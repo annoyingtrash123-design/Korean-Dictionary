@@ -6,7 +6,7 @@ import { useStore } from '../lib/store';
 import { normHeadword } from '../lib/search-mode';
 import type { SearchResult } from '../lib/types';
 import { Empty, GroupRow } from '../components/common';
-import { entryPath, hanjaPath, href, searchPath, wordPath } from '../lib/router';
+import { hanjaPath, href, wordPath } from '../lib/router';
 
 export function Results({ q }: { q: string }) {
   const s = useStore(settings);
@@ -63,4 +63,3 @@ export function Results({ q }: { q: string }) {
     </div>
   );
 }
-export { entryPath, searchPath };
