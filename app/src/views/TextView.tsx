@@ -59,7 +59,7 @@ function Para({ n, text, hl, verse, hanmun, reading, en, showEn, showReading }: 
 }
 
 // ---------- reading settings ----------
-function ReadingSettings({ p, hasModern, hasReading, onClose }: { p: ReaderPrefs; hasModern: boolean; hasReading: boolean; onClose: () => void }) {
+function ReadingSettings({ p, hasModern, hasReading, label, onClose }: { p: ReaderPrefs; hasModern: boolean; hasReading: boolean; label: string; onClose: () => void }) {
   const sw = (label: string, key: 'en' | 'modern' | 'reading', off?: boolean) => (
     <label class="field-row"><span>{label}</span>
       <input type="checkbox" role="switch" disabled={off} checked={p[key]} onChange={(e) => updatePrefs({ [key]: (e.currentTarget as HTMLInputElement).checked })} /></label>
@@ -77,6 +77,7 @@ function ReadingSettings({ p, hasModern, hasReading, onClose }: { p: ReaderPrefs
             <button type="button" role="radio" aria-checked={!p.serif} class={!p.serif ? 'on' : ''} onClick={() => updatePrefs({ serif: false })}>Sans</button>
           </div></div>
         {sw('Show English translation', 'en')}
+        {p.en && <div class="rd-labels small">{label}</div>}
         {sw(hasModern ? 'Modern spelling' : 'Modern spelling (not available for this text)', 'modern', !hasModern)}
         {sw(hasReading ? 'Hanmun reading line (음)' : 'Hanmun reading line (none for this text)', 'reading', !hasReading)}
         <div class="rd-sample" style={{ fontSize: p.size, lineHeight: p.lh }} data-serif={p.serif ? '1' : '0'} lang="ko">저는 한국어를 읽어요. <span class="hanja">學校</span></div>
@@ -297,24 +298,31 @@ export function TextView({ id }: { id: string }) {
             <div class="rd-badges">
               {doc.card.level && <span class="chip-lvl">{doc.card.level}</span>}
               <span class="chip-quiet">{fmtChars(total)}</span>
-              {m.script && <span class="chip-quiet">{m.script === 'hanmun' ? 'hanmun' : m.script === 'mixed' ? 'hangul + hanja' : 'hangul'}</span>}
               {doc.labels.text === 'ai' && <span class="chip-ai">AI-written</span>}
               {m.excerpt && <span class="chip-quiet">excerpt</span>}
             </div>
-            {(doc.card.summary_en || doc.card.summary_ko) && <div class="rd-summary"><p lang="ko">{doc.card.summary_ko}</p><p class="muted">{doc.card.summary_en}</p></div>}
-            <dl class="rd-prov">
-              {(doc.card.edition_en || doc.card.edition_ko || prov?.edition) && <><dt>Edition</dt><dd>{doc.card.edition_en || prov?.edition}{doc.card.edition_ko && doc.card.edition_en ? <span class="muted" lang="ko"> · {doc.card.edition_ko}</span> : null}</dd></>}
-              {prov?.url && <><dt>Source</dt><dd><a href={/^https?:\/\//.test(prov.url) ? prov.url : undefined} target="_blank" rel="noopener noreferrer">{prov.page_title || prov.source || prov.url}</a>{prov.revision_id != null && <span class="muted"> · revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</span>}</dd></>}
-              {!prov?.url && prov?.revision_id != null && <><dt>Revision</dt><dd>revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</dd></>}
-              {(prov?.licence || m.pd_basis) && <><dt>Licence</dt><dd>{prov?.licence || m.pd_basis}</dd></>}
-            </dl>
-            {(notesKo.length > 0 || notesEn.length > 0) && (
-              <details class="rd-notes">
-                <summary><span>Notes <span lang="ko">· 해설</span></span>{doc.labels.notes === 'ai' && <span class="chip-ai">AI-written</span>}</summary>
-                {notesKo.length > 0 && <div lang="ko" class="rd-notes-ko"><Notes blocks={notesKo} /></div>}
-                {notesEn.length > 0 && <div lang="en"><Notes blocks={notesEn} /></div>}
-              </details>
-            )}
+            <details class="rd-about">
+              <summary><span>About this text</span><span class="rd-i" aria-hidden="true">i</span></summary>
+              <div class="rd-about-body">
+                {(doc.card.summary_en || doc.card.summary_ko) && <div class="rd-summary"><p lang="ko">{doc.card.summary_ko}</p><p class="muted">{doc.card.summary_en}</p></div>}
+                <dl class="rd-prov">
+                  <dt>Shelf</dt><dd>{shelfLabel(m.shelf ?? '')}{m.script ? ` · ${m.script === 'hanmun' ? 'hanmun' : m.script === 'mixed' ? 'hangul + hanja' : 'hangul'}` : ''}</dd>
+                  {(doc.card.edition_en || doc.card.edition_ko || prov?.edition) && <><dt>Edition</dt><dd>{doc.card.edition_en || prov?.edition}{doc.card.edition_ko && doc.card.edition_en ? <span class="muted" lang="ko"> · {doc.card.edition_ko}</span> : null}</dd></>}
+                  {prov?.url && <><dt>Source</dt><dd><a href={/^https?:\/\//.test(prov.url) ? prov.url : undefined} target="_blank" rel="noopener noreferrer">{prov.page_title || prov.source || prov.url}</a>{prov.revision_id != null && <span class="muted"> · revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</span>}</dd></>}
+                  {!prov?.url && prov?.revision_id != null && <><dt>Revision</dt><dd>revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</dd></>}
+                  {(prov?.licence || m.pd_basis) && <><dt>Licence</dt><dd>{prov?.licence || m.pd_basis}</dd></>}
+                  {hasEn && <><dt>English</dt><dd>{translationLabel(doc.labels, prov)}</dd></>}
+                  {hasModern && modernLabel(doc.labels) && <><dt>Modern</dt><dd>{modernLabel(doc.labels)}</dd></>}
+                </dl>
+                {(notesKo.length > 0 || notesEn.length > 0) && (
+                  <div class="rd-notes">
+                    <h3>Notes <span lang="ko">· 해설</span>{doc.labels.notes === 'ai' && <span class="chip-ai">AI-written</span>}</h3>
+                    {notesKo.length > 0 && <div lang="ko" class="rd-notes-ko"><Notes blocks={notesKo} /></div>}
+                    {notesEn.length > 0 && <div lang="en"><Notes blocks={notesEn} /></div>}
+                  </div>
+                )}
+              </div>
+            </details>
           </header>
 
           <div class="rd-ctl" role="group" aria-label="Display">
@@ -324,12 +332,11 @@ export function TextView({ id }: { id: string }) {
                 <button type="button" role="radio" aria-checked={useModern} class={useModern ? 'on' : ''} onClick={() => updatePrefs({ modern: true })}>Modern</button>
               </div>
             )}
-            {hasEn && <button type="button" class={`pill${prefs.en ? ' on' : ''}`} aria-pressed={prefs.en} onClick={() => updatePrefs({ en: !prefs.en })}>English</button>}
             {hasReading && <button type="button" class={`pill${prefs.reading ? ' on' : ''}`} aria-pressed={prefs.reading} onClick={() => updatePrefs({ reading: !prefs.reading })}>음 reading</button>}
           </div>
           {(hasEn && prefs.en) || useModern ? (
             <div class="rd-labels small">
-              {hasEn && prefs.en && <div>{translationLabel(doc.labels, prov)}</div>}
+              {hasEn && prefs.en && <div class="rd-trl"><span class="chip-ai">AI translation</span> {translationLabel(doc.labels, prov)}</div>}
               {useModern && modernLabel(doc.labels) && <div>{modernLabel(doc.labels)}</div>}
             </div>
           ) : null}
@@ -375,7 +382,7 @@ export function TextView({ id }: { id: string }) {
         </article>
       </div>
       {sel && <LookupCard st={lk} onClose={clear} onStep={step} onResize={setCardH} onPick={pick} />}
-      {settingsOpen && <ReadingSettings p={prefs} hasModern={hasModern} hasReading={hasReading} onClose={() => setSettingsOpen(false)} />}
+      {settingsOpen && <ReadingSettings p={prefs} hasModern={hasModern} hasReading={hasReading} label={translationLabel(doc.labels, prov)} onClose={() => setSettingsOpen(false)} />}
     </div>
   );
 }
