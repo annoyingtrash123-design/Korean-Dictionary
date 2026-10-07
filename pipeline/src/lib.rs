@@ -14,3 +14,4 @@ pub mod stdict;
 pub mod tatoeba;
 pub mod unihan;
 pub mod xml;
+pub mod zhwikt;

@@ -16,6 +16,10 @@ pub const FILES: &[(&str, &str)] = &[
     ("tatoeba/kor_sentences.tsv.bz2", "https://downloads.tatoeba.org/exports/per_language/kor/kor_sentences.tsv.bz2"),
     ("tatoeba/eng_sentences.tsv.bz2", "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2"),
     ("tatoeba/links.tar.bz2", "https://downloads.tatoeba.org/exports/links.tar.bz2"),
+    // optional Chinese packs (no verified GitHub mirror of CC-CEDICT exists; mdbg.net works from CI)
+    ("cedict.zip", "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.zip"),
+    // multi-GB; skipped when KDICT_SKIP_ZHWIKT is set (the zhwikt pack is then not built)
+    ("kaikki-zh.jsonl", "https://kaikki.org/dictionary/Chinese/kaikki.org-dictionary-Chinese.jsonl"),
 ];
 
 fn download_ureq(url: &str, tmp: &Path) -> Result<u64> {
@@ -119,6 +123,10 @@ pub fn run(work: &Path) -> Result<()> {
         log::warn!("NIKL (krdict/stdict/opendict) fetch failed: {e:#}");
     }
     for (name, url) in FILES {
+        if *name == "kaikki-zh.jsonl" && std::env::var_os("KDICT_SKIP_ZHWIKT").is_some() {
+            log::info!("{name}: KDICT_SKIP_ZHWIKT is set, skipping");
+            continue;
+        }
         let dest = work.join(name);
         if dest.exists() && fs::metadata(&dest).map(|m| m.len() > 0).unwrap_or(false) {
             log::info!("{name}: already present, skipping");
