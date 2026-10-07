@@ -11,14 +11,25 @@ const ready = engine.init().catch((e) => { initError = String(e?.message ?? e); 
 let installing = false;
 let queue: Promise<void> = Promise.resolve();
 
+let lastStatus: PackStatus | null = null;
+/** While an install runs the engine's VFS is busy, so answer from the last known status + IndexedDB install records. */
+async function statusDuringInstall(): Promise<PackStatus> {
+  const packs: PackStatus['packs'] = { ...(lastStatus?.packs ?? {}) };
+  for (const id of Object.keys(packs)) {
+    const rec = await getInstalled(id);
+    if (rec) packs[id] = { ...packs[id], version: rec.version, installedAt: rec.installedAt };
+  }
+  return { ready: !initError, packs, error: initError };
+}
 async function packStatus(): Promise<PackStatus> {
   await ready;
+  if (installing) return statusDuringInstall();
   const packs: PackStatus['packs'] = {};
   for (const p of await engine.installedPacks()) {
     const rec = await getInstalled(p.id);
     packs[p.id] = { id: p.id, installed: true, version: rec?.version ?? p.version, bytes: p.bytes, installedAt: rec?.installedAt };
   }
-  return { ready: !initError, packs, error: initError };
+  return (lastStatus = { ready: !initError, packs, error: initError });
 }
 
 const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
@@ -26,12 +37,13 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async install(pack: ManifestPack, manifestUrl: string, version: string) {
     await ready;
     if (installing) throw new Error('An install is already running');
+    if (!lastStatus) await packStatus(); // remember what is installed before the engine gets busy
     installing = true;
     try { await installPack(engine, pack, manifestUrl, version, (p) => post({ event: 'progress', payload: p })); }
     finally { installing = false; }
     return packStatus();
   },
-  async removePack(id: string) { await ready; await engine.deletePack(id); await forgetPack(id); return packStatus(); },
+  async removePack(id: string) { await ready; if (installing) throw new Error('An install is running — try again when it finishes'); await engine.deletePack(id); await forgetPack(id); return packStatus(); },
   async search(q: string, o: { packs: string[]; limit?: number }) {
     await ready;
     const t = performance.now();

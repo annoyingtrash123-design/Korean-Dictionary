@@ -5,7 +5,8 @@ import { useAsync, useDelayed } from '../lib/useAsync';
 import { Lru } from '../lib/cache';
 import { settings } from '../lib/settings';
 import { useStore } from '../lib/store';
-import { bookmarks, isBookmarked, addBookmark, removeBookmark, moveBookmark } from '../lib/bookmarks';
+import { bookmarks, findBookmark, addBookmark, removeBookmark, moveBookmark } from '../lib/bookmarks';
+import { resolveEntry, type EntryRef } from '../lib/entry-key';
 import { recordHistory } from '../lib/history';
 import { sameWordRows } from '../lib/merge';
 import { hanChars } from '../lib/search-mode';
@@ -20,11 +21,11 @@ const viewCache = new Lru<Loaded>(40);
 const hanjaCache = new Lru<unknown>(60);
 type HanjaInfo = { ch: string; info: Awaited<ReturnType<typeof db.hanjaChar>>; words: Awaited<ReturnType<typeof db.wordsWithHanja>> };
 
-export function EntryView({ source, id, hw, word }: { source?: string; id?: number; hw?: string; word?: string }) {
+export function EntryView({ source, id, hw, word, pref }: { source?: string; id?: number; hw?: string; word?: string; pref?: Partial<EntryRef> }) {
   const s = useStore(settings);
   const status = useStore(packStatus$);
   const stamp = JSON.stringify(Object.values(status?.packs ?? {}).map((p) => p.version));
-  const ck = `${source}:${id}:${word}:${hw}|${packsKey(s)}|${stamp}`;
+  const ck = `${source}:${id}:${word}:${hw}:${pref ? JSON.stringify(pref) : ''}|${packsKey(s)}|${stamp}`;
   const r = useAsync(async (): Promise<Loaded> => {
     let primary: Entry | null = null;
     let all: Entry[] = [];
@@ -35,7 +36,7 @@ export function EntryView({ source, id, hw, word }: { source?: string; id?: numb
       all = a ?? (primary ? await db.getEntriesByHeadword(primary.headword) : []);
     } else if (word) {
       all = await db.getEntriesByHeadword(word);
-      primary = [...all].filter((e) => e.lang !== "ko").sort((a, b) => a.rank - b.rank)[0] ?? all[0] ?? null;
+      primary = pref?.source ? resolveEntry(all, pref) : [...all].filter((e) => e.lang !== "ko").sort((a, b) => a.rank - b.rank)[0] ?? all[0] ?? null;
     }
     if (!primary && hw) all = await db.getEntriesByHeadword(hw);
     let out: Loaded;
@@ -47,11 +48,11 @@ export function EntryView({ source, id, hw, word }: { source?: string; id?: numb
     }
     viewCache.set(ck, out);
     return out;
-  }, [source, id, word, packsKey(s), stamp], () => viewCache.get(ck));
+  }, [source, id, word, pref?.source, pref?.homonym, pref?.pos, packsKey(s), stamp], () => viewCache.get(ck));
 
   const primary = r.data?.primary;
   useEffect(() => {
-    if (primary) recordHistory({ source: primary.source, id: primary.id, headword: primary.headword, hanja: primary.hanja, gloss: primary.gloss });
+    if (primary) recordHistory({ source: primary.source, headword: primary.headword, homonym: primary.homonym, pos: primary.pos, hanja: primary.hanja, gloss: primary.gloss });
   }, [primary?.source, primary?.id]);
 
   const showSkel = useDelayed(r.loading && !r.data, 150);
@@ -84,7 +85,7 @@ export function EntryView({ source, id, hw, word }: { source?: string; id?: numb
 function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
   const bm = useStore(bookmarks);
   const [sheet, setSheet] = useState(false);
-  const marked = isBookmarked(bm, primary.source, primary.id);
+  const marked = !!findBookmark(bm, primary);
   const pron = entries.find((e) => e.pron)?.pron;
   const level = entries.map((e) => e.level).find((l) => l != null) ?? null;
   const hom = entries.filter((e) => e.source === primary.source).length > 1 ? undefined : primary.homonym;
@@ -115,10 +116,10 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
 }
 
 function FolderSheet({ marked, bm, entry, onClose }: { marked: boolean; bm: ReturnType<typeof bookmarks.get>; entry: Entry; onClose: () => void }) {
-  const cur = bm.items.find((b) => b.key === `${entry.source}:${entry.id}`);
+  const cur = findBookmark(bm, entry);
   const pick = async (folder: string) => {
     if (cur) await moveBookmark(cur.key, folder);
-    else await addBookmark({ source: entry.source, id: entry.id, headword: entry.headword, hanja: entry.hanja, gloss: entry.gloss, folder });
+    else await addBookmark({ source: entry.source, headword: entry.headword, homonym: entry.homonym, pos: entry.pos, hanja: entry.hanja, gloss: entry.gloss, folder });
     onClose();
   };
   return (
@@ -133,7 +134,7 @@ function FolderSheet({ marked, bm, entry, onClose }: { marked: boolean; bm: Retu
           </li>
         ))}
       </ul>
-      {marked && <button type="button" class="btn danger" onClick={async () => { await removeBookmark(entry.source, entry.id); onClose(); }}>Remove bookmark</button>}
+      {marked && <button type="button" class="btn danger" onClick={async () => { await removeBookmark(cur!.key); onClose(); }}>Remove bookmark</button>}
     </Sheet>
   );
 }

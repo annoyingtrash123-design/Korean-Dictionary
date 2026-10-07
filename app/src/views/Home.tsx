@@ -3,6 +3,7 @@ import { db } from '../db/client';
 import { history, clearHistory } from '../lib/history';
 import { useStore } from '../lib/store';
 import { entryPath, href } from '../lib/router';
+import { savedPath } from '../lib/entry-key';
 import { Hanja, LevelBadge, Pos } from '../components/common';
 import { UpdateBanner } from '../components/UpdateBanner';
 import type { ResultRow } from '../db/types';
@@ -62,7 +63,7 @@ export function Home() {
         <ul class="plain list">
           {hist.slice(0, 30).map((h) => (
             <li key={h.key}>
-              <a class="row compact" href={href(entryPath(h.source, h.id, h.headword))}>
+              <a class="row compact" href={href(savedPath(h))}>
                 <div class="row-main">
                   <div class="row-head">
                     <span class="hangul hw" lang="ko">{h.headword}</span>{h.hanja && <Hanja text={h.hanja} />}

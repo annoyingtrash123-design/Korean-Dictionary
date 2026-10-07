@@ -355,3 +355,32 @@ pub fn looks_romanized(lemma: &str, headword: &str) -> bool {
     let r = romanize_plain(&h);
     edit_distance(&r, l) <= (l.len() / 4).max(1)
 }
+
+/// Initial consonants (compatibility jamo) of a string made only of precomposed Hangul syllables
+/// ("학교" -> "ㅎㄱ"); `None` if it is empty or holds anything else. Used for the `entries.cho`
+/// column behind choseong search.
+pub fn choseong(s: &str) -> Option<String> {
+    const CHO: [char; 19] = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
+    if s.is_empty() {
+        return None;
+    }
+    s.chars()
+        .map(|c| {
+            let u = c as u32;
+            (0xAC00..=0xD7A3).contains(&u).then(|| CHO[((u - 0xAC00) / 588) as usize])
+        })
+        .collect()
+}
+
+#[cfg(test)]
+mod choseong_tests {
+    use super::choseong;
+
+    #[test]
+    fn initials() {
+        assert_eq!(choseong("학교").as_deref(), Some("ㅎㄱ"));
+        assert_eq!(choseong("까치").as_deref(), Some("ㄲㅊ"));
+        assert_eq!(choseong("a학교"), None);
+        assert_eq!(choseong(""), None);
+    }
+}

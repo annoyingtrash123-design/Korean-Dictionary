@@ -16,6 +16,7 @@ import { settings } from './lib/settings';
 import { applyTheme } from './lib/theme';
 import { loadBookmarks } from './lib/bookmarks';
 import { loadHistory } from './lib/history';
+import { refFromParams } from './lib/entry-key';
 import { Empty } from './components/common';
 
 const scrollMemo = new Map<string, number>();
@@ -68,7 +69,7 @@ function view(r: Route) {
   switch (r.name) {
     case 'search': { const q = r.params.get('q') ?? ''; return q.trim() ? <Results q={q} /> : <Home />; }
     case 'entry': return <EntryView key={r.raw} source={r.parts[0]} id={Number(r.parts[1])} hw={r.params.get('hw') ?? undefined} />;
-    case 'word': return <EntryView key={r.raw} word={r.parts[0]} />;
+    case 'word': return <EntryView key={r.raw} word={r.parts[0]} pref={r.params.has('s') ? refFromParams(r.params) : undefined} />;
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
     case 'grammar': return <GrammarView key={r.params.get('q') ?? ''} initialQ={r.params.get('q') ?? ''} />;
     case 'bookmarks': return <BookmarksView />;

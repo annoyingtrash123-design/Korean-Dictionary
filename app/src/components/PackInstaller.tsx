@@ -1,10 +1,14 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import { db, MANIFEST_URL, progress } from '../db/client';
 import { fmtBytes } from '../lib/app-state';
 import { useStore } from '../lib/store';
 import type { Manifest } from '../lib/types';
 
 import { packLabel } from '../lib/packs';
+import { requestPersist } from '../lib/persist';
+import { bytesNeeded, freeSpaceProblem, isFatalInstallMessage, isQuotaError, noSpaceMessage } from '../lib/storage';
+
+type WakeLockSentinelLike = { release(): Promise<void> };
 
 export function ProgressBar({ value, label }: { value: number; label: string }) {
   return (
@@ -22,16 +26,53 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
   const [started, setStarted] = useState(false);
   const packs = manifest.packs.filter((p) => packIds.includes(p.id));
 
+  const lock = useRef<WakeLockSentinelLike | null>(null);
+  const running = useRef(false);
+  const hiddenDuringRun = useRef(false);
+  const autoResumed = useRef(false);
+
+  const takeLock = async () => {
+    try { lock.current = (await (navigator as unknown as { wakeLock?: { request(t: 'screen'): Promise<WakeLockSentinelLike> } }).wakeLock?.request('screen')) ?? null; } catch { /* optional */ }
+  };
+  const dropLock = () => { void lock.current?.release().catch(() => undefined); lock.current = null; };
+
   const run = async () => {
+    if (running.current) return;
+    running.current = true; hiddenDuringRun.current = false;
     setBusy(true); setErr(undefined); setStarted(true);
-    try { await navigator.storage?.persist?.(); } catch { /* optional */ }
     try {
+      // Refuse to start (rather than fail half-way) when the device clearly lacks space.
+      const est = await navigator.storage?.estimate?.().catch(() => undefined);
+      const problem = freeSpaceProblem(est, bytesNeeded(packs));
+      if (problem) throw new Error(problem);
+      await requestPersist();
+      await takeLock();
       for (const p of packs) await db.install(p, MANIFEST_URL(), manifest.version);
       await db.packStatus();
+      dropLock();
+      running.current = false;
       onDone?.();
-    } catch (e) { setErr(String((e as Error)?.message ?? e)); }
+    } catch (e) {
+      dropLock();
+      running.current = false;
+      const m = String((e as Error)?.message ?? e);
+      setErr(isQuotaError(e) && !isFatalInstallMessage(m) ? noSpaceMessage(bytesNeeded(packs)) : m);
+    }
     setBusy(false);
   };
+  // Mobile browsers suspend a backgrounded download: remember that, and resume once when the app is visible again.
+  const runRef = useRef(run); runRef.current = run;
+  const errRef = useRef<string>();
+  errRef.current = err;
+  useEffect(() => {
+    const on = () => {
+      if (document.visibilityState === 'hidden') { if (running.current) hiddenDuringRun.current = true; return; }
+      if (running.current) void takeLock(); // wake locks are released when the page is hidden
+      else if (errRef.current && !isFatalInstallMessage(errRef.current) && hiddenDuringRun.current && !autoResumed.current) { autoResumed.current = true; void runRef.current(); }
+    };
+    document.addEventListener('visibilitychange', on);
+    return () => { document.removeEventListener('visibilitychange', on); dropLock(); };
+  }, []);
   return (
     <div class="installer">
       {started && packs.map((p) => {
@@ -45,8 +86,8 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
           </div>
         );
       })}
-      {err && <p class="error" role="alert">{err} <span class="muted">Progress is kept — you can resume.</span></p>}
-      {!busy && <button type="button" class="btn primary" onClick={run}>{err ? 'Resume download' : label}</button>}
+      {err && <p class="error" role="alert">{err}{!isFatalInstallMessage(err) && <> <span class="muted">Progress is kept — you can resume.</span></>}</p>}
+      {!busy && <button type="button" class="btn primary" onClick={run}>{err ? (isFatalInstallMessage(err) ? 'Try again' : 'Resume download') : label}</button>}
     </div>
   );
 }

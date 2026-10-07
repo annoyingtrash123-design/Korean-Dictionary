@@ -59,3 +59,8 @@ CREATE TABLE grammar (
 CREATE INDEX grammar_cat ON grammar(category, sort);
 CREATE INDEX grammar_entry ON grammar(entry_id);
 "#;
+
+/// Core pack only: initial-consonant string of `hw_norm` (NULL unless it is all syllables),
+/// filled by the builder before `CHO_INDEX` is created. Powers choseong search (ㅎㄱ -> 학교).
+pub const CHO_COLUMN: &str = "ALTER TABLE entries ADD COLUMN cho TEXT;";
+pub const CHO_INDEX: &str = "CREATE INDEX entries_cho ON entries(cho, rank) WHERE cho IS NOT NULL;";

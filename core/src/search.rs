@@ -33,6 +33,8 @@ pub struct Caps {
     pub hanja_rank: bool,
     /// `entries_hanja` index exists.
     pub hanja_idx: bool,
+    /// `entries.cho` (initial consonants of `hw_norm`) with its `(cho, rank)` index exists.
+    pub cho: bool,
 }
 
 /// An opened pack database.
@@ -66,6 +68,7 @@ impl PackDb {
             wotd: names.contains("wotd"),
             hanja_rank,
             hanja_idx: has_index("entries_hanja"),
+            cho: has_index("entries_cho"),
             forms: names.contains("forms"),
             hanja_words: names.contains("hanja_words"),
             entries_fts: names.contains("entries_fts"),
@@ -270,20 +273,91 @@ fn rows_for(packs: &[&PackDb], cands: &[(i64, usize, i64)], via: Option<&'static
 
 // ---- search ---------------------------------------------------------------------------------
 
+/// Longest query considered (chars, after normalisation); the rest is ignored.
+pub const MAX_QUERY_CHARS: usize = 100;
+/// Most FTS tokens used for a text query.
+pub const MAX_FTS_TOKENS: usize = 8;
+
+fn is_compat_jamo(c: char) -> bool {
+    (0x3130..=0x318F).contains(&(c as u32))
+}
+
+/// Query clean-up: NFKC (full-width Latin, half-width forms, CJK compatibility ideographs,
+/// decomposed Hangul), except that compatibility jamo are kept as typed (NFKC would turn them
+/// into conjoining jamo that match nothing); Latin lower-cased; at most [`MAX_QUERY_CHARS`].
+pub fn normalize_query(query: &str) -> String {
+    use unicode_normalization::UnicodeNormalization;
+    let mut out = String::new();
+    let mut run = String::new();
+    let flush = |run: &mut String, out: &mut String| {
+        out.extend(run.nfkc());
+        run.clear();
+    };
+    for c in query.chars().take(MAX_QUERY_CHARS * 4) {
+        if is_compat_jamo(c) {
+            flush(&mut run, &mut out);
+            out.push(c);
+        } else {
+            run.push(c);
+        }
+    }
+    flush(&mut run, &mut out);
+    // single spaces, lower-case, bounded length
+    let collapsed = out.to_lowercase().split_whitespace().collect::<Vec<_>>().join(" ");
+    collapsed.chars().take(MAX_QUERY_CHARS).collect::<String>().trim().to_string()
+}
+
+/// True for 2-6 initial consonants and nothing else (ㅎㄱ): a choseong query.
+fn choseong_query(q: &str) -> bool {
+    const CHO: &str = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ";
+    let n = q.chars().count();
+    (2..=6).contains(&n) && q.chars().all(|c| CHO.contains(c))
+}
+
 /// Search across the given (already filtered to enabled) packs.
 pub fn search(packs: &[&PackDb], query: &str, limit: Option<usize>) -> Result<SearchResult> {
     let limit = limit.unwrap_or(DEFAULT_LIMIT).max(1);
-    let q = query.trim();
+    let q = normalize_query(query);
     if q.is_empty() {
         return Ok(SearchResult { mode: "english", rows: vec![], hanja: None, deconj: None, grammar_hints: None });
     }
-    if has_hangul(q) {
-        search_hangul(packs, q, limit)
-    } else if has_han(q) {
-        search_hanja(packs, q, limit)
+    if has_hangul(&q) {
+        if choseong_query(&q) {
+            if let Some(r) = search_choseong(packs, &q, limit)? {
+                return Ok(r);
+            }
+        }
+        // mixed script ("학교 school"): Hangul tokens in Hangul mode, then English for the rest
+        let (ko, latin): (Vec<&str>, Vec<&str>) = q.split(' ').partition(|t| has_hangul(t));
+        if !latin.is_empty() && latin.iter().any(|t| t.chars().any(char::is_alphanumeric)) {
+            let mut r = search_hangul(packs, &ko.join(" "), limit)?;
+            if r.rows.len() < limit {
+                let en = search_english(packs, &latin.join(" "), limit)?;
+                let mut seen: HashSet<(String, i64)> = r.rows.iter().map(key).collect();
+                push_new(&mut r.rows, &mut seen, en.rows);
+                r.rows.truncate(limit);
+            }
+            return Ok(r);
+        }
+        search_hangul(packs, &q, limit)
+    } else if has_han(&q) {
+        search_hanja(packs, &q, limit)
     } else {
-        search_english(packs, q, limit)
+        search_english(packs, &q, limit)
     }
+}
+
+/// Initial-consonant search: headwords whose syllable initials equal `q` (needs `entries.cho`).
+/// `None` when no pack has it (the query then falls through to the ordinary Hangul search).
+fn search_choseong(packs: &[&PackDb], q: &str, limit: usize) -> Result<Option<SearchResult>> {
+    let with: Vec<&PackDb> = packs.iter().copied().filter(|p| p.caps.cho).collect();
+    if with.is_empty() {
+        return Ok(None);
+    }
+    let sql = |_: &PackDb| format!("SELECT id, rank FROM entries WHERE cho = ?1 ORDER BY rank LIMIT {PREFIX_LIMIT}");
+    let cands = top_ids(&with, &sql, &[q.into()], limit.min(PREFIX_LIMIT))?;
+    let rows = rows_for(&with, &cands, Some("prefix"))?;
+    Ok(Some(SearchResult { mode: "hangul", rows, hanja: None, deconj: None, grammar_hints: None }))
 }
 
 fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchResult> {
@@ -384,6 +458,7 @@ pub fn fts_query(text: &str) -> Option<String> {
     let tokens: Vec<String> = text
         .split(|c: char| !c.is_alphanumeric())
         .filter(|t| !t.is_empty())
+        .take(MAX_FTS_TOKENS)
         .map(|t| t.to_lowercase())
         .collect();
     if tokens.is_empty() {

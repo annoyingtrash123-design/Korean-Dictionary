@@ -3,7 +3,8 @@ import { bookmarks, createFolder, deleteFolder, DEFAULT_FOLDER, moveBookmark, re
 import { useStore } from '../lib/store';
 import { Empty, Hanja, IconButton, Sheet } from '../components/common';
 import { Icon } from '../components/Icons';
-import { entryPath, href } from '../lib/router';
+import { href } from '../lib/router';
+import { savedPath } from '../lib/entry-key';
 
 export function BookmarksView() {
   const d = useStore(bookmarks);
@@ -44,7 +45,7 @@ export function BookmarksView() {
       <ul class="plain list">
         {items.map((b) => (
           <li key={b.key} class="bm">
-            <a class="row compact" href={href(entryPath(b.source, b.id, b.headword))}>
+            <a class="row compact" href={href(savedPath(b))}>
               <div class="row-main">
                 <div class="row-head"><span class="hangul hw" lang="ko">{b.headword}</span>{b.hanja && <Hanja text={b.hanja} />}</div>
                 {b.gloss && <div class="row-gloss">{b.gloss}</div>}
@@ -53,7 +54,7 @@ export function BookmarksView() {
             {edit && (
               <div class="bm-actions">
                 <IconButton icon="folder" label={`Move ${b.headword}`} onClick={() => setMoving(b)} />
-                <IconButton icon="trash" label={`Remove ${b.headword}`} onClick={() => removeBookmark(b.source, b.id)} />
+                <IconButton icon="trash" label={`Remove ${b.headword}`} onClick={() => removeBookmark(b.key)} />
               </div>
             )}
           </li>

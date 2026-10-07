@@ -395,11 +395,31 @@ fn source_info(name: &str, n: i64) -> Value {
 
 // --- core pack -------------------------------------------------------------
 
+/// Fill `entries.cho` (initial consonants of `hw_norm`) and index it.
+fn fill_cho(conn: &Connection) -> Result<()> {
+    let rows: Vec<(i64, String)> = {
+        let mut st = conn.prepare("SELECT id, hw_norm FROM entries")?;
+        let it = st.query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?;
+        it.collect::<std::result::Result<_, _>>()?
+    };
+    {
+        let mut up = conn.prepare("UPDATE entries SET cho = ? WHERE id = ?")?;
+        for (id, hw) in rows {
+            if let Some(cho) = choseong(&hw) {
+                up.execute(params![cho, id])?;
+            }
+        }
+    }
+    conn.execute_batch(schema::CHO_INDEX)?;
+    Ok(())
+}
+
 pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, built_at: &str) -> Result<PackResult> {
     let path = out.join("core.sqlite");
     let conn = open_db(&path)?;
     conn.execute_batch(schema::COMMON)?;
     conn.execute_batch(schema::CORE_ONLY)?;
+    conn.execute_batch(schema::CHO_COLUMN)?;
     conn.execute_batch("BEGIN")?;
     let mut c = Counters::default();
     let mut grammar: Vec<GrammarRow> = Vec::new();
@@ -621,6 +641,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
 
     conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
+    fill_cho(&conn)?;
     conn.execute_batch("DELETE FROM forms WHERE rowid NOT IN (SELECT MIN(rowid) FROM forms GROUP BY form, entry_id)")?;
 
     // hanja characters

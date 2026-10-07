@@ -3,6 +3,7 @@
 // 2. stream chunk files -> ONE DecompressionStream('gzip') -> engine.writeChunk (never buffers the DB).
 import { get, set, del } from 'idb-keyval';
 import type { Engine, ManifestPack, Progress } from './types';
+import { bytesNeeded, freeSpaceProblem, isQuotaError, noSpaceMessage } from '../lib/storage';
 
 export interface InstalledRecord { version: string; bytes: number; installedAt: number }
 const DL_DIR = 'kd-dl';
@@ -11,11 +12,13 @@ interface DlState { version: string; done: number }
 
 export const getInstalled = (id: string) => get<InstalledRecord>('installed:' + id);
 
-function chunkList(pack: ManifestPack, manifestUrl: string) {
+function chunkList(pack: ManifestPack, manifestUrl: string, version: string) {
   return pack.chunks.map((c, i) => {
     const o = typeof c === 'string' ? { file: c } : c;
     const file = o.file ?? o.name ?? o.url ?? `${pack.file}.gz.${String(i).padStart(3, '0')}`;
-    return { name: file.split('/').pop()!, url: new URL(file, manifestUrl).toString(), bytes: o.bytes ?? o.gz_bytes };
+    const u = new URL(file, manifestUrl);
+    u.searchParams.set('v', version); // cache-bust per data version: a stale CDN/HTTP-cache chunk can never mix into a new build
+    return { name: file.split('/').pop()!, url: u.toString(), bytes: o.bytes ?? o.gz_bytes };
   });
 }
 
@@ -30,7 +33,7 @@ async function fetchToFile(url: string, dir: FileSystemDirectoryHandle, name: st
   const ah = await (fh as unknown as { createSyncAccessHandle(): Promise<FileSystemSyncAccessHandle> }).createSyncAccessHandle();
   try {
     ah.truncate(0);
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok || !res.body) throw new Error(`Download failed (${res.status}) for ${name}`);
     const rd = res.body.getReader();
     let pos = 0;
@@ -44,10 +47,30 @@ async function fetchToFile(url: string, dir: FileSystemDirectoryHandle, name: st
   } finally { ah.close(); }
 }
 
+/** Remove the staging directory (downloaded gz chunks) and resume state of a pack. */
+export async function clearStaging(id: string) {
+  try { const root = await navigator.storage.getDirectory(); const top = await root.getDirectoryHandle(DL_DIR); await top.removeEntry(id, { recursive: true }); } catch { /* nothing staged */ }
+  await del('dl:' + id).catch(() => undefined);
+}
+
 export async function installPack(
   engine: Engine, pack: ManifestPack, manifestUrl: string, version: string, emit: (p: Progress) => void,
 ): Promise<void> {
-  const chunks = chunkList(pack, manifestUrl);
+  let verified = false; // set once all chunks are downloaded: from then on a failure leaves useless staging
+  try { await installPackInner(engine, pack, manifestUrl, version, emit, () => { verified = true; }); }
+  catch (e) {
+    // Disk-full errors get one actionable message; free the staging space either way.
+    const quota = isQuotaError(e);
+    if (verified || quota) await clearStaging(pack.id);
+    if (quota) throw new Error(noSpaceMessage(bytesNeeded([pack])));
+    throw e;
+  }
+}
+
+async function installPackInner(
+  engine: Engine, pack: ManifestPack, manifestUrl: string, version: string, emit: (p: Progress) => void, onDownloaded: () => void,
+): Promise<void> {
+  const chunks = chunkList(pack, manifestUrl, version);
   const dir = await dirFor(pack.id, true);
   const stateKey = 'dl:' + pack.id;
   let st = await get<DlState>(stateKey);
@@ -68,6 +91,8 @@ export async function installPack(
       got += f.size;
     } catch { break; }
   }
+  const problem = freeSpaceProblem(await navigator.storage?.estimate?.().catch(() => undefined), bytesNeeded([pack], got));
+  if (problem) throw new Error(problem);
   report(start);
   for (let i = start; i < chunks.length; i++) {
     const before = got;
@@ -77,19 +102,22 @@ export async function installPack(
   }
   emit({ pack: pack.id, phase: 'download', done: total, total, chunk: chunks.length, chunks: chunks.length });
 
+  onDownloaded();
   // ---- install: chunk files -> single gzip stream -> engine ----
   let idx = 0;
   let cur: ReadableStreamDefaultReader<Uint8Array> | undefined;
+  let curName: string | undefined;
   const joined = new ReadableStream<Uint8Array>({
     async pull(c) {
       for (;;) {
         if (!cur) {
           if (idx >= chunks.length) { c.close(); return; }
-          const f = await (await dir.getFileHandle(chunks[idx++].name)).getFile();
+          curName = chunks[idx++].name;
+          const f = await (await dir.getFileHandle(curName)).getFile();
           cur = f.stream().getReader();
         }
         const { value, done } = await cur.read();
-        if (done) { cur = undefined; continue; }
+        if (done) { cur = undefined; await dir.removeEntry(curName!).catch(() => undefined); continue; } // consumed: free the disk now
         c.enqueue(value); return;
       }
     },
@@ -106,11 +134,10 @@ export async function installPack(
     emit({ pack: pack.id, phase: 'install', done: written, total: pack.bytes });
   }
   if (written !== pack.bytes) throw new Error(`Decompressed size mismatch for ${pack.id}: ${written} vs ${pack.bytes}`);
-  await engine.finishImport(pack.id, version);
+  await engine.finishImport(pack.id, version, pack.sha256 ?? null);
   await set('installed:' + pack.id, { version, bytes: pack.bytes, installedAt: Date.now() } satisfies InstalledRecord);
-  await del(stateKey);
-  try { const root = await navigator.storage.getDirectory(); const top = await root.getDirectoryHandle(DL_DIR); await top.removeEntry(pack.id, { recursive: true }); } catch { /* */ }
+  await clearStaging(pack.id);
   emit({ pack: pack.id, phase: 'done', done: pack.bytes, total: pack.bytes });
 }
 
-export async function forgetPack(id: string) { await del('installed:' + id); await del('dl:' + id); }
+export async function forgetPack(id: string) { await del('installed:' + id); await clearStaging(id); }

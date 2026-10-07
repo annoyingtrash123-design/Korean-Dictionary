@@ -9,6 +9,7 @@
 
 pub mod deconjugate;
 pub mod hangul;
+pub mod packfile;
 pub mod search;
 pub mod sql;
 
@@ -109,11 +110,11 @@ mod wasm_api {
         }
 
         #[wasm_bindgen(js_name = finishImport)]
-        pub async fn finish_import(&self, pack_id: String, version: String) -> Result<(), JsError> {
+        pub async fn finish_import(&self, pack_id: String, version: String, sha256: Option<String>) -> Result<(), JsError> {
             let mut st = self.state.borrow_mut();
             let State { store, imports } = &mut *st;
             let store = store.as_mut().ok_or_else(|| JsError::new("engine not initialised: call init() first"))?;
-            imports.finish(store, &pack_id, &version).map_err(js_err)
+            imports.finish(store, &pack_id, &version, sha256.as_deref()).map_err(js_err)
         }
 
         #[wasm_bindgen(js_name = deletePack)]

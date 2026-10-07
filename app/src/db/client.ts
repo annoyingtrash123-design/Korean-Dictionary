@@ -92,7 +92,9 @@ export const db = {
   randomWordOfDay: (date: string) => call<ResultRow | null>('wordOfDay', date),
   packStatus: refreshStatus,
   install: async (pack: ManifestPack, manifestUrl: string, version: string) => {
-    const s = await call<PackStatus>('install', pack, manifestUrl, version); packStatus$.set(s); return s;
+    // The engine keeps the old pack usable until the new import finishes, so status is refreshed after success AND failure.
+    try { const s = await call<PackStatus>('install', pack, manifestUrl, version); packStatus$.set(s); return s; }
+    finally { await refreshStatus().catch(() => undefined); }
   },
   removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); packStatus$.set(s); return s; },
 };

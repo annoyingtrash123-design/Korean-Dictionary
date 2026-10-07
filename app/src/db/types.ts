@@ -49,7 +49,8 @@ export interface Engine {
   installedPacks(): Promise<{ id: string; version: string; bytes: number }[]>;
   beginImport(packId: string, totalBytes: number): Promise<void>;
   writeChunk(packId: string, bytes: Uint8Array): Promise<void>;
-  finishImport(packId: string, version: string): Promise<void>;
+  /** `sha256`: hex digest of the uncompressed DB; the engine verifies it (throws on mismatch, old pack stays intact). */
+  finishImport(packId: string, version: string, sha256?: string | null): Promise<void>;
   deletePack(packId: string): Promise<void>;
   search(query: string, opts: { packs: string[]; limit?: number }): Promise<SearchResult>;
   entriesByHeadword(hw: string, packs: string[]): Promise<Entry[]>;

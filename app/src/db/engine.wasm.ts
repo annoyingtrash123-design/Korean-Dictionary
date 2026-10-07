@@ -22,7 +22,8 @@ export function createEngine(): Engine {
     installedPacks: () => e().installedPacks(),
     beginImport: (id, total) => e().beginImport(id, total),
     writeChunk: (id, bytes) => e().writeChunk(id, bytes),
-    finishImport: (id, version) => e().finishImport(id, version),
+    // the generated typings may predate the 3-arg signature; extra args are harmless on an older wasm build
+    finishImport: (id, version, sha256) => (e() as unknown as { finishImport(a: string, b: string, c?: string | null): Promise<void> }).finishImport(id, version, sha256 ?? null),
     deletePack: (id) => e().deletePack(id),
     search: (q, opts) => e().search(q, opts),
     entriesByHeadword: (hw, packs) => e().entriesByHeadword(hw, packs),

@@ -3,7 +3,7 @@ import { settings, updateSettings, type ColorKey, type ThemeName } from '../lib/
 import { currentColor } from '../lib/theme';
 import { useStore } from '../lib/store';
 import { db, fetchManifest, packStatus$ } from '../db/client';
-import { fmtBytes, update } from '../lib/app-state';
+import { fmtBytes, stalePacks, update } from '../lib/app-state';
 import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
 import { cachedManifest } from '../db/client';
@@ -17,8 +17,8 @@ const COLORS: [ColorKey, string][] = [['accent', 'Accent'], ['bg', 'Background']
 
 export function checkForUpdate(): Promise<Manifest | null> {
   return fetchManifest().then((m) => {
-    const core = packStatus$.get()?.packs.core;
-    update.set({ manifest: m, available: !!core?.installed && core.version !== m.version });
+    const stale = stalePacks(packStatus$.get()?.packs, m);
+    update.set({ manifest: m, available: stale.length > 0, stale });
     return m;
   }, () => null);
 }
@@ -100,7 +100,7 @@ export function SettingsView() {
             </div>
           );
         })}
-        {installing && manifest && <PackInstaller manifest={manifest} packIds={installing} label={upd.available ? 'Update' : 'Download'} onDone={() => { const ids = installing; setInstalling(null); update.set((u) => ({ ...u, available: false })); updateSettings({ packs: { ...s.packs, ...Object.fromEntries(ids.filter((i) => i !== 'core' && !installedIds.includes(i)).map((i) => [i, true])) } }); checkForUpdate(); }} />}
+        {installing && manifest && <PackInstaller manifest={manifest} packIds={installing} label={upd.available && installing.every((i) => upd.stale.includes(i)) ? 'Update' : 'Download'} onDone={() => { const ids = installing; setInstalling(null); update.set((u) => ({ ...u, available: false, stale: [] })); updateSettings({ packs: { ...s.packs, ...Object.fromEntries(ids.filter((i) => i !== 'core' && !installedIds.includes(i)).map((i) => [i, true])) } }); checkForUpdate(); }} />}
       </section>
 
       <section class="group">
@@ -112,7 +112,7 @@ export function SettingsView() {
         </dl>
         <div class="btn-row">
           <button type="button" class="btn" onClick={doCheck}>Check for update</button>
-          {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(allInstalled)}>Update now</button>}
+          {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(upd.stale)}>Update now</button>}
           <button type="button" class="btn" onClick={() => startInstall(allInstalled)}>Re-download</button>
         </div>
         {msg && <p class="muted small" role="status">{msg}</p>}
