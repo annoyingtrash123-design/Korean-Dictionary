@@ -8,8 +8,6 @@ on:
         description: "Force a fresh dictionary data build (ignore cache)"
         type: boolean
         default: false
-  schedule:
-    - cron: "17 3 1 * *" # monthly refresh of upstream dictionaries
 
 permissions:
   contents: read
