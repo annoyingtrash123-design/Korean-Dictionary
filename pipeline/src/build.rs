@@ -229,6 +229,31 @@ pub struct Counters {
     pub by_source: BTreeMap<&'static str, i64>,
     pub entries: i64,
     pub forms: i64,
+    /// (term, tier, score, entry_id) rows for `gloss_terms` (core pack only).
+    pub terms: Vec<(String, i64, i64, i64)>,
+}
+
+/// Normalised English gloss items of an entry in gloss order: lower-cased, trimmed, leading
+/// "to " stripped, whitespace collapsed, items over 40 chars skipped, duplicates dropped.
+/// The flag is true for the entry's first item (tier 0).
+pub fn gloss_items(e: &Entry) -> Vec<(String, bool)> {
+    let mut out: Vec<(String, bool)> = Vec::new();
+    let mut first = true;
+    for g in sense_strs(e, "gloss") {
+        for piece in g.split([';', ',']) {
+            let t = piece.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase();
+            let t = t.strip_prefix("to ").map(str::trim).unwrap_or(&t).to_string();
+            if t.is_empty() {
+                continue;
+            }
+            let is_first = std::mem::take(&mut first);
+            if t.chars().count() > 40 || out.iter().any(|(o, _)| *o == t) {
+                continue;
+            }
+            out.push((t, is_first));
+        }
+    }
+    out
 }
 
 fn insert_entry(conn: &Connection, e: &Entry, rank: i64, fts: bool, c: &mut Counters) -> Result<i64> {
@@ -256,6 +281,11 @@ fn insert_entry(conn: &Connection, e: &Entry, rank: i64, fts: bool, c: &mut Coun
         }
     }
     if fts {
+        let q = quality(e);
+        for (term, first) in gloss_items(e) {
+            let tier = i64::from(!first);
+            c.terms.push((term, tier, (tier + q) * 10_000_000 + rank.min(9_999_999), id));
+        }
         let (head, en) = fts_text(e);
         if !head.is_empty() || !en.is_empty() {
             conn.prepare_cached("INSERT INTO entries_fts(rowid, head, en) VALUES(?,?,?)")?.execute(params![id, head, en])?;
@@ -574,6 +604,22 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             .execute(params![g.entry_id, g.pattern, g.category, g.level, g.summary, i as i64])?;
     }
 
+    // gloss_terms: sorted so the WITHOUT ROWID table is built by appending
+    let mut terms = std::mem::take(&mut c.terms);
+    terms.sort_unstable();
+    terms.dedup_by(|a, b| a.0 == b.0 && a.3 == b.3 && a.2 >= b.2);
+    {
+        let mut st = conn.prepare("INSERT OR IGNORE INTO gloss_terms(term,tier,score,entry_id) VALUES(?,?,?,?)")?;
+        for (term, tier, score, id) in &terms {
+            st.execute(params![term, tier, score, id])?;
+        }
+    }
+    conn.execute_batch(
+        "INSERT INTO wotd(n, entry_id) SELECT row_number() OVER (ORDER BY id) - 1, id FROM entries \
+         WHERE source = 'krdict' AND level IN (1, 2) AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''",
+    )?;
+
+    conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
     conn.execute_batch("DELETE FROM forms WHERE rowid NOT IN (SELECT MIN(rowid) FROM forms GROUP BY form, entry_id)")?;
 
@@ -626,6 +672,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("sentences_tatoeba".into(), n_tat.into());
     counts.insert("sentences_wikt".into(), n_wikt_s.into());
     counts.insert("grammar".into(), q("SELECT COUNT(*) FROM grammar")?.into());
+    counts.insert("gloss_terms".into(), q("SELECT COUNT(*) FROM gloss_terms")?.into());
     let counts = Value::Object(counts);
 
     let mut sources = Map::new();
@@ -668,6 +715,7 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
         .with_context(|| format!("stdict {}", p.display()))?;
         log::info!("stdict {}: {} entries ({:.1}s)", p.file_name().unwrap().to_string_lossy(), c.entries - before, t.elapsed().as_secs_f32());
     }
+    conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
     let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
     let mut counts = Map::new();
@@ -717,6 +765,7 @@ pub fn build_opendict(src: &Sources, ranker: &Ranker, out: &Path, version: &str,
             t.elapsed().as_secs_f32()
         );
     }
+    conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
     let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
     let mut counts = Map::new();

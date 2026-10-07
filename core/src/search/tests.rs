@@ -218,7 +218,12 @@ fn hangul_prefix_ordered_by_rank_and_limited() {
     assert_eq!(r.rows[0].via, Some("exact"));
     let pre: Vec<_> = r.rows.iter().filter(|x| x.via == Some("prefix")).map(|x| x.headword.clone()).collect();
     assert_eq!(&pre[..3], ["학교", "학생", "학년"]);
-    assert!(pre.contains(&"학문".to_string()));
+    // one-syllable queries scan the core pack only (stdict-only 학문 is not a prefix hit) ...
+    assert!(!pre.contains(&"학문".to_string()));
+    assert!(r.rows.iter().all(|x| x.via != Some("prefix") || x.pack == "core"));
+    // ... but two-syllable queries still prefix-scan every pack
+    let r2 = search(&[&core, &st], "학문", None).unwrap();
+    assert!(r2.rows.iter().any(|x| x.pack == "stdict" && x.via == Some("exact")));
     assert!(r.rows.windows(2).filter(|w| w[0].via == Some("prefix") && w[1].via == Some("prefix")).all(|w| w[0].rank <= w[1].rank));
     let r = search(&[&core, &st], "학", Some(2)).unwrap();
     assert_eq!(r.rows.len(), 2);
@@ -601,18 +606,177 @@ fn any_number_of_packs_are_merged_by_rank() {
     assert!(search(&[&core, &st], "학당", None).unwrap().rows.iter().all(|x| x.source != "opendict"));
 }
 
+/// Fresh connections for every measurement, so each number is a cold first run; "misses" is
+/// SQLite's pager cache-miss count (pages read from the file), the native proxy for OPFS reads.
+fn open_cold(dir: &std::path::Path) -> Vec<PackDb> {
+    ["core", "stdict", "opendict"]
+        .iter()
+        .filter_map(|id| open_real(&dir.join(format!("{id}.sqlite")), id))
+        .inspect(|p| {
+            p.conn.exec("PRAGMA cache_size = -49152").unwrap();
+        })
+        .collect()
+}
+
+fn cold<T>(dir: &std::path::Path, label: &str, f: impl Fn(&[&PackDb]) -> T) -> T {
+    let packs = open_cold(dir);
+    let refs: Vec<&PackDb> = packs.iter().collect();
+    for p in &packs {
+        p.conn.cache_misses(true);
+    }
+    let t = std::time::Instant::now();
+    let out = f(&refs);
+    let ms = t.elapsed().as_secs_f64() * 1000.0;
+    let misses: i64 = packs.iter().map(|p| p.conn.cache_misses(false)).sum();
+    eprintln!("{label:<24} cold {ms:8.2} ms  {misses:5} page misses");
+    out
+}
+
+/// Add the newer pipeline structures (covering index, `gloss_terms`, `wotd`, hanja rank) to a
+/// fixture pack, the way `pipeline/src/build.rs` writes them.
+fn modernize(db: PackDb) -> PackDb {
+    let c = db.conn;
+    c.exec("CREATE INDEX entries_hw_rank ON entries(hw_norm, rank)").unwrap();
+    c.exec("CREATE TABLE gloss_terms (term TEXT NOT NULL, tier INTEGER NOT NULL, score INTEGER NOT NULL, entry_id INTEGER NOT NULL, PRIMARY KEY (term, score, entry_id)) WITHOUT ROWID").unwrap();
+    c.exec("CREATE TABLE wotd (n INTEGER PRIMARY KEY, entry_id INTEGER NOT NULL)").unwrap();
+    c.exec("INSERT INTO wotd SELECT row_number() OVER (ORDER BY id) - 1, id FROM entries WHERE source = 'krdict' AND level IN (1, 2) AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''").unwrap();
+    c.exec("ALTER TABLE hanja_words ADD COLUMN rank INTEGER NOT NULL DEFAULT 0").unwrap();
+    c.exec("UPDATE hanja_words SET rank = (SELECT rank FROM entries WHERE entries.id = hanja_words.entry_id)").unwrap();
+    c.exec("CREATE INDEX hanja_words_rank ON hanja_words(ch, rank, entry_id)").unwrap();
+    for r in c.query("SELECT id, source, kind, rank, gloss FROM entries WHERE gloss IS NOT NULL AND (source = 'krdict' OR id = 15)", &[]).unwrap() {
+        let q = match r.string(1).as_str() {
+            "krdict" => 0,
+            "wikt" => 1,
+            "kengdic" => 3,
+            _ => 2,
+        } + i64::from(matches!(r.string(2).as_str(), "phrase" | "idiom" | "proverb"));
+        let mut first = true;
+        let mut seen: Vec<String> = Vec::new();
+        for item in r.string(4).split([';', ',']) {
+            let t = item.trim().to_lowercase();
+            let t = t.strip_prefix("to ").unwrap_or(&t).trim().to_string();
+            let tier = i64::from(!std::mem::take(&mut first));
+            if t.is_empty() || seen.contains(&t) {
+                continue;
+            }
+            seen.push(t.clone());
+            c.query(
+                "INSERT INTO gloss_terms VALUES (?1, ?2, ?3, ?4)",
+                &[t.into(), tier.into(), ((tier + q) * 10_000_000 + r.int(3).unwrap()).into(), r.int(0).unwrap().into()],
+            )
+            .unwrap();
+        }
+    }
+    PackDb::new(&db.id, c).unwrap()
+}
+
+#[test]
+fn modern_schema_matches_legacy_results() {
+    let (old, new) = (build_core(), modernize(build_core()));
+    assert!(new.caps.gloss_terms && new.caps.hw_rank && new.caps.wotd && new.caps.hanja_rank);
+    assert!(!old.caps.gloss_terms && !old.caps.hw_rank);
+    let ids = |p: &PackDb, q: &str| -> Vec<(String, i64)> {
+        search(&[p], q, None).unwrap().rows.iter().map(|r| (r.headword.clone(), r.id)).collect()
+    };
+    for q in [
+        "학교", "학", "가", "갔다", "가다", "ㅎ", "학교가", "공부했어요", "school", "eat", "to eat", "go", "love", "stud", "sch", "teacher",
+        "definition", "cold", "hear", "hold", "study", "student", "學", "學校", "校",
+    ] {
+        assert_eq!(ids(&old, q), ids(&new, q), "query {q}");
+    }
+    assert_eq!(
+        words_with_hanja(&[&old], "學", 10, 0).unwrap().iter().map(|r| r.id).collect::<Vec<_>>(),
+        words_with_hanja(&[&new], "學", 10, 0).unwrap().iter().map(|r| r.id).collect::<Vec<_>>()
+    );
+    assert_eq!(word_of_day(&[&old], "2025-06-01").unwrap().map(|r| r.id), word_of_day(&[&new], "2025-06-01").unwrap().map(|r| r.id));
+    // gloss tiers: exact first-gloss, exact later gloss, prefix ("stud" -> student/study)
+    let r = search(&[&new], "study", None).unwrap();
+    assert_eq!(r.rows[0].headword, "공부");
+}
+
 #[test]
 #[ignore]
 fn perf_real_data() {
     let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out");
-    let packs: Vec<PackDb> = ["core", "stdict", "opendict"].iter().filter_map(|id| open_real(&dir.join(format!("{id}.sqlite")), id)).collect();
-    let refs: Vec<&PackDb> = packs.iter().collect();
-    for q in ["가", "사", "ㄱ", "가다", "갔어요", "학교", "eat", "school", "e", "ea", "學", "사랑하"] {
-        let t = std::time::Instant::now();
-        let n = search(&refs, q, None).unwrap().rows.len();
-        let cold = t.elapsed();
-        let t = std::time::Instant::now();
-        search(&refs, q, None).unwrap();
-        eprintln!("{q}: {n} rows, cold {:?}, warm {:?}", cold, t.elapsed());
+    for q in ["가", "사", "하", "ㄱ", "가다", "갔어요", "학교", "사랑하", "eat", "school", "go", "e", "ea", "love", "water", "學", "學校"] {
+        cold(&dir, &format!("search {q}"), |r| search(r, q, Some(50)).unwrap().rows.len());
+    }
+    cold(&dir, "entriesByHeadword 먹다", |r| entries_by_headword(r, "먹다").unwrap().len());
+    cold(&dir, "hanjaChar 學", |r| hanja_char(r, "學").unwrap().is_some());
+    cold(&dir, "wordsWithHanja 學", |r| words_with_hanja(r, "學", 50, 0).unwrap().len());
+    cold(&dir, "grammarList", |r| grammar_list(r).unwrap().len());
+    cold(&dir, "wordOfDay", |r| word_of_day(r, "2025-06-01").unwrap().is_some());
+    cold(&dir, "entry krdict #1", |r| entry(r, "krdict", 1).unwrap().is_some());
+}
+
+#[test]
+#[ignore]
+fn explain_real_data() {
+    let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out");
+    let packs = open_cold(&dir);
+    let plan = |p: &PackDb, sql: &str| {
+        let all = [Val::Text("가".into()), Val::Text("각".into())];
+        let n = if sql.contains("?2") { 2 } else if sql.contains("?1") { 1 } else { 0 };
+        let rows = p.conn.query(&format!("EXPLAIN QUERY PLAN {sql}"), &all[..n]).unwrap();
+        eprintln!("[{}] {sql}\n    => {}", p.id, rows.iter().map(|r| r.string(3)).collect::<Vec<_>>().join(" | "));
+    };
+    for p in &packs {
+        plan(p, "SELECT id, rank FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= ?1 AND hw_norm < ?2 ORDER BY rank LIMIT 50");
+        plan(p, "SELECT id, rank FROM entries INDEXED BY entries_hw_rank WHERE hw_norm = ?1 ORDER BY rank LIMIT 50");
+        plan(p, "SELECT e.id FROM entries e WHERE e.id IN (1,2,3)");
+        plan(p, "SELECT e.id FROM entries e WHERE e.source = 'krdict' AND e.id = 5");
+        plan(p, "SELECT e.id FROM entries e WHERE e.hw_norm = ?1 ORDER BY e.rank, e.homonym, e.id");
+        plan(p, "SELECT e.id FROM forms f JOIN entries e ON e.id = f.entry_id WHERE f.form = ?1 ORDER BY e.rank LIMIT 50");
+        plan(p, "SELECT e.id FROM entries e WHERE e.hanja = ?1 ORDER BY e.rank LIMIT 50");
+        plan(p, "SELECT e.id FROM entries e WHERE e.hanja >= ?1 AND e.hanja < ?2 ORDER BY e.rank LIMIT 50");
+        if p.caps.hanja_words {
+            plan(p, "SELECT e.id FROM hanja_words h JOIN entries e ON e.id = h.entry_id WHERE h.ch = ?1 ORDER BY e.rank, e.id LIMIT 50");
+        }
+        if p.caps.gloss_terms {
+            plan(p, "SELECT score, entry_id FROM gloss_terms WHERE term = ?1 ORDER BY score LIMIT 60");
+            plan(p, "SELECT tier, score, entry_id FROM gloss_terms WHERE term > ?1 AND term < ?2 LIMIT 2000");
+            plan(p, "SELECT * FROM wotd w JOIN entries e ON e.id = w.entry_id WHERE w.n = ?1");
+        }
+        if p.caps.grammar {
+            plan(p, "SELECT id, entry_id, pattern, category, level, summary_en, sort FROM grammar ORDER BY sort, id");
+        }
+        if p.caps.hanja_chars {
+            plan(p, "SELECT ch FROM hanja_chars WHERE ch = ?1");
+        }
+    }
+}
+
+#[test]
+#[ignore]
+fn scratch_probe() {
+    let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out");
+    let qs: Vec<(&str, Vec<Val>)> = vec![
+        ("SELECT id, rank FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= ?1 AND hw_norm < ?2 ORDER BY rank LIMIT 50", vec!["가".into(), format!("가{}", char::MAX).into()]),
+        ("SELECT id, rank FROM entries INDEXED BY entries_hw_rank WHERE hw_norm = ?1 ORDER BY rank LIMIT 50", vec!["가".into()]),
+        ("SELECT e.id FROM forms f JOIN entries e ON e.id = f.entry_id WHERE f.form = ?1 ORDER BY e.rank LIMIT 50", vec!["가".into()]),
+        ("SELECT e.id, e.headword, e.hanja, e.pos, e.level, e.gloss, e.kind FROM entries e WHERE e.id IN (SELECT id FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= ?1 AND hw_norm < ?2 ORDER BY rank LIMIT 50)", vec!["가".into(), format!("가{}", char::MAX).into()]),
+    ];
+    for (sql, params) in qs {
+        let packs = open_cold(&dir);
+        let p = &packs[0];
+        p.conn.cache_misses(true);
+        let n = p.conn.query(sql, &params).unwrap().len();
+        eprintln!("{n:5} rows {:5} misses  {sql} {:?}", p.conn.cache_misses(false), params[0]);
+    }
+}
+
+#[test]
+#[ignore]
+fn scratch_packs() {
+    let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out");
+    for q in ["가", "사", "하", "eat", "school"] {
+        for sel in [&["core"][..], &["core", "stdict"], &["core", "stdict", "opendict"]] {
+            let packs = open_cold(&dir);
+            let refs: Vec<&PackDb> = packs.iter().filter(|p| sel.contains(&p.id.as_str())).collect();
+            for p in &packs { p.conn.cache_misses(true); }
+            search(&refs, q, Some(50)).unwrap();
+            let m: Vec<i64> = packs.iter().map(|p| p.conn.cache_misses(false)).collect();
+            eprintln!("{q} {sel:?} misses per pack {m:?}");
+        }
     }
 }

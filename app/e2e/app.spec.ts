@@ -144,9 +144,10 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   // warm the engine (first queries touch cold pages), then measure typing a word keystroke by keystroke
   await typeAndMeasure(page, '학교');
+  await page.waitForTimeout(2500); // grammar list is prefetched ~1.5 s after engine-ready (a main-thread blip)
   const keys: number[] = [];
   for (const q of ['ㅎ', '하', '학', '학교', '가', '갔', '먹', '먹다', '사', '사랑']) keys.push(await typeAndMeasure(page, q));
-  keys.push(await typeAndMeasure(page, 'eat'), await typeAndMeasure(page, 'school'));
+  for (const q of ['갔어요', 'eat', 'school', 'go', 'e', 'ea', 'love', '學']) keys.push(await typeAndMeasure(page, q));
   console.log('keystroke->results ms', keys.map((k) => Math.round(k)).join(' '), 'p95', Math.round(p95(keys)));
 
   await typeAndMeasure(page, '학교');
@@ -164,7 +165,6 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
     mo.observe(main, { childList: true, subtree: true });
     history.back();
   }));
-  await page.waitForTimeout(2500); // grammar list is prefetched ~1.5 s after engine-ready
   const tabs: number[] = [];
   for (const name of ['Grammar', 'Bookmarks', 'Settings', 'Grammar']) {
     tabs.push(await page.evaluate((n) => new Promise<number>((resolve) => {
@@ -178,9 +178,10 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
   }
   console.log(`tap->entry ${Math.round(tap)}ms, back->results ${Math.round(back)}ms, tabs ${tabs.map(Math.round).join(' ')}ms`);
   expect(Math.min(...keys)).toBeGreaterThan(0); // -1 = timed out
-  // Budget is p95 < 50 ms; today 1-syllable prefix queries and English FTS cost 250-500 ms inside the engine.
-  expect([...keys].sort((a, b) => a - b)[Math.floor(keys.length / 2)]).toBeLessThan(150);
-  expect(p95(keys)).toBeLessThan(800);
+  // Engine time is 2-35 ms per cold query in headless Chromium; the rest of the keystroke->results
+  // time is the worker round trip + rendering (a cached 50-row result still takes 40-90 ms to paint).
+  expect([...keys].sort((a, b) => a - b)[Math.floor(keys.length / 2)]).toBeLessThan(90);
+  expect(p95(keys)).toBeLessThan(200);
   expect(tap).toBeLessThan(100);
   expect(back).toBeLessThan(100);
   expect(Math.max(...tabs)).toBeLessThan(150);

@@ -66,3 +66,20 @@ One line per (word, pos, etymology). Merged per (word, etymology_number) -> one 
 - grammar categories: 조사 Particles; 어미 by Korean definition (선어말 Pre-final, 연결 Connective, 종결 Final, 전성/관형사형/명사형 Nominal/adnominal, else Final); 문법‧표현 Expressions; 접사 Affixes (krdict only).
 - DB finishing: `ANALYZE; PRAGMA journal_mode=DELETE; VACUUM`, page_size 4096. rusqlite 0.32 bundles SQLite 3.46.0 (FTS5 with `trigram` and `porter unicode61`).
 - Manifest `chunks` entries are `{"file","bytes"}`; chunk size is 20,000,000 bytes; one gzip stream (level 9) per pack.
+
+## Query-speed structures (browser page reads)
+
+Every SQLite page miss in the browser is a slow OPFS read, so the schema is shaped so that the hot queries are
+answered from a few contiguous index pages, and only the final <= 50 result rows are fetched from `entries`:
+
+- `entries_hw_rank(hw_norm, rank)` is covering for `SELECT id, rank ... WHERE hw_norm = ?` / `hw_norm >= ? AND < ? ORDER BY rank LIMIT 50`
+  (EXPLAIN QUERY PLAN: `USING COVERING INDEX entries_hw_rank`; the range form adds a TEMP B-TREE over index entries only). It replaces `entries_hw`.
+  The engine forces it with `INDEXED BY` (otherwise the planner may walk `entries_rank` and probe the table per row).
+- `gloss_terms` (core only): see docs/SCOPE.md. Built in `insert_entry` (`Counters::terms`, `gloss_items()`), sorted and bulk-inserted
+  just before the indexes. Items split on `;` and `,` like the old engine-side `gloss_tier`. A term appears once per entry (lowest tier wins).
+  English search = `term = q` (tier 0/1) + `term > q AND < q||U+10FFFF` (tier 2, >= 3 chars, first 2000 rows in term order) + FTS rowid/bm25 only.
+- `wotd(n, entry_id)`: word-of-the-day candidates, replaces a full scan + OFFSET.
+- `hanja_words.rank` + index `(ch, rank, entry_id)`; `entries_hanja` partial index for whole-word hanja search.
+- Old packs (without these) still work: the engine falls back to the old queries per pack (`Caps` in core/src/search.rs).
+- Measure with `cargo test --release -p kdict-core perf_real_data -- --ignored --nocapture` (cold fresh connections; prints SQLite pager
+  cache misses = pages read per query) and `explain_real_data` (query plans) against `pipeline/out`.

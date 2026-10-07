@@ -422,9 +422,30 @@ fn end_to_end_mini_build() {
     let c = Connection::open(out.join("core.sqlite")).unwrap();
     assert_eq!(q::<i64>(&c, "PRAGMA page_size"), 4096);
     assert_eq!(q::<String>(&c, "PRAGMA journal_mode"), "delete");
-    for t in ["meta", "entries", "forms", "hanja_words", "entries_fts", "hanja_chars", "sentences", "sentences_fts", "grammar"] {
+    for t in ["meta", "entries", "forms", "hanja_words", "entries_fts", "hanja_chars", "sentences", "sentences_fts", "grammar", "gloss_terms", "wotd", "entries_hw_rank"] {
         assert_eq!(q::<i64>(&c, &format!("SELECT COUNT(*) FROM sqlite_master WHERE name='{t}'")), 1, "table {t}");
     }
+    // gloss_terms: one row per (normalised gloss item, entry); score orders results within a term
+    assert_eq!(q::<i64>(&c, "SELECT tier FROM gloss_terms g JOIN entries e ON e.id=g.entry_id WHERE g.term='school' AND e.source='krdict'"), 0);
+    assert_eq!(q::<i64>(&c, "SELECT score FROM gloss_terms g JOIN entries e ON e.id=g.entry_id WHERE g.term='school' AND e.source='krdict'"), q::<i64>(&c, "SELECT rank FROM entries WHERE hw_norm='학교' AND source='krdict'"));
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM gloss_terms WHERE term LIKE 'to %' OR term != lower(trim(term)) OR length(term) > 40"), 0);
+    // "eat; smoke" on a later sense: 'smoke' is a tier-1 item, 'eat' of the first sense tier 0
+    assert!(q::<i64>(&c, "SELECT COUNT(*) FROM gloss_terms WHERE term='smoke' AND tier=1") >= 1);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM (SELECT term, entry_id FROM gloss_terms GROUP BY term, entry_id HAVING COUNT(*) > 1)"), 0);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='krdict' AND level IN (1,2) AND kind='word' AND gloss IS NOT NULL AND gloss != ''"));
+    assert_eq!(q::<i64>(&c, "SELECT MAX(n) + 1 FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM wotd"));
+    // covering-index plans for the hot queries
+    let plan = |sql: &str| -> String {
+        let mut st = c.prepare(&format!("EXPLAIN QUERY PLAN {sql}")).unwrap();
+        let rows: Vec<String> = st.query_map([], |r| r.get::<_, String>(3)).unwrap().map(|r| r.unwrap()).collect();
+        rows.join(" | ")
+    };
+    let p = plan("SELECT id FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= '가' AND hw_norm < '각' ORDER BY rank LIMIT 50");
+    assert!(p.contains("USING COVERING INDEX entries_hw_rank"), "{p}");
+    let p = plan("SELECT id FROM entries WHERE hw_norm = '가' ORDER BY rank LIMIT 50");
+    assert!(p.contains("USING COVERING INDEX entries_hw_rank") && !p.contains("TEMP B-TREE"), "{p}");
+    let p = plan("SELECT tier, score, entry_id FROM gloss_terms WHERE term = 'eat' ORDER BY score LIMIT 60");
+    assert!(p.contains("PRIMARY KEY") && !p.contains("TEMP B-TREE"), "{p}");
     assert!(q::<String>(&c, "SELECT sql FROM sqlite_master WHERE name='entries_fts'").contains("content=''"));
     for k in ["pack", "version", "built_at", "counts", "sources"] {
         assert_eq!(q::<i64>(&c, &format!("SELECT COUNT(*) FROM meta WHERE key='{k}'")), 1, "meta {k}");

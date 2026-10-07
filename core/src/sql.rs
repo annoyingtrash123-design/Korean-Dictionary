@@ -127,6 +127,17 @@ mod native {
             self.db.execute_batch(sql).map_err(err)
         }
 
+        /// Pager cache misses (pages read from the file) since the last reset; the native
+        /// proxy for the number of OPFS reads a query costs in the browser.
+        pub fn cache_misses(&self, reset: bool) -> i64 {
+            let (mut cur, mut hi) = (0i32, 0i32);
+            unsafe {
+                // SQLITE_DBSTATUS_CACHE_MISS = 8
+                rusqlite::ffi::sqlite3_db_status(self.db.handle(), 8, &mut cur, &mut hi, reset as i32);
+            }
+            cur as i64
+        }
+
         pub fn query(&self, sql: &str, params: &[Val]) -> Result<Vec<Row>> {
             let mut stmt = self.db.prepare_cached(sql).map_err(err)?;
             let ncol = stmt.column_count();

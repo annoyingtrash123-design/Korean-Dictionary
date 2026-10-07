@@ -76,23 +76,35 @@ CREATE TABLE entries (
   ext_id    TEXT,              -- id in the source dictionary (addition)
   quality   INTEGER NOT NULL   -- result-quality hint, 0 best: source tier (krdict 0, wikt 1, stdict 2, kengdic 3, opendict 4) + 1 for phrase/proverb/idiom (addition)
 );
-CREATE INDEX entries_hw   ON entries(hw_norm);
-CREATE INDEX entries_rank ON entries(rank);
+CREATE INDEX entries_hw_rank ON entries(hw_norm, rank);  -- covering: exact / prefix id lists in rank order without touching the table (replaces entries_hw)
+CREATE INDEX entries_hanja   ON entries(hanja) WHERE hanja IS NOT NULL;   -- whole-word hanja lookup (addition)
+CREATE INDEX entries_rank    ON entries(rank);
 
 -- Conjugated / variant forms → entry (from krdict WordForm 활용, stdict conjugation, wikt forms)
 CREATE TABLE forms (form TEXT NOT NULL, entry_id INTEGER NOT NULL);
 CREATE INDEX forms_form ON forms(form);
 
 -- Each hanja character of an entry → entry  (for hanja search & "words with this character")
-CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL);
-CREATE INDEX hanja_words_ch ON hanja_words(ch);
+CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL, rank INTEGER NOT NULL DEFAULT 0);  -- rank = entries.rank (addition)
+CREATE INDEX hanja_words_ch ON hanja_words(ch, rank, entry_id);   -- covering: 'words with this character' by rank
 
 -- English full-text search (core pack only; stdict has none)
 -- rowid = entries.id. head = short English glosses (first 6); en = English definitions, only for entries WITHOUT glosses.
 -- Query: MATCH 'school' ORDER BY bm25(entries_fts, 10.0, 1.0), quality, rank
 CREATE VIRTUAL TABLE entries_fts USING fts5(head, en, content='', tokenize='porter unicode61');
 
--- core pack only:
+-- core pack only (additions):
+-- One row per (normalised English gloss item, entry): term = gloss item lower-cased, trimmed, leading 'to ' stripped,
+-- whitespace collapsed (items > 40 chars skipped; ALL gloss items of all senses). tier 0 = the entry's first gloss item, 1 = any other.
+-- score = (tier + quality) * 10_000_000 + min(rank, 9_999_999), so ORDER BY score within a term is the final result order.
+-- Engine: exact = `term = ?`; prefix (tier 2) = `term > ? AND term < ?||char(0x10FFFF)`.
+CREATE TABLE gloss_terms (
+  term TEXT NOT NULL, tier INTEGER NOT NULL, score INTEGER NOT NULL, entry_id INTEGER NOT NULL,
+  PRIMARY KEY (term, score, entry_id)
+) WITHOUT ROWID;
+-- Word-of-the-day candidates (krdict level 1-2 word entries with a gloss), n = 0..N-1 in entries.id order.
+CREATE TABLE wotd (n INTEGER PRIMARY KEY, entry_id INTEGER NOT NULL);
+
 CREATE TABLE hanja_chars (
   ch TEXT PRIMARY KEY, readings TEXT,   -- '학' (comma-separated if several)
   meaning_en TEXT, strokes INTEGER, radical TEXT, word_count INTEGER

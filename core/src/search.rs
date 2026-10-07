@@ -23,6 +23,16 @@ pub struct Caps {
     pub grammar: bool,
     /// `entries_fts` has the short-gloss `head` column (weighted higher).
     pub fts_head: bool,
+    /// `gloss_terms` (one row per normalised English gloss item, pre-scored) exists.
+    pub gloss_terms: bool,
+    /// Covering index `entries_hw_rank(hw_norm, rank)` exists.
+    pub hw_rank: bool,
+    /// `wotd(n, entry_id)` candidate list exists.
+    pub wotd: bool,
+    /// `hanja_words.rank` exists (covering `(ch, rank, entry_id)` index).
+    pub hanja_rank: bool,
+    /// `entries_hanja` index exists.
+    pub hanja_idx: bool,
 }
 
 /// An opened pack database.
@@ -39,7 +49,23 @@ impl PackDb {
         if !names.contains("entries") {
             return Err(SqlError(format!("pack '{id}' has no entries table")));
         }
+        let has_index = |name: &str| {
+            conn.query("SELECT 1 FROM sqlite_master WHERE type = 'index' AND name = ?1", &[name.into()])
+                .map(|r| !r.is_empty())
+                .unwrap_or(false)
+        };
+        let has_hw_rank = has_index("entries_hw_rank");
+        let hanja_rank = names.contains("hanja_words")
+            && conn
+                .query("SELECT name FROM pragma_table_info('hanja_words')", &[])
+                .map(|r| r.iter().any(|r| r.string(0) == "rank"))
+                .unwrap_or(false);
         let caps = Caps {
+            gloss_terms: names.contains("gloss_terms"),
+            hw_rank: has_hw_rank,
+            wotd: names.contains("wotd"),
+            hanja_rank,
+            hanja_idx: has_index("entries_hanja"),
             forms: names.contains("forms"),
             hanja_words: names.contains("hanja_words"),
             entries_fts: names.contains("entries_fts"),
@@ -196,6 +222,52 @@ fn push_new(out: &mut Vec<ResultRow>, seen: &mut HashSet<(String, i64)>, rows: V
     }
 }
 
+/// `INDEXED BY` clause that forces the covering `(hw_norm, rank)` index (the planner would
+/// otherwise happily walk `entries_rank` and probe the table for every row).
+fn hw_hint(p: &PackDb) -> &'static str {
+    if p.caps.hw_rank {
+        "INDEXED BY entries_hw_rank"
+    } else {
+        ""
+    }
+}
+
+/// Run an `id, rank` query on every pack; the best `limit` as (rank, pack index, id).
+fn top_ids(
+    packs: &[&PackDb],
+    sql: &dyn Fn(&PackDb) -> String,
+    params: &[Val],
+    limit: usize,
+) -> Result<Vec<(i64, usize, i64)>> {
+    let mut c = Vec::new();
+    for (pi, p) in packs.iter().enumerate() {
+        for r in p.conn.query(&sql(p), params)? {
+            c.push((r.int(1).unwrap_or(i64::MAX), pi, r.int(0).unwrap_or(0)));
+        }
+    }
+    c.sort();
+    c.truncate(limit);
+    Ok(c)
+}
+
+/// Full result rows for (sort key, pack index, id) candidates, in candidate order.
+fn rows_for(packs: &[&PackDb], cands: &[(i64, usize, i64)], via: Option<&'static str>) -> Result<Vec<ResultRow>> {
+    let mut by_id: HashMap<(usize, i64), ResultRow> = HashMap::new();
+    for (pi, p) in packs.iter().enumerate() {
+        let ids: Vec<i64> = cands.iter().filter(|c| c.1 == pi).map(|c| c.2).collect();
+        for chunk in ids.chunks(200) {
+            let ph = (1..=chunk.len()).map(|i| format!("?{i}")).collect::<Vec<_>>().join(",");
+            let sql = format!("SELECT {COLS} FROM entries e WHERE e.id IN ({ph})");
+            let params: Vec<Val> = chunk.iter().map(|&i| Val::Int(i)).collect();
+            for r in p.conn.query(&sql, &params)? {
+                let row = result_row(&p.id, &r, via);
+                by_id.insert((pi, row.id), row);
+            }
+        }
+    }
+    Ok(cands.iter().filter_map(|c| by_id.remove(&(c.1, c.2))).collect())
+}
+
 // ---- search ---------------------------------------------------------------------------------
 
 /// Search across the given (already filtered to enabled) packs.
@@ -219,16 +291,12 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
     let mut out: Vec<ResultRow> = Vec::new();
     let mut seen: HashSet<(String, i64)> = HashSet::new();
 
-    // 1. exact headword
-    let mut exact = Vec::new();
-    for p in packs {
-        let sql = format!("SELECT {COLS} FROM entries e WHERE e.hw_norm = ?1 ORDER BY e.rank LIMIT {EXACT_LIMIT}");
-        for r in p.conn.query(&sql, &[q.as_str().into()])? {
-            exact.push(result_row(&p.id, &r, Some("exact")));
-        }
-    }
-    sort_by_rank(&mut exact);
-    push_new(&mut out, &mut seen, exact);
+    // 1. exact headword (ids and ranks from the covering index, then the full rows)
+    let exact_sql = |p: &PackDb| {
+        format!("SELECT id, rank FROM entries {} WHERE hw_norm = ?1 ORDER BY rank LIMIT {EXACT_LIMIT}", hw_hint(p))
+    };
+    let cands = top_ids(packs, &exact_sql, &[q.as_str().into()], limit.max(EXACT_LIMIT))?;
+    push_new(&mut out, &mut seen, rows_for(packs, &cands, Some("exact"))?);
 
     // 2. conjugated / variant forms listed in the pack
     let mut forms = Vec::new();
@@ -277,20 +345,28 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
         push_new(&mut out, &mut seen, found.into_iter().map(|(_, r)| r).collect());
     }
 
-    // 4. prefix matches
+    // 4. prefix matches. A one-syllable query matches thousands of headwords in every pack;
+    // reading them all costs hundreds of page reads, so only the core pack is scanned for it
+    // (the other packs still contribute exact / form / conjugation matches above).
     let upper = format!("{q}{}", char::MAX);
-    let mut prefix = Vec::new();
-    for p in packs {
-        let sql = format!(
-            "SELECT {COLS} FROM entries e WHERE e.hw_norm >= ?1 AND e.hw_norm < ?2 ORDER BY e.rank LIMIT {PREFIX_LIMIT}"
-        );
-        for r in p.conn.query(&sql, &[q.as_str().into(), upper.as_str().into()])? {
-            prefix.push(result_row(&p.id, &r, Some("prefix")));
-        }
-    }
-    sort_by_rank(&mut prefix);
-    prefix.truncate(PREFIX_LIMIT);
-    push_new(&mut out, &mut seen, prefix);
+    let core_only = q.chars().count() == 1 && packs.iter().any(|p| p.id == "core");
+    let prefix_packs: Vec<&PackDb> = packs.iter().copied().filter(|p| !core_only || p.id == "core").collect();
+    let prefix_sql = |p: &PackDb| {
+        format!(
+            "SELECT id, rank FROM entries {} WHERE hw_norm >= ?1 AND hw_norm < ?2 ORDER BY rank LIMIT {PREFIX_LIMIT}",
+            hw_hint(p)
+        )
+    };
+    // ids are cheap (covering index); full rows cost a page read each, so fetch only as many
+    // as still fit under `limit` after dropping what the earlier steps already found.
+    let cands = top_ids(&prefix_packs, &prefix_sql, &[q.as_str().into(), upper.as_str().into()], PREFIX_LIMIT)?;
+    let need = limit.saturating_sub(out.len());
+    let cands: Vec<_> = cands
+        .into_iter()
+        .filter(|c| !seen.contains(&(prefix_packs[c.1].id.clone(), c.2)))
+        .take(need)
+        .collect();
+    push_new(&mut out, &mut seen, rows_for(&prefix_packs, &cands, Some("prefix"))?);
 
     out.truncate(limit);
     let hints = grammar_hints(&q);
@@ -360,59 +436,170 @@ fn gloss_tier(gloss: Option<&str>, q: &str) -> u8 {
 }
 
 const FTS_CANDIDATES: i64 = 300;
+const GLOSS_EXACT_LIMIT: i64 = 60;
+const GLOSS_PREFIX_LIMIT: usize = 40;
+/// Rows read (in term order) for a gloss-prefix query before ranking them in Rust.
+const GLOSS_PREFIX_SCAN: i64 = 2000;
+const FTS_LIMIT: i64 = 40;
+/// Gloss matches at which the text-relevance (FTS) tier is skipped.
+const FTS_SKIP_ABOVE: usize = 30;
+const SCORE_UNIT: i64 = 10_000_000;
+
+/// One English candidate. `group` 0 = gloss match (ordered by `key`), 1 = text relevance
+/// (ordered by `score`).
+struct Hit {
+    group: u8,
+    key: i64,
+    score: f64,
+    row: ResultRow,
+}
 
 fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult> {
     let ql: String = q.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase();
-    // (tier, quality-adjusted score) per row; rows can come from several queries.
-    let mut hits: HashMap<(String, i64), (u8, f64, ResultRow)> = HashMap::new();
-    if let Some(m) = fts_query(q) {
-        for p in packs.iter().filter(|p| p.caps.entries_fts) {
-            let bm = if p.caps.fts_head { "bm25(entries_fts, 10.0, 1.0)" } else { "bm25(entries_fts)" };
-            // The exact-token query keeps short common words ("go") from being crowded out
-            // by the prefix query's many matches ("good", "gold", …).
-            let exact = m.trim_end_matches('*').to_string();
-            // (match expression, order): the gloss-only query is ordered by word frequency so
-            // common words with many glosses (가다: "go; travel; head for; …") are never cut off.
-            let mut exprs = vec![(exact.clone(), "sc, e.rank"), (m.clone(), "sc, e.rank")];
-            if p.caps.fts_head {
-                exprs.insert(0, (format!("head : ({exact})"), "e.rank"));
+    let qt: &str = match ql.strip_prefix("to ") {
+        Some(rest) if !rest.trim().is_empty() => rest.trim(),
+        _ => &ql,
+    };
+    let mut hits: HashMap<(String, i64), Hit> = HashMap::new();
+
+    // 1. gloss tiers from `gloss_terms` (pre-scored: ORDER BY score is the final order)
+    let mut tiered: Vec<(i64, usize, i64)> = Vec::new(); // (key, pack index, id)
+    for (pi, p) in packs.iter().enumerate().filter(|(_, p)| p.caps.gloss_terms) {
+        let mut seen_ids: HashSet<i64> = HashSet::new();
+        let rows = p.conn.query(
+            &format!("SELECT score, entry_id FROM gloss_terms WHERE term = ?1 ORDER BY score LIMIT {GLOSS_EXACT_LIMIT}"),
+            &[qt.into()],
+        )?;
+        for r in rows {
+            let id = r.int(1).unwrap_or(0);
+            if seen_ids.insert(id) {
+                tiered.push((r.int(0).unwrap_or(i64::MAX), pi, id));
             }
-            for (expr, order) in exprs {
+        }
+        if qt.chars().count() >= 3 {
+            let upper = format!("{qt}{}", char::MAX);
+            let rows = p.conn.query(
+                &format!(
+                    "SELECT tier, score, entry_id FROM gloss_terms WHERE term > ?1 AND term < ?2 LIMIT {GLOSS_PREFIX_SCAN}"
+                ),
+                &[qt.into(), upper.as_str().into()],
+            )?;
+            // an item that merely starts with the query is tier 2, whatever its position
+            let mut pre: HashMap<i64, i64> = HashMap::new();
+            for r in rows {
+                let (tier, score, id) = (r.int(0).unwrap_or(0), r.int(1).unwrap_or(i64::MAX), r.int(2).unwrap_or(0));
+                if seen_ids.contains(&id) {
+                    continue;
+                }
+                let key = score + (2 - tier) * SCORE_UNIT;
+                let e = pre.entry(id).or_insert(key);
+                *e = (*e).min(key);
+            }
+            let mut pre: Vec<(i64, i64)> = pre.into_iter().map(|(id, k)| (k, id)).collect();
+            pre.sort();
+            pre.truncate(GLOSS_PREFIX_LIMIT);
+            tiered.extend(pre.into_iter().map(|(k, id)| (k, pi, id)));
+        }
+    }
+    tiered.sort();
+    tiered.truncate(limit);
+    for (c, row) in tiered.iter().zip(rows_for(packs, &tiered, Some("fts"))?) {
+        hits.insert(key(&row), Hit { group: 0, key: c.0, score: 0.0, row });
+    }
+
+    // 2. text relevance (definitions, stemmed forms): rowid + bm25 only, then the rows
+    let mut fts: Vec<(f64, usize, i64)> = Vec::new();
+    // Only when the gloss tiers left room: bm25 ordering reads a docsize row per match (random
+    // page reads), and these rows rank below every gloss match anyway. A very short query
+    // is left to the gloss tiers unless they found nothing.
+    let want_fts = if qt.chars().count() < 3 { hits.is_empty() } else { hits.len() < FTS_SKIP_ABOVE };
+    if want_fts && hits.len() < limit {
+        if let Some(m) = fts_query(q) {
+            // a short last token as a prefix would match a huge part of the index
+            let last_len = m.trim_end_matches('*').rsplit('"').nth(1).map_or(0, |t| t.chars().count());
+            let expr = if last_len >= 3 { m.clone() } else { m.trim_end_matches('*').to_string() };
+            for (pi, p) in packs.iter().enumerate().filter(|(_, p)| p.caps.entries_fts && p.caps.gloss_terms) {
+                let bm = if p.caps.fts_head { "bm25(entries_fts, 10.0, 1.0)" } else { "bm25(entries_fts)" };
                 let sql = format!(
-                    "SELECT {COLS}, {bm} AS sc FROM entries_fts JOIN entries e ON e.id = entries_fts.rowid \
-                     WHERE entries_fts MATCH ?1 ORDER BY {order} LIMIT ?2"
+                    "SELECT rowid, {bm} FROM entries_fts WHERE entries_fts MATCH ?1 ORDER BY 2 LIMIT {FTS_LIMIT}"
                 );
-                for r in p.conn.query(&sql, &[expr.as_str().into(), FTS_CANDIDATES.into()])? {
-                    let score = r.real(13).unwrap_or(0.0);
-                    let row = result_row(&p.id, &r, Some("fts"));
-                    let tier = gloss_tier(row.gloss.as_deref(), &ql);
-                    hits.entry(key(&row)).or_insert((tier, score, row));
+                for r in p.conn.query(&sql, &[expr.as_str().into()])? {
+                    let id = r.int(0).unwrap_or(0);
+                    if !hits.contains_key(&(p.id.clone(), id)) {
+                        fts.push((r.real(1).unwrap_or(0.0), pi, id));
+                    }
                 }
             }
         }
     }
-    let mut v: Vec<(u8, f64, ResultRow)> = hits.into_values().collect();
+    if !fts.is_empty() {
+        let cands: Vec<(i64, usize, i64)> = fts.iter().map(|c| (0, c.1, c.2)).collect();
+        let score_of: HashMap<(usize, i64), f64> = fts.iter().map(|c| ((c.1, c.2), c.0)).collect();
+        let pack_idx: HashMap<&str, usize> = packs.iter().enumerate().map(|(i, p)| (p.id.as_str(), i)).collect();
+        for row in rows_for(packs, &cands, Some("fts"))? {
+            let sc = score_of.get(&(pack_idx[row.pack.as_str()], row.id)).copied().unwrap_or(0.0);
+            hits.entry(key(&row)).or_insert(Hit { group: 1, key: 0, score: sc, row });
+        }
+    }
+
+    // 3. packs without `gloss_terms` (older builds): FTS candidates ranked by gloss tier in Rust
+    for p in packs.iter().filter(|p| p.caps.entries_fts && !p.caps.gloss_terms) {
+        english_legacy(p, q, &ql, &mut hits)?;
+    }
+
+    let mut v: Vec<Hit> = hits.into_values().collect();
     // Gloss matches: best (tier + source) first, then the most frequent word.
     // Everything else: text relevance, nudged down for weaker sources.
-    // Gloss matches are keyed on match tier + source quality, so a learner's-dictionary prefix
-    // match ("thank" → "thankful") beats an exact match from a noisy source.
-    let key = |h: &(u8, f64, ResultRow)| if h.0 < 3 { (0, h.0 as i64 + quality(&h.2)) } else { (1, 0) };
     v.sort_by(|a, b| {
-        key(a).cmp(&key(b)).then_with(|| {
-            if a.0 < 3 {
-                a.2.rank.cmp(&b.2.rank)
+        (a.group, a.key).cmp(&(b.group, b.key)).then_with(|| {
+            if a.group == 0 {
+                a.row.rank.cmp(&b.row.rank)
             } else {
-                let sa = a.1 * (1.0 - 0.15 * quality(&a.2) as f64);
-                let sb = b.1 * (1.0 - 0.15 * quality(&b.2) as f64);
-                sa.partial_cmp(&sb).unwrap_or(std::cmp::Ordering::Equal).then(a.2.rank.cmp(&b.2.rank))
+                let sa = a.score * (1.0 - 0.15 * quality(&a.row) as f64);
+                let sb = b.score * (1.0 - 0.15 * quality(&b.row) as f64);
+                sa.partial_cmp(&sb).unwrap_or(std::cmp::Ordering::Equal).then(a.row.rank.cmp(&b.row.rank))
             }
         })
     });
     let mut out = Vec::new();
     let mut seen = HashSet::new();
-    push_new(&mut out, &mut seen, v.into_iter().map(|h| h.2).collect());
+    push_new(&mut out, &mut seen, v.into_iter().map(|h| h.row).collect());
     out.truncate(limit);
     Ok(SearchResult { mode: "english", rows: out, hanja: None, deconj: None, grammar_hints: None })
+}
+
+/// The original English search for one pack without `gloss_terms`.
+fn english_legacy(p: &PackDb, q: &str, ql: &str, hits: &mut HashMap<(String, i64), Hit>) -> Result<()> {
+    let Some(m) = fts_query(q) else { return Ok(()) };
+    let bm = if p.caps.fts_head { "bm25(entries_fts, 10.0, 1.0)" } else { "bm25(entries_fts)" };
+    // The exact-token query keeps short common words ("go") from being crowded out
+    // by the prefix query's many matches ("good", "gold", …).
+    let exact = m.trim_end_matches('*').to_string();
+    // (match expression, order): the gloss-only query is ordered by word frequency so
+    // common words with many glosses (가다: "go; travel; head for; …") are never cut off.
+    let mut exprs = vec![(exact.clone(), "sc, e.rank"), (m.clone(), "sc, e.rank")];
+    if p.caps.fts_head {
+        exprs.insert(0, (format!("head : ({exact})"), "e.rank"));
+    }
+    for (expr, order) in exprs {
+        let sql = format!(
+            "SELECT {COLS}, {bm} AS sc FROM entries_fts JOIN entries e ON e.id = entries_fts.rowid \
+             WHERE entries_fts MATCH ?1 ORDER BY {order} LIMIT ?2"
+        );
+        for r in p.conn.query(&sql, &[expr.as_str().into(), FTS_CANDIDATES.into()])? {
+            let score = r.real(13).unwrap_or(0.0);
+            let row = result_row(&p.id, &r, Some("fts"));
+            let tier = gloss_tier(row.gloss.as_deref(), ql);
+            let hit = if tier < 3 {
+                let k = (tier as i64 + quality(&row)) * SCORE_UNIT + row.rank.clamp(0, SCORE_UNIT - 1);
+                Hit { group: 0, key: k, score, row }
+            } else {
+                Hit { group: 1, key: 0, score, row }
+            };
+            hits.entry(key(&hit.row)).or_insert(hit);
+        }
+    }
+    Ok(())
 }
 
 fn search_hanja(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult> {
@@ -435,17 +622,49 @@ fn search_hanja(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult
     let n_chars = compact.chars().count();
     if n_chars >= 2 {
         // whole-word hanja: exact, then prefix, then contained
-        let like = format!("{}%", compact);
-        let steps: [(&str, Val); 3] = [
-            ("e.hanja = ?1", compact.as_str().into()),
-            ("e.hanja LIKE ?1", like.as_str().into()),
-            ("instr(e.hanja, ?1) > 0", compact.as_str().into()),
-        ];
-        for (cond, param) in steps {
+        let upper = format!("{compact}{}", char::MAX);
+        let rare = rarest_char(packs, &compact)?;
+        for step in 0..3 {
+            if step > 0 && out.len() >= PREFIX_LIMIT {
+                break;
+            }
             let mut rows = Vec::new();
             for p in packs {
-                let sql = format!("SELECT {COLS} FROM entries e WHERE {cond} ORDER BY e.rank LIMIT {PREFIX_LIMIT}");
-                for r in p.conn.query(&sql, &[param.clone()])? {
+                let (sql, params): (String, Vec<Val>) = match step {
+                    0 => (
+                        format!("SELECT {COLS} FROM entries e WHERE e.hanja = ?1 ORDER BY e.rank LIMIT {PREFIX_LIMIT}"),
+                        vec![compact.as_str().into()],
+                    ),
+                    1 if p.caps.hanja_idx => (
+                        format!(
+                            "SELECT {COLS} FROM entries e WHERE e.hanja >= ?1 AND e.hanja < ?2 ORDER BY e.rank LIMIT {PREFIX_LIMIT}"
+                        ),
+                        vec![compact.as_str().into(), upper.as_str().into()],
+                    ),
+                    1 => (
+                        format!("SELECT {COLS} FROM entries e WHERE e.hanja LIKE ?1 ORDER BY e.rank LIMIT {PREFIX_LIMIT}"),
+                        vec![format!("{compact}%").into()],
+                    ),
+                    // contained: walk the rarest character's words in rank order (index-driven)
+                    _ if p.caps.hanja_words => (
+                        format!(
+                            "SELECT {COLS} FROM hanja_words h JOIN entries e ON e.id = h.entry_id \
+                             WHERE h.ch = ?1 AND instr(e.hanja, ?2) > 0 ORDER BY h.rank, h.entry_id LIMIT {PREFIX_LIMIT}"
+                        ),
+                        vec![rare.as_str().into(), compact.as_str().into()],
+                    ),
+                    _ => (
+                        format!("SELECT {COLS} FROM entries e WHERE instr(e.hanja, ?1) > 0 ORDER BY e.rank LIMIT {PREFIX_LIMIT}"),
+                        vec![compact.as_str().into()],
+                    ),
+                };
+                // `hanja_rank` packs only: the join above orders by h.rank
+                let sql = if step == 2 && p.caps.hanja_words && !p.caps.hanja_rank {
+                    sql.replace("h.rank, h.entry_id", "e.rank, e.id")
+                } else {
+                    sql
+                };
+                for r in p.conn.query(&sql, &params)? {
                     rows.push(result_row(&p.id, &r, Some("hanja")));
                 }
             }
@@ -467,6 +686,25 @@ fn search_hanja(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult
         deconj: None,
         grammar_hints: None,
     })
+}
+
+/// The character of `compact` with the fewest words (cheapest to walk), the first one when unknown.
+fn rarest_char(packs: &[&PackDb], compact: &str) -> Result<String> {
+    let mut best: Option<(i64, char)> = None;
+    for c in compact.chars() {
+        let mut n = None;
+        for p in packs.iter().filter(|p| p.caps.hanja_chars) {
+            if let Some(r) = p.conn.query("SELECT word_count FROM hanja_chars WHERE ch = ?1", &[c.to_string().into()])?.first() {
+                n = r.int(0);
+                break;
+            }
+        }
+        let n = n.unwrap_or(i64::MAX);
+        if best.map_or(true, |(b, _)| n < b) {
+            best = Some((n, c));
+        }
+    }
+    Ok(best.map(|b| b.1).or_else(|| compact.chars().next()).unwrap_or(' ').to_string())
 }
 
 // ---- entry lookups --------------------------------------------------------------------------
@@ -550,16 +788,21 @@ pub fn words_with_hanja(packs: &[&PackDb], ch: &str, limit: usize, offset: usize
     if ch.is_empty() {
         return Ok(vec![]);
     }
-    let mut rows = Vec::new();
-    for p in packs.iter().filter(|p| p.caps.hanja_words) {
-        let sql = format!(
-            "SELECT {COLS} FROM hanja_words h JOIN entries e ON e.id = h.entry_id WHERE h.ch = ?1 ORDER BY e.rank, e.id LIMIT ?2"
-        );
-        for r in p.conn.query(&sql, &[ch.as_str().into(), ((limit + offset) as i64).into()])? {
-            rows.push(result_row(&p.id, &r, Some("hanja")));
+    let want = limit + offset;
+    let hp: Vec<&PackDb> = packs.iter().copied().filter(|p| p.caps.hanja_words).collect();
+    // ids and ranks from the covering index of every pack, then only the best rows
+    let sql = |p: &PackDb| {
+        if p.caps.hanja_rank {
+            format!("SELECT entry_id, rank FROM hanja_words WHERE ch = ?1 ORDER BY rank, entry_id LIMIT {want}")
+        } else {
+            format!(
+                "SELECT h.entry_id, e.rank FROM hanja_words h JOIN entries e ON e.id = h.entry_id \
+                 WHERE h.ch = ?1 ORDER BY e.rank, e.id LIMIT {want}"
+            )
         }
-    }
-    sort_by_rank(&mut rows);
+    };
+    let cands = top_ids(&hp, &sql, &[ch.as_str().into()], want)?;
+    let rows = rows_for(&hp, &cands, Some("hanja"))?;
     Ok(rows.into_iter().skip(offset).take(limit).collect())
 }
 
@@ -652,6 +895,24 @@ pub fn word_of_day(packs: &[&PackDb], date: &str) -> Result<Option<ResultRow>> {
         None => date.bytes().fold(1469598103934665603u64, |h, b| (h ^ b as u64).wrapping_mul(1099511628211)),
     };
     for p in packs {
+        if p.caps.wotd {
+            // precomputed candidate list (n = 0..N-1 in id order): two point lookups
+            let n = p
+                .conn
+                .query("SELECT count(*) FROM wotd", &[])?
+                .first()
+                .and_then(|r| r.int(0))
+                .unwrap_or(0);
+            if n <= 0 {
+                continue;
+            }
+            let idx = (splitmix64(seed) % n as u64) as i64;
+            let sql = format!("SELECT {COLS} FROM wotd w JOIN entries e ON e.id = w.entry_id WHERE w.n = ?1");
+            if let Some(r) = p.conn.query(&sql, &[idx.into()])?.first() {
+                return Ok(Some(result_row(&p.id, r, None)));
+            }
+            continue;
+        }
         let cond = "e.source = 'krdict' AND e.level IN (1, 2) AND e.kind = 'word' AND e.gloss IS NOT NULL AND e.gloss != ''";
         let n = p
             .conn
