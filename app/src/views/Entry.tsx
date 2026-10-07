@@ -75,9 +75,6 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
       ))}
       {primary.hanja && hanChars(primary.hanja).length > 0 && <HanjaSection primary={primary} />}
       <MoreExamples headword={primary.headword} />
-      {entries.some((e) => e.kind === 'grammar') && (
-        <a class="btn-link" href={href(`/grammar?q=${encodeURIComponent(primary.headword)}`)}><Icon name="book" size={18} /> Open in grammar reference</a>
-      )}
     </article>
   );
 }

@@ -5,7 +5,6 @@ import { Home } from './views/Home';
 import { Results } from './views/Results';
 import { EntryView } from './views/Entry';
 import { HanjaPage } from './views/HanjaPage';
-import { GrammarView, prefetchGrammar } from './views/Grammar';
 import { BookmarksView } from './views/Bookmarks';
 import { SettingsView, checkForUpdate } from './views/Settings';
 import { FirstRun } from './views/FirstRun';
@@ -38,7 +37,7 @@ export function App() {
   }, [s.theme]);
   useEffect(() => {
     loadBookmarks(); loadHistory();
-    refreshStatus().then((st) => { if (st.packs.core?.installed) { setTimeout(prefetchGrammar, 1500); const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
+    refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
   }, []);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
   useEffect(() => {
@@ -78,7 +77,6 @@ function view(r: Route) {
     case 'entry': return <EntryView key={r.raw} source={r.parts[0]} id={Number(r.parts[1])} hw={r.params.get('hw') ?? undefined} />;
     case 'word': return <EntryView key={r.raw} word={r.parts[0]} pref={r.params.has('s') ? refFromParams(r.params) : undefined} />;
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
-    case 'grammar': return <GrammarView key={r.params.get('q') ?? ''} initialQ={r.params.get('q') ?? ''} />;
     case 'bookmarks': return <BookmarksView />;
     case 'settings': return <SettingsView />;
     default: return <Home />;

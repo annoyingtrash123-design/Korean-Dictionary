@@ -12,7 +12,7 @@ const search = async (page: Page, q: string) => {
 
 async function tour(page: Page, theme: 'light' | 'dark') {
   await page.goto('/#/');
-  await expect(page.getByText('Word of the day')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Recent' })).toBeVisible();
   await shot(page, `${theme}-home`);
   await search(page, '먹다');
   await expect(page.locator('.row .hw', { hasText: '먹다' }).first()).toBeVisible();
@@ -25,9 +25,6 @@ async function tour(page: Page, theme: 'light' | 'dark') {
   await expect(page.locator('h1')).toContainText('먹다');
   await page.waitForTimeout(500);
   await shot(page, `${theme}-entry`);
-  await page.getByRole('link', { name: 'Grammar' }).click();
-  await expect(page.locator('.row .hw').first()).toBeVisible();
-  await shot(page, `${theme}-grammar`);
   await page.getByRole('link', { name: 'Settings' }).click();
   await expect(page.getByRole('heading', { name: 'Appearance' })).toBeVisible();
   await shot(page, `${theme}-settings`);
@@ -149,7 +146,7 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   // warm the engine (first queries touch cold pages), then measure typing a word keystroke by keystroke
   await typeAndMeasure(page, '학교');
-  await page.waitForTimeout(2500); // grammar list is prefetched ~1.5 s after engine-ready (a main-thread blip)
+  await page.waitForTimeout(2500); // let background warm-up start
   const keys: number[] = [];
   for (const q of ['ㅎ', '하', '학', '학교', '가', '갔', '먹', '먹다', '사', '사랑']) keys.push(await typeAndMeasure(page, q));
   for (const q of ['갔어요', 'eat', 'school', 'go', 'e', 'ea', 'love', '學']) keys.push(await typeAndMeasure(page, q));
@@ -171,7 +168,7 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
     history.back();
   }));
   const tabs: number[] = [];
-  for (const name of ['Grammar', 'Bookmarks', 'Settings', 'Grammar']) {
+  for (const name of ['Bookmarks', 'Settings', 'Bookmarks']) {
     tabs.push(await page.evaluate((n) => new Promise<number>((resolve) => {
       const t = performance.now();
       const main = document.querySelector('main')!;

@@ -92,9 +92,6 @@ export function Results({ q }: { q: string }) {
           ))}
         </div>
       )}
-      {shown?.grammarHints?.length ? (
-        <div class="notice">{shown.grammarHints.map((h) => <div key={h}><a href={href(`/grammar?q=${encodeURIComponent(h.split(/[:\s(]/)[0])}`)}>{h}</a></div>)}</div>
-      ) : null}
       {!busy && groups.length === 0 && !shown?.hanja?.length && (
         <Empty title={`No results for “${q}”`}>Try another spelling, the dictionary form, or an English word.</Empty>
       )}

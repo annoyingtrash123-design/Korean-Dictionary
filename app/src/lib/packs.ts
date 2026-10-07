@@ -2,7 +2,7 @@ import type { Manifest, ManifestPack, PackStatus } from '../db/types';
 import type { Settings } from './settings';
 
 export const PACK_INFO: Record<string, { label: string; desc: string }> = {
-  core: { label: 'Core dictionary', desc: 'English definitions, hanja, examples, grammar' },
+  core: { label: 'Core dictionary', desc: 'English definitions, hanja, example sentences' },
   stdict: { label: '표준국어대사전 (Korean–Korean)', desc: 'Standard dictionary · ~436k words, Korean definitions, hanja' },
   opendict: { label: '우리말샘 (Korean–Korean)', desc: 'Open dictionary · ~1M extra words incl. dialect, archaic, North Korean, technical terms' },
 };

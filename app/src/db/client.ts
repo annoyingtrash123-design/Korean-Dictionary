@@ -1,6 +1,6 @@
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GrammarRow, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence } from './types';
+import type { Entry, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -25,8 +25,8 @@ channel?.addEventListener('message', (ev: MessageEvent<{ t: string; from: string
   if (installActive.get()) { channel?.postMessage({ t: 'busy-installing', from: instanceId }); return; } // never abort a download
   releaseWorker(true);
 });
-// After handing over, this copy must not take the files back for background work (grammar
-// prefetch, word of the day…) — that would knock out the copy in use. Calls wait until the user
+// After handing over, this copy must not take the files back for background work (status
+// refreshes, history upgrades…) — that would knock out the copy in use. Calls wait until the user
 // actually comes back here: a tap, a key, focus, or the page becoming visible again.
 let handedOver = false;
 let waiters: (() => void)[] = [];
@@ -131,8 +131,6 @@ export const db = {
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),
   wordsWithHanja: (ch: string, limit: number, offset = 0) => call<ResultRow[]>('wordsWithHanja', ch, limit, offset),
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
-  grammarList: () => call<GrammarRow[]>('grammarList'),
-  randomWordOfDay: (date: string) => call<ResultRow | null>('wordOfDay', date),
   packStatus: refreshStatus,
   install: async (pack: ManifestPack, manifestUrl: string, version: string) => {
     // The engine keeps the old pack usable until the new import finishes, so status is refreshed after success AND failure.

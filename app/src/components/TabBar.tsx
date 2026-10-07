@@ -4,7 +4,6 @@ import { query } from '../lib/app-state';
 
 const TABS = [
   { name: 'search', icon: 'search', label: 'Search', match: ['home', 'search', 'entry', 'word', 'hanja'] },
-  { name: 'grammar', icon: 'book', label: 'Grammar', match: ['grammar'] },
   { name: 'bookmarks', icon: 'star', label: 'Bookmarks', match: ['bookmarks'] },
   { name: 'settings', icon: 'gear', label: 'Settings', match: ['settings'] },
 ];
