@@ -1,7 +1,8 @@
 import { packsKey } from '../lib/packs';
 import { useEffect, useState } from 'preact/hooks';
 import { db, packStatus$ } from '../db/client';
-import { useAsync } from '../lib/useAsync';
+import { useAsync, useDelayed } from '../lib/useAsync';
+import { Lru } from '../lib/cache';
 import { settings } from '../lib/settings';
 import { useStore } from '../lib/store';
 import { bookmarks, isBookmarked, addBookmark, removeBookmark, moveBookmark } from '../lib/bookmarks';
@@ -14,11 +15,17 @@ import { Empty, Hanja, IconButton, LevelBadge, Pos, Sheet } from '../components/
 import { Icon } from '../components/Icons';
 import { entryPath, hanjaPath, href, searchPath } from '../lib/router';
 
+type Loaded = { primary: Entry | null; entries: Entry[] };
+const viewCache = new Lru<Loaded>(40);
+const hanjaCache = new Lru<unknown>(60);
+type HanjaInfo = { ch: string; info: Awaited<ReturnType<typeof db.hanjaChar>>; words: Awaited<ReturnType<typeof db.wordsWithHanja>> };
+
 export function EntryView({ source, id, hw, word }: { source?: string; id?: number; hw?: string; word?: string }) {
   const s = useStore(settings);
   const status = useStore(packStatus$);
   const stamp = JSON.stringify(Object.values(status?.packs ?? {}).map((p) => p.version));
-  const r = useAsync(async () => {
+  const ck = `${source}:${id}:${word}:${hw}|${packsKey(s)}|${stamp}`;
+  const r = useAsync(async (): Promise<Loaded> => {
     let primary: Entry | null = null;
     let all: Entry[] = [];
     if (source && id != null) {
@@ -29,18 +36,24 @@ export function EntryView({ source, id, hw, word }: { source?: string; id?: numb
       primary = [...all].filter((e) => e.lang !== "ko").sort((a, b) => a.rank - b.rank)[0] ?? all[0] ?? null;
     }
     if (!primary && hw) all = await db.getEntriesByHeadword(hw);
-    if (!primary) return { primary: null, entries: all };
-    const entries = sameWordRows(all, primary);
-    if (!entries.some((e) => e.source === primary!.source && e.id === primary!.id)) entries.push(primary);
-    return { primary, entries };
-  }, [source, id, word, packsKey(s), stamp]);
+    let out: Loaded;
+    if (!primary) out = { primary: null, entries: all };
+    else {
+      const entries = sameWordRows(all, primary);
+      if (!entries.some((e) => e.source === primary!.source && e.id === primary!.id)) entries.push(primary);
+      out = { primary, entries };
+    }
+    viewCache.set(ck, out);
+    return out;
+  }, [source, id, word, packsKey(s), stamp], () => viewCache.get(ck));
 
   const primary = r.data?.primary;
   useEffect(() => {
     if (primary) recordHistory({ source: primary.source, id: primary.id, headword: primary.headword, hanja: primary.hanja, gloss: primary.gloss });
   }, [primary?.source, primary?.id]);
 
-  if (r.loading && !r.data) return <div class="page"><div class="skeleton" /></div>;
+  const showSkel = useDelayed(r.loading && !r.data, 150);
+  if (r.loading && !r.data) return <div class="page">{showSkel && <div class="skeleton" />}</div>;
   if (r.error) return <div class="page"><Empty title="Could not load entry">{r.error}</Empty></div>;
   if (!primary) {
     const t = hw || word || '';
@@ -181,10 +194,11 @@ function EntryBody({ e, many, showKo }: { e: Entry; many: boolean; showKo: boole
 
 function HanjaSection({ primary }: { primary: Entry }) {
   const chars = [...new Set(hanChars(primary.hanja!))];
-  const r = useAsync(async () => Promise.all(chars.map(async (ch) => ({
+  const hk = `${primary.source}:${primary.id}`;
+  const r = useAsync<HanjaInfo[]>(async () => { const v = await Promise.all(chars.map(async (ch) => ({
     ch, info: await db.hanjaChar(ch),
     words: (await db.wordsWithHanja(ch, 12, 0)).filter((w) => !(w.source === primary.source && w.id === primary.id)).slice(0, 5),
-  }))), [primary.source, primary.id]);
+  }))); hanjaCache.set(hk, v); return v; }, [primary.source, primary.id], () => hanjaCache.get(hk) as HanjaInfo[] | undefined);
   return (
     <details class="dict" open>
       <summary><span>Hanja</span><Icon name="down" size={18} /></summary>

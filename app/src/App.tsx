@@ -9,7 +9,7 @@ import { GrammarView } from './views/Grammar';
 import { BookmarksView } from './views/Bookmarks';
 import { SettingsView, checkForUpdate } from './views/Settings';
 import { FirstRun } from './views/FirstRun';
-import { packStatus$, refreshStatus } from './db/client';
+import { packStatus$, packsHint, refreshStatus } from './db/client';
 import { useStore } from './lib/store';
 import { useRoute, type Route } from './lib/router';
 import { settings } from './lib/settings';
@@ -17,6 +17,8 @@ import { applyTheme } from './lib/theme';
 import { loadBookmarks } from './lib/bookmarks';
 import { loadHistory } from './lib/history';
 import { Empty } from './components/common';
+
+const scrollMemo = new Map<string, number>();
 
 export function App() {
   const status = useStore(packStatus$);
@@ -36,11 +38,22 @@ export function App() {
     loadBookmarks(); loadHistory();
     refreshStatus().then(() => { if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
   }, []);
-  useEffect(() => { main.current?.scrollTo(0, 0); }, [route.name, route.parts.join('/'), route.params.get('q')]);
+  // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
+  useEffect(() => {
+    const el = main.current; if (!el) return;
+    const key = route.raw;
+    const saved = scrollMemo.get(key) ?? 0;
+    el.scrollTop = saved;
+    if (saved) requestAnimationFrame(() => { el.scrollTop = saved; });
+    const on = () => scrollMemo.set(key, el.scrollTop);
+    el.addEventListener('scroll', on, { passive: true });
+    return () => el.removeEventListener('scroll', on);
+  }, [route.raw]);
 
-  if (!status) return <div class="splash" aria-busy="true"><div class="spinner" /></div>;
-  if (status.error) return <div class="firstrun"><Empty title="Could not open the dictionary storage">{status.error} — If the app is open in another tab, close it and reload.</Empty></div>;
-  if (!status.packs.core?.installed) return <FirstRun />;
+  const hinted = packsHint().includes('core');
+  if (!status && !hinted) return <div class="splash" aria-busy="true"><div class="spinner" /></div>;
+  if (status?.error) return <div class="firstrun"><Empty title="Could not open the dictionary storage">{status.error} — If the app is open in another tab, close it and reload.</Empty></div>;
+  if (status && !status.packs.core?.installed) return <FirstRun />;
 
   return (
     <div class="app">

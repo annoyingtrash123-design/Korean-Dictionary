@@ -1,11 +1,14 @@
 import { useMemo, useState } from 'preact/hooks';
 import { db } from '../db/client';
+import type { GrammarRow } from '../db/types';
 import { useAsync } from '../lib/useAsync';
 import { Empty, LevelBadge } from '../components/common';
 import { entryPath, href } from '../lib/router';
 
+let grammarCache: GrammarRow[] | undefined;
+
 export function GrammarView({ initialQ }: { initialQ: string }) {
-  const r = useAsync(() => db.grammarList(), []);
+  const r = useAsync(async () => (grammarCache ??= await db.grammarList()), [], () => grammarCache);
   const [cat, setCat] = useState('All');
   const [lvl, setLvl] = useState(0);
   const [q, setQ] = useState(initialQ);

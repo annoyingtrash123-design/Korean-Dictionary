@@ -1,5 +1,7 @@
 import { packsKey } from '../lib/packs';
 import { useEffect, useMemo, useState } from 'preact/hooks';
+import { Lru } from '../lib/cache';
+import { useDelayed } from '../lib/useAsync';
 import { db, packStatus$ } from '../db/client';
 import { groupResults } from '../lib/merge';
 import { settings } from '../lib/settings';
@@ -9,19 +11,25 @@ import type { SearchResult } from '../lib/types';
 import { Empty, GroupRow } from '../components/common';
 import { hanjaPath, href, wordPath } from '../lib/router';
 
+const cache = new Lru<SearchResult>(40);
+
 export function Results({ q }: { q: string }) {
   const s = useStore(settings);
   const status = useStore(packStatus$);
-  const [res, setRes] = useState<SearchResult>();
-  const [err, setErr] = useState<string>();
-  const [busy, setBusy] = useState(true);
   const stamp = JSON.stringify(Object.values(status?.packs ?? {}).map((p) => p.version));
+  const ck = (qq: string) => `${qq}|${packsKey(s)}|${stamp}`;
+  const [res, setRes] = useState<SearchResult | undefined>(() => cache.get(ck(q)));
+  const [err, setErr] = useState<string>();
+  const [busy, setBusy] = useState(() => !cache.get(ck(q)));
+  const slow = useDelayed(busy, 150);
 
   useEffect(() => {
     let live = true;
+    const hit = cache.get(ck(q));
+    if (hit) { setRes(hit); setErr(undefined); setBusy(false); return; }
     setBusy(true);
     db.search(q, { limit: 50 }).then(
-      (r) => { if (live) { setRes(r); setErr(undefined); setBusy(false); } },
+      (r) => { if (live && r.rows !== undefined) { if (r.rows.length || r.mode !== 'english' || r.hanja) cache.set(ck(q), r); setRes(r); setErr(undefined); setBusy(false); } },
       (e) => { if (live) { setErr(String(e?.message ?? e)); setBusy(false); } });
     return () => { live = false; };
   }, [q, packsKey(s), stamp]);
@@ -32,7 +40,7 @@ export function Results({ q }: { q: string }) {
 
   if (err) return <div class="page"><Empty title="Search failed">{err}</Empty></div>;
   return (
-    <div class={`page${busy ? ' busy' : ''}`}>
+    <div class={`page${slow ? ' busy' : ''}`}>
       {res?.hanja?.map((h) => (
         <a key={h.ch} class="hanja-card" href={href(hanjaPath(h.ch))}>
           <span class="hanja-big" lang="zh-Hant">{h.ch}</span>

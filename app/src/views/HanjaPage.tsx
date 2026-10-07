@@ -8,9 +8,10 @@ import { useStore } from '../lib/store';
 import { settings } from '../lib/settings';
 
 const PAGE = 30;
+const infoCache = new Map<string, Awaited<ReturnType<typeof db.hanjaChar>>>();
 export function HanjaPage({ ch }: { ch: string }) {
   const s = useStore(settings);
-  const info = useAsync(() => db.hanjaChar(ch), [ch]);
+  const info = useAsync(async () => { const v = await db.hanjaChar(ch); infoCache.set(ch, v); return v; }, [ch], () => infoCache.get(ch));
   const [extra, setExtra] = useState<{ ch: string; rows: Awaited<ReturnType<typeof db.wordsWithHanja>>; more: boolean }>({ ch, rows: [], more: true });
   const first = useAsync(async () => {
     const rows = await db.wordsWithHanja(ch, PAGE, 0);

@@ -66,7 +66,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await search(page, '학교');
   await page.locator('.row', { hasText: '학교' }).first().click();
   await expect(page.locator('h1')).toContainText('학교');
-  await expect(page.getByText('표준국어대사전 (Korean)')).toBeVisible();
+  await expect(page.getByText('krdict 한국어기초사전')).toBeVisible();
   await page.getByRole('button', { name: 'Add bookmark' }).click();
   await page.getByRole('button', { name: 'Saved' }).click();
   await expect(page.getByRole('button', { name: 'Edit bookmark' })).toBeVisible();
@@ -109,4 +109,78 @@ test('interrupted download resumes per chunk', async ({ page }) => {
   await page.getByRole('button', { name: 'Resume download' }).click();
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   expect(n).toBeGreaterThan(1);
+});
+
+/** Time from an input event to the frame after matching results are in the DOM. */
+async function typeAndMeasure(page: Page, q: string): Promise<number> {
+  return page.evaluate((q) => new Promise<number>((resolve) => {
+    const input = document.querySelector<HTMLInputElement>('.searchbar input')!;
+    const main = document.querySelector('main')!;
+    const t0 = performance.now();
+    const done = () => requestAnimationFrame(() => requestAnimationFrame(() => resolve(performance.now() - t0)));
+    const ok = () => {
+      const h = main.querySelector('.row .hw, .hanja-card .hanja-big');
+      return !!h && (h.textContent ?? '').length > 0 && !!location.hash.includes('q=') &&
+        decodeURIComponent(location.hash).includes('q=' + q) && (main.querySelector('.page:not(.busy)') !== null);
+    };
+    const mo = new MutationObserver(() => { if (ok()) { mo.disconnect(); done(); } });
+    mo.observe(main, { childList: true, subtree: true, characterData: true });
+    input.focus();
+    input.value = q;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }), q);
+}
+const p95 = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.min(xs.length - 1, Math.ceil(xs.length * 0.95) - 1)];
+
+test('performance budgets (loose: <100ms headless)', async ({ page }) => {
+  test.setTimeout(600_000);
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Download' }).click();
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  // warm the engine (first queries touch cold pages), then measure typing a word keystroke by keystroke
+  await typeAndMeasure(page, '학교');
+  const keys: number[] = [];
+  for (const q of ['ㅎ', '하', '학', '학교', '가', '갔', '먹', '먹다', '사', '사랑']) keys.push(await typeAndMeasure(page, q));
+  keys.push(await typeAndMeasure(page, 'eat'), await typeAndMeasure(page, 'school'));
+  console.log('keystroke->results ms', keys.map((k) => Math.round(k)).join(' '), 'p95', Math.round(p95(keys)));
+
+  await typeAndMeasure(page, '학교');
+  const t0 = Date.now();
+  const tap = await page.evaluate(() => new Promise<number>((resolve) => {
+    const t = performance.now();
+    const main = document.querySelector('main')!;
+    const mo = new MutationObserver(() => { if (main.querySelector('h1')) { mo.disconnect(); requestAnimationFrame(() => requestAnimationFrame(() => resolve(performance.now() - t))); } });
+    mo.observe(main, { childList: true, subtree: true });
+    document.querySelector<HTMLElement>('.row')!.click();
+  }));
+  const back = await page.evaluate(() => new Promise<number>((resolve) => {
+    const t = performance.now();
+    const main = document.querySelector('main')!;
+    const mo = new MutationObserver(() => { if (main.querySelector('.row')) { mo.disconnect(); requestAnimationFrame(() => requestAnimationFrame(() => resolve(performance.now() - t))); } });
+    mo.observe(main, { childList: true, subtree: true });
+    history.back();
+  }));
+  const tabs: number[] = [];
+  for (const name of ['Grammar', 'Bookmarks', 'Settings', 'Grammar']) {
+    tabs.push(await page.evaluate((n) => new Promise<number>((resolve) => {
+      const t = performance.now();
+      const main = document.querySelector('main')!;
+      const before = main.innerHTML;
+      const mo = new MutationObserver(() => { if (main.innerHTML !== before && !main.querySelector('.skeleton')) { mo.disconnect(); requestAnimationFrame(() => requestAnimationFrame(() => resolve(performance.now() - t))); } });
+      mo.observe(main, { childList: true, subtree: true });
+      [...document.querySelectorAll<HTMLElement>('.tab')].find((a) => a.textContent === n)!.click();
+    }), name));
+  }
+  console.log(`tap->entry ${Math.round(tap)}ms, back->results ${Math.round(back)}ms, tabs ${tabs.map(Math.round).join(' ')}ms`, Date.now() - t0 > 0 ? '' : '');
+  expect(p95(keys)).toBeLessThan(100);
+  expect(tap).toBeLessThan(100);
+  expect(back).toBeLessThan(100);
+  expect(Math.max(...tabs)).toBeLessThan(150);
+
+  // cold start with installed packs: time until the engine answers (search box is usable immediately)
+  await page.reload();
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible();
+  await page.waitForFunction(() => performance.getEntriesByName('kd-engine-ready').length > 0, null, { timeout: 120_000 });
+  const ready = await page.evaluate(() => Math.round(performance.getEntriesByName('kd-engine-ready')[0].startTime));
+  console.log('engine ready (ms since navigation start):', ready);
 });

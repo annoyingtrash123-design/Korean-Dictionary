@@ -31,15 +31,40 @@ function call<T>(method: string, ...args: unknown[]): Promise<T> {
   });
 }
 
+export const PACKS_HINT = 'kd.packs';
+/** Installed pack ids remembered from the last run, so the UI can start before the engine is ready. */
+export const packsHint = (): string[] => { try { return JSON.parse(localStorage.getItem(PACKS_HINT) || '[]'); } catch { return []; } };
 export async function refreshStatus(): Promise<PackStatus> {
   const s = await call<PackStatus>('packStatus');
+  try { performance.mark('kd-engine-ready'); } catch { /* ignore */ }
+  try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* ignore */ }
   packStatus$.set(s);
   return s;
 }
-export const enabledPacks = (): string[] => activePacks(settings.get(), packStatus$.get());
+export const enabledPacks = (): string[] => activePacks(settings.get(), packStatus$.get(), packsHint());
+
+// Search coalescing: while one search runs, only the newest pending query is kept; superseded ones resolve empty.
+const EMPTY: SearchResult = { mode: 'english', rows: [] };
+let searching = false;
+let waiting: { q: string; limit?: number; ok: (r: SearchResult) => void; err: (e: Error) => void } | null = null;
+function searchLatest(q: string, limit?: number): Promise<SearchResult> {
+  return new Promise((ok, err) => {
+    if (waiting) waiting.ok(EMPTY);
+    waiting = { q, limit, ok, err };
+    if (!searching) void pump();
+  });
+}
+async function pump() {
+  searching = true;
+  while (waiting) {
+    const w = waiting; waiting = null;
+    try { w.ok(await call<SearchResult>('search', w.q, { packs: enabledPacks(), limit: w.limit })); } catch (e) { w.err(e as Error); }
+  }
+  searching = false;
+}
 
 export const db = {
-  search: (q: string, o: { limit?: number } = {}) => call<SearchResult>('search', q, { packs: enabledPacks(), limit: o.limit }),
+  search: (q: string, o: { limit?: number } = {}) => searchLatest(q, o.limit),
   getEntriesByHeadword: (hw: string) => call<Entry[]>('entriesByHeadword', hw, enabledPacks()),
   getEntry: (source: string, id: number) => call<Entry | null>('entry', source, id),
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),

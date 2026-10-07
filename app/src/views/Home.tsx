@@ -9,6 +9,10 @@ import type { ResultRow } from '../db/types';
 import { todayStr } from '../lib/app-state';
 
 /** Word of the day is cached per date (the query is slow on the full pack) and fetched shortly after first paint. */
+function peekWotd(): ResultRow | undefined {
+  try { const c = JSON.parse(localStorage.getItem('kd.wotd') || 'null'); if (c?.day === todayStr() && c.row) return c.row; } catch { /* ignore */ }
+  return undefined;
+}
 async function wordOfDay(): Promise<ResultRow | null> {
   const day = todayStr();
   try { const c = JSON.parse(localStorage.getItem('kd.wotd') || 'null'); if (c?.day === day && c.row) return c.row; } catch { /* ignore */ }
@@ -20,7 +24,7 @@ async function wordOfDay(): Promise<ResultRow | null> {
 
 export function Home() {
   const hist = useStore(history);
-  const wotd = useAsync(() => wordOfDay(), []);
+  const wotd = useAsync(() => wordOfDay(), [], peekWotd);
   const w = wotd.data;
   return (
     <div class="page">
