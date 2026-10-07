@@ -1,0 +1,5 @@
+# Raw texts a reviewer has checked (right work/section, complete, no markup leftovers) and approved
+# for "original-only" shipping before enrichment. Texts not listed here ship only once they have an
+# approved enrichment (enriched/<id>.json). See .claude/skills/content-review.
+[approved]
+ids = []

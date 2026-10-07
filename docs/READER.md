@@ -143,6 +143,10 @@ News articles are texts with shelf `news` (period `modern`), refreshed each buil
   `{id:"texts", required:false, label:"Reader library", …}`. A full (non `--allow-partial`) build
   needs ≥ 40 texts. With `--allow-partial`, mismatches, unresolved vocab and `required` gaps are
   logged instead of failing (a mismatching enrichment falls back to the original text).
+- **Original-only texts** ship only when listed in `pipeline/texts/raw_review.toml` (`[approved] ids`)
+  after a reviewer checked the raw text (right work/section, complete, no markup), and never when
+  `raw_problem` finds wiki markup, a licence section or a heading-only page (logged as
+  `counts.rejected_raw`; unreviewed ones as `counts.raw_unreviewed`).
 - **Original-only texts** (raw present, no approved enrichment): paragraphs are the raw text split
   on blank lines (verse/modern-poetry shelves keep inner line breaks, other shelves join lines),
   `modern`/`reading`/`en` null, `labels = {text:"original"}`, `review.status = "original-only"`,

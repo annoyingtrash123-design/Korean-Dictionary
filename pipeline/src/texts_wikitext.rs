@@ -123,7 +123,9 @@ fn keep_line_breaks(inner: &str) -> String {
     let lines: Vec<&str> = inner.trim_matches('\n').split('\n').collect();
     let mut out = String::new();
     for (n, l) in lines.iter().enumerate() {
-        out.push_str(l.trim_end());
+        // `:` indents a poem line in MediaWiki; it is layout, not text
+        let l = l.trim_start_matches([':', ' ']).trim_end();
+        out.push_str(l);
         if let Some(next) = lines.get(n + 1) {
             if l.trim().is_empty() || next.trim().is_empty() {
                 out.push('\n');
@@ -200,6 +202,8 @@ fn is_named_param(p: &str) -> Option<(&str, &str)> {
 
 const KEEP_FIRST: &[&str] = &[
     "center", "centre", "가운데", "중앙", "larger", "smaller", "큰글씨", "작은글씨", "nowrap", "bold", "굵게", "small", "big", "한자", "hanja", "ruby", "루비", "underline", "밑줄", "u", "indent", "들여쓰기", "right", "오른쪽", "block center", "sc", "ib", "overstrike", "strike", "blockquote", "인용문", "quote", "텍스트", "글",
+    // ruby: {{윗주|大|대}} keeps the base text
+    "윗주", "덧말", "furigana",
 ];
 const KEEP_POEM: &[&str] = &["poem", "시", "verse", "운문", "시구"];
 const KEEP_LAST: &[&str] = &["lang", "언어", "font", "폰트", "linktext", "rubi"];
@@ -427,7 +431,8 @@ fn process_tables(s: &str) -> String {
 
 // ---------------------------------------------------------------- lines, headings, inline
 
-const DROP_SECTIONS: &[&str] = &["각주", "주석", "주", "외부 링크", "외부링크", "같이 보기", "함께 보기", "관련 문서", "관련 항목", "참고 문헌", "참고문헌", "references", "notes", "footnotes", "external links", "see also", "각주 및 참고 문헌"];
+const DROP_SECTIONS: &[&str] = &["각주", "주석", "주", "외부 링크", "외부링크", "같이 보기", "함께 보기", "관련 문서", "관련 항목", "참고 문헌", "참고문헌", "references", "notes", "footnotes", "external links", "see also", "각주 및 참고 문헌",
+    "라이선스", "저작권", "license", "licence", "licensing", "copyright", "저작권 정보"];
 const MAGIC: &[&str] = &["__NOTOC__", "__TOC__", "__FORCETOC__", "__NOEDITSECTION__", "__NOTITLECONVERT__", "__NOCONTENTCONVERT__", "__NOINDEX__", "__INDEX__"];
 
 enum Line {

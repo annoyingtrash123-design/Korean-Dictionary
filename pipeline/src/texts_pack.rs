@@ -7,7 +7,7 @@ use crate::texts_catalog::{self, Entry};
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
 use serde_json::{json, Map, Value};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashSet};
 use std::fs;
 use std::path::{Path, PathBuf};
 
@@ -449,6 +449,38 @@ fn graded_text(id: &str, v: &Value) -> Packed {
     }
 }
 
+/// Ids whose raw text a reviewer approved for original-only shipping (`[approved] ids = [...]`).
+fn raw_reviewed(path: &Path) -> Result<HashSet<String>> {
+    if !path.exists() {
+        return Ok(HashSet::new());
+    }
+    let v: toml::Value = toml::from_str(&fs::read_to_string(path)?).with_context(|| format!("{}", path.display()))?;
+    Ok(v.get("approved")
+        .and_then(|a| a.get("ids"))
+        .and_then(|ids| ids.as_array())
+        .map(|ids| ids.iter().filter_map(|x| x.as_str().map(String::from)).collect())
+        .unwrap_or_default())
+}
+
+/// Why a raw (unenriched) text must not be packed: wiki markup or licence boilerplate left in
+/// the text, or nothing but section headings (e.g. a page that only transcludes scans).
+pub fn raw_problem(paras: &[String]) -> Option<String> {
+    const JUNK: &[&str] = &["{{", "}}", "[[", "]]", "<pages", "<ref", "__TOC__", "PD-old"];
+    const BOILER: &[&str] = &["## 라이선스", "## 저작권", "## License", "## Copyright"];
+    for p in paras {
+        if let Some(j) = JUNK.iter().find(|j| p.contains(*j)) {
+            return Some(format!("wiki markup {j:?} in: {}", clip(p)));
+        }
+        if BOILER.iter().any(|b| p.trim() == *b) {
+            return Some(format!("licence section kept: {}", p.trim()));
+        }
+    }
+    if !paras.iter().any(|p| !p.trim_start().starts_with("## ") && !p.trim().is_empty()) {
+        return Some("only section headings, no text".into());
+    }
+    None
+}
+
 fn catalog_text(
     e: &Entry,
     raw: Option<&Value>,
@@ -596,6 +628,9 @@ fn collect(
     let mut out: Vec<Packed> = Vec::new();
     let (mut n_enriched, mut n_original, mut n_graded, mut n_news, mut n_unapproved) =
         (0, 0, 0, 0, 0);
+    let mut rejected: Vec<Value> = Vec::new();
+    let mut n_unreviewed = 0;
+    let raw_ok = raw_reviewed(&o.dir.join("raw_review.toml"))?;
     let note = |partial_ok: bool, msg: String, problems: &mut Vec<String>| {
         if partial_ok && o.allow_partial {
             log::warn!("texts: {msg}");
@@ -674,6 +709,19 @@ fn collect(
         if raw.is_some() && raw_paras.is_empty() && enriched.is_none() {
             problems.push(format!("{}: raw source has no text", e.id));
             continue;
+        }
+        if enriched.is_none() && !raw_ok.contains(&e.id) {
+            // original-only texts ship only after a reviewer checked the raw text (raw_review.toml)
+            n_unreviewed += 1;
+            continue;
+        }
+        if enriched.is_none() {
+            if let Some(why) = raw_problem(&raw_paras) {
+                // never ship markup leftovers or a heading-only page as a Reader text
+                log::warn!("texts: {}: raw text left out of the pack: {why}", e.id);
+                rejected.push(json!({"id": e.id, "why": why}));
+                continue;
+            }
         }
         let mut p = catalog_text(e, raw.as_ref(), enriched.as_ref(), &raw_paras);
         if enriched.is_some() {
@@ -763,7 +811,7 @@ fn collect(
             problems.push(format!("{}: duplicate text id", p.id));
         }
     }
-    let stats = json!({"enriched": n_enriched, "original_only": n_original, "graded": n_graded, "news": n_news, "unapproved_ignored": n_unapproved});
+    let stats = json!({"enriched": n_enriched, "original_only": n_original, "graded": n_graded, "news": n_news, "unapproved_ignored": n_unapproved, "rejected_raw": rejected, "raw_unreviewed": n_unreviewed});
     Ok((out, stats))
 }
 
@@ -898,5 +946,19 @@ mod tests {
             theme_slug("Colonial era & independence"),
             "colonial-independence"
         );
+    }
+}
+
+#[cfg(test)]
+mod raw_problem_tests {
+    use super::raw_problem;
+
+    #[test]
+    fn rejects_leftovers_and_heading_only_pages() {
+        let v = |xs: &[&str]| xs.iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        assert!(raw_problem(&v(&["가시리 가시리잇고", "## 라이선스"])).unwrap().contains("licence"));
+        assert!(raw_problem(&v(&["## 청구영언", "## 가곡원류"])).unwrap().contains("headings"));
+        assert!(raw_problem(&v(&["본문 {{틀}}"])).unwrap().contains("markup"));
+        assert_eq!(raw_problem(&v(&["## 1장", "본문입니다."])), None);
     }
 }

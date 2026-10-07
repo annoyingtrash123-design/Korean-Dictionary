@@ -649,3 +649,11 @@ fn fetch_news_keeps_only_kogl1() {
     let opts2 = NewsOpts { feeds: vec!["https://www.korea.kr/rss/nope.xml".into(), "https://www.korea.kr/rss/policy.xml".into()], force: true, ..opts };
     assert_eq!(texts_news::run_with(&http, &opts2).unwrap().kept, 1);
 }
+
+#[test]
+fn goryeo_song_ruby_indent_and_licence() {
+    // shape of ko.wikisource 가시리: ruby template refrain, `:` indent inside <poem>, licence section
+    let src = "{{머리말\n|제목 = 가시리\n}}\n<poem>\n가시리 가시리잇고<ref>가시겠습니까</ref> 나ᄂᆞᆫ\n:위 증즐가 {{윗주|大|대}}{{윗주|平|평}}{{윗주|盛|셩}}{{윗주|代|ᄃᆡ}}\n</poem>\n\n== 라이선스 ==\n{{PD-old-100}}\n\n==저작권==\n{{PD-old-100}}\n[[분류:고려속요]]\n";
+    let c = clean(src, Layout::Verse, false);
+    assert_eq!(c.text, "가시리 가시리잇고 나ᄂᆞᆫ\n위 증즐가 大平盛代");
+}

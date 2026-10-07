@@ -102,6 +102,8 @@ impl Fx {
         cat += &entry("noraw", "classical-prose", "hangul", "");
         fs::create_dir_all(&t).unwrap();
         fs::write(t.join("catalog.toml"), cat).unwrap();
+        // every raw fixture text has been checked by a reviewer (original-only shipping allowed)
+        fs::write(t.join("raw_review.toml"), "[approved]\nids = [\"good\", \"poem\", \"excerpted\", \"unapproved\", \"noraw\"]\n").unwrap();
         write(
             &t.join("raw/good.json"),
             &raw("good", "첫째 문단입니다.\n\n둘째   문단입니다.\n"),
@@ -192,6 +194,15 @@ fn q(c: &Connection, sql: &str) -> Vec<String> {
     .unwrap()
     .map(|r| r.unwrap())
     .collect()
+}
+
+#[test]
+fn unreviewed_raw_texts_are_not_packed() {
+    let fx = Fx::new();
+    fs::write(fx.t().join("raw_review.toml"), "[approved]\nids = [\"poem\"]\n").unwrap();
+    let r = fx.build(false).unwrap().unwrap();
+    assert_eq!(r.counts["original_only"], 1); // poem only; 'unapproved' (raw, no approved enrichment) waits
+    assert_eq!(r.counts["raw_unreviewed"], 1);
 }
 
 #[test]
