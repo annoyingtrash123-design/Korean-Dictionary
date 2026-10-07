@@ -85,8 +85,56 @@ jobs:
           path: pipeline/out/site-data
           retention-days: 7
 
-  app:
+  # Verification gate: the same checks as scripts/verify.sh, against the freshly built data.
+  # Nothing deploys unless this is green.
+  verify:
     needs: data
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Restore wasm-pack
+        id: wasmpack
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/wasm-pack
+          key: wasm-pack-0.15.0-${{ runner.os }}
+      - name: Install wasm-pack
+        if: steps.wasmpack.outputs.cache-hit != 'true'
+        run: cargo install wasm-pack --locked --version 0.15.0
+      - uses: actions/download-artifact@v4
+        with:
+          name: site-data
+          path: app/public/data
+      - name: Install app deps + browser
+        working-directory: app
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: scripts/verify.sh (rust tests, clippy, wasm, typecheck, unit, e2e)
+        env:
+          CI: "true"
+        run: scripts/verify.sh
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: docs/screenshots
+          retention-days: 14
+
+  app:
+    needs: [data, verify]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -113,7 +161,6 @@ jobs:
         run: cargo install wasm-pack --locked --version 0.15.0
       - run: npm ci
       - run: npm run build:core
-      - run: npx vitest run
       - uses: actions/download-artifact@v4
         with:
           name: site-data

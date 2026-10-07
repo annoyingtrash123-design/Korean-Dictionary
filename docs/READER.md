@@ -90,3 +90,15 @@ Joseon, Colonial era & independence, Modern Korea, Sino-Korean relations.
 }
 ```
 Every AI-produced field is labelled in the UI ("AI-written", "AI-generated translation — may contain errors").
+
+## Pleco-derived interaction details (binding for the Reader UI)
+- Tapping a word **highlights it in the text** (accent-tinted background) and opens a **bottom
+  pop-up card** (phone) / updates the **right pane** (iPad wide layout) without moving the text.
+- The pop-up has **◀ ▶** to move the selection to the previous/next word and **⇤ ⇥** (or
+  long-press-drag) to shrink/extend the selection by a character — the lookup re-runs live, as in
+  Pleco's reader. Swipe down or tap outside to dismiss.
+- Pop-up content: headword (large), hanja, pronunciation, POS + level badge, 1–3 short glosses
+  from the best dictionary, "Open full entry", bookmark ☆. For hanja selections: traditional
+  form, Sino-Korean reading, 훈음 per character, CC-CEDICT gloss.
+- Reading settings: font size, line spacing, serif/sans for Korean, show/hide English, original ↔
+  modern spelling, hanmun reading line on/off; reading position remembered per text.
