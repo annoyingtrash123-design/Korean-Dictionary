@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** '국권 피탈'은 1910년 대한제국이 일본에 병합된 사건을 한국에서 가리키는 표현으로, 나라의 주권을 빼앗겼다는 뜻을 담고 있습니다. 일본은 '병합', '합방' 등의 말을 썼습니다. 이 글은 과정을 사실 중심으로 서술하며, 한국 정부는 이 조약들이 강압 속에서 맺어져 원천적으로 무효라는 입장입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 데 이어`: 앞의 일에 이어서.\n- `-에 의해`: 행위자를 나타냅니다.\n- `-게 되다`: 변화.\n- 단어: 국권, 주권, 조약, 외교권, 통감부, 병합, 강압.\n- 연도를 순서대로 정리하면 이해하기 쉽습니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '1910년 국권 피탈'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** \"Gukgwon pihwal\" is the Korean expression for the 1910 annexation of the Korean Empire by Japan, and carries the meaning that national sovereignty was taken away. Japan used terms such as \"annexation\" and \"merger.\" This text narrates the process factually; the Korean government's position is that these treaties were concluded under coercion and are null and void from the outset.\n\n**Points to watch**\n- `-(으)ㄴ/는 데 이어`: following on from.\n- `-에 의해`: marking the agent.\n- `-게 되다`: change.\n- Words: 국권 national sovereignty, 주권 sovereignty, 조약 treaty, 외교권 diplomatic rights, 통감부 Residency-General, 병합 annexation, 강압 coercion.\n- Arranging the years in order helps comprehension.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Loss of Sovereignty in 1910,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** '국권 피탈'은 1910년 대한제국이 일본에 병합된 사건을 한국에서 가리키는 표현으로, 나라의 주권을 빼앗겼다는 뜻을 담고 있습니다. 일본은 '병합', '합방' 등의 말을 썼습니다. 이 글은 과정을 사실 중심으로 서술하며, 한국 정부는 이 조약들이 강압 속에서 맺어져 원천적으로 무효라는 입장입니다.\n\n**어휘와 문법**\n- `-(으)면서`: 앞의 일에 이어 다른 일이 생김 (공포되면서).\n- `-에 의해`: 행위자를 나타냅니다.\n- `-게 되다`: 변화.\n- 단어: 국권, 주권, 조약, 외교권, 통감부, 병합, 강압.\n- 연도를 순서대로 정리하면 이해하기 쉽습니다.",
+    "en": "**Background** \"Gukgwon pihwal\" is the Korean expression for the 1910 annexation of the Korean Empire by Japan, and carries the meaning that national sovereignty was taken away. Japan used terms such as \"annexation\" and \"merger.\" This text narrates the process factually; the Korean government's position is that these treaties were concluded under coercion and are null and void from the outset.\n\n**Points to watch**\n- `-(으)면서`: one event leading into another (공포되면서).\n- `-에 의해`: marking the agent.\n- `-게 되다`: change.\n- Words: 국권 national sovereignty, 주권 sovereignty, 조약 treaty, 외교권 diplomatic rights, 통감부 Residency-General, 병합 annexation, 강압 coercion.\n- Arranging the years in order helps comprehension."
   },
   "paragraphs": [
     {
@@ -48,7 +48,7 @@
       "en": "In 1907 Gojong secretly sent special envoys to the Hague Peace Conference in the Netherlands, but they were refused participation. Japan used this as a pretext to force Gojong to abdicate, and then concluded the Jeongmi Treaty of Seven Articles to seize control of internal affairs and disband the Korean Empire's army. Some soldiers who protested the disbandment joined the righteous armies and fought."
     },
     {
-      "orig": "1909년 안중근이 하얼빈에서 이토 히로부미를 처단했지만, 일본은 병합을 그대로 추진했다. 1910년 8월 22일 병합 조약이 체결되고 29일 공포되면서 대한제국이라는 국호는 사라졌고, 한반도에는 조선총독부가 설치되었다. 이후 35년 가까이 일본의 식민 지배가 이어졌다.",
+      "orig": "1909년 안중근이 하얼빈에서 이토 히로부미를 저격했지만, 일본은 병합을 그대로 추진했다. 1910년 8월 22일 병합 조약이 체결되고 29일 공포되면서 대한제국이라는 국호는 사라졌고, 한반도에는 조선총독부가 설치되었다. 이후 35년 가까이 일본의 식민 지배가 이어졌다.",
       "modern": null,
       "reading": null,
       "en": "In 1909 An Jung-geun shot Itō Hirobumi at Harbin, but Japan went ahead with annexation as planned. The annexation treaty was concluded on August 22, 1910 and promulgated on the 29th, so the name Korean Empire disappeared and the Government-General of Korea was established on the peninsula. Japanese colonial rule continued for nearly 35 years afterward."
@@ -149,5 +149,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; replaced loaded verb 처단 with neutral 저격; fixed note grammar item; dates (1897, 1904, 1905, 1907, 22/29 Aug 1910) verified; neutral on legal dispute."
   }
 }

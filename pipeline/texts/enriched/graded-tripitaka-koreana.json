@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 팔만대장경은 고려 고종 때인 1236년부터 1251년까지 새긴 불교 경전의 목판입니다. 현재 경남 합천 해인사의 장경판전에 보관되어 있으며, 경판은 2007년에 유네스코 세계기록유산으로, 장경판전은 1995년에 세계유산으로 등록되었습니다.\n\n**어휘와 문법**\n- `-고자`: 격식 있는 의도 표현입니다 (지키고자).\n- `-(으)ㄹ 뿐 아니라`: 추가를 나타냅니다.\n- `-에 힘입어`: 도움을 받아.\n- 단어: 대장경, 경판, 목판, 판각, 염원, 보존, 해인사.\n- '팔만'은 경판 수가 약 8만여 장이라는 데서 온 이름입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '팔만대장경'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** The Tripitaka Koreana is a set of woodblocks of Buddhist scriptures carved from 1236 to 1251 under King Gojong of Goryeo. It is kept in the Janggyeong Panjeon of Haeinsa in Hapcheon, South Gyeongsang. The blocks were inscribed as UNESCO Memory of the World in 2007 and the Janggyeong Panjeon as World Heritage in 1995.\n\n**Points to watch**\n- `-고자`: formal intent (지키고자).\n- `-(으)ㄹ 뿐 아니라`: addition.\n- `-에 힘입어`: with the help of.\n- Words: 대장경 Tripitaka, 경판 scripture block, 목판 woodblock, 판각 carving, 염원 aspiration, 보존 preservation, 해인사 Haeinsa.\n- 팔만 \"eighty thousand\" refers to the roughly 80,000 blocks.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Tripitaka Koreana,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 팔만대장경은 고려 고종 때인 1236년부터 1251년까지 새긴 불교 경전의 목판입니다. 현재 경남 합천 해인사의 장경판전에 보관되어 있으며, 경판은 2007년에 유네스코 세계기록유산으로, 장경판전은 1995년에 세계유산으로 등록되었습니다.\n\n**어휘와 문법**\n- `-고자`: 격식 있는 의도 표현입니다 (지키고자).\n- `-(으)ㄹ 뿐 아니라`: 추가를 나타냅니다.\n- `-에 힘입어`: 도움을 받아.\n- 단어: 대장경, 경판, 목판, 판각, 염원, 보존, 해인사.\n- '팔만'은 경판 수가 약 8만여 장이라는 데서 온 이름입니다.",
+    "en": "**Background** The Tripitaka Koreana is a set of woodblocks of Buddhist scriptures carved from 1236 to 1251 under King Gojong of Goryeo. It is kept in the Janggyeong Panjeon of Haeinsa in Hapcheon, South Gyeongsang. The blocks were inscribed as UNESCO Memory of the World in 2007 and the Janggyeong Panjeon as World Heritage in 1995.\n\n**Points to watch**\n- `-고자`: formal intent (지키고자).\n- `-(으)ㄹ 뿐 아니라`: addition.\n- `-에 힘입어`: with the help of.\n- Words: 대장경 Tripitaka, 경판 scripture block, 목판 woodblock, 판각 carving, 염원 aspiration, 보존 preservation, 해인사 Haeinsa.\n- 팔만 \"eighty thousand\" refers to the roughly 80,000 blocks."
   },
   "paragraphs": [
     {
@@ -149,5 +149,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

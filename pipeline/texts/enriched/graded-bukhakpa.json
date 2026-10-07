@@ -26,8 +26,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 18세기 후반 조선에서는 병자호란의 기억 때문에 청나라를 오랑캐로 낮추어 보는 분위기가 남아 있었습니다. 그러나 일부 학자들은 청나라를 직접 다녀온 뒤 그 문물을 배워야 한다고 주장했고, 이들을 '북학파'라 부릅니다. 박지원은 1780년 청 사절단을 따라 열하까지 다녀와 『열하일기』를 썼습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤`: 순서.\n- `-(으)ㄹ 만하다`: 그럴 가치가 있음.\n- `-고 해서`: 이유 중 하나를 제시합니다.\n- 단어: 북학, 문물, 수레, 벽돌, 풍자, 상업, 서얼.\n- '열하'는 청 황제의 여름 별궁이 있던 곳(지금의 청더)입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '북학파: 박지원과 박제가'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In late 18th-century Joseon, the memory of the Second Manchu invasion left an atmosphere of looking down on Qing as barbarians. But some scholars, after visiting Qing themselves, argued that its civilization should be learned from; they are called the \"Northern Learning\" school. Park Ji-won traveled with a Qing mission in 1780 as far as Rehe and wrote the *Yeolha Ilgi*.\n\n**Points to watch**\n- `-(으)ㄴ 뒤`: sequence.\n- `-(으)ㄹ 만하다`: worth doing.\n- `-고 해서`: giving one among several reasons.\n- Words: 북학 Northern Learning, 문물 civilization, 수레 cart, 벽돌 brick, 풍자 satire, 상업 commerce, 서얼 secondary-line sons.\n- Rehe (Yeolha) was where the Qing emperor's summer villa stood (now Chengde).\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Northern Learning School: Park Ji-won and Park Je-ga,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 18세기 후반 조선에서는 병자호란의 기억 때문에 청나라를 오랑캐로 낮추어 보는 분위기가 남아 있었습니다. 그러나 일부 학자들은 청나라를 직접 다녀온 뒤 그 문물을 배워야 한다고 주장했고, 이들을 '북학파'라 부릅니다. 박지원은 1780년 청 사절단을 따라 열하까지 다녀와 『열하일기』를 썼습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤`: 순서.\n- `-(으)ㄹ 만하다`: 그럴 가치가 있음.\n- `-고 해서`: 이유 중 하나를 제시합니다.\n- 단어: 북학, 문물, 수레, 벽돌, 풍자, 상업, 서얼.\n- '열하'는 청 황제의 여름 별궁이 있던 곳(지금의 청더)입니다.",
+    "en": "**Background** In late 18th-century Joseon, the memory of the Second Manchu invasion left an atmosphere of looking down on Qing as barbarians. But some scholars, after visiting Qing themselves, argued that its civilization should be learned from; they are called the \"Northern Learning\" school. Park Ji-won traveled with a Qing mission in 1780 as far as Rehe and wrote the *Yeolha Ilgi*.\n\n**Points to watch**\n- `-(으)ㄴ 뒤`: sequence.\n- `-(으)ㄹ 만하다`: worth doing.\n- `-고 해서`: giving one among several reasons.\n- Words: 북학 Northern Learning, 문물 civilization, 수레 cart, 벽돌 brick, 풍자 satire, 상업 commerce, 서얼 secondary-line sons.\n- Rehe (Yeolha) was where the Qing emperor's summer villa stood (now Chengde)."
   },
   "paragraphs": [
     {
@@ -144,5 +144,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

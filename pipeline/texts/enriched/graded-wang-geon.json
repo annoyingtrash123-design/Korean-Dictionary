@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 9세기 말 신라가 약해지자 각지에서 호족들이 힘을 키웠고, 900년에 견훤이 후백제를, 901년에 궁예가 후고구려를 세웠습니다. 왕건은 송악(개성) 지방의 호족 집안 출신으로, 918년에 고려를 세웠고 936년에 후삼국을 통일했습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤에`: 순서.\n- `-기 위해`: 목적.\n- `-도록 하다`: 하게 만들다.\n- 단어: 호족, 후삼국, 통합, 건국, 항복하다, 북진.\n- '고려'라는 이름은 고구려를 이어받는다는 뜻을 담고 있다고 알려져 있습니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '왕건과 고려의 건국'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** As Silla weakened in the late 9th century, local strongmen (*hojok*) grew powerful, and Gyeonhwon founded Later Baekje in 900 and Gungye founded Later Goguryeo in 901. Wang Geon came from a *hojok* family in the Songak (Gaeseong) region, founded Goryeo in 918 and unified the Later Three Kingdoms in 936.\n\n**Points to watch**\n- `-(으)ㄴ 뒤에`: sequence.\n- `-기 위해`: purpose.\n- `-도록 하다`: to make someone do.\n- Words: 호족 local strongman, 후삼국 Later Three Kingdoms, 통합 integration, 건국 founding, 항복하다 surrender, 북진 northward expansion.\n- The name Goryeo is known to express succession to Goguryeo.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Wang Geon and the Founding of Goryeo,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 9세기 말 신라가 약해지자 각지에서 호족들이 힘을 키웠고, 900년에 견훤이 후백제를, 901년에 궁예가 후고구려를 세웠습니다. 왕건은 송악(개성) 지방의 호족 집안 출신으로, 918년에 고려를 세웠고 936년에 후삼국을 통일했습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤에`: 순서.\n- `-기 위해`: 목적.\n- `-도록 하다`: 하게 만들다.\n- 단어: 호족, 후삼국, 통합, 건국, 항복하다, 북진.\n- '고려'라는 이름은 고구려를 이어받는다는 뜻을 담고 있다고 알려져 있습니다.",
+    "en": "**Background** As Silla weakened in the late 9th century, local strongmen (*hojok*) grew powerful, and Gyeonhwon founded Later Baekje in 900 and Gungye founded Later Goguryeo in 901. Wang Geon came from a *hojok* family in the Songak (Gaeseong) region, founded Goryeo in 918 and unified the Later Three Kingdoms in 936.\n\n**Points to watch**\n- `-(으)ㄴ 뒤에`: sequence.\n- `-기 위해`: purpose.\n- `-도록 하다`: to make someone do.\n- Words: 호족 local strongman, 후삼국 Later Three Kingdoms, 통합 integration, 건국 founding, 항복하다 surrender, 북진 northward expansion.\n- The name Goryeo is known to express succession to Goguryeo."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

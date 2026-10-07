@@ -26,8 +26,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 발해는 698년 대조영이 고구려 유민과 말갈 사람들을 이끌고 세운 나라로 알려져 있으며, 926년 거란에 멸망했습니다. 발해의 역사는 한국과 중국, 러시아의 영토에 걸쳐 있어 나라마다 서술하는 방식이 다릅니다. 이 글은 한국 학계에서 널리 쓰이는 설명을 따랐습니다.\n\n**어휘와 문법**\n- `-(으)로 알려져 있다`: 확실하지 않은 부분을 조심스럽게 말합니다.\n- `-에 걸쳐`: 범위를 나타냅니다.\n- `-(으)ㄴ/는 반면`: 대조를 나타냅니다.\n- 단어: 유민, 건국, 계승, 번영, 해동성국, 멸망.\n- '남북국 시대'는 신라와 발해를 함께 부르는 말입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '발해'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Balhae is known to have been founded in 698 by Dae Joyeong, who led Goguryeo refugees and Malgal people, and was destroyed by the Khitan in 926. Its history spans the territories of Korea, China and Russia, and each country narrates it differently. This text follows the account widely used in Korean scholarship.\n\n**Points to watch**\n- `-(으)로 알려져 있다`: carefully expressing uncertain points.\n- `-에 걸쳐`: across a range.\n- `-(으)ㄴ/는 반면`: contrast.\n- Words: 유민 refugees, 건국 founding, 계승 succession, 번영 prosperity, 해동성국 Flourishing Land of the East, 멸망 fall.\n- \"Northern and Southern States period\" refers to Silla and Balhae together.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Balhae,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 발해는 698년 대조영이 고구려 유민과 말갈 사람들을 이끌고 세운 나라로 알려져 있으며, 926년 거란에 멸망했습니다. 발해의 역사는 한국과 중국, 러시아의 영토에 걸쳐 있어 나라마다 서술하는 방식이 다릅니다. 이 글은 한국 학계에서 널리 쓰이는 설명을 따랐습니다.\n\n**어휘와 문법**\n- `-(으)로 알려져 있다`: 확실하지 않은 부분을 조심스럽게 말합니다.\n- `-에 걸쳐`: 범위를 나타냅니다.\n- `-(으)ㄴ/는 한편`: 한 가지 일과 함께 다른 일을 말합니다.\n- 단어: 유민, 건국, 계승, 번영, 해동성국, 멸망.\n- '남북국 시대'는 신라와 발해를 함께 부르는 말입니다.",
+    "en": "**Background** Balhae is known to have been founded in 698 by Dae Joyeong, who led Goguryeo refugees and Malgal people, and was destroyed by the Khitan in 926. Its history spans the territories of Korea, China and Russia, and each country narrates it differently. This text follows the account widely used in Korean scholarship.\n\n**Points to watch**\n- `-(으)로 알려져 있다`: carefully expressing uncertain points.\n- `-에 걸쳐`: across a range.\n- `-(으)ㄴ/는 한편`: mentioning another matter alongside.\n- Words: 유민 refugees, 건국 founding, 계승 succession, 번영 prosperity, 해동성국 Flourishing Land of the East, 멸망 fall.\n- \"Northern and Southern States period\" refers to Silla and Balhae together."
   },
   "paragraphs": [
     {
@@ -150,5 +150,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; fixed note grammar item. Dates, institutions and hedged claims (Goryeo-king title, fall theories) verified; multi-national interpretation noted."
   }
 }

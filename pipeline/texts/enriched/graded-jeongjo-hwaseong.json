@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 정조(재위 1776–1800)는 조선 후기의 개혁 군주입니다. 그는 억울하게 죽은 아버지 사도세자의 무덤을 수원으로 옮기고, 그 주변에 화성을 쌓았습니다(1794–1796). 화성은 1997년 유네스코 세계유산이 되었습니다.\n\n**어휘와 문법**\n- `-기 위해(서)`: 목적을 나타냅니다.\n- `-(으)ㄴ/는 데다가`: 앞의 내용에 더하는 말입니다.\n- `-아/어 놓다`: 어떤 일을 끝내고 그 상태를 유지합니다.\n- 단어: 성곽, 거중기, 개혁, 기록, 세계유산, 인재.\n- 『화성성역의궤』는 공사 기록 책입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '정조와 수원 화성'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Jeongjo (r. 1776-1800) was a reform-minded king of late Joseon. He moved the tomb of his father, Crown Prince Sado, to Suwon and built Hwaseong around it (1794-1796). Hwaseong became a UNESCO World Heritage site in 1997.\n\n**Points to watch**\n- `-기 위해(서)`: purpose.\n- `-(으)ㄴ/는 데다가`: adding to what came before.\n- `-아/어 놓다`: finishing something and leaving it in that state.\n- Words: 성곽 fortress wall, 거중기 crane, 개혁 reform, 기록 record, 세계유산 World Heritage, 인재 talented person.\n- The *Hwaseong Seongyeok Uigwe* is the book recording the construction.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"King Jeongjo and Hwaseong Fortress,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 정조(재위 1776–1800)는 조선 후기의 개혁 군주입니다. 그는 억울하게 죽은 아버지 사도세자의 무덤을 수원으로 옮기고, 그 주변에 화성을 쌓았습니다(1794–1796). 화성은 1997년 유네스코 세계유산이 되었습니다.\n\n**어휘와 문법**\n- `-기 위해(서)`: 목적을 나타냅니다.\n- `-(으)ㄴ/는 데다가`: 앞의 내용에 더하는 말입니다.\n- `-아/어 놓다`: 어떤 일을 끝내고 그 상태를 유지합니다.\n- 단어: 성곽, 거중기, 개혁, 기록, 세계유산, 인재.\n- 『화성성역의궤』는 공사 기록 책입니다.",
+    "en": "**Background** Jeongjo (r. 1776-1800) was a reform-minded king of late Joseon. He moved the tomb of his father, Crown Prince Sado, to Suwon and built Hwaseong around it (1794-1796). Hwaseong became a UNESCO World Heritage site in 1997.\n\n**Points to watch**\n- `-기 위해(서)`: purpose.\n- `-(으)ㄴ/는 데다가`: adding to what came before.\n- `-아/어 놓다`: finishing something and leaving it in that state.\n- Words: 성곽 fortress wall, 거중기 crane, 개혁 reform, 기록 record, 세계유산 World Heritage, 인재 talented person.\n- The *Hwaseong Seongyeok Uigwe* is the book recording the construction."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

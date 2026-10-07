@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 경복궁은 1395년 조선의 법궁(으뜸 궁궐)으로 지어졌습니다. 궁궐에는 왕과 왕비 외에도 신하, 궁녀, 내시 등 많은 사람이 일하고 살았습니다. 이 글은 일반적인 궁궐 생활을 설명한 것이며, 시대에 따라 조금씩 달랐습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 편이다`: 대체로 그렇다는 뜻입니다.\n- `-(으)ㄹ 뿐만 아니라`: 이것뿐 아니라 다른 것도 있음을 말합니다.\n- `-(으)ㄴ 후에`: 순서를 나타냅니다.\n- 단어: 궁궐, 신하, 궁녀, 내시, 수라, 경연.\n- '수라'는 왕이 드시는 밥을 높여 부르는 말입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '조선 궁궐의 하루'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Gyeongbokgung was built in 1395 as Joseon's main palace. Besides the king and queen, many people such as officials, court ladies and eunuchs worked and lived in the palace. This text describes palace life in general; it varied somewhat by period.\n\n**Points to watch**\n- `-(으)ㄴ/는 편이다`: generally so.\n- `-(으)ㄹ 뿐만 아니라`: not only... but also.\n- `-(으)ㄴ 후에`: sequence.\n- Words: 궁궐 palace, 신하 official, 궁녀 court lady, 내시 eunuch, 수라 the king's meal, 경연 royal lecture.\n- 수라 is the honorific word for the king's meal.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"A Day in a Joseon Palace,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 경복궁은 1395년 조선의 법궁(으뜸 궁궐)으로 지어졌습니다. 궁궐에는 왕과 왕비 외에도 신하, 궁녀, 내시 등 많은 사람이 일하고 살았습니다. 이 글은 일반적인 궁궐 생활을 설명한 것이며, 시대에 따라 조금씩 달랐습니다.\n\n**어휘와 문법**\n- `-(이)라고 한다`: 이름을 설명합니다 (조회라고 한다).\n- `-아/어야 하다`: 의무 (공부해야 하는).\n- `-(으)ㄴ 후에`: 순서를 나타냅니다.\n- 단어: 궁궐, 신하, 궁녀, 내시, 수라, 경연.\n- '수라'는 왕이 드시는 밥을 높여 부르는 말입니다.",
+    "en": "**Background** Gyeongbokgung was built in 1395 as Joseon's main palace. Besides the king and queen, many people such as officials, court ladies and eunuchs worked and lived in the palace. This text describes palace life in general; it varied somewhat by period.\n\n**Points to watch**\n- `-(이)라고 한다`: giving a name (조회라고 한다).\n- `-아/어야 하다`: obligation (공부해야 하는).\n- `-(으)ㄴ 후에`: sequence.\n- Words: 궁궐 palace, 신하 official, 궁녀 court lady, 내시 eunuch, 수라 the king's meal, 경연 royal lecture.\n- 수라 is the honorific word for the king's meal."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; fixed note grammar items. Facts verified (Gyeongbokgung 1395)."
   }
 }

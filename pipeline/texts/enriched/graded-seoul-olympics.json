@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1988년 9월 17일부터 10월 2일까지 서울에서 하계 올림픽이 열렸습니다. 한국에서 처음 열린 올림픽이었고, 많은 나라가 참가했습니다. 이 대회는 한국이 세계에 알려지는 계기가 되었습니다.\n\n**어휘와 문법**\n- `-에서 열리다`: 행사가 어디에서 하는지 말합니다.\n- `처음`, `많은`: 자주 쓰는 말입니다.\n- `-게 되다`: 변화를 나타냅니다 (알게 되었어요).\n- 단어: 올림픽, 선수, 마스코트, 발전하다, 세계.\n- 호랑이 '호돌이'는 이 올림픽의 마스코트였습니다.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '서울 올림픽'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
-    "en": "**Background** The Summer Olympics were held in Seoul from September 17 to October 2, 1988. They were the first Olympics in Korea, with many countries taking part, and helped raise Korea's profile worldwide.\n\n**Points to watch**\n- `-에서 열리다`: where an event takes place.\n- `처음` (first) and `많은` (many) are common words.\n- `-게 되다`: change of state (알게 되었어요).\n- Words: 올림픽 Olympics, 선수 athlete, 마스코트 mascot, 발전하다 develop, 세계 world.\n- The tiger Hodori was the mascot of these Games.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"The Seoul Olympics.\" After reading, try answering the questions briefly."
+    "ko": "**배경** 1988년 9월 17일부터 10월 2일까지 서울에서 하계 올림픽이 열렸습니다. 한국에서 처음 열린 올림픽이었고, 많은 나라가 참가했습니다. 이 대회는 한국이 세계에 알려지는 계기가 되었습니다.\n\n**어휘와 문법**\n- `-에서 열리다`: 행사가 어디에서 하는지 말합니다.\n- `처음`, `많은`: 자주 쓰는 말입니다.\n- `-게 되다`: 변화를 나타냅니다 (알게 되었어요).\n- 단어: 올림픽, 선수, 마스코트, 발전하다, 세계.\n- 호랑이 '호돌이'는 이 올림픽의 마스코트였습니다.",
+    "en": "**Background** The Summer Olympics were held in Seoul from September 17 to October 2, 1988. They were the first Olympics in Korea, with many countries taking part, and helped raise Korea's profile worldwide.\n\n**Points to watch**\n- `-에서 열리다`: where an event takes place.\n- `처음` (first) and `많은` (many) are common words.\n- `-게 되다`: change of state (알게 되었어요).\n- Words: 올림픽 Olympics, 선수 athlete, 마스코트 mascot, 발전하다 develop, 세계 world.\n- The tiger Hodori was the mascot of these Games."
   },
   "paragraphs": [
     {
@@ -122,5 +122,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

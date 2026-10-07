@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1945년 광복 뒤 한반도는 38도선을 경계로 남쪽은 미군, 북쪽은 소련군이 관리했습니다. 1948년 남쪽에 대한민국, 북쪽에 조선민주주의인민공화국이 각각 세워졌고, 1950년 6월 25일 전쟁이 시작되어 1953년 7월 27일 휴전 협정이 맺어졌습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 가운데`: 상황 속에서.\n- `-게 되다`: 결과.\n- `-(으)ㄹ 뿐이다`: 단지 그러할 뿐.\n- 단어: 분단, 휴전, 군사분계선, 이산가족, 유엔군, 상륙, 정전.\n- '휴전'은 전쟁을 잠시 멈춘 것으로, 평화 협정과는 다릅니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '분단과 6·25 전쟁'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** After liberation in 1945, the Korean peninsula was administered along the 38th parallel by U.S. forces in the south and Soviet forces in the north. In 1948 the Republic of Korea in the south and the Democratic People's Republic of Korea in the north were each established; war began on June 25, 1950, and an armistice agreement was signed on July 27, 1953.\n\n**Points to watch**\n- `-(으)ㄴ/는 가운데`: amid a situation.\n- `-게 되다`: result.\n- `-(으)ㄹ 뿐이다`: only.\n- Words: 분단 division, 휴전 armistice, 군사분계선 military demarcation line, 이산가족 separated families, 유엔군 UN forces, 상륙 landing, 정전 ceasefire.\n- 휴전 is a pause in fighting and differs from a peace treaty.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Division and the Korean War,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 1945년 광복 뒤 한반도는 38도선을 경계로 남쪽은 미군, 북쪽은 소련군이 관리했습니다. 1948년 남쪽에 대한민국, 북쪽에 조선민주주의인민공화국이 각각 세워졌고, 1950년 6월 25일 전쟁이 시작되어 1953년 7월 27일 휴전 협정이 맺어졌습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 가운데`: 상황 속에서.\n- `-게 되다`: 결과.\n- `-(으)ㄹ 뿐이다`: 단지 그러할 뿐.\n- 단어: 분단, 휴전, 군사분계선, 이산가족, 유엔군, 상륙, 정전.\n- '휴전'은 전쟁을 잠시 멈춘 것으로, 평화 협정과는 다릅니다.",
+    "en": "**Background** After liberation in 1945, the Korean peninsula was administered along the 38th parallel by U.S. forces in the south and Soviet forces in the north. In 1948 the Republic of Korea in the south and the Democratic People's Republic of Korea in the north were each established; war began on June 25, 1950, and an armistice agreement was signed on July 27, 1953.\n\n**Points to watch**\n- `-(으)ㄴ/는 가운데`: amid a situation.\n- `-게 되다`: result.\n- `-(으)ㄹ 뿐이다`: only.\n- Words: 분단 division, 휴전 armistice, 군사분계선 military demarcation line, 이산가족 separated families, 유엔군 UN forces, 상륙 landing, 정전 ceasefire.\n- 휴전 is a pause in fighting and differs from a peace treaty."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

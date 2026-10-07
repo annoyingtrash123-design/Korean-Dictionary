@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 한자는 늦어도 삼국 시대 이전부터 한반도에서 쓰였고, 한문은 오랫동안 공식 문서와 학문의 글이었습니다. 한자 문화권은 한국, 중국, 일본, 베트남 등 한자와 한문을 공유한 지역을 말합니다. 오늘날 한국어 어휘에는 한자어가 상당히 많습니다.\n\n**어휘와 문법**\n- `-에 비해`: 비교.\n- `-(으)ㄹ 수 있다`: 가능.\n- `-(으)ㄴ 덕분에`: 도움이 된 이유.\n- 단어: 한자어, 한문, 이두, 필담, 어휘, 공용어, 문화권.\n- 한자어를 보면 한자의 뜻을 짐작해 보세요 (학교 = 學校).\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '한자와 한문 문화권'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Chinese characters were used on the peninsula from at latest before the Three Kingdoms period, and Literary Chinese was long the language of official documents and scholarship. The Sinitic cultural sphere means regions that shared Chinese characters and Literary Chinese, such as Korea, China, Japan and Vietnam. Modern Korean vocabulary contains many Sino-Korean words.\n\n**Points to watch**\n- `-에 비해`: comparison.\n- `-(으)ㄹ 수 있다`: possibility.\n- `-(으)ㄴ 덕분에`: because of helpful circumstances.\n- Words: 한자어 Sino-Korean word, 한문 Literary Chinese, 이두 Idu script, 필담 brush conversation, 어휘 vocabulary, 공용어 official language, 문화권 cultural sphere.\n- Guess the meaning of Sino-Korean words from the hanja (학교 = 學校).\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Chinese Characters and the Sinitic Cultural Sphere,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 한자는 늦어도 삼국 시대 이전부터 한반도에서 쓰였고, 한문은 오랫동안 공식 문서와 학문의 글이었습니다. 한자 문화권은 한국, 중국, 일본, 베트남 등 한자와 한문을 공유한 지역을 말합니다. 오늘날 한국어 어휘에는 한자어가 상당히 많습니다.\n\n**어휘와 문법**\n- `-에 비해`: 비교.\n- `-(으)ㄹ 수 있다`: 가능.\n- `-(으)ㄴ 덕분에`: 도움이 된 이유.\n- 단어: 한자어, 한문, 이두, 필담, 어휘, 공용어, 문화권.\n- 한자어를 보면 한자의 뜻을 짐작해 보세요 (학교 = 學校).",
+    "en": "**Background** Chinese characters were used on the peninsula from at latest before the Three Kingdoms period, and Literary Chinese was long the language of official documents and scholarship. The Sinitic cultural sphere means regions that shared Chinese characters and Literary Chinese, such as Korea, China, Japan and Vietnam. Modern Korean vocabulary contains many Sino-Korean words.\n\n**Points to watch**\n- `-에 비해`: comparison.\n- `-(으)ㄹ 수 있다`: possibility.\n- `-(으)ㄴ 덕분에`: because of helpful circumstances.\n- Words: 한자어 Sino-Korean word, 한문 Literary Chinese, 이두 Idu script, 필담 brush conversation, 어휘 vocabulary, 공용어 official language, 문화권 cultural sphere.\n- Guess the meaning of Sino-Korean words from the hanja (학교 = 學校)."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

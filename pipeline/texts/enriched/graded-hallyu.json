@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** '한류'는 1990년대 말부터 중국과 동남아시아에서 한국 드라마와 노래가 인기를 얻으면서 쓰이기 시작한 말입니다. 이후 케이팝, 영화, 음식 등으로 넓어지며 세계로 퍼졌습니다.\n\n**어휘와 문법**\n- `-(이)라고 하다`: 이름이나 뜻을 설명합니다.\n- `-도`: '또한'의 뜻입니다 (영화도 봐요).\n- `-는 사람`: 동사로 사람을 꾸밉니다 (배우는 사람).\n- `-지요?`: 확인하는 질문입니다.\n- 단어: 문화, 인기, 드라마, 영화, 음식, 외국. 마지막 문장은 독자에게 말을 거는 표현입니다.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '한류'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
-    "en": "**Background** The word *Hallyu* (\"Korean Wave\") came into use from the late 1990s as Korean dramas and songs became popular in China and Southeast Asia. It later widened to K-pop, film, food and more across the world.\n\n**Points to watch**\n- `-(이)라고 하다`: explaining a name or meaning.\n- `-도`: \"also\" (영화도 봐요).\n- `-는 사람`: a verb describing a person (배우는 사람).\n- `-지요?`: a question seeking confirmation.\n- Words: 문화 culture, 인기 popularity, 드라마 drama, 영화 film, 음식 food, 외국 foreign country. The last sentence speaks directly to the reader.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"The Korean Wave.\" After reading, try answering the questions briefly."
+    "ko": "**배경** '한류'는 1990년대 말부터 중국과 동남아시아에서 한국 드라마와 노래가 인기를 얻으면서 쓰이기 시작한 말입니다. 이후 케이팝, 영화, 음식 등으로 넓어지며 세계로 퍼졌습니다.\n\n**어휘와 문법**\n- `-고 있다`: 지금 계속하는 일 (공부하고 있지요).\n- `-도`: '또한'의 뜻입니다 (영화도 봐요).\n- `-는 사람`: 동사로 사람을 꾸밉니다 (배우는 사람).\n- `-지요?`: 확인하는 질문입니다.\n- 단어: 문화, 인기, 드라마, 영화, 음식, 외국. 마지막 문장은 독자에게 말을 거는 표현입니다.",
+    "en": "**Background** The word *Hallyu* (\"Korean Wave\") came into use from the late 1990s as Korean dramas and songs became popular in China and Southeast Asia. It later widened to K-pop, film, food and more across the world.\n\n**Points to watch**\n- `-고 있다`: ongoing action (공부하고 있지요).\n- `-도`: \"also\" (영화도 봐요).\n- `-는 사람`: a verb describing a person (배우는 사람).\n- `-지요?`: a question seeking confirmation.\n- Words: 문화 culture, 인기 popularity, 드라마 drama, 영화 film, 음식 food, 외국 foreign country. The last sentence speaks directly to the reader."
   },
   "paragraphs": [
     {
@@ -122,5 +122,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; fixed note grammar item; level OK for TOPIK 1-2."
   }
 }

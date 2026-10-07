@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 전근대 동아시아에서는 중국 왕조를 중심으로 한 국제 질서가 오랫동안 유지되었습니다. 한반도의 여러 왕조도 이 질서에 참여했으나, 관계의 성격은 시기와 왕조에 따라 달랐고 오늘날에도 연구자들의 해석이 갈립니다. 이 글은 일반적으로 받아들여지는 설명을 요약한 것입니다.\n\n**어휘와 문법**\n- `-에 불과하다`: 그것에 지나지 않음을 나타냅니다.\n- `-는 한편`: 두 가지 측면을 함께 말합니다.\n- `-(으)ㄴ/는 셈이다`: 사실상 그러함을 나타냅니다.\n- 단어: 조공, 책봉, 사대, 교린, 명분, 실리, 자율성.\n- 한자어가 많으므로 한자의 뜻을 짐작하며 읽으세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '조공과 책봉'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In premodern East Asia, an international order centered on Chinese dynasties lasted for a long time. Dynasties on the Korean peninsula also took part, but the nature of the relationship varied by period and dynasty, and scholars' interpretations still differ. This text summarizes the generally accepted account.\n\n**Points to watch**\n- `-에 불과하다`: nothing more than.\n- `-는 한편`: presenting two aspects together.\n- `-(으)ㄴ/는 셈이다`: amounts to.\n- Words: 조공 tribute, 책봉 investiture, 사대 serving the great, 교린 neighborly relations, 명분 justification, 실리 practical gain, 자율성 autonomy.\n- Many Sino-Korean words appear; guess meanings from the hanja.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Tribute and Investiture,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 전근대 동아시아에서는 중국 왕조를 중심으로 한 국제 질서가 오랫동안 유지되었습니다. 한반도의 여러 왕조도 이 질서에 참여했으나, 관계의 성격은 시기와 왕조에 따라 달랐고 오늘날에도 연구자들의 해석이 갈립니다. 이 글은 일반적으로 받아들여지는 설명을 요약한 것입니다.\n\n**어휘와 문법**\n- `-에 불과하다`: 그것에 지나지 않음을 나타냅니다.\n- `-는 한편`: 두 가지 측면을 함께 말합니다.\n- `-(으)ㄴ/는 셈이다`: 사실상 그러함을 나타냅니다.\n- 단어: 조공, 책봉, 사대, 교린, 명분, 실리, 자율성.\n- 한자어가 많으므로 한자의 뜻을 짐작하며 읽으세요.",
+    "en": "**Background** In premodern East Asia, an international order centered on Chinese dynasties lasted for a long time. Dynasties on the Korean peninsula also took part, but the nature of the relationship varied by period and dynasty, and scholars' interpretations still differ. This text summarizes the generally accepted account.\n\n**Points to watch**\n- `-에 불과하다`: nothing more than.\n- `-는 한편`: presenting two aspects together.\n- `-(으)ㄴ/는 셈이다`: amounts to.\n- Words: 조공 tribute, 책봉 investiture, 사대 serving the great, 교린 neighborly relations, 명분 justification, 실리 practical gain, 자율성 autonomy.\n- Many Sino-Korean words appear; guess meanings from the hanja."
   },
   "paragraphs": [
     {
@@ -149,5 +149,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

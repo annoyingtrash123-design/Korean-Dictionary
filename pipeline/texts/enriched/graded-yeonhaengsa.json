@@ -26,8 +26,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 조선은 청나라가 베이징을 수도로 삼은 뒤 정기적으로 사신단을 보냈는데, 이를 '연행사'라 부릅니다. '연'(燕)은 베이징 지역의 옛 이름입니다. 사신들은 여행의 기록을 '연행록'으로 남겼고, 이는 당시 청나라의 모습을 알려 주는 귀중한 자료입니다.\n\n**어휘와 문법**\n- `-(으)로 향하다`: 어떤 방향으로 가다.\n- `-(으)ㄹ 때마다`: 반복되는 상황.\n- `-는 동안`: 기간.\n- 단어: 사신, 정사, 역관, 수행원, 연행록, 국경, 서점.\n- 이 글의 일정과 인원은 대략적인 설명입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '연행사의 베이징 여행'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** After the Qing made Beijing its capital, Joseon sent missions regularly; these are called *yeonhaengsa*. \"Yeon\" is an old name for the Beijing region. Envoys left records of their journeys called *yeonhaengnok*, valuable sources on Qing at the time.\n\n**Points to watch**\n- `-(으)로 향하다`: heading toward.\n- `-(으)ㄹ 때마다`: whenever.\n- `-는 동안`: during.\n- Words: 사신 envoy, 정사 chief envoy, 역관 interpreter, 수행원 attendant, 연행록 travel record, 국경 border, 서점 bookstore.\n- The itinerary and numbers here are approximate.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Envoys' Journey to Beijing,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 조선은 청나라가 베이징을 수도로 삼은 뒤 정기적으로 사신단을 보냈는데, 이를 '연행사'라 부릅니다. '연'(燕)은 베이징 지역의 옛 이름입니다. 사신들은 여행의 기록을 '연행록'으로 남겼고, 이는 당시 청나라의 모습을 알려 주는 귀중한 자료입니다.\n\n**어휘와 문법**\n- `-(으)로 향하다`: 어떤 방향으로 가다.\n- `-(으)ㄹ 때마다`: 반복되는 상황.\n- `-는 동안`: 기간.\n- 단어: 사신, 정사, 역관, 수행원, 연행록, 국경, 서점.\n- 이 글의 일정과 인원은 대략적인 설명입니다.",
+    "en": "**Background** After the Qing made Beijing its capital, Joseon sent missions regularly; these are called *yeonhaengsa*. \"Yeon\" is an old name for the Beijing region. Envoys left records of their journeys called *yeonhaengnok*, valuable sources on Qing at the time.\n\n**Points to watch**\n- `-(으)로 향하다`: heading toward.\n- `-(으)ㄹ 때마다`: whenever.\n- `-는 동안`: during.\n- Words: 사신 envoy, 정사 chief envoy, 역관 interpreter, 수행원 attendant, 연행록 travel record, 국경 border, 서점 bookstore.\n- The itinerary and numbers here are approximate."
   },
   "paragraphs": [
     {
@@ -150,5 +150,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

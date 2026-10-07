@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 판소리와 탈춤은 조선 후기에 널리 퍼진 공연 예술입니다. 두 공연은 모두 웃음 속에 사회에 대한 불만과 풍자를 담았습니다. 판소리는 유네스코 인류무형문화유산으로 등록되어 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 반면에`: 서로 대비되는 내용을 이어 줍니다.\n- `-에 대해`: 대상을 나타냅니다.\n- `-(으)ㄹ 수 있다`: 가능을 나타냅니다.\n- 단어: 소리꾼, 고수, 장단, 풍자, 양반, 관객.\n- '한'과 '흥'이라는 감정이 함께 느껴지는 점이 특징이라고 합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '판소리와 탈춤'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Pansori and talchum (mask dance) were performing arts that spread widely in late Joseon. Both put criticism of and satire on society into humor. Pansori is inscribed as UNESCO Intangible Cultural Heritage.\n\n**Points to watch**\n- `-(으)ㄴ/는 반면에`: contrasting contents.\n- `-에 대해`: about (an object).\n- `-(으)ㄹ 수 있다`: possibility.\n- Words: 소리꾼 pansori singer, 고수 drummer, 장단 rhythm, 풍자 satire, 양반 aristocrat, 관객 audience.\n- It is said the feelings of *han* (sorrow) and *heung* (joy) are felt together.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Pansori and Talchum,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 판소리와 탈춤은 조선 후기에 널리 퍼진 공연 예술입니다. 두 공연은 모두 웃음 속에 사회에 대한 불만과 풍자를 담았습니다. 판소리는 유네스코 인류무형문화유산으로 등록되어 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 반면에`: 서로 대비되는 내용을 이어 줍니다.\n- `-에 대해`: 대상을 나타냅니다.\n- `-(으)ㄹ 수 있다`: 가능을 나타냅니다.\n- 단어: 소리꾼, 고수, 장단, 풍자, 양반, 관객.\n- '한'과 '흥'이라는 감정이 함께 느껴지는 점이 특징이라고 합니다.",
+    "en": "**Background** Pansori and talchum (mask dance) were performing arts that spread widely in late Joseon. Both put criticism of and satire on society into humor. Pansori is inscribed as UNESCO Intangible Cultural Heritage.\n\n**Points to watch**\n- `-(으)ㄴ/는 반면에`: contrasting contents.\n- `-에 대해`: about (an object).\n- `-(으)ㄹ 수 있다`: possibility.\n- Words: 소리꾼 pansori singer, 고수 drummer, 장단 rhythm, 풍자 satire, 양반 aristocrat, 관객 audience.\n- It is said the feelings of *han* (sorrow) and *heung* (joy) are felt together."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** '한강의 기적'은 6·25 전쟁 이후 가난했던 한국이 1960년대부터 빠르게 경제 성장을 이룬 것을 가리키는 표현입니다. 1962년에 경제개발 5개년 계획이 시작되었고, 수출을 중심으로 공업이 발전했습니다. 성장 과정에서 긴 노동 시간 등 어려움도 있었다는 점이 함께 언급됩니다.\n\n**어휘와 문법**\n- `-(으)로 인해`: 원인을 나타냅니다.\n- `-에 힘입어`: 도움을 받아서라는 뜻입니다.\n- `-(으)ㄴ 한편`: 다른 측면을 덧붙입니다.\n- 단어: 경제, 수출, 성장, 공장, 산업, 노동자.\n- '기적'은 믿기 어려운 놀라운 일을 뜻합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '한강의 기적'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** \"The Miracle on the Han River\" refers to the rapid economic growth Korea, poor after the Korean War, achieved from the 1960s. The first Five-Year Economic Development Plan began in 1962, and industry developed with exports at its center. It is also noted that the growth involved hardships such as long working hours.\n\n**Points to watch**\n- `-(으)로 인해`: cause.\n- `-에 힘입어`: thanks to help from.\n- `-(으)ㄴ 한편`: adding another aspect.\n- Words: 경제 economy, 수출 export, 성장 growth, 공장 factory, 산업 industry, 노동자 worker.\n- 기적 means a surprising, hard-to-believe event.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Miracle on the Han River,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** '한강의 기적'은 6·25 전쟁 이후 가난했던 한국이 1960년대부터 빠르게 경제 성장을 이룬 것을 가리키는 표현입니다. 1962년에 경제개발 5개년 계획이 시작되었고, 수출을 중심으로 공업이 발전했습니다. 성장 과정에서 긴 노동 시간 등 어려움도 있었다는 점이 함께 언급됩니다.\n\n**어휘와 문법**\n- `-(으)로 인해`: 원인을 나타냅니다.\n- `-에 힘입어`: 도움을 받아서라는 뜻입니다.\n- `-(으)ㄴ 한편`: 다른 측면을 덧붙입니다.\n- 단어: 경제, 수출, 성장, 공장, 산업, 노동자.\n- '기적'은 믿기 어려운 놀라운 일을 뜻합니다.",
+    "en": "**Background** \"The Miracle on the Han River\" refers to the rapid economic growth Korea, poor after the Korean War, achieved from the 1960s. The first Five-Year Economic Development Plan began in 1962, and industry developed with exports at its center. It is also noted that the growth involved hardships such as long working hours.\n\n**Points to watch**\n- `-(으)로 인해`: cause.\n- `-에 힘입어`: thanks to help from.\n- `-(으)ㄴ 한편`: adding another aspect.\n- Words: 경제 economy, 수출 export, 성장 growth, 공장 factory, 산업 industry, 노동자 worker.\n- 기적 means a surprising, hard-to-believe event."
   },
   "paragraphs": [
     {
@@ -86,8 +86,8 @@
       "level": 3
     },
     {
-      "word": "이다",
-      "gloss_en": "to connect",
+      "word": "잇다",
+      "gloss_en": "to connect; to link",
       "level": 2
     },
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; vocab headword corrected 이다 -> 잇다. Facts verified (1962 plan, 1970 expressway, 1996 OECD); balanced on labour conditions."
   }
 }

@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1910년부터 한국은 일본의 지배를 받았습니다. 1919년 3월 1일에 서울에서 독립 선언서를 읽고 만세를 외치는 운동이 시작되었고, 전국으로 퍼졌습니다. 오늘날 3월 1일은 삼일절이라는 공휴일입니다.\n\n**어휘와 문법**\n- `-고 있었어요`: 그때 계속되고 있던 상태 (받고 있었어요).\n- `그리고`, `그래서`로 문장을 이어 보세요.\n- `-아/어요`와 `-았/었어요`를 구별해 보세요.\n- 단어: 독립, 만세, 태극기, 거리, 기념하다, 공휴일.\n- '3·1'은 '삼일'이라고 읽습니다.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '3·1 운동'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
-    "en": "**Background** From 1910 Korea was under Japanese rule. On March 1, 1919, a movement of reading a declaration of independence and shouting \"manse\" began in Seoul and spread nationwide. March 1 is now the public holiday Samiljeol.\n\n**Points to watch**\n- `-고 있었어요`: an ongoing state at that time (받고 있었어요).\n- Link sentences with simple connectors such as 그리고 and 그래서.\n- Compare present -아/어요 and past -았/었어요.\n- Words: 독립 independence, 만세 hurrah, 태극기 national flag, 거리 street, 기념하다 commemorate, 공휴일 public holiday.\n- Read 3·1 as 삼일.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"The March 1st Movement.\" After reading, try answering the questions briefly."
+    "ko": "**배경** 1910년부터 한국은 일본의 지배를 받았습니다. 1919년 3월 1일에 서울에서 독립 선언서를 읽고 만세를 외치는 운동이 시작되었고, 전국으로 퍼졌습니다. 오늘날 3월 1일은 삼일절이라는 공휴일입니다.\n\n**어휘와 문법**\n- `-고 있었어요`: 그때 계속되고 있던 상태 (받고 있었어요).\n- `그리고`, `그래서`로 문장을 이어 보세요.\n- `-아/어요`와 `-았/었어요`를 구별해 보세요.\n- 단어: 독립, 만세, 태극기, 거리, 기념하다, 공휴일.\n- '3·1'은 '삼일'이라고 읽습니다.",
+    "en": "**Background** From 1910 Korea was under Japanese rule. On March 1, 1919, a movement of reading a declaration of independence and shouting \"manse\" began in Seoul and spread nationwide. March 1 is now the public holiday Samiljeol.\n\n**Points to watch**\n- `-고 있었어요`: an ongoing state at that time (받고 있었어요).\n- Link sentences with simple connectors such as 그리고 and 그래서.\n- Compare present -아/어요 and past -았/었어요.\n- Words: 독립 independence, 만세 hurrah, 태극기 national flag, 거리 street, 기념하다 commemorate, 공휴일 public holiday.\n- Read 3·1 as 삼일."
   },
   "paragraphs": [
     {
@@ -122,5 +122,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

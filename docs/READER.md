@@ -102,3 +102,10 @@ Every AI-produced field is labelled in the UI ("AI-written", "AI-generated trans
   form, Sino-Korean reading, 훈음 per character, CC-CEDICT gloss.
 - Reading settings: font size, line spacing, serif/sans for Korean, show/hide English, original ↔
   modern spelling, hanmun reading line on/off; reading position remembered per text.
+
+## Pack build rules (deterministic checks, not review)
+- Only enriched files with `review.status == "approved"` are packed; the build fails if a catalogue
+  text has raw source but no approved enrichment *and* is marked `required`.
+- `vocab[].level` is recomputed from krdict (초급 1 / 중급 2 / 고급 3; absent → null) and every
+  `vocab[].word` must resolve to a dictionary headword (directly or via deconjugation) — unresolved
+  words fail the build with a list.

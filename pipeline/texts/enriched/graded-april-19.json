@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 이승만 대통령은 1948년부터 대통령을 맡았고, 1960년 3월 15일 선거에서 대규모 부정선거가 있었습니다. 이에 항의하는 시위가 전국으로 번졌고, 4월 26일 이승만은 대통령직에서 물러났습니다. 4·19는 학생과 시민이 힘으로 정권을 바꾼 한국 민주주의의 중요한 사건입니다.\n\n**어휘와 문법**\n- `-에 항의하다`: 반대의 뜻을 밝히다.\n- `-(으)ㄴ 것을 계기로`: 계기.\n- `-도록 하다`: 하게 하다.\n- 단어: 부정선거, 시위, 하야, 혁명, 민주주의, 발포, 희생.\n- '하야'는 대통령이 스스로 물러나는 것을 말합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '4·19 혁명'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** President Syngman Rhee had held office since 1948, and the March 15, 1960 election involved large-scale fraud. Protests against it spread nationwide, and on April 26 Rhee stepped down. April 19 is an important event in Korean democracy in which students and citizens changed a government by their own power.\n\n**Points to watch**\n- `-에 항의하다`: to protest against.\n- `-(으)ㄴ 것을 계기로`: taking as an occasion.\n- `-도록 하다`: to make someone do.\n- Words: 부정선거 election fraud, 시위 demonstration, 하야 stepping down, 혁명 revolution, 민주주의 democracy, 발포 firing, 희생 sacrifice.\n- 하야 means a president resigning of his own accord.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The April 19 Revolution,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 이승만 대통령은 1948년부터 대통령을 맡았고, 1960년 3월 15일 선거에서 대규모 부정선거가 있었습니다. 이에 항의하는 시위가 전국으로 번졌고, 4월 26일 이승만은 대통령직에서 물러났습니다. 4·19는 학생과 시민이 힘으로 정권을 바꾼 한국 민주주의의 중요한 사건입니다.\n\n**어휘와 문법**\n- `-에 항의하다`: 반대의 뜻을 밝히다.\n- `-(으)ㄴ 것을 계기로`: 계기.\n- `-도록 하다`: 하게 하다.\n- 단어: 부정선거, 시위, 하야, 혁명, 민주주의, 발포, 희생.\n- '하야'는 대통령이 스스로 물러나는 것을 말합니다.",
+    "en": "**Background** President Syngman Rhee had held office since 1948, and the March 15, 1960 election involved large-scale fraud. Protests against it spread nationwide, and on April 26 Rhee stepped down. April 19 is an important event in Korean democracy in which students and citizens changed a government by their own power.\n\n**Points to watch**\n- `-에 항의하다`: to protest against.\n- `-(으)ㄴ 것을 계기로`: taking as an occasion.\n- `-도록 하다`: to make someone do.\n- Words: 부정선거 election fraud, 시위 demonstration, 하야 stepping down, 혁명 revolution, 민주주의 democracy, 발포 firing, 희생 sacrifice.\n- 하야 means a president resigning of his own accord."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

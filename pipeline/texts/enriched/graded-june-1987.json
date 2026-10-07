@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1980년대 한국에서는 대통령을 국민이 직접 뽑지 못하고 간접 선거로 선출하는 제도가 이어지고 있었습니다. 1987년 박종철 학생이 경찰 조사 중에 사망한 일을 계기로 민주화 요구가 커졌고, 6월에 전국적인 시위가 벌어졌습니다. 그 결과 6월 29일 대통령 직선제 개헌이 발표되었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 계기.\n- `-에 이르다`: 어떤 단계에 도달하다.\n- `-(으)ㄹ 것을 요구하다`: 요구의 내용.\n- 단어: 직선제, 개헌, 호헌, 고문, 최루탄, 선언, 참여.\n- 시민, 학생, 직장인 등 다양한 사람들이 참여한 점에 주목하세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '6월 민주 항쟁'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In 1980s Korea, the system persisted in which the president was not chosen directly by the people but by indirect election. After student Park Jong-chul died during police interrogation in 1987, demands for democratization grew, and nationwide protests broke out in June. As a result, on June 29, a constitutional amendment for direct presidential elections was announced.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: taking as an occasion.\n- `-에 이르다`: reaching a stage.\n- `-(으)ㄹ 것을 요구하다`: content of a demand.\n- Words: 직선제 direct election system, 개헌 constitutional amendment, 호헌 defending the constitution, 고문 torture, 최루탄 tear gas shell, 선언 declaration, 참여 participation.\n- Note that diverse people, including citizens, students and office workers, took part.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The June Democratic Uprising,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 1980년대 한국에서는 대통령을 국민이 직접 뽑지 못하고 간접 선거로 선출하는 제도가 이어지고 있었습니다. 1987년 박종철 학생이 경찰 조사 중에 사망한 일을 계기로 민주화 요구가 커졌고, 6월에 전국적인 시위가 벌어졌습니다. 그 결과 6월 29일 대통령 직선제 개헌이 발표되었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 계기.\n- `-에 이르다`: 어떤 단계에 도달하다.\n- `-(으)ㄹ 것을 요구하다`: 요구의 내용.\n- 단어: 직선제, 개헌, 호헌, 고문, 최루탄, 선언, 참여.\n- 시민, 학생, 직장인 등 다양한 사람들이 참여한 점에 주목하세요.",
+    "en": "**Background** In 1980s Korea, the system persisted in which the president was not chosen directly by the people but by indirect election. After student Park Jong-chul died during police interrogation in 1987, demands for democratization grew, and nationwide protests broke out in June. As a result, on June 29, a constitutional amendment for direct presidential elections was announced.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: taking as an occasion.\n- `-에 이르다`: reaching a stage.\n- `-(으)ㄹ 것을 요구하다`: content of a demand.\n- Words: 직선제 direct election system, 개헌 constitutional amendment, 호헌 defending the constitution, 고문 torture, 최루탄 tear gas shell, 선언 declaration, 참여 participation.\n- Note that diverse people, including citizens, students and office workers, took part."
   },
   "paragraphs": [
     {
@@ -149,5 +149,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

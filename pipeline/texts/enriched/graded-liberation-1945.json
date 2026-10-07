@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1945년 8월 15일, 일본이 연합국에 항복했다는 소식이 알려졌고, 한국은 35년 가까이 이어진 일본의 지배에서 벗어났습니다. 그러나 곧 북위 38도선을 경계로 남쪽에는 미군, 북쪽에는 소련군이 들어왔습니다. 광복절은 지금도 한국의 국경일입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 순간`: 어떤 일이 일어난 바로 그때를 가리킵니다.\n- `-게 되다`: 변화를 나타냅니다.\n- `-(으)ㄴ 채로`: 어떤 상태가 유지됨을 말합니다.\n- 단어: 광복, 항복, 해방, 국경일, 경계, 감격.\n- '광복'은 빼앗긴 빛을 되찾는다는 뜻입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '1945년 8월 15일, 광복'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** On August 15, 1945, news spread that Japan had surrendered to the Allies, and Korea was freed from nearly 35 years of Japanese rule. Soon, however, U.S. forces entered the south and Soviet forces the north, with the 38th parallel as the boundary. Liberation Day is still a national holiday.\n\n**Points to watch**\n- `-(으)ㄴ/는 순간`: the very moment something happened.\n- `-게 되다`: change of state.\n- `-(으)ㄴ 채로`: remaining in a state.\n- Words: 광복 liberation, 항복 surrender, 해방 liberation, 국경일 national holiday, 경계 boundary, 감격 deep emotion.\n- 광복 means \"recovering the lost light\".\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"August 15, 1945: Liberation,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 1945년 8월 15일, 일본이 연합국에 항복했다는 소식이 알려졌고, 한국은 35년 가까이 이어진 일본의 지배에서 벗어났습니다. 그러나 곧 북위 38도선을 경계로 남쪽에는 미군, 북쪽에는 소련군이 들어왔습니다. 광복절은 지금도 한국의 국경일입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 순간`: 어떤 일이 일어난 바로 그때를 가리킵니다.\n- `-게 되다`: 변화를 나타냅니다.\n- `-(으)ㄴ 채로`: 어떤 상태가 유지됨을 말합니다.\n- 단어: 광복, 항복, 해방, 국경일, 경계, 감격.\n- '광복'은 빼앗긴 빛을 되찾는다는 뜻입니다.",
+    "en": "**Background** On August 15, 1945, news spread that Japan had surrendered to the Allies, and Korea was freed from nearly 35 years of Japanese rule. Soon, however, U.S. forces entered the south and Soviet forces the north, with the 38th parallel as the boundary. Liberation Day is still a national holiday.\n\n**Points to watch**\n- `-(으)ㄴ/는 순간`: the very moment something happened.\n- `-게 되다`: change of state.\n- `-(으)ㄴ 채로`: remaining in a state.\n- Words: 광복 liberation, 항복 surrender, 해방 liberation, 국경일 national holiday, 경계 boundary, 감격 deep emotion.\n- 광복 means \"recovering the lost light\"."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

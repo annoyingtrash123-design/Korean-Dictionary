@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 조선은 성리학, 곧 유교를 나라의 기본 이념으로 삼았습니다. 사회는 크게 양반, 중인, 상민, 천민으로 나뉘었으나, 시기에 따라 신분의 변동도 있었습니다. 이 글은 일반적인 특징을 설명한 것이며, 지역과 시대에 따라 차이가 있었습니다.\n\n**어휘와 문법**\n- `-에 따라`: 기준.\n- `-(으)ㄴ/는 반면`: 대조.\n- `-기도 하다`: 여러 면 중 하나를 말합니다.\n- 단어: 신분, 과거, 제사, 족보, 서원, 효, 예절.\n- 삼강오륜은 군신·부자·부부 등의 도리를 말합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '유교와 양반 사회'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Joseon made Neo-Confucianism its basic ideology. Society was broadly divided into yangban, jungin, sangmin and cheonmin, though status could shift over time. This text explains general features, which varied by region and period.\n\n**Points to watch**\n- `-에 따라`: according to.\n- `-(으)ㄴ/는 반면`: contrast.\n- `-기도 하다`: mentioning one of several aspects.\n- Words: 신분 status, 과거 civil service exam, 제사 ancestral rites, 족보 genealogy, 서원 private academy, 효 filial piety, 예절 etiquette.\n- *Samgang Oryun* refers to the duties between ruler and subject, parent and child, husband and wife, and so on.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Confucianism and Yangban Society,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 조선은 성리학, 곧 유교를 나라의 기본 이념으로 삼았습니다. 사회는 크게 양반, 중인, 상민, 천민으로 나뉘었으나, 시기에 따라 신분의 변동도 있었습니다. 이 글은 일반적인 특징을 설명한 것이며, 지역과 시대에 따라 차이가 있었습니다.\n\n**어휘와 문법**\n- `-에 따라`: 기준.\n- `-(으)ㄹ 수 있다`: 가능 (응시할 수 있었지만).\n- `-기도 하다`: 여러 면 중 하나를 말합니다.\n- 단어: 신분, 과거, 제사, 족보, 서원, 효, 예절.\n- 삼강오륜은 군신·부자·부부 등의 도리를 말합니다.",
+    "en": "**Background** Joseon made Neo-Confucianism its basic ideology. Society was broadly divided into yangban, jungin, sangmin and cheonmin, though status could shift over time. This text explains general features, which varied by region and period.\n\n**Points to watch**\n- `-에 따라`: according to.\n- `-(으)ㄹ 수 있다`: possibility (응시할 수 있었지만).\n- `-기도 하다`: mentioning one of several aspects.\n- Words: 신분 status, 과거 civil service exam, 제사 ancestral rites, 족보 genealogy, 서원 private academy, 효 filial piety, 예절 etiquette.\n- *Samgang Oryun* refers to the duties between ruler and subject, parent and child, husband and wife, and so on."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; fixed note grammar item. General claims accurate and hedged."
   }
 }

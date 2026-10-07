@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1979년 박정희 대통령이 사망한 뒤 한국 사회에서는 민주주의를 요구하는 목소리가 높아졌습니다. 1980년 5월 광주에서 시민들이 계엄군에 맞서 일어났고, 이는 이후 한국 민주화에 큰 영향을 미쳤습니다. 피해자 수는 조사 기관에 따라 집계 방식이 달라, 이 글에서는 구체적인 숫자를 쓰지 않았습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 어떤 일을 계기로.\n- `-에 대한 책임`: 책임의 대상.\n- `-(으)ㄴ 바 있다`: 격식 있는 서술.\n- 단어: 계엄령, 시민군, 민주화, 진상 규명, 보상, 기록물.\n- 사실을 서술하는 격식체 문장에 주목하세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '5·18 민주화 운동'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** After President Park Chung-hee died in 1979, calls for democracy rose in Korean society. In May 1980, citizens in Gwangju rose up against martial law troops, which greatly influenced later democratization in Korea. Because counts of victims differ by investigating body, this text does not give specific numbers.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: using something as the occasion.\n- `-에 대한 책임`: responsibility for.\n- `-(으)ㄴ 바 있다`: formal narration.\n- Words: 계엄령 martial law, 시민군 citizens' army, 민주화 democratization, 진상 규명 fact-finding, 보상 compensation, 기록물 records.\n- Pay attention to the formal sentences narrating facts.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The May 18 Democratization Movement,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 1979년 박정희 대통령이 사망한 뒤 한국 사회에서는 민주주의를 요구하는 목소리가 높아졌습니다. 1980년 5월 광주에서 시민들이 계엄군에 맞서 일어났고, 이는 이후 한국 민주화에 큰 영향을 미쳤습니다. 피해자 수는 조사 기관에 따라 집계 방식이 달라, 이 글에서는 구체적인 숫자를 쓰지 않았습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 어떤 일을 계기로.\n- `-에 대한 책임`: 책임의 대상.\n- `-(으)ㄴ 바 있다`: 격식 있는 서술.\n- 단어: 계엄령, 시민군, 민주화, 진상 규명, 보상, 기록물.\n- 사실을 서술하는 격식체 문장에 주목하세요.",
+    "en": "**Background** After President Park Chung-hee died in 1979, calls for democracy rose in Korean society. In May 1980, citizens in Gwangju rose up against martial law troops, which greatly influenced later democratization in Korea. Because counts of victims differ by investigating body, this text does not give specific numbers.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: using something as the occasion.\n- `-에 대한 책임`: responsibility for.\n- `-(으)ㄴ 바 있다`: formal narration.\n- Words: 계엄령 martial law, 시민군 citizens' army, 민주화 democratization, 진상 규명 fact-finding, 보상 compensation, 기록물 records.\n- Pay attention to the formal sentences narrating facts."
   },
   "paragraphs": [
     {
@@ -149,5 +149,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

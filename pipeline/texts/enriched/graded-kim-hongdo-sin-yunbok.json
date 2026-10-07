@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 풍속화는 당시 사람들의 생활과 풍습을 그린 그림입니다. 김홍도와 신윤복은 18세기 후반에서 19세기 초에 활동한 화가로, 둘 다 나라의 그림을 담당하는 도화서와 관련이 있다고 알려져 있습니다. 두 사람의 정확한 생몰 연대는 분명하지 않습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 점에서`: 어떤 측면에서 본다는 뜻입니다.\n- `-에 비해`: 비교할 때 씁니다.\n- `-(으)ㄹ 정도로`: 정도를 나타냅니다.\n- 단어: 풍속화, 서민, 필치, 색채, 묘사하다, 해학.\n- 대표작: 「씨름」, 「서당」, 「단오풍정」, 「월하정인」.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '김홍도와 신윤복'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Genre painting depicts the daily life and customs of the time. Kim Hong-do and Sin Yun-bok were painters active from the late 18th to early 19th century, both known to have been connected to the Dohwaseo, the court painting office. Their exact dates of birth and death are unclear.\n\n**Points to watch**\n- `-(으)ㄴ/는 점에서`: from a certain viewpoint.\n- `-에 비해`: for comparison.\n- `-(으)ㄹ 정도로`: to the extent that.\n- Words: 풍속화 genre painting, 서민 commoner, 필치 brushwork, 색채 color, 묘사하다 depict, 해학 humor.\n- Representative works: \"Ssireum,\" \"Seodang,\" \"Danopungjeong,\" and \"Wolhajeongin\".\n\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Kim Hong-do and Sin Yun-bok,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 풍속화는 당시 사람들의 생활과 풍습을 그린 그림입니다. 김홍도와 신윤복은 18세기 후반에서 19세기 초에 활동한 화가로, 둘 다 나라의 그림을 담당하는 도화서와 관련이 있다고 알려져 있습니다. 두 사람의 정확한 생몰 연대는 분명하지 않습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 점에서`: 어떤 측면에서 본다는 뜻입니다.\n- `-에 비해`: 비교할 때 씁니다.\n- `-(으)ㄹ 정도로`: 정도를 나타냅니다.\n- 단어: 풍속화, 서민, 필치, 색채, 묘사하다, 해학.\n- 대표작: 「씨름」, 「서당」, 「단오풍정」, 「월하정인」.",
+    "en": "**Background** Genre painting depicts the daily life and customs of the time. Kim Hong-do and Sin Yun-bok were painters active from the late 18th to early 19th century, both known to have been connected to the Dohwaseo, the court painting office. Their exact dates of birth and death are unclear.\n\n**Points to watch**\n- `-(으)ㄴ/는 점에서`: from a certain viewpoint.\n- `-에 비해`: for comparison.\n- `-(으)ㄹ 정도로`: to the extent that.\n- Words: 풍속화 genre painting, 서민 commoner, 필치 brushwork, 색채 color, 묘사하다 depict, 해학 humor.\n- Representative works: \"Ssireum,\" \"Seodang,\" \"Danopungjeong,\" and \"Wolhajeongin\"."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

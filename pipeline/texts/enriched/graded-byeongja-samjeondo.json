@@ -26,8 +26,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 17세기 초 명나라가 약해지고 여진족이 세운 후금(후에 청)이 강해지면서 조선은 어려운 외교 선택에 놓였습니다. 1636년 청은 조선에 군신 관계를 요구했고, 조선이 거부하자 침입했습니다. 이것이 병자호란입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 가운데`: 어떤 상황이 계속되는 중에.\n- `-(으)ㄹ 수밖에 없었다`: 달리 방법이 없었음.\n- `-(으)ㄴ 채`: 그 상태로.\n- 단어: 호란, 척화, 주화, 항전, 군신 관계, 볼모, 대의명분.\n- '척화파'와 '주화파'의 입장을 구분하며 읽으세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '병자호란과 삼전도'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In the early 17th century, as Ming weakened and the Later Jin (later Qing), founded by the Jurchens, grew strong, Joseon faced difficult diplomatic choices. In 1636 Qing demanded a ruler-subject relationship from Joseon, and when Joseon refused, it invaded. This is the Byeongja Horan.\n\n**Points to watch**\n- `-(으)ㄴ/는 가운데`: while a situation continues.\n- `-(으)ㄹ 수밖에 없었다`: there was no alternative.\n- `-(으)ㄴ 채`: remaining in that state.\n- Words: 호란 barbarian invasion, 척화 rejecting peace, 주화 advocating peace, 항전 resistance, 군신 관계 ruler-subject relationship, 볼모 hostage, 대의명분 moral cause.\n- Distinguish the positions of the 척화파 and 주화파.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Second Manchu Invasion and Samjeondo,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 17세기 초 명나라가 약해지고 여진족이 세운 후금(후에 청)이 강해지면서 조선은 어려운 외교 선택에 놓였습니다. 1636년 청은 조선에 군신 관계를 요구했고, 조선이 거부하자 침입했습니다. 이것이 병자호란입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 가운데`: 어떤 상황이 계속되는 중에.\n- `-(으)ㄹ 수밖에 없었다`: 달리 방법이 없었음.\n- `-(으)ㄴ 채`: 그 상태로.\n- 단어: 호란, 척화, 주화, 항전, 군신 관계, 볼모, 대의명분.\n- '척화파'와 '주화파'의 입장을 구분하며 읽으세요.",
+    "en": "**Background** In the early 17th century, as Ming weakened and the Later Jin (later Qing), founded by the Jurchens, grew strong, Joseon faced difficult diplomatic choices. In 1636 Qing demanded a ruler-subject relationship from Joseon, and when Joseon refused, it invaded. This is the Byeongja Horan.\n\n**Points to watch**\n- `-(으)ㄴ/는 가운데`: while a situation continues.\n- `-(으)ㄹ 수밖에 없었다`: there was no alternative.\n- `-(으)ㄴ 채`: remaining in that state.\n- Words: 호란 barbarian invasion, 척화 rejecting peace, 주화 advocating peace, 항전 resistance, 군신 관계 ruler-subject relationship, 볼모 hostage, 대의명분 moral cause.\n- Distinguish the positions of the 척화파 and 주화파."
   },
   "paragraphs": [
     {
@@ -150,5 +150,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

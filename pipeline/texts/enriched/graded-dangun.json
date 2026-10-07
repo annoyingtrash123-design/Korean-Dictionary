@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 단군 이야기는 고려 시대의 책 『삼국유사』 등에 실려 있는 건국 신화입니다. 전통적으로 고조선은 기원전 2333년에 세워졌다고 알려져 있지만, 이것은 신화에 바탕을 둔 연대입니다. 오늘날 10월 3일은 개천절로 이 건국을 기념하는 날입니다.\n\n**어휘와 문법**\n- `-고 싶었어요`: 원하는 것을 말할 때 씁니다 (내려오고 싶었어요).\n- `-(으)ㄴ/는 동안`: 어떤 일이 계속되는 시간을 나타냅니다.\n- `-아/어서`: 이유나 순서를 나타냅니다 (그래서, 결혼해서).\n- `-(이)라는`: 이름을 소개할 때 씁니다 (고조선이라는 나라).\n- 단어: 신화, 동굴, 건국, 허락하다. 이 글은 쉬운 말로 다시 쓴 것입니다. 읽으면서 '-았/었어요' 과거형에 익숙해지세요.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '단군 이야기'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
-    "en": "**Background** The Dangun story appears in works such as the Goryeo-era *Samguk Yusa*. Tradition holds that Gojoseon was founded in 2333 BCE, but this date rests on myth. Today October 3 is Gaecheonjeol, a holiday that commemorates the founding.\n\n**Points to watch**\n- `-고 싶었어요`: wanting to do something (내려오고 싶었어요).\n- `-(으)ㄴ/는 동안`: during an ongoing period.\n- `-아/어서`: reason or sequence (그래서, 결혼해서).\n- `-(이)라는`: introducing a name (고조선이라는 나라).\n- Words: 신화 myth, 동굴 cave, 건국 founding, 허락하다 permit. Use this text to get comfortable with the past form -았/었어요.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"The Story of Dangun.\" After reading, try answering the questions briefly."
+    "ko": "**배경** 단군 이야기는 고려 시대의 책 『삼국유사』 등에 실려 있는 건국 신화입니다. 전통적으로 고조선은 기원전 2333년에 세워졌다고 알려져 있지만, 이것은 신화에 바탕을 둔 연대입니다. 오늘날 10월 3일은 개천절로 이 건국을 기념하는 날입니다.\n\n**어휘와 문법**\n- `-고 싶었어요`: 원하는 것을 말할 때 씁니다 (내려오고 싶었어요).\n- `-지 못하다`: 할 수 없음 (참지 못하고).\n- `-아/어서`: 이유나 순서를 나타냅니다 (그래서, 결혼해서).\n- `-(이)라는`: 이름을 소개할 때 씁니다 (고조선이라는 나라).\n- 단어: 신화, 동굴, 건국, 허락하다. 이 글은 쉬운 말로 다시 쓴 것입니다. 읽으면서 '-았/었어요' 과거형에 익숙해지세요.",
+    "en": "**Background** The Dangun story appears in works such as the Goryeo-era *Samguk Yusa*. Tradition holds that Gojoseon was founded in 2333 BCE, but this date rests on myth. Today October 3 is Gaecheonjeol, a holiday that commemorates the founding.\n\n**Points to watch**\n- `-고 싶었어요`: wanting to do something (내려오고 싶었어요).\n- `-지 못하다`: unable to do something (참지 못하고).\n- `-아/어서`: reason or sequence (그래서, 결혼해서).\n- `-(이)라는`: introducing a name (고조선이라는 나라).\n- Words: 신화 myth, 동굴 cave, 건국 founding, 허락하다 permit. Use this text to get comfortable with the past form -았/었어요."
   },
   "paragraphs": [
     {
@@ -137,5 +137,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; fixed note grammar item. Myth framed as myth; Gaecheonjeol correct."
   }
 }

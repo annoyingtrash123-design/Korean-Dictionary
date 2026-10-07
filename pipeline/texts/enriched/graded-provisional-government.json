@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 3·1 운동 직후인 1919년 4월 중국 상하이에서 독립운동가들이 모여 대한민국 임시정부를 세웠습니다. 임시정부는 '민주공화국'을 내세웠고, 이후 여러 도시를 옮겨 다니며 1945년까지 활동했습니다. 현재의 헌법 전문은 대한민국이 임시정부의 법통을 이어받았다고 밝히고 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 이후`: ~한 뒤.\n- `-기 위해서`: 목적.\n- `-(으)며`: 두 가지 일을 나열합니다.\n- 단어: 임시정부, 민주공화국, 헌법, 광복군, 의거, 법통, 외교.\n- '임시'는 잠시, 한시적이라는 뜻입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '대한민국 임시정부'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In April 1919, just after the March 1st Movement, independence activists gathered in Shanghai, China, and founded the Provisional Government of the Republic of Korea. It put forward a \"democratic republic\" and operated until 1945, moving among several cities. The preamble of today's constitution states that the Republic of Korea inherits the legitimacy of the Provisional Government.\n\n**Points to watch**\n- `-(으)ㄴ 이후`: after.\n- `-기 위해서`: purpose.\n- `-(으)며`: listing two things.\n- Words: 임시정부 provisional government, 민주공화국 democratic republic, 헌법 constitution, 광복군 Korean Liberation Army, 의거 righteous act, 법통 legitimate lineage, 외교 diplomacy.\n- 임시 means temporary.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Provisional Government of the Republic of Korea,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 3·1 운동 직후인 1919년 4월 중국 상하이에서 독립운동가들이 모여 대한민국 임시정부를 세웠습니다. 임시정부는 '민주공화국'을 내세웠고, 이후 여러 도시를 옮겨 다니며 1945년까지 활동했습니다. 현재의 헌법 전문은 대한민국이 임시정부의 법통을 이어받았다고 밝히고 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 이후`: ~한 뒤.\n- `-기 위해서`: 목적.\n- `-(으)며`: 두 가지 일을 나열합니다.\n- 단어: 임시정부, 민주공화국, 헌법, 광복군, 의거, 법통, 외교.\n- '임시'는 잠시, 한시적이라는 뜻입니다.",
+    "en": "**Background** In April 1919, just after the March 1st Movement, independence activists gathered in Shanghai, China, and founded the Provisional Government of the Republic of Korea. It put forward a \"democratic republic\" and operated until 1945, moving among several cities. The preamble of today's constitution states that the Republic of Korea inherits the legitimacy of the Provisional Government.\n\n**Points to watch**\n- `-(으)ㄴ 이후`: after.\n- `-기 위해서`: purpose.\n- `-(으)며`: listing two things.\n- Words: 임시정부 provisional government, 민주공화국 democratic republic, 헌법 constitution, 광복군 Korean Liberation Army, 의거 righteous act, 법통 legitimate lineage, 외교 diplomacy.\n- 임시 means temporary."
   },
   "paragraphs": [
     {
@@ -48,10 +48,10 @@
       "en": "As Japanese pressure grew, the Provisional Government left Shanghai, moved among several cities, and settled in Chongqing in 1940. The same year the Korean Liberation Army was founded and prepared to fight alongside the Allies. However, because Japan surrendered, the plan for the Liberation Army to enter the country directly was not realized."
     },
     {
-      "orig": "임시정부 요인들은 1945년 11월 개인 자격으로 귀국하였다. 1948년 제정된 대한민국 헌법은 3·1 운동과 임시정부의 법통을 계승한다고 밝혔고, 지금의 헌법 전문에도 같은 내용이 있다. 임시정부는 나라가 없던 시기에도 국가의 틀을 이어 간 중요한 사례로 평가된다.",
+      "orig": "임시정부 요인들은 1945년 11월 개인 자격으로 귀국하였다. 1948년 제정된 대한민국 헌법은 3·1 운동으로 나라를 세웠다는 정신을 밝혔고, 1987년 개정된 지금의 헌법 전문에는 임시정부의 법통을 계승한다고 적혀 있다. 임시정부는 나라가 없던 시기에도 국가의 틀을 이어 간 중요한 사례로 평가된다.",
       "modern": null,
       "reading": null,
-      "en": "Leaders of the Provisional Government returned home in November 1945 as individuals. The Constitution of the Republic of Korea enacted in 1948 stated that it inherits the legitimacy of the March 1st Movement and the Provisional Government, and the same content appears in the present constitution's preamble. The Provisional Government is evaluated as an important example of keeping the framework of a state going even when there was no country."
+      "en": "Leaders of the Provisional Government returned home in November 1945 as individuals. The Constitution of the Republic of Korea enacted in 1948 invoked the March 1st Movement as the founding of the nation, and the preamble of the present constitution, as revised in 1987, states that it inherits the legitimacy of the Provisional Government. The Provisional Government is evaluated as an important example of keeping the framework of a state going even when there was no country."
     }
   ],
   "vocab": [
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; corrected constitutional claim: 1948 constitution invoked the March 1st Movement, the explicit 임시정부 법통 clause is in the 1987 preamble. Other dates verified."
   }
 }

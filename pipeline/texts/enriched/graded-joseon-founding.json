@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 14세기 후반 중국에서는 원나라가 쇠퇴하고 명나라가 일어났고, 고려는 외교 방향을 두고 갈등했습니다. 이성계는 1388년 위화도에서 군대를 돌려 정권을 잡았고, 1392년 왕위에 올라 새 왕조를 열었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 어떤 일을 계기로.\n- `-에 따라`: 기준을 나타냅니다.\n- `-고자 하다`: 의도.\n- 단어: 위화도 회군, 신진 사대부, 개혁, 국호, 천도, 성리학, 민본.\n- '회군'은 군대를 되돌린다는 뜻입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '조선의 건국'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In the late 14th century the Yuan dynasty declined and Ming rose in China, and Goryeo was divided over its diplomatic direction. Yi Seong-gye turned his army back at Wihwado in 1388 and seized power, ascending the throne in 1392 to open a new dynasty.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: taking something as the occasion.\n- `-에 따라`: according to.\n- `-고자 하다`: intent.\n- Words: 위화도 회군 turning back at Wihwado, 신진 사대부 new literati, 개혁 reform, 국호 name of the state, 천도 moving the capital, 성리학 Neo-Confucianism, 민본 people-first.\n- 회군 means turning an army back.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Founding of Joseon,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 14세기 후반 중국에서는 원나라가 쇠퇴하고 명나라가 일어났고, 고려는 외교 방향을 두고 갈등했습니다. 이성계는 1388년 위화도에서 군대를 돌려 정권을 잡았고, 1392년 왕위에 올라 새 왕조를 열었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 어떤 일을 계기로.\n- `-에 따라`: 기준을 나타냅니다.\n- `-고자 하다`: 의도.\n- 단어: 위화도 회군, 신진 사대부, 개혁, 국호, 천도, 성리학, 민본.\n- '회군'은 군대를 되돌린다는 뜻입니다.",
+    "en": "**Background** In the late 14th century the Yuan dynasty declined and Ming rose in China, and Goryeo was divided over its diplomatic direction. Yi Seong-gye turned his army back at Wihwado in 1388 and seized power, ascending the throne in 1392 to open a new dynasty.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: taking something as the occasion.\n- `-에 따라`: according to.\n- `-고자 하다`: intent.\n- Words: 위화도 회군 turning back at Wihwado, 신진 사대부 new literati, 개혁 reform, 국호 name of the state, 천도 moving the capital, 성리학 Neo-Confucianism, 민본 people-first.\n- 회군 means turning an army back."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

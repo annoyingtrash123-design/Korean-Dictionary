@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1592년에 일본이 조선을 공격하면서 임진왜란이 시작되었습니다. 이순신(1545–1598)은 수군을 이끌고 바다에서 여러 번 이겼습니다. 거북선은 그가 사용한 것으로 유명한 배입니다.\n\n**어휘와 문법**\n- `-(이)라고 해요`: 이름을 설명할 때 씁니다 (임진왜란이라고 해요).\n- `-(으)로`: 도구를 나타냅니다 (거북선으로).\n- `-았/었어요`: 과거형.\n- `-(으)ㄴ`: 명사를 꾸밉니다 (튼튼한 배).\n- 단어: 장군, 전쟁, 물리치다, 튼튼하다, 동상. '물리치다'는 싸워서 이기고 쫓아낸다는 뜻입니다.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '이순신과 거북선'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
-    "en": "**Background** The Imjin War began in 1592 when Japan attacked Joseon. Yi Sun-sin (1545-1598) led the navy and won many sea battles. The turtle ship is the vessel famously associated with him.\n\n**Points to watch**\n- `-(이)라고 해요`: giving a name (임진왜란이라고 해요).\n- `-(으)로`: means or tool (거북선으로).\n- `-았/었어요`: past tense.\n- Words: 장군 general/admiral, 전쟁 war, 물리치다 to drive off, 튼튼하다 sturdy, 동상 statue. 물리치다 means to defeat and drive away an enemy.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"Yi Sun-sin and the Turtle Ship.\" After reading, try answering the questions briefly."
+    "ko": "**배경** 1592년에 일본이 조선을 공격하면서 임진왜란이 시작되었습니다. 이순신(1545–1598)은 수군을 이끌고 바다에서 여러 번 이겼습니다. 거북선은 그가 사용한 것으로 유명한 배입니다.\n\n**어휘와 문법**\n- `-(이)라고 해요`: 이름을 설명할 때 씁니다 (임진왜란이라고 해요).\n- `-(으)로`: 도구를 나타냅니다 (거북선으로).\n- `-았/었어요`: 과거형.\n- `-(으)ㄴ`: 명사를 꾸밉니다 (튼튼한 배).\n- 단어: 장군, 전쟁, 물리치다, 튼튼하다, 동상. '물리치다'는 싸워서 이기고 쫓아낸다는 뜻입니다.",
+    "en": "**Background** The Imjin War began in 1592 when Japan attacked Joseon. Yi Sun-sin (1545-1598) led the navy and won many sea battles. The turtle ship is the vessel famously associated with him.\n\n**Points to watch**\n- `-(이)라고 해요`: giving a name (임진왜란이라고 해요).\n- `-(으)로`: means or tool (거북선으로).\n- `-았/었어요`: past tense.\n- Words: 장군 general/admiral, 전쟁 war, 물리치다 to drive off, 튼튼하다 sturdy, 동상 statue. 물리치다 means to defeat and drive away an enemy."
   },
   "paragraphs": [
     {
@@ -36,10 +36,10 @@
       "en": "In 1592, Japan attacked Joseon. This war is called the Imjin War. At that time, Joseon had General Yi Sun-sin."
     },
     {
-      "orig": "이순신 장군은 바다에서 싸웠어요. 그는 거북선이라는 배를 만들었어요. 거북선은 튼튼했어요. 조선 군인들은 거북선으로 일본 배를 많이 물리쳤어요.",
+      "orig": "이순신 장군은 바다에서 싸웠어요. 그는 거북선이라는 배를 썼어요. 거북선은 튼튼했어요. 조선 군인들은 거북선으로 일본 배를 많이 물리쳤어요.",
       "modern": null,
       "reading": null,
-      "en": "General Yi Sun-sin fought at sea. He built a ship called the turtle ship. The turtle ship was sturdy. Joseon soldiers defeated many Japanese ships with it."
+      "en": "General Yi Sun-sin fought at sea. He used a ship called the turtle ship. The turtle ship was sturdy. Joseon soldiers defeated many Japanese ships with it."
     },
     {
       "orig": "이순신 장군은 나라를 아주 사랑했어요. 지금도 서울 광화문에 이순신 장군의 동상이 있어요.",
@@ -132,5 +132,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; 'built the turtle ship' softened to 'used' (ship pre-existed; Yi Sun-sin used/improved it). Level OK for TOPIK 2."
   }
 }

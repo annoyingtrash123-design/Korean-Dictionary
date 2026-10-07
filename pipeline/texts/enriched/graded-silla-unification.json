@@ -26,8 +26,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 7세기 동북아시아에서는 당나라의 팽창과 삼국의 경쟁이 겹쳐 있었습니다. 신라는 660년 백제, 668년 고구려를 멸망시키는 데 당과 협력했으나, 이후 당이 한반도에 직접 통치 기구를 두려 하자 670년부터 676년까지 싸웠습니다. 결과적으로 신라는 대동강 남쪽의 영역을 차지했습니다.\n\n**어휘와 문법**\n- `-에 맞서`: 대립하는 대상을 가리킵니다.\n- `-(으)ㄴ 끝에`: 오랜 과정 뒤의 결과를 말합니다.\n- `-고자 하다`: 격식 있는 의도 표현입니다.\n- 단어: 동맹, 멸망, 통치, 영역, 철수하다, 항전.\n- 나당 전쟁은 '동맹이 갈등으로 바뀐' 사례로 자주 설명됩니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '나당 연합과 신라의 삼국 통일'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In 7th-century Northeast Asia, Tang expansion overlapped with Three Kingdoms rivalry. Silla cooperated with Tang to destroy Baekje (660) and Goguryeo (668), but when Tang tried to set up its own administration on the peninsula, they fought from 670 to 676. Silla ended up holding the area south of the Daedong River.\n\n**Points to watch**\n- `-에 맞서`: confronting an opposing party.\n- `-(으)ㄴ 끝에`: a result after a long process.\n- `-고자 하다`: formal expression of intent.\n- Words: 동맹 alliance, 멸망 downfall, 통치 rule, 영역 territory, 철수하다 withdraw, 항전 resistance.\n- The Silla-Tang War is often explained as an alliance turning into conflict.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Silla–Tang Alliance and Unification,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 7세기 동북아시아에서는 당나라의 팽창과 삼국의 경쟁이 겹쳐 있었습니다. 신라는 660년 백제, 668년 고구려를 멸망시키는 데 당과 협력했으나, 이후 당이 한반도에 직접 통치 기구를 두려 하자 670년부터 676년까지 싸웠습니다. 결과적으로 신라는 대동강 남쪽의 영역을 차지했습니다.\n\n**어휘와 문법**\n- `-에 맞서`: 대립하는 대상을 가리킵니다.\n- `-(으)ㄴ 끝에`: 오랜 과정 뒤의 결과를 말합니다.\n- `-고자 하다`: 격식 있는 의도 표현입니다.\n- 단어: 동맹, 멸망, 통치, 영역, 철수하다, 항전.\n- 나당 전쟁은 '동맹이 갈등으로 바뀐' 사례로 자주 설명됩니다.",
+    "en": "**Background** In 7th-century Northeast Asia, Tang expansion overlapped with Three Kingdoms rivalry. Silla cooperated with Tang to destroy Baekje (660) and Goguryeo (668), but when Tang tried to set up its own administration on the peninsula, they fought from 670 to 676. Silla ended up holding the area south of the Daedong River.\n\n**Points to watch**\n- `-에 맞서`: confronting an opposing party.\n- `-(으)ㄴ 끝에`: a result after a long process.\n- `-고자 하다`: formal expression of intent.\n- Words: 동맹 alliance, 멸망 downfall, 통치 rule, 영역 territory, 철수하다 withdraw, 항전 resistance.\n- The Silla-Tang War is often explained as an alliance turning into conflict."
   },
   "paragraphs": [
     {
@@ -150,5 +150,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

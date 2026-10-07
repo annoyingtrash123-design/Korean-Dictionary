@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 고려청자는 10세기 무렵 중국의 기술을 배워 시작되었고, 12세기에는 고려만의 독특한 도자기로 발전했습니다. 특히 흙에 무늬를 새기고 다른 흙을 채우는 '상감' 기법은 고려의 자랑으로 알려져 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것으로 알려져 있다`: 일반적으로 알려진 사실을 말합니다.\n- `-에 따르면`: 출처를 밝힐 때 씁니다.\n- `-(으)ㄴ 뒤에`: 순서를 나타냅니다.\n- 단어: 도자기, 가마, 비색, 상감, 기법, 무늬.\n- '비색'은 푸른 옥빛 색을 뜻하는 말입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '고려청자'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** Goryeo celadon began around the 10th century by learning Chinese techniques and by the 12th century had developed into a distinctive Goryeo ware. The *sanggam* inlay technique, carving patterns into clay and filling them with another clay, is known as a Goryeo pride.\n\n**Points to watch**\n- `-(으)ㄴ/는 것으로 알려져 있다`: stating a commonly known fact.\n- `-에 따르면`: citing a source.\n- `-(으)ㄴ 뒤에`: sequence.\n- Words: 도자기 ceramics, 가마 kiln, 비색 jade-green color, 상감 inlay, 기법 technique, 무늬 pattern.\n- 비색 means a blue-green jade color.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Goryeo Celadon,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 고려청자는 10세기 무렵 중국의 기술을 배워 시작되었고, 12세기에는 고려만의 독특한 도자기로 발전했습니다. 특히 흙에 무늬를 새기고 다른 흙을 채우는 '상감' 기법은 고려의 자랑으로 알려져 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것으로 알려져 있다`: 일반적으로 알려진 사실을 말합니다.\n- `-에 따르면`: 출처를 밝힐 때 씁니다.\n- `-(으)ㄴ 뒤에`: 순서를 나타냅니다.\n- 단어: 도자기, 가마, 비색, 상감, 기법, 무늬.\n- '비색'은 푸른 옥빛 색을 뜻하는 말입니다.",
+    "en": "**Background** Goryeo celadon began around the 10th century by learning Chinese techniques and by the 12th century had developed into a distinctive Goryeo ware. The *sanggam* inlay technique, carving patterns into clay and filling them with another clay, is known as a Goryeo pride.\n\n**Points to watch**\n- `-(으)ㄴ/는 것으로 알려져 있다`: stating a commonly known fact.\n- `-에 따르면`: citing a source.\n- `-(으)ㄴ 뒤에`: sequence.\n- Words: 도자기 ceramics, 가마 kiln, 비색 jade-green color, 상감 inlay, 기법 technique, 무늬 pattern.\n- 비색 means a blue-green jade color."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1897년 고종은 러시아 공사관에서 경운궁(덕수궁)으로 돌아와 국호를 '대한제국', 연호를 '광무'로 정하고 황제 자리에 올랐습니다. 이 나라는 1910년까지 약 13년간 이어졌습니다. 대한제국의 개혁에 대한 평가는 학자마다 다릅니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤`: 순서.\n- `-(으)로 삼다`: 무엇을 ~로 정하다.\n- `-(으)ㄴ/는 한편`: 한편으로는.\n- 단어: 황제, 연호, 자주독립, 근대화, 전차, 철도, 개혁.\n- 대한제국의 '대한'은 오늘날 '대한민국'의 이름으로 이어집니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '대한제국'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** In 1897 Gojong returned from the Russian legation to Gyeongun Palace (Deoksugung), adopted the state name \"Daehan Jeguk\" (Korean Empire) and the era name \"Gwangmu,\" and became emperor. This state lasted about 13 years, until 1910. Scholars differ in evaluating its reforms.\n\n**Points to watch**\n- `-(으)ㄴ 뒤`: sequence.\n- `-(으)로 삼다`: to take as.\n- `-(으)ㄴ/는 한편`: on the one hand.\n- Words: 황제 emperor, 연호 era name, 자주독립 independence, 근대화 modernization, 전차 tram, 철도 railway, 개혁 reform.\n- \"Daehan\" in Daehan Jeguk continues in the name of today's \"Daehanminguk\".\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Korean Empire,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 1897년 고종은 러시아 공사관에서 경운궁(덕수궁)으로 돌아와 국호를 '대한제국', 연호를 '광무'로 정하고 황제 자리에 올랐습니다. 이 나라는 1910년까지 약 13년간 이어졌습니다. 대한제국의 개혁에 대한 평가는 학자마다 다릅니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤`: 순서.\n- `-(으)로 삼다`: 무엇을 ~로 정하다.\n- `-(으)ㄴ/는 한편`: 한편으로는.\n- 단어: 황제, 연호, 자주독립, 근대화, 전차, 철도, 개혁.\n- 대한제국의 '대한'은 오늘날 '대한민국'의 이름으로 이어집니다.",
+    "en": "**Background** In 1897 Gojong returned from the Russian legation to Gyeongun Palace (Deoksugung), adopted the state name \"Daehan Jeguk\" (Korean Empire) and the era name \"Gwangmu,\" and became emperor. This state lasted about 13 years, until 1910. Scholars differ in evaluating its reforms.\n\n**Points to watch**\n- `-(으)ㄴ 뒤`: sequence.\n- `-(으)로 삼다`: to take as.\n- `-(으)ㄴ/는 한편`: on the one hand.\n- Words: 황제 emperor, 연호 era name, 자주독립 independence, 근대화 modernization, 전차 tram, 철도 railway, 개혁 reform.\n- \"Daehan\" in Daehan Jeguk continues in the name of today's \"Daehanminguk\"."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

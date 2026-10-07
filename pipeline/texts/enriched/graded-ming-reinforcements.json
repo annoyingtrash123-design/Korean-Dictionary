@@ -26,8 +26,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 1592년 일본군이 부산에 상륙하며 임진왜란이 시작되었습니다. 조선은 명나라에 도움을 요청했고, 명은 1592년 말부터 군대를 보냈습니다. 일본이 다시 침입한 1597년의 정유재란 때에도 명군이 참전했습니다. 이 도움에 대한 평가는 당시와 후대에 서로 달랐습니다.\n\n**어휘와 문법**\n- `-에 힘입어`: 도움을 받아.\n- `-(으)ㄴ/는 한편`: 다른 측면을 덧붙임.\n- `-(으)ㄹ 수밖에 없다`: 선택의 여지가 없음.\n- 단어: 원군, 참전, 탈환, 교섭, 보급, 부담, 의리.\n- 이 글은 전쟁의 한 측면만 다룹니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '임진왜란과 명나라 원군'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** The Imjin War began in 1592 when Japanese forces landed at Busan. Joseon asked Ming for help, and Ming sent troops from the end of 1592. Ming forces also took part in the 1597 Jeongyu War when Japan invaded again. Evaluations of this aid differed then and later.\n\n**Points to watch**\n- `-에 힘입어`: with the help of.\n- `-(으)ㄴ/는 한편`: adding another aspect.\n- `-(으)ㄹ 수밖에 없다`: having no choice.\n- Words: 원군 reinforcements, 참전 participation in war, 탈환 recapture, 교섭 negotiation, 보급 supply, 부담 burden, 의리 obligation.\n- This text covers only one aspect of the war.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Imjin War and Ming Reinforcements,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 1592년 일본군이 부산에 상륙하며 임진왜란이 시작되었습니다. 조선은 명나라에 도움을 요청했고, 명은 1592년 말부터 군대를 보냈습니다. 일본이 다시 침입한 1597년의 정유재란 때에도 명군이 참전했습니다. 이 도움에 대한 평가는 당시와 후대에 서로 달랐습니다.\n\n**어휘와 문법**\n- `-에 힘입어`: 도움을 받아.\n- `-(으)ㄴ/는 한편`: 다른 측면을 덧붙임.\n- `-(으)ㄹ 수밖에 없다`: 선택의 여지가 없음.\n- 단어: 원군, 참전, 탈환, 교섭, 보급, 부담, 의리.\n- 이 글은 전쟁의 한 측면만 다룹니다.",
+    "en": "**Background** The Imjin War began in 1592 when Japanese forces landed at Busan. Joseon asked Ming for help, and Ming sent troops from the end of 1592. Ming forces also took part in the 1597 Jeongyu War when Japan invaded again. Evaluations of this aid differed then and later.\n\n**Points to watch**\n- `-에 힘입어`: with the help of.\n- `-(으)ㄴ/는 한편`: adding another aspect.\n- `-(으)ㄹ 수밖에 없다`: having no choice.\n- Words: 원군 reinforcements, 참전 participation in war, 탈환 recapture, 교섭 negotiation, 보급 supply, 부담 burden, 의리 obligation.\n- This text covers only one aspect of the war."
   },
   "paragraphs": [
     {
@@ -150,5 +150,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }

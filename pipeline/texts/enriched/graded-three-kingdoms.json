@@ -25,8 +25,8 @@
     "edition_en": "Learner text written for this app (AI-generated)"
   },
   "notes": {
-    "ko": "**배경** 삼국 시대는 대략 4세기에서 7세기 사이에 고구려, 백제, 신라가 서로 경쟁하던 시기를 말합니다. 세 나라는 말과 문화에 비슷한 점이 많았지만 각자 개성이 있었습니다. 이후 신라가 676년에 한반도의 대부분을 통일했습니다.\n\n**어휘와 문법**\n- `-에는 ~이/가 있었다`: 존재를 설명합니다.\n- `-(으)ㄴ 나라`: 나라를 꾸미는 표현입니다.\n- `-(으)면서`: 두 가지 일이 함께 일어남을 나타냅니다.\n- `-게 되다`: 변화의 결과를 말합니다.\n- 단어: 영토, 왕릉, 유물, 경쟁하다, 통일. 글의 끝에서 '통일'로 이야기가 이어지는 점에 주목하세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '삼국 시대: 고구려·백제·신라'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
-    "en": "**Background** The Three Kingdoms period refers roughly to the 4th-7th centuries, when Goguryeo, Baekje and Silla competed. The kingdoms shared much in language and culture but each had its own character. Silla later unified most of the peninsula in 676.\n\n**Points to watch**\n- `-에는 ~이/가 있었다`: describing existence.\n- `-(으)ㄴ 나라`: a verb modifying \"country\".\n- `-(으)면서`: two actions happening together.\n- `-게 되다`: expresses a resulting change.\n- Words: 영토 territory, 왕릉 royal tomb, 유물 relic, 경쟁하다 compete, 통일 unification. Notice how the text ends by leading into \"unification\".\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Three Kingdoms: Goguryeo, Baekje and Silla,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+    "ko": "**배경** 삼국 시대는 대략 4세기에서 7세기 사이에 고구려, 백제, 신라가 서로 경쟁하던 시기를 말합니다. 세 나라는 말과 문화에 비슷한 점이 많았지만 각자 개성이 있었습니다. 이후 신라가 676년에 한반도의 대부분을 통일했습니다.\n\n**어휘와 문법**\n- `-에는 ~이/가 있었다`: 존재를 설명합니다.\n- `-(으)ㄴ 나라`: 나라를 꾸미는 표현입니다.\n- `-(으)면서`: 두 가지 일이 함께 일어남을 나타냅니다.\n- `-게 되다`: 변화의 결과를 말합니다.\n- 단어: 영토, 왕릉, 유물, 경쟁하다, 통일. 글의 끝에서 '통일'로 이야기가 이어지는 점에 주목하세요.",
+    "en": "**Background** The Three Kingdoms period refers roughly to the 4th-7th centuries, when Goguryeo, Baekje and Silla competed. The kingdoms shared much in language and culture but each had its own character. Silla later unified most of the peninsula in 676.\n\n**Points to watch**\n- `-에는 ~이/가 있었다`: describing existence.\n- `-(으)ㄴ 나라`: a verb modifying \"country\".\n- `-(으)면서`: two actions happening together.\n- `-게 되다`: expresses a resulting change.\n- Words: 영토 territory, 왕릉 royal tomb, 유물 relic, 경쟁하다 compete, 통일 unification. Notice how the text ends by leading into \"unification\"."
   },
   "paragraphs": [
     {
@@ -143,5 +143,11 @@
     "translation": "ai",
     "modern": null,
     "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
   }
 }
