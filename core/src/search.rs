@@ -365,12 +365,12 @@ fn search_hanja(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult
     if n_chars >= 2 {
         // whole-word hanja: exact, then prefix, then contained
         let like = format!("{}%", compact);
-        let steps: [(&str, &str, Val); 3] = [
-            ("e.hanja = ?1", "", compact.as_str().into()),
-            ("e.hanja LIKE ?1", "", like.as_str().into()),
-            ("instr(e.hanja, ?1) > 0", "", compact.as_str().into()),
+        let steps: [(&str, Val); 3] = [
+            ("e.hanja = ?1", compact.as_str().into()),
+            ("e.hanja LIKE ?1", like.as_str().into()),
+            ("instr(e.hanja, ?1) > 0", compact.as_str().into()),
         ];
-        for (cond, _, param) in steps {
+        for (cond, param) in steps {
             let mut rows = Vec::new();
             for p in packs {
                 let sql = format!("SELECT {COLS} FROM entries e WHERE {cond} ORDER BY e.rank LIMIT {PREFIX_LIMIT}");
@@ -558,7 +558,7 @@ fn days_from_date(date: &str) -> Option<i64> {
         return None;
     }
     let y = if m <= 2 { y - 1 } else { y };
-    let era = if y >= 0 { y } else { y - 399 } / 400;
+    let era = (if y >= 0 { y } else { y - 399 }) / 400;
     let yoe = y - era * 400;
     let mp = (m + 9) % 12;
     let doy = (153 * mp + 2) / 5 + d - 1;

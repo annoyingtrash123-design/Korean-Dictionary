@@ -29,3 +29,6 @@ rsqlite-vfs = "0.2"
 
 [package.metadata.wasm-pack.profile.release]
 wasm-opt = ["-Oz", "--enable-bulk-memory", "--enable-nontrapping-float-to-int", "--enable-sign-ext", "--enable-mutable-globals"]
+
+[dev-dependencies]
+flate2 = "1"

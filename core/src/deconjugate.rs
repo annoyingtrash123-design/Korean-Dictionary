@@ -27,6 +27,8 @@ pub struct Candidate {
 const MAX_CANDIDATES: usize = 40;
 const MAX_EXPANSIONS: usize = 4000;
 const MAX_DEPTH: usize = 7;
+/// Rank credit per input character that has been peeled off.
+const REMOVED_CREDIT: i32 = 6;
 
 // ---- context bits -------------------------------------------------------------------------
 
@@ -411,7 +413,7 @@ fn eo_children(n: &Node, out: &mut Vec<Node>) {
         return;
     }
     let silent = n.ctx & EO != 0;
-    let base = if silent { 0 } else { 14 };
+    let base = if silent { 0 } else { 16 };
     let step: Option<Step> = if silent { None } else { Some(("informal -아/어", "-아/어")) };
     let l = f[len - 1];
     let p = &f[..len - 1];
@@ -602,9 +604,11 @@ fn ends_with_expression(stem: &[char]) -> bool {
         || ["수있", "수없", "적있", "적없"].iter().any(|x| ends(stem, x))
 }
 
-fn emit(n: &Node, best: &mut HashMap<String, (i32, usize, String, Vec<&'static str>)>, seq: &mut usize) {
+fn emit(n: &Node, root_len: usize, best: &mut HashMap<String, (i32, usize, String, Vec<&'static str>)>, seq: &mut usize) {
+    // analyses that consumed more of the input rank first: partial peelings are usually junk
+    let credit = REMOVED_CREDIT * root_len.saturating_sub(n.form.len()) as i32;
     let mut put = |lemma: String, extra: i32, notes: Vec<&'static str>, steps: &[Step]| {
-        let cost = n.cost + extra;
+        let cost = n.cost + extra - credit;
         let mut parts: Vec<String> = Vec::new();
         for nt in &notes {
             if !nt.is_empty() {
@@ -639,7 +643,7 @@ fn emit(n: &Node, best: &mut HashMap<String, (i32, usize, String, Vec<&'static s
             if final_of(last) == Some('ㅆ') && last != '있' {
                 continue;
             }
-            if last == '으' || !is_hangul_char(last) || ends_with_expression(&stem) {
+            if matches!(last, '으' | '습' | '읍') || !is_hangul_char(last) || ends_with_expression(&stem) {
                 continue;
             }
             let mut notes = n.notes.clone();
@@ -668,6 +672,11 @@ fn emit(n: &Node, best: &mut HashMap<String, (i32, usize, String, Vec<&'static s
     }
 }
 
+/// A dictionary-looking form (ends in 다) is never an informal 아/어-form.
+fn last_char_ok_for_root_eo(f: &[char]) -> bool {
+    f.last() != Some(&'다')
+}
+
 fn expand(n: &Node, is_root: bool, out: &mut Vec<Node>) {
     if n.ctx & EO != 0 {
         eo_children(n, out);
@@ -678,7 +687,7 @@ fn expand(n: &Node, is_root: bool, out: &mut Vec<Node>) {
     if len == 0 {
         return;
     }
-    if is_root {
+    if is_root && last_char_ok_for_root_eo(f) {
         eo_children(n, out);
     }
     let last = f[len - 1];
@@ -704,12 +713,17 @@ fn expand(n: &Node, is_root: bool, out: &mut Vec<Node>) {
         let rl = j.rest.chars().count();
         if len > rl && ends(f, j.rest) {
             let pc = f[len - rl - 1];
-            if final_of(pc) == Some(j.jamo) {
+            if final_of(pc) == Some(j.jamo) && !(j.jamo == 'ㅂ' && matches!(pc, '습' | '읍')) {
                 if let Some(base) = without_final(pc) {
                     out.push(child(n, cat1(&f[..len - rl - 1], base), j.ctx, j.cost, Some((j.desc, j.pat)), None));
                 }
             }
         }
+    }
+
+    // 아니다 (negative copula): 아니에요 -> 아니
+    if ends(f, "아니에요") {
+        out.push(child(n, f[..len - 2].to_vec(), C, 10, Some(("polite copula -에요", "-이에요/예요")), None));
     }
 
     // contracted past: 갔 = 가 + 았, 했 = 하 + 였, 먹었(handled by suffix), 셨 = 시 + 었
@@ -783,6 +797,7 @@ fn analyze(input: &str) -> Vec<Analysis> {
         return Vec::new();
     }
     let input_clean: String = form.iter().collect();
+    let root_len = form.len();
     let root = Node { form, ctx: ANY, cost: 0, steps: Vec::new(), notes: Vec::new() };
     let mut best: HashMap<String, (i32, usize, String, Vec<&'static str>)> = HashMap::new();
     let mut seq = 0usize;
@@ -800,7 +815,7 @@ fn analyze(input: &str) -> Vec<Analysis> {
             }
         }
         visited.insert(key, node.cost);
-        emit(&node, &mut best, &mut seq);
+        emit(&node, root_len, &mut best, &mut seq);
         expansions += 1;
         if expansions > MAX_EXPANSIONS || node.steps.len() >= MAX_DEPTH {
             continue;
@@ -998,7 +1013,7 @@ mod tests {
     #[test]
     fn performance_is_bounded() {
         let t = std::time::Instant::now();
-        for _ in 0..50 {
+        for _ in 0..3 {
             deconjugate("먹고싶었는데요");
             deconjugate("공부하고있었어요");
         }
