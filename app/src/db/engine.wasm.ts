@@ -1,0 +1,36 @@
+// Engine adapter backed by the Rust/WASM core (core/ -> src/core-wasm, built with `npm run build:core`).
+// To switch: in engine.ts replace the body with `export { createEngine } from './engine.wasm';`
+// (worker.ts keeps calling createEngine()).
+import init, { Engine as WasmEngine } from '../core-wasm/kdict_core.js';
+import wasmUrl from '../core-wasm/kdict_core_bg.wasm?url';
+import type { Engine } from './types';
+
+export function createEngine(): Engine {
+  let eng: WasmEngine | undefined;
+  const e = () => {
+    if (!eng) throw new Error('engine not initialised');
+    return eng;
+  };
+  return {
+    async init() {
+      if (eng) return;
+      await init({ module_or_path: wasmUrl });
+      const w = new WasmEngine();
+      await w.init();
+      eng = w;
+    },
+    installedPacks: () => e().installedPacks(),
+    beginImport: (id, total) => e().beginImport(id, total),
+    writeChunk: (id, bytes) => e().writeChunk(id, bytes),
+    finishImport: (id, version) => e().finishImport(id, version),
+    deletePack: (id) => e().deletePack(id),
+    search: (q, opts) => e().search(q, opts),
+    entriesByHeadword: (hw, packs) => e().entriesByHeadword(hw, packs),
+    entry: (source, id) => e().entry(source, id),
+    hanjaChar: (ch) => e().hanjaChar(ch),
+    wordsWithHanja: (ch, limit, offset) => e().wordsWithHanja(ch, limit, offset),
+    sentences: (text, limit) => e().sentences(text, limit),
+    grammarList: () => e().grammarList(),
+    wordOfDay: (date) => e().wordOfDay(date),
+  };
+}

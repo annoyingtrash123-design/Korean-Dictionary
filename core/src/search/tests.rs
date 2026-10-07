@@ -576,3 +576,19 @@ fn app_fixture_if_present() {
     }
     let _ = std::fs::remove_dir_all(&tmp);
 }
+
+#[test]
+fn any_number_of_packs_are_merged_by_rank() {
+    const OPEN: &[E] = &[e(1, "학교", Some("學校"), "noun", "opendict", None, 9500, "", &["학교의"]), e(2, "학당", Some("學堂"), "noun", "opendict", None, 9600, "", &[])];
+    let c = Conn::open_memory().unwrap();
+    c.exec(SCHEMA).unwrap();
+    insert(&c, "opendict", OPEN);
+    let open = PackDb::new("opendict", c).unwrap();
+    let (core, st) = (build_core(), build_stdict());
+    let r = search(&[&core, &st, &open], "학교", None).unwrap();
+    let ex: Vec<_> = r.rows.iter().filter(|x| x.via == Some("exact")).map(|x| x.source.clone()).collect();
+    assert_eq!(ex, ["krdict", "wikt", "kengdic", "stdict", "opendict"]);
+    let h = search(&[&core, &st, &open], "學", None).unwrap();
+    assert!(h.rows.iter().any(|x| x.source == "opendict" && x.headword == "학당"));
+    assert!(search(&[&core, &st], "학당", None).unwrap().rows.iter().all(|x| x.source != "opendict"));
+}
