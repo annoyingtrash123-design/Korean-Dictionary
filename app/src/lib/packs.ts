@@ -5,8 +5,8 @@ export const PACK_INFO: Record<string, { label: string; desc: string }> = {
   core: { label: 'Core dictionary', desc: 'English definitions, hanja, example sentences' },
   stdict: { label: '표준국어대사전 (Korean–Korean)', desc: 'Standard dictionary · ~436k words, Korean definitions, hanja' },
   texts: { label: 'Reader library', desc: 'Public-domain and openly licensed Korean texts for the 읽기 Reader · tap-to-look-up, parallel English' },
-  cedict: { label: 'CC-CEDICT (Chinese–English)', desc: 'For hanja and hanmun lookups in the Reader · CC BY-SA 4.0' },
-  zhwikt: { label: 'Wiktionary Chinese', desc: 'Classical senses, Middle Chinese and Sino-Korean readings for hanmun · large' },
+  cedict: { label: 'CC-CEDICT (Chinese–English)', desc: 'Chinese senses of hanja words used in Korean (Korean-attested words only) · CC BY-SA 4.0' },
+  zhwikt: { label: 'Wiktionary Chinese', desc: 'Classical senses, Middle Chinese and Sino-Korean readings of hanja words used in Korean (Korean-attested words only)' },
   opendict: { label: '우리말샘 (Korean–Korean)', desc: 'Open dictionary · ~1M extra words incl. dialect, archaic, North Korean, technical terms' },
 };
 /** Packs that are content, not dictionaries: never passed to search/lookup. */

@@ -1,6 +1,7 @@
 //! Build core.sqlite / stdict.sqlite and the site-data bundle.
 
 use crate::common::*;
+use crate::zh_korean::KoreanHanja;
 use crate::{cedict, freq, kaikki, kengdic, krdict, opendict, pack, schema, stdict, tatoeba, unihan, zhwikt};
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
@@ -997,6 +998,29 @@ pub fn load_sino_readings(core: &Path) -> HashMap<char, String> {
     m
 }
 
+/// Hanja words of the built Korean packs (core, stdict, opendict) + characters with a Korean
+/// reading, matched across Unihan variants (Korean 敎 = Chinese 教).
+fn korean_hanja(src: &Sources, out: &Path, sino: &HashMap<char, String>) -> KoreanHanja {
+    let variants = match &src.unihan {
+        Some(p) => unihan::parse_variants(p).unwrap_or_else(|e| {
+            log::warn!("unihan variants failed: {e:#}");
+            HashMap::new()
+        }),
+        None => HashMap::new(),
+    };
+    let nvar = variants.len();
+    let mut ko = KoreanHanja::new(variants);
+    for p in ["core", "stdict", "opendict"] {
+        let n = ko.add_pack(&out.join(format!("{p}.sqlite")));
+        log::info!("korean hanja: {n} distinct hanja values from {p}");
+    }
+    for &c in sino.keys() {
+        ko.add_char(c);
+    }
+    log::info!("korean hanja: {} words, {nvar} variant links", ko.word_count());
+    ko
+}
+
 /// Insert an entry with an explicit rank (Chinese packs have no frequency data).
 fn insert_ranked(conn: &Connection, e: &Entry, rank: i64, c: &mut Counters) -> Result<i64> {
     insert_entry(conn, e, rank, false, c)
@@ -1018,7 +1042,7 @@ fn finish_pack(conn: Connection, pack: &str, counts: Value, src: &str, n: i64, v
 /// `cedict.sqlite`: CC-CEDICT. headword = hanja = traditional; `forms.form` = simplified (the
 /// "extra index on simplified": `forms_form`); `pron` = Sino-Korean reading; `rank` = headword
 /// length then file order.
-pub fn build_cedict(src: &Sources, sino: &HashMap<char, String>, out: &Path, version: &str, built_at: &str) -> Result<Option<PackResult>> {
+pub fn build_cedict(src: &Sources, sino: &HashMap<char, String>, ko: &KoreanHanja, out: &Path, version: &str, built_at: &str) -> Result<Option<PackResult>> {
     let Some(p) = &src.cedict else { return Ok(None) };
     let path = out.join("cedict.sqlite");
     let conn = open_db(&path)?;
@@ -1026,9 +1050,14 @@ pub fn build_cedict(src: &Sources, sino: &HashMap<char, String>, out: &Path, ver
     conn.execute_batch("BEGIN")?;
     let mut c = Counters::default();
     let mut seq = 0usize;
+    let mut dropped = 0i64;
     cedict::parse_file(p, sino, |e| {
         let rank = cedict::rank(&e.headword, seq);
         seq += 1;
+        if !ko.keeps(std::iter::once(e.headword.as_str()).chain(e.forms.iter().map(String::as_str))) {
+            dropped += 1;
+            return Ok(());
+        }
         insert_ranked(&conn, &e, rank, &mut c)?;
         Ok(())
     })
@@ -1041,6 +1070,7 @@ pub fn build_cedict(src: &Sources, sino: &HashMap<char, String>, out: &Path, ver
     counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
     counts.insert("with_sino_korean".into(), q("SELECT COUNT(*) FROM entries WHERE pron IS NOT NULL")?.into());
+    counts.insert("dropped_not_korean".into(), dropped.into());
     let counts = Value::Object(counts);
     finish_pack(conn, "cedict", counts.clone(), "cedict", c.entries, version, built_at)?;
     Ok(Some(PackResult { path, counts, keys: HashSet::new() }))
@@ -1048,7 +1078,7 @@ pub fn build_cedict(src: &Sources, sino: &HashMap<char, String>, out: &Path, ver
 
 /// `zhwikt.sqlite`: Wiktionary Chinese (kaikki), streamed. Form-of redirects (simplified ->
 /// traditional, variants) become `forms` rows of the target entries.
-pub fn build_zhwikt(src: &Sources, sino: &HashMap<char, String>, out: &Path, version: &str, built_at: &str) -> Result<Option<PackResult>> {
+pub fn build_zhwikt(src: &Sources, sino: &HashMap<char, String>, ko: &KoreanHanja, out: &Path, version: &str, built_at: &str) -> Result<Option<PackResult>> {
     let Some(p) = &src.zhwikt else { return Ok(None) };
     let path = out.join("zhwikt.sqlite");
     let conn = open_db(&path)?;
@@ -1056,7 +1086,12 @@ pub fn build_zhwikt(src: &Sources, sino: &HashMap<char, String>, out: &Path, ver
     conn.execute_batch("BEGIN")?;
     let mut c = Counters::default();
     let rd = BufReader::with_capacity(1 << 20, fs::File::open(p)?);
+    let mut dropped = 0i64;
     let redirects = zhwikt::parse(rd, sino, |e, rank| {
+        if !ko.keeps(std::iter::once(e.headword.as_str()).chain(e.forms.iter().map(String::as_str))) {
+            dropped += 1;
+            return Ok(());
+        }
         insert_ranked(&conn, &e, rank, &mut c)?;
         Ok(())
     })
@@ -1088,6 +1123,7 @@ pub fn build_zhwikt(src: &Sources, sino: &HashMap<char, String>, out: &Path, ver
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
     counts.insert("redirect_forms".into(), added.into());
     counts.insert("with_sino_korean".into(), q("SELECT COUNT(*) FROM entries WHERE pron IS NOT NULL")?.into());
+    counts.insert("dropped_not_korean".into(), dropped.into());
     let counts = Value::Object(counts);
     finish_pack(conn, "zhwikt", counts.clone(), "zhwikt", c.entries, version, built_at)?;
     Ok(Some(PackResult { path, counts, keys: HashSet::new() }))
@@ -1128,10 +1164,11 @@ pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
     bad
 }
 
-/// Minimum entries of a healthy cedict pack (CC-CEDICT has ~120k lines).
-pub const MIN_CEDICT: i64 = 100_000;
-/// Minimum entries of a healthy zhwikt pack (kaikki Chinese has several 100k non-form-of entries).
-pub const MIN_ZHWIKT: i64 = 100_000;
+/// Minimum entries of a healthy cedict pack: CC-CEDICT (~120k lines) cut to Korean-attested
+/// words and characters (`zh_korean`).
+pub const MIN_CEDICT: i64 = 15_000;
+/// Minimum entries of a healthy zhwikt pack (kaikki Chinese, cut to Korean-attested words).
+pub const MIN_ZHWIKT: i64 = 15_000;
 
 /// Gate for the optional packs; `built` holds `(pack id, counts)` for the packs that were
 /// built in this run only (a missing source is not a failure).
@@ -1209,12 +1246,15 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     }
 
     // optional Chinese packs; a failing one only logs a warning
-    let sino = if o.sources.cedict.is_some() || o.sources.zhwikt.is_some() { load_sino_readings(&core.path) } else { HashMap::new() };
+    let want_zh = o.sources.cedict.is_some() || o.sources.zhwikt.is_some();
+    let sino = if want_zh { load_sino_readings(&core.path) } else { HashMap::new() };
+    // Chinese packs keep only what is relevant to Korean (hanja words attested in the Korean packs)
+    let ko = if want_zh { korean_hanja(&o.sources, &o.out, &sino) } else { KoreanHanja::default() };
     let mut zh_counts: Vec<(&str, Value)> = Vec::new();
     if o.sources.cedict.is_none() {
         remove_stale(&site, "cedict.sqlite.gz.")?;
     } else {
-        match build_cedict(&o.sources, &sino, &o.out, &version, &built_at) {
+        match build_cedict(&o.sources, &sino, &ko, &o.out, &version, &built_at) {
             Ok(Some(r)) => {
                 log::info!("cedict.sqlite built: {}", r.counts);
                 packs.push(pack::compress_pack("cedict", false, &r.path, &site, &r.counts, o.chunk_bytes)?);
@@ -1227,7 +1267,7 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     if o.sources.zhwikt.is_none() {
         remove_stale(&site, "zhwikt.sqlite.gz.")?;
     } else {
-        match build_zhwikt(&o.sources, &sino, &o.out, &version, &built_at) {
+        match build_zhwikt(&o.sources, &sino, &ko, &o.out, &version, &built_at) {
             Ok(Some(r)) => {
                 log::info!("zhwikt.sqlite built: {}", r.counts);
                 packs.push(pack::compress_pack("zhwikt", false, &r.path, &site, &r.counts, o.chunk_bytes)?);

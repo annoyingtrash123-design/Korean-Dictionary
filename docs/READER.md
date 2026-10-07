@@ -48,8 +48,11 @@ Joseon, Colonial era & independence, Modern Korea, Sino-Korean relations.
 ## Dictionary packs for older texts
 - **옛말 filter**: 우리말샘 entries tagged 옛말 (no new download); Reader lookups fall back to them.
 - **Hanja 훈음** (small): per-character 훈음 (學: 배울 학) from Wiktionary + Unihan.
-- **CC-CEDICT** Chinese–English (CC BY-SA 4.0), ~10 MB.
-- **Wiktionary Chinese** (optional, large): classical senses, Middle Chinese and Sino-Korean readings.
+- **CC-CEDICT** Chinese–English (CC BY-SA 4.0), cut to words attested as hanja in the Korean
+  dictionaries (plus characters with a Korean reading). Pure Chinese vocabulary is out of scope:
+  use a Chinese dictionary app (e.g. Pleco) for hanmun beyond Korean usage.
+- **Wiktionary Chinese** (optional): classical senses, Middle Chinese and Sino-Korean readings,
+  cut to Korean-attested words the same way.
 
 ## Data flow
 1. `kdict-pipeline fetch-texts` (GitHub Actions, `fetch-texts.yml`, manual) resolves the catalogue

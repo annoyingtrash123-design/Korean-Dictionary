@@ -124,7 +124,11 @@ CREATE TABLE grammar (
 ### Contract additions: older-text packs
 * `entries.hist INTEGER NOT NULL DEFAULT 0` (all packs): 1 = 옛말 / old word (stdict, opendict). Partial index `entries_hist(hist, hw_norm) WHERE hist = 1` in those packs.
 * `hanja_chars.hun TEXT` (Korean gloss word, '배울') and `eumhun TEXT` ('배울 학'; several joined '; ') in core.
-* Optional packs `cedict` and `zhwikt` (`required: false` in the manifest), same `entries`/`forms`/`hanja_words` tables, `lang 'en'`, `source` = pack id, no FTS/gloss_terms:
+* Optional packs `cedict` and `zhwikt` (`required: false` in the manifest) keep only Korean-relevant
+  entries: a headword (traditional or simplified form) is kept when it equals a run of hanja in some
+  Korean entry's `hanja` (core/stdict/opendict), or is a single character with a Korean reading,
+  compared after folding Unihan kZVariant/kSemanticVariant/kCompatibilityVariant classes (敎 = 教);
+  `counts.dropped_not_korean` records the rest. They have the same `entries`/`forms`/`hanja_words` tables, `lang 'en'`, `source` = pack id, no FTS/gloss_terms:
   `headword` = `hw_norm` = `hanja` = traditional; `forms.form` = simplified; `pron` = Sino-Korean reading in hangul; `data.simplified`, `data.pinyin` (tone marks), `data.pinyin_num`, `data.cl` (cedict); `data.pron` {mandarin, middle_chinese, cantonese, sino_korean, sino_vietnamese, sino_japanese}, `data.classical`, `data.etym` (zhwikt). Chinese packs rank after all Korean ranks.
 * Engine: Han-script searches also query installed `cedict`/`zhwikt` (exact, simplified via `forms`, longest known prefix, words starting with the query), rows after the Korean ones with `via: 'hanja'`. `lookupInText(text, offset, {packs, limit?}) -> {match, start, end, rows, hanja?, deconj?}` (offsets are UTF-16 code units) serves the Reader; extra `via` values: `hist`, `spelling`, `prefix`.
 

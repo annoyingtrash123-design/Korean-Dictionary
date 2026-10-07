@@ -22,3 +22,4 @@ pub mod texts_wikitext;
 pub mod unihan;
 pub mod xml;
 pub mod zhwikt;
+pub mod zh_korean;

@@ -782,7 +782,10 @@ fn chinese_packs_are_built_from_fixtures() {
 
     // cedict: traditional headword, simplified via forms, Sino-Korean in pron
     let d = Connection::open(out.join("cedict.sqlite")).unwrap();
-    assert_eq!(q::<i64>(&d, "SELECT COUNT(*) FROM entries"), 11);
+    // only Korean-attested words/characters are kept (the fixture Korean packs know 學校, 學, 校)
+    let kept = |c: &Connection| -> Vec<String> { c.prepare("SELECT headword FROM entries ORDER BY id").unwrap().query_map([], |r| r.get(0)).unwrap().flatten().collect() };
+    assert_eq!(kept(&d), ["學校", "學", "校", "校"]);
+    assert_eq!(q::<i64>(&d, "SELECT json_extract(value, '$.dropped_not_korean') FROM meta WHERE key='counts'"), 7); // 女子 理由 老師 規律 學生 阿Q 花兒
     assert_eq!(q::<String>(&d, "SELECT pron FROM entries WHERE hw_norm='學校'"), "학교");
     assert_eq!(q::<String>(&d, "SELECT e.headword FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='学校'"), "學校");
     assert_eq!(q::<String>(&d, "SELECT hanja FROM entries WHERE hw_norm='學校'"), "學校");
@@ -792,7 +795,7 @@ fn chinese_packs_are_built_from_fixtures() {
 
     // zhwikt: form-of redirects become forms of the target
     let z = Connection::open(out.join("zhwikt.sqlite")).unwrap();
-    assert_eq!(q::<i64>(&z, "SELECT COUNT(*) FROM entries"), 4);
+    assert_eq!(kept(&z), ["學校", "學", "校"]); // "hello", 女子: not Korean hanja words in the fixtures
     assert_eq!(q::<String>(&z, "SELECT e.headword FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='学校'"), "學校");
     assert_eq!(q::<String>(&z, "SELECT e.headword FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='学'"), "學");
     assert_eq!(q::<String>(&z, "SELECT value FROM meta WHERE key='pack'"), "zhwikt");
