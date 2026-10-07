@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Korean Dictionary</title>
+    <meta name="description" content="Offline Korean–English dictionary" />
+    <meta name="theme-color" content="#faf8f5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="한영사전" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%icon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
+    <script>
+      // Apply the saved theme before first paint (keep in sync with src/lib/theme.ts).
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('kd.settings') || '{}');
+          var t = s.theme || 'system';
+          if (t === 'system') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          var r = document.documentElement;
+          r.setAttribute('data-theme', t);
+          var m = { accent: '--accent', bg: '--bg', text: '--text', hangul: '--hangul', hanja: '--hanja' };
+          var c = s.colors || {};
+          for (var k in m) if (c[k]) r.style.setProperty(m[k], c[k]);
+          r.style.setProperty('--entry-font-size', (s.fontSize || 17) + 'px');
+          var bg = c.bg || { light: '#faf8f5', dark: '#16181a', sepia: '#f3e8d2' }[t];
+          if (bg) document.querySelector('meta[name=theme-color]').setAttribute('content', bg);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
