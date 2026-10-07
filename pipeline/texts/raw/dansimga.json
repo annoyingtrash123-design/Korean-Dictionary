@@ -1,0 +1,29 @@
+{
+  "id": "dansimga",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%EB%8B%A8%EC%8B%AC%EA%B0%80",
+  "page_title": "단심가",
+  "revision_id": 430428,
+  "revision_timestamp": "2026-06-15T14:48:47Z",
+  "fetched_at": "2026-10-07T22:20:10Z",
+  "licence": "Original work: public domain (Author died 1392; the work is centuries old and in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 이 몸이 주거 주거\n|다른 표기 = 丹心歌\n|지은이 = [[저자:정몽주|정몽주]]\n|역자 =\n|부제 = \n|이전 = \n|다음 = \n|설명 = 이방원의 [[하여가]]에 대한 화답시. 정몽주가 이성계에게 협력할 의사가 없음을 알고 이방원은 정몽주를 선죽교에서 살해하였다. [[가곡원류]]에는 곡조를 달리 하여 두 차례 실려 있다.\n}}\n{{옛한글 알림}}\n\n{{옛한글/시작}}\n=== 청구영언 ===\n<pages index=\"김천택 청구영언 (디지털한글박물관, 1728).pdf\" from=6 to=6 fromsection=\"八\" tosection=\"八\" />\n\n=== 가곡원류 (우조 두거) ===\n<pages index=\"가곡원류 (국립국악원).pdf\" from=24 to=24 fromsection=\"123\" tosection=\"123\" />\n\n=== 가곡원류 (계면조 두거) ===\n<pages index=\"가곡원류 (국립국악원).pdf\" from=65 to=65 fromsection=\"408\" tosection=\"408\" />\n{{옛한글/끝}}\n\n=== 한역 ===\n<poem>\n此身死了死了(차신사료사료) 一百番更死了(일백번갱사료)\n白骨爲塵土(백골위진토) 魂魄有也無(혼백유야무)\n向主一片丹心(향주일편단심) 寧有改理也歟(영유개리야여)\n</poem>\n\n\n== 같이 보기 ==\n* [[하여가]]\n\n== 라이선스 ==\n{{PD-old-100}}\n[[분류:시조]]",
+  "text": "## 청구영언\n\n## 가곡원류 (우조 두거)\n\n## 가곡원류 (계면조 두거)\n\n## 한역\n\n此身死了死了(차신사료사료) 一百番更死了(일백번갱사료)\n白骨爲塵土(백골위진토) 魂魄有也無(혼백유야무)\n向主一片丹心(향주일편단심) 寧有改理也歟(영유개리야여)\n\n## 라이선스",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "이 몸이 주거 주거",
+      "다른 표기": "丹心歌",
+      "지은이": "정몽주",
+      "설명": "이방원의 하여가에 대한 화답시. 정몽주가 이성계에게 협력할 의사가 없음을 알고 이방원은 정몽주를 선죽교에서 살해하였다. 가곡원류에는 곡조를 달리 하여 두 차례 실려 있다."
+    },
+    "index": [
+      "김천택",
+      "가곡원류"
+    ]
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}

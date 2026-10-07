@@ -1,0 +1,28 @@
+{
+  "id": "isunsin_hansando",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EC%82%B0%EC%84%AC_%EB%8B%AC_%EB%B0%9D%EC%9D%80_%EB%B0%A4%EC%97%90",
+  "page_title": "한산섬 달 밝은 밤에",
+  "revision_id": 430670,
+  "revision_timestamp": "2026-06-15T14:57:39Z",
+  "fetched_at": "2026-10-07T22:22:03Z",
+  "licence": "Original work: public domain (Author died 1598; the work is centuries old and in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 閑山셤 ᄃᆞᆯ ᄇᆞᆯ근 밤의\n|지은이 = [[저자:이순신|이순신]]\n|역자 =\n|부제 =\n|이전 =\n|다음 =\n|설명 = [[청구영언]]과 [[가곡원류]]에 실려 있다.\n}}\n{{옛한글 알림}}\n\n{{옛한글/시작}}\n=== 청구영언 ===\n<pages index=\"김천택 청구영언 (디지털한글박물관, 1728).pdf\" from=31 to=31 fromsection=\"一一一\" tosection=\"一一一\" />\n\n=== 가곡원류 ===\n<pages index=\"가곡원류 (국립국악원).pdf\" from=46 to=46 fromsection=\"272\" tosection=\"272\" />\n{{옛한글/끝}}\n\n==저작권==\n{{PD-old-100}}\n{{분류:시조}}",
+  "text": "## 청구영언\n\n## 가곡원류\n\n## 저작권",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "閑山셤 ᄃᆞᆯ ᄇᆞᆯ근 밤의",
+      "지은이": "이순신",
+      "설명": "청구영언과 가곡원류에 실려 있다."
+    },
+    "index": [
+      "김천택",
+      "가곡원류"
+    ]
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": "giljae_hoegoga",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%ED%9A%8C%EA%B3%A0%EA%B0%80_%28%EA%B8%B8%EC%9E%AC%29",
+  "page_title": "회고가 (길재)",
+  "revision_id": 430574,
+  "revision_timestamp": "2026-06-15T14:53:57Z",
+  "fetched_at": "2026-10-07T22:21:05Z",
+  "licence": "Original work: public domain (Author died 1419; the work is centuries old and in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 회고가\n|다른 표기 = 懷古歌\n|지은이 = [[글쓴이:길재|길재]]\n|역자 =\n|부제 =\n|이전 =\n|다음 =\n|설명 = 길재가 고려의 도읍지인 개경을 둘러보며 지은 시조. 길재는 고려가 망하고 조선이 서자 고향으로 내려갔는데 이 시조는 고향으로 내려가기 전에 개경을 돌아보며 지은 것이다. 비슷한 주제의 시조로는 원천석의 [[회고가 (원천석)|회고가]]와 이색의 [[회고가 (이색)|회고가]]가 있고, 비슷한 주제의 한시로는 두보의 [[춘망]]이 있다. [[청구영언]]과 [[가곡원류]]에 실려 있다.\n}}\n\n{{옛한글 알림}}\n\n{{옛한글/시작}}\n=== 청구영언 ===\n<pages index=\"김천택 청구영언 (디지털한글박물관, 1728).pdf\" from=85 to=85 fromsection=\"길재\" tosection=\"길재\" />\n\n=== 가곡원류 ===\n<pages index=\"가곡원류 (국립국악원).pdf\" from=51 to=51 fromsection=\"310\" tosection=\"310\" />\n{{옛한글/끝}}\n\n==저작권==\n{{PD-old-100}}\n{{분류:시조}}",
+  "text": "## 청구영언\n\n## 가곡원류\n\n## 저작권",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "회고가",
+      "다른 표기": "懷古歌",
+      "지은이": "길재",
+      "설명": "길재가 고려의 도읍지인 개경을 둘러보며 지은 시조. 길재는 고려가 망하고 조선이 서자 고향으로 내려갔는데 이 시조는 고향으로 내려가기 전에 개경을 돌아보며 지은 것이다. 비슷한 주제의 시조로는 원천석의 회고가와 이색의 회고가가 있고, 비슷한 주제의 한시로는 두보의 춘망이 있다. 청구영언과 가곡원류에 실려 있다."
+    },
+    "index": [
+      "김천택",
+      "가곡원류"
+    ]
+  },
+  "subpages": [],
+  "resolved_via": "prefer_edition",
+  "truncated": false,
+  "needs_sections": false
+}

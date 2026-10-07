@@ -1,0 +1,27 @@
+{
+  "id": "alsuopseoyo",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%EB%8B%98%EC%9D%98_%EC%B9%A8%EB%AC%B5/%EC%95%8C_%EC%88%98_%EC%97%86%EC%96%B4%EC%9A%94",
+  "page_title": "님의 침묵/알 수 없어요",
+  "revision_id": 430601,
+  "revision_timestamp": "2026-06-15T14:55:08Z",
+  "fetched_at": "2026-10-07T22:45:06Z",
+  "licence": "Original work: public domain (Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 님의 침묵\n|지은이 = [[저자:한용운|한용운]]\n|역자 =\n|부제 = 알ㅅ수업서요\n|이전 = [[님의 침묵/이별은 미의 창조|리별은美의創造]]\n|다음 = [[님의 침묵/나는 잊고저|나는잊고저]]\n|설명 = \n}}\n== 알ㅅ수업서요 ==\n{{옛한글/시작}}\n<poem>\n<pages index=\"CNTS-00076805684 님의 沈黙.pdf\" from=16 to=17 fromsection=\"본문\" />\n</poem>\n{{옛한글/끝}}\n\n== 현대어==\n<poem>\n바람도 없는 공중에 수직의 파문을 내이며 고요히 떨어지는 오동잎은 누구의 발자취입니까\n지리한 장마 끝에 서풍에 몰려가는 무서운 검은 구름의 터진 틈으로 언뜻언뜻 보이는 푸른 하늘은 누구의 얼굴입니까\n꽃도 없는 깊은 나무에 푸른 이끼를 거쳐서 옛 탑 위의 고요한 하늘을 스치는 알 수 없는 향기는 누구의 입김입니까\n근원은 알지도 못할 곳에서 나서 돌뿌리를 울리고 가늘게 흐르는 작은 시내는 구비구비 누구의 노래입니까\n연꽃 같은 발꿈치로 가이 없는 바다를 밟고 옥 같은 손으로 끝없는 하늘을 만지면서 떨어지는 날을 곱게 단장하는 저녁놀은 누구의 시입니까\n타고 남은 재가 다시 기름이 됩니다 그칠 줄을 모르고 타는 나의 가슴은 누구의 밤을 지키는 약한 등불입니까\n</poem>",
+  "text": "## 알ㅅ수업서요\n\n## 현대어\n\n바람도 없는 공중에 수직의 파문을 내이며 고요히 떨어지는 오동잎은 누구의 발자취입니까\n지리한 장마 끝에 서풍에 몰려가는 무서운 검은 구름의 터진 틈으로 언뜻언뜻 보이는 푸른 하늘은 누구의 얼굴입니까\n꽃도 없는 깊은 나무에 푸른 이끼를 거쳐서 옛 탑 위의 고요한 하늘을 스치는 알 수 없는 향기는 누구의 입김입니까\n근원은 알지도 못할 곳에서 나서 돌뿌리를 울리고 가늘게 흐르는 작은 시내는 구비구비 누구의 노래입니까\n연꽃 같은 발꿈치로 가이 없는 바다를 밟고 옥 같은 손으로 끝없는 하늘을 만지면서 떨어지는 날을 곱게 단장하는 저녁놀은 누구의 시입니까\n타고 남은 재가 다시 기름이 됩니다 그칠 줄을 모르고 타는 나의 가슴은 누구의 밤을 지키는 약한 등불입니까",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "님의 침묵",
+      "지은이": "한용운",
+      "부제": "알ㅅ수업서요"
+    },
+    "index": [
+      "CNTS-00076805684"
+    ]
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}

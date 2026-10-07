@@ -1,0 +1,27 @@
+{
+  "id": "narutbaewa_haengin",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%EB%8B%98%EC%9D%98_%EC%B9%A8%EB%AC%B5/%EB%82%98%EB%A3%BB%EB%B0%B0%EC%99%80_%ED%96%89%EC%9D%B8",
+  "page_title": "님의 침묵/나룻배와 행인",
+  "revision_id": 430578,
+  "revision_timestamp": "2026-06-15T14:54:05Z",
+  "fetched_at": "2026-10-07T22:45:08Z",
+  "licence": "Original work: public domain (Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 님의 침묵\n|저자 = [[저자:한용운|한용운]]\n|역자 =\n|부제 = 나룻배와 행인\n|이전 = [[님의 침묵/하나가 되어주셔요|하나가 되어주셔요]]\n|다음 = [[님의 침묵/차라리|차라리]]\n|설명 = \n}}\n\n== 나루ㅅ배와行人 ==\n{{옛한글/시작}}\n<poem>\n<pages index=\"CNTS-00076805684 님의 沈黙.pdf\" from=40 to=41 fromsection=\"본문\" />\n</poem>\n{{옛한글/끝}}\n\n== 현대어 ==\n<poem>\n나는 나룻배 \n당신은 행인(行人)\n \n당신은 흙발로 나를 짓밟습니다 \n나는 당신을 안고 물을 건너갑니다\n나는 당신을 안으면 깊으나 옅으나 급한 여울이나 건너갑니다\n\n만일 당신이 아니 오시면 나는 바람을 쐬고 눈비를 맞으며 밤에서 낮까지 당신을 기다리고 있습니다 \n당신은 물만 건너면 나를 돌아보지도 않고 가십니다 그려\n\n그러나 당신이 언제든지 오실 줄만은 알아요\n나는 당신을 기다리면서 날마다날마다 낡아갑니다\n\n나는 나룻배 \n당신은 행인\n</poem>",
+  "text": "## 나루ㅅ배와行人\n\n## 현대어\n\n나는 나룻배\n당신은 행인(行人)\n\n당신은 흙발로 나를 짓밟습니다\n나는 당신을 안고 물을 건너갑니다\n나는 당신을 안으면 깊으나 옅으나 급한 여울이나 건너갑니다\n\n만일 당신이 아니 오시면 나는 바람을 쐬고 눈비를 맞으며 밤에서 낮까지 당신을 기다리고 있습니다\n당신은 물만 건너면 나를 돌아보지도 않고 가십니다 그려\n\n그러나 당신이 언제든지 오실 줄만은 알아요\n나는 당신을 기다리면서 날마다날마다 낡아갑니다\n\n나는 나룻배\n당신은 행인",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "님의 침묵",
+      "저자": "한용운",
+      "부제": "나룻배와 행인"
+    },
+    "index": [
+      "CNTS-00076805684"
+    ]
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}

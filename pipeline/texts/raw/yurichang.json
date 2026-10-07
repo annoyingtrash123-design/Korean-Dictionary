@@ -1,0 +1,24 @@
+{
+  "id": "yurichang",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%ED%96%A5%EC%88%98/%EC%9C%A0%EB%A6%AC%EC%B0%BD1",
+  "page_title": "향수/유리창1",
+  "revision_id": 340569,
+  "revision_timestamp": "2024-09-20T05:36:39Z",
+  "fetched_at": "2026-10-07T22:49:00Z",
+  "licence": "Original work: public domain (Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 유리창(琉璃窓) 1\n|부제 = 《[[향수]]》 중\n|저자 = [[저자:정지용|정지용]]\n|설명 = \n}}\n\n<poem>\n유리(琉璃)에 차고 슬픈것이 어린거린다.\n열없이 붙어서서 입김을 흐리우니\n길들은양 언날개를 파다거린다.\n지우고 보고 지우고 보아도\n새까만 밤이 밀려나가고 밀려와 부디치고,\n물먹은 별이, 반짝, 보석(寶石)처럼 백힌다.\n밤에 홀로 유리(琉璃)를 닥는 것은\n외로운 황홀한 심사 이어니,\n고운 폐혈관(肺血管)이 찢어진 채로\n아아, 늬는 산(山)ㅅ새처럼 날러 갔구나!\n</poem>",
+  "text": "유리(琉璃)에 차고 슬픈것이 어린거린다.\n열없이 붙어서서 입김을 흐리우니\n길들은양 언날개를 파다거린다.\n지우고 보고 지우고 보아도\n새까만 밤이 밀려나가고 밀려와 부디치고,\n물먹은 별이, 반짝, 보석(寶石)처럼 백힌다.\n밤에 홀로 유리(琉璃)를 닥는 것은\n외로운 황홀한 심사 이어니,\n고운 폐혈관(肺血管)이 찢어진 채로\n아아, 늬는 산(山)ㅅ새처럼 날러 갔구나!",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "유리창(琉璃窓) 1",
+      "부제": "《향수》 중",
+      "저자": "정지용"
+    }
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}

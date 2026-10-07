@@ -1,0 +1,29 @@
+{
+  "id": "hayeoga",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%ED%95%98%EC%97%AC%EA%B0%80",
+  "page_title": "하여가",
+  "revision_id": 430637,
+  "revision_timestamp": "2026-06-15T14:56:20Z",
+  "fetched_at": "2026-10-07T22:21:02Z",
+  "licence": "Original work: public domain (Author died 1422; the work is centuries old and in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n |제목 = 하여가\n |다른 표기 = 何如歌\n |저자 = [[저자:조선 태종|조선 태종]]\n |부제 =\n |이전 = \n |다음 =\n |설명= 이방원(태종)의 시조. 온건 개혁파의 중추적 인물인 정몽주를 회유하기 위해 지었다고 알려져 있다. 정몽주는 이방원에게 [[단심가]]로 화답하였다가 선죽교에서 살해되었다. [[청구영언]]과 [[가곡원류]]에 실려 있다.\n}}\n\n{{옛한글 알림}}\n{{옛한글/시작}}\n===청구영언===\n<pages index=\"김천택 청구영언 (디지털한글박물관, 1728).pdf\" from=56 to=56 fromsection=\"二一六\" tosection=\"二一六\" />\n\n=== 가곡원류 ===\n<pages index=\"가곡원류 (국립국악원).pdf\" from=70 to=70 fromsection=\"443\" tosection=\"443\" />\n{{옛한글/끝}}\n\n===해석===\n<poem>\n이런들 어떠하며 저런들 어떠하리오\n만수산 드렁칡이 얽어진들 어떠하리\n우리도 이 같이 얽어져 백년까지 누리리라\n</poem>\n\n== 라이선스 ==\n{{PD-old-100}}\n[[분류:시조]]",
+  "text": "## 청구영언\n\n## 가곡원류\n\n## 해석\n\n이런들 어떠하며 저런들 어떠하리오\n만수산 드렁칡이 얽어진들 어떠하리\n우리도 이 같이 얽어져 백년까지 누리리라\n\n## 라이선스",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "하여가",
+      "다른 표기": "何如歌",
+      "저자": "조선 태종",
+      "설명": "이방원(태종)의 시조. 온건 개혁파의 중추적 인물인 정몽주를 회유하기 위해 지었다고 알려져 있다. 정몽주는 이방원에게 단심가로 화답하였다가 선죽교에서 살해되었다. 청구영언과 가곡원류에 실려 있다."
+    },
+    "index": [
+      "김천택",
+      "가곡원류"
+    ]
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}
