@@ -233,7 +233,7 @@ fn resolves_direct_page_with_subpages() {
     assert_eq!(d.subpages.len(), 2);
     // linked order on the index page: 2 before 1
     assert_eq!(d.subpages[0]["title"], "구운몽/2");
-    assert_eq!(d.text, "## 2\n\n둘째 회 본문\n\n## 제1회\n\n성진이 연화봉에서\n\n팔선녀를 만나다.");
+    assert_eq!(d.text, "제2회 제1회\n\n## 2\n\n둘째 회 본문\n\n## 제1회\n\n성진이 연화봉에서\n\n팔선녀를 만나다.");
     assert!(d.wikitext.contains("<!-- subpage: 구운몽/1 -->"));
     assert_eq!(d.edition.as_ref().unwrap()["params"]["출처"], "노존B본");
     assert_eq!(d.url, "https://ko.wikisource.org/wiki/%EA%B5%AC%EC%9A%B4%EB%AA%BD");

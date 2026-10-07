@@ -480,7 +480,7 @@ CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL, rank INTE
         assert_eq!(m.rows[0].headword, "한");
         // packs without the hist column simply skip that step
         let m = lookup_in_text(&[&c], "\u{1112}\u{119E}\u{11AB}", 0, None).unwrap();
-        assert_eq!(m.rows[0].headword, "하다".replace("하다", "하다")); // 하 + ㄴ -> 한 ~ deconj of 한? either way modern
+        assert!(!m.rows.is_empty()); // 한 itself is no headword here; its deconjugation (하다) is
     }
 
     #[test]

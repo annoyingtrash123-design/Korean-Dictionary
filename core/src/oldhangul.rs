@@ -217,7 +217,7 @@ fn palatalise(word: &str) -> String {
                     i = if i == 3 { 12 } else { 14 };
                     m = yot(m).unwrap_or(m);
                 }
-                12 | 13 | 14 => m = yot(m).unwrap_or(m),
+                12..=14 => m = yot(m).unwrap_or(m),
                 9 if m == 6 => m = 4,
                 _ => return c,
             }
@@ -249,7 +249,7 @@ fn past_tense(word: &str) -> String {
 pub fn variants(word: &str) -> Vec<String> {
     let w = clean(word);
     let mut out: Vec<String> = Vec::new();
-    let mut push = |s: String, out: &mut Vec<String>| {
+    let push = |s: String, out: &mut Vec<String>| {
         if s != w && !s.is_empty() && !out.contains(&s) && out.len() < MAX_VARIANTS {
             out.push(s);
         }

@@ -377,10 +377,10 @@ fn process_tables(s: &str) -> String {
     let mut row: Vec<String> = Vec::new();
     for line in s.lines() {
         let t = line.trim();
-        if t.starts_with("{|") {
+        if let Some(tail) = t.strip_prefix("{|") {
             depth += 1;
             if depth == 1 {
-                let attrs = t[2..].to_lowercase();
+                let attrs = tail.to_lowercase();
                 skipping = SKIP_TABLE.iter().any(|k| attrs.contains(k));
             }
             continue;
@@ -622,8 +622,8 @@ fn strip_tags(s: &str) -> String {
     let mut i = 0;
     while i < s.len() {
         let rest = &s[i..];
-        if rest.starts_with('<') {
-            let nxt = rest[1..].chars().next();
+        if let Some(after) = rest.strip_prefix('<') {
+            let nxt = after.chars().next();
             let tagish = matches!(nxt, Some(c) if c.is_ascii_alphabetic() || c == '/' || c == '!');
             if tagish {
                 if let Some(gt) = rest.find('>') {

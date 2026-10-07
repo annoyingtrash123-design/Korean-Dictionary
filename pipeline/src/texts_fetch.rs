@@ -198,7 +198,7 @@ fn natural_key(s: &str) -> Vec<Tok> {
 
 /// Subpages in reading order: first by where the main page links to them, then naturally sorted.
 pub fn order_subpages(main_title: &str, main_wikitext: &str, mut subs: Vec<String>) -> Vec<String> {
-    subs.sort_by(|a, b| natural_key(a).cmp(&natural_key(b)));
+    subs.sort_by_key(|a| natural_key(a));
     let hay = main_wikitext.replace('_', " ");
     let pos = |s: &str| -> Option<usize> {
         let suffix = s.strip_prefix(main_title).unwrap_or(s);

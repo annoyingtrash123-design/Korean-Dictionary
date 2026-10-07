@@ -1,0 +1,90 @@
+name: Fetch reader texts
+
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Only these catalogue ids (comma-separated, optional)"
+        type: string
+        required: false
+        default: ""
+      force:
+        description: "Re-fetch entries that already have a raw file"
+        type: boolean
+        default: false
+      news:
+        description: "Also fetch recent korea.kr articles (KOGL type 1)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-texts
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build pipeline
+        run: cargo build --release -p kdict-pipeline
+
+      - name: Fetch texts
+        run: |
+          args=(--catalog pipeline/texts/catalog.toml --out pipeline/texts/raw)
+          if [ -n "${{ inputs.only }}" ]; then args+=(--only "${{ inputs.only }}"); fi
+          if [ "${{ inputs.force }}" = "true" ]; then args+=(--force); fi
+          ./target/release/kdict-pipeline fetch-texts "${args[@]}"
+
+      - name: Fetch news
+        if: ${{ inputs.news }}
+        run: |
+          args=(--catalog pipeline/texts/catalog.toml --out pipeline/texts/raw/news --max 30)
+          if [ "${{ inputs.force }}" = "true" ]; then args+=(--force); fi
+          ./target/release/kdict-pipeline fetch-news "${args[@]}"
+
+      - name: Report
+        if: always()
+        run: |
+          for f in pipeline/texts/raw/_report.json pipeline/texts/raw/news/_report.json; do
+            [ -f "$f" ] || continue
+            echo "######## $f"
+            python3 - "$f" <<'PY'
+          import json, sys
+          r = json.load(open(sys.argv[1]))
+          for k, v in r.items():
+              if isinstance(v, list):
+                  print(f"{k}: {len(v)}")
+                  if k != "resolved" and k != "kept":
+                      for row in v:
+                          print("   ", json.dumps(row, ensure_ascii=False)[:300])
+              elif isinstance(v, dict):
+                  for kk, vv in v.items():
+                      print(f"english.{kk}: {len(vv)}")
+                      if kk != "resolved":
+                          for row in vv:
+                              print("   ", json.dumps(row, ensure_ascii=False)[:300])
+          PY
+          done
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A pipeline/texts/raw
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit"
+            exit 0
+          fi
+          git commit -m "Fetch reader texts [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}" || true
+          git push origin "HEAD:${GITHUB_REF_NAME}"

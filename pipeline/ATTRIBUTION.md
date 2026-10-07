@@ -2,7 +2,7 @@
 
 The dictionary data bundled with this app is derived from the open datasets
 listed below. Each retains its original licence; the combined databases
-(`core.sqlite`, `stdict.sqlite`) are distributed under the most restrictive
+(`core.sqlite`, `stdict.sqlite`, `opendict.sqlite`, `cedict.sqlite`, `zhwikt.sqlite`) are distributed under the most restrictive
 share-alike terms that apply (CC BY-SA 4.0 compatible). The app source code is
 licensed separately.
 
@@ -36,7 +36,8 @@ licensed separately.
 
 ## Wiktionary (via kaikki.org)
 * Content used: Korean entries with English glosses, hanja forms, etymology,
-  related terms and translated example sentences.
+  related terms and translated example sentences; the 훈음 (Korean gloss word and reading)
+  of single hanja characters.
 * Source: English Wiktionary contributors; machine-readable extraction by
   Tatu Ylonen's wiktextract (https://kaikki.org/dictionary/Korean/).
 * Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
@@ -65,3 +66,18 @@ licensed separately.
   search results.
 * Source: Hermit Dave — https://github.com/hermitdave/FrequencyWords
 * Licence: CC BY-SA 4.0 (content), MIT (code).
+
+## CC-CEDICT (optional `cedict` pack)
+* Content used: Chinese (traditional / simplified) headwords, pinyin and English glosses.
+  The Sino-Korean reading shown with each entry is computed from the hanja readings of this app.
+* Source: https://www.mdbg.net/chinese/dictionary?page=cc-cedict — CC-CEDICT, community maintained.
+* Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
+  https://creativecommons.org/licenses/by-sa/4.0/
+
+## Wiktionary Chinese (optional `zhwikt` pack, via kaikki.org)
+* Content used: Chinese entries (traditional / simplified forms), glosses and usage tags
+  (e.g. Classical / literary), short etymology, Mandarin / Middle Chinese / Sino-Korean
+  (and Cantonese, Sino-Vietnamese, Sino-Japanese) readings. Translations, inflection tables
+  and examples are not included.
+* Source: English Wiktionary contributors; extraction by wiktextract (https://kaikki.org/dictionary/Chinese/).
+* Licence: CC BY-SA 4.0 and the GNU Free Documentation License.

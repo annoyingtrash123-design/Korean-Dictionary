@@ -154,6 +154,23 @@ mod wasm_api {
             })
         }
 
+        /// `lookupInText(text, offset, {packs, limit?}) -> {match, start, end, rows, hanja?, deconj?}`
+        /// Reader lookup around a UTF-16 offset of `text` (Hangul eojeol incl. old spelling / 옛말,
+        /// or the longest hanja word; see `search::lookup_in_text`).
+        #[wasm_bindgen(js_name = lookupInText)]
+        pub async fn lookup_in_text(&self, text: String, offset: f64, opts: JsValue) -> Result<JsValue, JsError> {
+            let opts: SearchOpts = if opts.is_undefined() || opts.is_null() {
+                SearchOpts { packs: vec![], limit: None }
+            } else {
+                serde_wasm_bindgen::from_value(opts).map_err(js_err)?
+            };
+            let offset = if offset.is_finite() && offset > 0.0 { offset as usize } else { 0 };
+            self.with_store(|s| {
+                let packs = if opts.packs.is_empty() { s.all() } else { s.select(&opts.packs) };
+                to_js(&search::lookup_in_text(&packs, &text, offset, opts.limit).map_err(js_err)?)
+            })
+        }
+
         #[wasm_bindgen(js_name = entriesByHeadword)]
         pub async fn entries_by_headword(&self, hw: String, packs: Vec<String>) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&search::entries_by_headword(&s.select(&packs), &hw).map_err(js_err)?))

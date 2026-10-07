@@ -48,6 +48,8 @@ GitHub Actions (full internet)                     Phone (offline)
 | Wiktionary via kaikki.org | Korean entries with English glosses, hanja, translated examples | CC BY-SA 4.0 | kaikki.org JSONL |
 | kengdic | ~130k Korean–English pairs + hanja | MPL 2.0 / LGPL | raw.githubusercontent.com/garfieldnate/kengdic |
 | Tatoeba | Korean–English sentence pairs | CC BY 2.0 FR | downloads.tatoeba.org |
+| CC-CEDICT (optional `cedict` pack) | Chinese–English, traditional/simplified, pinyin | CC BY-SA 4.0 | mdbg.net |
+| Wiktionary Chinese (optional `zhwikt` pack) | classical senses, Middle Chinese / Sino-Korean readings | CC BY-SA 4.0 | kaikki.org Chinese JSONL |
 | Unihan | Hanja readings (kHangul), English meaning, strokes, radical | Unicode licence | unicode.org |
 | FrequencyWords (OpenSubtitles) | Word frequency for ranking | CC BY-SA 4.0 | raw.githubusercontent.com/hermitdave/FrequencyWords |
 
@@ -118,6 +120,13 @@ CREATE TABLE grammar (
   level INTEGER, summary_en TEXT, sort INTEGER
 );
 ```
+
+### Contract additions: older-text packs
+* `entries.hist INTEGER NOT NULL DEFAULT 0` (all packs): 1 = 옛말 / old word (stdict, opendict). Partial index `entries_hist(hist, hw_norm) WHERE hist = 1` in those packs.
+* `hanja_chars.hun TEXT` (Korean gloss word, '배울') and `eumhun TEXT` ('배울 학'; several joined '; ') in core.
+* Optional packs `cedict` and `zhwikt` (`required: false` in the manifest), same `entries`/`forms`/`hanja_words` tables, `lang 'en'`, `source` = pack id, no FTS/gloss_terms:
+  `headword` = `hw_norm` = `hanja` = traditional; `forms.form` = simplified; `pron` = Sino-Korean reading in hangul; `data.simplified`, `data.pinyin` (tone marks), `data.pinyin_num`, `data.cl` (cedict); `data.pron` {mandarin, middle_chinese, cantonese, sino_korean, sino_vietnamese, sino_japanese}, `data.classical`, `data.etym` (zhwikt). Chinese packs rank after all Korean ranks.
+* Engine: Han-script searches also query installed `cedict`/`zhwikt` (exact, simplified via `forms`, longest known prefix, words starting with the query), rows after the Korean ones with `via: 'hanja'`. `lookupInText(text, offset, {packs, limit?}) -> {match, start, end, rows, hanja?, deconj?}` (offsets are UTF-16 code units) serves the Reader; extra `via` values: `hist`, `spelling`, `prefix`.
 
 ### EntryData JSON
 
