@@ -64,7 +64,12 @@ pub fn download(url: &str, dest: &Path) -> Result<()> {
         }
         other => {
             let _ = fs::remove_file(&tmp);
-            Err(last.unwrap_or_else(|| anyhow!("download failed")).context(format!("{other:?}")))
+            let curl = match other {
+                Ok(_) => "empty download".to_string(),
+                Err(e) => e.to_string(),
+            };
+            let first = last.map(|e| e.to_string()).unwrap_or_else(|| "download failed".into());
+            Err(anyhow!("{first}; curl fallback: {curl}"))
         }
     }
 }
