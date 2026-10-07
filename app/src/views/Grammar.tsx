@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'preact/hooks';
+import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { db } from '../db/client';
 import type { GrammarRow } from '../db/types';
 import { useAsync } from '../lib/useAsync';
@@ -7,15 +7,26 @@ import { entryPath, href } from '../lib/router';
 
 let grammarCache: GrammarRow[] | undefined;
 
+export const prefetchGrammar = () => { if (!grammarCache) db.grammarList().then((g) => { if (g.length) grammarCache = g; }, () => undefined); };
+
 export function GrammarView({ initialQ }: { initialQ: string }) {
-  const r = useAsync(async () => (grammarCache ??= await db.grammarList()), [], () => grammarCache);
+  const r = useAsync(async () => { const g = await db.grammarList(); if (g.length) grammarCache = g; return g; }, [], () => grammarCache);
   const [cat, setCat] = useState('All');
   const [lvl, setLvl] = useState(0);
   const [q, setQ] = useState(initialQ);
   const cats = useMemo(() => ['All', ...[...new Set((r.data ?? []).map((g) => g.category))]], [r.data]);
-  const list = (r.data ?? []).filter((g) =>
+  const [shownN, setShownN] = useState(60);
+  const matched = (r.data ?? []).filter((g) =>
     (cat === 'All' || g.category === cat) && (!lvl || g.level === lvl) &&
     (!q.trim() || (g.pattern + ' ' + (g.summary_en ?? '')).toLowerCase().includes(q.trim().toLowerCase())));
+  const list = matched.slice(0, shownN);
+  useEffect(() => setShownN(60), [cat, lvl, q]);
+  const sentinel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = sentinel.current; if (!el) return;
+    const io = new IntersectionObserver((e) => { if (e[0].isIntersecting) setShownN((n) => n + 100); }, { rootMargin: '600px' });
+    io.observe(el); return () => io.disconnect();
+  }, [matched.length, shownN]);
   return (
     <div class="page">
       <div class="grammar-filter">
@@ -30,7 +41,7 @@ export function GrammarView({ initialQ }: { initialQ: string }) {
         </div>
       </div>
       {r.loading && !r.data && <div class="skeleton" />}
-      {r.data && list.length === 0 && <Empty title="No grammar patterns match" />}
+      {r.data && matched.length === 0 && <Empty title="No grammar patterns match" />}
       <ul class="plain list">
         {list.map((g) => (
           <li key={g.id}>
@@ -44,6 +55,7 @@ export function GrammarView({ initialQ }: { initialQ: string }) {
           </li>
         ))}
       </ul>
+      {matched.length > shownN && <div ref={sentinel} class="sentinel" aria-hidden="true" />}
     </div>
   );
 }

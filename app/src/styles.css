@@ -226,3 +226,6 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 @media (min-width: 761px) { .app { border-inline: 1px solid var(--border); } }
+
+.sentinel { height: 1px; }
+.pack-line > div:first-child { flex: 1; min-width: 0; }

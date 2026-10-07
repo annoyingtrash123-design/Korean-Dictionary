@@ -8,7 +8,8 @@ opt-level = 3
 # The wasm engine is size-sensitive; these overrides only affect the core crate
 # (and the wasm-only SQLite build), never the native pipeline binary.
 [profile.release.package.kdict-core]
-opt-level = "z"
+opt-level = 3
 
+# SQLite itself is compiled for speed: queries run on every keystroke.
 [profile.release.package.sqlite-wasm-rs]
-opt-level = "z"
+opt-level = 3

@@ -57,11 +57,11 @@ export function groupResults(rows: ResultRow[]): ResultGroup[] {
 }
 
 /** Entries shown on the entry page: same headword + same hanja as the primary, ordered by source. */
-export function sameWordRows<T extends { headword: string; hanja?: string | null; source: Source; homonym?: number | null; id: number }>(
+export function sameWordRows<T extends { headword: string; hanja?: string | null; source: Source; homonym?: number | null; id: number; rank?: number }>(
   all: T[], primary: { headword: string; hanja?: string | null },
 ): T[] {
   const k = normHeadword(primary.headword);
   return all
     .filter((e) => normHeadword(e.headword) === k && (e.hanja ?? '') === (primary.hanja ?? ''))
-    .sort((a, b) => srcIdx(a.source) - srcIdx(b.source) || (a.homonym ?? 0) - (b.homonym ?? 0) || a.id - b.id);
+    .sort((a, b) => srcIdx(a.source) - srcIdx(b.source) || (a.rank ?? 0) - (b.rank ?? 0) || (a.homonym ?? 0) - (b.homonym ?? 0) || a.id - b.id);
 }

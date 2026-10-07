@@ -18,7 +18,8 @@ export function Results({ q }: { q: string }) {
   const status = useStore(packStatus$);
   const stamp = JSON.stringify(Object.values(status?.packs ?? {}).map((p) => p.version));
   const ck = (qq: string) => `${qq}|${packsKey(s)}|${stamp}`;
-  const [res, setRes] = useState<SearchResult | undefined>(() => cache.get(ck(q)));
+  const [res, setRes0] = useState<{ q: string; r: SearchResult } | undefined>(() => { const c = cache.get(ck(q)); return c ? { q, r: c } : undefined; });
+  const setRes = (r: SearchResult) => setRes0({ q, r });
   const [err, setErr] = useState<string>();
   const [busy, setBusy] = useState(() => !cache.get(ck(q)));
   const slow = useDelayed(busy, 150);
@@ -34,14 +35,15 @@ export function Results({ q }: { q: string }) {
     return () => { live = false; };
   }, [q, packsKey(s), stamp]);
 
-  const groups = useMemo(() => groupResults(res?.rows ?? []), [res]);
-  const ruleFor = (hw: string) => res?.deconj?.find((d) => normHeadword(d.lemma) === normHeadword(hw))?.rule;
+  const shown = res?.r;
+  const groups = useMemo(() => groupResults(shown?.rows ?? []), [shown]);
+  const ruleFor = (hw: string) => shown?.deconj?.find((d) => normHeadword(d.lemma) === normHeadword(hw))?.rule;
   const deconjGroups = groups.filter((g) => g.via === 'deconj' && !groups.some((o) => o !== g && o.via === 'exact' && o.key === g.key)).slice(0, 2);
 
   if (err) return <div class="page"><Empty title="Search failed">{err}</Empty></div>;
   return (
-    <div class={`page${slow ? ' busy' : ''}`}>
-      {res?.hanja?.map((h) => (
+    <div class={`page${slow ? ' busy' : ''}`} data-q={res?.q} data-busy={busy ? 1 : 0}>
+      {shown?.hanja?.map((h) => (
         <a key={h.ch} class="hanja-card" href={href(hanjaPath(h.ch))}>
           <span class="hanja-big" lang="zh-Hant">{h.ch}</span>
           <div class="hanja-card-body">
@@ -58,10 +60,10 @@ export function Results({ q }: { q: string }) {
           ))}
         </div>
       )}
-      {res?.grammarHints?.length ? (
-        <div class="notice">{res.grammarHints.map((h) => <div key={h}><a href={href(`/grammar?q=${encodeURIComponent(h.split(/[:\s(]/)[0])}`)}>{h}</a></div>)}</div>
+      {shown?.grammarHints?.length ? (
+        <div class="notice">{shown.grammarHints.map((h) => <div key={h}><a href={href(`/grammar?q=${encodeURIComponent(h.split(/[:\s(]/)[0])}`)}>{h}</a></div>)}</div>
       ) : null}
-      {!busy && groups.length === 0 && !res?.hanja?.length && (
+      {!busy && groups.length === 0 && !shown?.hanja?.length && (
         <Empty title={`No results for “${q}”`}>Try another spelling, the dictionary form, or an English word.</Empty>
       )}
       <ul class="plain list">

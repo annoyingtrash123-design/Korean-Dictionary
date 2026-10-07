@@ -29,8 +29,10 @@ export function EntryView({ source, id, hw, word }: { source?: string; id?: numb
     let primary: Entry | null = null;
     let all: Entry[] = [];
     if (source && id != null) {
-      primary = await db.getEntry(source, id);
-      if (primary) all = await db.getEntriesByHeadword(primary.headword);
+      // headword comes from the link (?hw=) so both lookups run together
+      const [p, a] = await Promise.all([db.getEntry(source, id), hw ? db.getEntriesByHeadword(hw) : Promise.resolve(null)]);
+      primary = p;
+      all = a ?? (primary ? await db.getEntriesByHeadword(primary.headword) : []);
     } else if (word) {
       all = await db.getEntriesByHeadword(word);
       primary = [...all].filter((e) => e.lang !== "ko").sort((a, b) => a.rank - b.rank)[0] ?? all[0] ?? null;
@@ -85,7 +87,7 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
   const marked = isBookmarked(bm, primary.source, primary.id);
   const pron = entries.find((e) => e.pron)?.pron;
   const level = entries.map((e) => e.level).find((l) => l != null) ?? null;
-  const hom = primary.homonym;
+  const hom = entries.filter((e) => e.source === primary.source).length > 1 ? undefined : primary.homonym;
   return (
     <header class="entry-head">
       <div class="entry-title">
@@ -149,6 +151,9 @@ function Chips({ rels }: { rels?: { type: string; word: string }[] }) {
 }
 
 function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolean; isKo: boolean }) {
+  const [all, setAll] = useState(false);
+  const exs = s.examples ?? [];
+  const shownEx = all || exs.length <= 4 ? exs : exs.slice(0, 3);
   return (
     <li class="sense">
       <div class="sense-body">
@@ -159,12 +164,13 @@ function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolea
         {s.ko_def && (showKo || isKo) && <div class={isKo ? 'def ko-main hangul' : 'def ko'} lang="ko">{s.ko_def}</div>}
         {s.note && <div class="note">{s.note}</div>}
         {s.pattern && <div class="pattern" lang="ko">{s.pattern}</div>}
-        {s.examples?.map((x, i) => (
+        {shownEx.map((x, i) => (
           <div key={i} class="ex">
             {x.ko.split('\n').map((l, j) => <div key={j} class="ex-ko hangul" lang="ko">{l}</div>)}
             {x.en && x.en.split('\n').map((l, j) => <div key={j} class="ex-en">{l}</div>)}
           </div>
         ))}
+        {exs.length > shownEx.length && <button type="button" class="link" onClick={() => setAll(true)}>Show {exs.length - shownEx.length} more examples</button>}
         <Chips rels={s.rel} />
       </div>
       <span class="sense-n" aria-hidden="true">{n}</span>

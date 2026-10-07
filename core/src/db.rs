@@ -81,6 +81,11 @@ impl Store {
     pub fn open_pack(&mut self, id: &str) -> Result<(), String> {
         self.close_pack(id);
         let conn = Conn::open(&file_name(id), Some(VFS_NAME), true).map_err(|e| e.to_string())?;
+        // Every page miss is a read through OPFS, so keep hot index pages in memory: the default
+        // 2 MB cache made short prefix and English queries ~50x slower than native.
+        let cache_kib = if id == "core" { 48 * 1024 } else { 16 * 1024 };
+        conn.exec(&format!("PRAGMA cache_size = -{cache_kib}; PRAGMA temp_store = MEMORY;"))
+            .map_err(|e| e.to_string())?;
         let db = PackDb::new(id, conn).map_err(|e| e.to_string())?;
         self.packs.push(db);
         Ok(())

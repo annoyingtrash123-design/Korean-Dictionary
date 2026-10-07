@@ -600,3 +600,19 @@ fn any_number_of_packs_are_merged_by_rank() {
     assert!(h.rows.iter().any(|x| x.source == "opendict" && x.headword == "학당"));
     assert!(search(&[&core, &st], "학당", None).unwrap().rows.iter().all(|x| x.source != "opendict"));
 }
+
+#[test]
+#[ignore]
+fn perf_real_data() {
+    let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out");
+    let packs: Vec<PackDb> = ["core", "stdict", "opendict"].iter().filter_map(|id| open_real(&dir.join(format!("{id}.sqlite")), id)).collect();
+    let refs: Vec<&PackDb> = packs.iter().collect();
+    for q in ["가", "사", "ㄱ", "가다", "갔어요", "학교", "eat", "school", "e", "ea", "學", "사랑하"] {
+        let t = std::time::Instant::now();
+        let n = search(&refs, q, None).unwrap().rows.len();
+        let cold = t.elapsed();
+        let t = std::time::Instant::now();
+        search(&refs, q, None).unwrap();
+        eprintln!("{q}: {n} rows, cold {:?}, warm {:?}", cold, t.elapsed());
+    }
+}

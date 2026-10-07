@@ -5,7 +5,7 @@ import { Home } from './views/Home';
 import { Results } from './views/Results';
 import { EntryView } from './views/Entry';
 import { HanjaPage } from './views/HanjaPage';
-import { GrammarView } from './views/Grammar';
+import { GrammarView, prefetchGrammar } from './views/Grammar';
 import { BookmarksView } from './views/Bookmarks';
 import { SettingsView, checkForUpdate } from './views/Settings';
 import { FirstRun } from './views/FirstRun';
@@ -36,7 +36,7 @@ export function App() {
   }, [s.theme]);
   useEffect(() => {
     loadBookmarks(); loadHistory();
-    refreshStatus().then(() => { if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
+    refreshStatus().then((st) => { if (st.packs.core?.installed) setTimeout(prefetchGrammar, 1500); if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
   }, []);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
   useEffect(() => {
