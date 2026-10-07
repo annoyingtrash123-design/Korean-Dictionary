@@ -74,7 +74,7 @@ KR = [
  ("가다", None, "verb", "가다", 1, "word", [
    sense("to go", "To move from one place to another.", "어떤 장소에서 다른 장소로 이동하다.", [ex("학교에 가요.", "I go to school."), ex("어제 친구 집에 갔어요.", "I went to my friend's house yesterday.")], pattern="1이 2에 가다", rel=[("antonym", "오다")]),
    sense("to attend; to go (regularly)", "To regularly attend a place.", "어떤 곳에 다니다.", [ex("동생은 유치원에 가요.", "My younger sibling goes to kindergarten.")])],
-   ["가", "가요", "갔어요", "갔다", "간다", "갑니다", "가서", "갈", "간"], [], "이동", None),
+   ["가", "가요", "갔다", "간다", "갑니다", "가서", "갈", "간"], [], "이동", None),
  ("오다", None, "verb", "오다", 1, "word", [sense("to come", "To move toward the speaker.", "말하는 사람 쪽으로 이동하다.", [ex("친구가 우리 집에 왔어요.", "My friend came to my house.")], rel=[("antonym", "가다")])], ["와요", "왔어요", "온다", "옵니다"], [], None, None),
  ("먹다", None, "verb", "먹따", 1, "word", [
    sense("to eat", "To take food into the mouth and swallow.", "음식을 입에 넣어 삼키다.", [ex("저는 밥을 먹어요.", "I eat rice."), ex("점심 먹었어요?", "Did you eat lunch?")], pattern="1이 2를 먹다", note="Honorific: 드시다 / 잡수시다"),

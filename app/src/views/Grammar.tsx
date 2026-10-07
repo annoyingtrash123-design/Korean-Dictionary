@@ -20,8 +20,8 @@ export function GrammarView({ initialQ }: { initialQ: string }) {
         <div class="seg scroll" role="tablist" aria-label="Category">
           {cats.map((c) => <button key={c} type="button" role="tab" aria-selected={cat === c} class={cat === c ? 'on' : ''} onClick={() => setCat(c)}>{c}</button>)}
         </div>
-        <div class="seg" role="tablist" aria-label="Level">
-          {[[0, 'All levels'], [1, '초 Beginner'], [2, '중 Intermediate'], [3, '고 Advanced']].map(([v, l]) => (
+        <div class="seg scroll" role="tablist" aria-label="Level">
+          {[[0, 'All levels'], [1, '초 Beginner'], [2, '중 Interm.'], [3, '고 Advanced']].map(([v, l]) => (
             <button key={v} type="button" role="tab" aria-selected={lvl === v} class={lvl === v ? 'on' : ''} onClick={() => setLvl(v as number)}>{l}</button>
           ))}
         </div>
@@ -35,8 +35,8 @@ export function GrammarView({ initialQ }: { initialQ: string }) {
               <div class="row-main">
                 <div class="row-head"><span class="hangul hw" lang="ko">{g.pattern}</span><LevelBadge level={g.level} /></div>
                 <div class="row-gloss">{g.summary_en}</div>
+                <div class="row-src">{g.category}</div>
               </div>
-              <span class="row-src">{g.category}</span>
             </a>
           </li>
         ))}

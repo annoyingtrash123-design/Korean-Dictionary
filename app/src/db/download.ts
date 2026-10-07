@@ -94,7 +94,7 @@ export async function installPack(
       }
     },
   });
-  const reader = joined.pipeThrough(new DecompressionStream('gzip')).getReader();
+  const reader = joined.pipeThrough(new DecompressionStream("gzip") as unknown as ReadableWritablePair<Uint8Array, Uint8Array>).getReader();
   await engine.beginImport(pack.id, pack.bytes);
   let written = 0;
   emit({ pack: pack.id, phase: 'install', done: 0, total: pack.bytes });

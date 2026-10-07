@@ -9,12 +9,13 @@ export const DEBOUNCE_MS = 120;
 export function SearchBar() {
   const q = useStore(query);
   const route = useRoute();
-  const timer = useRef<number>();
+  const timer = useRef<number | undefined>(undefined);
   const input = useRef<HTMLInputElement>(null);
 
   // Back/forward or links to #/search?q=… update the text.
   useEffect(() => {
-    if (route.name === 'search') { const rq = route.params.get('q') ?? ''; if (rq !== query.get()) query.set(rq); }
+    if (route.name === 'home') { if (query.get()) query.set(''); }
+    else if (route.name === 'search') { const rq = route.params.get('q') ?? ''; if (rq !== query.get()) query.set(rq); }
   }, [route.raw]);
 
   const go = (v: string, immediate = false) => {

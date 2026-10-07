@@ -30,7 +30,11 @@ impl Node {
     pub fn find_all<'a>(&'a self, path: &str) -> Vec<&'a Node> {
         let mut cur: Vec<&Node> = vec![self];
         for seg in path.split('/') {
-            cur = cur.into_iter().flat_map(|n| n.kids(seg)).collect();
+            let mut next = Vec::new();
+            for n in cur {
+                next.extend(n.children.iter().filter(|c| c.name == seg));
+            }
+            cur = next;
         }
         cur
     }

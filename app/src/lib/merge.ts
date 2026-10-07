@@ -49,7 +49,7 @@ export function groupResults(rows: ResultRow[]): ResultGroup[] {
     g.headword = g.primary.headword;
     g.level = g.rows.map((r) => r.level).find((l) => l != null) ?? null;
     g.pos = [...new Set(g.rows.map((r) => r.pos).filter((p): p is string => !!p))].slice(0, 2);
-    g.gloss = (pool.find((r) => r.gloss)?.gloss ?? g.rows.find((r) => r.gloss)?.gloss ?? '').trim();
+    g.gloss = (g.primary.gloss ?? pool.find((r) => r.gloss)?.gloss ?? g.rows.find((r) => r.gloss)?.gloss ?? '').trim();
     g.sources = [...new Set(g.rows.map((r) => r.source))].sort((a, b) => srcIdx(a) - srcIdx(b));
     g.via = g.rows.reduce<MatchKind>((m, r) => (TIER[r.via ?? 'prefix'] < TIER[m] ? (r.via ?? 'prefix') : m), g.rows[0].via ?? 'prefix');
   }

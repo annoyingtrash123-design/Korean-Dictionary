@@ -508,6 +508,7 @@ dependencies = [
  "bzip2",
  "clap",
  "flate2",
+ "log",
  "quick-xml",
  "rusqlite",
  "serde",

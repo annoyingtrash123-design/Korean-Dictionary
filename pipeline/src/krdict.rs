@@ -110,7 +110,9 @@ pub fn parse_entry(le: &Node) -> Option<Entry> {
             }
         }
         if !gl.is_empty() {
-            sense.insert("gloss".into(), gl.join("; ").into());
+            // grammar entries carry a romanisation (e.g. "-aseo") as their English lemma
+            let key = if kind == "grammar" { "roman" } else { "gloss" };
+            sense.insert(key.into(), gl.join("; ").into());
         }
         if !df.is_empty() {
             sense.insert("def".into(), df.join(" ").into());
