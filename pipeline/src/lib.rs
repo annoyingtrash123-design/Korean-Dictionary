@@ -17,6 +17,7 @@ pub mod texts_fetch;
 pub mod texts_html;
 pub mod texts_http;
 pub mod texts_news;
+pub mod texts_pack;
 pub mod texts_wikitext;
 pub mod unihan;
 pub mod xml;

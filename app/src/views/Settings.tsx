@@ -93,7 +93,7 @@ export function SettingsView() {
                 <div><strong>{packLabel(id)}</strong><div class="muted small">{packDesc(id)}</div>
                   <div class="muted small">{inst?.installed ? `v${inst.version} · ${fmtBytes(inst.bytes)} on device` : mp ? `Not downloaded · ${fmtBytes(mp.gz_bytes)} download, needs about ${fmtMB(bytesNeeded([mp]))} free` : 'Not downloaded'}</div></div>
                 {inst?.installed
-                  ? <input type="checkbox" role="switch" aria-label={`Use ${packLabel(id)} in search`} checked={packEnabled(s, id)} onChange={(e) => updateSettings({ packs: { ...s.packs, [id]: (e.currentTarget as HTMLInputElement).checked } })} />
+                  ? (id === 'texts' ? <span class="muted small">Installed</span> : <input type="checkbox" role="switch" aria-label={`Use ${packLabel(id)} in search`} checked={packEnabled(s, id)} onChange={(e) => updateSettings({ packs: { ...s.packs, [id]: (e.currentTarget as HTMLInputElement).checked } })} />)
                   : <button type="button" class="btn" onClick={() => startInstall([id])}>Download</button>}
               </div>
               {inst?.installed && <button type="button" class="link danger" onClick={async () => { if (confirm(`Delete ${packLabel(id)} from this device?`)) { await db.removePack(id); updateSettings({ packs: { ...s.packs, [id]: false } }); } }}>Delete data</button>}

@@ -4,7 +4,7 @@ import type { Manifest } from '../db/types';
 /** Current text in the search bar. */
 export const query = createStore('');
 /** Which list tab the two-pane layout shows on the left while an entry is open. */
-export const listTab = createStore<'search' | 'bookmarks'>('search');
+export const listTab = createStore<'search' | 'bookmarks' | 'reader'>('search');
 /** Latest manifest seen online; `stale` lists installed packs whose version differs from it (each pack is compared). */
 export const update = createStore<{ manifest: Manifest | null; available: boolean; stale: string[] }>({ manifest: null, available: false, stale: [] });
 

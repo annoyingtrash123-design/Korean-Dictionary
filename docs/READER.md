@@ -133,3 +133,34 @@ Engine (wasm `Engine` + TS `Engine` interface):
 - `getText(id): TextDoc | null` — `{id, meta, card, notes, provenance, labels, review, vocab, questions, paragraphs: [{n, orig, modern, reading, en}]}`.
 - `lookupInText(text, offset, {packs})` — already implemented (UTF-16 offsets).
 News articles are texts with shelf `news` (period `modern`), refreshed each build.
+
+### Clarifications (implemented by the pipeline and engine)
+- **Build inputs**: `kdict-pipeline build --texts pipeline/texts` (default) reads `catalog.toml`,
+  `raw/<id>.json`, `enriched/<id>.json`, `raw/news/*.json`. The manifest entry is
+  `{id:"texts", required:false, label:"Reader library", …}`. A full (non `--allow-partial`) build
+  needs ≥ 40 texts. With `--allow-partial`, mismatches, unresolved vocab and `required` gaps are
+  logged instead of failing (a mismatching enrichment falls back to the original text).
+- **Original-only texts** (raw present, no approved enrichment): paragraphs are the raw text split
+  on blank lines (verse/modern-poetry shelves keep inner line breaks, other shelves join lines),
+  `modern`/`reading`/`en` null, `labels = {text:"original"}`, `review.status = "original-only"`,
+  `vocab`/`questions` null, `card = {summary_ko:"", summary_en:"", level, edition_ko, edition_en}`
+  with `level` derived from the catalogue ("classical" for hanmun or pre-1910 periods, else
+  "advanced"), `notes = {ko:"", en: pd_basis + note}`. Empty strings, never null, for card/notes text.
+- **Paragraph integrity**: enriched `orig` paragraphs must equal the raw paragraphs after whitespace
+  normalisation (all whitespace ignored for hanmun). For catalogue entries with `excerpt = true` an
+  ordered selection of raw paragraphs is allowed. Enriched files with a draft/unapproved status
+  are ignored; an enriched file for an id that is neither in the catalogue nor `graded-*` fails.
+- **Graded readers** are normalised to the catalogue vocabulary: `shelf = "graded"`, `period` /
+  `meta.period` slug (`ancient`, `goryeo`, `joseon-early` (<1700), `joseon-late`, `colonial`,
+  `modern`), `meta.themes` slugs (`ancient-goryeo`, `joseon`, `colonial-independence`,
+  `modern-korea`, `sino-korean`). `level` = `card.level` (e.g. "TOPIK 3–4"). Vocab levels are
+  recomputed from core (headword match on `hw_norm`, else `forms`); `level` is null if absent.
+- **News** (`shelf = "news"`, `period = "modern"`, `script = "hangul"`): `meta.title_en` is `""`,
+  `meta.note` holds the attribution line, `provenance.revision_timestamp` is the publication date.
+- **`sort`** is chronological (`year`, then `id`); `chars` is the number of characters of all `orig`
+  paragraphs.
+- **Engine**: `listTexts()` rows additionally carry `summary_ko` / `summary_en` (card blurbs, `""`
+  when absent); `excerpt` is a boolean. `getText(id)` returns `vocab` / `questions` as `null` when
+  the text has none. Without the pack: `listTexts() = []`, `getText() = null`. The `texts` pack
+  has no `entries` table, so it never takes part in dictionary searches (`packs` options naming
+  it are ignored by `search` / `lookupInText`).

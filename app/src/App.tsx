@@ -8,6 +8,8 @@ import { HanjaPage } from './views/HanjaPage';
 import { BookmarksView } from './views/Bookmarks';
 import { SettingsView, checkForUpdate } from './views/Settings';
 import { FirstRun } from './views/FirstRun';
+import { ReaderLibrary, ReaderEmpty } from './views/Reader';
+import { TextView } from './views/TextView';
 import { db, packStatus$, packsHint, refreshStatus, restartWorker } from './db/client';
 import { useStore } from './lib/store';
 import { useRoute, type Route } from './lib/router';
@@ -43,11 +45,12 @@ export function App() {
   const list = useStore(listTab);
   const q = useStore(query);
   const entryRoute = ENTRY_ROUTES.includes(route.name);
-  const leftKind: 'search' | 'bookmarks' = route.name === 'bookmarks' ? 'bookmarks' : entryRoute ? list : 'search';
+  const readerRoute = route.name === 'reader';
+  const leftKind: 'search' | 'bookmarks' | 'reader' = readerRoute ? 'reader' : route.name === 'bookmarks' ? 'bookmarks' : entryRoute ? list : 'search';
   const leftQ = route.name === 'search' ? (route.params.get('q') ?? '') : q;
   const left = useRef<HTMLElement>(null);
   // Remember which list tab the open entry came from, so the left pane keeps showing it.
-  useEffect(() => { if (route.name === 'bookmarks') listTab.set('bookmarks'); else if (!entryRoute && route.name !== 'settings') listTab.set('search'); }, [route.name]);
+  useEffect(() => { if (route.name === 'bookmarks') listTab.set('bookmarks'); else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings') listTab.set('search'); }, [route.name]);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
   useScrollMemo(main, wide ? route.raw + '|w' : route.raw);
   useScrollMemo(left, wide ? `L:${leftKind}:${leftKind === 'search' ? leftQ : ''}` : 'unused');
@@ -81,15 +84,15 @@ export function App() {
       <div class="app wide">
         <TabBar />
         {!single && (
-          <section class="pane-left" aria-label={leftKind === 'bookmarks' ? 'Bookmarks' : 'Search'}>
-            <header class="topbar"><SearchBar /></header>
+          <section class="pane-left" aria-label={leftKind === 'bookmarks' ? 'Bookmarks' : leftKind === 'reader' ? 'Reader library' : 'Search'}>
+            {leftKind !== 'reader' && <header class="topbar"><SearchBar /></header>}
             <main ref={left} class="pane-scroll">
-              {leftKind === 'bookmarks' ? <BookmarksView /> : leftQ.trim() ? <Results q={leftQ} /> : <Home />}
+              {leftKind === 'reader' ? <ReaderLibrary currentId={readerRoute ? route.parts[0] : undefined} /> : leftKind === 'bookmarks' ? <BookmarksView /> : leftQ.trim() ? <Results q={leftQ} /> : <Home />}
             </main>
           </section>
         )}
-        <main ref={main} id="main" tabIndex={-1} class={single ? 'pane-right single' : 'pane-right'}>
-          {entryRoute || single ? view(route) : <PaneEmpty bookmarks={leftKind === 'bookmarks'} />}
+        <main ref={main} id="main" tabIndex={-1} class={single ? 'pane-right single' : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
+          {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty bookmarks={leftKind === 'bookmarks'} />}
         </main>
         <UpdateToast />
       </div>
@@ -97,8 +100,8 @@ export function App() {
   }
   return (
     <div class="app">
-      <header class="topbar"><SearchBar /></header>
-      <main ref={main} id="main" tabIndex={-1}>{view(route)}</main>
+      {!readerRoute && <header class="topbar"><SearchBar /></header>}
+      <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
       <TabBar />
       <UpdateToast />
     </div>
@@ -128,6 +131,7 @@ function view(r: Route) {
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
     case 'bookmarks': return <BookmarksView />;
     case 'settings': return <SettingsView />;
+    case 'reader': return r.parts[0] ? <TextView key={r.parts[0]} id={r.parts[0]} /> : <ReaderLibrary />;
     default: return <Home />;
   }
 }

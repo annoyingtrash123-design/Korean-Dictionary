@@ -11,6 +11,11 @@ export function createEngine(): Engine {
     if (!eng) throw new Error('engine not initialised');
     return eng;
   };
+  const optional = (name: string) => {
+    const f = (e() as unknown as Record<string, ((...a: unknown[]) => Promise<any>) | undefined>)[name];
+    if (typeof f !== 'function') throw new Error(`This engine build has no ${name}() (texts pack not supported yet)`);
+    return (...a: unknown[]) => f.apply(e(), a);
+  };
   return {
     async init() {
       if (eng) return;
@@ -33,6 +38,10 @@ export function createEngine(): Engine {
     sentences: (text, limit) => e().sentences(text, limit),
     grammarList: () => e().grammarList(),
     wordOfDay: (date) => e().wordOfDay(date),
+    lookupInText: (text, offset, opts) => e().lookupInText(text, offset, opts),
+    // listTexts/getText arrive with the `texts` pack; older wasm builds don't have them yet
+    listTexts: () => optional('listTexts')(),
+    getText: (id) => optional('getText')(id),
     warm: (step, packs) => e().warm(step, packs),
     diagnostics: async () => e().diagnostics(),
   };

@@ -6,6 +6,7 @@ import { useWide } from '../lib/layout';
 
 const TABS = [
   { name: 'search', icon: 'search', label: 'Search', match: ['home', 'search', 'entry', 'word', 'hanja'] },
+  { name: 'reader', icon: 'book', label: 'Reader', match: ['reader'] },
   { name: 'bookmarks', icon: 'star', label: 'Bookmarks', match: ['bookmarks'] },
   { name: 'settings', icon: 'gear', label: 'Settings', match: ['settings'] },
 ];

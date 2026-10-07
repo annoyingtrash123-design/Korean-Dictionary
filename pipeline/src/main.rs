@@ -50,6 +50,9 @@ enum Cmd {
         /// sentences < 10k, hanja_chars < 5k, stdict < 400k). For local partial builds only; CI omits it.
         #[arg(long)]
         allow_partial: bool,
+        /// Reader library sources (catalog.toml, raw/, enriched/); the `texts` pack is skipped when absent
+        #[arg(long, default_value = "pipeline/texts")]
+        texts: PathBuf,
     },
     /// Reader: resolve the text catalogue against Wikisource etc. and write raw texts + provenance
     FetchTexts {
@@ -89,9 +92,9 @@ fn main() -> Result<()> {
     log::set_max_level(log::LevelFilter::Info);
     match Cli::parse().cmd {
         Cmd::Fetch { work } => fetch::run(&work),
-        Cmd::Build { work, out, limit_files, allow_partial } => {
+        Cmd::Build { work, out, limit_files, allow_partial, texts } => {
             let sources = build::Sources::discover(&work, limit_files);
-            build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES, allow_partial })?;
+            build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES, allow_partial, texts: Some(texts) })?;
             Ok(())
         }
         Cmd::FetchTexts { catalog, out, only, force, max_subpages } => texts_fetch::run(&texts_fetch::Opts { catalog, out, only, force, max_subpages }),

@@ -394,7 +394,7 @@ fn end_to_end_mini_build() {
         zhwikt: Some(fx("zhwikt_sample.jsonl")),
     };
     let out = dir.path().join("out");
-    let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
+    let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
 
     // --- manifest
     let packs = manifest["packs"].as_array().unwrap();
@@ -546,7 +546,7 @@ fn mini_build_without_optional_sources() {
     let dir = tempfile::tempdir().unwrap();
     let src = Sources { krdict: vec![fx("krdict_sample.xml")], ..Default::default() };
     let out = dir.path().join("out");
-    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
+    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
     assert_eq!(m["packs"].as_array().unwrap().len(), 1);
     assert!(!out.join("site-data/stdict.sqlite.gz.000").exists());
 }
@@ -759,7 +759,7 @@ fn chinese_packs_are_built_from_fixtures() {
         ..Default::default()
     };
     let out = dir.path().join("out");
-    build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
+    build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
 
     // core: 훈음 columns (Unihan reading kept, Wiktionary adds hun/eumhun)
     let c = Connection::open(out.join("core.sqlite")).unwrap();
@@ -803,7 +803,7 @@ fn chinese_sources_missing_means_no_pack() {
     let dir = tempfile::tempdir().unwrap();
     let src = Sources { krdict: vec![fx("krdict_sample.xml")], ..Default::default() };
     let out = dir.path().join("out");
-    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
+    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
     assert_eq!(m["packs"].as_array().unwrap().len(), 1);
     assert!(!out.join("cedict.sqlite").exists() && !out.join("zhwikt.sqlite").exists());
 }

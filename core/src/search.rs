@@ -39,6 +39,8 @@ pub struct Caps {
     pub hist: bool,
     /// `hanja_chars.hun` / `eumhun` (훈음) exist.
     pub hanja_hun: bool,
+    /// Reader library pack (`texts` + `paragraphs`, no `entries`): not a dictionary pack.
+    pub texts: bool,
 }
 
 /// An opened pack database.
@@ -53,6 +55,9 @@ impl PackDb {
         let rows = conn.query("SELECT name FROM sqlite_master WHERE type IN ('table','view')", &[])?;
         let names: HashSet<String> = rows.iter().map(|r| r.string(0)).collect();
         if !names.contains("entries") {
+            if names.contains("texts") && names.contains("paragraphs") {
+                return Ok(PackDb { id: id.to_string(), conn, caps: Caps { texts: true, ..Caps::default() } });
+            }
             return Err(SqlError(format!("pack '{id}' has no entries table")));
         }
         let has_index = |name: &str| {
@@ -72,6 +77,7 @@ impl PackDb {
                 .unwrap_or(false)
         };
         let caps = Caps {
+            texts: false,
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),

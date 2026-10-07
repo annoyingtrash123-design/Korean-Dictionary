@@ -2,7 +2,7 @@
 
 The dictionary data bundled with this app is derived from the open datasets
 listed below. Each retains its original licence; the combined databases
-(`core.sqlite`, `stdict.sqlite`) are distributed under the most restrictive
+(`core.sqlite`, `stdict.sqlite`, `opendict.sqlite`, `cedict.sqlite`, `zhwikt.sqlite`) are distributed under the most restrictive
 share-alike terms that apply (CC BY-SA 4.0 compatible). The app source code is
 licensed separately.
 
@@ -36,7 +36,8 @@ licensed separately.
 
 ## Wiktionary (via kaikki.org)
 * Content used: Korean entries with English glosses, hanja forms, etymology,
-  related terms and translated example sentences.
+  related terms and translated example sentences; the 훈음 (Korean gloss word and reading)
+  of single hanja characters.
 * Source: English Wiktionary contributors; machine-readable extraction by
   Tatu Ylonen's wiktextract (https://kaikki.org/dictionary/Korean/).
 * Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
@@ -65,3 +66,38 @@ licensed separately.
   search results.
 * Source: Hermit Dave — https://github.com/hermitdave/FrequencyWords
 * Licence: CC BY-SA 4.0 (content), MIT (code).
+
+## CC-CEDICT (optional `cedict` pack)
+* Content used: Chinese (traditional / simplified) headwords, pinyin and English glosses.
+  The Sino-Korean reading shown with each entry is computed from the hanja readings of this app.
+* Source: https://www.mdbg.net/chinese/dictionary?page=cc-cedict — CC-CEDICT, community maintained.
+* Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
+  https://creativecommons.org/licenses/by-sa/4.0/
+
+## Wiktionary Chinese (optional `zhwikt` pack, via kaikki.org)
+* Content used: Chinese entries (traditional / simplified forms), glosses and usage tags
+  (e.g. Classical / literary), short etymology, Mandarin / Middle Chinese / Sino-Korean
+  (and Cantonese, Sino-Vietnamese, Sino-Japanese) readings. Translations, inflection tables
+  and examples are not included.
+* Source: English Wiktionary contributors; extraction by wiktextract (https://kaikki.org/dictionary/Chinese/).
+* Licence: CC BY-SA 4.0 and the GNU Free Documentation License.
+
+## Reader library (optional `texts` pack)
+* Content used: public-domain and openly licensed Korean texts shown in the Reader, with
+  AI-written introductions, notes, translations and modernised spelling (always labelled as such
+  in the app), and ~40 original graded readers written for this app (labelled AI-written).
+  Every text carries its own provenance (page, revision, URL, licence, fetch date) in the pack.
+* Korean and Chinese Wikisource (https://ko.wikisource.org, https://zh.wikisource.org):
+  texts of authors who died before 1963 and older anonymous works are in the public domain;
+  Wikisource editions, transcriptions and page text are available under Creative Commons
+  Attribution-ShareAlike 4.0 (CC BY-SA 4.0) — https://creativecommons.org/licenses/by-sa/4.0/ —
+  contributors are credited in each page's revision history, linked from the text's provenance.
+* Laws and court rulings (e.g. the Constitution of the Republic of Korea): not protected by
+  copyright (Copyright Act of Korea, art. 7).
+* Universal Declaration of Human Rights, Korean text: © United Nations; reproduced under the
+  OHCHR terms of use (https://www.ohchr.org/en/about-this-site/terms-of-use), unaltered.
+* News articles: Policy Briefing (정책브리핑, https://www.korea.kr), Republic of Korea government,
+  marked 공공누리 제1유형 (Korea Open Government Licence, Type 1: attribution; commercial use and
+  modification allowed). 출처: 정책브리핑 (korea.kr).
+* Historical English translations (Gale, Allen, etc., 1889–1922; Project Gutenberg / Internet
+  Archive): public domain.

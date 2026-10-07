@@ -1,0 +1,160 @@
+{
+  "id": "graded-yeonhaengsa",
+  "meta": {
+    "title_ko": "연행사의 베이징 여행",
+    "title_en": "The Envoys' Journey to Beijing",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1780,
+    "period": "Joseon",
+    "themes": [
+      "Joseon",
+      "Sino-Korean relations"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "조선의 사신단이 한양에서 베이징까지 오가며 보고 겪은 일을 소개합니다.",
+    "summary_en": "Describes what Joseon's envoy missions saw and experienced travelling between Hanyang and Beijing.",
+    "level": "TOPIK 5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 조선은 청나라가 베이징을 수도로 삼은 뒤 정기적으로 사신단을 보냈는데, 이를 '연행사'라 부릅니다. '연'(燕)은 베이징 지역의 옛 이름입니다. 사신들은 여행의 기록을 '연행록'으로 남겼고, 이는 당시 청나라의 모습을 알려 주는 귀중한 자료입니다.\n\n**어휘와 문법**\n- `-(으)로 향하다`: 어떤 방향으로 가다.\n- `-(으)ㄹ 때마다`: 반복되는 상황.\n- `-는 동안`: 기간.\n- 단어: 사신, 정사, 역관, 수행원, 연행록, 국경, 서점.\n- 이 글의 일정과 인원은 대략적인 설명입니다.",
+    "en": "**Background** After the Qing made Beijing its capital, Joseon sent missions regularly; these are called *yeonhaengsa*. \"Yeon\" is an old name for the Beijing region. Envoys left records of their journeys called *yeonhaengnok*, valuable sources on Qing at the time.\n\n**Points to watch**\n- `-(으)로 향하다`: heading toward.\n- `-(으)ㄹ 때마다`: whenever.\n- `-는 동안`: during.\n- Words: 사신 envoy, 정사 chief envoy, 역관 interpreter, 수행원 attendant, 연행록 travel record, 국경 border, 서점 bookstore.\n- The itinerary and numbers here are approximate."
+  },
+  "paragraphs": [
+    {
+      "orig": "연행사는 조선이 청나라의 수도 베이징에 보낸 사신단이다. 새해 인사나 황제의 생일 축하 등 해마다 여러 차례 파견되었다. 사신단의 책임자는 정사이며, 그 아래에 부사와 서장관이 있었다. 통역을 맡은 역관을 비롯해 수행원까지 합치면 수백 명이 함께 움직이기도 했다.",
+      "modern": null,
+      "reading": null,
+      "en": "The *yeonhaengsa* were envoy missions that Joseon sent to Qing's capital, Beijing. They were dispatched several times a year, for occasions such as New Year greetings or celebrating the emperor's birthday. The head of the mission was the chief envoy, with a deputy envoy and a recorder below him. Counting interpreters and attendants, several hundred people sometimes moved together."
+    },
+    {
+      "orig": "사행단은 한양을 떠나 의주까지 간 뒤 압록강을 건너 청의 영토로 들어갔다. 이후 봉황성과 심양을 거쳐 산해관을 지나 베이징에 이르렀다. 왕복에는 수개월이 걸렸고, 겨울 추위 속에서 얼어붙은 강을 건너는 일도 흔했다. 그래서 여행은 힘들었지만 새로운 세계를 만나는 기회이기도 했다.",
+      "modern": null,
+      "reading": null,
+      "en": "The mission left Hanyang, went as far as Uiju, then crossed the Yalu River and entered Qing territory. Afterward it passed through Fenghuangcheng and Shenyang, went through Shanhaiguan, and reached Beijing. The round trip took several months, and crossing frozen rivers in winter cold was common. The journey was therefore hard, but also an opportunity to meet a new world."
+    },
+    {
+      "orig": "베이징에 머무는 동안 사신들은 의식에 참석하고 외교 문서를 전달하였다. 그리고 틈이 날 때마다 유리창 거리의 서점을 둘러보며 책을 사고, 서양 선교사가 있는 천주당을 찾아가 새로운 학문과 서양의 문물을 접하였다. 역관과 상인들은 인삼과 비단 등을 거래하며 무역에도 참여했다.",
+      "modern": null,
+      "reading": null,
+      "en": "While staying in Beijing, the envoys attended ceremonies and delivered diplomatic documents. And whenever they found spare time, they browsed the bookstores of Liulichang street to buy books, and visited the Catholic church where Western missionaries lived to encounter new learning and Western goods. Interpreters and merchants also took part in trade, dealing in ginseng, silk and other goods."
+    },
+    {
+      "orig": "돌아온 사신들은 여행에서 보고 들은 것을 연행록으로 정리하였다. 홍대용의 『담헌연기』, 박지원의 『열하일기』 등이 대표적이다. 이러한 기록은 청나라의 풍속과 도시, 학문 상황을 생생하게 전하여, 조선 지식인들이 바깥 세상을 이해하는 창이 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "The envoys who returned organized what they had seen and heard on the trip into travel records. Hong Dae-yong's *Damheon Yeongi* and Park Ji-won's *Yeolha Ilgi* are representative. These records vividly convey Qing's customs, cities and scholarly situation, and became a window through which Joseon intellectuals understood the outside world."
+    },
+    {
+      "orig": "연행사의 경험은 조선 후기 사상의 변화에도 영향을 주었다. 청의 번영을 눈으로 확인한 일부 사신들은 돌아와 기술과 상업의 중요성을 주장하였고, 이것은 북학 사상으로 이어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "The experience of the yeonhaengsa also influenced changes in late-Joseon thought. Some envoys who saw Qing's prosperity with their own eyes came back arguing for the importance of technology and commerce, which led to Northern Learning thought."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "사신단",
+      "gloss_en": "envoy mission",
+      "level": 3
+    },
+    {
+      "word": "파견되다",
+      "gloss_en": "to be dispatched",
+      "level": 3
+    },
+    {
+      "word": "책임자",
+      "gloss_en": "person in charge",
+      "level": 3
+    },
+    {
+      "word": "통역",
+      "gloss_en": "interpretation",
+      "level": 3
+    },
+    {
+      "word": "수행원",
+      "gloss_en": "attendant",
+      "level": 3
+    },
+    {
+      "word": "왕복",
+      "gloss_en": "round trip",
+      "level": 3
+    },
+    {
+      "word": "얼어붙다",
+      "gloss_en": "to freeze over",
+      "level": 3
+    },
+    {
+      "word": "전달하다",
+      "gloss_en": "to deliver",
+      "level": 3
+    },
+    {
+      "word": "선교사",
+      "gloss_en": "missionary",
+      "level": 3
+    },
+    {
+      "word": "거래하다",
+      "gloss_en": "to trade",
+      "level": 3
+    },
+    {
+      "word": "정리하다",
+      "gloss_en": "to organize",
+      "level": 3
+    },
+    {
+      "word": "창",
+      "gloss_en": "window",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "연행사는 무엇입니까?",
+      "q_en": "What were the yeonhaengsa?",
+      "answer_en": "Joseon envoy missions sent to Beijing."
+    },
+    {
+      "q_ko": "사신단은 어떤 길로 갔습니까?",
+      "q_en": "What route did the mission take?",
+      "answer_en": "From Hanyang to Uiju, across the Yalu, via Shenyang and Shanhaiguan to Beijing."
+    },
+    {
+      "q_ko": "사신들은 베이징에서 무엇을 했습니까?",
+      "q_en": "What did the envoys do in Beijing?",
+      "answer_en": "Attended ceremonies, delivered documents, bought books, visited the church and traded."
+    },
+    {
+      "q_ko": "연행록은 왜 중요합니까?",
+      "q_en": "Why are the yeonhaengnok important?",
+      "answer_en": "They vividly convey Qing society and were a window on the outside world."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed templated reading-tip filler; Korean, translation, facts, vocab and questions checked; no further changes needed."
+  }
+}

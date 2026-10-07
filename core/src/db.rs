@@ -213,7 +213,7 @@ impl Store {
     pub fn select(&self, ids: &[String]) -> Vec<&PackDb> {
         let mut out = Vec::new();
         for id in ids {
-            if let Some(p) = self.packs.iter().find(|p| &p.id == id) {
+            if let Some(p) = self.packs.iter().find(|p| &p.id == id && !p.caps.texts) {
                 if !out.iter().any(|q: &&PackDb| q.id == p.id) {
                     out.push(p);
                 }
@@ -222,9 +222,14 @@ impl Store {
         out
     }
 
-    /// All opened packs (core first).
+    /// The Reader library pack, if installed (it is not part of `all()` / `select()`).
+    pub fn texts_pack(&self) -> Option<&PackDb> {
+        self.packs.iter().find(|p| p.caps.texts)
+    }
+
+    /// All opened dictionary packs (core first).
     pub fn all(&self) -> Vec<&PackDb> {
-        let mut v: Vec<&PackDb> = self.packs.iter().collect();
+        let mut v: Vec<&PackDb> = self.packs.iter().filter(|p| !p.caps.texts).collect();
         v.sort_by_key(|p| (p.id != "core", p.id.clone()));
         v
     }

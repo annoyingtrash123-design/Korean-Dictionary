@@ -81,3 +81,23 @@ licensed separately.
   and examples are not included.
 * Source: English Wiktionary contributors; extraction by wiktextract (https://kaikki.org/dictionary/Chinese/).
 * Licence: CC BY-SA 4.0 and the GNU Free Documentation License.
+
+## Reader library (optional `texts` pack)
+* Content used: public-domain and openly licensed Korean texts shown in the Reader, with
+  AI-written introductions, notes, translations and modernised spelling (always labelled as such
+  in the app), and ~40 original graded readers written for this app (labelled AI-written).
+  Every text carries its own provenance (page, revision, URL, licence, fetch date) in the pack.
+* Korean and Chinese Wikisource (https://ko.wikisource.org, https://zh.wikisource.org):
+  texts of authors who died before 1963 and older anonymous works are in the public domain;
+  Wikisource editions, transcriptions and page text are available under Creative Commons
+  Attribution-ShareAlike 4.0 (CC BY-SA 4.0) — https://creativecommons.org/licenses/by-sa/4.0/ —
+  contributors are credited in each page's revision history, linked from the text's provenance.
+* Laws and court rulings (e.g. the Constitution of the Republic of Korea): not protected by
+  copyright (Copyright Act of Korea, art. 7).
+* Universal Declaration of Human Rights, Korean text: © United Nations; reproduced under the
+  OHCHR terms of use (https://www.ohchr.org/en/about-this-site/terms-of-use), unaltered.
+* News articles: Policy Briefing (정책브리핑, https://www.korea.kr), Republic of Korea government,
+  marked 공공누리 제1유형 (Korea Open Government Licence, Type 1: attribution; commercial use and
+  modification allowed). 출처: 정책브리핑 (korea.kr).
+* Historical English translations (Gale, Allen, etc., 1889–1922; Project Gutenberg / Internet
+  Archive): public domain.

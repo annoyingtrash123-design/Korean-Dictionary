@@ -1,6 +1,6 @@
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence } from './types';
+import type { Entry, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -86,6 +86,15 @@ export async function refreshStatus(): Promise<PackStatus> {
 }
 export const enabledPacks = (): string[] => activePacks(settings.get(), packStatus$.get(), packsHint());
 
+// Reader. DEV-ONLY: with localStorage['kd.fixture.texts']='1' the library comes from src/dev/texts-fixture.ts
+// instead of the engine (used until the engine ships listTexts()/getText()).
+const fixture = async () => { const f = await import('../dev/texts-fixture'); return f.fixtureOn() ? f : null; };
+export const fixtureTexts = (): boolean => { try { return localStorage.getItem('kd.fixture.texts') === '1' || /[?&]fixture=texts\b/.test(location.search); } catch { return false; } };
+let textList: Promise<TextSummary[]> | undefined;
+const textDocs = new Map<string, Promise<TextDoc | null>>();
+/** Forget cached texts (after the texts pack is installed or removed). */
+export const resetTexts = () => { textList = undefined; textDocs.clear(); };
+
 // Search coalescing: while one search runs, only the newest pending query is kept; superseded ones resolve empty.
 const EMPTY: SearchResult = { mode: 'english', rows: [] };
 let searching = false;
@@ -131,14 +140,28 @@ export const db = {
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),
   wordsWithHanja: (ch: string, limit: number, offset = 0) => call<ResultRow[]>('wordsWithHanja', ch, limit, offset),
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
+  listTexts: (): Promise<TextSummary[]> => (textList ??= (async () => { const f = fixtureTexts() ? await fixture() : null; return f ? f.fixtureList() : call<TextSummary[]>('listTexts'); })().catch((e) => { textList = undefined; throw e; })),
+  getText: (id: string): Promise<TextDoc | null> => {
+    let p = textDocs.get(id);
+    if (!p) {
+      p = (async () => { const f = fixtureTexts() ? await fixture() : null; return f ? f.fixtureText(id) : call<TextDoc | null>('getText', id); })();
+      p.catch(() => textDocs.delete(id));
+      textDocs.set(id, p);
+      if (textDocs.size > 12) textDocs.delete(textDocs.keys().next().value!);
+    }
+    return p;
+  },
+  /** Dictionary match around a UTF-16 `offset` of `text` (Hangul eojeol incl. old spelling, or longest hanja word). */
+  lookupInText: (text: string, offset: number, limit?: number) =>
+    call<TextMatch>('lookupInText', text, offset, { packs: enabledPacks().filter((id) => id !== 'texts'), limit }),
   packStatus: refreshStatus,
   install: async (pack: ManifestPack, manifestUrl: string, version: string) => {
     // The engine keeps the old pack usable until the new import finishes, so status is refreshed after success AND failure.
     installActive.set(true);
     try { const s = await call<PackStatus>('install', pack, manifestUrl, version); packStatus$.set(s); return s; }
-    finally { installActive.set(false); await refreshStatus().catch(() => undefined); }
+    finally { installActive.set(false); resetTexts(); await refreshStatus().catch(() => undefined); }
   },
-  removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); packStatus$.set(s); return s; },
+  removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); resetTexts(); packStatus$.set(s); return s; },
 };
 
 export const MANIFEST_URL = () => new URL(import.meta.env.BASE_URL + 'data/manifest.json', location.origin).toString();

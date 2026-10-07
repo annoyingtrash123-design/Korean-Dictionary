@@ -1,0 +1,147 @@
+{
+  "id": "graded-dangun",
+  "meta": {
+    "title_ko": "단군 이야기",
+    "title_en": "The Story of Dangun",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": -2333,
+    "period": "Ancient",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "곰이 사람이 되고, 그 아들 단군이 고조선을 세웠다는 한국의 건국 신화입니다.",
+    "summary_en": "The Korean founding myth in which a bear becomes a woman and her son Dangun founds Gojoseon.",
+    "level": "TOPIK 2",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 단군 이야기는 고려 시대의 책 『삼국유사』 등에 실려 있는 건국 신화입니다. 전통적으로 고조선은 기원전 2333년에 세워졌다고 알려져 있지만, 이것은 신화에 바탕을 둔 연대입니다. 오늘날 10월 3일은 개천절로 이 건국을 기념하는 날입니다.\n\n**어휘와 문법**\n- `-고 싶었어요`: 원하는 것을 말할 때 씁니다 (내려오고 싶었어요).\n- `-지 못하다`: 할 수 없음 (참지 못하고).\n- `-아/어서`: 이유나 순서를 나타냅니다 (그래서, 결혼해서).\n- `-(이)라는`: 이름을 소개할 때 씁니다 (고조선이라는 나라).\n- 단어: 신화, 동굴, 건국, 허락하다. 이 글은 쉬운 말로 다시 쓴 것입니다. 읽으면서 '-았/었어요' 과거형에 익숙해지세요.",
+    "en": "**Background** The Dangun story appears in works such as the Goryeo-era *Samguk Yusa*. Tradition holds that Gojoseon was founded in 2333 BCE, but this date rests on myth. Today October 3 is Gaecheonjeol, a holiday that commemorates the founding.\n\n**Points to watch**\n- `-고 싶었어요`: wanting to do something (내려오고 싶었어요).\n- `-지 못하다`: unable to do something (참지 못하고).\n- `-아/어서`: reason or sequence (그래서, 결혼해서).\n- `-(이)라는`: introducing a name (고조선이라는 나라).\n- Words: 신화 myth, 동굴 cave, 건국 founding, 허락하다 permit. Use this text to get comfortable with the past form -았/었어요."
+  },
+  "paragraphs": [
+    {
+      "orig": "옛날 옛적에 하늘나라에 환웅이 살았어요. 환웅은 땅에 내려오고 싶었어요. 아버지 환인이 허락했어요.",
+      "modern": null,
+      "reading": null,
+      "en": "Long, long ago, Hwanung lived in the heavenly kingdom. He wanted to come down to the earth. His father, Hwanin, gave permission."
+    },
+    {
+      "orig": "곰과 호랑이가 사람이 되고 싶었어요. 환웅이 마늘과 쑥을 주었어요. 호랑이는 참지 못하고 동굴을 나갔어요. 곰은 끝까지 참았어요. 그래서 곰은 여자가 되었어요.",
+      "modern": null,
+      "reading": null,
+      "en": "A bear and a tiger wanted to become human. Hwanung gave them garlic and mugwort. The tiger could not endure it and left the cave. The bear endured to the end. So the bear became a woman."
+    },
+    {
+      "orig": "환웅과 웅녀는 결혼해서 아들을 낳았어요. 아들의 이름은 단군이에요. 단군은 고조선이라는 나라를 세웠어요.",
+      "modern": null,
+      "reading": null,
+      "en": "Hwanung and Ungnyeo married and had a son. The son's name was Dangun. Dangun founded a country called Gojoseon."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "옛날",
+      "gloss_en": "long ago",
+      "level": 1
+    },
+    {
+      "word": "하늘",
+      "gloss_en": "sky; heaven",
+      "level": 1
+    },
+    {
+      "word": "내려오다",
+      "gloss_en": "to come down",
+      "level": 1
+    },
+    {
+      "word": "허락하다",
+      "gloss_en": "to permit",
+      "level": 2
+    },
+    {
+      "word": "곰",
+      "gloss_en": "bear",
+      "level": 1
+    },
+    {
+      "word": "호랑이",
+      "gloss_en": "tiger",
+      "level": 1
+    },
+    {
+      "word": "마늘",
+      "gloss_en": "garlic",
+      "level": 1
+    },
+    {
+      "word": "쑥",
+      "gloss_en": "mugwort",
+      "level": 3
+    },
+    {
+      "word": "동굴",
+      "gloss_en": "cave",
+      "level": 3
+    },
+    {
+      "word": "참다",
+      "gloss_en": "to endure",
+      "level": 2
+    },
+    {
+      "word": "세우다",
+      "gloss_en": "to found; to set up",
+      "level": 2
+    },
+    {
+      "word": "아들",
+      "gloss_en": "son",
+      "level": 1
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "환웅은 어디에 내려오고 싶었어요?",
+      "q_en": "Where did Hwanung want to go down to?",
+      "answer_en": "To the earth."
+    },
+    {
+      "q_ko": "환웅은 곰과 호랑이에게 무엇을 주었어요?",
+      "q_en": "What did Hwanung give the bear and the tiger?",
+      "answer_en": "Garlic and mugwort."
+    },
+    {
+      "q_ko": "누가 여자가 되었어요?",
+      "q_en": "Who became a woman?",
+      "answer_en": "The bear, who endured to the end."
+    },
+    {
+      "q_ko": "단군은 무엇을 세웠어요?",
+      "q_en": "What did Dangun found?",
+      "answer_en": "The country of Gojoseon."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  },
+  "review": {
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-07",
+    "notes": "Removed filler; fixed note grammar item. Myth framed as myth; Gaecheonjeol correct."
+  }
+}

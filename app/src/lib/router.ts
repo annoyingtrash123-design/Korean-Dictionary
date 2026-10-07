@@ -40,3 +40,4 @@ export const entryPath = (source: string, id: number, hw?: string) =>
 export const wordPath = (hw: string) => `/word/${encodeURIComponent(hw)}`;
 export const hanjaPath = (ch: string) => `/hanja/${encodeURIComponent(ch)}`;
 export const href = (path: string) => '#' + path;
+export const readerPath = (id?: string) => (id ? `/reader/${encodeURIComponent(id)}` : '/reader');

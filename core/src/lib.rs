@@ -2,6 +2,7 @@
 //!
 //! * [`hangul`] - syllable compose/decompose and batchim helpers;
 //! * [`deconjugate`] - inflected word -> dictionary-form candidates, grammar hints;
+//! * [`texts`] - the Reader library pack (`listTexts`, `getText`);
 //! * [`sql`] - small SQLite abstraction (rusqlite natively, sqlite-wasm-rs in the browser);
 //! * [`search`] - script-aware search and all query logic (plain Rust, natively testable);
 //! * `db`, `import` (wasm only) - OPFS sahpool storage and streaming pack import;
@@ -13,6 +14,7 @@ pub mod oldhangul;
 pub mod packfile;
 pub mod search;
 pub mod sql;
+pub mod texts;
 
 #[cfg(target_arch = "wasm32")]
 mod db;
@@ -169,6 +171,18 @@ mod wasm_api {
                 let packs = if opts.packs.is_empty() { s.all() } else { s.select(&opts.packs) };
                 to_js(&search::lookup_in_text(&packs, &text, offset, opts.limit).map_err(js_err)?)
             })
+        }
+
+        /// `TextSummary[]` of the Reader library (`texts` pack); `[]` when it is not installed.
+        #[wasm_bindgen(js_name = listTexts)]
+        pub async fn list_texts(&self) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&crate::texts::list_texts(s.texts_pack()).map_err(js_err)?))
+        }
+
+        /// `TextDoc | null`: one library text with its paragraphs.
+        #[wasm_bindgen(js_name = getText)]
+        pub async fn get_text(&self, id: String) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&crate::texts::get_text(s.texts_pack(), &id).map_err(js_err)?))
         }
 
         #[wasm_bindgen(js_name = entriesByHeadword)]

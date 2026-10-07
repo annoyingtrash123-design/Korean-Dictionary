@@ -486,7 +486,7 @@ fn cat_order(c: &str) -> usize {
     CATEGORIES.iter().position(|x| *x == c).unwrap_or(CATEGORIES.len())
 }
 
-fn open_db(path: &Path) -> Result<Connection> {
+pub(crate) fn open_db(path: &Path) -> Result<Connection> {
     for suffix in ["", "-journal", "-wal", "-shm"] {
         let p = PathBuf::from(format!("{}{}", path.display(), suffix));
         if p.exists() {
@@ -498,7 +498,7 @@ fn open_db(path: &Path) -> Result<Connection> {
     Ok(conn)
 }
 
-fn finish_db(conn: Connection) -> Result<()> {
+pub(crate) fn finish_db(conn: Connection) -> Result<()> {
     conn.execute_batch("ANALYZE;")?;
     conn.execute_batch("PRAGMA journal_mode=DELETE; VACUUM;")?;
     // verify header-level settings
@@ -510,7 +510,7 @@ fn finish_db(conn: Connection) -> Result<()> {
     Ok(())
 }
 
-fn set_meta(conn: &Connection, k: &str, v: &str) -> Result<()> {
+pub(crate) fn set_meta(conn: &Connection, k: &str, v: &str) -> Result<()> {
     conn.execute("INSERT OR REPLACE INTO meta(key,value) VALUES(?,?)", params![k, v])?;
     Ok(())
 }
@@ -1101,6 +1101,8 @@ pub struct BuildOpts {
     pub chunk_bytes: u64,
     /// Skip the data-quality gate (local partial builds, `--limit-files`, tests).
     pub allow_partial: bool,
+    /// Reader library sources (`catalog.toml`, `raw/`, `enriched/`); `None` skips the `texts` pack.
+    pub texts: Option<PathBuf>,
 }
 
 /// Minimum row counts of a healthy full build (core pack).
@@ -1131,7 +1133,7 @@ pub const MIN_CEDICT: i64 = 100_000;
 /// Minimum entries of a healthy zhwikt pack (kaikki Chinese has several 100k non-form-of entries).
 pub const MIN_ZHWIKT: i64 = 100_000;
 
-/// Gate for the optional Chinese packs; `built` holds `(pack id, counts)` for the packs that were
+/// Gate for the optional packs; `built` holds `(pack id, counts)` for the packs that were
 /// built in this run only (a missing source is not a failure).
 pub fn quality_gate_optional(built: &[(&str, &Value)]) -> Vec<String> {
     let mut bad = Vec::new();
@@ -1139,11 +1141,13 @@ pub fn quality_gate_optional(built: &[(&str, &Value)]) -> Vec<String> {
         let min = match *id {
             "cedict" => MIN_CEDICT,
             "zhwikt" => MIN_ZHWIKT,
+            "texts" => crate::texts_pack::MIN_TEXTS,
             _ => continue,
         };
-        let n = counts.get("entries").and_then(Value::as_i64).unwrap_or(0);
+        let key = if *id == "texts" { "texts" } else { "entries" };
+        let n = counts.get(key).and_then(Value::as_i64).unwrap_or(0);
         if n < min {
-            bad.push(format!("{id}.entries = {n} (< {min})"));
+            bad.push(format!("{id}.{key} = {n} (< {min})"));
         }
     }
     bad
@@ -1232,6 +1236,27 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
             Ok(None) => {}
             Err(e) => log::warn!("zhwikt pack failed, skipping it: {e:#}"),
         }
+    }
+
+    // optional Reader library; a source problem (paragraph mismatch, unresolved vocab) fails the build
+    match &o.texts {
+        Some(dir) => {
+            let r = crate::texts_pack::build_texts(&crate::texts_pack::TextsOpts { dir, core: &core.path, extra: &[o.out.join("stdict.sqlite"), o.out.join("opendict.sqlite")], out: &o.out, version: &version, built_at: &built_at, allow_partial: o.allow_partial })?;
+            match r {
+                Some(r) => {
+                    log::info!("texts.sqlite built: {}", r.counts);
+                    let mut p = pack::compress_pack("texts", false, &r.path, &site, &r.counts, o.chunk_bytes)?;
+                    p["label"] = json!("Reader library");
+                    packs.push(p);
+                    zh_counts.push(("texts", r.counts));
+                }
+                None => {
+                    log::warn!("no texts to pack: skipping the texts pack");
+                    remove_stale(&site, "texts.sqlite.gz.")?;
+                }
+            }
+        }
+        None => remove_stale(&site, "texts.sqlite.gz.")?,
     }
 
     if !o.allow_partial {

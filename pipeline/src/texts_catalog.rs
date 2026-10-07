@@ -1,7 +1,7 @@
 //! The curated Reader catalogue (`pipeline/texts/catalog.toml`).
 
 use anyhow::{Context, Result};
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use std::collections::HashSet;
 use std::path::Path;
 
@@ -23,7 +23,7 @@ pub const SHELVES: &[&str] = &[
 pub const SCRIPTS: &[&str] = &["hangul", "hanmun", "mixed"];
 pub const SOURCES: &[&str] = &["wikisource-ko", "wikisource-zh", "law", "ohchr", "korea-kr", "gutenberg", "archive-org"];
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct EnglishPd {
     pub title: String,
@@ -42,7 +42,7 @@ pub struct EnglishPd {
     pub reference: String,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct Entry {
     pub id: String,
@@ -74,6 +74,9 @@ pub struct Entry {
     pub english_pd: Option<EnglishPd>,
     #[serde(default)]
     pub uncertain: Vec<String>,
+    /// The build fails when this text has raw source but no approved enrichment.
+    #[serde(default)]
+    pub required: bool,
 }
 
 #[derive(Debug, Clone, Default, Deserialize)]

@@ -1,13 +1,15 @@
-export type Source = 'krdict' | 'wikt' | 'kengdic' | 'stdict' | 'opendict';
-export const SOURCE_ORDER: Source[] = ['krdict', 'wikt', 'kengdic', 'stdict', 'opendict'];
+export type Source = 'krdict' | 'wikt' | 'kengdic' | 'stdict' | 'opendict' | 'cedict' | 'zhwikt';
+export const SOURCE_ORDER: Source[] = ['krdict', 'wikt', 'kengdic', 'stdict', 'opendict', 'cedict', 'zhwikt'];
 export const SOURCE_TITLE: Record<Source, string> = {
   krdict: 'krdict 한국어기초사전',
   wikt: 'Wiktionary',
   kengdic: 'kengdic',
   stdict: '표준국어대사전 (Korean)',
   opendict: '우리말샘 (Korean)',
+  cedict: 'CC-CEDICT',
+  zhwikt: 'Wiktionary (Chinese)',
 };
-export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict', opendict: '우리말샘' };
+export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict', opendict: '우리말샘', cedict: 'CC-CEDICT', zhwikt: 'zh-wikt' };
 /** Korean-only sources (lang 'ko'): never preferred over an English source. */
 export const isKoSource = (s: string) => s === 'stdict' || s === 'opendict';
 
@@ -34,7 +36,7 @@ export interface ResultRow {
   gloss?: string; kind: EntryRow['kind']; pack: string; via?: MatchKind;
   rank: number; homonym?: number; pron?: string; lang: 'en' | 'ko'; hw_norm: string;
 }
-export interface HanjaChar { ch: string; readings?: string; meaning_en?: string; strokes?: number; radical?: string; word_count?: number }
+export interface HanjaChar { ch: string; readings?: string; meaning_en?: string; strokes?: number; radical?: string; word_count?: number; hun?: string; eumhun?: string }
 export interface GrammarRow { id: number; entry_id?: number; pattern: string; category: string; level?: number; summary_en?: string; sort?: number }
 export interface Sentence { ko: string; en: string | null; source: string | null; id?: number }
 
@@ -43,6 +45,30 @@ export interface SearchResult {
   mode: 'hangul' | 'english' | 'hanja'; rows: ResultRow[]; hanja?: HanjaChar[];
   deconj?: { lemma: string; rule: string }[]; grammarHints?: string[];
 }
+
+// ---- Reader (see docs/READER.md "texts pack + engine API") ----
+export interface TextLabels { notes?: 'ai' | null; translation?: string | null; modern?: 'ai' | 'wikisource' | null; text?: 'original' | 'ai' | null }
+export interface TextSummary {
+  id: string; shelf: string; period?: string | null; year?: number | null; script: 'hangul' | 'hanmun' | 'mixed' | string;
+  level?: string | null; chars: number; title_ko: string; title_en?: string | null; author_ko?: string | null; author_en?: string | null;
+  date?: string | null; themes: string[]; excerpt?: boolean; labels: TextLabels;
+}
+export interface TextParagraph { n: number; orig: string; modern?: string | null; reading?: string | null; en?: string | null }
+export interface TextProvenance { source?: string; url?: string; page_title?: string; revision_id?: string | number; revision_timestamp?: string; edition?: string; licence?: string; fetched_at?: string; english_source?: string }
+export interface TextDoc {
+  id: string;
+  meta: { title_ko: string; title_en?: string; author_ko?: string; author_en?: string; author_dates?: string; date?: string; year?: number; period?: string; themes?: string[]; shelf?: string; script?: string; excerpt?: boolean; excerpt_note?: string; pd_basis?: string; [k: string]: unknown };
+  card: { summary_ko?: string; summary_en?: string; level?: string; edition_ko?: string; edition_en?: string };
+  notes: { ko?: string; en?: string };
+  provenance?: TextProvenance | null;
+  labels: TextLabels;
+  review?: { status?: string; [k: string]: unknown } | null;
+  vocab?: { word: string; gloss_en: string; level?: number | null }[] | null;
+  questions?: { q_ko: string; q_en?: string; answer_en?: string }[] | null;
+  paragraphs: TextParagraph[];
+}
+/** `lookupInText` result: offsets are UTF-16 code units of the text passed in, `end` exclusive. */
+export interface TextMatch { match: string; start: number; end: number; rows: ResultRow[]; hanja?: HanjaChar; deconj?: { lemma: string; rule: string }[] }
 
 export interface Engine {
   init(): Promise<void>;
@@ -60,6 +86,9 @@ export interface Engine {
   sentences(text: string, limit: number): Promise<{ ko: string; en: string | null; source: string | null }[]>;
   grammarList(): Promise<GrammarRow[]>;
   wordOfDay(date: string): Promise<ResultRow | null>;
+  listTexts(): Promise<TextSummary[]>;
+  getText(id: string): Promise<TextDoc | null>;
+  lookupInText(text: string, offset: number, opts: { packs: string[]; limit?: number }): Promise<TextMatch>;
   /** Background warm-up step over `packs`; resolves to whether more steps remain. */
   warm(step: number, packs: string[]): Promise<boolean>;
   /** Engine diagnostics log (startup file discovery, pack swaps). */
