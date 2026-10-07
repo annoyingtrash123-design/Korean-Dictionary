@@ -296,15 +296,138 @@ fn insert_entry(conn: &Connection, e: &Entry, rank: i64, fts: bool, c: &mut Coun
     Ok(id)
 }
 
-struct GrammarRow {
-    entry_id: i64,
-    pattern: String,
-    category: &'static str,
-    level: Option<i64>,
-    summary: Option<String>,
-    key: String,
-    rank: i64,
-    jamo_last: bool,
+pub(crate) struct GrammarRow {
+    pub(crate) entry_id: i64,
+    pub(crate) pattern: String,
+    pub(crate) category: &'static str,
+    pub(crate) level: Option<i64>,
+    pub(crate) summary: Option<String>,
+    pub(crate) key: String,
+    pub(crate) rank: i64,
+    pub(crate) jamo_last: bool,
+}
+
+/// Particle allomorph pairs that krdict lists as two entries with near-identical summaries.
+const PARTICLE_PAIRS: [(&str, &str); 8] =
+    [("이", "가"), ("은", "는"), ("을", "를"), ("와", "과"), ("으로", "로"), ("이랑", "랑"), ("아", "야"), ("이나", "나")];
+
+fn word_set(s: &str) -> HashSet<String> {
+    s.split(|c: char| !c.is_alphanumeric()).filter(|w| !w.is_empty()).map(|w| w.to_lowercase()).collect()
+}
+
+/// Jaccard similarity of the word sets of two summaries (1.0 = identical wording).
+fn summary_similarity(a: &str, b: &str) -> f64 {
+    let (x, y) = (word_set(a), word_set(b));
+    if x.is_empty() || y.is_empty() {
+        return 0.0;
+    }
+    x.intersection(&y).count() as f64 / x.union(&y).count() as f64
+}
+
+/// Merge the two entries of each allomorph pair (이 + 가 -> "이/가") into one row: the first
+/// entry's id is kept, the twin is dropped. The twin is the same-category entry of the second
+/// form whose summary is most similar (>= 0.4), so homonyms with a different sense (야 "emphasis"
+/// vs 아 "address") stay separate.
+pub(crate) fn merge_particle_pairs(rows: &mut Vec<GrammarRow>) {
+    for (a, b) in PARTICLE_PAIRS {
+        let a_idx: Vec<usize> = (0..rows.len()).filter(|&i| rows[i].category == "Particles" && rows[i].pattern == a).collect();
+        let mut dropped: Vec<usize> = Vec::new();
+        for ia in a_idx {
+            let sa = rows[ia].summary.clone().unwrap_or_default();
+            let best = (0..rows.len())
+                .filter(|&j| rows[j].category == "Particles" && rows[j].pattern == b && !dropped.contains(&j))
+                .map(|j| (summary_similarity(&sa, rows[j].summary.as_deref().unwrap_or("")), j))
+                .filter(|(sim, _)| *sim >= 0.4)
+                .max_by(|x, y| x.0.partial_cmp(&y.0).unwrap_or(std::cmp::Ordering::Equal));
+            if let Some((_, jb)) = best {
+                let (lvl, rank) = (rows[jb].level, rows[jb].rank);
+                let r = &mut rows[ia];
+                r.pattern = format!("{a}/{b}");
+                r.key = format!("{a}/{b}");
+                r.level = match (r.level, lvl) {
+                    (Some(x), Some(y)) => Some(x.min(y)),
+                    (x, y) => x.or(y),
+                };
+                r.rank = r.rank.min(rank);
+                dropped.push(jb);
+            }
+        }
+        dropped.sort_unstable();
+        for j in dropped.into_iter().rev() {
+            rows.remove(j);
+        }
+    }
+}
+
+/// Hand-picked beginner patterns, most common first: (category restriction, accepted `hw_norm`
+/// keys of the krdict headword). Without a restriction any category except Particles / Affixes
+/// matches. Patterns missing from the data are simply skipped.
+const PRIORITY: &[(Option<&str>, &[&str])] = &[
+    (Some("Particles"), &["이", "가"]),
+    (Some("Particles"), &["은", "는"]),
+    (Some("Particles"), &["을", "를"]),
+    (Some("Particles"), &["에"]),
+    (Some("Particles"), &["에서"]),
+    (Some("Particles"), &["의"]),
+    (Some("Particles"), &["도"]),
+    (Some("Particles"), &["만"]),
+    (Some("Particles"), &["와", "과"]),
+    (Some("Particles"), &["하고"]),
+    (Some("Particles"), &["으로", "로"]),
+    (Some("Particles"), &["에게"]),
+    (Some("Particles"), &["한테"]),
+    (Some("Particles"), &["부터"]),
+    (Some("Particles"), &["까지"]),
+    (Some("Particles"), &["보다"]),
+    (None, &["아요", "어요", "여요", "해요"]),
+    (None, &["습니다", "ㅂ니다"]),
+    (None, &["았", "었", "였", "았었"]),
+    (None, &["겠"]),
+    (None, &["고"]),
+    (None, &["아서", "어서", "여서"]),
+    (None, &["니까", "으니까", "(으)니까"]),
+    (None, &["지만"]),
+    (None, &["면", "으면", "(으)면"]),
+    (None, &["는데", "ㄴ데", "은데", "(으)ㄴ데"]),
+    (None, &["ㄹ거예요", "을거예요", "(으)ㄹ거예요", "ㄹ것이다", "을것이다", "(으)ㄹ것이다"]),
+    (None, &["고싶다"]),
+    (None, &["고있다"]),
+    (None, &["아야하다", "어야하다", "여야하다"]),
+    (None, &["ㄹ수있다", "을수있다", "(으)ㄹ수있다"]),
+    (None, &["지않다"]),
+    (None, &["세요", "으세요", "(으)세요"]),
+    (None, &["려고", "으려고", "(으)려고"]),
+    (None, &["기때문에", "기때문"]),
+    (Some("Nominal/adnominal endings"), &["는", "ㄴ", "은", "(으)ㄴ"]),
+    (Some("Nominal/adnominal endings"), &["ㄹ", "을", "(으)ㄹ"]),
+    (None, &["기"]),
+    (None, &["게"]),
+    (None, &["도록"]),
+];
+
+/// Index into [`PRIORITY`] of the first beginner pattern this row is, or `PRIORITY.len()`.
+pub(crate) fn grammar_priority(g: &GrammarRow) -> usize {
+    if g.category == "Affixes" {
+        return PRIORITY.len();
+    }
+    let parts: Vec<String> = g.pattern.split('/').map(hw_norm).collect();
+    PRIORITY
+        .iter()
+        .position(|(cat, keys)| {
+            let cat_ok = match cat {
+                Some(c) => g.category == *c,
+                None => g.category != "Particles",
+            };
+            cat_ok && parts.iter().any(|p| keys.contains(&p.as_str()))
+        })
+        .unwrap_or(PRIORITY.len())
+}
+
+/// Final order of the grammar table: category, beginner priority list, bare-jamo contractions
+/// last, then level and frequency rank.
+pub(crate) fn sort_grammar(rows: &mut Vec<GrammarRow>) {
+    merge_particle_pairs(rows);
+    rows.sort_by_cached_key(|g| (cat_order(g.category), grammar_priority(g), g.jamo_last, g.level.unwrap_or(4), g.rank, g.key.clone()));
 }
 
 const CATEGORIES: [&str; 6] =
@@ -616,9 +739,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     conn.execute_batch("INSERT INTO sentences_fts(sentences_fts) VALUES('rebuild')")?;
 
     // grammar table
-    grammar.sort_by(|a, b| {
-        (cat_order(a.category), a.jamo_last, a.level.unwrap_or(4), a.rank, &a.key).cmp(&(cat_order(b.category), b.jamo_last, b.level.unwrap_or(4), b.rank, &b.key))
-    });
+    sort_grammar(&mut grammar);
     for (i, g) in grammar.iter().enumerate() {
         conn.prepare_cached("INSERT INTO grammar(entry_id,pattern,category,level,summary_en,sort) VALUES(?,?,?,?,?,?)")?
             .execute(params![g.entry_id, g.pattern, g.category, g.level, g.summary, i as i64])?;
@@ -814,6 +935,31 @@ pub struct BuildOpts {
     pub out: PathBuf,
     pub sources: Sources,
     pub chunk_bytes: u64,
+    /// Skip the data-quality gate (local partial builds, `--limit-files`, tests).
+    pub allow_partial: bool,
+}
+
+/// Minimum row counts of a healthy full build (core pack).
+pub const MIN_CORE: [(&str, i64); 5] = [("entries", 150_000), ("krdict", 50_000), ("wikt", 20_000), ("sentences", 10_000), ("hanja_chars", 5_000)];
+/// Minimum entries of a healthy stdict pack.
+pub const MIN_STDICT: i64 = 400_000;
+
+/// Problems that make a build look degraded (a source silently failed to download or parse);
+/// empty when the counts are at full-build level. `stdict` is `None` when it was not built.
+pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
+    let n = |v: &Value, k: &str| v.get(k).and_then(Value::as_i64).unwrap_or(0);
+    let mut bad = Vec::new();
+    for (k, min) in MIN_CORE {
+        if n(core, k) < min {
+            bad.push(format!("core.{k} = {} (< {min})", n(core, k)));
+        }
+    }
+    if let Some(st) = stdict {
+        if n(st, "entries") < MIN_STDICT {
+            bad.push(format!("stdict.entries = {} (< {MIN_STDICT})", n(st, "entries")));
+        }
+    }
+    bad
 }
 
 fn remove_stale(site: &Path, prefix: &str) -> Result<()> {
@@ -852,6 +998,7 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);
 
     let mut dedupe: HashSet<String> = HashSet::new();
+    let mut stdict_counts: Option<Value> = None;
     if o.sources.stdict.is_empty() {
         log::warn!("no stdict files: skipping the stdict pack");
         remove_stale(&site, "stdict.sqlite.gz.")?;
@@ -859,6 +1006,7 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
         let st = build_stdict(&o.sources, &ranker, &o.out, &version, &built_at)?;
         log::info!("stdict.sqlite built: {}", st.counts);
         packs.push(pack::compress_pack("stdict", false, &st.path, &site, &st.counts, o.chunk_bytes)?);
+        stdict_counts = Some(st.counts.clone());
         dedupe = st.keys;
     }
     if o.sources.opendict.is_empty() {
@@ -869,9 +1017,93 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
         packs.push(pack::compress_pack("opendict", false, &od.path, &site, &od.counts, o.chunk_bytes)?);
     }
 
+    if !o.allow_partial {
+        let problems = quality_gate(&core.counts, stdict_counts.as_ref());
+        if !problems.is_empty() {
+            anyhow::bail!("data quality gate failed, the build looks degraded (a source failed to download or parse?): {}. Pass --allow-partial for local partial builds.", problems.join("; "));
+        }
+    } else {
+        log::warn!("--allow-partial: data quality gate skipped");
+    }
+
     let manifest = json!({"version": version, "packs": packs});
     fs::write(site.join("manifest.json"), serde_json::to_string_pretty(&manifest)?)?;
     fs::write(site.join("ATTRIBUTION.md"), ATTRIBUTION)?;
     log::info!("build finished in {:.1}s", t0.elapsed().as_secs_f32());
     Ok(manifest)
+}
+
+#[cfg(test)]
+mod grammar_tests {
+    use super::*;
+
+    fn row(id: i64, pat: &str, cat: &'static str, level: Option<i64>, rank: i64, summary: &str) -> GrammarRow {
+        GrammarRow { entry_id: id, pattern: pat.into(), category: cat, level, summary: Some(summary.into()), key: hw_norm(pat), rank, jamo_last: false }
+    }
+
+    #[test]
+    fn allomorph_pairs_merge_and_priority_orders() {
+        let subj = "A postpositional particle referring to a subject under a certain state or situation, or the agent of an action.";
+        let subj2 = "A postpositional particle referring to a subject under a certain state or situation, or the subject of an act.";
+        let mut rows = vec![
+            row(1, "마저", "Particles", Some(3), 5, "A postpositional particle that indicates the addition"),
+            row(2, "가", "Particles", None, 9, subj2),
+            row(3, "-게", "Connective endings", None, 50, "so that"),
+            row(4, "이", "Particles", None, 8, subj),
+            row(5, "야", "Particles", None, 7, "A postpositional particle used to emphasize the preceding word."),
+            row(6, "아", "Particles", None, 7, "A postpositional particle used to address a friend, younger person, animal, etc."),
+            row(7, "야", "Particles", None, 7, "A postpositional word used to address a friend, younger person, animal, etc."),
+            row(8, "에", "Particles", None, 3, "A postpositional particle to indicate"),
+            row(9, "-습니다", "Final endings", None, 3, "formal polite"),
+            row(10, "-고", "Connective endings", None, 1, "and"),
+            row(11, "-도", "Affixes", None, 1, "also"),
+            row(12, "도", "Particles", None, 99, "also"),
+            row(13, "와", "Particles", Some(1), 4, "A postpositional particle used to indicate that something is the subject of a comparison or subject of a standard."),
+            row(14, "과", "Particles", None, 6, "A postpositional word used to indicate the subject of comparison or the object that serves as a basis."),
+        ];
+        sort_grammar(&mut rows);
+        let pats: Vec<&str> = rows.iter().map(|r| r.pattern.as_str()).collect();
+        // twins merged (first entry's id kept), unrelated homonym 야 (emphasis) stays separate
+        assert!(pats.contains(&"이/가") && !pats.contains(&"가") && !pats.contains(&"이"));
+        assert_eq!(rows.iter().find(|r| r.pattern == "이/가").unwrap().entry_id, 4);
+        assert!(pats.contains(&"아/야") && pats.contains(&"야") && pats.contains(&"와/과"));
+        assert_eq!(rows.iter().find(|r| r.pattern == "아/야").unwrap().entry_id, 6);
+        assert_eq!(rows.iter().find(|r| r.pattern == "와/과").unwrap().level, Some(1));
+        let pos = |p: &str| pats.iter().position(|x| *x == p).unwrap();
+        // priority list order in Particles, then the rest by level / rank
+        assert!(pos("이/가") < pos("에") && pos("에") < pos("도") && pos("도") < pos("와/과"));
+        assert!(pos("와/과") < pos("마저"));
+        // endings: -습니다 and -고 are priority entries, -게 too (after them); order by list position
+        assert!(pos("-습니다") < pos("-게") || rows[pos("-습니다")].category != rows[pos("-게")].category);
+        assert!(pos("-고") < pos("-게") || rows[pos("-고")].category != rows[pos("-게")].category);
+        // the affix -도 is not a priority pattern
+        assert_eq!(grammar_priority(&rows[pos("-도")]), PRIORITY.len());
+    }
+
+    #[test]
+    fn priority_list_order_is_stable() {
+        let g = |p: &str, c: &'static str| grammar_priority(&row(0, p, c, None, 1, "x"));
+        assert!(g("-아요", "Final endings") < g("-겠-", "Final endings"));
+        assert!(g("-고 싶다", "Expressions") < g("-고 있다", "Expressions"));
+        assert!(g("-ㄴ", "Nominal/adnominal endings") < g("-ㄹ", "Nominal/adnominal endings"));
+        assert_eq!(g("-이", "Final endings"), PRIORITY.len());
+    }
+}
+
+#[cfg(test)]
+mod gate_tests {
+    use super::*;
+
+    #[test]
+    fn quality_gate_flags_degraded_builds() {
+        let full = json!({"entries": 190000, "krdict": 56000, "wikt": 30000, "sentences": 40000, "hanja_chars": 8000});
+        assert!(quality_gate(&full, None).is_empty());
+        assert!(quality_gate(&full, Some(&json!({"entries": 436000}))).is_empty());
+        let bad = quality_gate(&full, Some(&json!({"entries": 25000})));
+        assert_eq!(bad.len(), 1);
+        assert!(bad[0].contains("stdict.entries"));
+        let degraded = json!({"entries": 60000, "krdict": 56000, "wikt": 0, "sentences": 0, "hanja_chars": 4999});
+        let bad = quality_gate(&degraded, None);
+        assert_eq!(bad.len(), 4, "{bad:?}"); // entries, wikt, sentences, hanja_chars
+    }
 }

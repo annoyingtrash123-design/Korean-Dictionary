@@ -117,7 +117,7 @@ pub fn final_index(j: char) -> Option<u8> {
 
 /// Does the syllable have a batchim?
 pub fn has_batchim(c: char) -> bool {
-    decompose(c).map_or(false, |d| d.fin != 0)
+    decompose(c).is_some_and(|d| d.fin != 0)
 }
 
 /// Final consonant letter of a syllable (None when there is none / not a syllable).

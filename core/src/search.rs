@@ -282,6 +282,21 @@ fn is_compat_jamo(c: char) -> bool {
     (0x3130..=0x318F).contains(&(c as u32))
 }
 
+/// Half-width Hangul letter (U+FFA1..U+FFDC) -> compatibility jamo (NFKC would go on to the
+/// conjoining jamo block, which matches nothing).
+fn halfwidth_jamo(c: char) -> Option<char> {
+    let u = c as u32;
+    let base = match u {
+        0xFFA1..=0xFFBE => 0x3131 + (u - 0xFFA1),
+        0xFFC2..=0xFFC7 => 0x314F + (u - 0xFFC2),
+        0xFFCA..=0xFFCF => 0x3155 + (u - 0xFFCA),
+        0xFFD2..=0xFFD7 => 0x315B + (u - 0xFFD2),
+        0xFFDA..=0xFFDC => 0x3161 + (u - 0xFFDA),
+        _ => return None,
+    };
+    char::from_u32(base)
+}
+
 /// Query clean-up: NFKC (full-width Latin, half-width forms, CJK compatibility ideographs,
 /// decomposed Hangul), except that compatibility jamo are kept as typed (NFKC would turn them
 /// into conjoining jamo that match nothing); Latin lower-cased; at most [`MAX_QUERY_CHARS`].
@@ -290,10 +305,11 @@ pub fn normalize_query(query: &str) -> String {
     let mut out = String::new();
     let mut run = String::new();
     let flush = |run: &mut String, out: &mut String| {
-        out.extend(run.nfkc());
+        out.extend(run.nfkc().map(|c| if c == '\u{FA11}' { '\u{5D0E}' } else { c }));
         run.clear();
     };
     for c in query.chars().take(MAX_QUERY_CHARS * 4) {
+        let c = halfwidth_jamo(c).unwrap_or(c);
         if is_compat_jamo(c) {
             flush(&mut run, &mut out);
             out.push(c);
@@ -775,7 +791,7 @@ fn rarest_char(packs: &[&PackDb], compact: &str) -> Result<String> {
             }
         }
         let n = n.unwrap_or(i64::MAX);
-        if best.map_or(true, |(b, _)| n < b) {
+        if best.is_none_or(|(b, _)| n < b) {
             best = Some((n, c));
         }
     }
@@ -884,7 +900,8 @@ pub fn words_with_hanja(packs: &[&PackDb], ch: &str, limit: usize, offset: usize
 /// Example sentences containing `text`. Uses the trigram FTS index (needs >= 3 characters)
 /// and falls back to LIKE for shorter input.
 pub fn sentences(packs: &[&PackDb], text: &str, limit: usize) -> Result<Vec<SentenceRow>> {
-    let t = text.trim();
+    let t: String = text.trim().chars().take(MAX_QUERY_CHARS).collect();
+    let t = t.as_str();
     if t.is_empty() || limit == 0 {
         return Ok(vec![]);
     }

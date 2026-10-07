@@ -36,6 +36,7 @@ struct E {
     forms: &'static [&'static str],
 }
 
+#[allow(clippy::too_many_arguments)]
 const fn e(
     id: i64,
     hw: &'static str,
@@ -122,6 +123,16 @@ fn build_core() -> PackDb {
     c.exec(CORE_ONLY).unwrap();
     c.exec("INSERT INTO meta VALUES ('pack','core'), ('version','2025.01.test')").unwrap();
     insert(&c, "core", CORE);
+    // choseong column + index, as the pipeline builds them
+    c.exec("ALTER TABLE entries ADD COLUMN cho TEXT").unwrap();
+    for it in CORE {
+        let hw = norm_headword(it.hw);
+        let cho: Option<String> = hw.chars().map(crate::hangul::initial_of).collect();
+        if let Some(cho) = cho.filter(|c| !c.is_empty()) {
+            c.query("UPDATE entries SET cho = ?1 WHERE id = ?2", &[cho.into(), it.id.into()]).unwrap();
+        }
+    }
+    c.exec("CREATE INDEX entries_cho ON entries(cho, rank) WHERE cho IS NOT NULL").unwrap();
     // contentless FTS rows (rowid = entries.id)
     for it in CORE {
         if it.source == "krdict" || it.id == 15 {
@@ -305,6 +316,65 @@ fn hangul_query_normalisation() {
     assert_eq!(r.rows[0].headword, "-아서/어서");
     let r = search(&[&core], "학 교", None).unwrap();
     assert_eq!(r.rows[0].headword, "학교");
+}
+
+#[test]
+fn query_is_normalised_nfkc() {
+    assert_eq!(normalize_query("  Ａｐｐｌｅ  "), "apple");
+    assert_eq!(normalize_query("ｶﾞ"), "ガ");
+    assert_eq!(normalize_query("﨑"), "崎"); // unified compat ideograph with no NFKC mapping
+    assert_eq!(normalize_query("\u{F900}"), "\u{8C48}"); // NFKC compatibility ideograph
+    assert_eq!(normalize_query("ㅎㄱ"), "ㅎㄱ"); // compatibility jamo stay as typed
+    assert_eq!(normalize_query("ﾎﾞ"), "ボ");
+    assert_eq!(normalize_query("ᄒ\u{1161}ᆨ"), "학"); // decomposed hangul recomposes
+    assert_eq!(normalize_query(&"가".repeat(500)).chars().count(), MAX_QUERY_CHARS);
+    let core = build_core();
+    assert_eq!(search(&[&core], "ＳＣＨＯＯＬ", None).unwrap().mode, "english");
+    assert!(!search(&[&core], "ＳＣＨＯＯＬ", None).unwrap().rows.is_empty());
+    assert_eq!(search(&[&core], "ｶﾞ", None).unwrap().mode, "english"); // katakana: no crash
+    // half-width hangul letters become compatibility jamo
+    assert_eq!(normalize_query("\u{FFA1}\u{FFA4}"), "ㄱㄴ");
+}
+
+#[test]
+fn long_queries_are_bounded() {
+    let core = build_core();
+    let t = std::time::Instant::now();
+    for q in [vec!["a"; 5000].join(" "), vec!["school"; 3000].join(" "), "학".repeat(10_000), vec!["學"; 5000].join(" ")] {
+        let _ = search(&[&core], &q, None).unwrap();
+    }
+    assert!(t.elapsed().as_secs() < 5);
+    assert!(fts_query(&vec!["w"; 50].join(" ")).unwrap().matches('"').count() / 2 <= MAX_FTS_TOKENS);
+}
+
+#[test]
+fn mixed_script_query() {
+    let (core, st) = (build_core(), build_stdict());
+    let r = search(&[&core, &st], "학교 school", None).unwrap();
+    assert_eq!(r.mode, "hangul");
+    assert_eq!(r.rows[0].headword, "학교");
+    let r = search(&[&core], "가다 school", None).unwrap();
+    assert_eq!(r.rows[0].headword, "가다");
+    // English results follow the Hangul ones
+    let pos_school = r.rows.iter().position(|x| x.gloss.as_deref().is_some_and(|g| g.starts_with("school"))).unwrap();
+    assert!(pos_school > 0);
+}
+
+#[test]
+fn choseong_search() {
+    let core = build_core();
+    let r = search(&[&core], "ㅎㄱ", None).unwrap();
+    assert_eq!(r.mode, "hangul");
+    let h: Vec<_> = r.rows.iter().map(|r| r.headword.as_str()).collect();
+    assert!(h.contains(&"학교"), "{h:?}");
+    assert!(!h.contains(&"학생"));
+    assert!(r.rows.windows(2).all(|w| w[0].rank <= w[1].rank));
+    // full-width / half-width jamo input
+    assert!(!search(&[&core], "\u{FFBE}\u{FFA1}", None).unwrap().rows.is_empty());
+    assert!(search(&[&core], "ㅌㅌ", None).unwrap().rows.is_empty());
+    // a pack without the column falls back to the ordinary jamo search
+    let st = build_stdict();
+    assert_eq!(search(&[&st], "ㅎㄱ", None).unwrap().mode, "hangul");
 }
 
 #[test]
@@ -521,7 +591,7 @@ fn open_real(path: &std::path::Path, id: &str) -> Option<PackDb> {
     if !path.exists() {
         return None;
     }
-    Some(PackDb::new(id, Conn::open_path(path.to_str()?, true).ok()?).ok()?)
+    PackDb::new(id, Conn::open_path(path.to_str()?, true).ok()?).ok()
 }
 
 #[test]
@@ -533,7 +603,7 @@ fn pipeline_output_if_present() {
     };
     let r = search(&[&core], "학교", None).unwrap();
     assert!(!r.rows.is_empty(), "pipeline core.sqlite has no 학교");
-    assert!(search(&[&core], "school", None).unwrap().rows.len() > 0);
+    assert!(!search(&[&core], "school", None).unwrap().rows.is_empty());
     let r = search(&[&core], "갔어요", None).unwrap();
     assert!(r.rows.iter().any(|x| x.headword == "가다"));
     assert!(!grammar_list(&[&core]).unwrap().is_empty());

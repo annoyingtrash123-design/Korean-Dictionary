@@ -4,6 +4,7 @@ import type { Entry, GrammarRow, HanjaChar, Manifest, ManifestPack, PackStatus, 
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
+import { installActive } from '../lib/sw-update';
 
 let worker: Worker | undefined;
 let seq = 0;
@@ -29,6 +30,13 @@ function call<T>(method: string, ...args: unknown[]): Promise<T> {
     const id = ++seq; pending.set(id, { ok, err });
     w().postMessage({ id, method, args } satisfies Req);
   });
+}
+
+/** Drop the worker (and with it a failed engine init, e.g. storage locked by another tab) and start a fresh one. */
+export function restartWorker() {
+  worker?.terminate(); worker = undefined;
+  for (const p of pending.values()) p.err(new Error('Worker restarted')); pending.clear();
+  packStatus$.set(null);
 }
 
 export const PACKS_HINT = 'kd.packs';
@@ -93,8 +101,9 @@ export const db = {
   packStatus: refreshStatus,
   install: async (pack: ManifestPack, manifestUrl: string, version: string) => {
     // The engine keeps the old pack usable until the new import finishes, so status is refreshed after success AND failure.
+    installActive.set(true);
     try { const s = await call<PackStatus>('install', pack, manifestUrl, version); packStatus$.set(s); return s; }
-    finally { await refreshStatus().catch(() => undefined); }
+    finally { installActive.set(false); await refreshStatus().catch(() => undefined); }
   },
   removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); packStatus$.set(s); return s; },
 };

@@ -45,6 +45,10 @@ enum Cmd {
         /// Only read the first N krdict and N stdict XML files (for quick test builds)
         #[arg(long)]
         limit_files: Option<usize>,
+        /// Do not fail when the result looks degraded (core < 150k entries, krdict < 50k, wikt < 20k,
+        /// sentences < 10k, hanja_chars < 5k, stdict < 400k). For local partial builds only; CI omits it.
+        #[arg(long)]
+        allow_partial: bool,
     },
 }
 
@@ -53,9 +57,9 @@ fn main() -> Result<()> {
     log::set_max_level(log::LevelFilter::Info);
     match Cli::parse().cmd {
         Cmd::Fetch { work } => fetch::run(&work),
-        Cmd::Build { work, out, limit_files } => {
+        Cmd::Build { work, out, limit_files, allow_partial } => {
             let sources = build::Sources::discover(&work, limit_files);
-            build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES })?;
+            build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES, allow_partial })?;
             Ok(())
         }
     }

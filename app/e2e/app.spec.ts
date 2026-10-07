@@ -76,6 +76,11 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await expect(page.locator('.hanja-giant')).toHaveText('學');
   await page.getByRole('link', { name: 'Bookmarks' }).click();
   await expect(page.locator('.bm .hw', { hasText: '학교' })).toBeVisible();
+  // bookmarks open by headword (stable across data rebuilds), not by entry id
+  await page.locator('.bm .row', { hasText: '학교' }).click();
+  await expect(page).toHaveURL(/#\/word\//);
+  await expect(page.locator('h1')).toContainText('학교');
+  await expect(page.getByRole('button', { name: 'Edit bookmark' })).toBeVisible();
 
   // ---- light screenshots, then dark theme ----
   await page.goto('/#/settings');
@@ -104,7 +109,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
 test('interrupted download resumes per chunk', async ({ page }) => {
   test.setTimeout(600_000);
   let n = 0;
-  await page.route('**/data/core.sqlite.gz.001', (route) => (n++ === 0 ? route.abort() : route.continue()));
+  await page.route('**/data/core.sqlite.gz.001?v=*', (route) => (n++ === 0 ? route.abort() : route.continue()));
   await page.goto('/');
   await page.getByRole('button', { name: 'Download' }).click();
   await expect(page.getByRole('alert')).toBeVisible({ timeout: 120_000 });

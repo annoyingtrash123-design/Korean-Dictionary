@@ -8,8 +8,11 @@ import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
 import { cachedManifest } from '../db/client';
 import { UpdateBanner } from '../components/UpdateBanner';
-import { bookmarks, exportBookmarks, importBookmarks } from '../lib/bookmarks';
+import { bookmarks, exportBookmarks, ImportError, importBookmarks, MAX_IMPORT_BYTES } from '../lib/bookmarks';
 import { useAsync } from '../lib/useAsync';
+import attribution from '../assets/ATTRIBUTION.md?raw';
+import { inlineParts, parseMarkdown } from '../lib/markdown';
+import { bytesNeeded, fmtMB } from '../lib/storage';
 import type { Manifest } from '../lib/types';
 
 const THEMES: [ThemeName, string][] = [['light', 'Light'], ['dark', 'Dark'], ['sepia', 'Sepia'], ['system', 'System']];
@@ -32,10 +35,6 @@ export function SettingsView() {
   const [installing, setInstalling] = useState<string[] | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const est = useAsync(async () => (await navigator.storage?.estimate?.()) ?? {}, [st]);
-  const about = useAsync(async () => {
-    try { const r = await fetch(import.meta.env.BASE_URL + 'data/ATTRIBUTION.md'); if (r.ok && !(r.headers.get('content-type') ?? '').includes('html')) return await r.text(); } catch { /* offline */ }
-    return null;
-  }, []);
   const [theme, setTheme] = useState(s.theme);
   useEffect(() => setTheme(s.theme), [s.theme]);
 
@@ -56,8 +55,9 @@ export function SettingsView() {
   };
   const importFile = async (f: File | undefined) => {
     if (!f) return;
+    if (f.size > MAX_IMPORT_BYTES) { setMsg('That file is too large (limit 5 MB).'); if (fileRef.current) fileRef.current.value = ''; return; }
     try { const r = await importBookmarks(await f.text()); setMsg(`Imported ${r.items} bookmark(s) and ${r.folders} folder(s).`); }
-    catch { setMsg('That file is not a valid backup.'); }
+    catch (e) { setMsg(e instanceof ImportError ? e.message : 'That file is not a valid backup.'); }
     if (fileRef.current) fileRef.current.value = '';
   };
 
@@ -91,7 +91,7 @@ export function SettingsView() {
             <div key={id} class="pack-opt">
               <div class="pack-line">
                 <div><strong>{packLabel(id)}</strong><div class="muted small">{packDesc(id)}</div>
-                  <div class="muted small">{inst?.installed ? `v${inst.version} · ${fmtBytes(inst.bytes)} on device` : mp ? `Not downloaded · ${fmtBytes(mp.gz_bytes)} download` : 'Not downloaded'}</div></div>
+                  <div class="muted small">{inst?.installed ? `v${inst.version} · ${fmtBytes(inst.bytes)} on device` : mp ? `Not downloaded · ${fmtBytes(mp.gz_bytes)} download, needs about ${fmtMB(bytesNeeded([mp]))} free` : 'Not downloaded'}</div></div>
                 {inst?.installed
                   ? <input type="checkbox" role="switch" aria-label={`Use ${packLabel(id)} in search`} checked={packEnabled(s, id)} onChange={(e) => updateSettings({ packs: { ...s.packs, [id]: (e.currentTarget as HTMLInputElement).checked } })} />
                   : <button type="button" class="btn" onClick={() => startInstall([id])}>Download</button>}
@@ -130,25 +130,20 @@ export function SettingsView() {
 
       <section class="group">
         <h2>About &amp; licences</h2>
-        {about.data ? <pre class="licence">{about.data}</pre> : <Licences />}
+        <Markdown src={attribution} />
       </section>
     </div>
   );
 }
 
-function Licences() {
-  const rows = [
-    ['krdict 한국어기초사전', 'National Institute of Korean Language', 'CC BY-SA 2.0 KR'],
-    ['표준국어대사전 (stdict)', 'National Institute of Korean Language', 'CC BY-SA 2.0 KR'],
-    ['Wiktionary (via kaikki.org)', 'Wiktionary contributors', 'CC BY-SA 4.0'],
-    ['kengdic', 'Garfield Nate et al.', 'MPL 2.0 / LGPL'],
-    ['Tatoeba', 'Tatoeba contributors', 'CC BY 2.0 FR'],
-    ['Unihan', 'Unicode, Inc.', 'Unicode licence'],
-    ['FrequencyWords', 'hermitdave (OpenSubtitles)', 'CC BY-SA 4.0'],
-  ];
+function Markdown({ src }: { src: string }) {
+  const inline = (t: string) => inlineParts(t).map((p, i) => (p.href ? <a key={i} href={p.href} target="_blank" rel="noopener noreferrer">{p.text}</a> : <span key={i}>{p.text}</span>));
   return (
-    <ul class="plain licences">
-      {rows.map(([n, a, l]) => <li key={n}><strong>{n}</strong><div class="muted small">{a} · {l}</div></li>)}
-    </ul>
+    <div class="licence">
+      {parseMarkdown(src).map((b, i) =>
+        b.t === 'h' ? (b.level <= 1 ? null : <h3 key={i}>{inline(b.text)}</h3>)
+        : b.t === 'ul' ? <ul key={i} class="plain small">{b.items.map((it, j) => <li key={j}>{inline(it)}</li>)}</ul>
+        : <p key={i} class="small">{inline(b.text)}</p>)}
+    </div>
   );
 }

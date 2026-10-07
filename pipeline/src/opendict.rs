@@ -37,7 +37,7 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
     let (hanja, origin_note) = origin(wi);
     let mut prons = Vec::new();
     for p in wi.find_all("pronunciation_info/pronunciation") {
-        let p = clean(&p.text);
+        let p = clean_ko(&p.text);
         if !p.is_empty() && !prons.contains(&p) {
             prons.push(p);
         }
@@ -45,14 +45,14 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
     let mut forms = Vec::new();
     for path in ["conju_info/conjugation_info/conjugation", "conju_info/abbreviation_info/abbreviation"] {
         for c in wi.find_all(path) {
-            let c = clean(&c.text);
+            let c = clean_ko(&c.text);
             if !c.is_empty() {
                 forms.push(c);
             }
         }
     }
     for a in si.find_all("abbreviation_info/abbreviation") {
-        let c = clean(&a.text);
+        let c = clean_ko(&a.text);
         if !c.is_empty() {
             forms.push(c);
         }
@@ -64,7 +64,7 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
     if !ko_def.is_empty() {
         sense.insert("ko_def".into(), ko_def.clone().into());
     }
-    let grammar: Vec<String> = si.find_all("grammar_info/grammar").iter().map(|g| clean(&g.text)).filter(|g| !g.is_empty()).collect();
+    let grammar: Vec<String> = si.find_all("grammar_info/grammar").iter().map(|g| clean_ko(&g.text)).filter(|g| !g.is_empty()).collect();
     if !grammar.is_empty() {
         sense.insert("note".into(), grammar.join("; ").into());
     }
@@ -79,14 +79,14 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
         tags.push(ty);
     }
     for r in si.find_all("region_info/region") {
-        let r = clean(&r.text);
+        let r = clean_ko(&r.text);
         if !r.is_empty() && !tags.contains(&r) {
             tags.push(r);
         }
     }
     let mut cats = Vec::new();
     for c in si.find_all("cat_info/cat") {
-        let ct = clean(&c.text);
+        let ct = clean_ko(&c.text);
         if !ct.is_empty() && ct != "없음" {
             if !cats.contains(&ct) {
                 cats.push(ct.clone());
@@ -123,7 +123,7 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
     let en: Vec<String> = si
         .kids("translation_info")
         .filter(|x| t(x, "language_type") == "영어")
-        .map(|x| clean(&x.t("translation")))
+        .map(|x| clean_ko(&x.t("translation")))
         .filter(|x| !x.is_empty())
         .collect();
     if !en.is_empty() {

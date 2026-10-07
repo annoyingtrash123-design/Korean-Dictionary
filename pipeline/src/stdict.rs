@@ -34,7 +34,7 @@ pub fn rel_word(w: &str) -> String {
 }
 
 pub fn t(n: &Node, path: &str) -> String {
-    clean(&n.t(path))
+    clean_ko(&n.t(path))
 }
 
 /// (hanja, origin_note) from `original_language_info` children of a word_info node.
@@ -82,7 +82,7 @@ pub fn parse_item(item: &Node) -> Option<Entry> {
 
     let mut prons: Vec<String> = Vec::new();
     for p in wi.find_all("pronunciation_info/pronunciation") {
-        let p = clean(&p.text);
+        let p = clean_ko(&p.text);
         if !p.is_empty() && !prons.contains(&p) {
             prons.push(p);
         }
@@ -91,7 +91,7 @@ pub fn parse_item(item: &Node) -> Option<Entry> {
     let mut forms = Vec::new();
     for path in ["conju_info/conjugation_info/conjugation", "conju_info/abbreviation_info/abbreviation"] {
         for c in wi.find_all(path) {
-            let c = clean(&c.text);
+            let c = clean_ko(&c.text);
             if !c.is_empty() {
                 forms.push(c);
             }
@@ -121,7 +121,7 @@ pub fn parse_item(item: &Node) -> Option<Entry> {
         let sense_pos = kr_pos_or_other(&ko_pos);
         for cp in pi.kids("comm_pattern_info") {
             let pattern = t(cp, "pattern_info/pattern");
-            let gram: Vec<String> = cp.find_all("grammar_info/grammar").iter().map(|g| clean(&g.text)).filter(|g| !g.is_empty()).collect();
+            let gram: Vec<String> = cp.find_all("grammar_info/grammar").iter().map(|g| clean_ko(&g.text)).filter(|g| !g.is_empty()).collect();
             let gram = gram.join("; ");
             for si in cp.kids("sense_info") {
                 let mut sense = Map::new();
@@ -145,7 +145,7 @@ pub fn parse_item(item: &Node) -> Option<Entry> {
                     tags.push(ty);
                 }
                 for c in si.find_all("cat_info/cat") {
-                    let ct = clean(&c.text);
+                    let ct = clean_ko(&c.text);
                     if !ct.is_empty() && ct != "없음" {
                         if !cats.contains(&ct) {
                             cats.push(ct.clone());

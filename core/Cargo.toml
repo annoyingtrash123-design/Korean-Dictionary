@@ -31,7 +31,9 @@ rsqlite-vfs = "0.2"
 
 # wasm-opt for speed, not size: every keystroke runs SQLite queries in this module.
 [package.metadata.wasm-pack.profile.release]
-wasm-opt = ["-O3", "--enable-bulk-memory", "--enable-nontrapping-float-to-int", "--enable-sign-ext", "--enable-mutable-globals"]
+# The enabled feature set must cover everything the stable rustc/LLVM emits by default
+# (reference-types and multivalue since Rust 1.82), or wasm-opt rejects the module.
+wasm-opt = ["-O3", "--enable-bulk-memory", "--enable-nontrapping-float-to-int", "--enable-sign-ext", "--enable-mutable-globals", "--enable-reference-types", "--enable-multivalue"]
 
 [dev-dependencies]
 flate2 = "1"

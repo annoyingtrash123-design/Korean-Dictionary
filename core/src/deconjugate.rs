@@ -4,11 +4,11 @@
 //! plus a context bit-mask that says what the string is allowed to be:
 //!
 //! * `EO`   - an 아/어-form (e.g. `가`, `먹어`, `봐`, `추워`) whose stem must be recovered from the
-//!            contracted last syllable;
+//!   contracted last syllable;
 //! * `NOUN` - a bare noun (after particles / copula);
 //! * the `PLAIN | LDROP | IR*` bits - a verb/adjective stem, with the stem restorations that are
-//!            allowed given the ending that was just removed (e.g. ㄹ-drop is only possible
-//!            before ㄴ ㅂ ㅅ ㅁ; ㅂ/ㄷ/ㅅ/르/ㅎ restoration before vowel-initial endings).
+//!   allowed given the ending that was just removed (e.g. ㄹ-drop is only possible
+//!   before ㄴ ㅂ ㅅ ㅁ; ㅂ/ㄷ/ㅅ/르/ㅎ restoration before vowel-initial endings).
 //!
 //! Every node is also a candidate (a stem + 다, or a noun). The search keeps the cheapest
 //! analysis per lemma. Over-generation is expected: the caller filters against the database.
@@ -540,7 +540,7 @@ fn restore(f: &[char], mask: u16) -> Vec<(Vec<char>, &'static str, i32)> {
     let b_first = mask & IRB != 0
         && (last == '우' || last == '오')
         && n >= 2
-        && decompose(f[n - 2]).map_or(false, |pd| pd.fin == 0);
+        && decompose(f[n - 2]).is_some_and(|pd| pd.fin == 0);
     if mask & PLAIN != 0 {
         v.push((f.to_vec(), "", if b_first { 1 } else { 0 }));
     }
@@ -556,7 +556,7 @@ fn restore(f: &[char], mask: u16) -> Vec<(Vec<char>, &'static str, i32)> {
     }
     if mask & IRB != 0 && (last == '우' || last == '오') && n >= 2 {
         let prev = f[n - 2];
-        if decompose(prev).map_or(false, |pd| pd.fin == 0) {
+        if decompose(prev).is_some_and(|pd| pd.fin == 0) {
             if let Some(c) = with_final(prev, 'ㅂ') {
                 v.push((cat1(&f[..n - 2], c), "ㅂ-irregular (ㅂ becomes 우)", 0));
             }

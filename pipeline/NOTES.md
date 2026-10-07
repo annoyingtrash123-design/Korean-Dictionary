@@ -6,6 +6,13 @@ cargo run --release -p kdict-pipeline -- build --work pipeline/.work --out pipel
 cargo test -p kdict-pipeline
 ```
 
+Quality gate: `build` exits non-zero when the result looks degraded (core entries < 150k, krdict < 50k, wikt < 20k,
+sentences < 10k, hanja_chars < 5k, stdict entries < 400k when stdict is built), so CI never publishes a silently
+half-empty dictionary. Local partial builds (missing sources, `--limit-files`) must pass `--allow-partial`; CI does not.
+Text cleanup: `common::clean` strips the markup NIKL / opendict leave in text (`<DR />`, `<br/>`, `<sub>`, `<FL>`, id tags
+such as `<sp_no>`), `clean_ko` (stdict/opendict) also drops the `{word}` markers. Core pack: `entries.cho` + index
+`entries_cho(cho, rank)` hold the initial consonants of `hw_norm` for choseong search (ㅎㄱ -> 학교).
+
 Layout: `src/{krdict,stdict,kaikki,kengdic,tatoeba,unihan,freq}.rs` parse one source each into `common::Entry`;
 `build.rs` writes the SQLite packs (schema in `schema.rs`, contract in docs/SCOPE.md); `pack.rs` gzips + chunks;
 `fetch.rs` downloads. `xml.rs` is a tiny streaming DOM (quick-xml) that yields one subtree per `<LexicalEntry>` / `<item>`.

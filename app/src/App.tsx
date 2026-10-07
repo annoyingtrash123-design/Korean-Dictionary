@@ -9,13 +9,14 @@ import { GrammarView, prefetchGrammar } from './views/Grammar';
 import { BookmarksView } from './views/Bookmarks';
 import { SettingsView, checkForUpdate } from './views/Settings';
 import { FirstRun } from './views/FirstRun';
-import { packStatus$, packsHint, refreshStatus } from './db/client';
+import { db, packStatus$, packsHint, refreshStatus, restartWorker } from './db/client';
 import { useStore } from './lib/store';
 import { useRoute, type Route } from './lib/router';
 import { settings } from './lib/settings';
 import { applyTheme } from './lib/theme';
-import { loadBookmarks } from './lib/bookmarks';
-import { loadHistory } from './lib/history';
+import { loadBookmarks, upgradeBookmarks } from './lib/bookmarks';
+import { loadHistory, upgradeHistory } from './lib/history';
+import { UpdateToast } from './components/UpdateToast';
 import { refFromParams } from './lib/entry-key';
 import { Empty } from './components/common';
 
@@ -37,7 +38,7 @@ export function App() {
   }, [s.theme]);
   useEffect(() => {
     loadBookmarks(); loadHistory();
-    refreshStatus().then((st) => { if (st.packs.core?.installed) setTimeout(prefetchGrammar, 1500); if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
+    refreshStatus().then((st) => { if (st.packs.core?.installed) { setTimeout(prefetchGrammar, 1500); const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
   }, []);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
   useEffect(() => {
@@ -53,7 +54,12 @@ export function App() {
 
   const hinted = packsHint().includes('core');
   if (!status && !hinted) return <div class="splash" aria-busy="true"><div class="spinner" /></div>;
-  if (status?.error) return <div class="firstrun"><Empty title="Could not open the dictionary storage">{status.error} — If the app is open in another tab, close it and reload.</Empty></div>;
+  if (status?.error) return (
+    <div class="firstrun">
+      <Empty title="Could not open the dictionary storage">{status.error} — If the app is open in another tab or window, close it, then retry.</Empty>
+      <button type="button" class="btn primary" onClick={() => { restartWorker(); refreshStatus().catch(() => undefined); }}>Retry</button>
+    </div>
+  );
   if (status && !status.packs.core?.installed) return <FirstRun />;
 
   return (
@@ -61,6 +67,7 @@ export function App() {
       <header class="topbar"><SearchBar /></header>
       <main ref={main} id="main" tabIndex={-1}>{view(route)}</main>
       <TabBar />
+      <UpdateToast />
     </div>
   );
 }

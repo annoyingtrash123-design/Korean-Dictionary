@@ -6,6 +6,8 @@ import { useStore } from '../lib/store';
 import { db } from '../db/client';
 import { FIRST_PAGE } from '../views/Results';
 
+export const MAX_QUERY = 100;
+
 export function SearchBar() {
   const q = useStore(query);
   const route = useRoute();
@@ -24,12 +26,14 @@ export function SearchBar() {
     else navigate(searchPath(v), onSearch);
   };
   return (
-    <form class="searchbar" role="search" onSubmit={(e) => { e.preventDefault(); go(q); input.current?.blur(); }}>
+    <form class="searchbar" role="search" onSubmit={(e) => { e.preventDefault(); go(q.slice(0, MAX_QUERY)); input.current?.blur(); }}>
       <Icon name="search" size={20} />
-      <input ref={input} type="search" enterkeyhint="search" inputMode="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck={false}
+      <input ref={input} type="search" enterkeyhint="search" inputMode="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck={false} maxLength={MAX_QUERY}
         placeholder="Search Korean, English or 漢字" aria-label="Search" value={q}
         onInput={(e) => {
-          const v = (e.currentTarget as HTMLInputElement).value;
+          const el = e.currentTarget as HTMLInputElement;
+          const v = el.value.slice(0, MAX_QUERY);   // truncate pasted text (maxlength also guards typing)
+          if (v !== el.value) el.value = v;
           if (v.trim()) void db.search(v, { limit: FIRST_PAGE }); // start now; Results joins this request
           query.set(v); go(v);
         }} />

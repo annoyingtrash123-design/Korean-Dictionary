@@ -132,10 +132,78 @@ pub fn html_unescape(s: &str) -> String {
     out
 }
 
-/// Unescape stray entities, collapse whitespace, trim.
+/// Markup tags that carry an internal id (`<sp_no>405343001</sp_no>`): dropped with their content.
+const DROP_TAGS: [&str; 5] = ["hanja", "word_no", "sp_no", "each_sense_no", "equ_no"];
+/// Line-break tags: become a space.
+const BREAK_TAGS: [&str; 3] = ["br", "dr", "hr"];
+/// Formatting tags: removed, the inner text stays.
+const KEEP_TAGS: [&str; 17] =
+    ["sub", "sup", "i", "b", "u", "em", "strong", "span", "a", "fl", "in", "equ", "p", "div", "font", "sp", "small"];
+
+/// Remove the XML/HTML-like markup that the NIKL / opendict dumps leave in text (`<DR />`,
+/// `<br/>`, `<sub>2</sub>`, `<FL>이와세군</FL>`, id tags). Only known tag names are touched, so
+/// literal angle brackets such as a title `<변강쇠전>` or "a < b" survive.
+pub fn strip_markup(s: &str) -> String {
+    if !s.contains('<') {
+        return s.to_string();
+    }
+    let mut out = String::with_capacity(s.len());
+    let mut i = 0;
+    while i < s.len() {
+        let rest = &s[i..];
+        if let Some(after) = rest.strip_prefix('<') {
+            if let Some(end) = after.find(['>', '<']).filter(|&e| rest.as_bytes()[1 + e] == b'>' && e <= 60) {
+                let inner = rest[1..1 + end].trim();
+                let closing = inner.starts_with('/');
+                let name = inner.trim_start_matches('/').trim_end_matches('/').split_whitespace().next().unwrap_or("").to_ascii_lowercase();
+                let skip_to = i + end + 2;
+                if BREAK_TAGS.contains(&name.as_str()) {
+                    out.push(' ');
+                    i = skip_to;
+                    continue;
+                }
+                if KEEP_TAGS.contains(&name.as_str()) {
+                    i = skip_to;
+                    continue;
+                }
+                if DROP_TAGS.contains(&name.as_str()) {
+                    if closing || inner.ends_with('/') {
+                        i = skip_to;
+                    } else {
+                        let close = format!("</{name}>");
+                        let tail = &s[skip_to..];
+                        i = match tail.to_ascii_lowercase().find(&close) {
+                            Some(p) => skip_to + p + close.len(),
+                            None => skip_to,
+                        };
+                    }
+                    continue;
+                }
+            }
+        }
+        let ch = rest.chars().next().unwrap();
+        out.push(ch);
+        i += ch.len_utf8();
+    }
+    out
+}
+
+/// Unescape stray entities, strip markup, collapse whitespace, trim.
 pub fn clean(s: &str) -> String {
     let s = if s.contains('&') { html_unescape(s) } else { s.to_string() };
+    let s = strip_markup(&s);
     s.split_whitespace().collect::<Vec<_>>().join(" ")
+}
+
+/// [`clean`] for the Korean dictionaries (stdict / opendict): additionally drops the `{word}`
+/// emphasis markers around dialect / quoted words, keeping the inner text.
+pub fn clean_ko(s: &str) -> String {
+    let c = clean(s);
+    if c.contains(['{', '}']) {
+        c.replace(['{', '}'], "")
+    } else {
+        c
+    }
 }
 
 /// Lookup key: headword with '-', '^', ' ', '·' removed.
@@ -370,6 +438,31 @@ pub fn choseong(s: &str) -> Option<String> {
             (0xAC00..=0xD7A3).contains(&u).then(|| CHO[((u - 0xAC00) / 588) as usize])
         })
         .collect()
+}
+
+#[cfg(test)]
+mod markup_tests {
+    use super::*;
+
+    #[test]
+    fn strips_known_markup_only() {
+        assert_eq!(clean("'날리다'의 방언<DR /> 제주 지역에서는…"), "'날리다'의 방언 제주 지역에서는…");
+        assert_eq!(clean("화학식 Ca(OH)<sub>2</sub>."), "화학식 Ca(OH)2.");
+        assert_eq!(clean("a<br/>b <br> c"), "a b c");
+        assert_eq!(clean("→ <word_no>601450</word_no>콘텐츠_"), "→ 콘텐츠_");
+        assert_eq!(clean("<hanja>4076_1</hanja>"), "");
+        assert_eq!(clean("‘<each_sense_no>22875,54856</each_sense_no>지역’"), "‘지역’");
+        assert_eq!(clean("<<FL>미스티</FL>>가 있다"), "<미스티>가 있다");
+        assert_eq!(clean("<변강쇠전>과 a < b"), "<변강쇠전>과 a < b");
+        assert_eq!(clean("see &lt;i&gt;x&lt;/i&gt; &amp; y"), "see x & y");
+        assert_eq!(clean("<span class=\"korean-webfont\">ṅ</span>ga"), "ṅga");
+    }
+
+    #[test]
+    fn ko_braces_removed() {
+        assert_eq!(clean_ko("마음이 {서글펐다}"), "마음이 서글펐다");
+        assert_eq!(clean("괄호 '{ }'"), "괄호 '{ }'"); // other sources keep literal braces
+    }
 }
 
 #[cfg(test)]

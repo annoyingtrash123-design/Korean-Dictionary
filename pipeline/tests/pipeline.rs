@@ -392,7 +392,7 @@ fn end_to_end_mini_build() {
         unihan: Some(zp),
     };
     let out = dir.path().join("out");
-    let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000 }).unwrap();
+    let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
 
     // --- manifest
     let packs = manifest["packs"].as_array().unwrap();
@@ -542,7 +542,7 @@ fn mini_build_without_optional_sources() {
     let dir = tempfile::tempdir().unwrap();
     let src = Sources { krdict: vec![fx("krdict_sample.xml")], ..Default::default() };
     let out = dir.path().join("out");
-    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000 }).unwrap();
+    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
     assert_eq!(m["packs"].as_array().unwrap().len(), 1);
     assert!(!out.join("site-data/stdict.sqlite.gz.000").exists());
 }

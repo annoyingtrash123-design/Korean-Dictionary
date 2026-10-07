@@ -62,7 +62,7 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
   };
   // Mobile browsers suspend a backgrounded download: remember that, and resume once when the app is visible again.
   const runRef = useRef(run); runRef.current = run;
-  const errRef = useRef<string>();
+  const errRef = useRef<string | undefined>(undefined);
   errRef.current = err;
   useEffect(() => {
     const on = () => {
