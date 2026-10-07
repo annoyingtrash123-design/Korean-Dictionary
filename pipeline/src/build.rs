@@ -1,7 +1,7 @@
 //! Build core.sqlite / stdict.sqlite and the site-data bundle.
 
 use crate::common::*;
-use crate::{freq, kaikki, kengdic, krdict, pack, schema, stdict, tatoeba, unihan};
+use crate::{freq, kaikki, kengdic, krdict, opendict, pack, schema, stdict, tatoeba, unihan};
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
 use serde_json::{json, Map, Value};
@@ -18,6 +18,7 @@ pub const ATTRIBUTION: &str = include_str!("../ATTRIBUTION.md");
 pub struct Sources {
     pub krdict: Vec<PathBuf>,
     pub stdict: Vec<PathBuf>,
+    pub opendict: Vec<PathBuf>,
     pub kaikki: Option<PathBuf>,
     pub kengdic: Option<PathBuf>,
     pub freq: Option<PathBuf>,
@@ -55,6 +56,10 @@ impl Sources {
         if stdict.is_empty() {
             log::warn!("no stdict XML files in {}", nikl.join("stdict").display());
         }
+        let opendict = xml_files(&nikl.join("opendict"), limit_files);
+        if opendict.is_empty() {
+            log::warn!("no opendict XML files in {} - skipping the opendict pack", nikl.join("opendict").display());
+        }
         let tat = work.join("tatoeba");
         let tatoeba = match (
             opt(tat.join("kor_sentences.tsv.bz2"), "Tatoeba kor sentences"),
@@ -67,6 +72,7 @@ impl Sources {
         Sources {
             krdict,
             stdict,
+            opendict,
             kaikki: opt(work.join("kaikki-ko.jsonl"), "kaikki Wiktionary JSONL"),
             kengdic: opt(work.join("kengdic.tsv"), "kengdic"),
             freq: opt(work.join("ko_50k.txt"), "FrequencyWords"),
@@ -104,7 +110,7 @@ pub struct Ranker {
     pub stems: HashMap<String, u32>,
 }
 
-const TIER_DEFAULT: [i64; 7] = [15_000, 25_000, 40_000, 55_000, 60_000, 70_000, 80_000];
+const TIER_DEFAULT: [i64; 8] = [15_000, 25_000, 40_000, 55_000, 60_000, 70_000, 80_000, 90_000];
 
 impl Ranker {
     pub fn new(ranks: HashMap<String, u32>) -> Ranker {
@@ -120,7 +126,8 @@ impl Ranker {
             },
             "wikt" => 4,
             "kengdic" => 5,
-            _ => 6,
+            "stdict" => 6,
+            _ => 7,
         }
     }
 
@@ -308,12 +315,15 @@ fn set_meta(conn: &Connection, k: &str, v: &str) -> Result<()> {
 pub struct PackResult {
     pub path: PathBuf,
     pub counts: Value,
+    /// "hw_norm\tpos" keys of every entry (used to dedupe opendict against stdict)
+    pub keys: HashSet<String>,
 }
 
 fn source_info(name: &str, n: i64) -> Value {
     let (lic, url) = match name {
         "krdict" => ("CC BY-SA 2.0 KR", "https://krdict.korean.go.kr (via https://github.com/spellcheck-ko/korean-dict-nikl)"),
         "stdict" => ("CC BY-SA 2.0 KR", "https://stdict.korean.go.kr (via https://github.com/spellcheck-ko/korean-dict-nikl)"),
+        "opendict" => ("CC BY-SA 2.0 KR", "https://opendict.korean.go.kr (via https://github.com/spellcheck-ko/korean-dict-nikl)"),
         "wikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/Korean/"),
         "kengdic" => ("MPL 2.0 / LGPL", "https://github.com/garfieldnate/kengdic"),
         "tatoeba" => ("CC BY 2.0 FR", "https://tatoeba.org"),
@@ -560,7 +570,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     set_meta(&conn, "sources", &Value::Object(sources).to_string())?;
     conn.execute_batch("COMMIT")?;
     finish_db(conn)?;
-    Ok(PackResult { path, counts })
+    Ok(PackResult { path, counts, keys: HashSet::new() })
 }
 
 // --- stdict pack ---------------------------------------------------------------
@@ -571,10 +581,12 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
     conn.execute_batch(schema::COMMON)?;
     conn.execute_batch("BEGIN")?;
     let mut c = Counters::default();
+    let mut keys: HashSet<String> = HashSet::new();
     for p in &src.stdict {
         let t = Instant::now();
         let before = c.entries;
         stdict::parse_file(p, |e| {
+            keys.insert(format!("{}\t{}", hw_norm(&e.headword), e.pos));
             let rank = ranker.rank(&e);
             insert_entry(&conn, &e, rank, false, &mut c)?;
             Ok(())
@@ -599,7 +611,57 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
     set_meta(&conn, "sources", &Value::Object(sources).to_string())?;
     conn.execute_batch("COMMIT")?;
     finish_db(conn)?;
-    Ok(PackResult { path, counts })
+    Ok(PackResult { path, counts, keys })
+}
+
+pub fn build_opendict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, built_at: &str, dedupe: &HashSet<String>) -> Result<PackResult> {
+    let path = out.join("opendict.sqlite");
+    let conn = open_db(&path)?;
+    conn.execute_batch(schema::COMMON)?;
+    conn.execute_batch("BEGIN")?;
+    let mut c = Counters::default();
+    let mut skipped = 0i64;
+    for p in &src.opendict {
+        let t = Instant::now();
+        let before = c.entries;
+        let skipped_before = skipped;
+        opendict::parse_file(p, |e| {
+            if dedupe.contains(&format!("{}\t{}", hw_norm(&e.headword), e.pos)) {
+                skipped += 1;
+                return Ok(());
+            }
+            let rank = ranker.rank(&e);
+            insert_entry(&conn, &e, rank, false, &mut c)?;
+            Ok(())
+        })
+        .with_context(|| format!("opendict {}", p.display()))?;
+        log::info!(
+            "opendict {}: {} entries, {} skipped as stdict duplicates ({:.1}s)",
+            p.file_name().unwrap().to_string_lossy(),
+            c.entries - before,
+            skipped - skipped_before,
+            t.elapsed().as_secs_f32()
+        );
+    }
+    conn.execute_batch(schema::COMMON_INDEXES)?;
+    let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
+    let mut counts = Map::new();
+    counts.insert("entries".into(), q("SELECT COUNT(*) FROM entries")?.into());
+    counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
+    counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
+    counts.insert("skipped_stdict_duplicates".into(), skipped.into());
+    let counts = Value::Object(counts);
+    let mut sources = Map::new();
+    sources.insert("opendict".into(), source_info("opendict", c.entries));
+    set_meta(&conn, "pack", "opendict")?;
+    set_meta(&conn, "schema", "1")?;
+    set_meta(&conn, "version", version)?;
+    set_meta(&conn, "built_at", built_at)?;
+    set_meta(&conn, "counts", &counts.to_string())?;
+    set_meta(&conn, "sources", &Value::Object(sources).to_string())?;
+    conn.execute_batch("COMMIT")?;
+    finish_db(conn)?;
+    Ok(PackResult { path, counts, keys: HashSet::new() })
 }
 
 // --- driver ------------------------------------------------------------------------
@@ -608,6 +670,16 @@ pub struct BuildOpts {
     pub out: PathBuf,
     pub sources: Sources,
     pub chunk_bytes: u64,
+}
+
+fn remove_stale(site: &Path, prefix: &str) -> Result<()> {
+    for e in fs::read_dir(site)? {
+        let e = e?;
+        if e.file_name().to_string_lossy().starts_with(prefix) {
+            fs::remove_file(e.path())?;
+        }
+    }
+    Ok(())
 }
 
 pub fn run(o: &BuildOpts) -> Result<Value> {
@@ -635,18 +707,22 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     log::info!("core.sqlite built: {}", core.counts);
     packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);
 
+    let mut dedupe: HashSet<String> = HashSet::new();
     if o.sources.stdict.is_empty() {
         log::warn!("no stdict files: skipping the stdict pack");
-        for e in fs::read_dir(&site)? {
-            let e = e?;
-            if e.file_name().to_string_lossy().starts_with("stdict.sqlite.gz.") {
-                fs::remove_file(e.path())?;
-            }
-        }
+        remove_stale(&site, "stdict.sqlite.gz.")?;
     } else {
         let st = build_stdict(&o.sources, &ranker, &o.out, &version, &built_at)?;
         log::info!("stdict.sqlite built: {}", st.counts);
         packs.push(pack::compress_pack("stdict", false, &st.path, &site, &st.counts, o.chunk_bytes)?);
+        dedupe = st.keys;
+    }
+    if o.sources.opendict.is_empty() {
+        remove_stale(&site, "opendict.sqlite.gz.")?;
+    } else {
+        let od = build_opendict(&o.sources, &ranker, &o.out, &version, &built_at, &dedupe)?;
+        log::info!("opendict.sqlite built: {}", od.counts);
+        packs.push(pack::compress_pack("opendict", false, &od.path, &site, &od.counts, o.chunk_bytes)?);
     }
 
     let manifest = json!({"version": version, "packs": packs});

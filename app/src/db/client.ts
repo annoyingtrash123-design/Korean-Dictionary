@@ -2,6 +2,8 @@
 import type { Evt, Req, Res } from './rpc';
 import type { Entry, GrammarRow, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence } from './types';
 import { createStore } from '../lib/store';
+import { settings } from '../lib/settings';
+import { activePacks } from '../lib/packs';
 
 let worker: Worker | undefined;
 let seq = 0;
@@ -34,14 +36,11 @@ export async function refreshStatus(): Promise<PackStatus> {
   packStatus$.set(s);
   return s;
 }
-export const installedPacks = (stdictEnabled: boolean): string[] => {
-  const s = packStatus$.get();
-  return ['core', ...(stdictEnabled ? ['stdict'] : [])].filter((p) => s?.packs[p]?.installed);
-};
+export const enabledPacks = (): string[] => activePacks(settings.get(), packStatus$.get());
 
 export const db = {
-  search: (q: string, o: { stdict: boolean; limit?: number }) => call<SearchResult>('search', q, { packs: installedPacks(o.stdict), limit: o.limit }),
-  getEntriesByHeadword: (hw: string, stdict: boolean) => call<Entry[]>('entriesByHeadword', hw, installedPacks(stdict)),
+  search: (q: string, o: { limit?: number } = {}) => call<SearchResult>('search', q, { packs: enabledPacks(), limit: o.limit }),
+  getEntriesByHeadword: (hw: string) => call<Entry[]>('entriesByHeadword', hw, enabledPacks()),
   getEntry: (source: string, id: number) => call<Entry | null>('entry', source, id),
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),
   wordsWithHanja: (ch: string, limit: number, offset = 0) => call<ResultRow[]>('wordsWithHanja', ch, limit, offset),

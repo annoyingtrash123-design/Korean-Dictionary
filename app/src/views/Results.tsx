@@ -1,3 +1,4 @@
+import { packsKey } from '../lib/packs';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { db, packStatus$ } from '../db/client';
 import { groupResults } from '../lib/merge';
@@ -19,11 +20,11 @@ export function Results({ q }: { q: string }) {
   useEffect(() => {
     let live = true;
     setBusy(true);
-    db.search(q, { stdict: s.stdict, limit: 50 }).then(
+    db.search(q, { limit: 50 }).then(
       (r) => { if (live) { setRes(r); setErr(undefined); setBusy(false); } },
       (e) => { if (live) { setErr(String(e?.message ?? e)); setBusy(false); } });
     return () => { live = false; };
-  }, [q, s.stdict, stamp]);
+  }, [q, packsKey(s), stamp]);
 
   const groups = useMemo(() => groupResults(res?.rows ?? []), [res]);
   const ruleFor = (hw: string) => res?.deconj?.find((d) => normHeadword(d.lemma) === normHeadword(hw))?.rule;

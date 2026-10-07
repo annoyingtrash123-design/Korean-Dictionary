@@ -6,6 +6,7 @@ pub mod freq;
 pub mod kaikki;
 pub mod kengdic;
 pub mod krdict;
+pub mod opendict;
 pub mod pack;
 pub mod schema;
 pub mod stdict;

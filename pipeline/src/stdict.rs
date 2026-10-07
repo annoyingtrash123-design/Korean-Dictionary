@@ -29,23 +29,16 @@ pub fn display_word(raw: &str) -> String {
     format!("{}{}{}", if lead { "-" } else { "" }, core, if trail { "-" } else { "" })
 }
 
-fn rel_word(w: &str) -> String {
+pub fn rel_word(w: &str) -> String {
     display_word(&split_homonym(w).0)
 }
 
-fn t(n: &Node, path: &str) -> String {
+pub fn t(n: &Node, path: &str) -> String {
     clean(&n.t(path))
 }
 
-pub fn parse_item(item: &Node) -> Option<Entry> {
-    let wi = item.child("word_info")?;
-    let (raw, homonym) = split_homonym(&t(wi, "word"));
-    let headword = display_word(&raw);
-    if headword.is_empty() {
-        return None;
-    }
-    let unit = { let u = t(wi, "word_unit"); if u.is_empty() { "단어".to_string() } else { u } };
-
+/// (hanja, origin_note) from `original_language_info` children of a word_info node.
+pub fn origin(wi: &Node) -> (Option<String>, Option<String>) {
     let mut parts: Vec<(String, String)> = Vec::new();
     let mut has_hanja_part = false;
     for ol in wi.kids("original_language_info") {
@@ -72,6 +65,20 @@ pub fn parse_item(item: &Node) -> Option<Entry> {
             .collect();
         origin_note = Some(v.join("; "));
     }
+
+    (hanja, origin_note)
+}
+
+pub fn parse_item(item: &Node) -> Option<Entry> {
+    let wi = item.child("word_info")?;
+    let (raw, homonym) = split_homonym(&t(wi, "word"));
+    let headword = display_word(&raw);
+    if headword.is_empty() {
+        return None;
+    }
+    let unit = { let u = t(wi, "word_unit"); if u.is_empty() { "단어".to_string() } else { u } };
+
+    let (hanja, origin_note) = origin(wi);
 
     let mut prons: Vec<String> = Vec::new();
     for p in wi.find_all("pronunciation_info/pronunciation") {

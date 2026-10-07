@@ -9,6 +9,7 @@ const post = (m: Res | Evt) => (self as unknown as Worker).postMessage(m);
 let initError: string | undefined;
 const ready = engine.init().catch((e) => { initError = String(e?.message ?? e); });
 let installing = false;
+let queue: Promise<void> = Promise.resolve();
 
 async function packStatus(): Promise<PackStatus> {
   await ready;
@@ -46,7 +47,12 @@ self.onmessage = async (ev: MessageEvent<Req>) => {
   try {
     const fn = methods[method];
     if (!fn) throw new Error('Unknown method ' + method);
-    post({ id, result: await fn(...args) });
+    // The engine is not re-entrant (overlapping calls give 'disk I/O error'), so queries run one at a time.
+    // install() runs outside the queue because it makes many engine calls of its own.
+    if (method === 'install') { post({ id, result: await fn(...args) }); return; }
+    const run = queue.then(() => fn(...args));
+    queue = run.then(() => undefined, () => undefined);
+    post({ id, result: await run });
   } catch (e) {
     post({ id, error: String((e as Error)?.message ?? e) });
   }

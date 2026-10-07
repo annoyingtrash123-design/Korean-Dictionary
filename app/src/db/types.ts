@@ -1,39 +1,41 @@
-export type Source = 'krdict' | 'wikt' | 'kengdic' | 'stdict';
-export const SOURCE_ORDER: Source[] = ['krdict', 'wikt', 'kengdic', 'stdict'];
+export type Source = 'krdict' | 'wikt' | 'kengdic' | 'stdict' | 'opendict';
+export const SOURCE_ORDER: Source[] = ['krdict', 'wikt', 'kengdic', 'stdict', 'opendict'];
 export const SOURCE_TITLE: Record<Source, string> = {
   krdict: 'krdict 한국어기초사전',
   wikt: 'Wiktionary',
   kengdic: 'kengdic',
   stdict: '표준국어대사전 (Korean)',
+  opendict: '우리말샘 (Korean)',
 };
-export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict' };
+export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict', opendict: '우리말샘' };
+/** Korean-only sources (lang 'ko'): never preferred over an English source. */
+export const isKoSource = (s: string) => s === 'stdict' || s === 'opendict';
 
 export interface Example { ko: string; en?: string; type?: 'phrase' | 'sentence' | 'dialogue' }
 export interface Rel { type: string; word: string }
 export interface Sense {
-  pos?: string; gloss?: string; def?: string; ko_def?: string; note?: string; pattern?: string;
+  pos?: string; gloss?: string; roman?: string; def?: string; ko_def?: string; note?: string; pattern?: string;
   tags?: string[]; examples?: Example[]; rel?: Rel[];
 }
 export interface EntryData {
   senses: Sense[]; related?: Rel[]; category?: string; etym?: string; origin_note?: string;
 }
 export interface EntryRow {
-  id: number; source: Source; headword: string; hw_norm: string; homonym: number | null;
-  hanja: string | null; pos: string | null; pron: string | null; lang: 'en' | 'ko';
-  level: number | null; rank: number; kind: 'word' | 'phrase' | 'idiom' | 'proverb' | 'grammar';
-  gloss: string | null;
+  id: number; source: Source; headword: string; hw_norm: string; homonym?: number;
+  hanja?: string; pos?: string; pron?: string; lang: 'en' | 'ko';
+  level?: number; rank: number; kind: 'word' | 'phrase' | 'idiom' | 'proverb' | 'grammar';
+  gloss?: string;
 }
 export interface Entry extends EntryRow { data: EntryData }
 
 export type MatchKind = 'exact' | 'form' | 'deconj' | 'prefix' | 'fts' | 'hanja';
 export interface ResultRow {
-  source: Source; id: number; headword: string; hanja: string | null; pos: string | null; level: number | null;
-  gloss: string | null; kind: EntryRow['kind']; pack: string; via?: MatchKind;
-  // optional extras (the Rust engine may omit them)
-  rank?: number; homonym?: number | null; pron?: string | null; lang?: 'en' | 'ko'; hw_norm?: string; score?: number;
+  source: Source; id: number; headword: string; hanja?: string; pos?: string; level?: number;
+  gloss?: string; kind: EntryRow['kind']; pack: string; via?: MatchKind;
+  rank: number; homonym?: number; pron?: string; lang: 'en' | 'ko'; hw_norm: string;
 }
-export interface HanjaChar { ch: string; readings: string | null; meaning_en: string | null; strokes: number | null; radical: string | null; word_count: number | null }
-export interface GrammarRow { id: number; entry_id: number | null; pattern: string; category: string; level: number | null; summary_en: string | null; sort: number | null }
+export interface HanjaChar { ch: string; readings?: string; meaning_en?: string; strokes?: number; radical?: string; word_count?: number }
+export interface GrammarRow { id: number; entry_id?: number; pattern: string; category: string; level?: number; summary_en?: string; sort?: number }
 export interface Sentence { ko: string; en: string | null; source: string | null; id?: number }
 
 export type SearchMode = 'hangul' | 'latin' | 'han' | 'empty';   // UI-side script detection

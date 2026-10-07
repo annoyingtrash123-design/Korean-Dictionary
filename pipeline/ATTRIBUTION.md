@@ -25,6 +25,15 @@ licensed separately.
 * Obtained from https://github.com/spellcheck-ko/korean-dict-nikl
   (original: https://stdict.korean.go.kr).
 
+## opendict — 우리말샘 (Urimalsaem, open Korean dictionary)
+* Publisher: National Institute of Korean Language (국립국어원, NIKL), user-contributed.
+* Content used: headwords, hanja, pronunciation, Korean definitions, dialect / region /
+  archaic / North Korean labels, categories, English translations and examples.
+  Examples that carry a `<source>` citation (quotations from copyrighted works) are **excluded**.
+  Entries that duplicate a stdict entry (same normalised headword and POS) are omitted.
+* Licence: Creative Commons Attribution-ShareAlike 2.0 Korea (CC BY-SA 2.0 KR).
+* Obtained from https://github.com/spellcheck-ko/korean-dict-nikl (original: https://opendict.korean.go.kr).
+
 ## Wiktionary (via kaikki.org)
 * Content used: Korean entries with English glosses, hanja forms, etymology,
   related terms and translated example sentences.

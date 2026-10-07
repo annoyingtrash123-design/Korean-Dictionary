@@ -10,10 +10,10 @@ let loaded: Promise<void> | undefined;
 export function loadHistory(): Promise<void> {
   return (loaded ??= get<HistoryItem[]>('history', userDb()).catch(() => undefined).then((v) => { if (Array.isArray(v)) history.set(v); }));
 }
-export async function recordHistory(it: Omit<HistoryItem, 'key' | 'ts'>): Promise<void> {
+export async function recordHistory(it: Omit<HistoryItem, 'key' | 'ts' | 'hanja' | 'gloss'> & { hanja?: string | null; gloss?: string | null }): Promise<void> {
   await loadHistory();
   const key = `${it.source}:${it.id}`;
-  const next = [{ ...it, key, ts: Date.now() }, ...history.get().filter((h) => h.key !== key)].slice(0, MAX_HISTORY);
+  const next = [{ ...it, hanja: it.hanja ?? null, gloss: it.gloss ?? null, key, ts: Date.now() }, ...history.get().filter((h) => h.key !== key)].slice(0, MAX_HISTORY);
   history.set(next);
   await set('history', next, userDb()).catch(() => undefined);
 }

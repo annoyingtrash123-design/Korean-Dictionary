@@ -1,7 +1,7 @@
 use kdict_pipeline::build::{self, BuildOpts, Sources};
 use kdict_pipeline::common::*;
 use kdict_pipeline::xml::{for_each, for_each_file};
-use kdict_pipeline::{freq, kaikki, kengdic, krdict, pack, stdict, tatoeba, unihan};
+use kdict_pipeline::{freq, kaikki, kengdic, krdict, opendict, pack, stdict, tatoeba, unihan};
 use rusqlite::Connection;
 use serde_json::Value;
 use std::io::{BufReader, Cursor, Write};
@@ -128,6 +128,44 @@ fn stdict_parsing() {
     assert_eq!(aseo.kind, "grammar");
     assert!(aseo.hanja.is_none());
     assert_eq!(aseo.data["origin_note"], "영어: ok");
+}
+
+#[test]
+fn opendict_parsing() {
+    let mut es = Vec::new();
+    opendict::parse_file(&fx("opendict_sample.xml"), |e| {
+        es.push(e);
+        Ok(())
+    })
+    .unwrap();
+    // 5 groups, one has no definition and is dropped
+    assert_eq!(es.len(), 4);
+    let hak = &es[0];
+    assert_eq!((hak.headword.as_str(), hak.source, hak.lang), ("학교", "opendict", "ko"));
+    assert_eq!(hak.hanja.as_deref(), Some("學校"));
+    assert_eq!(hak.forms, vec!["학교가"]);
+    // items of one group_code are merged and ordered by group_order
+    let senses = hak.data["senses"].as_array().unwrap();
+    assert_eq!(senses.len(), 2);
+    assert_eq!(senses[0]["ko_def"], "교사가 학생을 가르치는 기관.");
+    assert_eq!(senses[0]["rel"][0]["type"], "hypernym");
+    assert_eq!(senses[1]["en"], "school");
+    // the example with a <source> citation is excluded
+    let ex = senses[1]["examples"].as_array().unwrap();
+    assert_eq!(ex.len(), 1);
+    assert_eq!(ex[0]["ko"], "학교에 다닌다.");
+    assert_eq!(hak.data["category"], "교육");
+    // dialect label + region as tags, relation type mapped
+    let hk = &es[1];
+    assert_eq!(hk.data["senses"][0]["tags"], serde_json::json!(["방언", "경상"]));
+    assert_eq!(hk.data["senses"][0]["rel"][0]["type"], "synonym");
+    // '^' -> space, phrase, 북한어 tag
+    assert_eq!(es[2].headword, "가 는 길");
+    assert_eq!(es[2].kind, "phrase");
+    assert_eq!(es[2].data["senses"][0]["tags"][0], "북한어");
+    // composite POS "관·명" uses its first component; 옛말 label
+    assert_eq!(es[3].pos, "determiner");
+    assert_eq!(es[3].data["senses"][0]["tags"][0], "옛말");
 }
 
 #[test]
@@ -325,6 +363,7 @@ fn end_to_end_mini_build() {
     let src = Sources {
         krdict: vec![fx("krdict_sample.xml")],
         stdict: vec![fx("stdict_sample.xml")],
+        opendict: vec![fx("opendict_sample.xml")],
         kaikki: Some(fx("kaikki_sample.jsonl")),
         kengdic: Some(fx("kengdic_sample.tsv")),
         freq: Some(fx("ko_freq.txt")),
@@ -336,7 +375,8 @@ fn end_to_end_mini_build() {
 
     // --- manifest
     let packs = manifest["packs"].as_array().unwrap();
-    assert_eq!(packs.len(), 2);
+    assert_eq!(packs.len(), 3);
+    assert_eq!((packs[2]["id"].as_str(), packs[2]["required"].as_bool()), (Some("opendict"), Some(false)));
     assert_eq!((packs[0]["id"].as_str(), packs[0]["required"].as_bool()), (Some("core"), Some(true)));
     assert_eq!((packs[1]["id"].as_str(), packs[1]["required"].as_bool()), (Some("stdict"), Some(false)));
     let ver = manifest["version"].as_str().unwrap();
@@ -433,6 +473,17 @@ fn end_to_end_mini_build() {
     assert!(q::<i64>(&s, "SELECT COUNT(*) FROM hanja_words WHERE ch='加'") == 1);
     assert_eq!(q::<String>(&s, "SELECT value FROM meta WHERE key='pack'"), "stdict");
     assert_eq!(q::<String>(&s, "SELECT lang FROM entries LIMIT 1"), "ko");
+
+    // --- opendict pack: 학교 (noun) / 가는길 (phrase) duplicate stdict and are skipped; sourced example never stored
+    let o = Connection::open(out.join("opendict.sqlite")).unwrap();
+    assert_eq!(q::<i64>(&o, "SELECT COUNT(*) FROM entries"), 2); // 학교 + 가는 길 are stdict duplicates
+    assert_eq!(q::<i64>(&o, "SELECT COUNT(*) FROM entries WHERE hw_norm='학교'"), 0);
+    assert_eq!(q::<String>(&o, "SELECT headword FROM entries WHERE hw_norm='핵교'"), "핵교");
+    assert_eq!(q::<i64>(&o, "SELECT COUNT(*) FROM entries WHERE data LIKE '%어느 신문%' OR data LIKE '%신문에서 인용%'"), 0);
+    assert_eq!(q::<String>(&o, "SELECT value FROM meta WHERE key='pack'"), "opendict");
+    let oc: Value = serde_json::from_str(&q::<String>(&o, "SELECT value FROM meta WHERE key='counts'")).unwrap();
+    assert_eq!(oc["skipped_stdict_duplicates"], 2);
+    assert_eq!(q::<i64>(&o, "SELECT COUNT(*) FROM sqlite_master WHERE name IN ('entries_fts','sentences','grammar','hanja_chars')"), 0);
 }
 
 #[test]

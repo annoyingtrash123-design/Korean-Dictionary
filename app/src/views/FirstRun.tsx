@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'preact/hooks';
 import { cachedManifest, fetchManifest, refreshStatus } from '../db/client';
 import { fmtBytes } from '../lib/app-state';
-import { PackInstaller, PACK_LABEL } from '../components/PackInstaller';
+import { PackInstaller } from '../components/PackInstaller';
+import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
 import { settings, updateSettings } from '../lib/settings';
 import { useStore } from '../lib/store';
 import type { Manifest } from '../lib/types';
@@ -16,10 +17,12 @@ export function FirstRun() {
   }, [tick]);
 
   const core = manifest?.packs.find((p) => p.id === 'core');
-  const std = manifest?.packs.find((p) => p.id === 'stdict');
-  const ids = ['core', ...(std && s.stdict ? ['stdict'] : [])];
-  const dl = [core, std && s.stdict ? std : undefined].reduce((a, p) => a + (p?.gz_bytes ?? 0), 0);
-  const disk = [core, std && s.stdict ? std : undefined].reduce((a, p) => a + (p?.bytes ?? 0), 0);
+  const opt = optionalPacks(manifest);
+  const chosen = opt.filter((p) => packEnabled(s, p.id));
+  const ids = ['core', ...chosen.map((p) => p.id)];
+  const sel = [core, ...chosen];
+  const dl = sel.reduce((a, p) => a + (p?.gz_bytes ?? 0), 0);
+  const disk = sel.reduce((a, p) => a + (p?.bytes ?? 0), 0);
 
   return (
     <div class="firstrun">
@@ -32,14 +35,15 @@ export function FirstRun() {
       )}
       {manifest && core && (
         <div class="card">
-          <div class="pack-line"><div><strong>{PACK_LABEL.core}</strong><div class="muted small">English definitions, hanja, examples, grammar</div></div><span class="size">{fmtBytes(core.gz_bytes)}</span></div>
-          {std && (
-            <label class="pack-line toggle">
-              <div><strong>{PACK_LABEL.stdict}</strong><div class="muted small">Optional. Korean definitions for 400k+ words</div></div>
-              <span class="size">{fmtBytes(std.gz_bytes)}</span>
-              <input type="checkbox" role="switch" checked={s.stdict} onChange={(e) => updateSettings({ stdict: (e.currentTarget as HTMLInputElement).checked })} aria-label="Include the standard Korean dictionary" />
+          <div class="pack-line"><div><strong>{packLabel('core')}</strong><div class="muted small">{packDesc('core')}</div></div><span class="size">{fmtBytes(core.gz_bytes)}</span></div>
+          {opt.map((p) => (
+            <label key={p.id} class="pack-line toggle">
+              <div><strong>{packLabel(p.id)}</strong><div class="muted small">Optional. {packDesc(p.id)}</div></div>
+              <span class="size">{fmtBytes(p.gz_bytes)}</span>
+              <input type="checkbox" role="switch" checked={packEnabled(s, p.id)} aria-label={`Include ${packLabel(p.id)}`}
+                onChange={(e) => updateSettings({ packs: { ...s.packs, [p.id]: (e.currentTarget as HTMLInputElement).checked } })} />
             </label>
-          )}
+          ))}
           <p class="muted small total">Download {fmtBytes(dl)} · uses about {fmtBytes(disk)} on this device. Wi-Fi recommended. You can add or remove the optional pack later in Settings.</p>
           <PackInstaller manifest={manifest} packIds={ids} label="Download" onDone={() => { refreshStatus(); }} />
         </div>

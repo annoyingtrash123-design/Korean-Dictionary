@@ -4,7 +4,7 @@ import { fmtBytes } from '../lib/app-state';
 import { useStore } from '../lib/store';
 import type { Manifest } from '../lib/types';
 
-const LABEL: Record<string, string> = { core: 'Core dictionary', stdict: '표준국어대사전 (Korean–Korean)' };
+import { packLabel } from '../lib/packs';
 
 export function ProgressBar({ value, label }: { value: number; label: string }) {
   return (
@@ -40,8 +40,8 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
         const v = !pr ? 0 : pr.phase === 'done' ? 1 : pr.total ? pr.done / pr.total : 0;
         return (
           <div key={p.id} class="pack-prog">
-            <div class="pack-prog-head"><span>{LABEL[p.id] ?? p.id}</span><span class="muted small">{phase}</span></div>
-            <ProgressBar value={v} label={`${LABEL[p.id] ?? p.id} progress`} />
+            <div class="pack-prog-head"><span>{packLabel(p.id)}</span><span class="muted small">{phase}</span></div>
+            <ProgressBar value={v} label={`${packLabel(p.id)} progress`} />
           </div>
         );
       })}
@@ -50,4 +50,3 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
     </div>
   );
 }
-export { LABEL as PACK_LABEL };

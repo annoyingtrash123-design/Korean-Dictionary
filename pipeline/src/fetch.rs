@@ -95,9 +95,9 @@ pub fn fetch_nikl(work: &Path) -> Result<()> {
         git(&["clone", "--depth", "1", "--filter=blob:none", "--sparse", NIKL_URL, &dir.to_string_lossy()], None)?;
     }
     if dir.join(".git").exists() {
-        git(&["sparse-checkout", "set", "krdict", "stdict"], Some(&dir))?;
+        git(&["sparse-checkout", "set", "krdict", "stdict", "opendict"], Some(&dir))?;
         // make sure every blob in the sparse set is materialised (no-op when already present)
-        if let Err(e) = git(&["checkout", "HEAD", "--", "krdict", "stdict"], Some(&dir)) {
+        if let Err(e) = git(&["checkout", "HEAD", "--", "krdict", "stdict", "opendict"], Some(&dir)) {
             log::warn!("NIKL checkout: {e:#}");
         }
         // idempotent refresh; ignore failure (offline reruns keep what we have)
@@ -116,7 +116,7 @@ pub fn fetch_nikl(work: &Path) -> Result<()> {
 pub fn run(work: &Path) -> Result<()> {
     fs::create_dir_all(work)?;
     if let Err(e) = fetch_nikl(work) {
-        log::warn!("NIKL (krdict/stdict) fetch failed: {e:#}");
+        log::warn!("NIKL (krdict/stdict/opendict) fetch failed: {e:#}");
     }
     for (name, url) in FILES {
         let dest = work.join(name);

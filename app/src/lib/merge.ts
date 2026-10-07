@@ -1,13 +1,13 @@
-import { SOURCE_ORDER, type MatchKind, type ResultRow, type Source } from './types';
+import { SOURCE_ORDER, isKoSource, type MatchKind, type ResultRow, type Source } from './types';
 import { normHeadword } from './search-mode';
 
 export interface ResultGroup {
   key: string;
   headword: string;
-  hanja: string | null;
+  hanja?: string;
   rows: ResultRow[];       // all entries of this headword+hanja, in engine order
   primary: ResultRow;      // row used for navigation
-  level: number | null;
+  level?: number;
   pos: string[];
   gloss: string;
   sources: Source[];
@@ -36,18 +36,18 @@ export function groupResults(rows: ResultRow[]): ResultGroup[] {
     const key = `${normHeadword(r.headword)}|${r.hanja ?? ''}`;
     let g = groups.get(key);
     if (!g) {
-      g = { key, headword: r.headword, hanja: r.hanja, rows: [], primary: r, level: null, pos: [], gloss: '', sources: [], via: r.via ?? 'prefix' };
+      g = { key, headword: r.headword, hanja: r.hanja, rows: [], primary: r, level: undefined, pos: [], gloss: '', sources: [], via: r.via ?? 'prefix' };
       groups.set(key, g);
     }
     g.rows.push(r);
   }
   for (const g of groups.values()) {
     // Primary: an English-defined row (carries gloss + level) by source order; else first row.
-    const en = g.rows.filter((r) => r.source !== 'stdict');
+    const en = g.rows.filter((r) => r.lang !== 'ko' && !isKoSource(r.source));
     const pool = en.length ? en : g.rows;
     g.primary = [...pool].sort((a, b) => srcIdx(a.source) - srcIdx(b.source))[0];
     g.headword = g.primary.headword;
-    g.level = g.rows.map((r) => r.level).find((l) => l != null) ?? null;
+    g.level = g.rows.map((r) => r.level).find((l) => l != null);
     g.pos = [...new Set(g.rows.map((r) => r.pos).filter((p): p is string => !!p))].slice(0, 2);
     g.gloss = (g.primary.gloss ?? pool.find((r) => r.gloss)?.gloss ?? g.rows.find((r) => r.gloss)?.gloss ?? '').trim();
     g.sources = [...new Set(g.rows.map((r) => r.source))].sort((a, b) => srcIdx(a) - srcIdx(b));
@@ -57,8 +57,8 @@ export function groupResults(rows: ResultRow[]): ResultGroup[] {
 }
 
 /** Entries shown on the entry page: same headword + same hanja as the primary, ordered by source. */
-export function sameWordRows<T extends { headword: string; hanja: string | null; source: Source; homonym: number | null; id: number }>(
-  all: T[], primary: { headword: string; hanja: string | null },
+export function sameWordRows<T extends { headword: string; hanja?: string | null; source: Source; homonym?: number | null; id: number }>(
+  all: T[], primary: { headword: string; hanja?: string | null },
 ): T[] {
   const k = normHeadword(primary.headword);
   return all

@@ -1,3 +1,4 @@
+import { packsKey } from '../lib/packs';
 import { useEffect, useState } from 'preact/hooks';
 import { db, packStatus$ } from '../db/client';
 import { useAsync } from '../lib/useAsync';
@@ -22,17 +23,17 @@ export function EntryView({ source, id, hw, word }: { source?: string; id?: numb
     let all: Entry[] = [];
     if (source && id != null) {
       primary = await db.getEntry(source, id);
-      if (primary) all = await db.getEntriesByHeadword(primary.headword, s.stdict);
+      if (primary) all = await db.getEntriesByHeadword(primary.headword);
     } else if (word) {
-      all = await db.getEntriesByHeadword(word, s.stdict);
-      primary = [...all].filter((e) => e.source !== 'stdict').sort((a, b) => a.rank - b.rank)[0] ?? all[0] ?? null;
+      all = await db.getEntriesByHeadword(word);
+      primary = [...all].filter((e) => e.lang !== "ko").sort((a, b) => a.rank - b.rank)[0] ?? all[0] ?? null;
     }
-    if (!primary && hw) all = await db.getEntriesByHeadword(hw, s.stdict);
+    if (!primary && hw) all = await db.getEntriesByHeadword(hw);
     if (!primary) return { primary: null, entries: all };
     const entries = sameWordRows(all, primary);
     if (!entries.some((e) => e.source === primary!.source && e.id === primary!.id)) entries.push(primary);
     return { primary, entries };
-  }, [source, id, word, s.stdict, stamp]);
+  }, [source, id, word, packsKey(s), stamp]);
 
   const primary = r.data?.primary;
   useEffect(() => {
@@ -139,7 +140,8 @@ function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolea
     <li class="sense">
       <div class="sense-body">
         {s.pos && <Pos pos={s.pos} />}
-        {s.gloss && <span class="gloss">{s.gloss}</span>}
+        {s.gloss ? <span class="gloss">{s.gloss}</span> : s.roman ? <span class="roman">{s.roman}</span> : null}
+        {s.tags?.length ? <span class="tags">{s.tags.map((t) => <span key={t} class="tag">{t}</span>)}</span> : null}
         {s.def && <div class="def">{s.def}</div>}
         {s.ko_def && (showKo || isKo) && <div class={isKo ? 'def ko-main hangul' : 'def ko'} lang="ko">{s.ko_def}</div>}
         {s.note && <div class="note">{s.note}</div>}

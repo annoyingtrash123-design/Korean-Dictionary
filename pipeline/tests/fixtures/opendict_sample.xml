@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel>
+	<title>우리말샘</title>
+	<total>5</total>
+	<item>
+		<target_code>9001</target_code>
+		<group_code>10</group_code>
+		<group_order>2</group_order>
+		<link><![CDATA[http://opendict.korean.go.kr/dictionary/view?sense_no=9001]]></link>
+		<wordInfo>
+			<word><![CDATA[학교]]></word>
+			<word_unit>어휘</word_unit>
+			<word_type>한자어</word_type>
+			<original_language_info>
+				<original_language><![CDATA[學校]]></original_language>
+				<language_type>한자</language_type>
+			</original_language_info>
+		</wordInfo>
+		<senseInfo>
+			<sense_no>002</sense_no>
+			<pos>명사</pos>
+			<type>일반어</type>
+			<definition><![CDATA[학문을 가르치는 곳.]]></definition>
+			<example_info>
+				<example><![CDATA[학교에 다닌다.]]></example>
+			</example_info>
+			<example_info>
+				<example><![CDATA[신문에서 인용한 문장.]]></example>
+				<source><![CDATA[어느 신문 2020년]]></source>
+			</example_info>
+			<translation_info>
+				<translation><![CDATA[school]]></translation>
+				<language_type>영어</language_type>
+			</translation_info>
+		</senseInfo>
+	</item>
+	<item>
+		<target_code>9000</target_code>
+		<group_code>10</group_code>
+		<group_order>1</group_order>
+		<wordInfo>
+			<word><![CDATA[학교]]></word>
+			<word_unit>어휘</word_unit>
+			<word_type>한자어</word_type>
+			<original_language_info>
+				<original_language><![CDATA[學校]]></original_language>
+				<language_type>한자</language_type>
+			</original_language_info>
+			<pronunciation_info>
+				<pronunciation><![CDATA[학꾜]]></pronunciation>
+			</pronunciation_info>
+			<conju_info>
+				<conjugation_info>
+					<conjugation><![CDATA[학교가]]></conjugation>
+				</conjugation_info>
+			</conju_info>
+		</wordInfo>
+		<senseInfo>
+			<sense_no>001</sense_no>
+			<pos>명사</pos>
+			<type>일반어</type>
+			<definition><![CDATA[교사가 학생을 가르치는 기관.]]></definition>
+			<definition_original><![CDATA[교사가 <FL>학생</FL>을 가르치는 기관.]]></definition_original>
+			<cat_info><cat>교육</cat></cat_info>
+			<relation_info>
+				<word><![CDATA[교육-기관001]]></word>
+				<type>상위어</type>
+				<link_target_code>1</link_target_code>
+			</relation_info>
+		</senseInfo>
+	</item>
+	<item>
+		<target_code>9002</target_code>
+		<group_code>11</group_code>
+		<group_order>1</group_order>
+		<wordInfo>
+			<word><![CDATA[핵교]]></word>
+			<word_unit>어휘</word_unit>
+			<word_type>한자어</word_type>
+		</wordInfo>
+		<senseInfo>
+			<sense_no>001</sense_no>
+			<pos>명사</pos>
+			<type>방언</type>
+			<definition><![CDATA[‘학교’의 방언.]]></definition>
+			<region_info><region><![CDATA[경상]]></region></region_info>
+			<relation_info>
+				<word><![CDATA[학교]]></word>
+				<type>비슷한말</type>
+			</relation_info>
+		</senseInfo>
+	</item>
+	<item>
+		<target_code>9003</target_code>
+		<group_code>12</group_code>
+		<group_order>1</group_order>
+		<wordInfo>
+			<word><![CDATA[가^는^길]]></word>
+			<word_unit>구</word_unit>
+		</wordInfo>
+		<senseInfo>
+			<sense_no>001</sense_no>
+			<type>북한어</type>
+			<definition><![CDATA[가고 있는 도중.]]></definition>
+		</senseInfo>
+	</item>
+	<item>
+		<target_code>9004</target_code>
+		<group_code>13</group_code>
+		<group_order>1</group_order>
+		<wordInfo>
+			<word><![CDATA[아름]]></word>
+			<word_unit>어휘</word_unit>
+		</wordInfo>
+		<senseInfo>
+			<sense_no>001</sense_no>
+			<pos>관·명</pos>
+			<type>옛말</type>
+			<definition><![CDATA[‘아름다움’의 옛말.]]></definition>
+		</senseInfo>
+	</item>
+	<item>
+		<target_code>9005</target_code>
+		<group_code>14</group_code>
+		<group_order>1</group_order>
+		<wordInfo>
+			<word><![CDATA[정의 없음]]></word>
+			<word_unit>어휘</word_unit>
+		</wordInfo>
+		<senseInfo>
+			<sense_no>001</sense_no>
+			<pos>명사</pos>
+			<type>일반어</type>
+		</senseInfo>
+	</item>
+</channel>

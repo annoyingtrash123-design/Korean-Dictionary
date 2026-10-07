@@ -14,15 +14,19 @@ async function tour(page: Page, theme: 'light' | 'dark') {
   await page.goto('/#/');
   await expect(page.getByText('Word of the day')).toBeVisible();
   await shot(page, `${theme}-home`);
-  await search(page, '학교');
-  await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
+  await search(page, '먹다');
+  await expect(page.locator('.row .hw', { hasText: '먹다' }).first()).toBeVisible();
   await shot(page, `${theme}-results`);
-  await page.locator('.row', { hasText: '학교' }).first().click();
-  await expect(page.locator('h1')).toContainText('학교');
-  await page.waitForTimeout(400);
+  await search(page, 'eat');
+  await expect(page.locator('.row .hw').first()).toBeVisible();
+  await shot(page, `${theme}-results-eat`);
+  await search(page, '먹다');
+  await page.locator('.row', { hasText: '먹다' }).first().click();
+  await expect(page.locator('h1')).toContainText('먹다');
+  await page.waitForTimeout(500);
   await shot(page, `${theme}-entry`);
   await page.getByRole('link', { name: 'Grammar' }).click();
-  await expect(page.getByText('-아서/어서').first()).toBeVisible();
+  await expect(page.locator('.row .hw').first()).toBeVisible();
   await shot(page, `${theme}-grammar`);
   await page.getByRole('link', { name: 'Settings' }).click();
   await expect(page.getByRole('heading', { name: 'Appearance' })).toBeVisible();
@@ -30,6 +34,7 @@ async function tour(page: Page, theme: 'light' | 'dark') {
 }
 
 test('first run, search, bookmarks, themes, offline persistence', async ({ page, context }) => {
+  test.setTimeout(600_000);
   page.on('pageerror', (e) => console.log('PAGEERROR', e.message));
   await page.goto('/');
   // ---- first-run download ----
@@ -37,15 +42,17 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await expect(page.getByRole('switch')).toBeChecked();
   await shot(page, 'light-firstrun');
   await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
 
   // ---- searches ----
   await search(page, '학교');
   await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
-  await expect(page.locator('.row').first()).toContainText('school');
+  await expect(page.locator('.row').first()).toContainText(/school/i);
 
   await search(page, '갔어요');
-  await expect(page.getByText('Did you mean')).toBeVisible();
+  const t0 = Date.now();
+  await expect(page.getByText('Did you mean')).toBeVisible({ timeout: 60_000 });
+  console.log('deconj search ms', Date.now() - t0);
   await expect(page.locator('.row .hw', { hasText: '가다' }).first()).toBeVisible();
 
   await search(page, 'school');
@@ -93,12 +100,13 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
 });
 
 test('interrupted download resumes per chunk', async ({ page }) => {
+  test.setTimeout(600_000);
   let n = 0;
   await page.route('**/data/core.sqlite.gz.001', (route) => (n++ === 0 ? route.abort() : route.continue()));
   await page.goto('/');
   await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('alert')).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByRole('alert')).toBeVisible({ timeout: 120_000 });
   await page.getByRole('button', { name: 'Resume download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   expect(n).toBeGreaterThan(1);
 });

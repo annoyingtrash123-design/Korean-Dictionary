@@ -4,7 +4,9 @@ import { currentColor } from '../lib/theme';
 import { useStore } from '../lib/store';
 import { db, fetchManifest, packStatus$ } from '../db/client';
 import { fmtBytes, update } from '../lib/app-state';
-import { PackInstaller, PACK_LABEL } from '../components/PackInstaller';
+import { PackInstaller } from '../components/PackInstaller';
+import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
+import { cachedManifest } from '../db/client';
 import { UpdateBanner } from '../components/UpdateBanner';
 import { bookmarks, exportBookmarks, importBookmarks } from '../lib/bookmarks';
 import { useAsync } from '../lib/useAsync';
@@ -37,8 +39,11 @@ export function SettingsView() {
   const [theme, setTheme] = useState(s.theme);
   useEffect(() => setTheme(s.theme), [s.theme]);
 
-  const core = st?.packs.core, std = st?.packs.stdict;
-  const manifest = upd.manifest;
+  const core = st?.packs.core;
+  const manifest = upd.manifest ?? cachedManifest();
+  const installedIds = Object.keys(st?.packs ?? {}).filter((id) => id !== 'core' && st!.packs[id].installed);
+  const optIds = [...new Set([...optionalPacks(manifest).map((p) => p.id), ...installedIds])];
+  const allInstalled = ['core', ...installedIds];
   const setColor = (k: ColorKey, v: string) => updateSettings({ colors: { ...s.colors, [k]: v } });
 
   const doCheck = async () => { setMsg('Checking…'); const m = await checkForUpdate(); setMsg(m ? (update.get().available ? 'Update available.' : 'Dictionary is up to date.') : 'Could not reach the server (offline?).'); };
@@ -79,15 +84,23 @@ export function SettingsView() {
 
       <section class="group">
         <h2>Dictionaries</h2>
-        <div class="pack-line"><div><strong>{PACK_LABEL.core}</strong><div class="muted small">{core ? `v${core.version} · ${fmtBytes(core.bytes)}` : 'Not installed'}</div></div></div>
-        <div class="pack-line">
-          <div><strong>{PACK_LABEL.stdict}</strong><div class="muted small">{std ? `v${std.version} · ${fmtBytes(std.bytes)}` : 'Not downloaded'}</div></div>
-          {std
-            ? <input type="checkbox" role="switch" aria-label="Use 표준국어대사전 in search" checked={s.stdict} onChange={(e) => updateSettings({ stdict: (e.currentTarget as HTMLInputElement).checked })} />
-            : <button type="button" class="btn" onClick={() => startInstall(['stdict'])}>Download</button>}
-        </div>
-        {std && <button type="button" class="link danger" onClick={async () => { if (confirm('Delete the 표준국어대사전 data from this device?')) { await db.removePack('stdict'); updateSettings({ stdict: false }); } }}>Delete 표준국어대사전 data</button>}
-        {installing && manifest && <PackInstaller manifest={manifest} packIds={installing} label={upd.available ? 'Update' : 'Download'} onDone={() => { setInstalling(null); update.set((u) => ({ ...u, available: false })); updateSettings({ stdict: installing.includes('stdict') ? true : s.stdict }); checkForUpdate(); }} />}
+        <div class="pack-line"><div><strong>{packLabel('core')}</strong><div class="muted small">{core ? `v${core.version} · ${fmtBytes(core.bytes)}` : 'Not installed'}</div></div></div>
+        {optIds.map((id) => {
+          const inst = st?.packs[id]; const mp = manifest?.packs.find((p) => p.id === id);
+          return (
+            <div key={id} class="pack-opt">
+              <div class="pack-line">
+                <div><strong>{packLabel(id)}</strong><div class="muted small">{packDesc(id)}</div>
+                  <div class="muted small">{inst?.installed ? `v${inst.version} · ${fmtBytes(inst.bytes)} on device` : mp ? `Not downloaded · ${fmtBytes(mp.gz_bytes)} download` : 'Not downloaded'}</div></div>
+                {inst?.installed
+                  ? <input type="checkbox" role="switch" aria-label={`Use ${packLabel(id)} in search`} checked={packEnabled(s, id)} onChange={(e) => updateSettings({ packs: { ...s.packs, [id]: (e.currentTarget as HTMLInputElement).checked } })} />
+                  : <button type="button" class="btn" onClick={() => startInstall([id])}>Download</button>}
+              </div>
+              {inst?.installed && <button type="button" class="link danger" onClick={async () => { if (confirm(`Delete ${packLabel(id)} from this device?`)) { await db.removePack(id); updateSettings({ packs: { ...s.packs, [id]: false } }); } }}>Delete data</button>}
+            </div>
+          );
+        })}
+        {installing && manifest && <PackInstaller manifest={manifest} packIds={installing} label={upd.available ? 'Update' : 'Download'} onDone={() => { const ids = installing; setInstalling(null); update.set((u) => ({ ...u, available: false })); updateSettings({ packs: { ...s.packs, ...Object.fromEntries(ids.filter((i) => i !== 'core' && !installedIds.includes(i)).map((i) => [i, true])) } }); checkForUpdate(); }} />}
       </section>
 
       <section class="group">
@@ -99,8 +112,8 @@ export function SettingsView() {
         </dl>
         <div class="btn-row">
           <button type="button" class="btn" onClick={doCheck}>Check for update</button>
-          {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(['core', ...(std ? ['stdict'] : [])])}>Update now</button>}
-          <button type="button" class="btn" onClick={() => startInstall(['core', ...(std ? ['stdict'] : [])])}>Re-download</button>
+          {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(allInstalled)}>Update now</button>}
+          <button type="button" class="btn" onClick={() => startInstall(allInstalled)}>Re-download</button>
         </div>
         {msg && <p class="muted small" role="status">{msg}</p>}
       </section>

@@ -5,11 +5,22 @@ import { useStore } from '../lib/store';
 import { entryPath, href } from '../lib/router';
 import { Hanja, LevelBadge, Pos } from '../components/common';
 import { UpdateBanner } from '../components/UpdateBanner';
+import type { ResultRow } from '../db/types';
 import { todayStr } from '../lib/app-state';
+
+/** Word of the day is cached per date (the query is slow on the full pack) and fetched shortly after first paint. */
+async function wordOfDay(): Promise<ResultRow | null> {
+  const day = todayStr();
+  try { const c = JSON.parse(localStorage.getItem('kd.wotd') || 'null'); if (c?.day === day && c.row) return c.row; } catch { /* ignore */ }
+  await new Promise((r) => setTimeout(r, 600));
+  const row = await db.randomWordOfDay(day);
+  try { if (row) localStorage.setItem('kd.wotd', JSON.stringify({ day, row })); } catch { /* ignore */ }
+  return row;
+}
 
 export function Home() {
   const hist = useStore(history);
-  const wotd = useAsync(() => db.randomWordOfDay(todayStr()), []);
+  const wotd = useAsync(() => wordOfDay(), []);
   const w = wotd.data;
   return (
     <div class="page">

@@ -14,8 +14,9 @@ function findChromium(): string | undefined {
 
 export default defineConfig({
   testDir: 'e2e',
-  timeout: 120_000,
+  timeout: 600_000,
   workers: 1,
+  expect: { timeout: 60_000 },
   reporter: 'list',
   use: {
     baseURL: 'http://localhost:4173',

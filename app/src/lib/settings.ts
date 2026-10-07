@@ -7,15 +7,23 @@ export interface Settings {
   colors: Partial<Record<ColorKey, string>>;
   fontSize: number;
   showKoDef: boolean;
-  stdict: boolean;
+  /** optional dictionary packs enabled for search, by pack id */
+  packs: Record<string, boolean>;
 }
 export const SETTINGS_KEY = 'kd.settings';
-export const DEFAULT_SETTINGS: Settings = { theme: 'system', colors: {}, fontSize: 17, showKoDef: true, stdict: true };
+export const DEFAULT_SETTINGS: Settings = { theme: 'system', colors: {}, fontSize: 17, showKoDef: true, packs: { stdict: true, opendict: false } };
+
+/** Fill defaults; migrate the old boolean `stdict` into `packs.stdict`. */
+export function migrateSettings(raw: any): Settings {
+  const packs = { ...DEFAULT_SETTINGS.packs, ...(raw.packs ?? {}) };
+  if (typeof raw.stdict === 'boolean' && !raw.packs) packs.stdict = raw.stdict;
+  const { stdict: _old, ...rest } = raw;
+  return { ...DEFAULT_SETTINGS, ...rest, packs, colors: { ...(rest.colors ?? {}) } };
+}
 
 export function loadSettings(): Settings {
   try {
-    const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
-    return { ...DEFAULT_SETTINGS, ...raw, colors: { ...(raw.colors ?? {}) } };
+    return migrateSettings(JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}'));
   } catch {
     return { ...DEFAULT_SETTINGS };
   }

@@ -52,12 +52,12 @@ export function loadBookmarks(): Promise<void> {
 }
 export const isBookmarked = (d: BookmarkData, source: string, id: number) => d.items.some((b) => b.key === `${source}:${id}`);
 
-export const addBookmark = (b: Omit<Bookmark, 'key' | 'added' | 'folder'> & { folder?: string }) =>
+export const addBookmark = (b: Omit<Bookmark, 'key' | 'added' | 'folder' | 'hanja' | 'gloss'> & { hanja?: string | null; gloss?: string | null; folder?: string }) =>
   mutate((d) => {
     const key = `${b.source}:${b.id}`;
     const folder = d.folders.some((f) => f.id === b.folder) ? b.folder! : DEFAULT_FOLDER.id;
     const rest = d.items.filter((i) => i.key !== key);
-    return { ...d, items: [{ ...b, key, folder, added: Date.now() }, ...rest] };
+    return { ...d, items: [{ ...b, hanja: b.hanja ?? null, gloss: b.gloss ?? null, key, folder, added: Date.now() }, ...rest] };
   });
 export const removeBookmark = (source: string, id: number) =>
   mutate((d) => ({ ...d, items: d.items.filter((i) => i.key !== `${source}:${id}`) }));

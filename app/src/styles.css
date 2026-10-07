@@ -133,6 +133,11 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .sense-n { flex: none; width: 1.5em; color: var(--muted); font-size: .85em; font-variant-numeric: tabular-nums; padding-top: .15em; }
 .sense-body { flex: 1; min-width: 0; }
 .gloss { font-weight: 650; margin-right: 6px; }
+.roman { font-style: italic; color: var(--muted); margin-right: 6px; }
+.tags { display: inline-flex; flex-wrap: wrap; gap: 4px; vertical-align: middle; }
+.tag { font-size: .72em; padding: 1px 7px; border-radius: 9px; background: var(--surface-2); color: var(--muted); font-family: var(--font-ko); }
+.pack-opt { border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+.pack-opt .pack-line { min-height: 56px; padding: 6px 0; }
 .def { margin-top: 2px; line-height: 1.45; }
 .def.ko { font-size: .88em; color: var(--muted); font-family: var(--font-ko); }
 .def.ko-main { font-size: 1em; }

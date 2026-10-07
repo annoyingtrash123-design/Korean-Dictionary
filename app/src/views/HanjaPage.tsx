@@ -1,3 +1,4 @@
+import { packsKey } from '../lib/packs';
 import { useState } from 'preact/hooks';
 import { db } from '../db/client';
 import { useAsync } from '../lib/useAsync';
@@ -15,7 +16,7 @@ export function HanjaPage({ ch }: { ch: string }) {
     const rows = await db.wordsWithHanja(ch, PAGE, 0);
     setExtra({ ch, rows: [], more: rows.length === PAGE });
     return rows;
-  }, [ch, s.stdict]);
+  }, [ch, packsKey(s)]);
   const rows = [...(first.data ?? []), ...(extra.ch === ch ? extra.rows : [])];
   const loadMore = async () => {
     const next = await db.wordsWithHanja(ch, PAGE, rows.length);

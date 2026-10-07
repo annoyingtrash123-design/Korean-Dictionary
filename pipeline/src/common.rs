@@ -162,7 +162,22 @@ pub fn kr_pos(ko: &str) -> Option<&'static str> {
 }
 
 pub fn kr_pos_or_other(ko: &str) -> &'static str {
-    kr_pos(ko).unwrap_or("other")
+    if let Some(p) = kr_pos(ko) {
+        return p;
+    }
+    // opendict composite POS such as "관·명": use the first component
+    match ko.split('·').next().unwrap_or("") {
+        "명" => "noun",
+        "동" => "verb",
+        "형" => "adjective",
+        "부" => "adverb",
+        "관" => "determiner",
+        "감" => "interjection",
+        "대" => "pronoun",
+        "수" => "numeral",
+        "조" => "particle",
+        _ => "other",
+    }
 }
 
 /// lexicalUnit that overrides POS for non-word units.
@@ -210,6 +225,10 @@ pub fn kr_rel(ty: &str) -> String {
         "본말" => "full form",
         "파생어" => "derived",
         "부표제어" => "sub-entry",
+        "상위어" => "hypernym",
+        "하위어" => "hyponym",
+        "방언" => "dialect",
+        "옛말" => "archaic form",
         "☞(가 보라)" => "reference",
         other => other,
     }

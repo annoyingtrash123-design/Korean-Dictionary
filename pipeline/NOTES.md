@@ -16,7 +16,7 @@ kaikki / Tatoeba / Unihan parsers are tested only against hand-written fixtures 
 sandbox); the first CI run is their first contact with real data. Each optional source that is missing or fails only logs a WARNING.
 
 ## Fetch
-- NIKL: blobless sparse clone `git clone --depth 1 --filter=blob:none --sparse https://github.com/spellcheck-ko/korean-dict-nikl work/nikl`, then `sparse-checkout set krdict stdict` (never `opendict/`). krdict/001..011.xml (~35 MB each), stdict/005000.xml.. (~88 files, ~8 MB each).
+- NIKL: blobless sparse clone `git clone --depth 1 --filter=blob:none --sparse https://github.com/spellcheck-ko/korean-dict-nikl work/nikl`, then `sparse-checkout set krdict stdict opendict` (`opendict/` is included for the optional opendict pack). krdict/001..011.xml (~35 MB each), stdict/005000.xml.. (~88 files, ~8 MB each).
 - Files land in `work/`: `kengdic.tsv`, `ko_50k.txt`, `kaikki-ko.jsonl`, `Unihan.zip`, `tatoeba/{kor_sentences.tsv.bz2,eng_sentences.tsv.bz2,links.tar.bz2}`. Existing non-empty files are skipped (delete to refresh). Download uses ureq (rustls); on failure it retries once and then falls back to `curl` if installed.
 - To reuse an existing NIKL checkout: symlink it to `work/nikl` (it needs `krdict/` and `stdict/` directly inside).
 
@@ -32,6 +32,13 @@ sandbox); the first CI run is their first contact with real data. Each optional 
 - item > target_code, word_info > word, word_unit, original_language_info*, pronunciation_info, conju_info*, lexical_info*, relation_info, origin, allomorph, pos_info* > pos, comm_pattern_info* > pattern_info/pattern, grammar_info/grammar, sense_info* > type, definition, cat_info/cat ('없음' = none), example_info* > example (+ optional `source` -> **excluded**).
 - word: trailing 1-3 digit homonym number ("가03"), '-' morpheme marker, '^' = space ("가^는^길" -> "가 는 길"; hw_norm "가는길"). Leading/trailing '-' (affix/ending) are kept in `headword`.
 - hanja = concatenation of the 한자 + 고유어 parts (ㄱㄴㄷ-순 -> ㄱㄴㄷ順) only if a 한자 part exists; other origins -> `origin_note`.
+
+## opendict (우리말샘, optional third pack, lang 'ko', default OFF in the app)
+- `opendict/*.xml` (25 files, ~77 MB, 50k items each). Unlike stdict, **each `<item>` is one sense**: `wordInfo` (word, word_unit 어휘/구/속담/관용구, word_type, original_language_info, pronunciation_info, conju_info) + `senseInfo` (sense_no, pos, type, definition, cat_info/cat, example_info, relation_info, region_info/region, translation_info, pattern_info, grammar_info, abbreviation_info; also history_info, norm_info, multimedia_info, proverb_info, sl_info_link which are ignored). Items sharing `group_code` are senses of one word; they are merged within a file ordered by `group_order` (groups split across files stay separate entries). Words carry no homonym digits.
+- Labels -> `sense.tags`: sense `type` (방언, 북한어, 옛말, 순화...; 일반어 omitted), region (경상...), category. relation_info types add hypernym (상위어), hyponym (하위어), dialect (방언), archaic form (옛말). English `translation_info` -> `sense.en`. Composite POS such as "관·명" use the first component.
+- Copyright: examples with `<source>` are excluded; `history_example_info` and long `history_info` descriptions are not stored.
+- Dedupe: opendict entries whose `(hw_norm, pos)` already exists in stdict are skipped (counted in `meta.counts.skipped_stdict_duplicates`). Only done when the stdict pack is built in the same run.
+- Measured (2 files, stdict limited to 5 files so dedupe is understated): ~1.6 s/file, ~430 MB peak RSS; 74k entries = 43.6 MB sqlite / 10.4 MB gz.
 
 ## kengdic
 Tab-separated, header `id surface hanja gloss level created source`, ~133k rows, no quoting. 16k rows have an empty gloss (hanja only, still feed the hanja-by-surface map); hanja may be comma separated variants (first = key, rest -> `hanja_alt`). Rows grouped by (surface, first hanja); glosses deduped case-insensitively; junk glosses ("VST + ... adds no meaning", >250 chars) dropped; level A-D kept as `kengdic_level`. Surfaces with spaces -> phrase. Real build: 108,586 entries from 34,510 hanja-bearing surfaces.
