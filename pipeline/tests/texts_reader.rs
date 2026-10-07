@@ -257,38 +257,189 @@ fn max_subpages_truncates() {
     assert_eq!(d.subpages.len(), 1);
 }
 
-#[test]
-fn search_fallback_resolved_and_ambiguous() {
-    // title missing -> one root found by search -> resolved via search
-    let e = catalog_entry(&entry("hg", "classical-prose", "wikisource-ko", "홍길동전", "hangul", &["홍길동전 경판"]));
-    let http = Mock::new(vec![
-        ("list=search".into(), search_json(&["홍길동전 (경판 24장본)"])),
-        (allpages_needle("홍길동전 (경판 24장본)"), empty_allpages()),
-        (allpages_needle("홍길동전"), empty_allpages()),
-        (titles_needle("홍길동전 (경판 24장본)"), pages_json(json!([page("홍길동전 (경판 24장본)", 5, "길동의 이야기")]))),
-        (titles_needle("홍길동전"), pages_json(json!([missing("홍길동전")]))),
-    ]);
-    let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e, 10) else { panic!("{:?}", texts_fetch::fetch_entry(&http, &e, 10)) };
-    assert_eq!(d.resolved_via, "search");
-    assert_eq!(d.page_title, "홍길동전 (경판 24장본)");
+fn prefix_json(titles: &[&str]) -> String {
+    json!({"batchcomplete": true, "query": {"prefixsearch": titles.iter().map(|t| json!({"ns": 0, "title": t})).collect::<Vec<_>>()}}).to_string()
+}
 
-    // several unrelated hits -> ambiguous with candidates, nothing chosen
+#[test]
+fn search_hits_are_never_accepted() {
+    // exact title missing; search finds exactly one (wrong!) page -> reported as a candidate only
+    let e = catalog_entry(&entry("cp", "classical-prose", "wikisource-ko", "열녀춘향수절가", "hangul", &["춘향전"]));
     let http = Mock::new(vec![
-        ("list=search".into(), search_json(&["홍길동전 (완판본)", "홍길동전 (경판본)", "허균"])),
-        (allpages_needle("홍길동전"), empty_allpages()),
-        (titles_needle("홍길동전"), pages_json(json!([missing("홍길동전")]))),
+        ("list=search".into(), search_json(&["GB 18030-2022 信息技术 中文编码字符集/附录C"])),
+        ("list=prefixsearch".into(), prefix_json(&["열녀춘향수절가 (완판본)"])),
+        (allpages_needle("열녀춘향수절가"), empty_allpages()),
+        (titles_needle("열녀춘향수절가") + "%7C", pages_json(json!([page("열녀춘향수절가 (완판본)", 4, "춘향이 광한루에서 그네를 뛰다"), page("GB 18030-2022 信息技术 中文编码字符集/附录C", 5, "{{x}}0xA1A1 　")]))),
+        (titles_needle("열녀춘향수절가"), pages_json(json!([missing("열녀춘향수절가")]))),
     ]);
     match texts_fetch::fetch_entry(&http, &e, 10) {
         Outcome::Ambiguous { candidates } => {
-            assert_eq!(candidates.len(), 3);
-            assert!(candidates[0].contains("홍길동전 (완판본)"));
+            assert_eq!(candidates.len(), 2);
+            assert_eq!(candidates[0]["title"], "열녀춘향수절가 (완판본)");
+            assert!(candidates[0]["bytes"].as_u64().unwrap() > 10);
+            assert!(candidates[0]["preview"].as_str().unwrap().starts_with("춘향이 광한루에서"));
+            assert_eq!(candidates[1]["namespace"], 0);
         }
         o => panic!("{o:?}"),
     }
-
     // nothing at all -> missing
-    let http = Mock::new(vec![("list=search".into(), search_json(&[])), (allpages_needle("홍길동전"), empty_allpages()), (titles_needle("홍길동전"), pages_json(json!([missing("홍길동전")])))]);
+    let http = Mock::new(vec![("list=search".into(), search_json(&[])), ("list=prefixsearch".into(), prefix_json(&[])), (allpages_needle("열녀춘향수절가"), empty_allpages()), (titles_needle("열녀춘향수절가"), pages_json(json!([missing("열녀춘향수절가")])))]);
     assert!(matches!(texts_fetch::fetch_entry(&http, &e, 10), Outcome::Missing { .. }));
+}
+
+#[test]
+fn alt_titles_and_redirects_are_accepted() {
+    let src = entry("cp", "classical-prose", "wikisource-ko", "열녀춘향수절가", "hangul", &[]).replace("pd_basis", "alt_titles = [\"춘향전\"]\npd_basis");
+    let e = catalog_entry(&src);
+    let http = Mock::new(vec![
+        (allpages_needle("춘향전"), empty_allpages()),
+        (allpages_needle("열녀춘향수절가"), empty_allpages()),
+        (titles_needle("춘향전"), json!({"query": {"redirects": [{"from": "춘향전", "to": "춘향전 (완판)"}], "pages": [page("춘향전 (완판)", 8, "춘향의 이야기가 길게 이어진다. ".repeat(40).as_str())]}}).to_string()),
+        (titles_needle("열녀춘향수절가"), pages_json(json!([missing("열녀춘향수절가")]))),
+    ]);
+    let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e, 10) else { panic!() };
+    assert_eq!((d.page_title.as_str(), d.resolved_via.as_str()), ("춘향전 (완판)", "redirect"));
+}
+
+#[test]
+fn versions_page_is_followed_only_with_prefer_edition() {
+    let index = "{{판본 목록}}\n* [[홍길동전 (경판 24장본)]]\n* [[홍길동전 (완판본)]]\n";
+    let routes = |extra: &str| {
+        vec![
+            (allpages_needle("홍길동전 (경판 24장본)"), empty_allpages()),
+            (allpages_needle("홍길동전"), empty_allpages()),
+            (titles_needle("홍길동전 (경판 24장본)") + "%7C", pages_json(json!([page("홍길동전 (경판 24장본)", 21, "길동은 조선국 세종조 때의 사람이라. ".repeat(30).as_str()), page("홍길동전 (완판본)", 22, "완판 본문")]))),
+            (titles_needle("홍길동전 (경판 24장본)"), pages_json(json!([page("홍길동전 (경판 24장본)", 21, "길동은 조선국 세종조 때의 사람이라. ".repeat(30).as_str())]))),
+            (titles_needle("홍길동전"), pages_json(json!([page("홍길동전", 20, index)]))),
+            ("list=".into(), extra.to_string()),
+        ]
+    };
+    let e = catalog_entry(&entry("hg", "classical-prose", "wikisource-ko", "홍길동전", "hangul", &[]));
+    // no preference: index is NOT accepted, its links become candidates
+    let http = Mock::new(routes(&empty_allpages()));
+    match texts_fetch::fetch_entry(&http, &e, 10) {
+        Outcome::Ambiguous { candidates } => {
+            let titles: Vec<&str> = candidates.iter().filter_map(|c| c["title"].as_str()).collect();
+            assert_eq!(titles, vec!["홍길동전", "홍길동전 (경판 24장본)", "홍길동전 (완판본)"]);
+            assert!(candidates[0]["note"].as_str().unwrap().contains("index"));
+        }
+        o => panic!("{o:?}"),
+    }
+    // prefer_edition = 경판 -> that page is fetched
+    let e2 = catalog_entry(&(entry("hg", "classical-prose", "wikisource-ko", "홍길동전", "hangul", &[]).replace("pd_basis", "prefer_edition = \"경판\"\npd_basis")));
+    let http = Mock::new(routes(&empty_allpages()));
+    let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e2, 10) else { panic!() };
+    assert_eq!((d.page_title.as_str(), d.resolved_via.as_str()), ("홍길동전 (경판 24장본)", "prefer_edition"));
+    // classifier unit checks
+    assert!(matches!(texts_fetch::classify("토끼전", "", "7자", &[]), texts_fetch::Kind::Index { .. }));
+    assert_eq!(texts_fetch::classify("가시리", "", &"가시리 가시리잇고 ".repeat(1), &[]), texts_fetch::Kind::Normal);
+}
+
+#[test]
+fn excerpt_without_sections_is_cut_and_flagged() {
+    let long: String = (0..400).map(|i| format!("{i}번째 문단입니다. 아주 긴 문장이 계속 이어집니다 가나다라마바사.")).collect::<Vec<_>>().join("\n\n");
+    let src = entry("hj", "classical-prose", "wikisource-ko", "한중록", "hangul", &[]).replace("pd_basis", "excerpt = true\nexcerpt_note = \"first chapters only for the test\"\npd_basis");
+    let e = catalog_entry(&src);
+    let http = Mock::new(vec![(allpages_needle("한중록"), empty_allpages()), (titles_needle("한중록"), pages_json(json!([page("한중록", 1, &long)])))]);
+    let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e, 10) else { panic!() };
+    assert!(d.needs_sections && d.truncated);
+    let n = d.text.chars().count();
+    assert!((10_000..=15_000).contains(&n), "{n}");
+    assert!(d.text.ends_with("가나다라마바사."), "cut at a paragraph boundary");
+}
+
+#[test]
+fn sections_select_subpages_and_headings() {
+    let src = entry("hj", "classical-prose", "wikisource-ko", "한중록", "hangul", &[]).replace("pd_basis", "excerpt = true\nexcerpt_note = \"two parts\"\nsections = [\"1\", \"3\", \"둘째\"]\npd_basis");
+    let e = catalog_entry(&src);
+    let http = Mock::new(vec![
+        (allpages_needle("한중록"), allpages(&["한중록/1", "한중록/2", "한중록/3"])),
+        (titles_needle("한중록/1") + "%7C", pages_json(json!([page("한중록/1", 11, "하나"), page("한중록/3", 13, "셋")]))),
+        (titles_needle("한중록"), pages_json(json!([page("한중록", 10, "== 첫째 ==\n버릴 글\n== 둘째 ==\n남길 글\n")]))),
+    ]);
+    let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e, 10) else { panic!() };
+    assert_eq!(d.text, "## 둘째\n\n남길 글\n\n## 1\n\n하나\n\n## 3\n\n셋");
+    assert!(!d.needs_sections);
+    assert_eq!(texts_fetch::filter_headings("## a\n\nx\n\n## b\n\ny", &["b".into()]), "## b\n\ny");
+}
+
+#[test]
+fn entity_decoding_is_char_boundary_safe() {
+    // regression: the first CI run panicked slicing a 12-byte window inside a Hangul syllable
+    let c = clean("&대한민국 헌법 &amp; 가시리 &청산별곡 &#44032; 끝", Layout::Prose, false);
+    assert_eq!(c.text, "&대한민국 헌법 & 가시리 &청산별곡 가 끝");
+    assert_eq!(clean("a & 청산에 살어리랏다", Layout::Verse, false).text, "a & 청산에 살어리랏다");
+}
+
+struct PanicHttp(Mock, &'static str);
+impl Http for PanicHttp {
+    fn get(&self, url: &str) -> Result<String> {
+        if url.contains(self.1) {
+            panic!("kaboom in parser");
+        }
+        self.0.get(url)
+    }
+}
+
+#[test]
+fn a_panic_is_isolated_to_its_entry() {
+    let tmp = tempfile::tempdir().unwrap();
+    let cat_path = tmp.path().join("catalog.toml");
+    std::fs::write(&cat_path, [entry("bad", "verse", "wikisource-ko", "폭발", "hangul", &[]), entry("good", "verse", "wikisource-ko", "좋은글", "hangul", &[])].concat()).unwrap();
+    let inner = Mock::new(vec![(allpages_needle("좋은글"), empty_allpages()), (titles_needle("좋은글"), pages_json(json!([page("좋은글", 1, "첫 줄\n둘째 줄")])))]);
+    let http = PanicHttp(inner, "apprefix=%ED%8F%AD%EB%B0%9C");
+    let opts = Opts { catalog: cat_path, out: tmp.path().join("raw"), only: vec![], force: false, max_subpages: 5, discover: false };
+    let s = texts_fetch::run_with(&http, &opts).unwrap();
+    assert_eq!(s.report["resolved"][0]["id"], "good");
+    assert_eq!(s.report["errors"][0]["id"], "bad");
+    assert!(s.report["errors"][0]["error"].as_str().unwrap().contains("panic: kaboom"));
+}
+
+#[test]
+fn requests_are_batched_and_polite() {
+    let tmp = tempfile::tempdir().unwrap();
+    let cat_path = tmp.path().join("catalog.toml");
+    std::fs::write(&cat_path, [entry("a", "verse", "wikisource-ko", "가시리", "hangul", &[]), entry("b", "verse", "wikisource-ko", "정읍사", "hangul", &[])].concat()).unwrap();
+    let http = Mock::new(vec![
+        (allpages_needle("가시리"), empty_allpages()),
+        (allpages_needle("정읍사"), empty_allpages()),
+        ("titles=".into(), pages_json(json!([page("가시리", 1, "가시리 가시리잇고"), page("정읍사", 2, "달하 노피곰 도다샤")]))),
+    ]);
+    let opts = Opts { catalog: cat_path, out: tmp.path().join("raw"), only: vec![], force: false, max_subpages: 5, discover: false };
+    let s = texts_fetch::run_with(&http, &opts).unwrap();
+    assert_eq!(s.report["resolved"].as_array().unwrap().len(), 2);
+    let hits = http.hits.borrow();
+    let title_calls = hits.iter().filter(|u| u.contains("prop=revisions")).count();
+    assert_eq!(title_calls, 1, "one batched lookup for both entries: {hits:?}");
+    assert!(hits.iter().filter(|u| u.contains("api.php")).all(|u| u.contains("maxlag=5")));
+}
+
+#[test]
+fn discover_writes_candidates_not_texts() {
+    let tmp = tempfile::tempdir().unwrap();
+    let cat_path = tmp.path().join("catalog.toml");
+    std::fs::write(&cat_path, entry("hg", "classical-prose", "wikisource-ko", "홍길동전", "hangul", &["홍길동"])).unwrap();
+    let http = Mock::new(vec![
+        ("list=search".into(), search_json(&["허균", "홍길동전 (경판)"])),
+        ("list=prefixsearch".into(), prefix_json(&["홍길동전 (경판)"])),
+        (allpages_needle("홍길동전"), allpages(&["홍길동전/경판"])),
+        (titles_needle("홍길동전") + "%7C", pages_json(json!([page("홍길동전", 1, "개요"), page("홍길동전 (경판)", 2, "경판 본문입니다")]))),
+        (titles_needle("홍길동전"), pages_json(json!([page("홍길동전", 1, "개요 페이지")]))),
+        (titles_needle("허균"), pages_json(json!([page("허균", 3, "저자 항목")]))),
+    ]);
+    let opts = Opts { catalog: cat_path, out: tmp.path().join("raw"), only: vec![], force: false, max_subpages: 5, discover: true };
+    let s = texts_fetch::run_with(&http, &opts).unwrap();
+    assert_eq!(s.report["discovered"], 1);
+    assert!(!tmp.path().join("raw/hg.json").exists());
+    let d: Value = serde_json::from_str(&std::fs::read_to_string(tmp.path().join("raw/_discover.json")).unwrap()).unwrap();
+    let host = &d["entries"][0]["hosts"][0];
+    assert_eq!(d["entries"][0]["id"], "hg");
+    assert_eq!(host["exact"][0]["found"], true);
+    assert_eq!(host["exact"][0]["subpages"][0], "홍길동전/경판");
+    assert!(host["exact"][0]["preview"].as_str().unwrap().starts_with("개요"));
+    assert!(host["prefix_search"][0]["bytes"].as_u64().unwrap() > 0);
+    assert_eq!(host["search"][0]["term"], "홍길동");
+    assert_eq!(host["search"][0]["results"][0]["namespace"], 0);
 }
 
 #[test]
@@ -379,7 +530,7 @@ fn run_is_independent_idempotent_and_reports() {
         ("srsearch=%EC%95%A0%EB%A7%A4".into(), search_json(&["애매 A", "애매 B"])),
         // "boom": every request fails with 404
     ]);
-    let opts = Opts { catalog: cat_path.clone(), out: tmp.path().join("raw"), only: vec![], force: false, max_subpages: 10 };
+    let opts = Opts { catalog: cat_path.clone(), out: tmp.path().join("raw"), only: vec![], force: false, max_subpages: 10, discover: false };
     let s = texts_fetch::run_with(&http, &opts).unwrap();
     let r = &s.report;
     assert_eq!(r["resolved"].as_array().unwrap().len(), 1);

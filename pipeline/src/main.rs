@@ -69,6 +69,9 @@ enum Cmd {
         /// Maximum number of subpages fetched per work
         #[arg(long, default_value_t = 150)]
         max_subpages: usize,
+        /// Write texts/raw/_discover.json (exact hits, edition links, search candidates) instead of texts
+        #[arg(long)]
+        discover: bool,
     },
     /// Reader: recent 정책브리핑 (korea.kr) articles marked 공공누리 제1유형
     FetchNews {
@@ -97,7 +100,7 @@ fn main() -> Result<()> {
             build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES, allow_partial, texts: Some(texts) })?;
             Ok(())
         }
-        Cmd::FetchTexts { catalog, out, only, force, max_subpages } => texts_fetch::run(&texts_fetch::Opts { catalog, out, only, force, max_subpages }),
+        Cmd::FetchTexts { catalog, out, only, force, max_subpages, discover } => texts_fetch::run(&texts_fetch::Opts { catalog, out, only, force, max_subpages, discover }),
         Cmd::FetchNews { catalog, out, max, force, feed } => texts_news::run(&texts_news::NewsOpts { catalog, out, max, force, feeds: feed }),
     }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
-import { cachedManifest, db, fetchManifest, fixtureTexts, packStatus$, packsHint, refreshStatus, resetTexts } from '../db/client';
+import { cachedManifest, db, fetchManifest, packStatus$, packsHint, refreshStatus, resetTexts } from '../db/client';
 import { useAsync } from '../lib/useAsync';
 import { useStore } from '../lib/store';
 import { fmtBytes } from '../lib/app-state';
@@ -21,10 +21,9 @@ const view$ = createStore<View>(loadView());
 view$.subscribe((v) => { try { localStorage.setItem(VIEW_KEY, v); } catch { /* */ } });
 const filters$ = createStore<Filters>({ ...NO_FILTERS });
 
-/** Is the `texts` pack usable (installed, or the dev fixture is on)? `undefined` while the engine is still starting. */
+/** Is the `texts` pack usable (installed)? `undefined` while the engine is still starting. */
 export function useTextsReady(): boolean | undefined {
   const st = useStore(packStatus$);
-  if (fixtureTexts()) return true;
   if (!st) return packsHint().includes('texts') ? true : undefined;
   return !!st.packs.texts?.installed;
 }

@@ -42,6 +42,7 @@ export function modernLabel(l: TextLabels): string | null {
   return l.modern === 'ai' ? 'Modernised spelling: AI-written — may contain errors' : l.modern === 'wikisource' ? 'Modernised spelling: Wikisource modern edition' : null;
 }
 
+const hasRev = (p?: TextProvenance | null): p is TextProvenance => !!p && p.revision_id != null && String(p.revision_id) !== '';
 const fmtDate = (s?: string) => (s ? s.slice(0, 10) : '');
 
 // ---------- paragraph ----------
@@ -308,8 +309,8 @@ export function TextView({ id }: { id: string }) {
                 <dl class="rd-prov">
                   <dt>Shelf</dt><dd>{shelfLabel(m.shelf ?? '')}{m.script ? ` · ${m.script === 'hanmun' ? 'hanmun' : m.script === 'mixed' ? 'hangul + hanja' : 'hangul'}` : ''}</dd>
                   {(doc.card.edition_en || doc.card.edition_ko || prov?.edition) && <><dt>Edition</dt><dd>{doc.card.edition_en || prov?.edition}{doc.card.edition_ko && doc.card.edition_en ? <span class="muted" lang="ko"> · {doc.card.edition_ko}</span> : null}</dd></>}
-                  {prov?.url && <><dt>Source</dt><dd><a href={/^https?:\/\//.test(prov.url) ? prov.url : undefined} target="_blank" rel="noopener noreferrer">{prov.page_title || prov.source || prov.url}</a>{prov.revision_id != null && <span class="muted"> · revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</span>}</dd></>}
-                  {!prov?.url && prov?.revision_id != null && <><dt>Revision</dt><dd>revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</dd></>}
+                  {prov?.url && <><dt>Source</dt><dd><a href={/^https?:\/\//.test(prov.url) ? prov.url : undefined} target="_blank" rel="noopener noreferrer">{prov.page_title || prov.source || prov.url}</a>{hasRev(prov) && <span class="muted"> · revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</span>}</dd></>}
+                  {!prov?.url && hasRev(prov) && <><dt>Revision</dt><dd>revision {String(prov.revision_id)}{prov.revision_timestamp ? ` (${fmtDate(prov.revision_timestamp)})` : ''}</dd></>}
                   {(prov?.licence || m.pd_basis) && <><dt>Licence</dt><dd>{prov?.licence || m.pd_basis}</dd></>}
                   {hasEn && <><dt>English</dt><dd>{translationLabel(doc.labels, prov)}</dd></>}
                   {hasModern && modernLabel(doc.labels) && <><dt>Modern</dt><dd>{modernLabel(doc.labels)}</dd></>}

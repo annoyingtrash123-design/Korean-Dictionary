@@ -27,7 +27,7 @@ async function readerFlow(page: Page) {
   await page.getByRole('link', { name: 'Reader' }).click();
   await expect(page.getByRole('heading', { name: /Reader/ })).toBeVisible();
   await expect(page.locator('.rd-row').first()).toBeVisible();
-  await page.waitForTimeout(400);
+  await page.waitForTimeout(600);
   await shot(page, 'library');
 
   {
@@ -36,9 +36,13 @@ async function readerFlow(page: Page) {
     await page.waitForTimeout(300);
     await shot(page, 'timeline');
     await page.getByRole('button', { name: /Filters/ }).click();
-    await page.getByLabel('Script', { exact: true }).selectOption('hanmun');
-    await expect(page.locator('.rd-row')).toHaveCount(1);
-    await page.getByLabel('Script', { exact: true }).selectOption('');
+    const total = await page.locator('.rd-row').count();
+    expect(total).toBeGreaterThan(30);
+    await page.getByLabel('Level', { exact: true }).selectOption('topik12');
+    await expect.poll(() => page.locator('.rd-row').count()).toBeLessThan(total);
+    expect(await page.locator('.rd-row').count()).toBeGreaterThan(0);
+    await page.getByLabel('Level', { exact: true }).selectOption('');
+    await expect.poll(() => page.locator('.rd-row').count()).toBe(total);
     await page.getByRole('button', { name: /Filters/ }).click();
     await page.getByRole('tab', { name: 'Shelves' }).click();
   }
@@ -90,7 +94,7 @@ async function readerFlow(page: Page) {
 
   // English toggle
   await page.getByRole('button', { name: 'Reading settings' }).click();
-  await expect(page.getByText('AI-generated translation — may contain errors')).toBeVisible();
+  await expect(page.getByRole('dialog', { name: 'Reading settings' }).getByText('AI-generated translation — may contain errors')).toBeVisible();
   await page.getByRole('switch', { name: 'Show English translation' }).click();
   await expect(page.locator('.rd-en')).toHaveCount(0);
   await page.getByRole('switch', { name: 'Show English translation' }).click();
@@ -125,33 +129,30 @@ async function readerFlow(page: Page) {
 
 test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ page }) => {
   test.setTimeout(900_000);
-  await page.addInitScript(() => { try { localStorage.setItem('kd.fixture.texts', '1'); } catch { /* */ } });
   await page.goto('/');
   await page.getByRole('button', { name: 'Download' }).click();
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   await page.getByRole('link', { name: 'Settings' }).click();
   await page.getByRole('radio', { name: 'Light' }).click();
 
+  // the Reader offers to download the texts pack first
+  await page.getByRole('link', { name: 'Reader' }).click();
+  await expect(page.getByRole('heading', { name: 'Reader library' })).toBeVisible();
+  await page.waitForTimeout(500);
+  await shot(page, 'download-prompt');
+  await page.getByRole('button', { name: /Download Reader library/ }).click();
+  await expect(page.locator('.rd-row').first()).toBeVisible({ timeout: 120_000 });
+
   await readerFlow(page);
 
-  // verse + hanmun layouts, dark theme
-  await page.goto('/#/reader/fixture-jindallae');
-  await expect(page.locator('.rd-para.verse').first()).toBeVisible();
-  expect(await page.locator('.rd-ko').first().evaluate((el) => getComputedStyle(el).whiteSpace)).toBe('pre-wrap');
-  await page.goto('/#/reader/fixture-chuya');
-  await expect(page.locator('.rd-reading').first()).toBeVisible();
-  await tap(page, 0, 0, 1);                       // 秋: hanja lookup
-  await expect(page.locator('.lk-chars')).toBeVisible();
-  await page.waitForTimeout(500);
-  await shot(page, 'popup-hanja');
-  await page.keyboard.press('Escape');
+  // settings sheet, dark theme
   await page.getByRole('button', { name: 'Reading settings' }).click();
-  await expect(page.getByRole('dialog', { name: 'Reading settings' })).toBeVisible();
   await page.waitForTimeout(200);
   await shot(page, 'settings');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.getByRole('link', { name: 'Settings' }).click();
   await page.getByRole('radio', { name: 'Dark' }).click();
+  await expect(page.getByText('Reader library').first()).toBeVisible();
   await page.goto('/#/reader/graded-dangun');
   await expect(page.locator('.rd-title')).toBeVisible();
   await page.locator('.rd-scroll').evaluate((el) => { el.scrollTop = 0; });
