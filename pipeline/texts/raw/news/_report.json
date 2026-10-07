@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-10-07T23:05:04Z",
+  "feeds": [
+    {
+      "url": "https://www.korea.kr/rss/policy.xml",
+      "error": "HTTP 404 for https://www.korea.kr/rss/policy.xml"
+    },
+    {
+      "url": "https://www.korea.kr/rss/pressrelease.xml",
+      "error": "HTTP 404 for https://www.korea.kr/rss/pressrelease.xml"
+    },
+    {
+      "url": "https://www.korea.kr/rss/president.xml",
+      "error": "HTTP 404 for https://www.korea.kr/rss/president.xml"
+    }
+  ],
+  "kept": [],
+  "rejected": [],
+  "errors": []
+}

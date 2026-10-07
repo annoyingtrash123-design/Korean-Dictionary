@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T22:52:10Z",
+  "generated_at": "2026-10-07T23:05:02Z",
   "resolved": [
     {
       "id": "honggildongjeon",
@@ -944,6 +944,78 @@
       "url": "https://ko.wikisource.org/wiki/%EB%82%99%EC%97%BD%EC%9D%84_%ED%83%9C%EC%9A%B0%EB%A9%B4%EC%84%9C",
       "revision_id": 264425,
       "chars": 2532,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "gwontae",
+      "source": "wikisource-ko",
+      "page_title": "권태",
+      "url": "https://ko.wikisource.org/wiki/%EA%B6%8C%ED%83%9C",
+      "revision_id": 387146,
+      "chars": 10735,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "dareul_ssoda",
+      "source": "wikisource-ko",
+      "page_title": "달을 쏘다",
+      "url": "https://ko.wikisource.org/wiki/%EB%8B%AC%EC%9D%84_%EC%8F%98%EB%8B%A4",
+      "revision_id": 129481,
+      "chars": 1661,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "sihon",
+      "source": "wikisource-ko",
+      "page_title": "시혼",
+      "url": "https://ko.wikisource.org/wiki/%EC%8B%9C%ED%98%BC",
+      "revision_id": 115447,
+      "chars": 6160,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "eorini_chanmi",
+      "source": "wikisource-ko",
+      "page_title": "어린이 찬미",
+      "url": "https://ko.wikisource.org/wiki/%EC%96%B4%EB%A6%B0%EC%9D%B4_%EC%B0%AC%EB%AF%B8",
+      "revision_id": 122901,
+      "chars": 4579,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "mannyeon_shatsu",
+      "source": "wikisource-ko",
+      "page_title": "만년 셔츠",
+      "url": "https://ko.wikisource.org/wiki/%EB%A7%8C%EB%85%84_%EC%85%94%EC%B8%A0",
+      "revision_id": 263594,
+      "chars": 6082,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "wangjawa_jebi",
+      "source": "wikisource-ko",
+      "page_title": "사랑의 선물/왕자와 제비",
+      "url": "https://ko.wikisource.org/wiki/%EC%82%AC%EB%9E%91%EC%9D%98_%EC%84%A0%EB%AC%BC/%EC%99%95%EC%9E%90%EC%99%80_%EC%A0%9C%EB%B9%84",
+      "revision_id": 263613,
+      "chars": 8362,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -8697,5 +8769,10 @@
       "subpages": []
     }
   ],
-  "english": null
+  "english": {
+    "resolved": [],
+    "missing": [],
+    "ambiguous": [],
+    "errors": []
+  }
 }
