@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './fixtures';
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -71,8 +71,10 @@ test('two-pane tablet layout', async ({ page }) => {
   await search(page, '학교');
   const rows = page.locator('.pane-left .list .row');
   await expect(rows.first()).toBeVisible();
-  await page.waitForTimeout(600); // progressive row paint settles
-  const before = await rows.count();
+  // progressive row paint: wait until the count is stable for a full second
+  let before = -1;
+  await expect.poll(async () => { const n = await rows.count(); const same = n === before; before = n; return same; },
+    { timeout: 30_000, intervals: [1000] }).toBe(true);
   await expect(page.locator('.pane-right h1')).toHaveCount(0);
 
   // open on the right; left list persists with the row highlighted

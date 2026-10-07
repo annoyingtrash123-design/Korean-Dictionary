@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './fixtures';
 
 async function search(page: Page, q: string) {
   await page.getByRole('searchbox', { name: 'Search' }).fill(q);

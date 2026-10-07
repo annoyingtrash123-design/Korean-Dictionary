@@ -1175,27 +1175,44 @@ pub use lookup::{lookup_in_text, TextMatch};
 /// so that first-time queries don't pay for slow storage reads. Returns false when done.
 /// Steps are small (tens of ms cold) so a search queued behind one barely waits.
 pub fn warm_step(packs: &[&PackDb], step: usize) -> bool {
-    const HW: [&str; 13] = ["", "나", "다", "마", "바", "사", "아", "응", "자", "차", "파", "하", "\u{10FFFF}"];
-    const EN: [&str; 7] = ["", "c", "f", "l", "p", "t", "\u{10FFFF}"];
-    let mut steps: Vec<(&PackDb, String, String, String)> = Vec::new();
+    // Many small steps: a keystroke that arrives mid-step waits for that step to finish, so each
+    // one must stay well under a frame budget even on the full 표준국어대사전 (~2M forms).
+    let hangul = warm_bounds();
+    let latin: Vec<String> = std::iter::once(String::new())
+        .chain(('b'..='z').map(String::from))
+        .chain(std::iter::once("\u{10FFFF}".to_string()))
+        .collect();
+    let mut steps: Vec<(&PackDb, &str, &str, &str)> = Vec::new();
     for p in packs {
-        for w in HW.windows(2) {
-            steps.push((p, "SELECT count(*) FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= ?1 AND hw_norm < ?2".into(), w[0].into(), w[1].into()));
+        for w in hangul.windows(2) {
+            steps.push((p, "SELECT count(*) FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= ?1 AND hw_norm < ?2", &w[0], &w[1]));
         }
         if p.caps.forms {
-            for w in [["", "사"], ["사", "\u{10FFFF}"]] {
-                steps.push((p, "SELECT count(*) FROM forms INDEXED BY forms_form WHERE form >= ?1 AND form < ?2".into(), w[0].into(), w[1].into()));
+            for w in hangul.windows(2) {
+                steps.push((p, "SELECT count(*) FROM forms INDEXED BY forms_form WHERE form >= ?1 AND form < ?2", &w[0], &w[1]));
             }
         }
         if p.id == "core" {
-            for w in EN.windows(2) {
-                steps.push((p, "SELECT count(*) FROM gloss_terms WHERE term >= ?1 AND term < ?2".into(), w[0].into(), w[1].into()));
+            for w in latin.windows(2) {
+                steps.push((p, "SELECT count(*) FROM gloss_terms WHERE term >= ?1 AND term < ?2", &w[0], &w[1]));
             }
-            steps.push((p, "SELECT count(*) FROM hanja_words INDEXED BY hanja_words_ch WHERE ch >= ?1 AND ch < ?2".into(), "".into(), "\u{10FFFF}".into()));
+            steps.push((p, "SELECT count(*) FROM hanja_words INDEXED BY hanja_words_ch WHERE ch >= ?1 AND ch < ?2", "", "\u{10FFFF}"));
         }
     }
     let Some((p, sql, a, b)) = steps.get(step) else { return false };
     // A missing index (older pack) just means nothing to warm for this step.
-    let _ = p.conn.query(sql, &[a.as_str().into(), b.as_str().into()]);
+    let _ = p.conn.query(sql, &[(*a).into(), (*b).into()]);
     step + 1 < steps.len()
+}
+
+/// "" < 48 equal slices of the Hangul syllable block < U+10FFFF (everything else lands in the ends).
+fn warm_bounds() -> Vec<String> {
+    const SLICES: u32 = 48;
+    let (lo, hi) = (0xAC00u32, 0xD7A4u32);
+    let mut v = vec![String::new()];
+    for i in 0..SLICES {
+        v.push(char::from_u32(lo + (hi - lo) * i / SLICES).unwrap().to_string());
+    }
+    v.push("\u{10FFFF}".to_string());
+    v
 }

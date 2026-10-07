@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './fixtures';
 
 // The service worker would hide manifest requests from page.route().
 test.use({ serviceWorkers: 'block' });

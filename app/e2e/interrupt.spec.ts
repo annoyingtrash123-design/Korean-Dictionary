@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './fixtures';
 test.use({ serviceWorkers: 'block' });
 
 test('reload during an update import keeps the old pack', async ({ page }) => {

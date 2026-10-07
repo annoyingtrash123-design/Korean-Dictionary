@@ -862,3 +862,17 @@ fn scratch_packs() {
         }
     }
 }
+
+#[test]
+fn warm_up_runs_in_many_small_steps_then_stops() {
+    let (core, stdict) = (build_core(), build_stdict());
+    let packs = [&core, &stdict];
+    let mut steps = 0;
+    while warm_step(&packs, steps) {
+        steps += 1;
+        assert!(steps < 1000, "warm-up never finishes");
+    }
+    // fine-grained: each pack's headword and form indexes are split into ~49 slices
+    assert!(steps > 100, "only {steps} warm-up steps");
+    assert!(!warm_step(&packs, steps + 1));
+}
