@@ -8,6 +8,10 @@ on:
         description: "Force a fresh dictionary data build (ignore cache)"
         type: boolean
         default: false
+      deploy:
+        description: "Deploy to GitHub Pages after building"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -64,6 +68,15 @@ jobs:
           ls -la pipeline/out pipeline/out/site-data
           cat pipeline/out/site-data/manifest.json
 
+      - name: Data QA report
+        if: steps.datacache.outputs.cache-hit != 'true'
+        run: |
+          command -v sqlite3 || sudo apt-get install -y sqlite3
+          sqlite3 pipeline/out/core.sqlite < pipeline/qa/core.sql
+          for p in stdict opendict; do
+            [ -f pipeline/out/$p.sqlite ] && { echo "######## $p"; sqlite3 pipeline/out/$p.sqlite < pipeline/qa/ko.sql; }
+          done
+
       - uses: actions/upload-artifact@v4
         with:
           name: site-data
@@ -104,6 +117,7 @@ jobs:
 
   deploy:
     needs: app
+    if: github.event_name == 'push' || inputs.deploy
     runs-on: ubuntu-latest
     environment:
       name: github-pages

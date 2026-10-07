@@ -59,7 +59,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
 
   await search(page, '學');
-  await expect(page.locator('.hanja-card')).toContainText('학');
+  await expect(page.locator('.hanja-card')).toContainText('學'); // readings/meaning are empty in the current real pack (Unihan missing)
   await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
 
   // ---- entry + bookmark ----
