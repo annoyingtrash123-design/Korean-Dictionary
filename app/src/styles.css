@@ -67,18 +67,20 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 
 /* ---------- Lists ---------- */
 .list { border-top: 1px solid var(--border); margin-top: 4px; }
+.list.flush { margin-top: 0; border-top: 0; }
 .list > li + li { border-top: 1px solid var(--border); }
-.row { display: flex; align-items: center; gap: 10px; padding: 11px 16px; color: inherit; min-height: 58px; }
-.list > li { content-visibility: auto; contain-intrinsic-size: auto 58px; }
+.row { display: flex; align-items: center; gap: 8px; padding: 4px 16px; color: inherit; min-height: 56px; }
+.list > li { content-visibility: auto; contain-intrinsic-size: auto 56px; }
 .row:active { background: var(--surface); }
-.row.compact { min-height: 52px; padding-top: 9px; padding-bottom: 9px; }
+.row.compact { min-height: 52px; }
 .row-main { flex: 1; min-width: 0; }
-.row-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-.hw { font-size: 21px; font-weight: 600; line-height: 1.25; }
+.row-head { display: flex; align-items: baseline; gap: 8px; min-width: 0; white-space: nowrap; overflow: hidden; }
+.row-head > * { flex: none; }
+.row-head .pos { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.hw { font-size: 20px; font-weight: 600; line-height: 1.25; }
 .row .hanja { font-size: 16px; }
-.row-gloss { color: color-mix(in srgb, var(--text) 82%, var(--bg)); font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.row-note { font-size: 12.5px; color: var(--accent); margin-top: 1px; }
-.row-src { margin-top: 1px; font-size: 11px; letter-spacing: .02em; color: var(--muted); }
+.row-gloss { color: color-mix(in srgb, var(--text) 82%, var(--bg)); font-size: 15px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-note { font-size: 12.5px; color: var(--accent); line-height: 1.3; }
 .pos { font-size: 12px; color: var(--muted); font-style: italic; }
 .lvl { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; font-size: 11.5px; font-weight: 700; font-family: var(--font-ko); align-self: center; background: color-mix(in srgb, var(--accent) 9%, var(--bg)); color: var(--accent); }
 .lvl2 { background: color-mix(in srgb, var(--hanja) 9%, var(--bg)); color: var(--hanja); }
@@ -108,30 +110,31 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 
 /* ---------- Entry ---------- */
 .entry { font-size: var(--entry-font-size); }
-.entry-head { padding: 8px 16px 6px; }
+.entry-head { padding: 8px 16px 8px; }
 .entry-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .entry-title h1 { font-size: 2.1em; font-weight: 600; line-height: 1.2; word-break: keep-all; }
 .entry-title sup { font-size: .45em; margin-left: 2px; color: var(--muted); }
-.entry-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 2px; }
+.entry-meta { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-top: 0; }
 .entry-meta .hanja { font-size: 1.2em; letter-spacing: .05em; }
 .hj-link { border-bottom: 1px dotted currentColor; }
 .pron { color: var(--muted); font-size: .92em; }
 .iconbtn { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); padding: 0; flex: none; }
 .iconbtn:active { background: var(--surface-2); }
 .iconbtn.on { color: #d9a21b; }
-.dict { margin: 12px 0 0; border-top: 1px solid var(--border); }
-.dict > summary { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px 8px; font-size: 13px; font-weight: 600; letter-spacing: .03em; color: var(--muted); cursor: pointer; list-style: none; }
+.dict { margin: 0; border-top: 1px solid var(--border); }
+.etab-panel > .dict:first-child { border-top: 0; }
+.dict > summary { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px 4px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); cursor: pointer; list-style: none; }
 .dict > summary::-webkit-details-marker { display: none; }
 .dict > summary svg { transition: transform .15s; }
 .dict:not([open]) > summary svg { transform: rotate(-90deg); }
-.body { padding: 0 16px 10px; }
+.body { padding: 0 16px 8px; }
 .body > .small { margin-top: 8px; }
-.body + .body { border-top: 1px dashed var(--border); padding-top: 10px; }
+.body + .body { border-top: 1px dashed var(--border); padding-top: 8px; }
 .body-head { font-size: .95em; margin-bottom: 4px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
 .body-head sup { color: var(--muted); }
-.senses { display: flex; flex-direction: column; gap: 14px; }
-.sense { display: flex; flex-direction: row-reverse; gap: 10px; align-items: flex-start; }
-.sense-n { flex: none; width: 1.5em; color: var(--muted); font-size: .85em; font-variant-numeric: tabular-nums; padding-top: .15em; }
+.senses { display: flex; flex-direction: column; gap: 12px; }
+.sense { display: flex; gap: 8px; align-items: flex-start; }
+.sense-n { order: -1; flex: none; width: 1.4em; text-align: right; color: var(--muted); font-size: .85em; font-weight: 600; font-variant-numeric: tabular-nums; padding-top: .2em; }
 .sense-body { flex: 1; min-width: 0; }
 .gloss { font-weight: 650; margin-right: 6px; }
 .roman { font-style: italic; color: var(--muted); margin-right: 6px; }
@@ -144,19 +147,18 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .def.ko-main { font-size: 1em; }
 .note { margin-top: 4px; font-size: .88em; color: var(--muted); font-style: italic; }
 .pattern { display: inline-block; margin-top: 5px; padding: 2px 8px; border-radius: 6px; background: var(--surface-2); font-size: .85em; font-family: var(--font-ko); }
-.ex { margin: 8px 0 0; padding-left: 10px; border-left: 2px solid var(--border); }
-.ex-ko { line-height: 1.4; }
-.ex-en { font-size: .9em; color: var(--muted); }
-.dict > .ex { margin: 6px 16px 10px; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ex { margin: 8px 0 0; padding-left: 8px; border-left: 2px solid var(--border); }
+.ex-ko { font-size: .92em; line-height: 1.4; }
+.ex-en { font-size: .85em; line-height: 1.35; color: var(--muted); }
+.sents { padding: 0 16px 8px; } .sents .ex { margin-top: 12px; } .sents .ex:first-child { margin-top: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 8px; }
 .chip { display: inline-flex; align-items: baseline; gap: 5px; padding: 3px 10px; border-radius: 14px; background: var(--surface-2); color: inherit; font-size: .9em; }
 .chip:active { background: var(--accent-soft); }
 .chip-type { font-size: .72em; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
 .chip .hanja { font-size: .9em; }
-.hanja-block, .hanja-card { display: flex; gap: 14px; align-items: center; padding: 8px 16px; color: inherit; }
+.hanja-card { display: flex; gap: 12px; align-items: center; padding: 8px 16px; color: inherit; }
 .hanja-card { margin: 8px 16px 0; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); }
 .hanja-big { font-size: 40px; line-height: 1; color: var(--hanja); font-family: 'Noto Serif CJK KR', 'Noto Serif KR', serif; }
-.hanja-big.sm { font-size: 38px; }
 .hanja-card-body, .hanja-block-body { flex: 1; min-width: 0; }
 .btn-link { display: flex; align-items: center; gap: 8px; margin: 16px; padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); font-weight: 500; font-size: 15px; }
 
@@ -167,6 +169,22 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; margin: 0; font-size: 14px; }
 .facts dt { color: var(--muted); } .facts dd { margin: 0; }
 .facts.wide { font-size: 15px; gap: 6px 16px; }
+
+/* entry tabs (Dict | Words | Chars | Sents) */
+.etabs { position: sticky; top: 0; z-index: 3; display: grid; grid-template-columns: repeat(4, 1fr); margin: 4px 16px 8px; padding: 2px; border-radius: 10px; background: var(--surface-2); }
+.etab { position: relative; height: 36px; border: 0; border-radius: 8px; background: transparent; color: var(--muted); font-size: 14px; font-weight: 500; padding: 0 4px; }
+.etab[aria-selected='true'] { background: var(--bg); color: var(--text); font-weight: 650; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+.etab:disabled { opacity: .45; cursor: default; }
+.etab:focus-visible { outline-offset: -2px; }
+.etab::after { content: ''; position: absolute; inset: -4px -1px; } /* >= 44px tap area */
+.pane-right .etabs { margin-inline: 0; }
+.chars { padding: 0 16px 8px; }
+.char { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; }
+.char + .char { border-top: 1px solid var(--border); }
+.char .hanja-big { font-size: 56px; width: 64px; text-align: center; flex: none; }
+.char-body { flex: 1; min-width: 0; }
+.char-read { font-size: 1.1em; }
+.char-mean { line-height: 1.35; }
 
 /* ---------- Controls ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); font-weight: 500; font-size: 15px; }
@@ -252,10 +270,11 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .pane-right { flex: 1; min-width: 0; overflow-y: auto; overscroll-behavior: contain; padding: calc(env(safe-area-inset-top) + 18px) 28px calc(env(safe-area-inset-bottom) + 48px); }
 .pane-right > * { max-width: 720px; margin-inline: auto; }
 .pane-right.single { padding-top: calc(env(safe-area-inset-top) + 8px); }
-.pane-right .entry-head, .pane-right .body, .pane-right .dict > summary { padding-left: 0; padding-right: 0; }
-.pane-right .dict > .ex { margin-inline: 0; }
+.pane-right .entry-head, .pane-right .body, .pane-right .dict > summary, .pane-right .pad { padding-left: 0; padding-right: 0; }
+.pane-right .row { padding-inline: 8px; margin-inline: -8px; border-radius: 8px; }
 .pane-right .hanja-card, .pane-right .btn-link { margin-inline: 0; }
-.pane-right .hanja-hero, .pane-right .hanja-block { padding-inline: 0; }
+.pane-right .hanja-hero { padding-inline: 0; }
+.pane-right .sents, .pane-right .chars { padding-inline: 0; }
 .app.wide .toast { bottom: calc(env(safe-area-inset-bottom) + 20px); }
 /* selected row: persistent accent bar + tint so it is clear what is open on the right */
 .pane-left .row { position: relative; }

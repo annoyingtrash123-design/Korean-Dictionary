@@ -2,7 +2,6 @@ import type { ComponentChildren } from 'preact';
 import { Icon } from './Icons';
 import { entryPath, href } from '../lib/router';
 import type { ResultGroup } from '../lib/merge';
-import { SOURCE_SHORT } from '../lib/types';
 
 export const LEVEL_LABEL: Record<number, string> = { 1: '초', 2: '중', 3: '고' };
 export const LEVEL_NAME: Record<number, string> = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced' };
@@ -30,7 +29,6 @@ export function GroupRow({ g, note, current }: { g: ResultGroup; note?: string; 
         </div>
         <div class="row-gloss">{g.gloss || <span class="muted">Korean definition only</span>}</div>
         {note && <div class="row-note">{note}</div>}
-        <div class="row-src">{g.sources.map((s) => SOURCE_SHORT[s]).join(' · ')}</div>
       </div>
     </a>
   );

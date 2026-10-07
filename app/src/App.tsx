@@ -117,11 +117,14 @@ function PaneEmpty({ bookmarks }: { bookmarks: boolean }) {
   );
 }
 
+// ?tab= changes must not remount the entry (it would reload and flash)
+const entryKey = (r: Route) => { const p = new URLSearchParams(r.params); p.delete('tab'); return `${r.name}/${r.parts.join('/')}?${p}`; };
+
 function view(r: Route) {
   switch (r.name) {
     case 'search': { const q = r.params.get('q') ?? ''; return q.trim() ? <Results q={q} /> : <Home />; }
-    case 'entry': return <EntryView key={r.raw} source={r.parts[0]} id={Number(r.parts[1])} hw={r.params.get('hw') ?? undefined} />;
-    case 'word': return <EntryView key={r.raw} word={r.parts[0]} pref={r.params.has('s') ? refFromParams(r.params) : undefined} />;
+    case 'entry': return <EntryView key={entryKey(r)} source={r.parts[0]} id={Number(r.parts[1])} hw={r.params.get('hw') ?? undefined} />;
+    case 'word': return <EntryView key={entryKey(r)} word={r.parts[0]} pref={r.params.has('s') ? refFromParams(r.params) : undefined} />;
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
     case 'bookmarks': return <BookmarksView />;
     case 'settings': return <SettingsView />;

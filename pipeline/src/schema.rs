@@ -18,7 +18,8 @@ CREATE TABLE entries (
   gloss     TEXT,
   data      TEXT NOT NULL,
   ext_id    TEXT,
-  quality   INTEGER NOT NULL DEFAULT 0
+  quality   INTEGER NOT NULL DEFAULT 0,
+  hist      INTEGER NOT NULL DEFAULT 0
 );
 CREATE TABLE forms (form TEXT NOT NULL, entry_id INTEGER NOT NULL);
 CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL, rank INTEGER NOT NULL DEFAULT 0);
@@ -42,7 +43,8 @@ CREATE VIRTUAL TABLE entries_fts USING fts5(head, en, content='', tokenize='port
 CREATE TABLE hanja_chars (
   ch TEXT PRIMARY KEY, readings TEXT,
   meaning_en TEXT, strokes INTEGER, radical TEXT, word_count INTEGER,
-  radical_num INTEGER
+  radical_num INTEGER,
+  hun TEXT, eumhun TEXT
 );
 CREATE TABLE sentences (id INTEGER PRIMARY KEY, ko TEXT NOT NULL, en TEXT, source TEXT);
 CREATE VIRTUAL TABLE sentences_fts USING fts5(ko, content='sentences', content_rowid='id', tokenize='trigram');
@@ -64,3 +66,7 @@ CREATE INDEX grammar_entry ON grammar(entry_id);
 /// filled by the builder before `CHO_INDEX` is created. Powers choseong search (ㅎㄱ -> 학교).
 pub const CHO_COLUMN: &str = "ALTER TABLE entries ADD COLUMN cho TEXT;";
 pub const CHO_INDEX: &str = "CREATE INDEX entries_cho ON entries(cho, rank) WHERE cho IS NOT NULL;";
+
+/// Korean packs (stdict / opendict): partial index over the 옛말 (old word) entries, `entries.hist = 1`.
+/// The engine uses it for old-spelling lookups in the Reader.
+pub const HIST_INDEX: &str = "CREATE INDEX entries_hist ON entries(hist, hw_norm) WHERE hist = 1;";

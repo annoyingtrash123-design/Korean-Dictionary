@@ -1,6 +1,6 @@
 import { history, clearHistory } from '../lib/history';
 import { useStore } from '../lib/store';
-import { href, useRoute } from '../lib/router';
+import { href, useRoute, withoutTab } from '../lib/router';
 import { savedPath } from '../lib/entry-key';
 import { Hanja } from '../components/common';
 import { UpdateBanner } from '../components/UpdateBanner';
@@ -21,7 +21,7 @@ export function Home() {
         <ul class="plain list">
           {hist.slice(0, 30).map((h) => (
             <li key={h.key}>
-              <a class="row compact" href={href(savedPath(h))} aria-current={route.raw === savedPath(h) ? 'true' : undefined}>
+              <a class="row compact" href={href(savedPath(h))} aria-current={withoutTab(route.raw) === savedPath(h) ? 'true' : undefined}>
                 <div class="row-main">
                   <div class="row-head">
                     <span class="hangul hw" lang="ko">{h.headword}</span>{h.hanja && <Hanja text={h.hanja} />}

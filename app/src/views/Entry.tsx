@@ -10,17 +10,15 @@ import { resolveEntry, type EntryRef } from '../lib/entry-key';
 import { recordHistory } from '../lib/history';
 import { sameWordRows } from '../lib/merge';
 import { hanChars } from '../lib/search-mode';
-import { stemOf } from '../lib/search-mode';
+import { TabBar, WordsTab, CharsTab, SentsTab, useEntryTab } from './EntryTabs';
 import { SOURCE_ORDER, SOURCE_TITLE, type Entry, type Sense } from '../lib/types';
-import { Empty, Hanja, IconButton, LevelBadge, Pos, Sheet } from '../components/common';
+import { Empty, IconButton, LevelBadge, Pos, Sheet } from '../components/common';
 import { Icon } from '../components/Icons';
-import { entryPath, hanjaPath, href, searchPath, wordPath } from '../lib/router';
+import { hanjaPath, href, searchPath, wordPath } from '../lib/router';
 import { useWide } from '../lib/layout';
 
 type Loaded = { primary: Entry | null; entries: Entry[] };
 const viewCache = new Lru<Loaded>(40);
-const hanjaCache = new Lru<unknown>(60);
-type HanjaInfo = { ch: string; info: Awaited<ReturnType<typeof db.hanjaChar>>; words: Awaited<ReturnType<typeof db.wordsWithHanja>> };
 
 export function EntryView({ source, id, hw, word, pref }: { source?: string; id?: number; hw?: string; word?: string; pref?: Partial<EntryRef> }) {
   const s = useStore(settings);
@@ -52,6 +50,8 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
   }, [source, id, word, pref?.source, pref?.homonym, pref?.pos, packsKey(s), stamp], () => viewCache.get(ck));
 
   const primary = r.data?.primary;
+  const hasHanja = !!primary?.hanja && hanChars(primary.hanja).length > 0;
+  const [tab, setTab] = useEntryTab(hasHanja);
   useEffect(() => {
     if (primary) recordHistory({ source: primary.source, headword: primary.headword, homonym: primary.homonym, pos: primary.pos, hanja: primary.hanja, gloss: primary.gloss });
   }, [primary?.source, primary?.id]);
@@ -68,14 +68,18 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
   return (
     <article class="page entry" style={{ fontSize: 'var(--entry-font-size)' }}>
       <Header primary={primary} entries={entries} />
-      {bySource.map(({ src, list }) => (
-        <details key={src} class="dict" open>
-          <summary><span>{SOURCE_TITLE[src]}</span><Icon name="down" size={18} /></summary>
-          {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
-        </details>
-      ))}
-      {primary.hanja && hanChars(primary.hanja).length > 0 && <HanjaSection primary={primary} />}
-      <MoreExamples headword={primary.headword} />
+      <TabBar tab={tab} onTab={setTab} hasHanja={hasHanja} />
+      <div class="etab-panel" role="tabpanel" id="etab-panel" aria-labelledby={`etab-${tab}`}>
+        {tab === 'dict' && bySource.map(({ src, list }) => (
+          <details key={src} class="dict" open>
+            <summary><span>{SOURCE_TITLE[src]}</span><Icon name="down" size={18} /></summary>
+            {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
+          </details>
+        ))}
+        {tab === 'words' && <WordsTab primary={primary} />}
+        {tab === 'chars' && <CharsTab primary={primary} />}
+        {tab === 'sents' && <SentsTab headword={primary.headword} />}
+      </div>
     </article>
   );
 }
@@ -195,50 +199,5 @@ function EntryBody({ e, many, showKo }: { e: Entry; many: boolean; showKo: boole
       {e.data?.origin_note && <div class="note">{e.data.origin_note}</div>}
       <Chips rels={e.data?.related} />
     </section>
-  );
-}
-
-function HanjaSection({ primary }: { primary: Entry }) {
-  const chars = [...new Set(hanChars(primary.hanja!))];
-  const hk = `${primary.source}:${primary.id}`;
-  const r = useAsync<HanjaInfo[]>(async () => { const v = await Promise.all(chars.map(async (ch) => ({
-    ch, info: await db.hanjaChar(ch),
-    words: (await db.wordsWithHanja(ch, 12, 0)).filter((w) => !(w.source === primary.source && w.id === primary.id)).slice(0, 5),
-  }))); hanjaCache.set(hk, v); return v; }, [primary.source, primary.id], () => hanjaCache.get(hk) as HanjaInfo[] | undefined);
-  return (
-    <details class="dict" open>
-      <summary><span>Hanja</span><Icon name="down" size={18} /></summary>
-      {r.data?.map(({ ch, info, words }) => (
-        <div key={ch} class="hanja-block">
-          <a class="hanja-big sm" lang="zh-Hant" href={href(hanjaPath(ch))}>{ch}</a>
-          <div class="hanja-block-body">
-            <div><strong class="hangul">{info?.readings ?? '?'}</strong> <span class="muted">{info?.meaning_en}</span></div>
-            <div class="chips">
-              {words.map((w) => (
-                <a key={`${w.source}:${w.id}`} class="chip" href={href(entryPath(w.source, w.id, w.headword))}>
-                  <span class="hangul" lang="ko">{w.headword}</span> {w.hanja && <Hanja text={w.hanja} />}
-                </a>
-              ))}
-              {words.length === 0 && <span class="muted small">No other words.</span>}
-            </div>
-          </div>
-        </div>
-      ))}
-    </details>
-  );
-}
-
-function MoreExamples({ headword }: { headword: string }) {
-  const [open, setOpen] = useState(false);
-  const r = useAsync(() => (open ? db.sentences(stemOf(headword), 8) : Promise.resolve(undefined)), [open, headword]);
-  return (
-    <details class="dict" onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}>
-      <summary><span>More examples</span><Icon name="down" size={18} /></summary>
-      {open && r.loading && <p class="muted pad">Loading…</p>}
-      {r.data?.length === 0 && <p class="muted pad">No example sentences found.</p>}
-      {r.data?.map((x, i) => (
-        <div key={i} class="ex"><div class="ex-ko hangul" lang="ko">{x.ko}</div>{x.en && <div class="ex-en">{x.en}</div>}</div>
-      ))}
-    </details>
   );
 }

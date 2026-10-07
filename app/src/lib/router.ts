@@ -30,6 +30,10 @@ export function useRoute(): Route {
   return r;
 }
 
+/** Route hash without the ?tab= param (an entry is the same entry whichever tab shows). */
+export const withoutTab = (raw: string) => raw.replace(/([?&])tab=[^&]*&?/, '$1').replace(/[?&]$/, '');
+export const withTab = (raw: string, tab: string) => { const b = withoutTab(raw); return `${b}${b.includes('?') ? '&' : '?'}tab=${tab}`; };
+
 export const searchPath = (q: string) => `/search?q=${encodeURIComponent(q)}`;
 export const entryPath = (source: string, id: number, hw?: string) =>
   `/entry/${source}/${id}${hw ? `?hw=${encodeURIComponent(hw)}` : ''}`;

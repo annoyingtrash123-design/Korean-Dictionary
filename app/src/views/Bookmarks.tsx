@@ -3,7 +3,7 @@ import { bookmarks, createFolder, deleteFolder, DEFAULT_FOLDER, moveBookmark, re
 import { useStore } from '../lib/store';
 import { Empty, Hanja, IconButton, Sheet } from '../components/common';
 import { Icon } from '../components/Icons';
-import { href, useRoute } from '../lib/router';
+import { href, useRoute, withoutTab } from '../lib/router';
 import { savedPath } from '../lib/entry-key';
 
 export function BookmarksView() {
@@ -46,7 +46,7 @@ export function BookmarksView() {
       <ul class="plain list">
         {items.map((b) => (
           <li key={b.key} class="bm">
-            <a class="row compact" href={href(savedPath(b))} aria-current={route.raw === savedPath(b) ? 'true' : undefined}>
+            <a class="row compact" href={href(savedPath(b))} aria-current={withoutTab(route.raw) === savedPath(b) ? 'true' : undefined}>
               <div class="row-main">
                 <div class="row-head"><span class="hangul hw" lang="ko">{b.headword}</span>{b.hanja && <Hanja text={b.hanja} />}</div>
                 {b.gloss && <div class="row-gloss">{b.gloss}</div>}

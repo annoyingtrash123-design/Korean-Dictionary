@@ -1,5 +1,6 @@
 //! Data pipeline for the offline Korean-English dictionary PWA.
 pub mod build;
+pub mod cedict;
 pub mod common;
 pub mod fetch;
 pub mod freq;

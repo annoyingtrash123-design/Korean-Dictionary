@@ -1,0 +1,2354 @@
+# Curated catalogue for the Reader add-on (see docs/READER.md).
+# Consumed by `kdict-pipeline fetch-texts`.  Fields marked in `uncertain` are best guesses that a
+# human should confirm against the fetched Wikisource page (see pipeline/texts/raw/_report.json).
+#
+# Sources:  wikisource-ko / wikisource-zh / law / ohchr  (resolved by source_title, then `search`)
+#           gutenberg / archive-org  (English translations referenced by `english_pd`)
+# Only authors who died before 1963 are listed (Korean life+50 term had expired before the 2013 extension).
+
+[news]
+# Policy Briefing (korea.kr) RSS feeds.  Only articles whose page shows the
+# KOGL Type 1 mark (공공누리 제1유형) are kept.  URLs are tried in order; failures are logged.
+feeds = [
+  "https://www.korea.kr/rss/policy.xml",
+  "https://www.korea.kr/rss/pressrelease.xml",
+  "https://www.korea.kr/rss/president.xml",
+]
+
+[[text]]
+id = "chunhyangjeon"
+title_ko = "열녀춘향수절가"
+title_en = "The Faithful Chunhyang (Wanpan 84-leaf text)"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "19th century (Wanpan 84-leaf printing, c. 1910)"
+year = 1850
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the opening (Chunhyang and Mongnyong meet on the swing, the vow) and the final reunion/암행어사 출도 scene; ~10k characters."
+source = "wikisource-ko"
+source_title = "열녀춘향수절가"
+search = ["열녀춘향수절가", "춘향전 완판본"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+english_pd = { title = "Korean Tales", translator = "Horace N. Allen", year = 1889, source = "gutenberg", search = "Korean Tales Allen", ref = "allen-1889-korean-tales" }
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "honggildongjeon"
+title_ko = "홍길동전"
+title_en = "The Tale of Hong Gildong"
+author_ko = "허균"
+author_en = "Heo Gyun"
+author_dates = "1569–1618"
+date = "c. 1612 (earliest surviving texts 18th–19th c.)"
+year = 1612
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep the birth and grievance (호부호형), the departure from home, and the founding of 활빈당; ~8k characters."
+source = "wikisource-ko"
+source_title = "홍길동전"
+search = ["홍길동전", "경판 홍길동전"]
+pd_basis = "Author died 1618; the work is centuries old and in the public domain."
+note = "Attribution to 허균 is traditional and disputed; surviving texts are later."
+uncertain = ["date", "year", "author"]
+
+[[text]]
+id = "simcheongjeon"
+title_ko = "심청전"
+title_en = "The Tale of Sim Cheong"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "18th–19th century (Wanpan 71-leaf text)"
+year = 1800
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep Sim Cheong's sale for 300 seok of rice, the Indangsu sacrifice and the royal reunion banquet; ~10k characters."
+source = "wikisource-ko"
+source_title = "심청전"
+search = ["심청전", "심청전 완판본"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+english_pd = { title = "Korean Tales", translator = "Horace N. Allen", year = 1889, source = "gutenberg", search = "Korean Tales Allen", ref = "allen-1889-korean-tales" }
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "heungbujeon"
+title_ko = "흥부전"
+title_en = "The Tale of Heungbu"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "18th–19th century (Gyeongpan 25-leaf text)"
+year = 1850
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the brothers' division of the property, the swallow and the two gourds; ~8k characters."
+source = "wikisource-ko"
+source_title = "흥부전"
+search = ["흥부전", "흥보가 경판"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+english_pd = { title = "Korean Tales", translator = "Horace N. Allen", year = 1889, source = "gutenberg", search = "Korean Tales Allen", ref = "allen-1889-korean-tales" }
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "tokkijeon"
+title_ko = "토끼전"
+title_en = "The Tale of the Rabbit (Byeoljubu-jeon)"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "18th–19th century"
+year = 1850
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the Dragon King's illness, the tortoise's mission and the rabbit's escape (\"liver left at home\"); ~8k characters."
+source = "wikisource-ko"
+source_title = "토끼전"
+search = ["토끼전", "별주부전", "토생원전"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "bakssijeon"
+title_ko = "박씨전"
+title_en = "The Tale of Lady Bak"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "17th–18th century (after the Manchu invasion of 1636)"
+year = 1700
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "classical-prose"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep Lady Bak's ugliness and transformation and the defence against the Qing general Yonggolda; ~8k characters."
+source = "wikisource-ko"
+source_title = "박씨전"
+search = ["박씨전", "박씨부인전"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+uncertain = ["date", "year"]
+
+[[text]]
+id = "guunmong"
+title_ko = "구운몽"
+title_en = "The Cloud Dream of the Nine"
+author_ko = "김만중"
+author_en = "Kim Man-jung"
+author_dates = "1637–1692"
+date = "c. 1687"
+year = 1687
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Selected chapters only: 1 (Seongjin and the eight fairies), the Yangso-yu/Gye Seom-wol episodes, and the final chapter (the dream awakening); ~15k characters."
+source = "wikisource-ko"
+source_title = "구운몽"
+search = ["구운몽", "九雲夢"]
+pd_basis = "Author died 1692; the work is centuries old and in the public domain."
+note = "Original language (hangul vs hanmun) debated; Wikisource editions vary."
+english_pd = { title = "The Cloud Dream of the Nine", translator = "James Scarth Gale", year = 1922, source = "archive-org", search = "Cloud Dream of the Nine Gale", ref = "gale-1922-cloud-dream-of-the-nine" }
+uncertain = ["source_title"]
+
+[[text]]
+id = "sassinamjeonggi"
+title_ko = "사씨남정기"
+title_en = "Lady Sa's Journey to the South"
+author_ko = "김만중"
+author_en = "Kim Man-jung"
+author_dates = "1637–1692"
+date = "c. 1689"
+year = 1689
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep Lady Sa's marriage, the concubine Gyo-chae's plot, the expulsion and reunion; ~10k characters."
+source = "wikisource-ko"
+source_title = "사씨남정기"
+search = ["사씨남정기", "謝氏南征記"]
+pd_basis = "Author died 1692; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "hanjungnok"
+title_ko = "한중록"
+title_en = "Memoirs of Lady Hyegyeong (Hanjungnok)"
+author_ko = "혜경궁 홍씨"
+author_en = "Lady Hyegyeong"
+author_dates = "1735–1816"
+date = "1795–1805"
+year = 1795
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the 1795 memoir (childhood in the palace) and the 1762 tragedy of Prince Sado; ~12k characters."
+source = "wikisource-ko"
+source_title = "한중록"
+search = ["한중록", "恨中錄", "혜경궁 홍씨"]
+pd_basis = "Author died 1816; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "mangbokssajeopogi"
+title_ko = "만복사저포기"
+title_hanja = "萬福寺樗蒲記"
+title_en = "The Game of Yut at Manboksa"
+author_ko = "김시습"
+author_en = "Kim Si-seup"
+author_dates = "1435–1493"
+date = "c. 1465–1470"
+year = 1467
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "hanmun"
+collection = "금오신화 (Geumo sinhwa)"
+excerpt = false
+source = "wikisource-ko"
+source_title = "만복사저포기"
+search = ["만복사저포기", "萬福寺樗蒲記", "금오신화"]
+pd_basis = "Author died 1493; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "iseang_gyujangjeon"
+title_ko = "이생규장전"
+title_hanja = "李生窺牆傳"
+title_en = "Yi Saeng Peers over the Wall"
+author_ko = "김시습"
+author_en = "Kim Si-seup"
+author_dates = "1435–1493"
+date = "c. 1465–1470"
+year = 1467
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "hanmun"
+collection = "금오신화 (Geumo sinhwa)"
+excerpt = false
+source = "wikisource-ko"
+source_title = "이생규장전"
+search = ["이생규장전", "李生窺牆傳", "금오신화"]
+pd_basis = "Author died 1493; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "chwiyububerugjeong"
+title_ko = "취유부벽정기"
+title_hanja = "醉遊浮碧亭記"
+title_en = "Drunken Revel at Buibyeok Pavilion"
+author_ko = "김시습"
+author_en = "Kim Si-seup"
+author_dates = "1435–1493"
+date = "c. 1465–1470"
+year = 1467
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "hanmun"
+collection = "금오신화 (Geumo sinhwa)"
+excerpt = false
+source = "wikisource-ko"
+source_title = "취유부벽정기"
+search = ["취유부벽정기", "醉遊浮碧亭記", "금오신화"]
+pd_basis = "Author died 1493; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "namyeombujuji"
+title_ko = "남염부주지"
+title_hanja = "南炎浮洲志"
+title_en = "A Record of Namyeombuju"
+author_ko = "김시습"
+author_en = "Kim Si-seup"
+author_dates = "1435–1493"
+date = "c. 1465–1470"
+year = 1467
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "hanmun"
+collection = "금오신화 (Geumo sinhwa)"
+excerpt = false
+source = "wikisource-ko"
+source_title = "남염부주지"
+search = ["남염부주지", "南炎浮洲志", "금오신화"]
+pd_basis = "Author died 1493; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "yonggungbuyeonrok"
+title_ko = "용궁부연록"
+title_hanja = "龍宮赴宴錄"
+title_en = "A Banquet at the Dragon Palace"
+author_ko = "김시습"
+author_en = "Kim Si-seup"
+author_dates = "1435–1493"
+date = "c. 1465–1470"
+year = 1467
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "classical-prose"
+script = "hanmun"
+collection = "금오신화 (Geumo sinhwa)"
+excerpt = false
+source = "wikisource-ko"
+source_title = "용궁부연록"
+search = ["용궁부연록", "龍宮赴宴錄", "금오신화"]
+pd_basis = "Author died 1493; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "jeongeupsa"
+title_ko = "정읍사"
+title_en = "Song of Jeongeup"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "Baekje song (recorded in Akhak gwebeom, 1493)"
+year = 600
+period = "three-kingdoms"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "정읍사"
+search = ["정읍사", "井邑詞"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+note = "Oldest surviving Korean-language song text in hangul; the Baekje date is traditional."
+uncertain = ["date", "year"]
+
+[[text]]
+id = "cheongsanbyeolgok"
+title_ko = "청산별곡"
+title_en = "Song of the Green Mountain"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "Goryeo (13th–14th c.)"
+year = 1300
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "청산별곡"
+search = ["청산별곡", "靑山別曲"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+uncertain = ["date", "year"]
+
+[[text]]
+id = "gasiri"
+title_ko = "가시리"
+title_en = "Will You Go?"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "Goryeo (13th–14th c.)"
+year = 1300
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "가시리"
+search = ["가시리", "귀호곡"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+uncertain = ["date", "year"]
+
+[[text]]
+id = "gujiga"
+title_ko = "구지가"
+title_hanja = "龜旨歌"
+title_en = "Song of Gujibong (Welcome Song)"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "42 CE (founding legend of Gaya)"
+year = 42
+period = "three-kingdoms"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hanmun"
+excerpt = false
+source = "wikisource-ko"
+source_title = "구지가"
+search = ["구지가", "龜旨歌", "가락국기"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "hwangjoga"
+title_ko = "황조가"
+title_hanja = "黃鳥歌"
+title_en = "Song of the Yellow Birds"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "17 BCE (attributed to King Yuri of Goguryeo)"
+year = -17
+period = "three-kingdoms"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hanmun"
+excerpt = false
+source = "wikisource-ko"
+source_title = "황조가"
+search = ["황조가", "黃鳥歌", "유리왕"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+note = "Attributed to 유리왕 (King Yuri), recorded in the Samguk sagi."
+uncertain = ["date", "year", "author", "source_title"]
+
+[[text]]
+id = "cheoyongga"
+title_ko = "처용가"
+title_hanja = "處容歌"
+title_en = "Song of Cheoyong"
+author_ko = "작자 미상"
+author_en = "Anonymous"
+author_dates = ""
+date = "879 (Silla, King Heongang)"
+year = 879
+period = "unified-silla"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "처용가"
+search = ["처용가", "處容歌"]
+pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "dansimga"
+title_ko = "단심가"
+title_en = "Song of a Loyal Heart"
+author_ko = "정몽주"
+author_en = "Jeong Mong-ju"
+author_dates = "1337–1392"
+date = "1392"
+year = 1392
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hangul"
+collection = "정몽주·이방원 시조 문답"
+excerpt = false
+source = "wikisource-ko"
+source_title = "단심가"
+search = ["단심가", "정몽주", "이 몸이 죽고 죽어"]
+pd_basis = "Author died 1392; the work is centuries old and in the public domain."
+uncertain = ["author_dates"]
+
+[[text]]
+id = "hayeoga"
+title_ko = "하여가"
+title_en = "Song of \"What of It?\""
+author_ko = "이방원"
+author_en = "Yi Bang-won (King Taejong)"
+author_dates = "1367–1422"
+date = "1392"
+year = 1392
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "verse"
+script = "hangul"
+collection = "정몽주·이방원 시조 문답"
+excerpt = false
+source = "wikisource-ko"
+source_title = "하여가"
+search = ["하여가", "이방원", "이런들 어떠하리"]
+pd_basis = "Author died 1422; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "giljae_hoegoga"
+title_ko = "회고가"
+title_en = "Lament for the Old Capital"
+author_ko = "길재"
+author_en = "Gil Jae"
+author_dates = "1353–1419"
+date = "c. 1400"
+year = 1400
+period = "joseon-early"
+themes = ["ancient-goryeo", "joseon"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "회고가"
+search = ["회고가", "길재", "오백 년 도읍지를"]
+pd_basis = "Author died 1419; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "seongsammun_sijo"
+title_ko = "이 몸이 죽어 가서"
+title_en = "When I Die, What Shall I Be?"
+author_ko = "성삼문"
+author_en = "Seong Sam-mun"
+author_dates = "1418–1456"
+date = "c. 1456"
+year = 1456
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "이 몸이 죽어 가서"
+search = ["이 몸이 죽어 가서", "성삼문", "낙락장송"]
+pd_basis = "Author died 1456; the work is centuries old and in the public domain."
+uncertain = ["date", "source_title"]
+
+[[text]]
+id = "hwangjini_byeokgyesu"
+title_ko = "청산리 벽계수야"
+title_en = "O Green Stream of the Blue Mountain"
+author_ko = "황진이"
+author_en = "Hwang Jini"
+author_dates = "c. 1506–c. 1560"
+date = "16th century"
+year = 1530
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "verse"
+script = "hangul"
+collection = "황진이 시조"
+excerpt = false
+source = "wikisource-ko"
+source_title = "청산리 벽계수야"
+search = ["청산리 벽계수야", "황진이"]
+pd_basis = "Author died 1560; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "hwangjini_dongjitdal"
+title_ko = "동짓달 기나긴 밤을"
+title_en = "The Long Night of the Winter Solstice"
+author_ko = "황진이"
+author_en = "Hwang Jini"
+author_dates = "c. 1506–c. 1560"
+date = "16th century"
+year = 1530
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "verse"
+script = "hangul"
+collection = "황진이 시조"
+excerpt = false
+source = "wikisource-ko"
+source_title = "동짓달 기나긴 밤을"
+search = ["동짓달 기나긴 밤을", "황진이"]
+pd_basis = "Author died 1560; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "isunsin_hansando"
+title_ko = "한산섬 달 밝은 밤에"
+title_en = "On Hansan Island on a Moonlit Night"
+author_ko = "이순신"
+author_en = "Yi Sun-sin"
+author_dates = "1545–1598"
+date = "1597"
+year = 1597
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "한산섬 달 밝은 밤에"
+search = ["한산섬 달 밝은 밤에", "이순신", "한산도가"]
+pd_basis = "Author died 1598; the work is centuries old and in the public domain."
+uncertain = ["date", "source_title"]
+
+[[text]]
+id = "kimsangheon_sijo"
+title_ko = "가노라 삼각산아"
+title_en = "Farewell, Samgak Mountain"
+author_ko = "김상헌"
+author_en = "Kim Sang-heon"
+author_dates = "1570–1652"
+date = "1637"
+year = 1637
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "가노라 삼각산아"
+search = ["가노라 삼각산아", "김상헌"]
+pd_basis = "Author died 1652; the work is centuries old and in the public domain."
+note = "Composed on being taken to Shenyang after the 1636 Manchu invasion."
+uncertain = ["date", "source_title"]
+
+[[text]]
+id = "ouga"
+title_ko = "오우가"
+title_hanja = "五友歌"
+title_en = "Song of My Five Friends"
+author_ko = "윤선도"
+author_en = "Yun Seon-do"
+author_dates = "1587–1671"
+date = "1642"
+year = 1642
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "verse"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "오우가"
+search = ["오우가", "윤선도", "산중신곡"]
+pd_basis = "Author died 1671; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "eobusasiga"
+title_ko = "어부사시사"
+title_hanja = "漁父四時詞"
+title_en = "Fisherman's Calendar (Four Seasons)"
+author_ko = "윤선도"
+author_en = "Yun Seon-do"
+author_dates = "1587–1671"
+date = "1651"
+year = 1651
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "verse"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep the spring (춘사) set of ten verses and two verses of each other season; ~4k characters."
+source = "wikisource-ko"
+source_title = "어부사시사"
+search = ["어부사시사", "윤선도", "漁父四時詞"]
+pd_basis = "Author died 1671; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "gwandongbyeolgok"
+title_ko = "관동별곡"
+title_hanja = "關東別曲"
+title_en = "Song of the Eastern Coast"
+author_ko = "정철"
+author_en = "Jeong Cheol"
+author_dates = "1536–1593"
+date = "1580"
+year = 1580
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "verse"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the opening journey, Geumgangsan and Gwandong sections and the closing dream; ~6k characters."
+source = "wikisource-ko"
+source_title = "관동별곡"
+search = ["관동별곡", "정철", "關東別曲"]
+pd_basis = "Author died 1593; the work is centuries old and in the public domain."
+
+[[text]]
+id = "samimingok"
+title_ko = "사미인곡"
+title_hanja = "思美人曲"
+title_en = "Song of Longing for the Fair One"
+author_ko = "정철"
+author_en = "Jeong Cheol"
+author_dates = "1536–1593"
+date = "c. 1585"
+year = 1585
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "verse"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "사미인곡"
+search = ["사미인곡", "정철", "思美人曲"]
+pd_basis = "Author died 1593; the work is centuries old and in the public domain."
+uncertain = ["date", "source_title"]
+
+[[text]]
+id = "chuyaujung"
+title_ko = "추야우중"
+title_hanja = "秋夜雨中"
+title_en = "Rainy Autumn Night"
+author_ko = "최치원"
+author_en = "Choe Chi-won"
+author_dates = "857–after 908"
+date = "late 9th century"
+year = 890
+period = "unified-silla"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "추야우중"
+search = ["추야우중", "秋夜雨中", "최치원"]
+pd_basis = "Author died 908; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "gyeokhwangsoseo"
+title_ko = "격황소서"
+title_hanja = "檄黃巢書"
+title_en = "Proclamation against Huang Chao"
+author_ko = "최치원"
+author_en = "Choe Chi-won"
+author_dates = "857–after 908"
+date = "881"
+year = 881
+period = "unified-silla"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "檄黃巢書"
+search = ["격황소서", "檄黃巢書", "토황소격문"]
+pd_basis = "Author died 908; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "dongmyeongwangpyeon"
+title_ko = "동명왕편"
+title_hanja = "東明王篇"
+title_en = "Epic of King Dongmyeong"
+author_ko = "이규보"
+author_en = "Yi Gyu-bo"
+author_dates = "1168–1241"
+date = "1193"
+year = 1193
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the prose preface and the opening 40 couplets of the epic; ~6k characters."
+source = "wikisource-zh"
+source_title = "東明王篇"
+search = ["동명왕편", "東明王篇", "이규보"]
+pd_basis = "Author died 1241; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "seulgyeonseol"
+title_ko = "슬견설"
+title_hanja = "蝨犬說"
+title_en = "On Lice and Dogs"
+author_ko = "이규보"
+author_en = "Yi Gyu-bo"
+author_dates = "1168–1241"
+date = "13th century"
+year = 1220
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "蝨犬說"
+search = ["슬견설", "蝨犬說", "이규보"]
+pd_basis = "Author died 1241; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "yangbanjeon"
+title_ko = "양반전"
+title_hanja = "兩班傳"
+title_en = "The Tale of the Yangban"
+author_ko = "박지원"
+author_en = "Park Ji-won"
+author_dates = "1737–1805"
+date = "c. 1780"
+year = 1780
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-ko"
+source_title = "양반전"
+search = ["양반전", "兩班傳", "박지원"]
+pd_basis = "Author died 1805; the work is centuries old and in the public domain."
+note = "From Yeonam jip (Bangyeonggak oejeon)."
+uncertain = ["date", "year"]
+
+[[text]]
+id = "heosaengjeon"
+title_ko = "허생전"
+title_hanja = "許生傳"
+title_en = "The Tale of Master Heo"
+author_ko = "박지원"
+author_en = "Park Ji-won"
+author_dates = "1737–1805"
+date = "c. 1780"
+year = 1780
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-ko"
+source_title = "허생전"
+search = ["허생전", "許生傳", "옥갑야화", "박지원"]
+pd_basis = "Author died 1805; the work is centuries old and in the public domain."
+note = "From Okgap yahwa in the Yeolha ilgi."
+uncertain = ["date", "year"]
+
+[[text]]
+id = "mokminsimseo"
+title_ko = "목민심서"
+title_hanja = "牧民心書"
+title_en = "Admonitions on Governing the People (Mongmin simseo)"
+author_ko = "정약용"
+author_en = "Jeong Yak-yong"
+author_dates = "1762–1836"
+date = "1818"
+year = 1818
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the preface (자서) and the 율기 (self-discipline) section on 청심; ~8k characters."
+source = "wikisource-zh"
+source_title = "목민심서"
+search = ["목민심서", "牧民心書", "정약용"]
+pd_basis = "Author died 1836; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "dangun_samgukyusa"
+title_ko = "단군 조 (고조선·왕검조선)"
+title_hanja = "古朝鮮 王儉朝鮮"
+title_en = "The Founding of Gojoseon by Dangun (Samguk yusa)"
+author_ko = "일연"
+author_en = "Iryeon"
+author_dates = "1206–1289"
+date = "c. 1281"
+year = 1281
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "三國遺事/卷第一"
+search = ["삼국유사 고조선", "古朝鮮 王儉朝鮮", "三國遺事 紀異"]
+pd_basis = "Author died 1289; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "ondal_samguksagi"
+title_ko = "온달전"
+title_hanja = "溫達傳"
+title_en = "The Tale of Ondal (Samguk sagi)"
+author_ko = "김부식"
+author_en = "Kim Bu-sik"
+author_dates = "1075–1151"
+date = "1145"
+year = 1145
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "三國史記/卷第四十五"
+search = ["온달전", "溫達傳", "삼국사기 열전"]
+pd_basis = "Author died 1151; the work is centuries old and in the public domain."
+note = "Biography of Ondal is in vol. 45 (열전 제5)."
+uncertain = ["source_title"]
+
+[[text]]
+id = "hwawanggye"
+title_ko = "화왕계"
+title_hanja = "花王戒"
+title_en = "Parable of the Flower King"
+author_ko = "김부식"
+author_en = "Kim Bu-sik"
+author_dates = "1075–1151"
+date = "1145 (Seol Chong, 7th c., in Samguk sagi)"
+year = 1145
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "三國史記/卷第四十六"
+search = ["화왕계", "花王戒", "설총"]
+pd_basis = "Author died 1151; the work is centuries old and in the public domain."
+note = "Story told by 설총 (Seol Chong) to King Sinmun; recorded in Samguk sagi vol. 46."
+uncertain = ["source_title", "date"]
+
+[[text]]
+id = "songin"
+title_ko = "송인"
+title_hanja = "送人"
+title_en = "Parting (Songin)"
+author_ko = "정지상"
+author_en = "Jeong Ji-sang"
+author_dates = "?–1135"
+date = "early 12th century"
+year = 1120
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "送人"
+search = ["송인", "送人", "정지상"]
+pd_basis = "Author died 1135; the work is centuries old and in the public domain."
+uncertain = ["date", "year", "source_title"]
+
+[[text]]
+id = "balhaego_seo"
+title_ko = "발해고 서"
+title_hanja = "渤海考序"
+title_en = "Preface to Reflections on Balhae"
+author_ko = "유득공"
+author_en = "Yu Deuk-gong"
+author_dates = "1748–1807"
+date = "1784"
+year = 1784
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "渤海考序"
+search = ["발해고 서", "渤海考序", "유득공"]
+pd_basis = "Author died 1807; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "yeolha_dogangrok"
+title_ko = "열하일기 도강록"
+title_hanja = "渡江錄"
+title_en = "Yeolha ilgi: Dogangnok (Crossing the Yalu)"
+author_ko = "박지원"
+author_en = "Park Ji-won"
+author_dates = "1737–1805"
+date = "1780–1783"
+year = 1783
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+collection = "열하일기"
+excerpt = true
+excerpt_note = "Keep the opening passage (the party leaves Uiju and crosses the Yalu) and the discourse on 호곡장; ~10k characters."
+source = "wikisource-zh"
+source_title = "熱河日記/渡江錄"
+search = ["도강록", "渡江錄", "열하일기"]
+pd_basis = "Author died 1805; the work is centuries old and in the public domain."
+uncertain = ["source_title", "year"]
+
+[[text]]
+id = "yeolha_hojil"
+title_ko = "열하일기 호질"
+title_hanja = "虎叱"
+title_en = "Yeolha ilgi: Hojil (The Tiger's Rebuke)"
+author_ko = "박지원"
+author_en = "Park Ji-won"
+author_dates = "1737–1805"
+date = "1780–1783"
+year = 1783
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+collection = "열하일기"
+excerpt = false
+source = "wikisource-zh"
+source_title = "熱河日記/虎叱"
+search = ["호질", "虎叱", "열하일기"]
+pd_basis = "Author died 1805; the work is centuries old and in the public domain."
+uncertain = ["source_title", "year"]
+
+[[text]]
+id = "yeolha_iyagudoha"
+title_ko = "열하일기 일야구도하기"
+title_hanja = "一夜九渡河記"
+title_en = "Yeolha ilgi: Nine Crossings of the River in One Night"
+author_ko = "박지원"
+author_en = "Park Ji-won"
+author_dates = "1737–1805"
+date = "1780–1783"
+year = 1783
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+collection = "열하일기"
+excerpt = false
+source = "wikisource-zh"
+source_title = "熱河日記/一夜九渡河記"
+search = ["일야구도하기", "一夜九渡河記", "산장잡기"]
+pd_basis = "Author died 1805; the work is centuries old and in the public domain."
+uncertain = ["source_title", "year"]
+
+[[text]]
+id = "uisanmundap"
+title_ko = "의산문답"
+title_hanja = "醫山問答"
+title_en = "Dialogue on Mount Uisan (Uisan mundap)"
+author_ko = "홍대용"
+author_en = "Hong Dae-yong"
+author_dates = "1731–1783"
+date = "c. 1766"
+year = 1766
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the opening dialogue between Heoja and Silong and the argument that the earth rotates and has no centre; ~8k characters."
+source = "wikisource-zh"
+source_title = "醫山問答"
+search = ["의산문답", "醫山問答", "담헌서", "홍대용"]
+pd_basis = "Author died 1783; the work is centuries old and in the public domain."
+uncertain = ["year", "source_title"]
+
+[[text]]
+id = "hongdaeyong_yeongi"
+title_ko = "담헌연기 (연행 기록 발췌)"
+title_hanja = "湛軒燕記"
+title_en = "Damheon yeongi: Excerpt on Meeting Chinese Scholars in Beijing"
+author_ko = "홍대용"
+author_en = "Hong Dae-yong"
+author_dates = "1731–1783"
+date = "1766"
+year = 1766
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep one or two sections on the meetings with Yan Cheng, Pan Tingyun and Lu Fei at the Ganjing Alley lodging; ~8k characters."
+source = "wikisource-zh"
+source_title = "湛軒燕記"
+search = ["담헌연기", "湛軒燕記", "홍대용 연기", "건정동필담"]
+pd_basis = "Author died 1783; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "pyohaerok"
+title_ko = "표해록"
+title_hanja = "漂海錄"
+title_en = "Record of Drifting across the Sea (Pyohaerok)"
+author_ko = "최부"
+author_en = "Choe Bu"
+author_dates = "1454–1504"
+date = "1488"
+year = 1488
+period = "joseon-early"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the shipwreck and landfall in Taizhou, and the Grand Canal journey to Beijing (the first quarter of the book); ~12k characters."
+source = "wikisource-zh"
+source_title = "漂海錄"
+search = ["표해록", "漂海錄", "최부"]
+pd_basis = "Author died 1504; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "bukhakui_seo"
+title_ko = "북학의 서"
+title_hanja = "北學議序"
+title_en = "Preface to Discourse on Northern Learning"
+author_ko = "박제가"
+author_en = "Bak Je-ga"
+author_dates = "1750–1805"
+date = "1778"
+year = 1778
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "北學議序"
+search = ["북학의 서", "北學議序", "박제가", "北學議"]
+pd_basis = "Author died 1805; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "najeon_war"
+title_ko = "삼국사기 나당전쟁 (답설인귀서)"
+title_hanja = "答薛仁貴書"
+title_en = "Samguk sagi on the Silla–Tang War (King Munmu's reply to Xue Rengui)"
+author_ko = "김부식"
+author_en = "Kim Bu-sik"
+author_dates = "1075–1151"
+date = "1145 (events of 670–676)"
+year = 676
+period = "unified-silla"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep King Munmu's 11th-year (671) letter replying to Xue Rengui (대당 총관 설인귀에게 답한 편지); ~6k characters."
+source = "wikisource-zh"
+source_title = "三國史記/卷第七"
+search = ["삼국사기 문무왕 답설인귀서", "答薛仁貴書", "新羅本紀 文武王"]
+pd_basis = "Author died 1151; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "euljimundeok_sijo"
+title_ko = "여수장우중문시"
+title_hanja = "與隋將于仲文詩"
+title_en = "Poem to General You Zhongwen of Sui"
+author_ko = "을지문덕"
+author_en = "Eulji Mundeok"
+author_dates = "fl. 612"
+date = "612"
+year = 612
+period = "three-kingdoms"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "三國史記/卷第四十四"
+search = ["여수장우중문시", "與隋將于仲文詩", "을지문덕"]
+pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
+note = "Preserved in Samguk sagi vol. 44."
+uncertain = ["date", "source_title", "author_dates"]
+
+[[text]]
+id = "seohui_damphan"
+title_ko = "서희 담판 (고려사 서희전)"
+title_hanja = "徐熙傳"
+title_en = "Seo Hui's Negotiation with the Khitan (Goryeo-sa)"
+author_ko = "정인지 등"
+author_en = "Jeong In-ji et al."
+author_dates = "1396–1478"
+date = "993 (compiled 1451)"
+year = 993
+period = "goryeo"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "高麗史/卷九十四"
+search = ["고려사 서희", "徐熙 蕭遜寧", "高麗史 列傳 徐熙"]
+pd_basis = "Author died 1478; the work is centuries old and in the public domain."
+note = "Biography of Seo Hui in Goryeo-sa 열전 vol. 94."
+uncertain = ["source_title"]
+
+[[text]]
+id = "seonjo_myeongwonbyeong"
+title_ko = "선조실록 임진왜란 명 원군"
+title_en = "Seonjo sillok: Ming Relief Army in the Imjin War"
+author_ko = "실록청 (편찬)"
+author_en = "Veritable Records bureau (compilers)"
+author_dates = ""
+date = "1592–1593"
+year = 1592
+period = "joseon-early"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Choose a few entries from 1592–1593 on the Ming decision to send troops, Li Rusong's arrival and the recovery of Pyongyang; ~8k characters."
+source = "wikisource-zh"
+source_title = "宣祖實錄"
+search = ["선조실록 명 원군", "宣祖實錄 李如松 平壤", "선조실록 이여송"]
+pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "injo_samjeondo"
+title_ko = "인조실록 삼전도"
+title_en = "Injo sillok: Surrender at Samjeondo"
+author_ko = "실록청 (편찬)"
+author_en = "Veritable Records bureau (compilers)"
+author_dates = ""
+date = "1637 (Injo 15th year, 1st month)"
+year = 1637
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Choose the entries of the 1st month of the 15th year covering the surrender at Samjeondo (30th day); ~6k characters."
+source = "wikisource-zh"
+source_title = "仁祖實錄"
+search = ["인조실록 삼전도", "仁祖實錄 三田渡", "인조 15년 1월 30일"]
+pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "anjunggeun_dongyang"
+title_ko = "동양평화론"
+title_hanja = "東洋平和論"
+title_en = "On Peace in the East (Dongyang pyeonghwaron)"
+author_ko = "안중근"
+author_en = "An Jung-geun"
+author_dates = "1879–1910"
+date = "1910"
+year = 1910
+period = "korean-empire"
+themes = ["colonial-independence", "sino-korean"]
+shelf = "sino-korean"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the preface and the first section; ~6k characters."
+source = "wikisource-ko"
+source_title = "동양평화론"
+search = ["동양평화론", "東洋平和論", "안중근"]
+pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "hunminjeongeum_haerye"
+title_ko = "훈민정음 (해례본) 어제서문·예의"
+title_hanja = "訓民正音"
+title_en = "Hunminjeongeum Haerye: King Sejong's Preface and Examples"
+author_ko = "세종"
+author_en = "King Sejong"
+author_dates = "1397–1450"
+date = "1446"
+year = 1446
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "documents"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the 어제서문 and 예의 (the 28 letters); ~3k characters."
+source = "wikisource-zh"
+source_title = "訓民正音"
+search = ["훈민정음 해례본", "訓民正音 御製序", "훈민정음 예의"]
+pd_basis = "Author died 1450; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "hunminjeongeum_jeonginji"
+title_ko = "훈민정음 해례본 정인지 서"
+title_hanja = "鄭麟趾序"
+title_en = "Hunminjeongeum Haerye: Jeong In-ji's Postscript"
+author_ko = "정인지 등"
+author_en = "Jeong In-ji et al."
+author_dates = "1396–1478"
+date = "1446"
+year = 1446
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "documents"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "訓民正音/解例/鄭麟趾序"
+search = ["정인지 서", "鄭麟趾序", "훈민정음 해례"]
+pd_basis = "Author died 1478; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "hunminjeongeum_eonhae"
+title_ko = "훈민정음 언해본"
+title_hanja = "訓民正音諺解"
+title_en = "Hunminjeongeum Eonhae (vernacular gloss)"
+author_ko = "세종"
+author_en = "King Sejong"
+author_dates = "1397–1450"
+date = "c. 1459"
+year = 1459
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "documents"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the 어제서문 언해 and the letter-by-letter 예의 언해; ~3k characters."
+source = "wikisource-ko"
+source_title = "훈민정음 언해"
+search = ["훈민정음 언해", "訓民正音諺解"]
+pd_basis = "Author died 1450; the work is centuries old and in the public domain."
+note = "The gloss appended to Worin seokbo (1459) in Middle Korean."
+uncertain = ["source_title", "date"]
+
+[[text]]
+id = "sejong_sillok_changje"
+title_ko = "세종실록 훈민정음 창제 기사"
+title_en = "Sejong sillok: Entry on the Creation of Hunminjeongeum (1443)"
+author_ko = "실록청 (편찬)"
+author_en = "Veritable Records bureau (compilers)"
+author_dates = ""
+date = "1443 (Sejong 25th year, 12th month)"
+year = 1443
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "documents"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "世宗實錄/卷一百二"
+search = ["세종실록 훈민정음 창제", "是月上親制諺文二十八字", "세종 25년 12월 30일"]
+pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "dongnip_sinmun_changgan"
+title_ko = "독립신문 창간호 논설"
+title_en = "Independent (Dongnip sinmun) First Editorial"
+author_ko = "서재필"
+author_en = "Seo Jae-pil (Philip Jaisohn)"
+author_dates = "1864–1951"
+date = "1896"
+year = 1896
+period = "korean-empire"
+themes = ["joseon", "colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "독립신문 창간호 논설"
+search = ["독립신문 창간 논설", "독립신문 1896년 4월 7일", "독닙신문"]
+pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain."
+note = "Unsigned editorial of the 7 April 1896 first issue, written by 서재필."
+uncertain = ["source_title"]
+
+[[text]]
+id = "gimi_declaration"
+title_ko = "기미독립선언서"
+title_en = "Declaration of Independence (1 March 1919)"
+author_ko = "민족대표 33인 (최남선 기초)"
+author_en = "The 33 national representatives (drafted by Choe Nam-seon)"
+author_dates = ""
+date = "1919-03-01"
+year = 1919
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "기미독립선언서"
+search = ["기미독립선언서", "3·1 독립선언서", "己未獨立宣言書"]
+pd_basis = "Collective/anonymous 1919 document; authors long dead (drafted by Choe Nam-seon, d. 1957); in the public domain."
+
+[[text]]
+id = "daehan_declaration"
+title_ko = "대한독립선언서 (무오독립선언서)"
+title_en = "Proclamation of Korean Independence (Muo Declaration)"
+author_ko = "조소앙 등"
+author_en = "Jo So-ang et al."
+author_dates = "1887–1958"
+date = "1919 (dated 1918 lunar year Muo)"
+year = 1919
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "대한독립선언서"
+search = ["대한독립선언서", "무오독립선언서", "戊午獨立宣言書"]
+pd_basis = "Author died 1958; Korean term (life+50) expired 2008, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title", "date"]
+
+[[text]]
+id = "imsi_heonjang"
+title_ko = "대한민국 임시헌장"
+title_en = "Provisional Charter of the Republic of Korea (1919)"
+author_ko = "대한민국 임시의정원"
+author_en = "Provisional Legislative Council of the Korean Provisional Government"
+author_dates = ""
+date = "1919-04-11"
+year = 1919
+period = "colonial"
+themes = ["colonial-independence", "modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "대한민국 임시헌장"
+search = ["대한민국 임시헌장", "임시헌장 1919"]
+pd_basis = "Promulgated 11 April 1919 by the Provisional Legislative Council; a legal/state document (Copyright Act art. 7) and anonymous collective work."
+uncertain = ["source_title"]
+
+[[text]]
+id = "joseon_hyeongmyeong"
+title_ko = "조선혁명선언 (의열단선언)"
+title_en = "Declaration of the Korean Revolution"
+author_ko = "신채호"
+author_en = "Sin Chae-ho"
+author_dates = "1880–1936"
+date = "1923"
+year = 1923
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "조선혁명선언"
+search = ["조선혁명선언", "의열단선언", "朝鮮革命宣言"]
+pd_basis = "Author died 1936; Korean term (life+50) expired 1986, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "joseondongnip_ui_seo"
+title_ko = "조선독립의 서"
+title_hanja = "朝鮮獨立의 書"
+title_en = "Reasons for the Independence of Korea"
+author_ko = "한용운"
+author_en = "Han Yong-un"
+author_dates = "1879–1944"
+date = "1919"
+year = 1919
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "조선독립의 서"
+search = ["조선독립의 서", "朝鮮獨立의 書", "한용운"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "constitution_rok"
+title_ko = "대한민국 헌법"
+title_en = "Constitution of the Republic of Korea (1987)"
+author_ko = "대한민국"
+author_en = "Republic of Korea"
+author_dates = ""
+date = "1987 (in force since 25 Feb 1988)"
+year = 1987
+period = "modern"
+themes = ["modern-korea"]
+shelf = "constitution"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the preamble and Chapter I (제1조–제9조), Chapter II rights (제10조–제37조); ~8k characters."
+source = "law"
+source_title = "대한민국 헌법"
+search = ["대한민국 헌법", "헌법 1987"]
+pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
+
+[[text]]
+id = "constitution_1948"
+title_ko = "제헌헌법 (1948)"
+title_en = "Constitution of 1948 (Founding Constitution)"
+author_ko = "대한민국"
+author_en = "Republic of Korea"
+author_dates = ""
+date = "1948-07-17"
+year = 1948
+period = "modern"
+themes = ["modern-korea"]
+shelf = "constitution"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the preamble and Chapters I–II; ~5k characters."
+source = "law"
+source_title = "제헌헌법"
+search = ["대한민국 헌법 1948", "제헌헌법", "헌법 (1948년)"]
+pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
+uncertain = ["source_title"]
+
+[[text]]
+id = "udhr_korean"
+title_ko = "세계인권선언"
+title_en = "Universal Declaration of Human Rights (Korean)"
+author_ko = "국제연합 총회"
+author_en = "United Nations General Assembly"
+author_dates = ""
+date = "1948-12-10"
+year = 1948
+period = "modern"
+themes = ["modern-korea"]
+shelf = "constitution"
+script = "hangul"
+excerpt = false
+source = "ohchr"
+source_title = "세계인권선언"
+search = ["세계인권선언", "Universal Declaration of Human Rights Korean"]
+pd_basis = "UN document; OHCHR permits reproduction of its translations with attribution (https://www.ohchr.org/en/human-rights/universal-declaration/translations/korean)."
+uncertain = ["source_title"]
+
+[[text]]
+id = "jindallaekkot"
+title_ko = "진달래꽃"
+title_en = "Azaleas"
+author_ko = "김소월"
+author_en = "Kim Sowol"
+author_dates = "1902–1934"
+date = "1922 (collected 1925)"
+year = 1922
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "김소월 시집 진달래꽃"
+excerpt = false
+source = "wikisource-ko"
+source_title = "진달래꽃"
+search = ["진달래꽃", "김소월"]
+pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["date"]
+
+[[text]]
+id = "sanyuhwa"
+title_ko = "산유화"
+title_en = "Mountain Flowers"
+author_ko = "김소월"
+author_en = "Kim Sowol"
+author_dates = "1902–1934"
+date = "1924 (collected 1925)"
+year = 1924
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "김소월 시집 진달래꽃"
+excerpt = false
+source = "wikisource-ko"
+source_title = "산유화"
+search = ["산유화", "김소월"]
+pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["date"]
+
+[[text]]
+id = "chohon"
+title_ko = "초혼"
+title_en = "Summoning the Soul"
+author_ko = "김소월"
+author_en = "Kim Sowol"
+author_dates = "1902–1934"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "김소월 시집 진달래꽃"
+excerpt = false
+source = "wikisource-ko"
+source_title = "초혼"
+search = ["초혼", "김소월"]
+pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "meonhuil"
+title_ko = "먼 후일"
+title_en = "Some Day Far Off"
+author_ko = "김소월"
+author_en = "Kim Sowol"
+author_dates = "1902–1934"
+date = "1920"
+year = 1920
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "김소월 시집 진달래꽃"
+excerpt = false
+source = "wikisource-ko"
+source_title = "먼 후일"
+search = ["먼 후일", "김소월"]
+pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "nimui_chimmuk"
+title_ko = "님의 침묵"
+title_en = "Silence of the Beloved"
+author_ko = "한용운"
+author_en = "Han Yong-un"
+author_dates = "1879–1944"
+date = "1926"
+year = 1926
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "님의 침묵"
+excerpt = false
+source = "wikisource-ko"
+source_title = "님의 침묵"
+search = ["님의 침묵", "한용운"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "alsuopseoyo"
+title_ko = "알 수 없어요"
+title_en = "I Do Not Know"
+author_ko = "한용운"
+author_en = "Han Yong-un"
+author_dates = "1879–1944"
+date = "1926"
+year = 1926
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "님의 침묵"
+excerpt = false
+source = "wikisource-ko"
+source_title = "알 수 없어요"
+search = ["알 수 없어요", "한용운"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "narutbaewa_haengin"
+title_ko = "나룻배와 행인"
+title_en = "The Ferryboat and the Traveller"
+author_ko = "한용운"
+author_en = "Han Yong-un"
+author_dates = "1879–1944"
+date = "1926"
+year = 1926
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "님의 침묵"
+excerpt = false
+source = "wikisource-ko"
+source_title = "나룻배와 행인"
+search = ["나룻배와 행인", "한용운"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "seosi"
+title_ko = "서시"
+title_en = "Prologue"
+author_ko = "윤동주"
+author_en = "Yun Dong-ju"
+author_dates = "1917–1945"
+date = "1941 (published 1948)"
+year = 1941
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "하늘과 바람과 별과 시"
+excerpt = false
+source = "wikisource-ko"
+source_title = "서시"
+search = ["서시", "윤동주"]
+pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "byeolhenunbam"
+title_ko = "별 헤는 밤"
+title_en = "Counting the Stars at Night"
+author_ko = "윤동주"
+author_en = "Yun Dong-ju"
+author_dates = "1917–1945"
+date = "1941 (published 1948)"
+year = 1941
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "하늘과 바람과 별과 시"
+excerpt = false
+source = "wikisource-ko"
+source_title = "별 헤는 밤"
+search = ["별 헤는 밤", "윤동주"]
+pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "jahwasang"
+title_ko = "자화상"
+title_en = "Self-Portrait"
+author_ko = "윤동주"
+author_en = "Yun Dong-ju"
+author_dates = "1917–1945"
+date = "1939 (published 1948)"
+year = 1939
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "하늘과 바람과 별과 시"
+excerpt = false
+source = "wikisource-ko"
+source_title = "자화상"
+search = ["자화상", "윤동주"]
+pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "swipge_sseuieojin_si"
+title_ko = "쉽게 씌어진 시"
+title_en = "A Poem Easily Written"
+author_ko = "윤동주"
+author_en = "Yun Dong-ju"
+author_dates = "1917–1945"
+date = "1942 (published 1946)"
+year = 1942
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+collection = "하늘과 바람과 별과 시"
+excerpt = false
+source = "wikisource-ko"
+source_title = "쉽게 씌어진 시"
+search = ["쉽게 씌어진 시", "윤동주"]
+pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "cheongpodo"
+title_ko = "청포도"
+title_en = "Green Grapes"
+author_ko = "이육사"
+author_en = "Yi Yuksa"
+author_dates = "1904–1944"
+date = "1939"
+year = 1939
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "청포도"
+search = ["청포도", "이육사"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "gwangya"
+title_ko = "광야"
+title_en = "The Wilderness"
+author_ko = "이육사"
+author_en = "Yi Yuksa"
+author_dates = "1904–1944"
+date = "1939 (published 1945)"
+year = 1939
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "광야"
+search = ["광야", "이육사"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["date"]
+
+[[text]]
+id = "jeoljeong"
+title_ko = "절정"
+title_en = "The Peak"
+author_ko = "이육사"
+author_en = "Yi Yuksa"
+author_dates = "1904–1944"
+date = "1940"
+year = 1940
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "절정"
+search = ["절정", "이육사"]
+pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "bbaeatgin_deule"
+title_ko = "빼앗긴 들에도 봄은 오는가"
+title_en = "Will Spring Come to the Stolen Fields?"
+author_ko = "이상화"
+author_en = "Yi Sang-hwa"
+author_dates = "1901–1943"
+date = "1926"
+year = 1926
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "빼앗긴 들에도 봄은 오는가"
+search = ["빼앗긴 들에도 봄은 오는가", "이상화"]
+pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "naui_chimsil"
+title_ko = "나의 침실로"
+title_en = "To My Bedchamber"
+author_ko = "이상화"
+author_en = "Yi Sang-hwa"
+author_dates = "1901–1943"
+date = "1923"
+year = 1923
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "나의 침실로"
+search = ["나의 침실로", "이상화"]
+pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "hyangsu"
+title_ko = "향수"
+title_en = "Nostalgia"
+author_ko = "정지용"
+author_en = "Jeong Ji-yong"
+author_dates = "1902–1950"
+date = "1927"
+year = 1927
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "향수"
+search = ["향수", "정지용"]
+pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "yurichang"
+title_ko = "유리창"
+title_en = "The Windowpane"
+author_ko = "정지용"
+author_en = "Jeong Ji-yong"
+author_dates = "1902–1950"
+date = "1930"
+year = 1930
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "유리창"
+search = ["유리창", "정지용"]
+pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "moran"
+title_ko = "모란이 피기까지는"
+title_en = "Until the Peonies Bloom"
+author_ko = "김영랑"
+author_en = "Kim Yeong-nang"
+author_dates = "1903–1950"
+date = "1934"
+year = 1934
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "모란이 피기까지는"
+search = ["모란이 피기까지는", "김영랑"]
+pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "ogamdo"
+title_ko = "오감도 시제1호"
+title_en = "Crow's-eye View, Poem No. 1"
+author_ko = "이상"
+author_en = "Yi Sang"
+author_dates = "1910–1937"
+date = "1934"
+year = 1934
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "오감도 시제1호"
+search = ["오감도 시제1호", "이상"]
+pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "haeeguseo"
+title_ko = "해에게서 소년에게"
+title_en = "From the Sea to the Boy"
+author_ko = "최남선"
+author_en = "Choe Nam-seon"
+author_dates = "1890–1957"
+date = "1908"
+year = 1908
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "modern-poetry"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "해에게서 소년에게"
+search = ["해에게서 소년에게", "최남선"]
+pd_basis = "Author died 1957; Korean term (life+50) expired 2007, before the 2013 extension to life+70, so the work is in the public domain."
+note = "Often cited as the first new-style poem (sinchesi), published in Sonyeon, Nov. 1908."
+uncertain = ["source_title"]
+
+[[text]]
+id = "unsu_joeun_nal"
+title_ko = "운수 좋은 날"
+title_en = "A Lucky Day"
+author_ko = "현진건"
+author_en = "Hyeon Jin-geon"
+author_dates = "1900–1943"
+date = "1924"
+year = 1924
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "운수 좋은 날"
+search = ["운수 좋은 날", "현진건"]
+pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "bicheo"
+title_ko = "빈처"
+title_en = "The Poor Wife"
+author_ko = "현진건"
+author_en = "Hyeon Jin-geon"
+author_dates = "1900–1943"
+date = "1921"
+year = 1921
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "빈처"
+search = ["빈처", "현진건"]
+pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "dongbaekkkot"
+title_ko = "동백꽃"
+title_en = "Camellias"
+author_ko = "김유정"
+author_en = "Kim Yu-jeong"
+author_dates = "1908–1937"
+date = "1936"
+year = 1936
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "동백꽃"
+search = ["동백꽃", "김유정"]
+pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "bombom"
+title_ko = "봄·봄"
+title_en = "Spring, Spring"
+author_ko = "김유정"
+author_en = "Kim Yu-jeong"
+author_dates = "1908–1937"
+date = "1935"
+year = 1935
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "봄·봄"
+search = ["봄·봄", "김유정"]
+pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "memilkkot"
+title_ko = "메밀꽃 필 무렵"
+title_en = "When the Buckwheat Blooms"
+author_ko = "이효석"
+author_en = "Yi Hyo-seok"
+author_dates = "1907–1942"
+date = "1936"
+year = 1936
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "메밀꽃 필 무렵"
+search = ["메밀꽃 필 무렵", "이효석"]
+pd_basis = "Author died 1942; Korean term (life+50) expired 1992, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "beongeoriu_samryong"
+title_ko = "벙어리 삼룡이"
+title_en = "Samryong the Mute"
+author_ko = "나도향"
+author_en = "Na Do-hyang"
+author_dates = "1902–1926"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "벙어리 삼룡이"
+search = ["벙어리 삼룡이", "나도향"]
+pd_basis = "Author died 1926; Korean term (life+50) expired 1976, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "mullebanga"
+title_ko = "물레방아"
+title_en = "The Water Mill"
+author_ko = "나도향"
+author_en = "Na Do-hyang"
+author_dates = "1902–1926"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "물레방아"
+search = ["물레방아", "나도향"]
+pd_basis = "Author died 1926; Korean term (life+50) expired 1976, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "gamja"
+title_ko = "감자"
+title_en = "Potatoes"
+author_ko = "김동인"
+author_en = "Kim Dong-in"
+author_dates = "1900–1951"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "감자"
+search = ["감자", "김동인"]
+pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "baettaragi"
+title_ko = "배따라기"
+title_en = "Baettaragi"
+author_ko = "김동인"
+author_en = "Kim Dong-in"
+author_dates = "1900–1951"
+date = "1921"
+year = 1921
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "배따라기"
+search = ["배따라기", "김동인"]
+pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "talchulgi"
+title_ko = "탈출기"
+title_en = "Record of Escape"
+author_ko = "최서해"
+author_en = "Choe Seo-hae"
+author_dates = "1901–1932"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "탈출기"
+search = ["탈출기", "최서해"]
+pd_basis = "Author died 1932; Korean term (life+50) expired 1982, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "taepyeongcheonha"
+title_ko = "태평천하"
+title_en = "Peace Under Heaven"
+author_ko = "채만식"
+author_en = "Chae Man-sik"
+author_dates = "1902–1950"
+date = "1938 (serialised 1938)"
+year = 1938
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep the opening scene of Yun Jikwon's household and the chapter on his grandson; ~10k characters."
+source = "wikisource-ko"
+source_title = "태평천하"
+search = ["태평천하", "채만식"]
+pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "chisuk"
+title_ko = "치숙"
+title_en = "My Idiot Uncle"
+author_ko = "채만식"
+author_en = "Chae Man-sik"
+author_dates = "1902–1950"
+date = "1938"
+year = 1938
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "치숙"
+search = ["치숙", "채만식"]
+pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "nalgae"
+title_ko = "날개"
+title_en = "Wings"
+author_ko = "이상"
+author_en = "Yi Sang"
+author_dates = "1910–1937"
+date = "1936"
+year = 1936
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "날개"
+search = ["날개", "이상"]
+pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "mujeong"
+title_ko = "무정"
+title_en = "The Heartless"
+author_ko = "이광수"
+author_en = "Yi Gwang-su"
+author_dates = "1892–1950"
+date = "1917 (serialised in Maeil sinbo)"
+year = 1917
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep chapters 1–12 (Hyeongsik, Yeongchae and Seonhyeong) and the closing chapter; ~12k characters."
+source = "wikisource-ko"
+source_title = "무정"
+search = ["무정", "이광수"]
+pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
+note = "Yi Gwang-su later collaborated with the Japanese colonial regime; PD in Korea (author d. 1950) but handle with that context in the notes."
+uncertain = ["source_title"]
+
+[[text]]
+id = "bsagam"
+title_ko = "B사감과 러브레터"
+title_en = "Matron B and the Love Letters"
+author_ko = "현진건"
+author_en = "Hyeon Jin-geon"
+author_dates = "1900–1943"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "B사감과 러브레터"
+search = ["B사감과 러브레터", "현진건"]
+pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "nakyeop_taeuumyeo"
+title_ko = "낙엽을 태우면서"
+title_en = "Burning Fallen Leaves"
+author_ko = "이효석"
+author_en = "Yi Hyo-seok"
+author_dates = "1907–1942"
+date = "1938"
+year = 1938
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "낙엽을 태우면서"
+search = ["낙엽을 태우면서", "이효석"]
+pd_basis = "Author died 1942; Korean term (life+50) expired 1992, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "gwontae"
+title_ko = "권태"
+title_en = "Boredom"
+author_ko = "이상"
+author_en = "Yi Sang"
+author_dates = "1910–1937"
+date = "1937"
+year = 1937
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "권태"
+search = ["권태", "이상"]
+pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "dareul_ssoda"
+title_ko = "달을 쏘다"
+title_en = "Shooting the Moon"
+author_ko = "윤동주"
+author_en = "Yun Dong-ju"
+author_dates = "1917–1945"
+date = "1938"
+year = 1938
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "달을 쏘다"
+search = ["달을 쏘다", "윤동주"]
+pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title", "date"]
+
+[[text]]
+id = "sihon"
+title_ko = "시혼"
+title_en = "Poetic Spirit"
+author_ko = "김소월"
+author_en = "Kim Sowol"
+author_dates = "1902–1934"
+date = "1925"
+year = 1925
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "시혼"
+search = ["시혼", "김소월"]
+pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
+
+[[text]]
+id = "eorini_chanmi"
+title_ko = "어린이 찬미"
+title_en = "In Praise of Children"
+author_ko = "방정환"
+author_en = "Bang Jeong-hwan"
+author_dates = "1899–1931"
+date = "1923"
+year = 1923
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "어린이 찬미"
+search = ["어린이 찬미", "방정환"]
+pd_basis = "Author died 1931; Korean term (life+50) expired 1981, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "mannyeon_shatsu"
+title_ko = "만년 샤쓰"
+title_en = "The Ever-Lasting Shirt"
+author_ko = "방정환"
+author_en = "Bang Jeong-hwan"
+author_dates = "1899–1931"
+date = "1927"
+year = 1927
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+excerpt = false
+source = "wikisource-ko"
+source_title = "만년 샤쓰"
+search = ["만년 샤쓰", "만년샤쓰", "방정환"]
+pd_basis = "Author died 1931; Korean term (life+50) expired 1981, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
+
+[[text]]
+id = "wangjawa_jebi"
+title_ko = "왕자와 제비"
+title_en = "The Happy Prince and the Swallow"
+author_ko = "방정환"
+author_en = "Bang Jeong-hwan"
+author_dates = "1899–1931"
+date = "1922 (Sarang-ui seonmul)"
+year = 1922
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "essays-children"
+script = "hangul"
+collection = "사랑의 선물"
+excerpt = false
+source = "wikisource-ko"
+source_title = "왕자와 제비"
+search = ["왕자와 제비", "사랑의 선물", "방정환"]
+pd_basis = "Author died 1931; Korean term (life+50) expired 1981, before the 2013 extension to life+70, so the work is in the public domain."
+note = "Bang's adaptation of Oscar Wilde's tale (Wilde d. 1900)."
+uncertain = ["source_title", "author"]

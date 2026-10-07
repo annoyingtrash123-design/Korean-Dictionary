@@ -1,7 +1,7 @@
 //! Build core.sqlite / stdict.sqlite and the site-data bundle.
 
 use crate::common::*;
-use crate::{freq, kaikki, kengdic, krdict, opendict, pack, schema, stdict, tatoeba, unihan};
+use crate::{cedict, freq, kaikki, kengdic, krdict, opendict, pack, schema, stdict, tatoeba, unihan, zhwikt};
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
 use serde_json::{json, Map, Value};
@@ -24,6 +24,10 @@ pub struct Sources {
     pub freq: Option<PathBuf>,
     pub tatoeba: Option<(PathBuf, PathBuf, PathBuf)>,
     pub unihan: Option<PathBuf>,
+    /// `cedict_1_0_ts_utf-8_mdbg.zip` (or a plain `.u8`): optional `cedict` pack.
+    pub cedict: Option<PathBuf>,
+    /// kaikki Chinese JSONL (multi-GB, streamed): optional `zhwikt` pack.
+    pub zhwikt: Option<PathBuf>,
 }
 
 fn xml_files(dir: &Path, limit: Option<usize>) -> Vec<PathBuf> {
@@ -78,6 +82,8 @@ impl Sources {
             freq: opt(work.join("ko_50k.txt"), "FrequencyWords"),
             tatoeba,
             unihan: opt(work.join("Unihan.zip"), "Unihan"),
+            cedict: opt(work.join("cedict.zip"), "CC-CEDICT (skipping the cedict pack)"),
+            zhwikt: opt(work.join("kaikki-zh.jsonl"), "kaikki Chinese JSONL (skipping the zhwikt pack)"),
         }
     }
 }
@@ -256,14 +262,29 @@ pub fn gloss_items(e: &Entry) -> Vec<(String, bool)> {
     out
 }
 
+/// True for 옛말 (old word) entries of the Korean dictionaries: every sense carries the sense
+/// type/tag "옛말", or its Korean definition ends with "옛말" ("'아무'의 옛말.").
+pub fn is_historical(e: &Entry) -> bool {
+    if !matches!(e.source, "stdict" | "opendict") {
+        return false;
+    }
+    let ss = senses(e);
+    !ss.is_empty()
+        && ss.iter().all(|s| {
+            let tagged = s.get("tags").and_then(Value::as_array).is_some_and(|t| t.iter().any(|x| x.as_str() == Some("옛말")));
+            let defd = s.get("ko_def").and_then(Value::as_str).is_some_and(|d| d.trim().trim_end_matches('.').ends_with("옛말"));
+            tagged || defd
+        })
+}
+
 fn insert_entry(conn: &Connection, e: &Entry, rank: i64, fts: bool, c: &mut Counters) -> Result<i64> {
     let hwn = hw_norm(&e.headword);
     let gloss = entry_gloss(e);
     let data = serde_json::to_string(&e.data)?;
     conn.prepare_cached(
-        "INSERT INTO entries(headword,hw_norm,homonym,hanja,pos,pron,source,lang,level,rank,kind,gloss,data,ext_id,quality) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO entries(headword,hw_norm,homonym,hanja,pos,pron,source,lang,level,rank,kind,gloss,data,ext_id,quality,hist) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
     )?
-    .execute(params![e.headword, hwn, e.homonym, e.hanja, e.pos, e.pron, e.source, e.lang, e.level, rank, e.kind, gloss, data, e.ext_id, quality(e)])?;
+    .execute(params![e.headword, hwn, e.homonym, e.hanja, e.pos, e.pron, e.source, e.lang, e.level, rank, e.kind, gloss, data, e.ext_id, quality(e), i64::from(is_historical(e))])?;
     let id = conn.last_insert_rowid();
     let mut seen: HashSet<String> = HashSet::new();
     seen.insert(hwn.clone());
@@ -509,6 +530,8 @@ fn source_info(name: &str, n: i64) -> Value {
         "wikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/Korean/"),
         "kengdic" => ("MPL 2.0 / LGPL", "https://github.com/garfieldnate/kengdic"),
         "tatoeba" => ("CC BY 2.0 FR", "https://tatoeba.org"),
+        "cedict" => ("CC BY-SA 4.0", "https://www.mdbg.net/chinese/dictionary?page=cc-cedict"),
+        "zhwikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/Chinese/"),
         "unihan" => ("Unicode License", "https://www.unicode.org/charts/unihan.html"),
         "freq" => ("CC BY-SA 4.0", "https://github.com/hermitdave/FrequencyWords"),
         _ => ("", ""),
@@ -619,6 +642,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     // wiktionary
     let mut wikt_norms: HashSet<String> = HashSet::new();
     let mut wikt_sentences: Vec<(String, String)> = Vec::new();
+    let mut wikt_hanja: HashMap<char, kaikki::HanjaHun> = HashMap::new();
     if let Some(p) = &src.kaikki {
         let t = Instant::now();
         let parsed = fs::File::open(p).map_err(anyhow::Error::from).and_then(|f| kaikki::parse(BufReader::with_capacity(1 << 20, f)));
@@ -649,6 +673,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 }
                 c.forms += added;
                 wikt_sentences = k.sentences;
+                wikt_hanja = k.hanja;
                 log::info!("wikt: {} entries, {} redirects -> {} forms, {} example pairs ({:.1}s)", k.entries.len(), k.redirects.len(), added, wikt_sentences.len(), t.elapsed().as_secs_f32());
             }
             Err(e) => log::warn!("kaikki failed: {e:#}"),
@@ -790,14 +815,34 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             chars.push(*ch);
         }
     }
+    // characters with a Wiktionary 훈음 but neither a word nor a Unihan reading
+    for ch in wikt_hanja.keys() {
+        if !chars.contains(ch) && (wikt_hanja[ch].eumhun.len() + wikt_hanja[ch].eum.len()) > 0 {
+            chars.push(*ch);
+        }
+    }
     chars.sort();
+    let mut n_hun = 0i64;
     for ch in &chars {
         let s = ch.to_string();
         let info = uni.get(ch);
-        let readings = info.map(|i| i.readings.join(",")).filter(|r| !r.is_empty());
+        let hh = wikt_hanja.get(ch);
+        // Unihan readings first, then any further Wiktionary readings
+        let mut rd: Vec<String> = info.map(|i| i.readings.clone()).unwrap_or_default();
+        for e in hh.map(|h| h.eum.as_slice()).unwrap_or(&[]) {
+            if !rd.contains(e) {
+                rd.push(e.clone());
+            }
+        }
+        let readings = Some(rd.join(",")).filter(|r| !r.is_empty());
+        let hun = hh.and_then(|h| h.hun.first().cloned());
+        let eumhun = hh.map(|h| h.eumhun.join("; ")).filter(|x| !x.is_empty());
+        if hun.is_some() {
+            n_hun += 1;
+        }
         conn.execute(
-            "INSERT INTO hanja_chars(ch,readings,meaning_en,strokes,radical,word_count,radical_num) VALUES(?,?,?,?,?,?,?)",
-            params![s, readings, info.and_then(|i| i.meaning_en.clone()), info.and_then(|i| i.strokes), info.and_then(|i| i.radical.clone()), wc.get(&s).copied().unwrap_or(0), info.and_then(|i| i.radical_num)],
+            "INSERT INTO hanja_chars(ch,readings,meaning_en,strokes,radical,word_count,radical_num,hun,eumhun) VALUES(?,?,?,?,?,?,?,?,?)",
+            params![s, readings, info.and_then(|i| i.meaning_en.clone()), info.and_then(|i| i.strokes), info.and_then(|i| i.radical.clone()), wc.get(&s).copied().unwrap_or(0), info.and_then(|i| i.radical_num), hun, eumhun],
         )?;
     }
 
@@ -810,6 +855,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
     counts.insert("hanja_chars".into(), q("SELECT COUNT(*) FROM hanja_chars")?.into());
+    counts.insert("hanja_hun".into(), n_hun.into());
     counts.insert("sentences".into(), q("SELECT COUNT(*) FROM sentences")?.into());
     counts.insert("sentences_tatoeba".into(), n_tat.into());
     counts.insert("sentences_wikt".into(), n_wikt_s.into());
@@ -859,11 +905,13 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
     }
     conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
+    conn.execute_batch(schema::HIST_INDEX)?;
     let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
     let mut counts = Map::new();
     counts.insert("entries".into(), q("SELECT COUNT(*) FROM entries")?.into());
     counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
+    counts.insert("hist".into(), q("SELECT COUNT(*) FROM entries WHERE hist = 1")?.into());
     let counts = Value::Object(counts);
     let mut sources = Map::new();
     sources.insert("stdict".into(), source_info("stdict", c.entries));
@@ -909,11 +957,13 @@ pub fn build_opendict(src: &Sources, ranker: &Ranker, out: &Path, version: &str,
     }
     conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
+    conn.execute_batch(schema::HIST_INDEX)?;
     let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
     let mut counts = Map::new();
     counts.insert("entries".into(), q("SELECT COUNT(*) FROM entries")?.into());
     counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
+    counts.insert("hist".into(), q("SELECT COUNT(*) FROM entries WHERE hist = 1")?.into());
     counts.insert("skipped_stdict_duplicates".into(), skipped.into());
     let counts = Value::Object(counts);
     let mut sources = Map::new();
@@ -927,6 +977,120 @@ pub fn build_opendict(src: &Sources, ranker: &Ranker, out: &Path, version: &str,
     conn.execute_batch("COMMIT")?;
     finish_db(conn)?;
     Ok(PackResult { path, counts, keys: HashSet::new() })
+}
+
+// --- cedict / zhwikt packs (optional, Chinese) --------------------------------------------
+
+/// First Sino-Korean reading of every hanja in a built core pack (`hanja_chars.readings`).
+pub fn load_sino_readings(core: &Path) -> HashMap<char, String> {
+    let mut m = HashMap::new();
+    let Ok(conn) = Connection::open_with_flags(core, rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY) else { return m };
+    let Ok(mut st) = conn.prepare("SELECT ch, readings FROM hanja_chars WHERE readings IS NOT NULL AND readings != ''") else { return m };
+    let rows = st.query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?)));
+    if let Ok(rows) = rows {
+        for (ch, rd) in rows.flatten() {
+            if let (Some(c), Some(first)) = (ch.chars().next(), rd.split(',').next()) {
+                m.insert(c, first.to_string());
+            }
+        }
+    }
+    m
+}
+
+/// Insert an entry with an explicit rank (Chinese packs have no frequency data).
+fn insert_ranked(conn: &Connection, e: &Entry, rank: i64, c: &mut Counters) -> Result<i64> {
+    insert_entry(conn, e, rank, false, c)
+}
+
+fn finish_pack(conn: Connection, pack: &str, counts: Value, src: &str, n: i64, version: &str, built_at: &str) -> Result<()> {
+    let mut sources = Map::new();
+    sources.insert(src.into(), source_info(src, n));
+    set_meta(&conn, "pack", pack)?;
+    set_meta(&conn, "schema", "1")?;
+    set_meta(&conn, "version", version)?;
+    set_meta(&conn, "built_at", built_at)?;
+    set_meta(&conn, "counts", &counts.to_string())?;
+    set_meta(&conn, "sources", &Value::Object(sources).to_string())?;
+    conn.execute_batch("COMMIT")?;
+    finish_db(conn)
+}
+
+/// `cedict.sqlite`: CC-CEDICT. headword = hanja = traditional; `forms.form` = simplified (the
+/// "extra index on simplified": `forms_form`); `pron` = Sino-Korean reading; `rank` = headword
+/// length then file order.
+pub fn build_cedict(src: &Sources, sino: &HashMap<char, String>, out: &Path, version: &str, built_at: &str) -> Result<Option<PackResult>> {
+    let Some(p) = &src.cedict else { return Ok(None) };
+    let path = out.join("cedict.sqlite");
+    let conn = open_db(&path)?;
+    conn.execute_batch(schema::COMMON)?;
+    conn.execute_batch("BEGIN")?;
+    let mut c = Counters::default();
+    let mut seq = 0usize;
+    cedict::parse_file(p, sino, |e| {
+        let rank = cedict::rank(&e.headword, seq);
+        seq += 1;
+        insert_ranked(&conn, &e, rank, &mut c)?;
+        Ok(())
+    })
+    .with_context(|| format!("cedict {}", p.display()))?;
+    conn.execute_batch(schema::FILL_HANJA_RANK)?;
+    conn.execute_batch(schema::COMMON_INDEXES)?;
+    let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
+    let mut counts = Map::new();
+    counts.insert("entries".into(), q("SELECT COUNT(*) FROM entries")?.into());
+    counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
+    counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
+    counts.insert("with_sino_korean".into(), q("SELECT COUNT(*) FROM entries WHERE pron IS NOT NULL")?.into());
+    let counts = Value::Object(counts);
+    finish_pack(conn, "cedict", counts.clone(), "cedict", c.entries, version, built_at)?;
+    Ok(Some(PackResult { path, counts, keys: HashSet::new() }))
+}
+
+/// `zhwikt.sqlite`: Wiktionary Chinese (kaikki), streamed. Form-of redirects (simplified ->
+/// traditional, variants) become `forms` rows of the target entries.
+pub fn build_zhwikt(src: &Sources, sino: &HashMap<char, String>, out: &Path, version: &str, built_at: &str) -> Result<Option<PackResult>> {
+    let Some(p) = &src.zhwikt else { return Ok(None) };
+    let path = out.join("zhwikt.sqlite");
+    let conn = open_db(&path)?;
+    conn.execute_batch(schema::COMMON)?;
+    conn.execute_batch("BEGIN")?;
+    let mut c = Counters::default();
+    let rd = BufReader::with_capacity(1 << 20, fs::File::open(p)?);
+    let redirects = zhwikt::parse(rd, sino, |e, rank| {
+        insert_ranked(&conn, &e, rank, &mut c)?;
+        Ok(())
+    })
+    .with_context(|| format!("zhwikt {}", p.display()))?;
+    let mut added = 0i64;
+    let mut seen: HashSet<(String, String)> = HashSet::new();
+    for (form, target) in &redirects {
+        let (f, t) = (hw_norm(form), hw_norm(target));
+        if f == t || !seen.insert((f.clone(), t.clone())) {
+            continue;
+        }
+        let ids: Vec<i64> = {
+            let mut st = conn.prepare_cached("SELECT id FROM entries WHERE hw_norm = ? ORDER BY rank LIMIT 3")?;
+            let rows = st.query_map([&t], |r| r.get(0))?;
+            rows.collect::<std::result::Result<_, _>>()?
+        };
+        for id in ids {
+            conn.prepare_cached("INSERT INTO forms(form, entry_id) VALUES(?,?)")?.execute(params![f, id])?;
+            added += 1;
+        }
+    }
+    conn.execute_batch("DELETE FROM forms WHERE rowid NOT IN (SELECT MIN(rowid) FROM forms GROUP BY form, entry_id)")?;
+    conn.execute_batch(schema::FILL_HANJA_RANK)?;
+    conn.execute_batch(schema::COMMON_INDEXES)?;
+    let q = |sql: &str| -> Result<i64> { Ok(conn.query_row(sql, [], |r| r.get(0))?) };
+    let mut counts = Map::new();
+    counts.insert("entries".into(), q("SELECT COUNT(*) FROM entries")?.into());
+    counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
+    counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
+    counts.insert("redirect_forms".into(), added.into());
+    counts.insert("with_sino_korean".into(), q("SELECT COUNT(*) FROM entries WHERE pron IS NOT NULL")?.into());
+    let counts = Value::Object(counts);
+    finish_pack(conn, "zhwikt", counts.clone(), "zhwikt", c.entries, version, built_at)?;
+    Ok(Some(PackResult { path, counts, keys: HashSet::new() }))
 }
 
 // --- driver ------------------------------------------------------------------------
@@ -957,6 +1121,29 @@ pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
     if let Some(st) = stdict {
         if n(st, "entries") < MIN_STDICT {
             bad.push(format!("stdict.entries = {} (< {MIN_STDICT})", n(st, "entries")));
+        }
+    }
+    bad
+}
+
+/// Minimum entries of a healthy cedict pack (CC-CEDICT has ~120k lines).
+pub const MIN_CEDICT: i64 = 100_000;
+/// Minimum entries of a healthy zhwikt pack (kaikki Chinese has several 100k non-form-of entries).
+pub const MIN_ZHWIKT: i64 = 100_000;
+
+/// Gate for the optional Chinese packs; `built` holds `(pack id, counts)` for the packs that were
+/// built in this run only (a missing source is not a failure).
+pub fn quality_gate_optional(built: &[(&str, &Value)]) -> Vec<String> {
+    let mut bad = Vec::new();
+    for (id, counts) in built {
+        let min = match *id {
+            "cedict" => MIN_CEDICT,
+            "zhwikt" => MIN_ZHWIKT,
+            _ => continue,
+        };
+        let n = counts.get("entries").and_then(Value::as_i64).unwrap_or(0);
+        if n < min {
+            bad.push(format!("{id}.entries = {n} (< {min})"));
         }
     }
     bad
@@ -1017,8 +1204,40 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
         packs.push(pack::compress_pack("opendict", false, &od.path, &site, &od.counts, o.chunk_bytes)?);
     }
 
+    // optional Chinese packs; a failing one only logs a warning
+    let sino = if o.sources.cedict.is_some() || o.sources.zhwikt.is_some() { load_sino_readings(&core.path) } else { HashMap::new() };
+    let mut zh_counts: Vec<(&str, Value)> = Vec::new();
+    if o.sources.cedict.is_none() {
+        remove_stale(&site, "cedict.sqlite.gz.")?;
+    } else {
+        match build_cedict(&o.sources, &sino, &o.out, &version, &built_at) {
+            Ok(Some(r)) => {
+                log::info!("cedict.sqlite built: {}", r.counts);
+                packs.push(pack::compress_pack("cedict", false, &r.path, &site, &r.counts, o.chunk_bytes)?);
+                zh_counts.push(("cedict", r.counts));
+            }
+            Ok(None) => {}
+            Err(e) => log::warn!("cedict pack failed, skipping it: {e:#}"),
+        }
+    }
+    if o.sources.zhwikt.is_none() {
+        remove_stale(&site, "zhwikt.sqlite.gz.")?;
+    } else {
+        match build_zhwikt(&o.sources, &sino, &o.out, &version, &built_at) {
+            Ok(Some(r)) => {
+                log::info!("zhwikt.sqlite built: {}", r.counts);
+                packs.push(pack::compress_pack("zhwikt", false, &r.path, &site, &r.counts, o.chunk_bytes)?);
+                zh_counts.push(("zhwikt", r.counts));
+            }
+            Ok(None) => {}
+            Err(e) => log::warn!("zhwikt pack failed, skipping it: {e:#}"),
+        }
+    }
+
     if !o.allow_partial {
-        let problems = quality_gate(&core.counts, stdict_counts.as_ref());
+        let mut problems = quality_gate(&core.counts, stdict_counts.as_ref());
+        let built: Vec<(&str, &Value)> = zh_counts.iter().map(|(i, v)| (*i, v)).collect();
+        problems.extend(quality_gate_optional(&built));
         if !problems.is_empty() {
             anyhow::bail!("data quality gate failed, the build looks degraded (a source failed to download or parse?): {}. Pass --allow-partial for local partial builds.", problems.join("; "));
         }

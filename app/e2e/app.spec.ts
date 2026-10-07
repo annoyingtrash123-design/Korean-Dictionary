@@ -10,6 +10,49 @@ const search = async (page: Page, q: string) => {
   await page.waitForURL((u) => u.hash.includes('q=') && decodeURIComponent(u.hash).includes(q));
 };
 
+/** Dict | Words | Chars | Sents: each tab renders for 학교, ?tab= drives Back/Forward, the choice is remembered. */
+async function tabs(page: Page, scope: string, shotPrefix: string, shotFn: (p: Page, n: string) => Promise<unknown>) {
+  const root = page.locator(scope);
+  const tab = (n: string) => root.getByRole('tab', { name: n, exact: true });
+  await expect(root.getByRole('tablist')).toBeVisible();
+  await expect(tab('Dict')).toHaveAttribute('aria-selected', 'true');
+  await expect(root.locator('details.dict').first()).toBeVisible();
+  await tab('Words').click();
+  await expect(page).toHaveURL(/tab=words/);
+  await expect(tab('Words')).toHaveAttribute('aria-selected', 'true');
+  await expect(root.locator('.list .row').first()).toBeVisible({ timeout: 20_000 });
+  await expect(root.locator('details.dict')).toHaveCount(0);
+  await page.waitForTimeout(300);
+  await shotFn(page, `${shotPrefix}-words`);
+  await tab('Chars').click();
+  await expect(root.locator('.char .hanja-big').first()).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(300);
+  await shotFn(page, `${shotPrefix}-chars`);
+  await tab('Sents').click();
+  await expect(root.locator('.sents .ex, .etab-panel .muted').first()).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(300);
+  await shotFn(page, `${shotPrefix}-sents`);
+  // keyboard: arrows move between tabs
+  await tab('Sents').focus();
+  await page.keyboard.press('ArrowLeft');
+  await expect(tab('Chars')).toHaveAttribute('aria-selected', 'true');
+  await page.keyboard.press('Home');
+  await expect(tab('Dict')).toHaveAttribute('aria-selected', 'true');
+  // back/forward follow the tab
+  await page.goBack();
+  await expect(tab('Chars')).toHaveAttribute('aria-selected', 'true');
+  await page.goForward();
+  await expect(tab('Dict')).toHaveAttribute('aria-selected', 'true');
+  // the last tab is remembered across entries
+  await tab('Words').click();
+  await expect(tab('Words')).toHaveAttribute('aria-selected', 'true');
+  await root.locator('.list .row').first().click();
+  await expect(root.getByRole('tab', { name: 'Words', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await page.goBack();
+  await root.getByRole('tab', { name: 'Dict', exact: true }).click();
+  await expect(root.getByRole('tab', { name: 'Dict', exact: true })).toHaveAttribute('aria-selected', 'true');
+}
+
 async function tour(page: Page, theme: 'light' | 'dark') {
   await page.goto('/#/');
   await expect(page.getByRole('heading', { name: 'Recent' })).toBeVisible();
@@ -69,6 +112,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await page.getByRole('button', { name: 'Add bookmark' }).click();
   await page.getByRole('button', { name: 'Saved' }).click();
   await expect(page.getByRole('button', { name: 'Edit bookmark' })).toBeVisible();
+  await tabs(page, 'main', 'phone-entry-tab', shot);
   await page.locator('.hj-link', { hasText: '學' }).click();
   await expect(page.locator('.hanja-giant')).toHaveText('學');
   await page.getByRole('link', { name: 'Bookmarks' }).click();

@@ -5,6 +5,48 @@ import { join } from 'node:path';
 const SHOTS = join(process.cwd(), '..', 'docs', 'screenshots');
 mkdirSync(SHOTS, { recursive: true });
 const shot = (page: Page, name: string) => page.screenshot({ path: join(SHOTS, `tablet-${name}.png`) });
+/** Dict | Words | Chars | Sents: each tab renders for 학교, ?tab= drives Back/Forward, the choice is remembered. */
+async function tabs(page: Page, scope: string, shotPrefix: string, shotFn: (p: Page, n: string) => Promise<unknown>) {
+  const root = page.locator(scope);
+  const tab = (n: string) => root.getByRole('tab', { name: n, exact: true });
+  await expect(root.getByRole('tablist')).toBeVisible();
+  await expect(tab('Dict')).toHaveAttribute('aria-selected', 'true');
+  await expect(root.locator('details.dict').first()).toBeVisible();
+  await tab('Words').click();
+  await expect(page).toHaveURL(/tab=words/);
+  await expect(tab('Words')).toHaveAttribute('aria-selected', 'true');
+  await expect(root.locator('.list .row').first()).toBeVisible({ timeout: 20_000 });
+  await expect(root.locator('details.dict')).toHaveCount(0);
+  await page.waitForTimeout(300);
+  await shotFn(page, `${shotPrefix}-words`);
+  await tab('Chars').click();
+  await expect(root.locator('.char .hanja-big').first()).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(300);
+  await shotFn(page, `${shotPrefix}-chars`);
+  await tab('Sents').click();
+  await expect(root.locator('.sents .ex, .etab-panel .muted').first()).toBeVisible({ timeout: 20_000 });
+  await page.waitForTimeout(300);
+  await shotFn(page, `${shotPrefix}-sents`);
+  // keyboard: arrows move between tabs
+  await tab('Sents').focus();
+  await page.keyboard.press('ArrowLeft');
+  await expect(tab('Chars')).toHaveAttribute('aria-selected', 'true');
+  await page.keyboard.press('Home');
+  await expect(tab('Dict')).toHaveAttribute('aria-selected', 'true');
+  // back/forward follow the tab
+  await page.goBack();
+  await expect(tab('Chars')).toHaveAttribute('aria-selected', 'true');
+  await page.goForward();
+  await expect(tab('Dict')).toHaveAttribute('aria-selected', 'true');
+  // the last tab is remembered across entries
+  await tab('Words').click();
+  await expect(tab('Words')).toHaveAttribute('aria-selected', 'true');
+  await root.locator('.list .row').first().click();
+  await expect(root.getByRole('tab', { name: 'Words', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await page.goBack();
+  await root.getByRole('tab', { name: 'Dict', exact: true }).click();
+  await expect(root.getByRole('tab', { name: 'Dict', exact: true })).toHaveAttribute('aria-selected', 'true');
+}
 const search = async (page: Page, q: string) => {
   await page.getByRole('searchbox', { name: 'Search' }).fill(q);
   await expect(page.locator(`.pane-left .page[data-q="${q}"][data-busy="0"]`)).toBeVisible({ timeout: 30_000 });
@@ -43,6 +85,7 @@ test('two-pane tablet layout', async ({ page }) => {
   await expect(page.locator('.pane-left .row[aria-current="true"]')).toContainText('학교');
   await page.waitForTimeout(500);
   await shot(page, 'light-entry');
+  await tabs(page, '.pane-right', 'entry-tab', shot);
 
   // a link inside the entry changes the right pane only
   const h1 = await page.locator('.pane-right h1').innerText();
