@@ -9,3 +9,5 @@ __pycache__/
 app/public/data/
 *.sqlite
 *.sqlite.gz
+app/src/core-wasm/
+target/

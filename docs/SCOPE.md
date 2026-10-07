@@ -23,7 +23,7 @@ delivered as an installable Progressive Web App (PWA) hosted on GitHub Pages.
 ```
 GitHub Actions (full internet)                     Phone (offline)
 ┌────────────────────────────────┐                 ┌───────────────────────────────┐
-│ pipeline/ (Python)              │                 │ PWA (Vite + Preact + TS)      │
+│ pipeline/ (Rust CLI)            │                 │ PWA (Vite + Preact + TS)      │
 │  fetch → parse → merge → SQLite │──► Pages ──────►│  service worker: app shell    │
 │  core.sqlite  (EN dicts, hanja, │   site/data/    │  worker: sqlite-wasm + OPFS   │
 │   grammar, sentences)           │   *.gz chunks   │  IndexedDB: bookmarks/history │
@@ -151,13 +151,25 @@ Exact numeric formula lives in `pipeline/build.py`; only ordering matters to the
 * **Settings**: theme presets + colour pickers, font size, enable/disable stdict, data
   pack status and re-download, storage usage, backup/restore, licences and attributions.
 
+## Languages
+
+* **Rust**: the data pipeline (`pipeline/`, a native CLI run in CI) and the core engine
+  (`core/`, compiled to WebAssembly with wasm-pack). The core engine owns SQLite
+  (rusqlite + sqlite-wasm-rs, OPFS sahpool VFS), pack import, deconjugation and all
+  search and query logic.
+* **TypeScript**: a thin UI layer only (Preact components, routing, theming, bookmarks,
+  the service worker, and the download manager that streams chunks into the engine).
+  The UI talks to the engine through `app/src/db/engine.ts` (the `Engine` interface).
+
 ## Repository layout
 
 ```
-pipeline/            Python data build (fetch.py, parsers/*.py, build.py, tests/)
-app/                 Vite + Preact + TypeScript PWA
-  src/lib/deconjugate.ts   conjugation-aware lookup
-  src/db/            sqlite worker + pack download manager
+Cargo.toml           Rust workspace (pipeline, core)
+pipeline/            Rust data build CLI: `kdict-pipeline fetch|build`
+core/                Rust engine → WASM (search, deconjugate, hangul, db)
+app/                 Vite + Preact + TypeScript PWA UI
+  src/core-wasm/     wasm-pack output (generated, gitignored)
+  src/db/            worker, engine.ts adapter, types.ts, download manager
 .github/workflows/   build-data + deploy to Pages
 docs/                this scope document
 ```
