@@ -14,7 +14,8 @@ import { stemOf } from '../lib/search-mode';
 import { SOURCE_ORDER, SOURCE_TITLE, type Entry, type Sense } from '../lib/types';
 import { Empty, Hanja, IconButton, LevelBadge, Pos, Sheet } from '../components/common';
 import { Icon } from '../components/Icons';
-import { entryPath, hanjaPath, href, searchPath } from '../lib/router';
+import { entryPath, hanjaPath, href, searchPath, wordPath } from '../lib/router';
+import { useWide } from '../lib/layout';
 
 type Loaded = { primary: Entry | null; entries: Entry[] };
 const viewCache = new Lru<Loaded>(40);
@@ -138,11 +139,12 @@ function FolderSheet({ marked, bm, entry, onClose }: { marked: boolean; bm: Retu
 
 const RELTYPE: Record<string, string> = { synonym: 'syn', antonym: 'ant', honorific: 'hon', humble: 'hum', 'see also': 'see', reference: 'ref', derived: 'der', variant: 'var', abbreviation: 'abbr' };
 function Chips({ rels }: { rels?: { type: string; word: string }[] }) {
+  const wide = useWide();
   if (!rels?.length) return null;
   return (
     <div class="chips">
       {rels.map((r, i) => (
-        <a key={i} class="chip" href={href(searchPath(r.word))}><span class="chip-type">{RELTYPE[r.type] ?? r.type}</span> <span class="hangul" lang="ko">{r.word}</span></a>
+        <a key={i} class="chip" href={href(wide ? wordPath(r.word) : searchPath(r.word))}><span class="chip-type">{RELTYPE[r.type] ?? r.type}</span> <span class="hangul" lang="ko">{r.word}</span></a>
       ))}
     </div>
   );

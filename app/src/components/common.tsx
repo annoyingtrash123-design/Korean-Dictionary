@@ -17,10 +17,10 @@ export function Hanja({ text }: { text: string }) {
   return <span class="hanja" lang="zh-Hant">{text}</span>;
 }
 
-export function GroupRow({ g, note }: { g: ResultGroup; note?: string }) {
+export function GroupRow({ g, note, current }: { g: ResultGroup; note?: string; current?: boolean }) {
   const p = g.primary;
   return (
-    <a class="row" href={href(entryPath(p.source, p.id, g.headword))}>
+    <a class="row" href={href(entryPath(p.source, p.id, g.headword))} aria-current={current ? 'true' : undefined}>
       <div class="row-main">
         <div class="row-head">
           <span class="hangul hw" lang="ko">{g.headword}</span>

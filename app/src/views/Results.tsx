@@ -9,7 +9,7 @@ import { useStore } from '../lib/store';
 import { normHeadword } from '../lib/search-mode';
 import type { SearchResult } from '../lib/types';
 import { Empty, GroupRow } from '../components/common';
-import { hanjaPath, href, wordPath } from '../lib/router';
+import { entryPath, hanjaPath, href, useRoute, wordPath } from '../lib/router';
 
 const cache = new Lru<SearchResult>(40);
 const FIRST_PAINT = 15;
@@ -18,6 +18,7 @@ const FULL_PAGE = 50;
 
 export function Results({ q }: { q: string }) {
   const s = useStore(settings);
+  const route = useRoute();
   const status = useStore(packStatus$);
   const stamp = JSON.stringify(Object.values(status?.packs ?? {}).map((p) => p.version));
   const ck = (qq: string) => `${qq}|${packsKey(s)}|${stamp}`;
@@ -97,7 +98,7 @@ export function Results({ q }: { q: string }) {
       )}
       <ul class="plain list">
         {visible.map((g) => (
-          <li key={g.key}><GroupRow g={g} note={g.via === 'deconj' ? `← ${q}${ruleFor(g.headword) ? ` · ${ruleFor(g.headword)}` : ''}` : g.via === 'form' ? `form: ${q}` : undefined} /></li>
+          <li key={g.key}><GroupRow g={g} current={route.raw === entryPath(g.primary.source, g.primary.id, g.headword)} note={g.via === 'deconj' ? `← ${q}${ruleFor(g.headword) ? ` · ${ruleFor(g.headword)}` : ''}` : g.via === 'form' ? `form: ${q}` : undefined} /></li>
         ))}
       </ul>
     </div>
