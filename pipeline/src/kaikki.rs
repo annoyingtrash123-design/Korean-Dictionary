@@ -83,7 +83,7 @@ fn eumhun_in_expansion(exp: &str) -> Vec<(String, String)> {
 pub fn extract_hun_eum(v: &Value) -> (Vec<(String, String)>, Vec<String>) {
     let mut pairs: Vec<(String, String)> = Vec::new();
     let mut eums: Vec<String> = Vec::new();
-    let mut add = |p: (String, String), pairs: &mut Vec<(String, String)>| {
+    let add = |p: (String, String), pairs: &mut Vec<(String, String)>| {
         if !pairs.contains(&p) {
             pairs.push(p);
         }

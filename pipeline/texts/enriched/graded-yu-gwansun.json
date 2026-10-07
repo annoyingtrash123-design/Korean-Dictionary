@@ -1,0 +1,147 @@
+{
+  "id": "graded-yu-gwansun",
+  "meta": {
+    "title_ko": "유관순",
+    "title_en": "Yu Gwan-sun",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1919,
+    "period": "Colonial era",
+    "themes": [
+      "Colonial era & independence"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "3·1 운동에 참여했다가 열여덟 살에 세상을 떠난 유관순의 짧지만 강한 삶을 소개합니다.",
+    "summary_en": "The brief but powerful life of Yu Gwan-sun, who joined the March 1st Movement and died at eighteen.",
+    "level": "TOPIK 3",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 유관순(1902–1920)은 충청남도 천안에서 태어나 서울의 이화학당에서 공부했습니다. 3·1 운동에 참여했고, 고향에서 만세 시위를 이끌다가 체포되어 서대문형무소에서 1920년 9월 28일에 세상을 떠났습니다.\n\n**어휘와 문법**\n- `-다가`: 하던 일이 중간에 바뀌거나 끝남을 나타냅니다.\n- `-(으)ㄴ/는 바람에`: 뜻밖의 이유로 일어난 결과를 말합니다.\n- `-고 말다`: 어떤 일이 결국 일어났음을 나타냅니다.\n- 단어: 시위, 체포되다, 형무소, 독립운동, 고향, 휴교.\n- 나이는 한국식 나이가 아니라 만 나이에 가깝게 서술했습니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '유관순'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Yu Gwan-sun (1902-1920) was born in Cheonan, South Chungcheong, and studied at Ewha Hakdang in Seoul. She took part in the March 1st Movement, led a demonstration in her hometown, was arrested, and died in Seodaemun Prison on September 28, 1920.\n\n**Points to watch**\n- `-다가`: an action interrupted or changed midway.\n- `-(으)ㄴ/는 바람에`: a result caused by an unexpected reason.\n- `-고 말다`: something finally happened.\n- Words: 시위 demonstration, 체포되다 be arrested, 형무소 prison, 독립운동 independence movement, 고향 hometown, 휴교 school closure.\n- Ages here are given close to international age.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Yu Gwan-sun,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "유관순은 1902년에 충청남도 천안에서 태어났다. 어릴 때부터 공부를 좋아했고, 서울의 이화학당에서 학생으로 지냈다.",
+      "modern": null,
+      "reading": null,
+      "en": "Yu Gwan-sun was born in 1902 in Cheonan, South Chungcheong. She liked studying from childhood and spent time as a student at Ewha Hakdang in Seoul."
+    },
+    {
+      "orig": "1919년 3월 1일, 서울에서 독립 만세 운동이 일어났다. 유관순도 친구들과 함께 거리로 나가 만세를 외쳤다. 얼마 뒤 일본이 학교의 문을 닫는 바람에 그녀는 고향으로 내려갔다.",
+      "modern": null,
+      "reading": null,
+      "en": "On March 1, 1919, the independence movement broke out in Seoul. Yu Gwan-sun also went out to the streets with her friends and shouted for independence. Not long after, because Japan closed the schools, she went back to her hometown."
+    },
+    {
+      "orig": "고향에서 유관순은 마을 사람들에게 서울의 소식을 전하며 만세 시위를 준비했다. 4월 1일 아우내 장터에서 수천 명이 모여 독립 만세를 외쳤다. 이 일로 유관순은 체포되고 말았다.",
+      "modern": null,
+      "reading": null,
+      "en": "In her hometown, Yu Gwan-sun passed on news from Seoul to the villagers and prepared a demonstration. On April 1, thousands of people gathered at the Aunae marketplace and shouted for independence. Because of this, Yu Gwan-sun was arrested."
+    },
+    {
+      "orig": "유관순은 서대문형무소에서 재판을 받고 감옥에 갇혔다. 그리고 1920년 9월 28일, 열여덟 살의 나이로 세상을 떠났다. 오늘날 사람들은 그녀를 독립운동의 상징으로 기억한다.",
+      "modern": null,
+      "reading": null,
+      "en": "Yu Gwan-sun was tried and imprisoned in Seodaemun Prison. And on September 28, 1920, at the age of eighteen, she died. Today people remember her as a symbol of the independence movement."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "태어나다",
+      "gloss_en": "to be born",
+      "level": 1
+    },
+    {
+      "word": "거리",
+      "gloss_en": "street",
+      "level": 2
+    },
+    {
+      "word": "외치다",
+      "gloss_en": "to shout",
+      "level": 3
+    },
+    {
+      "word": "고향",
+      "gloss_en": "hometown",
+      "level": 2
+    },
+    {
+      "word": "소식",
+      "gloss_en": "news",
+      "level": 2
+    },
+    {
+      "word": "전하다",
+      "gloss_en": "to pass on",
+      "level": 3
+    },
+    {
+      "word": "준비하다",
+      "gloss_en": "to prepare",
+      "level": 2
+    },
+    {
+      "word": "장터",
+      "gloss_en": "marketplace",
+      "level": 3
+    },
+    {
+      "word": "체포되다",
+      "gloss_en": "to be arrested",
+      "level": 3
+    },
+    {
+      "word": "재판",
+      "gloss_en": "trial",
+      "level": 3
+    },
+    {
+      "word": "갇히다",
+      "gloss_en": "to be locked up",
+      "level": 3
+    },
+    {
+      "word": "상징",
+      "gloss_en": "symbol",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "유관순은 어디에서 공부했어요?",
+      "q_en": "Where did Yu Gwan-sun study?",
+      "answer_en": "At Ewha Hakdang in Seoul."
+    },
+    {
+      "q_ko": "왜 고향으로 내려갔어요?",
+      "q_en": "Why did she return to her hometown?",
+      "answer_en": "Because Japan closed the schools."
+    },
+    {
+      "q_ko": "아우내 장터에서 무슨 일이 있었어요?",
+      "q_en": "What happened at the Aunae marketplace?",
+      "answer_en": "Thousands gathered and shouted for independence."
+    },
+    {
+      "q_ko": "유관순은 몇 살에 세상을 떠났어요?",
+      "q_en": "How old was she when she died?",
+      "answer_en": "Eighteen."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

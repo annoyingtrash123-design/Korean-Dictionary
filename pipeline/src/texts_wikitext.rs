@@ -199,7 +199,7 @@ fn is_named_param(p: &str) -> Option<(&str, &str)> {
 // ---------------------------------------------------------------- templates
 
 const KEEP_FIRST: &[&str] = &[
-    "center", "centre", "가운데", "중앙", "larger", "smaller", "큰글씨", "작은글씨", "nowrap", "bold", "굵게", "small", "big", "한자", "hanja", "ruby", "루비", "underline", "밑줄", "u", "indent", "들여쓰기", "right", "오른쪽", "block center", "sc", "ib", "overstrike", "strike", "blockquote", "인용문", "quote", "저자:", "텍스트", "글",
+    "center", "centre", "가운데", "중앙", "larger", "smaller", "큰글씨", "작은글씨", "nowrap", "bold", "굵게", "small", "big", "한자", "hanja", "ruby", "루비", "underline", "밑줄", "u", "indent", "들여쓰기", "right", "오른쪽", "block center", "sc", "ib", "overstrike", "strike", "blockquote", "인용문", "quote", "텍스트", "글",
 ];
 const KEEP_POEM: &[&str] = &["poem", "시", "verse", "운문", "시구"];
 const KEEP_LAST: &[&str] = &["lang", "언어", "font", "폰트", "linktext", "rubi"];
@@ -232,7 +232,7 @@ fn expand_template(inner: &str, depth: usize) -> String {
     let parts = split_top(inner, b'|');
     let name = parts[0].trim().to_lowercase();
     let name = name.trim_start_matches("subst:").trim_start_matches("safesubst:").trim().to_string();
-    if name.starts_with('#') || name.contains(':') && !name.ends_with(':') {
+    if name.starts_with('#') {
         return String::new();
     }
     let mut positional = Vec::new();
@@ -273,7 +273,8 @@ pub fn extract_edition(s: &str) -> Option<Value> {
     let head = &s[..head_end];
     let mut found: Option<Map<String, Value>> = None;
     let mut i = 0;
-    while let Some(p) = head[i..].find("{{").map(|x| x + i) {
+    while i < head.len() {
+        let Some(p) = head[i..].find("{{").map(|x| x + i) else { break };
         let Some(end) = match_braces(s, p) else { break };
         let inner = &s[p + 2..end - 2];
         let parts = split_top(inner, b'|');
@@ -316,7 +317,8 @@ pub fn extract_edition(s: &str) -> Option<Value> {
         let tag = &s[p..gt];
         if let Some(a) = tag.find("index=") {
             let v = tag[a + 6..].trim_start_matches(['"', '\'']);
-            let v: String = v.chars().take_while(|c| !matches!(c, '"' | '\'' | ' ' | '/' | '>') || *c == '/' && false).collect();
+            let v: String = v.chars().take_while(|c| !matches!(c, '"' | '\'' | ' ' | '>')).collect();
+            let v = v.trim_end_matches('/').to_string();
             if !v.is_empty() && !index.contains(&v) {
                 index.push(v);
             }
@@ -498,26 +500,18 @@ fn assemble(s: &str, layout: Layout, nospace: bool) -> String {
     flush!();
     let text = blocks.join("\n\n").replace(LB, "\n");
     // tidy: trim every line, at most one blank line in a row
-    let mut out = String::with_capacity(text.len());
-    let mut blank = 0;
+    let mut lines: Vec<&str> = Vec::new();
     for l in text.lines() {
-        let l = l.trim_matches(|c: char| c.is_whitespace());
-        if l.is_empty() {
-            blank += 1;
-            if blank == 1 && !out.is_empty() {
-                out.push('\n');
-            }
-        } else {
-            if blank > 0 || out.is_empty() {
-                // blank line(s) already emitted
-            } else {
-                out.push('\n');
-            }
-            blank = 0;
-            out.push_str(l);
+        let l = l.trim();
+        if l.is_empty() && lines.last().is_none_or(|x| x.is_empty()) {
+            continue;
         }
+        lines.push(l);
     }
-    out.trim().to_string()
+    while lines.last() == Some(&"") {
+        lines.pop();
+    }
+    lines.join("\n")
 }
 
 /// Inline markup cleanup for one line: links, bold/italic, tags, entities, whitespace.

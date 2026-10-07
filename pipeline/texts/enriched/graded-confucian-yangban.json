@@ -1,0 +1,147 @@
+{
+  "id": "graded-confucian-yangban",
+  "meta": {
+    "title_ko": "유교와 양반 사회",
+    "title_en": "Confucianism and Yangban Society",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1500,
+    "period": "Joseon",
+    "themes": [
+      "Joseon"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "조선 사회를 이끈 유교 이념과 신분 제도, 양반의 생활을 알아봅니다.",
+    "summary_en": "Looks at the Confucian ideology and status system that shaped Joseon society, and the lives of the yangban.",
+    "level": "TOPIK 4–5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 조선은 성리학, 곧 유교를 나라의 기본 이념으로 삼았습니다. 사회는 크게 양반, 중인, 상민, 천민으로 나뉘었으나, 시기에 따라 신분의 변동도 있었습니다. 이 글은 일반적인 특징을 설명한 것이며, 지역과 시대에 따라 차이가 있었습니다.\n\n**어휘와 문법**\n- `-에 따라`: 기준.\n- `-(으)ㄴ/는 반면`: 대조.\n- `-기도 하다`: 여러 면 중 하나를 말합니다.\n- 단어: 신분, 과거, 제사, 족보, 서원, 효, 예절.\n- 삼강오륜은 군신·부자·부부 등의 도리를 말합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '유교와 양반 사회'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Joseon made Neo-Confucianism its basic ideology. Society was broadly divided into yangban, jungin, sangmin and cheonmin, though status could shift over time. This text explains general features, which varied by region and period.\n\n**Points to watch**\n- `-에 따라`: according to.\n- `-(으)ㄴ/는 반면`: contrast.\n- `-기도 하다`: mentioning one of several aspects.\n- Words: 신분 status, 과거 civil service exam, 제사 ancestral rites, 족보 genealogy, 서원 private academy, 효 filial piety, 예절 etiquette.\n- *Samgang Oryun* refers to the duties between ruler and subject, parent and child, husband and wife, and so on.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Confucianism and Yangban Society,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "유교는 인간관계에서 지켜야 할 도리를 중시하는 가르침이다. 조선은 이 가르침을 사회의 기본 질서로 삼았다. 특히 부모에 대한 효도와 윗사람에 대한 공경을 중요하게 여겼으며, 이는 예절과 제사 문화로 이어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "Confucianism is a teaching that values the duties to be observed in human relationships. Joseon made this teaching the basic order of society. In particular it regarded filial piety toward parents and respect for superiors as important, which led to cultures of etiquette and ancestral rites."
+    },
+    {
+      "orig": "조선 사회는 신분에 따라 구분되었다. 양반은 학문을 닦고 관직에 나아가는 지배층이었고, 중인은 통역이나 의료 등 전문 기술직을 맡았다. 상민은 농사나 장사로 세금을 내는 대다수 백성이었으며, 천민은 노비처럼 가장 낮은 신분이었다.",
+      "modern": null,
+      "reading": null,
+      "en": "Joseon society was divided according to status. The yangban were the ruling class who cultivated learning and entered government posts, while the jungin took professional technical posts such as interpretation and medicine. The sangmin were the majority of the people who paid taxes through farming or trade, and the cheonmin, such as slaves, were of the lowest status."
+    },
+    {
+      "orig": "양반이 되기 위한 중요한 길은 과거 시험이었다. 원칙적으로 천민이 아니면 누구나 응시할 수 있었지만, 실제로는 오랜 공부가 필요하여 양반 자제가 유리하였다. 양반은 지방에 서원을 세우고 족보를 만들어 가문의 자부심과 학문 전통을 이어 갔다.",
+      "modern": null,
+      "reading": null,
+      "en": "The important path to becoming a yangban was the civil service examination. In principle anyone except the cheonmin could take it, but in practice it required long study, so sons of yangban were at an advantage. The yangban built private academies in the provinces and made genealogies, carrying on their families' pride and scholarly traditions."
+    },
+    {
+      "orig": "유교 사회는 안정을 가져오기도 하였으나, 신분에 따른 차별과 여성에 대한 제약이라는 한계도 있었다. 조선 후기에는 신분 질서가 점차 흔들렸고, 평민도 재산을 모아 양반이 되려는 경우가 늘어났다. 오늘날 한국 사회의 예절과 가족 문화에는 이러한 유교 전통의 흔적이 남아 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "The Confucian society brought stability but also had limits, namely discrimination based on status and restrictions on women. In late Joseon the status order gradually wavered, and cases increased in which commoners accumulated wealth to become yangban. Traces of this Confucian tradition remain in the etiquette and family culture of Korean society today."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "도리",
+      "gloss_en": "proper duty",
+      "level": 3
+    },
+    {
+      "word": "효도",
+      "gloss_en": "filial piety",
+      "level": 3
+    },
+    {
+      "word": "공경",
+      "gloss_en": "respect",
+      "level": 3
+    },
+    {
+      "word": "제사",
+      "gloss_en": "ancestral rites",
+      "level": 3
+    },
+    {
+      "word": "신분",
+      "gloss_en": "social status",
+      "level": 3
+    },
+    {
+      "word": "지배층",
+      "gloss_en": "ruling class",
+      "level": 3
+    },
+    {
+      "word": "관직",
+      "gloss_en": "government post",
+      "level": 3
+    },
+    {
+      "word": "응시하다",
+      "gloss_en": "to take (an exam)",
+      "level": 3
+    },
+    {
+      "word": "자제",
+      "gloss_en": "son (of a family)",
+      "level": 3
+    },
+    {
+      "word": "족보",
+      "gloss_en": "genealogy",
+      "level": 3
+    },
+    {
+      "word": "차별",
+      "gloss_en": "discrimination",
+      "level": 3
+    },
+    {
+      "word": "제약",
+      "gloss_en": "restriction",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "조선은 무엇을 사회의 기본 질서로 삼았습니까?",
+      "q_en": "What did Joseon take as the basic order of society?",
+      "answer_en": "Confucian teaching."
+    },
+    {
+      "q_ko": "조선의 신분은 어떻게 나뉘었습니까?",
+      "q_en": "How was status divided?",
+      "answer_en": "Yangban, jungin, sangmin and cheonmin."
+    },
+    {
+      "q_ko": "과거 시험에서 양반 자제가 유리했던 이유는 무엇입니까?",
+      "q_en": "Why were yangban sons at an advantage in the exam?",
+      "answer_en": "It required long study."
+    },
+    {
+      "q_ko": "후기에 신분 질서는 어떻게 되었습니까?",
+      "q_en": "What happened to the status order in late Joseon?",
+      "answer_en": "It gradually wavered, and commoners sought to become yangban."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

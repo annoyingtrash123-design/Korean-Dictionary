@@ -1,0 +1,147 @@
+{
+  "id": "graded-korean-empire",
+  "meta": {
+    "title_ko": "대한제국",
+    "title_en": "The Korean Empire",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1897,
+    "period": "Colonial era",
+    "themes": [
+      "Colonial era & independence"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "1897년 고종이 황제 자리에 오르며 시작된 대한제국의 개혁과 한계를 소개합니다.",
+    "summary_en": "Introduces the reforms and limits of the Korean Empire, which began in 1897 when Gojong became emperor.",
+    "level": "TOPIK 4–5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 1897년 고종은 러시아 공사관에서 경운궁(덕수궁)으로 돌아와 국호를 '대한제국', 연호를 '광무'로 정하고 황제 자리에 올랐습니다. 이 나라는 1910년까지 약 13년간 이어졌습니다. 대한제국의 개혁에 대한 평가는 학자마다 다릅니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤`: 순서.\n- `-(으)로 삼다`: 무엇을 ~로 정하다.\n- `-(으)ㄴ/는 한편`: 한편으로는.\n- 단어: 황제, 연호, 자주독립, 근대화, 전차, 철도, 개혁.\n- 대한제국의 '대한'은 오늘날 '대한민국'의 이름으로 이어집니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '대한제국'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** In 1897 Gojong returned from the Russian legation to Gyeongun Palace (Deoksugung), adopted the state name \"Daehan Jeguk\" (Korean Empire) and the era name \"Gwangmu,\" and became emperor. This state lasted about 13 years, until 1910. Scholars differ in evaluating its reforms.\n\n**Points to watch**\n- `-(으)ㄴ 뒤`: sequence.\n- `-(으)로 삼다`: to take as.\n- `-(으)ㄴ/는 한편`: on the one hand.\n- Words: 황제 emperor, 연호 era name, 자주독립 independence, 근대화 modernization, 전차 tram, 철도 railway, 개혁 reform.\n- \"Daehan\" in Daehan Jeguk continues in the name of today's \"Daehanminguk\".\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Korean Empire,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "19세기 말 조선은 일본, 청, 러시아의 간섭을 받고 있었다. 1895년 왕비가 시해된 을미사변 뒤 불안을 느낀 고종은 1896년 러시아 공사관으로 옮겨 가서 지냈다. 그러나 나라의 자주성을 지키라는 여론이 높아지자 이듬해 경운궁으로 돌아왔다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the late 19th century Joseon was subject to interference by Japan, Qing and Russia. After the Eulmi Incident of 1895, in which the queen was murdered, Gojong, feeling insecure, moved to the Russian legation in 1896. But as public opinion rose that the nation's independence must be protected, he returned to Gyeongun Palace the next year."
+    },
+    {
+      "orig": "1897년 10월 고종은 환구단에서 하늘에 제사를 지내고 황제에 올랐다. 나라 이름은 대한제국, 연호는 광무로 정하였다. 황제국을 선포한 것은 청나라 등 다른 나라와 대등한 자주독립 국가임을 대내외에 보여 주려는 뜻이었다.",
+      "modern": null,
+      "reading": null,
+      "en": "In October 1897, Gojong performed a ritual to heaven at Hwangudan and became emperor. The state name was set as the Korean Empire and the era name as Gwangmu. Proclaiming an empire was meant to show at home and abroad that Korea was an independent state equal to others such as Qing."
+    },
+    {
+      "orig": "정부는 '구본신참', 곧 옛것을 근본으로 하고 새것을 참고한다는 방침으로 근대화를 추진하였다. 토지를 조사하여 증명서를 발급하는 사업을 벌였고, 상공업과 교육 기관을 세웠다. 1899년에는 서울에서 전차가 다니기 시작했고, 노량진과 제물포를 잇는 경인선 철도도 개통되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "The government pursued modernization on the principle of \"Gubon Sinchham,\" that is, taking the old as the base and consulting the new. It carried out projects of surveying land and issuing certificates, and established commerce, industry and educational institutions. In 1899 trams began to run in Seoul, and the Gyeongin railway linking Noryangjin and Jemulpo was also opened."
+    },
+    {
+      "orig": "그러나 열강의 간섭이 계속되고 재정이 부족하여 개혁에는 한계가 있었다. 1904년 러일전쟁이 일어난 뒤 일본의 영향력이 급격히 커졌고, 1905년에는 외교권을 빼앗겼다. 대한제국은 1910년에 막을 내렸지만, 그 이름은 오늘날 '대한민국'으로 이어지고 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "However, interference by the powers continued and finances were short, so the reforms had limits. After the Russo-Japanese War broke out in 1904, Japanese influence grew rapidly, and in 1905 diplomatic rights were taken away. The Korean Empire ended in 1910, but its name continues today as 'Daehanminguk' (the Republic of Korea)."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "간섭",
+      "gloss_en": "interference",
+      "level": 3
+    },
+    {
+      "word": "시해",
+      "gloss_en": "assassination (of royalty)",
+      "level": 3
+    },
+    {
+      "word": "자주성",
+      "gloss_en": "independence",
+      "level": 3
+    },
+    {
+      "word": "여론",
+      "gloss_en": "public opinion",
+      "level": 3
+    },
+    {
+      "word": "선포하다",
+      "gloss_en": "to proclaim",
+      "level": 3
+    },
+    {
+      "word": "대등하다",
+      "gloss_en": "to be equal",
+      "level": 3
+    },
+    {
+      "word": "근대화",
+      "gloss_en": "modernization",
+      "level": 3
+    },
+    {
+      "word": "증명서",
+      "gloss_en": "certificate",
+      "level": 3
+    },
+    {
+      "word": "개통되다",
+      "gloss_en": "to be opened (to traffic)",
+      "level": 3
+    },
+    {
+      "word": "열강",
+      "gloss_en": "great powers",
+      "level": 3
+    },
+    {
+      "word": "재정",
+      "gloss_en": "finances",
+      "level": 3
+    },
+    {
+      "word": "영향력",
+      "gloss_en": "influence",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "고종은 왜 경운궁으로 돌아왔습니까?",
+      "q_en": "Why did Gojong return to Gyeongun Palace?",
+      "answer_en": "Public opinion demanded protecting the nation's independence."
+    },
+    {
+      "q_ko": "대한제국의 국호와 연호는 무엇이었습니까?",
+      "q_en": "What were the state name and era name?",
+      "answer_en": "Daehan Jeguk and Gwangmu."
+    },
+    {
+      "q_ko": "1899년에 서울에 어떤 변화가 있었습니까?",
+      "q_en": "What change came to Seoul in 1899?",
+      "answer_en": "Trams began to run, and the Gyeongin railway opened."
+    },
+    {
+      "q_ko": "개혁의 한계는 무엇이었습니까?",
+      "q_en": "What limited the reforms?",
+      "answer_en": "Continued interference by the powers and a shortage of finances."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

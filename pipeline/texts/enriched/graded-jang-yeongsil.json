@@ -1,0 +1,147 @@
+{
+  "id": "graded-jang-yeongsil",
+  "meta": {
+    "title_ko": "장영실과 조선의 과학",
+    "title_en": "Jang Yeong-sil and Joseon Science",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1434,
+    "period": "Joseon",
+    "themes": [
+      "Joseon"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "신분이 낮았지만 세종대왕에게 인정받은 과학자 장영실의 이야기입니다.",
+    "summary_en": "The story of Jang Yeong-sil, a scientist of low birth whose talent King Sejong recognized.",
+    "level": "TOPIK 3",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 장영실은 세종 시대(재위 1418–1450)에 활동한 과학 기술자입니다. 관청에 속한 낮은 신분 출신으로 알려져 있지만 뛰어난 재주로 세종의 신임을 얻었습니다. 1434년에는 자동으로 시간을 알리는 물시계 '자격루'를 만들었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는데도`: 예상과 다른 결과를 나타냅니다.\n- `-아/어 주다`: 남을 위해 하는 행동을 나타냅니다.\n- `-도록 하다`: 어떤 일이 되게 함을 나타냅니다.\n- 단어: 신분, 재주, 물시계, 해시계, 측정하다, 농사.\n- 장영실의 마지막 행적은 분명하지 않습니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '장영실과 조선의 과학'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Jang Yeong-sil was a scientist and engineer active under King Sejong (r. 1418-1450). He is known to have come from a low status attached to a government office, but his talent won Sejong's trust. In 1434 he made the Jagyeokru, a water clock that announced the time automatically.\n\n**Points to watch**\n- `-(으)ㄴ/는데도`: a result contrary to expectation.\n- `-아/어 주다`: doing something for others.\n- `-도록 하다`: causing something to happen.\n- Words: 신분 social status, 재주 talent, 물시계 water clock, 해시계 sundial, 측정하다 measure, 농사 farming.\n- Jang's final fate is unclear.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Jang Yeong-sil and Joseon Science,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "세종대왕은 백성이 편하게 살 수 있도록 여러 가지 일을 했다. 그중 하나가 과학 기술을 발전시키는 일이었다. 이 일에서 큰 역할을 한 사람이 장영실이다.",
+      "modern": null,
+      "reading": null,
+      "en": "King Sejong did many things so that the people could live comfortably. One of them was advancing science and technology. A person who played a big role in this was Jang Yeong-sil."
+    },
+    {
+      "orig": "장영실은 신분이 높지 않았지만 손재주가 뛰어났다. 세종은 이 재주를 알아보고 그를 궁궐로 불렀다. 그리고 중국에 보내 천문 기구를 공부하게 하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "Jang Yeong-sil was not of high status, but he was very skilled with his hands. Sejong recognized this talent and summoned him to the palace. He then sent him to China to study astronomical instruments."
+    },
+    {
+      "orig": "장영실은 자동으로 시간을 알려 주는 물시계 자격루를 만들었다. 또 해의 그림자로 시간을 재는 해시계 앙부일구도 만들어졌다. 이런 기구 덕분에 사람들은 시간을 정확히 알 수 있게 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "Jang Yeong-sil made the Jagyeokru, a water clock that announces the time automatically. The Angbuilgu, a sundial that tells time by the shadow of the sun, was also made. Thanks to such instruments, people could know the time accurately."
+    },
+    {
+      "orig": "비의 양을 재는 측우기도 이 시기에 만들어졌다. 농사에 비가 중요했기 때문에 이 기구는 백성에게 큰 도움이 되었다. 장영실의 이후 행적은 잘 알려지지 않았지만, 그의 업적은 지금도 기억되고 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "The rain gauge, the cheugugi, was also made in this period. Because rain was important for farming, this instrument was a great help to the people. Little is known about Jang Yeong-sil's later life, but his achievements are still remembered today."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "과학",
+      "gloss_en": "science",
+      "level": 2
+    },
+    {
+      "word": "기술",
+      "gloss_en": "technology",
+      "level": 2
+    },
+    {
+      "word": "백성",
+      "gloss_en": "common people",
+      "level": 3
+    },
+    {
+      "word": "역할",
+      "gloss_en": "role",
+      "level": 3
+    },
+    {
+      "word": "신분",
+      "gloss_en": "social status",
+      "level": 3
+    },
+    {
+      "word": "재주",
+      "gloss_en": "talent; skill",
+      "level": 3
+    },
+    {
+      "word": "천문",
+      "gloss_en": "astronomy",
+      "level": 3
+    },
+    {
+      "word": "물시계",
+      "gloss_en": "water clock",
+      "level": 3
+    },
+    {
+      "word": "그림자",
+      "gloss_en": "shadow",
+      "level": 2
+    },
+    {
+      "word": "재다",
+      "gloss_en": "to measure",
+      "level": 3
+    },
+    {
+      "word": "농사",
+      "gloss_en": "farming",
+      "level": 2
+    },
+    {
+      "word": "업적",
+      "gloss_en": "achievement",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "세종은 장영실을 어떻게 했어요?",
+      "q_en": "What did Sejong do with Jang Yeong-sil?",
+      "answer_en": "He recognized his talent, summoned him to the palace and sent him to China to study."
+    },
+    {
+      "q_ko": "자격루는 어떤 물건이에요?",
+      "q_en": "What is the Jagyeokru?",
+      "answer_en": "A water clock that announces the time automatically."
+    },
+    {
+      "q_ko": "측우기는 왜 도움이 되었어요?",
+      "q_en": "Why was the rain gauge useful?",
+      "answer_en": "Rain was important for farming, so it helped the people."
+    },
+    {
+      "q_ko": "장영실의 이후 행적은 어때요?",
+      "q_en": "What is known of his later life?",
+      "answer_en": "Little is known."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

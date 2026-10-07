@@ -1,6 +1,7 @@
 
 use anyhow::Result;
 use kdict_pipeline::{build, fetch, pack};
+use kdict_pipeline::{texts_fetch, texts_news};
 use clap::{Parser, Subcommand};
 use std::path::PathBuf;
 
@@ -50,6 +51,37 @@ enum Cmd {
         #[arg(long)]
         allow_partial: bool,
     },
+    /// Reader: resolve the text catalogue against Wikisource etc. and write raw texts + provenance
+    FetchTexts {
+        #[arg(long, default_value = "pipeline/texts/catalog.toml")]
+        catalog: PathBuf,
+        #[arg(long, default_value = "pipeline/texts/raw")]
+        out: PathBuf,
+        /// Only these catalogue ids (comma-separated)
+        #[arg(long, value_delimiter = ',')]
+        only: Vec<String>,
+        /// Re-fetch entries that already have a raw file
+        #[arg(long)]
+        force: bool,
+        /// Maximum number of subpages fetched per work
+        #[arg(long, default_value_t = 150)]
+        max_subpages: usize,
+    },
+    /// Reader: recent 정책브리핑 (korea.kr) articles marked 공공누리 제1유형
+    FetchNews {
+        #[arg(long, default_value = "pipeline/texts/catalog.toml")]
+        catalog: PathBuf,
+        #[arg(long, default_value = "pipeline/texts/raw/news")]
+        out: PathBuf,
+        /// Stop after this many KOGL type 1 articles
+        #[arg(long, default_value_t = 30)]
+        max: usize,
+        #[arg(long)]
+        force: bool,
+        /// RSS feed URL (repeatable); overrides [news] feeds in the catalogue
+        #[arg(long)]
+        feed: Vec<String>,
+    },
 }
 
 fn main() -> Result<()> {
@@ -62,5 +94,7 @@ fn main() -> Result<()> {
             build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES, allow_partial })?;
             Ok(())
         }
+        Cmd::FetchTexts { catalog, out, only, force, max_subpages } => texts_fetch::run(&texts_fetch::Opts { catalog, out, only, force, max_subpages }),
+        Cmd::FetchNews { catalog, out, max, force, feed } => texts_news::run(&texts_news::NewsOpts { catalog, out, max, force, feeds: feed }),
     }
 }

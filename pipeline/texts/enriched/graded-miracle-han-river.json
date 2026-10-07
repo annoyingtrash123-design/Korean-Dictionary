@@ -1,0 +1,147 @@
+{
+  "id": "graded-miracle-han-river",
+  "meta": {
+    "title_ko": "한강의 기적",
+    "title_en": "The Miracle on the Han River",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1970,
+    "period": "Modern",
+    "themes": [
+      "Modern Korea"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "전쟁 뒤 가난했던 한국이 짧은 기간에 산업 국가로 성장한 과정을 살펴봅니다.",
+    "summary_en": "A look at how Korea, poor after the war, grew into an industrial country in a short time.",
+    "level": "TOPIK 4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** '한강의 기적'은 6·25 전쟁 이후 가난했던 한국이 1960년대부터 빠르게 경제 성장을 이룬 것을 가리키는 표현입니다. 1962년에 경제개발 5개년 계획이 시작되었고, 수출을 중심으로 공업이 발전했습니다. 성장 과정에서 긴 노동 시간 등 어려움도 있었다는 점이 함께 언급됩니다.\n\n**어휘와 문법**\n- `-(으)로 인해`: 원인을 나타냅니다.\n- `-에 힘입어`: 도움을 받아서라는 뜻입니다.\n- `-(으)ㄴ 한편`: 다른 측면을 덧붙입니다.\n- 단어: 경제, 수출, 성장, 공장, 산업, 노동자.\n- '기적'은 믿기 어려운 놀라운 일을 뜻합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '한강의 기적'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** \"The Miracle on the Han River\" refers to the rapid economic growth Korea, poor after the Korean War, achieved from the 1960s. The first Five-Year Economic Development Plan began in 1962, and industry developed with exports at its center. It is also noted that the growth involved hardships such as long working hours.\n\n**Points to watch**\n- `-(으)로 인해`: cause.\n- `-에 힘입어`: thanks to help from.\n- `-(으)ㄴ 한편`: adding another aspect.\n- Words: 경제 economy, 수출 export, 성장 growth, 공장 factory, 산업 industry, 노동자 worker.\n- 기적 means a surprising, hard-to-believe event.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Miracle on the Han River,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "1950년에 시작된 6·25 전쟁으로 한국은 많은 것을 잃었다. 전쟁이 끝난 1950년대에 한국은 세계에서 가장 가난한 나라 가운데 하나였다.",
+      "modern": null,
+      "reading": null,
+      "en": "The Korean War that began in 1950 cost Korea a great deal. In the 1950s, after the war ended, Korea was one of the poorest countries in the world."
+    },
+    {
+      "orig": "1962년부터 정부는 경제개발 5개년 계획을 세워 공업을 키우기 시작했다. 한국은 값싸고 부지런한 노동력에 힘입어 옷, 신발, 전자 제품 등을 만들어 외국에 팔았다. 1970년에는 서울과 부산을 잇는 경부고속도로가 열렸다.",
+      "modern": null,
+      "reading": null,
+      "en": "From 1962, the government drew up the Five-Year Economic Development Plans and began to build up industry. Thanks to its inexpensive and hardworking labor force, Korea made clothes, shoes and electronic products and sold them abroad. In 1970 the Gyeongbu Expressway, linking Seoul and Busan, opened."
+    },
+    {
+      "orig": "이후 철강, 조선, 자동차 같은 중공업도 발전했다. 한국은 짧은 기간에 농업 중심의 나라에서 산업 국가로 바뀌었고, 사람들은 이 변화를 '한강의 기적'이라고 불렀다. 1996년에는 선진국 모임인 OECD에도 가입했다.",
+      "modern": null,
+      "reading": null,
+      "en": "Afterward, heavy industries such as steel, shipbuilding and automobiles also developed. In a short time, Korea changed from an agriculture-centered country into an industrial one, and people called this change \"the Miracle on the Han River.\" In 1996 it also joined the OECD, a club of advanced countries."
+    },
+    {
+      "orig": "한편 이 성장의 이면에는 노동자들의 긴 노동 시간과 어려운 근로 조건도 있었다. 오늘날 한국에서는 성장의 성과와 함께 이러한 문제들도 함께 돌아보고 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Meanwhile, behind this growth were also the long working hours and difficult working conditions of workers. Today in Korea, along with the achievements of growth, people also reflect on these problems."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "경제",
+      "gloss_en": "economy",
+      "level": 3
+    },
+    {
+      "word": "성장",
+      "gloss_en": "growth",
+      "level": 3
+    },
+    {
+      "word": "잃다",
+      "gloss_en": "to lose",
+      "level": 2
+    },
+    {
+      "word": "공업",
+      "gloss_en": "industry (manufacturing)",
+      "level": 3
+    },
+    {
+      "word": "부지런하다",
+      "gloss_en": "to be diligent",
+      "level": 3
+    },
+    {
+      "word": "수출",
+      "gloss_en": "export",
+      "level": 3
+    },
+    {
+      "word": "이다",
+      "gloss_en": "to connect",
+      "level": 2
+    },
+    {
+      "word": "중공업",
+      "gloss_en": "heavy industry",
+      "level": 3
+    },
+    {
+      "word": "선진국",
+      "gloss_en": "advanced country",
+      "level": 3
+    },
+    {
+      "word": "가입하다",
+      "gloss_en": "to join",
+      "level": 3
+    },
+    {
+      "word": "노동자",
+      "gloss_en": "worker",
+      "level": 3
+    },
+    {
+      "word": "조건",
+      "gloss_en": "condition",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "1950년대 한국은 어떤 나라였어요?",
+      "q_en": "What kind of country was Korea in the 1950s?",
+      "answer_en": "One of the poorest countries in the world."
+    },
+    {
+      "q_ko": "정부는 1962년부터 무엇을 시작했어요?",
+      "q_en": "What did the government start in 1962?",
+      "answer_en": "The Five-Year Economic Development Plans."
+    },
+    {
+      "q_ko": "'한강의 기적'은 무슨 뜻이에요?",
+      "q_en": "What does 'Miracle on the Han River' mean?",
+      "answer_en": "Korea's rapid change from an agricultural to an industrial country."
+    },
+    {
+      "q_ko": "성장 과정의 어려움은 무엇이었어요?",
+      "q_en": "What difficulties accompanied the growth?",
+      "answer_en": "Long working hours and hard working conditions."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

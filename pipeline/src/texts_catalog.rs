@@ -65,6 +65,8 @@ pub struct Entry {
     pub excerpt_note: Option<String>,
     pub source: String,
     pub source_title: String,
+    /// Direct URL for sources that are not MediaWiki (e.g. the OHCHR page).
+    pub url: Option<String>,
     #[serde(default)]
     pub search: Vec<String>,
     pub pd_basis: String,

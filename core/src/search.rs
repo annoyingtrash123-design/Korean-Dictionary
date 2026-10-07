@@ -35,6 +35,10 @@ pub struct Caps {
     pub hanja_idx: bool,
     /// `entries.cho` (initial consonants of `hw_norm`) with its `(cho, rank)` index exists.
     pub cho: bool,
+    /// `entries.hist` (1 = 옛말 / old word) exists, with its partial `(hist, hw_norm)` index.
+    pub hist: bool,
+    /// `hanja_chars.hun` / `eumhun` (훈음) exist.
+    pub hanja_hun: bool,
 }
 
 /// An opened pack database.
@@ -62,7 +66,14 @@ impl PackDb {
                 .query("SELECT name FROM pragma_table_info('hanja_words')", &[])
                 .map(|r| r.iter().any(|r| r.string(0) == "rank"))
                 .unwrap_or(false);
+        let table_has = |table: &str, col: &str| {
+            conn.query(&format!("SELECT name FROM pragma_table_info('{table}')"), &[])
+                .map(|r| r.iter().any(|r| r.string(0) == col))
+                .unwrap_or(false)
+        };
         let caps = Caps {
+            hist: table_has("entries", "hist"),
+            hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
             hw_rank: has_hw_rank,
             wotd: names.contains("wotd"),
@@ -124,6 +135,10 @@ pub struct HanjaChar {
     pub strokes: Option<i64>,
     pub radical: Option<String>,
     pub word_count: Option<i64>,
+    /// Korean gloss word of the character (훈), e.g. "배울".
+    pub hun: Option<String>,
+    /// 훈음 ("배울 학"; several readings joined with "; ").
+    pub eumhun: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -337,6 +352,9 @@ pub fn search(packs: &[&PackDb], query: &str, limit: Option<usize>) -> Result<Se
     if q.is_empty() {
         return Ok(SearchResult { mode: "english", rows: vec![], hanja: None, deconj: None, grammar_hints: None });
     }
+    // the Chinese packs only take part in Han-script queries
+    let (korean, han_packs) = split_han(packs);
+    let packs: &[&PackDb] = &korean;
     if has_hangul(&q) {
         if choseong_query(&q) {
             if let Some(r) = search_choseong(packs, &q, limit)? {
@@ -357,7 +375,18 @@ pub fn search(packs: &[&PackDb], query: &str, limit: Option<usize>) -> Result<Se
         }
         search_hangul(packs, &q, limit)
     } else if has_han(&q) {
-        search_hanja(packs, &q, limit)
+        let mut r = search_hanja(packs, &q, limit)?;
+        if !han_packs.is_empty() {
+            let compact: String = q.chars().filter(|c| is_han(*c)).collect();
+            let han_rows = search_han_packs(&han_packs, &compact, limit)?;
+            if limit > han_rows.len() {
+                r.rows.truncate(limit - han_rows.len());
+            }
+            let mut seen: HashSet<(String, i64)> = r.rows.iter().map(key).collect();
+            push_new(&mut r.rows, &mut seen, han_rows);
+            r.rows.truncate(limit);
+        }
+        Ok(r)
     } else {
         search_english(packs, &q, limit)
     }
@@ -376,8 +405,10 @@ fn search_choseong(packs: &[&PackDb], q: &str, limit: usize) -> Result<Option<Se
     Ok(Some(SearchResult { mode: "hangul", rows, hanja: None, deconj: None, grammar_hints: None }))
 }
 
-fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchResult> {
-    let q = norm_headword(q_raw);
+/// Steps 1-3 of the Hangul search: exact headword, listed forms, deconjugation candidates that
+/// exist. `q` is already `norm_headword`-ed. Also the strict matcher behind `lookup_in_text`.
+fn hangul_strict(packs: &[&PackDb], q: &str, limit: usize) -> Result<(Vec<ResultRow>, Vec<DeconjOut>)> {
+    let q = q.to_string();
     let mut out: Vec<ResultRow> = Vec::new();
     let mut seen: HashSet<(String, i64)> = HashSet::new();
 
@@ -434,6 +465,13 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
         }
         push_new(&mut out, &mut seen, found.into_iter().map(|(_, r)| r).collect());
     }
+    Ok((out, deconj_out))
+}
+
+fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchResult> {
+    let q = norm_headword(q_raw);
+    let (mut out, deconj_out) = hangul_strict(packs, &q, limit)?;
+    let mut seen: HashSet<(String, i64)> = out.iter().map(key).collect();
 
     // 4. prefix matches. A one-syllable query matches thousands of headwords in every pack;
     // reading them all costs hundreds of page reads, so only the core pack is scanned for it
@@ -798,6 +836,97 @@ fn rarest_char(packs: &[&PackDb], compact: &str) -> Result<String> {
     Ok(best.map(|b| b.1).or_else(|| compact.chars().next()).unwrap_or(' ').to_string())
 }
 
+/// Optional Chinese packs (`cedict`, `zhwikt`): headword = traditional hanzi, `forms` = simplified.
+pub const HAN_PACKS: [&str; 2] = ["cedict", "zhwikt"];
+
+/// (Korean-side packs, Chinese packs) of a pack selection, order kept.
+pub fn split_han<'a>(packs: &[&'a PackDb]) -> (Vec<&'a PackDb>, Vec<&'a PackDb>) {
+    packs.iter().copied().partition(|p| !HAN_PACKS.contains(&p.id.as_str()))
+}
+
+/// Which column of `entries` / `forms` a key lookup compares.
+#[derive(Clone, Copy, PartialEq)]
+pub(crate) enum KeyCol {
+    /// `entries.hw_norm`
+    Headword,
+    /// `entries.hanja` (Korean packs)
+    Hanja,
+    /// `forms.form` (simplified hanzi in the Chinese packs)
+    Form,
+}
+
+/// Rows whose key column equals one of `keys`: `(matched key, row)` in rank order per pack.
+pub(crate) fn rows_by_keys(
+    packs: &[&PackDb],
+    col: KeyCol,
+    keys: &[String],
+    via: Option<&'static str>,
+) -> Result<Vec<(String, ResultRow)>> {
+    let mut out = Vec::new();
+    for p in packs {
+        if col == KeyCol::Form && !p.caps.forms {
+            continue;
+        }
+        for chunk in keys.chunks(40) {
+            let ph = (1..=chunk.len()).map(|i| format!("?{i}")).collect::<Vec<_>>().join(",");
+            let sql = match col {
+                KeyCol::Headword => format!("SELECT {COLS}, e.hw_norm FROM entries e WHERE e.hw_norm IN ({ph}) ORDER BY e.rank"),
+                KeyCol::Hanja => format!("SELECT {COLS}, e.hanja FROM entries e WHERE e.hanja IN ({ph}) ORDER BY e.rank"),
+                KeyCol::Form => format!(
+                    "SELECT {COLS}, f.form FROM forms f JOIN entries e ON e.id = f.entry_id WHERE f.form IN ({ph}) ORDER BY e.rank"
+                ),
+            };
+            let params: Vec<Val> = chunk.iter().map(|k| Val::Text(k.clone())).collect();
+            for r in p.conn.query(&sql, &params)? {
+                out.push((r.string(13), result_row(&p.id, &r, via)));
+            }
+        }
+    }
+    Ok(out)
+}
+
+/// Han-script search in the Chinese packs: exact headword, simplified form (via `forms`), the
+/// longest proper prefix of the run when the whole run is unknown, then words starting with it.
+/// All rows carry `via: 'hanja'`.
+fn search_han_packs(han: &[&PackDb], compact: &str, limit: usize) -> Result<Vec<ResultRow>> {
+    let chars: Vec<char> = compact.chars().take(12).collect();
+    if chars.is_empty() {
+        return Ok(vec![]);
+    }
+    let whole: String = chars.iter().collect();
+    let mut out: Vec<ResultRow> = Vec::new();
+    let mut seen: HashSet<(String, i64)> = HashSet::new();
+    let mut keyed = rows_by_keys(han, KeyCol::Headword, std::slice::from_ref(&whole), Some("hanja"))?;
+    keyed.extend(rows_by_keys(han, KeyCol::Form, std::slice::from_ref(&whole), Some("hanja"))?);
+    push_new(&mut out, &mut seen, keyed.into_iter().map(|(_, r)| r).collect());
+    if out.is_empty() && chars.len() > 1 {
+        // longest proper prefix that is a headword or a simplified form
+        let prefixes: Vec<String> = (1..chars.len()).rev().map(|n| chars[..n].iter().collect()).collect();
+        let mut hits = rows_by_keys(han, KeyCol::Headword, &prefixes, Some("hanja"))?;
+        hits.extend(rows_by_keys(han, KeyCol::Form, &prefixes, Some("hanja"))?);
+        if let Some(best) = hits.iter().map(|(k, _)| k.chars().count()).max() {
+            let rows: Vec<ResultRow> = hits.into_iter().filter(|(k, _)| k.chars().count() == best).map(|(_, r)| r).collect();
+            push_new(&mut out, &mut seen, rows);
+        }
+    }
+    // entries that start with the query (学 -> 学校 ...), best first
+    let upper = format!("{whole}{}", char::MAX);
+    let mut ext: Vec<ResultRow> = Vec::new();
+    for p in han {
+        let sql = format!(
+            "SELECT {COLS} FROM entries e WHERE e.hw_norm > ?1 AND e.hw_norm < ?2 ORDER BY e.rank LIMIT {}",
+            PREFIX_LIMIT / 2
+        );
+        for r in p.conn.query(&sql, &[whole.as_str().into(), upper.as_str().into()])? {
+            ext.push(result_row(&p.id, &r, Some("hanja")));
+        }
+    }
+    sort_by_rank(&mut ext);
+    push_new(&mut out, &mut seen, ext);
+    out.truncate(limit);
+    Ok(out)
+}
+
 // ---- entry lookups --------------------------------------------------------------------------
 
 fn entry_from(r: &Row, o: usize) -> Entry {
@@ -858,7 +987,11 @@ pub fn hanja_char(packs: &[&PackDb], ch: &str) -> Result<Option<HanjaChar>> {
         return Ok(None);
     }
     for p in packs.iter().filter(|p| p.caps.hanja_chars) {
-        let sql = "SELECT ch, readings, meaning_en, strokes, radical, word_count FROM hanja_chars WHERE ch = ?1";
+        let sql = if p.caps.hanja_hun {
+            "SELECT ch, readings, meaning_en, strokes, radical, word_count, hun, eumhun FROM hanja_chars WHERE ch = ?1"
+        } else {
+            "SELECT ch, readings, meaning_en, strokes, radical, word_count, NULL, NULL FROM hanja_chars WHERE ch = ?1"
+        };
         if let Some(r) = p.conn.query(sql, &[ch.as_str().into()])?.first() {
             return Ok(Some(HanjaChar {
                 ch: r.string(0),
@@ -867,6 +1000,8 @@ pub fn hanja_char(packs: &[&PackDb], ch: &str) -> Result<Option<HanjaChar>> {
                 strokes: r.int(3),
                 radical: r.text(4),
                 word_count: r.int(5),
+                hun: r.text(6),
+                eumhun: r.text(7),
             }));
         }
     }
@@ -1026,6 +1161,9 @@ pub fn word_of_day(packs: &[&PackDb], date: &str) -> Result<Option<ResultRow>> {
 
 #[cfg(test)]
 mod tests;
+
+mod lookup;
+pub use lookup::{lookup_in_text, TextMatch};
 
 /// Background warm-up: step `step` reads one slice of a search index into SQLite's page cache,
 /// so that first-time queries don't pay for slow storage reads. Returns false when done.

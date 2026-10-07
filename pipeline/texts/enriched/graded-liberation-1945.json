@@ -1,0 +1,147 @@
+{
+  "id": "graded-liberation-1945",
+  "meta": {
+    "title_ko": "1945년 8월 15일, 광복",
+    "title_en": "August 15, 1945: Liberation",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1945,
+    "period": "Colonial era",
+    "themes": [
+      "Colonial era & independence"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "일본의 지배가 끝나고 사람들이 거리로 나온 광복의 날을 읽습니다.",
+    "summary_en": "A reading about Liberation Day, when Japanese rule ended and people poured into the streets.",
+    "level": "TOPIK 3",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 1945년 8월 15일, 일본이 연합국에 항복했다는 소식이 알려졌고, 한국은 35년 가까이 이어진 일본의 지배에서 벗어났습니다. 그러나 곧 북위 38도선을 경계로 남쪽에는 미군, 북쪽에는 소련군이 들어왔습니다. 광복절은 지금도 한국의 국경일입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 순간`: 어떤 일이 일어난 바로 그때를 가리킵니다.\n- `-게 되다`: 변화를 나타냅니다.\n- `-(으)ㄴ 채로`: 어떤 상태가 유지됨을 말합니다.\n- 단어: 광복, 항복, 해방, 국경일, 경계, 감격.\n- '광복'은 빼앗긴 빛을 되찾는다는 뜻입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '1945년 8월 15일, 광복'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** On August 15, 1945, news spread that Japan had surrendered to the Allies, and Korea was freed from nearly 35 years of Japanese rule. Soon, however, U.S. forces entered the south and Soviet forces the north, with the 38th parallel as the boundary. Liberation Day is still a national holiday.\n\n**Points to watch**\n- `-(으)ㄴ/는 순간`: the very moment something happened.\n- `-게 되다`: change of state.\n- `-(으)ㄴ 채로`: remaining in a state.\n- Words: 광복 liberation, 항복 surrender, 해방 liberation, 국경일 national holiday, 경계 boundary, 감격 deep emotion.\n- 광복 means \"recovering the lost light\".\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"August 15, 1945: Liberation,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "1945년 8월 15일 낮, 라디오에서 일본 왕의 목소리가 흘러나왔다. 일본이 전쟁에서 졌다는 내용이었다. 이 소식은 곧 온 나라에 퍼졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "On the afternoon of August 15, 1945, the voice of the Japanese emperor came over the radio. The message was that Japan had lost the war. The news soon spread throughout the country."
+    },
+    {
+      "orig": "이 소식을 들은 사람들은 기뻐서 거리로 뛰어나왔다. 사람들은 감추어 두었던 태극기를 꺼내 들고 \"대한 독립 만세!\"를 외쳤다. 감옥에 갇혀 있던 독립운동가들도 풀려났다.",
+      "modern": null,
+      "reading": null,
+      "en": "Hearing the news, people ran into the streets in joy. They took out the Taegeukgi they had kept hidden and shouted \"Long live Korean independence!\" Independence activists who had been in prison were also released."
+    },
+    {
+      "orig": "하지만 기쁨 뒤에는 새로운 어려움이 있었다. 한반도는 북위 38도선을 경계로 남쪽은 미군이, 북쪽은 소련군이 들어와 관리하게 되었다. 이것이 분단의 시작이 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "But behind the joy lay new difficulties. With the 38th parallel as a boundary, the U.S. army came to administer the south and the Soviet army the north. This became the beginning of division."
+    },
+    {
+      "orig": "한국은 해마다 8월 15일을 광복절로 기념한다. 이날 사람들은 독립을 위해 노력한 분들을 기억하고, 앞으로의 나라에 대해 생각해 본다.",
+      "modern": null,
+      "reading": null,
+      "en": "Korea commemorates August 15 every year as Liberation Day. On this day, people remember those who worked for independence and think about the country's future."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "광복",
+      "gloss_en": "liberation",
+      "level": 3
+    },
+    {
+      "word": "항복하다",
+      "gloss_en": "to surrender",
+      "level": 3
+    },
+    {
+      "word": "소식",
+      "gloss_en": "news",
+      "level": 2
+    },
+    {
+      "word": "퍼지다",
+      "gloss_en": "to spread",
+      "level": 3
+    },
+    {
+      "word": "기쁘다",
+      "gloss_en": "to be glad",
+      "level": 1
+    },
+    {
+      "word": "감추다",
+      "gloss_en": "to hide",
+      "level": 3
+    },
+    {
+      "word": "꺼내다",
+      "gloss_en": "to take out",
+      "level": 2
+    },
+    {
+      "word": "풀려나다",
+      "gloss_en": "to be released",
+      "level": 3
+    },
+    {
+      "word": "관리하다",
+      "gloss_en": "to manage; to administer",
+      "level": 3
+    },
+    {
+      "word": "분단",
+      "gloss_en": "division",
+      "level": 3
+    },
+    {
+      "word": "기념하다",
+      "gloss_en": "to commemorate",
+      "level": 3
+    },
+    {
+      "word": "노력하다",
+      "gloss_en": "to make an effort",
+      "level": 2
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "1945년 8월 15일에 무슨 소식이 있었어요?",
+      "q_en": "What news came on August 15, 1945?",
+      "answer_en": "That Japan had lost the war."
+    },
+    {
+      "q_ko": "사람들은 어떻게 했어요?",
+      "q_en": "What did people do?",
+      "answer_en": "They ran into the streets with the Taegeukgi and shouted for independence."
+    },
+    {
+      "q_ko": "38도선은 무엇을 나누었어요?",
+      "q_en": "What did the 38th parallel divide?",
+      "answer_en": "The south, administered by the U.S., and the north, by the Soviet Union."
+    },
+    {
+      "q_ko": "8월 15일은 지금 어떤 날이에요?",
+      "q_en": "What is August 15 today?",
+      "answer_en": "Liberation Day."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

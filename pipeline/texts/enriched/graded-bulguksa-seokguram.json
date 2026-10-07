@@ -1,0 +1,147 @@
+{
+  "id": "graded-bulguksa-seokguram",
+  "meta": {
+    "title_ko": "불국사와 석굴암",
+    "title_en": "Bulguksa and Seokguram",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 751,
+    "period": "Ancient",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "신라 경주에 있는 두 불교 유산의 아름다움과 의미를 소개합니다.",
+    "summary_en": "An introduction to two Buddhist heritage sites in Silla's Gyeongju and what makes them special.",
+    "level": "TOPIK 3",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 불국사와 석굴암은 경주 토함산에 있는 신라의 불교 유산입니다. 751년에 김대성이 짓기 시작했다고 전해지며, 1995년 유네스코 세계유산으로 등록되었습니다. '전해진다'는 표현은 자세한 내용이 완전히 확인되지는 않았음을 뜻합니다.\n\n**어휘와 문법**\n- `-(이)라고 전해진다`: 옛이야기를 전할 때 씁니다.\n- `-기 시작하다`: 어떤 일이 시작됨을 나타냅니다.\n- `-(으)ㄹ 만큼`: 정도를 비교합니다.\n- 단어: 불교, 탑, 불상, 세계유산, 정교하다. \n- 다보탑과 석가탑의 이름과 모양을 비교해 보세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '불국사와 석굴암'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Bulguksa and Seokguram are Silla Buddhist sites on Mt. Tohamsan in Gyeongju. They are said to have been begun by Kim Daeseong in 751, and were listed as UNESCO World Heritage in 1995. \"Is said to\" means the details are not fully confirmed.\n\n**Points to watch**\n- `-(이)라고 전해진다`: reporting tradition.\n- `-기 시작하다`: beginning to do.\n- `-(으)ㄹ 만큼`: to the degree of.\n- Words: 불교 Buddhism, 탑 pagoda, 불상 Buddha statue, 세계유산 World Heritage, 정교하다 intricate.\n- Compare the names and shapes of Dabotap and Seokgatap.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Bulguksa and Seokguram,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "경주는 옛 신라의 수도였다. 이곳 토함산에는 불국사와 석굴암이 있다. 두 곳은 751년에 김대성이 짓기 시작했다고 전해진다.",
+      "modern": null,
+      "reading": null,
+      "en": "Gyeongju was the capital of ancient Silla. On Mt. Tohamsan here stand Bulguksa and Seokguram. It is said that Kim Daeseong began building them in 751."
+    },
+    {
+      "orig": "불국사에는 아름다운 두 탑이 마주 보고 서 있다. 다보탑은 화려하고 정교하며, 석가탑은 단순하고 힘이 있다. 서로 다른 모습이어서 더 특별하게 느껴진다.",
+      "modern": null,
+      "reading": null,
+      "en": "At Bulguksa, two beautiful pagodas stand facing each other. Dabotap is ornate and intricate, while Seokgatap is simple and strong. Their different appearances make them feel all the more special."
+    },
+    {
+      "orig": "석굴암은 화강암으로 만든 인공 석굴이다. 안에는 부처님의 모습이 조용히 앉아 있다. 이 불상은 동해 쪽을 바라보고 있다고 알려져 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Seokguram is an artificial grotto made of granite. Inside, a figure of the Buddha sits quietly. This statue is known to look toward the East Sea."
+    },
+    {
+      "orig": "두 곳은 1995년에 유네스코 세계유산으로 등록되었다. 지금도 많은 사람들이 이곳을 찾아와 신라 사람들의 기술과 믿음을 느낀다.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1995, the two sites were registered as UNESCO World Heritage. Even now, many people visit to feel the skill and faith of the people of Silla."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "수도",
+      "gloss_en": "capital",
+      "level": 2
+    },
+    {
+      "word": "짓다",
+      "gloss_en": "to build",
+      "level": 2
+    },
+    {
+      "word": "전해지다",
+      "gloss_en": "to be handed down",
+      "level": 3
+    },
+    {
+      "word": "탑",
+      "gloss_en": "pagoda",
+      "level": 3
+    },
+    {
+      "word": "마주 보다",
+      "gloss_en": "to face each other",
+      "level": 3
+    },
+    {
+      "word": "화려하다",
+      "gloss_en": "to be ornate",
+      "level": 3
+    },
+    {
+      "word": "정교하다",
+      "gloss_en": "to be intricate",
+      "level": 3
+    },
+    {
+      "word": "단순하다",
+      "gloss_en": "to be simple",
+      "level": 3
+    },
+    {
+      "word": "화강암",
+      "gloss_en": "granite",
+      "level": 3
+    },
+    {
+      "word": "불상",
+      "gloss_en": "Buddha statue",
+      "level": 3
+    },
+    {
+      "word": "등록되다",
+      "gloss_en": "to be registered",
+      "level": 3
+    },
+    {
+      "word": "믿음",
+      "gloss_en": "faith",
+      "level": 2
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "불국사와 석굴암은 어디에 있어요?",
+      "q_en": "Where are Bulguksa and Seokguram?",
+      "answer_en": "On Mt. Tohamsan in Gyeongju."
+    },
+    {
+      "q_ko": "다보탑과 석가탑은 어떻게 달라요?",
+      "q_en": "How do Dabotap and Seokgatap differ?",
+      "answer_en": "Dabotap is ornate and intricate; Seokgatap is simple and strong."
+    },
+    {
+      "q_ko": "석굴암은 무엇으로 만들었어요?",
+      "q_en": "What is Seokguram made of?",
+      "answer_en": "Granite."
+    },
+    {
+      "q_ko": "두 곳은 언제 세계유산이 되었어요?",
+      "q_en": "When did they become World Heritage sites?",
+      "answer_en": "In 1995."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

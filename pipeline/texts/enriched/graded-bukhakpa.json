@@ -1,0 +1,148 @@
+{
+  "id": "graded-bukhakpa",
+  "meta": {
+    "title_ko": "북학파: 박지원과 박제가",
+    "title_en": "The Northern Learning School: Park Ji-won and Park Je-ga",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1780,
+    "period": "Joseon",
+    "themes": [
+      "Joseon",
+      "Sino-Korean relations"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "청나라를 직접 보고 돌아와 새로운 사회를 제안한 박지원과 박제가의 생각을 살펴봅니다.",
+    "summary_en": "Looks at the ideas of Park Ji-won and Park Je-ga, who saw Qing with their own eyes and proposed a new society.",
+    "level": "TOPIK 6",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 18세기 후반 조선에서는 병자호란의 기억 때문에 청나라를 오랑캐로 낮추어 보는 분위기가 남아 있었습니다. 그러나 일부 학자들은 청나라를 직접 다녀온 뒤 그 문물을 배워야 한다고 주장했고, 이들을 '북학파'라 부릅니다. 박지원은 1780년 청 사절단을 따라 열하까지 다녀와 『열하일기』를 썼습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤`: 순서.\n- `-(으)ㄹ 만하다`: 그럴 가치가 있음.\n- `-고 해서`: 이유 중 하나를 제시합니다.\n- 단어: 북학, 문물, 수레, 벽돌, 풍자, 상업, 서얼.\n- '열하'는 청 황제의 여름 별궁이 있던 곳(지금의 청더)입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '북학파: 박지원과 박제가'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** In late 18th-century Joseon, the memory of the Second Manchu invasion left an atmosphere of looking down on Qing as barbarians. But some scholars, after visiting Qing themselves, argued that its civilization should be learned from; they are called the \"Northern Learning\" school. Park Ji-won traveled with a Qing mission in 1780 as far as Rehe and wrote the *Yeolha Ilgi*.\n\n**Points to watch**\n- `-(으)ㄴ 뒤`: sequence.\n- `-(으)ㄹ 만하다`: worth doing.\n- `-고 해서`: giving one among several reasons.\n- Words: 북학 Northern Learning, 문물 civilization, 수레 cart, 벽돌 brick, 풍자 satire, 상업 commerce, 서얼 secondary-line sons.\n- Rehe (Yeolha) was where the Qing emperor's summer villa stood (now Chengde).\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Northern Learning School: Park Ji-won and Park Je-ga,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "병자호란 이후 조선에서는 청을 오랑캐라 부르며 복수해야 한다는 북벌론이 오랫동안 이어졌다. 그러나 18세기에 이르러 청나라는 매우 번영하였고, 중국을 다녀온 일부 학자들은 청의 앞선 문물을 배워야 한다고 생각하기 시작했다. 이들이 북학파이다.",
+      "modern": null,
+      "reading": null,
+      "en": "After the Byeongja Horan, the idea of a northern expedition to avenge the defeat, calling Qing barbarians, continued in Joseon for a long time. By the 18th century, however, Qing had become very prosperous, and some scholars who had traveled to China began to think that Joseon should learn from its advanced civilization. These were the Northern Learning school."
+    },
+    {
+      "orig": "박지원은 1780년 청 건륭제의 칠순 잔치를 축하하는 사절단을 따라 베이징과 열하를 다녀왔다. 그는 여행에서 보고 들은 것을 『열하일기』에 기록하였다. 이 책에는 수레와 벽돌, 기와 같은 생활 기술을 배워야 한다는 주장과 함께 재치 있고 생생한 문장이 가득하다.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1780 Park Ji-won traveled to Beijing and Rehe with a mission celebrating the seventieth birthday of the Qianlong Emperor of Qing. He recorded what he saw and heard on the trip in the *Yeolha Ilgi*. The book is full of witty and vivid prose along with the argument that practical technologies such as carts, bricks and roof tiles should be learned."
+    },
+    {
+      "orig": "박제가는 서얼, 곧 첩의 자식이라는 신분의 한계를 가지고 있었지만 정조의 신임을 얻어 규장각에서 일했다. 그는 청나라를 여러 차례 다녀온 뒤 『북학의』를 지어 상업을 장려하고 수레와 배를 활용하여 물자를 널리 유통하자고 주장했다. 심지어 소비가 있어야 생산이 늘어난다는 생각도 제시했다.",
+      "modern": null,
+      "reading": null,
+      "en": "Park Je-ga was a seoeol, that is, the child of a concubine, with the limits of that status, but gained the trust of Jeongjo and worked at the Kyujanggak. After visiting Qing several times, he wrote the *Bukhagui*, arguing for encouraging commerce and circulating goods widely using carts and ships. He even presented the idea that consumption is needed for production to grow."
+    },
+    {
+      "orig": "박지원은 「양반전」과 「허생전」 같은 소설에서 양반의 허례와 무능을 풍자하기도 하였다. 북학파의 주장은 당시 조선 사회에서 널리 받아들여지지는 못했으나, 이후 개화사상으로 이어지는 중요한 사상적 바탕이 되었다. 이들의 이야기는 다른 나라를 직접 보고 배우는 일이 얼마나 중요한지를 알려 준다.",
+      "modern": null,
+      "reading": null,
+      "en": "In novels such as \"Yangbanjeon\" and \"Heosaengjeon,\" Park Ji-won also satirized the empty formalities and incompetence of the yangban. The Northern Learning school's arguments were not widely accepted in Joseon society at the time, but they became an important intellectual foundation leading to later enlightenment thought. Their story shows how important it is to see and learn from other countries firsthand."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "북벌론",
+      "gloss_en": "northern expedition theory",
+      "level": 3
+    },
+    {
+      "word": "오랑캐",
+      "gloss_en": "barbarian",
+      "level": 3
+    },
+    {
+      "word": "번영하다",
+      "gloss_en": "to prosper",
+      "level": 3
+    },
+    {
+      "word": "문물",
+      "gloss_en": "civilization; culture",
+      "level": 3
+    },
+    {
+      "word": "사절단",
+      "gloss_en": "mission; delegation",
+      "level": 3
+    },
+    {
+      "word": "재치",
+      "gloss_en": "wit",
+      "level": 3
+    },
+    {
+      "word": "신분",
+      "gloss_en": "social status",
+      "level": 3
+    },
+    {
+      "word": "신임",
+      "gloss_en": "trust",
+      "level": 3
+    },
+    {
+      "word": "유통하다",
+      "gloss_en": "to circulate (goods)",
+      "level": 3
+    },
+    {
+      "word": "소비",
+      "gloss_en": "consumption",
+      "level": 3
+    },
+    {
+      "word": "풍자하다",
+      "gloss_en": "to satirize",
+      "level": 3
+    },
+    {
+      "word": "바탕",
+      "gloss_en": "foundation",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "북학파는 무엇을 주장했습니까?",
+      "q_en": "What did the Northern Learning school argue?",
+      "answer_en": "That Joseon should learn from Qing's advanced civilization."
+    },
+    {
+      "q_ko": "박지원은 어떤 책을 썼습니까?",
+      "q_en": "What book did Park Ji-won write?",
+      "answer_en": "The Yeolha Ilgi, recording his journey to Beijing and Rehe."
+    },
+    {
+      "q_ko": "박제가는 어떤 신분이었습니까?",
+      "q_en": "What was Park Je-ga's status?",
+      "answer_en": "A seoeol, the child of a concubine."
+    },
+    {
+      "q_ko": "북학파의 의의는 무엇입니까?",
+      "q_en": "What was their significance?",
+      "answer_en": "They became an intellectual foundation for later enlightenment thought."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "graded-hallyu",
+  "meta": {
+    "title_ko": "한류",
+    "title_en": "The Korean Wave",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 2000,
+    "period": "Modern",
+    "themes": [
+      "Modern Korea"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "드라마와 케이팝으로 세계에 퍼진 한국 문화의 인기, 한류를 소개합니다.",
+    "summary_en": "An introduction to Hallyu, the worldwide popularity of Korean dramas, K-pop and more.",
+    "level": "TOPIK 1–2",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** '한류'는 1990년대 말부터 중국과 동남아시아에서 한국 드라마와 노래가 인기를 얻으면서 쓰이기 시작한 말입니다. 이후 케이팝, 영화, 음식 등으로 넓어지며 세계로 퍼졌습니다.\n\n**어휘와 문법**\n- `-(이)라고 하다`: 이름이나 뜻을 설명합니다.\n- `-도`: '또한'의 뜻입니다 (영화도 봐요).\n- `-는 사람`: 동사로 사람을 꾸밉니다 (배우는 사람).\n- `-지요?`: 확인하는 질문입니다.\n- 단어: 문화, 인기, 드라마, 영화, 음식, 외국. 마지막 문장은 독자에게 말을 거는 표현입니다.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '한류'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
+    "en": "**Background** The word *Hallyu* (\"Korean Wave\") came into use from the late 1990s as Korean dramas and songs became popular in China and Southeast Asia. It later widened to K-pop, film, food and more across the world.\n\n**Points to watch**\n- `-(이)라고 하다`: explaining a name or meaning.\n- `-도`: \"also\" (영화도 봐요).\n- `-는 사람`: a verb describing a person (배우는 사람).\n- `-지요?`: a question seeking confirmation.\n- Words: 문화 culture, 인기 popularity, 드라마 drama, 영화 film, 음식 food, 외국 foreign country. The last sentence speaks directly to the reader.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"The Korean Wave.\" After reading, try answering the questions briefly."
+  },
+  "paragraphs": [
+    {
+      "orig": "한류는 한국 문화의 인기를 말해요. 한국 드라마와 케이팝이 세계에서 인기가 있어요.",
+      "modern": null,
+      "reading": null,
+      "en": "Hallyu means the popularity of Korean culture. Korean dramas and K-pop are popular around the world."
+    },
+    {
+      "orig": "많은 외국 사람들이 한국 노래를 들어요. 한국 영화도 봐요. 한국 음식도 좋아해요. 그래서 한국어를 배우는 사람도 많아요.",
+      "modern": null,
+      "reading": null,
+      "en": "Many foreigners listen to Korean songs. They also watch Korean films. They like Korean food too. So there are many people who learn Korean."
+    },
+    {
+      "orig": "여러분도 한국어를 공부하고 있지요?",
+      "modern": null,
+      "reading": null,
+      "en": "You are studying Korean too, aren't you?"
+    }
+  ],
+  "vocab": [
+    {
+      "word": "문화",
+      "gloss_en": "culture",
+      "level": 2
+    },
+    {
+      "word": "인기",
+      "gloss_en": "popularity",
+      "level": 2
+    },
+    {
+      "word": "드라마",
+      "gloss_en": "drama",
+      "level": 1
+    },
+    {
+      "word": "세계",
+      "gloss_en": "world",
+      "level": 2
+    },
+    {
+      "word": "외국",
+      "gloss_en": "foreign country",
+      "level": 2
+    },
+    {
+      "word": "노래",
+      "gloss_en": "song",
+      "level": 1
+    },
+    {
+      "word": "영화",
+      "gloss_en": "film",
+      "level": 1
+    },
+    {
+      "word": "음식",
+      "gloss_en": "food",
+      "level": 1
+    },
+    {
+      "word": "좋아하다",
+      "gloss_en": "to like",
+      "level": 1
+    },
+    {
+      "word": "공부하다",
+      "gloss_en": "to study",
+      "level": 1
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "한류는 무엇이에요?",
+      "q_en": "What is Hallyu?",
+      "answer_en": "The popularity of Korean culture."
+    },
+    {
+      "q_ko": "외국 사람들은 무엇을 해요?",
+      "q_en": "What do foreigners do?",
+      "answer_en": "They listen to Korean songs, watch Korean films and like Korean food."
+    },
+    {
+      "q_ko": "왜 한국어를 배우는 사람이 많아요?",
+      "q_en": "Why do many people learn Korean?",
+      "answer_en": "Because Korean culture is popular."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

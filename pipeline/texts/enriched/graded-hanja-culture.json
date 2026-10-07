@@ -1,0 +1,147 @@
+{
+  "id": "graded-hanja-culture",
+  "meta": {
+    "title_ko": "한자와 한문 문화권",
+    "title_en": "Chinese Characters and the Sinitic Cultural Sphere",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 500,
+    "period": "Ancient",
+    "themes": [
+      "Sino-Korean relations"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "한자가 한국에 들어와 쓰인 역사와, 한자어가 오늘날의 한국어에 남긴 흔적을 살펴봅니다.",
+    "summary_en": "Looks at the history of Chinese characters in Korea and the traces Sino-Korean words have left in modern Korean.",
+    "level": "TOPIK 4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 한자는 늦어도 삼국 시대 이전부터 한반도에서 쓰였고, 한문은 오랫동안 공식 문서와 학문의 글이었습니다. 한자 문화권은 한국, 중국, 일본, 베트남 등 한자와 한문을 공유한 지역을 말합니다. 오늘날 한국어 어휘에는 한자어가 상당히 많습니다.\n\n**어휘와 문법**\n- `-에 비해`: 비교.\n- `-(으)ㄹ 수 있다`: 가능.\n- `-(으)ㄴ 덕분에`: 도움이 된 이유.\n- 단어: 한자어, 한문, 이두, 필담, 어휘, 공용어, 문화권.\n- 한자어를 보면 한자의 뜻을 짐작해 보세요 (학교 = 學校).\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '한자와 한문 문화권'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Chinese characters were used on the peninsula from at latest before the Three Kingdoms period, and Literary Chinese was long the language of official documents and scholarship. The Sinitic cultural sphere means regions that shared Chinese characters and Literary Chinese, such as Korea, China, Japan and Vietnam. Modern Korean vocabulary contains many Sino-Korean words.\n\n**Points to watch**\n- `-에 비해`: comparison.\n- `-(으)ㄹ 수 있다`: possibility.\n- `-(으)ㄴ 덕분에`: because of helpful circumstances.\n- Words: 한자어 Sino-Korean word, 한문 Literary Chinese, 이두 Idu script, 필담 brush conversation, 어휘 vocabulary, 공용어 official language, 문화권 cultural sphere.\n- Guess the meaning of Sino-Korean words from the hanja (학교 = 學校).\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Chinese Characters and the Sinitic Cultural Sphere,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "한자는 중국에서 만들어진 글자이다. 한반도에는 아주 오래전에 들어와 삼국 시대에는 이미 널리 쓰였다. 왕의 명령이나 역사책, 불교 경전을 모두 한문으로 적었기 때문에 한문을 읽고 쓰는 능력은 지식인의 기본이었다.",
+      "modern": null,
+      "reading": null,
+      "en": "Chinese characters were created in China. They came to the peninsula very long ago and were already widely used in the Three Kingdoms period. Because royal orders, history books and Buddhist scriptures were all written in Literary Chinese, the ability to read and write it was fundamental for intellectuals."
+    },
+    {
+      "orig": "그러나 한문은 한국어와 어순이 달라서 배우기가 어려웠다. 그래서 신라 시대부터 한자의 소리와 뜻을 빌려 한국어를 적는 방법이 생겼는데, 이두가 대표적이다. 이후 1443년 한글이 만들어지면서 한국어를 그대로 적을 수 있게 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "However, Literary Chinese had a different word order from Korean and was hard to learn. So from the Silla period, methods arose of borrowing the sounds and meanings of characters to write Korean, with Idu as a representative. Later, when Hangul was created in 1443, Korean could be written as it is."
+    },
+    {
+      "orig": "한글이 생긴 뒤에도 한문은 오랫동안 공식 글로 쓰였다. 1894년 갑오개혁 이후에야 한글을 공용 문자로 삼는다는 방침이 정해졌다. 한편 동아시아 나라들은 말이 달라도 한자를 아는 사람끼리는 붓으로 글을 써서 대화할 수 있었는데, 이를 필담이라고 한다.",
+      "modern": null,
+      "reading": null,
+      "en": "Even after Hangul appeared, Literary Chinese was used as the official script for a long time. Only after the Gabo Reforms of 1894 was a policy set to make Hangul an official script. Meanwhile, even when the spoken languages differed, people in East Asian countries who knew Chinese characters could converse by writing with brushes, which is called pidam (brush conversation)."
+    },
+    {
+      "orig": "한자 문화권의 영향으로 한국어에는 한자어가 상당히 많다. 학교, 도서관, 사회처럼 생활 속에서 흔히 쓰는 말 가운데에도 한자어가 많이 있다. 한자의 뜻을 알면 새로운 낱말을 짐작할 수 있어, 한자어는 한국어를 배우는 사람에게 도움이 되기도 한다.",
+      "modern": null,
+      "reading": null,
+      "en": "Because of the influence of the Sinitic cultural sphere, Korean has quite a lot of Sino-Korean words. Among words commonly used in daily life, such as school, library and society, there are many Sino-Korean words. Knowing the meanings of the characters lets you guess new words, so Sino-Korean words can also help those who learn Korean."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "한자",
+      "gloss_en": "Chinese character",
+      "level": 2
+    },
+    {
+      "word": "한문",
+      "gloss_en": "Literary Chinese",
+      "level": 3
+    },
+    {
+      "word": "경전",
+      "gloss_en": "scripture",
+      "level": 3
+    },
+    {
+      "word": "지식인",
+      "gloss_en": "intellectual",
+      "level": 3
+    },
+    {
+      "word": "어순",
+      "gloss_en": "word order",
+      "level": 3
+    },
+    {
+      "word": "빌리다",
+      "gloss_en": "to borrow",
+      "level": 2
+    },
+    {
+      "word": "공식",
+      "gloss_en": "official",
+      "level": 3
+    },
+    {
+      "word": "공용",
+      "gloss_en": "public use",
+      "level": 3
+    },
+    {
+      "word": "방침",
+      "gloss_en": "policy",
+      "level": 3
+    },
+    {
+      "word": "필담",
+      "gloss_en": "brush conversation",
+      "level": 3
+    },
+    {
+      "word": "영향",
+      "gloss_en": "influence",
+      "level": 3
+    },
+    {
+      "word": "짐작하다",
+      "gloss_en": "to guess",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "옛날 한국에서는 무엇을 한문으로 적었습니까?",
+      "q_en": "What was written in Literary Chinese in old Korea?",
+      "answer_en": "Royal orders, history books and Buddhist scriptures."
+    },
+    {
+      "q_ko": "이두는 무엇입니까?",
+      "q_en": "What is Idu?",
+      "answer_en": "A method of borrowing the sounds and meanings of characters to write Korean."
+    },
+    {
+      "q_ko": "필담은 무엇입니까?",
+      "q_en": "What is pidam?",
+      "answer_en": "Conversation by writing characters with a brush when spoken languages differ."
+    },
+    {
+      "q_ko": "한자어를 알면 어떤 점이 좋습니까?",
+      "q_en": "What is the benefit of knowing Sino-Korean words?",
+      "answer_en": "You can guess new words from the meanings of characters."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

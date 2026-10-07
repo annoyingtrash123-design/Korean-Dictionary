@@ -1,0 +1,154 @@
+{
+  "id": "graded-balhae",
+  "meta": {
+    "title_ko": "발해",
+    "title_en": "Balhae",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 698,
+    "period": "Ancient",
+    "themes": [
+      "Ancient & Goryeo",
+      "Sino-Korean relations"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "고구려 멸망 뒤 세워져 '해동성국'으로 불린 발해의 성립과 발전, 멸망을 살펴봅니다.",
+    "summary_en": "The founding, development and fall of Balhae, which arose after Goguryeo's fall and was called the \"Flourishing Land of the East.\"",
+    "level": "TOPIK 5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 발해는 698년 대조영이 고구려 유민과 말갈 사람들을 이끌고 세운 나라로 알려져 있으며, 926년 거란에 멸망했습니다. 발해의 역사는 한국과 중국, 러시아의 영토에 걸쳐 있어 나라마다 서술하는 방식이 다릅니다. 이 글은 한국 학계에서 널리 쓰이는 설명을 따랐습니다.\n\n**어휘와 문법**\n- `-(으)로 알려져 있다`: 확실하지 않은 부분을 조심스럽게 말합니다.\n- `-에 걸쳐`: 범위를 나타냅니다.\n- `-(으)ㄴ/는 반면`: 대조를 나타냅니다.\n- 단어: 유민, 건국, 계승, 번영, 해동성국, 멸망.\n- '남북국 시대'는 신라와 발해를 함께 부르는 말입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '발해'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Balhae is known to have been founded in 698 by Dae Joyeong, who led Goguryeo refugees and Malgal people, and was destroyed by the Khitan in 926. Its history spans the territories of Korea, China and Russia, and each country narrates it differently. This text follows the account widely used in Korean scholarship.\n\n**Points to watch**\n- `-(으)로 알려져 있다`: carefully expressing uncertain points.\n- `-에 걸쳐`: across a range.\n- `-(으)ㄴ/는 반면`: contrast.\n- Words: 유민 refugees, 건국 founding, 계승 succession, 번영 prosperity, 해동성국 Flourishing Land of the East, 멸망 fall.\n- \"Northern and Southern States period\" refers to Silla and Balhae together.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Balhae,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "668년 고구려가 멸망한 뒤 많은 고구려 사람들이 당나라 영토로 끌려갔다. 그러나 일부는 옛 땅에 남아 저항을 이어 갔다. 이런 가운데 698년 대조영이 지금의 중국 지린성 일대인 동모산에서 나라를 세웠는데, 이것이 발해의 시작으로 알려져 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "After Goguryeo fell in 668, many Goguryeo people were taken into Tang territory. Some, however, remained on their old land and continued to resist. In this situation, in 698 Dae Joyeong founded a state at Dongmosan in what is now Jilin Province, China, and this is known as the beginning of Balhae."
+    },
+    {
+      "orig": "발해는 처음에 '진'이라는 이름을 썼으나, 713년 당나라로부터 발해군왕으로 책봉을 받은 뒤 '발해'라는 이름을 쓰게 되었다. 발해는 넓은 영토에 5경 15부 62주를 두어 나라를 다스렸고, 수도는 상경 용천부였다.",
+      "modern": null,
+      "reading": null,
+      "en": "Balhae at first used the name \"Jin,\" but after receiving investiture from Tang as the Prince of Balhae in 713, it came to use the name \"Balhae.\" It governed its broad territory with five capitals, fifteen prefectures and sixty-two districts, and its capital was Sangyeong Yongcheonbu."
+    },
+    {
+      "orig": "9세기에 발해는 가장 크게 번영하여 중국에서 '해동성국', 곧 동쪽 바다 끝의 번성한 나라라고 불렸다. 발해는 당나라와 활발히 교류하는 한편 일본에도 사신을 보냈다. 일본에 보낸 문서에서 발해 왕이 '고려 왕'이라 일컬은 기록이 남아 있어, 발해가 고구려를 계승했다는 의식을 가졌다고 해석된다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the 9th century Balhae prospered most greatly and was called \"Haedong Seongguk,\" a flourishing country at the eastern edge of the sea, in China. Balhae actively exchanged with Tang and also sent envoys to Japan. Because records remain in which the Balhae king called himself \"King of Goryeo\" in documents sent to Japan, it is interpreted that Balhae held a consciousness of succeeding Goguryeo."
+    },
+    {
+      "orig": "그러나 926년 북방의 거란이 침입하여 발해는 무너졌다. 발해의 멸망 원인에 대해서는 내부의 갈등이나 화산 폭발 등 여러 설이 제기되어 있으나 아직 분명하지 않다. 발해가 멸망한 뒤 많은 유민이 고려로 넘어왔고, 이것이 고려가 한반도를 아우르는 데 도움이 되었다고 한다.",
+      "modern": null,
+      "reading": null,
+      "en": "However, in 926 the Khitan from the north invaded and Balhae collapsed. Various theories, such as internal conflict or volcanic eruption, have been proposed for the cause of its fall, but it is still unclear. After Balhae fell, many refugees came over to Goryeo, which is said to have helped Goryeo unite the peninsula."
+    },
+    {
+      "orig": "발해의 역사는 오늘날에도 여러 나라에서 관심을 받는다. 한국에서는 신라와 발해가 함께 있던 시기를 '남북국 시대'라 부르며, 조선 후기의 학자 유득공이 『발해고』에서 이 개념을 제시하였다. 한편 중국과 러시아의 학계는 서로 다른 해석을 내놓고 있어, 발해사는 여전히 활발한 연구 주제이다.",
+      "modern": null,
+      "reading": null,
+      "en": "Balhae's history draws attention in several countries today. In Korea the period when Silla and Balhae coexisted is called the \"Northern and Southern States period,\" a concept presented by the late-Joseon scholar Yu Deuk-gong in the *Balhaego*. Meanwhile, scholars in China and Russia offer different interpretations, so Balhae's history remains an active research topic."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "유민",
+      "gloss_en": "refugees; displaced people",
+      "level": 3
+    },
+    {
+      "word": "저항",
+      "gloss_en": "resistance",
+      "level": 3
+    },
+    {
+      "word": "일대",
+      "gloss_en": "the area",
+      "level": 3
+    },
+    {
+      "word": "다스리다",
+      "gloss_en": "to govern",
+      "level": 3
+    },
+    {
+      "word": "번영하다",
+      "gloss_en": "to prosper",
+      "level": 3
+    },
+    {
+      "word": "교류하다",
+      "gloss_en": "to exchange",
+      "level": 3
+    },
+    {
+      "word": "일컫다",
+      "gloss_en": "to call; to name",
+      "level": 3
+    },
+    {
+      "word": "계승하다",
+      "gloss_en": "to succeed; to inherit",
+      "level": 3
+    },
+    {
+      "word": "해석되다",
+      "gloss_en": "to be interpreted",
+      "level": 3
+    },
+    {
+      "word": "침입하다",
+      "gloss_en": "to invade",
+      "level": 3
+    },
+    {
+      "word": "제기하다",
+      "gloss_en": "to raise (a theory)",
+      "level": 3
+    },
+    {
+      "word": "아우르다",
+      "gloss_en": "to unite; to encompass",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "발해는 누가 언제 세웠다고 알려져 있습니까?",
+      "q_en": "Who founded Balhae and when, according to tradition?",
+      "answer_en": "Dae Joyeong, in 698."
+    },
+    {
+      "q_ko": "'해동성국'은 무슨 뜻입니까?",
+      "q_en": "What does 'Haedong Seongguk' mean?",
+      "answer_en": "A flourishing country at the eastern edge of the sea."
+    },
+    {
+      "q_ko": "발해가 고구려를 계승했다고 보는 근거는 무엇입니까?",
+      "q_en": "What suggests Balhae saw itself as Goguryeo's successor?",
+      "answer_en": "Its king called himself 'King of Goryeo' in documents sent to Japan."
+    },
+    {
+      "q_ko": "발해는 언제 어떻게 멸망했습니까?",
+      "q_en": "When and how did Balhae fall?",
+      "answer_en": "In 926, to the invading Khitan; internal causes are also debated."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

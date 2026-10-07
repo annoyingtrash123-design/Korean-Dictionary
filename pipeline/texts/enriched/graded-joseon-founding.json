@@ -1,0 +1,147 @@
+{
+  "id": "graded-joseon-founding",
+  "meta": {
+    "title_ko": "조선의 건국",
+    "title_en": "The Founding of Joseon",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1392,
+    "period": "Joseon",
+    "themes": [
+      "Joseon"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "이성계와 정도전을 중심으로 고려가 무너지고 조선이 세워지는 과정을 설명합니다.",
+    "summary_en": "Explains how Goryeo fell and Joseon was founded, centered on Yi Seong-gye and Jeong Do-jeon.",
+    "level": "TOPIK 4–5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 14세기 후반 중국에서는 원나라가 쇠퇴하고 명나라가 일어났고, 고려는 외교 방향을 두고 갈등했습니다. 이성계는 1388년 위화도에서 군대를 돌려 정권을 잡았고, 1392년 왕위에 올라 새 왕조를 열었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것을 계기로`: 어떤 일을 계기로.\n- `-에 따라`: 기준을 나타냅니다.\n- `-고자 하다`: 의도.\n- 단어: 위화도 회군, 신진 사대부, 개혁, 국호, 천도, 성리학, 민본.\n- '회군'은 군대를 되돌린다는 뜻입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '조선의 건국'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** In the late 14th century the Yuan dynasty declined and Ming rose in China, and Goryeo was divided over its diplomatic direction. Yi Seong-gye turned his army back at Wihwado in 1388 and seized power, ascending the throne in 1392 to open a new dynasty.\n\n**Points to watch**\n- `-(으)ㄴ/는 것을 계기로`: taking something as the occasion.\n- `-에 따라`: according to.\n- `-고자 하다`: intent.\n- Words: 위화도 회군 turning back at Wihwado, 신진 사대부 new literati, 개혁 reform, 국호 name of the state, 천도 moving the capital, 성리학 Neo-Confucianism, 민본 people-first.\n- 회군 means turning an army back.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Founding of Joseon,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "14세기 후반 고려는 안팎으로 어려움에 놓여 있었다. 몽골의 간섭에서 벗어났지만, 왜구와 홍건적의 침입이 이어졌고 권세가들이 토지를 독점하여 백성의 삶이 어려웠다. 이런 가운데 신진 사대부라 불린 학자 관료들이 개혁을 요구하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the late 14th century Goryeo was in difficulty both inside and out. It had escaped Mongol interference, but invasions by Japanese pirates and Red Turbans continued, and powerful families monopolized land, making the people's lives hard. Amid this, scholar-officials called the new literati demanded reform."
+    },
+    {
+      "orig": "1388년 명나라가 고려의 북쪽 땅을 요구하자, 고려 조정은 요동을 공격하기로 하였다. 그러나 장군 이성계는 작은 나라가 큰 나라를 치는 것은 옳지 않다는 등의 이유를 들어 반대했고, 압록강의 위화도에서 군대를 돌렸다. 이를 위화도 회군이라 한다. 이후 이성계는 정치의 실권을 쥐게 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1388, when Ming demanded Goryeo's northern territory, the Goryeo court decided to attack Liaodong. But General Yi Seong-gye objected, citing reasons such as that it is not right for a small country to attack a large one, and turned his army back at Wihwado on the Yalu River. This is called the Wihwado Retreat. Afterward Yi Seong-gye took real political power."
+    },
+    {
+      "orig": "개혁의 방법을 두고 신진 사대부들은 의견이 갈렸다. 정도전 등은 새 왕조를 세워야 한다고 주장하였고, 정몽주는 고려 왕조를 유지하면서 개혁하자고 하였다. 결국 정몽주가 살해되면서, 1392년 이성계가 왕위에 올랐다.",
+      "modern": null,
+      "reading": null,
+      "en": "The new literati were divided on the method of reform. Jeong Do-jeon and others argued that a new dynasty should be founded, while Jeong Mong-ju argued for reforming while keeping the Goryeo dynasty. In the end, after Jeong Mong-ju was killed, Yi Seong-gye ascended the throne in 1392."
+    },
+    {
+      "orig": "새 왕조는 1393년 국호를 조선으로 정했고, 1394년 수도를 한양으로 옮겼다. 정도전은 성리학을 나라의 근본 이념으로 삼고 백성을 근본으로 하는 정치를 지향하였다. 이렇게 시작된 조선은 이후 500여 년 동안 이어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "The new dynasty set the state name as Joseon in 1393 and moved the capital to Hanyang in 1394. Jeong Do-jeon made Neo-Confucianism the nation's fundamental ideology and aimed at a politics with the people as its foundation. Joseon, begun in this way, lasted for over 500 years."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "왜구",
+      "gloss_en": "Japanese pirates",
+      "level": 3
+    },
+    {
+      "word": "독점하다",
+      "gloss_en": "to monopolize",
+      "level": 3
+    },
+    {
+      "word": "권세가",
+      "gloss_en": "powerful family",
+      "level": 3
+    },
+    {
+      "word": "관료",
+      "gloss_en": "official",
+      "level": 3
+    },
+    {
+      "word": "요구하다",
+      "gloss_en": "to demand",
+      "level": 3
+    },
+    {
+      "word": "회군",
+      "gloss_en": "turning an army back",
+      "level": 3
+    },
+    {
+      "word": "실권",
+      "gloss_en": "real power",
+      "level": 3
+    },
+    {
+      "word": "의견이 갈리다",
+      "gloss_en": "opinions to split",
+      "level": 3
+    },
+    {
+      "word": "유지하다",
+      "gloss_en": "to maintain",
+      "level": 3
+    },
+    {
+      "word": "국호",
+      "gloss_en": "name of the state",
+      "level": 3
+    },
+    {
+      "word": "이념",
+      "gloss_en": "ideology",
+      "level": 3
+    },
+    {
+      "word": "지향하다",
+      "gloss_en": "to aim for",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "신진 사대부는 무엇을 요구했습니까?",
+      "q_en": "What did the new literati demand?",
+      "answer_en": "Reform."
+    },
+    {
+      "q_ko": "위화도 회군은 무엇입니까?",
+      "q_en": "What was the Wihwado Retreat?",
+      "answer_en": "Yi Seong-gye turned his army back at Wihwado instead of attacking Liaodong."
+    },
+    {
+      "q_ko": "정도전과 정몽주는 어떻게 달랐습니까?",
+      "q_en": "How did Jeong Do-jeon and Jeong Mong-ju differ?",
+      "answer_en": "Jeong Do-jeon argued for a new dynasty; Jeong Mong-ju for reform within Goryeo."
+    },
+    {
+      "q_ko": "조선은 언제 국호와 수도를 정했습니까?",
+      "q_en": "When did Joseon set its name and capital?",
+      "answer_en": "The name in 1393 and the capital Hanyang in 1394."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

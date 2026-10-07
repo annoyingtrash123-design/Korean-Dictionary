@@ -9,6 +9,7 @@
 
 pub mod deconjugate;
 pub mod hangul;
+pub mod oldhangul;
 pub mod packfile;
 pub mod search;
 pub mod sql;

@@ -64,7 +64,9 @@ pub fn collect_sounds(v: &Value, p: &mut Prons) {
             continue;
         }
         if t.contains("sino korean") {
-            push_cap(&mut p.sino_korean, hangul_part(&val));
+            // any field may hold the hangul ("other": "학교 (hakgyo)")
+            let h = ["zh-pron", "zh_pron", "other", "hangeul", "pinyin", "romanization"].iter().map(|k| hangul_part(&clean(s(snd, k)))).find(|x| !x.is_empty());
+            push_cap(&mut p.sino_korean, h.unwrap_or_default());
         } else if t.contains("sino vietnamese") {
             push_cap(&mut p.sino_vietnamese, val);
         } else if t.contains("sino japanese") || t.contains("go on") || t.contains("kan on") || t.contains("on yomi") {

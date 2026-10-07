@@ -1,7 +1,7 @@
 use kdict_pipeline::build::{self, BuildOpts, Sources};
 use kdict_pipeline::common::*;
 use kdict_pipeline::xml::{for_each, for_each_file};
-use kdict_pipeline::{freq, kaikki, kengdic, krdict, opendict, pack, stdict, tatoeba, unihan};
+use kdict_pipeline::{cedict, freq, kaikki, kengdic, krdict, opendict, pack, stdict, tatoeba, unihan, zhwikt};
 use rusqlite::Connection;
 use serde_json::Value;
 use std::io::{BufReader, Cursor, Write};
@@ -390,16 +390,20 @@ fn end_to_end_mini_build() {
         freq: Some(fx("ko_freq.txt")),
         tatoeba: Some((kor, eng, links)),
         unihan: Some(zp),
+        cedict: Some(fx("cedict_sample.u8")),
+        zhwikt: Some(fx("zhwikt_sample.jsonl")),
     };
     let out = dir.path().join("out");
     let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
 
     // --- manifest
     let packs = manifest["packs"].as_array().unwrap();
-    assert_eq!(packs.len(), 3);
+    assert_eq!(packs.len(), 5);
     assert_eq!((packs[2]["id"].as_str(), packs[2]["required"].as_bool()), (Some("opendict"), Some(false)));
     assert_eq!((packs[0]["id"].as_str(), packs[0]["required"].as_bool()), (Some("core"), Some(true)));
     assert_eq!((packs[1]["id"].as_str(), packs[1]["required"].as_bool()), (Some("stdict"), Some(false)));
+    assert_eq!((packs[3]["id"].as_str(), packs[3]["required"].as_bool()), (Some("cedict"), Some(false)));
+    assert_eq!((packs[4]["id"].as_str(), packs[4]["required"].as_bool()), (Some("zhwikt"), Some(false)));
     let ver = manifest["version"].as_str().unwrap();
     assert_eq!(ver.len(), 13);
     assert_eq!(ver.as_bytes()[8], b'-');
@@ -564,4 +568,242 @@ fn stamp_format() {
     let (v, b) = build::stamp(1_700_000_000);
     assert_eq!(v, "20231114-2213");
     assert_eq!(b, "2023-11-14T22:13:20Z");
+}
+
+// --- older-text packs: 훈음, CC-CEDICT, Wiktionary Chinese, 옛말 flag -------------------------
+
+#[test]
+fn kaikki_hanja_hun_eum() {
+    let k = kaikki::parse(BufReader::new(std::fs::File::open(fx("kaikki_sample.jsonl")).unwrap())).unwrap();
+    // {{ko-hanja|배울|학}} args; the second line of 學 would only add a reading
+    let h = &k.hanja[&'學'];
+    assert_eq!(h.hun, vec!["배울"]);
+    assert_eq!(h.eumhun, vec!["배울 학"]);
+    assert_eq!(h.eum, vec!["학"]);
+    // no args: eumhun taken from the template expansion text
+    assert_eq!(k.hanja[&'校'].eumhun, vec!["학교 교"]);
+    // two etymology lines: arg pair + forms[] tagged eumhun, joined later with "; "
+    let le = &k.hanja[&'樂'];
+    assert_eq!(le.eumhun, vec!["즐길 락", "풍류 악"]);
+    assert_eq!(le.hun, vec!["즐길", "풍류"]);
+    // a bare "생 (saeng): life" gloss yields a reading only
+    assert_eq!(k.hanja[&'生'].eum, vec!["생"]);
+    assert!(k.hanja[&'生'].hun.is_empty());
+    assert!(!k.hanja.contains_key(&'木'));
+    assert!(k.entries.iter().all(|e| !has_cjk(&e.headword)));
+    assert_eq!(kaikki::split_eumhun("배울 학 (baeul hak)"), Some(("배울".into(), "학".into())));
+    assert_eq!(kaikki::split_eumhun("hello world"), None);
+    assert_eq!(kaikki::split_eumhun("학"), None);
+}
+
+#[test]
+fn cedict_pinyin_and_sino_korean() {
+    assert_eq!(cedict::pinyin_marked("xue2 xiao4"), "xué xiào");
+    assert_eq!(cedict::pinyin_marked("nu:3 zi3"), "nǚ zǐ");
+    assert_eq!(cedict::pinyin_marked("lu:e4 liu2 gui1 hui4"), "lüè liú guī huì");
+    assert_eq!(cedict::pinyin_marked("hua1 r5"), "huā r");
+    assert_eq!(cedict::pinyin_marked("xue2 sheng5"), "xué sheng");
+    assert_eq!(cedict::pinyin_marked("Zhong1 guo2 ou1 A1 Q"), "Zhōng guó ōu Ā Q");
+    // 두음법칙 + 렬/률
+    assert_eq!(cedict::dueum("녀자"), "여자");
+    assert_eq!(cedict::dueum("리유"), "이유");
+    assert_eq!(cedict::dueum("로사"), "노사");
+    assert_eq!(cedict::dueum("례의"), "예의");
+    assert_eq!(cedict::dueum("규률"), "규율");
+    assert_eq!(cedict::dueum("비률"), "비율");
+    assert_eq!(cedict::dueum("학교"), "학교");
+    assert_eq!(cedict::dueum("소녀"), "소녀");
+    assert_eq!(cedict::dueum("선률"), "선율");
+    let r: std::collections::HashMap<char, String> = [('學', "학"), ('校', "교"), ('女', "녀"), ('子', "자")].iter().map(|(c, s)| (*c, s.to_string())).collect();
+    assert_eq!(cedict::sino_korean("學校", &r).as_deref(), Some("학교"));
+    assert_eq!(cedict::sino_korean("女子", &r).as_deref(), Some("여자"));
+    assert_eq!(cedict::sino_korean("學A", &r), None); // non-hanja
+    assert_eq!(cedict::sino_korean("學生", &r), None); // unknown reading
+}
+
+#[test]
+fn cedict_parsing() {
+    let sino: std::collections::HashMap<char, String> = [('學', "학"), ('校', "교")].iter().map(|(c, s)| (*c, s.to_string())).collect();
+    let mut es = Vec::new();
+    cedict::parse_file(&fx("cedict_sample.u8"), &sino, |e| {
+        es.push(e);
+        Ok(())
+    })
+    .unwrap();
+    assert_eq!(es.len(), 11); // comment lines skipped
+    let x = &es[0];
+    assert_eq!((x.headword.as_str(), x.hanja.as_deref(), x.source, x.lang), ("學校", Some("學校"), "cedict", "en"));
+    assert_eq!(x.pron.as_deref(), Some("학교"));
+    assert_eq!(x.forms, vec!["学校"]);
+    assert_eq!(x.data["simplified"], "学校");
+    assert_eq!(x.data["pinyin"], "xué xiào");
+    assert_eq!(x.data["pinyin_num"], "xue2 xiao4");
+    assert_eq!(x.data["senses"].as_array().unwrap().len(), 1);
+    assert_eq!(x.data["senses"][0]["gloss"], "school");
+    assert_eq!(x.data["cl"], serde_json::json!(["家[jia1]", "所[suo3]"]));
+    // two readings of 校 are two entries, same headword
+    assert_eq!(es.iter().filter(|e| e.headword == "校").count(), 2);
+    assert_eq!(es[1].data["senses"].as_array().unwrap().len(), 4);
+    assert_eq!(es[1].forms, vec!["学"]);
+    assert!(es[2].forms.is_empty()); // 校: simplified == traditional
+    assert!(es[2].data.get("simplified").is_none());
+    assert_eq!(es[2].data["senses"].as_array().unwrap().len(), 2); // CL: is not a sense
+    assert!(es.iter().find(|e| e.headword == "阿Q").unwrap().pron.is_none());
+    // CEDICT zip container
+    let dir = tempfile::tempdir().unwrap();
+    let zp = dir.path().join("cedict.zip");
+    {
+        let mut zw = zip::ZipWriter::new(std::fs::File::create(&zp).unwrap());
+        zw.start_file("cedict_ts.u8", zip::write::SimpleFileOptions::default()).unwrap();
+        zw.write_all(&std::fs::read(fx("cedict_sample.u8")).unwrap()).unwrap();
+        zw.finish().unwrap();
+    }
+    let mut n = 0;
+    cedict::parse_file(&zp, &sino, |_| {
+        n += 1;
+        Ok(())
+    })
+    .unwrap();
+    assert_eq!(n, 11);
+}
+
+#[test]
+fn zhwikt_parsing() {
+    let sino: std::collections::HashMap<char, String> = [('女', "녀"), ('子', "자")].iter().map(|(c, s)| (*c, s.to_string())).collect();
+    let mut es = Vec::new();
+    let redirects = zhwikt::parse(BufReader::new(std::fs::File::open(fx("zhwikt_sample.jsonl")).unwrap()), &sino, |e, rank| {
+        es.push((e, rank));
+        Ok(())
+    })
+    .unwrap();
+    // 學校, 學 (two lines merged by etymology), 校, 女子; the simplified redirect lines and "hello" yield none
+    let hw: Vec<&str> = es.iter().map(|(e, _)| e.headword.as_str()).collect();
+    assert_eq!(hw, vec!["學校", "學", "校", "女子"]);
+    assert!(redirects.contains(&("学校".to_string(), "學校".to_string())) && redirects.contains(&("学".to_string(), "學".to_string())));
+    let (x, _) = &es[0];
+    assert_eq!((x.source, x.lang, x.hanja.as_deref()), ("zhwikt", "en", Some("學校")));
+    assert_eq!(x.data["simplified"], "学校");
+    assert_eq!(x.forms, vec!["学校"]);
+    assert_eq!(x.data["senses"][0]["gloss"], "school");
+    assert!(x.data["senses"][0].get("examples").is_none() && x.data.get("translations").is_none());
+    assert_eq!(x.data["pron"]["mandarin"], serde_json::json!(["xuéxiào"]));
+    assert_eq!(x.data["pron"]["sino_korean"], serde_json::json!(["학교"]));
+    assert_eq!(x.data["pron"]["middle_chinese"], serde_json::json!(["haewk gaewH"]));
+    assert_eq!(x.data["pron"]["cantonese"], serde_json::json!(["hok6 haau6"]));
+    assert_eq!(x.pron.as_deref(), Some("학교"));
+    assert!(x.data["etym"].as_str().unwrap().starts_with("From 學"));
+    let (g, _) = &es[1];
+    assert_eq!(g.data["senses"].as_array().unwrap().len(), 3); // POS lines merged
+    assert_eq!(g.data["senses"][2]["pos"], "verb");
+    assert_eq!(g.data["classical"], true);
+    assert_eq!(g.data["pron"]["middle_chinese"], serde_json::json!(["ɦɔk̚"]));
+    assert_eq!(g.data["pron"]["sino_vietnamese"], serde_json::json!(["học"]));
+    assert_eq!(g.pron.as_deref(), Some("학"));
+    // Sino-Korean computed from the hanja readings when the entry has none (dueum applied)
+    assert_eq!(es[3].0.pron.as_deref(), Some("여자"));
+    // ranks: shorter headword first
+    assert!(es[1].1 < es[0].1);
+}
+
+#[test]
+fn historical_flag() {
+    use serde_json::json;
+    let mut e = Entry { source: "stdict", ..Default::default() };
+    e.data = json!({"senses": [{"tags": ["옛말"], "ko_def": "x"}]});
+    assert!(build::is_historical(&e));
+    e.data = json!({"senses": [{"ko_def": "‘아무’의 옛말."}]});
+    assert!(build::is_historical(&e));
+    e.data = json!({"senses": [{"tags": ["옛말"]}, {"ko_def": "현대어 뜻."}]});
+    assert!(!build::is_historical(&e)); // only entries that are old in every sense
+    e.data = json!({"senses": []});
+    assert!(!build::is_historical(&e));
+    e.source = "krdict";
+    e.data = json!({"senses": [{"tags": ["옛말"]}]});
+    assert!(!build::is_historical(&e));
+}
+
+#[test]
+fn quality_gate_optional_packs() {
+    use serde_json::json;
+    let ok = json!({"entries": 120000});
+    let bad = json!({"entries": 10});
+    assert!(build::quality_gate_optional(&[("cedict", &ok), ("zhwikt", &ok)]).is_empty());
+    assert!(build::quality_gate_optional(&[]).is_empty()); // not built -> not gated
+    let p = build::quality_gate_optional(&[("cedict", &bad), ("zhwikt", &ok)]);
+    assert_eq!(p.len(), 1);
+    assert!(p[0].contains("cedict.entries"));
+}
+
+#[test]
+fn chinese_packs_are_built_from_fixtures() {
+    let dir = tempfile::tempdir().unwrap();
+    let work = dir.path().join("work");
+    std::fs::create_dir_all(&work).unwrap();
+    let zp = work.join("Unihan.zip");
+    {
+        let mut zw = zip::ZipWriter::new(std::fs::File::create(&zp).unwrap());
+        for n in ["Unihan_Readings.txt", "Unihan_IRGSources.txt"] {
+            zw.start_file(n, zip::write::SimpleFileOptions::default()).unwrap();
+            zw.write_all(&std::fs::read(fx(n)).unwrap()).unwrap();
+        }
+        zw.finish().unwrap();
+    }
+    let src = Sources {
+        krdict: vec![fx("krdict_sample.xml")],
+        stdict: vec![fx("stdict_sample.xml")],
+        opendict: vec![fx("opendict_sample.xml")],
+        kaikki: Some(fx("kaikki_sample.jsonl")),
+        unihan: Some(zp),
+        cedict: Some(fx("cedict_sample.u8")),
+        zhwikt: Some(fx("zhwikt_sample.jsonl")),
+        ..Default::default()
+    };
+    let out = dir.path().join("out");
+    build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
+
+    // core: 훈음 columns (Unihan reading kept, Wiktionary adds hun/eumhun)
+    let c = Connection::open(out.join("core.sqlite")).unwrap();
+    assert_eq!(q::<String>(&c, "SELECT hun FROM hanja_chars WHERE ch='學'"), "배울");
+    assert_eq!(q::<String>(&c, "SELECT eumhun FROM hanja_chars WHERE ch='學'"), "배울 학");
+    assert_eq!(q::<String>(&c, "SELECT readings FROM hanja_chars WHERE ch='學'"), "학");
+    assert_eq!(q::<String>(&c, "SELECT eumhun FROM hanja_chars WHERE ch='樂'"), "즐길 락; 풍류 악");
+    assert_eq!(q::<String>(&c, "SELECT readings FROM hanja_chars WHERE ch='樂'"), "락,악"); // Wiktionary readings (no Unihan row)
+    assert_eq!(q::<String>(&c, "SELECT hun FROM hanja_chars WHERE ch='樂'"), "즐길");
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM hanja_chars WHERE ch='校' AND hun IS NOT NULL"), 1);
+    assert_eq!(q::<i64>(&c, "SELECT hist FROM entries LIMIT 1"), 0);
+
+    // opendict: 옛말 entry flagged and indexed
+    let o = Connection::open(out.join("opendict.sqlite")).unwrap();
+    assert!(q::<i64>(&o, "SELECT COUNT(*) FROM entries WHERE hist = 1") >= 1);
+    assert_eq!(q::<i64>(&o, "SELECT COUNT(*) FROM sqlite_master WHERE name = 'entries_hist'"), 1);
+    assert_eq!(q::<i64>(&o, "SELECT COUNT(*) FROM entries WHERE hist = 1 AND data NOT LIKE '%옛말%'"), 0);
+    let s = Connection::open(out.join("stdict.sqlite")).unwrap();
+    assert_eq!(q::<i64>(&s, "SELECT COUNT(*) FROM sqlite_master WHERE name = 'entries_hist'"), 1);
+
+    // cedict: traditional headword, simplified via forms, Sino-Korean in pron
+    let d = Connection::open(out.join("cedict.sqlite")).unwrap();
+    assert_eq!(q::<i64>(&d, "SELECT COUNT(*) FROM entries"), 11);
+    assert_eq!(q::<String>(&d, "SELECT pron FROM entries WHERE hw_norm='學校'"), "학교");
+    assert_eq!(q::<String>(&d, "SELECT e.headword FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='学校'"), "學校");
+    assert_eq!(q::<String>(&d, "SELECT hanja FROM entries WHERE hw_norm='學校'"), "學校");
+    assert_eq!(q::<i64>(&d, "SELECT COUNT(*) FROM hanja_words WHERE ch='校'"), 3);
+    assert_eq!(q::<String>(&d, "SELECT value FROM meta WHERE key='pack'"), "cedict");
+    assert_eq!(q::<i64>(&d, "SELECT COUNT(*) FROM sqlite_master WHERE name IN ('entries_fts','gloss_terms','sentences')"), 0);
+
+    // zhwikt: form-of redirects become forms of the target
+    let z = Connection::open(out.join("zhwikt.sqlite")).unwrap();
+    assert_eq!(q::<i64>(&z, "SELECT COUNT(*) FROM entries"), 4);
+    assert_eq!(q::<String>(&z, "SELECT e.headword FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='学校'"), "學校");
+    assert_eq!(q::<String>(&z, "SELECT e.headword FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='学'"), "學");
+    assert_eq!(q::<String>(&z, "SELECT value FROM meta WHERE key='pack'"), "zhwikt");
+}
+
+#[test]
+fn chinese_sources_missing_means_no_pack() {
+    let dir = tempfile::tempdir().unwrap();
+    let src = Sources { krdict: vec![fx("krdict_sample.xml")], ..Default::default() };
+    let out = dir.path().join("out");
+    let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true }).unwrap();
+    assert_eq!(m["packs"].as_array().unwrap().len(), 1);
+    assert!(!out.join("cedict.sqlite").exists() && !out.join("zhwikt.sqlite").exists());
 }

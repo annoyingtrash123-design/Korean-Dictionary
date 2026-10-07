@@ -1,0 +1,153 @@
+{
+  "id": "graded-tribute-investiture",
+  "meta": {
+    "title_ko": "조공과 책봉",
+    "title_en": "Tribute and Investiture",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1500,
+    "period": "Joseon",
+    "themes": [
+      "Sino-Korean relations"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "한국과 중국 왕조 사이의 전통적인 외교 관계, 조공과 책봉의 구조와 의미를 설명합니다.",
+    "summary_en": "Explains the structure and meaning of tribute and investiture, the traditional diplomatic relationship between Korean and Chinese dynasties.",
+    "level": "TOPIK 6",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 전근대 동아시아에서는 중국 왕조를 중심으로 한 국제 질서가 오랫동안 유지되었습니다. 한반도의 여러 왕조도 이 질서에 참여했으나, 관계의 성격은 시기와 왕조에 따라 달랐고 오늘날에도 연구자들의 해석이 갈립니다. 이 글은 일반적으로 받아들여지는 설명을 요약한 것입니다.\n\n**어휘와 문법**\n- `-에 불과하다`: 그것에 지나지 않음을 나타냅니다.\n- `-는 한편`: 두 가지 측면을 함께 말합니다.\n- `-(으)ㄴ/는 셈이다`: 사실상 그러함을 나타냅니다.\n- 단어: 조공, 책봉, 사대, 교린, 명분, 실리, 자율성.\n- 한자어가 많으므로 한자의 뜻을 짐작하며 읽으세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '조공과 책봉'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** In premodern East Asia, an international order centered on Chinese dynasties lasted for a long time. Dynasties on the Korean peninsula also took part, but the nature of the relationship varied by period and dynasty, and scholars' interpretations still differ. This text summarizes the generally accepted account.\n\n**Points to watch**\n- `-에 불과하다`: nothing more than.\n- `-는 한편`: presenting two aspects together.\n- `-(으)ㄴ/는 셈이다`: amounts to.\n- Words: 조공 tribute, 책봉 investiture, 사대 serving the great, 교린 neighborly relations, 명분 justification, 실리 practical gain, 자율성 autonomy.\n- Many Sino-Korean words appear; guess meanings from the hanja.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Tribute and Investiture,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "조공이란 주변 나라의 통치자가 중국 황제에게 사절을 보내 예물을 바치는 일을 말하고, 책봉이란 황제가 그 통치자를 왕으로 인정하여 지위를 내리는 일을 말한다. 두 제도는 짝을 이루어 중국 중심의 국제 질서를 이루었다.",
+      "modern": null,
+      "reading": null,
+      "en": "Tribute refers to the ruler of a neighboring country sending an envoy to the Chinese emperor to present gifts, and investiture refers to the emperor recognizing that ruler as king and conferring status. The two institutions formed a pair and made up the China-centered international order."
+    },
+    {
+      "orig": "한반도의 왕조는 이 질서 속에서 때로는 적극적으로, 때로는 소극적으로 움직였다. 신라와 고려, 조선은 모두 중국 왕조에 사절을 보냈으며, 새 왕이 즉위하면 책봉을 받아 정통성을 보강하곤 하였다. 특히 조선은 명나라를 큰 나라로 섬기는 '사대'를 외교의 기본으로 삼았다.",
+      "modern": null,
+      "reading": null,
+      "en": "Within this order, the dynasties of the peninsula acted sometimes actively and sometimes passively. Silla, Goryeo and Joseon all sent envoys to Chinese dynasties, and when a new king acceded to the throne they would receive investiture to reinforce their legitimacy. Joseon in particular took \"sadae,\" serving Ming as the great power, as the basis of its diplomacy."
+    },
+    {
+      "orig": "그렇다고 해서 이 관계가 일방적인 복종에 불과했던 것은 아니다. 중국 황제는 조공에 대한 답례로 더 값진 물품을 내려 주는 경우가 많았고, 사절을 통해 무역과 문화 교류도 활발히 이루어졌다. 또한 책봉을 받은 나라는 대체로 내정과 군사에 대한 자율성을 유지하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "That does not mean this relationship was merely one-sided submission. The Chinese emperor often granted goods of greater value in return for tribute, and trade and cultural exchange also thrived through the envoys. Moreover, countries that received investiture generally maintained autonomy over domestic affairs and the military."
+    },
+    {
+      "orig": "한편 조선은 일본이나 여진과는 '교린', 곧 대등한 이웃 관계를 맺었다. 이처럼 조공과 책봉은 힘의 차이를 인정하는 명분이자, 동시에 전쟁을 피하고 실리를 얻기 위한 현실적 수단이었다고 평가된다. 다만 그 성격을 '형식적인 의례'로 볼지 '실질적인 종속'으로 볼지는 지금도 논쟁이 이어지고 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Meanwhile, Joseon formed \"gyorin,\" that is, relations as equal neighbors, with Japan and the Jurchens. Tribute and investiture are thus evaluated as both a justification acknowledging differences in power and a realistic means of avoiding war and gaining practical benefits. However, whether to view their nature as \"formal ritual\" or \"substantive subordination\" is still debated."
+    },
+    {
+      "orig": "오늘날 학자들은 이 제도를 현대 국제법의 개념만으로 설명하기 어렵다고 본다. 당시 사람들에게 조공과 책봉은 외교 의례이자 국가의 안전을 보장받는 장치였기 때문이다.",
+      "modern": null,
+      "reading": null,
+      "en": "Today scholars consider it difficult to explain this system with the concepts of modern international law alone. For people at the time, tribute and investiture were both a diplomatic ritual and a device for securing the state's safety."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "조공",
+      "gloss_en": "tribute",
+      "level": 3
+    },
+    {
+      "word": "책봉",
+      "gloss_en": "investiture",
+      "level": 3
+    },
+    {
+      "word": "사절",
+      "gloss_en": "envoy",
+      "level": 3
+    },
+    {
+      "word": "예물",
+      "gloss_en": "gift",
+      "level": 3
+    },
+    {
+      "word": "지위",
+      "gloss_en": "status",
+      "level": 3
+    },
+    {
+      "word": "정통성",
+      "gloss_en": "legitimacy",
+      "level": 3
+    },
+    {
+      "word": "섬기다",
+      "gloss_en": "to serve",
+      "level": 3
+    },
+    {
+      "word": "복종",
+      "gloss_en": "submission",
+      "level": 3
+    },
+    {
+      "word": "답례",
+      "gloss_en": "return gift",
+      "level": 3
+    },
+    {
+      "word": "자율성",
+      "gloss_en": "autonomy",
+      "level": 3
+    },
+    {
+      "word": "명분",
+      "gloss_en": "justification",
+      "level": 3
+    },
+    {
+      "word": "논쟁",
+      "gloss_en": "debate",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "조공과 책봉은 각각 무엇입니까?",
+      "q_en": "What are tribute and investiture?",
+      "answer_en": "Tribute is sending envoys with gifts to the emperor; investiture is the emperor recognizing a ruler as king."
+    },
+    {
+      "q_ko": "조선이 외교의 기본으로 삼은 것은 무엇입니까?",
+      "q_en": "What did Joseon take as the basis of its diplomacy with China?",
+      "answer_en": "Sadae, serving Ming as the great power."
+    },
+    {
+      "q_ko": "이 관계가 일방적이지 않았다고 보는 근거는 무엇입니까?",
+      "q_en": "What suggests the relationship was not one-sided?",
+      "answer_en": "The emperor often gave more valuable return gifts, trade and exchange flourished, and countries kept autonomy."
+    },
+    {
+      "q_ko": "학자들 사이에 논쟁이 되는 점은 무엇입니까?",
+      "q_en": "What is debated among scholars?",
+      "answer_en": "Whether the relationship was formal ritual or substantive subordination."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

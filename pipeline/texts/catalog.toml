@@ -1501,6 +1501,7 @@ script = "hangul"
 excerpt = false
 source = "ohchr"
 source_title = "세계인권선언"
+url = "https://www.ohchr.org/en/human-rights/universal-declaration/translations/korean"
 search = ["세계인권선언", "Universal Declaration of Human Rights Korean"]
 pd_basis = "UN document; OHCHR permits reproduction of its translations with attribution (https://www.ohchr.org/en/human-rights/universal-declaration/translations/korean)."
 uncertain = ["source_title"]

@@ -1,0 +1,147 @@
+{
+  "id": "graded-pansori-talchum",
+  "meta": {
+    "title_ko": "판소리와 탈춤",
+    "title_en": "Pansori and Talchum",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1800,
+    "period": "Joseon",
+    "themes": [
+      "Joseon"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "조선 후기 서민 문화를 대표하는 두 가지 공연 예술을 소개합니다.",
+    "summary_en": "An introduction to two performing arts that represent the common people's culture of late Joseon.",
+    "level": "TOPIK 4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 판소리와 탈춤은 조선 후기에 널리 퍼진 공연 예술입니다. 두 공연은 모두 웃음 속에 사회에 대한 불만과 풍자를 담았습니다. 판소리는 유네스코 인류무형문화유산으로 등록되어 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 반면에`: 서로 대비되는 내용을 이어 줍니다.\n- `-에 대해`: 대상을 나타냅니다.\n- `-(으)ㄹ 수 있다`: 가능을 나타냅니다.\n- 단어: 소리꾼, 고수, 장단, 풍자, 양반, 관객.\n- '한'과 '흥'이라는 감정이 함께 느껴지는 점이 특징이라고 합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '판소리와 탈춤'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Pansori and talchum (mask dance) were performing arts that spread widely in late Joseon. Both put criticism of and satire on society into humor. Pansori is inscribed as UNESCO Intangible Cultural Heritage.\n\n**Points to watch**\n- `-(으)ㄴ/는 반면에`: contrasting contents.\n- `-에 대해`: about (an object).\n- `-(으)ㄹ 수 있다`: possibility.\n- Words: 소리꾼 pansori singer, 고수 drummer, 장단 rhythm, 풍자 satire, 양반 aristocrat, 관객 audience.\n- It is said the feelings of *han* (sorrow) and *heung* (joy) are felt together.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Pansori and Talchum,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "판소리는 한 사람의 소리꾼이 북을 치는 고수와 함께 이야기를 노래하는 공연이다. 소리꾼은 노래와 말, 몸짓을 번갈아 사용하면서 몇 시간 동안 이야기를 이끌어 간다. 관객도 \"얼쑤\" 하고 소리를 내며 공연에 참여한다.",
+      "modern": null,
+      "reading": null,
+      "en": "Pansori is a performance in which a single singer sings a story together with a drummer. The singer alternates song, speech and gesture and carries the story along for hours. The audience also takes part by calling out \"eolssu.\""
+    },
+    {
+      "orig": "대표적인 판소리로는 「춘향가」, 「심청가」, 「흥보가」 등이 있다. 이야기는 사랑이나 효도, 형제의 우애처럼 누구나 공감할 수 있는 주제를 다룬다. 가난한 사람의 아픔과 기쁨이 웃음과 눈물 속에 담겨 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Representative pansori include \"Chunhyangga,\" \"Simcheongga\" and \"Heungboga.\" The stories deal with themes anyone can relate to, such as love, filial piety and brotherly affection. The pain and joy of poor people are contained in laughter and tears."
+    },
+    {
+      "orig": "탈춤은 사람들이 탈을 쓰고 춤과 대사로 이야기를 펼치는 놀이이다. 탈춤에서는 양반이 어리석은 모습으로 나와 놀림을 받곤 한다. 양반 앞에서는 하기 어려웠던 말을 탈 뒤에서 마음껏 할 수 있었던 것이다.",
+      "modern": null,
+      "reading": null,
+      "en": "Talchum is a play in which people wear masks and unfold a story with dance and dialogue. In talchum, the yangban aristocrat often appears as a foolish figure and is mocked. From behind the mask, people could say freely what was hard to say in front of the aristocrats."
+    },
+    {
+      "orig": "판소리가 한 사람이 이끄는 이야기 예술인 반면에 탈춤은 여러 사람이 함께 만드는 마당놀이이다. 두 가지 모두 관객과 함께 웃고 울면서 만드는 열린 공연이라는 점이 공통적이다.",
+      "modern": null,
+      "reading": null,
+      "en": "While pansori is a storytelling art led by one person, talchum is an open-air play made by many people together. What the two have in common is that both are open performances made by laughing and crying together with the audience."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "공연",
+      "gloss_en": "performance",
+      "level": 3
+    },
+    {
+      "word": "소리꾼",
+      "gloss_en": "pansori singer",
+      "level": 3
+    },
+    {
+      "word": "번갈아",
+      "gloss_en": "alternately",
+      "level": 3
+    },
+    {
+      "word": "몸짓",
+      "gloss_en": "gesture",
+      "level": 3
+    },
+    {
+      "word": "효도",
+      "gloss_en": "filial piety",
+      "level": 3
+    },
+    {
+      "word": "공감하다",
+      "gloss_en": "to empathize",
+      "level": 3
+    },
+    {
+      "word": "다루다",
+      "gloss_en": "to deal with",
+      "level": 3
+    },
+    {
+      "word": "탈",
+      "gloss_en": "mask",
+      "level": 3
+    },
+    {
+      "word": "대사",
+      "gloss_en": "lines; dialogue",
+      "level": 3
+    },
+    {
+      "word": "양반",
+      "gloss_en": "yangban aristocrat",
+      "level": 3
+    },
+    {
+      "word": "어리석다",
+      "gloss_en": "to be foolish",
+      "level": 3
+    },
+    {
+      "word": "놀리다",
+      "gloss_en": "to tease; to mock",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "판소리는 누가 해요?",
+      "q_en": "Who performs pansori?",
+      "answer_en": "A singer, together with a drummer."
+    },
+    {
+      "q_ko": "대표적인 판소리에는 무엇이 있어요?",
+      "q_en": "What are some representative pansori?",
+      "answer_en": "Chunhyangga, Simcheongga and Heungboga."
+    },
+    {
+      "q_ko": "탈춤에서 양반은 어떻게 나와요?",
+      "q_en": "How does the yangban appear in talchum?",
+      "answer_en": "As a foolish figure who gets mocked."
+    },
+    {
+      "q_ko": "두 공연의 공통점은 무엇이에요?",
+      "q_en": "What do the two have in common?",
+      "answer_en": "Both are open performances created together with the audience."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

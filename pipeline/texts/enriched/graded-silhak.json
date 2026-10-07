@@ -1,0 +1,153 @@
+{
+  "id": "graded-silhak",
+  "meta": {
+    "title_ko": "실학",
+    "title_en": "Silhak: Practical Learning",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1780,
+    "period": "Joseon",
+    "themes": [
+      "Joseon"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "조선 후기에 현실의 문제를 해결하려 했던 실학의 등장 배경과 대표적 학자들을 소개합니다.",
+    "summary_en": "Introduces the background of Silhak, which sought to solve real-world problems in late Joseon, and its main scholars.",
+    "level": "TOPIK 5–6",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 17세기 이후 조선은 두 차례의 전쟁을 겪으며 사회와 경제가 크게 흔들렸습니다. 일부 학자들은 성리학의 이론만으로는 이 문제를 해결하기 어렵다고 보고 현실에 도움이 되는 학문을 추구했는데, 이것을 오늘날 '실학'이라 부릅니다. 실학이 하나의 뚜렷한 학파였는지에 대해서는 논의가 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 데 그치지 않고`: 거기에서 멈추지 않고.\n- `-에 주목하다`: 어떤 것에 관심을 두다.\n- `-는 한`: 조건을 나타냅니다.\n- 단어: 성리학, 개혁, 토지, 농업, 상공업, 이용후생.\n- 학자와 책 이름을 함께 기억해 두세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '실학'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** From the 17th century, Joseon society and economy were shaken by two wars. Some scholars thought Neo-Confucian theory alone could not solve these problems and pursued learning useful to reality, which today is called \"Silhak.\" Whether Silhak was one distinct school is debated.\n\n**Points to watch**\n- `-(으)ㄴ/는 데 그치지 않고`: not stopping at.\n- `-에 주목하다`: to pay attention to.\n- `-는 한`: conditional \"as long as\".\n- Words: 성리학 Neo-Confucianism, 개혁 reform, 토지 land, 농업 agriculture, 상공업 commerce and industry, 이용후생 improving practical life.\n- Memorize scholars together with their books.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Silhak: Practical Learning,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "조선 전기의 학문은 성리학이 중심이었다. 성리학은 인간의 도리와 마음의 이치를 깊이 탐구하는 학문이다. 그러나 임진왜란과 병자호란을 겪은 뒤 농토는 황폐해지고 신분 질서도 흔들렸다. 이에 일부 학자들은 이론보다 현실의 문제 해결에 주목하기 시작했다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the early Joseon period, scholarship centered on Neo-Confucianism. Neo-Confucianism deeply explores human duty and the principles of the mind. But after the Imjin War and the Second Manchu invasion, farmland was devastated and the social order was shaken. Some scholars therefore began to turn their attention to solving real problems rather than theory."
+    },
+    {
+      "orig": "먼저 농업과 토지 제도를 개혁하자고 주장한 학자들이 있었다. 17세기의 유형원은 『반계수록』에서 토지를 공정하게 나누자고 하였고, 18세기의 이익은 농민이 생활할 수 있는 최소한의 땅을 보호해야 한다고 하였다. 이들은 농업을 바탕으로 사회를 바로잡고자 하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "First, there were scholars who argued for reform of agriculture and the land system. In the 17th century Yu Hyeongwon proposed in the *Banggye Surok* to divide the land fairly, and in the 18th century Yi Ik argued that the minimum land for farmers to live on should be protected. They sought to set society right on the basis of agriculture."
+    },
+    {
+      "orig": "한편 상업과 기술을 발전시켜야 한다고 본 학자들도 있었다. 박지원과 박제가 등 이른바 북학파는 청나라의 선진 문물을 배우자고 하였고, 상공업을 장려하여 백성의 생활을 넉넉하게 하자는 '이용후생'을 주장하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "Meanwhile, there were also scholars who held that commerce and technology should be developed. Park Ji-won, Park Je-ga and others, the so-called Northern Learning school, argued for learning from the advanced culture of Qing and for \"iyonghusaeng,\" encouraging commerce and industry to make the people's lives comfortable."
+    },
+    {
+      "orig": "19세기 초 정약용은 이러한 흐름을 집대성한 학자로 평가된다. 그는 오랜 유배 생활 중에 『목민심서』, 『경세유표』 등 500여 권에 이르는 저술을 남겼다. 『목민심서』는 지방 관리가 백성을 어떻게 다스려야 하는지를 다룬 책이다. 실학의 사상은 당시 곧바로 정책이 되지는 못했으나, 후대의 개혁 사상에 큰 영향을 주었다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the early 19th century, Jeong Yak-yong is evaluated as the scholar who synthesized these currents. During his long exile he left writings amounting to more than 500 volumes, including *Mokminsimseo* and *Gyeongse Yupyo*. *Mokminsimseo* deals with how local officials should govern the people. The ideas of Silhak could not immediately become policy at the time, but they greatly influenced later reform thought."
+    },
+    {
+      "orig": "오늘날 실학은 근대 사상의 싹으로 평가되기도 하지만, 한계도 지적된다. 실학자 대부분은 양반 출신이었고, 그들의 개혁안이 신분 질서를 완전히 바꾸려는 것은 아니었다는 점에서 한계가 있다는 평가가 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Today Silhak is sometimes evaluated as a seed of modern thought, but its limits are also pointed out. Most Silhak scholars were of yangban origin, and some evaluate that their reform proposals had limits in that they did not aim to completely change the status order."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "성리학",
+      "gloss_en": "Neo-Confucianism",
+      "level": 3
+    },
+    {
+      "word": "탐구하다",
+      "gloss_en": "to investigate",
+      "level": 3
+    },
+    {
+      "word": "황폐해지다",
+      "gloss_en": "to be devastated",
+      "level": 3
+    },
+    {
+      "word": "주목하다",
+      "gloss_en": "to pay attention to",
+      "level": 3
+    },
+    {
+      "word": "제도",
+      "gloss_en": "system; institution",
+      "level": 3
+    },
+    {
+      "word": "개혁",
+      "gloss_en": "reform",
+      "level": 3
+    },
+    {
+      "word": "주장하다",
+      "gloss_en": "to argue; to claim",
+      "level": 3
+    },
+    {
+      "word": "장려하다",
+      "gloss_en": "to encourage",
+      "level": 3
+    },
+    {
+      "word": "넉넉하다",
+      "gloss_en": "to be comfortable; ample",
+      "level": 3
+    },
+    {
+      "word": "집대성하다",
+      "gloss_en": "to synthesize",
+      "level": 3
+    },
+    {
+      "word": "유배",
+      "gloss_en": "exile",
+      "level": 3
+    },
+    {
+      "word": "저술",
+      "gloss_en": "writing; work",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "실학자들은 왜 현실 문제에 주목했습니까?",
+      "q_en": "Why did Silhak scholars focus on real-world problems?",
+      "answer_en": "After the wars, farmland was devastated and the social order shaken; theory alone could not solve them."
+    },
+    {
+      "q_ko": "유형원과 이익은 무엇을 주장했습니까?",
+      "q_en": "What did Yu Hyeongwon and Yi Ik argue?",
+      "answer_en": "Fair division of land and protection of farmers' minimum land."
+    },
+    {
+      "q_ko": "북학파는 무엇을 주장했습니까?",
+      "q_en": "What did the Northern Learning school argue?",
+      "answer_en": "Learning from Qing's advanced culture and encouraging commerce and industry."
+    },
+    {
+      "q_ko": "『목민심서』는 어떤 책입니까?",
+      "q_en": "What kind of book is Mokminsimseo?",
+      "answer_en": "A book about how local officials should govern the people."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

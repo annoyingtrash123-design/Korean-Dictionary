@@ -1,0 +1,154 @@
+{
+  "id": "graded-ming-reinforcements",
+  "meta": {
+    "title_ko": "임진왜란과 명나라 원군",
+    "title_en": "The Imjin War and Ming Reinforcements",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1592,
+    "period": "Joseon",
+    "themes": [
+      "Joseon",
+      "Sino-Korean relations"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "임진왜란 때 조선이 명나라의 원군을 맞이한 과정과 그 의미를 살펴봅니다.",
+    "summary_en": "Looks at how Joseon received Ming reinforcements during the Imjin War and what this meant.",
+    "level": "TOPIK 5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 1592년 일본군이 부산에 상륙하며 임진왜란이 시작되었습니다. 조선은 명나라에 도움을 요청했고, 명은 1592년 말부터 군대를 보냈습니다. 일본이 다시 침입한 1597년의 정유재란 때에도 명군이 참전했습니다. 이 도움에 대한 평가는 당시와 후대에 서로 달랐습니다.\n\n**어휘와 문법**\n- `-에 힘입어`: 도움을 받아.\n- `-(으)ㄴ/는 한편`: 다른 측면을 덧붙임.\n- `-(으)ㄹ 수밖에 없다`: 선택의 여지가 없음.\n- 단어: 원군, 참전, 탈환, 교섭, 보급, 부담, 의리.\n- 이 글은 전쟁의 한 측면만 다룹니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '임진왜란과 명나라 원군'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** The Imjin War began in 1592 when Japanese forces landed at Busan. Joseon asked Ming for help, and Ming sent troops from the end of 1592. Ming forces also took part in the 1597 Jeongyu War when Japan invaded again. Evaluations of this aid differed then and later.\n\n**Points to watch**\n- `-에 힘입어`: with the help of.\n- `-(으)ㄴ/는 한편`: adding another aspect.\n- `-(으)ㄹ 수밖에 없다`: having no choice.\n- Words: 원군 reinforcements, 참전 participation in war, 탈환 recapture, 교섭 negotiation, 보급 supply, 부담 burden, 의리 obligation.\n- This text covers only one aspect of the war.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Imjin War and Ming Reinforcements,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "1592년 일본군이 빠르게 북쪽으로 올라오자 선조는 한양을 떠나 평양을 거쳐 의주까지 피란하였다. 조선은 관군이 무너진 상황에서 명나라에 원군을 요청하였다. 명은 조선이 무너지면 자국의 안전도 위험하다고 판단하여 군대를 보내기로 하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "When the Japanese army advanced rapidly north in 1592, King Seonjo left Hanyang and fled via Pyongyang as far as Uiju. With the government army collapsed, Joseon asked Ming for reinforcements. Ming judged that if Joseon fell its own security would also be at risk, and decided to send troops."
+    },
+    {
+      "orig": "1592년 말 이여송이 이끄는 명군이 압록강을 건넜고, 이듬해 1월 조선군과 함께 평양성을 되찾았다. 하지만 개성 방면으로 진격하다가 벽제관에서 패하면서 명군의 사기는 꺾였다. 같은 해 2월에는 권율이 이끄는 조선군이 행주산성에서 일본군을 크게 물리쳤다.",
+      "modern": null,
+      "reading": null,
+      "en": "At the end of 1592 the Ming army led by Li Rusong crossed the Yalu River, and in January of the following year recaptured Pyongyang Fortress together with Joseon troops. But the Ming army's morale was broken when it was defeated at Byeokjegwan while advancing toward Gaeseong. In February of the same year the Joseon army led by Gwon Yul won a great victory over the Japanese at Haengju Fortress."
+    },
+    {
+      "orig": "이후 전쟁은 교섭 단계로 들어가 한동안 긴 소강상태가 이어졌다. 한편 조선은 수많은 명군을 먹이고 입히는 부담을 져야 했다. 군량 보급은 전쟁으로 황폐해진 조선 백성에게 큰 고통이 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "Afterward the war entered a negotiation stage and a long lull continued for a time. Meanwhile, Joseon had to bear the burden of feeding and clothing the numerous Ming troops. The supply of army provisions became a great hardship for the Joseon people, already devastated by war."
+    },
+    {
+      "orig": "1597년 일본이 다시 침입하자 명은 다시 군대를 보냈고, 1598년 노량 해전에서는 명의 수군과 조선 수군이 함께 싸웠다. 이순신은 이 전투에서 전사하였다. 조선은 이 도움을 오래도록 '다시 나라를 세워 준 은혜'로 기억했으며, 이는 이후 명에 대한 의리를 강조하는 사회 분위기로 이어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "When Japan invaded again in 1597, Ming again sent troops, and at the Battle of Noryang in 1598 the Ming navy and the Joseon navy fought together. Yi Sun-sin was killed in this battle. Joseon long remembered this aid as 'a favor that re-established the country,' which led to a social atmosphere emphasizing obligation to Ming."
+    },
+    {
+      "orig": "그러나 명군의 참전을 평가하는 시각은 한 가지가 아니다. 명이 조선을 도와 일본군을 물리친 점을 강조하는 평가가 있는 반면, 명군의 행패와 군량 부담을 지적하는 평가도 있다. 또한 명은 전쟁으로 국력이 약해져 이후 청의 성장에 대응하기 어려웠다는 견해도 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "However, there is more than one view in evaluating the Ming army's participation. Some evaluations emphasize that Ming helped Joseon to defeat the Japanese army, while others point to the Ming troops' misconduct and the burden of provisions. There is also a view that Ming, weakened by the war, found it hard to respond to Qing's rise afterward."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "원군",
+      "gloss_en": "reinforcements",
+      "level": 3
+    },
+    {
+      "word": "피란하다",
+      "gloss_en": "to flee as a refugee",
+      "level": 3
+    },
+    {
+      "word": "관군",
+      "gloss_en": "government army",
+      "level": 3
+    },
+    {
+      "word": "판단하다",
+      "gloss_en": "to judge",
+      "level": 3
+    },
+    {
+      "word": "탈환",
+      "gloss_en": "recapture",
+      "level": 3
+    },
+    {
+      "word": "진격하다",
+      "gloss_en": "to advance",
+      "level": 3
+    },
+    {
+      "word": "사기",
+      "gloss_en": "morale",
+      "level": 3
+    },
+    {
+      "word": "소강상태",
+      "gloss_en": "lull",
+      "level": 3
+    },
+    {
+      "word": "군량",
+      "gloss_en": "army provisions",
+      "level": 3
+    },
+    {
+      "word": "보급",
+      "gloss_en": "supply",
+      "level": 3
+    },
+    {
+      "word": "전사하다",
+      "gloss_en": "to be killed in battle",
+      "level": 3
+    },
+    {
+      "word": "은혜",
+      "gloss_en": "favor; grace",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "조선은 왜 명나라에 원군을 요청했습니까?",
+      "q_en": "Why did Joseon ask Ming for reinforcements?",
+      "answer_en": "The government army had collapsed in the face of the Japanese advance."
+    },
+    {
+      "q_ko": "1593년 초에 무엇이 있었습니까?",
+      "q_en": "What happened in early 1593?",
+      "answer_en": "Ming and Joseon troops recaptured Pyongyang; Haengju victory followed in February."
+    },
+    {
+      "q_ko": "명군 때문에 조선이 겪은 어려움은 무엇이었습니까?",
+      "q_en": "What hardship did Joseon face because of the Ming troops?",
+      "answer_en": "The burden of supplying provisions."
+    },
+    {
+      "q_ko": "노량 해전에서 누가 함께 싸웠습니까?",
+      "q_en": "Who fought together at Noryang?",
+      "answer_en": "The Ming navy and the Joseon navy."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

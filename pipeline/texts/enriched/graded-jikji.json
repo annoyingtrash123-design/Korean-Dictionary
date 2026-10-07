@@ -1,0 +1,153 @@
+{
+  "id": "graded-jikji",
+  "meta": {
+    "title_ko": "직지와 금속활자",
+    "title_en": "Jikji and Metal Movable Type",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1377,
+    "period": "Goryeo",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "세계에서 가장 오래된 금속활자 인쇄본으로 알려진 『직지』의 가치를 설명합니다.",
+    "summary_en": "Explains the value of the Jikji, known as the oldest extant book printed with metal movable type.",
+    "level": "TOPIK 5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 『직지』의 정식 이름은 『백운화상초록불조직지심체요절』이며, 1377년 청주 흥덕사에서 금속활자로 찍었다는 기록이 있습니다. 현재는 하권 한 권만 프랑스 국립도서관에 보관되어 있고, 2001년 유네스코 세계기록유산이 되었습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 것으로 확인되다`: 조사로 사실임이 알려졌음을 뜻합니다.\n- `-에 앞서`: 어떤 일보다 먼저.\n- `-는 점에서`: 어떤 측면에서.\n- 단어: 활자, 인쇄, 현존하다, 기록유산, 소장, 선승.\n- '금속활자'는 쇠로 만든 글자판으로 책을 찍는 기술입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '직지와 금속활자'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** The full title of the Jikji is *Baegun Hwasang Chorok Buljo Jikji Simche Yojeol*, and records say it was printed with metal type in 1377 at Heungdeoksa Temple in Cheongju. Only the second volume survives, held at the National Library of France, and it became a UNESCO Memory of the World item in 2001.\n\n**Points to watch**\n- `-(으)ㄴ 것으로 확인되다`: confirmed as fact through investigation.\n- `-에 앞서`: prior to.\n- `-는 점에서`: in terms of.\n- Words: 활자 type, 인쇄 printing, 현존하다 exist now, 기록유산 documentary heritage, 소장 holding, 선승 Seon monk.\n- Metal movable type is a technique of printing with individually cast metal characters.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Jikji and Metal Movable Type,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "활자 인쇄란 글자 하나하나를 따로 만들어 필요에 따라 짜 맞추어 책을 찍는 방법이다. 목판 인쇄는 책 한 권마다 판을 새겨야 하지만, 활자는 글자를 다시 쓸 수 있어 훨씬 효율적이다.",
+      "modern": null,
+      "reading": null,
+      "en": "Movable-type printing is a method of making each character separately and assembling them as needed to print a book. Woodblock printing requires carving a block for every book, but with movable type the characters can be reused, which is far more efficient."
+    },
+    {
+      "orig": "고려에서는 일찍부터 금속활자가 만들어진 것으로 보인다. 13세기 중엽의 기록에는 『상정고금예문』을 금속활자로 찍었다는 내용이 있으나, 그 책은 전해지지 않는다. 지금 남아 있는 가장 오래된 금속활자본은 1377년에 간행된 『직지』이다.",
+      "modern": null,
+      "reading": null,
+      "en": "Metal movable type appears to have been made in Goryeo from early on. A record from the mid-13th century says that the *Sangjeong Gogeum Yemun* was printed with metal type, but that book has not survived. The oldest surviving metal-type book is the *Jikji*, published in 1377."
+    },
+    {
+      "orig": "『직지』는 승려 백운 화상이 선종의 가르침을 중요한 대목 위주로 엮은 책으로, 그의 제자들이 청주의 흥덕사에서 찍어 냈다. 이 책은 19세기 말 프랑스 외교관에 의해 프랑스로 넘어갔고, 1972년 파리에서 열린 도서 전시회에서 세상에 알려졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "The *Jikji* is a book in which the monk Baegun compiled the teachings of the Seon school, focusing on key passages, and his disciples printed it at Heungdeoksa in Cheongju. The book passed to France through a French diplomat in the late 19th century and became known to the world at a book exhibition held in Paris in 1972."
+    },
+    {
+      "orig": "유럽에서 구텐베르크가 금속활자로 성경을 찍은 시기는 15세기 중반으로, 『직지』보다 70여 년 뒤이다. 이 때문에 『직지』는 금속활자 인쇄의 역사에서 중요한 위치를 차지한다. 다만 한국의 금속활자가 유럽에 직접 영향을 주었는지는 확인되지 않았다.",
+      "modern": null,
+      "reading": null,
+      "en": "The time when Gutenberg printed the Bible with metal type in Europe was the mid-15th century, some 70 years after the *Jikji*. For this reason the *Jikji* holds an important place in the history of metal-type printing. However, it has not been confirmed whether Korean metal type directly influenced Europe."
+    },
+    {
+      "orig": "오늘날 청주에는 『직지』를 기념하는 고인쇄박물관이 있고, 1985년에는 흥덕사 터가 발굴되어 『직지』가 간행된 장소가 확인되었다. 청주시는 매년 『직지』와 관련된 행사를 열어 금속활자의 가치를 알리고 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Today Cheongju has the Early Printing Museum commemorating the *Jikji*, and in 1985 the site of Heungdeoksa was excavated, confirming the place where the *Jikji* was published. Cheongju holds events related to the *Jikji* every year to publicize the value of metal movable type."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "활자",
+      "gloss_en": "movable type",
+      "level": 3
+    },
+    {
+      "word": "인쇄",
+      "gloss_en": "printing",
+      "level": 3
+    },
+    {
+      "word": "효율적",
+      "gloss_en": "efficient",
+      "level": 3
+    },
+    {
+      "word": "간행하다",
+      "gloss_en": "to publish",
+      "level": 3
+    },
+    {
+      "word": "승려",
+      "gloss_en": "monk",
+      "level": 3
+    },
+    {
+      "word": "가르침",
+      "gloss_en": "teaching",
+      "level": 3
+    },
+    {
+      "word": "엮다",
+      "gloss_en": "to compile",
+      "level": 3
+    },
+    {
+      "word": "제자",
+      "gloss_en": "disciple",
+      "level": 3
+    },
+    {
+      "word": "전시회",
+      "gloss_en": "exhibition",
+      "level": 3
+    },
+    {
+      "word": "위치",
+      "gloss_en": "position",
+      "level": 3
+    },
+    {
+      "word": "영향",
+      "gloss_en": "influence",
+      "level": 3
+    },
+    {
+      "word": "확인되다",
+      "gloss_en": "to be confirmed",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "활자 인쇄가 목판 인쇄보다 효율적인 이유는 무엇입니까?",
+      "q_en": "Why is movable type more efficient than woodblock printing?",
+      "answer_en": "The characters can be reused instead of carving a block for every book."
+    },
+    {
+      "q_ko": "『직지』는 언제 어디에서 찍었습니까?",
+      "q_en": "When and where was the Jikji printed?",
+      "answer_en": "In 1377 at Heungdeoksa in Cheongju."
+    },
+    {
+      "q_ko": "『직지』는 지금 어디에 있습니까?",
+      "q_en": "Where is it now?",
+      "answer_en": "At the National Library of France."
+    },
+    {
+      "q_ko": "『직지』가 중요한 이유는 무엇입니까?",
+      "q_en": "Why is it important?",
+      "answer_en": "It is the oldest surviving metal-type book, earlier than Gutenberg's Bible by about 70 years."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

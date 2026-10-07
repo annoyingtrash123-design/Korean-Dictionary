@@ -1,0 +1,147 @@
+{
+  "id": "graded-korean-war",
+  "meta": {
+    "title_ko": "분단과 6·25 전쟁",
+    "title_en": "Division and the Korean War",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1950,
+    "period": "Modern",
+    "themes": [
+      "Modern Korea"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "광복 후의 분단에서 6·25 전쟁과 휴전까지의 과정, 그리고 전쟁이 남긴 흔적을 설명합니다.",
+    "summary_en": "Explains the process from post-liberation division through the Korean War to the armistice, and what the war left behind.",
+    "level": "TOPIK 4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 1945년 광복 뒤 한반도는 38도선을 경계로 남쪽은 미군, 북쪽은 소련군이 관리했습니다. 1948년 남쪽에 대한민국, 북쪽에 조선민주주의인민공화국이 각각 세워졌고, 1950년 6월 25일 전쟁이 시작되어 1953년 7월 27일 휴전 협정이 맺어졌습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 가운데`: 상황 속에서.\n- `-게 되다`: 결과.\n- `-(으)ㄹ 뿐이다`: 단지 그러할 뿐.\n- 단어: 분단, 휴전, 군사분계선, 이산가족, 유엔군, 상륙, 정전.\n- '휴전'은 전쟁을 잠시 멈춘 것으로, 평화 협정과는 다릅니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '분단과 6·25 전쟁'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** After liberation in 1945, the Korean peninsula was administered along the 38th parallel by U.S. forces in the south and Soviet forces in the north. In 1948 the Republic of Korea in the south and the Democratic People's Republic of Korea in the north were each established; war began on June 25, 1950, and an armistice agreement was signed on July 27, 1953.\n\n**Points to watch**\n- `-(으)ㄴ/는 가운데`: amid a situation.\n- `-게 되다`: result.\n- `-(으)ㄹ 뿐이다`: only.\n- Words: 분단 division, 휴전 armistice, 군사분계선 military demarcation line, 이산가족 separated families, 유엔군 UN forces, 상륙 landing, 정전 ceasefire.\n- 휴전 is a pause in fighting and differs from a peace treaty.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Division and the Korean War,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "광복 후 한반도는 38도선을 경계로 나뉘었다. 통일 정부를 세우려는 노력이 있었지만 남쪽과 북쪽의 정치적 입장이 달라 합의에 이르지 못했다. 결국 1948년 남쪽에는 대한민국이, 북쪽에는 조선민주주의인민공화국이 각각 세워졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "After liberation the Korean peninsula was divided along the 38th parallel. There were efforts to establish a unified government, but the political positions of the south and north differed and no agreement was reached. In the end, in 1948 the Republic of Korea was established in the south and the Democratic People's Republic of Korea in the north."
+    },
+    {
+      "orig": "1950년 6월 25일 새벽 북한군이 38도선을 넘어 남쪽으로 진격하면서 전쟁이 시작되었다. 서울은 사흘 만에 점령되었고, 국군은 낙동강까지 밀려 내려갔다. 유엔은 군대를 보내 한국을 돕기로 하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "On the dawn of June 25, 1950, North Korean forces crossed the 38th parallel and advanced south, and the war began. Seoul was occupied in three days, and the South Korean army was pushed back as far as the Nakdong River. The United Nations decided to send troops to help Korea."
+    },
+    {
+      "orig": "1950년 9월 유엔군이 인천에 상륙하여 전세를 바꾸었고, 서울을 되찾은 뒤 북쪽으로 올라갔다. 그러나 10월에 중국군이 전쟁에 개입하면서 전선은 다시 남쪽으로 내려왔다. 이후 전쟁은 38도선 부근에서 오랫동안 이어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "In September 1950 UN forces landed at Incheon and turned the tide, and after retaking Seoul went north. But when Chinese forces intervened in the war in October, the front came back down south. Afterward the war continued for a long time around the 38th parallel."
+    },
+    {
+      "orig": "1953년 7월 27일 휴전 협정이 맺어져 전투는 멈추었다. 두 나라 사이에는 군사분계선과 비무장지대가 만들어졌다. 이 전쟁으로 많은 사람이 목숨을 잃었고 가족이 서로 헤어졌다. 휴전 협정은 평화 협정이 아니기 때문에, 한반도는 지금도 공식적으로는 휴전 상태에 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "On July 27, 1953, an armistice agreement was signed and the fighting stopped. A military demarcation line and a demilitarized zone were established between the two sides. Many people lost their lives in this war and families were separated. Because the armistice agreement is not a peace treaty, the Korean peninsula is still officially in a state of armistice."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "분단",
+      "gloss_en": "division",
+      "level": 3
+    },
+    {
+      "word": "합의",
+      "gloss_en": "agreement",
+      "level": 3
+    },
+    {
+      "word": "진격하다",
+      "gloss_en": "to advance",
+      "level": 3
+    },
+    {
+      "word": "점령되다",
+      "gloss_en": "to be occupied",
+      "level": 3
+    },
+    {
+      "word": "전세",
+      "gloss_en": "tide of battle",
+      "level": 3
+    },
+    {
+      "word": "개입하다",
+      "gloss_en": "to intervene",
+      "level": 3
+    },
+    {
+      "word": "전선",
+      "gloss_en": "front line",
+      "level": 3
+    },
+    {
+      "word": "휴전",
+      "gloss_en": "armistice",
+      "level": 3
+    },
+    {
+      "word": "협정",
+      "gloss_en": "agreement",
+      "level": 3
+    },
+    {
+      "word": "비무장지대",
+      "gloss_en": "demilitarized zone",
+      "level": 3
+    },
+    {
+      "word": "헤어지다",
+      "gloss_en": "to be separated",
+      "level": 2
+    },
+    {
+      "word": "공식적",
+      "gloss_en": "official",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "한반도는 광복 후 어떻게 나뉘었습니까?",
+      "q_en": "How was the peninsula divided after liberation?",
+      "answer_en": "Along the 38th parallel, with U.S. forces in the south and Soviet forces in the north."
+    },
+    {
+      "q_ko": "인천상륙작전은 어떤 결과를 가져왔습니까?",
+      "q_en": "What did the Incheon landing bring?",
+      "answer_en": "It turned the tide and Seoul was retaken."
+    },
+    {
+      "q_ko": "전쟁은 어떻게 멈추었습니까?",
+      "q_en": "How did the war stop?",
+      "answer_en": "An armistice agreement was signed on July 27, 1953."
+    },
+    {
+      "q_ko": "한반도는 지금 어떤 상태입니까?",
+      "q_en": "What is the peninsula's present status?",
+      "answer_en": "Officially in a state of armistice, not peace."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

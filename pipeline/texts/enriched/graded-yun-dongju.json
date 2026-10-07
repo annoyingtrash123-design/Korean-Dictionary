@@ -1,0 +1,147 @@
+{
+  "id": "graded-yun-dongju",
+  "meta": {
+    "title_ko": "윤동주와 저항의 시",
+    "title_en": "Yun Dong-ju and Poetry of Resistance",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1941,
+    "period": "Colonial era",
+    "themes": [
+      "Colonial era & independence"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "일제강점기에 맑은 시를 쓰다 젊은 나이에 세상을 떠난 시인 윤동주를 소개합니다.",
+    "summary_en": "An introduction to the poet Yun Dong-ju, who wrote pure poems under colonial rule and died young.",
+    "level": "TOPIK 4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 윤동주(1917–1945)는 만주 북간도에서 태어나 서울의 연희전문학교에서 공부한 시인입니다. 일본 유학 중이던 1943년에 체포되어 후쿠오카 형무소에서 1945년 2월에 세상을 떠났습니다. 그의 시는 사후인 1948년에 시집으로 출간되었습니다.\n\n**어휘와 문법**\n- `-는 가운데`: 어떤 상황 속에서를 나타냅니다.\n- `-(으)ㄹ수록`: 정도가 더해짐을 나타냅니다.\n- `-고자`: 의도나 목적을 나타내는 격식 있는 표현입니다.\n- 단어: 시인, 부끄러움, 별, 저항, 유고, 성찰하다.\n- 「서시」의 한 구절은 아주 유명합니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '윤동주와 저항의 시'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Yun Dong-ju (1917-1945) was a poet born in Bukgando, Manchuria, who studied at Yeonhui College in Seoul. Arrested in 1943 while studying in Japan, he died in Fukuoka Prison in February 1945. His poems were published as a collection posthumously in 1948.\n\n**Points to watch**\n- `-는 가운데`: amid a situation.\n- `-(으)ㄹ수록`: the more... the more.\n- `-고자`: a formal expression of intent or purpose.\n- Words: 시인 poet, 부끄러움 shame, 별 star, 저항 resistance, 유고 posthumous work, 성찰하다 reflect.\n- A line from \"Prologue\" is very famous.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Yun Dong-ju and Poetry of Resistance,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "윤동주는 1917년 만주 북간도에서 태어났다. 어릴 때부터 시를 좋아하던 그는 서울의 연희전문학교에 들어가 공부하면서 본격적으로 시를 쓰기 시작했다.",
+      "modern": null,
+      "reading": null,
+      "en": "Yun Dong-ju was born in 1917 in Bukgando, Manchuria. Having loved poetry since childhood, he entered Yeonhui College in Seoul and began to write poetry in earnest while studying."
+    },
+    {
+      "orig": "그가 살던 시대는 한국이 일본의 지배를 받던 때였다. 일본은 한국어 사용을 점점 막았고, 한국어로 글을 쓰는 일은 어려워졌다. 그런 가운데도 윤동주는 한글로 시를 계속 썼다.",
+      "modern": null,
+      "reading": null,
+      "en": "The age he lived in was one in which Korea was under Japanese rule. Japan increasingly restricted the use of Korean, and writing in Korean became difficult. Even so, Yun Dong-ju kept writing poems in Hangul."
+    },
+    {
+      "orig": "그의 시에는 크게 소리치는 말이 많지 않다. 대신 자신을 돌아보며 부끄러워하는 마음과 어려운 시대를 사는 아픔이 조용히 담겨 있다. 「서시」의 \"죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를\"이라는 구절이 대표적이다.",
+      "modern": null,
+      "reading": null,
+      "en": "His poems do not have many loudly shouted words. Instead, quietly contained in them are the heart that looks back at itself with shame and the pain of living in a hard age. The line from \"Prologue,\" \"May I have not a speck of shame before the heavens until the day I die,\" is typical."
+    },
+    {
+      "orig": "1943년 일본에서 체포된 윤동주는 후쿠오카 형무소에서 1945년 2월 16일에 세상을 떠났다. 겨우 스물일곱 살이었다. 그의 시집은 광복 후인 1948년에 출간되었고, 지금도 많은 사람들이 읽는다.",
+      "modern": null,
+      "reading": null,
+      "en": "Arrested in Japan in 1943, Yun Dong-ju died in Fukuoka Prison on February 16, 1945. He was only twenty-seven. His collection of poems was published in 1948, after liberation, and is still read by many people today."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "시인",
+      "gloss_en": "poet",
+      "level": 3
+    },
+    {
+      "word": "본격적",
+      "gloss_en": "in earnest; full-scale",
+      "level": 3
+    },
+    {
+      "word": "지배",
+      "gloss_en": "rule",
+      "level": 3
+    },
+    {
+      "word": "막다",
+      "gloss_en": "to block; to restrict",
+      "level": 2
+    },
+    {
+      "word": "돌아보다",
+      "gloss_en": "to look back on",
+      "level": 3
+    },
+    {
+      "word": "부끄러워하다",
+      "gloss_en": "to feel ashamed",
+      "level": 3
+    },
+    {
+      "word": "아픔",
+      "gloss_en": "pain",
+      "level": 3
+    },
+    {
+      "word": "담기다",
+      "gloss_en": "to be contained",
+      "level": 3
+    },
+    {
+      "word": "구절",
+      "gloss_en": "phrase; verse",
+      "level": 3
+    },
+    {
+      "word": "대표적",
+      "gloss_en": "representative",
+      "level": 3
+    },
+    {
+      "word": "체포되다",
+      "gloss_en": "to be arrested",
+      "level": 3
+    },
+    {
+      "word": "출간되다",
+      "gloss_en": "to be published",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "윤동주는 어디에서 태어났어요?",
+      "q_en": "Where was Yun Dong-ju born?",
+      "answer_en": "In Bukgando, Manchuria."
+    },
+    {
+      "q_ko": "그는 어떤 언어로 시를 썼어요?",
+      "q_en": "In what language did he write poems?",
+      "answer_en": "In Korean (Hangul)."
+    },
+    {
+      "q_ko": "그의 시에는 어떤 마음이 담겨 있어요?",
+      "q_en": "What feelings are in his poems?",
+      "answer_en": "Shame in self-reflection and the pain of living in a hard age."
+    },
+    {
+      "q_ko": "그는 몇 살에 세상을 떠났어요?",
+      "q_en": "How old was he when he died?",
+      "answer_en": "Twenty-seven."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

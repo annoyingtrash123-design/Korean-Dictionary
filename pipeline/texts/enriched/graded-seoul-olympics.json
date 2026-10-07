@@ -1,0 +1,126 @@
+{
+  "id": "graded-seoul-olympics",
+  "meta": {
+    "title_ko": "서울 올림픽",
+    "title_en": "The Seoul Olympics",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1988,
+    "period": "Modern",
+    "themes": [
+      "Modern Korea"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "1988년 서울에서 열린 올림픽과 한국의 변화를 쉽게 소개합니다.",
+    "summary_en": "A simple introduction to the 1988 Seoul Olympics and Korea's changing image.",
+    "level": "TOPIK 2",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 1988년 9월 17일부터 10월 2일까지 서울에서 하계 올림픽이 열렸습니다. 한국에서 처음 열린 올림픽이었고, 많은 나라가 참가했습니다. 이 대회는 한국이 세계에 알려지는 계기가 되었습니다.\n\n**어휘와 문법**\n- `-에서 열리다`: 행사가 어디에서 하는지 말합니다.\n- `처음`, `많은`: 자주 쓰는 말입니다.\n- `-게 되다`: 변화를 나타냅니다 (알게 되었어요).\n- 단어: 올림픽, 선수, 마스코트, 발전하다, 세계.\n- 호랑이 '호돌이'는 이 올림픽의 마스코트였습니다.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '서울 올림픽'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
+    "en": "**Background** The Summer Olympics were held in Seoul from September 17 to October 2, 1988. They were the first Olympics in Korea, with many countries taking part, and helped raise Korea's profile worldwide.\n\n**Points to watch**\n- `-에서 열리다`: where an event takes place.\n- `처음` (first) and `많은` (many) are common words.\n- `-게 되다`: change of state (알게 되었어요).\n- Words: 올림픽 Olympics, 선수 athlete, 마스코트 mascot, 발전하다 develop, 세계 world.\n- The tiger Hodori was the mascot of these Games.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"The Seoul Olympics.\" After reading, try answering the questions briefly."
+  },
+  "paragraphs": [
+    {
+      "orig": "1988년에 서울에서 올림픽이 열렸어요. 한국에서 처음 열린 올림픽이었어요. 많은 나라에서 선수들이 왔어요.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1988, the Olympics were held in Seoul. It was the first Olympics held in Korea. Athletes came from many countries."
+    },
+    {
+      "orig": "올림픽의 마스코트는 호랑이 호돌이였어요. 개막식에서 한 소년이 굴렁쇠를 굴리며 운동장을 걸었어요. 사람들은 그 모습을 오래 기억했어요.",
+      "modern": null,
+      "reading": null,
+      "en": "The Olympic mascot was Hodori the tiger. At the opening ceremony, a boy rolled a hoop across the stadium. People remembered that scene for a long time."
+    },
+    {
+      "orig": "그때 한국은 빠르게 발전하고 있었어요. 올림픽 후에 세계 사람들이 한국을 더 많이 알게 되었어요.",
+      "modern": null,
+      "reading": null,
+      "en": "At that time Korea was developing quickly. After the Olympics, people around the world came to know Korea better."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "올림픽",
+      "gloss_en": "Olympics",
+      "level": 2
+    },
+    {
+      "word": "열리다",
+      "gloss_en": "to be held",
+      "level": 2
+    },
+    {
+      "word": "처음",
+      "gloss_en": "first time",
+      "level": 1
+    },
+    {
+      "word": "선수",
+      "gloss_en": "athlete",
+      "level": 2
+    },
+    {
+      "word": "마스코트",
+      "gloss_en": "mascot",
+      "level": 3
+    },
+    {
+      "word": "개막식",
+      "gloss_en": "opening ceremony",
+      "level": 3
+    },
+    {
+      "word": "소년",
+      "gloss_en": "boy",
+      "level": 2
+    },
+    {
+      "word": "기억하다",
+      "gloss_en": "to remember",
+      "level": 2
+    },
+    {
+      "word": "발전하다",
+      "gloss_en": "to develop",
+      "level": 3
+    },
+    {
+      "word": "세계",
+      "gloss_en": "world",
+      "level": 2
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "올림픽은 어디에서 열렸어요?",
+      "q_en": "Where were the Olympics held?",
+      "answer_en": "In Seoul."
+    },
+    {
+      "q_ko": "올림픽의 마스코트는 무엇이었어요?",
+      "q_en": "What was the mascot?",
+      "answer_en": "Hodori the tiger."
+    },
+    {
+      "q_ko": "올림픽 후에 무엇이 달라졌어요?",
+      "q_en": "What changed after the Olympics?",
+      "answer_en": "More people around the world got to know Korea."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

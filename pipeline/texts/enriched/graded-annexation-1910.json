@@ -1,0 +1,153 @@
+{
+  "id": "graded-annexation-1910",
+  "meta": {
+    "title_ko": "1910년 국권 피탈",
+    "title_en": "The Loss of Sovereignty in 1910",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1910,
+    "period": "Colonial era",
+    "themes": [
+      "Colonial era & independence"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "대한제국이 외교권과 군대를 잃고 1910년 일본에 병합되기까지의 과정을 살펴봅니다.",
+    "summary_en": "Traces the process by which the Korean Empire lost its diplomatic rights and army and was annexed by Japan in 1910.",
+    "level": "TOPIK 6",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** '국권 피탈'은 1910년 대한제국이 일본에 병합된 사건을 한국에서 가리키는 표현으로, 나라의 주권을 빼앗겼다는 뜻을 담고 있습니다. 일본은 '병합', '합방' 등의 말을 썼습니다. 이 글은 과정을 사실 중심으로 서술하며, 한국 정부는 이 조약들이 강압 속에서 맺어져 원천적으로 무효라는 입장입니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 데 이어`: 앞의 일에 이어서.\n- `-에 의해`: 행위자를 나타냅니다.\n- `-게 되다`: 변화.\n- 단어: 국권, 주권, 조약, 외교권, 통감부, 병합, 강압.\n- 연도를 순서대로 정리하면 이해하기 쉽습니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '1910년 국권 피탈'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** \"Gukgwon pihwal\" is the Korean expression for the 1910 annexation of the Korean Empire by Japan, and carries the meaning that national sovereignty was taken away. Japan used terms such as \"annexation\" and \"merger.\" This text narrates the process factually; the Korean government's position is that these treaties were concluded under coercion and are null and void from the outset.\n\n**Points to watch**\n- `-(으)ㄴ/는 데 이어`: following on from.\n- `-에 의해`: marking the agent.\n- `-게 되다`: change.\n- Words: 국권 national sovereignty, 주권 sovereignty, 조약 treaty, 외교권 diplomatic rights, 통감부 Residency-General, 병합 annexation, 강압 coercion.\n- Arranging the years in order helps comprehension.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Loss of Sovereignty in 1910,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "19세기 말부터 청과 일본, 러시아는 한반도를 둘러싸고 경쟁했다. 1897년 조선은 국호를 대한제국으로 바꾸고 자주독립 국가임을 선언하였다. 그러나 1904년 러일전쟁이 일어나자 일본은 군대를 한반도에 주둔시키고 한일의정서를 맺어 대한제국에 간섭하기 시작했다.",
+      "modern": null,
+      "reading": null,
+      "en": "From the late 19th century, Qing, Japan and Russia competed over the Korean peninsula. In 1897 Joseon changed its name to the Korean Empire and declared itself an independent state. But when the Russo-Japanese War broke out in 1904, Japan stationed troops on the peninsula and began to interfere in the Korean Empire by concluding the Korea-Japan Protocol."
+    },
+    {
+      "orig": "러일전쟁에서 승리한 일본은 1905년 11월 을사늑약을 맺었다. 이 조약에 의해 대한제국은 외교권을 빼앗기고, 서울에는 통감부가 설치되어 이토 히로부미가 초대 통감이 되었다. 고종 황제는 조약에 동의한 적이 없다고 밝히며 국제 사회에 호소하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "Japan, victorious in the Russo-Japanese War, concluded the Eulsa Treaty in November 1905. Under this treaty the Korean Empire lost its diplomatic rights, a Residency-General was established in Seoul, and Itō Hirobumi became the first Resident-General. Emperor Gojong stated that he had never consented to the treaty and appealed to the international community."
+    },
+    {
+      "orig": "1907년 고종은 네덜란드 헤이그에서 열린 만국평화회의에 비밀리에 특사를 보냈으나 참석이 거부되었다. 일본은 이를 구실로 고종을 물러나게 하였고, 이어 정미7조약을 맺어 내정권을 장악하고 대한제국의 군대를 해산하였다. 군대 해산에 반발한 일부 군인들은 의병과 합류하여 항쟁하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1907 Gojong secretly sent special envoys to the Hague Peace Conference in the Netherlands, but they were refused participation. Japan used this as a pretext to force Gojong to abdicate, and then concluded the Jeongmi Treaty of Seven Articles to seize control of internal affairs and disband the Korean Empire's army. Some soldiers who protested the disbandment joined the righteous armies and fought."
+    },
+    {
+      "orig": "1909년 안중근이 하얼빈에서 이토 히로부미를 처단했지만, 일본은 병합을 그대로 추진했다. 1910년 8월 22일 병합 조약이 체결되고 29일 공포되면서 대한제국이라는 국호는 사라졌고, 한반도에는 조선총독부가 설치되었다. 이후 35년 가까이 일본의 식민 지배가 이어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1909 An Jung-geun shot Itō Hirobumi at Harbin, but Japan went ahead with annexation as planned. The annexation treaty was concluded on August 22, 1910 and promulgated on the 29th, so the name Korean Empire disappeared and the Government-General of Korea was established on the peninsula. Japanese colonial rule continued for nearly 35 years afterward."
+    },
+    {
+      "orig": "이 사건은 오늘날에도 한국과 일본 사이의 역사 인식 문제에서 자주 언급된다. 두 나라의 정부와 학계는 조약의 성립 과정과 법적 효력에 대해 서로 다른 견해를 가지고 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "This event is still often mentioned today in the issue of historical perception between Korea and Japan. The governments and academic circles of the two countries hold different views on how the treaties were concluded and on their legal effect."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "국권",
+      "gloss_en": "national sovereignty",
+      "level": 3
+    },
+    {
+      "word": "선언하다",
+      "gloss_en": "to declare",
+      "level": 3
+    },
+    {
+      "word": "주둔시키다",
+      "gloss_en": "to station (troops)",
+      "level": 3
+    },
+    {
+      "word": "간섭하다",
+      "gloss_en": "to interfere",
+      "level": 3
+    },
+    {
+      "word": "외교권",
+      "gloss_en": "diplomatic rights",
+      "level": 3
+    },
+    {
+      "word": "호소하다",
+      "gloss_en": "to appeal",
+      "level": 3
+    },
+    {
+      "word": "구실",
+      "gloss_en": "pretext",
+      "level": 3
+    },
+    {
+      "word": "해산하다",
+      "gloss_en": "to disband",
+      "level": 3
+    },
+    {
+      "word": "의병",
+      "gloss_en": "righteous army",
+      "level": 3
+    },
+    {
+      "word": "추진하다",
+      "gloss_en": "to push ahead with",
+      "level": 3
+    },
+    {
+      "word": "공포되다",
+      "gloss_en": "to be promulgated",
+      "level": 3
+    },
+    {
+      "word": "식민",
+      "gloss_en": "colonial",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "1905년 을사늑약으로 대한제국은 무엇을 잃었습니까?",
+      "q_en": "What did the Korean Empire lose through the 1905 Eulsa Treaty?",
+      "answer_en": "Its diplomatic rights."
+    },
+    {
+      "q_ko": "고종은 헤이그에 왜 특사를 보냈습니까?",
+      "q_en": "Why did Gojong send envoys to the Hague?",
+      "answer_en": "To appeal to the international community against the treaty; they were refused."
+    },
+    {
+      "q_ko": "1907년 이후 대한제국은 어떻게 되었습니까?",
+      "q_en": "What happened to the Korean Empire after 1907?",
+      "answer_en": "Gojong abdicated, internal affairs were seized and the army was disbanded."
+    },
+    {
+      "q_ko": "1910년에 무슨 일이 있었습니까?",
+      "q_en": "What happened in 1910?",
+      "answer_en": "The annexation treaty was concluded and the Korean Empire's name disappeared."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "graded-tripitaka-koreana",
+  "meta": {
+    "title_ko": "팔만대장경",
+    "title_en": "The Tripitaka Koreana",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1251,
+    "period": "Goryeo",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "몽골의 침입 속에서 부처의 힘으로 나라를 지키려는 염원으로 새긴 팔만대장경 이야기입니다.",
+    "summary_en": "The story of the Tripitaka Koreana, carved in the hope of protecting the nation through the Buddha's power during the Mongol invasions.",
+    "level": "TOPIK 5",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 팔만대장경은 고려 고종 때인 1236년부터 1251년까지 새긴 불교 경전의 목판입니다. 현재 경남 합천 해인사의 장경판전에 보관되어 있으며, 경판은 2007년에 유네스코 세계기록유산으로, 장경판전은 1995년에 세계유산으로 등록되었습니다.\n\n**어휘와 문법**\n- `-고자`: 격식 있는 의도 표현입니다 (지키고자).\n- `-(으)ㄹ 뿐 아니라`: 추가를 나타냅니다.\n- `-에 힘입어`: 도움을 받아.\n- 단어: 대장경, 경판, 목판, 판각, 염원, 보존, 해인사.\n- '팔만'은 경판 수가 약 8만여 장이라는 데서 온 이름입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '팔만대장경'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** The Tripitaka Koreana is a set of woodblocks of Buddhist scriptures carved from 1236 to 1251 under King Gojong of Goryeo. It is kept in the Janggyeong Panjeon of Haeinsa in Hapcheon, South Gyeongsang. The blocks were inscribed as UNESCO Memory of the World in 2007 and the Janggyeong Panjeon as World Heritage in 1995.\n\n**Points to watch**\n- `-고자`: formal intent (지키고자).\n- `-(으)ㄹ 뿐 아니라`: addition.\n- `-에 힘입어`: with the help of.\n- Words: 대장경 Tripitaka, 경판 scripture block, 목판 woodblock, 판각 carving, 염원 aspiration, 보존 preservation, 해인사 Haeinsa.\n- 팔만 \"eighty thousand\" refers to the roughly 80,000 blocks.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Tripitaka Koreana,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "대장경은 불교의 경전을 모두 모아 놓은 것이다. 고려는 11세기 거란이 침입했을 때 부처의 힘으로 나라를 지키고자 대장경을 새긴 적이 있다. 그러나 이 첫 대장경은 13세기 몽골의 침입 때 불에 타 버렸다.",
+      "modern": null,
+      "reading": null,
+      "en": "A Tripitaka is a complete collection of Buddhist scriptures. When the Khitan invaded in the 11th century, Goryeo had carved a Tripitaka in order to protect the country through the Buddha's power. However, this first Tripitaka was destroyed by fire during the Mongol invasions of the 13th century."
+    },
+    {
+      "orig": "1232년 몽골의 침입이 계속되자 고려 조정은 수도를 개경에서 강화도로 옮겼다. 그리고 1236년부터 다시 대장경을 새기기 시작하여, 15년 가까이 걸린 1251년에야 작업을 마쳤다. 이렇게 완성된 것이 재조대장경, 곧 팔만대장경이다.",
+      "modern": null,
+      "reading": null,
+      "en": "In 1232, as the Mongol invasions continued, the Goryeo court moved the capital from Gaegyeong to Ganghwa Island. From 1236 it began carving the Tripitaka again, and only finished the work in 1251, after nearly fifteen years. The result is the second carving of the Tripitaka, that is, the Tripitaka Koreana."
+    },
+    {
+      "orig": "경판의 수는 8만 장이 넘으며, 새긴 글자는 5천만 자가 넘는 것으로 알려져 있다. 놀랍게도 글자 모양이 한결같이 단정하여 마치 한 사람이 쓴 것처럼 보인다. 이는 정성을 다해 작업했음을 보여 준다.",
+      "modern": null,
+      "reading": null,
+      "en": "The number of blocks exceeds 80,000, and the characters carved are known to exceed fifty million. Remarkably, the shape of the characters is consistently neat, so that they look as if written by one person. This shows that the work was done with devoted care."
+    },
+    {
+      "orig": "팔만대장경은 조선 초기에 해인사로 옮겨져 지금까지 보관되고 있다. 경판을 보관하는 장경판전은 바람이 잘 통하고 습도가 조절되도록 설계되어 있어, 700년이 넘도록 경판이 거의 상하지 않았다. 이러한 가치를 인정받아 팔만대장경과 장경판전은 모두 유네스코에 등재되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "The Tripitaka Koreana was moved to Haeinsa in early Joseon and has been kept there until now. The Janggyeong Panjeon, which houses the blocks, is designed so that air circulates well and humidity is regulated, so the blocks have hardly deteriorated in over 700 years. In recognition of this value, both the Tripitaka Koreana and the Janggyeong Panjeon have been inscribed by UNESCO."
+    },
+    {
+      "orig": "팔만대장경의 경판에는 양면에 글자가 새겨져 있으며, 판의 양쪽 끝에는 뒤틀림을 막는 나무 막대가 붙어 있다. 또 나무를 바닷물에 담갔다가 말리는 등의 처리를 했다고 알려져 있다. 이러한 정성과 지혜 덕분에 경판이 오늘날까지 보존될 수 있었다.",
+      "modern": null,
+      "reading": null,
+      "en": "The blocks of the Tripitaka Koreana are carved with characters on both sides, and wooden bars are attached to both ends of each block to prevent warping. It is also said that the wood was treated, for example by soaking it in seawater and drying it. Thanks to this care and wisdom, the blocks have been preserved to this day."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "경전",
+      "gloss_en": "scripture",
+      "level": 3
+    },
+    {
+      "word": "새기다",
+      "gloss_en": "to carve",
+      "level": 3
+    },
+    {
+      "word": "조정",
+      "gloss_en": "royal court",
+      "level": 3
+    },
+    {
+      "word": "옮기다",
+      "gloss_en": "to move",
+      "level": 2
+    },
+    {
+      "word": "작업",
+      "gloss_en": "work; task",
+      "level": 2
+    },
+    {
+      "word": "완성되다",
+      "gloss_en": "to be completed",
+      "level": 3
+    },
+    {
+      "word": "경판",
+      "gloss_en": "scripture woodblock",
+      "level": 3
+    },
+    {
+      "word": "한결같이",
+      "gloss_en": "consistently",
+      "level": 3
+    },
+    {
+      "word": "단정하다",
+      "gloss_en": "to be neat",
+      "level": 3
+    },
+    {
+      "word": "정성",
+      "gloss_en": "devotion; care",
+      "level": 3
+    },
+    {
+      "word": "습도",
+      "gloss_en": "humidity",
+      "level": 3
+    },
+    {
+      "word": "등재되다",
+      "gloss_en": "to be inscribed",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "고려는 왜 대장경을 새겼습니까?",
+      "q_en": "Why did Goryeo carve the Tripitaka?",
+      "answer_en": "To protect the country through the Buddha's power."
+    },
+    {
+      "q_ko": "고려 조정은 어디로 수도를 옮겼습니까?",
+      "q_en": "Where did the Goryeo court move its capital?",
+      "answer_en": "To Ganghwa Island."
+    },
+    {
+      "q_ko": "대장경 작업은 언제부터 언제까지 했습니까?",
+      "q_en": "When was the carving done?",
+      "answer_en": "From 1236 to 1251."
+    },
+    {
+      "q_ko": "장경판전은 왜 경판 보존에 좋습니까?",
+      "q_en": "Why is the Janggyeong Panjeon good for preservation?",
+      "answer_en": "It is designed for good air circulation and humidity control."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

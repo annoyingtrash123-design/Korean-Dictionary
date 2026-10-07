@@ -1,0 +1,147 @@
+{
+  "id": "graded-goryeo-celadon",
+  "meta": {
+    "title_ko": "고려청자",
+    "title_en": "Goryeo Celadon",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1150,
+    "period": "Goryeo",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "맑은 비취색과 상감 무늬로 유명한 고려의 도자기, 청자를 소개합니다.",
+    "summary_en": "An introduction to Goryeo celadon, famed for its jade-green glaze and inlaid designs.",
+    "level": "TOPIK 3–4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 고려청자는 10세기 무렵 중국의 기술을 배워 시작되었고, 12세기에는 고려만의 독특한 도자기로 발전했습니다. 특히 흙에 무늬를 새기고 다른 흙을 채우는 '상감' 기법은 고려의 자랑으로 알려져 있습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ/는 것으로 알려져 있다`: 일반적으로 알려진 사실을 말합니다.\n- `-에 따르면`: 출처를 밝힐 때 씁니다.\n- `-(으)ㄴ 뒤에`: 순서를 나타냅니다.\n- 단어: 도자기, 가마, 비색, 상감, 기법, 무늬.\n- '비색'은 푸른 옥빛 색을 뜻하는 말입니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '고려청자'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** Goryeo celadon began around the 10th century by learning Chinese techniques and by the 12th century had developed into a distinctive Goryeo ware. The *sanggam* inlay technique, carving patterns into clay and filling them with another clay, is known as a Goryeo pride.\n\n**Points to watch**\n- `-(으)ㄴ/는 것으로 알려져 있다`: stating a commonly known fact.\n- `-에 따르면`: citing a source.\n- `-(으)ㄴ 뒤에`: sequence.\n- Words: 도자기 ceramics, 가마 kiln, 비색 jade-green color, 상감 inlay, 기법 technique, 무늬 pattern.\n- 비색 means a blue-green jade color.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Goryeo Celadon,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "청자는 푸른빛이 나는 도자기이다. 고려 사람들은 중국에서 이 기술을 배운 뒤에 자기들만의 청자를 만들기 시작했다. 맑고 깊은 푸른빛은 '비색'이라고 불렀다.",
+      "modern": null,
+      "reading": null,
+      "en": "Celadon is ceramic ware with a bluish-green tint. After learning this technique from China, the people of Goryeo began to make celadon of their own. The clear, deep blue-green was called \"bisaek\"."
+    },
+    {
+      "orig": "12세기 중반에는 새로운 기법이 나타났다. 흙 표면에 학이나 구름 같은 무늬를 새기고, 그 안에 흰 흙이나 붉은 흙을 채워 굽는 방법이다. 이것을 상감 기법이라고 한다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the mid-12th century a new technique appeared. Patterns such as cranes or clouds are carved into the clay surface, and white or red clay is filled in before firing. This is called the inlay technique."
+    },
+    {
+      "orig": "당시 중국 송나라 사람이 쓴 기록에 따르면, 고려청자의 색은 매우 뛰어나다고 평가되었다고 한다. 청자는 전라도의 강진과 부안 같은 곳의 가마에서 만들어졌다.",
+      "modern": null,
+      "reading": null,
+      "en": "According to a record written by a Chinese person of the Song dynasty at the time, the color of Goryeo celadon was highly praised. Celadon was made in kilns in places such as Gangjin and Buan in Jeolla."
+    },
+    {
+      "orig": "오늘날 고려청자는 한국을 대표하는 문화재로 여겨진다. 박물관에서 술병과 향로, 꽃병을 보면 고려 사람들의 섬세한 솜씨를 느낄 수 있다.",
+      "modern": null,
+      "reading": null,
+      "en": "Today Goryeo celadon is regarded as a cultural treasure representing Korea. If you see the wine bottles, incense burners and vases in museums, you can feel the delicate skill of the Goryeo people."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "도자기",
+      "gloss_en": "ceramics; pottery",
+      "level": 3
+    },
+    {
+      "word": "기술",
+      "gloss_en": "technique; technology",
+      "level": 2
+    },
+    {
+      "word": "맑다",
+      "gloss_en": "to be clear",
+      "level": 2
+    },
+    {
+      "word": "새기다",
+      "gloss_en": "to carve",
+      "level": 3
+    },
+    {
+      "word": "채우다",
+      "gloss_en": "to fill",
+      "level": 2
+    },
+    {
+      "word": "굽다",
+      "gloss_en": "to bake; to fire",
+      "level": 2
+    },
+    {
+      "word": "기법",
+      "gloss_en": "technique",
+      "level": 3
+    },
+    {
+      "word": "기록",
+      "gloss_en": "record",
+      "level": 2
+    },
+    {
+      "word": "뛰어나다",
+      "gloss_en": "to be outstanding",
+      "level": 3
+    },
+    {
+      "word": "평가하다",
+      "gloss_en": "to evaluate",
+      "level": 3
+    },
+    {
+      "word": "대표하다",
+      "gloss_en": "to represent",
+      "level": 3
+    },
+    {
+      "word": "섬세하다",
+      "gloss_en": "to be delicate",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "고려 사람들은 청자의 기술을 어디에서 배웠어요?",
+      "q_en": "Where did the Goryeo people learn the celadon technique?",
+      "answer_en": "From China."
+    },
+    {
+      "q_ko": "상감 기법은 어떤 방법이에요?",
+      "q_en": "What is the inlay technique?",
+      "answer_en": "Carving patterns into the clay and filling them with white or red clay before firing."
+    },
+    {
+      "q_ko": "청자는 어디에서 만들어졌어요?",
+      "q_en": "Where was celadon made?",
+      "answer_en": "In kilns such as those in Gangjin and Buan."
+    },
+    {
+      "q_ko": "오늘날 청자는 어떻게 여겨져요?",
+      "q_en": "How is celadon regarded today?",
+      "answer_en": "As a cultural treasure representing Korea."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

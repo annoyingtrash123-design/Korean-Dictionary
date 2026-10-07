@@ -1,0 +1,147 @@
+{
+  "id": "graded-three-kingdoms",
+  "meta": {
+    "title_ko": "삼국 시대: 고구려·백제·신라",
+    "title_en": "The Three Kingdoms: Goguryeo, Baekje and Silla",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 500,
+    "period": "Ancient",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "한반도와 만주에서 경쟁하며 발전한 세 나라의 특징을 비교하며 읽습니다.",
+    "summary_en": "A comparison of the three rival kingdoms that developed on the peninsula and in Manchuria.",
+    "level": "TOPIK 3",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 삼국 시대는 대략 4세기에서 7세기 사이에 고구려, 백제, 신라가 서로 경쟁하던 시기를 말합니다. 세 나라는 말과 문화에 비슷한 점이 많았지만 각자 개성이 있었습니다. 이후 신라가 676년에 한반도의 대부분을 통일했습니다.\n\n**어휘와 문법**\n- `-에는 ~이/가 있었다`: 존재를 설명합니다.\n- `-(으)ㄴ 나라`: 나라를 꾸미는 표현입니다.\n- `-(으)면서`: 두 가지 일이 함께 일어남을 나타냅니다.\n- `-게 되다`: 변화의 결과를 말합니다.\n- 단어: 영토, 왕릉, 유물, 경쟁하다, 통일. 글의 끝에서 '통일'로 이야기가 이어지는 점에 주목하세요.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '삼국 시대: 고구려·백제·신라'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** The Three Kingdoms period refers roughly to the 4th-7th centuries, when Goguryeo, Baekje and Silla competed. The kingdoms shared much in language and culture but each had its own character. Silla later unified most of the peninsula in 676.\n\n**Points to watch**\n- `-에는 ~이/가 있었다`: describing existence.\n- `-(으)ㄴ 나라`: a verb modifying \"country\".\n- `-(으)면서`: two actions happening together.\n- `-게 되다`: expresses a resulting change.\n- Words: 영토 territory, 왕릉 royal tomb, 유물 relic, 경쟁하다 compete, 통일 unification. Notice how the text ends by leading into \"unification\".\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"The Three Kingdoms: Goguryeo, Baekje and Silla,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "삼국 시대에는 한반도와 만주에 고구려, 백제, 신라라는 세 나라가 있었다. 고구려는 북쪽에, 백제는 서남쪽에, 신라는 동남쪽에 자리를 잡았다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the Three Kingdoms period there were three countries on the Korean peninsula and in Manchuria: Goguryeo, Baekje and Silla. Goguryeo was in the north, Baekje in the southwest and Silla in the southeast."
+    },
+    {
+      "orig": "고구려는 세 나라 가운데 가장 먼저 크게 성장했다. 광개토대왕 때에는 영토를 넓혀 만주의 넓은 땅을 차지했다. 또 중국의 수나라와 당나라가 쳐들어왔을 때 오랫동안 잘 막아 냈다.",
+      "modern": null,
+      "reading": null,
+      "en": "Goguryeo was the first of the three to grow large. In the time of King Gwanggaeto, it expanded its territory and held a wide area of Manchuria. It also held off the invasions of China's Sui and Tang dynasties for a long time."
+    },
+    {
+      "orig": "백제는 한강 근처에서 시작했다. 백제 사람들은 세련된 예술을 가지고 있었고, 일본에 불교와 여러 기술을 전해 주었다. 무령왕릉과 금동 대향로는 백제 문화의 아름다움을 보여 준다.",
+      "modern": null,
+      "reading": null,
+      "en": "Baekje began near the Han River. The people of Baekje had refined arts and passed Buddhism and various technologies to Japan. The tomb of King Muryeong and the gilt-bronze incense burner show the beauty of Baekje culture."
+    },
+    {
+      "orig": "신라는 세 나라 가운데 발전이 가장 늦었다. 그러나 경주를 중심으로 힘을 키우면서 금관 같은 화려한 문화를 만들었다. 결국 신라는 당나라와 손을 잡고 삼국을 하나로 통일하게 되었다.",
+      "modern": null,
+      "reading": null,
+      "en": "Silla was the slowest of the three to develop. However, as it built up its strength around Gyeongju, it created a splendid culture, including gold crowns. In the end, Silla joined hands with Tang and went on to unify the three kingdoms."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "삼국",
+      "gloss_en": "Three Kingdoms",
+      "level": 3
+    },
+    {
+      "word": "영토",
+      "gloss_en": "territory",
+      "level": 3
+    },
+    {
+      "word": "넓히다",
+      "gloss_en": "to expand",
+      "level": 3
+    },
+    {
+      "word": "차지하다",
+      "gloss_en": "to occupy; to take",
+      "level": 3
+    },
+    {
+      "word": "막다",
+      "gloss_en": "to block; to defend",
+      "level": 2
+    },
+    {
+      "word": "세련되다",
+      "gloss_en": "to be refined",
+      "level": 3
+    },
+    {
+      "word": "전하다",
+      "gloss_en": "to convey",
+      "level": 3
+    },
+    {
+      "word": "왕릉",
+      "gloss_en": "royal tomb",
+      "level": 3
+    },
+    {
+      "word": "화려하다",
+      "gloss_en": "to be splendid",
+      "level": 3
+    },
+    {
+      "word": "결국",
+      "gloss_en": "in the end",
+      "level": 3
+    },
+    {
+      "word": "통일",
+      "gloss_en": "unification",
+      "level": 3
+    },
+    {
+      "word": "손을 잡다",
+      "gloss_en": "to join hands",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "삼국은 어느 나라들이에요?",
+      "q_en": "Which three kingdoms were there?",
+      "answer_en": "Goguryeo, Baekje and Silla."
+    },
+    {
+      "q_ko": "광개토대왕 때 고구려는 어떻게 되었어요?",
+      "q_en": "What happened to Goguryeo under King Gwanggaeto?",
+      "answer_en": "It expanded its territory in Manchuria."
+    },
+    {
+      "q_ko": "백제는 일본에 무엇을 전해 주었어요?",
+      "q_en": "What did Baekje pass to Japan?",
+      "answer_en": "Buddhism and various technologies."
+    },
+    {
+      "q_ko": "신라는 마지막에 어떻게 했어요?",
+      "q_en": "What did Silla do in the end?",
+      "answer_en": "It allied with Tang and unified the three kingdoms."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

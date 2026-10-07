@@ -1,0 +1,120 @@
+{
+  "id": "graded-sejong-hangul",
+  "meta": {
+    "title_ko": "세종대왕과 한글",
+    "title_en": "King Sejong and Hangul",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 1443,
+    "period": "Joseon",
+    "themes": [
+      "Joseon"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "세종대왕이 쉬운 글자 한글을 만든 이야기를 아주 쉬운 말로 읽습니다.",
+    "summary_en": "A very simple text about King Sejong creating the easy alphabet Hangul.",
+    "level": "TOPIK 1",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 세종대왕(1397–1450)은 조선의 4대 왕입니다. 한글은 1443년에 만들어졌고, 1446년에 『훈민정음』이라는 이름으로 널리 알려졌습니다. 한국에서는 10월 9일을 한글날로 기념합니다.\n\n**어휘와 문법**\n- `-이에요/예요`: '이다'의 해요체입니다 (왕이에요).\n- `-았/었어요`: 과거를 나타냅니다 (만들었어요).\n- `-어요`: 설명하는 문장입니다 (쉬워요).\n- `그래서`: 앞 문장의 결과를 이어 줍니다.\n- 단어: 왕, 글자, 한자, 어렵다, 쉽다. 문장이 짧으니 소리 내어 읽어 보세요.\n\n**읽기 팁** 먼저 소리 내어 한 번 읽고, 모르는 단어는 아래 어휘 목록에서 찾아보세요. 짧은 문장마다 누가 무엇을 했는지 확인하면서 읽으면 '세종대왕과 한글'의 내용을 쉽게 이해할 수 있습니다. 다 읽은 뒤에는 질문에 짧게 대답해 보세요.",
+    "en": "**Background** King Sejong (1397-1450) was the fourth king of Joseon. Hangul was created in 1443 and announced in 1446 under the name *Hunminjeongeum*. Korea celebrates Hangul Day on October 9.\n\n**Points to watch**\n- `-이에요/예요`: polite form of 이다 (왕이에요).\n- `-았/었어요`: past tense (만들었어요).\n- `-어요`: polite statements (쉬워요).\n- `그래서`: connects a result to the previous sentence.\n- Words: 왕 king, 글자 letter, 한자 Chinese characters, 어렵다 difficult, 쉽다 easy. The sentences are short, so try reading aloud.\n\n**Reading tip** Read it aloud once first, then look up unknown words in the vocabulary list below. If you check who did what in each short sentence, you will easily follow the content of \"King Sejong and Hangul.\" After reading, try answering the questions briefly."
+  },
+  "paragraphs": [
+    {
+      "orig": "세종대왕은 조선의 왕이에요. 옛날에 한국에는 한글이 없었어요. 사람들은 어려운 한자를 썼어요. 한자는 배우기 어려웠어요.",
+      "modern": null,
+      "reading": null,
+      "en": "King Sejong was a king of Joseon. Long ago, Korea had no Hangul. People used difficult Chinese characters. Chinese characters were hard to learn."
+    },
+    {
+      "orig": "그래서 세종대왕은 새 글자를 만들었어요. 그 글자가 한글이에요. 한글은 쉬워요. 지금 우리는 한글을 써요. 10월 9일은 한글날이에요.",
+      "modern": null,
+      "reading": null,
+      "en": "So King Sejong made new letters. Those letters are Hangul. Hangul is easy. Today we use Hangul. October 9 is Hangul Day."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "왕",
+      "gloss_en": "king",
+      "level": 1
+    },
+    {
+      "word": "옛날",
+      "gloss_en": "long ago",
+      "level": 1
+    },
+    {
+      "word": "글자",
+      "gloss_en": "letter; character",
+      "level": 1
+    },
+    {
+      "word": "한자",
+      "gloss_en": "Chinese character",
+      "level": 2
+    },
+    {
+      "word": "어렵다",
+      "gloss_en": "to be difficult",
+      "level": 1
+    },
+    {
+      "word": "쉽다",
+      "gloss_en": "to be easy",
+      "level": 1
+    },
+    {
+      "word": "새",
+      "gloss_en": "new",
+      "level": 1
+    },
+    {
+      "word": "만들다",
+      "gloss_en": "to make",
+      "level": 1
+    },
+    {
+      "word": "쓰다",
+      "gloss_en": "to use; to write",
+      "level": 1
+    },
+    {
+      "word": "배우다",
+      "gloss_en": "to learn",
+      "level": 1
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "세종대왕은 누구예요?",
+      "q_en": "Who was King Sejong?",
+      "answer_en": "A king of Joseon."
+    },
+    {
+      "q_ko": "옛날 사람들은 어떤 글자를 썼어요?",
+      "q_en": "What characters did people use long ago?",
+      "answer_en": "Difficult Chinese characters."
+    },
+    {
+      "q_ko": "한글날은 언제예요?",
+      "q_en": "When is Hangul Day?",
+      "answer_en": "October 9."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

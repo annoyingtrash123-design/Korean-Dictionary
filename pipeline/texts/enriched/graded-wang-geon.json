@@ -1,0 +1,147 @@
+{
+  "id": "graded-wang-geon",
+  "meta": {
+    "title_ko": "왕건과 고려의 건국",
+    "title_en": "Wang Geon and the Founding of Goryeo",
+    "author_ko": "한영사전 편집부 (AI 작성)",
+    "author_en": "Written for this app (AI-generated)",
+    "date": "2026",
+    "year": 918,
+    "period": "Goryeo",
+    "themes": [
+      "Ancient & Goryeo"
+    ],
+    "shelf": "graded",
+    "script": "hangul",
+    "excerpt": false,
+    "source": "original",
+    "pd_basis": "Original text written for this app"
+  },
+  "card": {
+    "summary_ko": "후삼국 시대의 혼란 속에서 왕건이 고려를 세우고 나라를 통합한 과정을 읽습니다.",
+    "summary_en": "Reads about how Wang Geon founded Goryeo and unified the country amid the chaos of the Later Three Kingdoms.",
+    "level": "TOPIK 4",
+    "edition_ko": "이 앱을 위해 작성한 학습용 글 (AI 작성)",
+    "edition_en": "Learner text written for this app (AI-generated)"
+  },
+  "notes": {
+    "ko": "**배경** 9세기 말 신라가 약해지자 각지에서 호족들이 힘을 키웠고, 900년에 견훤이 후백제를, 901년에 궁예가 후고구려를 세웠습니다. 왕건은 송악(개성) 지방의 호족 집안 출신으로, 918년에 고려를 세웠고 936년에 후삼국을 통일했습니다.\n\n**어휘와 문법**\n- `-(으)ㄴ 뒤에`: 순서.\n- `-기 위해`: 목적.\n- `-도록 하다`: 하게 만들다.\n- 단어: 호족, 후삼국, 통합, 건국, 항복하다, 북진.\n- '고려'라는 이름은 고구려를 이어받는다는 뜻을 담고 있다고 알려져 있습니다.\n\n**읽기 팁** 먼저 각 문단의 중심 문장을 찾아 표시하고, 시간 순서와 인물 이름을 정리하면서 읽어 보세요. '왕건과 고려의 건국'에 나오는 한자어는 한자의 뜻을 떠올리면 의미를 짐작하기 쉽습니다. 읽은 뒤에는 본문 아래의 질문에 한국어로 답해 보면서 이해를 확인하세요.",
+    "en": "**Background** As Silla weakened in the late 9th century, local strongmen (*hojok*) grew powerful, and Gyeonhwon founded Later Baekje in 900 and Gungye founded Later Goguryeo in 901. Wang Geon came from a *hojok* family in the Songak (Gaeseong) region, founded Goryeo in 918 and unified the Later Three Kingdoms in 936.\n\n**Points to watch**\n- `-(으)ㄴ 뒤에`: sequence.\n- `-기 위해`: purpose.\n- `-도록 하다`: to make someone do.\n- Words: 호족 local strongman, 후삼국 Later Three Kingdoms, 통합 integration, 건국 founding, 항복하다 surrender, 북진 northward expansion.\n- The name Goryeo is known to express succession to Goguryeo.\n\n**Reading tip** First find and mark the key sentence of each paragraph, and read while organizing the chronology and the names of people. For Sino-Korean words in \"Wang Geon and the Founding of Goryeo,\" thinking of the meaning of the characters makes the meaning easier to guess. After reading, check your understanding by answering the questions below the text in Korean."
+  },
+  "paragraphs": [
+    {
+      "orig": "9세기 말 신라는 왕위 다툼과 흉년으로 힘이 크게 약해졌다. 그러자 각지에서 호족이 일어났고, 견훤은 후백제를, 궁예는 후고구려를 세웠다. 신라와 합쳐 세 나라가 다시 경쟁하는 후삼국 시대가 열린 것이다.",
+      "modern": null,
+      "reading": null,
+      "en": "In the late 9th century, Silla was greatly weakened by struggles over the throne and poor harvests. Then local strongmen rose up in various places, and Gyeonhwon founded Later Baekje and Gungye founded Later Goguryeo. Together with Silla, a Later Three Kingdoms period opened in which three states competed again."
+    },
+    {
+      "orig": "왕건은 송악 지방의 힘 있는 집안에서 태어났다. 그는 궁예 밑에서 장군으로 활약하며 많은 공을 세웠다. 그러나 궁예가 신하들의 신뢰를 잃자, 918년 신하들의 추대를 받아 왕건이 왕위에 올랐다. 그는 나라 이름을 고려라고 하고 수도를 송악으로 정하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "Wang Geon was born into a powerful family in the Songak region. Serving under Gungye as a general, he distinguished himself greatly. But when Gungye lost the trust of his ministers, in 918 Wang Geon was enthroned at the ministers' recommendation. He named the country Goryeo and made Songak the capital."
+    },
+    {
+      "orig": "왕건은 힘으로만 나라를 합치지 않았다. 그는 호족의 딸들과 혼인하여 호족과 가까워졌고, 항복한 신라 왕에게도 예우를 베풀었다. 935년 신라의 마지막 왕이 스스로 항복했고, 936년에는 후백제도 무너졌다. 이로써 고려는 후삼국을 통일하였다.",
+      "modern": null,
+      "reading": null,
+      "en": "Wang Geon did not unite the country by force alone. He grew close to the strongmen by marrying their daughters, and also treated the surrendered Silla king with courtesy. In 935 Silla's last king surrendered of his own accord, and in 936 Later Baekje also collapsed. Goryeo thereby unified the Later Three Kingdoms."
+    },
+    {
+      "orig": "왕건은 고구려의 옛 땅을 되찾는다는 북진 정책을 추진하여 평양을 서경으로 삼았고, 발해가 멸망했을 때 넘어온 유민들도 받아들였다. 그가 남긴 「훈요십조」는 후대 왕들이 지켜야 할 가르침으로 전해진다.",
+      "modern": null,
+      "reading": null,
+      "en": "Wang Geon pursued a northward expansion policy of recovering Goguryeo's old land, made Pyongyang the Western Capital, and also accepted refugees who came over when Balhae fell. The \"Ten Injunctions\" he left are handed down as teachings later kings should observe."
+    }
+  ],
+  "vocab": [
+    {
+      "word": "호족",
+      "gloss_en": "local strongman",
+      "level": 3
+    },
+    {
+      "word": "흉년",
+      "gloss_en": "year of bad harvest",
+      "level": 3
+    },
+    {
+      "word": "활약하다",
+      "gloss_en": "to play an active role",
+      "level": 3
+    },
+    {
+      "word": "공을 세우다",
+      "gloss_en": "to achieve merit",
+      "level": 3
+    },
+    {
+      "word": "추대",
+      "gloss_en": "recommendation (to the throne)",
+      "level": 3
+    },
+    {
+      "word": "혼인하다",
+      "gloss_en": "to marry",
+      "level": 3
+    },
+    {
+      "word": "예우",
+      "gloss_en": "courteous treatment",
+      "level": 3
+    },
+    {
+      "word": "무너지다",
+      "gloss_en": "to collapse",
+      "level": 2
+    },
+    {
+      "word": "통일하다",
+      "gloss_en": "to unify",
+      "level": 3
+    },
+    {
+      "word": "되찾다",
+      "gloss_en": "to recover",
+      "level": 3
+    },
+    {
+      "word": "받아들이다",
+      "gloss_en": "to accept",
+      "level": 2
+    },
+    {
+      "word": "가르침",
+      "gloss_en": "teaching",
+      "level": 3
+    }
+  ],
+  "questions": [
+    {
+      "q_ko": "후삼국 시대에 어떤 나라들이 있었습니까?",
+      "q_en": "Which states existed in the Later Three Kingdoms period?",
+      "answer_en": "Silla, Later Baekje and Later Goguryeo."
+    },
+    {
+      "q_ko": "왕건은 어떻게 왕이 되었습니까?",
+      "q_en": "How did Wang Geon become king?",
+      "answer_en": "Ministers recommended him in 918 after Gungye lost their trust."
+    },
+    {
+      "q_ko": "왕건은 호족과 어떻게 가까워졌습니까?",
+      "q_en": "How did he grow close to the strongmen?",
+      "answer_en": "By marrying their daughters."
+    },
+    {
+      "q_ko": "고려는 언제 후삼국을 통일했습니까?",
+      "q_en": "When did Goryeo unify the Later Three Kingdoms?",
+      "answer_en": "In 936."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "ai"
+  }
+}

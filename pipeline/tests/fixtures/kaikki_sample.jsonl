@@ -8,3 +8,9 @@
 {"word": "one", "lang_code": "en", "pos": "num", "senses": [{"glosses": ["not korean"]}]}
 {"word": "새로", "lang_code": "ko", "pos": "adv", "senses": [{"glosses": ["anew"], "alt_of": [{"word": "새로이"}]}]}
 {"word": "새로이", "lang_code": "ko", "pos": "adv", "senses": [{"glosses": ["newly"]}]}
+{"word": "學", "lang_code": "ko", "pos": "character", "head_templates": [{"name": "ko-hanja", "args": {"1": "배울", "2": "학"}, "expansion": "學 (eumhun 배울 학 (baeul hak), revised hak, McCune–Reischauer hak)"}], "senses": [{"glosses": ["학 (hak): to learn"]}]}
+{"word": "校", "lang_code": "ko", "pos": "character", "head_templates": [{"name": "ko-hanja", "args": {}, "expansion": "校 (eumhun 학교 교 (hakgyo gyo), revised gyo, McCune–Reischauer kyo)"}], "senses": [{"glosses": ["school"]}]}
+{"word": "樂", "lang_code": "ko", "pos": "character", "head_templates": [{"name": "ko-hanja", "args": {"1": "즐길", "2": "락"}}], "senses": [{"glosses": ["락 (rak): enjoy"]}]}
+{"word": "樂", "lang_code": "ko", "pos": "character", "forms": [{"form": "풍류 악 (pungnyu ak)", "tags": ["eumhun"]}], "senses": [{"glosses": ["music"]}]}
+{"word": "生", "lang_code": "ko", "pos": "character", "senses": [{"glosses": ["생 (saeng): life"]}]}
+{"word": "木", "lang_code": "ko", "pos": "character", "senses": [{"glosses": ["tree"]}]}
