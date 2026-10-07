@@ -46,7 +46,7 @@ async function readerFlow(page: Page) {
   // open a graded reader
   await page.locator('.rd-row', { hasText: '단군 이야기' }).click();
   await expect(root.locator('.rd-title')).toHaveText('단군 이야기');
-  await expect(root.getByText('AI-generated translation — may contain errors')).toBeVisible();
+  await expect(root.locator('.rd-trl')).toContainText('AI translation');
   await expect(page.locator('.rd-en').first()).toBeVisible();
   await page.waitForTimeout(400);
   await shot(page, 'text-light');
@@ -89,10 +89,13 @@ async function readerFlow(page: Page) {
   await expect(page.locator('.lk')).toHaveCount(0);
 
   // English toggle
-  await page.getByRole('button', { name: 'English', exact: true }).click();
+  await page.getByRole('button', { name: 'Reading settings' }).click();
+  await expect(page.getByText('AI-generated translation — may contain errors')).toBeVisible();
+  await page.getByRole('switch', { name: 'Show English translation' }).click();
   await expect(page.locator('.rd-en')).toHaveCount(0);
-  await page.getByRole('button', { name: 'English', exact: true }).click();
+  await page.getByRole('switch', { name: 'Show English translation' }).click();
   await expect(page.locator('.rd-en').first()).toBeVisible();
+  await page.getByRole('button', { name: 'Close' }).click();
 
   // vocabulary + questions (answers revealed on tap)
   await expect(page.getByRole('heading', { name: /Vocabulary/ })).toBeVisible();
@@ -100,12 +103,13 @@ async function readerFlow(page: Page) {
   await expect(page.locator('.rd-ans').first()).toBeVisible();
 
   // notes are rendered as elements (no raw markdown markers)
-  await page.locator('.rd-notes > summary').click();
+  await page.locator('.rd-about > summary').click();
+  await expect(page.getByText('Learner text written for this app').first()).toBeVisible();
   await expect(page.locator('.rd-notes strong').first()).toBeVisible();
   expect(await page.locator('.rd-notes').innerText()).not.toContain('**');
   await page.waitForTimeout(300);
   await shot(page, 'notes');
-  await page.locator('.rd-notes > summary').click();
+  await page.locator('.rd-about > summary').click();
 
   // reading position is remembered across a reload
   const max = await page.locator('.rd-scroll').evaluate((el) => el.scrollHeight - el.clientHeight);
@@ -127,7 +131,6 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   await page.getByRole('link', { name: 'Settings' }).click();
   await page.getByRole('radio', { name: 'Light' }).click();
-  await expect(page.getByText('Reader library')).toBeVisible();
 
   await readerFlow(page);
 

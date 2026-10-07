@@ -336,7 +336,7 @@ export function TextView({ id }: { id: string }) {
           </div>
           {(hasEn && prefs.en) || useModern ? (
             <div class="rd-labels small">
-              {hasEn && prefs.en && <div class="rd-trl"><span class="chip-ai">AI translation</span> {translationLabel(doc.labels, prov)}</div>}
+              {hasEn && prefs.en && <div class="rd-trl">{(doc.labels.translation ?? 'ai') === 'ai' ? <><span class="chip-ai">AI translation</span> may contain errors</> : translationLabel(doc.labels, prov)}</div>}
               {useModern && modernLabel(doc.labels) && <div>{modernLabel(doc.labels)}</div>}
             </div>
           ) : null}
