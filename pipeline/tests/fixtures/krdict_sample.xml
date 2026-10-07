@@ -158,5 +158,17 @@
 				</Equivalent>
 			</Sense>
 		</LexicalEntry>
+		<LexicalEntry att="id" val="1007">
+			<feat att="homonym_number" val="0" />
+			<feat att="lexicalUnit" val="단어" />
+			<feat att="partOfSpeech" val="품사 없음" />
+			<Lemma>
+				<feat att="writtenForm" val="먹-" />
+			</Lemma>
+			<feat att="vocabularyLevel" val="없음" />
+			<Sense att="id" val="1">
+				<feat att="definition" val="(먹고, 먹는데, 먹어)→ 먹다 2, 먹다 9, 없다" />
+			</Sense>
+		</LexicalEntry>
 	</Lexicon>
 </LexicalResource>

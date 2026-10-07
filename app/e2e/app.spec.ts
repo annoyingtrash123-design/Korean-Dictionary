@@ -119,8 +119,8 @@ async function typeAndMeasure(page: Page, q: string): Promise<number> {
     const t0 = performance.now();
     const done = () => requestAnimationFrame(() => requestAnimationFrame(() => resolve(performance.now() - t0)));
     const ok = () => {
-      const h = main.querySelector('.row .hw, .hanja-card .hanja-big');
-      return !!h && (h.textContent ?? '').length > 0 && !!location.hash.includes('q=') &&
+      const h = main.querySelector('.row .hw, .hanja-card .hanja-big, .empty-title');
+      return !!h && !!location.hash.includes('q=') &&
         decodeURIComponent(location.hash).includes('q=' + q) && (main.querySelector('.page:not(.busy)') !== null);
     };
     const mo = new MutationObserver(() => { if (ok()) { mo.disconnect(); done(); } });

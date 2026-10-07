@@ -42,13 +42,13 @@ fn xml_strips_control_bytes() {
         Ok(())
     })
     .unwrap();
-    assert_eq!(n, 6);
+    assert_eq!(n, 7);
 }
 
 #[test]
 fn krdict_parsing() {
     let es = krdict_entries();
-    assert_eq!(es.len(), 6);
+    assert_eq!(es.len(), 7);
     let hak = &es[0];
     assert_eq!((hak.headword.as_str(), hak.pos.as_str(), hak.kind.as_str()), ("학교", "noun", "word"));
     assert_eq!(hak.hanja.as_deref(), Some("學校"));
@@ -88,6 +88,11 @@ fn krdict_parsing() {
 
     assert_eq!(es[4].kind, "grammar"); // particle
     // romanised English lemma of an auxiliary verb
+    // conjugation-pointer entry: carried as a pointer, not as a normal sense
+    let ptr = es[6].pointer.as_ref().expect("pointer");
+    assert_eq!(ptr.forms, vec!["먹고", "먹는데", "먹어"]);
+    assert_eq!(ptr.targets, vec![("먹다".to_string(), Some(2)), ("먹다".to_string(), Some(9)), ("없다".to_string(), None)]);
+    assert!(es[0].pointer.is_none());
     assert_eq!(es[5].pos, "auxiliary verb");
     assert!(es[5].data["senses"][0].get("gloss").is_none());
 }
@@ -205,6 +210,12 @@ fn kengdic_parsing() {
     // first hanja variant is the key, others kept
     let gyo = by[&("교착하다".to_string(), Some("交着하다".to_string()))];
     assert_eq!(gyo.data["hanja_alt"][0], "膠着하다");
+    // quality filters + capitalisation
+    assert!(k.entries.iter().all(|e| e.headword != "TV방송" && e.headword != "한글"));
+    let gl_of = |w: &str| by[&(w.to_string(), None)].data["senses"].as_array().unwrap().iter().map(|s| s["gloss"].as_str().unwrap().to_string()).collect::<Vec<_>>();
+    assert_eq!(gl_of("서울"), vec!["Seoul"]);
+    assert_eq!(gl_of("대한민국"), vec!["the Republic of Korea"]);
+    assert_eq!(gl_of("고양이"), vec!["cat; feline"]);
     // surface with spaces -> phrase; non-hangul surface skipped
     let phr = k.entries.iter().find(|e| e.headword == "전원의 행진").unwrap();
     assert_eq!((phr.kind.as_str(), phr.pos.as_str()), ("phrase", "phrase"));
@@ -213,6 +224,16 @@ fn kengdic_parsing() {
     assert_eq!(k.hanja_by_surface["강"].len(), 1);
     assert!(by.contains_key(&("강".to_string(), Some("江".to_string()))));
     assert!(by.contains_key(&("강".to_string(), None)));
+}
+
+#[test]
+fn case_normalisation() {
+    assert_eq!(kengdic::normalize_case("Go deaf; Eat, chow down on"), "go deaf; eat, chow down on");
+    assert_eq!(kengdic::normalize_case("A man"), "a man");
+    assert_eq!(kengdic::normalize_case("TV set"), "TV set");
+    assert_eq!(kengdic::normalize_case("I think"), "I think");
+    assert_eq!(kengdic::normalize_case("Korea"), "Korea");
+    assert_eq!(kengdic::normalize_case("To go"), "to go");
 }
 
 #[test]
@@ -410,7 +431,7 @@ fn end_to_end_mini_build() {
     }
     assert_eq!(q::<String>(&c, "SELECT value FROM meta WHERE key='pack'"), "core");
     let counts: Value = serde_json::from_str(&q::<String>(&c, "SELECT value FROM meta WHERE key='counts'")).unwrap();
-    assert_eq!(counts["krdict"], 6);
+    assert_eq!(counts["krdict"], 6); // pointer entry dropped
 
     // exact lookup, best first
     let (hw, hanja, pos, level, gloss): (String, String, String, i64, String) = c
@@ -419,7 +440,14 @@ fn end_to_end_mini_build() {
         })
         .unwrap();
     assert_eq!((hw.as_str(), hanja.as_str(), pos.as_str(), level, gloss.as_str()), ("학교", "學校", "noun", 1, "school"));
-    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE hw_norm='학교'"), 3); // krdict + wikt + kengdic
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE hw_norm='학교'"), 2); // krdict + wikt (kengdic duplicate skipped)
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='kengdic' AND hw_norm IN ('학교','먹다')"), 0);
+    assert_eq!(q::<String>(&c, "SELECT gloss FROM entries WHERE source='kengdic' AND hw_norm='서울'"), "Seoul");
+    assert_eq!(q::<i64>(&c, "SELECT quality FROM entries WHERE source='krdict' AND hw_norm='학교'"), 0);
+    assert_eq!(q::<i64>(&c, "SELECT quality FROM entries WHERE source='kengdic' AND kind='phrase' LIMIT 1"), 4);
+    // the pointer entry is not an entry; its forms point at 먹다 homonym 2 (9 / 없다 do not exist)
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE headword='먹-'"), 0);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form IN ('먹고','먹는데','먹') AND e.hw_norm='먹다' AND e.homonym=2 AND e.source='krdict'"), 3);
     assert_eq!(q::<String>(&c, "SELECT source FROM entries WHERE hw_norm='학교' ORDER BY rank LIMIT 1"), "krdict");
     // grammar entry lookup by normalised key
     assert_eq!(q::<String>(&c, "SELECT headword FROM entries WHERE hw_norm='아서'"), "-아서");
@@ -436,7 +464,8 @@ fn end_to_end_mini_build() {
         "SELECT e.headword FROM entries_fts f JOIN entries e ON e.id=f.rowid WHERE entries_fts MATCH 'school' ORDER BY bm25(entries_fts), e.rank LIMIT 1",
     );
     assert_eq!(top, "학교");
-    assert!(q::<i64>(&c, "SELECT COUNT(*) FROM entries_fts WHERE entries_fts MATCH 'eating OR eats'") >= 1); // porter stemming
+    assert!(q::<i64>(&c, "SELECT COUNT(*) FROM entries_fts WHERE entries_fts MATCH 'head:eating OR head:eats'") >= 1); // porter stemming
+    assert!(q::<i64>(&c, "SELECT COUNT(*) FROM entries_fts WHERE entries_fts MATCH 'en:teachers'") >= 1); // definitions are searchable too
     // hanja
     assert!(q::<i64>(&c, "SELECT COUNT(*) FROM hanja_words WHERE ch='學'") >= 2);
     let (rd, mean, strokes, rad, wc): (String, String, i64, String, i64) = c
@@ -457,6 +486,7 @@ fn end_to_end_mini_build() {
         st.query_map([], |r| Ok((r.get(0)?, r.get(1)?))).unwrap().map(|r| r.unwrap()).collect()
     };
     assert_eq!(cats, vec![("Connective endings".to_string(), 1), ("Particles".to_string(), 1)]);
+    assert_eq!(q::<String>(&c, "SELECT pattern FROM grammar WHERE category='Connective endings'"), "-아서");
     // entry data is valid JSON with senses
     let d: Value = serde_json::from_str(&q::<String>(&c, "SELECT data FROM entries WHERE hw_norm='먹다' AND source='krdict'")).unwrap();
     assert_eq!(d["senses"].as_array().unwrap().len(), 2);

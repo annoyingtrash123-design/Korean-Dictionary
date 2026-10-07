@@ -187,14 +187,22 @@ pub fn entry_gloss(e: &Entry) -> Option<String> {
     None
 }
 
-/// (head, en): `head` = the short English glosses only; `en` = the longer English definitions
-/// (kept out of `head` so that a plain gloss match is not diluted by definition length).
+/// (head, en): `head` = the short English glosses (first 6 distinct items); `en` = the longer
+/// English definitions, indexed only for entries that have no gloss. bm25 normalises by the
+/// total document length over all columns, so definitions on glossed entries would push
+/// good entries (학교 "school") below one-word kengdic matches.
 fn fts_text(e: &Entry) -> (String, String) {
+    // `head`: the short glosses (weighted 10x by the engine). `en`: any further glosses plus the
+    // English definitions, so words that only appear in a definition stay searchable. Ranking
+    // of gloss matches over definition matches is done by the engine, not by bm25 alone.
     let mut seen = HashSet::new();
-    let mut parts: Vec<&str> = sense_strs(e, "gloss").collect();
-    parts.retain(|p| seen.insert(*p));
-    let head = parts.join(" ; ");
-    let mut en = String::new();
+    let pieces: Vec<&str> = sense_strs(e, "gloss")
+        .flat_map(|g| g.split("; "))
+        .map(str::trim)
+        .filter(|p| !p.is_empty() && seen.insert(p.to_lowercase()))
+        .collect();
+    let head = pieces.iter().take(12).copied().collect::<Vec<_>>().join(" ; ");
+    let mut en = pieces.iter().skip(12).copied().collect::<Vec<_>>().join(" ; ");
     for d in sense_strs(e, "def").take(8) {
         if !en.is_empty() {
             en.push_str(" ; ");

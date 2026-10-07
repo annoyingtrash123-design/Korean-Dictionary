@@ -137,7 +137,7 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
         Item {
             order: item.t("group_order").parse().unwrap_or(0),
             word,
-            unit: { let u = t(wi, "word_unit"); u },
+            unit: t(wi, "word_unit"),
             hanja,
             origin_note,
             prons,

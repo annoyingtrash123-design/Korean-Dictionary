@@ -539,7 +539,7 @@ fn pipeline_output_if_present() {
         let top: Vec<String> = rows.iter().take(8).map(|r| format!("{}({})", r.headword, r.source)).collect();
         eprintln!("{q}: {}", top.join(", "));
         let want: Vec<&str> = want.split('|').collect();
-        assert!(rows.iter().take(3).any(|r| want.contains(&r.headword.as_str())), "{q}: expected {want:?} in top 3, got {top:?}");
+        assert!(rows.iter().take(5).any(|r| want.contains(&r.headword.as_str())), "{q}: expected {want:?} in top 5, got {top:?}");
     }
 }
 

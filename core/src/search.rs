@@ -371,14 +371,16 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
             // The exact-token query keeps short common words ("go") from being crowded out
             // by the prefix query's many matches ("good", "gold", …).
             let exact = m.trim_end_matches('*').to_string();
-            let mut exprs = vec![exact.clone(), m.clone()];
+            // (match expression, order): the gloss-only query is ordered by word frequency so
+            // common words with many glosses (가다: "go; travel; head for; …") are never cut off.
+            let mut exprs = vec![(exact.clone(), "sc, e.rank"), (m.clone(), "sc, e.rank")];
             if p.caps.fts_head {
-                exprs.insert(0, format!("head : ({exact})"));
+                exprs.insert(0, (format!("head : ({exact})"), "e.rank"));
             }
-            for expr in exprs {
+            for (expr, order) in exprs {
                 let sql = format!(
                     "SELECT {COLS}, {bm} AS sc FROM entries_fts JOIN entries e ON e.id = entries_fts.rowid \
-                     WHERE entries_fts MATCH ?1 ORDER BY sc, e.rank LIMIT ?2"
+                     WHERE entries_fts MATCH ?1 ORDER BY {order} LIMIT ?2"
                 );
                 for r in p.conn.query(&sql, &[expr.as_str().into(), FTS_CANDIDATES.into()])? {
                     let score = r.real(13).unwrap_or(0.0);

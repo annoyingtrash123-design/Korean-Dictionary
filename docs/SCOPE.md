@@ -72,7 +72,9 @@ CREATE TABLE entries (
   rank      INTEGER NOT NULL,  -- sort key, lower = more important (see below)
   kind      TEXT NOT NULL,     -- 'word' | 'phrase' | 'idiom' | 'proverb' | 'grammar'
   gloss     TEXT,              -- one-line English summary for result lists (≤ 120 chars)
-  data      TEXT NOT NULL      -- JSON, see EntryData below
+  data      TEXT NOT NULL,     -- JSON, see EntryData below
+  ext_id    TEXT,              -- id in the source dictionary (addition)
+  quality   INTEGER NOT NULL   -- result-quality hint, 0 best: source tier (krdict 0, wikt 1, stdict 2, kengdic 3, opendict 4) + 1 for phrase/proverb/idiom (addition)
 );
 CREATE INDEX entries_hw   ON entries(hw_norm);
 CREATE INDEX entries_rank ON entries(rank);
@@ -86,7 +88,9 @@ CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL);
 CREATE INDEX hanja_words_ch ON hanja_words(ch);
 
 -- English full-text search (core pack only; stdict has none)
-CREATE VIRTUAL TABLE entries_fts USING fts5(en, content='', tokenize='porter unicode61');  -- rowid = entries.id
+-- rowid = entries.id. head = short English glosses (first 6); en = English definitions, only for entries WITHOUT glosses.
+-- Query: MATCH 'school' ORDER BY bm25(entries_fts, 10.0, 1.0), quality, rank
+CREATE VIRTUAL TABLE entries_fts USING fts5(head, en, content='', tokenize='porter unicode61');
 
 -- core pack only:
 CREATE TABLE hanja_chars (
