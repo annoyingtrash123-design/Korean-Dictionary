@@ -12,7 +12,7 @@ pub trait Http {
     fn get(&self, url: &str) -> Result<String>;
 }
 
-/// ureq-based client: <= 2 requests/second, retries with exponential backoff on
+/// ureq-based client: <= 1 request/second (shared by every host), retries with exponential backoff on
 /// transport errors, 429 and 5xx. 4xx (other than 429) fail immediately.
 pub struct UreqHttp {
     agent: ureq::Agent,
@@ -35,7 +35,7 @@ impl UreqHttp {
             .user_agent(USER_AGENT)
             .try_proxy_from_env(true)
             .build();
-        UreqHttp { agent, last: Mutex::new(None), min_interval: Duration::from_millis(500), retries: 4 }
+        UreqHttp { agent, last: Mutex::new(None), min_interval: Duration::from_millis(1100), retries: 6 }
     }
 
     fn throttle(&self) {
@@ -55,7 +55,7 @@ impl Http for UreqHttp {
         let mut last_err = anyhow!("no attempt made");
         for attempt in 0..=self.retries {
             self.throttle();
-            let mut wait = Duration::from_secs(2u64 << attempt.min(5));
+            let mut wait = Duration::from_secs(5u64 << attempt.min(4));
             match self.agent.get(url).call() {
                 Ok(resp) => {
                     let mut body = String::new();
@@ -67,7 +67,7 @@ impl Http for UreqHttp {
                 Err(ureq::Error::Status(code, resp)) => {
                     if code == 429 || code >= 500 {
                         if let Some(s) = resp.header("Retry-After").and_then(|v| v.trim().parse::<u64>().ok()) {
-                            wait = Duration::from_secs(s.min(60));
+                            wait = Duration::from_secs(s.clamp(1, 180));
                         }
                         last_err = anyhow!("HTTP {code} for {url}");
                     } else {

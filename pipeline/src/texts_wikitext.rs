@@ -652,7 +652,8 @@ pub fn decode_entities(s: &str) -> String {
     while i < s.len() {
         let rest = &s[i..];
         if rest.starts_with('&') {
-            if let Some(semi) = rest[..rest.len().min(12)].find(';') {
+            let window_end = rest.char_indices().nth(12).map(|(i, _)| i).unwrap_or(rest.len());
+            if let Some(semi) = rest[..window_end].find(';') {
                 let ent = &rest[1..semi];
                 let rep: Option<String> = match ent {
                     "nbsp" => Some(" ".into()),

@@ -69,6 +69,14 @@ pub struct Entry {
     pub url: Option<String>,
     #[serde(default)]
     pub search: Vec<String>,
+    /// Other exact page titles that are accepted for this text (search results never are).
+    #[serde(default)]
+    pub alt_titles: Vec<String>,
+    /// When the page is a versions/editions index: follow the link whose title contains this ("경판", "완판", …).
+    pub prefer_edition: Option<String>,
+    /// Subpage names (or heading names) to keep for long works.
+    #[serde(default)]
+    pub sections: Vec<String>,
     pub pd_basis: String,
     pub note: Option<String>,
     pub english_pd: Option<EnglishPd>,

@@ -631,6 +631,7 @@ fn app_fixture_if_present() {
     let tmp = std::env::temp_dir().join(format!("kdict-core-fixture-{}", std::process::id()));
     std::fs::create_dir_all(&tmp).unwrap();
     let mut dbs = Vec::new();
+    let mut texts: Option<PackDb> = None;
     for pack in m["packs"].as_array().unwrap() {
         let id = pack["id"].as_str().unwrap();
         let mut gz = Vec::new();
@@ -643,7 +644,18 @@ fn app_fixture_if_present() {
         assert_eq!(raw.len() as u64, pack["bytes"].as_u64().unwrap());
         let path = tmp.join(format!("{id}.sqlite"));
         std::fs::write(&path, raw).unwrap();
-        dbs.push(open_real(&path, id).unwrap());
+        let db = open_real(&path, id).unwrap();
+        if db.caps.texts {
+            texts = Some(db); // the Reader library has no entries: not a dictionary pack
+        } else {
+            dbs.push(db);
+        }
+    }
+    if let Some(t) = &texts {
+        let list = crate::texts::list_texts(Some(t)).unwrap();
+        assert!(!list.is_empty() && list.iter().all(|x| !x.title_ko.is_empty()));
+        let doc = crate::texts::get_text(Some(t), &list[0].id).unwrap().unwrap();
+        assert!(!doc.paragraphs.is_empty());
     }
     let refs: Vec<&PackDb> = dbs.iter().collect();
     let r = search(&refs, "학교", None).unwrap();
