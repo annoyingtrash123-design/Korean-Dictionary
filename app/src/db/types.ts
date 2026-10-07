@@ -62,6 +62,8 @@ export interface Engine {
   wordOfDay(date: string): Promise<ResultRow | null>;
   /** Background warm-up step over `packs`; resolves to whether more steps remain. */
   warm(step: number, packs: string[]): Promise<boolean>;
+  /** Engine diagnostics log (startup file discovery, pack swaps). */
+  diagnostics(): Promise<string>;
 }
 
 export interface PackInfo { id: string; installed: boolean; version?: string; bytes?: number; installedAt?: number }

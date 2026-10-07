@@ -40,6 +40,8 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
     if (running.current) return;
     running.current = true; hiddenDuringRun.current = false;
     setBusy(true); setErr(undefined); setStarted(true);
+    // Clear progress left over from an earlier install so queued packs don't show "Done".
+    progress.set((all) => { const next = { ...all }; for (const p of packs) delete next[p.id]; return next; });
     try {
       // Refuse to start (rather than fail half-way) when the device clearly lacks space.
       const est = await navigator.storage?.estimate?.().catch(() => undefined);

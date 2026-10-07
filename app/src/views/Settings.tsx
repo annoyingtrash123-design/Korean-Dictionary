@@ -46,7 +46,7 @@ export function SettingsView() {
   const setColor = (k: ColorKey, v: string) => updateSettings({ colors: { ...s.colors, [k]: v } });
 
   const doCheck = async () => { setMsg('Checking…'); const m = await checkForUpdate(); setMsg(m ? (update.get().available ? 'Update available.' : 'Dictionary is up to date.') : 'Could not reach the server (offline?).'); };
-  const startInstall = async (ids: string[]) => { setMsg(''); const m = manifest ?? await checkForUpdate(); if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
+  const startInstall = async (ids: string[]) => { setMsg(''); const m = (await checkForUpdate()) ?? manifest; /* always the live manifest: chunk files of an older version are gone after a deploy */ if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
 
   const exportFile = () => {
     const url = URL.createObjectURL(new Blob([exportBookmarks()], { type: 'application/json' }));

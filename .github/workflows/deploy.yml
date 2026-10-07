@@ -1,7 +1,8 @@
 name: Build data & deploy app
 
 on:
-  # push trigger enabled once the Rust pipeline + engine land
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       rebuild_data:
@@ -64,6 +65,7 @@ jobs:
       - name: Build dictionary packs
         if: steps.datacache.outputs.cache-hit != 'true'
         run: |
+          # no --allow-partial: the build fails when a source silently degraded (data quality gate)
           ./target/release/kdict-pipeline build --work pipeline/.work --out pipeline/out
           ls -la pipeline/out pipeline/out/site-data
           cat pipeline/out/site-data/manifest.json
@@ -100,7 +102,15 @@ jobs:
         with:
           targets: wasm32-unknown-unknown
       - uses: Swatinem/rust-cache@v2
-      - run: cargo install wasm-pack --locked
+      - name: Restore wasm-pack
+        id: wasmpack
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/wasm-pack
+          key: wasm-pack-0.15.0-${{ runner.os }}
+      - name: Install wasm-pack
+        if: steps.wasmpack.outputs.cache-hit != 'true'
+        run: cargo install wasm-pack --locked --version 0.15.0
       - run: npm ci
       - run: npm run build:core
       - run: npx vitest run

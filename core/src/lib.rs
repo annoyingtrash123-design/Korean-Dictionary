@@ -135,6 +135,11 @@ mod wasm_api {
             })
         }
 
+        /// Diagnostics log (startup file discovery, pack swaps) for troubleshooting.
+        pub fn diagnostics(&self) -> String {
+            crate::db::diag_dump()
+        }
+
         /// `search(query, {packs, limit?}) -> SearchResult`
         pub async fn search(&self, query: String, opts: JsValue) -> Result<JsValue, JsError> {
             let opts: SearchOpts = if opts.is_undefined() || opts.is_null() {

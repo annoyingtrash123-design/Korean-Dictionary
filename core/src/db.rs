@@ -60,6 +60,7 @@ impl Store {
 
         let mut store = Store { util, installed, packs: Vec::new(), live: HashMap::new() };
         let names = util.names().map_err(|e| e.to_string())?;
+        diag(format!("startup names={names:?}"));
         let recorded: HashMap<String, String> = store
             .installed
             .query("SELECT pack, file FROM installed WHERE file IS NOT NULL", &[])
@@ -67,6 +68,7 @@ impl Store {
             .iter()
             .map(|r| (r.string(0), r.string(1)))
             .collect();
+        diag(format!("recorded={recorded:?}"));
         let mut ids: Vec<String> = names.iter().filter_map(|n| parse_file(n)).map(|(id, _)| id).collect();
         ids.sort();
         ids.dedup();
@@ -86,7 +88,10 @@ impl Store {
                 }
             }
             if let Err(e) = store.open_pack_file(&id, &live) {
+                diag(format!("open {id} {live} failed: {e}"));
                 web_sys_log(&format!("kdict-core: cannot open pack '{id}': {e}"));
+            } else {
+                diag(format!("opened {id} {live}"));
             }
         }
         Ok(store)
@@ -125,7 +130,8 @@ impl Store {
         self.packs.push(db);
         let old = self.live.insert(id.to_string(), new_file.to_string());
         if let Some(old) = old.filter(|o| o != new_file) {
-            let _ = self.remove_file(&old);
+            let r = self.remove_file(&old);
+            diag(format!("swap {id}: {old} -> {new_file}, remove old: {r:?}"));
         }
         Ok(())
     }
@@ -232,4 +238,23 @@ extern "C" {
 
 fn web_sys_log(msg: &str) {
     console_warn(msg);
+}
+
+thread_local! {
+    static DIAG: std::cell::RefCell<Vec<String>> = const { std::cell::RefCell::new(Vec::new()) };
+}
+
+/// Startup / swap diagnostics, readable from the app for troubleshooting.
+pub fn diag(msg: String) {
+    DIAG.with(|d| {
+        let mut d = d.borrow_mut();
+        if d.len() > 200 {
+            d.remove(0);
+        }
+        d.push(msg);
+    });
+}
+
+pub fn diag_dump() -> String {
+    DIAG.with(|d| d.borrow().join("\n"))
 }

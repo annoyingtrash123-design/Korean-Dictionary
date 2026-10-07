@@ -118,3 +118,6 @@ export async function fetchManifest(): Promise<Manifest> {
   return m;
 }
 export const cachedManifest = (): Manifest | null => { try { return JSON.parse(localStorage.getItem(MANIFEST_CACHE) || 'null'); } catch { return null; } };
+
+// Troubleshooting hook: `await __kdDiagnostics()` in the console prints the engine's storage log.
+(globalThis as unknown as { __kdDiagnostics?: () => Promise<string> }).__kdDiagnostics = () => call<string>('diagnostics');

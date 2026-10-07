@@ -34,5 +34,6 @@ export function createEngine(): Engine {
     grammarList: () => e().grammarList(),
     wordOfDay: (date) => e().wordOfDay(date),
     warm: (step, packs) => e().warm(step, packs),
+    diagnostics: async () => e().diagnostics(),
   };
 }

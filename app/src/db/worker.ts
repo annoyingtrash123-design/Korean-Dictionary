@@ -7,7 +7,17 @@ import type { Engine, ManifestPack, PackStatus } from './types';
 const engine: Engine = createEngine();
 const post = (m: Res | Evt) => (self as unknown as Worker).postMessage(m);
 let initError: string | undefined;
-const ready = engine.init().catch((e) => { initError = String(e?.message ?? e); });
+// After a reload the previous worker can still hold the OPFS file handles for a moment, so a
+// first init attempt may fail with a lock error: retry for ~10 s before giving up.
+async function initWithRetry(): Promise<void> {
+  let last: unknown;
+  for (let attempt = 0; attempt < 20; attempt++) {
+    try { await engine.init(); initError = undefined; return; } catch (e) { last = e; }
+    await new Promise((r) => setTimeout(r, Math.min(1000, 150 * (attempt + 1))));
+  }
+  initError = String((last as Error)?.message ?? last);
+}
+const ready = initWithRetry();
 let installing = false;
 let queue: Promise<void> = Promise.resolve();
 
@@ -56,6 +66,7 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async wordsWithHanja(ch: string, l: number, o: number) { await ready; return engine.wordsWithHanja(ch, l, o); },
   async sentences(t: string, l: number) { await ready; return engine.sentences(t, l); },
   async grammarList() { await ready; return engine.grammarList(); },
+  async diagnostics() { await ready; return engine.diagnostics(); },
   async wordOfDay(d: string) { await ready; return engine.wordOfDay(d); },
 };
 
