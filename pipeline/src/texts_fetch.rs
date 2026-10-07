@@ -409,7 +409,9 @@ fn dedupe(items: Vec<(String, i64)>, cap: usize) -> Vec<(String, i64)> {
 }
 
 /// Prefix-search and full-text candidates (never auto-accepted). Returns (prefix, search-per-term).
-fn search_candidates(wiki: &Wiki, e: &Entry) -> (Vec<(String, i64)>, Vec<(String, Vec<(String, i64)>)>) {
+type Hits = Vec<(String, i64)>;
+
+fn search_candidates(wiki: &Wiki, e: &Entry) -> (Hits, Vec<(String, Hits)>) {
     let mut prefix = Vec::new();
     for t in accepted_titles(e) {
         match wiki.prefix_search(&t) {

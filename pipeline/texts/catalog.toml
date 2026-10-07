@@ -5,6 +5,11 @@
 # Sources:  wikisource-ko / wikisource-zh / law / ohchr  (resolved by source_title, then `search`)
 #           gutenberg / archive-org  (English translations referenced by `english_pd`)
 # Only authors who died before 1963 are listed (Korean life+50 term had expired before the 2013 extension).
+# Optional per-entry pins (set after `fetch-texts --discover`):
+#   alt_titles = ["…"]      other exact page titles that are accepted (search hits never are)
+#   prefer_edition = "경판"  follow this link when source_title is a versions/editions index
+#   sections = ["1", "3"]   subpage names (or heading names) to keep for long works / excerpts
+#                           (excerpt entries without `sections` are cut to ~15k characters)
 
 [news]
 # Policy Briefing (korea.kr) RSS feeds.  Only articles whose page shows the

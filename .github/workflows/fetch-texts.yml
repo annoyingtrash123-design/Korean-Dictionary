@@ -3,6 +3,11 @@ name: Fetch reader texts
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        description: "fetch = download texts; discover = write _discover.json (candidates, no texts)"
+        type: choice
+        options: [fetch, discover]
+        default: fetch
       only:
         description: "Only these catalogue ids (comma-separated, optional)"
         type: string
@@ -13,7 +18,7 @@ on:
         type: boolean
         default: false
       news:
-        description: "Also fetch recent korea.kr articles (KOGL type 1)"
+        description: "Also fetch recent korea.kr articles (KOGL type 1); fetch mode only"
         type: boolean
         default: true
 
@@ -27,7 +32,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -39,44 +44,58 @@ jobs:
         run: cargo build --release -p kdict-pipeline
 
       - name: Fetch texts
+        id: texts
+        continue-on-error: true
+        env:
+          ONLY: ${{ inputs.only }}
+          FORCE: ${{ inputs.force }}
+          MODE: ${{ inputs.mode }}
         run: |
           args=(--catalog pipeline/texts/catalog.toml --out pipeline/texts/raw)
-          if [ -n "${{ inputs.only }}" ]; then args+=(--only "${{ inputs.only }}"); fi
-          if [ "${{ inputs.force }}" = "true" ]; then args+=(--force); fi
+          if [ -n "$ONLY" ]; then args+=(--only "$ONLY"); fi
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          if [ "$MODE" = "discover" ]; then args+=(--discover); fi
           ./target/release/kdict-pipeline fetch-texts "${args[@]}"
 
       - name: Fetch news
-        if: ${{ inputs.news }}
+        id: news
+        if: ${{ inputs.news && inputs.mode != 'discover' }}
+        continue-on-error: true
+        env:
+          FORCE: ${{ inputs.force }}
         run: |
           args=(--catalog pipeline/texts/catalog.toml --out pipeline/texts/raw/news --max 30)
-          if [ "${{ inputs.force }}" = "true" ]; then args+=(--force); fi
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
           ./target/release/kdict-pipeline fetch-news "${args[@]}"
 
-      - name: Report
+      - name: Report summary
         if: always()
         run: |
           for f in pipeline/texts/raw/_report.json pipeline/texts/raw/news/_report.json; do
             [ -f "$f" ] || continue
-            echo "######## $f"
-            python3 - "$f" <<'PY'
+            echo "######## $f" | tee -a "$GITHUB_STEP_SUMMARY"
+            python3 - "$f" <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
           import json, sys
           r = json.load(open(sys.argv[1]))
+          def show(prefix, k, v):
+              print(f"{prefix}{k}: {len(v)}")
+              if k not in ("resolved", "kept"):
+                  for row in v:
+                      print("   ", json.dumps(row, ensure_ascii=False)[:400])
           for k, v in r.items():
               if isinstance(v, list):
-                  print(f"{k}: {len(v)}")
-                  if k != "resolved" and k != "kept":
-                      for row in v:
-                          print("   ", json.dumps(row, ensure_ascii=False)[:300])
+                  show("", k, v)
               elif isinstance(v, dict):
                   for kk, vv in v.items():
-                      print(f"english.{kk}: {len(vv)}")
-                      if kk != "resolved":
-                          for row in vv:
-                              print("   ", json.dumps(row, ensure_ascii=False)[:300])
+                      show("english.", kk, vv)
           PY
           done
+          if [ -f pipeline/texts/raw/_discover.json ]; then
+            python3 -c "import json;d=json.load(open('pipeline/texts/raw/_discover.json'));print('discover entries:',len(d['entries']))"
+          fi
 
-      - name: Commit and push
+      - name: Commit and push (even after a failed fetch)
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -88,3 +107,9 @@ jobs:
           git commit -m "Fetch reader texts [skip ci]"
           git pull --rebase origin "${GITHUB_REF_NAME}" || true
           git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Fail the job if a fetch step failed
+        if: always() && (steps.texts.outcome == 'failure' || steps.news.outcome == 'failure')
+        run: |
+          echo "fetch-texts: ${{ steps.texts.outcome }}, fetch-news: ${{ steps.news.outcome }}"
+          exit 1
