@@ -1,4 +1,4 @@
-import { expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
 
 // The service worker would hide manifest requests from page.route().
 test.use({ serviceWorkers: 'block' });
@@ -26,8 +26,7 @@ async function redownload(page: Page) {
 test('update keeps the old pack usable; corrupt download is rejected', async ({ page }) => {
   test.setTimeout(600_000);
   await page.goto('/');
-  await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(page);
   await search(page, '학교');
   await expect(firstRow(page)).toHaveText('학교');
 

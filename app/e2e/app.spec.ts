@@ -1,4 +1,4 @@
-import { expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -83,8 +83,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await expect(page.getByRole('switch', { name: /표준국어대사전/ })).toBeChecked();
   await expect(page.getByRole('switch', { name: /우리말샘/ })).not.toBeChecked(); // large optional pack: default off
   await shot(page, 'light-firstrun');
-  await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(page);
 
   // ---- searches ----
   await search(page, '학교');
@@ -186,8 +185,7 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
   page.on('console', (m) => { if (m.text().startsWith('KDPERF')) console.log(m.text()); });
   test.setTimeout(600_000);
   await page.goto('/');
-  await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(page);
   // warm the engine (first queries touch cold pages), then measure typing a word keystroke by keystroke
   await typeAndMeasure(page, '학교');
   await page.waitForTimeout(2500); // let background warm-up start

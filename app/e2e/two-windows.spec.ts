@@ -1,4 +1,4 @@
-import { expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
 
 async function search(page: Page, q: string) {
   await page.getByRole('searchbox', { name: 'Search' }).fill(q);
@@ -11,8 +11,7 @@ test('two windows of the app hand the engine over', async ({ context }) => {
   test.setTimeout(600_000);
   const a = await context.newPage();
   await a.goto('/');
-  await a.getByRole('button', { name: 'Download' }).click();
-  await expect(a.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(a);
   await search(a, '학교');
   await expect(a.locator('.row .hw').first()).toHaveText('학교');
   // the optional packs keep installing after the search box appears; a window never gives up

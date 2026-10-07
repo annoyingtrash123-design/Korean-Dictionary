@@ -154,9 +154,14 @@ export const db = {
   packStatus: refreshStatus,
   install: async (pack: ManifestPack, manifestUrl: string, version: string) => {
     // The engine keeps the old pack usable until the new import finishes, so status is refreshed after success AND failure.
+    installsInFlight++;
     installActive.set(true);
     try { const s = await call<PackStatus>('install', pack, manifestUrl, version); packStatus$.set(s); return s; }
-    finally { installActive.set(false); resetTexts(); await refreshStatus().catch(() => undefined); }
+    finally {
+      installsInFlight--;
+      installActive.set(installsInFlight > 0);
+      resetTexts(); await refreshStatus().catch(() => undefined);
+    }
   },
   removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); resetTexts(); packStatus$.set(s); return s; },
 };
@@ -171,6 +176,10 @@ export async function fetchManifest(): Promise<Manifest> {
   return m;
 }
 export const cachedManifest = (): Manifest | null => { try { return JSON.parse(localStorage.getItem(MANIFEST_CACHE) || 'null'); } catch { return null; } };
+
+let installsInFlight = 0;
+// Test hook: number of pack installs still downloading/importing.
+(globalThis as unknown as { __kdInstalling?: () => number }).__kdInstalling = () => installsInFlight;
 
 // Troubleshooting hook: `await __kdDiagnostics()` in the console prints the engine's storage log.
 (globalThis as unknown as { __kdDiagnostics?: () => Promise<string> }).__kdDiagnostics = () => call<string>('diagnostics');

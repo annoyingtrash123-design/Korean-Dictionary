@@ -27,3 +27,11 @@ export const test = base.extend<{ failureDump: void }>({
 });
 
 export { expect, type Page };
+
+/** First-run Download, then wait until every selected pack has finished importing (the search
+ *  box appears as soon as the core pack is usable; the optional packs keep importing after it). */
+export async function downloadAll(page: Page) {
+  await page.getByRole('button', { name: 'Download' }).click();
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await page.waitForFunction(() => (globalThis as unknown as { __kdInstalling?: () => number }).__kdInstalling?.() === 0, null, { timeout: 600_000 });
+}

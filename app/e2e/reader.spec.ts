@@ -1,4 +1,4 @@
-import { expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -130,8 +130,7 @@ async function readerFlow(page: Page) {
 test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ page }) => {
   test.setTimeout(900_000);
   await page.goto('/');
-  await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(page);
   await page.getByRole('link', { name: 'Settings' }).click();
   await page.getByRole('radio', { name: 'Light' }).click();
 

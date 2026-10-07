@@ -1,4 +1,4 @@
-import { expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -56,8 +56,7 @@ test('two-pane tablet layout', async ({ page }) => {
   test.setTimeout(600_000);
   await page.setViewportSize({ width: 1180, height: 820 });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(page);
   await expect(page.locator('.app.wide')).toBeVisible();
   await page.getByRole('link', { name: 'Settings' }).click();
   await page.getByRole('radio', { name: 'Light' }).click();

@@ -1,11 +1,10 @@
-import { expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
 test.use({ serviceWorkers: 'block' });
 
 test('reload during an update import keeps the old pack', async ({ page }) => {
   test.setTimeout(600_000);
   await page.goto('/');
-  await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await downloadAll(page);
   await page.route('**/data/manifest.json*', async (route) => {
     const res = await route.fetch(); const m = await res.json(); m.version += '-y';
     await route.fulfill({ response: res, json: m });

@@ -19,6 +19,7 @@ async function initWithRetry(): Promise<void> {
 }
 const ready = initWithRetry();
 let installing = false;
+let installChain: Promise<void> = Promise.resolve();
 let queue: Promise<void> = Promise.resolve();
 
 let lastStatus: PackStatus | null = null;
@@ -46,12 +47,17 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   packStatus,
   async install(pack: ManifestPack, manifestUrl: string, version: string) {
     await ready;
-    if (installing) throw new Error('An install is already running');
-    if (!lastStatus) await packStatus(); // remember what is installed before the engine gets busy
-    installing = true;
-    try { await installPack(engine, pack, manifestUrl, version, (p) => post({ event: 'progress', payload: p })); }
-    finally { installing = false; }
-    return packStatus();
+    // One import at a time: a second request (e.g. the Reader library while the first-run download
+    // is still importing) waits its turn instead of failing.
+    const run = installChain.then(async () => {
+      if (!lastStatus) await packStatus(); // remember what is installed before the engine gets busy
+      installing = true;
+      try { await installPack(engine, pack, manifestUrl, version, (p) => post({ event: 'progress', payload: p })); }
+      finally { installing = false; }
+      return packStatus();
+    });
+    installChain = run.then(() => undefined, () => undefined);
+    return run;
   },
   async removePack(id: string) { await ready; if (installing) throw new Error('An install is running — try again when it finishes'); await engine.deletePack(id); await forgetPack(id); return packStatus(); },
   async search(q: string, o: { packs: string[]; limit?: number }) {
