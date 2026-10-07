@@ -533,6 +533,14 @@ fn pipeline_output_if_present() {
     assert!(r.rows.iter().any(|x| x.headword == "가다"));
     assert!(!grammar_list(&[&core]).unwrap().is_empty());
     assert!(word_of_day(&[&core], "2025-06-01").unwrap().is_some());
+    // English ranking: the everyday word comes first.
+    for (q, want) in [("eat", "먹다"), ("school", "학교"), ("go", "가다"), ("water", "물"), ("snow", "눈"), ("thank", "고맙다|감사하다"), ("beautiful", "아름답다"), ("love", "사랑")] {
+        let rows = search(&[&core], q, None).unwrap().rows;
+        let top: Vec<String> = rows.iter().take(8).map(|r| format!("{}({})", r.headword, r.source)).collect();
+        eprintln!("{q}: {}", top.join(", "));
+        let want: Vec<&str> = want.split('|').collect();
+        assert!(rows.iter().take(3).any(|r| want.contains(&r.headword.as_str())), "{q}: expected {want:?} in top 3, got {top:?}");
+    }
 }
 
 /// The app's committed fixture packs (gzip chunks + manifest) built by app/scripts/make-fixture.py.

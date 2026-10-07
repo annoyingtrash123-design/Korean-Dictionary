@@ -17,7 +17,8 @@ CREATE TABLE entries (
   kind      TEXT NOT NULL,
   gloss     TEXT,
   data      TEXT NOT NULL,
-  ext_id    TEXT
+  ext_id    TEXT,
+  quality   INTEGER NOT NULL DEFAULT 0
 );
 CREATE TABLE forms (form TEXT NOT NULL, entry_id INTEGER NOT NULL);
 CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL);
@@ -31,7 +32,7 @@ CREATE INDEX hanja_words_ch ON hanja_words(ch);
 "#;
 
 pub const CORE_ONLY: &str = r#"
-CREATE VIRTUAL TABLE entries_fts USING fts5(en, content='', tokenize='porter unicode61');
+CREATE VIRTUAL TABLE entries_fts USING fts5(head, en, content='', tokenize='porter unicode61');
 CREATE TABLE hanja_chars (
   ch TEXT PRIMARY KEY, readings TEXT,
   meaning_en TEXT, strokes INTEGER, radical TEXT, word_count INTEGER,

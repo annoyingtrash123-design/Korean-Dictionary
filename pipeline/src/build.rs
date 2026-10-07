@@ -187,14 +187,33 @@ pub fn entry_gloss(e: &Entry) -> Option<String> {
     None
 }
 
-fn fts_text(e: &Entry) -> String {
-    let mut parts: Vec<&str> = sense_strs(e, "gloss").collect();
-    if parts.is_empty() {
-        parts = sense_strs(e, "def").collect();
-    }
+/// (head, en): `head` = the short English glosses only; `en` = the longer English definitions
+/// (kept out of `head` so that a plain gloss match is not diluted by definition length).
+fn fts_text(e: &Entry) -> (String, String) {
     let mut seen = HashSet::new();
+    let mut parts: Vec<&str> = sense_strs(e, "gloss").collect();
     parts.retain(|p| seen.insert(*p));
-    parts.join(" ; ")
+    let head = parts.join(" ; ");
+    let mut en = String::new();
+    for d in sense_strs(e, "def").take(8) {
+        if !en.is_empty() {
+            en.push_str(" ; ");
+        }
+        en.push_str(&truncate(d, 300));
+    }
+    (head, en)
+}
+
+/// Result-quality hint for the engine (0 = best): source tier + 1 for phrases/idioms/proverbs.
+pub fn quality(e: &Entry) -> i64 {
+    let base = match e.source {
+        "krdict" => 0,
+        "wikt" => 1,
+        "stdict" => 2,
+        "kengdic" => 3,
+        _ => 4,
+    };
+    base + i64::from(matches!(e.kind.as_str(), "phrase" | "proverb" | "idiom"))
 }
 
 #[derive(Default)]
@@ -209,9 +228,9 @@ fn insert_entry(conn: &Connection, e: &Entry, rank: i64, fts: bool, c: &mut Coun
     let gloss = entry_gloss(e);
     let data = serde_json::to_string(&e.data)?;
     conn.prepare_cached(
-        "INSERT INTO entries(headword,hw_norm,homonym,hanja,pos,pron,source,lang,level,rank,kind,gloss,data,ext_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO entries(headword,hw_norm,homonym,hanja,pos,pron,source,lang,level,rank,kind,gloss,data,ext_id,quality) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
     )?
-    .execute(params![e.headword, hwn, e.homonym, e.hanja, e.pos, e.pron, e.source, e.lang, e.level, rank, e.kind, gloss, data, e.ext_id])?;
+    .execute(params![e.headword, hwn, e.homonym, e.hanja, e.pos, e.pron, e.source, e.lang, e.level, rank, e.kind, gloss, data, e.ext_id, quality(e)])?;
     let id = conn.last_insert_rowid();
     let mut seen: HashSet<String> = HashSet::new();
     seen.insert(hwn.clone());
@@ -229,9 +248,9 @@ fn insert_entry(conn: &Connection, e: &Entry, rank: i64, fts: bool, c: &mut Coun
         }
     }
     if fts {
-        let t = fts_text(e);
-        if !t.is_empty() {
-            conn.prepare_cached("INSERT INTO entries_fts(rowid, en) VALUES(?,?)")?.execute(params![id, t])?;
+        let (head, en) = fts_text(e);
+        if !head.is_empty() || !en.is_empty() {
+            conn.prepare_cached("INSERT INTO entries_fts(rowid, head, en) VALUES(?,?,?)")?.execute(params![id, head, en])?;
         }
     }
     c.entries += 1;
@@ -246,6 +265,8 @@ struct GrammarRow {
     level: Option<i64>,
     summary: Option<String>,
     key: String,
+    rank: i64,
+    jamo_last: bool,
 }
 
 const CATEGORIES: [&str; 6] =
@@ -364,23 +385,58 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     };
 
     // krdict
+    let mut krdict_ids: HashMap<String, Vec<(Option<i64>, i64)>> = HashMap::new();
+    let mut pointers: Vec<(String, Pointer)> = Vec::new();
     for p in &src.krdict {
         let t = Instant::now();
         let before = c.entries;
-        krdict::parse_file(p, |e| {
+        krdict::parse_file(p, |mut e| {
+            if let Some(ptr) = e.pointer.take() {
+                pointers.push((e.headword.clone(), ptr));
+                return Ok(());
+            }
             let rank = ranker.rank(&e);
             let id = insert_entry(&conn, &e, rank, true, &mut c)?;
+            krdict_ids.entry(hw_norm(&e.headword)).or_default().push((e.homonym, id));
             if let Some(cat) = grammar_category(&e) {
                 let summary = senses(&e).iter().find_map(|s| s.get("def").or_else(|| s.get("ko_def")).and_then(Value::as_str)).map(|d| truncate(d, 200));
-                grammar.push(GrammarRow { entry_id: id, pattern: e.headword.clone(), category: cat, level: e.level, summary, key: hw_norm(&e.headword) });
+                // bare-jamo particles (ㄴ, ㄹ랑...) are contractions: list them after the full forms
+                let jamo_last = cat == "Particles" && e.headword.chars().next().is_some_and(|c| ('\u{3131}'..='\u{318E}').contains(&c));
+                grammar.push(GrammarRow { entry_id: id, pattern: e.headword.clone(), category: cat, level: e.level, summary, key: hw_norm(&e.headword), rank, jamo_last });
             }
             Ok(())
         })
         .with_context(|| format!("krdict {}", p.display()))?;
         log::info!("krdict {}: {} entries ({:.1}s)", p.file_name().unwrap().to_string_lossy(), c.entries - before, t.elapsed().as_secs_f32());
     }
+    // conjugation-pointer entries -> forms of the entries they point to
+    {
+        let (mut n_forms, mut unresolved) = (0i64, 0i64);
+        for (hw, ptr) in &pointers {
+            let mut forms: Vec<String> = ptr.forms.iter().map(|f| hw_norm(f)).collect();
+            forms.push(hw_norm(hw)); // the bare stem
+            for (lemma, hom) in &ptr.targets {
+                let ln = hw_norm(lemma);
+                let ids: Vec<i64> = krdict_ids
+                    .get(&ln)
+                    .map(|v| v.iter().filter(|(h, _)| hom.is_none() || h == hom).map(|(_, id)| *id).collect())
+                    .unwrap_or_default();
+                if ids.is_empty() {
+                    unresolved += 1;
+                }
+                for id in ids {
+                    for f in forms.iter().filter(|f| !f.is_empty() && **f != ln) {
+                        conn.prepare_cached("INSERT INTO forms(form, entry_id) VALUES(?,?)")?.execute(params![f, id])?;
+                        n_forms += 1;
+                    }
+                }
+            }
+        }
+        log::info!("krdict pointer entries: {} dropped, {} forms added, {} unresolved targets", pointers.len(), n_forms, unresolved);
+    }
 
     // wiktionary
+    let mut wikt_norms: HashSet<String> = HashSet::new();
     let mut wikt_sentences: Vec<(String, String)> = Vec::new();
     if let Some(p) = &src.kaikki {
         let t = Instant::now();
@@ -390,6 +446,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 for e in &k.entries {
                     let rank = ranker.rank(e);
                     insert_entry(&conn, e, rank, true, &mut c)?;
+                    wikt_norms.insert(hw_norm(&e.headword));
                 }
                 // form-of / alt-of -> target
                 let mut added = 0i64;
@@ -419,10 +476,18 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
 
     // kengdic entries
     if let Some(k) = &kd {
+        // kengdic-only words: skip surfaces that krdict or wikt already cover
+        let mut skipped = 0;
         for e in &k.entries {
+            let n = hw_norm(&e.headword);
+            if krdict_ids.contains_key(&n) || wikt_norms.contains(&n) {
+                skipped += 1;
+                continue;
+            }
             let rank = ranker.rank(e);
             insert_entry(&conn, e, rank, true, &mut c)?;
         }
+        log::info!("kengdic: {} kept (kengdic-only), {} skipped as already in krdict/wikt", k.entries.len() - skipped, skipped);
         // hanja fallback for krdict / wikt entries lacking it
         let mut cnt: HashMap<(String, String), i64> = HashMap::new();
         {
@@ -494,7 +559,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
 
     // grammar table
     grammar.sort_by(|a, b| {
-        (cat_order(a.category), a.level.unwrap_or(4), &a.key).cmp(&(cat_order(b.category), b.level.unwrap_or(4), &b.key))
+        (cat_order(a.category), a.jamo_last, a.level.unwrap_or(4), a.rank, &a.key).cmp(&(cat_order(b.category), b.jamo_last, b.level.unwrap_or(4), b.rank, &b.key))
     });
     for (i, g) in grammar.iter().enumerate() {
         conn.prepare_cached("INSERT INTO grammar(entry_id,pattern,category,level,summary_en,sort) VALUES(?,?,?,?,?,?)")?
@@ -502,6 +567,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     }
 
     conn.execute_batch(schema::COMMON_INDEXES)?;
+    conn.execute_batch("DELETE FROM forms WHERE rowid NOT IN (SELECT MIN(rowid) FROM forms GROUP BY form, entry_id)")?;
 
     // hanja characters
     let uni = match &src.unihan {

@@ -232,6 +232,7 @@ fn merge(mut items: Vec<Item>) -> Option<Entry> {
         forms,
         data: Value::Object(data),
         ko_defs,
+        pointer: None,
     })
 }
 

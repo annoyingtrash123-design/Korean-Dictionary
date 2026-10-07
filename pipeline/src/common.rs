@@ -2,6 +2,39 @@
 
 use serde_json::Value;
 
+/// krdict conjugation pointer ("(배고, 배어)→ 배다 1, 배다 2"): not an entry, just forms of other entries.
+#[derive(Debug, Clone, Default)]
+pub struct Pointer {
+    pub forms: Vec<String>,
+    /// (lemma, homonym number if given)
+    pub targets: Vec<(String, Option<i64>)>,
+}
+
+/// Parse `(form, form, ...)→ lemma N, lemma` (also `→‘lemma’`).
+pub fn parse_pointer(def: &str) -> Option<Pointer> {
+    let d = def.trim();
+    let rest = d.strip_prefix('(')?;
+    let close = rest.find(')')?;
+    let forms: Vec<String> = rest[..close].split(',').map(|f| f.trim().to_string()).filter(|f| !f.is_empty()).collect();
+    let tail = rest[close + 1..].trim_start().strip_prefix('→')?;
+    let mut targets = Vec::new();
+    for part in tail.split(',') {
+        let p = part.trim().trim_matches(|c| matches!(c, '‘' | '’' | '\'' | '"' | ' '));
+        let (word, hom) = match p.rsplit_once(' ') {
+            Some((w, n)) if n.chars().all(|c| c.is_ascii_digit()) && !n.is_empty() => (w.trim(), n.parse::<i64>().ok()),
+            _ => (p, None),
+        };
+        if word.is_empty() || !word.ends_with('다') || word.contains(' ') {
+            return None;
+        }
+        targets.push((word.to_string(), hom));
+    }
+    if forms.is_empty() || targets.is_empty() {
+        return None;
+    }
+    Some(Pointer { forms, targets })
+}
+
 /// One dictionary entry, source-agnostic, ready to be inserted into SQLite.
 #[derive(Debug, Clone, Default)]
 pub struct Entry {
@@ -20,6 +53,7 @@ pub struct Entry {
     pub data: Value,
     /// Korean definitions of all senses (used for grammar categorisation).
     pub ko_defs: Vec<String>,
+    pub pointer: Option<Pointer>,
 }
 
 // --- CJK / hangul --------------------------------------------------------

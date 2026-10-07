@@ -21,6 +21,8 @@ pub struct Caps {
     pub sentences: bool,
     pub sentences_fts: bool,
     pub grammar: bool,
+    /// `entries_fts` has the short-gloss `head` column (weighted higher).
+    pub fts_head: bool,
 }
 
 /// An opened pack database.
@@ -45,6 +47,11 @@ impl PackDb {
             sentences: names.contains("sentences"),
             sentences_fts: names.contains("sentences_fts"),
             grammar: names.contains("grammar"),
+            fts_head: names.contains("entries_fts")
+                && conn
+                    .query("SELECT name FROM pragma_table_info('entries_fts')", &[])
+                    .map(|r| r.iter().any(|r| r.string(0) == "head"))
+                    .unwrap_or(false),
         };
         Ok(PackDb { id: id.to_string(), conn, caps })
     }
@@ -322,24 +329,86 @@ pub fn fts_query(text: &str) -> Option<String> {
     Some(parts.join(" "))
 }
 
+/// Source quality tier for English results: lower is better.
+fn quality(r: &ResultRow) -> i64 {
+    let src = match r.source.as_str() {
+        "krdict" => 0,
+        "wikt" => 1,
+        "kengdic" => 3,
+        _ => 2,
+    };
+    let kind = if matches!(r.kind.as_str(), "phrase" | "idiom" | "proverb") { 1 } else { 0 };
+    src + kind
+}
+
+/// How well the entry's short glosses match the query: 0 first gloss is exactly the query,
+/// 1 another gloss is, 2 a gloss starts with the query ("thank" → "thankful"), 3 other.
+fn gloss_tier(gloss: Option<&str>, q: &str) -> u8 {
+    let Some(g) = gloss else { return 3 };
+    let mut best = 3;
+    for (i, item) in g.split([';', ',']).enumerate() {
+        let item = item.trim().to_lowercase();
+        let item = item.strip_prefix("to ").unwrap_or(&item);
+        if item == q {
+            return if i == 0 { 0 } else { 1 };
+        }
+        if item.starts_with(q) {
+            best = best.min(2);
+        }
+    }
+    best
+}
+
+const FTS_CANDIDATES: i64 = 300;
+
 fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult> {
-    let mut hits: Vec<(f64, ResultRow)> = Vec::new();
+    let ql: String = q.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase();
+    // (tier, quality-adjusted score) per row; rows can come from several queries.
+    let mut hits: HashMap<(String, i64), (u8, f64, ResultRow)> = HashMap::new();
     if let Some(m) = fts_query(q) {
         for p in packs.iter().filter(|p| p.caps.entries_fts) {
-            let sql = format!(
-                "SELECT {COLS}, bm25(entries_fts) AS sc FROM entries_fts JOIN entries e ON e.id = entries_fts.rowid \
-                 WHERE entries_fts MATCH ?1 ORDER BY sc, e.rank LIMIT ?2"
-            );
-            for r in p.conn.query(&sql, &[m.as_str().into(), (limit as i64).into()])? {
-                let score = r.real(13).unwrap_or(0.0);
-                hits.push((score, result_row(&p.id, &r, Some("fts"))));
+            let bm = if p.caps.fts_head { "bm25(entries_fts, 10.0, 1.0)" } else { "bm25(entries_fts)" };
+            // The exact-token query keeps short common words ("go") from being crowded out
+            // by the prefix query's many matches ("good", "gold", …).
+            let exact = m.trim_end_matches('*').to_string();
+            let mut exprs = vec![exact.clone(), m.clone()];
+            if p.caps.fts_head {
+                exprs.insert(0, format!("head : ({exact})"));
+            }
+            for expr in exprs {
+                let sql = format!(
+                    "SELECT {COLS}, {bm} AS sc FROM entries_fts JOIN entries e ON e.id = entries_fts.rowid \
+                     WHERE entries_fts MATCH ?1 ORDER BY sc, e.rank LIMIT ?2"
+                );
+                for r in p.conn.query(&sql, &[expr.as_str().into(), FTS_CANDIDATES.into()])? {
+                    let score = r.real(13).unwrap_or(0.0);
+                    let row = result_row(&p.id, &r, Some("fts"));
+                    let tier = gloss_tier(row.gloss.as_deref(), &ql);
+                    hits.entry(key(&row)).or_insert((tier, score, row));
+                }
             }
         }
     }
-    hits.sort_by(|a, b| a.0.partial_cmp(&b.0).unwrap_or(std::cmp::Ordering::Equal).then(a.1.rank.cmp(&b.1.rank)));
+    let mut v: Vec<(u8, f64, ResultRow)> = hits.into_values().collect();
+    // Gloss matches: best (tier + source) first, then the most frequent word.
+    // Everything else: text relevance, nudged down for weaker sources.
+    // Gloss matches are keyed on match tier + source quality, so a learner's-dictionary prefix
+    // match ("thank" → "thankful") beats an exact match from a noisy source.
+    let key = |h: &(u8, f64, ResultRow)| if h.0 < 3 { (0, h.0 as i64 + quality(&h.2)) } else { (1, 0) };
+    v.sort_by(|a, b| {
+        key(a).cmp(&key(b)).then_with(|| {
+            if a.0 < 3 {
+                a.2.rank.cmp(&b.2.rank)
+            } else {
+                let sa = a.1 * (1.0 - 0.15 * quality(&a.2) as f64);
+                let sb = b.1 * (1.0 - 0.15 * quality(&b.2) as f64);
+                sa.partial_cmp(&sb).unwrap_or(std::cmp::Ordering::Equal).then(a.2.rank.cmp(&b.2.rank))
+            }
+        })
+    });
     let mut out = Vec::new();
     let mut seen = HashSet::new();
-    push_new(&mut out, &mut seen, hits.into_iter().map(|h| h.1).collect());
+    push_new(&mut out, &mut seen, v.into_iter().map(|h| h.2).collect());
     out.truncate(limit);
     Ok(SearchResult { mode: "english", rows: out, hanja: None, deconj: None, grammar_hints: None })
 }

@@ -170,6 +170,7 @@ pub fn parse_entry(le: &Node) -> Option<Entry> {
         }
     }
 
+    let senses_len = senses.len();
     let mut data = Map::new();
     data.insert("senses".into(), senses.into());
     if !related.is_empty() {
@@ -181,6 +182,28 @@ pub fn parse_entry(le: &Node) -> Option<Entry> {
     }
     if let Some(o) = origin_note {
         data.insert("origin_note".into(), o.into());
+    }
+
+    // conjugation pointer entry ("배-": "(배고, 배어)→ 배다 1, 배다 2")
+    let mut pointer: Option<Pointer> = None;
+    if ko_pos == "품사 없음" && kind == "word" && headword.ends_with('-') && !ko_defs.is_empty() && ko_defs.len() == senses_len {
+        let mut all = Pointer::default();
+        let mut ok = true;
+        for d in &ko_defs {
+            match parse_pointer(d) {
+                Some(p) => {
+                    all.forms.extend(p.forms);
+                    all.targets.extend(p.targets);
+                }
+                None => {
+                    ok = false;
+                    break;
+                }
+            }
+        }
+        if ok {
+            pointer = Some(all);
+        }
     }
 
     Some(Entry {
@@ -198,6 +221,7 @@ pub fn parse_entry(le: &Node) -> Option<Entry> {
         forms,
         data: Value::Object(data),
         ko_defs,
+        pointer,
     })
 }
 

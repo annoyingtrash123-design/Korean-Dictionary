@@ -236,6 +236,7 @@ pub fn parse_item(item: &Node) -> Option<Entry> {
         forms,
         data: Value::Object(data),
         ko_defs,
+        pointer: None,
     })
 }
 

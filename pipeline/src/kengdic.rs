@@ -34,6 +34,38 @@ pub fn clean_gloss(g: &str) -> String {
     out
 }
 
+const PROPER: &[&str] = &[
+    "Korea", "Korean", "Koreans", "Seoul", "Pacific", "Atlantic", "Japan", "Japanese", "China", "Chinese", "English", "America", "American",
+    "Asia", "Asian", "Europe", "European", "Buddha", "Buddhist", "Buddhism", "God", "Christ", "Christian", "Christianity", "Confucian",
+    "Confucius", "Catholic", "Islam", "Muslim", "Jesus", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+    "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
+    "Russia", "Russian", "France", "French", "Germany", "German", "England", "British", "Britain", "India", "Indian", "Mongol", "Mongolia",
+    "Manchu", "Manchuria", "Pyongyang", "Busan", "Jeju", "Silla", "Goryeo", "Joseon", "Baekje", "Goguryeo", "Hanguk", "Hangeul", "Hangul",
+    "Latin", "Greek", "Sanskrit", "Taoism", "Taoist", "Shinto", "Africa", "African", "Australia", "Canada", "Mr", "Mrs", "Ms", "Dr",
+];
+
+/// Lowercase the first letter of each "; "-separated segment when it is just sentence-initial
+/// capitalisation (heuristic: first word is Capitalised + lowercase rest, not a known proper noun).
+pub fn normalize_case(g: &str) -> String {
+    g.split("; ").map(lower_first).collect::<Vec<_>>().join("; ")
+}
+
+fn lower_first(seg: &str) -> String {
+    let first_word: String = seg.chars().take_while(|c| c.is_ascii_alphabetic() || *c == '\'').collect();
+    let mut cs = first_word.chars();
+    let Some(c0) = cs.next() else { return seg.to_string() };
+    let rest: String = cs.collect();
+    if !c0.is_ascii_uppercase() || PROPER.contains(&first_word.as_str()) || first_word.contains('\'') && first_word.starts_with("I'") {
+        return seg.to_string();
+    }
+    let rest_lower = rest.chars().all(|c| c.is_ascii_lowercase());
+    // keep "I", acronyms (TV, DNA) and mixed-case words
+    if first_word == "I" || !rest_lower || (rest.is_empty() && first_word != "A") {
+        return seg.to_string();
+    }
+    format!("{}{}", c0.to_ascii_lowercase(), &seg[1..])
+}
+
 fn is_junk(g: &str) -> bool {
     let l = g.to_lowercase();
     l.contains("adds no meaning") || l.starts_with("vst +") || l.starts_with("vs +")
@@ -111,6 +143,15 @@ pub fn parse<R: BufRead>(mut rd: R) -> Result<Kengdic> {
         if gloss.is_empty() || gloss.chars().count() > 250 || is_junk(&gloss) {
             continue;
         }
+        // quality filters: no Latin letters in a Korean headword, no gloss without
+        // ASCII letters, and glosses that merely repeat the headword
+        if surface.chars().any(|c| c.is_ascii_alphabetic())
+            || !gloss.chars().any(|c| c.is_ascii_alphabetic())
+            || gloss.to_lowercase() == surface.to_lowercase()
+        {
+            continue;
+        }
+        let gloss = normalize_case(&gloss);
         let level = row.get(4).map(|s| s.trim().to_uppercase()).unwrap_or_default();
         let key = (surface.clone(), hanja.clone());
         let i = *idx.entry(key).or_insert_with(|| {
