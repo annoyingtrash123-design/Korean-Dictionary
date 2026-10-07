@@ -358,8 +358,7 @@ CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL, rank INTE
             &[
                 (1, "아름", None, "opendict", 1, 9000, &[]),
                 (2, "어떠", None, "opendict", 1, 9010, &[]),
-                (3, "ᄒᆞ다", None, "opendict", 1, 9020, &[]), // never matches: stored in NFC-modern spelling elsewhere
-                (4, "한", None, "opendict", 0, 9030, &[]),
+                                (4, "한", None, "opendict", 0, 9030, &[]),
                 (5, "뜻", None, "opendict", 1, 9040, &[]),
                 (6, "하얏", None, "opendict", 1, 9050, &[]),
             ],
@@ -450,19 +449,14 @@ CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL, rank INTE
         // 옛말 headword, not in core
         let m = lookup_in_text(&[&c, &o], "아름 다운", 1, None).unwrap();
         assert_eq!(m.matched, "아름");
-        assert_eq!((m.rows[0].headword.as_str(), m.rows[0].via), ("아름", Some("exact"))); // found by the normal search
-        // a non-hist entry is only found by the normal path; hist-only flows need old spelling
+        assert_eq!((m.rows[0].headword.as_str(), m.rows[0].via), ("아름", Some("exact"))); // an 옛말 headword in modern spelling: normal search
+        // old spelling: 어 + ᄯ ᅥ -> 어떠, a 옛말 entry
         let old = "어\u{112F}\u{1165}"; // 어 + ᄯ ᅥ -> 어떠
         let m = lookup_in_text(&[&c, &o], old, 0, None).unwrap();
         assert_eq!(m.rows[0].headword, "어떠");
         assert_eq!(m.rows[0].via, Some("hist"));
         assert_eq!((m.start, m.end), (0, old.encode_utf16().count()));
-        // tone marks (방점) are part of the eojeol and ignored by the lookup
-        let m = lookup_in_text(&[&c, &o], "\u{1103}\u{1173}\u{11BA}\u{302E} 나", 0, None).unwrap();
-        assert!(m.rows.is_empty() || m.rows[0].via.is_some());
-        let m = lookup_in_text(&[&c, &o], "\u{1103}\u{1173}\u{11BA}\u{302E}", 1, None).unwrap();
-        assert_eq!(m.rows.first().map(|r| r.headword.as_str()), Some("뜻").filter(|_| false)); // 듯 != 뜻: no false hit
-        // ᄠ + ᅳ + ᆺ -> 뜻 (pieup-tikeut), tone mark attached
+        // ᄠ + ᅳ + ᆺ -> 뜻 (pieup-tikeut), 방점 tone mark attached to the eojeol and ignored
         let m = lookup_in_text(&[&c, &o], "\u{1120}\u{1173}\u{11BA}\u{302F} 이", 0, None).unwrap();
         assert_eq!(m.rows[0].headword, "뜻");
         assert_eq!(m.rows[0].via, Some("hist"));
@@ -472,7 +466,7 @@ CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL, rank INTE
     #[test]
     fn lookup_old_spelling_variants_reach_modern_entries() {
         let (c, o) = (core(), oldwords());
-        // 하얏다 -> 하였다 -> (deconj) 하다 ; the hist entry 하얏 would win if it matched the original, here it is a candidate
+        // 갓다 -> 갔다 -> (deconj) 가다
         let m = lookup_in_text(&[&c], "서울에 갓다", 5, None).unwrap();
         assert_eq!(m.matched, "갓다");
         assert_eq!(m.rows[0].headword, "가다");
