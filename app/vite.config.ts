@@ -37,7 +37,7 @@ export default defineConfig({
     }),
   ],
   worker: { format: 'es' },
-  optimizeDeps: { exclude: ['@sqlite.org/sqlite-wasm'] },
+  
   build: { target: 'es2022', sourcemap: false },
   test: { environment: 'jsdom', include: ['src/**/*.test.ts'], setupFiles: ['src/test-setup.ts'] },
 });

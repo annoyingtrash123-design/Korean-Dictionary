@@ -30,7 +30,7 @@ The e2e run also writes screenshots to `../docs/screenshots/`.
 ## Layout
 
 - `src/db/engine.ts` — the only file that touches SQLite; implements the `Engine` interface from `src/db/types.ts`.
-  Currently a temporary sqlite-wasm (opfs-sahpool) implementation (`queries.ts`, `temp-deconj.ts`);
+  Currently a temporary Rust/wasm engine implementation (`queries.ts`, `temp-deconj.ts`);
   the Rust/wasm engine (`npm run build:core`) replaces it behind the same interface.
 - `src/db/worker.ts` — dedicated worker, message RPC (`rpc.ts`) + download manager (`download.ts`).
 - `src/db/client.ts` — main-thread proxy (`db.*`), progress and pack-status stores.
