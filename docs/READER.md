@@ -109,3 +109,27 @@ Every AI-produced field is labelled in the UI ("AI-written", "AI-generated trans
 - `vocab[].level` is recomputed from krdict (초급 1 / 중급 2 / 고급 3; absent → null) and every
   `vocab[].word` must resolve to a dictionary headword (directly or via deconjugation) — unresolved
   words fail the build with a list.
+
+## `texts` pack + engine API (contract between pipeline, engine and UI)
+
+SQLite pack `texts` (optional, `required: false`, label "Reader library"):
+```sql
+CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);
+CREATE TABLE texts (
+  id TEXT PRIMARY KEY, sort INTEGER NOT NULL,
+  shelf TEXT NOT NULL, period TEXT, year INTEGER, script TEXT NOT NULL,
+  level TEXT, chars INTEGER NOT NULL,           -- length of orig text
+  meta TEXT NOT NULL,        -- JSON: catalog fields (titles, author, dates, themes, excerpt, pd_basis, …)
+  card TEXT NOT NULL, notes TEXT NOT NULL,      -- JSON (see enriched format)
+  provenance TEXT NOT NULL,  -- JSON: {source, url, page_title, revision_id, revision_timestamp, edition, licence, fetched_at, english_source?}
+  labels TEXT NOT NULL, review TEXT NOT NULL,   -- JSON
+  vocab TEXT, questions TEXT                    -- JSON or NULL
+);
+CREATE TABLE paragraphs (text_id TEXT NOT NULL, n INTEGER NOT NULL, orig TEXT NOT NULL,
+  modern TEXT, reading TEXT, en TEXT, PRIMARY KEY (text_id, n)) WITHOUT ROWID;
+```
+Engine (wasm `Engine` + TS `Engine` interface):
+- `listTexts(): TextSummary[]` — `{id, shelf, period, year, script, level, chars, title_ko, title_en, author_ko, author_en, date, themes, excerpt, labels}` sorted by `sort`.
+- `getText(id): TextDoc | null` — `{id, meta, card, notes, provenance, labels, review, vocab, questions, paragraphs: [{n, orig, modern, reading, en}]}`.
+- `lookupInText(text, offset, {packs})` — already implemented (UTF-16 offsets).
+News articles are texts with shelf `news` (period `modern`), refreshed each build.
