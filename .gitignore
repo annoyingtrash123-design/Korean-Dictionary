@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.cache/
+pipeline/.work/
+pipeline/out/
+__pycache__/
+*.pyc
+.venv/
+app/public/data/
+*.sqlite
+*.sqlite.gz

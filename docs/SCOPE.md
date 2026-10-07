@@ -1,0 +1,163 @@
+# Korean Dictionary — Scope & Architecture
+
+An offline, Pleco-inspired Korean–English dictionary for iPhone and Android,
+delivered as an installable Progressive Web App (PWA) hosted on GitHub Pages.
+
+## Requirements (from interview)
+
+| Area | Decision |
+|---|---|
+| Platforms | iPhone + Android, one codebase |
+| Delivery | Offline PWA (Add to Home Screen), GitHub Pages, public repo |
+| Data size | As large as needed (~100–200 MB one-time download) |
+| Dictionaries | English: krdict (NIKL learner's dict), Wiktionary (kaikki), kengdic. Korean–Korean: 표준국어대사전 (stdict) as a secondary, toggleable dictionary |
+| Per entry | Headword, hanja, pronunciation, POS, level, English definitions, example sentences, related words / synonyms / antonyms, usage notes |
+| Search | Korean (prefix + exact), conjugation-aware (갔어요 → 가다), English → Korean, hanja (學 → 학교, 학생…) |
+| Extra features | Bookmarks in folders, search history, hanja character breakdown, grammar reference, usage notes |
+| Home screen | Word of the day + recent history |
+| Theming | Light / dark / sepia presets + custom accent, background, text, hangul and hanja colours, font size |
+| Not included | OCR, flashcards, TTS, romanization input, text reader (can be added later) |
+
+## Architecture
+
+```
+GitHub Actions (full internet)                     Phone (offline)
+┌────────────────────────────────┐                 ┌───────────────────────────────┐
+│ pipeline/ (Python)              │                 │ PWA (Vite + Preact + TS)      │
+│  fetch → parse → merge → SQLite │──► Pages ──────►│  service worker: app shell    │
+│  core.sqlite  (EN dicts, hanja, │   site/data/    │  worker: sqlite-wasm + OPFS   │
+│   grammar, sentences)           │   *.gz chunks   │  IndexedDB: bookmarks/history │
+│  stdict.sqlite (KO-KO)          │   manifest.json │  localStorage: settings/theme │
+└────────────────────────────────┘                 └───────────────────────────────┘
+```
+
+* Data is built in CI because the source sites are large and change over time.
+  Each source is optional: if a download fails the build continues without it.
+* Each data **pack** is a standalone SQLite DB, gzip-compressed and split into
+  ≤ 20 MB chunks. On first run the app streams the chunks, decompresses them
+  with `DecompressionStream`, and writes the DB into OPFS (the `opfs-sahpool`
+  VFS works on iOS Safari 16.4+ without COOP/COEP headers).
+* Packs: `core` (required) and `stdict` (optional, can be enabled or disabled in settings).
+
+## Data sources
+
+| Source | Content | Licence | Where fetched |
+|---|---|---|---|
+| krdict 한국어기초사전 | ~53k entries, English equivalents, hanja, examples, related words, grammar entries | CC BY-SA 2.0 KR | github.com/spellcheck-ko/korean-dict-nikl `krdict/*.xml` |
+| stdict 표준국어대사전 | ~436k entries, Korean defs, hanja, conjugations | CC BY-SA 2.0 KR (examples with a `<source>` citation are **excluded** — not open) | same repo `stdict/*.xml` |
+| Wiktionary via kaikki.org | Korean entries with English glosses, hanja, translated examples | CC BY-SA 4.0 | kaikki.org JSONL |
+| kengdic | ~130k Korean–English pairs + hanja | MPL 2.0 / LGPL | raw.githubusercontent.com/garfieldnate/kengdic |
+| Tatoeba | Korean–English sentence pairs | CC BY 2.0 FR | downloads.tatoeba.org |
+| Unihan | Hanja readings (kHangul), English meaning, strokes, radical | Unicode licence | unicode.org |
+| FrequencyWords (OpenSubtitles) | Word frequency for ranking | CC BY-SA 4.0 | raw.githubusercontent.com/hermitdave/FrequencyWords |
+
+## Database contract (both packs use the same `entries` schema)
+
+```sql
+CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);          -- pack, version, built_at, counts JSON, sources JSON
+
+CREATE TABLE entries (
+  id        INTEGER PRIMARY KEY,
+  headword  TEXT NOT NULL,     -- as displayed, e.g. '먹다', '-아서'
+  hw_norm   TEXT NOT NULL,     -- lookup key: headword with '-', '^', ' ', '·' removed
+  homonym   INTEGER,           -- homonym number (krdict/stdict), else NULL
+  hanja     TEXT,              -- e.g. '學校' (mixed allowed, e.g. 'ㄱㄴㄷ順'); NULL if native
+  pos       TEXT,              -- normalised English: noun, verb, adjective, adverb, pronoun, numeral,
+                               -- determiner, particle, ending, affix, interjection, auxiliary verb,
+                               -- auxiliary adjective, bound noun, phrase, idiom, proverb, expression, other
+  pron      TEXT,              -- pronunciation in hangul, e.g. '머ː따'
+  source    TEXT NOT NULL,     -- 'krdict' | 'wikt' | 'kengdic' | 'stdict'
+  lang      TEXT NOT NULL,     -- definition language: 'en' | 'ko'
+  level     INTEGER,           -- krdict 1=초급 2=중급 3=고급, else NULL
+  rank      INTEGER NOT NULL,  -- sort key, lower = more important (see below)
+  kind      TEXT NOT NULL,     -- 'word' | 'phrase' | 'idiom' | 'proverb' | 'grammar'
+  gloss     TEXT,              -- one-line English summary for result lists (≤ 120 chars)
+  data      TEXT NOT NULL      -- JSON, see EntryData below
+);
+CREATE INDEX entries_hw   ON entries(hw_norm);
+CREATE INDEX entries_rank ON entries(rank);
+
+-- Conjugated / variant forms → entry (from krdict WordForm 활용, stdict conjugation, wikt forms)
+CREATE TABLE forms (form TEXT NOT NULL, entry_id INTEGER NOT NULL);
+CREATE INDEX forms_form ON forms(form);
+
+-- Each hanja character of an entry → entry  (for hanja search & "words with this character")
+CREATE TABLE hanja_words (ch TEXT NOT NULL, entry_id INTEGER NOT NULL);
+CREATE INDEX hanja_words_ch ON hanja_words(ch);
+
+-- English full-text search (core pack only; stdict has none)
+CREATE VIRTUAL TABLE entries_fts USING fts5(en, content='', tokenize='porter unicode61');  -- rowid = entries.id
+
+-- core pack only:
+CREATE TABLE hanja_chars (
+  ch TEXT PRIMARY KEY, readings TEXT,   -- '학' (comma-separated if several)
+  meaning_en TEXT, strokes INTEGER, radical TEXT, word_count INTEGER
+);
+CREATE TABLE sentences (id INTEGER PRIMARY KEY, ko TEXT NOT NULL, en TEXT, source TEXT);  -- Tatoeba + wikt
+CREATE VIRTUAL TABLE sentences_fts USING fts5(ko, content='sentences', content_rowid='id', tokenize='trigram');
+CREATE TABLE grammar (
+  id INTEGER PRIMARY KEY, entry_id INTEGER, pattern TEXT NOT NULL,  -- '-아서/어서'
+  category TEXT NOT NULL,   -- 'Particles' | 'Connective endings' | 'Final endings' | 'Pre-final endings'
+                            -- | 'Nominal/adnominal endings' | 'Expressions' | 'Affixes'
+  level INTEGER, summary_en TEXT, sort INTEGER
+);
+```
+
+### EntryData JSON
+
+```jsonc
+{
+  "senses": [{
+    "pos": "noun",                  // optional, when an entry mixes POS (wikt)
+    "gloss": "edge; verge",         // short English equivalent(s)
+    "def": "The perimeter or outer limits of a place or a thing.",  // English definition
+    "ko_def": "어떤 장소나 물건의 둘레나 끝부분.",                         // Korean definition (krdict, stdict)
+    "note": "Used after some nouns.", // annotation / usage note (Korean or English)
+    "pattern": "1이 2를 먹다",          // syntactic pattern (krdict)
+    "tags": ["honorific"],
+    "examples": [{"ko": "…", "en": "…" /* optional */, "type": "phrase|sentence|dialogue"}],
+    "rel": [{"type": "synonym|antonym|honorific|humble|see also|reference", "word": "불가"}]
+  }],
+  "related": [{"type": "derived|variant|abbreviation|…", "word": "가하다"}],
+  "category": "자연 > 지형",          // semantic category (krdict)
+  "etym": "…",                       // etymology text (wikt)
+  "origin_note": "…"
+}
+```
+
+### Ranking (`rank`)
+`rank = source_base + level_adj + freq_adj` where frequency (FrequencyWords rank of the
+headword stem) dominates; krdict 초급 < 중급 < 고급 < krdict-unleveled < wikt < kengdic < stdict.
+Exact numeric formula lives in `pipeline/build.py`; only ordering matters to the app.
+
+## App behaviour
+
+* **Search box** detects script:
+  * Hangul → exact `hw_norm` match, then `forms` match, then deconjugation
+    candidates (`src/lib/deconjugate.ts`), then prefix matches (`hw_norm LIKE 'q%'`), ordered by `rank`.
+  * Latin → `entries_fts MATCH` (prefix-aware), ranked by bm25 then `rank`.
+  * Han characters → `hanja_chars` card(s) + entries via `hanja_words`.
+* **Result list** (Pleco-style): one row per headword+hanja group: headword · hanja · POS ·
+  gloss, with a level badge.
+* **Entry view**: header (headword, hanja tappable per character, pronunciation, level badge),
+  then a section per dictionary (krdict → wikt → kengdic → stdict), numbered senses,
+  examples, related words (tappable), "More examples" from `sentences_fts`, a "Hanja"
+  section that breaks the word down per character with other words sharing each character,
+  and a link to the grammar reference for grammar entries. Bookmark button.
+* **Grammar reference**: browse by category and level, then open the full entry.
+* **Bookmarks**: folders, add/remove/move, export/import JSON backup.
+* **History**: recent lookups on the home screen; clearable.
+* **Word of the day**: deterministic pick from krdict level 1–2 entries by date.
+* **Settings**: theme presets + colour pickers, font size, enable/disable stdict, data
+  pack status and re-download, storage usage, backup/restore, licences and attributions.
+
+## Repository layout
+
+```
+pipeline/            Python data build (fetch.py, parsers/*.py, build.py, tests/)
+app/                 Vite + Preact + TypeScript PWA
+  src/lib/deconjugate.ts   conjugation-aware lookup
+  src/db/            sqlite worker + pack download manager
+.github/workflows/   build-data + deploy to Pages
+docs/                this scope document
+```
