@@ -1,0 +1,6 @@
+[workspace]
+members = ["pipeline"]  # TODO add "core" once core/Cargo.toml exists
+resolver = "2"
+
+[profile.release]
+opt-level = 3

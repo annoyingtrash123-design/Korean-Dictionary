@@ -1,0 +1,115 @@
+name: Build data & deploy app
+
+on:
+  # push trigger enabled once the Rust pipeline + engine land
+  workflow_dispatch:
+    inputs:
+      rebuild_data:
+        description: "Force a fresh dictionary data build (ignore cache)"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "17 3 1 * *" # monthly refresh of upstream dictionaries
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache key
+        id: key
+        run: |
+          echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore built data
+        id: datacache
+        if: ${{ !inputs.rebuild_data && github.event_name != 'schedule' }}
+        uses: actions/cache@v4
+        with:
+          path: pipeline/out/site-data
+          key: site-data-${{ hashFiles('pipeline/**', 'Cargo.lock') }}-${{ steps.key.outputs.month }}
+
+      - uses: dtolnay/rust-toolchain@stable
+        if: steps.datacache.outputs.cache-hit != 'true'
+
+      - uses: Swatinem/rust-cache@v2
+        if: steps.datacache.outputs.cache-hit != 'true'
+
+      - name: Restore downloaded sources
+        if: steps.datacache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: pipeline/.work
+          key: sources-${{ steps.key.outputs.month }}
+
+      - name: Fetch sources
+        if: steps.datacache.outputs.cache-hit != 'true'
+        run: |
+          cargo build --release -p kdict-pipeline
+          ./target/release/kdict-pipeline fetch --work pipeline/.work
+
+      - name: Build dictionary packs
+        if: steps.datacache.outputs.cache-hit != 'true'
+        run: |
+          ./target/release/kdict-pipeline build --work pipeline/.work --out pipeline/out
+          ls -la pipeline/out pipeline/out/site-data
+          cat pipeline/out/site-data/manifest.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-data
+          path: pipeline/out/site-data
+          retention-days: 7
+
+  app:
+    needs: data
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo install wasm-pack --locked
+      - run: npm ci
+      - run: npm run build:core
+      - run: npx vitest run
+      - uses: actions/download-artifact@v4
+        with:
+          name: site-data
+          path: app/public/data
+      - run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+
+  deploy:
+    needs: app
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
