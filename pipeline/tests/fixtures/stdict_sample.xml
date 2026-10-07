@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel>
+	<title>사전 검색</title>
+	<total>4</total>
+	<item>
+		<target_code>1001</target_code>
+		<word_info>
+			<word><![CDATA[학교01]]></word>
+			<word_unit>단어</word_unit>
+			<word_type>한자어</word_type>
+			<original_language_info>
+				<original_language><![CDATA[學校]]></original_language>
+				<language_type><![CDATA[한자]]></language_type>
+			</original_language_info>
+			<pronunciation_info>
+				<pronunciation><![CDATA[학꾜]]></pronunciation>
+			</pronunciation_info>
+			<conju_info>
+				<conjugation_info>
+					<conjugation><![CDATA[학교가]]></conjugation>
+				</conjugation_info>
+			</conju_info>
+			<pos_info>
+				<pos>명사</pos>
+				<comm_pattern_info>
+					<sense_info>
+						<type>일반어</type>
+						<definition><![CDATA[일정한 목적 아래 교사가 학생을 가르치는 기관.]]></definition>
+						<cat_info><cat>교육</cat></cat_info>
+						<example_info>
+							<example><![CDATA[학교에 다니다.]]></example>
+						</example_info>
+						<example_info>
+							<example><![CDATA[그는 학교에 갔다.]]></example>
+							<source><![CDATA[어떤 소설]]></source>
+						</example_info>
+						<lexical_info>
+							<word><![CDATA[학원03]]></word>
+							<type>참고 어휘</type>
+						</lexical_info>
+					</sense_info>
+				</comm_pattern_info>
+			</pos_info>
+		</word_info>
+	</item>
+	<item>
+		<target_code>1002</target_code>
+		<word_info>
+			<word><![CDATA[가감-하다02]]></word>
+			<word_unit>단어</word_unit>
+			<word_type>혼종어</word_type>
+			<original_language_info>
+				<original_language><![CDATA[加減]]></original_language>
+				<language_type><![CDATA[한자]]></language_type>
+			</original_language_info>
+			<original_language_info>
+				<original_language><![CDATA[하다]]></original_language>
+				<language_type><![CDATA[고유어]]></language_type>
+			</original_language_info>
+			<pos_info>
+				<pos>동사</pos>
+				<comm_pattern_info>
+					<pattern_info><pattern><![CDATA[1이 2를 가감하다]]></pattern></pattern_info>
+					<sense_info>
+						<type>일반어</type>
+						<definition><![CDATA[더하거나 빼다.]]></definition>
+					</sense_info>
+				</comm_pattern_info>
+			</pos_info>
+		</word_info>
+	</item>
+	<item>
+		<target_code>1003</target_code>
+		<word_info>
+			<word><![CDATA[가^는^길]]></word>
+			<word_unit>구</word_unit>
+			<pos_info>
+				<pos>구</pos>
+				<comm_pattern_info>
+					<sense_info>
+						<definition><![CDATA[가고 있는 도중.]]></definition>
+					</sense_info>
+				</comm_pattern_info>
+			</pos_info>
+		</word_info>
+	</item>
+	<item>
+		<target_code>1004</target_code>
+		<word_info>
+			<word><![CDATA[-아서]]></word>
+			<word_unit>단어</word_unit>
+			<original_language_info>
+				<original_language><![CDATA[ok]]></original_language>
+				<language_type><![CDATA[영어]]></language_type>
+			</original_language_info>
+			<pos_info>
+				<pos>어미</pos>
+				<comm_pattern_info>
+					<sense_info>
+						<definition><![CDATA[연결 어미.]]></definition>
+					</sense_info>
+				</comm_pattern_info>
+			</pos_info>
+		</word_info>
+	</item>
+</channel>

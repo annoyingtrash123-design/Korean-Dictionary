@@ -1,46 +1,59 @@
-# Source format notes (learned while building the Python prototype)
+# Pipeline notes (Rust: `kdict-pipeline`)
 
-Status: Python prototype partially written (common.py, parsers/{krdict,stdict,kengdic,freq,tatoeba,unihan}.py).
-NOT written: parsers/wikt.py, fetch.py, build.py, tests, ATTRIBUTION.md, requirements is present.
-Verified against real data: krdict (all 11 files, 56,555 entries, ~26 s), stdict (5 files, 25,000 items, 3.6 s).
-Unverified (written from memory of formats, no fixtures/tests): kengdic grouping, freq, tatoeba, unihan, kaikki.
+```
+cargo run --release -p kdict-pipeline -- fetch --work pipeline/.work
+cargo run --release -p kdict-pipeline -- build --work pipeline/.work --out pipeline/out [--limit-files N]
+cargo test -p kdict-pipeline
+```
+
+Layout: `src/{krdict,stdict,kaikki,kengdic,tatoeba,unihan,freq}.rs` parse one source each into `common::Entry`;
+`build.rs` writes the SQLite packs (schema in `schema.rs`, contract in docs/SCOPE.md); `pack.rs` gzips + chunks;
+`fetch.rs` downloads. `xml.rs` is a tiny streaming DOM (quick-xml) that yields one subtree per `<LexicalEntry>` / `<item>`.
+Fixtures for every format are in `tests/fixtures/`. `ATTRIBUTION.md` is embedded in the binary and copied to `out/site-data/`.
+
+Status: krdict and stdict were verified on real data (krdict: 11 files -> 56,555 entries; stdict: 5 files -> 25,000 items).
+kaikki / Tatoeba / Unihan parsers are tested only against hand-written fixtures (those hosts are blocked in the dev
+sandbox); the first CI run is their first contact with real data. Each optional source that is missing or fails only logs a WARNING.
 
 ## Fetch
-- NIKL: `git clone --depth 1 --filter=blob:none --sparse https://github.com/spellcheck-ko/korean-dict-nikl` then `git sparse-checkout set krdict stdict`. krdict/001..011.xml (~35 MB each), stdict/005000.xml.. (~88 files, ~8 MB each). Do not use opendict/.
-- kengdic: raw.githubusercontent.com/garfieldnate/kengdic/master/kengdic.tsv (11 MB, works). FrequencyWords: raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/ko/ko_50k.txt ("word count", 50,000 lines, works).
-- kaikki / tatoeba / unicode.org were blocked in the sandbox; fine in CI.
+- NIKL: blobless sparse clone `git clone --depth 1 --filter=blob:none --sparse https://github.com/spellcheck-ko/korean-dict-nikl work/nikl`, then `sparse-checkout set krdict stdict` (never `opendict/`). krdict/001..011.xml (~35 MB each), stdict/005000.xml.. (~88 files, ~8 MB each).
+- Files land in `work/`: `kengdic.tsv`, `ko_50k.txt`, `kaikki-ko.jsonl`, `Unihan.zip`, `tatoeba/{kor_sentences.tsv.bz2,eng_sentences.tsv.bz2,links.tar.bz2}`. Existing non-empty files are skipped (delete to refresh). Download uses ureq (rustls); on failure it retries once and then falls back to `curl` if installed.
+- To reuse an existing NIKL checkout: symlink it to `work/nikl` (it needs `krdict/` and `stdict/` directly inside).
 
-## krdict (LMF XML, DOCTYPE references a remote DTD: use no_network, load_dtd=False)
-- Everything is `<feat att="X" val="Y"/>`. Elements: LexicalEntry(att=id) > feat*, Lemma (a 2nd Lemma may hold feat variant), WordForm*, RelatedForm*, Sense*; Sense > feat, SenseExample*, SenseRelation*, Equivalent*; WordForm may contain FormRepresentation (type 준말, writtenForm) -> extra conjugated form.
-- Entry feats: homonym_number (0 = none), lexicalUnit (단어 51555, 관용구 2227, 구 1120, 문법‧표현 996 (U+2027 char), 속담 657), partOfSpeech (명사, 동사, 품사 없음, 형용사, 부사, 관형사, 접사, 어미, 의존 명사, 감탄사, 조사, 대명사, 수사, 보조 동사, 보조 형용사), vocabularyLevel (초급/중급/고급/없음; mostly 고급), semanticCategory, origin (hanja, or English for loanwords e.g. "knot", mixed like "勞心焦思하다").
-- WordForm type 발음 (pronunciation, sound) / 활용 (writtenForm, pronunciation). 활용 forms are few (e.g. 가다 -> 가는, 가, 가니, 갑니다), so conjugation lookup needs the app deconjugator.
-- RelatedForm types: ☞(가 보라) (-> reference), 파생어 (derived); feats id, writtenForm.
-- Sense feats: definition, annotation, syntacticPattern, syntacticAnnotation. SenseExample type 구/문장/대화; 대화 has 2 `example` feats. SenseRelation types: 유의어 반대말 참고어 높임말 낮춤말 큰말 작은말 센말 여린말 준말 본말 (feats lemma, id, homonymNumber). Equivalent feats language/lemma/definition; take language 영어 only (many other languages).
-- Quirks: a few control bytes (0x01-0x1f) in 3 files make the XML invalid -> strip them at byte level before parsing. Annotations are double-escaped (`&amp;apos;`) -> html.unescape after parse. Grammar entries' English lemma is a romanisation (e.g. "-aseo"); use the English definition for gloss. Feat "type" also appears with values 사진/동영상 (Multimedia) - ignore.
-- Mapping: kind 단어 word (어미/조사 -> grammar), 구 phrase, 관용구 idiom, 속담 proverb, 문법‧표현 grammar (pos 'expression'); POS map in common.py (KR_POS). Rel map KR_REL in common.py.
+## krdict (LMF XML, DOCTYPE references a remote DTD, which is ignored)
+- Everything is `<feat att="X" val="Y"/>`. LexicalEntry(att=id) > feat*, Lemma (a 2nd Lemma may hold feat variant), WordForm*, RelatedForm*, Sense*; Sense > feat, SenseExample*, SenseRelation*, Equivalent*; WordForm may contain FormRepresentation (type 준말) -> extra form.
+- Entry feats: homonym_number (0 = none), lexicalUnit (단어, 관용구, 구, 문법‧표현 (U+2027), 속담), partOfSpeech, vocabularyLevel (초급/중급/고급/없음), semanticCategory, origin (hanja, or English for loanwords -> `origin_note`).
+- WordForm type 발음 (pronunciation) / 활용 (writtenForm). Only a few 활용 forms per entry, so conjugation lookup needs the app's deconjugator.
+- RelatedForm types: ☞(가 보라) (reference), 파생어 (derived). SenseRelation types: 유의어 반대말 참고어 높임말 낮춤말 큰말 작은말 센말 여린말 준말 본말. Equivalent: take language 영어 only.
+- Quirks: raw control bytes (0x01-0x1f) in 3 files make the XML invalid -> stripped at byte level (`xml::CleanReader`). Annotations are double-escaped (`&amp;apos;`) -> `clean()` unescapes once more. Grammar entries (and many auxiliary verbs, bound nouns, affixes) have a *romanisation* of the headword as English lemma ("-aseo", "gajida"): grammar kind always, others via `looks_romanized()` (plain RR transliteration within edit distance) -> stored as `sense.roman`, not `sense.gloss`; the English definition is used for `gloss`. "(no equivalent expression)" is dropped.
+- Mapping: kind 단어 word (어미/조사 -> grammar), 구 phrase, 관용구 idiom, 속담 proverb, 문법‧표현 grammar (pos 'expression').
 
-## stdict (RSS-like `<channel><item>`; CDATA everywhere; use iterparse on `item`, ~436k items)
-- item > target_code, word_info > word, word_unit (단어/구/속담/관용구), word_type, original_language_info* (original_language + language_type: 한자/고유어/영어/안 밝힘/...), pronunciation_info/pronunciation, conju_info* (conjugation_info/conjugation, abbreviation_info/abbreviation), lexical_info* (word, unit 의미/어휘, type 동의어/참고 어휘/비슷한말/반대말/준말/본말, link), relation_info (type 부표제어), origin, allomorph, pos_info* > pos, comm_pattern_info* > pattern_info/pattern, grammar_info/grammar, sense_info* > type, definition (definition_original has <sense_no>/<word_no> tags - use `definition`), cat_info/cat ('없음' = none), example_info* > example (+ optional `source` -> EXCLUDE), lexical_info, multimedia_info.
-- word: trailing 2-digit homonym number ("가03"), '-' morpheme/affix marker, '^' space marker ("가감-하다01"). Display: strip digits, drop inner '-', '^'->space, keep leading/trailing '-'.
-- hanja = concat of original_language parts (한자 + 고유어 parts, in order) only if a 한자 part exists (ㄱㄴㄷ-순 -> ㄱㄴㄷ順); other languages -> origin_note.
-- pos values: 명사 품사 없음 동사 구 형용사 부사 어미 관형사 접사 조사 의존 명사 감탄사 보조 동사. Entries may have several pos_info.
+## stdict (RSS-like `<channel><item>`, CDATA, ~436k items)
+- item > target_code, word_info > word, word_unit, original_language_info*, pronunciation_info, conju_info*, lexical_info*, relation_info, origin, allomorph, pos_info* > pos, comm_pattern_info* > pattern_info/pattern, grammar_info/grammar, sense_info* > type, definition, cat_info/cat ('없음' = none), example_info* > example (+ optional `source` -> **excluded**).
+- word: trailing 1-3 digit homonym number ("가03"), '-' morpheme marker, '^' = space ("가^는^길" -> "가 는 길"; hw_norm "가는길"). Leading/trailing '-' (affix/ending) are kept in `headword`.
+- hanja = concatenation of the 한자 + 고유어 parts (ㄱㄴㄷ-순 -> ㄱㄴㄷ順) only if a 한자 part exists; other origins -> `origin_note`.
 
 ## kengdic
-Tab-separated, header `id surface hanja gloss level created source`, 133,764 rows, QUOTE_NONE. 16k rows have empty gloss (hanja only); 38k have hanja; hanja may be comma separated variants ("交着하다,膠着하다"). level A/B/C/D (2.7k C, 2k B, 0.9k A) else empty. Dirty: double spaces, junk glosses ("VST + 먹다 , adds no meaning"), many rows are English->Korean artefacts with spaces in surface. Group by (surface, first hanja), dedupe glosses case-insensitively. Use as hanja fallback for other sources only when exactly one distinct hanja for the surface.
+Tab-separated, header `id surface hanja gloss level created source`, ~133k rows, no quoting. 16k rows have an empty gloss (hanja only, still feed the hanja-by-surface map); hanja may be comma separated variants (first = key, rest -> `hanja_alt`). Rows grouped by (surface, first hanja); glosses deduped case-insensitively; junk glosses ("VST + ... adds no meaning", >250 chars) dropped; level A-D kept as `kengdic_level`. Surfaces with spaces -> phrase. Real build: 108,586 entries from 34,510 hanja-bearing surfaces.
+Hanja fallback: krdict/wikt noun entries without hanja, no origin note, and unique within their source get the hanja from kengdic only when kengdic has exactly one distinct hanja for that surface (41 hits on krdict).
 
 ## FrequencyWords
-"word count" lines, rank = line number. Rank for verbs/adjectives: min over own forms and stem+common-ending (see parsers/freq.py ENDINGS, 하->했/해 contraction).
+"word count" lines; rank = line number. Verb/adjective stems get the best rank of stem+common-ending (`freq::ENDINGS`) incl. 하 -> 했/해 contractions.
+`rank = freq_rank*8 + tier` (tier: krdict L1/L2/L3 = 0/1/2, krdict unleveled 3, wikt 4, kengdic 5, stdict 6). Entries with no frequency use a per-tier default (15k/25k/40k/55k/60k/70k/80k, +20k for phrases/idioms/proverbs).
 
-## kaikki (wiktextract JSONL, from memory)
-Per line: word, pos, senses[].glosses/raw_glosses/tags/examples[{text, english|translation, roman}]/form_of/alt_of, forms[{form,tags}] (hanja tag), etymology_text, etymology_number, sounds[{ipa|hangeul}], synonyms/antonyms/derived/related [{word}], head_templates. Skip senses with form-of/alt-of (record redirects). Wikt POS map in common.py (WIKT_POS).
+## kaikki (wiktextract JSONL)
+One line per (word, pos, etymology). Merged per (word, etymology_number) -> one entry (`homonym` = etymology number); `sense.pos` only when the merged entry mixes POS. Senses with `form_of`/`alt_of` (or form-of/alt-of tags) are skipped and become `forms` rows pointing at the target (resolved against wikt then krdict entries by hw_norm). Nested glosses: last element is the gloss, parents -> `sense.parent`. Hanja = first `forms[]` item tagged "hanja"; entries without hangul in the headword are skipped. Examples `{text, english|translation}` -> sense examples + `sentences` (source 'wikt', deduped by Korean text).
 
-## Tatoeba (from memory)
-kor_sentences.tsv.bz2 / eng_sentences.tsv.bz2: `id \t lang \t text`. links.tar.bz2 contains links.csv `sentence_id \t translation_id` (all languages, both directions). Keep ids in the Korean set, first English match.
+## Tatoeba
+`kor_sentences.tsv.bz2` / `eng_sentences.tsv.bz2`: `id \t lang \t text`. `links.tar.bz2` holds `links.csv` (`sentence_id \t translation_id`, all languages), streamed (never loaded fully); only links from a Korean id are kept and the first English match is used. All bz2 readers are multi-stream safe.
 
-## Unihan (from memory)
-Unihan.zip: Unihan_Readings.txt (`U+5B78\tkHangul\t학:0E`, kDefinition, kKorean Yale), Unihan_IRGSources.txt (kTotalStrokes, kRSUnicode "39.13", possibly with `'`). Radical number -> Kangxi char chr(0x2F00+n-1).
+## Unihan
+`Unihan.zip` -> `Unihan_Readings.txt` (kHangul `학:0E`, kDefinition, kKorean Yale fallback) + `Unihan_IRGSources.txt` (kTotalStrokes, kRSUnicode `39.13` / `1'.2`). `hanja_chars.radical` = Kangxi radical character (U+2F00 + n-1); added column `radical_num`. Rows exist for every hanja used by an entry plus every character with a kHangul reading.
 
-## Contract/design decisions made
-- Entries are per source (no cross-source merging); rank = freq_rank*8 + tier (krdict L1..3 = 0..2, unleveled 3, wikt 4, kengdic 5, stdict 6); missing freq gets a per-source/level default.
-- grammar table: 조사 Particles; 어미 by Korean def (선어말 Pre-final, 연결 Connective, 종결 Final, 전성/관형사형/명사형 Nominal/adnominal, else Final); 문법‧표현 Expressions; 접사 Affixes.
-- sqlite: fts5 with trigram and porter available (SQLite 3.45). entries_fts is contentless: insert with rowid.
+## Output / contract notes
+- Additions to the contract: `entries.ext_id` (source id), `hanja_chars.radical_num`, `meta.schema`, index `grammar_cat`, `grammar_entry`; counts JSON keys are flat numbers (entries, krdict, wikt, kengdic, forms, hanja_words, hanja_chars, sentences, grammar...).
+- `forms.form` is stored `hw_norm`-ed (no spaces/'-'/'^'); the headword itself is never stored as a form. Entries are per source (no cross-source merge).
+- `entries_fts` is contentless (`content=''`), rowid = entries.id; indexed text = English glosses (definition only when there is no gloss). `sentences_fts` is trigram over `sentences` (external content, rebuilt at the end): MATCH needs a quoted phrase for multi-word queries (`'"책을 읽"'`), and terms shorter than 3 characters never match.
+- grammar categories: 조사 Particles; 어미 by Korean definition (선어말 Pre-final, 연결 Connective, 종결 Final, 전성/관형사형/명사형 Nominal/adnominal, else Final); 문법‧표현 Expressions; 접사 Affixes (krdict only).
+- DB finishing: `ANALYZE; PRAGMA journal_mode=DELETE; VACUUM`, page_size 4096. rusqlite 0.32 bundles SQLite 3.46.0 (FTS5 with `trigram` and `porter unicode61`).
+- Manifest `chunks` entries are `{"file","bytes"}`; chunk size is 20,000,000 bytes; one gzip stream (level 9) per pack.

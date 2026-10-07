@@ -1,18 +1,6 @@
-mod build;
-mod common;
-mod fetch;
-mod freq;
-mod kaikki;
-mod kengdic;
-mod krdict;
-mod pack;
-mod schema;
-mod stdict;
-mod tatoeba;
-mod unihan;
-mod xml;
 
 use anyhow::Result;
+use kdict_pipeline::{build, fetch, pack};
 use clap::{Parser, Subcommand};
 use std::path::PathBuf;
 

@@ -1,0 +1,10 @@
+{"word": "학교", "lang_code": "ko", "pos": "noun", "forms": [{"form": "學校", "tags": ["hanja"]}, {"form": "hakgyo", "tags": ["romanization"]}], "etymology_text": "Sino-Korean word from 學校.", "senses": [{"glosses": ["school"], "examples": [{"text": "학교에 가요.", "english": "I go to school."}, {"text": "학교가 멀어요.", "translation": "The school is far."}], "synonyms": [{"word": "스쿨"}]}], "synonyms": [{"word": "학원"}], "derived": [{"word": "초등학교"}], "sounds": [{"ipa": "[ha̠k̚k͈jo̞]"}]}
+{"word": "먹다", "lang_code": "ko", "pos": "verb", "etymology_number": 1, "senses": [{"glosses": ["to eat"], "tags": ["transitive"]}, {"glosses": ["to eat", "to consume"]}]}
+{"word": "먹다", "lang_code": "ko", "pos": "verb", "etymology_number": 2, "senses": [{"glosses": ["to go deaf"]}]}
+{"word": "먹었다", "lang_code": "ko", "pos": "verb", "senses": [{"glosses": ["past tense of 먹다"], "tags": ["form-of", "past"], "form_of": [{"word": "먹다"}]}]}
+{"word": "가다", "lang_code": "ko", "pos": "verb", "senses": [{"glosses": ["to go"]}]}
+{"word": "가다", "lang_code": "ko", "pos": "noun", "senses": [{"glosses": ["a bogus noun"]}]}
+{"word": "學", "lang_code": "ko", "pos": "character", "senses": [{"glosses": ["hanja entry"]}]}
+{"word": "one", "lang_code": "en", "pos": "num", "senses": [{"glosses": ["not korean"]}]}
+{"word": "새로", "lang_code": "ko", "pos": "adv", "senses": [{"glosses": ["anew"], "alt_of": [{"word": "새로이"}]}]}
+{"word": "새로이", "lang_code": "ko", "pos": "adv", "senses": [{"glosses": ["newly"]}]}

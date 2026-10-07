@@ -23,7 +23,7 @@ pub fn read_sentences<R: Read>(r: R, wanted: Option<&HashSet<String>>) -> Result
         let line = String::from_utf8_lossy(&raw);
         let mut p = line.trim_end_matches(['\r', '\n']).splitn(3, '\t');
         let (Some(id), Some(_lang), Some(text)) = (p.next(), p.next(), p.next()) else { continue };
-        if wanted.map_or(true, |w| w.contains(id)) {
+        if wanted.is_none_or(|w| w.contains(id)) {
             out.insert(id.to_string(), text.to_string());
         }
     }

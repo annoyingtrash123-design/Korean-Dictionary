@@ -248,3 +248,57 @@ pub fn kind_for_pos(pos: &str) -> &'static str {
 pub fn is_verbal(pos: &str) -> bool {
     matches!(pos, "verb" | "adjective" | "auxiliary verb" | "auxiliary adjective")
 }
+
+// --- romanisation heuristic -------------------------------------------------------
+
+/// Plain syllable-by-syllable Revised-Romanization transliteration (no assimilation).
+pub fn romanize_plain(s: &str) -> String {
+    const INIT: [&str; 19] = ["g", "kk", "n", "d", "tt", "r", "m", "b", "pp", "s", "ss", "", "j", "jj", "ch", "k", "t", "p", "h"];
+    const VOW: [&str; 21] = ["a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa", "wae", "oe", "yo", "u", "wo", "we", "wi", "yu", "eu", "ui", "i"];
+    const FIN: [&str; 28] = ["", "k", "k", "k", "n", "n", "n", "t", "l", "k", "m", "l", "l", "l", "p", "l", "m", "p", "p", "t", "t", "ng", "t", "t", "k", "t", "p", "t"];
+    let mut out = String::new();
+    for c in s.chars() {
+        let o = c as u32;
+        if (0xAC00..=0xD7A3).contains(&o) {
+            let i = o - 0xAC00;
+            out.push_str(INIT[(i / 588) as usize]);
+            out.push_str(VOW[((i % 588) / 28) as usize]);
+            out.push_str(FIN[(i % 28) as usize]);
+        } else if c == '-' {
+            // skip morpheme markers
+        } else {
+            out.push(c);
+        }
+    }
+    out
+}
+
+fn edit_distance(a: &str, b: &str) -> usize {
+    let a: Vec<char> = a.chars().collect();
+    let b: Vec<char> = b.chars().collect();
+    let mut prev: Vec<usize> = (0..=b.len()).collect();
+    for i in 1..=a.len() {
+        let mut cur = vec![i; b.len() + 1];
+        for j in 1..=b.len() {
+            let sub = prev[j - 1] + usize::from(a[i - 1] != b[j - 1]);
+            cur[j] = sub.min(prev[j] + 1).min(cur[j - 1] + 1);
+        }
+        prev = cur;
+    }
+    prev[b.len()]
+}
+
+/// krdict gives some entries (grammar items, auxiliaries, bound nouns...) a
+/// romanisation of the headword (e.g. "gajida") instead of an English equivalent.
+pub fn looks_romanized(lemma: &str, headword: &str) -> bool {
+    let l = lemma.trim().trim_matches('-');
+    if l.is_empty() || !l.chars().all(|c| c.is_ascii_lowercase()) {
+        return false;
+    }
+    let h: String = headword.chars().filter(|c| is_hangul(*c)).collect();
+    if h.is_empty() {
+        return false;
+    }
+    let r = romanize_plain(&h);
+    edit_distance(&r, l) <= (l.len() / 4).max(1)
+}

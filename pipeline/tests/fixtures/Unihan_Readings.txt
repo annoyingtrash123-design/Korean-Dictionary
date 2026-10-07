@@ -1,0 +1,8 @@
+# Unihan_Readings.txt
+U+5B78	kDefinition	learning; knowledge, school
+U+5B78	kHangul	학:0E
+U+5B78	kKorean	HAK
+U+6821	kHangul	교:0E 효:0N
+U+6821	kDefinition	school
+U+4E00	kKorean	IL
+U+4E00	kDefinition	one

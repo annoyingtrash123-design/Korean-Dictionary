@@ -1,0 +1,9 @@
+# Unihan_IRGSources.txt
+U+5B78	kRSUnicode	39.13
+U+5B78	kTotalStrokes	16
+U+6821	kRSUnicode	75.6
+U+6821	kTotalStrokes	10
+U+4E00	kRSUnicode	1.0
+U+4E00	kTotalStrokes	1
+U+3400	kRSUnicode	1'.2
+U+3400	kTotalStrokes	5

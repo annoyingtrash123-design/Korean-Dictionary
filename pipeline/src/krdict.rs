@@ -102,16 +102,18 @@ pub fn parse_entry(le: &Node) -> Option<Entry> {
             }
             let g = f(eq, "lemma");
             let d = f(eq, "definition");
-            if !g.is_empty() {
+            // krdict marks untranslatable items with "(no equivalent expression)"
+            if !g.is_empty() && !g.to_lowercase().contains("no equivalent") {
                 gl.push(g);
             }
-            if !d.is_empty() {
+            if !d.is_empty() && !(d.len() < 40 && d.to_lowercase().contains("no equivalent")) {
                 df.push(d);
             }
         }
         if !gl.is_empty() {
             // grammar entries carry a romanisation (e.g. "-aseo") as their English lemma
-            let key = if kind == "grammar" { "roman" } else { "gloss" };
+            let roman = kind == "grammar" || (gl.len() == 1 && looks_romanized(&gl[0], &headword));
+            let key = if roman { "roman" } else { "gloss" };
             sense.insert(key.into(), gl.join("; ").into());
         }
         if !df.is_empty() {

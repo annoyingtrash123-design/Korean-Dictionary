@@ -5,6 +5,10 @@ edition = "2021"
 description = "Data pipeline for the offline Korean-English dictionary PWA"
 publish = false
 
+[lib]
+name = "kdict_pipeline"
+path = "src/lib.rs"
+
 [[bin]]
 name = "kdict-pipeline"
 path = "src/main.rs"
@@ -18,8 +22,11 @@ flate2 = { version = "1", default-features = false, features = ["zlib-rs"] }
 quick-xml = "0.37"
 rusqlite = { version = "0.32", features = ["bundled"] }
 serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+serde_json = { version = "1", features = ["preserve_order"] }
 sha2 = "0.10"
 tar = "0.4"
 ureq = { version = "2", features = ["tls"] }
 zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[dev-dependencies]
+tempfile = "3"

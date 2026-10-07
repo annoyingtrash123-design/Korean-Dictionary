@@ -130,7 +130,7 @@ pub fn parse<R: BufRead>(mut rd: R) -> Result<Kengdic> {
             g.glosses.push((low, gloss));
         }
         if let Some(lv) = level_ord(&level) {
-            if g.klevel.map_or(true, |k| lv < k) {
+            if g.klevel.is_none_or(|k| lv < k) {
                 g.klevel = Some(lv);
             }
         }

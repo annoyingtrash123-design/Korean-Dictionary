@@ -27,7 +27,7 @@ pub struct Sources {
 
 fn xml_files(dir: &Path, limit: Option<usize>) -> Vec<PathBuf> {
     let mut v: Vec<PathBuf> = fs::read_dir(dir)
-        .map(|rd| rd.filter_map(|e| e.ok()).map(|e| e.path()).filter(|p| p.extension().map_or(false, |x| x == "xml")).collect())
+        .map(|rd| rd.filter_map(|e| e.ok()).map(|e| e.path()).filter(|p| p.extension().is_some_and(|x| x == "xml")).collect())
         .unwrap_or_default();
     v.sort();
     if let Some(n) = limit {
@@ -163,8 +163,10 @@ pub fn entry_gloss(e: &Entry) -> Option<String> {
     let mut seen = HashSet::new();
     let mut gl: Vec<&str> = Vec::new();
     for g in sense_strs(e, "gloss") {
-        if seen.insert(g) {
-            gl.push(g);
+        for piece in g.split("; ") {
+            if seen.insert(piece.to_lowercase()) {
+                gl.push(piece);
+            }
         }
     }
     if !gl.is_empty() {
