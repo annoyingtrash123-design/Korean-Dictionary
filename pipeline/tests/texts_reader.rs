@@ -332,7 +332,7 @@ fn versions_page_is_followed_only_with_prefer_edition() {
     assert_eq!((d.page_title.as_str(), d.resolved_via.as_str()), ("홍길동전 (경판 24장본)", "prefer_edition"));
     // classifier unit checks
     assert!(matches!(texts_fetch::classify("토끼전", "", "7자", &[]), texts_fetch::Kind::Index { .. }));
-    assert_eq!(texts_fetch::classify("가시리", "", &"가시리 가시리잇고 ".repeat(1), &[]), texts_fetch::Kind::Normal);
+    assert_eq!(texts_fetch::classify("가시리", "", &"가시리 가시리잇고 나난 바리고 가시리잇고", &[]), texts_fetch::Kind::Normal);
 }
 
 #[test]
@@ -403,10 +403,11 @@ fn requests_are_batched_and_polite() {
     let http = Mock::new(vec![
         (allpages_needle("가시리"), empty_allpages()),
         (allpages_needle("정읍사"), empty_allpages()),
-        ("titles=".into(), pages_json(json!([page("가시리", 1, "가시리 가시리잇고"), page("정읍사", 2, "달하 노피곰 도다샤")]))),
+        ("titles=".into(), pages_json(json!([page("가시리", 1, "가시리 가시리잇고 나난 바리고 가시리잇고 나난"), page("정읍사", 2, "달하 노피곰 도다샤 어긔야 머리곰 비취오시라")]))),
     ]);
     let opts = Opts { catalog: cat_path, out: tmp.path().join("raw"), only: vec![], force: false, max_subpages: 5, discover: false };
     let s = texts_fetch::run_with(&http, &opts).unwrap();
+    eprintln!("{}", s.report);
     assert_eq!(s.report["resolved"].as_array().unwrap().len(), 2);
     let hits = http.hits.borrow();
     let title_calls = hits.iter().filter(|u| u.contains("prop=revisions")).count();

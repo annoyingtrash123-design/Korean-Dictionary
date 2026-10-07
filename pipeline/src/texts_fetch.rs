@@ -360,7 +360,7 @@ pub fn classify(title: &str, wikitext: &str, text: &str, subs: &[String]) -> Kin
     if ed_links.len() + ed_subs.len() >= 2 && chars < 3000 {
         return Kind::Index { links: collect(&ed_subs), why: "links to several editions" };
     }
-    if chars < 15 && subs.is_empty() {
+    if chars < 10 && subs.is_empty() {
         return Kind::Index { links: related, why: "page is almost empty" };
     }
     Kind::Normal
