@@ -20,6 +20,7 @@ feeds = [
   "https://www.korea.kr/rss/president.xml",
 ]
 
+# discover: no match (열녀춘향수절가 not found; only encyclopedia hits)
 [[text]]
 id = "chunhyangjeon"
 title_ko = "열녀춘향수절가"
@@ -60,6 +61,7 @@ excerpt_note = "Keep the birth and grievance (호부호형), the departure from 
 source = "wikisource-ko"
 source_title = "홍길동전"
 search = ["홍길동전", "경판 홍길동전"]
+prefer_edition = "경판"
 pd_basis = "Author died 1618; the work is centuries old and in the public domain."
 note = "Attribution to 허균 is traditional and disputed; surviving texts are later."
 uncertain = ["date", "year", "author"]
@@ -86,6 +88,7 @@ pd_basis = "Anonymous pre-modern or collective work; no living author, in the pu
 english_pd = { title = "Korean Tales", translator = "Horace N. Allen", year = 1889, source = "gutenberg", search = "Korean Tales Allen", ref = "allen-1889-korean-tales" }
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (흥부전 is a versions index; only edition target (경판 25장본) is a 354-byte stub)
 [[text]]
 id = "heungbujeon"
 title_ko = "흥부전"
@@ -108,6 +111,7 @@ pd_basis = "Anonymous pre-modern or collective work; no living author, in the pu
 english_pd = { title = "Korean Tales", translator = "Horace N. Allen", year = 1889, source = "gutenberg", search = "Korean Tales Allen", ref = "allen-1889-korean-tales" }
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (토끼전 is a bare 주부전/수궁전 link page (682 bytes); no text page in results)
 [[text]]
 id = "tokkijeon"
 title_ko = "토끼전"
@@ -173,6 +177,7 @@ note = "Original language (hangul vs hanmun) debated; Wikisource editions vary."
 english_pd = { title = "The Cloud Dream of the Nine", translator = "James Scarth Gale", year = 1922, source = "archive-org", search = "Cloud Dream of the Nine Gale", ref = "gale-1922-cloud-dream-of-the-nine" }
 uncertain = ["source_title"]
 
+# discover: no match (no ko/zh page or relevant search hit)
 [[text]]
 id = "sassinamjeonggi"
 title_ko = "사씨남정기"
@@ -212,6 +217,7 @@ excerpt_note = "Keep the 1795 memoir (childhood in the palace) and the 1762 trag
 source = "wikisource-ko"
 source_title = "한중록"
 search = ["한중록", "恨中錄", "혜경궁 홍씨"]
+sections = ["1권"]
 pd_basis = "Author died 1816; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
@@ -237,6 +243,7 @@ search = ["만복사저포기", "萬福寺樗蒲記", "금오신화"]
 pd_basis = "Author died 1493; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (only the zh 金鰲新話 collection (61 KB; heading for this story not shown) - needs a human to pick heading)
 [[text]]
 id = "iseang_gyujangjeon"
 title_ko = "이생규장전"
@@ -259,6 +266,7 @@ search = ["이생규장전", "李生窺牆傳", "금오신화"]
 pd_basis = "Author died 1493; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (no page found; zh 金鰲新話 collection exists but not surfaced for this work)
 [[text]]
 id = "chwiyububerugjeong"
 title_ko = "취유부벽정기"
@@ -281,6 +289,7 @@ search = ["취유부벽정기", "醉遊浮碧亭記", "금오신화"]
 pd_basis = "Author died 1493; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (no page found; zh 金鰲新話 collection exists but not surfaced for this work)
 [[text]]
 id = "namyeombujuji"
 title_ko = "남염부주지"
@@ -303,6 +312,7 @@ search = ["남염부주지", "南炎浮洲志", "금오신화"]
 pd_basis = "Author died 1493; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (only the zh 金鰲新話 collection (61 KB; heading for this story not shown) - needs a human to pick heading)
 [[text]]
 id = "yonggungbuyeonrok"
 title_ko = "용궁부연록"
@@ -325,6 +335,7 @@ search = ["용궁부연록", "龍宮赴宴錄", "금오신화"]
 pd_basis = "Author died 1493; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
+# discover: no match (no 정읍사 page; prefix hits are unrelated 정진사전)
 [[text]]
 id = "jeongeupsa"
 title_ko = "정읍사"
@@ -344,7 +355,7 @@ source_title = "정읍사"
 search = ["정읍사", "井邑詞"]
 pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
 note = "Oldest surviving Korean-language song text in hangul; the Baekje date is traditional."
-uncertain = ["date", "year"]
+uncertain = ["date", "year", "source_title"]
 
 [[text]]
 id = "cheongsanbyeolgok"
@@ -429,6 +440,7 @@ pd_basis = "Anonymous pre-modern or collective work; no living author, in the pu
 note = "Attributed to 유리왕 (King Yuri), recorded in the Samguk sagi."
 uncertain = ["date", "year", "author", "source_title"]
 
+# discover: no match (처용가 exists but is a 1191-byte license-only stub)
 [[text]]
 id = "cheoyongga"
 title_ko = "처용가"
@@ -509,6 +521,7 @@ excerpt = false
 source = "wikisource-ko"
 source_title = "회고가"
 search = ["회고가", "길재", "오백 년 도읍지를"]
+prefer_edition = "길재"
 pd_basis = "Author died 1419; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
@@ -658,6 +671,7 @@ search = ["어부사시사", "윤선도", "漁父四時詞"]
 pd_basis = "Author died 1671; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
+# discover: no match (송강가사/관동별곡 found but only a 446-byte header template, no text)
 [[text]]
 id = "gwandongbyeolgok"
 title_ko = "관동별곡"
@@ -678,7 +692,9 @@ source = "wikisource-ko"
 source_title = "관동별곡"
 search = ["관동별곡", "정철", "關東別曲"]
 pd_basis = "Author died 1593; the work is centuries old and in the public domain."
+uncertain = ["source_title"]
 
+# discover: no match (송강가사/사미인곡 found but only a 538-byte header template, no text)
 [[text]]
 id = "samimingok"
 title_ko = "사미인곡"
@@ -715,7 +731,7 @@ themes = ["ancient-goryeo", "sino-korean"]
 shelf = "hanmun"
 script = "hanmun"
 excerpt = false
-source = "wikisource-zh"
+source = "wikisource-ko"
 source_title = "추야우중"
 search = ["추야우중", "秋夜雨中", "최치원"]
 pd_basis = "Author died 908; the work is centuries old and in the public domain."
@@ -759,8 +775,9 @@ script = "hanmun"
 excerpt = true
 excerpt_note = "Keep the prose preface and the opening 40 couplets of the epic; ~6k characters."
 source = "wikisource-zh"
-source_title = "東明王篇"
+source_title = "東國李相國全集/卷三"
 search = ["동명왕편", "東明王篇", "이규보"]
+sections = ["東明王篇"]
 pd_basis = "Author died 1241; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
@@ -823,7 +840,7 @@ shelf = "hanmun"
 script = "hanmun"
 excerpt = false
 source = "wikisource-ko"
-source_title = "허생전"
+source_title = "열하일기/옥갑야화"
 search = ["허생전", "許生傳", "옥갑야화", "박지원"]
 pd_basis = "Author died 1805; the work is centuries old and in the public domain."
 note = "From Okgap yahwa in the Yeolha ilgi."
@@ -845,9 +862,10 @@ shelf = "hanmun"
 script = "hanmun"
 excerpt = true
 excerpt_note = "Keep the preface (자서) and the 율기 (self-discipline) section on 청심; ~8k characters."
-source = "wikisource-zh"
+source = "wikisource-ko"
 source_title = "목민심서"
 search = ["목민심서", "牧民心書", "정약용"]
+sections = ["서", "율기"]
 pd_basis = "Author died 1836; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
@@ -888,12 +906,13 @@ shelf = "hanmun"
 script = "hanmun"
 excerpt = false
 source = "wikisource-zh"
-source_title = "三國史記/卷第四十五"
+source_title = "三國史記/卷45"
 search = ["온달전", "溫達傳", "삼국사기 열전"]
 pd_basis = "Author died 1151; the work is centuries old and in the public domain."
 note = "Biography of Ondal is in vol. 45 (열전 제5)."
 uncertain = ["source_title"]
 
+# discover: no match (三國史記/卷第四十六 not found and no 권46 page in results)
 [[text]]
 id = "hwawanggye"
 title_ko = "화왕계"
@@ -931,8 +950,8 @@ themes = ["ancient-goryeo"]
 shelf = "hanmun"
 script = "hanmun"
 excerpt = false
-source = "wikisource-zh"
-source_title = "送人"
+source = "wikisource-ko"
+source_title = "송인"
 search = ["송인", "送人", "정지상"]
 pd_basis = "Author died 1135; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
@@ -952,8 +971,8 @@ themes = ["joseon", "sino-korean"]
 shelf = "hanmun"
 script = "hanmun"
 excerpt = false
-source = "wikisource-zh"
-source_title = "渤海考序"
+source = "wikisource-ko"
+source_title = "발해고/발해고서"
 search = ["발해고 서", "渤海考序", "유득공"]
 pd_basis = "Author died 1807; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
@@ -975,12 +994,14 @@ script = "hanmun"
 collection = "열하일기"
 excerpt = true
 excerpt_note = "Keep the opening passage (the party leaves Uiju and crosses the Yalu) and the discourse on 호곡장; ~10k characters."
-source = "wikisource-zh"
-source_title = "熱河日記/渡江錄"
+source = "wikisource-ko"
+source_title = "열하일기/도강록"
 search = ["도강록", "渡江錄", "열하일기"]
+alt_titles = ["熱河日記/卷01"]
 pd_basis = "Author died 1805; the work is centuries old and in the public domain."
 uncertain = ["source_title", "year"]
 
+# discover: no match (호질 not a separate page; no hit shows it (it sits inside 관내정사, not evidenced))
 [[text]]
 id = "yeolha_hojil"
 title_ko = "열하일기 호질"
@@ -1003,6 +1024,7 @@ search = ["호질", "虎叱", "열하일기"]
 pd_basis = "Author died 1805; the work is centuries old and in the public domain."
 uncertain = ["source_title", "year"]
 
+# discover: no match (only whole-chapter 열하일기/산장잡기 (ko, 17 KB) shown, heading 一夜九渡河記 not in evidence)
 [[text]]
 id = "yeolha_iyagudoha"
 title_ko = "열하일기 일야구도하기"
@@ -1041,12 +1063,13 @@ shelf = "sino-korean"
 script = "hanmun"
 excerpt = true
 excerpt_note = "Keep the opening dialogue between Heoja and Silong and the argument that the earth rotates and has no centre; ~8k characters."
-source = "wikisource-zh"
-source_title = "醫山問答"
+source = "wikisource-ko"
+source_title = "담헌서/내집 4권/보유/의산문답"
 search = ["의산문답", "醫山問答", "담헌서", "홍대용"]
 pd_basis = "Author died 1783; the work is centuries old and in the public domain."
 uncertain = ["year", "source_title"]
 
+# discover: no match (담헌서/외집 7-10권 (연기) are ~265-byte stubs; no usable 燕記 text)
 [[text]]
 id = "hongdaeyong_yeongi"
 title_ko = "담헌연기 (연행 기록 발췌)"
@@ -1088,6 +1111,7 @@ excerpt_note = "Keep the shipwreck and landfall in Taizhou, and the Grand Canal 
 source = "wikisource-zh"
 source_title = "漂海錄"
 search = ["표해록", "漂海錄", "최부"]
+sections = ["卷01"]
 pd_basis = "Author died 1504; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
@@ -1107,11 +1131,13 @@ shelf = "sino-korean"
 script = "hanmun"
 excerpt = false
 source = "wikisource-zh"
-source_title = "北學議序"
+source_title = "北學議"
 search = ["북학의 서", "北學議序", "박제가", "北學議"]
+sections = ["序"]
 pd_basis = "Author died 1805; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
+# discover: no match (三國史記/卷第七 not found; no 卷07 page in results)
 [[text]]
 id = "najeon_war"
 title_ko = "삼국사기 나당전쟁 (답설인귀서)"
@@ -1150,8 +1176,9 @@ shelf = "sino-korean"
 script = "hanmun"
 excerpt = false
 source = "wikisource-zh"
-source_title = "三國史記/卷第四十四"
+source_title = "三國史記/卷44"
 search = ["여수장우중문시", "與隋將于仲文詩", "을지문덕"]
+sections = ["乙支文德"]
 pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
 note = "Preserved in Samguk sagi vol. 44."
 uncertain = ["date", "source_title", "author_dates"]
@@ -1178,6 +1205,7 @@ pd_basis = "Author died 1478; the work is centuries old and in the public domain
 note = "Biography of Seo Hui in Goryeo-sa 열전 vol. 94."
 uncertain = ["source_title"]
 
+# discover: no match (宣祖實錄 not found; only 宣祖修正實錄 year pages (different text) or 644 KB year pages)
 [[text]]
 id = "seonjo_myeongwonbyeong"
 title_ko = "선조실록 임진왜란 명 원군"
@@ -1199,6 +1227,7 @@ search = ["선조실록 명 원군", "宣祖實錄 李如松 平壤", "선조실
 pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
 uncertain = ["source_title"]
 
+# discover: no match (仁祖實錄 not found; no relevant hit)
 [[text]]
 id = "injo_samjeondo"
 title_ko = "인조실록 삼전도"
@@ -1264,6 +1293,7 @@ search = ["훈민정음 해례본", "訓民正音 御製序", "훈민정음 예�
 pd_basis = "Author died 1450; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
+# discover: no match (訓民正音/解例/鄭麟趾序 not found; no 解例 page in results)
 [[text]]
 id = "hunminjeongeum_jeonginji"
 title_ko = "훈민정음 해례본 정인지 서"
@@ -1285,6 +1315,7 @@ search = ["정인지 서", "鄭麟趾序", "훈민정음 해례"]
 pd_basis = "Author died 1478; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
+# discover: no match (훈민정음언해 exists but is a 775-byte license-only stub)
 [[text]]
 id = "hunminjeongeum_eonhae"
 title_ko = "훈민정음 언해본"
@@ -1308,6 +1339,7 @@ pd_basis = "Author died 1450; the work is centuries old and in the public domain
 note = "The gloss appended to Worin seokbo (1459) in Middle Korean."
 uncertain = ["source_title", "date"]
 
+# discover: no match (世宗實錄/卷一百二 not found; only 400+ KB year pages)
 [[text]]
 id = "sejong_sillok_changje"
 title_ko = "세종실록 훈민정음 창제 기사"
@@ -1328,6 +1360,7 @@ search = ["세종실록 훈민정음 창제", "是月上親制諺文二十八字
 pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
 uncertain = ["source_title"]
 
+# discover: no match (독립신문/1896년/4월/7일 found but only a 593-byte header template, no text)
 [[text]]
 id = "dongnip_sinmun_changgan"
 title_ko = "독립신문 창간호 논설"
@@ -1368,6 +1401,7 @@ source_title = "기미독립선언서"
 search = ["기미독립선언서", "3·1 독립선언서", "己未獨立宣言書"]
 pd_basis = "Collective/anonymous 1919 document; authors long dead (drafted by Choe Nam-seon, d. 1957); in the public domain."
 
+# discover: no match (대한독립선언서 found but only a 542-byte header template, no text)
 [[text]]
 id = "daehan_declaration"
 title_ko = "대한독립선언서 (무오독립선언서)"
@@ -1444,7 +1478,7 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "조선독립의 서"
+source_title = "조선 독립의 서"
 search = ["조선독립의 서", "朝鮮獨立의 書", "한용운"]
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["source_title"]
@@ -1504,7 +1538,7 @@ themes = ["modern-korea"]
 shelf = "constitution"
 script = "hangul"
 excerpt = false
-source = "ohchr"
+source = "wikisource-ko"
 source_title = "세계인권선언"
 url = "https://www.ohchr.org/en/human-rights/universal-declaration/translations/korean"
 search = ["세계인권선언", "Universal Declaration of Human Rights Korean"]
@@ -1527,7 +1561,7 @@ script = "hangul"
 collection = "김소월 시집 진달래꽃"
 excerpt = false
 source = "wikisource-ko"
-source_title = "진달래꽃"
+source_title = "진달래꽃 (시집)/진달래꽃"
 search = ["진달래꽃", "김소월"]
 pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["date"]
@@ -1548,7 +1582,7 @@ script = "hangul"
 collection = "김소월 시집 진달래꽃"
 excerpt = false
 source = "wikisource-ko"
-source_title = "산유화"
+source_title = "진달래꽃 (시집)/산유화"
 search = ["산유화", "김소월"]
 pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["date"]
@@ -1569,7 +1603,7 @@ script = "hangul"
 collection = "김소월 시집 진달래꽃"
 excerpt = false
 source = "wikisource-ko"
-source_title = "초혼"
+source_title = "진달래꽃 (시집)/초혼"
 search = ["초혼", "김소월"]
 pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
 
@@ -1609,7 +1643,7 @@ script = "hangul"
 collection = "님의 침묵"
 excerpt = false
 source = "wikisource-ko"
-source_title = "님의 침묵"
+source_title = "님의 침묵/님의 침묵"
 search = ["님의 침묵", "한용운"]
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["source_title"]
@@ -1630,8 +1664,9 @@ script = "hangul"
 collection = "님의 침묵"
 excerpt = false
 source = "wikisource-ko"
-source_title = "알 수 없어요"
+source_title = "님의 침묵/알 수 없어요"
 search = ["알 수 없어요", "한용운"]
+alt_titles = ["알수 없어요"]
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
 
 [[text]]
@@ -1650,10 +1685,11 @@ script = "hangul"
 collection = "님의 침묵"
 excerpt = false
 source = "wikisource-ko"
-source_title = "나룻배와 행인"
+source_title = "님의 침묵/나룻배와 행인"
 search = ["나룻배와 행인", "한용운"]
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
 
+# discover: no match (only empty/header-only 하늘과 바람과 별과 시 subpages (402-425 bytes))
 [[text]]
 id = "seosi"
 title_ko = "서시"
@@ -1675,6 +1711,7 @@ search = ["서시", "윤동주"]
 pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["source_title"]
 
+# discover: no match (only empty/header-only 하늘과 바람과 별과 시 subpages (290-404 bytes))
 [[text]]
 id = "byeolhenunbam"
 title_ko = "별 헤는 밤"
@@ -1694,7 +1731,9 @@ source = "wikisource-ko"
 source_title = "별 헤는 밤"
 search = ["별 헤는 밤", "윤동주"]
 pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
 
+# discover: no match (only empty/header-only 윤동주 subpages (289-402 bytes); other hits are other authors)
 [[text]]
 id = "jahwasang"
 title_ko = "자화상"
@@ -1714,6 +1753,7 @@ source = "wikisource-ko"
 source_title = "자화상"
 search = ["자화상", "윤동주"]
 pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
 
 [[text]]
 id = "swipge_sseuieojin_si"
@@ -1772,6 +1812,7 @@ excerpt = false
 source = "wikisource-ko"
 source_title = "광야"
 search = ["광야", "이육사"]
+prefer_edition = "이육사"
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["date"]
 
@@ -1847,7 +1888,7 @@ shelf = "modern-poetry"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "향수"
+source_title = "향수/향수"
 search = ["향수", "정지용"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
 
@@ -1866,7 +1907,7 @@ shelf = "modern-poetry"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "유리창"
+source_title = "향수/유리창1"
 search = ["유리창", "정지용"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
 
@@ -1885,7 +1926,7 @@ shelf = "modern-poetry"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "모란이 피기까지는"
+source_title = "영랑시선/모란이 피기까지는"
 search = ["모란이 피기까지는", "김영랑"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
 
@@ -1904,8 +1945,9 @@ shelf = "modern-poetry"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "오감도 시제1호"
+source_title = "오감도"
 search = ["오감도 시제1호", "이상"]
+sections = ["오감도 시제1호"]
 pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["source_title"]
 
@@ -2002,7 +2044,7 @@ shelf = "modern-fiction"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "봄·봄"
+source_title = "봄봄"
 search = ["봄·봄", "김유정"]
 pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
 
@@ -2025,6 +2067,7 @@ source_title = "메밀꽃 필 무렵"
 search = ["메밀꽃 필 무렵", "이효석"]
 pd_basis = "Author died 1942; Korean term (life+50) expired 1992, before the 2013 extension to life+70, so the work is in the public domain."
 
+# discover: no match (벙어리 삼룡이 exists but is a 337-byte license-only stub)
 [[text]]
 id = "beongeoriu_samryong"
 title_ko = "벙어리 삼룡이"
@@ -2043,6 +2086,7 @@ source = "wikisource-ko"
 source_title = "벙어리 삼룡이"
 search = ["벙어리 삼룡이", "나도향"]
 pd_basis = "Author died 1926; Korean term (life+50) expired 1976, before the 2013 extension to life+70, so the work is in the public domain."
+uncertain = ["source_title"]
 
 [[text]]
 id = "mullebanga"
@@ -2138,6 +2182,7 @@ excerpt_note = "Keep the opening scene of Yun Jikwon's household and the chapter
 source = "wikisource-ko"
 source_title = "태평천하"
 search = ["태평천하", "채만식"]
+sections = ["제1장", "제15장"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
 
 [[text]]
@@ -2196,6 +2241,7 @@ excerpt_note = "Keep chapters 1–12 (Hyeongsik, Yeongchae and Seonhyeong) and t
 source = "wikisource-ko"
 source_title = "무정"
 search = ["무정", "이광수"]
+sections = ["1장~20장"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
 note = "Yi Gwang-su later collaborated with the Japanese colonial regime; PD in Korea (author d. 1950) but handle with that context in the notes."
 uncertain = ["source_title"]
@@ -2332,7 +2378,7 @@ shelf = "essays-children"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "만년 샤쓰"
+source_title = "만년 셔츠"
 search = ["만년 샤쓰", "만년샤쓰", "방정환"]
 pd_basis = "Author died 1931; Korean term (life+50) expired 1981, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["source_title"]
@@ -2353,7 +2399,7 @@ script = "hangul"
 collection = "사랑의 선물"
 excerpt = false
 source = "wikisource-ko"
-source_title = "왕자와 제비"
+source_title = "사랑의 선물/왕자와 제비"
 search = ["왕자와 제비", "사랑의 선물", "방정환"]
 pd_basis = "Author died 1931; Korean term (life+50) expired 1981, before the 2013 extension to life+70, so the work is in the public domain."
 note = "Bang's adaptation of Oscar Wilde's tale (Wilde d. 1900)."
