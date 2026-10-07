@@ -125,6 +125,15 @@ mod wasm_api {
             store.remove_pack(&pack_id).map_err(js_err)
         }
 
+        /// Run background warm-up step `step` over the given packs; resolves to whether more steps remain.
+        pub async fn warm(&self, step: u32, packs: JsValue) -> Result<bool, JsError> {
+            let ids: Vec<String> = serde_wasm_bindgen::from_value(packs).unwrap_or_default();
+            self.with_store(|s| {
+                let packs = if ids.is_empty() { s.all() } else { s.select(&ids) };
+                Ok(search::warm_step(&packs, step as usize))
+            })
+        }
+
         /// `search(query, {packs, limit?}) -> SearchResult`
         pub async fn search(&self, query: String, opts: JsValue) -> Result<JsValue, JsError> {
             let opts: SearchOpts = if opts.is_undefined() || opts.is_null() {

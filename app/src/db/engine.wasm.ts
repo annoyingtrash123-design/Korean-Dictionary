@@ -32,5 +32,6 @@ export function createEngine(): Engine {
     sentences: (text, limit) => e().sentences(text, limit),
     grammarList: () => e().grammarList(),
     wordOfDay: (date) => e().wordOfDay(date),
+    warm: (step, packs) => e().warm(step, packs),
   };
 }

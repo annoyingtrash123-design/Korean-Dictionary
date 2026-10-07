@@ -66,6 +66,7 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .list { border-top: 1px solid var(--border); margin-top: 4px; }
 .list > li + li { border-top: 1px solid var(--border); }
 .row { display: flex; align-items: center; gap: 10px; padding: 11px 16px; color: inherit; min-height: 58px; }
+.list > li { content-visibility: auto; contain-intrinsic-size: auto 58px; }
 .row:active { background: var(--surface); }
 .row.compact { min-height: 52px; padding-top: 9px; padding-bottom: 9px; }
 .row-main { flex: 1; min-width: 0; }

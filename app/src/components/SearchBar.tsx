@@ -3,6 +3,8 @@ import { Icon } from './Icons';
 import { navigate, searchPath, useRoute } from '../lib/router';
 import { query } from '../lib/app-state';
 import { useStore } from '../lib/store';
+import { db } from '../db/client';
+import { FIRST_PAGE } from '../views/Results';
 
 export function SearchBar() {
   const q = useStore(query);
@@ -26,7 +28,11 @@ export function SearchBar() {
       <Icon name="search" size={20} />
       <input ref={input} type="search" enterkeyhint="search" inputMode="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck={false}
         placeholder="Search Korean, English or 漢字" aria-label="Search" value={q}
-        onInput={(e) => { const v = (e.currentTarget as HTMLInputElement).value; query.set(v); go(v); }} />
+        onInput={(e) => {
+          const v = (e.currentTarget as HTMLInputElement).value;
+          if (v.trim()) void db.search(v, { limit: FIRST_PAGE }); // start now; Results joins this request
+          query.set(v); go(v);
+        }} />
       {q && (
         <button type="button" class="clear" aria-label="Clear search" onClick={() => { query.set(''); go(''); input.current?.focus(); }}>
           <Icon name="x" size={16} />

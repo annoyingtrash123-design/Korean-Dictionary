@@ -27,8 +27,9 @@ sqlite-wasm-rs = { version = "0.6", default-features = false, features = ["wasm-
 sqlite-wasm-vfs = { version = "0.3", features = ["sahpool"] }
 rsqlite-vfs = "0.2"
 
+# wasm-opt for speed, not size: every keystroke runs SQLite queries in this module.
 [package.metadata.wasm-pack.profile.release]
-wasm-opt = ["-Oz", "--enable-bulk-memory", "--enable-nontrapping-float-to-int", "--enable-sign-ext", "--enable-mutable-globals"]
+wasm-opt = ["-O3", "--enable-bulk-memory", "--enable-nontrapping-float-to-int", "--enable-sign-ext", "--enable-mutable-globals"]
 
 [dev-dependencies]
 flate2 = "1"

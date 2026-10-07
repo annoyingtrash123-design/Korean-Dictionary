@@ -84,7 +84,9 @@ impl Store {
         // Every page miss is a read through OPFS, so keep hot index pages in memory: the default
         // 2 MB cache made short prefix and English queries ~50x slower than native.
         let cache_kib = if id == "core" { 48 * 1024 } else { 16 * 1024 };
-        conn.exec(&format!("PRAGMA cache_size = -{cache_kib}; PRAGMA temp_store = MEMORY;"))
+        // Packs are read-only and nothing else writes them while open: exclusive locking keeps the
+        // shared lock and page cache across statements instead of re-reading the header each time.
+        conn.exec(&format!("PRAGMA cache_size = -{cache_kib}; PRAGMA temp_store = MEMORY; PRAGMA locking_mode = EXCLUSIVE;"))
             .map_err(|e| e.to_string())?;
         let db = PackDb::new(id, conn).map_err(|e| e.to_string())?;
         self.packs.push(db);

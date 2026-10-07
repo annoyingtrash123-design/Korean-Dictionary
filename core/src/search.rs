@@ -934,3 +934,32 @@ pub fn word_of_day(packs: &[&PackDb], date: &str) -> Result<Option<ResultRow>> {
 
 #[cfg(test)]
 mod tests;
+
+/// Background warm-up: step `step` reads one slice of a search index into SQLite's page cache,
+/// so that first-time queries don't pay for slow storage reads. Returns false when done.
+/// Steps are small (tens of ms cold) so a search queued behind one barely waits.
+pub fn warm_step(packs: &[&PackDb], step: usize) -> bool {
+    const HW: [&str; 13] = ["", "나", "다", "마", "바", "사", "아", "응", "자", "차", "파", "하", "\u{10FFFF}"];
+    const EN: [&str; 7] = ["", "c", "f", "l", "p", "t", "\u{10FFFF}"];
+    let mut steps: Vec<(&PackDb, String, String, String)> = Vec::new();
+    for p in packs {
+        for w in HW.windows(2) {
+            steps.push((p, "SELECT count(*) FROM entries INDEXED BY entries_hw_rank WHERE hw_norm >= ?1 AND hw_norm < ?2".into(), w[0].into(), w[1].into()));
+        }
+        if p.caps.forms {
+            for w in [["", "사"], ["사", "\u{10FFFF}"]] {
+                steps.push((p, "SELECT count(*) FROM forms INDEXED BY forms_form WHERE form >= ?1 AND form < ?2".into(), w[0].into(), w[1].into()));
+            }
+        }
+        if p.id == "core" {
+            for w in EN.windows(2) {
+                steps.push((p, "SELECT count(*) FROM gloss_terms WHERE term >= ?1 AND term < ?2".into(), w[0].into(), w[1].into()));
+            }
+            steps.push((p, "SELECT count(*) FROM hanja_words INDEXED BY hanja_words_ch WHERE ch >= ?1 AND ch < ?2".into(), "".into(), "\u{10FFFF}".into()));
+        }
+    }
+    let Some((p, sql, a, b)) = steps.get(step) else { return false };
+    // A missing index (older pack) just means nothing to warm for this step.
+    let _ = p.conn.query(sql, &[a.as_str().into(), b.as_str().into()]);
+    step + 1 < steps.len()
+}

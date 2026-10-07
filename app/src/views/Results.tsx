@@ -12,6 +12,9 @@ import { Empty, GroupRow } from '../components/common';
 import { hanjaPath, href, wordPath } from '../lib/router';
 
 const cache = new Lru<SearchResult>(40);
+const FIRST_PAINT = 15;
+export const FIRST_PAGE = 20;
+const FULL_PAGE = 50;
 
 export function Results({ q }: { q: string }) {
   const s = useStore(settings);
@@ -29,15 +32,33 @@ export function Results({ q }: { q: string }) {
     const hit = cache.get(ck(q));
     if (hit) { setRes(hit); setErr(undefined); setBusy(false); return; }
     setBusy(true);
-    db.search(q, { limit: 50 }).then(
-      (r) => { if (live && r.rows !== undefined) { if (r.rows.length || r.mode !== 'english' || r.hanja) cache.set(ck(q), r); setRes(r); setErr(undefined); setBusy(false); } },
-      (e) => { if (live) { setErr(String(e?.message ?? e)); setBusy(false); } });
+    // A small first page keeps the engine to ~20 page reads per keystroke; the full list follows
+    // once the first screenful is painted (by then its pages are cached).
+    const done = (r: SearchResult, final: boolean) => {
+      if (!live || r.rows === undefined) return;
+      if (final && (r.rows.length || r.mode !== 'english' || r.hanja)) cache.set(ck(q), r);
+      setRes(r); setErr(undefined); setBusy(false);
+    };
+    const fail = (e: any) => { if (live) { setErr(String(e?.message ?? e)); setBusy(false); } };
+    db.search(q, { limit: FIRST_PAGE }).then((r) => {
+      done(r, r.rows !== undefined && r.rows.length < FIRST_PAGE);
+      if (live && r.rows?.length >= FIRST_PAGE) setTimeout(() => { if (live) db.search(q, { limit: FULL_PAGE }).then((r2) => done(r2, true), fail); }, 0);
+    }, fail);
     return () => { live = false; };
   }, [q, packsKey(s), stamp]);
 
   const shown = res?.r;
   const groups = useMemo(() => groupResults(shown?.rows ?? []), [shown]);
   const ruleFor = (hw: string) => shown?.deconj?.find((d) => normHeadword(d.lemma) === normHeadword(hw))?.rule;
+  // Paint the first screenful straight away and the rest a frame later, so a keystroke never
+  // waits on laying out 50 rows.
+  const [full, setFull] = useState(false);
+  useEffect(() => {
+    setFull(false);
+    const t = setTimeout(() => setFull(true), 30);
+    return () => clearTimeout(t);
+  }, [shown]);
+  const visible = full ? groups : groups.slice(0, FIRST_PAINT);
   const deconjGroups = groups.filter((g) => g.via === 'deconj' && !groups.some((o) => o !== g && o.via === 'exact' && o.key === g.key)).slice(0, 2);
 
   if (err) return <div class="page"><Empty title="Search failed">{err}</Empty></div>;
@@ -67,7 +88,7 @@ export function Results({ q }: { q: string }) {
         <Empty title={`No results for “${q}”`}>Try another spelling, the dictionary form, or an English word.</Empty>
       )}
       <ul class="plain list">
-        {groups.map((g) => (
+        {visible.map((g) => (
           <li key={g.key}><GroupRow g={g} note={g.via === 'deconj' ? `← ${q}${ruleFor(g.headword) ? ` · ${ruleFor(g.headword)}` : ''}` : g.via === 'form' ? `form: ${q}` : undefined} /></li>
         ))}
       </ul>

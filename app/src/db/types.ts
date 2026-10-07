@@ -59,6 +59,8 @@ export interface Engine {
   sentences(text: string, limit: number): Promise<{ ko: string; en: string | null; source: string | null }[]>;
   grammarList(): Promise<GrammarRow[]>;
   wordOfDay(date: string): Promise<ResultRow | null>;
+  /** Background warm-up step over `packs`; resolves to whether more steps remain. */
+  warm(step: number, packs: string[]): Promise<boolean>;
 }
 
 export interface PackInfo { id: string; installed: boolean; version?: string; bytes?: number; installedAt?: number }

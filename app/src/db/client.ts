@@ -47,7 +47,20 @@ export const enabledPacks = (): string[] => activePacks(settings.get(), packStat
 const EMPTY: SearchResult = { mode: 'english', rows: [] };
 let searching = false;
 let waiting: { q: string; limit?: number; ok: (r: SearchResult) => void; err: (e: Error) => void } | null = null;
+// Identical in-flight requests share one promise, so the search bar can start a query on the
+// keystroke itself and the results view (which renders a frame later) picks up the same request.
+const inflight = new Map<string, Promise<SearchResult>>();
 function searchLatest(q: string, limit?: number): Promise<SearchResult> {
+  const k = `${q}\u0000${limit ?? ''}\u0000${enabledPacks().join(',')}`;
+  const hit = inflight.get(k);
+  if (hit) return hit;
+  const p = searchQueued(q, limit);
+  inflight.set(k, p);
+  const drop = () => { if (inflight.get(k) === p) inflight.delete(k); };
+  p.then(drop, drop);
+  return p;
+}
+function searchQueued(q: string, limit?: number): Promise<SearchResult> {
   return new Promise((ok, err) => {
     if (waiting) waiting.ok(EMPTY);
     waiting = { q, limit, ok, err };
@@ -58,7 +71,12 @@ async function pump() {
   searching = true;
   while (waiting) {
     const w = waiting; waiting = null;
-    try { w.ok(await call<SearchResult>('search', w.q, { packs: enabledPacks(), limit: w.limit })); } catch (e) { w.err(e as Error); }
+    const t0 = performance.now();
+    try {
+      const r = await call<SearchResult & { engineMs?: number }>('search', w.q, { packs: enabledPacks(), limit: w.limit });
+      performance.measure('kd-search', { start: t0, detail: { q: w.q, limit: w.limit, engineMs: r.engineMs } });
+      w.ok(r);
+    } catch (e) { w.err(e as Error); }
   }
   searching = false;
 }

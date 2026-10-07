@@ -32,7 +32,12 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
     return packStatus();
   },
   async removePack(id: string) { await ready; await engine.deletePack(id); await forgetPack(id); return packStatus(); },
-  async search(q: string, o: { packs: string[]; limit?: number }) { await ready; return engine.search(q, o); },
+  async search(q: string, o: { packs: string[]; limit?: number }) {
+    await ready;
+    const t = performance.now();
+    const r = await engine.search(q, o);
+    return { ...r, engineMs: Math.round((performance.now() - t) * 10) / 10 };
+  },
   async entriesByHeadword(hw: string, packs: string[]) { await ready; return engine.entriesByHeadword(hw, packs); },
   async entry(s: string, id: number) { await ready; return engine.entry(s, id); },
   async hanjaChar(ch: string) { await ready; return engine.hanjaChar(ch); },
@@ -42,6 +47,35 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async wordOfDay(d: string) { await ready; return engine.wordOfDay(d); },
 };
 
+// Background warm-up: after start (and after installs), read the search indexes into SQLite's
+// page cache one small step at a time, only while no request is waiting, so first-time queries
+// don't pay for cold storage reads.
+let pending = 0;
+let warmPacks: string[] = [];
+let warmStep = 0;
+let warmTimer: ReturnType<typeof setTimeout> | undefined;
+function scheduleWarm(delay = 50) {
+  clearTimeout(warmTimer);
+  warmTimer = setTimeout(async () => {
+    if (pending > 0 || installing) return scheduleWarm(200);
+    const run = queue.then(() => engine.warm(warmStep, warmPacks));
+    queue = run.then(() => undefined, () => undefined);
+    const more = await run.catch(() => false);
+    warmStep++;
+    if (more) scheduleWarm(0);
+  }, delay);
+}
+async function startWarm() {
+  await ready;
+  if (initError) return;
+  const ids = (await engine.installedPacks()).map((p) => p.id).filter((id) => id !== 'opendict');
+  if (!ids.length) return;
+  warmPacks = ids;
+  warmStep = 0;
+  scheduleWarm(300);
+}
+void startWarm();
+
 self.onmessage = async (ev: MessageEvent<Req>) => {
   const { id, method, args } = ev.data;
   try {
@@ -49,10 +83,11 @@ self.onmessage = async (ev: MessageEvent<Req>) => {
     if (!fn) throw new Error('Unknown method ' + method);
     // The engine is not re-entrant (overlapping calls give 'disk I/O error'), so queries run one at a time.
     // install() runs outside the queue because it makes many engine calls of its own.
-    if (method === 'install') { post({ id, result: await fn(...args) }); return; }
+    if (method === 'install') { post({ id, result: await fn(...args) }); void startWarm(); return; }
+    pending++;
     const run = queue.then(() => fn(...args));
     queue = run.then(() => undefined, () => undefined);
-    post({ id, result: await run });
+    try { post({ id, result: await run }); } finally { pending--; }
   } catch (e) {
     post({ id, error: String((e as Error)?.message ?? e) });
   }
