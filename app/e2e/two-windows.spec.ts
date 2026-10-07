@@ -15,6 +15,9 @@ test('two windows of the app hand the engine over', async ({ context }) => {
   await expect(a.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
   await search(a, '학교');
   await expect(a.locator('.row .hw').first()).toHaveText('학교');
+  // the optional packs keep installing after the search box appears; a window never gives up
+  // the files mid-install, so wait for that to finish
+  await expect.poll(() => a.evaluate(() => localStorage.getItem('kd.packs') ?? ''), { timeout: 240_000 }).toContain('stdict');
 
   const b = await context.newPage();
   await b.goto('/');
