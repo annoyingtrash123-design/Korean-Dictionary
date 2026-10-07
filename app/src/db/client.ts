@@ -12,8 +12,29 @@ const pending = new Map<number, { ok: (v: any) => void; err: (e: Error) => void 
 export const progress = createStore<Record<string, Progress>>({});
 export const packStatus$ = createStore<PackStatus | null>(null);
 
+// Only one copy of the app can hold the dictionary files (OPFS access handles) at a time, but
+// an installed app and a browser tab of the same site are separate copies. Whoever starts an
+// engine announces it; every other copy hands its engine over by terminating its worker (it
+// starts a fresh one, and claims the files back, the next time it is used), so the copy in use wins.
+const instanceId = Math.random().toString(36).slice(2);
+const channel: BroadcastChannel | undefined = typeof BroadcastChannel === 'function' ? new BroadcastChannel('kdict-engine') : undefined;
+channel?.addEventListener('message', (ev: MessageEvent<{ t: string; from: string }>) => {
+  if (ev.data?.t !== 'claim' || ev.data.from === instanceId || !worker) return;
+  if (installActive.get()) return; // never abort a running download; the other copy will show the storage message
+  releaseWorker();
+});
+function releaseWorker() {
+  worker?.terminate(); worker = undefined;
+  for (const p of pending.values()) p.err(new Error('Worker restarted')); pending.clear();
+}
+// Coming back to the foreground: take the engine back now rather than on the first keystroke.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && !worker && packStatus$.get()) refreshStatus().catch(() => undefined);
+});
+
 function w(): Worker {
   if (worker) return worker;
+  channel?.postMessage({ t: 'claim', from: instanceId });
   worker = new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' });
   worker.onmessage = (ev: MessageEvent<Res | Evt>) => {
     const m = ev.data as Res & Evt;
@@ -34,8 +55,7 @@ function call<T>(method: string, ...args: unknown[]): Promise<T> {
 
 /** Drop the worker (and with it a failed engine init, e.g. storage locked by another tab) and start a fresh one. */
 export function restartWorker() {
-  worker?.terminate(); worker = undefined;
-  for (const p of pending.values()) p.err(new Error('Worker restarted')); pending.clear();
+  releaseWorker();
   packStatus$.set(null);
 }
 

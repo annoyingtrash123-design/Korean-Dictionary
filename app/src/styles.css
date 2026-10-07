@@ -244,3 +244,4 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 
 .sentinel { height: 1px; }
 .pack-line > div:first-child { flex: 1; min-width: 0; }
+.center { display: flex; justify-content: center; padding: 8px 16px; }

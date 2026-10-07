@@ -2,7 +2,7 @@ import { packsKey } from '../lib/packs';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { Lru } from '../lib/cache';
 import { useDelayed } from '../lib/useAsync';
-import { db, packStatus$ } from '../db/client';
+import { db, packStatus$, refreshStatus, restartWorker } from '../db/client';
 import { groupResults } from '../lib/merge';
 import { settings } from '../lib/settings';
 import { useStore } from '../lib/store';
@@ -24,6 +24,7 @@ export function Results({ q }: { q: string }) {
   const [res, setRes0] = useState<{ q: string; r: SearchResult } | undefined>(() => { const c = cache.get(ck(q)); return c ? { q, r: c } : undefined; });
   const setRes = (r: SearchResult) => setRes0({ q, r });
   const [err, setErr] = useState<string>();
+  const [stampBump, setStampBump] = useState(0);
   const [busy, setBusy] = useState(() => !cache.get(ck(q)));
   const slow = useDelayed(busy, 150);
 
@@ -45,7 +46,7 @@ export function Results({ q }: { q: string }) {
       if (live && r.rows?.length >= FIRST_PAGE) setTimeout(() => { if (live) db.search(q, { limit: FULL_PAGE }).then((r2) => done(r2, true), fail); }, 0);
     }, fail);
     return () => { live = false; };
-  }, [q, packsKey(s), stamp]);
+  }, [q, packsKey(s), stamp, stampBump]);
 
   const shown = res?.r;
   const groups = useMemo(() => groupResults(shown?.rows ?? []), [shown]);
@@ -61,7 +62,17 @@ export function Results({ q }: { q: string }) {
   const visible = full ? groups : groups.slice(0, FIRST_PAINT);
   const deconjGroups = groups.filter((g) => g.via === 'deconj' && !groups.some((o) => o !== g && o.via === 'exact' && o.key === g.key)).slice(0, 2);
 
-  if (err) return <div class="page"><Empty title="Search failed">{err}</Empty></div>;
+  if (err) {
+    const locked = /not initialised|Worker restarted|NoModificationAllowed|access handle|locked/i.test(err);
+    return (
+      <div class="page">
+        <Empty title={locked ? 'Dictionary is busy in another window' : 'Search failed'}>
+          {locked ? 'The dictionary is open in another tab or app window. Close that one, then tap Retry.' : err}
+        </Empty>
+        <div class="center"><button type="button" class="btn primary" onClick={() => { cache.clear(); restartWorker(); refreshStatus().catch(() => undefined).finally(() => setStampBump((n) => n + 1)); }}>Retry</button></div>
+      </div>
+    );
+  }
   return (
     <div class={`page${slow ? ' busy' : ''}`} data-q={res?.q} data-busy={busy ? 1 : 0}>
       {shown?.hanja?.map((h) => (
