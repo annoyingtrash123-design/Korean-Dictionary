@@ -2,7 +2,7 @@
 
 use crate::common::*;
 use crate::zh_korean::KoreanHanja;
-use crate::{cedict, freq, kaikki, kengdic, krdict, opendict, pack, schema, stdict, tatoeba, unihan, zhwikt};
+use crate::{cedict, enwikt, freq, kaikki, kengdic, krdict, opendict, pack, schema, stdict, tatoeba, unihan, zhwikt};
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
 use serde_json::{json, Map, Value};
@@ -29,6 +29,9 @@ pub struct Sources {
     pub cedict: Option<PathBuf>,
     /// kaikki Chinese JSONL (multi-GB, streamed): optional `zhwikt` pack.
     pub zhwikt: Option<PathBuf>,
+    /// English Wiktionary (kaikki English JSONL, cut to lines mentioning Korean by `fetch`):
+    /// optional `en_ko` table of the core pack.
+    pub enwikt: Option<PathBuf>,
 }
 
 fn xml_files(dir: &Path, limit: Option<usize>) -> Vec<PathBuf> {
@@ -85,6 +88,7 @@ impl Sources {
             unihan: opt(work.join("Unihan.zip"), "Unihan"),
             cedict: opt(work.join("cedict.zip"), "CC-CEDICT (skipping the cedict pack)"),
             zhwikt: opt(work.join("kaikki-zh.jsonl"), "kaikki Chinese JSONL (skipping the zhwikt pack)"),
+            enwikt: opt(work.join(crate::fetch::ENWIKT_FILE), "kaikki English JSONL (skipping the en_ko table)"),
         }
     }
 }
@@ -533,6 +537,7 @@ fn source_info(name: &str, n: i64) -> Value {
         "tatoeba" => ("CC BY 2.0 FR", "https://tatoeba.org"),
         "cedict" => ("CC BY-SA 4.0", "https://www.mdbg.net/chinese/dictionary?page=cc-cedict"),
         "zhwikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/Chinese/"),
+        "enwikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/English/"),
         "unihan" => ("Unicode License", "https://www.unicode.org/charts/unihan.html"),
         "freq" => ("CC BY-SA 4.0", "https://github.com/hermitdave/FrequencyWords"),
         _ => ("", ""),
@@ -781,6 +786,12 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             st.execute(params![term, tier, score, id])?;
         }
     }
+    // English Wiktionary translation tables -> en_ko (optional)
+    let en_ko = match &src.enwikt {
+        Some(p) => build_en_ko(&conn, p)?,
+        None => None,
+    };
+
     conn.execute_batch(
         "INSERT INTO wotd(n, entry_id) SELECT row_number() OVER (ORDER BY id) - 1, id FROM entries \
          WHERE source = 'krdict' AND level IN (1, 2) AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''",
@@ -862,9 +873,17 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("sentences_wikt".into(), n_wikt_s.into());
     counts.insert("grammar".into(), q("SELECT COUNT(*) FROM grammar")?.into());
     counts.insert("gloss_terms".into(), q("SELECT COUNT(*) FROM gloss_terms")?.into());
+    if let Some(ek) = &en_ko {
+        counts.insert("en_ko".into(), ek.rows.into());
+        counts.insert("en_ko_terms".into(), ek.terms.into());
+        counts.insert("en_ko_gz_bytes".into(), ek.gz_bytes.into());
+    }
     let counts = Value::Object(counts);
 
     let mut sources = Map::new();
+    if let Some(ek) = &en_ko {
+        sources.insert("enwikt".into(), source_info("enwikt", ek.terms));
+    }
     for s in ["krdict", "wikt", "kengdic"] {
         sources.insert(s.into(), source_info(s, c.by_source.get(s).copied().unwrap_or(0)));
     }
@@ -882,6 +901,68 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     finish_db(conn)?;
     Ok(PackResult { path, counts, keys: HashSet::new() })
 }
+
+/// Summary of the `en_ko` table.
+pub struct EnKoStats {
+    pub rows: i64,
+    pub terms: i64,
+    /// gzip size of the table's text (a close estimate of what it adds to the core download).
+    pub gz_bytes: i64,
+}
+
+/// Parse the English Wiktionary extract into `en_ko` + `en_ko_words` (inside the open
+/// transaction). A parse failure only logs a warning and leaves the tables out.
+pub fn build_en_ko(conn: &Connection, p: &Path) -> Result<Option<EnKoStats>> {
+    use std::io::Write;
+    let t = Instant::now();
+    let parsed = fs::File::open(p).map_err(anyhow::Error::from).and_then(|f| enwikt::parse(BufReader::with_capacity(1 << 20, f)));
+    let ek = match parsed {
+        Ok(k) => k,
+        Err(e) => {
+            log::warn!("English Wiktionary failed: {e:#}");
+            return Ok(None);
+        }
+    };
+    conn.execute_batch(schema::EN_KO)?;
+    let mut gz = flate2::write::GzEncoder::new(Vec::new(), flate2::Compression::default());
+    let mut terms: Vec<&str> = Vec::new();
+    {
+        let mut st = conn.prepare("INSERT INTO en_ko(term_norm,term,pos,sense,ko,roman,rank) VALUES(?,?,?,?,?,?,?)")?;
+        for r in &ek.rows {
+            st.execute(params![r.term_norm, r.term, r.pos, r.sense, r.ko, r.roman, r.rank])?;
+            writeln!(gz, "{}\t{}\t{}\t{}\t{}\t{}\t{}", r.term_norm, r.term.as_deref().unwrap_or(""), r.pos, r.sense.as_deref().unwrap_or(""), r.ko, r.roman.as_deref().unwrap_or(""), r.rank)?;
+            if terms.last() != Some(&r.term_norm.as_str()) {
+                terms.push(&r.term_norm);
+            }
+        }
+    }
+    let mut words: Vec<(String, &str)> = terms.iter().flat_map(|t| enwikt::phrase_words(t).into_iter().map(move |w| (w, *t))).collect();
+    words.sort_unstable();
+    words.dedup();
+    {
+        let mut st = conn.prepare("INSERT OR IGNORE INTO en_ko_words(word,term_norm) VALUES(?,?)")?;
+        for (w, t) in &words {
+            st.execute(params![w, t])?;
+            writeln!(gz, "{w}\t{t}")?;
+        }
+    }
+    conn.execute_batch(schema::EN_KO_INDEX)?;
+    let gz_bytes = gz.finish()?.len() as i64;
+    let stats = EnKoStats { rows: ek.rows.len() as i64, terms: terms.len() as i64, gz_bytes };
+    log::info!(
+        "en_ko: {} rows for {} English terms ({} entries, {} items dropped), {} phrase-word rows, ~{:.1} MB gz ({:.1}s)",
+        stats.rows, stats.terms, ek.entries, ek.dropped, words.len(), gz_bytes as f64 / 1e6, t.elapsed().as_secs_f32()
+    );
+    if gz_bytes > MAX_EN_KO_GZ {
+        log::warn!("en_ko is over its size budget: ~{} bytes gz (> {MAX_EN_KO_GZ})", gz_bytes);
+    }
+    Ok(Some(stats))
+}
+
+/// Size budget of the `en_ko` tables (gzip of their text); over it the build logs a warning.
+pub const MAX_EN_KO_GZ: i64 = 6_000_000;
+/// Minimum `en_ko` rows when the English extract was present (a healthy build has far more).
+pub const MIN_EN_KO: i64 = 20_000;
 
 // --- stdict pack ---------------------------------------------------------------
 
@@ -1154,6 +1235,12 @@ pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
     for (k, min) in MIN_CORE {
         if n(core, k) < min {
             bad.push(format!("core.{k} = {} (< {min})", n(core, k)));
+        }
+    }
+    // en_ko is optional: checked only when it was built (its counts are present)
+    if core.get("en_ko").is_some() {
+        if n(core, "en_ko") < MIN_EN_KO {
+            bad.push(format!("core.en_ko = {} (< {MIN_EN_KO})", n(core, "en_ko")));
         }
     }
     if let Some(st) = stdict {

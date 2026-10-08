@@ -256,6 +256,55 @@ fn freq_ranks() {
 }
 
 #[test]
+fn enwikt_parsing() {
+    use kdict_pipeline::enwikt;
+    let k = enwikt::parse(BufReader::new(std::fs::File::open(fx("kaikki_en_sample.jsonl")).unwrap())).unwrap();
+    let rows = |t: &str, pos: &str| -> Vec<(Option<String>, String, Option<String>)> {
+        k.rows.iter().filter(|r| r.term_norm == t && r.pos == pos).map(|r| (r.sense.clone(), r.ko.clone(), r.roman.clone())).collect()
+    };
+    // per-sense items with their own sense label; hanja in brackets dropped; duplicate + Latin + Japanese dropped;
+    // a sense without a label falls back to the sense's first gloss; "translations to be checked" items are skipped
+    let sense1 = Some("information describing events".to_string());
+    assert_eq!(
+        rows("report", "noun"),
+        vec![
+            (sense1.clone(), "보고".into(), Some("bogo".into())),
+            (sense1, "보고서".into(), Some("bogoseo".into())),
+            (Some("A sharp, loud noise as from an explosion".into()), "폭음".into(), Some("pogeum".into())),
+        ]
+    );
+    // top-level translations; `lang` without `lang_code` still counts
+    let verb = rows("report", "verb");
+    assert_eq!(verb.iter().map(|r| r.1.as_str()).collect::<Vec<_>>(), ["보고하다", "알리다", "신고하다"]);
+    assert_eq!(verb[2].0.as_deref(), Some("to notify authorities"));
+    // ranks run on across the lines of one term
+    let ranks: Vec<i64> = k.rows.iter().filter(|r| r.term_norm == "report").map(|r| r.rank).collect();
+    assert_eq!(ranks, (0..6).collect::<Vec<_>>());
+    assert_eq!(rows("report card", "noun").len(), 2);
+    assert_eq!(rows("report sick", "verb")[0].1, "병가를 내다");
+    // proper noun keeps its capitalised display form; non-English lines and lines without Korean are skipped
+    let korea = k.rows.iter().find(|r| r.term_norm == "korea").unwrap();
+    assert_eq!((korea.term.as_deref(), korea.pos.as_str()), (Some("Korea"), "proper noun"));
+    assert!(k.rows.iter().all(|r| r.term_norm != "rapport" && r.term_norm != "reporter"));
+    assert!(k.rows.iter().all(|r| r.term.is_none() || r.term.as_deref() != Some(r.term_norm.as_str())));
+    assert_eq!(k.rows.len(), 11);
+    assert_eq!(k.dropped, 2); // duplicate 보고서, Latin "bang"
+    // helpers
+    assert_eq!(enwikt::clean_ko_word("보고(報告)"), Some("보고".into()));
+    assert_eq!(enwikt::clean_ko_word("(을) 보고하다"), Some("보고하다".into()));
+    assert_eq!(enwikt::clean_ko_word("報告"), None);
+    assert_eq!(enwikt::clean_ko_word("TV 보고"), None);
+    assert_eq!(enwikt::phrase_words("file a report"), ["file".to_string(), "report".to_string()][1..].to_vec());
+    assert_eq!(enwikt::phrase_words("report card"), vec!["card".to_string()]);
+    assert!(enwikt::mentions_korean(br#"{"lang_code": "ko"}"#) && !enwikt::mentions_korean(br#"{"lang_code": "ja"}"#));
+    // fetch keeps only the lines that mention Korean
+    let mut out = Vec::new();
+    let (n, kept) = kdict_pipeline::fetch::filter_lines(&b"{\"a\": \"Korean\"}\n{\"a\": \"Japanese\"}\n{\"b\": \"ko\"}"[..], &mut out, enwikt::mentions_korean).unwrap();
+    assert_eq!((n, kept), (3, 2));
+    assert_eq!(out, b"{\"a\": \"Korean\"}\n{\"b\": \"ko\"}\n");
+}
+
+#[test]
 fn kaikki_parsing() {
     let k = kaikki::parse(BufReader::new(std::fs::File::open(fx("kaikki_sample.jsonl")).unwrap())).unwrap();
     let by = |w: &str, h: Option<i64>| k.entries.iter().find(|e| e.headword == w && e.homonym == h).unwrap_or_else(|| panic!("{w}"));
@@ -392,6 +441,7 @@ fn end_to_end_mini_build() {
         unihan: Some(zp),
         cedict: Some(fx("cedict_sample.u8")),
         zhwikt: Some(fx("zhwikt_sample.jsonl")),
+        enwikt: Some(fx("kaikki_en_sample.jsonl")),
     };
     let out = dir.path().join("out");
     let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
@@ -438,6 +488,16 @@ fn end_to_end_mini_build() {
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM (SELECT term, entry_id FROM gloss_terms GROUP BY term, entry_id HAVING COUNT(*) > 1)"), 0);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='krdict' AND level IN (1,2) AND kind='word' AND gloss IS NOT NULL AND gloss != ''"));
     assert_eq!(q::<i64>(&c, "SELECT MAX(n) + 1 FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM wotd"));
+    // en_ko (English Wiktionary translation tables), only with the English extract
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sqlite_master WHERE name='en_ko_term'"), 1);
+    assert_eq!(q::<String>(&c, "SELECT group_concat(ko, ',') FROM (SELECT ko FROM en_ko WHERE term_norm='report' AND pos='noun' ORDER BY rank)"), "보고,보고서,폭음");
+    assert_eq!(q::<String>(&c, "SELECT group_concat(term_norm, ',') FROM (SELECT term_norm FROM en_ko_words WHERE word='report' ORDER BY term_norm)"), "file a report");
+    assert_eq!(q::<String>(&c, "SELECT term FROM en_ko WHERE term_norm='korea'"), "Korea");
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM en_ko WHERE term IS NOT NULL AND term = term_norm"), 0);
+    let core_counts: serde_json::Value = serde_json::from_str(&q::<String>(&c, "SELECT value FROM meta WHERE key='counts'")).unwrap();
+    assert_eq!(core_counts["en_ko"].as_i64(), Some(11));
+    assert!(core_counts["en_ko_gz_bytes"].as_i64().unwrap() > 0);
+    assert!(q::<String>(&c, "SELECT value FROM meta WHERE key='sources'").contains("enwikt"));
     // covering-index plans for the hot queries
     let plan = |sql: &str| -> String {
         let mut st = c.prepare(&format!("EXPLAIN QUERY PLAN {sql}")).unwrap();
@@ -809,4 +869,17 @@ fn chinese_sources_missing_means_no_pack() {
     let m = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
     assert_eq!(m["packs"].as_array().unwrap().len(), 1);
     assert!(!out.join("cedict.sqlite").exists() && !out.join("zhwikt.sqlite").exists());
+}
+
+#[test]
+fn quality_gate_en_ko_only_when_built() {
+    use serde_json::json;
+    let base = json!({"entries": 200000, "krdict": 60000, "wikt": 30000, "sentences": 20000, "hanja_chars": 6000});
+    assert!(build::quality_gate(&base, None).is_empty());
+    let mut thin = base.clone();
+    thin["en_ko"] = json!(5);
+    assert_eq!(build::quality_gate(&thin, None).len(), 1);
+    let mut full = base.clone();
+    full["en_ko"] = json!(200000);
+    assert!(build::quality_gate(&full, None).is_empty());
 }

@@ -70,3 +70,15 @@ pub const CHO_INDEX: &str = "CREATE INDEX entries_cho ON entries(cho, rank) WHER
 /// Korean packs (stdict / opendict): partial index over the 옛말 (old word) entries, `entries.hist = 1`.
 /// The engine uses it for old-spelling lookups in the Reader.
 pub const HIST_INDEX: &str = "CREATE INDEX entries_hist ON entries(hist, hw_norm) WHERE hist = 1;";
+
+/// Core pack, only when the English Wiktionary extract was available: English term -> Korean
+/// translations (Wiktionary translation tables), plus a word index for "phrases containing".
+/// `term` is NULL when it equals `term_norm`; `rank` orders the rows of one term (source order).
+pub const EN_KO: &str = r#"
+CREATE TABLE en_ko (
+  term_norm TEXT NOT NULL, term TEXT, pos TEXT NOT NULL, sense TEXT,
+  ko TEXT NOT NULL, roman TEXT, rank INTEGER NOT NULL
+);
+CREATE TABLE en_ko_words (word TEXT NOT NULL, term_norm TEXT NOT NULL, PRIMARY KEY (word, term_norm)) WITHOUT ROWID;
+"#;
+pub const EN_KO_INDEX: &str = "CREATE INDEX en_ko_term ON en_ko(term_norm, rank);";
