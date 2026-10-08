@@ -19,7 +19,12 @@ const wordPoint = (page: Page, n: number, s: number, e: number) => page.evaluate
   const b = r.getBoundingClientRect();
   return { x: b.left + b.width / 2, y: b.top + b.height / 2 };
 }, [n, s, e] as [number, number, number]);
-const tap = async (page: Page, n: number, s: number, e: number) => { const p = await wordPoint(page, n, s, e); await page.mouse.click(p.x, p.y); };
+const tap = async (page: Page, n: number, s: number, e: number) => {
+  // a remembered reading position may have scrolled the paragraph away: bring it into view first
+  await page.locator(`[data-ko="${n}"]`).first().scrollIntoViewIfNeeded();
+  const p = await wordPoint(page, n, s, e);
+  await page.mouse.click(p.x, p.y);
+};
 const mark = (page: Page) => page.locator('mark.hl');
 
 async function readerFlow(page: Page) {
