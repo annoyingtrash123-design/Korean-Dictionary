@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T08:50:10Z",
+  "generated_at": "2026-10-08T19:40:01Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -1280,6 +1280,294 @@
       "url": "https://ko.wikisource.org/wiki/%EB%B2%99%EC%96%B4%EB%A6%AC_%EC%82%BC%EB%A3%A1%EC%9D%B4",
       "revision_id": 387844,
       "chars": 10694,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "imsi_heonbeop_1919",
+      "source": "wikisource-ko",
+      "page_title": "대한민국임시헌법 (제2호)",
+      "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9E%84%EC%8B%9C%ED%97%8C%EB%B2%95_%28%EC%A0%9C2%ED%98%B8%29",
+      "revision_id": 407831,
+      "chars": 4977,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "geonguk_gangnyeong",
+      "source": "wikisource-ko",
+      "page_title": "대한민국 임시정부 건국 강령",
+      "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%9E%84%EC%8B%9C%EC%A0%95%EB%B6%80_%EA%B1%B4%EA%B5%AD_%EA%B0%95%EB%A0%B9",
+      "revision_id": 368329,
+      "chars": 3512,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "gwangbokgun_seoneon",
+      "source": "wikisource-ko",
+      "page_title": "한국 광복군 선언문",
+      "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EA%B5%AD_%EA%B4%91%EB%B3%B5%EA%B5%B0_%EC%84%A0%EC%96%B8%EB%AC%B8",
+      "revision_id": 460072,
+      "chars": 573,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "baekbeomilji",
+      "source": "wikisource-ko",
+      "page_title": "백범일지",
+      "url": "https://ko.wikisource.org/wiki/%EB%B0%B1%EB%B2%94%EC%9D%BC%EC%A7%80",
+      "revision_id": 424842,
+      "chars": 23499,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "naui_sowon",
+      "source": "wikisource-ko",
+      "page_title": "백범일지",
+      "url": "https://ko.wikisource.org/wiki/%EB%B0%B1%EB%B2%94%EC%9D%BC%EC%A7%80",
+      "revision_id": 424842,
+      "chars": 8,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "geonjun_seoneon_gangnyeong",
+      "source": "wikisource-ko",
+      "page_title": "조선독립의 당위성 외/건준 선언과 강령",
+      "url": "https://ko.wikisource.org/wiki/%EC%A1%B0%EC%84%A0%EB%8F%85%EB%A6%BD%EC%9D%98_%EB%8B%B9%EC%9C%84%EC%84%B1_%EC%99%B8/%EA%B1%B4%EC%A4%80_%EC%84%A0%EC%96%B8%EA%B3%BC_%EA%B0%95%EB%A0%B9",
+      "revision_id": 151946,
+      "chars": 1546,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "mulsan_janglyeohoe_chwiji",
+      "source": "wikisource-ko",
+      "page_title": "조선물산장려회취지서",
+      "url": "https://ko.wikisource.org/wiki/%EC%A1%B0%EC%84%A0%EB%AC%BC%EC%82%B0%EC%9E%A5%EB%A0%A4%ED%9A%8C%EC%B7%A8%EC%A7%80%EC%84%9C",
+      "revision_id": 350168,
+      "chars": 1082,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "minjok_gaejoron",
+      "source": "wikisource-ko",
+      "page_title": "민족개조론",
+      "url": "https://ko.wikisource.org/wiki/%EB%AF%BC%EC%A1%B1%EA%B0%9C%EC%A1%B0%EB%A1%A0",
+      "revision_id": 402723,
+      "chars": 115240,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "gundae_haesan_jochik",
+      "source": "wikisource-zh",
+      "page_title": "朝鮮王朝實錄/純宗實錄/卽位年",
+      "url": "https://zh.wikisource.org/wiki/%E6%9C%9D%E9%AE%AE%E7%8E%8B%E6%9C%9D%E5%AF%A6%E9%8C%84/%E7%B4%94%E5%AE%97%E5%AF%A6%E9%8C%84/%E5%8D%BD%E4%BD%8D%E5%B9%B4",
+      "revision_id": 2406155,
+      "chars": 485,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "jeongmi_7jo",
+      "source": "wikisource-ko",
+      "page_title": "한일신협약",
+      "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EC%9D%BC%EC%8B%A0%ED%98%91%EC%95%BD",
+      "revision_id": 455061,
+      "chars": 913,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "palwol_tese",
+      "source": "wikisource-ko",
+      "page_title": "현 정세와 우리의 임무",
+      "url": "https://ko.wikisource.org/wiki/%ED%98%84_%EC%A0%95%EC%84%B8%EC%99%80_%EC%9A%B0%EB%A6%AC%EC%9D%98_%EC%9E%84%EB%AC%B4",
+      "revision_id": 194569,
+      "chars": 17508,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "nangaek_sinnyeon_manpil",
+      "source": "wikisource-ko",
+      "page_title": "낭객의 신년 만필",
+      "url": "https://ko.wikisource.org/wiki/%EB%82%AD%EA%B0%9D%EC%9D%98_%EC%8B%A0%EB%85%84_%EB%A7%8C%ED%95%84",
+      "revision_id": 124579,
+      "chars": 7667,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "pak_gyusu_jinju_jangge",
+      "source": "wikisource-zh",
+      "page_title": "朝鮮王朝實錄/哲宗實錄/十三年",
+      "url": "https://zh.wikisource.org/wiki/%E6%9C%9D%E9%AE%AE%E7%8E%8B%E6%9C%9D%E5%AF%A6%E9%8C%84/%E5%93%B2%E5%AE%97%E5%AF%A6%E9%8C%84/%E5%8D%81%E4%B8%89%E5%B9%B4",
+      "revision_id": 2134893,
+      "chars": 6732,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "hongbeom_14jo",
+      "source": "wikisource-zh",
+      "page_title": "洪範十四條",
+      "url": "https://zh.wikisource.org/wiki/%E6%B4%AA%E7%AF%84%E5%8D%81%E5%9B%9B%E6%A2%9D",
+      "revision_id": 2590162,
+      "chars": 1240,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "siil_yabangseongdaegok",
+      "source": "wikisource-ko",
+      "page_title": "시일야방성대곡",
+      "url": "https://ko.wikisource.org/wiki/%EC%8B%9C%EC%9D%BC%EC%95%BC%EB%B0%A9%EC%84%B1%EB%8C%80%EA%B3%A1",
+      "revision_id": 430485,
+      "chars": 1596,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "sul_gwonhaneun_sahoe",
+      "source": "wikisource-ko",
+      "page_title": "술 권하는 사회",
+      "url": "https://ko.wikisource.org/wiki/%EC%88%A0_%EA%B6%8C%ED%95%98%EB%8A%94_%EC%82%AC%ED%9A%8C",
+      "revision_id": 425047,
+      "chars": 10662,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "ready_made_insaeng",
+      "source": "wikisource-ko",
+      "page_title": "레디메이드 인생",
+      "url": "https://ko.wikisource.org/wiki/%EB%A0%88%EB%94%94%EB%A9%94%EC%9D%B4%EB%93%9C_%EC%9D%B8%EC%83%9D",
+      "revision_id": 223316,
+      "chars": 24219,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "manmubang",
+      "source": "wikisource-ko",
+      "page_title": "만무방",
+      "url": "https://ko.wikisource.org/wiki/%EB%A7%8C%EB%AC%B4%EB%B0%A9",
+      "revision_id": 157696,
+      "chars": 22940,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "ganghwado_treaty",
+      "source": "wikisource-zh",
+      "page_title": "江華島條約",
+      "url": "https://zh.wikisource.org/wiki/%E6%B1%9F%E8%8F%AF%E5%B3%B6%E6%A2%9D%E7%B4%84",
+      "revision_id": 2528032,
+      "chars": 1312,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "joseon_miguk_treaty",
+      "source": "wikisource-ko",
+      "page_title": "조미수호통상조약",
+      "url": "https://ko.wikisource.org/wiki/%EC%A1%B0%EB%AF%B8%EC%88%98%ED%98%B8%ED%86%B5%EC%83%81%EC%A1%B0%EC%95%BD",
+      "revision_id": 411447,
+      "chars": 2349,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "joseon_cheong_sangmin_muyeok",
+      "source": "wikisource-zh",
+      "page_title": "中朝商民水陸貿易章程",
+      "url": "https://zh.wikisource.org/wiki/%E4%B8%AD%E6%9C%9D%E5%95%86%E6%B0%91%E6%B0%B4%E9%99%B8%E8%B2%BF%E6%98%93%E7%AB%A0%E7%A8%8B",
+      "revision_id": 2667232,
+      "chars": 2007,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "gojong_sillok_cheongbyeong_jeonju",
+      "source": "wikisource-zh",
+      "page_title": "朝鮮王朝實錄/高宗實錄/三十一年",
+      "url": "https://zh.wikisource.org/wiki/%E6%9C%9D%E9%AE%AE%E7%8E%8B%E6%9C%9D%E5%AF%A6%E9%8C%84/%E9%AB%98%E5%AE%97%E5%AF%A6%E9%8C%84/%E4%B8%89%E5%8D%81%E4%B8%80%E5%B9%B4",
+      "revision_id": 2406188,
+      "chars": 16609,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "hanil_uijeongseo",
+      "source": "wikisource-ko",
+      "page_title": "한일의정서",
+      "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EC%9D%BC%EC%9D%98%EC%A0%95%EC%84%9C",
+      "revision_id": 455063,
+      "chars": 1334,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "eulsa_treaty",
+      "source": "wikisource-ko",
+      "page_title": "제2차 한일협약",
+      "url": "https://ko.wikisource.org/wiki/%EC%A0%9C2%EC%B0%A8_%ED%95%9C%EC%9D%BC%ED%98%91%EC%95%BD",
+      "revision_id": 455058,
+      "chars": 712,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -2573,6 +2861,72 @@
           "redirected_to": null
         }
       ]
+    },
+    {
+      "id": "gangbo_dubyeongjeong",
+      "source_title": "윤봉길의 유서",
+      "candidates": [
+        {
+          "host": "ko.wikisource.org",
+          "title": "윤봉길의 유서",
+          "namespace": 0,
+          "bytes": 2025,
+          "preview": "{{머리말 | 제목 = 유서 | 부제 = | 저자 = [[저자:윤봉길|윤봉길]] | 이전 = | 다음 = | 설명 = 대한민국의 보물 제568-2호. 1932년 4월 27일 공원을 답사한 직후 작성한 것으로, 이 자",
+          "note": "index page: page is almost empty"
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
+          "namespace": 0,
+          "bytes": 1262278,
+          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
+          "redirected_to": null
+        }
+      ]
+    },
+    {
+      "id": "dongnip_sinmun_nonseol_dongnipmun",
+      "source_title": "독립신문/1896년/7월/4일",
+      "candidates": [
+        {
+          "host": "zh.wikisource.org",
+          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
+          "namespace": 0,
+          "bytes": 1262278,
+          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "華夷譯語/朝鮮館譯語",
+          "namespace": 0,
+          "bytes": 39053,
+          "preview": "## 天文門 編號 詞彙 訓讀 古諺文 音讀 古諺文 1 天 哈嫩二 하늘 忝 텬(텬) 2 日 害 해 忍 ᅀᅵᆯ(ᅀᅵᇙ) 3 月 得二 ᄃᆞᆯ 臥 월(ᅌᅯᇙ) 4 星 別二 별 省 셔ᇰ(셔ᇰ) 5 風 把論 ᄇᆞᄅᆞᆷ 捧 푸ᇰ(",
+          "redirected_to": null
+        }
+      ]
+    },
+    {
+      "id": "dongnip_sinmun_nonseol_minkwon",
+      "source_title": "독립신문/1896년/5월/2일",
+      "candidates": [
+        {
+          "host": "zh.wikisource.org",
+          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
+          "namespace": 0,
+          "bytes": 1262278,
+          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "華夷譯語/朝鮮館譯語",
+          "namespace": 0,
+          "bytes": 39053,
+          "preview": "## 天文門 編號 詞彙 訓讀 古諺文 音讀 古諺文 1 天 哈嫩二 하늘 忝 텬(텬) 2 日 害 해 忍 ᅀᅵᆯ(ᅀᅵᇙ) 3 月 得二 ᄃᆞᆯ 臥 월(ᅌᅯᇙ) 4 星 別二 별 省 셔ᇰ(셔ᇰ) 5 風 把論 ᄇᆞᄅᆞᆷ 捧 푸ᇰ(",
+          "redirected_to": null
+        }
+      ]
     }
   ],
   "unsupported": [],
@@ -2580,6 +2934,10 @@
     {
       "id": "hunminjeongeum_jeonginji",
       "error": "page \"訓民正音\" resolved but its cleaned text is empty; page \"훈민정음\" resolved but its cleaned text is empty"
+    },
+    {
+      "id": "ingan_munje",
+      "error": "page \"인간문제\" resolved but its cleaned text is empty"
     }
   ],
   "needs_sections": [
