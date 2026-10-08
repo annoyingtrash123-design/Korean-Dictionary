@@ -1,70 +1,70 @@
 {
-  "id": "gimi_declaration",
-  "card": {
-    "summary_ko": "1919년 3월 1일 민족대표 33인이 조선의 독립과 조선인의 자주를 세계에 선언한 글. 최남선이 초안을 쓰고 한용운이 공약삼장을 더했다고 전한다.",
-    "summary_en": "The declaration of 1 March 1919, in which 33 national representatives proclaimed Korea's independence to the world. Choe Nam-seon is said to have drafted it, with the three-point pledge usually credited to Han Yong-un.",
-    "level": "advanced",
-    "edition_ko": "한국어 위키문헌 「3·1독립선언서」 (개정 459928, 2026-09-24), 원저작 퍼블릭 도메인, 전사 CC BY-SA 4.0 — 국한문 원문, 현대어 풀이, ‘쉽고 바르게 읽는’ 현대어판이 함께 실려 있음(뒤의 두 가지는 후대의 현대어 옮김), 번역 없음",
-    "edition_en": "Korean Wikisource '3.1 Independence Declaration' (revision 459928, 2026-09-24); original in the public domain, transcription CC BY-SA 4.0. The Reader shows three layers: the 1919 mixed-script original, a modern-Korean rendering, and a plain-language modern version (the last two are later renderings, not the 1919 text); no translation yet"
+ "id": "gimi_declaration",
+ "card": {
+  "summary_ko": "1919년 3월 1일 민족대표 33인이 조선의 독립과 조선인의 자주를 세계에 선언한 글. 최남선이 초안을 쓰고 한용운이 공약삼장을 더했다고 전한다.",
+  "summary_en": "The declaration of 1 March 1919, in which 33 national representatives proclaimed Korea's independence to the world. Choe Nam-seon is said to have drafted it, with the three-point pledge usually credited to Han Yong-un.",
+  "level": "advanced",
+  "edition_ko": "한국어 위키문헌 「3·1독립선언서」 (개정 459928, 2026-09-24), 원저작 퍼블릭 도메인(1919년 문서), 전사 CC BY-SA 4.0 — 1919년 국한문 원문(선언서 본문, 공약삼장, 서명한 33인 명단)만 수록한 판. 위키문헌 쪽에 함께 있는 후대의 현대어 옮김들은 수록하지 않았음, 번역 없음",
+  "edition_en": "Korean Wikisource '3.1 Independence Declaration' (revision 459928, 2026-09-24); original in the public domain (1919 document), transcription CC BY-SA 4.0. The Reader shows only the 1919 mixed-script original (body, three-point pledge and the list of the 33 signatories); the modern-Korean renderings on the source page are not included; no translation yet"
+ },
+ "notes": {
+  "ko": "**배경**\n1919년 3월 1일, 천도교·기독교·불교 대표 33인이 서명한 독립선언서가 발표되었다. 서명자 가운데 29명이 서울 태화관에 모여 선언서를 낭독하고 스스로 일제 당국에 알렸다. 같은 날 탑골공원 등에서 학생과 시민이 독립 만세를 외치며 3·1운동이 시작되었다. 글은 최남선이 초안을 썼고, 끝의 ‘공약삼장’은 한용운이 더했다고 흔히 전해진다. 연도는 ‘조선건국 4252년’이라는 단기식으로 적혀 있다.\n\n**내용**\n본문은 크게 다섯 갈래로 읽을 수 있다. 첫째, 조선이 독립국이며 조선인이 자주민임을 선언하고, 이것이 하늘의 뜻이자 시대의 대세라고 말한다. 둘째, 일본의 지배가 민족에게 준 고통과 손실을 헤아리고 독립을 확실히 하는 것이 가장 급한 일이라고 한다. 셋째, 일본의 신의 없음을 책망하기보다 자기 건설에 힘쓰겠다고 하며 과거를 따지지 않는다. 넷째, 병합이 두 민족 사이에 원한을 만들고 동양의 평화를 해친다고 주장한다. 다섯째, ‘위력의 시대’가 가고 ‘도의의 시대’가 왔다며 새 세계를 향해 나아가자고 호소한다. 끝에 ‘공약삼장’(자유 정신, 정당한 의사 표현, 질서 존중)과 33인의 이름이 나온다. 리더에는 1919년 국한문 원문(본문, 공약삼장, 33인 명단)만 실려 있으며, 위키문헌 쪽의 후대 현대어 옮김은 포함하지 않았다.\n\n**의의**\n비폭력과 질서를 강조한 독립 선언으로, 이후 상하이 대한민국임시정부 수립(1919)과 현행 헌법 전문의 3·1운동 언급으로 이어진다. 한문 투 국한문 혼용 문체의 대표적 본보기이기도 하다.\n\n**읽기 도움**\n- 吾等(오등): 우리\n- 玆(자)에: 이에\n- 宣言(선언), 獨立國(독립국), 自主民(자주민)\n- 人類平等(인류평등)의 大義(대의): 인류 평등의 큰 뜻\n- 民族自存(민족자존)의 正權(정권): 민족이 스스로 존재할 정당한 권리\n- 侵略主義·强權主義: 침략주의·강권주의\n- 丙子修好條規(병자수호조규): 1876년 강화도조약\n- 威力(위력)의 時代 → 道義(도의)의 時代\n- 公約三章(공약삼장): 세 가지 약속\n- 朝鮮建國(조선건국) 4252년: 단군 기원식 연도로, 서기 1919년\n- 원문에는 ᄲᅮᆫ(뿐), ᄭᅡ지(까지)처럼 자모를 풀어 쓴 글자가 있어 화면에 따라 어색하게 보일 수 있다.\n- 명단의 梁旬伯(양순백)은 보통 양전백(梁甸伯)으로 알려진 인물의 이름이 이 문서에 이렇게 인쇄된 것이다.",
+  "en": "**Background**\nOn 1 March 1919, the declaration was issued over the signatures of 33 representatives of the Cheondogyo, Christian and Buddhist communities. Twenty-nine of the signatories gathered at the Taehwagwan restaurant in Seoul, read it out and notified the Japanese authorities themselves. The same day, students and citizens at Tapgol Park and elsewhere shouted for independence, starting the March First Movement. The text is commonly said to have been drafted by Choe Nam-seon, with the closing 'three-point pledge' added by Han Yong-un. The date is given in the dangi reckoning ('4252nd year of the founding of Joseon').\n\n**Contents**\nThe body can be read in five movements. First, it declares Korea an independent state and Koreans a self-governing people, calling this Heaven's will and the tide of the age. Second, it counts what Japanese rule has cost the nation and says securing independence is the most urgent task. Third, rather than blame Japan for broken treaties, it says it will concentrate on building itself and not litigate the past. Fourth, it argues that the annexation has bred resentment between two peoples and endangers peace in the East. Fifth, it announces that the age of force has ended and an age of moral right begun, and urges moving toward the new world. It closes with the three-point pledge (act in the spirit of freedom, express the people's will to the last, keep order) and the 33 names. The Reader shows only the 1919 mixed-script original (body, pledge and the 33 names); the later modern-Korean renderings on the source page are not included.\n\n**Significance**\nA manifesto that stresses non-violence and order, leading to the founding of the Provisional Government in Shanghai (1919) and, much later, to the mention of the March First Movement in the preamble of the present Constitution. It is also a prime specimen of the Sino-Korean mixed-script prose style.\n\n**Reading help**\n- 吾等 (odeung): we\n- 玆 (ja)에: hereby\n- 人類平等의 大義: the great principle of human equality\n- 民族自存의 正權: a people's rightful claim to exist on its own\n- 侵略主義 / 强權主義: aggression / might-makes-right\n- 丙子修好條規: the 1876 treaty of Ganghwa\n- 威力의 時代 -> 道義의 時代: age of force -> age of moral right\n- 公約三章: the three-point pledge\n- 朝鮮建國 4252: year count from the legendary founding era (Dangun reckoning); 1919 CE\n- The original contains decomposed jamo sequences such as ᄲᅮᆫ (ppun) and ᄭᅡ지 (kka-ji) that may render oddly on some screens.\n- The original name list has 梁旬伯 (Yang Sun-baek); the person is usually known as Yang Jeon-baek (梁甸伯); the name is printed this way in this document."
+ },
+ "paragraphs": [
+  {
+   "orig": "## 원문",
+   "modern": null,
+   "reading": null,
+   "en": null
   },
-  "notes": {
-    "ko": "**배경**\n1919년 3월 1일, 천도교·기독교·불교 대표 33인이 서울 태화관에 모여 독립선언서를 낭독하고 스스로 일제에 알렸다. 같은 날 탑골공원 등에서 학생과 시민이 독립 만세를 외치며 3·1운동이 시작되었다. 글은 최남선이 초안을 썼고, 끝의 ‘공약삼장’은 한용운이 더했다고 흔히 전해진다. 연도는 ‘조선건국 4252년’이라는 단기식으로 적혀 있다.\n\n**내용**\n본문은 크게 다섯 갈래로 읽을 수 있다. 첫째, 조선이 독립국이며 조선인이 자주민임을 선언하고, 이것이 하늘의 뜻이자 시대의 대세라고 말한다. 둘째, 일본의 지배가 민족에게 준 고통과 손실을 헤아리고 독립을 확실히 하는 것이 가장 급한 일이라고 한다. 셋째, 일본의 신의 없음을 책망하기보다 자기 건설에 힘쓰겠다고 하며 과거를 따지지 않는다. 넷째, 병합이 두 민족 사이에 원한을 만들고 동양의 평화를 해친다고 주장한다. 다섯째, ‘위력의 시대’가 가고 ‘도의의 시대’가 왔다며 새 세계를 향해 나아가자고 호소한다. 끝에 ‘공약삼장’(자유 정신, 정당한 의사 표현, 질서 존중)과 33인의 이름이 나온다. 리더에는 이 전체가 세 겹으로 실려 있다.\n\n**의의**\n비폭력과 질서를 강조한 독립 선언으로, 이후 상하이 대한민국임시정부 수립(1919)과 현행 헌법 전문의 3·1운동 언급으로 이어진다. 한문 투 국한문 혼용 문체의 대표적 본보기이기도 하다.\n\n**읽기 도움**\n- 吾等(오등): 우리\n- 玆(자)에: 이에\n- 宣言(선언), 獨立國(독립국), 自主民(자주민)\n- 人類平等(인류평등)의 大義(대의): 인류 평등의 큰 뜻\n- 民族自存(민족자존)의 正權(정권): 민족이 스스로 존재할 정당한 권리\n- 侵略主義·强權主義: 침략주의·강권주의\n- 丙子修好條規(병자수호조규): 1876년 강화도조약\n- 威力(위력)의 時代 → 道義(도의)의 時代\n- 公約三章(공약삼장): 세 가지 약속\n- 檀紀(단기) 4252년: 서기 1919년\n- 원문에는 ᄲᅮᆫ(뿐), ᄭᅡ지(까지)처럼 자모를 풀어 쓴 글자가 있어 화면에 따라 어색하게 보일 수 있다.\n- 명단의 梁旬伯(양순백)은 흔히 양전백(梁甸伯)으로 알려진 인물로, 쉬운 판은 ‘양전백’으로 적었다.",
-    "en": "**Background**\nOn 1 March 1919, 33 representatives of the Cheondogyo, Christian and Buddhist communities gathered at the Taehwagwan restaurant in Seoul, read out the declaration and notified the Japanese authorities themselves. The same day, students and citizens at Tapgol Park and elsewhere shouted for independence, starting the March First Movement. The text is commonly said to have been drafted by Choe Nam-seon, with the closing 'three-point pledge' added by Han Yong-un. The date is given in the dangi reckoning ('4252nd year of the founding of Joseon').\n\n**Contents**\nThe body can be read in five movements. First, it declares Korea an independent state and Koreans a self-governing people, calling this Heaven's will and the tide of the age. Second, it counts what Japanese rule has cost the nation and says securing independence is the most urgent task. Third, rather than blame Japan for broken treaties, it says it will concentrate on building itself and not litigate the past. Fourth, it argues that the annexation has bred resentment between two peoples and endangers peace in the East. Fifth, it announces that the age of force has ended and an age of moral right begun, and urges moving toward the new world. It closes with the three-point pledge (act in the spirit of freedom, express the people's will to the last, keep order) and the 33 names. The Reader shows all of this in three layers.\n\n**Significance**\nA manifesto that stresses non-violence and order, leading to the founding of the Provisional Government in Shanghai (1919) and, much later, to the mention of the March First Movement in the preamble of the present Constitution. It is also a prime specimen of the Sino-Korean mixed-script prose style.\n\n**Reading help**\n- 吾等 (odeung): we\n- 玆 (ja)에: hereby\n- 人類平等의 大義: the great principle of human equality\n- 民族自存의 正權: a people's rightful claim to exist on its own\n- 侵略主義 / 强權主義: aggression / might-makes-right\n- 丙子修好條規: the 1876 treaty of Ganghwa\n- 威力의 時代 -> 道義의 時代: age of force -> age of moral right\n- 公約三章: the three-point pledge\n- 檀紀 4252: 1919 CE\n- The original contains decomposed jamo sequences such as ᄲᅮᆫ (ppun) and ᄭᅡ지 (kka-ji) that may render oddly on some screens.\n- The original name list has 梁旬伯 (Yang Sun-baek); the person is usually known as Yang Jeon-baek (梁甸伯), as the plain-language version spells it."
+  {
+   "orig": "宣言書 吾等은 玆에 我 朝鮮의 獨立國임과 朝鮮人의 自主民임을 宣言하노라 此로써 世界萬邦에 告하야 人類平等의 大義를 克明하며 此로써 子孫萬代에 誥하야 民族自存의 正權을 永有케 하노라. 半萬年 歷史의 權威를 仗하야 此를 宣言함이며 二千萬 民衆의 誠忠을 合하야 此를 佈明함이며 民族의 恒久如一한 自由發展을 爲하야 此를 主張함이며 人類的良心의 發露에 基因한 世界改造의 大機運에 順應幷進하기 爲하야 此를 提起함이니 是ㅣ 天의 明命이며 時代의 大勢ㅣ며 全人類 共存同生權의 正當한 發動이라 天下何物이던지 此를 沮止抑制치 못 할지니라. 舊時代의 遺物인 侵略主義 强權主義의 犧牲을 作하야 有史以來 累千年에 처음으로 異民族 箝制의 痛苦를 甞한 지 今에 十年을 過한지라 我 生存權의 剝喪됨이 무릇 幾何ㅣ며 心靈上 發展의 障礙됨이 무릇 幾何ㅣ며 民族的 尊榮의 毁損됨이 무릇 幾何ㅣ며 新銳와 獨創으로써 世界文化의 大潮流에 寄與補裨할 機緣을 遺失함이 무릇 幾何ㅣ뇨.",
+   "modern": null,
+   "reading": null,
+   "en": null
   },
-  "paragraphs": [
-    {
-      "orig": "## 원문",
-      "modern": null,
-      "reading": null,
-      "en": null
-    },
-    {
-      "orig": "宣言書 吾等은 玆에 我 朝鮮의 獨立國임과 朝鮮人의 自主民임을 宣言하노라 此로써 世界萬邦에 告하야 人類平等의 大義를 克明하며 此로써 子孫萬代에 誥하야 民族自存의 正權을 永有케 하노라. 半萬年 歷史의 權威를 仗하야 此를 宣言함이며 二千萬 民衆의 誠忠을 合하야 此를 佈明함이며 民族의 恒久如一한 自由發展을 爲하야 此를 主張함이며 人類的良心의 發露에 基因한 世界改造의 大機運에 順應幷進하기 爲하야 此를 提起함이니 是ㅣ 天의 明命이며 時代의 大勢ㅣ며 全人類 共存同生權의 正當한 發動이라 天下何物이던지 此를 沮止抑制치 못 할지니라. 舊時代의 遺物인 侵略主義 强權主義의 犧牲을 作하야 有史以來 累千年에 처음으로 異民族 箝制의 痛苦를 甞한 지 今에 十年을 過한지라 我 生存權의 剝喪됨이 무릇 幾何ㅣ며 心靈上 發展의 障礙됨이 무릇 幾何ㅣ며 民族的 尊榮의 毁損됨이 무릇 幾何ㅣ며 新銳와 獨創으로써 世界文化의 大潮流에 寄與補裨할 機緣을 遺失함이 무릇 幾何ㅣ뇨.",
-      "modern": null,
-      "reading": null,
-      "en": null
-    },
-    {
-      "orig": "噫라 舊來의 抑鬱을 宣暢하려 하면 時下의 苦痛을 擺脫하려 하면 將來의 脅威를 芟除하려 하면 民族的 良心과 國家的 廉義의 壓縮銷殘을 興奮伸張하려 하면 各個人格의 正當한 發達을 遂하려 하면 可憐한 子弟에게 苦恥的 財產을 遺與치 안이하려 하면 子子孫孫의 永久完全한 慶福을 導迎하려 하면 最大急務가 民族的 獨立을 確實케 함이니 二千萬 各個가 人마다 方寸의 刃을 懷하고人類通性과 時代良心이 正義의 軍과 人道의 干戈로써 護援하는 今日 吾人은 進하야 取하매 何强을 挫치 못하랴 退하야 作하매 何志를 展치 못하랴.",
-      "modern": null,
-      "reading": null,
-      "en": null
-    },
-    {
-      "orig": "丙子修好條規 以來 時時種種의 金石盟約을 食하얏다 하야 日本의 無信을 罪하려 안이 하노라. 學者는 講壇에서 政治家는 實際에서 我 祖宗世業을 植民地視하고 我文化民族을 土昧人遇하야 한갓 征服者의 快를 貪할 ᄲᅮᆫ이오 我의 久遠한 社會基礎와 卓犖한 民族心理를 無視한다 하야 日本의 少義함을 責하려 안이 하노라. 自己를 策勵하기에 急한 吾人은 他의 怨尤를 暇치 못하노라. 現在를 綢繆하기에 急한 吾人은 宿昔의 懲辨을 暇치 못 하노라. 今日 吾人의 所任은 다만 自己의 建設이 有할 ᄲᅮᆫ이오 決코 他의 破壞에 在치 안이 하도다. 嚴肅한 良心의 命令으로써 自家의 新運命을 開拓함이오 決코 舊怨과 一時的 感情으로써 他를 嫉逐排斥함이 안이로다. 舊思想 舊勢力에 羈縻된 日本 爲政家의 功名的 犧牲이 된 不自然 又 不合理한 錯誤狀態를 改善匡正하야 自然 又 合理한 正經大原으로 歸還케 함이로다. 當初에 民族的 要求로서 出치 안이한 兩國倂合의 結果가 畢竟 姑息的 威壓과 差別的 不平과 統計數字上 虛飾의 下에서 利害相反한 兩 民族間에 永遠히 和同할 수 업는 怨溝를 去益深造하는 今來實積을 觀하라. 勇明果敢으로써 舊誤를 廓正하고 眞正한 理解와 同情에 基本한 友好的 新局面을 打開함이 彼此間 遠禍召福하는 捷徑임을 明知할 것 안인가. ᄯᅩ 二千萬 含憤蓄怨의 民을 威力으로써 拘束함은 다만 東洋의 永久한 平和를 保障하는 所以가 안일 ᄲᅮᆫ 안이라 此로 因하야 東洋安危의 主軸인 四億萬 支那人의 日本에 對한 危懼와 猜疑를 갈스록 濃厚케 하야 그 結果로 東洋 全局이 共倒同兦의 悲運을 招致할 것이 明하니 今日 吾人의 朝鮮獨立은 朝鮮人으로 하야금 正當한 生榮을 遂케 하는 同時에 日本으로 하야금 邪路로서 出하야 東洋 支持者인 重責을 全케 하는 것이며 支那로 하야금 夢寐에도 免하지 못하는 不安 恐怖로서 脫出케 하는 것이며 ᄯᅩ 東洋平和로 重要한 一部를 삼는 世界平和 人類幸福에 必要한 階段이 되게 하는 것이라 이 엇지 區區한 感情上 問題ㅣ리오.",
-      "modern": null,
-      "reading": null,
-      "en": null
-    },
-    {
-      "orig": "아아 新天地가 眼前에 展開되도다. 威力의 時代가 去하고 道義의 時代가 來하도다. 過去 全世紀에 鍊磨長養된 人道的 精神이 바야흐로 新文明의 曙光을 人類의 歷史에 投射하기 始하도다. 新春이 世界에 來하야 萬物의 回蘇를 催促하는도다. 凍氷寒雪에 呼吸을 閉蟄한 것이 彼一時의 勢ㅣ라 하면 和風暖陽에 氣脈을 振舒함은 此一時의 勢ㅣ니 天地의 復運에 際하고 世界의 變潮를 乘한 吾人은 아모 躊躇할 것 업스며 아모 忌憚할 것 업도다. 我의 固有한 自由權을 護全하야 生旺의 樂을 飽享할 것이며 我의 自足한 獨創力을 發揮하야 春滿한 大界에 民族的 精華를 結紐할지로다. 吾等이 玆에 奪起하도다 良心이 我와 同存하며 眞理가 我와 幷進하는도다 男女老少 업시 陰鬱한 古巢로서 活潑히 起來하야 萬彙群象으로 더부러 欣快한 復活을 成遂하게 되도다. 千百世 祖靈이 吾等을 陰佑하며 全世界 氣運이 吾等을 外護하나니 着手가 곳 成功이라. 다만 前頭의 光明으로 驀進할 ᄯᅡ름인뎌.",
-      "modern": null,
-      "reading": null,
-      "en": null
-    },
-    {
-      "orig": "公約三章 一、 今日 吾人의 此擧는 正義·人道·生存·尊榮을 爲하는 民族的 要求ㅣ니 오즉 自由的 精神을 發揮할 것이오 決코 排他的 感情으로 逸走하지 말라. 一、 最後의 一人ᄭᅡ지 最後의 一刻ᄭᅡ지 民族의 正當한 意思를 快히 發表하라. 一、 一切의 行動은 가장 秩序를 尊重하야 吾人의 主張과 態度로 하야금 어대ᄭᅡ지던지 光明正大하게 하라.",
-      "modern": null,
-      "reading": null,
-      "en": null
-    },
-    {
-      "orig": "朝鮮建國 四千二百五十二年 三月 一日 朝鮮民族代表 孫秉熙, 吉善宙, 李弼柱, 白龍城, 金完圭 金秉祚, 金昌俊, 權東鎭, 權秉悳, 羅龍煥 羅仁協, 梁旬伯, 梁漢默, 劉如大, 李甲成 李明龍, 李昇薰, 李鍾勳, 李鍾一, 林禮煥 朴準承, 朴熙道, 朴東完, 申洪植, 申錫九 吳世昌, 吳華英, 鄭春洙, 崔聖模, 崔　麟 韓龍雲, 洪秉箕, 洪其兆",
-      "modern": null,
-      "reading": null,
-      "en": null
-    }
-  ],
-  "labels": {
-    "notes": "ai",
-    "translation": null,
-    "modern": null,
-    "text": "original"
+  {
+   "orig": "噫라 舊來의 抑鬱을 宣暢하려 하면 時下의 苦痛을 擺脫하려 하면 將來의 脅威를 芟除하려 하면 民族的 良心과 國家的 廉義의 壓縮銷殘을 興奮伸張하려 하면 各個人格의 正當한 發達을 遂하려 하면 可憐한 子弟에게 苦恥的 財產을 遺與치 안이하려 하면 子子孫孫의 永久完全한 慶福을 導迎하려 하면 最大急務가 民族的 獨立을 確實케 함이니 二千萬 各個가 人마다 方寸의 刃을 懷하고人類通性과 時代良心이 正義의 軍과 人道의 干戈로써 護援하는 今日 吾人은 進하야 取하매 何强을 挫치 못하랴 退하야 作하매 何志를 展치 못하랴.",
+   "modern": null,
+   "reading": null,
+   "en": null
   },
-  "review": {
-    "status": "draft",
-    "by": "writer",
-    "date": "2026-10-08",
-    "notes": "Right work and complete (original, signature list of 33 names, and two later modern-Korean layers: 현대어 and '쉽고 바르게 읽는' version). Not a pure original: two thirds of the paragraphs are modern renderings whose author is not named in provenance; PD basis covers the 1919 text only. Original's 梁旬伯 vs easy version's 양전백 differ (standard 양전백). LEAD: shipping only the 1919 original (paragraphs 0–6); the unattributed 현대어 and plain-language renderings are excluded (copyright unclear). Card/notes must describe only the original."
+  {
+   "orig": "丙子修好條規 以來 時時種種의 金石盟約을 食하얏다 하야 日本의 無信을 罪하려 안이 하노라. 學者는 講壇에서 政治家는 實際에서 我 祖宗世業을 植民地視하고 我文化民族을 土昧人遇하야 한갓 征服者의 快를 貪할 ᄲᅮᆫ이오 我의 久遠한 社會基礎와 卓犖한 民族心理를 無視한다 하야 日本의 少義함을 責하려 안이 하노라. 自己를 策勵하기에 急한 吾人은 他의 怨尤를 暇치 못하노라. 現在를 綢繆하기에 急한 吾人은 宿昔의 懲辨을 暇치 못 하노라. 今日 吾人의 所任은 다만 自己의 建設이 有할 ᄲᅮᆫ이오 決코 他의 破壞에 在치 안이 하도다. 嚴肅한 良心의 命令으로써 自家의 新運命을 開拓함이오 決코 舊怨과 一時的 感情으로써 他를 嫉逐排斥함이 안이로다. 舊思想 舊勢力에 羈縻된 日本 爲政家의 功名的 犧牲이 된 不自然 又 不合理한 錯誤狀態를 改善匡正하야 自然 又 合理한 正經大原으로 歸還케 함이로다. 當初에 民族的 要求로서 出치 안이한 兩國倂合의 結果가 畢竟 姑息的 威壓과 差別的 不平과 統計數字上 虛飾의 下에서 利害相反한 兩 民族間에 永遠히 和同할 수 업는 怨溝를 去益深造하는 今來實積을 觀하라. 勇明果敢으로써 舊誤를 廓正하고 眞正한 理解와 同情에 基本한 友好的 新局面을 打開함이 彼此間 遠禍召福하는 捷徑임을 明知할 것 안인가. ᄯᅩ 二千萬 含憤蓄怨의 民을 威力으로써 拘束함은 다만 東洋의 永久한 平和를 保障하는 所以가 안일 ᄲᅮᆫ 안이라 此로 因하야 東洋安危의 主軸인 四億萬 支那人의 日本에 對한 危懼와 猜疑를 갈스록 濃厚케 하야 그 結果로 東洋 全局이 共倒同兦의 悲運을 招致할 것이 明하니 今日 吾人의 朝鮮獨立은 朝鮮人으로 하야금 正當한 生榮을 遂케 하는 同時에 日本으로 하야금 邪路로서 出하야 東洋 支持者인 重責을 全케 하는 것이며 支那로 하야금 夢寐에도 免하지 못하는 不安 恐怖로서 脫出케 하는 것이며 ᄯᅩ 東洋平和로 重要한 一部를 삼는 世界平和 人類幸福에 必要한 階段이 되게 하는 것이라 이 엇지 區區한 感情上 問題ㅣ리오.",
+   "modern": null,
+   "reading": null,
+   "en": null
+  },
+  {
+   "orig": "아아 新天地가 眼前에 展開되도다. 威力의 時代가 去하고 道義의 時代가 來하도다. 過去 全世紀에 鍊磨長養된 人道的 精神이 바야흐로 新文明의 曙光을 人類의 歷史에 投射하기 始하도다. 新春이 世界에 來하야 萬物의 回蘇를 催促하는도다. 凍氷寒雪에 呼吸을 閉蟄한 것이 彼一時의 勢ㅣ라 하면 和風暖陽에 氣脈을 振舒함은 此一時의 勢ㅣ니 天地의 復運에 際하고 世界의 變潮를 乘한 吾人은 아모 躊躇할 것 업스며 아모 忌憚할 것 업도다. 我의 固有한 自由權을 護全하야 生旺의 樂을 飽享할 것이며 我의 自足한 獨創力을 發揮하야 春滿한 大界에 民族的 精華를 結紐할지로다. 吾等이 玆에 奪起하도다 良心이 我와 同存하며 眞理가 我와 幷進하는도다 男女老少 업시 陰鬱한 古巢로서 活潑히 起來하야 萬彙群象으로 더부러 欣快한 復活을 成遂하게 되도다. 千百世 祖靈이 吾等을 陰佑하며 全世界 氣運이 吾等을 外護하나니 着手가 곳 成功이라. 다만 前頭의 光明으로 驀進할 ᄯᅡ름인뎌.",
+   "modern": null,
+   "reading": null,
+   "en": null
+  },
+  {
+   "orig": "公約三章 一、 今日 吾人의 此擧는 正義·人道·生存·尊榮을 爲하는 民族的 要求ㅣ니 오즉 自由的 精神을 發揮할 것이오 決코 排他的 感情으로 逸走하지 말라. 一、 最後의 一人ᄭᅡ지 最後의 一刻ᄭᅡ지 民族의 正當한 意思를 快히 發表하라. 一、 一切의 行動은 가장 秩序를 尊重하야 吾人의 主張과 態度로 하야금 어대ᄭᅡ지던지 光明正大하게 하라.",
+   "modern": null,
+   "reading": null,
+   "en": null
+  },
+  {
+   "orig": "朝鮮建國 四千二百五十二年 三月 一日 朝鮮民族代表 孫秉熙, 吉善宙, 李弼柱, 白龍城, 金完圭 金秉祚, 金昌俊, 權東鎭, 權秉悳, 羅龍煥 羅仁協, 梁旬伯, 梁漢默, 劉如大, 李甲成 李明龍, 李昇薰, 李鍾勳, 李鍾一, 林禮煥 朴準承, 朴熙道, 朴東完, 申洪植, 申錫九 吳世昌, 吳華英, 鄭春洙, 崔聖模, 崔　麟 韓龍雲, 洪秉箕, 洪其兆",
+   "modern": null,
+   "reading": null,
+   "en": null
   }
+ ],
+ "labels": {
+  "notes": "ai",
+  "translation": null,
+  "modern": null,
+  "text": "original"
+ },
+ "review": {
+  "status": "approved",
+  "by": "content-review",
+  "date": "2026-10-08",
+  "notes": "Ships only the 1919 original (paragraphs 0-6, en null; catalogue excerpt=true); card and notes now describe only that and say the modern renderings are not included. Signature list counted: 33 names; 29 attended at Taehwagwan corrected in notes. validate.py en check expected to flag null en."
+ }
 }

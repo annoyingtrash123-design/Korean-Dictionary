@@ -19,9 +19,9 @@
   "text": "original"
  },
  "review": {
-  "status": "draft",
-  "by": "writer",
+  "status": "approved",
+  "by": "content-review",
   "date": "2026-10-08",
-  "notes": "Right work and complete: sections 1-7 (111 paragraphs) through the closing dateline '(12월 19일 미명, 동경서)'; no commentary, stray headings other than the '## 1'-'## 7' section numbers, or damage ('?' are genuine punctuation). A few minor typos from the transcription (e.g. '서방의 조카')."
+  "notes": "Right work, complete sections 1-7 through the dateline; dates and publication facts are standard and the section-by-section summary matches the text. Yi Sang d. 1937, public domain; KO and EN notes carry the same content."
  }
 }

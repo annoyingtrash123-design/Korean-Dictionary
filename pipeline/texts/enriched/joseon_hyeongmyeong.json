@@ -4,8 +4,8 @@
   "summary_ko": "1923년 신채호가 의열단을 위해 쓴 선언문. 일본을 ‘강도’로 규정하고 외교·준비론·자치론을 물리친 뒤 민중의 직접 혁명과 폭력을 주장한다.",
   "summary_en": "Sin Chae-ho's 1923 manifesto for the Uiyeoldan (Righteous Fraternity): it labels Japan a robber regime, rejects diplomacy, gradual 'preparation' and autonomy schemes, and calls for direct popular revolution and violence.",
   "level": "advanced",
-  "edition_ko": "한국어 위키문헌 「조선혁명선언」 (개정 179459, 2017-08-03), 원저작 퍼블릭 도메인(신채호 1936년 사망), 전사 CC BY-SA 4.0 — 전문(1–5장) 수록, 현대 한국어 표기, 번역 없음",
-  "edition_en": "Korean Wikisource 'Joseon hyeongmyeong seoneon' (revision 179459, 2017-08-03); original in the public domain (Sin d. 1936), transcription CC BY-SA 4.0; complete text, sections 1-5, in modern Korean spelling, no translation yet"
+  "edition_ko": "한국어 위키문헌 「조선혁명선언」 (개정 179459, 2017-08-03), 원저작 퍼블릭 도메인(신채호 1936년 사망), 전사 CC BY-SA 4.0 — 전문(1–5장) 수록, 1923년 국한문 원문을 현대 표기로 옮긴 판(표기를 바꾼 것일 뿐 번역이 아님, 옮긴 이는 밝혀져 있지 않음), 영어 번역 없음",
+  "edition_en": "Korean Wikisource 'Joseon hyeongmyeong seoneon' (revision 179459, 2017-08-03); original in the public domain (Sin d. 1936), transcription CC BY-SA 4.0; complete text, sections 1-5, as a version rendered in modern Korean spelling (a spelling update, not a translation; no editor is named); no English translation yet"
  },
  "notes": {
   "ko": "**배경**\n신채호(1880–1936)는 역사학자이자 독립운동가, 무정부주의 사상가이다. 1923년 1월, 상하이에서 의열단의 요청으로 이 선언을 썼다고 전하며, 의열단은 김원봉이 이끈 무장 항일 단체였다. 의열단은 이 글을 인쇄·배포하고 단원들의 필독서로 삼았다. 위키문헌 머리말은 이 글을 ‘신채호 (초안)’로 표기한다. 신채호는 1936년 뤼순 감옥에서 숨졌다.\n\n**내용**\n모두 다섯 장이다. 1장은 일본이 국호와 정권, 산업, 언론의 자유와 생명까지 빼앗은 ‘강도’라고 규정하고, 그를 몰아내는 혁명을 선언한다. 2장은 내정 독립·참정권·자치와 ‘문화운동’을 외치는 이들을 비판하며, 이들이 일본과 타협하는 적이라고 말한다. 3장은 외국의 도움을 바라는 ‘외교론’과 힘을 길러 때를 기다리는 ‘준비론’을 둘 다 미몽이라고 물리친다. 4장은 영웅이 아니라 민중이 스스로 깨어나 직접 혁명에 나서야 한다고 주장하고, 암살·파괴·폭동의 대상(총독과 관리, 일본 천황, 밀정과 매국노 등)을 열거한다. 5장은 파괴가 곧 건설이라며 파괴할 다섯 가지(이족통치, 특권계급, 경제 약탈 제도, 사회적 불평등, 노예적 문화사상)를 꼽고 ‘민중은 우리 혁명의 대본영, 폭력은 유일 무기’라는 구호로 맺는다. 리더에는 전체가 실려 있다.\n\n**의의**\n임시정부 노선의 외교·실력양성론을 정면으로 비판한 급진적 문서로, 1920년대 독립운동 내부의 노선 대립을 잘 보여 준다. 폭력 수단에는 민간인에 대한 것도 포함되어 있어 평가가 갈리며, 역사 자료로서 맥락과 함께 읽어야 한다.\n\n**읽기 도움**\n- 강도(强盜) 일본: 신채호가 일본을 부르는 표현\n- 이족통치(異族統治): 다른 민족의 지배\n- 내정독립, 참정권, 자치: 일본 통치 안에서 요구하는 제한적 권리\n- 문약정치(文弱政治): 글만 숭상해 약해진 정치\n- 외교론 / 준비론: 두 비판 대상\n- 민중 직접혁명: 영웅이 아닌 민중이 하는 혁명\n- 특권계급(特權階級), 경제약탈제도\n- 대본영(大本營): 군의 최고 사령부\n- 부화뇌동(附和雷同): 줏대 없이 남을 따름\n- 불보살(佛菩薩): 부처와 보살, 여기서는 자비로운 존재의 비유\n- 의열단(義烈團): 의롭고 열렬한 단체",
@@ -19,9 +19,9 @@
   "text": "original"
  },
  "review": {
-  "status": "draft",
-  "by": "writer",
+  "status": "approved",
+  "by": "content-review",
   "date": "2026-10-08",
-  "notes": "Right work and complete: sections 1-5 and the closing slogans/date/'의열단'. It is a modern-Korean spelling version (the 1923 original was in mixed script), modernizer not named in provenance. No damage."
+  "notes": "Right work, complete sections 1-5 with closing slogans and date; summary matches the text. Sin Chae-ho d. 1936; the modernised spelling has no named editor but spelling modernisation is not a creative work, and the edition line now says it is a modern-spelling version."
  }
 }
