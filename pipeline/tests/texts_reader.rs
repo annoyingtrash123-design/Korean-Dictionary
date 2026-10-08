@@ -657,3 +657,9 @@ fn goryeo_song_ruby_indent_and_licence() {
     let c = clean(src, Layout::Verse, false);
     assert_eq!(c.text, "가시리 가시리잇고 나ᄂᆞᆫ\n위 증즐가 大平盛代");
 }
+
+#[test]
+fn hangul_reading_subs_are_dropped_hanja_notes_kept() {
+    let c = clean("<poem>至<sub>지</sub>匊<sub>국</sub>於<sub>ᄉᆞ</sub>\nᄇᆡ떠라</poem>\n\n===東明王篇<sub>幷序</sub>===\n", Layout::Verse, false);
+    assert_eq!(c.text, "至匊於\nᄇᆡ떠라\n\n## 東明王篇幷序");
+}

@@ -27,7 +27,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,wasm,svg,png,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,wasm,svg,png,webmanifest,woff2}'],
         globIgnores: ['data/**'],
         navigateFallback: 'index.html',
         navigateFallbackDenylist: [/\/data\//],

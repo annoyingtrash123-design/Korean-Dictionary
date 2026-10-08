@@ -49,6 +49,17 @@ const fmtDate = (s?: string) => (s ? s.slice(0, 10) : '');
 function Para({ n, text, hl, verse, hanmun, reading, en, showEn, showReading }: {
   n: number; text: string; hl: Span | null; verse: boolean; hanmun: boolean; reading?: string | null; en?: string | null; showEn: boolean; showReading: boolean;
 }) {
+  // section headings ("## …" in the source) render as headings, not as tappable text
+  if (text.startsWith('## ')) {
+    const h = text.slice(3).trim();
+    const he = en?.replace(/^##\s*/, '').trim();
+    return (
+      <section class="rd-para rd-sec" data-n={n}>
+        <h3 class="rd-sec-ko" lang="ko">{h}</h3>
+        {showEn && he && he !== h && <p class="rd-sec-en" lang="en">{he}</p>}
+      </section>
+    );
+  }
   const [a, b, c] = splitHighlight(text, hl);
   return (
     <section class={`rd-para${verse ? ' verse' : ''}${hanmun ? ' hanmun' : ''}`} data-n={n}>

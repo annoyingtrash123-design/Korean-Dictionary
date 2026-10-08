@@ -101,3 +101,8 @@ licensed separately.
   modification allowed). 출처: 정책브리핑 (korea.kr).
 * Historical English translations (Gale, Allen, etc., 1889–1922; Project Gutenberg / Internet
   Archive): public domain.
+
+## Fonts
+* `app/public/fonts/yethangul-jamo.woff2`: subset of 나눔명조 옛한글 (NanumMyeongjo YetHangul),
+  © 2014 NHN Corporation (NAVER), designed by FONTRIX Inc., SIL Open Font License 1.1. Used only to
+  render Old Hangul (옛한글) jamo sequences.

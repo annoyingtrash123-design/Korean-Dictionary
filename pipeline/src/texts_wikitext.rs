@@ -34,6 +34,7 @@ pub fn clean(wikitext: &str, layout: Layout, nospace: bool) -> Cleaned {
     for el in ["noinclude", "ref", "gallery", "references", "pages", "section", "math", "templatedata", "rt", "rp", "syntaxhighlight", "timeline", "imagemap", "score"] {
         s = remove_element(&s, el);
     }
+    let s = drop_reading_subs(&s);
     let s = process_poems(&s);
     let s = process_templates(&s, 0);
     let s = process_tables(&s);
@@ -96,6 +97,34 @@ pub fn remove_element(s: &str, name: &str) -> String {
 }
 
 /// `<poem>…</poem>`: keep the line breaks inside stanzas.
+/// `至<sub>지</sub>`: a Hangul-only `<sub>` after a character is its reading gloss (old-text
+/// editions on ko.wikisource), not text. Interlinear notes in hanja (`東明王篇<sub>幷序</sub>`) stay.
+fn drop_reading_subs(s: &str) -> String {
+    let is_reading = |t: &str| {
+        !t.trim().is_empty()
+            && t.chars().all(|c| {
+                c.is_whitespace() || ('\u{AC00}'..='\u{D7A3}').contains(&c) || ('\u{1100}'..='\u{11FF}').contains(&c) || ('\u{A960}'..='\u{A97F}').contains(&c) || ('\u{D7B0}'..='\u{D7FF}').contains(&c) || ('\u{3131}'..='\u{318E}').contains(&c)
+            })
+    };
+    let mut out = String::with_capacity(s.len());
+    let mut rest = s;
+    while let Some(i) = rest.find("<sub>") {
+        let after = &rest[i + 5..];
+        match after.find("</sub>") {
+            Some(j) if is_reading(&after[..j]) => {
+                out.push_str(&rest[..i]);
+                rest = &after[j + 6..];
+            }
+            _ => {
+                out.push_str(&rest[..i + 5]);
+                rest = after;
+            }
+        }
+    }
+    out.push_str(rest);
+    out
+}
+
 fn process_poems(s: &str) -> String {
     let lower = s.to_ascii_lowercase();
     let mut out = String::with_capacity(s.len());
