@@ -460,7 +460,7 @@ fn process_tables(s: &str) -> String {
 
 // ---------------------------------------------------------------- lines, headings, inline
 
-const DROP_SECTIONS: &[&str] = &["각주", "주석", "주", "외부 링크", "외부링크", "같이 보기", "함께 보기", "관련 문서", "관련 항목", "참고 문헌", "참고문헌", "references", "notes", "footnotes", "external links", "see also", "각주 및 참고 문헌",
+const DROP_SECTIONS: &[&str] = &["각주", "주석", "주", "외부 링크", "외부링크", "바깥 고리", "바깥고리", "같이 보기", "함께 보기", "관련 문서", "관련 항목", "참고 문헌", "참고문헌", "references", "notes", "footnotes", "external links", "see also", "각주 및 참고 문헌",
     "라이선스", "저작권", "license", "licence", "licensing", "copyright", "저작권 정보"];
 const MAGIC: &[&str] = &["__NOTOC__", "__TOC__", "__FORCETOC__", "__NOEDITSECTION__", "__NOTITLECONVERT__", "__NOCONTENTCONVERT__", "__NOINDEX__", "__INDEX__"];
 

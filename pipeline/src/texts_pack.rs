@@ -108,6 +108,10 @@ pub fn split_paragraphs(text: &str, keep_lines: bool, hanmun: bool) -> Vec<Strin
         }
     }
     flush(&mut cur, &mut out);
+    // a heading with nothing after it is navigation residue ("## 바깥 고리", "## 註釋")
+    while out.last().is_some_and(|p| p.starts_with("## ")) {
+        out.pop();
+    }
     out
 }
 
@@ -918,6 +922,11 @@ pub fn build_texts(o: &TextsOpts) -> Result<Option<TextsResult>> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn trailing_headings_are_dropped() {
+        assert_eq!(split_paragraphs("## 1\n\n본문\n\n## 바깥 고리\n", false, false), vec!["## 1", "본문"]);
+    }
 
     #[test]
     fn paragraphs_split_on_blank_lines() {
