@@ -2557,10 +2557,10 @@ excerpt_note = "Keep only the Shanghai Provisional Government years: the 하권 
 source = "wikisource-ko"
 source_title = "백범일지"
 alt_titles = ["백범일지/하권", "백범일지/상권"]
-sections = ["하권", "상해"]
+sections = ["3.1 운동의 상해"]
 search = ["백범일지", "백범 일지", "김구 백범일지"]
 pd_basis = "Author died 1949; Korean term (life+50) expired 1999, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["date", "sections"]
+uncertain = ["date"]
 
 # resource: guess: Wikisource may hold it as 백범일지 appendix 나의 소원 (백범일지/나의 소원)
 [[text]]
@@ -2579,7 +2579,7 @@ script = "mixed"
 excerpt = false
 source = "wikisource-ko"
 source_title = "백범일지"
-sections = ["나의 소원"]
+sections = ["나의 소원", "민족 국가", "정치 이념", "내가 원하는 우리 나라"]
 alt_titles = ["백범일지/나의 소원", "나의 소원 (김구)"]
 search = ["나의 소원 김구", "나의소원", "김구 나의 소원"]
 pd_basis = "Author died 1949; Korean term (life+50) expired 1999, before the 2013 extension to life+70, so the work is in the public domain."
@@ -2718,7 +2718,6 @@ note = "Unsigned editorial; keep only the 논설 column of the issue."
 source = "wikisource-ko"
 source_title = "독립신문/1896년/7월/4일"
 alt_titles = ["독립신문/1896년/7월", "독립신문/1896년/6월/20일"]
-sections = ["논설"]
 search = ["독립신문 1896년 7월 4일", "독립신문 독립문 논설", "독립협회 독립문 건립 논설"]
 pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain. Unsigned editorial attributed to 서재필 and the paper's staff."
 uncertain = ["source_title", "date", "year"]
@@ -2742,7 +2741,6 @@ note = "Keep only the 논설 column."
 source = "wikisource-ko"
 source_title = "독립신문/1896년/5월/2일"
 alt_titles = ["독립신문/1896년/5월", "독립신문/1896년/4월/21일"]
-sections = ["논설"]
 search = ["독립신문 1896년 5월 논설", "독립신문 정부 인민 논설", "독립신문 논설 관민"]
 pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain. Unsigned editorial attributed to 서재필 and the paper's staff."
 uncertain = ["source_title", "date", "year", "title_ko"]
@@ -3111,10 +3109,9 @@ excerpt = true
 excerpt_note = "Keep the opening 원소 village chapters (제1-제10 in the serial's first section) and one factory/Incheon chapter; about 10k characters."
 source = "wikisource-ko"
 source_title = "인간문제"
-sections = ["제1회", "제10회"]
 search = ["인간문제", "인간 문제 강경애", "강경애 인간문제"]
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["sections"]
+uncertain = []
 
 # resource: guess: ko title could be 강화도 조약 or 조일수호조규; text in classical Chinese
 [[text]]
