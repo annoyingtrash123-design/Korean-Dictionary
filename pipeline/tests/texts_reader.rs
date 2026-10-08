@@ -61,7 +61,7 @@ fn real_catalog_is_valid() {
     let cat = texts_catalog::load(&path).expect("catalog.toml parses");
     let problems = texts_catalog::validate(&cat);
     assert!(problems.is_empty(), "{}", problems.join("\n"));
-    assert!((90..=130).contains(&cat.texts.len()), "{} entries", cat.texts.len());
+    assert!((90..=220).contains(&cat.texts.len()), "{} entries", cat.texts.len());
     // unique ids (validate checks it too, assert directly for a clear failure)
     let mut ids: Vec<&str> = cat.texts.iter().map(|e| e.id.as_str()).collect();
     ids.sort();
@@ -92,7 +92,7 @@ fn real_catalog_is_valid() {
             assert!(e.excerpt_note.as_deref().unwrap_or("").len() > 20, "{}", e.id);
         }
         for u in &e.uncertain {
-            assert!(["date", "year", "author", "author_dates", "source_title", "english_pd", "search"].contains(&u.as_str()), "{}: odd uncertain field {u}", e.id);
+            assert!(["date", "year", "author", "author_dates", "source_title", "english_pd", "search", "sections", "pd_basis", "title_ko", "script"].contains(&u.as_str()), "{}: odd uncertain field {u}", e.id);
         }
     }
     assert!(cat.news.feeds.iter().all(|f| f.starts_with("https://")));

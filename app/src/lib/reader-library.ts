@@ -7,6 +7,8 @@ export const SHELVES: { id: string; label: string; ko: string }[] = [
   { id: 'hanmun', label: 'Hanmun', ko: '한문' },
   { id: 'sino-korean', label: 'Sino-Korean relations', ko: '한중 관계' },
   { id: 'documents', label: 'Historical documents', ko: '역사 문서' },
+  { id: 'treaties', label: 'Treaties & state papers', ko: '조약·외교 문서' },
+  { id: 'political-writing', label: 'Political & social thought', ko: '정치·사회 사상' },
   { id: 'constitution', label: 'Constitution & key documents', ko: '헌법과 주요 문서' },
   { id: 'modern-poetry', label: 'Modern poetry', ko: '현대시' },
   { id: 'modern-fiction', label: 'Modern fiction', ko: '현대 소설' },

@@ -15,6 +15,8 @@ pub const SHELVES: &[&str] = &[
     "hanmun",
     "sino-korean",
     "documents",
+    "treaties",
+    "political-writing",
     "constitution",
     "modern-poetry",
     "modern-fiction",
