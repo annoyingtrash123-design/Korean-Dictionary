@@ -1,0 +1,27 @@
+{
+ "id": "baettaragi",
+ "card": {
+  "summary_ko": "평양 모란봉에서 ‘나’가 들은 뱃노래 ‘배따라기’를 부르는 뱃사공의 기구한 사연을 액자 속 이야기로 들려주는 김동인의 단편소설.",
+  "summary_en": "Kim Dong-in's short story in which a narrator on Moranbong hill in Pyongyang hears a sailor singing the folk song 'Baettaragi' and then his tragic life story, told as a story within a story.",
+  "level": "advanced",
+  "edition_ko": "한국어 위키문헌 「배따라기」 (개정 250693, 2022-08-11), 원저작 퍼블릭 도메인, 전사 CC BY-SA 4.0 — 전문 수록, 원문만, 번역 없음",
+  "edition_en": "Korean Wikisource 「배따라기」 (revision 250693, 2022-08-11); original in the public domain, transcription CC BY-SA 4.0; complete text, original only, no translation"
+ },
+ "notes": {
+  "ko": "**배경 / Background**\n김동인(1900–1951)은 평양 출신으로, 1919년 《창조》 창간에 참여한 초기 근대 소설가이다. 〈배따라기〉는 1921년 《창조》에 발표된 단편으로 알려져 있다. ‘배따라기’는 서도(평안도·황해도 일대) 지방에서 뱃사람들이 부르던 노래(뱃노래)를 가리킨다.\n\n**줄거리 / Synopsis**\n봄날 평양 모란봉 일대를 거닐던 ‘나’는 어디선가 들려오는 구슬픈 배따라기 노래에 이끌려 그 주인공인 뱃사공을 만난다. 사공은 영유 근처 바닷가 마을에서 자랐으며, 아내와 아우를 두고 살았다고 말한다. 질투와 오해 끝에 그는 아내를 때려 내쫓았고, 아내는 물에 빠져 죽은 채 발견된다. 아우도 집을 떠나 버리고, 그는 뉘우침을 안고 배를 타며 떠돌다 오랜 뒤 바다에서 아우를 만나지만 아우는 다시 떠난다. 이야기를 마친 사공은 노래를 남기고 사라지고, 이듬해 봄 ‘나’는 그를 다시 찾지 못한다. 〈원문 전체가 실려 있다.〉\n\n**의의 / Significance**\n화자가 들은 이야기를 전하는 액자식 구성, 간결하고 구어적인 문체, 운명과 뉘우침이라는 주제 때문에 한국 근대 단편소설 초기의 대표작으로 흔히 꼽힌다. 사공의 대사에는 평안도 방언이 쓰인다.\n\n**읽기 도움 / Reading help**\n- 배따라기: 서도 지방의 뱃노래. 후렴 ‘에에야 어그여지야’.\n- 모란봉·기자묘·을밀대: 평양의 명소.\n- 영유: 평안남도의 고을 이름(지금의 평안남도 평원 일대).\n- 아우: 동생.\n- 장: 시장(장날).\n- 숙명(宿命): 정해진 운명.\n- 뉘우침: 후회, 반성.\n- 하소연: 억울함이나 사정을 털어놓음.\n- 잎잎: 잎사귀 하나하나.\n- 평안도 방언: ‘-디’(-지), ‘-이요’, ‘-쉐다’ 등 어미와 ‘~ㄴ디’ 같은 억양이 대사에 나온다.\n- 장고: 장구.\n- 소리(노래): 여기서는 사공의 노랫소리.\n- ‘🙝🙟’ 표시는 위키문헌의 장면 구분 장식이다.",
+  "en": "**Background**\nKim Dong-in (1900–1951), born in Pyongyang, was an early modern Korean fiction writer and a founder of the journal Changjo (1919). 'Baettaragi' is generally dated to 1921, in Changjo. The title is a folk sailors' song of the Seodo region (Pyongan and Hwanghae provinces).\n\n**Synopsis**\nStrolling on Moranbong hill in Pyongyang one spring day, the narrator is drawn by a mournful song to its singer, a sailor. The sailor tells how he grew up in a seaside village near Yeongyu and lived with his wife and younger brother. Jealousy and misunderstanding led him to beat his wife and drive her out; she is later found drowned. His brother also leaves, and the sailor spends years at sea in remorse; long after, he meets his brother at sea, but the brother parts from him again. After telling his tale he vanishes, leaving only the song; the next spring the narrator cannot find him. The Reader shows the complete text.\n\n**Significance**\nIts frame structure (a story heard and retold), plain colloquial style and themes of fate and regret make it a standard early example of the modern Korean short story. The sailor's speech uses Pyongan dialect.\n\n**Reading help**\n- 배따라기: Seodo sailors' song; refrain 에에야 어그여지야.\n- 모란봉, 기자묘, 을밀대: well-known Pyongyang sites.\n- 영유: a county in South Pyongan (modern Pyongwon area).\n- 아우: younger brother.\n- 장: market (market day).\n- 숙명(宿命): fate, destiny.\n- 뉘우침: remorse.\n- 하소연: pouring out one's grievance.\n- 잎잎: each and every leaf.\n- Pyongan dialect endings such as -디 (-지), -이요, -쉐다 appear in dialogue.\n- 장고: the hourglass drum (janggu).\n- The ornament '🙝🙟' is a Wikisource scene divider."
+ },
+ "paragraphs": "raw",
+ "labels": {
+  "notes": "ai",
+  "translation": null,
+  "modern": null,
+  "text": "original"
+ },
+ "review": {
+  "status": "draft",
+  "by": "writer",
+  "date": "2026-10-08",
+  "notes": "Right work/author; complete from the opening to the last line; one '?' stands in for a lost dash (para 77) and five '🙝🙟' ornament-only paragraphs (scene dividers) are in the text."
+ }
+}
