@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T23:05:02Z",
+  "generated_at": "2026-10-08T01:32:14Z",
   "resolved": [
     {
       "id": "honggildongjeon",
@@ -79,7 +79,7 @@
       "page_title": "청산별곡",
       "url": "https://ko.wikisource.org/wiki/%EC%B2%AD%EC%82%B0%EB%B3%84%EA%B3%A1",
       "revision_id": 460064,
-      "chars": 548,
+      "chars": 539,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -91,7 +91,7 @@
       "page_title": "가시리",
       "url": "https://ko.wikisource.org/wiki/%EA%B0%80%EC%8B%9C%EB%A6%AC",
       "revision_id": 430430,
-      "chars": 168,
+      "chars": 175,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -103,7 +103,7 @@
       "page_title": "구지가",
       "url": "https://ko.wikisource.org/wiki/%EA%B5%AC%EC%A7%80%EA%B0%80",
       "revision_id": 418344,
-      "chars": 40,
+      "chars": 53,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -115,7 +115,7 @@
       "page_title": "황조가",
       "url": "https://ko.wikisource.org/wiki/%ED%99%A9%EC%A1%B0%EA%B0%80",
       "revision_id": 418716,
-      "chars": 55,
+      "chars": 67,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -127,7 +127,7 @@
       "page_title": "단심가",
       "url": "https://ko.wikisource.org/wiki/%EB%8B%A8%EC%8B%AC%EA%B0%80",
       "revision_id": 430428,
-      "chars": 145,
+      "chars": 136,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -139,7 +139,7 @@
       "page_title": "하여가",
       "url": "https://ko.wikisource.org/wiki/%ED%95%98%EC%97%AC%EA%B0%80",
       "revision_id": 430637,
-      "chars": 94,
+      "chars": 85,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -151,7 +151,7 @@
       "page_title": "회고가 (길재)",
       "url": "https://ko.wikisource.org/wiki/%ED%9A%8C%EA%B3%A0%EA%B0%80_%28%EA%B8%B8%EC%9E%AC%29",
       "revision_id": 430574,
-      "chars": 24,
+      "chars": 16,
       "subpages": 0,
       "resolved_via": "prefer_edition",
       "truncated": false,
@@ -163,7 +163,7 @@
       "page_title": "이 몸이 죽어 가서",
       "url": "https://ko.wikisource.org/wiki/%EC%9D%B4_%EB%AA%B8%EC%9D%B4_%EC%A3%BD%EC%96%B4_%EA%B0%80%EC%84%9C",
       "revision_id": 431782,
-      "chars": 24,
+      "chars": 16,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -175,7 +175,7 @@
       "page_title": "청산리 벽계수야",
       "url": "https://ko.wikisource.org/wiki/%EC%B2%AD%EC%82%B0%EB%A6%AC_%EB%B2%BD%EA%B3%84%EC%88%98%EC%95%BC",
       "revision_id": 430429,
-      "chars": 113,
+      "chars": 104,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -187,7 +187,7 @@
       "page_title": "동짓달 기나긴 밤을",
       "url": "https://ko.wikisource.org/wiki/%EB%8F%99%EC%A7%93%EB%8B%AC_%EA%B8%B0%EB%82%98%EA%B8%B4_%EB%B0%A4%EC%9D%84",
       "revision_id": 459956,
-      "chars": 56,
+      "chars": 48,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -199,7 +199,7 @@
       "page_title": "한산섬 달 밝은 밤에",
       "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EC%82%B0%EC%84%AC_%EB%8B%AC_%EB%B0%9D%EC%9D%80_%EB%B0%A4%EC%97%90",
       "revision_id": 430670,
-      "chars": 24,
+      "chars": 16,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -211,7 +211,7 @@
       "page_title": "가노라 삼각산아",
       "url": "https://ko.wikisource.org/wiki/%EA%B0%80%EB%85%B8%EB%9D%BC_%EC%82%BC%EA%B0%81%EC%82%B0%EC%95%84",
       "revision_id": 430456,
-      "chars": 134,
+      "chars": 125,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -223,7 +223,7 @@
       "page_title": "산중신곡",
       "url": "https://ko.wikisource.org/wiki/%EC%82%B0%EC%A4%91%EC%8B%A0%EA%B3%A1",
       "revision_id": 460013,
-      "chars": 1221,
+      "chars": 1212,
       "subpages": 0,
       "resolved_via": "redirect",
       "truncated": false,
@@ -235,7 +235,7 @@
       "page_title": "어부사시사",
       "url": "https://ko.wikisource.org/wiki/%EC%96%B4%EB%B6%80%EC%82%AC%EC%8B%9C%EC%82%AC",
       "revision_id": 460039,
-      "chars": 3607,
+      "chars": 3598,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -247,7 +247,7 @@
       "page_title": "추야우중",
       "url": "https://ko.wikisource.org/wiki/%EC%B6%94%EC%95%BC%EC%9A%B0%EC%A4%91",
       "revision_id": 382905,
-      "chars": 114,
+      "chars": 130,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -355,7 +355,7 @@
       "page_title": "송인",
       "url": "https://ko.wikisource.org/wiki/%EC%86%A1%EC%9D%B8",
       "revision_id": 383390,
-      "chars": 102,
+      "chars": 126,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -451,7 +451,7 @@
       "page_title": "동양평화론",
       "url": "https://ko.wikisource.org/wiki/%EB%8F%99%EC%96%91%ED%8F%89%ED%99%94%EB%A1%A0",
       "revision_id": 383123,
-      "chars": 9296,
+      "chars": 9287,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -487,7 +487,7 @@
       "page_title": "대한민국임시헌장 (제1호)",
       "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9E%84%EC%8B%9C%ED%97%8C%EC%9E%A5_%28%EC%A0%9C1%ED%98%B8%29",
       "revision_id": 456188,
-      "chars": 2578,
+      "chars": 2569,
       "subpages": 0,
       "resolved_via": "redirect",
       "truncated": false,
@@ -499,7 +499,7 @@
       "page_title": "조선혁명선언",
       "url": "https://ko.wikisource.org/wiki/%EC%A1%B0%EC%84%A0%ED%98%81%EB%AA%85%EC%84%A0%EC%96%B8",
       "revision_id": 179459,
-      "chars": 9293,
+      "chars": 9284,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -535,7 +535,7 @@
       "page_title": "대한민국헌법 (제1호)",
       "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%ED%97%8C%EB%B2%95_%28%EC%A0%9C1%ED%98%B8%29",
       "revision_id": 418800,
-      "chars": 9903,
+      "chars": 9894,
       "subpages": 0,
       "resolved_via": "redirect",
       "truncated": false,
@@ -547,7 +547,7 @@
       "page_title": "세계인권선언",
       "url": "https://ko.wikisource.org/wiki/%EC%84%B8%EA%B3%84%EC%9D%B8%EA%B6%8C%EC%84%A0%EC%96%B8",
       "revision_id": 382299,
-      "chars": 4797,
+      "chars": 4788,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -559,7 +559,7 @@
       "page_title": "진달래꽃 (시집)/진달래꽃",
       "url": "https://ko.wikisource.org/wiki/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83_%28%EC%8B%9C%EC%A7%91%29/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83",
       "revision_id": 430575,
-      "chars": 299,
+      "chars": 290,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -571,7 +571,7 @@
       "page_title": "진달래꽃 (시집)/산유화",
       "url": "https://ko.wikisource.org/wiki/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83_%28%EC%8B%9C%EC%A7%91%29/%EC%82%B0%EC%9C%A0%ED%99%94",
       "revision_id": 430577,
-      "chars": 267,
+      "chars": 258,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -583,7 +583,7 @@
       "page_title": "진달래꽃 (시집)/초혼",
       "url": "https://ko.wikisource.org/wiki/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83_%28%EC%8B%9C%EC%A7%91%29/%EC%B4%88%ED%98%BC",
       "revision_id": 203679,
-      "chars": 336,
+      "chars": 327,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -595,7 +595,7 @@
       "page_title": "진달래꽃 (시집)/먼 후일",
       "url": "https://ko.wikisource.org/wiki/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83_%28%EC%8B%9C%EC%A7%91%29/%EB%A8%BC_%ED%9B%84%EC%9D%BC",
       "revision_id": 430584,
-      "chars": 261,
+      "chars": 252,
       "subpages": 0,
       "resolved_via": "redirect",
       "truncated": false,
@@ -643,7 +643,7 @@
       "page_title": "쉽게 씌어진 시",
       "url": "https://ko.wikisource.org/wiki/%EC%89%BD%EA%B2%8C_%EC%94%8C%EC%96%B4%EC%A7%84_%EC%8B%9C",
       "revision_id": 203001,
-      "chars": 351,
+      "chars": 342,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -655,7 +655,7 @@
       "page_title": "청포도",
       "url": "https://ko.wikisource.org/wiki/%EC%B2%AD%ED%8F%AC%EB%8F%84",
       "revision_id": 202488,
-      "chars": 221,
+      "chars": 212,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -679,7 +679,7 @@
       "page_title": "절정",
       "url": "https://ko.wikisource.org/wiki/%EC%A0%88%EC%A0%95",
       "revision_id": 248562,
-      "chars": 149,
+      "chars": 140,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -691,7 +691,7 @@
       "page_title": "빼앗긴 들에도 봄은 오는가",
       "url": "https://ko.wikisource.org/wiki/%EB%B9%BC%EC%95%97%EA%B8%B4_%EB%93%A4%EC%97%90%EB%8F%84_%EB%B4%84%EC%9D%80_%EC%98%A4%EB%8A%94%EA%B0%80",
       "revision_id": 430592,
-      "chars": 1317,
+      "chars": 1308,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -703,7 +703,7 @@
       "page_title": "나의 침실로",
       "url": "https://ko.wikisource.org/wiki/%EB%82%98%EC%9D%98_%EC%B9%A8%EC%8B%A4%EB%A1%9C",
       "revision_id": 381039,
-      "chars": 1140,
+      "chars": 1131,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -739,7 +739,7 @@
       "page_title": "영랑시선/모란이 피기까지는",
       "url": "https://ko.wikisource.org/wiki/%EC%98%81%EB%9E%91%EC%8B%9C%EC%84%A0/%EB%AA%A8%EB%9E%80%EC%9D%B4_%ED%94%BC%EA%B8%B0%EA%B9%8C%EC%A7%80%EB%8A%94",
       "revision_id": 338033,
-      "chars": 225,
+      "chars": 216,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -763,7 +763,7 @@
       "page_title": "해에게서 소년에게",
       "url": "https://ko.wikisource.org/wiki/%ED%95%B4%EC%97%90%EA%B2%8C%EC%84%9C_%EC%86%8C%EB%85%84%EC%97%90%EA%B2%8C",
       "revision_id": 205651,
-      "chars": 920,
+      "chars": 911,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -775,7 +775,7 @@
       "page_title": "운수 좋은 날",
       "url": "https://ko.wikisource.org/wiki/%EC%9A%B4%EC%88%98_%EC%A2%8B%EC%9D%80_%EB%82%A0",
       "revision_id": 457472,
-      "chars": 10375,
+      "chars": 10366,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -787,7 +787,7 @@
       "page_title": "빈처",
       "url": "https://ko.wikisource.org/wiki/%EB%B9%88%EC%B2%98",
       "revision_id": 250704,
-      "chars": 14046,
+      "chars": 14037,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -799,7 +799,7 @@
       "page_title": "동백꽃",
       "url": "https://ko.wikisource.org/wiki/%EB%8F%99%EB%B0%B1%EA%BD%83",
       "revision_id": 465103,
-      "chars": 6990,
+      "chars": 6981,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -811,7 +811,7 @@
       "page_title": "봄봄",
       "url": "https://ko.wikisource.org/wiki/%EB%B4%84%EB%B4%84",
       "revision_id": 458652,
-      "chars": 11281,
+      "chars": 11272,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -823,7 +823,7 @@
       "page_title": "메밀꽃 필 무렵",
       "url": "https://ko.wikisource.org/wiki/%EB%A9%94%EB%B0%80%EA%BD%83_%ED%95%84_%EB%AC%B4%EB%A0%B5",
       "revision_id": 426852,
-      "chars": 8337,
+      "chars": 8328,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -835,7 +835,7 @@
       "page_title": "물레방아",
       "url": "https://ko.wikisource.org/wiki/%EB%AC%BC%EB%A0%88%EB%B0%A9%EC%95%84",
       "revision_id": 386826,
-      "chars": 12644,
+      "chars": 12635,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -871,7 +871,7 @@
       "page_title": "탈출기",
       "url": "https://ko.wikisource.org/wiki/%ED%83%88%EC%B6%9C%EA%B8%B0",
       "revision_id": 250625,
-      "chars": 8935,
+      "chars": 8926,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -895,7 +895,7 @@
       "page_title": "치숙",
       "url": "https://ko.wikisource.org/wiki/%EC%B9%98%EC%88%99",
       "revision_id": 120247,
-      "chars": 14185,
+      "chars": 14176,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -907,7 +907,7 @@
       "page_title": "날개",
       "url": "https://ko.wikisource.org/wiki/%EB%82%A0%EA%B0%9C",
       "revision_id": 221326,
-      "chars": 22525,
+      "chars": 22516,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -931,7 +931,7 @@
       "page_title": "B사감과 러브레터",
       "url": "https://ko.wikisource.org/wiki/B%EC%82%AC%EA%B0%90%EA%B3%BC_%EB%9F%AC%EB%B8%8C%EB%A0%88%ED%84%B0",
       "revision_id": 464471,
-      "chars": 5377,
+      "chars": 5368,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -955,7 +955,7 @@
       "page_title": "권태",
       "url": "https://ko.wikisource.org/wiki/%EA%B6%8C%ED%83%9C",
       "revision_id": 387146,
-      "chars": 10735,
+      "chars": 10726,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -979,7 +979,7 @@
       "page_title": "시혼",
       "url": "https://ko.wikisource.org/wiki/%EC%8B%9C%ED%98%BC",
       "revision_id": 115447,
-      "chars": 6160,
+      "chars": 6151,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -991,7 +991,7 @@
       "page_title": "어린이 찬미",
       "url": "https://ko.wikisource.org/wiki/%EC%96%B4%EB%A6%B0%EC%9D%B4_%EC%B0%AC%EB%AF%B8",
       "revision_id": 122901,
-      "chars": 4579,
+      "chars": 4570,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -1003,7 +1003,7 @@
       "page_title": "만년 셔츠",
       "url": "https://ko.wikisource.org/wiki/%EB%A7%8C%EB%85%84_%EC%85%94%EC%B8%A0",
       "revision_id": 263594,
-      "chars": 6082,
+      "chars": 6073,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -1095,7 +1095,7 @@
           "title": "흥부전 (경판 25장본)",
           "namespace": 0,
           "bytes": 354,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 | 제목 = 흥부전 | 다른 표기 = | 부제 = | 부제 다른 표기 = | 저자 = | 역자 = | 이전 = | 다음 = | 연도 = 1865 | 서지 = true | 설명 = 흥부전의 이본 중 하나. ",
           "redirected_to": null
         },
         {
@@ -1248,10 +1248,10 @@
         },
         {
           "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/문화·민속/예능 연표/연극 연표",
+          "title": "글로벌 세계 대백과사전/예술·스포츠·취미/예능 연표/연극 연표",
           "namespace": 0,
-          "bytes": 357,
-          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=연극 연표 |이전=[[글로벌 세계 대백과사전/문화·민속/예능 연표|예능 연표]] |다음=[[글로벌 세계 대백과사전/문화·민속/예능 연표/무용 연표|무용 연표]]",
+          "bytes": 393,
+          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=연극 연표 |이전=[[글로벌 세계 대백과사전/예술·스포츠·취미/예능 연표|예능 연표]] |다음=[[글로벌 세계 대백과사전/예술·스포츠·취미/예능 연표/무용 연표",
           "redirected_to": null
         },
         {
@@ -1400,10 +1400,42 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "封氏聞見記 (四庫全書本)/卷06",
+          "namespace": 0,
+          "bytes": 11684,
+          "preview": "欽定四庫全書 封氏聞見記卷六 唐 封演 撰 茶早采者為茶晚采者為茗本草云止渇令人不眠南人好飲之北人初不多飲開元中泰山巖寺有降魔師大興禪敎學禪務於不寐又不夕食皆許其飲茶人自懐挾到處煮飲從此轉相倣效遂成風俗自鄒齊滄棣漸至京邑城市多開店鋪煎茶賣之",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "翠微南征録 (四庫全書本)/卷06",
+          "namespace": 0,
+          "bytes": 10997,
+          "preview": "欽定四庫全書 宋 華岳 撰 題富沙廟 平政橋頭火爍空富沙宫殿烈煙中地形難撲徒臨水天意能囘遽反風十里爆雷驚客夢萬家全璧賴神㓛君王注意恢神武更乞威靈為寶冲 溪南風物照扉溪北蘭舟纜翠㣲雙槳碧雲苔浦合一簾紅雨杏花飛只知有酒酧佳景却恨無繩繫落暉更約風",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "石柱記箋釋 (四庫全書本)/卷2",
+          "namespace": 0,
+          "bytes": 20500,
+          "preview": "欽定四庫全書 歸安鄭元慶撰 吳興長城令晉分烏程 吳郡長城縣平陳廢仁夀二年復有雉山 長城望大業末沈法興置長州更置綏州因古綏安縣名之又更置雉州并置原郷縣七年州廢省原郷以長城來屬有西湖漑田三千頃其後湮廢刺史于頔復之人頼其利顧山有茶以供貢有銅 呉王",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "蜀中廣記 (四庫全書本)/卷040",
           "namespace": 0,
           "bytes": 6896,
           "preview": "欽定四庫全書 明 曹學佺 撰 川北 華陽國志秦昭襄王時白虎為害自秦蜀巴漢患之秦王乃重募國中有能煞虎者邑萬家金帛稱之於是夷朐䏰廖仲藥何射虎秦精等乃作白竹弩於髙樓上射虎巾頭三節白虎常從羣虎瞋恚盡摶煞羣虎大呴而死秦王嘉之曰虎厯四郡害千二百人一朝患",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "翠微南征録 (四庫全書本)/全覽",
+          "namespace": 0,
+          "bytes": 1475,
+          "preview": "﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
           "redirected_to": null
         },
         {
@@ -1424,14 +1456,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "翠微南征録 (四庫全書本)/卷06",
-          "namespace": 0,
-          "bytes": 10997,
-          "preview": "欽定四庫全書 宋 華岳 撰 題富沙廟 平政橋頭火爍空富沙宫殿烈煙中地形難撲徒臨水天意能囘遽反風十里爆雷驚客夢萬家全璧賴神㓛君王注意恢神武更乞威靈為寶冲 溪南風物照扉溪北蘭舟纜翠㣲雙槳碧雲苔浦合一簾紅雨杏花飛只知有酒酧佳景却恨無繩繫落暉更約風",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "翠微南征錄 (四部叢刊本)/卷之二",
           "namespace": 0,
           "bytes": 247,
@@ -1444,30 +1468,6 @@
           "namespace": 0,
           "bytes": 248,
           "preview": "{{四部叢刊頁眉|title=翠微南征錄|section=卷之六|prev=卷之五|next=卷之七|type=集|notes=宋 華岳 撰 張元濟 撰校勘記 舊鈔本}} <pages from=\"88\" to=\"105\" index=\"S",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "太平廣記/卷第141",
-          "namespace": 0,
-          "bytes": 5636,
-          "preview": "## 孔子 孔子謂子夏曰：「得麟之月，天當有血書魯端門。」孔聖沒，周室亡。子夏往觀，逢一郎云：「門有血，飛為赤鳥，化而為書云。」 ## 蕭士義 後漢黃門郎蕭士義，和帝永元二年被戮。數日前，家中常所養狗，來向其婦前而語曰：「汝極無相祿，汝家尋",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "封氏聞見記 (四庫全書本)/卷06",
-          "namespace": 0,
-          "bytes": 11684,
-          "preview": "欽定四庫全書 封氏聞見記卷六 唐 封演 撰 茶早采者為茶晚采者為茗本草云止渇令人不眠南人好飲之北人初不多飲開元中泰山巖寺有降魔師大興禪敎學禪務於不寐又不夕食皆許其飲茶人自懐挾到處煮飲從此轉相倣效遂成風俗自鄒齊滄棣漸至京邑城市多開店鋪煎茶賣之",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "太平寰宇記 (四庫全書本)/卷010",
-          "namespace": 0,
-          "bytes": 12425,
-          "preview": "欽定四庫全書 宋 樂史 撰 陳州 陳州淮陽郡今理宛邱縣昔庖犧氏所都曰太皥之墟禹貢為豫州之域星分心宿二度周初為陳國武王封舜后胡公媯滿于此以奉舜祀以備三恪至春秋時為楚靈王所滅乃縣之後五年復立陳惠公後五十六年楚惠王復滅陳而其地盡為楚所有又楚襄王自",
           "redirected_to": null
         }
       ]
@@ -1670,6 +1670,14 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "欽定古今圖書集成/經濟彙編/考工典/第137卷",
+          "namespace": 0,
+          "bytes": 423,
+          "preview": "{{GJTSJC header |彙編=經濟 |典=考工 |卷=一百三十七 |juan=137 |彙編_prev=經濟 |典_prev=考工 |卷_prev=一百三十六 |juan_prev=136 |彙編_next=經濟 |典_next=",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "牆東類稿 (四庫全書本)/卷15",
           "namespace": 0,
           "bytes": 36167,
@@ -1686,22 +1694,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "欽定古今圖書集成/經濟彙編/考工典/第137卷",
-          "namespace": 0,
-          "bytes": 423,
-          "preview": "{{GJTSJC header |彙編=經濟 |典=考工 |卷=一百三十七 |juan=137 |彙編_prev=經濟 |典_prev=考工 |卷_prev=一百三十六 |juan_prev=136 |彙編_next=經濟 |典_next=",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "金鰲新話",
-          "namespace": 0,
-          "bytes": 61128,
-          "preview": "## 萬福寺摴蒲記 南原有梁生者，早喪父母，未有妻室，獨居萬福寺之東. 房外有梨花一株，方春盛開，如瓊樹銀堆，生每月夜，逡巡朗吟其下. 詩曰: 一樹梨花伴寂廖，可憐辜負月明宵. 靑年獨臥孤窓畔，何處玉人吹鳳簫. 翡翠孤飛不作雙，鴛鴦失侶浴晴",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "牆東類稿 (四庫全書本)/卷11",
           "namespace": 0,
           "bytes": 27071,
@@ -1710,10 +1702,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "牆東類稿 (四庫全書本)/卷13",
+          "title": "金鰲新話",
           "namespace": 0,
-          "bytes": 35482,
-          "preview": "欽定四庫全書 牆東類稿巻十三 元 陸文圭 撰墓誌銘 延祐改元之二年中順大夫廣平張侯國綱来尹暨陽至之日迓者未岀城侯微服先至學宫延見諸生問民疾苦既視事聴斷明允吏民驚服爭問其爵里家世或曰侯嘗掾江西省又為其屬歴州縣所至有聲其先則洺之隠君子淳徳不耀鍾",
+          "bytes": 61128,
+          "preview": "## 萬福寺摴蒲記 南原有梁生者，早喪父母，未有妻室，獨居萬福寺之東. 房外有梨花一株，方春盛開，如瓊樹銀堆，生每月夜，逡巡朗吟其下. 詩曰: 一樹梨花伴寂廖，可憐辜負月明宵. 靑年獨臥孤窓畔，何處玉人吹鳳簫. 翡翠孤飛不作雙，鴛鴦失侶浴晴",
           "redirected_to": null
         },
         {
@@ -1734,6 +1726,14 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "牆東類稿 (四庫全書本)/卷13",
+          "namespace": 0,
+          "bytes": 35482,
+          "preview": "欽定四庫全書 牆東類稿巻十三 元 陸文圭 撰墓誌銘 延祐改元之二年中順大夫廣平張侯國綱来尹暨陽至之日迓者未岀城侯微服先至學宫延見諸生問民疾苦既視事聴斷明允吏民驚服爭問其爵里家世或曰侯嘗掾江西省又為其屬歴州縣所至有聲其先則洺之隠君子淳徳不耀鍾",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "弈人傳/卷04",
           "namespace": 0,
           "bytes": 11843,
@@ -1742,10 +1742,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "窺園留草",
+          "title": "東國李相國全集/卷五",
           "namespace": 0,
-          "bytes": 304142,
-          "preview": "窥园留草 清 许南英 窥园留草。作者：许南英。原书页数： ０２５０ 页 ●书籍简介第一四七种「窥园留草」 本书（二册二五○面一五○、○○○字）不分卷（另附「窥园词」），许南英撰。南英号蕴白或允白，台南人。清光绪十六年，由恩科会魁，授兵部车驾",
+          "bytes": 29883,
+          "preview": "## 古律詩四十四首 ## 卜居鸎溪。偶書草堂閑適。兼敍兩家來往之樂。贈西隣梁閣校。 鸎溪來卜宅。鵠嶺正當軒。老檜森南巷。靑松覆小垣。桑麻饒野壟。籬落似山村。窓對禪宮塔。樓臨酒店門。傍桃栽翠竹。剪棘護芳蓀。漸作顚茶陸。甘爲學圃樊。沈酣消日月",
           "redirected_to": null
         },
         {
@@ -1919,7 +1919,7 @@
           "title": "두시언해 (중간본)/권2/장유",
           "namespace": 0,
           "bytes": 389,
-          "preview": "## 저작권",
+          "preview": "{{머리말 | 제목 = 장유 | 다른 표기 = 壯遊 | 부제 = | 부제 다른 표기 = | 저자 = [[저자:두보|두보]] | 역자 = | 이전 = [[../자경부봉선현영회|자경부봉선현영회]] | 다음 = [[../",
           "redirected_to": null
         },
         {
@@ -2052,14 +2052,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "獨醉亭集 (四庫全書本)/卷下",
-          "namespace": 0,
-          "bytes": 34759,
-          "preview": "欽定四庫全書 明 史謹 撰 蘭竹圖 采采石上蘭蕭蕭水邊竹各抱夷齊心清風激流俗 户晝蕭森空堦凝緑隂不縁冰雪裏焉識歲寒心 樹擁溪邊閣山浮雨後嵐白頭歸未得畫裏看江南 獨立長門裏徘徊無所親可憐前殿月不照後宫人 澗畔花無數榮枯各有時先開復先謝莫羨向陽",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "雙溪醉隱集/卷5",
           "namespace": 0,
           "bytes": 16134,
@@ -2072,6 +2064,14 @@
           "namespace": 0,
           "bytes": 30517,
           "preview": "欽定四庫全書 明 史謹 撰 蜀山道中 塞上秋光向晚多無邊勝槩入吟哦太行舊畏羊腸險驛路今從鳥道過眼底故人無鮑叔軍中諸將有㢘頗羇愁忽共雲烟集幾處猿聲出薜蘿 山勢如龍入洞庭仙人樓閣倚青冥鐘聲縹緲連三界雲氣蒼茫護六丁蝴蝶夢囘山月曉鯉魚風起浪花腥無因",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "獨醉亭集 (四庫全書本)/卷下",
+          "namespace": 0,
+          "bytes": 34759,
+          "preview": "欽定四庫全書 明 史謹 撰 蘭竹圖 采采石上蘭蕭蕭水邊竹各抱夷齊心清風激流俗 户晝蕭森空堦凝緑隂不縁冰雪裏焉識歲寒心 樹擁溪邊閣山浮雨後嵐白頭歸未得畫裏看江南 獨立長門裏徘徊無所親可憐前殿月不照後宫人 澗畔花無數榮枯各有時先開復先謝莫羨向陽",
           "redirected_to": null
         },
         {
@@ -2205,7 +2205,7 @@
           "title": "서전언해/권1",
           "namespace": 0,
           "bytes": 448,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 | 제목 = 書傳諺解 卷一 | 다른 표기 = 서전언해 권일, 셔젼언ᄒᆡ 권지일 | 부제 = | 부제 다른 표기 = | 저자 = 미상 | 편집자 = | 역자 = | 이전 = | 다음 = [[../권2|권2]",
           "redirected_to": null
         },
         {
@@ -2253,7 +2253,7 @@
           "title": "시경언해 (1820년)/제6책",
           "namespace": 0,
           "bytes": 389,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 | 제목 = 시경언해 | 다른 표기 = 詩經諺解 | 부제 = | 부제 다른 표기 = | 저자 = | 편집자 = | 역자 = | 이전 = [[../제5책|제5책]] | 다음 = [[../제7책|제7책]] |",
           "redirected_to": null
         },
         {
@@ -2261,7 +2261,7 @@
           "title": "두시언해 (중간본)/권6/시문",
           "namespace": 0,
           "bytes": 353,
-          "preview": "## 저작권",
+          "preview": "{{머리말 | 제목 = 시문 | 다른 표기 = 柴門 | 부제 = | 부제 다른 표기 = | 저자 = [[저자:두보|두보]] | 역자 = | 이전 = [[../영옥|영옥]] | 다음 = [[../객거|객거]] | 설명",
           "redirected_to": null
         },
         {
@@ -2277,7 +2277,7 @@
           "title": "월인석보/권25",
           "namespace": 0,
           "bytes": 298,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 | 제목 = 월인석보 | 부제 = 권25 | 이전 = [[../권24|권24]] | 다음 = | 저자 = [[저자:조선 세조|수양대군]] }} {{옛한글 알림}} {{옛한글/시작}} <pages index",
           "redirected_to": null
         },
         {
@@ -2293,7 +2293,7 @@
           "title": "광주 천자문",
           "namespace": 0,
           "bytes": 598,
-          "preview": "## 저작권",
+          "preview": "{{머리말 | 제목 = 광주 천자문 | 부제 = | 저자 = 주흥사(周興嗣) | 연도 = 1575년 | 설명 = 광주(光州)에서 간행되었기 때문에 『광주천자문』, 『광주판 천자문』이라고 부르며, 일본 동경대학 오구라",
           "redirected_to": null
         },
         {
@@ -2426,14 +2426,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "景定建康志 (四庫全書本)/卷19",
-          "namespace": 0,
-          "bytes": 53443,
-          "preview": "欽定四庫全書 景定建康志巻十九 宋 周應合 撰 河港 古漕河一名靖安河自靖安鎮下缺口取道入儀真新河八十餘里 事跡呉聿靖安河記畧曰江出岷山道峽與荆湘沅澧至洞庭積為巨浸合沔水經潯陽東邀彭澤别為九道㑹為中江東北至南徐州為北江入于海惟中江自湖口合流",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "海內十洲記",
           "namespace": 0,
           "bytes": 16366,
@@ -2450,10 +2442,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "中阿含經/卷第 34",
+          "title": "景定建康志 (四庫全書本)/卷19",
           "namespace": 0,
-          "bytes": 29172,
-          "preview": "## 中阿含經卷第三十四 東晉罽賓三藏瞿曇僧伽提婆譯 ## （一三六）大品商人求財經第二十(第三念誦) 我聞如是： 一時，佛遊舍衛國，在勝林給孤獨園。 爾時，世尊告諸比丘：「乃往昔時，閻浮洲中諸商人等皆共集會在賈客堂，而作是念：『我等寧可乘",
+          "bytes": 53443,
+          "preview": "欽定四庫全書 景定建康志巻十九 宋 周應合 撰 河港 古漕河一名靖安河自靖安鎮下缺口取道入儀真新河八十餘里 事跡呉聿靖安河記畧曰江出岷山道峽與荆湘沅澧至洞庭積為巨浸合沔水經潯陽東邀彭澤别為九道㑹為中江東北至南徐州為北江入于海惟中江自湖口合流",
           "redirected_to": null
         },
         {
@@ -2466,34 +2458,18 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "中阿含經/卷第 34",
+          "namespace": 0,
+          "bytes": 29172,
+          "preview": "## 中阿含經卷第三十四 東晉罽賓三藏瞿曇僧伽提婆譯 ## （一三六）大品商人求財經第二十(第三念誦) 我聞如是： 一時，佛遊舍衛國，在勝林給孤獨園。 爾時，世尊告諸比丘：「乃往昔時，閻浮洲中諸商人等皆共集會在賈客堂，而作是念：『我等寧可乘",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "吳郡志/卷13",
           "namespace": 0,
           "bytes": 14798,
           "preview": "## 祠廟下 包山廟，在吳縣西南一百里。 土山卜將軍廟，在昆山縣。頃於山下菜圃朱四家得斷碑云：「唐卜府君墓，府君諱真。」碑字雖漫漶多闕，文尚可辨。然無將軍之號。 三高祠，在吳江縣垂虹橋南，即王氏腥庵之雪灘也。昔堂在垂虹南圯，極偏仄。乾道三年",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "欽定大清一統志 (四庫全書本)/卷050",
-          "namespace": 0,
-          "bytes": 71170,
-          "preview": "欽定四庫全書 分野天文斗牛女分野星紀之次 建置沿革禹貢揚州之域春秋呉地戰國屬越後屬楚置金陵邑秦改曰秣陵屬鄣郡漢為丹陽郡地後漢因之孫權徙治吴黄龍元年建都晉平吴移揚州及丹陽郡地此東晉仍為都改丹陽太守為尹又兼置南琅琊郡宋齊梁陳因之隋平陳廢郡改曰蔣",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "欽定大清一統志 (四庫全書本)/卷055",
-          "namespace": 0,
-          "bytes": 63367,
-          "preview": "欽定四庫全書 蘓州府 木瀆巡司甪頭廵司東山巡司呉塔巡司陳墓巡司石浦巡司巴城巡司黄泗浦巡司白茒港巡司同里巡司汾湖巡司平望巡司震澤巡司横塘鎮横金鎮光福鎮陸墓鎮望亭鎮蠡口鎮夷亭鎮甫里鎮兵墟鎮泗橋鎮安亭鎮石浦鎮蓬閬鎮慶安鎮福山鎮許浦鎮梅李鎮簡村鎮盛",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "欽定大清一統志 (四庫全書本)/卷344",
-          "namespace": 0,
-          "bytes": 93292,
-          "preview": "欽定四庫全書 潮州府 建置沿革禹貢州南境春秋戰國為百越地秦為南海郡地漢為南海郡揭陽縣後漢因之三國屬吳晉改置海陽縣咸和中分屬東官郡置義安郡宋齊因之梁兼置東州後改曰瀛州陳時州廢隋開皇中平陳罷郡屬循州十一年分置潮州大業初復為義安郡唐復為潮州天寳初",
           "redirected_to": null
         },
         {
@@ -2514,10 +2490,26 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "欽定大清一統志 (四庫全書本)/卷339",
+          "title": "欽定大清一統志 (四庫全書本)/卷344",
           "namespace": 0,
-          "bytes": 71350,
-          "preview": "欽定四庫全書 欽定大清一統志巻三百三十九 建置沿革禹貢州南境春秋戰國為百粤地置南海郡漢初為南越國復置南海郡屬交州後漢末移交州来治三國吳黄武五年改置廣州晉曰廣州南海郡宋齊以後皆因之隋郡廢仁夀元年改為番州復曰南海郡屬州唐復曰廣州置總管府天寳元年",
+          "bytes": 93292,
+          "preview": "欽定四庫全書 潮州府 建置沿革禹貢州南境春秋戰國為百越地秦為南海郡地漢為南海郡揭陽縣後漢因之三國屬吳晉改置海陽縣咸和中分屬東官郡置義安郡宋齊因之梁兼置東州後改曰瀛州陳時州廢隋開皇中平陳罷郡屬循州十一年分置潮州大業初復為義安郡唐復為潮州天寳初",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "欽定大清一統志 (四庫全書本)/卷050",
+          "namespace": 0,
+          "bytes": 71170,
+          "preview": "欽定四庫全書 分野天文斗牛女分野星紀之次 建置沿革禹貢揚州之域春秋呉地戰國屬越後屬楚置金陵邑秦改曰秣陵屬鄣郡漢為丹陽郡地後漢因之孫權徙治吴黄龍元年建都晉平吴移揚州及丹陽郡地此東晉仍為都改丹陽太守為尹又兼置南琅琊郡宋齊梁陳因之隋平陳廢郡改曰蔣",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "欽定大清一統志 (四庫全書本)/卷347",
+          "namespace": 0,
+          "bytes": 60835,
+          "preview": "欽定四庫全書 欽定大清一統志巻三百四十七 建置沿革禹貢州南境秦為南海郡地漢為合浦郡髙凉縣地三國晉宋為髙凉髙興二郡地梁為髙州地又分置電白郡隋平陳郡廢為髙凉永熙二郡地唐初屬髙州分置潘州二十二年又徙置髙州天寶初改髙州曰髙凉郡潘州曰南潘郡乾元初復曰",
           "redirected_to": null
         },
         {
@@ -2530,18 +2522,26 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "天啓贛州府志 (清順治十七年刻本)/卷01",
+          "title": "欽定大清一統志 (四庫全書本)/卷055",
           "namespace": 0,
-          "bytes": 237,
-          "preview": "{{Header2|title=[[../]]|section=卷一|previous=[[../凡例|凡例]]|next=[[../卷02|卷二]]|type=|from=天啓贛州府志|notes=}}<pages index=\"天啓贛州",
+          "bytes": 63367,
+          "preview": "欽定四庫全書 蘓州府 木瀆巡司甪頭廵司東山巡司呉塔巡司陳墓巡司石浦巡司巴城巡司黄泗浦巡司白茒港巡司同里巡司汾湖巡司平望巡司震澤巡司横塘鎮横金鎮光福鎮陸墓鎮望亭鎮蠡口鎮夷亭鎮甫里鎮兵墟鎮泗橋鎮安亭鎮石浦鎮蓬閬鎮慶安鎮福山鎮許浦鎮梅李鎮簡村鎮盛",
           "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
-          "title": "欽定大清一統志 (四庫全書本)/卷347",
+          "title": "西湖志纂 (四庫全書本)/卷07",
           "namespace": 0,
-          "bytes": 60835,
-          "preview": "欽定四庫全書 欽定大清一統志巻三百四十七 建置沿革禹貢州南境秦為南海郡地漢為合浦郡髙凉縣地三國晉宋為髙凉髙興二郡地梁為髙州地又分置電白郡隋平陳郡廢為髙凉永熙二郡地唐初屬髙州分置潘州二十二年又徙置髙州天寶初改髙州曰髙凉郡潘州曰南潘郡乾元初復曰",
+          "bytes": 30862,
+          "preview": "欽定四庫全書 大學士梁詩正等輯 出湧金門而北合錢塘門迤西過石函橋至寶石山為北山總路 豐樂樓 在湧金門外稍北西湖遊覽志宋初名衆樂亭尋改聳翠樓政和間易今名安撫趙與重構瑰麗峥嶸元末燬明郡守陳仕賢毁栁洲寺重建為賔使館題曰栁洲别館館後有樓題曰豐樂存舊",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "天啓贛州府志 (清順治十七年刻本)/卷01",
+          "namespace": 0,
+          "bytes": 237,
+          "preview": "{{Header2|title=[[../]]|section=卷一|previous=[[../凡例|凡例]]|next=[[../卷02|卷二]]|type=|from=天啓贛州府志|notes=}}<pages index=\"天啓贛州",
           "redirected_to": null
         },
         {
@@ -2896,18 +2896,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "御定佩文韻府 (四庫全書本)/卷028之2",
-          "namespace": 0,
-          "bytes": 204691,
-          "preview": "欽定四庫全書 御定佩文韻府卷二十八之二目録 下平聲 十三覃韻二 函 嵐 蠶 篸 探 貪 眈 耽 湛 龕 堪戡 弇 談 惔 甘 三 酣 籃 柑 慙 耼坩 藍 錟 擔 唅 郯 谽 妉 泔 邯 馣䰐 蜬 儋 盦 鬖 蚶 憨 韽 毿 鐔 淦 痰 甝",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "御定駢字類編 (四庫全書本)/卷074",
           "namespace": 0,
           "bytes": 137989,
           "preview": "欽定四庫全書 珍寶門九 銀漢 銀氣 銀帳 銀岡 銀宮 銀室 銀隥 銀色 銀黑 銀鏤銀錯 銀鈔銀貨 銀線 銀簟 銀燈 銀紙 銀甕 銀章 銀籠 銀綸 銀纒 銀 銀 銀蔓 銀茜 銀覆 鐡珠 鐵衣 鐵鎧 鐵斧 鐵箭 鐵簡 鐵椎 鐵鑽 鐵絲 鐵刷 鐵",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "御定佩文韻府 (四庫全書本)/卷028之2",
+          "namespace": 0,
+          "bytes": 204691,
+          "preview": "欽定四庫全書 御定佩文韻府卷二十八之二目録 下平聲 十三覃韻二 函 嵐 蠶 篸 探 貪 眈 耽 湛 龕 堪戡 弇 談 惔 甘 三 酣 籃 柑 慙 耼坩 藍 錟 擔 唅 郯 谽 妉 泔 邯 馣䰐 蜬 儋 盦 鬖 蚶 憨 韽 毿 鐔 淦 痰 甝",
           "redirected_to": null
         },
         {
@@ -3089,7 +3089,7 @@
           "title": "동동",
           "namespace": 0,
           "bytes": 2626,
-          "preview": "德으란 곰ᄇᆡ예 받ᄌᆞᆸ고 福으란 림ᄇᆡ예 받ᄌᆞᆸ고 德이여 福이라 호ᄂᆞᆯ 나ᅀᆞ라 오소ᅌᅵ다 :아으 動動다리 正月ㅅ 나릿 므른 아으 어져 녹져 ᄒᆞ논ᄃᆡ 누릿 가온ᄃᆡ 나곤 몸하 ᄒᆞ올로 녈셔 :아으 動動다리 二",
+          "preview": "德으란 곰ᄇᆡ예 받ᄌᆞᆸ고 福으란 림ᄇᆡ예 받ᄌᆞᆸ고 德이여 福이라 호ᄂᆞᆯ 나ᅀᆞ라 오소ᅌᅵ다 아으 動動다리 正月ㅅ 나릿 므른 아으 어져 녹져 ᄒᆞ논ᄃᆡ 누릿 가온ᄃᆡ 나곤 몸하 ᄒᆞ올로 녈셔 아으 動動다리 二月ㅅ",
           "redirected_to": null
         },
         {
@@ -3167,7 +3167,7 @@
           "title": "처용가",
           "namespace": 0,
           "bytes": 1191,
-          "preview": "## 라이선스",
+          "preview": "{{향찰 알림}} {{머리말 |제목 = 처용가(處容歌) |지은이 = [[저자:처용|처용]] |역자 = |부제 = |이전 = |다음 = |설명 = 악장가사에 수록. 《삼국유사》에 따르면 신라 헌강왕 때 처용이 지었다고",
           "note": "index page: page is almost empty"
         },
         {
@@ -3236,14 +3236,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "靈源大道歌",
-          "namespace": 0,
-          "bytes": 3421,
-          "preview": "我為諸君說端的。命蒂從來在真息。照體長生空不空。靈鑑涵天容萬物。 太極布妙人得一，得一善持謹勿失。宮室虛閒神自居，靈府煎熬枯血液。 一悲一喜一思慮，一縱一勞形蠹弊，朝傷暮損迷不知。喪亂精神無所據。 細細消磨漸漸衰，耗竭元氣神乃去。只道行禪坐",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "聖經 (和合本)/雅歌",
           "namespace": 0,
           "bytes": 15156,
@@ -3252,10 +3244,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "真人高象先金丹歌",
+          "title": "靈源大道歌",
           "namespace": 0,
-          "bytes": 7760,
-          "preview": "高先，字象先，朐陽人也。余素昧平生，，因四明傳神僧禹昌，始得識公面於京師。佳其負才學而輕名壯，陶陶然以酒自娛；又視其眼光溢臉，歎日：真明了人也，始與定交，然莫測有他衛。洎秋，觀公《承醉答諸宮高負外歌》一首，幾二千言，雖朝上帝問道西華，率皆寓",
+          "bytes": 3421,
+          "preview": "我為諸君說端的。命蒂從來在真息。照體長生空不空。靈鑑涵天容萬物。 太極布妙人得一，得一善持謹勿失。宮室虛閒神自居，靈府煎熬枯血液。 一悲一喜一思慮，一縱一勞形蠹弊，朝傷暮損迷不知。喪亂精神無所據。 細細消磨漸漸衰，耗竭元氣神乃去。只道行禪坐",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "蓬萊山西竈還丹歌",
+          "namespace": 0,
+          "bytes": 45228,
+          "preview": "## 蓬萊山西竈還丹歌卷上 漢檢校僕射金紫光祿大夫黃玄鍾撰 臣聞鷦鷯在木，不逾一枝之巢。偃鼠飲河，無過一腸之滿。伏惟陛下名逾東戶，調美南風，在於兆民，無不咸止。何重萬乘之榮，而輕不死之道。臣伏以元封年奉詔蓬萊，親求妙術，經過海難，涉歷幽陽，",
           "redirected_to": null
         },
         {
@@ -3268,18 +3268,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "正法念處經/卷36",
+          "title": "真人高象先金丹歌",
           "namespace": 0,
-          "bytes": 29597,
-          "preview": "正法念處經卷第三十六 元魏婆羅門瞿曇般若流支譯 觀天品之十五 又彼比丘。知業果報。精進不壞。觀察三十三天已上。復有何天。在彼三十三天上住。光明勝妙。力命自在。勝彼三十三天果報。彼見聞知。於彼三十三天已上。復有一切法勝之堂。法果報勝。光明勝妙",
+          "bytes": 7760,
+          "preview": "高先，字象先，朐陽人也。余素昧平生，，因四明傳神僧禹昌，始得識公面於京師。佳其負才學而輕名壯，陶陶然以酒自娛；又視其眼光溢臉，歎日：真明了人也，始與定交，然莫測有他衛。洎秋，觀公《承醉答諸宮高負外歌》一首，幾二千言，雖朝上帝問道西華，率皆寓",
           "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
-          "title": "蓬萊山西竈還丹歌",
+          "title": "正法念處經/卷36",
           "namespace": 0,
-          "bytes": 45228,
-          "preview": "## 蓬萊山西竈還丹歌卷上 漢檢校僕射金紫光祿大夫黃玄鍾撰 臣聞鷦鷯在木，不逾一枝之巢。偃鼠飲河，無過一腸之滿。伏惟陛下名逾東戶，調美南風，在於兆民，無不咸止。何重萬乘之榮，而輕不死之道。臣伏以元封年奉詔蓬萊，親求妙術，經過海難，涉歷幽陽，",
+          "bytes": 29597,
+          "preview": "正法念處經卷第三十六 元魏婆羅門瞿曇般若流支譯 觀天品之十五 又彼比丘。知業果報。精進不壞。觀察三十三天已上。復有何天。在彼三十三天上住。光明勝妙。力命自在。勝彼三十三天果報。彼見聞知。於彼三十三天已上。復有一切法勝之堂。法果報勝。光明勝妙",
           "redirected_to": null
         },
         {
@@ -3308,18 +3308,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "記李歌",
+          "title": "容春堂集 (四庫全書本)/前集卷02",
           "namespace": 0,
-          "bytes": 1452,
-          "preview": "李歌者，霸州人。其母一枝梅，倡也。年十四，母教之歌舞。李艴然曰：「人皆有配偶，我可獨為倡邪？」母告以衣食所仰。不得已，與母約曰：「媼能寬我不脂澤，不葷肉，則可爾。否則，有死而已。」母懼，陽從之。自是縞衣素裳，唯拂掠翠鬟。然姿容如玉雪，望之宛",
+          "bytes": 20350,
+          "preview": "欽定四庫全書 容春堂前集巻二 明 邵寳 撰古詩 嘉燕陳明堂黼座當春陽惠風拂宫扇親覩穆穆光冠簪肅趨拜共進萬夀觴簫韶叶舞佾宛然見虞唐三苗獨何為不如獸蹌蹌天髙復地厚永世垂衣裳 司徒始受命朝野賀得人兩邊數萬騎所望公一身公囊無芻糧公心有經綸亦有為國念",
           "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
-          "title": "容春堂集 (四庫全書本)/續集卷04",
+          "title": "李賀歌詩編/卷第三",
           "namespace": 0,
-          "bytes": 37300,
-          "preview": "欽定四庫全書 容春堂續集卷四 明 卲寳 撰七言律 山居秋日用杜韻八首 新秋景物愛山林碧樹含風正鬱森滴水下池時發響片雲度嶺漫成陰十年病後憂時鬢千仭岡頭望闕心餘興最憐東月上一峯清磬萬家砧 忠定祠邊細路斜高臺百尺面清華柝聲似應雲中笛㠶影虚疑海上槎",
+          "bytes": 17244,
+          "preview": "## 追和何謝銅雀妓 佳人一壺酒， 秋容滿千里。 石馬臥新煙， 憂來何所似？ 歌聲且潛弄， 陵樹風自起。 長裾壓高臺， 淚眼看花機。 ## 送秦光祿北征 北虜膠堪折， 秋沙亂曉鼙。 髯鬍頻犯塞， 驕氣似橫霓。 灞水樓船渡， 營門細柳開。 將",
           "redirected_to": null
         }
       ]
@@ -3370,18 +3370,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "白洲別稿/卷一",
-          "namespace": 0,
-          "bytes": 13951,
-          "preview": "## 五言絶句 ## 別一相赴金堤任所 七事皆眞切。行之豈易哉。燈前書贈意。非爲對銀臺。 ## 觀漲 積雨靑蕪沒。層濤白雪寒。高樓百尺望。大海一杯看。 ## 春帖 有好方爲慶。無憂便是安。固知皆有命。唯願命無艱。 ## 又 四座佳賓滿。千樽",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "稼亭集/卷十九",
           "namespace": 0,
           "bytes": 12921,
           "preview": "## 律詩 ## 宿興義驛 天寒破驛少人烟。下馬昏昏睡馬韉。夜半酒醒仍夢覺。宦情離思共悠然。 ## 過慈悲嶺 廻首松都已杳然。萱堂更在海南邊。吾生屢度慈悲嶺。此去還非少壯年。絶頂僧房埋積雪。荒林驛舍鎖寒烟。題詩欲寄諸心友。凍筆如錐不着牋。 ",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "白洲別稿/卷一",
+          "namespace": 0,
+          "bytes": 13951,
+          "preview": "## 五言絶句 ## 別一相赴金堤任所 七事皆眞切。行之豈易哉。燈前書贈意。非爲對銀臺。 ## 觀漲 積雨靑蕪沒。層濤白雪寒。高樓百尺望。大海一杯看。 ## 春帖 有好方爲慶。無憂便是安。固知皆有命。唯願命無艱。 ## 又 四座佳賓滿。千樽",
           "redirected_to": null
         },
         {
@@ -3394,18 +3394,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "全唐詩/卷244",
-          "namespace": 0,
-          "bytes": 4476,
-          "preview": "## 贈別韋兵曹歸池州 ## 寄武陵李少府 ## 贈張建 ## 送監軍李判官 ## 送客歸廣平 ## 送張儋水路歸北海 ## 送故人歸魯 ## 送故人歸蜀 ## 酬程延秋夜即事見贈 ## 送郭贊府歸淮南 ## 題龍興寺澹師房 ## 送客遊江",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "資治通鑑/卷060",
           "namespace": 0,
           "bytes": 34203,
           "preview": "資治通鑑 第060卷 【漢紀五十二】 起重光協洽，盡昭陽作噩，凡三年。 ## 孝獻皇帝乙初平二年（辛未，公元一九一年） 春，正月，辛丑，赦天下。 關東諸將議：以朝廷幼沖，逼於董卓，遠隔關塞，不知存否，幽州牧劉虞，宗室賢俊，欲共立為主。曹操曰",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "全唐詩/卷244",
+          "namespace": 0,
+          "bytes": 4476,
+          "preview": "## 贈別韋兵曹歸池州 ## 寄武陵李少府 ## 贈張建 ## 送監軍李判官 ## 送客歸廣平 ## 送張儋水路歸北海 ## 送故人歸魯 ## 送故人歸蜀 ## 酬程延秋夜即事見贈 ## 送郭贊府歸淮南 ## 題龍興寺澹師房 ## 送客遊江",
           "redirected_to": null
         },
         {
@@ -3418,14 +3418,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "嘉梧藁略/冊一",
-          "namespace": 0,
-          "bytes": 85092,
-          "preview": "## 樂府 ## 山居樂四章 園有來禽。圃有肥韭。我殽旣備。我酒旣斗。我友來思。皷瑟皷缶。今我不樂。於焉其耉。 園有穠荔。圃有肥芹。我殽旣嘉。我酒旣醺。我友來思。載悅載欣。今我不樂。歲將暮云。 園有靑梅。圃有肥蔗。我殽旣多。我酒旣瀉。式燕以",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "全唐詩/卷236",
           "namespace": 0,
           "bytes": 6911,
@@ -3434,10 +3426,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "資治通鑒 (胡三省音注)/卷060",
+          "title": "嘉梧藁略/冊一",
           "namespace": 0,
-          "bytes": 56611,
-          "preview": "孝獻皇帝乙 初平二年 ①春，正月，辛丑，赦天下。 ②關東諸將議：以朝廷幼沖，迫於董卓，遠隔關塞，不知存否，幽州牧劉虞，宗室賢儁，欲共立爲主。曹操曰：「吾等所以舉兵而遠近莫不響應者，以義動故也。今幼主微弱，制於姦臣，非有昌邑亡國之釁，而一旦改",
+          "bytes": 85092,
+          "preview": "## 樂府 ## 山居樂四章 園有來禽。圃有肥韭。我殽旣備。我酒旣斗。我友來思。皷瑟皷缶。今我不樂。於焉其耉。 園有穠荔。圃有肥芹。我殽旣嘉。我酒旣醺。我友來思。載悅載欣。今我不樂。歲將暮云。 園有靑梅。圃有肥蔗。我殽旣多。我酒旣瀉。式燕以",
           "redirected_to": null
         },
         {
@@ -3450,14 +3442,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "石洲別集/卷一",
-          "namespace": 0,
-          "bytes": 50428,
-          "preview": "## 五言古詩 ## 寓言 匏瓠貯糞水。窒以三生石。蟯蚘滿其內。臭穢汩回薄。汎在滄溟中。沈浮寧自覺。水仙偶見之。告以海之樂。糞水激聲笑。云自適其適。反謂水仙愚。汝言太匏落。不知身去來。盡是波濤力。人生一匏瓠。宇宙一大壑。以我觀此世。世人無乃",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "博泉集/詩五",
           "namespace": 0,
           "bytes": 8821,
@@ -3466,10 +3450,26 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "二曲集/23",
+          "namespace": 0,
+          "bytes": 31300,
+          "preview": "## 卷二十三 ## 襄城記異 襄城後學 劉宗泗 彙輯 康熙辛亥三月廿六日，二曲李隱君先生招其太翁信吾忠魂以歸，鄉紳父老鐮楮帛、為詩歌以祖其行。先一夕，予命椎工鍥《信吾傳》於石，自鎮將廳尉以迄殉難未有名氏之五千人，胥勒履晶。日暝，諸工役約一",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "息庵先生遺稿/卷四",
           "namespace": 0,
           "bytes": 27081,
           "preview": "## 七言律詩 ## 二月四日迂齋相公小祥辛丑 去春東閣曾相弔。惆悵今逢二月回。當日英豪歸夜宅。異時勳業列雲臺。亭園寂寂人誰在。風雨凄凄燕獨來。懷舊潘生情感慨。不堪重切悼亡哀。 ## 次四雅子述懷韻壬寅 南樓昨夜動涼風。七月殘炎覺已空。河漢",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "資治通鑒 (胡三省音注)/卷060",
+          "namespace": 0,
+          "bytes": 56611,
+          "preview": "孝獻皇帝乙 初平二年 ①春，正月，辛丑，赦天下。 ②關東諸將議：以朝廷幼沖，迫於董卓，遠隔關塞，不知存否，幽州牧劉虞，宗室賢儁，欲共立爲主。曹操曰：「吾等所以舉兵而遠近莫不響應者，以義動故也。今幼主微弱，制於姦臣，非有昌邑亡國之釁，而一旦改",
           "redirected_to": null
         }
       ]
@@ -3528,18 +3528,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "美人書/03",
-          "namespace": 0,
-          "bytes": 21809,
-          "preview": "引 煙水散人曰：人皆逐艷，予獨重情。自非情深千古，豈能事艷一時。如蕭寺月下之逢，趙郎錦箋之寄，長生殿裏私誓金釵，蝴蝶夢中巧偷香粉，事固艷矣，而情猶未摯。故其始也，盟山誓海，原如菡萏蒂聯；及其終也，抱恨銜愁，已逐燕勞影散。豈能作同心松柏，亦安",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "美人書/11",
           "namespace": 0,
           "bytes": 19628,
           "preview": "引 煙水散人曰：余情癡人也，然於桃葉之下，未嘗涉跡。蓋自錦江秀色，獨聞幻出濤情；西子湖頭，未見再繩小武。而煙花到處，誰擅蛾眉；歌舞紛紜，孰堪傾國。繞地羅裳脂粉，妝成傀儡；滿床明月笑啼，總屬虛脾。 嗟乎，青樓寂寥，久已才色無聞矣！雖然江都名勝",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "美人書/03",
+          "namespace": 0,
+          "bytes": 21809,
+          "preview": "引 煙水散人曰：人皆逐艷，予獨重情。自非情深千古，豈能事艷一時。如蕭寺月下之逢，趙郎錦箋之寄，長生殿裏私誓金釵，蝴蝶夢中巧偷香粉，事固艷矣，而情猶未摯。故其始也，盟山誓海，原如菡萏蒂聯；及其終也，抱恨銜愁，已逐燕勞影散。豈能作同心松柏，亦安",
           "redirected_to": null
         },
         {
@@ -3552,10 +3552,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "美人書/01",
+          "title": "欽定古今圖書集成/明倫彙編/閨媛典/閨媛總部",
           "namespace": 0,
-          "bytes": 17498,
-          "preview": "引 雪廬主人曰：千百年來，艷女、才女、怨女，未有一人如小青者。臨邛、章臺，艷矣才矣，而不怨。綠珠、小玉，亦艷矣才矣，而歡極憾終，要亦怨其所不必怨。孰與姬之托根失所，闃寂自如，或諷之去終不去，竟以怨死乎！ 姬之前身似屈平，馮生之前身似楚懷王，",
+          "bytes": 4984,
+          "preview": "## 第一卷 ## 第二卷 ## 第三卷 ## 第四卷 ## 第五卷 ## 第六卷 ## 第七卷 ## 第八卷 ## 第九卷 ## 第十卷 ## 第十一卷 ## 第十二卷 ## 第十三卷 ## 第十四卷 ## 第十五卷 ## 第十六卷 ##",
           "redirected_to": null
         },
         {
@@ -3568,50 +3568,18 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "美人書/01",
+          "namespace": 0,
+          "bytes": 17498,
+          "preview": "引 雪廬主人曰：千百年來，艷女、才女、怨女，未有一人如小青者。臨邛、章臺，艷矣才矣，而不怨。綠珠、小玉，亦艷矣才矣，而歡極憾終，要亦怨其所不必怨。孰與姬之托根失所，闃寂自如，或諷之去終不去，竟以怨死乎！ 姬之前身似屈平，馮生之前身似楚懷王，",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "美人書/02",
           "namespace": 0,
           "bytes": 22044,
           "preview": "引 煙水散人曰：予聞關睢之詠，獨取幽閑；傳記所褒，惟推貞靜，豈不以婦人之義節操為重？而曹娥雖死，其名皎皎，至今猶與江水並清也。 自世道式微，而競以淫風相煽。桑濮訂歡，桃李互答，甚而有以紅葉為美事、西廂為佳話者矣！故世之論者，僅以雲鬢花容當美",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "香屑集 (四庫全書本)/卷04",
-          "namespace": 0,
-          "bytes": 34305,
-          "preview": "欽定四庫全書 中允黄之雋撰 傾城獨立世所稀洞房豔豔生光輝深掩金屏日髙睡鴛鴦浴烟鸞鳳飛象口吹香毾㲪煖芙蓉帳裏蘭麝滿朱顔如花腰似栁栁條無力花枝軟絳羅髙捲不勝春和嬌扶起濃睡人睡起捲簾無一事唯解畫眉朱㸃唇傾城洞房深掩鴛鴦象口芙蓉朱顔柳條絳羅和嬌睡起",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "欽定古今圖書集成/明倫彙編/閨媛典/閨媛總部",
-          "namespace": 0,
-          "bytes": 4984,
-          "preview": "## 第一卷 ## 第二卷 ## 第三卷 ## 第四卷 ## 第五卷 ## 第六卷 ## 第七卷 ## 第八卷 ## 第九卷 ## 第十卷 ## 第十一卷 ## 第十二卷 ## 第十三卷 ## 第十四卷 ## 第十五卷 ## 第十六卷 ##",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "列朝詩集/甲前07下",
-          "namespace": 0,
-          "bytes": 7369,
-          "preview": "## 甲集前編第七 ## 䥫崖先生楊維楨 一百七十首 ## 鴻門會 ## 虞美人行 ## 梁父吟 ## 孔巢父 ## 警枕辭 ## 三閣圖 ## 澶淵行 ## 冬青塚（重見） ## 李鐵槍歌 ## 鐵槍封萬戶，至正壬辰七月二十日破賊於杭，余",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "欽定古今圖書集成/明倫彙編/閨媛典/第013卷",
-          "namespace": 0,
-          "bytes": 395,
-          "preview": "{{GJTSJC header |彙編=明倫 |典=閨媛 |卷=十三 |juan=013 |彙編_prev=明倫 |典_prev=閨媛 |卷_prev=十二 |juan_prev=012 |彙編_next=明倫 |典_next=閨媛 |卷_",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "樂府詩集/016卷",
-          "namespace": 0,
-          "bytes": 17763,
-          "preview": "## 卷十六•鼓吹曲辭一 鼓吹曲，一曰短簫鐃歌。劉瓛定軍禮-{云}-：「鼓吹未知其始也，漢班壹雄朔野而有之矣。鳴笳以和簫聲，非八音也。騷人曰『鳴篪吹竽』是也。」蔡邕《禮樂志》曰：「漢樂四品，其四曰短簫鐃歌，軍樂也。黃帝岐伯所作，以建威揚德、",
           "redirected_to": null
         },
         {
@@ -3624,18 +3592,50 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "御定厯代題畫詩類 (四庫全書本)/卷060",
+          "title": "樂府詩集/016卷",
           "namespace": 0,
-          "bytes": 24296,
-          "preview": "欽定四庫全書 御定厯代題畫詩類卷六十目録 觀李凑所畫美人障子 為黄應龍姬人史鳯翔題扇上景題扇詩 御定厯代題畫詩類巻六十目録 欽定四庫全書 御定厯代題畫詩類卷六十 觀李湊所畫美人障子 劉長卿 愛爾含天姿丹青有殊智無間已得象象外更生意西子不可見",
+          "bytes": 17763,
+          "preview": "## 卷十六•鼓吹曲辭一 鼓吹曲，一曰短簫鐃歌。劉瓛定軍禮-{云}-：「鼓吹未知其始也，漢班壹雄朔野而有之矣。鳴笳以和簫聲，非八音也。騷人曰『鳴篪吹竽』是也。」蔡邕《禮樂志》曰：「漢樂四品，其四曰短簫鐃歌，軍樂也。黃帝岐伯所作，以建威揚德、",
           "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
-          "title": "美人書/10",
+          "title": "列朝詩集/甲前07下",
           "namespace": 0,
-          "bytes": 20626,
-          "preview": "引 煙水散人曰：今之論美人者，但取其情之麗，事之艷而已。而不知欺花奪月之姿，自有遺世淩雲之想。故瑤圃仙妃，偶染凡心而下謫；蘭閨玉媛，必全凈體以遐飛。在秦則有弄珠乘鸞，在漢則有雲姬屍解，在唐則有蕭玉梅之飛升、宋春英之卻偶。傳記所載，班班可考，",
+          "bytes": 7369,
+          "preview": "## 甲集前編第七 ## 䥫崖先生楊維楨 一百七十首 ## 鴻門會 ## 虞美人行 ## 梁父吟 ## 孔巢父 ## 警枕辭 ## 三閣圖 ## 澶淵行 ## 冬青塚（重見） ## 李鐵槍歌 ## 鐵槍封萬戶，至正壬辰七月二十日破賊於杭，余",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "香屑集 (四庫全書本)/卷04",
+          "namespace": 0,
+          "bytes": 34305,
+          "preview": "欽定四庫全書 中允黄之雋撰 傾城獨立世所稀洞房豔豔生光輝深掩金屏日髙睡鴛鴦浴烟鸞鳳飛象口吹香毾㲪煖芙蓉帳裏蘭麝滿朱顔如花腰似栁栁條無力花枝軟絳羅髙捲不勝春和嬌扶起濃睡人睡起捲簾無一事唯解畫眉朱㸃唇傾城洞房深掩鴛鴦象口芙蓉朱顔柳條絳羅和嬌睡起",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "欽定古今圖書集成/明倫彙編/閨媛典/第013卷",
+          "namespace": 0,
+          "bytes": 395,
+          "preview": "{{GJTSJC header |彙編=明倫 |典=閨媛 |卷=十三 |juan=013 |彙編_prev=明倫 |典_prev=閨媛 |卷_prev=十二 |juan_prev=012 |彙編_next=明倫 |典_next=閨媛 |卷_",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "御定厯代題畫詩類 (四庫全書本)/卷058",
+          "namespace": 0,
+          "bytes": 23555,
+          "preview": "欽定四庫全書 御定厯代題畫詩類卷五十八目録 倚竹圖 題張彦明所藏翦紙惜花春起早圖題美人惜花圖 題李亮功家周昉畫美人琴阮圖内人阮琴圖 御定厯代題畫詩類卷五十八目錄 欽定四庫全書 御定厯代題畫詩類卷五十八 倚竹圖 范成大 輕薄人情翻覆手冰容却耐",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "香屑集 (四庫全書本)/卷09",
+          "namespace": 0,
+          "bytes": 37628,
+          "preview": "欽定四庫全書 中允黄之雋撰 佳人不可望侍婢豔傾城兩口遥相語雙蛾如有情迴風還㶑㶑臨水更盈盈願奉羅帷夜燒香過一生佳人侍婢兩口雙蛾迴風臨水願奉燒香 佳人能畫眉初日半簷時獨立梧桐井閒吟芍藥詩輕盈疑雪舞摇曵惹風吹末敢相邀約柔情託侍兒佳人初日獨立閒吟輕",
           "redirected_to": null
         }
       ]
@@ -3710,18 +3710,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "太上洞玄靈寶上品戒經",
-          "namespace": 0,
-          "bytes": 8495,
-          "preview": "爾時天尊以開皇元年七月一日午時，於西那玉國鬱察山中浮羅之境香桑林，所授太上道君智慧上品大戒法文，于時道君受戒，首體投地，迴心十方，思念三尊。是時諸天仙眾騰空而來，龍車虎駕，鳳輦鸞輿，翠旄羽扇，碧霧彩雲，仙花寶節，赫奕光明，鳴鶴嗈嗈，音樂鏘鏘",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "優婆塞戒經",
           "namespace": 0,
           "bytes": 202781,
           "preview": "第1083部～優婆塞戒經七卷 大乘律·第1083部 優婆塞戒經七卷 北涼天竺三藏法師曇無讖譯 ## 優婆塞戒經卷第一 ## 集會品第一 如是我聞。一時佛在舍衛國祇樹林中阿那邠坻精舍。與大比丘僧千二百五十人。五百比丘尼。千優婆塞。五百乞兒。爾",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "太上洞玄靈寶上品戒經",
+          "namespace": 0,
+          "bytes": 8495,
+          "preview": "爾時天尊以開皇元年七月一日午時，於西那玉國鬱察山中浮羅之境香桑林，所授太上道君智慧上品大戒法文，于時道君受戒，首體投地，迴心十方，思念三尊。是時諸天仙眾騰空而來，龍車虎駕，鳳輦鸞輿，翠旄羽扇，碧霧彩雲，仙花寶節，赫奕光明，鳴鶴嗈嗈，音樂鏘鏘",
           "redirected_to": null
         },
         {
@@ -3742,14 +3742,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "傳授三洞經戒法籙略說",
-          "namespace": 0,
-          "bytes": 45933,
-          "preview": "传授三洞经戒法箓略说 经名：传授三洞经戒法箓略说。唐张万福撰。二卷。底本出处：《正统道藏》正一部。 目 录 卷上 戒目 正一法目 道德经目 三皇法目 灵宝法目 灵宝五符 东西禁文 五岳真形图 三皇内文 卷下 三天正法除六天玉文 明科信品格 ",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "戒子通録 (四庫全書本)/卷5",
           "namespace": 0,
           "bytes": 26526,
@@ -3758,10 +3750,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "五分比丘尼戒本",
+          "title": "傳授三洞經戒法籙略說",
           "namespace": 0,
-          "bytes": 41102,
-          "preview": "五分比丘尼戒本 梁建初寺沙門釋明徽集 「大姊僧聽！春時一月過少一夜，餘有一夜三月在。老死至近，佛法欲滅。諸大姊！為得道故，一心勤精進。所以者何？諸佛一心勤精進故，得阿耨多羅三藐三菩提，何況餘善道法！」 「合十指爪掌， 供養釋師子， 我今欲說",
+          "bytes": 45933,
+          "preview": "传授三洞经戒法箓略说 经名：传授三洞经戒法箓略说。唐张万福撰。二卷。底本出处：《正统道藏》正一部。 目 录 卷上 戒目 正一法目 道德经目 三皇法目 灵宝法目 灵宝五符 东西禁文 五岳真形图 三皇内文 卷下 三天正法除六天玉文 明科信品格 ",
           "redirected_to": null
         },
         {
@@ -3770,14 +3762,6 @@
           "namespace": 0,
           "bytes": 34942,
           "preview": "根本說一切有部戒經 三藏法師義淨奉 制譯 別解脫經難得聞 經於無量俱胝劫 讀誦受持亦如是 如說行者更難遇 諸佛出現於世樂 演說微妙正法樂 僧伽一心同見樂 和合俱修勇進樂 若見聖人則為樂 并與共住亦為樂 若不見諸愚癡人 是則名為常受樂 見具尸",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "金籙大齋補職說戒儀",
-          "namespace": 0,
-          "bytes": 8626,
-          "preview": "金籙大齋補職說戒儀 侍職立師寶前，啟白 建齋行道，威儀肅列於三元；分任設官，俯仰聿符於四極。諸天臨軒而校錄，眾真侍座以監臨。職守攸司，步趨宜謹。况玉律備監攝之令，而金科垂銓舉之文。宜罄厥誠，登瑤壇而恭事；各典所署，敷瓊笈以宣揚。選授毋輕，鑒",
           "redirected_to": null
         },
         {
@@ -3794,6 +3778,22 @@
           "namespace": 0,
           "bytes": 46508,
           "preview": "四分尼戒本(并序) 西太原寺沙門懷素集 夫戒者，迺是定慧之宏基、聖賢之妙趾，窮八正之道、盡七覺之源。然既樹五制之良規，傳須獲實；揚六和之清訓，學者知詮。竊尋流行，總有四本，據其理雖復同、會其文則有異，致使弘揚失於宗敘、修奉乖於行儀，虧鹿野之",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "五分比丘尼戒本",
+          "namespace": 0,
+          "bytes": 41102,
+          "preview": "五分比丘尼戒本 梁建初寺沙門釋明徽集 「大姊僧聽！春時一月過少一夜，餘有一夜三月在。老死至近，佛法欲滅。諸大姊！為得道故，一心勤精進。所以者何？諸佛一心勤精進故，得阿耨多羅三藐三菩提，何況餘善道法！」 「合十指爪掌， 供養釋師子， 我今欲說",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "金籙大齋補職說戒儀",
+          "namespace": 0,
+          "bytes": 8626,
+          "preview": "金籙大齋補職說戒儀 侍職立師寶前，啟白 建齋行道，威儀肅列於三元；分任設官，俯仰聿符於四極。諸天臨軒而校錄，眾真侍座以監臨。職守攸司，步趨宜謹。况玉律備監攝之令，而金科垂銓舉之文。宜罄厥誠，登瑤壇而恭事；各典所署，敷瓊笈以宣揚。選授毋輕，鑒",
           "redirected_to": null
         },
         {
@@ -4300,22 +4300,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "虎薈/卷一",
-          "namespace": 0,
-          "bytes": 24894,
-          "preview": "華亭 陳繼儒 集 檇李 高承埏 錢應金 同校 虎，大寒之日始交，七月而生，性至猛烈。雖遭逐猶復徘徊顧步，其傷重者輙咆哮作聲而去，聽其聲之多少，以知去之遠近，率鳴一聲者為一里，靠岩坐，倚木而死，終不僵仆。其搏物不過三躍，不中則捨之。 秦昭襄王",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "海國春秋/19",
-          "namespace": 0,
-          "bytes": 36074,
-          "preview": "卻說雙龍之北，屏風島南，玉帶洲對岸，有大沙一片，名廣漠洲。其上不產他物，惟長青草，質堅葉茂，四季皆青。海中有馬，常食息於此洲上。其足如鳥，脅間有四翅、二翅不等，二翅者良。惟腮下有毛肉，渾身俱係鱗甲，其厚過於鯪鯉，而堅如鋼鐵，刀斧莫能傷；登山",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "虎薈/卷五",
           "namespace": 0,
           "bytes": 25808,
@@ -4324,10 +4308,26 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "丹鉛總録 (四庫全書本)/卷05",
+          "title": "虎薈/卷一",
           "namespace": 0,
-          "bytes": 10980,
+          "bytes": 24894,
+          "preview": "華亭 陳繼儒 集 檇李 高承埏 錢應金 同校 虎，大寒之日始交，七月而生，性至猛烈。雖遭逐猶復徘徊顧步，其傷重者輙咆哮作聲而去，聽其聲之多少，以知去之遠近，率鳴一聲者為一里，靠岩坐，倚木而死，終不僵仆。其搏物不過三躍，不中則捨之。 秦昭襄王",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "丹鉛總錄 (四庫全書本)/卷05",
+          "namespace": 0,
+          "bytes": 11002,
           "preview": "欽定四庫全書 丹鉛總錄卷五 明 楊慎 撰鳥獸類 月令鵙始鳴鵙即伯勞也左傳謂之伯趙樂府謂之百勞今不識為何鳥按禽經注云伯勞飛不能翺翔直刺而已形似鸚鵒喙黄伯勞喙黑以此别之易林曰鵙必单栖鵹必匹飛此鳥好隻飛未嘗雙性亦能擊搏鷹集於林則盤旋鳴䀨俟鷹飛輒擊",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "嘯旨",
+          "namespace": 0,
+          "bytes": 8768,
+          "preview": "## 權輿章第一 夫權輿者，嘯之始也。夫人精神內定，心目外息，我且不競，物無害者，身常足，心常樂，常定然後可以議權輿之門。天氣正，地氣和，風雲朗暢，日月調順，然後喪其神，亡其身，玉液傍潤，靈泉外灑，調暢其出入息，端正其唇齒之位，安其頰輔，和",
           "redirected_to": null
         },
         {
@@ -4650,18 +4650,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "孤山遺稿/卷六",
-          "namespace": 0,
-          "bytes": 103537,
-          "preview": "## 詩 ## 人間讀史各君臣辛亥 昨日我觀春秋，忠節磨蒼旻，今日我觀春秋，之子爲臣。尋常違志亦不孝，何乃事讎忘其親？吁嗟爾父烈丈夫，凜凜凌霜松與筠。金戈獨把運去後，爲國丹忱終未伸。之痛市慘，至今聞者猶酸辛。爲人臣子義如何？爾所當爲惟臥薪，",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "觀水齋遺稿/卷一",
           "namespace": 0,
           "bytes": 49132,
           "preview": "## 五言絶句三首 ## 寫扇面。贈人叙別。 欲持楊柳贈。霜後已無枝。便面如眞面。投之叙別離。 ## 龍潭偶吟 霜落龍潭水。秋深景益奇。山中無紙筆。紅葉寫新詩。 ## 悼官妓紅玉春 紅玉春寥寂。春光不復華。靑山固無識。埋却一枝花。 ## 七",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "孤山遺稿/卷六",
+          "namespace": 0,
+          "bytes": 103537,
+          "preview": "## 詩 ## 人間讀史各君臣辛亥 昨日我觀春秋，忠節磨蒼旻，今日我觀春秋，之子爲臣。尋常違志亦不孝，何乃事讎忘其親？吁嗟爾父烈丈夫，凜凜凌霜松與筠。金戈獨把運去後，爲國丹忱終未伸。之痛市慘，至今聞者猶酸辛。爲人臣子義如何？爾所當爲惟臥薪，",
           "redirected_to": null
         },
         {
@@ -4714,14 +4714,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "薛瑩後漢記",
-          "namespace": 0,
-          "bytes": 9251,
-          "preview": "## 本紀 ## 光武帝紀 光武征伐，嘗乘革車羸馬。公孫述破，益州送樂器、旅車〔01〕、乘輿，法物然後備〔02〕。──《書鈔》卷一三九 〔01〕 范書《光武帝紀》作「葆車」，是。 〔02〕 「法」原作「什」，據范書《光武帝紀》改。 王莽之際",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "欽定古今圖書集成/方輿彙編/山川典/河部",
           "namespace": 0,
           "bytes": 4243,
@@ -4730,10 +4722,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "河朔訪古記 (四庫全書本)",
+          "title": "薛瑩後漢記",
           "namespace": 0,
-          "bytes": 3738,
-          "preview": "欽定四庫全書 史部十一 河朔訪古記 地理類九提要 等謹案河朔訪古記三卷不著撰人名氏明焦竑國史經籍志著録亦不云誰作考元劉仁本羽庭集有是書序曰今翰林國史院編修官博囉洛氏納新易之自其先世徙居鄞挈行李出浙渡淮溯大河而濟歴齊魯陳蔡晉魏燕趙之墟弔古山川",
+          "bytes": 9251,
+          "preview": "## 本紀 ## 光武帝紀 光武征伐，嘗乘革車羸馬。公孫述破，益州送樂器、旅車〔01〕、乘輿，法物然後備〔02〕。──《書鈔》卷一三九 〔01〕 范書《光武帝紀》作「葆車」，是。 〔02〕 「法」原作「什」，據范書《光武帝紀》改。 王莽之際",
           "redirected_to": null
         },
         {
@@ -4754,6 +4746,14 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "河朔訪古記 (四庫全書本)",
+          "namespace": 0,
+          "bytes": 3738,
+          "preview": "欽定四庫全書 史部十一 河朔訪古記 地理類九提要 等謹案河朔訪古記三卷不著撰人名氏明焦竑國史經籍志著録亦不云誰作考元劉仁本羽庭集有是書序曰今翰林國史院編修官博囉洛氏納新易之自其先世徙居鄞挈行李出浙渡淮溯大河而濟歴齊魯陳蔡晉魏燕趙之墟弔古山川",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "天中記 (四庫全書本)/卷10",
           "namespace": 0,
           "bytes": 91636,
@@ -4766,14 +4766,6 @@
           "namespace": 0,
           "bytes": 96162,
           "preview": "欽定四庫全書 明 陳耀文 撰 立字水之為言演也隂化淖濡流施潜行也故其立字兩人交一以中出者為水一者數之始兩人譬男女言隂陽交物以一起也 北方之行水凖也北方之行象衆水並流中有㣲陽之氣也徐曰衆屈為水至桑能攻堅故一其内也包天水者天地之包幕五行之始焉萬",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "續齊諧記 (四庫全書本)",
-          "namespace": 0,
-          "bytes": 11359,
-          "preview": "﻿ 欽定四庫全書 子部十二 續齊諧記 小說家𩔖二提要 等謹案續齊諧記一卷梁吴均撰均事迹具見梁書本傳唐書藝文志作吳筠案唐有道士呉筠乃大厯時人是書隋志著録杜公瞻荆楚歲時記注歐陽詢藝文𩔖聚已先引其文非筠明甚唐志葢傳冩之訛呉琯刋本有元陸友跋曰齊諧志",
           "redirected_to": null
         },
         {
@@ -4794,18 +4786,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "幔亭集/卷09",
+          "title": "續齊諧記 (四庫全書本)",
           "namespace": 0,
-          "bytes": 16302,
-          "preview": "## 七言律詩 ## 丙申元日得惟起弟越中書聞王玉生客苕消息因柬錢叔達 ## 送翁兆震太史冊封周藩事竣還朝 ## 送張宗道之金陵兼懷諸舊游 ## 屠田叔使君枉過兼惠藏書賦謝 ## 送陳汝翔客建溪書林 ## 寄題郭張虚香雪齋 ## 鄭邦衡以書",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "太平寰宇記 (四庫全書本)/卷019",
-          "namespace": 0,
-          "bytes": 22955,
-          "preview": "欽定四庫全書 宋 樂史 撰 淄州 淄州淄川郡今理淄川縣禹貢青州之域星分危宿十四度周之九州為幽州之境職方氏幽州其浸淄時州葢取淄水為名也春秋及戰國時屬齊秦置三十六郡為齊郡之地在漢為濟南郡之般陽縣屬濟南樂安二國尋又置臨淄國于此其城迄今一名臨淄城一",
+          "bytes": 11359,
+          "preview": "﻿ 欽定四庫全書 子部十二 續齊諧記 小說家𩔖二提要 等謹案續齊諧記一卷梁吴均撰均事迹具見梁書本傳唐書藝文志作吳筠案唐有道士呉筠乃大厯時人是書隋志著録杜公瞻荆楚歲時記注歐陽詢藝文𩔖聚已先引其文非筠明甚唐志葢傳冩之訛呉琯刋本有元陸友跋曰齊諧志",
           "redirected_to": null
         },
         {
@@ -4818,10 +4802,26 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "海月先生集/卷九",
+          "title": "幔亭集/卷09",
           "namespace": 0,
-          "bytes": 31084,
-          "preview": "## 銀槎錄詩 ## 戊戌十月二十一日。離漢京宿碧蹄。是夜雨。 國有窮天痛。臣唯指日衷。未容辭薄劣。寧復歎家戎。大嶺遙橫北。長安却在東。驚回兩地夢。窻雨五更風。 ## 臨津有感 好在江流穩。胡令客意辛。當時無將策。七載有兵塵。盜賊由人久。山",
+          "bytes": 16302,
+          "preview": "## 七言律詩 ## 丙申元日得惟起弟越中書聞王玉生客苕消息因柬錢叔達 ## 送翁兆震太史冊封周藩事竣還朝 ## 送張宗道之金陵兼懷諸舊游 ## 屠田叔使君枉過兼惠藏書賦謝 ## 送陳汝翔客建溪書林 ## 寄題郭張虚香雪齋 ## 鄭邦衡以書",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "熱河日記/卷01",
+          "namespace": 0,
+          "bytes": 75671,
+          "preview": "## 渡江錄 曷爲後三庚子。記行程陰晴。將年以係月日也。曷稱後。崇禎紀元後也。曷三庚子。崇禎紀元後三周庚子也。曷不稱崇禎。將渡江故諱之也。曷諱之。江以外淸人也。天下皆奉淸正朔。故不敢稱崇禎也。曷私稱崇禎。皇明中華也。吾初受命之上國也。崇禎十",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "何記室集",
+          "namespace": 0,
+          "bytes": 8258,
+          "preview": "## 《何記室集》題詞 ## 內文 ## 賦 ## 窮烏賦 ## 牋 ## 與建安王謝秀才牋 ## 爲孔導辭建安王牋 ## 書 ## 爲衡山侯與婦書 ## 七 ## 七召 ## 樂府 ## 銅雀妓 ## 擬輕薄篇 ## 門有車馬客 ## 昭",
           "redirected_to": null
         },
         {
@@ -4837,7 +4837,7 @@
           "title": "수심정경",
           "namespace": 0,
           "bytes": 64014,
-          "preview": "## 1장 (정정의 대지를 밝힘) 는 하고 이니 은 으로 이니라。 은 하고 하야 을 이니라 는 가 요 이 며 는 하야 가 라고 도 니 에 이면 과 이 니라。 하고 하야 에 이 하고 이 하야 하고 하야 하야 이라 에 ",
+          "preview": "## 1장 第一章 明定靜大旨(정정의 대지를 밝힘) 夫修養者는 修基忘念하고 養基眞性이니 養性之工은 以定靜으로 僞本이니라。 定靜之法은 懷至廣至大之願하고 發至誠至信之心하야 念念不忘 則定靜을 可得이니라 定者는 一定於此而諸他",
           "redirected_to": null
         },
         {
@@ -5037,7 +5037,7 @@
           "title": "영보국정정편",
           "namespace": 0,
           "bytes": 40154,
-          "preview": "## 1단 와 〔수심정경1:2 明定靜大旨〕은 하며 하야 을 이라。 ○는 며 이 오。 ○는 하야 도 이오 도 하야 하고 이 이면 과 이 라。 ○〔수심정경1:3〕하고 하야 이면 이 하고 이 하야 하고 하야 하야 하야 ㅣ",
+          "preview": "## 1단 定靜立志와 靈寶大義 〔수심정경1:2 明定靜大旨〕夫定靜之法은 懷至廣至大之願하며 發至誠至信之心하야 念々不忘則定靜을 可得이라。 ○定者는 一定於此而諸他道理 無加於吾之所做며 許多法術이 不出於渠之惑世而已오。 ○靜者는",
           "redirected_to": null
         },
         {
@@ -5200,18 +5200,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "待軒詩記 (四庫全書本)/卷4",
-          "namespace": 0,
-          "bytes": 130615,
-          "preview": "欽定四庫全書 明 張次仲 撰 鹿鳴 呦鹿鳴食野之苹我有嘉賓鼓瑟吹笙吹笙鼓簧承筐是將人之好我示我周行 呦呦鹿鳴食野之蒿我有嘉賓徳音孔昭視民不恌君子是則是傚我有㫖酒嘉賓式燕以敖 我有嘉賓鼓瑟鼓琴鼓瑟鼓琴和樂且湛我有㫖酒以燕樂嘉賓之心 序勞使臣之",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "湛軒書/外集卷二",
           "namespace": 0,
           "bytes": 130983,
           "preview": "## 杭傳尺牘 ## 乾凈衕筆談 乙酉冬。余隨季父赴燕。自渡江後所見未嘗無刱覩。而乃其所大願則欲得一佳秀才會心人。與之劇談。沿路訪問甚勤。居途傍者。皆事刀錐之利。且北京以東。文風不振。或有邂逅。皆碌碌不足稱。東華門路。逢翰林二人。與之語。其",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "待軒詩記 (四庫全書本)/卷4",
+          "namespace": 0,
+          "bytes": 130615,
+          "preview": "欽定四庫全書 明 張次仲 撰 鹿鳴 呦鹿鳴食野之苹我有嘉賓鼓瑟吹笙吹笙鼓簧承筐是將人之好我示我周行 呦呦鹿鳴食野之蒿我有嘉賓徳音孔昭視民不恌君子是則是傚我有㫖酒嘉賓式燕以敖 我有嘉賓鼓瑟鼓琴鼓瑟鼓琴和樂且湛我有㫖酒以燕樂嘉賓之心 序勞使臣之",
           "redirected_to": null
         },
         {
@@ -5248,6 +5248,22 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "欽定古今圖書集成/方輿彙編/職方典/第0701卷",
+          "namespace": 0,
+          "bytes": 405,
+          "preview": "{{GJTSJC header |彙編=方輿 |典=職方 |卷=七百一 |juan=0701 |彙編_prev=方輿 |典_prev=職方 |卷_prev=七百 |juan_prev=0700 |彙編_next=方輿 |典_next=職方 ",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "湛軒書/內集卷三",
+          "namespace": 0,
+          "bytes": 94840,
+          "preview": "## 書 ## 與鄭光鉉書 兩日之拜。雖恨其未穩。從此而彼此襟懷。庶其洞澈無間矣。區區欣幸之誠。實匪出於阿好之私爾。歲色垂窮。寒沍益嚴。閑居靜養。動止神相。蔡公想有便信。不審無恙否。猥蒙不鄙。坐辱訪屈。竊仰其謙己下人之德。有大過人者。而自顧",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "初學記 (四庫全書本)/卷03",
           "namespace": 0,
           "bytes": 46650,
@@ -5264,34 +5280,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "湛軒書/內集卷三",
-          "namespace": 0,
-          "bytes": 94840,
-          "preview": "## 書 ## 與鄭光鉉書 兩日之拜。雖恨其未穩。從此而彼此襟懷。庶其洞澈無間矣。區區欣幸之誠。實匪出於阿好之私爾。歲色垂窮。寒沍益嚴。閑居靜養。動止神相。蔡公想有便信。不審無恙否。猥蒙不鄙。坐辱訪屈。竊仰其謙己下人之德。有大過人者。而自顧",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "欽定古今圖書集成/方輿彙編/職方典/第0701卷",
-          "namespace": 0,
-          "bytes": 405,
-          "preview": "{{GJTSJC header |彙編=方輿 |典=職方 |卷=七百一 |juan=0701 |彙編_prev=方輿 |典_prev=職方 |卷_prev=七百 |juan_prev=0700 |彙編_next=方輿 |典_next=職方 ",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "初學記/卷第十四",
-          "namespace": 0,
-          "bytes": 69074,
-          "preview": "卷十四 禮部下 ## 籍田第一 ## 敘事 《說文》曰：籍田者，天子躬耕，使民如借，故謂之籍。《禮記》曰：天子親耕于南郊，諸侯耕于東郊，以供粢盛。《月令》曰：天子三推，三公五推，卿諸侯九推，庶人終畝。《梁五禮籍田儀注》曰：其田東去宮八里，遠",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "半軒集 (四庫全書本)/卷03",
           "namespace": 0,
           "bytes": 35523,
           "preview": "欽定四庫全書 半軒集巻三 明 王行 撰記 孔翠翬翟之文甚麗也而弗能堅雲霞華彩之文甚美也而弗能久繪繡綺錦之文甚工也而假力以為之故予雖或睹之而不愛非特不愛而又少之以其文之著也惟山有石焉異於是精緻而清潤中温而有文遇識者致之剖琢礱砥飾而為屏則若渾淪",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "初學記 (四庫全書本)/卷15",
+          "namespace": 0,
+          "bytes": 44615,
+          "preview": "欽定四庫全書 唐 徐堅 撰 雅樂第一左傳曰天子省風以作樂禮記曰夫樂清明象天廣大象地終始象四時周旋象風雨白虎通曰樂者樂也君子樂得其道小人樂得其欲聲者鳴也音者飲也剛柔清濁和而相飲漢書曰五聲者宫商角徴羽商章也物成熟可章度也角觸也物觸地而出戴芒角也",
           "redirected_to": null
         },
         {
@@ -5448,9 +5448,9 @@
         },
         {
           "host": "ko.wikisource.org",
-          "title": "담헌서/외집 10권",
+          "title": "담헌서/외집 8권",
           "namespace": 0,
-          "bytes": 271,
+          "bytes": 265,
           "preview": "연기(燕記)",
           "redirected_to": null
         },
@@ -5464,9 +5464,9 @@
         },
         {
           "host": "ko.wikisource.org",
-          "title": "담헌서/외집 8권",
+          "title": "담헌서/외집 10권",
           "namespace": 0,
-          "bytes": 265,
+          "bytes": 271,
           "preview": "연기(燕記)",
           "redirected_to": null
         },
@@ -5686,18 +5686,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "薛仁貴征東/50",
-          "namespace": 0,
-          "bytes": 16377,
-          "preview": "詩曰： 蘇文幾次上仙山，再煉飛刀又設壇。 怎奈唐王洪福大，機謀枉用也徒然。 莊王道：「你有何法破他？」蓋蘇文道：「大唐將士雖多，臣皆不懼怕，但所懼大唐者，薛蠻子利害非常。臣如今再上仙山，請我師父前來，擒了薛仁貴，那怕大唐將士利害，城即可破矣",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "薛仁貴征東/37",
           "namespace": 0,
           "bytes": 16325,
           "preview": "詩曰： 八將英雄雖說能，未如殿寶獨稱尊。 若無仁貴天星將，獨木關前盡喪魂。 那兩邊戰鼓敲得如雷霆相似，炮響連天。獨木關前沸反淫天，忽驚動前營月字號內病人薛仁貴。他有大病在床，最喜清靜，可以朦朧打睡。不想外面開兵，喊殺大震。一個薛仁貴那裡睡得",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "薛仁貴征東/50",
+          "namespace": 0,
+          "bytes": 16377,
+          "preview": "詩曰： 蘇文幾次上仙山，再煉飛刀又設壇。 怎奈唐王洪福大，機謀枉用也徒然。 莊王道：「你有何法破他？」蓋蘇文道：「大唐將士雖多，臣皆不懼怕，但所懼大唐者，薛蠻子利害非常。臣如今再上仙山，請我師父前來，擒了薛仁貴，那怕大唐將士利害，城即可破矣",
           "redirected_to": null
         },
         {
@@ -5742,6 +5742,14 @@
         },
         {
           "host": "zh.wikisource.org",
+          "title": "混唐後傳",
+          "namespace": 0,
+          "bytes": 2823,
+          "preview": "## 目錄 序 第一回 長孫后遣放宮女 唐太宗魂遊地府 第二回 唐儉奉詔選秀女 西遼遣使下戰書 第三回 仁貴統兵征遼西 保童獻計困大唐 第四回 蘇保童刀傷仁貴 薛丁山箭敵保童 第五回 薛仁貴遼西認子 陳金定計殺遼婆 第六回 金蓮作法救丁山 ",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
           "title": "答萬季埜詩問",
           "namespace": 0,
           "bytes": 19689,
@@ -5754,14 +5762,6 @@
           "namespace": 0,
           "bytes": 128575,
           "preview": "## 卷上 余從江湖遊，接諸老緒餘半生鑽研，僅得《短長錄》一帙秀崖李心傳先生見之，則曰：「余有《朝野雜錄》，至戊巳矣。」借此以助參訂之闕。余端平上書，得罪落南，無一書相隨，思得此錄，增補近事，貽書索諸婦。報云：「子錄非《資治通鑒》，奚益於遷",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "三國志/卷53",
-          "namespace": 0,
-          "bytes": 25399,
-          "preview": "## 張紘 張紘字子綱，廣陵人。少遊學京都，還本郡，舉茂才，公府辟，皆不就，避難江東。孫策創業，遂委質焉。表為正議校尉，從討丹揚，策身臨行陳，紘諫曰：「夫主將乃籌謨之所自出，三軍之所繫命也，不宜輕脫。自敵小寇，願麾下重天授之姿，副四海之望，",
           "redirected_to": null
         },
         {
@@ -5814,14 +5814,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "三國史記/卷06",
-          "namespace": 0,
-          "bytes": 19498,
-          "preview": "文武王立，諱法敏，太宗王之元子。母，金氏文明王后，蘇判舒玄之季女，庾信之妹也。其姊夢登西兄山頂，坐旋流，徧國内。覺與季言夢。季戯曰：「予願買兄此夢。」因與錦裙爲直。後數日，庾信與春秋公蹴鞠，因踐落春秋衣紐。庾信曰：「吾家幸近，請往綴紐。」因",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "三國史記/卷07",
           "namespace": 0,
           "bytes": 23613,
@@ -5830,10 +5822,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "欽定古今圖書集成/經濟彙編/禮儀典/第285卷",
+          "title": "三國史記/卷06",
           "namespace": 0,
-          "bytes": 423,
-          "preview": "{{GJTSJC header |彙編=經濟 |典=禮儀 |卷=二百八十五 |juan=285 |彙編_prev=經濟 |典_prev=禮儀 |卷_prev=二百八十四 |juan_prev=284 |彙編_next=經濟 |典_next=",
+          "bytes": 19498,
+          "preview": "文武王立，諱法敏，太宗王之元子。母，金氏文明王后，蘇判舒玄之季女，庾信之妹也。其姊夢登西兄山頂，坐旋流，徧國内。覺與季言夢。季戯曰：「予願買兄此夢。」因與錦裙爲直。後數日，庾信與春秋公蹴鞠，因踐落春秋衣紐。庾信曰：「吾家幸近，請往綴紐。」因",
           "redirected_to": null
         },
         {
@@ -5842,6 +5834,14 @@
           "namespace": 0,
           "bytes": 405,
           "preview": "{{GJTSJC header |彙編=方輿 |典=邊裔 |卷=三十三 |juan=033 |彙編_prev=方輿 |典_prev=邊裔 |卷_prev=三十二 |juan_prev=032 |彙編_next=方輿 |典_next=邊裔 |",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "欽定古今圖書集成/經濟彙編/禮儀典/第285卷",
+          "namespace": 0,
+          "bytes": 423,
+          "preview": "{{GJTSJC header |彙編=經濟 |典=禮儀 |卷=二百八十五 |juan=285 |彙編_prev=經濟 |典_prev=禮儀 |卷_prev=二百八十四 |juan_prev=284 |彙編_next=經濟 |典_next=",
           "redirected_to": null
         },
         {
@@ -6164,14 +6164,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "明史/卷320",
-          "namespace": 0,
-          "bytes": 48726,
-          "preview": "朝鮮，箕子所封國也。漢以前曰朝鮮。始為燕人衞滿所據，漢武帝平之，置真番、臨屯、樂浪、玄菟四郡。漢末，有扶餘人高氏據其地，改國號曰高麗，又曰高句麗，居平壤，即樂浪也。已，為唐所破，東徙。後唐時，王建代高氏，兼併新羅、百濟地，徙居松岳，曰東京，",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "清實錄/太宗文皇帝實錄/卷之三十二",
           "namespace": 0,
           "bytes": 34604,
@@ -6184,6 +6176,14 @@
           "namespace": 0,
           "bytes": 91889,
           "preview": "## 春正月 ## 1月1日 ○朔乙酉，全羅監司尹斗壽狀啓：龍潭縣，去十二月十五日，地震，自西南，聲甚轟輵。 ## 1月2日 ○丙戌，二所巡廳軍號，趁不受去。兵曹啓：「以夜深，不爲受去。」傳曰：「軍法解弛，於此可見。」命囚巡將李準，監軍宣傳",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "明史/卷320",
+          "namespace": 0,
+          "bytes": 48726,
+          "preview": "朝鮮，箕子所封國也。漢以前曰朝鮮。始為燕人衞滿所據，漢武帝平之，置真番、臨屯、樂浪、玄菟四郡。漢末，有扶餘人高氏據其地，改國號曰高麗，又曰高句麗，居平壤，即樂浪也。已，為唐所破，東徙。後唐時，王建代高氏，兼併新羅、百濟地，徙居松岳，曰東京，",
           "redirected_to": null
         },
         {
@@ -6220,10 +6220,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "朝鮮王朝實錄/純祖實錄/十二年",
+          "title": "明史 (四庫全書本)/卷238",
           "namespace": 0,
-          "bytes": 299219,
-          "preview": "## 春正月 ## 1月1日 ○乙亥朔，御仁政殿，受賀，頒敎文：若曰，八千歲爲春，泰運屬三陽之會，九五福曰壽，長樂躋六旬之齡，凡在陶勻，孰不懽忭？恭惟王大妃殿下，稟性淵靜，秉德柔嘉，奉慈闈盡孝盡誠，嗣徽音於莘摯，事寧考克敬克順，播至化於葛覃",
+          "bytes": 28502,
+          "preview": "欽定四庫全書 大學士張廷玉等奉 敕修 李成梁 李成梁字汝契高祖英自朝鮮内附授世鐵嶺衛指揮僉事遂家焉成梁英毅驍健有大将才家貧不能襲職年四十猶為諸生巡按御史器之資入京乃得襲積功為遼東險山參将土黙特入永平成梁赴援有功進副總兵仍守險山尋協守遼陽三年",
           "redirected_to": null
         },
         {
@@ -6538,14 +6538,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "清實錄/世祖章皇帝實錄/卷二十一",
-          "namespace": 0,
-          "bytes": 26507,
-          "preview": "顺治二年。乙酉。冬十月。己卯朔。享太庙遣户部尚书英俄尔岱行礼 ○上躬祀堂子 ○颁顺治三年时宪历 ○顺天府举行乡饮酒礼。 ○以甲喇章京刘武元、为山东布政使司参政、兼按察使司佥事、天津兵备道。 ○庚辰。遣广东道御史王昌允、巡按山西。 ○敖汉部落",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "清實錄/聖祖仁皇帝實錄/卷2",
           "namespace": 0,
           "bytes": 21365,
@@ -6554,26 +6546,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "清實錄/世宗憲皇帝實錄/卷之五",
+          "title": "清實錄/世祖章皇帝實錄/卷二十一",
           "namespace": 0,
-          "bytes": 23444,
-          "preview": "雍正元年。癸卯。三月。庚辰朔。清明節。上詣壽皇殿、致祭行禮 遣官祭永陵、福陵、昭陵、暫安奉殿、孝陵、孝東陵、仁孝皇后、孝昭皇后、孝懿皇后陵。 複福建福州府駐防漢軍馬兵錢糧舊額。 辛巳。上詣皇太后宮問安。 以翰林院侍講王國棟、為陝西鄉試正考官",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "清實錄/世祖章皇帝實錄/卷十四",
-          "namespace": 0,
-          "bytes": 18099,
-          "preview": "顺治二年。乙酉。二月。甲寅朔。守备霍然、讦告宣府巡抚李鉴受贿事。下法司勘问。拟鉴弃市。议上得上□日、李鉴曾著大功。免死。追赃。罚俸六个月 ○乙卯。定国大将军和硕豫亲王多铎等奏报、大军于元年十二月十五日、追流贼李自成兵至陕州。先遣前锋参领索浑",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "清實錄/聖祖仁皇帝實錄/卷210",
-          "namespace": 0,
-          "bytes": 22493,
-          "preview": "康熙四十二年。癸未。春。正月。丁未朔。上詣堂子行禮。還宮。拜神畢。率諸王、貝勒、貝子、公、內大臣、大學士、侍衛等、詣皇太后宮、行禮。御殿。王以下、文武各官、外藩王、及使臣、上表朝賀。停止筵宴 朝鮮國王李焞、遣陪臣李桓等、表賀冬至、元旦、萬壽",
+          "bytes": 26507,
+          "preview": "顺治二年。乙酉。冬十月。己卯朔。享太庙遣户部尚书英俄尔岱行礼 ○上躬祀堂子 ○颁顺治三年时宪历 ○顺天府举行乡饮酒礼。 ○以甲喇章京刘武元、为山东布政使司参政、兼按察使司佥事、天津兵备道。 ○庚辰。遣广东道御史王昌允、巡按山西。 ○敖汉部落",
           "redirected_to": null
         },
         {
@@ -6586,10 +6562,34 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "清實錄/聖祖仁皇帝實錄/卷73",
+          "title": "清實錄/世祖章皇帝實錄/卷十四",
           "namespace": 0,
-          "bytes": 19735,
-          "preview": "康熙十七年。戊午。六月。庚午朔。諭議政王大臣等、康親王傑書用兵、甚為選愞。自至浙江、安居無事之地。及屢降嚴㫖督趣、始破衢州之賊、進定福建、福建既平、不事預防固守、俾海賊登岸、遂困海澄。我國家軍法嚴明、無敢輕忽、浙江福建失機將士、傑書未嘗察取",
+          "bytes": 18099,
+          "preview": "顺治二年。乙酉。二月。甲寅朔。守备霍然、讦告宣府巡抚李鉴受贿事。下法司勘问。拟鉴弃市。议上得上□日、李鉴曾著大功。免死。追赃。罚俸六个月 ○乙卯。定国大将军和硕豫亲王多铎等奏报、大军于元年十二月十五日、追流贼李自成兵至陕州。先遣前锋参领索浑",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "清實錄/聖祖仁皇帝實錄/卷71",
+          "namespace": 0,
+          "bytes": 28951,
+          "preview": "康熙十七年。戊午。三月。壬申朔 癸酉。諭禮部。皇后鈕祜盧氏、端懿夙著。作配朕躬。奉事太皇太后皇太后、恪恭婉順。殫竭孝忱。正位宮闈。節儉寬仁。克襄內治。芳型伊始。淑德彌彰。茲於康熙十七年二月二十六日崩逝。追念壼儀。良深痛悼。宜有稱諡、以垂永久",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "清實錄/聖祖仁皇帝實錄/卷210",
+          "namespace": 0,
+          "bytes": 22493,
+          "preview": "康熙四十二年。癸未。春。正月。丁未朔。上詣堂子行禮。還宮。拜神畢。率諸王、貝勒、貝子、公、內大臣、大學士、侍衛等、詣皇太后宮、行禮。御殿。王以下、文武各官、外藩王、及使臣、上表朝賀。停止筵宴 朝鮮國王李焞、遣陪臣李桓等、表賀冬至、元旦、萬壽",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "清實錄/世宗憲皇帝實錄/卷之五",
+          "namespace": 0,
+          "bytes": 23444,
+          "preview": "雍正元年。癸卯。三月。庚辰朔。清明節。上詣壽皇殿、致祭行禮 遣官祭永陵、福陵、昭陵、暫安奉殿、孝陵、孝東陵、仁孝皇后、孝昭皇后、孝懿皇后陵。 複福建福州府駐防漢軍馬兵錢糧舊額。 辛巳。上詣皇太后宮問安。 以翰林院侍講王國棟、為陝西鄉試正考官",
           "redirected_to": null
         },
         {
@@ -6818,18 +6818,18 @@
         },
         {
           "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/사설시조와 가집의 편찬",
-          "namespace": 0,
-          "bytes": 29111,
-          "preview": "## 사설시조 辭說時調 시조는 선조 때 윤선도(尹善道)를 최고봉으로 점차 참신한 창작 의욕을 잃게 되었다. 영·정조시대에는 점차 시들어 서리(胥吏)들에게 옮아가 김천택(金天澤)·김수장(金壽長) 등에 의해 시조집의 편",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
           "title": "국민생활의안정을위한대통령긴급조치",
           "namespace": 0,
           "bytes": 32068,
           "preview": "## 조문 ## 제1장 총칙 제1조 (목적) 이 긴급조치는 저소득자에 대한 조세부담의 경감등 국민생활의 안정을 위하여 필요한 조치와 사치성 소비의 억제, 자원의 절약과 개발 및 노사간의 협조강화등 건전한 국민생활 기",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/사설시조와 가집의 편찬",
+          "namespace": 0,
+          "bytes": 29111,
+          "preview": "## 사설시조 辭說時調 시조는 선조 때 윤선도(尹善道)를 최고봉으로 점차 참신한 창작 의욕을 잃게 되었다. 영·정조시대에는 점차 시들어 서리(胥吏)들에게 옮아가 김천택(金天澤)·김수장(金壽長) 등에 의해 시조집의 편",
           "redirected_to": null
         },
         {
@@ -6872,18 +6872,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "詩序補義 (四庫全書本)/卷01",
-          "namespace": 0,
-          "bytes": 37775,
-          "preview": "欽定四庫全書 石泉縣知縣姜炳璋撰 舊本言毛詩國風陸氏德明云詩有齊魯韓三家故題姓以别之或云大毛公加毛詩二字或云河間獻王所加孔氏云詩國風舊題也毛字漢世加之按易稱周易以文王周公孔子而名傳不得擬經故書不稱伏詩不稱毛尊經也 或曰孔子删詩乎曰然然則古詩",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "春秋左傳註疏/序",
           "namespace": 0,
           "bytes": 92809,
           "preview": "## 春秋正義序 ## 春秋左傳序",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "詩序補義 (四庫全書本)/卷01",
+          "namespace": 0,
+          "bytes": 37775,
+          "preview": "欽定四庫全書 石泉縣知縣姜炳璋撰 舊本言毛詩國風陸氏德明云詩有齊魯韓三家故題姓以别之或云大毛公加毛詩二字或云河間獻王所加孔氏云詩國風舊題也毛字漢世加之按易稱周易以文王周公孔子而名傳不得擬經故書不稱伏詩不稱毛尊經也 或曰孔子删詩乎曰然然則古詩",
           "redirected_to": null
         },
         {
@@ -6920,10 +6920,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "詩本義 (四部叢刊本)/卷一",
+          "title": "經國大典/經國大典序",
           "namespace": 0,
-          "bytes": 223,
-          "preview": "{{四部叢刊頁眉|title=詩本義|section=卷一|prev=|next=卷二|type=經|notes=宋 歐陽脩 撰 吳潘氏滂憙齋藏宋刊本}} <pages from=\"4\" to=\"23\" index=\"Sibu Congka",
+          "bytes": 2583,
+          "preview": "自古帝王之有天下、國家也，創業之主，經綸草昧，而未遑於典故，守文之君，遵守舊章，而又無事於制作。雖曰漢高算無遺策，而三章之法，略存規模，史稱唐家萬目俱張，而六典之作，猶俟中葉，況下於漢唐者乎? 恭惟世祖握符中興，功兼創守，文昭武定，禮備樂興",
           "redirected_to": null
         },
         {
@@ -6936,10 +6936,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "經國大典/經國大典序",
+          "title": "詩本義 (四部叢刊本)/卷一",
           "namespace": 0,
-          "bytes": 2583,
-          "preview": "自古帝王之有天下、國家也，創業之主，經綸草昧，而未遑於典故，守文之君，遵守舊章，而又無事於制作。雖曰漢高算無遺策，而三章之法，略存規模，史稱唐家萬目俱張，而六典之作，猶俟中葉，況下於漢唐者乎? 恭惟世祖握符中興，功兼創守，文昭武定，禮備樂興",
+          "bytes": 223,
+          "preview": "{{四部叢刊頁眉|title=詩本義|section=卷一|prev=|next=卷二|type=經|notes=宋 歐陽脩 撰 吳潘氏滂憙齋藏宋刊本}} <pages from=\"4\" to=\"23\" index=\"Sibu Congka",
           "redirected_to": null
         },
         {
@@ -6948,6 +6948,14 @@
           "namespace": 0,
           "bytes": 6422,
           "preview": "欽定四庫全書 欽定續文獻通考卷一百六十六 史 等謹案馬端臨通考有霸史偽史一門考阮孝緒七録始立偽史隋書經籍志改稱霸史而馬氏則兼用二名其實曰霸曰偽乃指當時僣撰者而言若非偏方割據者之所自作即不得槩以此目今所存者大抵後人追記為多四庫全書凖東觀漢記晉",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "虛白先生續集/䟦",
+          "namespace": 0,
+          "bytes": 3332,
+          "preview": "先祖虛白先生元集。成於萬曆辛亥。樗谷崔公知求禮。捐俸鋟梓。愚伏鄭爺按節湖南。撰弁文。先輩殫誠發揮。詎不韙哉。竊想前後敍述。不啻充箱。而不惟蕩失於慘禍兵燹。且緣當初無由廣搜。尙多闕漏文字。此先父老所共慨恨而留意者。而東庵公手錄編年。爲可攷證驗",
           "redirected_to": null
         },
         {
@@ -6968,18 +6976,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "虛白先生續集/䟦",
+          "title": "藍溪先生文集/年譜",
           "namespace": 0,
-          "bytes": 3332,
-          "preview": "先祖虛白先生元集。成於萬曆辛亥。樗谷崔公知求禮。捐俸鋟梓。愚伏鄭爺按節湖南。撰弁文。先輩殫誠發揮。詎不韙哉。竊想前後敍述。不啻充箱。而不惟蕩失於慘禍兵燹。且緣當初無由廣搜。尙多闕漏文字。此先父老所共慨恨而留意者。而東庵公手錄編年。爲可攷證驗",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "毛詩正義 (四庫全書本)/卷01",
-          "namespace": 0,
-          "bytes": 132126,
-          "preview": "欽定四庫全書卷 漢鄭氏箋 唐陸徳明音義 孔穎達疏 周南 疏風之始也所以風天下而正夫婦也故用之鄉人焉用之邦國焉音義疏風風也教也風以動之教以化之音義疏詩者志之所之也在心為志發言為詩疏情動於中而形於言言之不足故嗟歎之嗟歎之不足故永歌之永歌之不足不",
+          "bytes": 6316,
+          "preview": "皇明英宗皇帝正統十四年己巳 先生生于咸陽郡孝里舊第。長于柏坪里。○先生聘于星山李氏護軍從林之門。文烈公兆年之后也。 景宗皇帝景泰元年庚午。 是歲。考敎授公卒。 景泰二年辛未 冬。葬敎授公于咸陽郡北斗村右麓。 憲宗皇帝成化二年丙戌 春。立碣于",
           "redirected_to": null
         },
         {
@@ -7043,7 +7043,7 @@
           "title": "그날이 오면/총석정",
           "namespace": 0,
           "bytes": 682,
-          "preview": "멀리선 생황(笙篁)이요 다가보니 일세 촉촉(矗矗) 릉릉(稜稜) 온갖 형용(形容) 엄청나 못붙일레 신기(神奇)하다, 조물주(造物主)의 손장난도 이만하면 관주러라. ::× 벌집 같이 모난 돌이 창(槍)대처럼 뻗어 올라 ",
+          "preview": "멀리선 생황(笙篁)이요 다가보니 일세 촉촉(矗矗) 릉릉(稜稜) 온갖 형용(形容) 엄청나 못붙일레 신기(神奇)하다, 조물주(造物主)의 손장난도 이만하면 관주러라. × 벌집 같이 모난 돌이 창(槍)대처럼 뻗어 올라 창공",
           "redirected_to": null
         },
         {
@@ -7051,7 +7051,7 @@
           "title": "서유견문/서",
           "namespace": 0,
           "bytes": 218,
-          "preview": "## 저작권",
+          "preview": "{{머리말 |부제= 서(序) |저자= [[저자:유길준|유길준]] |이전= |다음= [[../비고|비고]] |설명= }} <pages index=\"CNTS-00076805887 西遊見聞.pdf\" from=5 to=10",
           "redirected_to": null
         },
         {
@@ -7219,7 +7219,7 @@
           "title": "훈민정음",
           "namespace": 0,
           "bytes": 1290,
-          "preview": "## 라이선스",
+          "preview": "{{다른 뜻 설명|이 문서는 훈민정음 해례본에 관한 것입니다. 훈민정음언해를 보길 원하시면 [[훈민정음언해]] 문서를 참고하십시오.}} {{머리말 |제목 = 훈민정음 |다른 표기 = 訓民正音 |지은이 = |역자 = ",
           "redirected_to": null
         },
         {
@@ -7249,7 +7249,7 @@
           "title": "훈민정음언해",
           "namespace": 0,
           "bytes": 775,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 |제목 = 훈민정음 |지은이 = |역자 = |부제 = 훈민정음언해 |이전 = |다음 = |연도 = 1459 |서지 = true |설명 = {{위키백과|훈민정음 언해}} 한문으로 된 《[[훈민정음]]》에서 ",
           "note": "index page: page is almost empty"
         },
         {
@@ -7334,18 +7334,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "内訓 (四庫全書本)",
+          "title": "詩識名解 (四庫全書本)/卷11",
           "namespace": 0,
-          "bytes": 56848,
-          "preview": "﻿ 欽定四庫全書 子部一 内訓 儒家類 提要 等謹案内訓一卷明仁孝文皇后撰案成祖以簒逆取國滛刑肆無善可稱后乃特以賢著是書凡二十篇曰徳性曰修身曰慎言曰謹行曰勤勵曰警戒曰節儉曰積善曰遷善曰崇聖訓曰景賢範曰事父母曰事君曰事舅姑曰奉祭祀曰母儀曰睦親",
+          "bytes": 25488,
+          "preview": "欽定四庫全書 錢塘 姚炳 撰 苕 釋草惟釋苕為陵苕黄華者名蔈白華者名苃餘無文則陳風小雅二詩祇是一苕也傳於此苕别訓草又不明言何物惟陸璣確指為苕饒以為幽州謂之翹饒夏生莖如勞豆而細葉似蒺藜而青其莖葉緑色可生食如小豆藿說家多宗之大抵因㫖字解作味美故",
           "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
-          "title": "濳研堂文集 (四部叢刊本)/卷第三十六",
+          "title": "内訓 (四庫全書本)",
           "namespace": 0,
-          "bytes": 275,
-          "preview": "{{四部叢刊頁眉|title=濳研堂文集|section=卷第三十六|prev=卷第三十五|next=卷第三十七|type=集|notes=清 錢大昕 撰 景上海涵芬樓藏嘉慶丙寅刊本}} <pages from=\"104\" to=\"123\"",
+          "bytes": 56848,
+          "preview": "﻿ 欽定四庫全書 子部一 内訓 儒家類 提要 等謹案内訓一卷明仁孝文皇后撰案成祖以簒逆取國滛刑肆無善可稱后乃特以賢著是書凡二十篇曰徳性曰修身曰慎言曰謹行曰勤勵曰警戒曰節儉曰積善曰遷善曰崇聖訓曰景賢範曰事父母曰事君曰事舅姑曰奉祭祀曰母儀曰睦親",
           "redirected_to": null
         },
         {
@@ -7358,18 +7358,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "詩識名解 (四庫全書本)/卷11",
+          "title": "濳研堂文集 (四部叢刊本)/卷第三十六",
           "namespace": 0,
-          "bytes": 25488,
-          "preview": "欽定四庫全書 錢塘 姚炳 撰 苕 釋草惟釋苕為陵苕黄華者名蔈白華者名苃餘無文則陳風小雅二詩祇是一苕也傳於此苕别訓草又不明言何物惟陸璣確指為苕饒以為幽州謂之翹饒夏生莖如勞豆而細葉似蒺藜而青其莖葉緑色可生食如小豆藿說家多宗之大抵因㫖字解作味美故",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "通俗編/01",
-          "namespace": 0,
-          "bytes": 30734,
-          "preview": "卷一 ○天文 【談天】 〔史記孟子荀卿傳〕騶衍觀陰陽消息而作十萬餘言，載其禨祥度制，推而遠之，至天地未生，窈冥而不可考而原也，騶奭亦頗採騶衍之術以紀文，故齊人頌曰，談天衍，雕龍奭。〔按〕俗於閑暇群居，高談宏辨，概-{云}-談天，原本於此。 ",
+          "bytes": 275,
+          "preview": "{{四部叢刊頁眉|title=濳研堂文集|section=卷第三十六|prev=卷第三十五|next=卷第三十七|type=集|notes=清 錢大昕 撰 景上海涵芬樓藏嘉慶丙寅刊本}} <pages from=\"104\" to=\"123\"",
           "redirected_to": null
         },
         {
@@ -7378,6 +7370,14 @@
           "namespace": 0,
           "bytes": 24537,
           "preview": "欽定四庫全書 錢唐 姚炳 撰 蓬 蓬似蒿散生故今俗亦稱蓬蒿要非蒿屬説文直訓為蒿非是釋草彫蓬黍蓬二種鄭漁仲皆名為茭不名蓬然按西京雜記宫中正月上辰出池邊盥濯食蓬餌以袚邪此即所謂彫胡者其為蓬無疑矣陸農師分蓬為陸草葭為澤草然蓬亦産隰間如彫胡野茭之類",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "順菴集 (安鼎福)/卷十一",
+          "namespace": 0,
+          "bytes": 60730,
+          "preview": "## 雜著 ## 經書疑義條例不多。諸經合附。 道體神用。道者體也。神卽其妙用也。易曰。一陰一陽之謂道。之字有力。帶神字而言。下文曰。陰陽不測之謂神。張子釋之曰。一故神。兩在故不測。言神本一而在陰在陽。其用不測。故曰神無方。 交易變易。易者",
           "redirected_to": null
         }
       ]
@@ -7436,14 +7436,6 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "月沙先生集/附錄卷之二",
-          "namespace": 0,
-          "bytes": 59935,
-          "preview": "## 行狀一首 豐壤趙翼撰 公諱廷龜。字聖徵。號月沙。少號秋崖。或曰習靜。或曰癡庵。晩號保晩亭主人。其先出於唐中郞將茂。從蘇定方平百濟。留仕新羅。賜籍延安。麗朝自少府監賢呂，文林郞映君。入本朝有版圖判書孝臣，戶曹典書宗茂。文康公延城府院君諱",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "三淵集/卷之二十八",
           "namespace": 0,
           "bytes": 51984,
@@ -7452,10 +7444,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "朝鮮王朝實錄/英祖實錄/二十八年",
+          "title": "月沙先生集/附錄卷之二",
           "namespace": 0,
-          "bytes": 335616,
-          "preview": "## 春正月 ## 1月2日 ○甲子，虎入景福宮後苑。 ○命以來月十二日，展拜靈壽閣。蓋以寶齡，今年與先朝入耆社之年相符，令禮曹考出入耆社之月日而有是命。 ## 1月3日 ○乙丑，司諫朴致文上書言：李運海卽充軍罪人時蕃之至親也。本院方以時蕃",
+          "bytes": 59935,
+          "preview": "## 行狀一首 豐壤趙翼撰 公諱廷龜。字聖徵。號月沙。少號秋崖。或曰習靜。或曰癡庵。晩號保晩亭主人。其先出於唐中郞將茂。從蘇定方平百濟。留仕新羅。賜籍延安。麗朝自少府監賢呂，文林郞映君。入本朝有版圖判書孝臣，戶曹典書宗茂。文康公延城府院君諱",
           "redirected_to": null
         },
         {
@@ -7468,18 +7460,18 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "月沙先生集/卷之四十四",
+          "title": "朝鮮王朝實錄/英祖實錄/二十八年",
           "namespace": 0,
-          "bytes": 71271,
-          "preview": "## 神道碑銘下 ## 左參贊贈右議政諡文肅鄭公神道碑銘幷序 我上卽位之三年天啓乙丑。左參贊鄭公。卒于第。訃聞。上震悼。卽其日。命眞拜贊成。吏曹以非格持之。更命追贈議政府右議政。蓋上以常欲命公者。酬之也。輟朝進素膳。仍命特禮葬。賻贈加常數。",
+          "bytes": 335616,
+          "preview": "## 春正月 ## 1月2日 ○甲子，虎入景福宮後苑。 ○命以來月十二日，展拜靈壽閣。蓋以寶齡，今年與先朝入耆社之年相符，令禮曹考出入耆社之月日而有是命。 ## 1月3日 ○乙丑，司諫朴致文上書言：李運海卽充軍罪人時蕃之至親也。本院方以時蕃",
           "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
-          "title": "存齋集 (魏伯珪)/卷之二十四",
+          "title": "月沙先生集/卷之四十四",
           "namespace": 0,
-          "bytes": 53382,
-          "preview": "## 附錄 ## 年譜 我三年丁未五月十五日卯時，先生生于古之第。 四年戊申纔過晬日，通解言語。○叔祖甚愛之，常抱置膝上，敎以六甲，其冬盡誦無遺。 五年己酉敎以千字文，言下領悟，數月畢誦。掩卷試問，上板某字地，下板何字，以次照對，竟卷不差。",
+          "bytes": 71271,
+          "preview": "## 神道碑銘下 ## 左參贊贈右議政諡文肅鄭公神道碑銘幷序 我上卽位之三年天啓乙丑。左參贊鄭公。卒于第。訃聞。上震悼。卽其日。命眞拜贊成。吏曹以非格持之。更命追贈議政府右議政。蓋上以常欲命公者。酬之也。輟朝進素膳。仍命特禮葬。賻贈加常數。",
           "redirected_to": null
         },
         {
@@ -7492,10 +7484,10 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "大山先生文集/卷四十二",
+          "title": "存齋集 (魏伯珪)/卷之二十四",
           "namespace": 0,
-          "bytes": 52218,
-          "preview": "## 雜著 ## 科擧私議己未 先王設學敷敎之意、取材官人之法，其道甚美而其制甚嚴，其施而行之也有常則而論而用之也有恒法。是以學有定業而無聲利外誘之害，法無歧途而絶雜進巧宦之徑。幼學爲壯行之地，自修爲新民之本，而三代人材之盛、治化之隆，所以",
+          "bytes": 53382,
+          "preview": "## 附錄 ## 年譜 我三年丁未五月十五日卯時，先生生于古之第。 四年戊申纔過晬日，通解言語。○叔祖甚愛之，常抱置膝上，敎以六甲，其冬盡誦無遺。 五年己酉敎以千字文，言下領悟，數月畢誦。掩卷試問，上板某字地，下板何字，以次照對，竟卷不差。",
           "redirected_to": null
         },
         {
@@ -7512,6 +7504,14 @@
           "namespace": 0,
           "bytes": 26781,
           "preview": "《泰誓》引古人有言，牝雞無晨。《大雅》云：“人亦有言，惟憂用老。”並上古遺諺、詩書所引者也。至於陳琳諫辭、掩目捕雀、潘岳哀稱、掌珠伉儷，並引俗說，而為文詞也。夫文辭鄙俚，莫過於諺。而聖賢詩書，采以為談，況逾此者，可忽乎哉！ 〔省蘭案：原本首",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "大山先生文集/卷四十二",
+          "namespace": 0,
+          "bytes": 52218,
+          "preview": "## 雜著 ## 科擧私議己未 先王設學敷敎之意、取材官人之法，其道甚美而其制甚嚴，其施而行之也有常則而論而用之也有恒法。是以學有定業而無聲利外誘之害，法無歧途而絶雜進巧宦之徑。幼學爲壯行之地，自修爲新民之本，而三代人材之盛、治化之隆，所以",
           "redirected_to": null
         },
         {
@@ -7944,26 +7944,26 @@
         },
         {
           "host": "zh.wikisource.org",
-          "title": "太平御覽/0111",
-          "namespace": 0,
-          "bytes": 21823,
-          "preview": "## 唐玄宗明皇帝 《唐書》曰：玄宗明皇帝，諱隆基，睿宗第三子也，母曰昭成順聖皇后竇氏。秋八月戊寅，生于東都。性英斷多藝，尤知音律，善八分書。儀範偉麗，有非常之表。三年閏七月丁卯，封楚王。十月戊戌，出閣，開府置官屬，年始七歲。朔望車騎至朝堂",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "太平御覽 (四部叢刊本)/卷之一百一十一",
-          "namespace": 0,
-          "bytes": 346,
-          "preview": "{{四部叢刊頁眉|title=太平御覽|section=卷之一百一十一|prev=卷之一百一十|next=卷之一百一十二|type=子|notes=宋 李昉 等奉勅撰 中華學藝社借照日本帝室圖書寮京都東福寺東京靜嘉堂文庫藏宋刊本}} <pa",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
           "title": "冊府元龜/卷0016",
           "namespace": 0,
           "bytes": 20789,
           "preview": "○帝王部 尊號一 2 古者盛德之君。若九皇五帝皆典籍之所述也。夏商而下降號稱王秦並天下始兼三五而建號然後尊極之名著矣。歷代而下遵而不易時或因革理非水公襲踵事增華其流彌盛乃至傾臣子之將順頌君上之徽美守闕上書備物典策所以極光大之稱流景鑠之懿也。",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "中国职工运动史 (一九一九——一九二六)",
+          "namespace": 0,
+          "bytes": 375769,
+          "preview": "## 著者申明 本書原定三十章：前三章為“中國工業的發展”，“中國無產階級的形成”，“中國工人的勞動條件”；後十四章為“廣東時代極盛期”，“反奉戰爭”，“第三次全國勞動大會”，“上海罷工期”，“北伐期中兩湖職工運動之發展”，“上海三次暴動”",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "太平御覽/0111",
+          "namespace": 0,
+          "bytes": 21823,
+          "preview": "## 唐玄宗明皇帝 《唐書》曰：玄宗明皇帝，諱隆基，睿宗第三子也，母曰昭成順聖皇后竇氏。秋八月戊寅，生于東都。性英斷多藝，尤知音律，善八分書。儀範偉麗，有非常之表。三年閏七月丁卯，封楚王。十月戊戌，出閣，開府置官屬，年始七歲。朔望車騎至朝堂",
           "redirected_to": null
         }
       ]
@@ -7977,7 +7977,7 @@
           "title": "하늘과 바람과 별과 시 (1948년)/서시",
           "namespace": 0,
           "bytes": 425,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 | 제목 = [[../|하늘과 바람과 별과 시]] | 다른 표기 = | 부제 = | 부제 다른 표기 = 序詩 | 저자 = [[저자:윤동주|윤동주]] | 역자 = | 이전 = | 다음 = [[../자화상|자",
           "redirected_to": null
         },
         {
@@ -8009,7 +8009,7 @@
           "title": "국경의 밤",
           "namespace": 0,
           "bytes": 1004,
-          "preview": "서 (김억) 서시 꿈을 따라 갔더니 방화범 물결 북청 물장수 선구자 표박 눈이 내리느니 초인의 선언 곡 폐허 손님 울 수도 없거든 영탄 주영의 고백 도토리 국경의 밤 ## 라이선스",
+          "preview": "서 (김억) 서시 꿈을 따라 갔더니 방화범 물결 북청 물장수 선구자 표박 눈이 내리느니 초인의 선언 곡 폐허 손님 울 수도 없거든 영탄 주영의 고백 도토리 국경의 밤",
           "redirected_to": null
         },
         {
@@ -8017,7 +8017,7 @@
           "title": "두시언해 (중간본)/권7/별이비서시흥사소거",
           "namespace": 0,
           "bytes": 455,
-          "preview": "## 저작권",
+          "preview": "{{머리말 | 제목 = 별이비서시흥사소거 | 다른 표기 = 別李秘書始興寺所居 | 부제 = | 부제 다른 표기 = | 저자 = [[저자:두보|두보]] | 역자 = | 이전 = [[../기백학사림거|기백학사림거]] | ",
           "redirected_to": null
         },
         {
@@ -8049,7 +8049,7 @@
           "title": "하늘과 바람과 별과 시 (1948년)",
           "namespace": 0,
           "bytes": 773,
-          "preview": "## 저작권",
+          "preview": "{{다른 판본|하늘과 바람과 별과 시}} {{머리말 | 제목 = 하늘과 바람과 별과 시 | 다른 표기 = 하늘과바람과별과詩 | 부제 = | 부제 다른 표기 = | 저자 = [[저자:윤동주|윤동주]] | 역자 = | ",
           "redirected_to": null
         },
         {
@@ -8073,7 +8073,7 @@
           "title": "월상국 범사백이",
           "namespace": 0,
           "bytes": 499,
-          "preview": "## 저작권",
+          "preview": "{{머리말 |제목 = 월상국(越相國) 범사백(范少伯)이 |다른 표기 = |지은이 = [[저자:을파소|을파소]] |역자 = |부제 = |이전 = |다음 = |설명 = [[가곡원류]]에 실린 시조. 저자가 실제 을파소인",
           "redirected_to": null
         },
         {
@@ -8223,7 +8223,7 @@
           "title": "하늘과 바람과 별과 시 (1948년)/별 헤는 밤",
           "namespace": 0,
           "bytes": 404,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 |제목 = [[../|하늘과 바람과 별과 시]] |지은이 = [[저자:윤동주|윤동주]] |역자 = |부제 = 별 헤는 밤 |연도 = 1941 |이전 = [[../길|길]] |다음 = [[../흰 그림자|흰",
           "redirected_to": null
         },
         {
@@ -8247,7 +8247,7 @@
           "title": "동짓달 기나긴 밤을",
           "namespace": 0,
           "bytes": 824,
-          "preview": "## 청구영언 ## 가곡원류 (우조 초삭대엽) ## 가곡원류 (여창 우조 이삭대엽) ## 저작권",
+          "preview": "## 청구영언 ## 가곡원류 (우조 초삭대엽) ## 가곡원류 (여창 우조 이삭대엽)",
           "redirected_to": null
         },
         {
@@ -8255,7 +8255,7 @@
           "title": "하늘과 바람과 별과 시 (1948년)/길",
           "namespace": 0,
           "bytes": 423,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 |제목 = [[../|하늘과 바람과 별과 시]] |지은이 = [[저자:윤동주|윤동주]] |역자 = |부제 = 길 |연도 = 1941 |이전 = [[../또 다른 고향|또 다른 고향]] |다음 = [[../",
           "redirected_to": null
         },
         {
@@ -8279,7 +8279,7 @@
           "title": "하늘과 바람과 별과 시 (1948년)/흰 그림자",
           "namespace": 0,
           "bytes": 437,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 |제목 = [[../|하늘과 바람과 별과 시]] |지은이 = [[저자:윤동주|윤동주]] |역자 = |부제 = 흰 그림자 |연도 = 1942 |이전 = [[../별 헤는 밤|별 헤는 밤]] |다음 = [[.",
           "redirected_to": null
         },
         {
@@ -8501,7 +8501,7 @@
           "title": "하늘과 바람과 별과 시 (1948년)/자화상",
           "namespace": 0,
           "bytes": 402,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 |제목 = [[../|하늘과 바람과 별과 시]] |지은이 = [[저자:윤동주|윤동주]] |역자 = |부제 = 자화상(自畵像) |연도 = 1939 |이전 = [[../서시|서시]] |다음 = [[../소년|",
           "redirected_to": null
         },
         {
@@ -8509,7 +8509,7 @@
           "title": "빙화",
           "namespace": 0,
           "bytes": 1054,
-          "preview": "벽 분수 MEMORIE 1. 황혼 2. 호수 3. 마을 야경 언덕 희망 포플라 자화상 대야초 별과 새에게 시계 꿈 청포도 넋에 혹이 돛다 비애 다방 나의 밤 발원 차돌 눈 쌓인 밤 백야 밤의 시름 성에의 꽃 빙하 #",
+          "preview": "벽 분수 MEMORIE 1. 황혼 2. 호수 3. 마을 야경 언덕 희망 포플라 자화상 대야초 별과 새에게 시계 꿈 청포도 넋에 혹이 돛다 비애 다방 나의 밤 발원 차돌 눈 쌓인 밤 백야 밤의 시름 성에의 꽃 빙하",
           "redirected_to": null
         },
         {
@@ -8723,7 +8723,7 @@
           "title": "벙어리 삼룡이",
           "namespace": 0,
           "bytes": 337,
-          "preview": "## 라이선스",
+          "preview": "{{머리말 |제목 = 벙어리 삼룡이 |지은이 = [[저자:나도향|나도향]] |역자 = |부제 = |연도 = 1925 |이전 = |다음 = |설명 = 《黎明》 창간호(1925. 7)에 발표. }} <pages inde",
           "note": "index page: page is almost empty"
         }
       ]
@@ -8770,7 +8770,18 @@
     }
   ],
   "english": {
-    "resolved": [],
+    "resolved": [
+      {
+        "id": "allen-1889-korean-tales",
+        "url": "https://www.gutenberg.org/cache/epub/55539/pg55539.txt",
+        "chars": 245111
+      },
+      {
+        "id": "gale-1922-cloud-dream-of-the-nine",
+        "url": "https://archive.org/download/cu31924023333077/cu31924023333077_djvu.txt",
+        "chars": 634398
+      }
+    ],
     "missing": [],
     "ambiguous": [],
     "errors": []
