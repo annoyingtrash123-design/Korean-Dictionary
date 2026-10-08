@@ -121,7 +121,7 @@ async function readerFlow(page: Page) {
   await page.keyboard.press('Escape');
   await expect(page.locator('.lk')).toHaveCount(0);
   await expect(mark(page)).toHaveCount(0);
-  await tap(page, 4, 0, 1);
+  await tap(page, 2, 13, 15);                   // 漢城
   await expect(page.locator('.lk')).toBeVisible();
   await page.locator('.rd-card .rd-title').click();
   await expect(page.locator('.lk')).toHaveCount(0);
