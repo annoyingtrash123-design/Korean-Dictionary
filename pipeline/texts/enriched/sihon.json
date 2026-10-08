@@ -1,0 +1,250 @@
+{
+  "id": "sihon",
+  "card": {
+    "summary_ko": "김소월이 생전에 남긴 유일한 시론으로, 영혼과 같은 불변의 \"시혼\"이 달빛과 그림자 같은 \"음영\"을 통해 나타나며 시의 우열은 음영의 가치에 있다고 논한다.",
+    "summary_en": "Kim Sowol’s only essay on the theory of poetry: the unchanging “poetic soul” (sihon) is revealed through “shadows and tones” like moonlight and shade, and a poem’s merit lies in the value of those shadows.",
+    "level": "advanced",
+    "edition_ko": "Wikisource 「시혼」 (판 115447); 원저작물 공유 저작물, 전사: 위키문헌 기여자, CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, “시혼” (revision 115447); original work in the public domain, transcription by Wikisource contributors, CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**배경** 김소월(1902–1934)은 평안북도 출신의 시인으로, 시집 『진달래꽃』(1925)으로 널리 알려져 있다. 「시혼」은 1925년 5월 잡지 『개벽』에 발표된 글로, 소월이 남긴 거의 유일한 시론(詩論)으로 알려져 있다. 글에서 소월은 스승 김억이 자신의 시를 평한 것을 인용한다. 위키문헌 전사본에는 옛 한글 표기와 국한문 혼용이 그대로 있고, 표시되지 않는 글자가 \"?\"로 나타나 있다.\n\n**의의** 서정시의 \"영혼\"이 변하지 않는 본질이며, 작품의 차이는 \"음영(陰影)\"의 차이라는 소월 나름의 시 이론을 보여 준다. 소월 시의 정서를 이해하는 열쇠로 자주 인용된다.\n\n**형식과 주제** 세 부분(1 밤하늘과 영혼, 2 시혼의 불변성, 3 음영과 비평)으로 나뉜다. 산·강·달·별 같은 자연물의 비유가 계속되며 \"시혼=불변의 본체, 시작=음영\"이라는 구도를 만든다. 봄밤의 개구리 소리와 가을 새벽의 벌레 울음은 서로 다른 음영이지만 미적 가치에 우열이 없다는 예로 쓰인다. 영국 시인 아서 시먼스의 시를 인용한다.\n\n**읽기 도움** (옛 표기)\n- 업다, 잇다, 늣기다 = 없다, 있다, 느끼다 (받침 표기).\n- 가티 / 갓갑다 = 같이 / 가깝다.\n- 한울 = 하늘, 나제 = 낮에, 우헤 = 위에.\n- 가름 = 강(가람).\n- 음영(陰影): 그림자와 밝기의 차이.\n- 시혼(詩魂): 시의 영혼.\n- 완상(翫賞): 즐기며 감상함.\n- 현현(顯現): 뚜렷이 나타남.",
+    "en": "**Background** Kim Sowol (1902–1934), a poet from North Pyeongan Province, is best known for the collection *Azaleas* (*Jindallaekkot*, 1925). “Sihon” (“Poetic Soul”) was published in the magazine *Gaebyeok* in May 1925 and is known as nearly the only essay on poetry he left. In it Sowol quotes his teacher Kim Eok’s comments on his own poems. The Wikisource transcription keeps the old Hangul spelling and mixed Sino-Korean script, and characters it could not display appear as “?”.\n\n**Significance** It sets out Sowol’s own theory of poetry: the “soul” of a lyric is an unchanging essence, and differences between works are differences of “shadows” (陰影). It is often cited as a key to understanding the mood of Sowol’s poems.\n\n**Form and themes** There are three parts (1 the night sky and the soul, 2 the unchanging poetic soul, 3 shadows and criticism). A run of natural images—mountain, river, moon, stars—builds the scheme “poetic soul = unchanging essence, poem = shadow”. The frog chorus on a spring night and the insect’s cry at an autumn dawn are offered as different shadows with no superiority or inferiority in aesthetic value. The English poet Arthur Symons is quoted.\n\n**Reading help** (old spelling)\n- 업다, 잇다, 늣기다 = 없다, 있다, 느끼다 (final-consonant spelling).\n- 가티 / 갓갑다 = 같이 / 가깝다.\n- 한울 = 하늘, 나제 = 낮에, 우헤 = 위에.\n- 가름 = 강 (river; native word).\n- 음영(陰影): shade and shadow, light and dark.\n- 시혼(詩魂): the soul of poetry.\n- 완상(翫賞): to enjoy and appreciate.\n- 현현(顯現): clear manifestation."
+  },
+  "paragraphs": [
+    {
+      "orig": "1",
+      "modern": null,
+      "reading": null,
+      "en": "1"
+    },
+    {
+      "orig": "적어도 平凡한 가운데서는 物의 正體를 보지 못하며, 慣習的 行爲에서는 眞理를 보다 더 發見할 수 업는 것이 가장 어질다고 하는 우리 사람의 일입니다.",
+      "modern": "적어도 평범(平凡)한 가운데서는 물(物)의 정체(正體)를 보지 못하며, 관습적(慣習的) 행위에서는 진리(眞理)를 보다 더 발견할 수 없는 것이 가장 어질다고 하는 우리 사람의 일입니다.",
+      "reading": null,
+      "en": "At least amid the commonplace, we cannot see the true nature of things, and in customary behaviour we cannot discover truth any further: such is the condition of us human beings, who are said to be the most virtuous of creatures."
+    },
+    {
+      "orig": "그러나 여보십시오. 무엇보다도 밤에 ?여서 한울을 우럴어 보십시오. 우리는 나제 보지 못하든 아름답움을, 그곳에서, 볼 수도 잇고 늣길 수도 있습니다. 파릇한 별들은 오히려 ?여잇섯서 애처롭게도 긔운있게도 몸을 ?며 永遠을 소삭입니다. 엇든 ?는, 새벽에 저가는 오묘한 달빗치, 애틋한 한?각, 崇嚴한 彩雲의 多情한 치마?를 비러, 그의 可憐한 한두 줄기 눈물을 문지르기도 합니다. 여보십시오, 여러분. 이런 것들은 적은 일이나마, 우리가 대나제는 보지도 못하고 늣기지도 못하든 것들입니다.",
+      "modern": "그러나 여보십시오. 무엇보다도 밤에 나서서 하늘을 우러러보십시오. 우리는 낮에 보지 못하던 아름다움을, 그곳에서, 볼 수도 있고 느낄 수도 있습니다. 파릇한 별들은 오히려 떠 있어서 애처롭게도 기운 있게도 몸을 떨며 영원(永遠)을 속삭입니다. 어떤 때는, 새벽에 지는 오묘한 달빛이, 애틋한 한 조각, 숭엄(崇嚴)한 채운(彩雲)의 다정한 치맛자락을 빌려, 그의 가련한 한두 줄기 눈물을 문지르기도 합니다. 여보십시오, 여러분. 이런 것들은 작은 일이나마, 우리가 대낮에는 보지도 못하고 느끼지도 못하던 것들입니다.",
+      "reading": null,
+      "en": "But look, please. Above all, go out at night and look up at the sky. There we can see and feel a beauty we could not see by day. The pale-green stars, rather, hang there, pitifully and yet vigorously trembling, and whisper of eternity. At times, the subtle moonlight setting at dawn, borrowing a poignant scrap of a majestic coloured cloud, the tender hem of its skirt, wipes away a pitiable line or two of its tears. Look, please, everyone. These are small things, but they are things we could neither see nor feel in broad daylight."
+    },
+    {
+      "orig": "다시 한번, 都會의 밝음과 짓거림이 그의 文明으로써 光輝와 勢力을 다투며 자랑할 ?에도, 저, 깁고 어둠은 山과 숩의 그늘진 곳에서는 외롭은 버러지 한마리가, 그 무슨 슬음에 겨웟는지, 수임업시 울지고 잇습니다, 여러분. 그 버러지 한마리가 오히려 더 만히 우리 사람의 情操답지 안으며 난들에 말라 벌바람에 여위는 갈? 하나가 오히려 아직도 더 갓갑은, 우리 사람의 無常과 變轉을 설워하여 주는 살틀한 노래의 동무가 안이며, 저 넓고 아득한 난 바다의 ?노는 물?들이 오히려 더 조흔, 우리 사람의 自由를 사랑한다는 啓示가 안입닛가. 그럿습니다. 일허 버린 故人은 ?에서 맛나고, 놉고 맑은 行蹟의 거륵한 첫 한방울의 企圖의 이슬도 이른 아츰 잠자리 우헤서 ?습니다.",
+      "modern": "다시 한번, 도회(都會)의 밝음과 지껄임이 그의 문명(文明)으로써 광휘(光輝)와 세력(勢力)을 다투며 자랑할 때에도, 저, 깊고 어두운 산(山)과 숲의 그늘진 곳에서는 외로운 벌레 한 마리가, 그 무슨 설움에 겨웠는지, 쉼 없이 울고 있습니다, 여러분. 그 벌레 한 마리가 오히려 더 많이 우리 사람의 정조(情操)답지 않으며, 들에 말라 벌바람에 여위는 갈대 하나가 오히려 아직도 더 가까운, 우리 사람의 무상(無常)과 변전(變轉)을 서러워하여 주는 살뜰한 노래의 동무가 아니며, 저 넓고 아득한 난바다의 뛰노는 물결들이 오히려 더 좋은, 우리 사람의 자유(自由)를 사랑한다는 계시(啓示)가 아닙니까. 그렇습니다. 잃어버린 고인(故人)은 꿈에서 만나고, 높고 맑은 행적(行蹟)의 거룩한 첫 한 방울의 기도(企圖)의 이슬도 이른 아침 잠자리 위에서 맺혔습니다.",
+      "reading": null,
+      "en": "Once more: even when the brightness and clamour of the city compete and boast of their radiance and power through their civilisation, in the shaded places of those deep, dark mountains and woods a lone insect, overcome by some sorrow, is crying without rest, everyone. Is not that single insect, rather, far more akin to the sentiment proper to us human beings? Is not a single reed, withered in the fields and thinning in the wind from the plain, still closer a tender companion in song that grieves for our human impermanence and change? Are not the leaping waves of that wide, distant open sea an even better revelation that we human beings love freedom? So it is. The dead we have lost we meet in dreams, and the sacred first drop of the dew of aspiration, of high and clear deeds, formed on a bed in the early morning."
+    },
+    {
+      "orig": "우리는 寂寞한 가운데서 더욱 사뭇처 오는 歡喜를 經驗하는 것이며, 孤獨의 안에서 더욱 보드랍은 同情을 알 수 잇는 것이며, 다시 한번, 슬픔 가운데서야 보다 더 거룩한 善行을 늣길 수도 있는 것이며, 어둡음의 거울에 빗치어 와서야 비로소 우리에게 보이며, 살음을 좀 더 멀리한, 죽음에 갓갑은 山마루에 섯서야 비로소 사름의 아름답은 ?내한 옷이 生命의 봄두던에 나붓기는 것을 볼 수도 잇습니다. 그럿습니다. 곧 이것입니다. 우리는 우리의 몸이나 맘으로는 日常에 보지도 못하며 늣기지도 못하든 것을, ?는 그들로는 볼 수도 업스며 늣길 수도 업는 밝음을 지어바린 어둡음의 골방에서며, 사름에서는 좀더 도라안즌 죽음의 새벽빗츨 밧는 바라지 우헤서야, 비로소 보기도 하며 늣기기도 한다는 말입니다. 그럿습니다, 分明합니다. 우리에게는 우리의 몸보다도 맘보다도 더욱 우리에게 各自의 그림자가티 갓갑고 各自에게 잇는 그림자가티 반듯한 各自의 靈魂이 잇습니다. 가장 놉피 늣길 수도 잇고 가장 놉히 ?달을 수도 잇는 힘, ?는 가장 强하게 振動의 맑지게 울니어 오는, 反響과 共鳴을 恒常 니저버리지 안는 樂器, 이는 곳, 모든 물건이 가장 갓가히 빗치워 드러옴을 밧는 거울, 그것들이 모두다 우리 各自의 靈魂의 標像이라면 標像일 것입니다.",
+      "modern": "우리는 적막(寂寞)한 가운데서 더욱 사무쳐 오는 환희(歡喜)를 경험하는 것이며, 고독(孤獨)의 안에서 더욱 보드라운 동정(同情)을 알 수 있는 것이며, 다시 한번, 슬픔 가운데서야 보다 더 거룩한 선행(善行)을 느낄 수도 있는 것이며, 어두움의 거울에 비치어 와서야 비로소 우리에게 보이며, 삶을 좀 더 멀리한, 죽음에 가까운 산마루에 서서야 비로소 삶의 아름다운 찬란한 옷이 생명(生命)의 봄 두던에 나부끼는 것을 볼 수도 있습니다. 그렇습니다. 곧 이것입니다. 우리는 우리의 몸이나 맘으로는 일상(日常)에 보지도 못하며 느끼지도 못하던 것을, 또는 그들로는 볼 수도 없으며 느낄 수도 없는 밝음을 지어 버린 어두움의 골방에서며, 삶에서는 좀 더 돌아앉은 죽음의 새벽빛을 받는 바라지 위에서야, 비로소 보기도 하며 느끼기도 한다는 말입니다. 그렇습니다, 분명(分明)합니다. 우리에게는 우리의 몸보다도 맘보다도 더욱 우리에게 각자(各自)의 그림자같이 가깝고 각자에게 있는 그림자같이 반듯한 각자의 영혼(靈魂)이 있습니다. 가장 높이 느낄 수도 있고 가장 높이 깨달을 수도 있는 힘, 또는 가장 강(强)하게 진동(振動)의 맑게 울려 오는, 반향(反響)과 공명(共鳴)을 항상(恒常) 잊어버리지 않는 악기(樂器), 이는 곧, 모든 물건이 가장 가까이 비치어 들어옴을 받는 거울, 그것들이 모두 다 우리 각자의 영혼의 표상(標像)이라면 표상일 것입니다.",
+      "reading": null,
+      "en": "In desolation we experience a joy that pierces us all the more; within solitude we can know a gentler sympathy; once more, it is in sorrow that we can feel a still holier good deed; it is only when reflected in the mirror of darkness that it first appears to us; and only by standing on a mountain ridge farther from life and closer to death can we see the beautiful, resplendent garment of life fluttering on the spring knoll of living. So it is. This is precisely it. What we do not see or feel in everyday life with our bodies or minds, or rather what cannot be seen or felt by them, we come to see and feel for the first time in the closet of darkness that has made a brightness, or on the window sill, turned a little further from life, that receives the dawn light of death. So it is; it is plain. Within us, closer to us than our body or mind, like each person’s own shadow, and upright like the shadow each has, there is each person’s soul. A power that can feel at the highest and understand at the highest, an instrument that always keeps in mind the echo and resonance of the clear ringing of vibration at its strongest, in other words a mirror that receives the closest reflection of all things: if all these are the emblem of each of our souls, then an emblem they are."
+    },
+    {
+      "orig": "2",
+      "modern": null,
+      "reading": null,
+      "en": "2"
+    },
+    {
+      "orig": "그러한 우리의 靈魂이 우리의 가장 理想的 美의 옷을 닙고, 完全한 音律의 발거름으로 微妙한 節操의 風景 만흔 길우흘, 情調의 불붓는 山마루로 向하야, 或은 말의 아름답은 샘물에 心想의 적은 배를 젓기도 하며, 잇기도든 慣習의 崎驗한 돌무덕이 새로 追憶의 수레를 몰기도 하야, 惑은 洞口陽柳에 春光은 아릿답고 十李曲坊에 風流는 繁華하면 風飄萬點이 散亂한 碧桃花 ?닙만 저흣는 움물 속에 卽興의 드레박을 드놋키도 할 ?에는, 이곳, 니르는 바 詩魂으로 그 瞬間에 우리에게 顯現되는 것입니다.",
+      "modern": "그러한 우리의 영혼이 우리의 가장 이상적(理想的) 미(美)의 옷을 입고, 완전(完全)한 음률(音律)의 발걸음으로 미묘(微妙)한 절조(節操)의 풍경 많은 길 위를, 정조(情調)의 불붙는 산마루로 향하여, 혹은 말의 아름다운 샘물에 심상(心想)의 작은 배를 젓기도 하며, 이어 오던 관습(慣習)의 기험(崎驗)한 돌무더기 사이로 추억(追憶)의 수레를 몰기도 하여, 혹은 동구양류(洞口陽柳)에 춘광(春光)은 아리땁고 십리곡방(十李曲坊)에 풍류(風流)는 번화하면 풍표만점(風飄萬點)이 산란(散亂)한 벽도화(碧桃花) 꽃잎만 젖은 우물 속에 즉흥(卽興)의 두레박을 들여놓듯이도 할 때에는, 이곳, 이르는 바 시혼(詩魂)으로 그 순간(瞬間)에 우리에게 현현(顯現)되는 것입니다.",
+      "reading": null,
+      "en": "Such a soul of ours, clothed in the garment of our most ideal beauty, with the steps of perfect melody, on a road rich in scenery of subtle fidelity, toward the blazing ridge of mood—now rowing the small boat of imagination on the lovely spring of words, now driving the cart of memory among the rugged heaps of stones of long-standing custom—or, when “at the village gate the spring light is lovely under the sunlit willows, in the Ten-Li winding quarter the revelry is bustling, and ten thousand specks scatter on the wind,” lowering an impromptu bucket into a well where only petals of the scattered green-peach blossoms lie wet—at such times it is revealed to us in that instant as what is called the poetic soul."
+    },
+    {
+      "orig": "그러한 우리의 詩魂은 勿論 境遇)에 ?라 大小深淺을 自在變換하는 것도 안인 同時에, 時間과 空間을 超越 存在입니다.",
+      "modern": "그러한 우리의 시혼(詩魂)은 물론(勿論) 경우(境遇)에 따라 대소심천(大小深淺)을 자재변환(自在變換)하는 것도 아닌 동시에, 시간(時間)과 공간(空間)을 초월(超越)한 존재(存在)입니다.",
+      "reading": null,
+      "en": "Our poetic soul, of course, is not something that freely changes its size or depth according to circumstances, and at the same time it is an existence that transcends time and space."
+    },
+    {
+      "orig": "어듸?지 不完全한 대로 사람의 잇는 말의 精을 다하여 할진대는, 靈魂은 山과 類似하다면 할 수도 잇습니다. 가름과 類似하다면 할 수 잇습니다. 초하루 보름 그믐 한울에 ?오르는 달과도 類似하다면, 별과도 類似하다면, 더욱 類似할 것입니다. 그러나 山보다도 가름보다도, 달?는 별보다도, 다시금 그들은 엇든 ?에는 반드시 한 번은 업서도 질 것이며 지금도 亦是 時時刻刻으로 적어도 變換되려고 하며 잇지마는, 靈魂은 絶對로 完全한 永遠의 存在며 不變의 成形입니다. 藝術로 表現된 靈魂은 그 自身의 藝術에서, 事業과 行蹟으로 表現된 靈魂은 그 自身의 事業과 行蹟에서 그의 첫 形體대로 ??지 남아 잇슬 것입니다.",
+      "modern": "어디까지나 불완전(不完全)한 대로 사람의 있는 말의 정(精)을 다하여 할진대는, 영혼(靈魂)은 산(山)과 유사(類似)하다면 할 수도 있습니다. 강과 유사하다면 할 수 있습니다. 초하루 보름 그믐 하늘에 떠오르는 달과도 유사하다면, 별과도 유사하다면, 더욱 유사할 것입니다. 그러나 산보다도 강보다도, 달 또는 별보다도, 다시금 그들은 어떤 때에는 반드시 한 번은 없어질 것이며 지금도 역시 시시각각(時時刻刻)으로 적어도 변환(變換)되려고 하며 있지마는, 영혼은 절대(絶對)로 완전한 영원(永遠)의 존재며 불변(不變)의 성형(成形)입니다. 예술(藝術)로 표현된 영혼은 그 자신의 예술에서, 사업(事業)과 행적(行蹟)으로 표현된 영혼은 그 자신의 사업과 행적에서 그의 첫 형체(形體)대로 언제까지나 남아 있을 것입니다.",
+      "reading": null,
+      "en": "If, imperfect though it is, we were to exhaust all the essence of the words people have, we could say that the soul is akin to a mountain. We could say it is akin to a river. If it is akin to the moon rising in the sky on the first, the fifteenth, the last day of the month, if akin to the stars, it will be more akin still. But beyond mountains, beyond rivers, beyond moon or stars, those will one day surely vanish, and even now are at least trying to change moment by moment, whereas the soul is absolutely a perfect, eternal existence and an unchanging form. A soul expressed through art will remain in its own art, and a soul expressed through works and deeds in its own works and deeds, in its original form for ever."
+    },
+    {
+      "orig": "?라서 詩魂도 山과도 가트며는 가름과도 가트며, 달 ?는 별과도 갓다고 할 수는 잇스나, 詩魂亦是 本體는 靈魂 그것이기 ?문에, 그들보다도 오히려 그는 永遠의 存在며 不變의 成形일 것은 勿論입니다.",
+      "modern": "따라서 시혼도 산과도 같으며는 강과도 같으며, 달 또는 별과도 같다고 할 수는 있으나, 시혼 역시 본체(本體)는 영혼 그것이기 때문에, 그들보다도 오히려 그는 영원의 존재며 불변의 성형일 것은 물론입니다.",
+      "reading": null,
+      "en": "Therefore the poetic soul too may be said to be like a mountain, like a river, like the moon or the stars; but because the essence of the poetic soul too is the soul itself, it is of course, more than those, an eternal existence and an unchanging form."
+    },
+    {
+      "orig": "그러면 詩作品의 優劣 ?는 異同에 따라, 가튼 한 사람의 詩魂일지라도 或은 變換한것 티가 보일는지도 모르지마는 그것은 결코 그러치 못할 것이, 적어도 가튼 한 사람의 詩魂은 詩魂自身이 變하는 것은 안입니다. 그것은 바로 山과 물과, 或은 달과 별이 片刻에 그 形體가 變하지 안음과 마치 한가지입니다.",
+      "modern": "그러면 시작품(詩作品)의 우열(優劣) 또는 이동(異同)에 따라, 같은 한 사람의 시혼일지라도 혹은 변환한 것 같은 티가 보일는지도 모르지마는 그것은 결코 그렇지 못할 것이, 적어도 같은 한 사람의 시혼은 시혼 자신이 변하는 것은 아닙니다. 그것은 바로 산과 물과, 혹은 달과 별이 편각(片刻)에 그 형체가 변하지 아니함과 마치 한가지입니다.",
+      "reading": null,
+      "en": "Then, depending on the merits or differences of poetic works, the poetic soul of one and the same person may perhaps seem to have changed; but that can never be so, for at least the poetic soul of one and the same person is not something that itself changes. It is exactly the same as the mountains and waters, or the moon and stars, not changing their forms in an instant."
+    },
+    {
+      "orig": "그러나 作品에는, 그 詩想의 範圍, 리듬의 變化, ?는 그 情調의 明暗에 ?라, 비록 가튼 한 사람의 詩作이라고는 할지라도, 勿論 異同은 생기며 ?는 닑는 사람에게는 詩作 各個의 印象을 주기도 하며, 詩作 自身도 亦是 어듸?지든지 儼然한 各個로 存立될 것입니다, 그것은 ? 마치 山色과 水面과 月光星輝가 모두 다 엇든 한 ?의 陰影에 ?라, 그 形狀을, 보는 사람에게는 달리 보이도록 함과 갓습니다. 勿論 그 한 ? 한 ?의 光景만은 亦是 混同할 수 업는 各個의 光景으로 存立하는 것도, 詩作의 그것과 바로 갓습니다.",
+      "modern": "그러나 작품에는, 그 시상(詩想)의 범위(範圍), 리듬의 변화(變化), 또는 그 정조(情調)의 명암(明暗)에 따라, 비록 같은 한 사람의 시작(詩作)이라고는 할지라도, 물론 이동(異同)은 생기며 또는 읽는 사람에게는 시작 각개(各個)의 인상(印象)을 주기도 하며, 시작 자신도 역시 어디까지든지 엄연(儼然)한 각개로 존립(存立)될 것입니다, 그것은 꼭 마치 산색(山色)과 수면(水面)과 월광성휘(月光星輝)가 모두 다 어떤 한 때의 음영(陰影)에 따라, 그 형상(形狀)을, 보는 사람에게는 달리 보이도록 함과 같습니다. 물론 그 한 때 한 때의 광경(光景)만은 역시 혼동(混同)할 수 없는 각개의 광경으로 존립하는 것도, 시작의 그것과 바로 같습니다.",
+      "reading": null,
+      "en": "But in works, depending on the range of the poetic idea, the changes of rhythm, or the light and dark of the mood, even though they are the poetic works of one and the same person, differences naturally arise, they give readers an impression of each separate work, and each work itself will stand as a distinct individual to the end. It is just as when the colours of mountains, the surface of water and the glow of moon and stars all look different to the viewer according to the shade of some particular moment. Of course, that the scene of each moment stands as a separate scene that cannot be confused is likewise exactly like a poetic work."
+    },
+    {
+      "orig": "그러타고, 山色 ?는 水面, 或은 月光星輝가 한 ?의 陰影에 ?라, ??로, 그것을 翫賞하는 사람의 눈에 달리 보인다고, 그 山水星月은 山水星月自身의 形體가 變換된 것이라고는 決코 할 수 업는 것입니다.",
+      "modern": "그렇다고, 산색 또는 수면, 혹은 월광성휘가 한 때의 음영에 따라, 그 때문으로, 그것을 완상(翫賞)하는 사람의 눈에 달리 보인다고, 그 산수성월(山水星月)은 산수성월 자신의 형체가 변환된 것이라고는 결코 할 수 없는 것입니다.",
+      "reading": null,
+      "en": "Even so, just because the colour of a mountain, or the surface of water, or the glow of the moon and stars looks different to the eye of the person who admires it according to the shade of a moment, one can never say that the mountains, waters, stars and moon have themselves changed form."
+    },
+    {
+      "orig": "詩作에도 亦是 詩魂自身의 變換으로 말미암아 詩作에 異同이 생기며 優劣이 나타나는 것이 안이라, 그 時代며 그 社會와 ?는 當時 情境의 如何에 依하야 作者의 心靈上에 無時로 나타나는 陰影의 現象이 變換되는 데 지나지 못하는 것입니다.",
+      "modern": "시작에도 역시 시혼 자신의 변환으로 말미암아 시작에 이동이 생기며 우열이 나타나는 것이 아니라, 그 시대(時代)며 그 사회(社會)와 또는 당시(當時) 정경(情境)의 여하(如何)에 의하여 작자(作者)의 심령상(心靈上)에 무시(無時)로 나타나는 음영(陰影)의 현상(現象)이 변환되는 데 지나지 못하는 것입니다.",
+      "reading": null,
+      "en": "In poetic works, too, differences do not arise and merits and faults do not appear because the poetic soul itself has changed; they are nothing more than a change in the phenomenon of shadows that appear ceaselessly in the author’s spirit, according to the age, the society, and the circumstances of the moment."
+    },
+    {
+      "orig": "겨울에 눈이 왓다고 山 自身이 희여젓다는 사람이 이 어듸 잇겟스며, 초생이라고 초생달은 달 自身이 鉤狀이라는 사람이야 어듸 잇겟스며, 구름이 덥핀다고 별 自身이 업서지고 마랏다는 사람이야 어듸 잇겟스며, 모래바닥 江물에 달빗치 빗춘다고 或은 햇볏치 그늘진다고 그 江물이 「얏타젓다」或은「깁퍼젓다」고 할 사람이야 어듸 잇겟습니?.",
+      "modern": "겨울에 눈이 왔다고 산 자신이 희어졌다는 사람이 어디 있겠으며, 초생이라고 초생달은 달 자신이 구상(鉤狀)이라는 사람이야 어디 있겠으며, 구름이 덮는다고 별 자신이 없어지고 말았다는 사람이야 어디 있겠으며, 모래바닥 강물에 달빛이 비친다고 혹은 햇볕이 그늘진다고 그 강물이 「얕아졌다」 혹은 「깊어졌다」고 할 사람이야 어디 있겠습니까.",
+      "reading": null,
+      "en": "Who would say that the mountain itself has turned white because snow has fallen in winter? Who would say that the crescent moon itself is hook-shaped because it is a new moon? Who would say that the star itself has ceased to exist because clouds cover it? Who would say that a river has “become shallow” or “become deep” because moonlight shines on a sandy-bottomed river or because sunlight is shaded?"
+    },
+    {
+      "orig": "3",
+      "modern": null,
+      "reading": null,
+      "en": "3"
+    },
+    {
+      "orig": "여러분. 느진 봄 삼월 밤, 들에는 물 긔운 퓌여 오르고, 동산의 산듸밧테 물구술 매칠?, 실실히 느러진 버드나무 닙새 속에서, 玉盤에 金珠를 구을니는 듯, 놉게, 낮게, ?는 煩그러히, ?는 삼가는 듯시 울지는 ??리 소리를, 소반가티 둥근 달이 燈盞가티 밝게 빗추는 가운데 茫然히 서서, 귀를 기우린 적이 업스십닛가. 四方을 두루 살펴도 그 ?에는 그늘진 곳조차 어슴푸려 하게, 그러나 곳곳이 異常히도 빗나는 밝음이 사라잇는 것가트며, 淸明한 ??리 소리에, 호젓한 달빗 안인 것이 업습니다.",
+      "modern": "여러분. 늦은 봄 삼월 밤, 들에는 물기운 피어오르고, 동산의 잔디밭에 물구슬 맺힐 때, 실실이 늘어진 버드나무 잎새 속에서, 옥반(玉盤)에 금주(金珠)를 굴리는 듯, 높게, 낮게, 또는 번거로이, 또는 삼가는 듯이 우는 개구리 소리를, 소반같이 둥근 달이 등잔같이 밝게 비추는 가운데 망연(茫然)히 서서, 귀를 기울인 적이 없으십니까. 사방(四方)을 두루 살펴도 그 가운데에는 그늘진 곳조차 어슴푸레하게, 그러나 곳곳이 이상(異常)히도 빛나는 밝음이 살아 있는 것 같으며, 청명(淸明)한 개구리 소리에, 호젓한 달빛 아닌 것이 없습니다.",
+      "reading": null,
+      "en": "Everyone. On a late-spring March night, when the mist of water rises in the fields and dew beads form on the lawn of the garden hill, have you never stood in a daze, listening, under a moon round as a tray and bright as a lamp, to the sound of frogs, among the leaves of the weeping willow hanging in threads, high and low, now noisy, now restrained, as if rolling golden pearls on a jade plate? Look all around: even the shaded places are dim, yet everywhere a strangely shining brightness seems alive, and there is nothing in the clear sound of frogs that is not the lonely moonlight."
+    },
+    {
+      "orig": "그러나 여보십시오, 그 곳에 陰影이 업다고 하십니?. 안입니다 안입니다, 호젓이 빗추는 달밤의 달빗아래에는 亦是 그에 ? 固有한 陰影이 잇는 것입니다. 支那唐以의 蘇子膽의 句에『積水空明』이라는 말이 잇습니다. 이것이 곧 이러한 밤, 이러한 光景의 陰影을 ?내인 것입니다. 달밤에는, 달밤에 ? 固有한 陰影이 잇고, 淸麗한 ??리의 노래에는, 亦是 그에 ? 相當한 陰影이 잇는 것입니다. 陰影 없는 物體가 어듸 잇겟습니까. 나는 存在에는 반드시 陰影이 ?른다고 합니다. 다만 가튼 物體일지라도 空間과 時間의 如何에 依하야, 그 陰影에 光度의 强弱만은 잇슬 것입니다. 곳, 陰影에 그 深淺은 잇슬지라도, 陰影이 업기도 하다고는 할 수 업는 것입니다. 英詩人, 아더·시몬드의",
+      "modern": "그러나 여보십시오, 그곳에 음영이 없다고 하십니까. 아닙니다 아닙니다, 호젓이 비추는 달밤의 달빛 아래에는 역시 그에 알맞은 고유(固有)한 음영이 있는 것입니다. 지나(支那) 당송(唐宋)의 소자첨(蘇子瞻)의 구(句)에 『적수공명(積水空明)』이라는 말이 있습니다. 이것이 곧 이러한 밤, 이러한 광경의 음영을 그려 낸 것입니다. 달밤에는, 달밤에 알맞은 고유한 음영이 있고, 청려(淸麗)한 개구리 소리의 노래에는, 역시 그에 알맞은 상당한 음영이 있는 것입니다. 음영 없는 물체가 어디 있겠습니까. 나는 존재에는 반드시 음영이 따른다고 합니다. 다만 같은 물체일지라도 공간과 시간의 여하에 의하여, 그 음영에 광도(光度)의 강약만은 있을 것입니다. 곧, 음영에 그 깊고 얕음은 있을지라도, 음영이 없기도 하다고는 할 수 없는 것입니다. 영국 시인, 아서 시먼스의",
+      "reading": null,
+      "en": "But look, please: do you say there is no shadow there? No, no—beneath the lonely shining moonlight of a moonlit night there is, after all, a shadow proper to it. In the verse of Su Zizhan of China, of Tang and Song times, there is the phrase “积水空明”—“pooled water, empty and bright.” This is precisely what depicts the shadows of such a night and such a scene. A moonlit night has the shadows proper to a moonlit night, and the song of the clear, lovely frogs likewise has the considerable shadows proper to it. Where is there an object without a shadow? I say that shadow always accompanies existence. Only, even for the same object, depending on the space and the time, there will be a difference of strength in the light of its shadow. That is, though a shadow may be deep or shallow, one cannot say that it is ever absent. The English poet Arthur Symons’s"
+    },
+    {
+      "orig": "“Night, and the silence of the night; In the Venice far away a song; As if the lyrics water made Itself a serenade; As if the waters silence were a song, Sent up in to the night,",
+      "modern": null,
+      "reading": null,
+      "en": "“Night, and the silence of the night; In the Venice far away a song; As if the lyrics water made Itself a serenade; As if the waters silence were a song, Sent up in to the night,"
+    },
+    {
+      "orig": "Night a more perfect day, A day of shadows luminious, Water and sky at one, at one with Us; As if the very peace of night, The older peace than heaven or light, Came down into the day,”",
+      "modern": null,
+      "reading": null,
+      "en": "Night a more perfect day, A day of shadows luminious, Water and sky at one, at one with Us; As if the very peace of night, The older peace than heaven or light, Came down into the day,”"
+    },
+    {
+      "orig": "라는 詩도 亦是 이러한 밤의, 이러한 光景의 陰影을 보인 것입니다.",
+      "modern": "라는 시도 역시 이러한 밤의, 이러한 광경의 음영을 보인 것입니다.",
+      "reading": null,
+      "en": "—this poem too shows the shadows of such a night and such a scene."
+    },
+    {
+      "orig": "그러면 詩魂은 本來가 靈魂 그것인 同時에 自體의 變換은 絶對로 업는 것이며, 가튼 한 사람의 詩魂에서 創造되어 나오는 詩作에 優劣이 잇서도 그 優劣은, 詩魂自體에 잇는 것이 안이요, 그 陰影의 變換에 잇는 것이며, ?는 그 陰影을 보는 翫賞者 各自의 正當한 審美的眼目에서 判別되는 것이라고 합니다. 童濯禿山의 陰影은 落落長松이 가지버더 트러지고 淸溪水 맑은 물이 구뷔저 흐르는 鬱鬱蒼蒼한 山의 陰影보다 美的 價値에 乏할 것이며, ?는 개이지도 안으며는, 비도 내리지 안이하는 흐릿하고 沓沓한 날의 陰影은 雷聲電光이 今時에 번가라 니르며 대?기가튼 비?이 붓드시 나려 쏫차는 驟雨의 녀름날의 陰影보다 우리에게 快感이 적을 것이며, ?라서 살음에 對한 美的價値도 적은 날일 것입니다.",
+      "modern": "그러면 시혼은 본래(本來)가 영혼 그것인 동시에 자체(自體)의 변환은 절대로 없는 것이며, 같은 한 사람의 시혼에서 창조(創造)되어 나오는 시작에 우열이 있어도 그 우열은, 시혼 자체에 있는 것이 아니요, 그 음영의 변환에 있는 것이며, 또는 그 음영을 보는 완상자(翫賞者) 각자의 정당(正當)한 심미적(審美的) 안목(眼目)에서 판별(判別)되는 것이라고 합니다. 동탁독산(童濯禿山)의 음영은 낙락장송(落落長松)이 가지 뻗어 틀어지고 청계수(淸溪水) 맑은 물이 굽이져 흐르는 울울창창(鬱鬱蒼蒼)한 산의 음영보다 미적 가치(美的價値)에 핍(乏)할 것이며, 또는 개지도 않으며는, 비도 내리지 아니하는 흐릿하고 답답(沓沓)한 날의 음영은 뇌성전광(雷聲電光)이 금시(今時)에 번갈아 이르며 대꼬챙이 같은 빗발이 붓듯이 내려 쏟아지는 취우(驟雨)의 여름날의 음영보다 우리에게 쾌감(快感)이 적을 것이며, 따라서 삶에 대한 미적 가치도 적은 날일 것입니다.",
+      "reading": null,
+      "en": "So the poetic soul is, by nature, the soul itself, and at once it never changes in itself; and even if poetic works created from the poetic soul of one and the same person differ in merit, that merit lies not in the poetic soul itself but in the change of its shadows, and is judged by the proper aesthetic eye of each individual viewer who beholds those shadows. The shadows of a bare, washed-out hill will be poorer in aesthetic value than the shadows of a lush, deep-green mountain where tall pines stretch and twist their branches and clear stream water flows in bends; and the shadows of a murky, stifling day that neither clears nor rains will give us less pleasure than the shadows of a summer day of sudden showers, when thunder and lightning come in turns and rain like rods pours down as if poured out, and so it will be a day with less aesthetic value for living as well."
+    },
+    {
+      "orig": "그러면 詩作의 價値如何는 적어도 詩作에 나타난 陰影의 價値如何일 것입니다. 그러나 그 陰影의 價値如何를 識別하기는, 곳, 詩作을 批評하기는 至難의 일인 줄로 생각합니다. 나의 愛慕하는 師匠, 金億氏가 掘作『님의 노래』",
+      "modern": "그러면 시작의 가치 여하(價値如何)는 적어도 시작에 나타난 음영의 가치 여하일 것입니다. 그러나 그 음영의 가치 여하를 식별(識別)하기는, 곧, 시작을 비평(批評)하기는 지난(至難)의 일인 줄로 생각합니다. 나의 애모(愛慕)하는 사장(師匠), 김억(金億) 씨가 졸작(拙作) 『님의 노래』",
+      "reading": null,
+      "en": "Then the value of a poetic work will at the very least be the value of the shadows that appear in it. But I think that to discern the value of those shadows, that is, to criticise a poem, is an extremely difficult task. My beloved teacher, Mr. Kim Eok, commenting on my humble poem “Song of My Beloved”"
+    },
+    {
+      "orig": "『그립은 우리 님의 맑은 노래는 언제나 내가슴에 저저 잇서요. 긴 날을 門밧게서 섯서 드러도",
+      "modern": "『그리운 우리 님의 맑은 노래는 언제나 내 가슴에 젖어 있어요. 긴 날을 문밖에서 서서 들어도",
+      "reading": null,
+      "en": "“The clear song of our beloved is always soaking my heart. Even if I stand outside the door and listen for a long day,"
+    },
+    {
+      "orig": "그립은 우리 님의 고흔 노래는 해지고 저무도록 귀에 들려요 밤들고 잠드로록 귀에 들려요.",
+      "modern": "그리운 우리 님의 고운 노래는 해 지고 저물도록 귀에 들려요. 밤들고 잠들도록 귀에 들려요.",
+      "reading": null,
+      "en": "the lovely song of our beloved can be heard in my ears until the sun sets and darkens. It can be heard in my ears until night comes and I fall asleep."
+    },
+    {
+      "orig": "고히도 흔들니는 노래가락에 내 잠은 그만이나 깁피 드러요 孤寂한 잠자리에 홀로 누어도 내 잠은 포스근히 깁피 드러요.",
+      "modern": "고이도 흔들리는 노랫가락에 내 잠은 그만이나 깊이 들어요. 고적(孤寂)한 잠자리에 홀로 누워도 내 잠은 포근히 깊이 들어요.",
+      "reading": null,
+      "en": "To the gently swaying melody of the song my sleep falls, nothing less, deep. Even lying alone in a lonely bed, my sleep falls softly deep."
+    },
+    {
+      "orig": "그러나 자다 ?면 님의 노래는 하나도 남김업시 일허 바려요 드르면 듯는 대로 님의 노래는 하나도 남김업시 닛고 마라요.』",
+      "modern": "그러나 자다 깨면 님의 노래는 하나도 남김없이 잃어버려요. 들으면 듣는 대로 님의 노래는 하나도 남김없이 잊고 말아요.』",
+      "reading": null,
+      "en": "But if I wake from sleep, I lose the beloved’s song without leaving a single trace. However I listen, I forget the beloved’s song without leaving a single trace.”"
+    },
+    {
+      "orig": "를 評하심에, 「너무도 맑아, 밋?지 드려다 보이는 江물과 가튼 詩다. 그 詩魂自體가 넘어 얏다.」고 하시고, 다시 掘作",
+      "modern": "를 평하심에, 「너무도 맑아, 밑까지 들여다보이는 강물과 같은 시다. 그 시혼 자체가 너무 얕다.」고 하시고, 다시 졸작",
+      "reading": null,
+      "en": "said, “It is a poem like a river so clear that you can see to the very bottom. The poetic soul itself is too shallow,” and again, on my humble poem"
+    },
+    {
+      "orig": "『자나 ?나 안즈나 서나 그림자 가튼 벗 한 사람이 내게 잇엇습니다.",
+      "modern": "『자나 깨나 앉으나 서나 그림자 같은 벗 한 사람이 내게 있었습니다.",
+      "reading": null,
+      "en": "“Sleeping or waking, sitting or standing, I had one friend like a shadow."
+    },
+    {
+      "orig": "그러나 우리는 얼마나 만흔 歲月을 쓸데업는 괴롭음으로만 보내엿겟습니?!",
+      "modern": "그러나 우리는 얼마나 많은 세월을 쓸데없는 괴로움으로만 보냈겠습니까!",
+      "reading": null,
+      "en": "Yet how many years have we spent in nothing but useless suffering!"
+    },
+    {
+      "orig": "오늘날은 ?다시 당신의 가슴 속, 속모를 곳을 울면서 나는 휘저어 버리고 ?납니다그려!",
+      "modern": "오늘날은 또다시 당신의 가슴 속, 속 모를 곳을 울면서 나는 휘저어 버리고 떠납니다그려!",
+      "reading": null,
+      "en": "Today once more, weeping, I stir up the unknown depths of your heart and leave!"
+    },
+    {
+      "orig": "허수한 맘, 둘데 업는 心事에 쓰라린 가슴은 그것이 사랑, 사랑이든 줄이 아니도 닛칩니다.』",
+      "modern": "허수한 맘, 둘 데 없는 심사(心事)에 쓰라린 가슴은 그것이 사랑, 사랑이던 줄이 아니도 잊힙니다.』",
+      "reading": null,
+      "en": "In a hollow heart, in an aching breast with nowhere to put its feelings, that it was love, love, I do not even remember.”"
+    },
+    {
+      "orig": "를 評하심에, 「詩魂과 詩想과 리듬이 步調를 가즉히 하야 거러나아가는 아름답은 詩다.」고 하셨다. 여긔에 對하야, 나는 첫재로 가튼 한 사람의 詩魂自體가 가튼 한 사람의 詩作에서 今時에 얏탓젓다 깁퍼젓다 할 수 업다는 것과, ?는 詩作마다 새로이 別다른 詩魂이 생기는 것이 안이라는 것을, 좀 더 分明히 하기 爲하야, 누구의 것보다도 自身이 제일 잘 알 수 잇는 自己의 詩作에 對한, 氏의 批評 一節을 一年歲月이 지난 지금에 비로소, 다시 ?으러 내여다 쓰는 것이며, 둘재로는 두個의 掘作이 모두다, 그에 나타난 陰影의 點에 잇섯서도, 亦是 各個 特有의 美를 가지고 잇다고 하려 함입니다.",
+      "modern": "를 평하심에, 「시혼과 시상(詩想)과 리듬이 보조(步調)를 가지런히 하여 걸어 나아가는 아름다운 시다.」고 하셨다. 여기에 대하여, 나는 첫째로 같은 한 사람의 시혼 자체가 같은 한 사람의 시작에서 금시에 얕았다 깊었다 할 수 없다는 것과, 또는 시작마다 새로이 별다른 시혼이 생기는 것이 아니라는 것을, 좀 더 분명히 하기 위하여, 누구의 것보다도 자신이 제일 잘 알 수 있는 자기의 시작에 대한, 씨(氏)의 비평 일절(一節)을 일 년 세월이 지난 지금에 비로소, 다시 꺼내어 쓰는 것이며, 둘째로는 두 개(個)의 졸작이 모두 다, 그에 나타난 음영의 점에 있어서도, 역시 각개 특유의 미를 가지고 있다고 하려 함입니다.",
+      "reading": null,
+      "en": "commented, “It is a beautiful poem in which poetic soul, poetic idea and rhythm walk forward keeping step together.” In response to this, I bring up once more, only now, after a year has passed, a passage of his criticism of my own poems—which no one can know better than I—firstly in order to make clearer that the poetic soul itself of one and the same person cannot become shallow or deep in an instant in the poetic works of one and the same person, and that a new and different poetic soul does not arise with each poem; and secondly to say that both of my humble poems, in the matter of the shadows that appear in them as well, each have a beauty peculiar to themselves."
+    },
+    {
+      "orig": "여러분. 우에도 썻거니와, 달밤의 ??리 소리에도 물소리에도 한갈가티 그에 特有한 陰影은 대낫의 밝음보다도 夜半의 어둡음보다도 더한 밝음 ?는 어둡음으로 ?는 어스름으로 빗나고 잇습니다.",
+      "modern": "여러분. 위에도 썼거니와, 달밤의 개구리 소리에도 물소리에도 한결같이 그에 특유한 음영은 대낮의 밝음보다도 야반(夜半)의 어두움보다도 더한 밝음 또는 어두움으로 또는 어스름으로 빛나고 있습니다.",
+      "reading": null,
+      "en": "Everyone. As I wrote above, in the sound of frogs on a moonlit night, in the sound of water, alike, the shadow peculiar to each shines with a brightness, or a darkness, or a dimness greater than the brightness of broad day or the darkness of midnight."
+    },
+    {
+      "orig": "여러분. 가을의 새어가는 새벽, 별빗도 稀微하고, 헐버슨 나무 찬비에 치저즌 가지조차 어슴푸러한데, 길 넘는 풀숩페서, 가늘게 들리와서는 사람의 구슬픈 心事를 자아내기도 하고 외롭게 ?는 하염업시 흩늣겨 숨여서는 이름조차 니저바린 눈물이 守臣節婦의 열두마듸 肝腸을 ?허도 지게하는, ??의 우름을 드러보신 적은 업습닛가. 勿論 그곳에 나타난 陰影이 봄날의 淸明한 달밤의 그것보다도 물소리 ?는 ??리 소리의 그것들보다도 더딧고 完然한, 얼는 보아도 알아볼 수 있는 것인 것만은 事實입니다.",
+      "modern": "여러분. 가을의 새어 가는 새벽, 별빛도 희미(稀微)하고, 헐벗은 나무 찬비에 찢어진 가지조차 어슴푸레한데, 길 넘는 풀숲에서, 가늘게 들려와서는 사람의 구슬픈 심사를 자아내기도 하고 외롭게 또는 하염없이 흐느껴 스며서는 이름조차 잊어버린 눈물이 수신절부(守臣節婦)의 열두 마디 간장(肝腸)을 끊어지게도 하는, 귀뚜라미의 울음을 들어 보신 적은 없습니까. 물론 그곳에 나타난 음영이 봄날의 청명한 달밤의 그것보다도 물소리 또는 개구리 소리의 그것들보다도 더 짙고 완연(完然)한, 얼른 보아도 알아볼 수 있는 것인 것만은 사실입니다.",
+      "reading": null,
+      "en": "Everyone. Have you never, on an autumn dawn that is breaking, with the starlight faint and even the branches of bare trees torn by cold rain dim, heard from the grass deeper than a man’s height the cry of the cricket, which, thinly heard, stirs a person’s plaintive thoughts, and, lonely and endlessly sobbing, seeps in, so that tears whose very name is forgotten might break the twelve joints of the heart and bowels of a loyal subject or a faithful wife? Of course it is a fact that the shadows that appear there are, more than those of a clear spring moonlit night, more than those of the sound of water or of frogs, thicker and more distinct, plain to see at a glance."
+    },
+    {
+      "orig": "그러나 나는 봄의 달밤에 듣는 ??리의 노래 ?는 물노래에서나, 가을의 서리 찬 새벽 울지는 ??의 울음에서나, 비록 翫賞하는 사람에조차 그 所好는 다를는지 몰나, 모다 그의 特有한 陰影의 美的 價値에 잇서서는 決코 優劣이 업다고 합니다.",
+      "modern": "그러나 나는 봄의 달밤에 듣는 개구리의 노래 또는 물노래에서나, 가을의 서리 찬 새벽 우는 귀뚜라미의 울음에서나, 비록 완상하는 사람에조차 그 소호(所好)는 다를는지 몰라, 모두 그의 특유한 음영의 미적 가치에 있어서는 결코 우열이 없다고 합니다.",
+      "reading": null,
+      "en": "But I say that, whether in the song of frogs heard on a spring moonlit night, or the song of water, or in the cry of crickets in the frosty cold of an autumn dawn, even if the tastes of those who admire them may differ, there is by no means any superiority or inferiority in the aesthetic value of their particular shadows."
+    },
+    {
+      "orig": "그러면 여러분. 다시 한番, 詩魂은 直接詩作에 移植되는 것이 안이라. 그 陰影으로써 顯現된다는 것과, ?는 顯現된 陰影의 價値에 對한 優劣은, 적어도 其顯現된 程度及 態度如何와 形狀如何에 ?라 創造되는 各自特有한 美的 價値에 依하야 判定할 것임을 말하고, 인제는, 이 부?럽을 만큼이나 조그만 論文은 이로써 ?틀 짓기로 합니다.",
+      "modern": "그러면 여러분. 다시 한 번, 시혼은 직접 시작에 이식(移植)되는 것이 아니라, 그 음영으로써 현현된다는 것과, 또는 현현된 음영의 가치에 대한 우열은, 적어도 그 현현된 정도 및 태도 여하와 형상 여하에 따라 창조되는 각자 특유한 미적 가치에 의하여 판정할 것임을 말하고, 인제는, 이 부끄러울 만큼이나 조그만 논문(論文)은 이로써 끝을 짓기로 합니다.",
+      "reading": null,
+      "en": "So, everyone, once more: I say that the poetic soul is not directly transplanted into poetic works but is revealed through shadows; and that superiority and inferiority in the value of the revealed shadows should be judged, at the least, by the aesthetic value peculiar to each, created according to the degree and manner of its revelation and its form; and with that I will end this little essay, small to the point of embarrassment."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": "Raw Wikisource transcription has ~50 \"?\" placeholders for unrendered (old-jamo/cluster) characters; all guessed from context in `modern` and `en` (low confidence: 꿈, 개구리 [spring chorus; raw shows ??리], 귀뚜라미 [autumn; raw ??], 찬란한 [raw ?내한], 더 짙고 [raw 더딧고], 졸작 [raw 掘作 = 拙作]). Su Shi cited as 蘇子膽 (= 子瞻) and 唐以 (= 唐宋) in raw; 十李曲坊 kept as written. Poem quotes are Sowol poems reviewed by Kim Eok; 28-31 poem not identified. Paragraph 31 \"아니도\" kept as in raw."
+  }
+}
