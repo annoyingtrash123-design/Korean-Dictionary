@@ -1,5 +1,6 @@
 {
   "id": "graded-hanja-culture",
+  "attach_to": "hunminjeongeum_jeonginji",
   "meta": {
     "title_ko": "한자와 한문 문화권",
     "title_en": "Chinese Characters and the Sinitic Cultural Sphere",

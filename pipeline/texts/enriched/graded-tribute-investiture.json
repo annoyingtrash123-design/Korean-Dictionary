@@ -1,5 +1,6 @@
 {
   "id": "graded-tribute-investiture",
+  "attach_to": "ganghwado_treaty",
   "meta": {
     "title_ko": "조공과 책봉",
     "title_en": "Tribute and Investiture",

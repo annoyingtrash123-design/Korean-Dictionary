@@ -49,7 +49,24 @@ async function readerFlow(page: Page) {
     await page.getByLabel('Level', { exact: true }).selectOption('');
     await expect.poll(() => page.locator('.rd-row').count()).toBe(total);
     await page.getByRole('button', { name: /Filters/ }).click();
+    // period headings fold away and come back (remembered per device)
+    const band = page.locator('.tl-h .rd-fold').first();
+    await expect(band).toHaveAttribute('aria-expanded', 'true');
+    await band.click();
+    await expect(band).toHaveAttribute('aria-expanded', 'false');
+    await expect.poll(() => page.locator('.rd-row').count()).toBeLessThan(total);
+    await page.waitForTimeout(200);
+    await shot(page, 'timeline-folded');
+    await band.click();
+    await expect.poll(() => page.locator('.rd-row').count()).toBe(total);
     await page.getByRole('tab', { name: 'Shelves' }).click();
+    const shelf = page.locator('.rd-shelf-h .rd-fold').first();
+    await shelf.click();
+    await expect(shelf).toHaveAttribute('aria-expanded', 'false');
+    await page.waitForTimeout(200);
+    await shot(page, 'shelves-folded');
+    await shelf.click();
+    await expect(shelf).toHaveAttribute('aria-expanded', 'true');
   }
 
   // open a graded reader

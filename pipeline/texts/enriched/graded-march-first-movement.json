@@ -1,5 +1,6 @@
 {
   "id": "graded-march-first-movement",
+  "attach_to": "gimi_declaration",
   "meta": {
     "title_ko": "3·1 운동",
     "title_en": "The March 1st Movement",

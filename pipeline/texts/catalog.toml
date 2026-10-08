@@ -3547,3 +3547,552 @@ alt_titles = ["헤이그 밀사 위임장", "헤이그특사 위임장", "고종
 search = ["헤이그 특사 위임장", "헤이그 밀사 위임장", "고종 위임장 1907", "海牙密使 委任狀"]
 pd_basis = "Author (Gojong) died 1919; the document is also an official imperial letter. Public domain."
 uncertain = ["source_title", "script"]
+
+# ── 2026-10: primary sources for the AI background essays ──
+
+# resource: ko page likely 광개토왕릉비 (several titles in use); zh may have 廣開土王碑
+[[text]]
+id = "gwanggaeto_stele"
+title_ko = "광개토왕릉비 비문"
+title_hanja = "廣開土王陵碑文"
+title_en = "Stele of King Gwanggaeto (414)"
+author_ko = "고구려 (장수왕 건립)"
+author_en = "Goguryeo (erected by King Jangsu)"
+author_dates = ""
+date = "414"
+year = 414
+period = "three-kingdoms"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the opening founding legend (Chumo/Jumong, 惟昔始祖鄒牟王之創基也 … 黃龍來下迎王) and the summary of the 永樂 campaigns (永樂五年 Baekje/Silla, 永樂九年–十四年 Wa and Baekje, 永樂二十年 Buyeo); omit the tomb-guardian household list."
+source = "wikisource-ko"
+source_title = "광개토왕릉비"
+alt_titles = ["광개토대왕릉비", "광개토왕릉비문", "광개토대왕릉비문", "廣開土王碑", "好太王碑"]
+search = ["광개토왕릉비", "광개토대왕릉비문", "廣開土王碑", "好太王碑", "永樂五年歲在乙未"]
+pd_basis = "Pre-modern royal inscription of 414; anonymous and far beyond any copyright term."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: likely exists as part of 삼국유사 권5 (효선 제9); page scheme uncertain
+[[text]]
+id = "samguk_yusa_daeseong"
+title_ko = "삼국유사 「대성효이세부모」"
+title_hanja = "大城孝二世父母"
+title_en = "Samguk yusa: Daeseong Honours His Parents of Two Lives (Bulguksa and Seokbulsa founding)"
+author_ko = "일연"
+author_en = "Ilyeon"
+author_dates = "1206–1289"
+date = "c. 1281–1283 (story set 751)"
+year = 1281
+period = "goryeo"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+collection = "삼국유사"
+excerpt = true
+excerpt_note = "Keep only the 大城孝二世父母 (神文代) entry of 卷第五 孝善第九: Daeseong's two sets of parents, the 吐含山 bear, and the founding of 佛國寺 and 石佛寺; omit neighbouring entries."
+source = "wikisource-zh"
+source_title = "三國遺事/卷第五"
+alt_titles = ["三國遺事/卷五", "삼국유사/권5", "삼국유사/효선", "三國遺事/孝善第九"]
+sections = ["大城孝二世父母"]
+search = ["대성효이세부모", "大城孝二世父母", "삼국유사 대성 불국사 석불사", "三國遺事 孝善第九"]
+pd_basis = "Author died 1289; centuries-old work in the public domain."
+uncertain = ["date", "year", "source_title", "search", "sections"]
+
+# resource: 高麗史 世家 page scheme 高麗史/卷二; the 훈요십조 sits in 太祖 26年 4月
+[[text]]
+id = "hunyo_sipjo"
+title_ko = "훈요십조"
+title_hanja = "訓要十條"
+title_en = "Ten Injunctions of Taejo Wang Geon (943)"
+author_ko = "태조 왕건 (정인지 등 편찬 고려사)"
+author_en = "Taejo Wang Geon (as recorded in the Goryeosa)"
+author_dates = "877–943"
+date = "943 (Taejo 26th year, 4th month)"
+year = 943
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the 太祖二十六年四月 entry containing the 訓要 preface (朕聞大舜耕歷山…) and all ten injunctions through 十曰; omit the earlier annals of the same reign."
+source = "wikisource-zh"
+source_title = "高麗史/卷二"
+alt_titles = ["高麗史/卷二/世家", "高麗史/卷002", "고려사/권2", "고려사/세가 권제2", "訓要十條"]
+sections = ["二十六年"]
+search = ["훈요십조", "訓要十條", "고려사 태조 26년", "高麗史 太祖二十六年 訓要"]
+pd_basis = "Pre-modern official royal text (943) preserved in the Goryeosa (1451); public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: zh 宣和奉使高麗圖經 likely exists in volumes (卷三十一 器皿一, 卷三十二 器皿二); ko page unlikely
+[[text]]
+id = "goryeo_dogyeong_celadon"
+title_ko = "선화봉사고려도경: 도준·기명 (비색 청자) 대목"
+title_hanja = "宣和奉使高麗圖經"
+title_en = "Xuanhe fengshi Gaoli tujing: Passages on Ceramic Vessels and Celadon (1124)"
+author_ko = "서긍"
+author_en = "Xu Jing"
+author_dates = "1091–1153"
+date = "1124 (presented 1124; Xuanhe 5)"
+year = 1124
+period = "goryeo"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "sino-korean"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep only the 器皿 chapter passages on ceramics: the 陶尊 entry (卷三十二) and the 陶器 / 狻猊出香 / 翡色 remarks (高麗人謂之翡色); omit the other vessel entries and all other chapters."
+source = "wikisource-zh"
+source_title = "宣和奉使高麗圖經/卷三十二"
+alt_titles = ["宣和奉使高麗圖經/卷第三十二", "宣和奉使高麗圖經/卷三十一", "高麗圖經/卷三十二", "宣和奉使高麗圖經"]
+sections = ["陶尊", "器皿"]
+search = ["선화봉사고려도경", "宣和奉使高麗圖經 器皿", "陶尊 翡色", "高麗圖經 翡色", "서긍 고려도경 청자"]
+pd_basis = "Author (Xu Jing) died 1153; centuries-old work in the public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: 東國李相國集 on zh/ko wikisource; chapter number is a guess (기고문 section, c. 卷二十五)
+[[text]]
+id = "daejanggak_pangunsin_gigomun"
+title_ko = "대장각판군신기고문"
+title_hanja = "大藏刻板君臣祈告文"
+title_en = "Prayer of the Sovereign and Ministers on Carving the Tripitaka Woodblocks (1237)"
+author_ko = "이규보"
+author_en = "Yi Gyu-bo"
+author_dates = "1168–1241"
+date = "1237"
+year = 1237
+period = "goryeo"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "東國李相國集/卷二十五"
+alt_titles = ["東國李相國全集/卷二十五", "東國李相國全集/卷第二十五", "大藏刻板君臣祈告文", "동국이상국집/권25"]
+sections = ["大藏刻板君臣祈告文"]
+search = ["대장각판군신기고문", "大藏刻板君臣祈告文", "이규보 기고문", "東國李相國集 祈告文"]
+pd_basis = "Author died 1241; centuries-old work in the public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: 高麗史 列傳 卷第四十三 (叛逆); 裴仲孫 volume number is a guess
+[[text]]
+id = "goryeosa_bae_jungson"
+title_ko = "고려사 열전 배중손 (삼별초)"
+title_hanja = "高麗史 列傳 裴仲孫"
+title_en = "Goryeosa Biographies: Bae Jung-son and the Sambyeolcho (1270–1271)"
+author_ko = "정인지 등 (고려사 편찬)"
+author_en = "Jeong In-ji et al. (compilers of the Goryeosa)"
+author_dates = ""
+date = "1451 (events 1270–1271)"
+year = 1270
+period = "goryeo"
+themes = ["ancient-goryeo"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the 裴仲孫 biography only (the 1270 revolt of the 三別抄, the enthronement of 承化侯 溫, the move to 珍島 and the 1271 fall); omit the other 列傳 in the same chapter."
+source = "wikisource-zh"
+source_title = "高麗史/卷一百三十"
+alt_titles = ["高麗史/卷130", "高麗史/列傳卷第四十三", "高麗史/卷一百二十九", "高麗史/卷一百三十一", "고려사/권130", "裴仲孫"]
+sections = ["裴仲孫"]
+search = ["배중손", "裴仲孫", "삼별초 고려사 열전", "高麗史 裴仲孫 三別抄", "승화후 온 삼별초"]
+pd_basis = "Official compilation of 1451 (anonymous/collective); public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: LOW confidence; the colophon may exist only inside a page on the Jikji text or on a ko article, not as a Wikisource page
+[[text]]
+id = "jikji_colophon"
+title_ko = "직지 간기 (백운화상초록불조직지심체요절)"
+title_hanja = "白雲和尙抄錄佛祖直指心體要節 跋"
+title_en = "Jikji: Colophon of the Metal-Type Printing (1377)"
+author_ko = "백운 경한 (석찬·달담 발문)"
+author_en = "Baegun Gyeonghan (colophon by disciples Seokchan and Dadam)"
+author_dates = "1298–1374"
+date = "1377 (Xuanguang 7, 7th month)"
+year = 1377
+period = "goryeo"
+themes = ["ancient-goryeo", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep only the closing colophon lines (the 宣光七年丁巳七月 日 清州牧外興德寺鑄字印施 printing notice and the 緣化門人釋璨・達湛 sponsor names); a few lines, no body text."
+source = "wikisource-zh"
+source_title = "白雲和尚抄錄佛祖直指心體要節"
+alt_titles = ["白雲和尙抄錄佛祖直指心體要節", "직지심체요절", "직지", "佛祖直指心體要節", "백운화상초록불조직지심체요절"]
+search = ["직지심체요절", "白雲和尙抄錄佛祖直指心體要節", "直指心體要節 興德寺", "宣光七年丁巳七月 興德寺鑄字印施"]
+pd_basis = "Pre-modern Buddhist anthology and printer's colophon of 1377; anonymous/centuries-old, public domain."
+uncertain = ["date", "year", "author", "source_title", "search", "sections"]
+
+# resource: 太祖實錄 卷一, 1年7月丁未 (28th); zh page scheme 朝鮮王朝實錄/太祖實錄/卷一
+[[text]]
+id = "taejo_jeuk_wi_gyoseo"
+title_ko = "태조 즉위교서 (태조실록 1년 7월 28일)"
+title_hanja = "太祖卽位敎書"
+title_en = "Accession Proclamation of King Taejo of Joseon (1392)"
+author_ko = "태조 (이성계)"
+author_en = "King Taejo (Yi Seong-gye)"
+author_dates = "1335–1408"
+date = "1392-08-05 (Taejo year 1, 7th month, 28th day)"
+year = 1392
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "documents"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the 7月丁未 entry on the enthronement at 壽昌宮 and the full 敎書 beginning 王若曰 (the new dynasty's reform programme: 國號, 儀章法制, 科擧, 賦役, 刑法); omit the preceding 七月 entries."
+source = "wikisource-zh"
+source_title = "朝鮮王朝實錄/太祖實錄/卷一"
+alt_titles = ["朝鮮王朝實錄/太祖康獻大王實錄/卷一", "朝鮮王朝實錄/太祖實錄/一年", "太祖實錄/卷一"]
+sections = ["七月", "丁未"]
+search = ["태조 즉위교서", "太祖實錄 卷一 即位教書", "太祖元年七月丁未 王若曰", "태조실록 1년 7월 28일"]
+pd_basis = "Official royal edict preserved in the Veritable Records; centuries old, public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: 世宗實錄 yearly pages (sejong_sillok_changje uses 二十五年); 報漏閣 entry is in 世宗 16年 7月 1日 (卷六十五)
+[[text]]
+id = "sejong_sillok_jagyeongnu"
+title_ko = "세종실록 보루각·자격루 기사 (1434)"
+title_hanja = "報漏閣自擊漏"
+title_en = "Sejong sillok: Boru-gak and the Self-Striking Water Clock (1434)"
+author_ko = "실록청 (편찬)"
+author_en = "Veritable Records bureau (compilers)"
+author_dates = ""
+date = "1434 (Sejong 16th year, 7th month, 1st day)"
+year = 1434
+period = "joseon-early"
+themes = ["joseon"]
+shelf = "documents"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep only the 世宗十六年七月 entry that describes the 報漏閣 and the 自擊漏 designed by 蔣英實 (the 木人 striking bell, drum and gong for the watches); also the short 蔣英實 mentions if adjacent."
+source = "wikisource-zh"
+source_title = "朝鮮王朝實錄/世宗實錄/十六年"
+alt_titles = ["朝鮮王朝實錄/世宗莊憲大王實錄/十六年", "朝鮮王朝實錄/世宗實錄/卷六十五", "世宗實錄/卷六十五"]
+sections = ["七月"]
+search = ["세종실록 보루각 자격루", "報漏閣記 自擊漏", "世宗實錄 十六年 七月 報漏閣", "장영실 자격루 세종실록"]
+pd_basis = "Official compilation (Veritable Records); centuries old, public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: 난중일기 exists on ko wikisource in per-year pages (임진일기, 정유일기); original is hanmun, check it is not a modern translation
+[[text]]
+id = "nanjung_ilgi"
+title_ko = "난중일기"
+title_hanja = "亂中日記"
+title_en = "Nanjung ilgi (War Diary of Yi Sun-sin)"
+author_ko = "이순신"
+author_en = "Yi Sun-sin"
+author_dates = "1545–1598"
+date = "1592–1598"
+year = 1592
+period = "joseon-late"
+themes = ["joseon"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the opening days of 壬辰日記 (1592, 正月 first days through the early 2nd month) and the 丁酉日記 entries for 九月十四日–十七日 on the Myeongnyang battle (필사즉생 / 十三隻); omit all other years."
+source = "wikisource-ko"
+source_title = "난중일기"
+alt_titles = ["亂中日記", "난중일기/임진일기", "난중일기/정유일기", "이충무공전서/난중일기"]
+sections = ["임진일기", "정유일기"]
+search = ["난중일기", "亂中日記", "이순신 난중일기 명량", "정유일기 九月十六日"]
+pd_basis = "Author died 1598; centuries-old work in the public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: 표암유고 / 단원기; may exist on ko as 단원기 (檀園記)
+[[text]]
+id = "danwongi"
+title_ko = "단원기"
+title_hanja = "檀園記"
+title_en = "Record of Danwon (Kang Se-hwang on Kim Hong-do)"
+author_ko = "강세황"
+author_en = "Kang Se-hwang"
+author_dates = "1713–1791"
+date = "1784"
+year = 1784
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-ko"
+source_title = "단원기"
+alt_titles = ["檀園記", "표암유고/단원기", "豹菴遺稿/檀園記"]
+search = ["단원기", "檀園記", "강세황 단원기 김홍도", "豹菴遺稿 檀園記"]
+pd_basis = "Author died 1791; centuries-old work in the public domain."
+uncertain = ["source_title", "search"]
+
+# resource: 與猶堂全書 第一集 詩文集 卷十 (說) 城說; ko may only have a translation
+[[text]]
+id = "seongseol"
+title_ko = "성설"
+title_hanja = "城說"
+title_en = "Discourse on Fortress Walls (Hwaseong design)"
+author_ko = "정약용"
+author_en = "Jeong Yak-yong"
+author_dates = "1762–1836"
+date = "1792"
+year = 1792
+period = "joseon-late"
+themes = ["joseon", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-zh"
+source_title = "與猶堂全書/第一集 詩文集/第十卷/城說"
+alt_titles = ["與猶堂全書/第一集/詩文集/卷十/城說", "與猶堂全書/第一集 詩文集/卷十/城說", "城說", "성설", "여유당전서/성설"]
+search = ["성설 정약용", "城說 丁若鏞", "與猶堂全書 城說", "화성 성설 정약용"]
+pd_basis = "Author died 1836; centuries-old work in the public domain."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: likely exists; mixed Sino-Korean script
+[[text]]
+id = "daehanguk_gukje"
+title_ko = "대한국 국제"
+title_hanja = "大韓國國制"
+title_en = "Constitution of the Korean Empire (Daehanguk gukje, 1899)"
+author_ko = "대한제국 (고종)"
+author_en = "Korean Empire (Emperor Gojong)"
+author_dates = ""
+date = "1899-08-17"
+year = 1899
+period = "korean-empire"
+themes = ["joseon"]
+shelf = "constitution"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "대한국 국제"
+alt_titles = ["대한국국제", "大韓國國制", "대한국 국제 (1899)"]
+search = ["대한국 국제", "大韓國國制", "대한제국 국제 1899"]
+pd_basis = "Official state document (imperial edict/fundamental law; Copyright Act art. 7)."
+uncertain = ["source_title"]
+
+# resource: likely exists; also titled 한일병합조약 / 韓國倂合ニ關スル條約. The 순종 유조 (1926) is deliberately left out: treaty only.
+[[text]]
+id = "hanil_byeonghap_treaty"
+title_ko = "한국병합에 관한 조약"
+title_hanja = "韓國倂合ニ關スル條約"
+title_en = "Treaty of Annexation of Korea (1910)"
+author_ko = "대한제국·일본제국"
+author_en = "Korean Empire and Empire of Japan"
+author_dates = ""
+date = "1910-08-22 (promulgated 1910-08-29)"
+year = 1910
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "treaties"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "한국병합에 관한 조약"
+alt_titles = ["한일병합조약", "한일합병조약", "韓國倂合ニ關スル條約", "한국 병합에 관한 조약", "경술국치조약"]
+search = ["한국병합에 관한 조약", "한일병합조약", "韓國倂合ニ關スル條約", "한일합방조약"]
+pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
+uncertain = ["source_title", "search"]
+
+# resource: LOW-MEDIUM; judgment text was Japanese (mixed kana/kanji); Wikisource copies may be a Korean rendering by others; check provenance
+[[text]]
+id = "yu_gwansun_pangyeolmun"
+title_ko = "유관순 판결문 (경성복심법원, 1920)"
+title_hanja = "柳寬順 判決文"
+title_en = "Judgment on Yu Gwan-sun (Keijo Court of Appeal, 1920)"
+author_ko = "경성복심법원 (조선총독부 재판소)"
+author_en = "Keijo Court of Appeal (Government-General court)"
+author_dates = ""
+date = "1920-03-21 (appeal; first instance 1919-09-11 at Gyeongseong Chiang Court)"
+year = 1920
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep only the 主文 and 理由 sections of the judgment on Yu Gwan-sun (the Aunae market 1919.4.1 demonstration, the charges of 保安法違反 and 騷擾); omit the co-defendants' identification boilerplate."
+source = "wikisource-ko"
+source_title = "유관순 판결문"
+alt_titles = ["유관순 재판 판결문", "柳寬順 判決文", "유관순 판결문 (경성복심법원)", "유관순 (판결문)"]
+search = ["유관순 판결문", "유관순 경성복심법원 판결", "柳寬順 判決 保安法 騷擾", "경성복심법원 판결 유관순 1920"]
+pd_basis = "Court judgment; judgments are unprotected official documents (Copyright Act art. 7)."
+uncertain = ["date", "year", "source_title", "script", "search", "sections", "pd_basis"]
+
+# resource: likely exists as 맥아더 포고 제1호 / 조선인민에게 고함; Korean text official US Army Pacific release
+[[text]]
+id = "macarthur_pogo_1"
+title_ko = "조선인민에게 고함 (맥아더 포고 제1호)"
+title_en = "To the People of Korea (MacArthur Proclamation No. 1, 1945)"
+author_ko = "미국 태평양육군총사령부 (맥아더 포고)"
+author_en = "U.S. Army Forces Pacific (MacArthur Proclamation No. 1)"
+author_dates = ""
+date = "1945-09-07"
+year = 1945
+period = "modern"
+themes = ["modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "조선인민에게 고함"
+alt_titles = ["맥아더 포고 제1호", "태평양미국육군총사령부 포고 제1호", "포고 제1호", "조선 인민에게 고함"]
+search = ["조선인민에게 고함", "맥아더 포고 제1호", "태평양미국육군총사령부 포고", "포고 제1호 1945 9월 7일"]
+pd_basis = "Official occupation-authority proclamation (an official state document; Copyright Act art. 7; US government work)."
+uncertain = ["source_title", "search"]
+
+# resource: likely exists; long text, keep excerpt
+[[text]]
+id = "armistice_agreement_ko"
+title_ko = "한국 군사정전에 관한 협정"
+title_en = "Korean Armistice Agreement (1953, Korean text)"
+author_ko = "국제연합군총사령관·조선인민군최고사령관·중국인민지원군사령원"
+author_en = "UN Command, KPA and CPV commanders"
+author_dates = ""
+date = "1953-07-27"
+year = 1953
+period = "modern"
+themes = ["modern-korea"]
+shelf = "treaties"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the preamble (서문) and the headings plus first paragraphs of 제1조 (군사분계선과 비무장지대) and 제2조 (정전의 구체적 조치, 정전 감시기구); omit articles 제3조 onward and all annexes."
+source = "wikisource-ko"
+source_title = "한국 군사정전에 관한 협정"
+alt_titles = ["한국군사정전에관한협정", "정전협정", "한국 정전 협정", "한국 군사 정전에 관한 협정", "6.25 정전협정"]
+sections = ["서문", "제1조", "제2조"]
+search = ["한국 군사정전에 관한 협정", "정전협정", "한국군사정전에관한협정", "Korean Armistice Agreement 한글"]
+pd_basis = "Official state/government document (armistice agreement; Copyright Act art. 7)."
+uncertain = ["source_title", "search", "sections"]
+
+# resource: medium; statement text widely transcribed; author is the President's office (Rhee died 1965, so authorship is attributed to the state, not the person)
+[[text]]
+id = "rhee_haya_seongmyeong"
+title_ko = "이승만 대통령 하야 성명"
+title_en = "President Syngman Rhee's Resignation Statement (1960)"
+author_ko = "대한민국 대통령 (공식 성명)"
+author_en = "President of the Republic of Korea (official statement)"
+author_dates = ""
+date = "1960-04-26"
+year = 1960
+period = "modern"
+themes = ["modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "이승만 대통령 하야 성명"
+alt_titles = ["이승만 하야 성명", "이승만 대통령 하야성명서", "이승만 대통령의 하야 성명", "대통령 하야 성명서"]
+search = ["이승만 하야 성명", "이승만 대통령 하야 성명서", "국민이 원한다면 대통령직 사임", "1960 4월 26일 하야 성명"]
+pd_basis = "Official presidential statement issued by the state; treated as an unprotected official document (Copyright Act art. 7) and not as a personal literary work (Rhee died 1965)."
+uncertain = ["source_title", "search", "pd_basis"]
+
+# resource: statute; the `law` source should find it by name (법률 제5029호, 1995-12-21)
+[[text]]
+id = "special_act_518"
+title_ko = "5·18민주화운동 등에 관한 특별법"
+title_en = "Special Act on the May 18 Democratisation Movement (1995)"
+author_ko = "대한민국"
+author_en = "Republic of Korea"
+author_dates = ""
+date = "1995-12-21"
+year = 1995
+period = "modern"
+themes = ["modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "law"
+source_title = "5·18민주화운동 등에 관한 특별법"
+alt_titles = ["5.18민주화운동 등에 관한 특별법", "5ㆍ18민주화운동 등에 관한 특별법"]
+search = ["5·18민주화운동 등에 관한 특별법", "5.18민주화운동 등에 관한 특별법", "5ㆍ18민주화운동등에관한특별법"]
+pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
+uncertain = ["source_title", "search", "date", "year"]
+
+# resource: LOW; an official 1962 plan document may not be on Wikisource; the plan text was issued by 경제기획원/건설부-era 최고회의 and its copyright status is not settled
+[[text]]
+id = "first_five_year_plan_1962"
+title_ko = "제1차 경제개발 5개년계획 (1962)"
+title_en = "First Five-Year Economic Development Plan (1962)"
+author_ko = "대한민국 정부 (경제기획원)"
+author_en = "Government of the Republic of Korea (Economic Planning Board)"
+author_dates = ""
+date = "1962-01-13 (announced); 1962 plan period 1962–1966"
+year = 1962
+period = "modern"
+themes = ["modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep only the plan's 서문 / 계획의 목표와 기본방침 (the opening statement of objectives and basic policy, and the list of key sectors); omit statistical tables and sector-by-sector annexes."
+source = "wikisource-ko"
+source_title = "제1차 경제개발 5개년계획"
+alt_titles = ["제1차 경제개발5개년계획", "제1차 경제개발 5개년 계획", "경제개발 5개년계획 공고", "제1차 경제개발 5개년계획 (1962~1966)"]
+search = ["제1차 경제개발 5개년계획", "경제개발5개년계획 공고 1962", "경제기획원 5개년계획 서문", "제1차 5개년계획 1962"]
+pd_basis = "Official government planning document; treated as an unprotected state document (Copyright Act art. 7) but the status of a full policy publication is unsettled."
+uncertain = ["date", "source_title", "search", "sections", "pd_basis"]
+
+# resource: LOW-MEDIUM; repealed statutes may not be on the `law` source (current statutes only); the statute is 서울올림픽대회 및 아시아경기대회 지원법 (name varied over amendments)
+[[text]]
+id = "seoul_olympic_support_act"
+title_ko = "서울올림픽대회 지원법"
+title_en = "Act on Support for the Seoul Olympic Games (1980s)"
+author_ko = "대한민국"
+author_en = "Republic of Korea"
+author_dates = ""
+date = "1982 (enacted; exact date unverified)"
+year = 1982
+period = "modern"
+themes = ["modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the purpose article (제1조 목적), the definitions and the articles creating the 서울올림픽대회조직위원회 and the state's support duties; omit penal and supplementary provisions."
+source = "law"
+source_title = "서울올림픽대회 및 아시아경기대회 지원법"
+alt_titles = ["서울올림픽대회지원법", "서울올림픽대회조직위원회 지원 법률", "서울올림픽대회 및 제10회 아시아경기대회 지원법", "88서울올림픽대회지원법"]
+search = ["서울올림픽대회 지원법", "서울올림픽대회조직위원회 지원", "서울올림픽 지원 법률 1982", "제24회 올림픽대회 지원법"]
+pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
+uncertain = ["date", "year", "source_title", "search", "pd_basis"]
+
+# resource: statute; the `law` source should find it by name (법률 제5929호, 1999-02-08)
+[[text]]
+id = "munhwa_saneop_jinheung_gibonbeop"
+title_ko = "문화산업진흥 기본법"
+title_en = "Framework Act on the Promotion of the Cultural Industry (1999)"
+author_ko = "대한민국"
+author_en = "Republic of Korea"
+author_dates = ""
+date = "1999-02-08"
+year = 1999
+period = "modern"
+themes = ["modern-korea"]
+shelf = "documents"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep 제1조 (목적) and 제2조 (정의: 문화산업, 문화상품, 문화콘텐츠 etc.); omit all later chapters and supplementary provisions."
+source = "law"
+source_title = "문화산업진흥 기본법"
+alt_titles = ["문화산업진흥기본법"]
+sections = ["제1조", "제2조"]
+search = ["문화산업진흥 기본법", "문화산업진흥기본법"]
+pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
+uncertain = ["date", "source_title", "search", "sections"]
+
+# resource: LOW-MEDIUM; 장부가 (1909) is a short hanmun poem in An's own words; the ko page may hold only a Korean rendering or the poem inside an article. A better original source: 안응칠 역사 (1910, hanmun) or 동양평화론 서문 if a non-translated page is found.
+[[text]]
+id = "anjunggeun_jangbuga"
+title_ko = "장부가"
+title_hanja = "丈夫歌"
+title_en = "Song of the Brave Man (An Jung-geun, 1909)"
+author_ko = "안중근"
+author_en = "An Jung-geun"
+author_dates = "1879–1910"
+date = "1909-10 (before the Harbin shooting)"
+year = 1909
+period = "korean-empire"
+themes = ["colonial-independence", "sino-korean"]
+shelf = "hanmun"
+script = "hanmun"
+excerpt = false
+source = "wikisource-ko"
+source_title = "장부가"
+alt_titles = ["丈夫歌", "안중근/장부가", "안중근의 장부가", "안응칠 역사/장부가"]
+search = ["장부가 안중근", "丈夫歌 安重根", "丈夫處世兮 其志大矣", "안응칠 역사 장부가"]
+pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the original is in the public domain."
+uncertain = ["date", "source_title", "search", "script"]

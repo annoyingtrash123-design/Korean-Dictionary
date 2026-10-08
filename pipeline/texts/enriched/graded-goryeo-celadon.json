@@ -1,5 +1,6 @@
 {
   "id": "graded-goryeo-celadon",
+  "attach_to": "goryeo_dogyeong_celadon",
   "meta": {
     "title_ko": "고려청자",
     "title_en": "Goryeo Celadon",

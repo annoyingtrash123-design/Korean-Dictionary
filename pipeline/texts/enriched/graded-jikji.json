@@ -1,5 +1,6 @@
 {
   "id": "graded-jikji",
+  "attach_to": "jikji_colophon",
   "meta": {
     "title_ko": "직지와 금속활자",
     "title_en": "Jikji and Metal Movable Type",

@@ -1,5 +1,6 @@
 {
   "id": "graded-dangun",
+  "attach_to": "dangun_samgukyusa",
   "meta": {
     "title_ko": "단군 이야기",
     "title_en": "The Story of Dangun",

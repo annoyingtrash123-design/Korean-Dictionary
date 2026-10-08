@@ -13,7 +13,7 @@ import { LookupCard, type LookupState } from '../components/LookupCard';
 import { Icon } from '../components/Icons';
 import { Empty, LevelBadge, Sheet } from '../components/common';
 import { href, readerPath, wordPath } from '../lib/router';
-import type { ResultRow, TextDoc, TextLabels, TextMatch, TextProvenance } from '../lib/types';
+import type { ResultRow, TextBackground, TextDoc, TextLabels, TextMatch, TextProvenance } from '../lib/types';
 
 // ---------- safe markdown ----------
 function Inl({ c }: { c: Inline[] }) {
@@ -126,6 +126,36 @@ export function offsetAtPoint(root: HTMLElement, x: number, y: number): number |
 }
 
 // ---------- the view ----------
+const BG = 100000;
+/** Modern spelling applies to Hangul / mixed-script texts from before the 1933 unified orthography. */
+export const modernEra = (doc: { meta: { year?: number; script?: string } } | undefined): boolean =>
+  !!doc && doc.meta.script !== 'hanmun' && (doc.meta.year ?? 0) < 1933;
+
+function Background({ bg, sel, showEn }: { bg: TextBackground; sel: { n: number; span: Span } | null; showEn: boolean }) {
+  return (
+    <details class="rd-bg">
+      <summary><span>Background <span lang="ko">· 배경</span></span><span class="chip-ai">AI-written</span></summary>
+      <div class="rd-bg-body">
+        <p class="small muted rd-bg-note">A learner essay written for this app to give context for the source text below. It is not part of the historical text{bg.reviewed ? '; checked by an independent reviewer' : ''}.</p>
+        {bg.title_ko && <h3 class="rd-bg-title" lang="ko">{bg.title_ko}{bg.level ? <span class="chip-lvl">{bg.level}</span> : null}</h3>}
+        {bg.title_en && <div class="rd-bg-title-en muted">{bg.title_en}</div>}
+        <div class="rd-body rd-bg-text" lang="ko">
+          {bg.paragraphs.map((p, i) => (
+            <Para key={i} n={BG + i} text={p.ko} hl={sel && sel.n === BG + i ? sel.span : null} verse={false} hanmun={false} en={p.en} showEn={showEn} showReading={false} />
+          ))}
+        </div>
+        {!!bg.vocab?.length && (
+          <ul class="plain rd-vocab rd-bg-vocab" aria-label="Background vocabulary">
+            {bg.vocab.map((v, i) => (
+              <li key={i}><a class="hangul" lang="ko" href={href(wordPath(v.word))}>{v.word}</a><span class="rd-vgloss">{v.gloss_en}</span><LevelBadge level={v.level} /></li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </details>
+  );
+}
+
 export function TextView({ id }: { id: string }) {
   const prefs = useStore(readerPrefs);
   const status = useStore(packStatus$);
@@ -139,10 +169,19 @@ export function TextView({ id }: { id: string }) {
   const [cardH, setCardH] = useState(0);
   const seq = useRef(0);
 
-  const hasModern = !!doc?.paragraphs.some((p) => p.modern);
+  // Hangul texts written before the 1933 unified orthography are shown in modern spelling only;
+  // later texts are shown as published.
+  const hasModern = !!doc?.paragraphs.some((p) => p.modern) && modernEra(doc);
   const hasReading = !!doc?.paragraphs.some((p) => p.reading);
-  const useModern = prefs.modern && hasModern;
-  const shown = (n: number) => { const p = doc!.paragraphs[n]; return (useModern && p.modern) || p.orig; };
+  const useModern = hasModern;
+  const bg = doc?.notes?.background?.paragraphs?.length ? doc.notes.background : null;
+  /** Paragraph index space: 0.. = the text, BG.. = the background essay. */
+  const shown = (n: number) => {
+    if (n >= BG) return bg!.paragraphs[n - BG].ko;
+    const p = doc!.paragraphs[n]; return (useModern && p.modern) || p.orig;
+  };
+  const lastPara = (n: number) => (n >= BG ? BG + (bg?.paragraphs.length ?? 0) : doc!.paragraphs.length) - 1;
+  const firstPara = (n: number) => (n >= BG ? BG : 0);
 
   // lookups run against the text as displayed (modern spelling when that toggle is on)
   const clear = () => { seq.current++; setSel(null); setLk({ match: null, loading: false, manual: false, text: '' }); };
@@ -194,14 +233,14 @@ export function TextView({ id }: { id: string }) {
     if (what === 'extend') return void selectSpan(n, extendSpan(text, span));
     if (what === 'next') {
       let para = n, o = nextWordStart(text, span.end);
-      while (o == null && para + 1 < doc.paragraphs.length) { para++; o = nextWordStart(shown(para), 0); }
+      while (o == null && para < lastPara(n)) { para++; o = nextWordStart(shown(para), 0); }
       if (o == null) return;
       const t = shown(para), run = runAt(t, o);
       if (run && run.start < o) return void selectSpan(para, { start: o, end: run.end });  // rest of the eojeol after a partial match
       return void selectAt(para, o);
     }
     let para = n, o = prevWordChar(text, span.start);
-    while (o == null && para > 0) { para--; o = prevWordChar(shown(para), shown(para).length); }
+    while (o == null && para > firstPara(n)) { para--; o = prevWordChar(shown(para), shown(para).length); }
     if (o == null) return;
     void selectAt(para, o, para === n ? span.start : undefined);
   }
@@ -337,13 +376,9 @@ export function TextView({ id }: { id: string }) {
             </details>
           </header>
 
+          {bg && <Background bg={bg} sel={sel} showEn={prefs.en} />}
+
           <div class="rd-ctl" role="group" aria-label="Display">
-            {hasModern && (
-              <div class="seg inline" role="radiogroup" aria-label="Spelling">
-                <button type="button" role="radio" aria-checked={!useModern} class={!useModern ? 'on' : ''} onClick={() => updatePrefs({ modern: false })}>Original</button>
-                <button type="button" role="radio" aria-checked={useModern} class={useModern ? 'on' : ''} onClick={() => updatePrefs({ modern: true })}>Modern</button>
-              </div>
-            )}
             {hasReading && <button type="button" class={`pill${prefs.reading ? ' on' : ''}`} aria-pressed={prefs.reading} onClick={() => updatePrefs({ reading: !prefs.reading })}>음 reading</button>}
           </div>
           {(hasEn && prefs.en) || useModern ? (
@@ -394,7 +429,7 @@ export function TextView({ id }: { id: string }) {
         </article>
       </div>
       {sel && <LookupCard st={lk} onClose={clear} onStep={step} onResize={setCardH} onPick={pick} />}
-      {settingsOpen && <ReadingSettings p={prefs} hasModern={hasModern} hasReading={hasReading} label={translationLabel(doc.labels, prov)} onClose={() => setSettingsOpen(false)} />}
+      {settingsOpen && <ReadingSettings p={prefs} hasModern={false} hasReading={hasReading} label={translationLabel(doc.labels, prov)} onClose={() => setSettingsOpen(false)} />}
     </div>
   );
 }

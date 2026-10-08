@@ -1,5 +1,6 @@
 {
   "id": "graded-three-kingdoms",
+  "attach_to": "gwanggaeto_stele",
   "meta": {
     "title_ko": "삼국 시대: 고구려·백제·신라",
     "title_en": "The Three Kingdoms: Goguryeo, Baekje and Silla",

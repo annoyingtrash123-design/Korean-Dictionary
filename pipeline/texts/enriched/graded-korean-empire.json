@@ -1,5 +1,6 @@
 {
   "id": "graded-korean-empire",
+  "attach_to": "daehanguk_gukje",
   "meta": {
     "title_ko": "대한제국",
     "title_en": "The Korean Empire",

@@ -1,5 +1,6 @@
 {
   "id": "graded-confucian-yangban",
+  "attach_to": "yangbanjeon",
   "meta": {
     "title_ko": "유교와 양반 사회",
     "title_en": "Confucianism and Yangban Society",

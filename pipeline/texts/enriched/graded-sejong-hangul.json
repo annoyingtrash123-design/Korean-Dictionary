@@ -1,5 +1,6 @@
 {
   "id": "graded-sejong-hangul",
+  "attach_to": "hunminjeongeum_haerye",
   "meta": {
     "title_ko": "세종대왕과 한글",
     "title_en": "King Sejong and Hangul",

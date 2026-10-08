@@ -1,5 +1,6 @@
 {
   "id": "graded-joseon-founding",
+  "attach_to": "taejo_jeuk_wi_gyoseo",
   "meta": {
     "title_ko": "조선의 건국",
     "title_en": "The Founding of Joseon",

@@ -56,6 +56,14 @@ export interface PendingText {
   status: 'source' | 'repair' | 'held' | 'preparing';
 }
 
+/** AI-written learner essay attached to a primary source as context (`notes.background`). */
+export interface TextBackground {
+  id: string; title_ko?: string | null; title_en?: string | null; level?: string | null;
+  paragraphs: { ko: string; en?: string | null }[];
+  vocab?: { word: string; gloss_en: string; level?: number | null }[] | null;
+  questions?: { q_ko: string; q_en?: string; answer_en?: string }[] | null;
+  reviewed?: boolean;
+}
 export interface TextSummary {
   id: string; shelf: string; period?: string | null; year?: number | null; script: 'hangul' | 'hanmun' | 'mixed' | string;
   level?: string | null; chars: number; title_ko: string; title_en?: string | null; author_ko?: string | null; author_en?: string | null;
@@ -67,7 +75,7 @@ export interface TextDoc {
   id: string;
   meta: { title_ko: string; title_en?: string; author_ko?: string; author_en?: string; author_dates?: string; date?: string; year?: number; period?: string; themes?: string[]; shelf?: string; script?: string; excerpt?: boolean; excerpt_note?: string; pd_basis?: string; [k: string]: unknown };
   card: { summary_ko?: string; summary_en?: string; level?: string; edition_ko?: string; edition_en?: string };
-  notes: { ko?: string; en?: string };
+  notes: { ko?: string; en?: string; background?: TextBackground | null };
   provenance?: TextProvenance | null;
   labels: TextLabels;
   review?: { status?: string; [k: string]: unknown } | null;

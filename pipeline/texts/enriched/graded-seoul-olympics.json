@@ -1,5 +1,6 @@
 {
   "id": "graded-seoul-olympics",
+  "attach_to": "seoul_olympic_support_act",
   "meta": {
     "title_ko": "서울 올림픽",
     "title_en": "The Seoul Olympics",

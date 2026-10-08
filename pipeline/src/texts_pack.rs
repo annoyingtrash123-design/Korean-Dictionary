@@ -414,6 +414,48 @@ fn edition_line(raw: &Value) -> String {
     format!("{src}: {title}{rev}")
 }
 
+/// Copy a modern-spelling sidecar onto the enriched paragraphs; `Some(problem)` when it does not fit.
+fn apply_modern(v: &mut Value, side: &Value) -> Option<String> {
+    let Some(modern) = side.get("modern").and_then(Value::as_array) else {
+        return Some("no `modern` array".into());
+    };
+    let Some(paras) = v.get_mut("paragraphs").and_then(Value::as_array_mut) else {
+        return Some("enriched file has no paragraph list".into());
+    };
+    if modern.len() != paras.len() {
+        return Some(format!("{} modern paragraphs for {} paragraphs", modern.len(), paras.len()));
+    }
+    for (p, m) in paras.iter_mut().zip(modern) {
+        match m {
+            Value::String(t) if !t.trim().is_empty() => {
+                if p.get("orig").and_then(Value::as_str).is_some_and(|o| o.starts_with("## ")) != t.starts_with("## ") {
+                    return Some(format!("heading mismatch at {:?}", t.chars().take(30).collect::<String>()));
+                }
+                p["modern"] = json!(t);
+            }
+            Value::Null => {}
+            _ => return Some("entries must be strings or null".into()),
+        }
+    }
+    v["labels"]["modern"] = json!("ai");
+    None
+}
+
+/// The `notes.background` object for a source text: an AI-written essay that gives context.
+fn background_of(p: &Packed) -> Value {
+    json!({
+        "id": p.id,
+        "title_ko": p.meta.get("title_ko"),
+        "title_en": p.meta.get("title_en"),
+        "level": p.level,
+        "paragraphs": p.paragraphs.iter().map(|q| json!({"ko": q.orig, "en": q.en})).collect::<Vec<_>>(),
+        "vocab": p.vocab,
+        "questions": p.questions,
+        "labels": p.labels,
+        "reviewed": p.review.get("status").and_then(Value::as_str) == Some("approved"),
+    })
+}
+
 fn graded_text(id: &str, v: &Value) -> Packed {
     let mut meta = v["meta"].clone();
     let year = meta.get("year").and_then(Value::as_i64).unwrap_or(0);
@@ -645,6 +687,7 @@ fn collect(
         (0, 0, 0, 0, 0);
     let mut rejected: Vec<Value> = Vec::new();
     let mut n_unreviewed = 0;
+    let mut held_bg: Vec<Value> = Vec::new();
     let raw_ok = raw_reviewed(&o.dir.join("raw_review.toml"))?;
     let note = |partial_ok: bool, msg: String, problems: &mut Vec<String>| {
         if partial_ok && o.allow_partial {
@@ -693,6 +736,20 @@ fn collect(
                     continue;
                 }
                 v["paragraphs"] = Value::Array(raw_paras.iter().map(|o| json!({"orig": o, "modern": null, "reading": null, "en": null})).collect());
+            }
+        }
+        // `enriched/modern/<id>.json`: modern-spelling sidecar for long pre-1933 texts,
+        // `{"id", "modern": [one string or null per paragraph], "review": {"status": "approved"}}`
+        if let Some(v) = enriched.as_mut() {
+            let side = enr_dir.join("modern").join(format!("{}.json", e.id));
+            if side.exists() {
+                let m = read_json(&side)?;
+                if m.pointer("/review/status").and_then(Value::as_str) != Some("approved") {
+                    log::info!("texts: {}: modern-spelling sidecar not approved, ignored", e.id);
+                } else if let Some(msg) = apply_modern(v, &m) {
+                    note(false, format!("{}: modern/{}.json: {msg}", e.id, e.id), problems);
+                    continue;
+                }
             }
         }
         if let Some(v) = &enriched {
@@ -814,8 +871,28 @@ fn collect(
                 );
             }
         }
-        n_graded += 1;
-        out.push(p);
+        // AI essays are background for a primary source (`attach_to`), never standalone texts
+        let Some(target) = s_of(&v, "attach_to") else {
+            problems.push(format!("{stem}: graded essay without `attach_to` (essays only ship as background to a source text)"));
+            continue;
+        };
+        match out.iter_mut().find(|t| t.id == target) {
+            Some(t) => {
+                if !t.notes.is_object() {
+                    t.notes = json!({});
+                }
+                if t.notes.get("background").is_some() {
+                    problems.push(format!("{stem}: {target} already has a background essay"));
+                    continue;
+                }
+                t.notes["background"] = background_of(&p);
+                n_graded += 1;
+            }
+            None => {
+                log::info!("texts: {stem}: source {target} is not in the pack yet, background held back");
+                held_bg.push(json!({"essay": stem, "source": target}));
+            }
+        }
     }
 
     // news
@@ -839,7 +916,7 @@ fn collect(
             problems.push(format!("{}: duplicate text id", p.id));
         }
     }
-    let stats = json!({"enriched": n_enriched, "original_only": n_original, "graded": n_graded, "news": n_news, "unapproved_ignored": n_unapproved, "rejected_raw": rejected, "raw_unreviewed": n_unreviewed});
+    let stats = json!({"enriched": n_enriched, "original_only": n_original, "graded": n_graded, "news": n_news, "unapproved_ignored": n_unapproved, "rejected_raw": rejected, "raw_unreviewed": n_unreviewed, "background_held": held_bg});
     Ok((out, stats))
 }
 
@@ -1027,6 +1104,16 @@ mod tests {
         assert!(check_integrity(&changed, &raw, false, false)
             .unwrap()
             .contains("paragraph 1"));
+    }
+
+    #[test]
+    fn modern_sidecar_fits_paragraphs() {
+        let mut v = json!({"paragraphs": [{"orig": "## 1"}, {"orig": "ᄒᆞ더라"}], "labels": {"modern": null}});
+        assert_eq!(apply_modern(&mut v, &json!({"modern": [null, "하더라"]})), None);
+        assert_eq!(v["paragraphs"][1]["modern"], "하더라");
+        assert_eq!(v["labels"]["modern"], "ai");
+        assert!(apply_modern(&mut v, &json!({"modern": ["하더라"]})).unwrap().contains("1 modern paragraphs for 2"));
+        assert!(apply_modern(&mut v, &json!({"modern": ["하더라", null]})).unwrap().contains("heading"));
     }
 
     #[test]

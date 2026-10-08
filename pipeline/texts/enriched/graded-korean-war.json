@@ -1,5 +1,6 @@
 {
   "id": "graded-korean-war",
+  "attach_to": "armistice_agreement_ko",
   "meta": {
     "title_ko": "분단과 6·25 전쟁",
     "title_en": "Division and the Korean War",
