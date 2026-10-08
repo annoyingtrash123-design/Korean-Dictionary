@@ -1,0 +1,40 @@
+{
+  "id": "gujiga",
+  "card": {
+    "summary_ko": "가락국 시조 김수로왕이 하늘에서 내려올 때 아홉 간(干)이 구지봉에서 불렀다고 전하는 네 구절의 주술적 노래입니다.",
+    "summary_en": "A four-line incantation that, according to tradition, the nine chieftains sang on Mount Gujibong to call down Kim Suro, the founder of Gaya.",
+    "level": "classical",
+    "edition_ko": "한국어 위키문헌 '구지가' (판 418344, 2025-12-14). 원문은 퍼블릭 도메인, 전사는 CC BY-SA 4.0.",
+    "edition_en": "Korean Wikisource, '구지가' (revision 418344, 2025-12-14). Original in the public domain; transcription CC BY-SA 4.0."
+  },
+  "notes": {
+    "ko": "**배경** 「구지가」는 일연의 『삼국유사』 권2 「가락국기」에 실려 전합니다. 전하는 바에 따르면 서기 42년 3월, 구지봉에서 하늘의 목소리가 들려 아홉 간(九干)과 백성들에게 흙을 파며 이 노래를 부르고 춤추라고 일렀고, 그러자 금합에 담긴 여섯 개의 황금알이 내려와 여섯 가야의 왕이 되었으며 그 첫째가 수로왕이라 합니다. 「가락국기」는 고려 시대에 지어진 것으로 알려져 있으며, 연대와 사실성은 학계에서 논의가 있습니다.\n\n**의의** 현존하는 가장 오래된 우리 노래의 하나로 꼽힙니다. 개인의 서정이 아니라 집단이 함께 부른 의례의 노래라는 점에서 「황조가」와 대조됩니다. 신라 「해가(海歌)」(수로부인 조)의 '거북아 거북아 수로를 내놓아라'와 구조가 비슷해 둘의 관계가 자주 논의됩니다.\n\n**형식과 주제** 한역(漢譯)으로 전하는 4언 4구의 짧은 노래이며, 원래의 우리말 가사는 전하지 않습니다. 부름(거북아) – 명령(머리를 내밀어라) – 조건(내밀지 않으면) – 위협(구워 먹으리)의 구조를 지닙니다. 거북을 신령한 존재로 보아 신을 맞이하는 영신군가(迎神君歌)로 읽는 설, 주술적 협박의 노래로 보는 설, 성적 상징으로 읽는 설 등 해석이 갈립니다.\n\n**읽기 도움**\n- 龜何龜何: '何'는 호격 조사로 보는 견해가 있습니다 ('거북아').\n- 首: 머리. 其: 여기서는 '그(너의)'.\n- 現: 나타나다, 내밀다.\n- 若不~: 만약 ~하지 않으면.\n- 燔灼: 불에 굽다. 喫: 먹다.\n- 也: 문장 끝에 쓰는 어조사.\n- 위키문헌 판본에는 원문 아래에 우리말 풀이가 함께 실려 있습니다.",
+    "en": "**Background** The Gujiga is preserved in Iryeon's Samguk yusa, vol. 2, in the 'Garak-guk gi' (Record of the Garak Kingdom). According to tradition, in the third month of 42 CE a voice from heaven on Mount Gujibong told the nine chieftains (gugan) and the people to dig the earth and sing this song while dancing; six golden eggs in a golden box then descended and became the kings of the six Gaya states, the first being Suro. The 'Garak-guk gi' is believed to date from the Goryeo period, and both its dating and its historicity are debated.\n\n**Significance** It is counted among the oldest surviving Korean songs. Unlike the Hwangjoga it is not a personal lyric but a ritual song sung by a group. Its structure resembles the Silla 'Haega' (Sea Song, in the Lady Suro episode: 'Turtle, turtle, give back Suro'), and the relationship between the two is often discussed.\n\n**Form and themes** It survives only in Chinese translation, as four lines of four characters; the original Korean words are lost. It moves from address (O turtle) to command (put out your head), condition (if you do not) and threat (we will roast and eat you). Interpretations differ: a hymn welcoming a god, a coercive spell, or a text with sexual symbolism.\n\n**Reading help**\n- 龜何龜何: some scholars take 何 as a vocative particle ('O turtle').\n- 首: head. 其: here 'your'.\n- 現: to appear, to stick out.\n- 若不~: if (you) do not ~.\n- 燔灼: to roast over fire. 喫: to eat.\n- 也: sentence-final particle.\n- The Wikisource edition prints a Korean rendering beneath the original."
+  },
+  "paragraphs": [
+    {
+      "orig": "龜何龜何\n首其現也\n若不現也\n燔灼而喫也",
+      "modern": null,
+      "reading": "구하구하\n수기현야\n약불현야\n번작이끽야",
+      "en": "O turtle, O turtle,\nstick out your head!\nIf you do not stick it out,\nwe will roast you and eat you."
+    },
+    {
+      "orig": "거북아 거북아\n머리를 내밀어라\n내밀지 않으면\n구워 먹으리",
+      "modern": null,
+      "reading": "거북아 거북아\n머리를 내밀어라\n내밀지 않으면\n구워 먹으리",
+      "en": "O turtle, O turtle,\nstick out your head!\nIf you do not stick it out,\nwe will roast you and eat you."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

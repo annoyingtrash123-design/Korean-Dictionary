@@ -1,15 +1,15 @@
 {
   "id": "cheongsanbyeolgok",
   "card": {
-    "summary_ko": "세상의 시름을 피해 청산과 바다에서 살고 싶다고 노래하다가 술에 붙들리는 고려 속요로, 해석이 갈리는 대목이 많습니다.",
-    "summary_en": "A Goryeo song of longing to escape worldly sorrow to the green mountains and the sea, only to end held fast by wine; many lines are disputed.",
+    "summary_ko": "세상의 시름을 피해 청산과 바다에서 살고 싶다고 노래하다가 마지막에 술에 붙들린다고 풀이되는 고려 속요로, 해석이 갈리는 대목이 많습니다.",
+    "summary_en": "A Goryeo song of longing to escape worldly sorrow to the green mountains and the sea, usually read as ending held fast by wine; many lines are disputed.",
     "level": "classical",
     "edition_ko": "위키문헌 「청산별곡」 (개정 460064), 전사 CC BY-SA 4.0; 원저작물은 퍼블릭 도메인",
     "edition_en": "Korean Wikisource, \"청산별곡\" (revision 460064), transcription CC BY-SA 4.0; the work itself is public domain"
   },
   "notes": {
-    "ko": "**배경** 작자와 창작 시기를 알 수 없는 고려 속요로, 고려 시대(13~14세기)의 노래로 추정합니다. 8연 전문이 《악장가사》에, 일부가 《시용향악보》에 실려 있습니다. 전란이나 사회 혼란을 피한 유랑민의 노래, 속세를 떠나려는 지식인의 노래 등 해석이 여럿입니다.\n\n**의의** 고려 속요 가운데 가장 뛰어난 작품의 하나로 평가되며, 'ㄹ'과 'ㅇ' 소리의 반복이 만드는 음악성이 특히 유명합니다.\n\n**형식과 주제** 8연, 각 연 4구(사설 2행과 후렴)이고, 사설은 3·3·2조의 3음보 율격을 지닙니다. 청산과 바다에 살겠다는 소망(1·6연), 새와 자신을 견주는 시름(2·3연), 밤의 외로움과 정체 모를 돌에 맞는 억울함(4·5연), 그리고 신비로운 소리와 술에 붙들림(7·8연)으로 이어집니다. 후렴 '얄리얄리 얄라셩'은 뜻이 없는 흥겨운 소리로 봅니다. 7·8연은 특히 뜻이 분명치 않아 학설이 갈립니다.\n\n**읽기 도움**\n- `살어리랏다`: 살겠노라. `멀위`: 머루. `ᄃᆞ래`: 다래.\n- `ᄂᆞᄆᆞ자기`: 나문재(바닷가 풀). `구조개`: 굴과 조개.\n- `바ᄅᆞ래`: 바다에. `디내와손뎌`: 지내왔구나.\n- `잉 무든 장글`: 이끼 묻은 쟁기로 보는 설이 우세하나 이설 있음.\n- `에졍지`: 뜻이 분명치 않음(외딴 부엌으로 보는 설 등).\n- `ㆍ`(아래아)는 대체로 ㅏ, `ᄯ`은 ㄸ, `ᄒᆡ금`은 해금(奚琴).\n- 후렴 첫 연 '얄랑셩', 이후 '얄라셩'으로 표기가 다릅니다.",
-    "en": "**Background** An anonymous Goryeo song (*sogyo*) of unknown date, presumed to be from the 13th–14th centuries. The full eight stanzas are in the *Akjang gasa*, part of it in the *Siyong hyangakbo*. Interpretations vary: the song of refugees fleeing war and unrest, or of a scholar wishing to leave the world behind.\n\n**Significance** Ranked among the finest Goryeo songs, famed for the musicality created by repeated \"l\" and \"ng\" sounds.\n\n**Form and themes** Eight stanzas of four units each (two lines of text plus refrain), in a 3-3-2 syllable, three-beat metre. The wish to live in the mountains and by the sea (stanzas 1 and 6); sorrow compared with a bird's (2–3); loneliness at night and the injustice of being hit by an unknown stone (4–5); and finally strange sounds and being held fast by drink (7–8). The refrain \"yalli yalli yallasyeong\" is generally taken as meaningless joyful sound. Stanzas 7 and 8 are especially obscure and scholars disagree.\n\n**Reading help**\n- `살어리랏다`: \"I will live\". `멀위`: wild grapes (머루). `ᄃᆞ래`: 다래, hardy-kiwi fruit.\n- `ᄂᆞᄆᆞ자기`: 나문재, a seaside plant. `구조개`: oysters and clams.\n- `바ᄅᆞ래`: \"by the sea\". `디내와손뎌`: \"I have got through\".\n- `잉 무든 장글`: most take \"a mossy plough\", but other readings exist.\n- `에졍지`: meaning unclear (one view: a lonely kitchen).\n- `ㆍ` is mostly ㅏ, `ᄯ` is ㄸ, and `ᄒᆡ금` is the haegeum (奚琴), a two-stringed fiddle.\n- The refrain is spelled 얄랑셩 in stanza 1 but 얄라셩 afterwards."
+    "ko": "**배경** 작자와 창작 시기를 알 수 없는 고려 속요로, 고려 시대(13~14세기)의 노래로 추정합니다. 8연 전문이 《악장가사》에, 일부가 《시용향악보》에 실려 있습니다. 전란이나 사회 혼란을 피한 유랑민의 노래, 속세를 떠나려는 지식인의 노래 등 해석이 여럿입니다.\n\n**의의** 고려 속요 가운데 가장 뛰어난 작품의 하나로 평가되며, 'ㄹ' 소리의 반복이 만드는 음악성이 특히 유명합니다.\n\n**형식과 주제** 8연, 각 연 4구(사설 2행과 후렴)이고, 사설은 3·3·2조의 3음보 율격을 지닙니다. 청산과 바다에 살겠다는 소망(1·6연), 새와 자신을 견주는 시름(2·3연), 밤의 외로움과 정체 모를 돌에 맞는 억울함(4·5연), 그리고 기이한 소리와 술에 붙들림(7·8연)으로 이어진다고 보는 것이 일반적입니다. 후렴 '얄리얄리 얄라셩'은 뜻이 없는 흥겨운 소리로 봅니다. 7·8연은 특히 뜻이 분명치 않아 학설이 갈립니다. 예컨대 7연의 '사슴'을 사슴으로 분장한 광대로 보는 설, 8연을 술 빚기가 아닌 다른 내용으로 보는 설 등이 있어, 여기 실린 번역과 현대어는 하나의 가능한 풀이입니다.\n\n**읽기 도움**\n- `살어리랏다`: 살겠노라. `멀위`: 머루. `ᄃᆞ래`: 다래.\n- `ᄂᆞᄆᆞ자기`: 나문재(바닷가 풀)로 풀이함. `구조개`: 굴과 조개.\n- `바ᄅᆞ래`: 바다에. `디내와손뎌`: 지내왔구나.\n- `잉 무든 장글`: 이끼 묻은 쟁기로 풀이하는 일이 많으나 뜻이 확실하지 않고 이설이 있음.\n- `에졍지`: 뜻이 분명치 않음(외딴 부엌으로 보는 설 등).\n- 4연의 `엇디 오리라`는 통상 '어찌 하리라'로 보고 풀이하며, 본문 표기가 다른 판본과 다를 수 있음.\n- `ㆍ`(아래아)는 대체로 ㅏ, `ᄯ`은 ㄸ, `ᄒᆡ금`은 해금(奚琴).\n- 후렴 첫 연 '얄랑셩', 이후 '얄라셩'으로 표기가 다릅니다.",
+    "en": "**Background** An anonymous Goryeo song (*sogyo*) of unknown date, presumed to be from the 13th–14th centuries. The full eight stanzas are in the *Akjang gasa*, part of it in the *Siyong hyangakbo*. Interpretations vary: the song of refugees fleeing war and unrest, or of a scholar wishing to leave the world behind.\n\n**Significance** Ranked among the finest Goryeo songs, famed for the musicality created by repeated \"l\" sounds.\n\n**Form and themes** Eight stanzas of four units each (two lines of text plus refrain), in a 3-3-2 syllable, three-beat metre. The wish to live in the mountains and by the sea (stanzas 1 and 6); sorrow compared with a bird's (2–3); loneliness at night and the injustice of being hit by an unknown stone (4–5); and finally strange sounds and being held fast by drink (7–8), as the song is commonly read. The refrain \"yalli yalli yallasyeong\" is generally taken as meaningless joyful sound. Stanzas 7 and 8 are especially obscure and scholars disagree (for instance, the \"deer\" of stanza 7 is sometimes taken as a performer in a deer costume, and stanza 8 is not always read as brewing), so the translation and modern rendering here are one possible reading.\n\n**Reading help**\n- `살어리랏다`: \"I will live\". `멀위`: wild grapes (머루). `ᄃᆞ래`: 다래, hardy-kiwi fruit.\n- `ᄂᆞᄆᆞ자기`: 나문재, taken as a seaside plant (sea-blite). `구조개`: oysters and clams.\n- `바ᄅᆞ래`: \"by the sea\". `디내와손뎌`: \"I have got through\".\n- `잉 무든 장글`: often read as \"a mossy plough\", but the meaning is uncertain and other readings exist.\n- `에졍지`: meaning unclear (one view: a lonely kitchen).\n- Stanza 4 `엇디 오리라` is usually understood as \"what shall I do\"; this edition's wording may differ from other texts.\n- `ㆍ` is mostly ㅏ, `ᄯ` is ㄸ, and `ᄒᆡ금` is the haegeum (奚琴), a two-stringed fiddle.\n- The refrain is spelled 얄랑셩 in stanza 1 but 얄라셩 afterwards."
   },
   "paragraphs": [
     {
@@ -26,7 +26,7 @@
     },
     {
       "orig": "가던 새 가던 새 본다 믈 아래 가던 새 본다.\n잉 무든 장글란 가지고 믈 아래 가던 새 본다.\n얄리얄리 얄라셩 얄라리 얄라",
-      "modern": "가는 새 가는 새 본다 물 아래 가는 새 본다.\n이끼 묻은 쟁기를 가지고 물 아래 가는 새 본다.\n얄리얄리 얄라셩 얄라리 얄라",
+      "modern": "가는 새 가는 새 본다 물 아래 가는 새 본다.\n이끼 묻은 쟁기(뜻 미상)를 가지고 물 아래 가는 새 본다.",
       "reading": null,
       "en": "I see a bird going by, I see a bird going by below the water.\nHolding a mossy plough (the line is disputed), I see the bird going by below the water.\nYalli yalli yallasyeong yallari yalla (refrain)"
     },
@@ -40,25 +40,25 @@
       "orig": "어듸라 더디던 돌코 누리라 마치던 돌코.\n믜리도 괴리도 업시 마자셔 우니노라.\n얄리얄리 얄라셩 얄라리 얄라",
       "modern": "어디에 던지던 돌인가 누구를 맞히던 돌인가.\n미워할 이도 사랑할 이도 없이 맞아서 우노라.\n얄리얄리 얄라셩 얄라리 얄라",
       "reading": null,
-      "en": "A stone thrown at what? A stone meant to hit whom?\nWith no one to hate and no one to love, I am struck, and I weep.\nYalli yalli yallasyeong yallari yalla (refrain)"
+      "en": "Where was it thrown, that stone? Whom was it meant to hit, that stone?\nWith no one to hate and no one to love, I am struck, and I weep.\nYalli yalli yallasyeong yallari yalla (refrain)"
     },
     {
       "orig": "살어리 살어리랏다 바ᄅᆞ래 살어리랏다.\nᄂᆞᄆᆞ자기 구조개랑 먹고 바ᄅᆞ래 살어리랏다.\n얄리얄리 얄라셩 얄라리 얄라",
       "modern": "살겠노라 살겠노라 바다에 살겠노라.\n나문재와 굴과 조개랑 먹고 바다에 살겠노라.\n얄리얄리 얄라셩 얄라리 얄라",
       "reading": null,
-      "en": "I will live, I will live, I will live by the sea.\nEating seaweed-herb, oysters and clams, I will live by the sea.\nYalli yalli yallasyeong yallari yalla (refrain)"
+      "en": "I will live, I will live, I will live by the sea.\nEating sea-blite, oysters and clams, I will live by the sea.\nYalli yalli yallasyeong yallari yalla (refrain)"
     },
     {
       "orig": "가다가 가다가 드로라 에졍지 가다가 드로라.\n사ᄉᆞ미 지ᇝ대에 올아셔 ᄒᆡ금(奚琴)을 혀거를 드로라.\n얄리얄리 얄라셩 얄라리 얄라",
-      "modern": "가다가 가다가 듣노라 에정지(뜻 미상) 가다가 듣노라.\n사슴이 장대에 올라서 해금(奚琴)을 켜는 것을 듣노라.\n얄리얄리 얄라셩 얄라리 얄라",
+      "modern": "가다가 가다가 듣노라 에정지(뜻 미상) 가다가 듣노라.\n사슴(분장한 광대라는 설도 있음)이 장대에 올라서 해금(奚琴)을 켜는 것을 듣노라.\n얄리얄리 얄라셩 얄라리 얄라",
       "reading": null,
-      "en": "As I go, as I go, I hear — Ejeongji (meaning unclear) — as I go, I hear.\nA deer climbs a pole and plays the haegeum, I hear.\nYalli yalli yallasyeong yallari yalla (refrain)"
+      "en": "As I go, as I go, I hear — Ejeongji (meaning unclear) — as I go, I hear.\nA deer climbs a pole and plays the haegeum, I hear (one reading; the \"deer\" may be a performer).\nYalli yalli yallasyeong yallari yalla (refrain)"
     },
     {
       "orig": "가다니 ᄇᆡ브른 도긔 설진 강수를 비조라.\n조롱곳 누로기 ᄆᆡ와 잡ᄉᆞ와니 내 엇디 ᄒᆞ리잇고.\n얄리얄리 얄라셩 얄라리 얄라",
       "modern": "가다 보니 배부른 독에 독한 강술을 빚는구나.\n조롱박꽃 누룩이 독해 붙잡으니 내 어찌하리오.\n얄리얄리 얄라셩 얄라리 얄라",
       "reading": null,
-      "en": "Going on, I see a swollen pot of strong liquor being brewed.\nThe gourd-flower yeast is pungent and holds me fast; what can I do?\nYalli yalli yallasyeong yallari yalla (refrain)"
+      "en": "Going on, I see a swollen pot of strong liquor being brewed (a disputed line).\nThe gourd-flower yeast is pungent and holds me fast; what can I do?\nYalli yalli yallasyeong yallari yalla (refrain)"
     }
   ],
   "labels": {
@@ -68,9 +68,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "8 stanzas complete, matches Wikisource rev 460064 and its 악장가사/시용향악보 headnote. Hedged the disputed readings (잉 무든 장글, 에졍지, deer/haegeum, stanzas 7-8), fixed stanza 5 translation and 나문재 gloss, removed unsupported 'ㅇ' alliteration claim."
   }
 }

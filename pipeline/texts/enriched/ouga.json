@@ -1,167 +1,17 @@
 {
   "id": "ouga",
   "card": {
-    "summary_ko": "윤선도가 해남 금쇄동에서 지은 연작 시조 〈산중신곡〉 전체로, 끝의 〈오우가〉는 물·돌·소나무·대나무·달을 벗으로 삼아 노래합니다.",
-    "summary_en": "The whole of Yun Seon-do's sijo cycle \"New Songs from the Mountains\" (Sanjung sin-gok), ending with \"Song of My Five Friends\", which names water, rock, pine, bamboo and the moon as his friends.",
+    "summary_ko": "윤선도의 연작 시조 〈산중신곡〉 가운데 〈오우가〉 6수로, 물·돌·소나무·대나무·달을 다섯 벗으로 삼아 그 덕을 노래합니다.",
+    "summary_en": "The six poems of \"Song of My Five Friends\" from Yun Seon-do's sijo cycle \"New Songs from the Mountains\" (Sanjung sin-gok), which take water, rock, pine, bamboo and the moon as friends and praise their qualities.",
     "level": "classical",
-    "edition_ko": "위키문헌 「산중신곡」 (개정 460013), 전사 CC BY-SA 4.0; 원저작물은 퍼블릭 도메인. 〈오우가〉는 이 가첩의 마지막 6수",
-    "edition_en": "Korean Wikisource, \"산중신곡\" (revision 460013), transcription CC BY-SA 4.0; the work itself is public domain. \"Ouga\" is the last six poems of this manuscript"
+    "edition_ko": "위키문헌 「산중신곡」 (개정 460013) 가운데 〈오우가〉 부분만 발췌, 전사 CC BY-SA 4.0; 원저작물은 퍼블릭 도메인",
+    "edition_en": "Korean Wikisource, \"산중신곡\" (revision 460013), the \"Ouga\" section only (excerpt), transcription CC BY-SA 4.0; the work itself is public domain"
   },
   "notes": {
-    "ko": "**배경** 윤선도(1587–1671)는 1642년 유배에서 풀려나 전라남도 해남 금쇄동에서 연작 시조 〈산중신곡〉을 지었다고 알려져 있습니다. 위키문헌 해제에 따르면 〈만흥〉 6수, 〈조무요〉·〈일모요〉·〈야심요〉·〈기세탄〉 각 1수, 〈하우요〉 2수, 〈오우가〉 6수 등 모두 18수이며, 문집 《고산유고》 권6에 실려 있습니다. 이 파일은 〈오우가〉만이 아니라 18수 전체를 싣고 있습니다.\n\n**의의** 〈오우가〉는 자연물을 벗으로 삼아 그 덕을 칭송한 가장 유명한 시조의 하나이며, 〈만흥〉은 자연 속 은거의 즐거움을 노래합니다.\n\n**형식과 주제** 모두 3장 평시조입니다. 〈오우가〉는 서시 뒤에 물(水), 돌(石), 소나무(松), 대나무(竹), 달(月)을 차례로 다루며, 각 수가 변하지 않음, 꿋꿋함, 말없음 같은 덕목과 연결됩니다. 〈만흥〉에서는 가난한 산중 생활의 만족과 임금에 대한 감사가 이어집니다.\n\n**읽기 도움**\n- 한자 뒤에 한글 음을 붙인 표기(山산水슈間간)가 쓰이고, 띄어쓰기가 없습니다.\n- `ㆍ`(아래아)는 대체로 ㅏ: `ᄒᆞ노라` = 하노라. `ᄒᆡ` = 해, 날. `ᄌᆞ`, `ᄂᆞ` 등도 같음.\n- `뛰집`: 띠로 이은 집. `햐암`: 시골뜨기(향암). `분(分)`: 분수.\n- `수석(水石)`, `송죽(松竹)`: 물과 돌, 소나무와 대나무.\n- `소부 허유`: 요 임금이 천하를 주려 하자 거절한 전설 속 은자.\n- `소부허유ㅣ`의 `ㅣ`는 주격 조사 '이'.\n- 〈야심요〉 마지막 줄과 〈기세탄〉의 뜻은 해석이 갈립니다.",
-    "en": "**Background** Yun Seon-do (1587–1671) is known to have composed the sijo cycle *Sanjung sin-gok* in 1642, after release from exile, at Geumsoedong in Haenam, South Jeolla. According to the Wikisource note it has 18 poems: six of *Manheung*, one each of *Jomuyo*, *Ilmoyo*, *Yasimyo* and *Gisetan*, two of *Hauyo*, and six of *Ouga*; it is in volume 6 of his collected works, *Goksan yuko*. This file contains all 18 poems, not only *Ouga*.\n\n**Significance** *Ouga* is one of the best-known sijo, praising the virtues of natural things as friends; *Manheung* sings the pleasure of retreat in nature.\n\n**Form and themes** All are standard three-line sijo. After an opening poem, *Ouga* takes water, rock, pine, bamboo and the moon in turn, each linked to a virtue such as constancy, firmness or silence. *Manheung* moves between contentment in a poor mountain life and gratitude to the king.\n\n**Reading help**\n- Hanja are followed by their Korean sound (山산水슈間간), and words are run together without spaces.\n- `ㆍ` (arae-a) is mostly modern ㅏ: `ᄒᆞ노라` = 하노라. `ᄒᆡ` = sun/day. Same for `ᄌᆞ`, `ᄂᆞ`.\n- `뛰집`: a house thatched with *tti* grass. `햐암`: a rustic (향암). `분(分)`: one's lot.\n- `수석(水石)`, `송죽(松竹)`: water and stone, pine and bamboo.\n- `소부 허유` (Sobu, Heo Yu): legendary hermits who refused the throne offered by Emperor Yao.\n- `ㅣ` after 소부허유 is the subject particle.\n- The last line of *Yasimyo* and the meaning of *Gisetan* are disputed."
+    "ko": "**배경** 〈오우가〉는 윤선도(1587–1671)의 연작 시조 〈산중신곡〉(山中新曲)의 일부입니다. 위키문헌 해제에 따르면 〈산중신곡〉은 1642년 유배에서 풀려난 윤선도가 전라남도 해남 금쇄동에서 지은 것으로, 〈만흥〉 6수, 〈조무요〉·〈일모요〉·〈야심요〉·〈기세탄〉 각 1수, 〈하우요〉 2수와 함께 〈오우가〉 6수, 모두 18수이며 문집 《고산유고》 권6에 실려 있습니다. 이 파일에는 그 가운데 〈오우가〉 6수만 실었습니다.\n\n**의의** 자연물을 벗으로 삼아 그 덕을 칭송한 가장 유명한 시조의 하나로, 교과서에도 자주 실립니다.\n\n**형식과 주제** 모두 3장 평시조입니다. 서사(첫 수)에서 다섯 벗을 밝힌 뒤, 물(水), 돌(石), 소나무(松), 대나무(竹), 달(月)을 한 수씩 차례로 다룹니다. 구름·바람과 달리 그치지 않는 물, 꽃·풀과 달리 변하지 않는 바위, 눈서리에도 푸른 소나무, 곧고 속이 빈 채 사철 푸른 대나무, 말없이 밤을 밝히는 달처럼 각각 한 가지 덕이 중심입니다.\n\n**읽기 도움**\n- 한자 뒤에 한글 음을 붙인 표기(水슈石석)가 쓰이고, 띄어쓰기가 없습니다.\n- `ㆍ`(아래아)는 대체로 ㅏ: `ᄒᆞ노라` = 하노라. `ᄇᆞ람` = 바람, `ᄃᆞᆯ` = 달.\n- `긔`: 그것이(달). `이다ᄉᆞᆺ`: 이 다섯.\n- `그칠 적이 하노매라`: 그칠 때가 많구나. `하다`는 '많다'.\n- `변티 아닐ᄉᆞᆫ`: 변하지 않을 것은.\n- `九泉`: 구천, 땅속 깊은 곳(저승). 소나무 뿌리가 곧게 깊이 뻗음을 말함.\n- `뷔연ᄂᆞᆫ다`: 비었는가.\n- `벋`: 벗.",
+    "en": "**Background** *Ouga* is part of Yun Seon-do's (1587–1671) sijo cycle *Sanjung sin-gok* (\"New Songs from the Mountains\"). According to the Wikisource note, the cycle was composed in 1642, after his release from exile, at Geumsoedong in Haenam, South Jeolla; it has 18 poems (six of *Manheung*, one each of *Jomuyo*, *Ilmoyo*, *Yasimyo* and *Gisetan*, two of *Hauyo*, and the six of *Ouga*) and is in volume 6 of his collected works, *Goksan yuko*. This file contains only the six *Ouga* poems.\n\n**Significance** One of the best-known sijo, praising the qualities of natural things taken as friends; it is often taught in schools.\n\n**Form and themes** All are standard three-line sijo. After an opening poem naming the five friends, water, rock, pine, bamboo and the moon each get one poem. Each centres on a single quality: water that never ceases, unlike clouds and wind; rock that never changes, unlike flowers and grass; the pine green through snow and frost; bamboo, straight, hollow and evergreen; and the moon, which lights the night and says nothing.\n\n**Reading help**\n- Hanja are followed by their Korean sound (水슈石석), and words are run together without spaces.\n- `ㆍ` (arae-a) is mostly modern ㅏ: `ᄒᆞ노라` = 하노라. `ᄇᆞ람` = 바람, `ᄃᆞᆯ` = 달.\n- `긔`: \"that\" (the moon). `이다ᄉᆞᆺ`: \"these five\".\n- `그칠 적이 하노매라`: \"it stops often\"; `하다` here means \"many\".\n- `변티 아닐ᄉᆞᆫ`: \"what does not change\".\n- `九泉`: the Nine Springs, deep underground (the underworld); the pine's roots run straight down.\n- `뷔연ᄂᆞᆫ다`: \"is it empty?\"\n- `벋`: friend (벗)."
   },
   "paragraphs": [
-    {
-      "orig": "山산中듕新신曲곡",
-      "modern": "산중신곡(山中新曲)",
-      "reading": null,
-      "en": "New Songs from the Mountains (Sanjung sin-gok)"
-    },
-    {
-      "orig": "## 만흥",
-      "modern": null,
-      "reading": null,
-      "en": "## Manheung (Idle Delight)"
-    },
-    {
-      "orig": "山산水슈間간바회아래뛰집을짓노라ᄒᆞ니\n그모른ᄂᆞᆷ들은욷는다ᄒᆞᆫ다마ᄂᆞᆫ\n어리고햐암의뜻의ᄂᆞᆫ내分분인가ᄒᆞ노라",
-      "modern": "산수 사이 바위 아래 띠집을 짓노라 하니\n그 모르는 남들은 웃는다 하지마는\n어리석고 시골뜨기인 내 뜻에는 내 분수인가 하노라",
-      "reading": null,
-      "en": "I say I am building a thatched hut among the hills and streams, beneath a rock,\nand those who do not understand laugh at me, they say.\nBut to my foolish, rustic mind it is simply my lot."
-    },
-    {
-      "orig": "보리밥풋ᄂᆞ물을알마초먹은後후에\n바횟긋믉ᄀᆞ의슬ᄏᆞ지노니노라\n그나믄녀나믄일이야부ᄅᆞᆯ줄이이시랴",
-      "modern": "보리밥과 풋나물을 알맞게 먹은 후에\n바위 끝 물가에서 실컷 노니노라\n그 밖의 다른 일이야 부러워할 줄이 있으랴",
-      "reading": null,
-      "en": "After a fitting meal of barley rice and fresh greens,\nI roam to my heart's content by the water at the rock's edge.\nAs for everything else, is there anything to envy?"
-    },
-    {
-      "orig": "잔들고혼자안자먼뫼흘ᄇᆞ라보니\n그리던님이오나반가옴이이리ᄒᆞ랴\n말ᄉᆞᆷ도우음도아녀도몯내됴ᄒᆞ노라",
-      "modern": "잔 들고 혼자 앉아 먼 산을 바라보니\n그리던 임이 온다 한들 반가움이 이러하랴\n말씀도 웃음도 아니하여도 못내 좋아하노라",
-      "reading": null,
-      "en": "Cup in hand, sitting alone, I gaze at the far hills.\nEven if my longed-for beloved came, would I be so glad?\nWithout a word, without a smile, I am endlessly happy."
-    },
-    {
-      "orig": "누고셔三삼公공도곤낫다ᄒᆞ더니萬만乘승이이만ᄒᆞ랴\n이제로헤어든巢소父부許허由유ㅣ냑돗더라\n아마도林님泉쳔閑한興흥을비길곳이업세라",
-      "modern": "누가 삼공(三公)보다 낫다 하더니 만승(萬乘)이 이만하랴\n이제 헤아려 보니 소부와 허유가 영리하더라\n아마도 임천한흥(林泉閑興)을 견줄 곳이 없구나",
-      "reading": null,
-      "en": "Who said the Three Dukes were better? Does even an emperor of ten thousand chariots have it so good?\nThinking it over now, Sobu and Heo Yu were shrewd.\nTruly, nothing compares to the leisurely delight of woods and springs."
-    },
-    {
-      "orig": "내셩이게으르더니히ᄂᆞᆯ히아ᄅᆞ실샤\n人인間간萬만事ᄉᆞᄅᆞᆯᄒᆞᆫ일도아니맛뎌\n다만당ᄃᆞ토리업슨江강山산을딕히라ᄒᆞ시도다",
-      "modern": "내 성품이 게으르더니 하늘이 아시어\n인간 만사를 한 일도 아니 맡겨\n다만 다툴 이 없는 강산을 지키라 하시도다",
-      "reading": null,
-      "en": "My nature was idle, and Heaven, knowing it,\nentrusted me with not one of the world's affairs,\nand told me only to guard the rivers and hills, which no one contends for."
-    },
-    {
-      "orig": "江강山산이됴타ᄒᆞᆫᄃᆞᆯ내分분으로누얻ᄂᆞ냐\n님군恩은惠혜ᄅᆞᆯ이제더옥아노이다\n아므리갑고쟈ᄒᆞ야도ᄒᆡ올일이업세라",
-      "modern": "강산이 좋다 한들 내 분수로 누워 있겠느냐\n임금의 은혜를 이제 더욱 알겠나이다\n아무리 갚고자 하여도 할 일이 없구나",
-      "reading": null,
-      "en": "Fair as the hills and rivers are, could I lie here by my own merit?\nNow I understand the king's grace all the more.\nHowever much I wish to repay it, there is nothing I can do."
-    },
-    {
-      "orig": "右우漫만興흥",
-      "modern": "우(右) 만흥(漫興)",
-      "reading": null,
-      "en": "The above: Manheung"
-    },
-    {
-      "orig": "## 조무요",
-      "modern": null,
-      "reading": null,
-      "en": "## Jomuyo (Song of Morning Mist)"
-    },
-    {
-      "orig": "月월出츌山산이놉더니마ᄂᆞᆫ믜운거시안개로다\n天텬王왕第데一일峰봉을一일時시예ᄀᆞ리와다\n두어라ᄒᆡ퍼딘휘면안개아니거드랴",
-      "modern": "월출산이 높더니마는 미운 것이 안개로구나\n천왕제일봉을 한꺼번에 가렸구나\n두어라 해가 퍼진 후면 안개 아니 걷히랴",
-      "reading": null,
-      "en": "Wolchulsan stood high, but the hateful thing is the mist,\nwhich has hidden the First Peak of Cheonwang all at once.\nNever mind: once the sun has spread, will the mist not lift?"
-    },
-    {
-      "orig": "右우朝됴霧무謠요",
-      "modern": "우(右) 조무요(朝霧謠)",
-      "reading": null,
-      "en": "The above: Jomuyo"
-    },
-    {
-      "orig": "## 하우요",
-      "modern": null,
-      "reading": null,
-      "en": "## Hauyo (Song of Summer Rain)"
-    },
-    {
-      "orig": "비오는ᄃᆡ들희가랴사립닷고쇼머겨라\n마히ᄆᆡ양이랴잠기연장다ᄉᆞ려라\n쉬다가개ᄂᆞᆫ날보아ᄉᆞ래긴밧가라라",
-      "modern": "비 오는데 들에 가랴 사립문 닫고 소 먹여라\n장마가 늘 이러하랴 쟁기와 연장을 손질해라\n쉬다가 개는 날 보아 사래 긴 밭 갈아라",
-      "reading": null,
-      "en": "It is raining; why go to the fields? Shut the brushwood gate and feed the ox.\nWill the rains always be like this? Get the ploughs and tools in order.\nRest, and when you see a clear day, plough the long-furrowed field."
-    },
-    {
-      "orig": "심심은ᄒᆞ다마ᄂᆞᆫ일업ᄉᆞᆯᄉᆞᆫ마히로다\n답답은ᄒᆞ다마ᄂᆞᆫ閑한暇가ᄒᆞᆯᄉᆞᆫ밤이로다\n아ᄒᆡ야일즉자다가東동트거든닐거라",
-      "modern": "심심하기는 하지마는 일 없기는 장마로구나\n답답하기는 하지마는 한가하기는 밤이로구나\n아이야 일찍 자다가 동이 트거든 일어나라",
-      "reading": null,
-      "en": "It is dull, but the rainy season is a time without work.\nIt is stifling, but the night is a time of leisure.\nBoy, sleep early, and rise when the east grows light."
-    },
-    {
-      "orig": "右우夏하雨우謠요",
-      "modern": "우(右) 하우요(夏雨謠)",
-      "reading": null,
-      "en": "The above: Hauyo"
-    },
-    {
-      "orig": "## 일모요",
-      "modern": null,
-      "reading": null,
-      "en": "## Ilmoyo (Song of Dusk)"
-    },
-    {
-      "orig": "夕셕陽양넘은後후에山산氣긔ᄂᆞᆫ됴타마ᄂᆞᆫ\n黃황昏혼이갓가오니物믈色석이어둡ᄂᆞᆫ다\n아ᄒᆡ야범므셔온ᄃᆡ나ᄃᆞᆫ니지마라라",
-      "modern": "석양(夕陽) 넘은 후에 산 기운은 좋다마는\n황혼(黃昏)이 가까우니 물색(物色)이 어두워진다\n아이야 범이 무서우니 나다니지 마라라",
-      "reading": null,
-      "en": "After the setting sun has gone, the mountain air is pleasant,\nbut dusk is near and the scenery grows dark.\nBoy, tigers are fearful; do not go wandering."
-    },
-    {
-      "orig": "右우日일暮모謠요",
-      "modern": "우(右) 일모요(日暮謠)",
-      "reading": null,
-      "en": "The above: Ilmoyo"
-    },
-    {
-      "orig": "## 야심요",
-      "modern": null,
-      "reading": null,
-      "en": "## Yasimyo (Song of Deep Night)"
-    },
-    {
-      "orig": "ᄇᆞ람분다지게다다라밤들거다블아사라\n벼개예히즈려슬ᄏᆞ지쉬여보쟈\n아희야새야오거든내ᄌᆞᆷ와ᄭᆡ와스라",
-      "modern": "바람이 분다 지게문 닫아라 밤이 들었다 불 꺼라\n베개에 비스듬히 누워 실컷 쉬어 보자\n아이야 새벽이 오거든 내 잠을 깨워라",
-      "reading": null,
-      "en": "The wind is blowing; shut the door. Night has come; put out the lamp.\nLying slantwise on the pillow, let me rest to my fill.\nBoy, when the dawn comes, wake me from my sleep."
-    },
-    {
-      "orig": "右우夜야深심謠요",
-      "modern": "우(右) 야심요(夜深謠)",
-      "reading": null,
-      "en": "The above: Yasimyo"
-    },
-    {
-      "orig": "## 기세탄",
-      "modern": null,
-      "reading": null,
-      "en": "## Gisetan (Lament for a Hungry World)"
-    },
-    {
-      "orig": "환자타산다ᄒᆞ고그ᄅᆞᆯ사그르다ᄒᆞ니\n夷이齊졔의노픈줄을이렁구러알관디고\n어즈머사ᄅᆞᆷ이야외라ᄒᆡ운의타시로다",
-      "modern": "환자(還子) 타 산다 하고 그것을 그르다 하니\n이제(夷齊)의 높음을 이럭저럭 알겠구나\n아아 사람이야 그르랴 흉년 운수의 탓이로다",
-      "reading": null,
-      "en": "They say one lives by taking relief grain, and call that wrong,\nand so I come, somehow, to see how lofty Yi and Je [Boyi and Shuqi] were.\nAlas, are the people at fault? It is the doing of the age's fortune."
-    },
-    {
-      "orig": "右우饑기世새嘆탄",
-      "modern": "우(右) 기세탄(饑世嘆)",
-      "reading": null,
-      "en": "The above: Gisetan"
-    },
     {
       "orig": "## 오우가",
       "modern": null,
@@ -218,9 +68,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Trimmed to the 오우가 section (heading, six sijo, closing colophon) with orig untouched; rewrote card/notes for the excerpt and edition line. All six translations and modern renderings checked; the uncertain 야심요/기세탄/만흥 glosses were removed with the trimmed poems."
   }
 }

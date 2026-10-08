@@ -44,9 +44,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Raw text complete; translation, modern and notes checked against orig and Wikisource headnote; stray headings kept with sensible en headings; no changes needed."
   }
 }

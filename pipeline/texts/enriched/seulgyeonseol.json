@@ -1,0 +1,52 @@
+{
+  "id": "seulgyeonseol",
+  "card": {
+    "summary_ko": "개를 때려죽인 일에 마음 아파하는 손님과 이를 놓고 이를 잡는 일에 빗대어 답하는 이규보의 문답체 글로, 생명은 크기와 상관없이 모두 소중하다는 깨달음을 담았습니다.",
+    "summary_en": "Yi Gyu-bo's dialogue-form essay in which a guest grieves over a beaten dog and the author answers with lice, arguing that all living things, large or small, cling equally to life.",
+    "level": "classical",
+    "edition_ko": "중국어 위키문헌 '蝨犬說' (판 1373632, 2018-02-24). 원문은 퍼블릭 도메인, 전사는 CC BY-SA 4.0.",
+    "edition_en": "Chinese Wikisource, '蝨犬說' (revision 1373632, 2018-02-24). Original in the public domain; transcription CC BY-SA 4.0."
+  },
+  "notes": {
+    "ko": "**배경** 이규보(1168~1241)는 고려 중기의 문인으로, 호는 백운거사이며 『동국이상국집』에 시문이 실려 있습니다. 「슬견설」은 '이(蝨)와 개에 관한 설(說)'이라는 뜻으로, 설은 어떤 사물이나 사건에 대한 생각을 논리적으로 풀어 쓰는 한문 문체입니다. 정확한 창작 연대는 알려져 있지 않습니다.\n\n**의의** 우리 고전 산문에서 대표적인 철리(哲理) 산문으로 오래 읽혀 왔으며, 교과서에도 자주 실립니다. 큰 것과 작은 것을 차별하는 시각을 비판하는 글로, 현대의 생명 존중 논의와도 맞닿아 있습니다.\n\n**형식과 주제** 손님과 '나'의 문답으로 이루어져 있습니다. 손님이 개의 죽음을 슬퍼하자 '나'는 불에 이를 굽는 광경으로 응수하고, 손님이 이는 하찮은 것이라고 화를 내자 열 손가락을 깨물면 어느 것이나 아프다는 비유로 설득합니다. 끝에서는 '달팽이 뿔을 소뿔처럼 보고, 메추라기를 대붕과 같게 보라'고 하여 『장자』의 제물(齊物) 사상, 곧 만물을 크기로 가르지 않는 시각을 빌려 마무리합니다.\n\n**읽기 도움**\n- 不逞: 불량한, 행실이 나쁜.\n- 痛心: 마음 아파하다.\n- 捫蝨: 이를 잡다.\n- 憮然: 낙담하여 멍한 모양.\n- 黔首: 백성.\n- 貪生惡死: 삶을 탐하고 죽음을 싫어함.\n- 蝸角: 달팽이 뿔 (아주 작은 것).\n- 斥鷃/大鵬: 작은 메추라기와 큰 새 (『장자』 소요유).\n- 盍: 어찌 ~하지 않는가.",
+    "en": "**Background** Yi Gyu-bo (1168-1241), a mid-Goryeo writer with the pen name Baegun geosa, has his works collected in the Dongguk Isanggukjip. 'Seulgyeonseol' means 'a discourse on lice and dogs'; a seol is a Literary Chinese genre in which the writer reasons through his thoughts on a thing or event. Its exact date of composition is not known.\n\n**Significance** It has long been read as the model of Korean philosophical prose and often appears in school textbooks. It criticizes the habit of valuing things by size, and speaks to modern debates about respect for life.\n\n**Form and themes** It is built as a dialogue between a guest and the author. When the guest mourns a dog's death, the author answers with a scene of someone roasting lice; when the guest angrily dismisses lice as trivial, the author replies that if you bite any of your ten fingers, each hurts alike. The ending, 'see a snail's horn as an ox's horn, count the quail equal to the great peng', borrows the Zhuangzi view of the equality of things: do not divide creatures by size.\n\n**Reading help**\n- 不逞: unruly, ill-behaved.\n- 痛心: to be pained at heart.\n- 捫蝨: to pick lice.\n- 憮然: dismayed, disappointed.\n- 黔首: the common people.\n- 貪生惡死: clinging to life, loathing death.\n- 蝸角: a snail's horn (something tiny).\n- 斥鷃 / 大鵬: the little quail and the great peng bird (Zhuangzi, 'Free and Easy Wandering').\n- 盍: why not."
+  },
+  "paragraphs": [
+    {
+      "orig": "客有謂予曰：＂昨晚見一不逞男子以大棒子椎遊犬而殺者，勢甚可哀，不能無痛心．自是誓不食犬豕之肉矣．＂",
+      "modern": null,
+      "reading": "객유위여왈 \"작만견일불령남자이대봉자추유견이살자 세심가애 불능무통심 자시서불식견시지육의\"",
+      "en": "A guest said to me, \"Yesterday evening I saw a ruffian beat a stray dog to death with a big club. The sight was so pitiable that I could not help being pained at heart. From that time I swore never to eat the flesh of dogs or pigs.\""
+    },
+    {
+      "orig": "予應之曰：＂昨見有人擁熾爐捫蝨而烘者，予不能無痛心．自誓不復捫蝨矣．＂",
+      "modern": null,
+      "reading": "여응지왈 \"작견유인옹치로문슬이홍자 여불능무통심 자서불부문슬의\"",
+      "en": "I answered him, \"Yesterday I saw someone holding a blazing brazier close and picking lice to roast them over it. I could not help being pained at heart. I have sworn never again to pick lice.\""
+    },
+    {
+      "orig": "客憮然曰：＂蝨微物也．吾見庬然大物之死，有可哀者故言之，子以此爲對，豈欺我耶？＂",
+      "modern": null,
+      "reading": "객무연왈 \"슬미물야 오견방연대물지사 유가애자고언지 자이차위대 기기아야\"",
+      "en": "The guest, dismayed, said, \"A louse is a trifling creature. I saw the death of a huge creature and found it pitiable, so I spoke of it. You make this your reply: are you trying to deceive me?\""
+    },
+    {
+      "orig": "予曰＂凡有血氣者，自黔首至于牛馬猪羊昆蟲螻蟻，其貪生惡死之心，未始不同．豈大者獨惡死，而小則不爾耶？然則犬與蝨之死一也，故擧以爲的對，豈故相欺耶？子不信之，盍齕爾之十指乎，獨拇指痛，而餘則否乎？在一體之中，無大小支節，均有血肉，故其痛則同．況各受氣息者，安有彼之惡死而此之樂乎？子退焉，冥心靜慮．視蝸角如牛角，齊斥鷃爲大鵬，然後吾方與之語道矣．＂",
+      "modern": null,
+      "reading": "여왈 \"범유혈기자 자검수지우우마저양곤충누의 기탐생오사지심 미시불동 기대자독오사 이소즉불이야 연즉견여슬지사일야 고거이위적대 기고상기야 자불신지 합흘이지십지호 독무지통 이여즉부호 재일체지중 무대소지절 균유혈육 고기통즉동 황각수기식자 안유피지오사이차지락호 자퇴언 명심정려 시와각여우각 제척안위대붕 연후오방여지어도의\"",
+      "en": "I said, \"All that have blood and breath, from the common people to oxen, horses, pigs, sheep, insects, mole crickets and ants, share the same heart that clings to life and loathes death. Would only the large hate death and the small not? Then the death of a dog and the death of a louse are one and the same; that is why I took it up as a direct counterpart. How could I be deliberately deceiving you? If you do not believe it, why not bite your ten fingers? Does only the thumb hurt, and the rest not? Within a single body there are no large or small limbs or joints; all have blood and flesh, so their pain is the same. How much more so for each creature that has received breath: how could one hate death while another delights in it? Go home, still your mind and calm your thoughts. When you see a snail's horn as an ox's horn, and make the little quail equal to the great peng, then I will talk of the Way with you.\""
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

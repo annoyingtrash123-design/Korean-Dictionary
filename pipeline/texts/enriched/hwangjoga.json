@@ -1,0 +1,40 @@
+{
+  "id": "hwangjoga",
+  "card": {
+    "summary_ko": "유리왕이 떠나 버린 치희를 쫓아갔다가 홀로 돌아오며, 짝지어 나는 꾀꼬리를 보고 외로움을 읊었다고 전하는 노래입니다.",
+    "summary_en": "A song traditionally ascribed to King Yuri of Goguryeo, who, returning alone after failing to bring back his departed consort, saw orioles in pairs and lamented his solitude.",
+    "level": "classical",
+    "edition_ko": "한국어 위키문헌 '황조가' (판 418716, 2025-12-22). 원문은 퍼블릭 도메인, 전사는 CC BY-SA 4.0.",
+    "edition_en": "Korean Wikisource, '황조가' (revision 418716, 2025-12-22). Original in the public domain; transcription CC BY-SA 4.0."
+  },
+  "notes": {
+    "ko": "**배경** 『삼국사기』 권13 고구려본기 유리명왕 3년(기원전 17년) 조에 실려 있습니다. 기록에 따르면 왕이 골천 출신의 화희와 한나라 출신의 치희를 맞았는데 두 사람이 다투었고, 왕이 사냥으로 궁을 비운 사이 화희가 치희를 꾸짖자 치희가 노하여 떠났습니다. 왕이 말을 달려 뒤쫓았으나 치희는 돌아오지 않았고, 왕은 나무 아래에서 쉬다가 꾀꼬리들이 모여 노니는 것을 보고 이 노래를 불렀다고 합니다. 작자는 전통적으로 유리왕으로 돌려지지만 확증은 없고, 한시 형태는 후대의 번역·정리일 가능성이 논의됩니다.\n\n**의의** 「구지가」가 집단의 주술적 노래라면 「황조가」는 개인의 감정을 읊은 현존 최고(最古) 수준의 서정시로 자주 언급됩니다.\n\n**형식과 주제** 4언 4구의 한역시로 전합니다. 앞의 두 구는 짝지어 나는 꾀꼬리라는 밝은 자연 풍경이고, 뒤의 두 구는 홀로 남은 자신의 처지입니다. 짝 있는 새와 홀로인 사람의 대비가 핵심입니다. 이 노래를 두 세력(토착 세력과 한(漢) 계열)의 갈등을 반영한 이야기로 읽는 해석도 있습니다.\n\n**읽기 도움**\n- 翩翩: 훨훨 나는 모양.\n- 黃鳥: 꾀꼬리.\n- 雌雄: 암컷과 수컷.\n- 相依: 서로 의지하다.\n- 念我之獨: '나의 외로움을 생각하니'.\n- 誰其: 누가 (의문).\n- 與歸: 함께 돌아가다.\n- 위키문헌 판본의 둘째 문단은 우리말 풀이입니다.",
+    "en": "**Background** It is recorded in the Samguk sagi, vol. 13 (Goguryeo annals), under the third year of King Yuri (17 BCE). The account says the king had two consorts, Hwahui from Golcheon and Chihui of Han origin, who quarrelled; while the king was away hunting, Hwahui scolded Chihui, who left in anger. The king galloped after her but she would not return, and, resting beneath a tree, he saw orioles gathering and sang this song. The poem is traditionally attributed to King Yuri, but this cannot be confirmed, and the Chinese-character form may be a later translation or arrangement.\n\n**Significance** Where the Gujiga is a collective ritual song, the Hwangjoga is often cited as one of the earliest surviving lyric poems expressing personal feeling.\n\n**Form and themes** It survives as four lines of four characters in Chinese. The first half is a bright natural scene of orioles in pairs; the second half turns to the speaker left alone. The contrast between paired birds and a solitary man is the whole poem. Some scholars also read the story as reflecting conflict between native and Han-affiliated groups.\n\n**Reading help**\n- 翩翩: fluttering.\n- 黃鳥: oriole.\n- 雌雄: female and male.\n- 相依: to lean on each other.\n- 念我之獨: 'I think of my being alone'.\n- 誰其: who (interrogative).\n- 與歸: to go home together with.\n- The second paragraph in the Wikisource edition is a Korean rendering."
+  },
+  "paragraphs": [
+    {
+      "orig": "翩翩黃鳥\n雌雄相依\n念我之獨\n誰其與歸",
+      "modern": null,
+      "reading": "편편황조\n자웅상의\n염아지독\n수기여귀",
+      "en": "Fluttering, fluttering, the yellow birds;\nmale and female lean on one another.\nI think of my own aloneness:\nwith whom shall I go home?"
+    },
+    {
+      "orig": "펄펄 나는 저 꾀꼬리는\n암수가 서로 노니는데\n외로울사 이내 몸은\n뉘와 함께 돌아갈꼬",
+      "modern": null,
+      "reading": "펄펄 나는 저 꾀꼬리는\n암수가 서로 노니는데\n외로울사 이내 몸은\n뉘와 함께 돌아갈꼬",
+      "en": "Those orioles flitting about,\nmale and female playing together,\nbut I, so lonely,\nwith whom shall I return?"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}
