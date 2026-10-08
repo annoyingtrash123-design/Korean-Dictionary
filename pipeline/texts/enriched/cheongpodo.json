@@ -1,0 +1,64 @@
+{
+  "id": "cheongpodo",
+  "card": {
+    "summary_ko": "이육사가 칠월의 청포도에 고향의 전설과 기다리는 손님에 대한 희망을 담은 서정시로, 그의 시 가운데 가장 밝고 맑은 어조를 띤다.",
+    "summary_en": "A lyric by Yi Yuksa in which July green grapes carry the legends of his home place and hope for an awaited guest, the brightest and clearest in tone among his poems.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「청포도」 (판 번호 202488), 원저작물은 공유저작물, 전사는 CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, \"청포도\" (revision 202488); original work in the public domain, transcription CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**배경** 이육사(1904–1944)는 항일 운동가이자 시인으로, 「청포도」는 1939년 『문장』에 발표되었고 사후인 1946년 『육사시집』에 실렸다. 그의 호 '육사'는 수감번호 264에서 따왔다고 전해진다.\n\n**의의** 저항시인으로 알려진 이육사의 작품 중 서정성이 가장 두드러진 시로 널리 읽힌다. '손님'이 누구인지에 대해서는 독립, 조국의 광복, 벗 등 여러 해석이 있으며 하나로 확정되지 않는다.\n\n**형식과 주제** 2행씩 6연으로 이루어져 있다. 1–3연은 청포도, 하늘, 바다, 흰 돛단배의 청과 백 색채가 어우러진 풍경이고, 4연부터 기다리는 손님이 등장한다. 5–6연의 먹고 싶은 마음과 준비하는 모습('은쟁반', '하이얀 모시 수건')은 기다림을 구체적인 장면으로 보여 준다. 푸른색과 흰색의 대비, 청포(푸른 도포)와 청포도의 소리·색 연결이 눈에 띈다.\n\n**읽기 도움**\n- `고장`: 고향·지역.\n- `주절이주절이`: 주저리주저리. 열매가 많이 달린 모양.\n- `알알이`: 알마다.\n- `박혀`: 박히어.\n- `청포(靑袍)`: 푸른 도포(예전 관복·예복).\n- `함뿍`: 가득, 흠뻑.\n- `-ㄹ련`: 해도 좋으련(마)—의향 표현.\n- `모시`: 모시풀 섬유로 짠 여름 천.",
+    "en": "**Background** Yi Yuksa (1904-1944), an anti-Japanese activist and poet, published \"Cheongpodo\" in *Munjang* in 1939; it was collected in *Yuksa sijip* in 1946, after his death. His pen name is said to derive from his prison number, 264.\n\n**Significance** It is widely read as the most lyrical among the works of the poet best known for resistance poetry. Who the awaited \"guest\" is has been read in several ways (independence, national liberation, a friend) and is not settled.\n\n**Form and themes** Six two-line stanzas. Stanzas 1-3 give a landscape of green grapes, sky, sea and a white sailboat in blue and white; the awaited guest appears from stanza 4. Stanzas 5-6, with the wish to eat the grapes and the preparations (silver tray, white ramie towel), turn waiting into a concrete scene. The contrast of blue and white, and the link between 청포 (blue robe) and 청포도 (green grapes), stand out.\n\n**Reading help**\n- `고장`: home district, locality.\n- `주절이주절이`: = 주저리주저리, in dangling clusters.\n- `알알이`: grape by grape.\n- `박혀`: = 박히어, embedded.\n- `청포(靑袍)`: blue robe (formerly official or formal dress).\n- `함뿍`: brimming, thoroughly.\n- `-ㄹ련`: expresses a willingness (\"it would be fine to...\").\n- `모시`: ramie, a summer fabric."
+  },
+  "paragraphs": [
+    {
+      "orig": "내 고장 칠월은\n청포도가 익어가는 시절",
+      "modern": "내 고장 칠월은\n청포도가 익어가는 시절",
+      "reading": null,
+      "en": "In my home place, July\nis the season when green grapes ripen."
+    },
+    {
+      "orig": "이 마을 전설이 주절이주절이 열리고\n먼데 하늘이 꿈꾸며 알알이 들어와 박혀",
+      "modern": "이 마을 전설이 주저리주저리 열리고\n먼 데 하늘이 꿈꾸며 알알이 들어와 박혀",
+      "reading": null,
+      "en": "The legends of this village hang in dangling clusters,\nand the distant sky, dreaming, comes in and lodges grape by grape,"
+    },
+    {
+      "orig": "하늘 밑 푸른 바다가 가슴을 열고\n흰 돛단배가 곱게 밀려서 오면",
+      "modern": "하늘 밑 푸른 바다가 가슴을 열고\n흰 돛단배가 곱게 밀려서 오면",
+      "reading": null,
+      "en": "and the blue sea beneath the sky opens its breast,\nand a white sailboat comes drifting in, lovely,"
+    },
+    {
+      "orig": "내가 바라는 손님은 고달픈 몸으로\n청포(靑袍)를 입고 찾아온다고 했으니",
+      "modern": "내가 바라는 손님은 고달픈 몸으로\n청포(靑袍)를 입고 찾아온다고 했으니",
+      "reading": null,
+      "en": "for the guest I long for\nis to come in a blue robe, weary in body,"
+    },
+    {
+      "orig": "내 그를 맞아 이 포도를 따먹으면\n두 손은 함뿍 적셔도 좋으련",
+      "modern": "내 그를 맞아 이 포도를 따먹으면\n두 손은 함뿍 적셔도 좋으련",
+      "reading": null,
+      "en": "so if I welcome him and eat these grapes picked fresh,\nit would be fine to soak both my hands through."
+    },
+    {
+      "orig": "아이야 우리 식탁엔 은쟁반에\n하이얀 모시 수건을 마련해두렴",
+      "modern": "아이야 우리 식탁엔 은쟁반에\n하이얀 모시 수건을 마련해두렴",
+      "reading": null,
+      "en": "Child, on our table, on a silver tray,\nplease set out a snow-white ramie towel."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

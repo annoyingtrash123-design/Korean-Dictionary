@@ -1,0 +1,52 @@
+{
+  "id": "jeoljeong",
+  "card": {
+    "summary_ko": "이육사가 일제강점기 말의 극한 상황을 '겨울'과 '북방'의 이미지로 압축한 4연 8행의 시로, 마지막 행의 역설적 전환이 핵심이다.",
+    "summary_en": "A four-stanza, eight-line poem in which Yi Yuksa condenses the extreme pressure of late colonial rule into images of winter and the far north; its turn in the last line is the key.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「절정」 (판 번호 248562), 원저작물은 공유저작물, 전사는 CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, \"절정\" (revision 248562); original work in the public domain, transcription CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**배경** 이육사(1904–1944)는 본명이 이원록으로, 의열단 등에서 항일 활동을 하다 여러 차례 투옥되었고 1944년 베이징의 감옥에서 숨졌다. 「절정」은 1940년 『문장』에 발표되었다. 시인이 활동하던 북방(만주·중국)의 체험이 배경에 깔려 있다고 흔히 해석한다.\n\n**의의** 저항시의 대표작으로 꼽히며, 직접적인 구호 없이 극한 상황과 그 너머의 인식을 압축한 점이 높이 평가된다. 교과서에도 자주 실린다.\n\n**형식과 주제** 기승전결의 4연 구성이다. 1연은 쫓겨 온 상황, 2연은 더는 갈 곳 없는 정점(고원, 서릿발 칼날), 3연은 무릎 꿇을 곳도 발 디딜 곳도 없는 절망이다. 4연에서 시인은 '눈감아' 생각하며 '겨울은 강철로 된 무지개'라고 말하는데, 이는 시련(강철)과 희망(무지개)을 한 이미지에 겹친 역설로 읽힌다. 다만 이 마지막 행의 해석은 독자마다 갈린다.\n\n**읽기 도움**\n- `갈겨`: (채찍으로) 후려쳐. 원형 '갈기다'.\n- `휩쓸려오다`: 거센 힘에 밀려 오다.\n- `서릿발 칼날지다`: 서리가 칼날처럼 곤두서다.\n- `재겨 디디다`: 발끝에 힘을 주어 딛다.\n- `이러매`: 이러하므로(옛스러운 연결).\n- `-ㄹ밖에`: ~할 수밖에.\n- `무지갠가보다`: '무지개인가 보다'의 줄임. 추측.\n- `어데다`: '어디에다'의 방언·구어형.",
+    "en": "**Background** Yi Yuksa (1904-1944; real name Yi Won-rok) took part in anti-Japanese activity, including with the Uiyoldan, was imprisoned several times, and died in a Beijing prison in 1944. \"Jeoljeong\" appeared in the magazine *Munjang* in 1940. It is commonly read against his experience in the northern lands (Manchuria and China).\n\n**Significance** It is counted among the central works of Korean resistance poetry, praised for compressing an extreme situation, and the insight beyond it, without slogans. It is a frequent school-textbook poem.\n\n**Form and themes** Four stanzas follow a rise-and-turn pattern. Stanza 1 is the driven-out situation; stanza 2 the end point (plateau, frost-blade ground); stanza 3 the despair of having nowhere to kneel or even to plant a foot. In stanza 4 the speaker closes his eyes and thinks, and calls winter \"a rainbow made of steel\", a paradox that overlays hardship (steel) and hope (rainbow). Readers differ on how to take this last line.\n\n**Reading help**\n- `갈겨`: lashed (with a whip); base form 갈기다.\n- `휩쓸려오다`: to be swept along by a violent force.\n- `서릿발 칼날지다`: hoarfrost standing up like blades.\n- `재겨 디디다`: to plant the foot pressing on the toes.\n- `이러매`: \"this being so\" (archaic-sounding connective).\n- `-ㄹ밖에`: \"there is nothing to do but...\".\n- `무지갠가보다`: contraction of 무지개인가 보다, \"it seems to be a rainbow\".\n- `어데다`: colloquial/dialect for 어디에다, \"where\"."
+  },
+  "paragraphs": [
+    {
+      "orig": "매운 계절(季節)의 채찍에 갈겨\n마침내 북방(北方)으로 휩쓸려오다",
+      "modern": "매운 계절의 채찍에 갈겨\n마침내 북방으로 휩쓸려오다",
+      "reading": null,
+      "en": "Lashed by the whip of a bitter season,\nat last I have been swept up to the north."
+    },
+    {
+      "orig": "하늘도 그만 지쳐 끝난 고원(高原)\n서릿발 칼날진 그 위에 서다",
+      "modern": "하늘도 그만 지쳐 끝난 고원\n서릿발 칼날진 그 위에 서다",
+      "reading": null,
+      "en": "A plateau where even the sky has tired and ended;\nI stand upon it, on the frost sharp as blades."
+    },
+    {
+      "orig": "어데다 무릎을 꿇어야 하나?\n한발 재겨 디딜 곳조차 없다",
+      "modern": "어디에다 무릎을 꿇어야 하나?\n한 발 재겨 디딜 곳조차 없다",
+      "reading": null,
+      "en": "Where am I to kneel?\nThere is not even a place to plant one foot."
+    },
+    {
+      "orig": "이러매 눈감아 생각해볼밖에\n겨울은 강철로 된 무지갠가보다.",
+      "modern": "이러매 눈감아 생각해볼 밖에\n겨울은 강철로 된 무지개인가 보다.",
+      "reading": null,
+      "en": "This being so, I can only close my eyes and think:\nwinter must be a rainbow made of steel."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

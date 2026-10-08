@@ -1,0 +1,226 @@
+{
+  "id": "ouga",
+  "card": {
+    "summary_ko": "윤선도가 해남 금쇄동에서 지은 연작 시조 〈산중신곡〉 전체로, 끝의 〈오우가〉는 물·돌·소나무·대나무·달을 벗으로 삼아 노래합니다.",
+    "summary_en": "The whole of Yun Seon-do's sijo cycle \"New Songs from the Mountains\" (Sanjung sin-gok), ending with \"Song of My Five Friends\", which names water, rock, pine, bamboo and the moon as his friends.",
+    "level": "classical",
+    "edition_ko": "위키문헌 「산중신곡」 (개정 460013), 전사 CC BY-SA 4.0; 원저작물은 퍼블릭 도메인. 〈오우가〉는 이 가첩의 마지막 6수",
+    "edition_en": "Korean Wikisource, \"산중신곡\" (revision 460013), transcription CC BY-SA 4.0; the work itself is public domain. \"Ouga\" is the last six poems of this manuscript"
+  },
+  "notes": {
+    "ko": "**배경** 윤선도(1587–1671)는 1642년 유배에서 풀려나 전라남도 해남 금쇄동에서 연작 시조 〈산중신곡〉을 지었다고 알려져 있습니다. 위키문헌 해제에 따르면 〈만흥〉 6수, 〈조무요〉·〈일모요〉·〈야심요〉·〈기세탄〉 각 1수, 〈하우요〉 2수, 〈오우가〉 6수 등 모두 18수이며, 문집 《고산유고》 권6에 실려 있습니다. 이 파일은 〈오우가〉만이 아니라 18수 전체를 싣고 있습니다.\n\n**의의** 〈오우가〉는 자연물을 벗으로 삼아 그 덕을 칭송한 가장 유명한 시조의 하나이며, 〈만흥〉은 자연 속 은거의 즐거움을 노래합니다.\n\n**형식과 주제** 모두 3장 평시조입니다. 〈오우가〉는 서시 뒤에 물(水), 돌(石), 소나무(松), 대나무(竹), 달(月)을 차례로 다루며, 각 수가 변하지 않음, 꿋꿋함, 말없음 같은 덕목과 연결됩니다. 〈만흥〉에서는 가난한 산중 생활의 만족과 임금에 대한 감사가 이어집니다.\n\n**읽기 도움**\n- 한자 뒤에 한글 음을 붙인 표기(山산水슈間간)가 쓰이고, 띄어쓰기가 없습니다.\n- `ㆍ`(아래아)는 대체로 ㅏ: `ᄒᆞ노라` = 하노라. `ᄒᆡ` = 해, 날. `ᄌᆞ`, `ᄂᆞ` 등도 같음.\n- `뛰집`: 띠로 이은 집. `햐암`: 시골뜨기(향암). `분(分)`: 분수.\n- `수석(水石)`, `송죽(松竹)`: 물과 돌, 소나무와 대나무.\n- `소부 허유`: 요 임금이 천하를 주려 하자 거절한 전설 속 은자.\n- `소부허유ㅣ`의 `ㅣ`는 주격 조사 '이'.\n- 〈야심요〉 마지막 줄과 〈기세탄〉의 뜻은 해석이 갈립니다.",
+    "en": "**Background** Yun Seon-do (1587–1671) is known to have composed the sijo cycle *Sanjung sin-gok* in 1642, after release from exile, at Geumsoedong in Haenam, South Jeolla. According to the Wikisource note it has 18 poems: six of *Manheung*, one each of *Jomuyo*, *Ilmoyo*, *Yasimyo* and *Gisetan*, two of *Hauyo*, and six of *Ouga*; it is in volume 6 of his collected works, *Goksan yuko*. This file contains all 18 poems, not only *Ouga*.\n\n**Significance** *Ouga* is one of the best-known sijo, praising the virtues of natural things as friends; *Manheung* sings the pleasure of retreat in nature.\n\n**Form and themes** All are standard three-line sijo. After an opening poem, *Ouga* takes water, rock, pine, bamboo and the moon in turn, each linked to a virtue such as constancy, firmness or silence. *Manheung* moves between contentment in a poor mountain life and gratitude to the king.\n\n**Reading help**\n- Hanja are followed by their Korean sound (山산水슈間간), and words are run together without spaces.\n- `ㆍ` (arae-a) is mostly modern ㅏ: `ᄒᆞ노라` = 하노라. `ᄒᆡ` = sun/day. Same for `ᄌᆞ`, `ᄂᆞ`.\n- `뛰집`: a house thatched with *tti* grass. `햐암`: a rustic (향암). `분(分)`: one's lot.\n- `수석(水石)`, `송죽(松竹)`: water and stone, pine and bamboo.\n- `소부 허유` (Sobu, Heo Yu): legendary hermits who refused the throne offered by Emperor Yao.\n- `ㅣ` after 소부허유 is the subject particle.\n- The last line of *Yasimyo* and the meaning of *Gisetan* are disputed."
+  },
+  "paragraphs": [
+    {
+      "orig": "山산中듕新신曲곡",
+      "modern": "산중신곡(山中新曲)",
+      "reading": null,
+      "en": "New Songs from the Mountains (Sanjung sin-gok)"
+    },
+    {
+      "orig": "## 만흥",
+      "modern": null,
+      "reading": null,
+      "en": "## Manheung (Idle Delight)"
+    },
+    {
+      "orig": "山산水슈間간바회아래뛰집을짓노라ᄒᆞ니\n그모른ᄂᆞᆷ들은욷는다ᄒᆞᆫ다마ᄂᆞᆫ\n어리고햐암의뜻의ᄂᆞᆫ내分분인가ᄒᆞ노라",
+      "modern": "산수 사이 바위 아래 띠집을 짓노라 하니\n그 모르는 남들은 웃는다 하지마는\n어리석고 시골뜨기인 내 뜻에는 내 분수인가 하노라",
+      "reading": null,
+      "en": "I say I am building a thatched hut among the hills and streams, beneath a rock,\nand those who do not understand laugh at me, they say.\nBut to my foolish, rustic mind it is simply my lot."
+    },
+    {
+      "orig": "보리밥풋ᄂᆞ물을알마초먹은後후에\n바횟긋믉ᄀᆞ의슬ᄏᆞ지노니노라\n그나믄녀나믄일이야부ᄅᆞᆯ줄이이시랴",
+      "modern": "보리밥과 풋나물을 알맞게 먹은 후에\n바위 끝 물가에서 실컷 노니노라\n그 밖의 다른 일이야 부러워할 줄이 있으랴",
+      "reading": null,
+      "en": "After a fitting meal of barley rice and fresh greens,\nI roam to my heart's content by the water at the rock's edge.\nAs for everything else, is there anything to envy?"
+    },
+    {
+      "orig": "잔들고혼자안자먼뫼흘ᄇᆞ라보니\n그리던님이오나반가옴이이리ᄒᆞ랴\n말ᄉᆞᆷ도우음도아녀도몯내됴ᄒᆞ노라",
+      "modern": "잔 들고 혼자 앉아 먼 산을 바라보니\n그리던 임이 온다 한들 반가움이 이러하랴\n말씀도 웃음도 아니하여도 못내 좋아하노라",
+      "reading": null,
+      "en": "Cup in hand, sitting alone, I gaze at the far hills.\nEven if my longed-for beloved came, would I be so glad?\nWithout a word, without a smile, I am endlessly happy."
+    },
+    {
+      "orig": "누고셔三삼公공도곤낫다ᄒᆞ더니萬만乘승이이만ᄒᆞ랴\n이제로헤어든巢소父부許허由유ㅣ냑돗더라\n아마도林님泉쳔閑한興흥을비길곳이업세라",
+      "modern": "누가 삼공(三公)보다 낫다 하더니 만승(萬乘)이 이만하랴\n이제 헤아려 보니 소부와 허유가 영리하더라\n아마도 임천한흥(林泉閑興)을 견줄 곳이 없구나",
+      "reading": null,
+      "en": "Who said the Three Dukes were better? Does even an emperor of ten thousand chariots have it so good?\nThinking it over now, Sobu and Heo Yu were shrewd.\nTruly, nothing compares to the leisurely delight of woods and springs."
+    },
+    {
+      "orig": "내셩이게으르더니히ᄂᆞᆯ히아ᄅᆞ실샤\n人인間간萬만事ᄉᆞᄅᆞᆯᄒᆞᆫ일도아니맛뎌\n다만당ᄃᆞ토리업슨江강山산을딕히라ᄒᆞ시도다",
+      "modern": "내 성품이 게으르더니 하늘이 아시어\n인간 만사를 한 일도 아니 맡겨\n다만 다툴 이 없는 강산을 지키라 하시도다",
+      "reading": null,
+      "en": "My nature was idle, and Heaven, knowing it,\nentrusted me with not one of the world's affairs,\nand told me only to guard the rivers and hills, which no one contends for."
+    },
+    {
+      "orig": "江강山산이됴타ᄒᆞᆫᄃᆞᆯ내分분으로누얻ᄂᆞ냐\n님군恩은惠혜ᄅᆞᆯ이제더옥아노이다\n아므리갑고쟈ᄒᆞ야도ᄒᆡ올일이업세라",
+      "modern": "강산이 좋다 한들 내 분수로 누워 있겠느냐\n임금의 은혜를 이제 더욱 알겠나이다\n아무리 갚고자 하여도 할 일이 없구나",
+      "reading": null,
+      "en": "Fair as the hills and rivers are, could I lie here by my own merit?\nNow I understand the king's grace all the more.\nHowever much I wish to repay it, there is nothing I can do."
+    },
+    {
+      "orig": "右우漫만興흥",
+      "modern": "우(右) 만흥(漫興)",
+      "reading": null,
+      "en": "The above: Manheung"
+    },
+    {
+      "orig": "## 조무요",
+      "modern": null,
+      "reading": null,
+      "en": "## Jomuyo (Song of Morning Mist)"
+    },
+    {
+      "orig": "月월出츌山산이놉더니마ᄂᆞᆫ믜운거시안개로다\n天텬王왕第데一일峰봉을一일時시예ᄀᆞ리와다\n두어라ᄒᆡ퍼딘휘면안개아니거드랴",
+      "modern": "월출산이 높더니마는 미운 것이 안개로구나\n천왕제일봉을 한꺼번에 가렸구나\n두어라 해가 퍼진 후면 안개 아니 걷히랴",
+      "reading": null,
+      "en": "Wolchulsan stood high, but the hateful thing is the mist,\nwhich has hidden the First Peak of Cheonwang all at once.\nNever mind: once the sun has spread, will the mist not lift?"
+    },
+    {
+      "orig": "右우朝됴霧무謠요",
+      "modern": "우(右) 조무요(朝霧謠)",
+      "reading": null,
+      "en": "The above: Jomuyo"
+    },
+    {
+      "orig": "## 하우요",
+      "modern": null,
+      "reading": null,
+      "en": "## Hauyo (Song of Summer Rain)"
+    },
+    {
+      "orig": "비오는ᄃᆡ들희가랴사립닷고쇼머겨라\n마히ᄆᆡ양이랴잠기연장다ᄉᆞ려라\n쉬다가개ᄂᆞᆫ날보아ᄉᆞ래긴밧가라라",
+      "modern": "비 오는데 들에 가랴 사립문 닫고 소 먹여라\n장마가 늘 이러하랴 쟁기와 연장을 손질해라\n쉬다가 개는 날 보아 사래 긴 밭 갈아라",
+      "reading": null,
+      "en": "It is raining; why go to the fields? Shut the brushwood gate and feed the ox.\nWill the rains always be like this? Get the ploughs and tools in order.\nRest, and when you see a clear day, plough the long-furrowed field."
+    },
+    {
+      "orig": "심심은ᄒᆞ다마ᄂᆞᆫ일업ᄉᆞᆯᄉᆞᆫ마히로다\n답답은ᄒᆞ다마ᄂᆞᆫ閑한暇가ᄒᆞᆯᄉᆞᆫ밤이로다\n아ᄒᆡ야일즉자다가東동트거든닐거라",
+      "modern": "심심하기는 하지마는 일 없기는 장마로구나\n답답하기는 하지마는 한가하기는 밤이로구나\n아이야 일찍 자다가 동이 트거든 일어나라",
+      "reading": null,
+      "en": "It is dull, but the rainy season is a time without work.\nIt is stifling, but the night is a time of leisure.\nBoy, sleep early, and rise when the east grows light."
+    },
+    {
+      "orig": "右우夏하雨우謠요",
+      "modern": "우(右) 하우요(夏雨謠)",
+      "reading": null,
+      "en": "The above: Hauyo"
+    },
+    {
+      "orig": "## 일모요",
+      "modern": null,
+      "reading": null,
+      "en": "## Ilmoyo (Song of Dusk)"
+    },
+    {
+      "orig": "夕셕陽양넘은後후에山산氣긔ᄂᆞᆫ됴타마ᄂᆞᆫ\n黃황昏혼이갓가오니物믈色석이어둡ᄂᆞᆫ다\n아ᄒᆡ야범므셔온ᄃᆡ나ᄃᆞᆫ니지마라라",
+      "modern": "석양(夕陽) 넘은 후에 산 기운은 좋다마는\n황혼(黃昏)이 가까우니 물색(物色)이 어두워진다\n아이야 범이 무서우니 나다니지 마라라",
+      "reading": null,
+      "en": "After the setting sun has gone, the mountain air is pleasant,\nbut dusk is near and the scenery grows dark.\nBoy, tigers are fearful; do not go wandering."
+    },
+    {
+      "orig": "右우日일暮모謠요",
+      "modern": "우(右) 일모요(日暮謠)",
+      "reading": null,
+      "en": "The above: Ilmoyo"
+    },
+    {
+      "orig": "## 야심요",
+      "modern": null,
+      "reading": null,
+      "en": "## Yasimyo (Song of Deep Night)"
+    },
+    {
+      "orig": "ᄇᆞ람분다지게다다라밤들거다블아사라\n벼개예히즈려슬ᄏᆞ지쉬여보쟈\n아희야새야오거든내ᄌᆞᆷ와ᄭᆡ와스라",
+      "modern": "바람이 분다 지게문 닫아라 밤이 들었다 불 꺼라\n베개에 비스듬히 누워 실컷 쉬어 보자\n아이야 새벽이 오거든 내 잠을 깨워라",
+      "reading": null,
+      "en": "The wind is blowing; shut the door. Night has come; put out the lamp.\nLying slantwise on the pillow, let me rest to my fill.\nBoy, when the dawn comes, wake me from my sleep."
+    },
+    {
+      "orig": "右우夜야深심謠요",
+      "modern": "우(右) 야심요(夜深謠)",
+      "reading": null,
+      "en": "The above: Yasimyo"
+    },
+    {
+      "orig": "## 기세탄",
+      "modern": null,
+      "reading": null,
+      "en": "## Gisetan (Lament for a Hungry World)"
+    },
+    {
+      "orig": "환자타산다ᄒᆞ고그ᄅᆞᆯ사그르다ᄒᆞ니\n夷이齊졔의노픈줄을이렁구러알관디고\n어즈머사ᄅᆞᆷ이야외라ᄒᆡ운의타시로다",
+      "modern": "환자(還子) 타 산다 하고 그것을 그르다 하니\n이제(夷齊)의 높음을 이럭저럭 알겠구나\n아아 사람이야 그르랴 흉년 운수의 탓이로다",
+      "reading": null,
+      "en": "They say one lives by taking relief grain, and call that wrong,\nand so I come, somehow, to see how lofty Yi and Je [Boyi and Shuqi] were.\nAlas, are the people at fault? It is the doing of the age's fortune."
+    },
+    {
+      "orig": "右우饑기世새嘆탄",
+      "modern": "우(右) 기세탄(饑世嘆)",
+      "reading": null,
+      "en": "The above: Gisetan"
+    },
+    {
+      "orig": "## 오우가",
+      "modern": null,
+      "reading": null,
+      "en": "## Ouga (Song of My Five Friends)"
+    },
+    {
+      "orig": "내버디몃치나ᄒᆞ니水슈石석과松숑竹듁이라\n東동山산의ᄃᆞᆯ오르니긔더옥반갑고야\n두어라이다ᄉᆞᆺ밧긔또더ᄒᆞ야머엇ᄒᆞ리",
+      "modern": "내 벗이 몇이냐 하니 수석(水石)과 송죽(松竹)이라\n동산에 달 오르니 그것이 더욱 반갑구나\n두어라 이 다섯 밖에 또 더하여 무엇하랴",
+      "reading": null,
+      "en": "How many friends have I? Water and stone, pine and bamboo.\nThe moon rising over the eastern hill, that is better still.\nEnough: besides these five, what more should I add?"
+    },
+    {
+      "orig": "구룸빗치조타ᄒᆞ나검기ᄅᆞᆯᄌᆞ로ᄒᆞᆫ다\nᄇᆞ람소ᄅᆡᄆᆞᆰ다ᄒᆞ나그칠적이하노매라\n조코도그츨뉘업기ᄂᆞᆫ믈뿐인가ᄒᆞ노라",
+      "modern": "구름 빛이 좋다 하나 검기를 자주 한다\n바람 소리가 맑다 하나 그칠 때가 많구나\n좋고도 그칠 때 없기는 물뿐인가 하노라",
+      "reading": null,
+      "en": "The colour of clouds is called fair, but they often turn dark;\nthe sound of wind is called clear, but it often stops.\nThat which is both good and never ceases is water alone, I think."
+    },
+    {
+      "orig": "고즌므스닐로퓌며셔쉬이디고\n플은어이ᄒᆞ야프르ᄂᆞᆫᄃᆞᆺ누르ᄂᆞ니\n아마도변티아닐ᄉᆞᆫ바회뿐인가ᄒᆞ노라",
+      "modern": "꽃은 무슨 일로 피며서 쉬이 지고\n풀은 어찌하여 푸른 듯 누르러지는가\n아마도 변하지 않을 것은 바위뿐인가 하노라",
+      "reading": null,
+      "en": "Why do flowers bloom only to fall so soon?\nWhy does grass, green one moment, turn yellow?\nThat which does not change is rock alone, I think."
+    },
+    {
+      "orig": "더우면곳퓌고치우면닙디거ᄂᆞᆯ\n솔아너ᄂᆞᆫ얻디눈서리ᄅᆞᆯ모ᄅᆞᄂᆞᆫ다\n九구泉쳔의불희고ᄃᆞᆫ줄을글로ᄒᆞ야아노라",
+      "modern": "더우면 꽃 피고 추우면 잎 지거늘\n솔아 너는 어찌 눈서리를 모르는가\n구천(九泉)에 뿌리 곧은 줄을 그로 하여 알겠노라",
+      "reading": null,
+      "en": "When it is warm they flower, when it is cold their leaves fall;\npine, how is it that you know nothing of snow and frost?\nBy that I know your roots run straight down to the Nine Springs."
+    },
+    {
+      "orig": "나모도아닌거시플도아닌거시\n곳기ᄂᆞᆫ뉘시기며속은어이뷔연ᄂᆞᆫ다\n뎌러코四ᄉᆞ時시예프르니그를됴하ᄒᆞ노라",
+      "modern": "나무도 아닌 것이 풀도 아닌 것이\n곧기는 누가 시켰으며 속은 어찌 비었는가\n저렇듯 사시(四時)에 푸르니 그것을 좋아하노라",
+      "reading": null,
+      "en": "Neither a tree nor a grass,\nwho made it grow so straight, and why is it hollow within?\nBecause it stays green through all four seasons, I love it."
+    },
+    {
+      "orig": "쟈근거시노피떠셔萬만物믈을다비취니\n밤듕의光광明명이너만ᄒᆞ니또잇ᄂᆞ냐\n보고도말아니ᄒᆞ니내벋인가ᄒᆞ노라",
+      "modern": "작은 것이 높이 떠서 만물을 다 비추니\n밤중의 광명이 너만 한 것이 또 있느냐\n보고도 말 아니 하니 내 벗인가 하노라",
+      "reading": null,
+      "en": "Small, yet floating high, you light up all creation.\nIs there another light in the night as bright as you?\nYou see all and say nothing: you must be my friend."
+    },
+    {
+      "orig": "右우五오友우歌가",
+      "modern": "우(右) 오우가(五友歌)",
+      "reading": null,
+      "en": "The above: Ouga"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

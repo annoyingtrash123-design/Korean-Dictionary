@@ -1,0 +1,58 @@
+{
+  "id": "chohon",
+  "card": {
+    "summary_ko": "김소월이 세상을 떠난 사랑하는 이의 이름을 목이 터져라 부르는 절규를 담은 대표작으로, 전통 장례 의식 ‘초혼’을 시의 틀로 삼았습니다.",
+    "summary_en": "Kim Sowol's best-known lament, in which the speaker cries out the name of a dead loved one, framed by the traditional funeral rite of \"summoning the soul.\"",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「진달래꽃 (시집)/초혼」 (리비전 203679, CC BY-SA 4.0 전사; 원저작물은 공유저작물)",
+    "edition_en": "Korean Wikisource, \"진달래꽃 (시집)/초혼\" (revision 203679, transcription CC BY-SA 4.0; the work itself is public domain)"
+  },
+  "notes": {
+    "ko": "**배경** 김소월(1902–1934)은 평안북도 출신으로, 시집 『진달래꽃』(1925)으로 한국 근대 서정시의 대표 시인이 되었습니다. 「초혼」은 이 시집에 실린 작품입니다. 제목의 초혼(招魂)은 사람이 죽었을 때 지붕에 올라 망자의 옷을 흔들며 그 이름을 부르는 전통 장례 절차를 가리킵니다.\n\n**의의** 이별과 상실의 정서를 한국 전통 민요의 가락으로 노래한 소월 시의 특징이 가장 강렬하게 드러나는 시로 흔히 꼽힙니다. 교과서와 노래로도 널리 알려져 있습니다.\n\n**형식과 주제** 5연으로, 각 연은 ‘~이름이어!’, ‘~사람이어!’ 같은 영탄(감탄) 호격으로 끝나거나 반복됩니다. 불러도 대답 없는 이름, 끝내 하지 못한 말 한마디, ‘하늘과 땅 사이’의 거리가 핵심 이미지입니다. 마지막 연에서 화자는 ‘선 채로 돌이 되어도’ 부르겠다고 말하여, 슬픔이 체념이 아니라 끝없는 부름으로 이어짐을 보여 줍니다. 작품 안에 구체적인 사연은 나오지 않으며, 연인의 죽음으로 읽기도 하고 더 넓은 상실로 읽기도 합니다.\n\n**읽기 도움**\n- **~이어!** 호격·감탄 어미(‘이름이여’의 옛 형태).\n- **허공중(虛空中)** 텅 빈 공중.\n- **주인(主人)없는** 응답할 임자가 없는.\n- **심중(心中)** 마음속.\n- **마저하지 못하였구나** 끝까지 다 말하지 못했구나.\n- **떨어져 나가앉은** 홀로 떨어져 앉은.\n- **설움에 겹도록** 서러움이 넘칠 만큼.\n- **비껴가지만** 곧바로 닿지 못하고 비스듬히 스쳐 가지만.\n",
+    "en": "**Background** Kim Sowol (1902-1934), from North Pyeongan Province, became the emblematic lyric poet of early modern Korea through his collection *Azaleas* (Jindallaekkot, 1925), in which \"Chohon\" appears. *Chohon* (招魂) is the traditional funeral rite in which, after a death, a relative climbs onto the roof, waves the dead person's garment and calls out their name.\n\n**Significance** The poem is often counted among the most intense expressions of Sowol's hallmark: the grief of parting and loss carried on the rhythms of Korean folk song. It is a staple of school textbooks and has been set to music.\n\n**Form and themes** Five stanzas, each built on or ending in an exclamatory vocative (\"...name!\", \"...person!\"). Key images are the name that no one answers to, the one word left unsaid, and the distance \"between sky and earth.\" In the last stanza the speaker vows to keep calling even if he turns to stone where he stands, so grief becomes endless calling rather than resignation. The poem names no specific circumstances; readers take it as the death of a lover or as a wider loss.\n\n**Reading help**\n- **~이어!** vocative/exclamatory ending (an older form of -이여).\n- **허공중(虛空中)** in the empty air.\n- **주인(主人)없는** with no owner, i.e. nobody to answer.\n- **심중(心中)** within the heart.\n- **마저하지 못하였구나** I could not finish saying it.\n- **떨어져 나가앉은** sitting apart, alone.\n- **설움에 겹도록** until sorrow overflows.\n- **비껴가지만** passes aslant, fails to arrive directly.\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "산산이 부서진 이름이어!\n허공중(虛空中)에 헤어진 이름이어!\n불러도 주인(主人)없는 이름이어!\n부르다가 내가 죽을 이름이어!",
+      "modern": null,
+      "reading": null,
+      "en": "Name shattered to pieces!\nName scattered in the empty air!\nName that calls, yet has no one to answer!\nName I will die calling!"
+    },
+    {
+      "orig": "심중(心中)에 남아있는 말 한마디는\n끝끝내 마저하지 못하였구나.\n사랑하던 그 사람이어!\n사랑하던 그 사람이어!",
+      "modern": null,
+      "reading": null,
+      "en": "The one word left in my heart\nI could not finish saying, to the very end.\nThe one I loved!\nThe one I loved!"
+    },
+    {
+      "orig": "붉은 해는 서산(西山) 마루에 걸리었다.\n사슴이의 무리도 슬피 운다.\n떨어져 나가앉은 산 위에서\n나는 그대의 이름을 부르노라.",
+      "modern": null,
+      "reading": null,
+      "en": "The red sun hangs on the ridge of the western mountain.\nThe herd of deer, too, cries sadly.\nOn a mountain where I sit apart, set off from the rest,\nI call out your name."
+    },
+    {
+      "orig": "설움에 겹도록 부르노라.\n설움에 겹도록 부르노라.\n부르는 소리는 비껴가지만\n하늘과 땅 사이가 너무 넓구나.",
+      "modern": null,
+      "reading": null,
+      "en": "I call until grief overflows me.\nI call until grief overflows me.\nThe sound of my calling drifts aslant,\nand the space between sky and earth is far too wide."
+    },
+    {
+      "orig": "선 채로 이 자리에 돌이 되어도\n부르다가 내가 죽을 이름이어!\n사랑하던 그 사람이어!\n사랑하던 그 사람이어!",
+      "modern": null,
+      "reading": null,
+      "en": "Even if I turn to stone, standing here just as I am,\nthe name I will die calling,\nthe one I loved!\nthe one I loved!"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

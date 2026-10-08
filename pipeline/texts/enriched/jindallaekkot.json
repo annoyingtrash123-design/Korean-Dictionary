@@ -1,0 +1,100 @@
+{
+  "id": "jindallaekkot",
+  "card": {
+    "summary_ko": "김소월이 떠나는 임을 말없이 보내며 진달래꽃을 길에 뿌리겠다고 하는, 절제된 이별의 시다. 마지막 행의 반어가 핵심이다.",
+    "summary_en": "Kim Sowol's restrained poem of parting, in which the speaker sends the beloved off in silence and strews azaleas on the path; the irony of the final line is the key.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「진달래꽃 (시집)/진달래꽃」 (판 번호 430575), 원저작물은 공유저작물, 전사는 CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, \"진달래꽃 (시집)/진달래꽃\" (revision 430575); original work in the public domain, transcription CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**배경** 김소월(1902–1934, 본명 김정식)은 평안북도 출신이다. 「진달래꽃」은 1922년 『개벽』에 발표되었고, 1925년 매문사에서 낸 시집 『진달래꽃』의 표제작이 되었다. 소월은 1934년에 세상을 떠났다.\n\n**판본 안내** 위키문헌 원본에는 현대어 블록과 원문(1925) 블록이 함께 있다. 두 블록을 모두 그대로 두었다. 원문에는 'ᄭᅩᆺ'(꽃), 'ᄯᅢ'(때), 'ᄲᅮ리다'(뿌리다)처럼 옛 표기와 한자 '寧邊'이 보인다.\n\n**의의** 한국에서 가장 널리 알려진 현대시의 하나이며, 한(恨)과 절제의 정서를 대표하는 작품으로 흔히 소개된다. 김소월의 시집 제목이기도 하다.\n\n**형식과 주제** 4연이며 7·5조 계열의 민요적 리듬을 따른다. 1연과 4연은 '나 보기가 역겨워 가실 때에는'으로 짝을 이룬다. 겉으로는 담담히 보내겠다고 하나 마지막 '죽어도 아니 눈물 흘리오리다'의 강한 부정이 오히려 사무친 슬픔을 드러낸다. 영변의 약산은 진달래 명소로 알려진 평안북도의 산이다.\n\n**읽기 도움**\n- `역겨워`: 싫고 마음에 거슬려. 시에서는 '나를 보는 것이 싫어져'로 읽는다.\n- `고이`: 곱게, 조용히.\n- `-오리다`: 하겠습니다(화자의 다짐·약속).\n- `아름따다`: 한 아름 가득 따다.\n- `사뿐히`: 가볍게.\n- `즈려밟다`: 위에서 눌러 밟다(어원·뜻에 대한 설명이 다양하다).\n- `-옵소서`: 하십시오(높임의 명령).\n- `ᄲᅮ리다`: 뿌리다.",
+    "en": "**Background** Kim Sowol (1902-1934; real name Kim Jeong-sik) was from North Pyeongan. \"Jindallaekkot\" was published in *Gaebyeok* in 1922 and became the title poem of the collection *Jindallaekkot* issued by Maemunsa in 1925. Sowol died in 1934.\n\n**About this text** The Wikisource source holds a modern-spelling block and an original (1925) spelling block; both are kept here as they stand. The original shows old forms such as 'ᄭᅩᆺ' (= 꽃, \"flower\"), 'ᄯᅢ' (= 때, \"time\"), 'ᄲᅮ리다' (= 뿌리다, \"to scatter\") and the hanja 寧邊.\n\n**Significance** One of the best-known modern poems in Korea, usually presented as representative of the feelings of *han* (lingering sorrow) and restraint. It is also the title of Sowol's collection.\n\n**Form and themes** Four stanzas in a folk-song rhythm of the 7-5 family. Stanzas 1 and 4 pair up around \"When you are sickened at the sight of me and go\". Outwardly the speaker will send the beloved off calmly, yet the strong negation in the last line, \"even if I die I will not shed a tear\", reveals deep sorrow instead. Yaksan in Yeongbyeon is a mountain in North Pyeongan known for its azaleas.\n\n**Reading help**\n- `역겨워`: repellent, grating; here read as \"when seeing me has become hateful to you\".\n- `고이`: gently, quietly.\n- `-오리다`: \"I will...\" (resolve or promise).\n- `아름따다`: to pick an armful.\n- `사뿐히`: lightly.\n- `즈려밟다`: to tread down from above (explanations of the word's origin and sense vary).\n- `-옵소서`: humble-respectful imperative, \"please...\".\n- `ᄲᅮ리다`: = 뿌리다, to scatter."
+  },
+  "paragraphs": [
+    {
+      "orig": "현대어",
+      "modern": null,
+      "reading": null,
+      "en": "Modern spelling"
+    },
+    {
+      "orig": "진달래꽃",
+      "modern": null,
+      "reading": null,
+      "en": "Azaleas"
+    },
+    {
+      "orig": "나 보기가 역겨워\n가실 때에는\n말없이 고이 보내드리오리다.",
+      "modern": null,
+      "reading": null,
+      "en": "When the sight of me grows hateful to you\nand you go,\nI will send you off gently, without a word."
+    },
+    {
+      "orig": "영변(寧邊)에 약산(藥山)\n진달래꽃\n아름따다 가실 길에 뿌리오리다.",
+      "modern": null,
+      "reading": null,
+      "en": "The azaleas\nof Yaksan at Yeongbyeon,\nI will gather armfuls and scatter them on your path."
+    },
+    {
+      "orig": "가시는 걸음 걸음\n놓인 그 꽃을\n사뿐히 즈려밟고 가시옵소서.",
+      "modern": null,
+      "reading": null,
+      "en": "With every step you take,\nthe flowers laid down there,\nlightly tread on them, and go."
+    },
+    {
+      "orig": "나 보기가 역겨워\n가실 때에는\n죽어도 아니 눈물 흘리오리다.",
+      "modern": null,
+      "reading": null,
+      "en": "When the sight of me grows hateful to you\nand you go,\nthough I die, I will not shed a tear."
+    },
+    {
+      "orig": "원문",
+      "modern": null,
+      "reading": null,
+      "en": "Original spelling"
+    },
+    {
+      "orig": "진달내ᄭᅩᆺ",
+      "modern": "진달래꽃",
+      "reading": null,
+      "en": "Azaleas"
+    },
+    {
+      "orig": "나보기가 역겨워\n가실ᄯᅢ에는\n말업시 고히 보내드리우리다",
+      "modern": "나 보기가 역겨워\n가실 때에는\n말없이 고이 보내드리우리다",
+      "reading": null,
+      "en": "When the sight of me grows hateful to you\nand you go,\nI will send you off gently, without a word."
+    },
+    {
+      "orig": "寧邊에藥山\n진달내ᄭᅩᆺ\n아름ᄯᅡ다 가실길에 ᄲᅮ리우리다",
+      "modern": "영변(寧邊)에 약산(藥山)\n진달래꽃\n아름따다 가실 길에 뿌리우리다",
+      "reading": null,
+      "en": "The azaleas\nof Yaksan at Yeongbyeon,\nI will gather armfuls and scatter them on your path."
+    },
+    {
+      "orig": "가시는거름거름\n노힌그ᄭᅩᆺ츨\n삽분히즈려밟고 가시옵소서",
+      "modern": "가시는 걸음걸음\n놓인 그 꽃을\n사뿐히 즈려밟고 가시옵소서",
+      "reading": null,
+      "en": "With every step you take,\nthe flowers laid down there,\nlightly tread on them, and go."
+    },
+    {
+      "orig": "나보기가 역겨워\n가실ᄯᅢ에는\n죽어도아니 눈물흘니우리다",
+      "modern": "나 보기가 역겨워\n가실 때에는\n죽어도 아니 눈물 흘리우리다",
+      "reading": null,
+      "en": "When the sight of me grows hateful to you\nand you go,\nthough I die, I will not shed a tear."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

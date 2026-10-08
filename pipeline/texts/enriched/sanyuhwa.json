@@ -1,0 +1,100 @@
+{
+  "id": "sanyuhwa",
+  "card": {
+    "summary_ko": "김소월이 산에 저 혼자 피고 지는 꽃과 그 곁의 작은 새를 통해 존재의 외로움과 거리감을 노래한 시다.",
+    "summary_en": "Kim Sowol's poem on flowers that bloom and fall alone in the mountains, and a small bird beside them, evoking solitude and distance.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「진달래꽃 (시집)/산유화」 (판 번호 430577), 원저작물은 공유저작물, 전사는 CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, \"진달래꽃 (시집)/산유화\" (revision 430577); original work in the public domain, transcription CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**배경** 김소월(1902–1934)의 「산유화」는 1924년 『영대』에 발표되었고 1925년 시집 『진달래꽃』에 실린 것으로 알려져 있다. 제목의 '산유화(山有花)'는 '산에 꽃이 있다'는 뜻으로, 민요 계통의 노래 이름과도 연결해 읽는다.\n\n**판본 안내** 위키문헌 원본에는 현대어 블록과 원문(1925) 블록이 함께 있다. 두 블록을 모두 그대로 두었다. 원문에는 'ᄭᅩᆺ'(꽃, 옛 합용 초성 표기)처럼 옛 표기, 한자(山), '녀름'(여름), '픠다'(피다) 같은 옛 형태가 나온다.\n\n**의의** 소월 시 중 서정과 철학적 깊이가 함께 높이 평가되는 작품이다. '저만치'라는 말이 만든 거리감이 가장 많이 논의된다.\n\n**형식과 주제** 4연이다. 1연과 4연이 '피네'와 '지네'로 대응하며 자연의 순환을 이루고, 2연의 '저만치 혼자서'는 꽃과 화자(또는 인간) 사이의 건널 수 없는 거리를, 3연은 꽃을 좋아해 산에 사는 작은 새를 보여 준다. 반복과 'ㅡ네' 종결이 민요 같은 리듬을 만든다.\n\n**읽기 도움**\n- `갈 봄 여름없이`: 가을·봄·여름 없이(철을 가리지 않고). '갈'은 가을.\n- `저만치`: 저 정도 떨어진 곳에. 거리감.\n- `-네`: 감탄·서술의 종결.\n- `사노라네`: 산다고 하네.\n- `ᄭᅩᆺ치`: 꽃이. `픠다`: 피다.\n- `녀름`: 여름. `적은`: 작은.",
+    "en": "**Background** Kim Sowol's \"Sanyuhwa\" is known to have appeared in *Yeongdae* in 1924 and been collected in *Jindallaekkot* in 1925. The title 山有花 means \"there are flowers in the mountains\", and is also read in connection with the name of a folk-song tradition.\n\n**About this text** The Wikisource source holds a modern-spelling block and an original (1925) spelling block; both are kept here as they stand. The original shows old forms such as 'ᄭᅩᆺ' (= 꽃, \"flower\", written with an old consonant cluster), the hanja 山, 녀름 (= 여름) and 픠다 (= 피다).\n\n**Significance** Prized among Sowol's poems for combining lyricism with philosophical depth. The distance created by the word 저만치 (\"over there, at that remove\") is the most discussed feature.\n\n**Form and themes** Four stanzas. Stanzas 1 and 4 answer each other as blooming and falling, forming a natural cycle; stanza 2's \"alone, over there\" suggests an uncrossable distance between the flowers and the speaker (or humans); stanza 3 shows a small bird that lives in the mountains because it loves the flowers. Repetition and the -네 ending give a folk-song rhythm.\n\n**Reading help**\n- `갈 봄 여름없이`: without regard to autumn, spring or summer; 갈 = 가을 (autumn).\n- `저만치`: at that distance over there; a sense of remove.\n- `-네`: sentence ending of observation or mild exclamation.\n- `사노라네`: they say it lives / it lives, says it.\n- `ᄭᅩᆺ치`: = 꽃이. `픠다`: = 피다.\n- `녀름`: = 여름. `적은`: = 작은."
+  },
+  "paragraphs": [
+    {
+      "orig": "현대어",
+      "modern": null,
+      "reading": null,
+      "en": "Modern spelling"
+    },
+    {
+      "orig": "산유화",
+      "modern": null,
+      "reading": null,
+      "en": "Mountain Flowers"
+    },
+    {
+      "orig": "산에는 꽃 피네\n꽃이 피네\n갈 봄 여름없이\n꽃이 피네",
+      "modern": null,
+      "reading": null,
+      "en": "In the mountains flowers bloom,\nflowers bloom;\nautumn, spring, summer alike,\nflowers bloom."
+    },
+    {
+      "orig": "산에\n산에\n피는 꽃은\n저만치 혼자서 피어 있네",
+      "modern": null,
+      "reading": null,
+      "en": "In the mountains,\nin the mountains,\nthe flowers that bloom\nbloom alone, over there at a distance."
+    },
+    {
+      "orig": "산에서 우는 작은 새요\n꽃이 좋아\n산에서\n사노라네",
+      "modern": null,
+      "reading": null,
+      "en": "Little bird that sings in the mountains,\nbecause you love the flowers\nin the mountains\nyou live, they say."
+    },
+    {
+      "orig": "산에는 꽃 지네\n꽃이 지네\n갈 봄 여름없이\n꽃이 지네",
+      "modern": null,
+      "reading": null,
+      "en": "In the mountains flowers fall,\nflowers fall;\nautumn, spring, summer alike,\nflowers fall."
+    },
+    {
+      "orig": "원문",
+      "modern": null,
+      "reading": null,
+      "en": "Original spelling"
+    },
+    {
+      "orig": "山有花",
+      "modern": "산유화",
+      "reading": null,
+      "en": "Sanyuhwa, \"There Are Flowers in the Mountains\" (title in hanja)"
+    },
+    {
+      "orig": "山에는 ᄭᅩᆺ픠네\nᄭᅩᆺ치픠네\n갈 봄 녀름업시\nᄭᅩᆺ치픠네",
+      "modern": "산에는 꽃 피네\n꽃이 피네\n갈 봄 여름없이\n꽃이 피네",
+      "reading": null,
+      "en": "In the mountains flowers bloom,\nflowers bloom;\nautumn, spring, summer alike,\nflowers bloom."
+    },
+    {
+      "orig": "山에\n山에\n픠는ᄭᅩᆺ츤\n저만치 혼자서 픠여잇네",
+      "modern": "산에\n산에\n피는 꽃은\n저만치 혼자서 피어 있네",
+      "reading": null,
+      "en": "In the mountains,\nin the mountains,\nthe flowers that bloom\nbloom alone, over there at a distance."
+    },
+    {
+      "orig": "山에서우는 적은새요\nᄭᅩᆺ치죠와\n山에서\n사노라네",
+      "modern": "산에서 우는 작은 새요\n꽃이 좋아\n산에서\n사노라네",
+      "reading": null,
+      "en": "Little bird that sings in the mountains,\nbecause you love the flowers\nin the mountains\nyou live, they say."
+    },
+    {
+      "orig": "山에는 ᄭᅩᆺ지네\nᄭᅩᆺ치지네\n갈 봄 녀름업시\nᄭᅩᆺ치지네",
+      "modern": "산에는 꽃 지네\n꽃이 지네\n갈 봄 여름없이\n꽃이 지네",
+      "reading": null,
+      "en": "In the mountains flowers fall,\nflowers fall;\nautumn, spring, summer alike,\nflowers fall."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

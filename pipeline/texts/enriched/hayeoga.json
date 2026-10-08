@@ -1,0 +1,52 @@
+{
+  "id": "hayeoga",
+  "card": {
+    "summary_ko": "이방원이 정몽주의 마음을 떠보려 지었다고 전하는 시조로, 얽혀 사는 칡덩굴에 빗대어 함께하자고 권합니다.",
+    "summary_en": "A sijo traditionally said to be Yi Bang-won's attempt to sound out Jeong Mong-ju, using tangled kudzu vines as an image of living together.",
+    "level": "classical",
+    "edition_ko": "위키문헌 「하여가」 (개정 430637), 전사 CC BY-SA 4.0; 원저작물은 퍼블릭 도메인",
+    "edition_en": "Korean Wikisource, \"하여가\" (revision 430637), transcription CC BY-SA 4.0; the work itself is public domain"
+  },
+  "notes": {
+    "ko": "**배경** 이방원(1367–1422, 훗날 태종)이 1392년 고려 말의 정치적 격변 속에서 정몽주를 설득하려고 읊었다고 전해지는 시조입니다. 이에 정몽주가 〈단심가〉로 답했다는 이야기가 함께 전합니다. 시조는 《청구영언》과 《가곡원류》 등 후대의 가집에 실려 있어, 이 문답이 실제로 그 자리에서 오갔는지는 확실하지 않습니다.\n\n**의의** 새 왕조를 세우려는 쪽과 고려를 지키려는 쪽의 대립을 한 쌍의 시조로 압축한 작품으로, 〈단심가〉와 짝으로 가장 널리 읽힙니다.\n\n**형식과 주제** 3장 형식의 평시조입니다. 초장과 중장에서 \"어떠하리\"를 되풀이하며 넌지시 묻고, 종장에서 \"우리도 이같이 얽혀\"라는 비유로 제안을 마무리합니다. 강요하지 않고 부드럽게 권하는 말투가 오히려 정치적 압박을 느끼게 합니다.\n\n**읽기 도움**\n- `이런들 저런들`: 이렇게 한들 저렇게 한들. 어느 쪽이든 상관없다는 뜻.\n- `어떠하리(오)`: 어떠하겠는가. 반어적인 물음.\n- `만수산`: 산 이름. 여기서는 칡이 우거진 산을 가리킴.\n- `드렁칡`: 두렁이나 비탈에 뻗은 칡덩굴.\n- `얽어진들`: 얽힌들. 옛 표기 '얽어지다'.\n- `누리리라`: 누리겠다(호강을 누리며 살겠다).\n- 이 판본은 이미 현대 맞춤법으로 적혀 있어 옛한글 글자는 나오지 않습니다.",
+    "en": "**Background** Traditionally this sijo is said to have been recited by Yi Bang-won (1367–1422, later King Taejong) in 1392, in the turmoil at the end of Goryeo, to win over Jeong Mong-ju; Jeong is said to have replied with his *Dansimga*. The poems are preserved in later anthologies such as *Cheonggu yeongeon* and *Gagok wollyu*, so whether the exchange really took place is uncertain.\n\n**Significance** It condenses the split between those who would found a new dynasty and those who would defend Goryeo into a pair of sijo, and is most often read together with the *Dansimga*.\n\n**Form and themes** A standard three-line (*pyeong-sijo*) poem. The first two lines pose the same mild question (\"what of it?\"), and the last line closes with the image of vines entwined: \"let us too be tangled like this.\" The gentle, non-coercive tone is exactly what makes the political pressure felt.\n\n**Reading help**\n- `이런들 저런들`: \"this way or that way\"; it makes no difference.\n- `어떠하리(오)`: \"what of it?\", a rhetorical question.\n- `만수산`: a mountain name; here simply a mountain thick with kudzu.\n- `드렁칡`: kudzu creeping over a bank or ridge between fields.\n- `얽어진들`: \"even if tangled\", from the older verb 얽어지다.\n- `누리리라`: \"we shall enjoy (life)\".\n- This version is already in modern orthography, so no archaic letters appear."
+  },
+  "paragraphs": [
+    {
+      "orig": "## 청구영언",
+      "modern": null,
+      "reading": null,
+      "en": "## Cheonggu yeongeon"
+    },
+    {
+      "orig": "## 가곡원류",
+      "modern": null,
+      "reading": null,
+      "en": "## Gagok wollyu"
+    },
+    {
+      "orig": "## 해석",
+      "modern": null,
+      "reading": null,
+      "en": "## Interpretation"
+    },
+    {
+      "orig": "이런들 어떠하며 저런들 어떠하리오\n만수산 드렁칡이 얽어진들 어떠하리\n우리도 이 같이 얽어져 백년까지 누리리라",
+      "modern": "이렇게 한들 어떠하며 저렇게 한들 어떠하겠는가\n만수산 칡덩굴이 얽혀 있다 한들 어떠하겠는가\n우리도 이처럼 얽혀서 백 년까지 누리며 살리라",
+      "reading": null,
+      "en": "What if it is this way, and what if it is that?\nWhat if the kudzu of Mansu Mountain lies all tangled?\nLet us too be entwined like this, and enjoy a hundred years."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}
