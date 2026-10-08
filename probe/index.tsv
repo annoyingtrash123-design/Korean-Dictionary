@@ -1,0 +1,18 @@
+01	000  0ERR	https://db.history.go.kr/diachronic/level.do?levelId=prd_002_0030_0060
+02	000  0ERR	https://db.history.go.kr/diachronic/level.do?levelId=prd_002_0030_0070
+03	000  0ERR	https://db.history.go.kr/diachronic/level.do?levelId=sa_001_0050_0090_0280
+04	000  0ERR	https://db.history.go.kr/diachronic/getChildItemLevelListAjax.do?parentId=ykc_001_0090&level=3&types=o
+05	000  0ERR	https://db.history.go.kr/diachronic/getChildItemLevelListAjax.do?parentId=sa_005_0030&level=3&types=o
+06	000  0ERR	https://db.history.go.kr/diachronic/getChildItemLevelListAjax.do?parentId=sa_005_0040&level=3&types=o
+07	000  0ERR	https://db.history.go.kr/diachronic/getChildItemLevelListAjax.do?parentId=sa_005_0020&level=3&types=o
+08	000  0ERR	https://db.history.go.kr/diachronic/getChildItemLevelListAjax.do?parentId=sa_006&level=2&types=o
+09	000  0ERR	https://db.history.go.kr/search/searchResult.do?searchKeywordType=BI&searchKeywordMethod=EQ&searchKeyword=%E6%96%B0%E5%B9%B9%E6%9C%83
+10	000  0ERR	https://db.history.go.kr/search/searchResult.do?searchKeywordType=BI&searchKeywordMethod=EQ&searchKeyword=%E5%8B%9E%E8%BE%B2%E7%B8%BD%E5%90%8C%E7%9B%9F
+11	000  0ERR	https://db.history.go.kr/search/searchResult.do?searchKeywordType=BI&searchKeywordMethod=EQ&searchKeyword=%E5%8D%81%E4%B8%89%E9%81%93%E5%80%A1%E7%BE%A9
+12	000  0ERR	https://db.history.go.kr/search/searchResult.do?searchKeywordType=BI&searchKeywordMethod=EQ&searchKeyword=%E5%B0%B9%E5%A5%89%E5%90%89%20%E5%AE%A3%E8%AA%93
+13	000  0ERR	https://db.history.go.kr/search/searchResult.do?searchKeywordType=BI&searchKeywordMethod=EQ&searchKeyword=%E5%B0%8D%E6%97%A5%E5%AE%A3%E6%88%B0
+14	200 application/json; charset=utf-8 5959	https://ko.wikisource.org/w/api.php?action=query&list=search&format=json&srlimit=6&srsearch=%EA%B0%91%EC%8B%A0%EC%A0%95%EB%B3%80%20%EC%A0%95%EA%B0%95
+15	200 application/json; charset=utf-8 7021	https://ko.wikisource.org/w/api.php?action=query&list=search&format=json&srlimit=6&srsearch=%EC%8B%A0%EA%B0%84%ED%9A%8C%20%EA%B0%95%EB%A0%B9
+16	200 application/json; charset=utf-8 1254	https://ko.wikisource.org/w/api.php?action=query&list=search&format=json&srlimit=6&srsearch=%EB%85%B8%EB%86%8D%EC%B4%9D%EB%8F%99%EB%A7%B9
+17	200 application/json; charset=utf-8 5954	https://ko.wikisource.org/w/api.php?action=query&list=search&format=json&srlimit=6&srsearch=%EB%AC%B4%EC%9E%A5%20%ED%8F%AC%EA%B3%A0%EB%AC%B8
+18	200 application/json; charset=utf-8 7317	https://zh.wikisource.org/w/api.php?action=query&list=search&format=json&srlimit=6&srsearch=%E7%94%B2%E7%94%B3%E6%97%A5%E9%8C%84
