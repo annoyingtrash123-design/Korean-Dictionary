@@ -456,3 +456,22 @@ fn quality_gate_wants_forty_texts() {
     assert_eq!(quality_gate_optional(&[("texts", &few)]).len(), 1);
     assert!(quality_gate_optional(&[("texts", &ok)]).is_empty());
 }
+
+#[test]
+fn card_and_notes_only_enrichment_uses_raw_paragraphs() {
+    let fx = Fx::new();
+    let mut v = enriched("poem", "approved", &[]);
+    v["paragraphs"] = json!("raw");
+    v["labels"]["translation"] = Value::Null;
+    write(&fx.t().join("enriched/poem.json"), &v);
+    let r = fx.build(true).unwrap().unwrap();
+    let c = Connection::open(&r.path).unwrap();
+    let rows = q(&c, "SELECT orig, en FROM paragraphs WHERE text_id='poem' ORDER BY n");
+    assert!(!rows.is_empty());
+    assert!(rows.iter().all(|r| r.ends_with("|∅")), "{rows:?}");
+    assert_eq!(q(&c, "SELECT json_extract(card,'$.summary_en') FROM texts WHERE id='poem'")[0], "Summary");
+    // a translation label with raw paragraphs is refused
+    v["labels"]["translation"] = json!("ai");
+    write(&fx.t().join("enriched/poem.json"), &v);
+    assert!(format!("{:#}", fx.build(false).unwrap_err()).contains("needs labels.translation = null"));
+}

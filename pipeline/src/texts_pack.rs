@@ -679,6 +679,17 @@ fn collect(
             .and_then(|r| r.get("text").and_then(Value::as_str))
             .map(|t| split_paragraphs(t, VERSE_SHELVES.contains(&e.shelf.as_str()), hanmun))
             .unwrap_or_default();
+        // `"paragraphs": "raw"`: card + notes only (long works awaiting translation) — the text
+        // is the raw source, untranslated; only allowed without a translation label.
+        if let Some(v) = enriched.as_mut() {
+            if v.get("paragraphs").and_then(Value::as_str) == Some("raw") {
+                if v.pointer("/labels/translation").is_some_and(|t| !t.is_null()) {
+                    note(false, format!("{}: \"paragraphs\": \"raw\" needs labels.translation = null", e.id), problems);
+                    continue;
+                }
+                v["paragraphs"] = Value::Array(raw_paras.iter().map(|o| json!({"orig": o, "modern": null, "reading": null, "en": null})).collect());
+            }
+        }
         if let Some(v) = &enriched {
             let bad = validate_enriched(v, false);
             if !bad.is_empty() {

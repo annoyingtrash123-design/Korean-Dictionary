@@ -92,6 +92,8 @@ Joseon, Colonial era & independence, Modern Korea, Sino-Korean relations.
   }
 }
 ```
+Long works may ship **card + notes only** first: `"paragraphs": "raw"` with `labels.translation =
+null` and `labels.modern = null` — the pack uses the raw paragraphs, untranslated.
 Every AI-produced field is labelled in the UI ("AI-written", "AI-generated translation — may contain errors").
 
 ## Pleco-derived interaction details (binding for the Reader UI)
