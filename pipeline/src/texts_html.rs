@@ -143,6 +143,31 @@ pub fn element_by_token(html: &str, tokens: &[&str]) -> Option<String> {
     None
 }
 
+/// Inner HTML of every element whose `class` attribute contains the class `cls` (document order,
+/// outermost match only).
+pub fn elements_by_class(html: &str, cls: &str) -> Vec<String> {
+    let mut out = Vec::new();
+    let mut i = 0;
+    while let Some(p) = html[i..].find('<').map(|x| x + i) {
+        let Some(t) = scan_tag(html, p) else {
+            i = p + 1;
+            continue;
+        };
+        i = t.end;
+        if t.closing || t.self_closing || VOID.contains(&t.name.as_str()) {
+            continue;
+        }
+        let hit = attr_value(t.attrs, "class").is_some_and(|v| v.split_whitespace().any(|c| c == cls));
+        if hit {
+            if let Some(e) = matching_close(html, t.end, &t.name) {
+                out.push(html[t.end..e].to_string());
+                i = e;
+            }
+        }
+    }
+    out
+}
+
 /// Inner HTML of the first `<name>` element.
 pub fn element_by_name(html: &str, name: &str) -> Option<String> {
     let mut i = 0;

@@ -23,7 +23,7 @@ pub const SHELVES: &[&str] = &[
     "essays-children",
 ];
 pub const SCRIPTS: &[&str] = &["hangul", "hanmun", "mixed"];
-pub const SOURCES: &[&str] = &["wikisource-ko", "wikisource-zh", "law", "ohchr", "korea-kr", "gutenberg", "archive-org"];
+pub const SOURCES: &[&str] = &["wikisource-ko", "wikisource-zh", "law", "ohchr", "korea-kr", "history-db", "gutenberg", "archive-org"];
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
@@ -69,6 +69,9 @@ pub struct Entry {
     pub source_title: String,
     /// Direct URL for sources that are not MediaWiki (e.g. the OHCHR page).
     pub url: Option<String>,
+    /// `history-db`: 한국사데이터베이스 leaf ids (original-text items only, in reading order).
+    #[serde(default)]
+    pub level_ids: Vec<String>,
     #[serde(default)]
     pub search: Vec<String>,
     /// Other exact page titles that are accepted for this text (search results never are).
@@ -150,6 +153,12 @@ pub fn validate(cat: &Catalog) -> Vec<String> {
         }
         if !SCRIPTS.contains(&e.script.as_str()) {
             bad(format!("unknown script {:?}", e.script));
+        }
+        if e.source == "history-db" && e.level_ids.is_empty() {
+            bad("history-db entry without level_ids".into());
+        }
+        if let Some(t) = e.level_ids.iter().find(|i| crate::texts_historydb::is_translation(i)) {
+            bad(format!("level id {t} is a translation (국역) item"));
         }
         if !SOURCES.contains(&e.source.as_str()) {
             bad(format!("unknown source {:?}", e.source));

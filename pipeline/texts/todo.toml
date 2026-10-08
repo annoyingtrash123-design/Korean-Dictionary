@@ -10,3 +10,7 @@ balhaego_seo = "repair"          # source mixes original and translation in a ta
 sihon = "repair"                 # transcription lost old-Hangul characters ('?')
 mokminsimseo = "repair"          # 청심 body missing, mixed transcriptions
 taepyeongcheonha = "repair"      # gap inside chapter 15
+
+# Parked: no public-domain transcription found (user decision 2026-10-08); keep looking.
+hanguk_hon = "source"
+yeo_unhyeong_imperial_hotel = "source"

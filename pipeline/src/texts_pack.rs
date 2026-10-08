@@ -403,6 +403,7 @@ fn edition_line(raw: &Value) -> String {
         Some("wikisource-ko") => "Korean Wikisource",
         Some("law") => "Korean statute (Ministry of Government Legislation)",
         Some("ohchr") => "OHCHR",
+        Some("history-db") => "국사편찬위원회 한국사데이터베이스 (National Institute of Korean History)",
         Some(o) => return format!("{o}: {title}"),
         None => "Source",
     };

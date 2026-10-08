@@ -14,6 +14,7 @@ pub mod stdict;
 pub mod tatoeba;
 pub mod texts_catalog;
 pub mod texts_fetch;
+pub mod texts_historydb;
 pub mod texts_html;
 pub mod texts_http;
 pub mod texts_news;

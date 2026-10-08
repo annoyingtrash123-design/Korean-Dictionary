@@ -687,3 +687,21 @@ fn scan_only_page_is_filled_from_its_transclusions() {
     let Outcome::Resolved(d) = o else { panic!("not resolved: {o:?} {:?}", http.hits.borrow()) };
     assert_eq!(d.text, "## 청구영언\n\n五百年 都邑地를 匹馬로 도라드니\n山川은 依舊ᄒᆞ되 人傑은 간 듸 업다");
 }
+
+#[test]
+fn history_db_leaves_are_joined_in_order() {
+    let src = entry("maecheon", "documents", "history-db", "매천야록", "hanmun", &[]).replace("pd_basis", "level_ids = [\"sa_001_0050_0090_0270\", \"sa_001_0050_0090_0280\"]\npd_basis");
+    let e = catalog_entry(&src);
+    let leaf = |t: &str| format!("<section id=\"section-read\" class=\"section-read\"><div class=\"txt-wrap\">{t}</div></section>");
+    let http = Mock::new(vec![
+        ("levelId=sa_001_0050_0090_0270".into(), leaf("京軍解散 七賊等…")),
+        ("levelId=sa_001_0050_0090_0280".into(), leaf("朴星煥 自刎…")),
+    ]);
+    let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e, 10) else { panic!("not resolved") };
+    assert_eq!(d.text, "京軍解散 七賊等…\n\n朴星煥 自刎…");
+    assert_eq!(d.source, "history-db");
+    assert!(d.licence.contains("한국사데이터베이스") && d.licence.contains("sa_001_0050_0090_0280"));
+    // a translation item is refused by catalogue validation
+    let bad = texts_catalog::parse(&src.replace("sa_001_0050_0090_0270", "sa_001r_0050_0090_0270")).unwrap();
+    assert!(texts_catalog::validate(&bad).iter().any(|p| p.contains("translation")));
+}

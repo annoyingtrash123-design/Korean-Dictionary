@@ -478,6 +478,11 @@ fn layout_for(e: &Entry) -> Layout {
 fn licence_for(e: &Entry, source: &str) -> String {
     match source {
         "ohchr" => format!("{} Source: OHCHR.", e.pd_basis),
+        "history-db" => format!(
+            "Original text: public domain ({}). Transcription: 국사편찬위원회 한국사데이터베이스 (db.history.go.kr), items {}; original-language text only, no translation or editorial matter.",
+            e.pd_basis,
+            e.level_ids.join(", ")
+        ),
         "law" => format!("Statute text, not protected by copyright (Copyright Act art. 7); transcription from Wikisource (CC BY-SA 4.0). {}", e.pd_basis),
         _ => format!("Original work: public domain ({}). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).", e.pd_basis),
     }
@@ -774,6 +779,38 @@ fn try_ohchr(http: &dyn Http, e: &Entry) -> Result<Outcome> {
     })))
 }
 
+fn try_historydb(http: &dyn Http, e: &Entry) -> Result<Outcome> {
+    let mut paras: Vec<String> = Vec::new();
+    let mut raw = String::new();
+    for id in &e.level_ids {
+        let url = crate::texts_historydb::leaf_url(id);
+        let html = http.get(&url)?;
+        let p = crate::texts_historydb::extract(&html);
+        if p.is_empty() {
+            return Ok(Outcome::Missing { tried: vec![format!("{url} (no original text in #section-read)")] });
+        }
+        paras.extend(p);
+        raw.push_str(&format!("<!-- {id} -->\n"));
+        raw.push_str(&texts_html::element_by_token(&html, &["section-read"]).unwrap_or_default());
+        raw.push('\n');
+    }
+    Ok(Outcome::Resolved(Box::new(Doc {
+        source: "history-db".into(),
+        url: crate::texts_historydb::leaf_url(&e.level_ids[0]),
+        page_title: e.level_ids.join(", "),
+        revision_id: 0,
+        revision_timestamp: String::new(),
+        wikitext: raw,
+        text: paras.join("\n\n"),
+        edition: None,
+        subpages: vec![],
+        licence: licence_for(e, "history-db"),
+        resolved_via: "level_ids".into(),
+        truncated: false,
+        needs_sections: false,
+    })))
+}
+
 fn hosts_for(e: &Entry) -> Option<Vec<&'static str>> {
     Some(match e.source.as_str() {
         "wikisource-ko" if e.script != "hangul" => vec![HOST_KO, HOST_ZH],
@@ -788,6 +825,12 @@ pub fn fetch_entry(http: &dyn Http, e: &Entry, max_subpages: usize) -> Outcome {
 }
 
 pub fn fetch_entry_cached(http: &dyn Http, cache: Option<&Cache>, e: &Entry, max_subpages: usize) -> Outcome {
+    if e.source == "history-db" {
+        return match try_historydb(http, e) {
+            Ok(o) => o,
+            Err(err) => Outcome::Failed(format!("history-db: {err:#}")),
+        };
+    }
     let Some(hosts) = hosts_for(e) else {
         return Outcome::Unsupported(format!("source {:?} is not fetched by fetch-texts", e.source));
     };

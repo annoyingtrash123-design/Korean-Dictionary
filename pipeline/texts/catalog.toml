@@ -2489,33 +2489,33 @@ themes = ["colonial-independence"]
 shelf = "documents"
 script = "mixed"
 excerpt = false
-source = "wikisource-ko"
-source_title = "대한민국 임시정부 건국 강령"
-alt_titles = ["건국강령", "대한민국임시정부 건국강령"]
+source = "history-db"
+source_title = "大韓民國建國綱領"
 search = ["대한민국 건국강령", "건국강령 1941", "임시정부 건국강령"]
+level_ids = ["kd_002_0010_0010_0110"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Promulgated by the Provisional Government in November 1941; drafted by 조소앙 (d. 1958), whose term has also expired."
 
 # resource: guess: page title may use spaces or 대일선전포고문
 [[text]]
 id = "daeil_seonjeon"
 title_ko = "대일선전성명서"
-title_en = "Declaration of War on Japan (10 Dec 1941)"
+title_en = "Declaration of War on Japan (December 1941)"
 author_ko = "대한민국 임시정부"
 author_en = "Korean Provisional Government"
 author_dates = ""
-date = "1941-12-10"
+date = "9 December 1941 (date on the document; announced 10 December)"
 year = 1941
 period = "colonial"
 themes = ["colonial-independence"]
 shelf = "documents"
-script = "mixed"
+script = "hanmun"
 excerpt = false
-source = "wikisource-ko"
-source_title = "대일선전성명서"
-alt_titles = ["대일 선전 성명서", "대일선전포고문", "대한민국 임시정부 대일선전성명서"]
+source = "history-db"
+source_title = "大韓民國臨時政府對日宣戰聲明書"
 search = ["대일선전성명서", "대일 선전 성명서", "대일선전포고 1941", "임시정부 대일선전"]
+level_ids = ["kd_002_0020_0010_0050"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Issued by the Provisional Government (signed 주석 김구 and 외무부장 조소앙)."
-uncertain = ["source_title"]
+uncertain = []
 
 # resource: low confidence a Wikisource page exists; may be titled 한국광복군 총사령부 성립 보고서 or 한국광복군 선언문(광복군 성립 선언)
 [[text]]
@@ -2586,74 +2586,8 @@ pd_basis = "Author died 1949; Korean term (life+50) expired 1999, before the 201
 uncertain = ["source_title"]
 
 # resource: guess: zh Wikisource may hold 韓國痛史 under 韓國痛史/緖言; ko may hold a translation (not PD translator-wise)
-[[text]]
-id = "hanguk_tongsa_seo"
-title_ko = "한국통사 서언"
-title_hanja = "韓國痛史"
-title_en = "Hanguk tongsa: Preface (Pitiful History of Korea)"
-author_ko = "박은식"
-author_en = "Bak Eun-sik"
-author_dates = "1859–1925"
-date = "1915"
-year = 1915
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "hanmun"
-excerpt = true
-excerpt_note = "Keep only the 緖言 (preface) and, if present, the 總論; about 3k characters. Omit the three-part chronicle."
-source = "wikisource-zh"
-source_title = "韓國痛史"
-alt_titles = ["韓國痛史/緒言", "韓國痛史/緖言", "한국통사", "韓國痛史 (朴殷植)"]
-sections = ["緖言", "緒言", "總論"]
-search = ["한국통사 서언", "韓國痛史", "韓國痛史 緖言", "박은식 한국통사"]
-pd_basis = "Author died 1925; Korean term (life+50) expired 1975, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "date"]
-
 # resource: low confidence: the best-documented 1919 Shanghai texts are 개조 and 6대사업; alternatively 6대사업 (독립신문 1919-08)
-[[text]]
-id = "ahn_changho_gaejo"
-title_ko = "개조"
-title_en = "Reconstruction (Renovation) - Ahn Changho's Shanghai speech"
-author_ko = "안창호"
-author_en = "Ahn Chang-ho"
-author_dates = "1878–1938"
-date = "1919 (Shanghai, serialised in Independent Aug 1919)"
-year = 1919
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "개조 (안창호)"
-alt_titles = ["改造", "안창호/개조", "개조 (도산)", "6대사업", "육대사업"]
-search = ["안창호 개조", "도산 안창호 개조", "독립신문 개조 1919"]
-pd_basis = "Author died 1938; Korean term (life+50) expired 1988, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "date"]
-
 # resource: low confidence a Wikisource page exists; text is short and may appear only inside a 윤봉길 page
-[[text]]
-id = "yunbonggil_seonseomun"
-title_ko = "윤봉길 한인애국단 선서문"
-title_en = "Yun Bong-gil's Oath on Joining the Korean Patriotic Organization (1932)"
-author_ko = "윤봉길"
-author_en = "Yun Bong-gil"
-author_dates = "1908–1932"
-date = "1932-04-26"
-year = 1932
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "한인애국단 선서문"
-alt_titles = ["윤봉길 선서문", "윤봉길의 선서문", "한인애국단 입단 선서문"]
-search = ["윤봉길 선서문", "한인애국단 선서문", "윤봉길 선서"]
-pd_basis = "Author died 1932; Korean term (life+50) expired 1982, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
-
 # resource: guess: farewell letter to his sons Mo-sun and Dam; page likely exists given its fame but unverified
 [[text]]
 id = "gangbo_dubyeongjeong"
@@ -2746,8 +2680,8 @@ uncertain = ["date"]
 # resource: guess: ko Wikisource may hold 서유견문/제4편 and 제5편..; chapter numbering from memory (인민의 권리 in 편4, 정부의 직분 in 편5 or later) needs checking
 [[text]]
 id = "seoyu_gyeonmun_minkwon"
-title_ko = "서유견문 (인민의 권리·정부의 직분)"
-title_en = "Seoyu gyeonmun: 'The Rights of the People' and 'The Duties of Government'"
+title_ko = "서유견문 「인민의 권리」"
+title_en = "Observations on a Journey to the West: \"The Rights of the People\""
 author_ko = "유길준"
 author_en = "Yu Gil-jun"
 author_dates = "1856–1914"
@@ -2757,15 +2691,13 @@ period = "joseon-late"
 themes = ["joseon"]
 shelf = "political-writing"
 script = "mixed"
-excerpt = true
-excerpt_note = "Keep exactly two chapters: 「인민의 권리」 (제4편) and 「정부의 직분」 (제5편 or whichever 편 holds it); about 12k characters. Written in the 국한문혼용 style."
-source = "wikisource-ko"
-source_title = "서유견문"
-alt_titles = ["서유견문/제4편", "서유견문/제5편", "西遊見聞"]
-sections = ["제4편", "제5편", "인민의 권리", "정부의 직분"]
+excerpt = false
+source = "history-db"
+source_title = "西遊見聞 第四編 人民의 權利"
 search = ["서유견문", "서유견문 인민의 권리", "서유견문 정부의 직분", "兪吉濬 西遊見聞"]
+level_ids = ["ykc_001_0070_0010"]
 pd_basis = "Author died 1914; Korean term (life+50) expired 1964, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "sections"]
+uncertain = []
 
 # resource: guess: Independent issue dates for the 독립협회 / 독립문 editorials are from memory (founding 2 July 1896); per-issue page scheme as in dongnip_sinmun_changgan
 [[text]]
@@ -2816,27 +2748,6 @@ pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 201
 uncertain = ["source_title", "date", "year", "title_ko"]
 
 # resource: guess: page may be titled 헌의 6조 or 관민공동회 헌의6조
-[[text]]
-id = "heonui_6jo"
-title_ko = "독립협회 헌의6조"
-title_en = "Six Articles of the Independence Club (1898)"
-author_ko = "독립협회·관민공동회"
-author_en = "Independence Club and the Joint Official-Popular Assembly"
-author_dates = ""
-date = "1898-10-29"
-year = 1898
-period = "korean-empire"
-themes = ["joseon", "colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "헌의6조"
-alt_titles = ["헌의 6조", "관민공동회 6조", "獻議六條"]
-search = ["헌의6조", "헌의 6조", "관민공동회 헌의6조", "獻議六條"]
-pd_basis = "Collective 1898 resolution of the Independence Club and Joint Assembly; anonymous/organisational, more than 70 years old, and a petition endorsed by the Korean Empire government (Gojong's approval, 'chosen' articles)."
-uncertain = ["source_title"]
-
 # resource: low confidence a Wikisource page exists; the text may appear in newspaper pages (동아일보 1923) instead
 [[text]]
 id = "mulsan_janglyeohoe_chwiji"
@@ -2929,27 +2840,6 @@ search = ["한일신협약", "정미7조약", "정미 7조약", "제3차 한일�
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Treaty and annexed memorandum, 1907."
 
 # resource: low confidence a Wikisource page exists; possible only inside 매천야록 or a news article. The note is variously reported in Korean mixed script and hanmun, so script is a guess
-[[text]]
-id = "bak_seunghwan_yuseo"
-title_ko = "박승환 유서"
-title_en = "Pak Seung-hwan's Last Note (1 Aug 1907)"
-author_ko = "박승환"
-author_en = "Pak Seung-hwan"
-author_dates = "1869–1907"
-date = "1907-08-01"
-year = 1907
-period = "korean-empire"
-themes = ["joseon"]
-shelf = "documents"
-script = "hanmun"
-excerpt = false
-source = "wikisource-zh"
-source_title = "朴昇煥遺書"
-alt_titles = ["박승환의 유서", "朴參領 遺書", "박승환"]
-search = ["박승환 유서", "박승환 유언", "朴昇煥 遺書", "朴昇煥"]
-pd_basis = "Author died 1907; Korean term (life+50) expired 1957, before the 2013 extension to life+70, so the work is in the public domain. Suicide note of the 1st Battalion commander on the day of disbandment."
-uncertain = ["source_title", "title_ko", "script"]
-
 # resource: guess: ko Wikisource has 매천야록 broken down by year (e.g. 매천야록/제5권 or 光武11年); entries for 융희 원년 丁未 on the army's dissolution and 박승환 are wanted
 [[text]]
 id = "maecheon_yarok_gundae_haesan"
@@ -2967,101 +2857,18 @@ shelf = "documents"
 script = "hanmun"
 excerpt = true
 excerpt_note = "Keep only the 隆熙元年 (丁未, 1907) entries covering the disbandment of the army (7월 31일–8월 1일), 박승환's suicide and the Namdaemun fighting; about 3k characters."
-source = "wikisource-zh"
-source_title = "梅泉野錄"
-alt_titles = ["매천야록", "梅泉野錄/卷五", "매천야록/융희 원년", "梅泉野錄/隆熙元年"]
+source = "history-db"
+source_title = "梅泉野錄 卷之五 丁未"
 search = ["매천야록 군대해산", "梅泉野錄 軍隊解散", "매천야록 1907", "黃玹 梅泉野錄 丁未"]
+note = "Entries on the 1907 army disbandment: the military system, the disbanding of the Seoul units, Major Pak Seung-hwan (朴星煥) taking his own life, the clashes that followed and the disbanding of the provincial garrisons."
+level_ids = ["sa_001_0050_0090_0260", "sa_001_0050_0090_0270", "sa_001_0050_0090_0280", "sa_001_0050_0090_0290", "sa_001_0050_0090_0300"]
 pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "sections"]
+uncertain = []
 
 # resource: low confidence on exact page: may be titled 13도창의군 격문 or the 각국 영사관 통고문, or hanmun 傳檄文; script a guess
-[[text]]
-id = "changuigun_gyeokmun_13do"
-title_ko = "13도 창의군 격문"
-title_en = "Call to Arms of the Righteous Army of the Thirteen Provinces (1907-08)"
-author_ko = "이인영·허위 등"
-author_en = "Yi In-yeong, Heo Wi et al."
-author_dates = "이인영 1867–1909; 허위 1855–1908"
-date = "1907-12 / 1908-01"
-year = 1907
-period = "korean-empire"
-themes = ["joseon", "colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "13도 창의군 격문"
-alt_titles = ["13도창의군 격문", "십삼도창의군 격문", "13도 창의군 통문", "전국 의병 격문"]
-search = ["13도 창의군 격문", "십삼도 창의군 격문", "13도창의군 격문", "의병 격문 1907", "각국 영사관에 보내는 격문"]
-pd_basis = "Authors died 1909 and 1908; Korean term (life+50) long expired. Also a collective wartime proclamation."
-uncertain = ["source_title", "date", "title_ko"]
-
 # resource: guess: originally in 개벽 (1923) criticising the Korean Products Promotion movement; Wikisource page unverified
-[[text]]
-id = "jungsan_gyegeup"
-title_ko = "중산계급의 이기적 운동"
-title_en = "The Selfish Movement of the Middle Class"
-author_ko = "이성태"
-author_en = "Yi Seong-tae"
-author_dates = ""
-date = "1923"
-year = 1923
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "중산계급의 이기적 운동"
-alt_titles = ["중산계급의 利己的 운동", "중산계급의 이기적운동"]
-search = ["중산계급의 이기적 운동", "중산계급의 이기적운동", "이성태 중산계급", "이성태 물산장려 비판"]
-pd_basis = "UNCONFIRMED. Author 이성태's death date is not established; public-domain status must be confirmed (the Korean life+70 term would only have expired if he died before 1955; the old life+50 term if before 1963 is our working rule)."
-uncertain = ["source_title", "author_dates", "pd_basis"]
-
 # resource: low confidence on a standalone page; the platform may appear in a 조선노농총동맹 article or in newspapers
-[[text]]
-id = "nonong_chongdongmaeng_gangnyeong"
-title_ko = "조선노농총동맹 강령"
-title_en = "Platform of the Korean Federation of Workers and Peasants (1924)"
-author_ko = "조선노농총동맹"
-author_en = "Korean Federation of Workers and Peasants"
-author_dates = ""
-date = "1924-04"
-year = 1924
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "조선노농총동맹 강령"
-alt_titles = ["조선노농총동맹", "노농총동맹 강령 및 규약", "조선노농총동맹 선언 강령"]
-search = ["조선노농총동맹 강령", "노농총동맹 강령", "조선노농총동맹 선언"]
-pd_basis = "Anonymous/organisational document of 1924, more than 70 years old; no living author, in the public domain."
-uncertain = ["source_title"]
-
 # resource: guess: three-line platform; may sit within a 신간회 page or the 취지서
-[[text]]
-id = "singanhoe_gangnyeong"
-title_ko = "신간회 강령"
-title_en = "Platform of the Singanhoe (1927)"
-author_ko = "신간회"
-author_en = "Singanhoe (New Korea Society)"
-author_dates = ""
-date = "1927-02-15"
-year = 1927
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "신간회 강령"
-alt_titles = ["신간회 강령 및 규약", "新幹會 綱領", "신간회"]
-search = ["신간회 강령", "신간회 창립 강령", "新幹會 綱領", "신간회 취지서"]
-pd_basis = "Anonymous/organisational document of 1927, more than 70 years old; no living author, in the public domain. Three-line platform of a society dissolved in 1931."
-uncertain = ["source_title"]
-
 # resource: low confidence a Wikisource page exists; copy may be in North Korean or scholarly collections
 [[text]]
 id = "palwol_tese"
@@ -3107,29 +2914,6 @@ search = ["낭객의 신년만필", "낭객의 新年漫筆", "신채호 낭객�
 pd_basis = "Author died 1936; Korean term (life+50) expired 1986, before the 2013 extension to life+70, so the work is in the public domain."
 
 # resource: guess: zh Wikisource has parts of 與猶堂全書; 田論 may sit in 詩文集 卷十一; ko may have a translation only
-[[text]]
-id = "jeollon"
-title_ko = "전론 (田論)"
-title_hanja = "田論"
-title_en = "Jeollon: On Land (Essays on Land Systems)"
-author_ko = "정약용"
-author_en = "Jeong Yak-yong"
-author_dates = "1762–1836"
-date = "1799"
-year = 1799
-period = "joseon-late"
-themes = ["joseon"]
-shelf = "political-writing"
-script = "hanmun"
-excerpt = false
-note = "Keep all seven parts if short (전론 1-7); otherwise 田論一 (the 閭田制 proposal) and 田論二; about 6k characters."
-source = "wikisource-zh"
-source_title = "田論"
-alt_titles = ["與猶堂全書/第一集 詩文集/卷十一/田論", "田論一", "여전론", "전론"]
-search = ["전론 정약용", "田論 丁若鏞", "與猶堂全書 田論", "여전론"]
-pd_basis = "Author died 1836; Korean term (life+50) expired 1886, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
-
 # resource: guess: the full 장계 is in 일성록/승정원일기; 철종실록 13년 (1862) entries summarise it (e.g. 5월, 6월, 윤8월). Exact dates unknown, so the page and sections are to be pinned by discover
 [[text]]
 id = "pak_gyusu_jinju_jangge"
@@ -3172,12 +2956,12 @@ shelf = "documents"
 script = "hanmun"
 excerpt = false
 note = "Whole proclamation (~600 characters)."
-source = "wikisource-ko"
-source_title = "무장포고문"
-alt_titles = ["무장 포고문", "동학농민군 무장포고문", "茂長布告文", "동학농민혁명 무장포고문"]
+source = "history-db"
+source_title = "東學史 (草稿本) 倡義文"
 search = ["무장포고문", "동학 무장포고문", "茂長布告文", "동학농민군 포고문 1894"]
+level_ids = ["prd_002_0030_0060"]
 pd_basis = "Author died 1895; Korean term (life+50) expired 1945, before the 2013 extension to life+70, so the work is in the public domain. Collective proclamation, over 70 years old."
-uncertain = ["source_title"]
+uncertain = []
 
 # resource: guess: article texts differ between sources (오하기문, 동학사); Wikisource page may be a single listing
 [[text]]
@@ -3194,38 +2978,15 @@ themes = ["joseon"]
 shelf = "documents"
 script = "mixed"
 excerpt = false
-source = "wikisource-ko"
-source_title = "폐정개혁안 12조"
-alt_titles = ["폐정개혁안 12개조", "폐정개혁 12조", "동학농민군 폐정개혁안", "폐정개혁안12조"]
+source = "history-db"
+source_title = "東學史 (草稿本) 執綱所의 行政"
 search = ["폐정개혁안 12조", "폐정개혁안", "동학 폐정개혁 12개조", "弊政改革案"]
+note = "Text of 오지영 『東學史』 draft manuscript (草稿本); the 12 articles are known only from this work, and the wording of the 1940 printed edition differs."
+level_ids = ["prd_002_0030_0110"]
 pd_basis = "Collective 1894 programme (Jeonju settlement), anonymous/organisational and over 70 years old; text survives in 오하기문/동학사/동학란기록."
-uncertain = ["source_title"]
+uncertain = []
 
 # resource: guess: 갑신일록 is on ko Wikisource in some form; the 정강 14조 sits in the 12/5 entry (갑신일록 1884년 12월 5일)
-[[text]]
-id = "gapsin_jeonggang_14jo"
-title_ko = "갑신정변 정강 14조 (갑신일록)"
-title_hanja = "甲申日錄"
-title_en = "Fourteen-Point Reform Programme of the Gapsin Coup (1884)"
-author_ko = "김옥균"
-author_en = "Kim Ok-gyun"
-author_dates = "1851–1894"
-date = "1884-12-05"
-year = 1884
-period = "joseon-late"
-themes = ["joseon"]
-shelf = "documents"
-script = "mixed"
-excerpt = true
-excerpt_note = "Keep only the 14-point reform programme of 12월 5일 (開化黨 政綱) and the surrounding entry; about 3k characters."
-source = "wikisource-ko"
-source_title = "갑신일록"
-alt_titles = ["갑신정변 정강", "갑신정변 개혁정강 14조", "갑신정변 14개조 정강", "甲申日錄"]
-sections = ["정강", "12월 5일"]
-search = ["갑신정변 정강 14조", "갑신일록", "갑신정변 14개조 정강", "甲申日錄 政綱"]
-pd_basis = "Author died 1894; Korean term (life+50) expired 1944, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "sections"]
-
 # resource: guess: Wikisource likely has 홍범14조 as a page with 국한문 text
 [[text]]
 id = "hongbeom_14jo"
@@ -3248,27 +3009,6 @@ search = ["홍범14조", "홍범 14조", "洪範十四條", "홍범십사조"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Royal oath/charter of January 1895."
 
 # resource: guess: Wikisource text may be a newspaper clipping (대한매일신보 1907-02) rather than a standalone page
-[[text]]
-id = "gukchae_boksang_chwijiseo"
-title_ko = "국채보상운동 취지서"
-title_en = "Prospectus of the National Debt Repayment Movement (1907)"
-author_ko = "서상돈·김광제 등 (대구 광문사)"
-author_en = "Seo Sang-don, Kim Gwang-je et al. (Daegu Gwangmunsa)"
-author_dates = "서상돈 1850–1913; 김광제 1866–1920"
-date = "1907-02"
-year = 1907
-period = "korean-empire"
-themes = ["joseon", "colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "국채보상운동 취지서"
-alt_titles = ["국채보상 취지서", "국채보상운동 발기 취지서", "대한매일신보 국채보상 취지서"]
-search = ["국채보상운동 취지서", "국채보상 취지서", "國債報償 趣旨書", "국채보상운동 발기문"]
-pd_basis = "Authors died 1913 and 1920 and the text is a collective prospectus of 1907; public domain."
-uncertain = ["source_title"]
-
 # resource: likely exists on ko Wikisource (famous text), but title may be 是日也放聲大哭
 [[text]]
 id = "siil_yabangseongdaegok"
@@ -3513,29 +3253,6 @@ search = ["을사조약", "제2차 한일협약", "을사늑약", "한일협상�
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
 
 # resource: low confidence a Wikisource page exists; the document may be only a scanned image (nominal credential) plus Korean/English translation by others, which is not PD
-[[text]]
-id = "hague_wimjangjang"
-title_ko = "고종 헤이그 특사 위임장 (1907)"
-title_en = "Gojong's Credentials for the Hague Special Envoys (1907)"
-author_ko = "고종"
-author_en = "Emperor Gojong"
-author_dates = "1852–1919"
-date = "1907-04-20"
-year = 1907
-period = "korean-empire"
-themes = ["joseon", "colonial-independence"]
-shelf = "treaties"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "헤이그 특사 위임장"
-alt_titles = ["헤이그 밀사 위임장", "헤이그특사 위임장", "고종황제 친서 1907", "고종 헤이그 특사 신임장"]
-search = ["헤이그 특사 위임장", "헤이그 밀사 위임장", "고종 위임장 1907", "海牙密使 委任狀"]
-pd_basis = "Author (Gojong) died 1919; the document is also an official imperial letter. Public domain."
-uncertain = ["source_title", "script"]
-
-# ── 2026-10: primary sources for the AI background essays ──
-
 # resource: ko page likely 광개토왕릉비 (several titles in use); zh may have 廣開土王碑
 [[text]]
 id = "gwanggaeto_stele"
