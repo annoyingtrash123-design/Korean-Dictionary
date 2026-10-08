@@ -22,7 +22,7 @@
       "orig": "처……ㄹ썩, 처……ㄹ썩, 척, 쏴……아.\n내게는 아무 것 두려움 없어,\n육상(陸上)에서, 아무런 힘과 권(權)을 부리던 자라도,\n내 앞에 와서는 꼼짝 못하고,\n아무리 큰 물건도 내게는 행세하지 못하네.\n내게는 내게는 나의 앞에는\n처……ㄹ썩, 처……ㄹ썩, 척, 튜르릉, 꽉.",
       "modern": null,
       "reading": null,
-      "en": "Sploooosh, sploooosh, slap, swooooosh.\nI fear nothing at all.\nEven one who wielded any power and authority on land\nmust not move a muscle before me,\nno matter how great a thing, it cannot throw its weight about before me.\nTo me, to me, before me:\nSploooosh, sploooosh, slap, rumble, CRACK."
+      "en": "Sploooosh, sploooosh, slap, swooooosh.\nI fear nothing at all.\nEven one who wielded any power and authority on land\ncannot move a muscle before me,\nno matter how great a thing, it cannot throw its weight about before me.\nTo me, to me, before me:\nSploooosh, sploooosh, slap, rumble, CRACK."
     },
     {
       "orig": "처……ㄹ썩, 처……ㄹ썩, 척, 쏴……아.\n나에게 절하지 아니한 자가,\n지금까지 있거든 통기(通寄)하고 나서 보아라.\n진시황(秦始皇), 나파륜, 너희들이냐.\n누구 누구 누구냐 너희 역시 내게는 굽히도다.\n나하고 겨룰 이 있건 오너라.\n처……ㄹ썩, 처……ㄹ썩, 척, 튜르릉, 꽉.",
@@ -56,9 +56,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Text complete (6 stanzas, rev 205651). \"First sinchesi\" is hedged (\"often cited\", \"debated\") in card and notes; Sonyeon Nov 1908 and Choe's role in the 1919 declaration are well established. Fixed one mistranslation (꼼짝 못하고 = cannot move)."
   }
 }

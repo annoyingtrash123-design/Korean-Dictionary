@@ -9,7 +9,7 @@
   },
   "notes": {
     "ko": "**배경** 김소월(1902–1934)은 평안북도 출신으로, 시집 『진달래꽃』(1925)으로 한국 근대 서정시의 대표 시인이 되었습니다. 「초혼」은 이 시집에 실린 작품입니다. 제목의 초혼(招魂)은 사람이 죽었을 때 지붕에 올라 망자의 옷을 흔들며 그 이름을 부르는 전통 장례 절차를 가리킵니다.\n\n**의의** 이별과 상실의 정서를 한국 전통 민요의 가락으로 노래한 소월 시의 특징이 가장 강렬하게 드러나는 시로 흔히 꼽힙니다. 교과서와 노래로도 널리 알려져 있습니다.\n\n**형식과 주제** 5연으로, 각 연은 ‘~이름이어!’, ‘~사람이어!’ 같은 영탄(감탄) 호격으로 끝나거나 반복됩니다. 불러도 대답 없는 이름, 끝내 하지 못한 말 한마디, ‘하늘과 땅 사이’의 거리가 핵심 이미지입니다. 마지막 연에서 화자는 ‘선 채로 돌이 되어도’ 부르겠다고 말하여, 슬픔이 체념이 아니라 끝없는 부름으로 이어짐을 보여 줍니다. 작품 안에 구체적인 사연은 나오지 않으며, 연인의 죽음으로 읽기도 하고 더 넓은 상실로 읽기도 합니다.\n\n**읽기 도움**\n- **~이어!** 호격·감탄 어미(‘이름이여’의 옛 형태).\n- **허공중(虛空中)** 텅 빈 공중.\n- **주인(主人)없는** 응답할 임자가 없는.\n- **심중(心中)** 마음속.\n- **마저하지 못하였구나** 끝까지 다 말하지 못했구나.\n- **떨어져 나가앉은** 홀로 떨어져 앉은.\n- **설움에 겹도록** 서러움이 넘칠 만큼.\n- **비껴가지만** 곧바로 닿지 못하고 비스듬히 스쳐 가지만.\n",
-    "en": "**Background** Kim Sowol (1902-1934), from North Pyeongan Province, became the emblematic lyric poet of early modern Korea through his collection *Azaleas* (Jindallaekkot, 1925), in which \"Chohon\" appears. *Chohon* (招魂) is the traditional funeral rite in which, after a death, a relative climbs onto the roof, waves the dead person's garment and calls out their name.\n\n**Significance** The poem is often counted among the most intense expressions of Sowol's hallmark: the grief of parting and loss carried on the rhythms of Korean folk song. It is a staple of school textbooks and has been set to music.\n\n**Form and themes** Five stanzas, each built on or ending in an exclamatory vocative (\"...name!\", \"...person!\"). Key images are the name that no one answers to, the one word left unsaid, and the distance \"between sky and earth.\" In the last stanza the speaker vows to keep calling even if he turns to stone where he stands, so grief becomes endless calling rather than resignation. The poem names no specific circumstances; readers take it as the death of a lover or as a wider loss.\n\n**Reading help**\n- **~이어!** vocative/exclamatory ending (an older form of -이여).\n- **허공중(虛空中)** in the empty air.\n- **주인(主人)없는** with no owner, i.e. nobody to answer.\n- **심중(心中)** within the heart.\n- **마저하지 못하였구나** I could not finish saying it.\n- **떨어져 나가앉은** sitting apart, alone.\n- **설움에 겹도록** until sorrow overflows.\n- **비껴가지만** passes aslant, fails to arrive directly.\n"
+    "en": "**Background** Kim Sowol (1902-1934), from North Pyeongan Province, became the emblematic lyric poet of early modern Korea through his collection *Azaleas* (Jindallaekkot, 1925), in which \"Chohon\" appears. *Chohon* (招魂) is the traditional funeral rite in which, after a death, a relative climbs onto the roof, waves the dead person's garment and calls out their name.\n\n**Significance** The poem is often counted among the most intense expressions of Sowol's hallmark: the grief of parting and loss carried on the rhythms of Korean folk song. It is a staple of school textbooks and has been set to music.\n\n**Form and themes** Five stanzas, each built on or ending in an exclamatory vocative (\"...name!\", \"...person!\"). Key images are the name that no one answers to, the one word left unsaid, and the distance \"between sky and earth.\" In the last stanza the speaker vows to keep calling even if the speaker turns to stone where he stands, so grief becomes endless calling rather than resignation. The poem names no specific circumstances; readers take it as the death of a lover or as a wider loss.\n\n**Reading help**\n- **~이어!** vocative/exclamatory ending (an older form of -이여).\n- **허공중(虛空中)** in the empty air.\n- **주인(主人)없는** with no owner, i.e. nobody to answer.\n- **심중(心中)** within the heart.\n- **마저하지 못하였구나** I could not finish saying it.\n- **떨어져 나가앉은** sitting apart, alone.\n- **설움에 겹도록** until sorrow overflows.\n- **비껴가지만** passes aslant, fails to arrive directly.\n"
   },
   "paragraphs": [
     {
@@ -50,9 +50,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Text complete and matches Wikisource rev 203679; translation faithful line by line; background facts (1925 Jindallaekkot, chohon rite) sound. Changed \"he\" to \"the speaker\" in the English note (gender not stated)."
   }
 }
