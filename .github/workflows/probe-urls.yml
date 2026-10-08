@@ -1,0 +1,54 @@
+name: Probe URLs
+
+# Downloads a few pages that the development sandbox cannot reach (archives other than
+# Wikisource) so that parsers can be written against real fixtures. Results go to the
+# `probe` branch (force-pushed), never to main.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URLs, one per line or space-separated (max 40)"
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe-urls
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        env:
+          URLS: ${{ inputs.urls }}
+        run: |
+          mkdir -p /tmp/probe
+          n=0
+          printf '%s\n' $URLS | head -40 | while read -r u; do
+            [ -z "$u" ] && continue
+            n=$((n+1))
+            f=$(printf '%02d' "$n")
+            code=$(curl -sS -L --max-time 60 -A "KoreanDictionaryReader/1.0 (+https://github.com/${GITHUB_REPOSITORY})" \
+              -o "/tmp/probe/$f.body" -w '%{http_code} %{content_type} %{size_download}' "$u" || echo "ERR")
+            printf '%s\t%s\t%s\n' "$f" "$code" "$u" >> /tmp/probe/index.tsv
+            # keep files small enough for git
+            head -c 1500000 "/tmp/probe/$f.body" > "/tmp/probe/$f.txt" && rm "/tmp/probe/$f.body"
+            sleep 2
+          done
+          cat /tmp/probe/index.tsv
+      - name: Push to the probe branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan probe-tmp
+          git rm -rq --cached . && rm -rf ./* .github || true
+          cp -r /tmp/probe ./probe
+          git add probe
+          git commit -qm "probe: $(date -u +%FT%TZ) [skip ci]"
+          git push -f origin HEAD:probe
