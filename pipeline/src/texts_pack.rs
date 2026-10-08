@@ -99,6 +99,7 @@ pub fn split_paragraphs(text: &str, keep_lines: bool, hanmun: bool) -> Vec<Strin
             cur.clear();
         }
     };
+    let text = crate::texts_wikitext::strip_noconvert(text);
     for line in text.lines() {
         let l = line.trim();
         if l.is_empty() {
@@ -928,6 +929,7 @@ mod tests {
     #[test]
     fn trailing_headings_are_dropped() {
         assert_eq!(split_paragraphs("## 1\n\n본문\n\n## 바깥 고리\n", false, false), vec!["## 1", "본문"]);
+        assert_eq!(split_paragraphs("曰：-{『}-可-{』}-", false, true), vec!["曰：『可』"]);
     }
 
     #[test]

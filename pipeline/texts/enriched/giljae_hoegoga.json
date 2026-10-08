@@ -1,0 +1,52 @@
+{
+  "id": "giljae_hoegoga",
+  "card": {
+    "summary_ko": "고려가 망한 뒤 옛 도읍 개경을 말 한 필로 돌아보며 지은 길재의 시조로, 변함없는 산천과 사라진 인걸을 대비합니다.",
+    "summary_en": "Gil Jae's sijo, written while riding alone through the old Goryeo capital after the dynasty's fall, contrasting unchanged hills and rivers with vanished great men.",
+    "level": "classical",
+    "edition_ko": "위키문헌 「회고가 (길재)」, 판 430574, CC BY-SA 4.0 (원전은 퍼블릭 도메인)",
+    "edition_en": "Korean Wikisource, \"회고가 (길재)\", revision 430574, CC BY-SA 4.0 (original work in the public domain)"
+  },
+  "notes": {
+    "ko": "**배경** 길재(吉再, 1353–1419)는 고려 말의 학자로, 조선이 서자 벼슬을 마다하고 고향 선산으로 내려가 후학을 가르쳤습니다. 이 시조는 낙향하기 전 옛 도읍 개경을 둘러보며 지었다고 전합니다. 「회고가」라는 제목은 후대에 붙은 것으로 보이며, 같은 제목의 작품이 여럿 있습니다.\n\n**이본** **청구영언**(靑丘永言)은 1728년 김천택이 엮은 시조집이고, **가곡원류**(歌曲源流)는 19세기 후반(1876년본) 박효관·안민영이 엮은 가집으로 곡조(우조·계면조, 초삭대엽·이삭대엽·두거 등)별로 노래를 배열합니다. 이 시조는 두 책에 모두 실려 있으나 둘째 줄이 다릅니다. 청구영언은 \"산천은 의구하되 인걸은 간 데 없다\"로 단정하고, 가곡원류는 \"산천은 의구커늘 인걸은 어디 간고\"로 의문형을 써서 탄식이 더 깊습니다.\n\n**의의** 왕조 교체기 유신(遺臣)의 심정을 가장 널리 알려진 형식으로 보여 주는 대표적 회고시조입니다.\n\n**형식과 주제** 초장·중장·종장 3장 구조에서 종장 첫머리 \"어즈버\"(감탄사)로 정서를 전환하는 시조의 전형입니다. 주제는 무상함, 옛 왕조에 대한 그리움, 변하는 인간사와 변치 않는 자연의 대비입니다.\n\n**읽기 도움**\n- 都邑地(도읍지): 수도.\n- 匹馬(필마): 한 필의 말.\n- 도라드니: 돌아드니(돌아다니니).\n- 依舊(의구): 예와 다름없음. ᄒᆞ되/-커늘은 '-하되/-하거늘'.\n- 人傑(인걸): 뛰어난 인물.\n- 어즈버: 아아, 아!\n- 太平烟月(태평연월): 태평한 세월.\n- ᄒᆞ노라: 하노라. ᄒᆞ의 'ᆞ'(아래아)는 오늘날 'ㅏ'. ᄭᅮᆷ은 '꿈'.",
+    "en": "**Background** Gil Jae (1353-1419) was a late-Goryeo scholar who, when Joseon was founded, declined office, returned to his home in Seonsan and taught pupils. The poem is traditionally said to have been composed as he looked around the old capital, Gaegyeong, before leaving. The title \"Hoegoga\" (\"song of remembering the past\") looks like a later label; several poems share it.\n\n**The versions** The **Cheongu yeongeon** (1728) is a sijo anthology compiled by Kim Cheon-taek; the **Gagok wollyu** (1876 edition, late 19th century) was compiled by Bak Hyo-gwan and An Min-yeong and arranges songs by musical mode (ujo, gyemyeonjo; chosakdaeyeop, isakdaeyeop, dugeo and so on). The poem is in both, but the second line differs. The Cheongu yeongeon states flatly \"the hills and streams are as of old, but the heroes are gone\"; the Gagok wollyu asks \"the hills and streams are as of old, yet where have the heroes gone?\", a more mournful question.\n\n**Significance** It is the best-known elegy for a lost dynasty, voicing the feelings of a loyalist of the fallen house.\n\n**Form and themes** A classic three-line sijo: the final line opens with the exclamation \"eojeubeo\" (\"alas\"), which turns the mood. Themes are impermanence, longing for the old dynasty, and the contrast between changing human affairs and unchanging nature.\n\n**Reading help**\n- 都邑地 (doeupji): capital city.\n- 匹馬 (pilma): a single horse.\n- 도라드니: archaic for \"going about / returning\".\n- 依舊 (uigu): unchanged; -ᄒᆞ되 and -커늘 mean \"although / since it is so\".\n- 人傑 (ingeol): outstanding people.\n- 어즈버: \"alas!\"\n- 太平烟月 (taepyeong yeonwol): peaceful times, \"calm smoke and moon\".\n- ᄒᆞ노라: modern 하노라; the dot-a (arae-a, ᆞ) later merged with ㅏ. ᄭᅮᆷ is 꿈 \"dream\"."
+  },
+  "paragraphs": [
+    {
+      "orig": "## 청구영언",
+      "modern": null,
+      "reading": null,
+      "en": "Cheongu yeongeon (anthology)"
+    },
+    {
+      "orig": "五百年 都邑地를 匹馬로 도라드니\n山川은 依舊ᄒᆞ되 人傑은 간 듸 업다\n어즈버 太平烟月이 ᄭᅮᆷ이런가 ᄒᆞ노라",
+      "modern": "오백 년 도읍지(都邑地)를 필마(匹馬)로 돌아드니\n산천(山川)은 의구(依舊)하되 인걸(人傑)은 간 데 없다\n아아, 태평연월(太平烟月)이 꿈이런가 하노라",
+      "reading": null,
+      "en": "Riding a single horse through the capital of five hundred years,\nthe hills and rivers are as of old, but the great men are gone nowhere to be found.\nAlas, was the age of peaceful smoke and moonlight only a dream?"
+    },
+    {
+      "orig": "## 가곡원류",
+      "modern": null,
+      "reading": null,
+      "en": "Gagok wollyu (anthology)"
+    },
+    {
+      "orig": "五百年 都邑地를 匹馬로 도라드니\n山川은 依舊커늘 人傑은 어듸 간고\n어즈버 太平烟月이 ᄭᅮᆷ이런가 ᄒᆞ노라",
+      "modern": "오백 년 도읍지를 필마로 돌아드니\n산천은 의구하거늘 인걸은 어디 간고\n아아, 태평연월이 꿈이런가 하노라",
+      "reading": null,
+      "en": "Riding a single horse through the capital of five hundred years,\nthe hills and rivers are as of old, so where have the great men gone?\nAlas, was the age of peaceful smoke and moonlight only a dream?"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

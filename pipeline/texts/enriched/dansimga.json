@@ -1,0 +1,76 @@
+{
+  "id": "dansimga",
+  "card": {
+    "summary_ko": "백 번 죽어 뼈가 흙이 되어도 임금을 향한 한결같은 마음은 변하지 않는다는 정몽주의 시조로, 이방원의 「하여가」에 화답한 노래라고 전합니다.",
+    "summary_en": "A sijo attributed to Jeong Mong-ju: though he die a hundred times and his bones turn to dust, his single loyal heart toward his lord will not change. Tradition says it answered Yi Bang-won's Hayeoga.",
+    "level": "classical",
+    "edition_ko": "위키문헌 「단심가」, 판 430428, CC BY-SA 4.0 (원전은 퍼블릭 도메인)",
+    "edition_en": "Korean Wikisource, \"단심가\", revision 430428, CC BY-SA 4.0 (original work in the public domain)"
+  },
+  "notes": {
+    "ko": "**배경** 정몽주(鄭夢周, 1337–1392)는 고려 말의 충신이자 학자입니다. 전하는 바에 따르면 1392년 이방원(훗날 태종)이 「하여가」로 마음을 떠보자 정몽주가 이 노래로 답하여 고려에 대한 변치 않는 충성을 밝혔고, 이방원은 정몽주를 개성 선죽교에서 살해했다고 합니다. 이 문답이 실제로 그렇게 오갔는지는 후대 기록에 의존하여 확실하지 않습니다.\n\n**이본** **청구영언**(靑丘永言)은 1728년 김천택이 엮은 시조집이고, **가곡원류**(歌曲源流)는 19세기 후반(1876년본) 박효관·안민영이 엮은 가집으로 곡조(우조·계면조, 초삭대엽·이삭대엽·두거 등)별로 노래를 배열합니다. 이 시조는 청구영언에 한 번, 가곡원류에는 곡조를 달리하여 두 번(우조 두거, 계면조 두거) 실려 있습니다. 차이는 주로 철자와 한 단어입니다. 청구영언은 \"주거주거 / 고쳐 주거 / 넉시라도\"이고, 가곡원류 우조 두거는 \"쥭고 쥭어 / 곳쳐 쥭어 / 넉시야\"(넋이야 있고 없고), 계면조 두거는 \"넉시라도\"로 청구영언과 같습니다. 이 문서에는 같은 내용을 한문으로 옮긴 한역도 실려 있으며, 한역자는 여기서 확인되지 않습니다.\n\n**의의** 절의의 노래로 가장 널리 알려진 작품이며, 이방원의 「하여가」와 짝지어 읽힙니다.\n\n**형식과 주제** 죽음을 백 번 되풀이하는 과장 뒤에 \"님 향한 일편단심\"이라는 단언으로 맺습니다. 주제는 충절과 불변입니다. '님'은 시조 문맥에서 임금을 가리킵니다.\n\n**읽기 도움**\n- 주거/쥭어: 죽어.\n- 一百番(일백 번): 백 번.\n- 고쳐/곳쳐: 다시.\n- 白骨(백골), 塵土(진토): 흰 뼈, 티끌과 흙. 塵土ㅣ의 ㅣ는 주격 조사 '이'.\n- 넉시: 넋이.\n- 一片丹心(일편단심): 한 조각 붉은 마음.\n- 가싈 줄: 가실(변할) 줄.",
+    "en": "**Background** Jeong Mong-ju (1337-1392) was a late-Goryeo scholar and loyalist. According to tradition, in 1392 Yi Bang-won (later King Taejong) sounded him out with the poem Hayeoga; Jeong replied with this song, declaring unchanging loyalty to Goryeo, and Yi Bang-won then had him killed on Seonjuk Bridge in Gaeseong. Whether the exchange took place as told rests on later accounts and is uncertain.\n\n**The versions** The **Cheongu yeongeon** (1728) is a sijo anthology compiled by Kim Cheon-taek; the **Gagok wollyu** (1876 edition, late 19th century) was compiled by Bak Hyo-gwan and An Min-yeong and arranges songs by musical mode (ujo, gyemyeonjo; chosakdaeyeop, isakdaeyeop, dugeo and so on). The poem appears once in the Cheongu yeongeon and twice in the Gagok wollyu, in different modes (ujo dugeo and gyemyeonjo dugeo). Differences are mostly spelling and one word. The Cheongu yeongeon has 주거주거 / 고쳐 주거 / 넉시라도 (\"even as a soul\"); the Gagok wollyu ujo version has 쥭고 쥭어 / 곳쳐 쥭어 / 넉시야 (\"as for the soul, whether it exists or not\"); the gyemyeonjo version has 넉시라도, like the Cheongu yeongeon. The page also carries a Chinese rendering (hanyeok) of the poem; its translator is not identified here.\n\n**Significance** It is the best-known song of loyalty, read alongside Yi Bang-won's Hayeoga.\n\n**Form and themes** After the hyperbole of dying a hundred times, it ends with the flat assertion \"my single red heart toward my lord\". The themes are loyalty and constancy. In sijo, 님 here refers to the king.\n\n**Reading help**\n- 주거/쥭어: \"dying\".\n- 一百番 (ilbaek beon): a hundred times.\n- 고쳐/곳쳐: \"again\".\n- 白骨, 塵土: white bones, dust and earth; the ㅣ in 塵土ㅣ is the subject particle 이.\n- 넉시: modern 넋이, \"the soul\".\n- 一片丹心 (ilpyeon dansim): a single red heart, i.e. sincere loyalty.\n- 가싈 줄: modern 가실 줄, \"that it will change\"."
+  },
+  "paragraphs": [
+    {
+      "orig": "## 청구영언",
+      "modern": null,
+      "reading": null,
+      "en": "Cheongu yeongeon (anthology)"
+    },
+    {
+      "orig": "이 몸이 주거주거 一百番 고쳐 주거\n白骨이 塵土ㅣ 되여 넉시라도 잇고 업고\n님 向ᄒᆞᆫ 一片丹心이야 가싈 줄이 이시랴",
+      "modern": "이 몸이 죽고 죽어 일백 번 고쳐 죽어\n백골(白骨)이 진토(塵土)가 되어 넋이라도 있고 없고\n님 향한 일편단심(一片丹心)이야 변할 줄이 있으랴",
+      "reading": null,
+      "en": "Though this body die and die, a hundred times die again,\nthough my white bones turn to dust and earth, whether a soul remain or not,\nhow could my single red heart toward my lord ever change?"
+    },
+    {
+      "orig": "## 가곡원류 (우조 두거)",
+      "modern": null,
+      "reading": null,
+      "en": "Gagok wollyu (ujo dugeo mode)"
+    },
+    {
+      "orig": "이 몸이 쥭고 쥭어 一百番 곳쳐 쥭어\n白骨이 塵土ㅣ 되야 넉시야 잇고 업고\n님 向ᄒᆞᆫ 一片丹心이야 가싈 쥴이 이시랴",
+      "modern": "이 몸이 죽고 죽어 일백 번 고쳐 죽어\n백골이 진토가 되어 넋이야 있고 없고\n님 향한 일편단심이야 변할 줄이 있으랴",
+      "reading": null,
+      "en": "Though this body die and die, a hundred times die again,\nthough my white bones turn to dust and earth, whether a soul remain or not,\nhow could my single red heart toward my lord ever change?"
+    },
+    {
+      "orig": "## 가곡원류 (계면조 두거)",
+      "modern": null,
+      "reading": null,
+      "en": "Gagok wollyu (gyemyeonjo dugeo mode)"
+    },
+    {
+      "orig": "이 몸이 쥭고 쥭어 一百番 곳쳐 쥭어\n白骨이 塵土ㅣ 되야 넉시라도 잇고 업고\n님 向ᄒᆞᆫ 一片丹心이야 ᄀᆞ싈 쥴이 이시랴",
+      "modern": "이 몸이 죽고 죽어 일백 번 고쳐 죽어\n백골이 진토가 되어 넋이라도 있고 없고\n님 향한 일편단심이야 변할 줄이 있으랴",
+      "reading": null,
+      "en": "Though this body die and die, a hundred times die again,\nthough my white bones turn to dust and earth, whether a soul remain or not,\nhow could my single red heart toward my lord ever change?"
+    },
+    {
+      "orig": "## 한역",
+      "modern": null,
+      "reading": null,
+      "en": "Chinese verse rendering (hanyeok)"
+    },
+    {
+      "orig": "此身死了死了(차신사료사료) 一百番更死了(일백번갱사료)\n白骨爲塵土(백골위진토) 魂魄有也無(혼백유야무)\n向主一片丹心(향주일편단심) 寧有改理也歟(영유개리야여)",
+      "modern": null,
+      "reading": "차신사료사료 일백번갱사료\n백골위진토 혼백유야무\n향주일편단심 영유개리야여",
+      "en": "This body dies and dies, a hundred times it dies again;\nwhite bones become dust and earth, does a soul remain or not?\nMy single red heart toward my lord, how could it ever change?"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

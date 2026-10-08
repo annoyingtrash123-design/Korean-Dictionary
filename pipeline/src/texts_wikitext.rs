@@ -548,9 +548,27 @@ fn assemble(s: &str, layout: Layout, nospace: bool) -> String {
     lines.join("\n")
 }
 
+/// `-{X}-` is zh.wikisource's "do not convert" marker: keep X.
+pub fn strip_noconvert(s: &str) -> String {
+    let mut out = String::with_capacity(s.len());
+    let mut rest = s;
+    while let Some(i) = rest.find("-{") {
+        match rest[i + 2..].find("}-") {
+            Some(j) => {
+                out.push_str(&rest[..i]);
+                out.push_str(&rest[i + 2..i + 2 + j]);
+                rest = &rest[i + 2 + j + 2..];
+            }
+            None => break,
+        }
+    }
+    out.push_str(rest);
+    out
+}
+
 /// Inline markup cleanup for one line: links, bold/italic, tags, entities, whitespace.
 pub fn inline(t: &str) -> String {
-    let mut s = t.to_string();
+    let mut s = strip_noconvert(t);
     for m in MAGIC {
         s = s.replace(m, "");
     }
