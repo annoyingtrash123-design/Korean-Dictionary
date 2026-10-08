@@ -1,11 +1,11 @@
 {
   "id": "yurichang",
   "card": {
-    "summary_ko": "정지용이 어린 자식을 잃은 슬픔을 차가운 유리창 앞의 밤 풍경으로 그린 시로, 절제된 감각적 이미지가 돋보인다.",
-    "summary_en": "Jeong Ji-yong's poem renders grief at the loss of a young child as a night scene at a cold windowpane, notable for its restrained sensory imagery.",
+    "summary_ko": "정지용이 흔히 어린 자식을 잃은 슬픔을 노래한 것으로 읽히는, 차가운 유리창 앞의 밤 풍경을 그린 시로, 절제된 감각적 이미지가 돋보인다.",
+    "summary_en": "Jeong Ji-yong's poem, usually read as grief at the loss of a young child, is a night scene at a cold windowpane, notable for its restrained sensory imagery.",
     "level": "advanced",
-    "edition_ko": "한국어 위키문헌 「향수/유리창1」 (판 번호 340569), 원저작물은 공유저작물, 전사는 CC BY-SA 4.0",
-    "edition_en": "Korean Wikisource, \"향수/유리창1\" (revision 340569); original work in the public domain, transcription CC BY-SA 4.0"
+    "edition_ko": "한국어 위키문헌 「향수/유리창1」 (판 번호 340569, 「유리창 1」 수록 쪽), 원저작물은 공유저작물, 전사는 CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, \"향수/유리창1\" (revision 340569; page of \"Yurichang 1\"); original work in the public domain, transcription CC BY-SA 4.0"
   },
   "notes": {
     "ko": "**배경** 정지용(1902–1950)은 모더니즘 계열의 대표 시인이다. 「유리창 1」은 1930년에 발표되었고 1935년 『정지용 시집』에 실린 것으로 알려져 있다. 흔히 어린 자식의 죽음을 애도한 시로 읽힌다. 이 판본은 위키문헌의 「향수/유리창1」 쪽에서 가져왔다.\n\n**의의** 감정을 직접 쏟아내지 않고 이미지로 억제해 표현하는 한국 현대시의 성취로 평가받는다. 정지용은 1950년 한국전쟁 중에 사망했으며(정확한 경위는 확실하지 않다), 월북 문제로 오랫동안 금서였다가 1988년 해금되었다.\n\n**형식과 주제** 한 연 10행이다. 창에 어른거리는 것(차고 슬픈 것), 입김으로 흐려진 유리, 밤과 별, 그리고 '날아간' 너로 이어진다. 유리는 안과 밖, 삶과 죽음을 가르는 경계이면서 투명하게 이어 주는 막이다. 마지막 행의 영탄 '아아'가 억눌렀던 감정을 처음 드러낸다. 역설적 표현인 '외로운 황홀한 심사'가 시의 핵심이다.\n\n**읽기 도움**\n- `어린거린다`: 어른거린다. 희미하게 아른거린다.\n- `열없이`: 겸연쩍게, 맥없이.\n- `길들은양`: 길든 양(것처럼).\n- `언 날개를 파다거린다`: 언 날개를 파닥거린다.\n- `부디치고`: 부딪치고.\n- `백힌다`: 박힌다.\n- `닥는`: 닦는.\n- `늬`: 너. `산ㅅ새`: 산새.",
@@ -26,9 +26,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Confirmed poem is 정지용 「유리창 1」 (Wikisource page 향수/유리창1, header 유리창(琉璃窓) 1); translation and modern spelling checked line by line. Hedged the child-elegy reading in the card and clarified the edition line."
   }
 }

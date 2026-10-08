@@ -1,0 +1,184 @@
+{
+  "id": "hyangsu",
+  "card": {
+    "summary_ko": "정지용이 고향의 실개천, 황소, 늙은 아버지, 누이와 아내의 모습을 감각적 이미지로 그리고, 후렴 ‘그곳이 차마 꿈엔들 잊힐 리야’를 되풀이하는 대표적 모더니즘 서정시입니다.",
+    "summary_en": "Jeong Ji-yong paints his hometown in vivid sensory images (the stream, the ox, his aged father, his sister and wife), returning to the refrain \"could that place be forgotten even in dreams?\"",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「향수/향수」 (리비전 325256, CC BY-SA 4.0 전사; 원저작물은 공유저작물)",
+    "edition_en": "Korean Wikisource, \"향수/향수\" (revision 325256, transcription CC BY-SA 4.0; the work itself is public domain)"
+  },
+  "notes": {
+    "ko": "**배경** 정지용(1902–1950)은 충북 옥천 출신으로, 일본 도시샤대학에서 영문학을 공부했습니다. 「향수」는 1927년경 발표된 것으로 알려져 있으며 『정지용시집』(1935)에 실렸습니다. 정지용은 한국 모더니즘 시를 대표하는 시인으로 꼽히며, 한국전쟁 중 행방불명되었다고 전합니다.\n\n**의의** 한국 현대시에서 가장 널리 사랑받는 시의 하나로, 1989년 가요로 만들어져 대중에게도 널리 알려졌습니다. 감각적 이미지와 토속 어휘가 결합한 점이 높이 평가됩니다.\n\n**형식과 주제** 5연이며 각 연은 ‘~곳,’으로 끝나고 후렴 ‘그곳이 차마 꿈엔들 잊힐 리야’로 닫힙니다. 1연은 벌과 개천과 황소, 2연은 늙은 아버지, 3연은 어린 시절의 화살과 하늘, 4연은 누이와 아내, 5연은 밤의 초가지붕과 가족의 도란거림으로 이어집니다. 공감각적 표현(‘금빛 게으른 울음’)이 특징입니다. 4연의 ‘아무렇지도 않고 예쁠 것도 없는 아내’는 화려하지 않은 일상의 정을 드러내는 표현입니다.\n\n**읽기 도움** (위키문헌 원문은 옛 표기·방언을 그대로 싣고 있어 ‘현대어’ 칸을 참고)\n- **지줄대는** 지저귀는, 재잘대는.\n- **회돌아** 휘돌아, 크게 돌아서.\n- **해설피** 해 질 무렵의 희미한 빛 속에서(뜻에 대해 다른 풀이도 있음).\n- **참하** 차마(‘차마 ~ 못하다’의 그 차마).\n- **절화로** 질화로, 질흙으로 구운 화로.\n- **함추름** 함초롬, 이슬에 촉촉이 젖은 모양.\n- **석근** 성근, 드문드문한.\n- **우지짖고** 우짖고, 울며 지저귀고.\n",
+    "en": "**Background** Jeong Ji-yong (1902-1950), from Okcheon in North Chungcheong, studied English literature at Doshisha University in Japan. \"Hyangsu\" is generally dated to around 1927 and was included in his *Collected Poems of Jeong Ji-yong* (1935). He is counted a leading modernist poet of Korea and is said to have gone missing during the Korean War.\n\n**Significance** One of the best-loved poems in modern Korean literature; a 1989 song setting made it familiar to a wide public. It is admired for joining sensory imagery to homely native vocabulary.\n\n**Form and themes** Five stanzas, each ending in a \"...place,\" and closed by the refrain \"could that place be forgotten even in dreams?\" Stanza 1: plain, stream, ox; 2: the aged father; 3: boyhood arrows and sky; 4: sister and wife; 5: the thatched roof at night and the family murmuring together. Synaesthesia (\"golden, lazy lowing\") is typical. In stanza 4 the wife \"nothing special, nothing pretty\" expresses plain everyday tenderness.\n\n**Reading help** (Wikisource keeps the original spelling and dialect; see the \"modern\" line)\n- **지줄대는** chattering, babbling.\n- **회돌아** winding around in a wide curve (= 휘돌아).\n- **해설피** in the dim light around sunset (other readings exist).\n- **참하** = 차마, as in \"cannot bear to\".\n- **절화로** = 질화로, an earthenware brazier.\n- **함추름** = 함초롬, dewy-moist.\n- **석근** = 성근, sparse.\n- **우지짖고** cawing noisily.\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "넓은 벌 동쪽 끝으로",
+      "modern": "넓은 벌 동쪽 끝으로",
+      "reading": null,
+      "en": "At the eastern edge of the wide plain,"
+    },
+    {
+      "orig": "옛이야기 지줄대는 실개천이 회돌아 나가고,",
+      "modern": "옛이야기 지줄대는 실개천이 휘돌아 나가고,",
+      "reading": null,
+      "en": "where a thread of a stream, babbling old tales, winds around and flows away,"
+    },
+    {
+      "orig": "얼룩백이 황소가",
+      "modern": "얼룩백이 황소가",
+      "reading": null,
+      "en": "where the brindled ox"
+    },
+    {
+      "orig": "해설피 금빛 게으른 울음을 우는 곳,",
+      "modern": "해설피 금빛 게으른 울음을 우는 곳,",
+      "reading": null,
+      "en": "lows its golden, lazy lowing in the slanting dusk light,"
+    },
+    {
+      "orig": "― 그 곳이 참하 꿈엔들 잊힐 리야.",
+      "modern": "― 그곳이 차마 꿈엔들 잊힐 리야.",
+      "reading": null,
+      "en": "— That place: could it be forgotten even in dreams?"
+    },
+    {
+      "orig": "절화로에 재가 식어지면",
+      "modern": "질화로에 재가 식어지면",
+      "reading": null,
+      "en": "When the ashes in the clay brazier grow cold,"
+    },
+    {
+      "orig": "뷔인 밭에 밤바람 소리 말을 달리고,",
+      "modern": "빈 밭에 밤바람 소리 말을 달리고,",
+      "reading": null,
+      "en": "and the night wind in the empty field gallops like a horse,"
+    },
+    {
+      "orig": "엷은 졸음에 겨운 늙으신 아버지가",
+      "modern": "엷은 졸음에 겨운 늙으신 아버지가",
+      "reading": null,
+      "en": "where my aged father, overcome with light drowsiness,"
+    },
+    {
+      "orig": "짚베개를 돋아 고이시는 곳,",
+      "modern": "짚베개를 돋워 고이시는 곳,",
+      "reading": null,
+      "en": "props up his straw pillow and lays his head to rest,"
+    },
+    {
+      "orig": "― 그 곳이 참하 꿈엔들 잊힐 리야.",
+      "modern": "― 그곳이 차마 꿈엔들 잊힐 리야.",
+      "reading": null,
+      "en": "— That place: could it be forgotten even in dreams?"
+    },
+    {
+      "orig": "흙에서 자란 내 마음",
+      "modern": "흙에서 자란 내 마음",
+      "reading": null,
+      "en": "My heart, raised in the earth,"
+    },
+    {
+      "orig": "파아란 하늘 빛이 그립어",
+      "modern": "파란 하늘빛이 그리워",
+      "reading": null,
+      "en": "longing for the blue of the sky,"
+    },
+    {
+      "orig": "함부로 쏜 화살을 찾으려",
+      "modern": "함부로 쏜 화살을 찾으려",
+      "reading": null,
+      "en": "to find the arrow I shot off at random,"
+    },
+    {
+      "orig": "풀섶 이슬에 함추름 휘적시든 곳,",
+      "modern": "풀섶 이슬에 함초롬 휘적시던 곳,",
+      "reading": null,
+      "en": "where I waded about, drenched in the dew of the grass thicket,"
+    },
+    {
+      "orig": "― 그 곳이 참하 꿈엔들 잊힐 리야.",
+      "modern": "― 그곳이 차마 꿈엔들 잊힐 리야.",
+      "reading": null,
+      "en": "— That place: could it be forgotten even in dreams?"
+    },
+    {
+      "orig": "전설바다에 춤추는 밤불결 같은",
+      "modern": "전설 바다에 춤추는 밤물결 같은",
+      "reading": null,
+      "en": "Like night waves dancing on a legendary sea,"
+    },
+    {
+      "orig": "검은 귀밑머리 날리는 어린 누이와",
+      "modern": "검은 귀밑머리 날리는 어린 누이와",
+      "reading": null,
+      "en": "my little sister, dark hair at her temples blowing,"
+    },
+    {
+      "orig": "아무렇지도 않고 여쁠 것도 없는",
+      "modern": "아무렇지도 않고 예쁠 것도 없는",
+      "reading": null,
+      "en": "and my wife, nothing special, nothing pretty,"
+    },
+    {
+      "orig": "사철 발벗은 안해가",
+      "modern": "사철 발 벗은 아내가",
+      "reading": null,
+      "en": "barefoot in every season,"
+    },
+    {
+      "orig": "따가운 해ㅅ살을 등에 지고 이삭 줏던 곳,",
+      "modern": "따가운 햇살을 등에 지고 이삭 줍던 곳,",
+      "reading": null,
+      "en": "where she gleaned ears of grain with the scorching sun on her back,"
+    },
+    {
+      "orig": "― 그 곳이 참하 꿈엔들 잊힐 리야.",
+      "modern": "― 그곳이 차마 꿈엔들 잊힐 리야.",
+      "reading": null,
+      "en": "— That place: could it be forgotten even in dreams?"
+    },
+    {
+      "orig": "하늘에는 석근 별",
+      "modern": "하늘에는 성근 별",
+      "reading": null,
+      "en": "In the sky, sparse stars"
+    },
+    {
+      "orig": "알 수도 없는 모래성으로 발을 옮기고,",
+      "modern": "알 수도 없는 모래성으로 발을 옮기고,",
+      "reading": null,
+      "en": "move their steps toward a sand castle no one can know,"
+    },
+    {
+      "orig": "서리 까마귀 우지짖고 지나가는 초라한 지붕,",
+      "modern": "서리 까마귀 우짖고 지나가는 초라한 지붕,",
+      "reading": null,
+      "en": "over a shabby roof where frost-time crows pass cawing,"
+    },
+    {
+      "orig": "흐릿한 불빛에 돌아 앉어 도란도란거리는 곳,",
+      "modern": "흐릿한 불빛에 돌아앉아 도란도란거리는 곳,",
+      "reading": null,
+      "en": "where they sit turned toward the dim lamplight, murmuring softly together,"
+    },
+    {
+      "orig": "― 그 곳이 참하 꿈엔들 잊힐 리야.",
+      "modern": "― 그곳이 차마 꿈엔들 잊힐 리야.",
+      "reading": null,
+      "en": "— That place: could it be forgotten even in dreams?"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

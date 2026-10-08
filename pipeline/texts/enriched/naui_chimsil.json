@@ -1,0 +1,106 @@
+{
+  "id": "naui_chimsil",
+  "card": {
+    "summary_ko": "이상화가 연인 ‘마돈나’에게 날이 새기 전에 자신의 침실로 오라고 애타게 부르는 시로, 초기 낭만주의·퇴폐적 감성과 근대적 관능이 두드러진 작품입니다.",
+    "summary_en": "Yi Sang-hwa's urgent summons to \"Madonna\" to come to his bedchamber before dawn; a leading example of the Romantic and decadent mood of 1920s Korean poetry.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「나의 침실로」 (리비전 381039, CC BY-SA 4.0 전사; 원저작물은 공유저작물)",
+    "edition_en": "Korean Wikisource, \"나의 침실로\" (revision 381039, transcription CC BY-SA 4.0; the work itself is public domain)"
+  },
+  "notes": {
+    "ko": "**배경** 이상화(1901–1943)는 대구 출신으로, 문예 동인지 『백조(白潮)』의 동인이었습니다. 「나의 침실로」는 1923년 9월 『백조』 3호에 발표되었습니다. 『백조』 동인은 3·1 운동 이후의 좌절감 속에서 낭만주의적, 감상적 시를 썼습니다.\n\n**의의** 한국 근대 낭만주의 시의 대표작으로 꼽히며, ‘마돈나’(성모 마리아, 또는 ‘나의 귀부인’을 뜻하는 이탈리아어에서 온 말)라는 서구적 호칭과 관능적·종교적 이미지가 한 시에 섞여 있습니다. 이상화는 뒷날 「빼앗긴 들에도 봄은 오는가」로 민족 현실을 직시한 시인이 되었습니다.\n\n**형식과 주제** 12연이며 모든 연이 ‘「마돈나」’ 하고 부르며 시작합니다. 새벽이 오기 전, 마돈나를 ‘부활의 동굴’이라는 침실로 데려가려는 조급함과 두려움, 환청과 불안이 이어집니다. 침실은 현실에서 벗어난 영원한 꿈의 공간이며 죽음과 부활의 이미지가 겹칩니다. 마지막 줄 ‘비음 가운데서’의 뜻은 분명하지 않습니다.\n\n**읽기 도움** (원문은 옛 표기라 ‘현대어’ 칸 참고)\n- **수밀도(水蜜桃)** 물이 많고 단 복숭아.\n- **유전하던** 대대로 전해 오던.\n- **아씨** 아가씨, 귀부인을 부르는 말.\n- **더우잡고** 더위잡고, 붙잡고.\n- **자지러드는도다** 잦아드는도다, 점점 사그라지는구나.\n- **쇠북** 종(鐘).\n- **외나무다리** 한 개의 통나무로 놓은 다리.\n- **ᄲᅡ지려는데** 옛 한글 자모 표기이며 ‘빠지려는데’입니다.\n",
+    "en": "**Background** Yi Sang-hwa (1901-1943), from Daegu, belonged to the literary coterie journal *Baekjo* (White Tide). \"Naui chimsillo\" appeared in issue 3 in September 1923. After the frustrations of the March First movement, the *Baekjo* poets wrote Romantic, sentimental verse.\n\n**Significance** Counted among the representative poems of Korean modern Romanticism. It mixes a Western form of address, \"Madonna\" (from Italian \"my lady,\" and also the Virgin Mary), with sensual and religious imagery. Yi later became known for facing national reality in \"Will Spring Come to the Stolen Fields?\"\n\n**Form and themes** Twelve stanzas, each opening with the call \"Madonna.\" Before dawn the speaker urges her to his bedchamber, a \"cave of resurrection,\" with haste, fear, hallucinated footsteps and anxiety. The bedchamber is a space of eternal dream outside reality, where images of death and resurrection overlap. The meaning of the closing tag \"From within Biyeum\" is unclear.\n\n**Reading help** (the original uses old spelling; see the \"modern\" line)\n- **수밀도(水蜜桃)** a juicy, sweet peach.\n- **유전하던** passed down through generations.\n- **아씨** young lady; a form of address for a lady.\n- **더우잡고** (= 더위잡고) clutching.\n- **자지러드는도다** is dying down, subsiding.\n- **쇠북** a bell.\n- **외나무다리** a bridge of a single log.\n- **ᄲᅡ지려는데** old jamo spelling of 빠지려는데, \"is about to fall out/set.\"\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "「마돈나」 지금은 밤도, 모든 목거지에, 다니로라 피곤(疲困)하야 돌아겨려는도다,\n아, 너도, 먼동이 트기 전으로, 수밀도(水蜜桃)의 네 가슴에, 이슬이 맷도록 달려 오느라.",
+      "modern": "「마돈나」 지금은 밤도, 모든 목거지에, 다니노라 피곤하여 돌아가려는도다,\n아, 너도, 먼동이 트기 전으로, 수밀도(水蜜桃)의 네 가슴에, 이슬이 맺도록 달려오너라.",
+      "reading": null,
+      "en": "Madonna, now even the night, in every nook and corner, weary from its wandering, is about to turn back.\nAh, you too, before the distant dawn breaks, come running until dew beads on your breast, soft as a honey peach."
+    },
+    {
+      "orig": "「마돈나」 오렴으나, 네 집에서 눈으로 유전(遺傳)하든 진주(眞珠)는, 다 두고 몸만 오느라,\nᄲᅡᆯ리 가자, 우리는 밝음이 오면, 어댄지도 모르게 숨는 두 별이어라.",
+      "modern": "「마돈나」 오렴으나, 네 집에서 눈으로 유전하던 진주(眞珠)는, 다 두고 몸만 오너라,\n빨리 가자, 우리는 밝음이 오면, 어딘지도 모르게 숨는 두 별이어라.",
+      "reading": null,
+      "en": "Madonna, do come: leave behind all the pearls your eyes inherited in your house, and come with only yourself.\nLet us go quickly; we are two stars that, when the brightness comes, hide where no one knows."
+    },
+    {
+      "orig": "「마돈나」 구석지고도 어둔 마음의 거리에서, 나는 두려워 ᄯᅥᆯ며 기다리노라,\n아, 어느듯 첫닭이 울고― 뭇 개가 짖도다, 나의 아씨여, 너도 듯느냐.",
+      "modern": "「마돈나」 구석지고도 어두운 마음의 거리에서, 나는 두려워 떨며 기다리노라,\n아, 어느덧 첫닭이 울고― 뭇 개가 짖도다, 나의 아씨여, 너도 듣느냐.",
+      "reading": null,
+      "en": "Madonna, in the corner-bound, dark streets of my heart, I wait, trembling with fear.\nAh, already the first cock has crowed, and the dogs, all of them, are barking. My lady, do you hear it too?"
+    },
+    {
+      "orig": "「마돈나」 지난 밤이 새도록, 내 손수 닥가둔 침실(寢室)로 가자, 침실(寢室)로!\n낡은 달은 ᄲᅡ지려는데, 내 귀가 듯는 발자욱― 오, 너의 것이냐?",
+      "modern": "「마돈나」 지난밤이 새도록, 내 손수 닦아 둔 침실(寢室)로 가자, 침실로!\n낡은 달은 빠지려는데, 내 귀가 듣는 발자국― 오, 너의 것이냐?",
+      "reading": null,
+      "en": "Madonna, all through last night I polished it with my own hands: let us go to the bedchamber, to the bedchamber!\nThe old moon is about to set; the footsteps my ear hears: oh, are they yours?"
+    },
+    {
+      "orig": "「마돈나」 ᄶᅡᆲ은 심지를 더우잡고, 눈물도 업시 하소연하는 내 맘의 촉(燭)불을 봐라,\n양(羊)털 가튼 바람결에도 질식(窒息)이 되어, 얄푸른 연긔로 ᄭᅥ지려는도다.",
+      "modern": "「마돈나」 짧은 심지를 더위잡고, 눈물도 없이 하소연하는 내 맘의 촉(燭)불을 봐라,\n양(羊)털 같은 바람결에도 질식이 되어, 얄푸른 연기로 꺼지려는도다.",
+      "reading": null,
+      "en": "Madonna, look at the candle of my heart, clutching its short wick, pleading without tears;\nsmothered even by a breeze soft as lamb's wool, it is about to go out in a thin bluish smoke."
+    },
+    {
+      "orig": "「마돈나」 오느라 가자, 압산 그름애가, 독갑이처럼, 발도 업시 이곳 갓가이 오도다,\n아, 행여나, 누가 볼는지― 가슴이 ᄯᅱ누나, 나의 아씨여, 너를 부른다.",
+      "modern": "「마돈나」 오너라 가자, 앞산 그림자가, 도깨비처럼, 발도 없이 이곳 가까이 오도다,\n아, 행여나, 누가 볼는지― 가슴이 뛰누나, 나의 아씨여, 너를 부른다.",
+      "reading": null,
+      "en": "Madonna, come, let us go; the shadow of the mountain before us, like a goblin, with no feet, draws near this place.\nAh, in case someone should see: my heart pounds. My lady, I call you."
+    },
+    {
+      "orig": "「마돈나」 날이 새련다, ᄲᅡᆯ리 오렴으나, 사원(寺院)의 쇠북이, 우리를 비웃기 전에\n네 손이 내 목을 안어라, 우리도 이 밤과 가티, 오랜 나라로 가고 말자.",
+      "modern": "「마돈나」 날이 새련다, 빨리 오렴으나, 사원(寺院)의 쇠북이, 우리를 비웃기 전에\n네 손이 내 목을 안아라, 우리도 이 밤과 같이, 오랜 나라로 가고 말자.",
+      "reading": null,
+      "en": "Madonna, day is about to break; come quickly, before the temple bell mocks us.\nLet your hands embrace my neck; like this night, let us go away, to an ancient land."
+    },
+    {
+      "orig": "「마돈나」 뉘우침과 두려움의 외나무다리 건너 잇는 내 침실(寢室) 열 이도 업느니!\n아, 바람이 불도다, 그와 가티 가볍게 오렴으나, 나의 아씨여, 네가 오느냐?",
+      "modern": "「마돈나」 뉘우침과 두려움의 외나무다리 건너 있는 내 침실(寢室) 열 이도 없느니!\n아, 바람이 불도다, 그와 같이 가볍게 오렴으나, 나의 아씨여, 네가 오느냐?",
+      "reading": null,
+      "en": "Madonna, my bedchamber lies across the single-log bridge of remorse and fear, and there is no one to open it!\nAh, the wind is blowing; come lightly, as it does. My lady, is that you coming?"
+    },
+    {
+      "orig": "「마돈나」 가엽서라, 나는 미치고 말앗는가, 업는 소리를 내 귀가 들음은,\n내 몸에 피란 피― 가슴의 샘이, 말라버린 듯, 마음과 목이 타려는도다.",
+      "modern": "「마돈나」 가엾어라, 나는 미치고 말았는가, 없는 소리를 내 귀가 들음은,\n내 몸에 피란 피― 가슴의 샘이, 말라버린 듯, 마음과 목이 타려는도다.",
+      "reading": null,
+      "en": "Madonna, how pitiful: have I gone mad, that my ear hears a sound that does not exist?\nEvery drop of blood in my body, the spring in my chest, seems to have run dry; my heart and throat are parched and burning."
+    },
+    {
+      "orig": "「마돈나」 언젠들 안 갈 수 잇스랴, 갈 테면, 우리가 가자, ᄭᅳ을려 가지 말고!\n너는 내 말을 밋는 「마돈나」― 내 침실(寢室)이 부활(復活)의 동굴(洞窟)임을 네야 알년만……….",
+      "modern": "「마돈나」 언젠들 안 갈 수 있으랴, 갈 테면, 우리가 가자, 끌려 가지 말고!\n너는 내 말을 믿는 「마돈나」― 내 침실(寢室)이 부활(復活)의 동굴(洞窟)임을 네야 알련만……….",
+      "reading": null,
+      "en": "Madonna, when could we not go? If we are to go, let us go ourselves, not be dragged away!\nYou, Madonna, who believe my words, you of all people should know that my bedchamber is a cave of resurrection..."
+    },
+    {
+      "orig": "「마돈나」 밤이 주는 ᄭᅮᆷ, 우리가 얽는 ᄭᅮᆷ, 사람이 안고 궁그는 목숨의 ᄭᅮᆷ이 다르지 안흐니,\n아, 어린애 가슴처럼 세월(歲月) 모르는 나의 침실(寢室)로 가자, 아름답고 오랜 거긔로.",
+      "modern": "「마돈나」 밤이 주는 꿈, 우리가 엮는 꿈, 사람이 안고 뒹구는 목숨의 꿈이 다르지 않으니,\n아, 어린애 가슴처럼 세월 모르는 나의 침실(寢室)로 가자, 아름답고 오랜 거기로.",
+      "reading": null,
+      "en": "Madonna, the dream the night gives, the dream we weave, the dream of life that people hold and tumble with, are not different;\nah, let us go to my bedchamber, which like a child's heart knows no passing of the years, to that beautiful and ancient place."
+    },
+    {
+      "orig": "「마돈나」 별들의 웃음도 흐려지려 하고, 어둔 밤 물결도 자지러는도다,\n아, 안개가 살아지기 전으로, 네가 와야지, 나의 아씨여, 너를 부를다.",
+      "modern": "「마돈나」 별들의 웃음도 흐려지려 하고, 어두운 밤 물결도 자지러드는도다,\n아, 안개가 사라지기 전으로, 네가 와야지, 나의 아씨여, 너를 부른다.",
+      "reading": null,
+      "en": "Madonna, the laughter of the stars is about to fade, and the waves of the dark night are dying away;\nah, before the mist vanishes, you must come, my lady. I call you."
+    },
+    {
+      "orig": "―『비음(緋音) 가온대서』―",
+      "modern": "―『비음(緋音) 가운데서』―",
+      "reading": null,
+      "en": "— From within \"Biyeum\" (緋音) —"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

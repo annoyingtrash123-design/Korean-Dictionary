@@ -1,0 +1,172 @@
+{
+  "id": "bbaeatgin_deule",
+  "card": {
+    "summary_ko": "이상화가 일제강점기에 ‘빼앗긴 들’ 위로 봄 햇살과 바람을 맞으며 걷는 화자를 통해 국권 상실의 아픔과 되찾으려는 염원을 노래한 대표적 저항시입니다.",
+    "summary_en": "A landmark poem of resistance under Japanese rule: a speaker walks through spring fields that are no longer his own, feeling sunlight and wind, and the poem voices grief for the lost nation and the hope of recovering it.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 「빼앗긴 들에도 봄은 오는가」 (리비전 430592, CC BY-SA 4.0 전사; 원저작물은 공유저작물)",
+    "edition_en": "Korean Wikisource, \"빼앗긴 들에도 봄은 오는가\" (revision 430592, transcription CC BY-SA 4.0; the work itself is public domain)"
+  },
+  "notes": {
+    "ko": "**배경** 이상화(1901–1943)는 대구 출신 시인으로, 처음에는 낭만주의적 시를 썼으나 점차 민족 현실을 노래했습니다. 이 시는 1926년 6월 『개벽』 70호에 발표되었습니다. 당시 한반도는 일제강점기였고, 『개벽』은 일제의 검열로 여러 차례 압수·정간을 당한 잡지입니다.\n\n**의의** 일제강점기 저항시의 대표작으로 널리 읽히며, 시인 자신이 대구에 살면서 겪은 고통을 반영한다고 흔히 설명됩니다. 직접적인 구호 대신 봄의 자연을 통해 상실을 말하여, 검열 아래에서도 발표될 수 있었던 점이 자주 언급됩니다.\n\n**형식과 주제** 첫 줄의 물음 ‘빼앗긴 들에도 봄은 오는가?’가 시 전체를 감싸고, 마지막 줄 ‘들을 빼앗겨 봄조차 빼앗기겠네’에서 부정적인 대답으로 닫힙니다. 중간 연들은 햇살, 바람, 종다리, 보리밭, 도랑 같은 봄의 사물과 대화하듯 걷는 화자를 보여 줍니다. ‘들’은 문자 그대로의 들판이자 빼앗긴 조국을 가리키는 것으로 읽힙니다. 표기상 첫 부분 ‘원문’은 1926년의 표기(띄어쓰기 거의 없음)이고, 이어서 ‘현대어’ 판이 실려 있습니다.\n\n**읽기 도움**\n- **가름아(가르마)** 머리를 가른 선. 논길의 비유.\n- **종조리/종다리** 종달새.\n- **삼단 같은 머리** 삼(麻)을 묶은 단처럼 숱 많고 긴 머리.\n- **깝치다** 재촉하다, 서두르다.\n- **맨드램이 들마꽃** 현대어 판에는 ‘민들레 제비꽃’으로 풀이됨(풀이에 이견 있을 수 있음).\n- **지심매다** 김매다.\n- **닫는** 달리는.\n- **지폈나** 신이 몸에 붙어 접했다는 뜻의 ‘지피다’ 계열.\n\n**텍스트 참고** 현대어 판의 ‘어디로 갔느냐’는 원문 ‘어데로가느냐’(어디로 가느냐)와 어긋납니다.\n",
+    "en": "**Background** Yi Sang-hwa (1901-1943), from Daegu, began with Romantic verse and gradually turned to the national situation. This poem appeared in *Gaebyeok*, issue 70, in June 1926, under Japanese rule. *Gaebyeok* was a magazine repeatedly seized and suspended by colonial censorship.\n\n**Significance** Widely read as a classic of resistance poetry under Japanese rule. It is often noted that it speaks of loss through spring nature rather than slogans, which is commonly given as why it could appear under censorship.\n\n**Form and themes** The opening question, \"will spring come even to the stolen fields?\", frames the whole poem, and the last line answers it negatively: \"the fields stolen, even spring will be stolen.\" The middle stanzas show the speaker walking and, as it were, conversing with sunlight, wind, the skylark, the barley, the ditch. The \"fields\" (deul) read both literally and as the lost homeland. The Wikisource page gives first the 1926 spelling (almost no spacing) under \"원문,\" then a \"현대어\" version.\n\n**Reading help**\n- **가름아 (가르마)** a hair parting, here a metaphor for the paddy path.\n- **종조리/종다리** skylark.\n- **삼단 같은 머리** hair thick and long like a bundle of hemp.\n- **깝치다** to hurry, bustle.\n- **맨드램이 들마꽃** glossed in the modern version as dandelion and violet (interpretations may vary).\n- **지심매다** to weed.\n- **닫는** running.\n- **지폈나** from 지피다, to be possessed by a spirit.\n\n**Text note** The modern version has \"where have you gone?\" (어디로 갔느냐), which does not match the original's \"where are you going?\" (어데로 가느냐).\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "원문",
+      "modern": null,
+      "reading": null,
+      "en": "Original text"
+    },
+    {
+      "orig": "ᄲᅢ앗긴들에도, 봄은오는가",
+      "modern": "빼앗긴 들에도, 봄은 오는가",
+      "reading": null,
+      "en": "Will Spring Come Even to the Stolen Fields? (title)"
+    },
+    {
+      "orig": "지금은 남의ᄯᅡᆼ―ᄲᅢ앗긴들에도 봄은오는가?",
+      "modern": "지금은 남의 땅―빼앗긴 들에도 봄은 오는가?",
+      "reading": null,
+      "en": "Now it is another's land: will spring come even to the stolen fields?"
+    },
+    {
+      "orig": "나는 온몸에 해살을 밧고\n푸른한울 푸른들이 맛부튼 곳으로\n가름아가튼 논길을ᄯᅡ라 ᄭᅮᆷ속을가듯 거러만간다.",
+      "modern": "나는 온몸에 햇살을 받고\n푸른 하늘 푸른 들이 맞붙은 곳으로\n가르마 같은 논길을 따라 꿈속을 가듯 걸어만 간다.",
+      "reading": null,
+      "en": "Taking the sunlight on my whole body,\nalong a paddy path parted like a hair-parting, toward where the blue sky and the blue fields meet,\nI keep walking, as if walking in a dream."
+    },
+    {
+      "orig": "입슐을 다문 한울아 들아\n내맘에는 내혼자온것 갓지를 안쿠나\n네가ᄭᅳᆯ엇느냐 누가부르드냐 답답워라 말을해다오.",
+      "modern": "입술을 다문 하늘아 들아\n내 맘에는 내 혼자 온 것 같지를 않구나\n네가 끌었느냐 누가 부르더냐 답답해라 말을 해 다오.",
+      "reading": null,
+      "en": "Sky and fields, lips pressed shut,\nit does not feel as if I came here alone.\nDid you pull me? Did someone call me? I am frustrated; tell me."
+    },
+    {
+      "orig": "바람은 내귀에 속삭이며\n한자욱도 섯지마라 옷자락을 흔들고\n종조리는 울타리넘의 아씨가티 구름뒤에서 반갑다웃네.",
+      "modern": "바람은 내 귀에 속삭이며\n한 자국도 서지 마라 옷자락을 흔들고\n종다리는 울타리 너머 아씨같이 구름 뒤에서 반갑다 웃네.",
+      "reading": null,
+      "en": "The wind whispers in my ear,\nshaking my coat-tails, saying not to stand still for even a step;\nthe skylark, like a young lady beyond the fence, laughs a greeting from behind the clouds."
+    },
+    {
+      "orig": "고맙게 잘자란 보리밧아\n간밤 자정이넘어 나리는 곱은비로\n너는 삼단가튼머리를 ᄭᅡᆷ앗구나 내머리조차 갑븐하다.",
+      "modern": "고맙게 잘 자란 보리밭아\n간밤 자정이 넘어 내리는 고운 비로\n너는 삼단 같은 머리를 감았구나 내 머리조차 가뿐하다.",
+      "reading": null,
+      "en": "Thankfully well-grown barley field,\nwith the fine rain that fell after midnight last night\nyou have washed your hair, thick as a sheaf, and my own head too feels light."
+    },
+    {
+      "orig": "혼자라도 갓부게나 가자\n마른논을 안고도는 착한도랑이\n젓먹이 달래는 노래를하고 제혼자 엇게춤만 추고가네.",
+      "modern": "혼자라도 가쁘게나 가자\n마른 논을 안고 도는 착한 도랑이\n젖먹이 달래는 노래를 하고 제 혼자 어깨춤만 추고 가네.",
+      "reading": null,
+      "en": "Even alone, let me go briskly, eagerly.\nThe gentle ditch that circles the dry paddy\nsings a song as if lulling a baby, and goes along dancing a shoulder dance all by itself."
+    },
+    {
+      "orig": "나비 제비야 ᄭᅡᆸ치지마라\n맨드램이 들마ᄭᅩᆺ에도 인사를해야지\n아주ᄭᅡ리 기름을바른이가 지심매든 그들이라 다보고십다.",
+      "modern": "나비 제비야 깝치지 마라\n민들레 제비꽃에도 인사를 해야지\n아주까리 기름을 바른 이가 김매던 그 들이라 다 보고 싶다.",
+      "reading": null,
+      "en": "Butterflies and swallows, do not flit about in such haste;\nI must greet the dandelions and the violets too.\nThe field where a woman with castor oil in her hair used to weed: I want to see it all."
+    },
+    {
+      "orig": "내손에 호미를 쥐여다오\n살ᄶᅵᆫ 젓가슴과가튼 부드러운 이흙을\n발목이 시도록 밟어도보고 조흔ᄯᅡᆷ조차 흘리고십다.",
+      "modern": "내 손에 호미를 쥐여 다오\n살찐 젖가슴과 같은 부드러운 이 흙을\n발목이 시도록 밟아도 보고 좋은 땀조차 흘리고 싶다.",
+      "reading": null,
+      "en": "Put a hoe in my hand.\nThis soft soil like a plump breast,\nI want to tread until my ankles ache, and to shed good sweat on it too."
+    },
+    {
+      "orig": "강가에 나온 아해와가티\nᄶᅡᆷ도모르고 ᄭᅳᆺ도업시 닷는 내혼아\n무엇을찻느냐 어데로가느냐 웃어웁다 답을하려무나.",
+      "modern": "강가에 나온 아이와 같이\n짬도 모르고 끝도 없이 닫는 내 혼아\n무엇을 찾느냐 어디로 가느냐 우습다 답을 하려무나.",
+      "reading": null,
+      "en": "Like a child who has come out to the riverbank,\nmy soul, running on without knowing when to stop or where it ends:\nwhat are you looking for? Where are you going? It is absurd; answer me."
+    },
+    {
+      "orig": "나는 온몸에 풋내를 ᄯᅴ고\n푸른웃슴 푸른설음이 어우러진사이로\n다리를절며 하로를것는다 아마도 봄신령이 접혓나보다.\n그러나 지금은―들을 ᄲᅢ앗겨 봄조차 ᄲᅢ앗기것네",
+      "modern": "나는 온몸에 풋내를 띠고\n푸른 웃음 푸른 설움이 어우러진 사이로\n다리를 절며 하루를 걷는다 아마도 봄 신령이 지폈나 보다.\n그러나 지금은― 들을 빼앗겨 봄조차 빼앗기겠네",
+      "reading": null,
+      "en": "My whole body wearing the green smell of new grass,\namid the mingling of blue-green laughter and blue-green sorrow,\nI limp through the day; perhaps a spring spirit has possessed me.\nBut now, the fields stolen, even spring will be stolen as well."
+    },
+    {
+      "orig": "현대어",
+      "modern": null,
+      "reading": null,
+      "en": "Modern spelling"
+    },
+    {
+      "orig": "빼앗긴 들에도, 봄은 오는가",
+      "modern": null,
+      "reading": null,
+      "en": "Will Spring Come Even to the Stolen Fields? (title)"
+    },
+    {
+      "orig": "지금은 남의 땅―빼앗긴 들에도 봄은 오는가?",
+      "modern": null,
+      "reading": null,
+      "en": "Now it is another's land: will spring come even to the stolen fields?"
+    },
+    {
+      "orig": "나는 온몸에 햇살을 받고\n푸른 하늘 푸른 들이 맞붙은 곳으로\n가르마같은 논길을 따라 꿈속을 가듯 걸어만 간다.",
+      "modern": null,
+      "reading": null,
+      "en": "Taking the sunlight on my whole body,\nalong a paddy path parted like a hair-parting, toward where the blue sky and the blue fields meet,\nI keep walking, as if walking in a dream."
+    },
+    {
+      "orig": "입술을 다문 하늘아 들아\n내 맘에는 내 혼자 온 것 같지를 않구나\n네가 끌었느냐 누가 부르더냐 답답해라 말을 해다오.",
+      "modern": null,
+      "reading": null,
+      "en": "Sky and fields, lips pressed shut,\nit does not feel as if I came here alone.\nDid you pull me? Did someone call me? I am frustrated; tell me."
+    },
+    {
+      "orig": "바람은 내 귀에 속삭이며\n한 자국도 서지 마라 옷자락을 흔들고\n종다리는 울타리 너머 아가씨같이 구름 뒤에서 반갑다 웃네.",
+      "modern": null,
+      "reading": null,
+      "en": "The wind whispers in my ear,\nshaking my coat-tails, saying not to stand still for even a step;\nthe skylark, like a young lady beyond the fence, laughs a greeting from behind the clouds."
+    },
+    {
+      "orig": "고맙게 잘 자란 보리밭아\n간밤 자정이 넘어 내리는 고운 비로\n너는 삼단같은 머리를 감았구나 내 머리조차 가뿐하다.",
+      "modern": null,
+      "reading": null,
+      "en": "Thankfully well-grown barley field,\nwith the fine rain that fell after midnight last night\nyou have washed your hair, thick as a sheaf, and my own head too feels light."
+    },
+    {
+      "orig": "혼자라도 가쁘게나 가자\n마른 논을 안고 도는 착한 도랑이\n젖먹이 달래는 노래를 하고 제 혼자 어깨춤만 추고 가네.",
+      "modern": null,
+      "reading": null,
+      "en": "Even alone, let me go briskly, eagerly.\nThe gentle ditch that circles the dry paddy\nsings a song as if lulling a baby, and goes along dancing a shoulder dance all by itself."
+    },
+    {
+      "orig": "나비 제비야 깝치지 마라\n민들레 제비꽃에도 인사를 해야지\n아주까리 기름을 바른 이가 김을 매는 그 들이라 다 보고 싶다.",
+      "modern": null,
+      "reading": null,
+      "en": "Butterflies and swallows, do not flit about in such haste;\nI must greet the dandelions and the violets too.\nThe field where a woman with castor oil in her hair used to weed: I want to see it all."
+    },
+    {
+      "orig": "내 손에 호미를 쥐여 다오\n살찐 젖가슴과 같은 부드러운 이 흙을\n발목이 시리도록 밟아도 보고 좋은 땀조차 흘리고 싶다.",
+      "modern": null,
+      "reading": null,
+      "en": "Put a hoe in my hand.\nThis soft soil like a plump breast,\nI want to tread until my ankles ache, and to shed good sweat on it too."
+    },
+    {
+      "orig": "강가에 나온 아이와 같이\n짬도 모르고 끝도 없이 닫는 내 혼아\n무엇을 찾느냐 어디로 갔느냐 우습다 답을 하려무나.",
+      "modern": null,
+      "reading": null,
+      "en": "Like a child who has come out to the riverbank,\nmy soul, running on without knowing when to stop or where it ends:\nwhat are you looking for? Where have you gone? It is absurd; answer me."
+    },
+    {
+      "orig": "나는 온몸에 풋내를 띄고\n푸른 웃음 푸른 설음 어우러진 사이로\n다리를 절며 하루를 걷는다 아마도 봄 신령이 지폈나보다.\n그러나 지금은― 들을 빼앗겨 봄조차 빼앗기겠네",
+      "modern": null,
+      "reading": null,
+      "en": "My whole body wearing the green smell of new grass,\namid the mingling of blue-green laughter and blue-green sorrow,\nI limp through the day; perhaps a spring spirit has possessed me.\nBut now, the fields stolen, even spring will be stolen as well."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}

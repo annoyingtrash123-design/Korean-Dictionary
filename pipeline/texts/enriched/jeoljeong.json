@@ -44,9 +44,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Checked text against Wikisource raw, translation line by line, background facts (1940 Munjang, death 1944 Beijing); no changes needed."
   }
 }
