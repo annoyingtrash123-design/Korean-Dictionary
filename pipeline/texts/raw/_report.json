@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T01:32:14Z",
+  "generated_at": "2026-10-08T02:23:43Z",
   "resolved": [
     {
       "id": "honggildongjeon",
@@ -212,30 +212,6 @@
       "url": "https://ko.wikisource.org/wiki/%EA%B0%80%EB%85%B8%EB%9D%BC_%EC%82%BC%EA%B0%81%EC%82%B0%EC%95%84",
       "revision_id": 430456,
       "chars": 125,
-      "subpages": 0,
-      "resolved_via": "title",
-      "truncated": false,
-      "needs_sections": false
-    },
-    {
-      "id": "ouga",
-      "source": "wikisource-ko",
-      "page_title": "산중신곡",
-      "url": "https://ko.wikisource.org/wiki/%EC%82%B0%EC%A4%91%EC%8B%A0%EA%B3%A1",
-      "revision_id": 460013,
-      "chars": 1212,
-      "subpages": 0,
-      "resolved_via": "redirect",
-      "truncated": false,
-      "needs_sections": false
-    },
-    {
-      "id": "eobusasiga",
-      "source": "wikisource-ko",
-      "page_title": "어부사시사",
-      "url": "https://ko.wikisource.org/wiki/%EC%96%B4%EB%B6%80%EC%82%AC%EC%8B%9C%EC%82%AC",
-      "revision_id": 460039,
-      "chars": 3598,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
@@ -1016,6 +992,30 @@
       "url": "https://ko.wikisource.org/wiki/%EC%82%AC%EB%9E%91%EC%9D%98_%EC%84%A0%EB%AC%BC/%EC%99%95%EC%9E%90%EC%99%80_%EC%A0%9C%EB%B9%84",
       "revision_id": 263613,
       "chars": 8362,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "ouga",
+      "source": "wikisource-ko",
+      "page_title": "산중신곡",
+      "url": "https://ko.wikisource.org/wiki/%EC%82%B0%EC%A4%91%EC%8B%A0%EA%B3%A1",
+      "revision_id": 460013,
+      "chars": 1112,
+      "subpages": 0,
+      "resolved_via": "redirect",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "eobusasiga",
+      "source": "wikisource-ko",
+      "page_title": "어부사시사",
+      "url": "https://ko.wikisource.org/wiki/%EC%96%B4%EB%B6%80%EC%82%AC%EC%8B%9C%EC%82%AC",
+      "revision_id": 460039,
+      "chars": 2878,
       "subpages": 0,
       "resolved_via": "title",
       "truncated": false,
