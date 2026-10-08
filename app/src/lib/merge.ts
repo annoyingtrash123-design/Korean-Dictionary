@@ -41,6 +41,38 @@ export function groupResults(rows: ResultRow[]): ResultGroup[] {
     }
     g.rows.push(r);
   }
+  // A row without hanja (e.g. Wiktionary) is the same word as a hanja-tagged group with the same
+  // headword: fold it in instead of listing the word twice. With several homographs
+  // (報告 / 寶庫), it joins the one whose glosses share the most words with it.
+  const words = (s?: string) => new Set((s ?? '').toLowerCase().split(/[^a-z]+/).filter((w) => w.length > 2 && w !== 'the'));
+  for (const [key, g] of [...groups]) {
+    if (g.hanja) continue;
+    const hw = normHeadword(g.headword);
+    const homes = [...groups.values()].filter((o) => o !== g && o.hanja && normHeadword(o.headword) === hw);
+    if (!homes.length) continue;
+    const homeWords = new Map(homes.map((o) => [o, words(o.rows.map((r) => r.gloss).join(' '))]));
+    const keep: ResultRow[] = [];
+    let best: ResultGroup | undefined;   // the home that received the earliest row
+    for (const r of g.rows) {
+      const mine = words(r.gloss);
+      const scored = homes.map((o) => ({ o, n: [...mine].filter((x) => homeWords.get(o)!.has(x)).length })).sort((x, y) => y.n - x.n);
+      // a single homograph takes any row; several need a clear gloss match
+      if (homes.length > 1 && (scored[0].n === 0 || scored[0].n === scored[1].n)) { keep.push(r); continue; }
+      scored[0].o.rows.push(r);
+      best ??= scored[0].o;
+    }
+    g.rows = keep;
+    // the merged word keeps the better (earlier) position in the list
+    const order = [...groups.keys()];
+    if (best && order.indexOf(key) < order.indexOf(best.key)) {
+      const rebuilt = new Map<string, ResultGroup>();
+      for (const k of order) {
+        if (k === key) { rebuilt.set(best.key, best); if (keep.length) rebuilt.set(key, g); }
+        else if (k !== best.key) rebuilt.set(k, groups.get(k)!);
+      }
+      groups.clear(); for (const [k, v] of rebuilt) groups.set(k, v);
+    } else if (!keep.length) groups.delete(key);
+  }
   for (const g of groups.values()) {
     // Primary: an English-defined row (carries gloss + level) by source order; else first row.
     const en = g.rows.filter((r) => r.lang !== 'ko' && !isKoSource(r.source));
@@ -61,7 +93,10 @@ export function sameWordRows<T extends { headword: string; hanja?: string | null
   all: T[], primary: { headword: string; hanja?: string | null },
 ): T[] {
   const k = normHeadword(primary.headword);
+  const hanjas = new Set(all.filter((e) => normHeadword(e.headword) === k && e.hanja).map((e) => e.hanja));
+  const unique = !!primary.hanja && hanjas.size === 1;
   return all
-    .filter((e) => normHeadword(e.headword) === k && (e.hanja ?? '') === (primary.hanja ?? ''))
+    // rows without hanja (e.g. Wiktionary) belong with the hanja-tagged word when it is the only one
+    .filter((e) => normHeadword(e.headword) === k && ((e.hanja ?? '') === (primary.hanja ?? '') || (!e.hanja && unique)))
     .sort((a, b) => srcIdx(a.source) - srcIdx(b.source) || (a.rank ?? 0) - (b.rank ?? 0) || (a.homonym ?? 0) - (b.homonym ?? 0) || a.id - b.id);
 }

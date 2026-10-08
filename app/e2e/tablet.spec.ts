@@ -70,6 +70,8 @@ test('two-pane tablet layout', async ({ page }) => {
   await search(page, 'report');
   await expect(page.locator('.pane-left .pos-h').first()).toBeVisible();
   await expect(page.locator('.pane-left .pos-h', { hasText: 'Nouns' })).toHaveCount(1);
+  // a word is listed once even when one dictionary gives it without hanja (보고하다 / 報告하다)
+  await expect(page.locator('.pane-left .row .hw', { hasText: /^보고하다$/ })).toHaveCount(1);
   await page.waitForTimeout(500);
   await shot(page, 'light-results-report');
 

@@ -69,23 +69,35 @@ async function readerFlow(page: Page) {
     await expect(shelf).toHaveAttribute('aria-expanded', 'true');
   }
 
-  // open a graded reader
-  await page.locator('.rd-row', { hasText: '단군 이야기' }).click();
-  await expect(root.locator('.rd-title')).toHaveText('단군 이야기');
+  // open a primary source with an AI translation and an AI background essay
+  await page.locator('.rd-row', { hasText: '대한민국 임시헌장' }).first().click();
+  await expect(root.locator('.rd-title')).toHaveText('대한민국 임시헌장');
   await expect(root.locator('.rd-trl')).toContainText('AI translation');
   await expect(page.locator('.rd-en').first()).toBeVisible();
   await page.waitForTimeout(400);
   await shot(page, 'text-light');
 
+  // the AI essay is a collapsed, labelled Background panel, not part of the text
+  const bg = page.locator('details.rd-bg');
+  await expect(bg).toBeVisible();
+  await expect(bg.locator('.chip-ai')).toHaveText('AI-written');
+  await bg.locator('summary').click();
+  await expect(bg.locator('.rd-bg-text .rd-ko').first()).toBeVisible();
+  await expect(bg.locator('.rd-bg-vocab li').first()).toBeVisible();
+  await bg.getByRole('button', { name: 'Show answer' }).first().click();
+  await expect(bg.locator('.rd-ans').first()).toBeVisible();
+  await page.waitForTimeout(300);
+  await shot(page, 'background');
+  await bg.locator('summary').click();
+
   // tap a word: highlighted span + dictionary card
-  await tap(page, 0, 0, 2);                      // 옛날
+  await tap(page, 2, 0, 2);                      // 神人
   await expect(page.locator('.lk')).toBeVisible();
-  await expect(mark(page)).toHaveText('옛날');
-  await expect(page.locator('.lk-hw')).toHaveText('옛날');
-  await expect(page.locator('.lk-gloss li').first()).toBeVisible();
+  await expect(mark(page)).toHaveCount(1);
+  await expect(page.locator('.lk-hw')).toBeVisible();
   await expect(page.locator('.lk[data-loading="0"]')).toBeVisible();
   // highlight is accent-tinted and the paragraph is not split into per-character elements
-  expect(await page.locator('.rd-ko').first().evaluate((el) => el.children.length)).toBe(1);
+  expect(await page.locator('.rd-body:not(.rd-bg-text) .rd-ko').nth(1).evaluate((el) => el.children.length)).toBe(1);
   await page.waitForTimeout(300);
   await shot(page, 'popup-phone');
 
@@ -109,7 +121,7 @@ async function readerFlow(page: Page) {
   await page.keyboard.press('Escape');
   await expect(page.locator('.lk')).toHaveCount(0);
   await expect(mark(page)).toHaveCount(0);
-  await tap(page, 1, 0, 1);
+  await tap(page, 3, 0, 1);
   await expect(page.locator('.lk')).toBeVisible();
   await page.locator('.rd-card .rd-title').click();
   await expect(page.locator('.lk')).toHaveCount(0);
@@ -123,14 +135,8 @@ async function readerFlow(page: Page) {
   await expect(page.locator('.rd-en').first()).toBeVisible();
   await page.getByRole('button', { name: 'Close' }).click();
 
-  // vocabulary + questions (answers revealed on tap)
-  await expect(page.getByRole('heading', { name: /Vocabulary/ })).toBeVisible();
-  await page.getByRole('button', { name: 'Show answer' }).first().click();
-  await expect(page.locator('.rd-ans').first()).toBeVisible();
-
   // notes are rendered as elements (no raw markdown markers)
   await page.locator('.rd-about > summary').click();
-  await expect(page.getByText('Learner text written for this app').first()).toBeVisible();
   await expect(page.locator('.rd-notes strong').first()).toBeVisible();
   expect(await page.locator('.rd-notes').innerText()).not.toContain('**');
   await page.waitForTimeout(300);
@@ -144,7 +150,7 @@ async function readerFlow(page: Page) {
   await page.locator('.rd-scroll').evaluate((el, y) => { el.scrollTop = y; }, target);
   await page.waitForTimeout(600);
   await page.reload();
-  await expect(page.locator('.rd-title')).toHaveText('단군 이야기');
+  await expect(page.locator('.rd-title')).toHaveText('대한민국 임시헌장');
   await expect.poll(() => page.locator('.rd-scroll').evaluate((el) => el.scrollTop), { timeout: 10_000 }).toBeGreaterThan(target - 40);
   expect(await page.locator('.rd-scroll').evaluate((el) => el.scrollTop)).toBeLessThan(target + 40);
 }
@@ -183,7 +189,7 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   await page.getByRole('link', { name: 'Settings' }).click();
   await page.getByRole('radio', { name: 'Dark' }).click();
   await expect(page.getByText('Reader library').first()).toBeVisible();
-  await page.goto('/#/reader/graded-dangun');
+  await page.goto('/#/reader/imsi_heonjang');
   await expect(page.locator('.rd-title')).toBeVisible();
   await page.locator('.rd-scroll').evaluate((el) => { el.scrollTop = 0; });
   await page.waitForTimeout(400);
@@ -211,13 +217,13 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
 async function readerFlow2(page: Page) {
   await page.waitForTimeout(300);
   await shot(page, 'library-ipad');
-  await page.locator('.pane-left .rd-row', { hasText: '단군 이야기' }).click();
-  await expect(page.locator('.pane-right .rd-title')).toHaveText('단군 이야기');
+  await page.locator('.pane-left .rd-row', { hasText: '대한민국 임시헌장' }).first().click();
+  await expect(page.locator('.pane-right .rd-title')).toHaveText('대한민국 임시헌장');
   await expect(page.locator('.pane-left .rd-row[aria-current="true"]')).toHaveCount(1);
-  await tap(page, 0, 0, 2);
+  await tap(page, 2, 0, 2);
   await expect(page.locator('.lk')).toBeVisible();
-  await expect(mark(page)).toHaveText('옛날');
-  await expect(page.locator('.lk-gloss li').first()).toBeVisible();
+  await expect(mark(page)).toHaveCount(1);
+  await expect(page.locator('.lk-hw')).toBeVisible();
   // the card floats inside the text pane and the library on the left stays put
   const card = await page.locator('.lk').boundingBox();
   const pane = await page.locator('.pane-right').boundingBox();

@@ -83,6 +83,37 @@ struct Para {
 
 /// Split raw text into paragraphs on blank lines. Verse keeps its line breaks; prose lines are
 /// joined (with a space, or directly for hanmun).
+/// Remove broken page-break tags left inside words by some transcriptions ("도pb n='15a'> 든").
+fn strip_page_breaks(t: &str) -> String {
+    let mut out = String::with_capacity(t.len());
+    let mut rest = t;
+    while let Some(p) = rest.find("pb n=") {
+        let tail = &rest[p..];
+        match tail.find('>') {
+            Some(e) if e < 24 => {
+                out.push_str(rest[..p].trim_end_matches('<'));
+                rest = tail[e + 1..].trim_start_matches(' ');
+            }
+            _ => {
+                out.push_str(&rest[..p + 5]);
+                rest = &rest[p + 5..];
+            }
+        }
+    }
+    out.push_str(rest);
+    out
+}
+
+/// `== X ==` (any level) → `X`.
+fn wiki_heading(l: &str) -> Option<&str> {
+    let n = l.chars().take_while(|&c| c == '=').count();
+    if n < 2 || l.len() <= 2 * n || !l.ends_with(&"=".repeat(n)) {
+        return None;
+    }
+    let inner = l[n..l.len() - n].trim();
+    (!inner.is_empty() && !inner.contains('=')).then_some(inner)
+}
+
 pub fn split_paragraphs(text: &str, keep_lines: bool, hanmun: bool) -> Vec<String> {
     let mut out = Vec::new();
     let mut cur: Vec<&str> = Vec::new();
@@ -100,10 +131,15 @@ pub fn split_paragraphs(text: &str, keep_lines: bool, hanmun: bool) -> Vec<Strin
         }
     };
     let text = crate::texts_wikitext::strip_noconvert(text);
+    let text = strip_page_breaks(&text);
     for line in text.lines() {
         let l = line.trim();
         if l.is_empty() {
             flush(&mut cur, &mut out);
+        } else if let Some(h) = wiki_heading(l) {
+            // a MediaWiki heading the converter left as "== X ==": its own "## X" paragraph
+            flush(&mut cur, &mut out);
+            out.push(format!("## {h}"));
         } else {
             cur.push(l);
         }
@@ -513,7 +549,7 @@ fn raw_reviewed(path: &Path) -> Result<HashSet<String>> {
 /// Why a raw (unenriched) text must not be packed: wiki markup or licence boilerplate left in
 /// the text, or nothing but section headings (e.g. a page that only transcludes scans).
 pub fn raw_problem(paras: &[String]) -> Option<String> {
-    const JUNK: &[&str] = &["{{", "}}", "[[", "]]", "<pages", "<ref", "__TOC__", "PD-old"];
+    const JUNK: &[&str] = &["{{", "}}", "[[", "]]", "<pages", "<ref", "__TOC__", "PD-old", "=="];
     const BOILER: &[&str] = &["## 라이선스", "## 저작권", "## License", "## Copyright"];
     for p in paras {
         if let Some(j) = JUNK.iter().find(|j| p.contains(*j)) {
@@ -1065,6 +1101,8 @@ mod tests {
     fn trailing_headings_are_dropped() {
         assert_eq!(split_paragraphs("## 1\n\n본문\n\n## 바깥 고리\n", false, false), vec!["## 1", "본문"]);
         assert_eq!(split_paragraphs("曰：-{『}-可-{』}-", false, true), vec!["曰：『可』"]);
+        assert_eq!(split_paragraphs("천심의 도pb n='15a'> 든 달이", false, false), vec!["천심의 도든 달이"]);
+        assert_eq!(split_paragraphs("文笑曰。\n\n== 兩班傳 ==\n兩班者。\n士族也。", false, true), vec!["文笑曰。", "## 兩班傳", "兩班者。士族也。"]);
     }
 
     #[test]

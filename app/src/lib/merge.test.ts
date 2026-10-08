@@ -45,6 +45,29 @@ describe('groupResults', () => {
   });
 });
 
+describe('hanja-less rows join their word', () => {
+  it('folds a Wiktionary row into the only hanja word with that headword, at the better position', () => {
+    const x = groupResults([
+      row({ source: 'krdict', id: 1, headword: '보고', hanja: '報告', gloss: 'report' }),
+      row({ source: 'wikt', id: 2, headword: '보고하다', hanja: undefined, pos: 'verb', gloss: 'to report' }),
+      row({ source: 'krdict', id: 3, headword: '보고하다', hanja: '報告하다', pos: 'verb', gloss: 'report' }),
+    ]);
+    expect(x.map((g) => g.key)).toEqual(['보고|報告', '보고하다|報告하다']);
+    expect(x[1].rows).toHaveLength(2);
+    expect(x[1].primary.source).toBe('krdict');
+  });
+  it('picks the homograph whose glosses match, and keeps ambiguous rows apart', () => {
+    const x = groupResults([
+      row({ source: 'krdict', id: 1, headword: '보고', hanja: '報告', gloss: 'report; account' }),
+      row({ source: 'krdict', id: 2, headword: '보고', hanja: '寶庫', gloss: 'treasury; treasure house' }),
+      row({ source: 'wikt', id: 3, headword: '보고', hanja: undefined, gloss: 'treasure house' }),
+      row({ source: 'wikt', id: 4, headword: '보고', hanja: undefined, gloss: 'see also' }),
+    ]);
+    expect(x.find((g) => g.hanja === '寶庫')!.rows.map((r) => r.id)).toEqual([2, 3]);
+    expect(x.find((g) => !g.hanja)!.rows.map((r) => r.id)).toEqual([4]);
+  });
+});
+
 describe('mergeRows', () => {
   it('dedupes by source:id keeping the better tier', () => {
     const m = mergeRows([row({ via: 'prefix' })], [row({ via: 'exact' }), row({ id: 2 })]);
@@ -60,6 +83,9 @@ describe('sameWordRows', () => {
       { headword: '학교', hanja: '學校', source: 'krdict' as const, homonym: null, id: 2 },
       { headword: '학교', hanja: null, source: 'wikt' as const, homonym: null, id: 3 },
     ];
-    expect(sameWordRows(all, { headword: '학교', hanja: '學校' }).map((e) => e.id)).toEqual([2, 1]);
+    expect(sameWordRows(all, { headword: '학교', hanja: '學校' }).map((e) => e.id)).toEqual([2, 3, 1]);
+    // with two homographs the hanja-less row is not attached to either
+    const two = [...all, { headword: '학교', hanja: '鶴橋', source: 'stdict' as const, homonym: null, id: 4 }];
+    expect(sameWordRows(two, { headword: '학교', hanja: '學校' }).map((e) => e.id)).toEqual([2, 1]);
   });
 });

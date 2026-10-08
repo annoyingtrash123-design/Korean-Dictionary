@@ -131,6 +131,23 @@ const BG = 100000;
 export const modernEra = (doc: { meta: { year?: number; script?: string } } | undefined): boolean =>
   !!doc && doc.meta.script !== 'hanmun' && (doc.meta.year ?? 0) < 1933;
 
+function BgQuestions({ qs }: { qs: NonNullable<TextBackground['questions']> }) {
+  const [open, setOpen] = useState<Set<number>>(new Set());
+  return (
+    <ol class="plain rd-q rd-bg-q" aria-label="Background questions">
+      {qs.map((q, i) => (
+        <li key={i}>
+          <div class="rd-q-ko" lang="ko">{q.q_ko}</div>
+          {q.q_en && <div class="rd-q-en">{q.q_en}</div>}
+          {q.answer_en && (open.has(i)
+            ? <div class="rd-ans" role="status">{q.answer_en}</div>
+            : <button type="button" class="link" onClick={() => setOpen(new Set([...open, i]))}>Show answer</button>)}
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 function Background({ bg, sel, showEn }: { bg: TextBackground; sel: { n: number; span: Span } | null; showEn: boolean }) {
   return (
     <details class="rd-bg">
@@ -144,6 +161,7 @@ function Background({ bg, sel, showEn }: { bg: TextBackground; sel: { n: number;
             <Para key={i} n={BG + i} text={p.ko} hl={sel && sel.n === BG + i ? sel.span : null} verse={false} hanmun={false} en={p.en} showEn={showEn} showReading={false} />
           ))}
         </div>
+        {!!bg.questions?.length && <BgQuestions qs={bg.questions} />}
         {!!bg.vocab?.length && (
           <ul class="plain rd-vocab rd-bg-vocab" aria-label="Background vocabulary">
             {bg.vocab.map((v, i) => (
