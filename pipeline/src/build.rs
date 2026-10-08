@@ -1238,10 +1238,8 @@ pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
         }
     }
     // en_ko is optional: checked only when it was built (its counts are present)
-    if core.get("en_ko").is_some() {
-        if n(core, "en_ko") < MIN_EN_KO {
-            bad.push(format!("core.en_ko = {} (< {MIN_EN_KO})", n(core, "en_ko")));
-        }
+    if core.get("en_ko").is_some() && n(core, "en_ko") < MIN_EN_KO {
+        bad.push(format!("core.en_ko = {} (< {MIN_EN_KO})", n(core, "en_ko")));
     }
     if let Some(st) = stdict {
         if n(st, "entries") < MIN_STDICT {

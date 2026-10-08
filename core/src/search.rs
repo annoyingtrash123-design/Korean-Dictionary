@@ -41,6 +41,10 @@ pub struct Caps {
     pub hanja_hun: bool,
     /// Reader library pack (`texts` + `paragraphs`, no `entries`): not a dictionary pack.
     pub texts: bool,
+    /// `en_ko` (English Wiktionary translation tables) exists.
+    pub en_ko: bool,
+    /// `en_ko_words` (word -> multi-word `en_ko` term) exists.
+    pub en_ko_words: bool,
 }
 
 /// An opened pack database.
@@ -78,6 +82,8 @@ impl PackDb {
         };
         let caps = Caps {
             texts: false,
+            en_ko: names.contains("en_ko"),
+            en_ko_words: names.contains("en_ko_words"),
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
@@ -164,7 +170,7 @@ pub struct DeconjOut {
     pub rule: String,
 }
 
-#[derive(Debug, Clone, Serialize, PartialEq)]
+#[derive(Debug, Clone, Default, Serialize, PartialEq)]
 pub struct SearchResult {
     pub mode: &'static str,
     pub rows: Vec<ResultRow>,
@@ -174,6 +180,12 @@ pub struct SearchResult {
     pub deconj: Option<Vec<DeconjOut>>,
     #[serde(rename = "grammarHints", skip_serializing_if = "Option::is_none")]
     pub grammar_hints: Option<Vec<String>>,
+    /// English queries: Korean translations of the query term (Wiktionary), by pos and sense.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub translations: Option<Vec<EnKoSense>>,
+    /// English queries: multi-word expressions starting with / containing the query, with Korean.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub phrases: Option<Vec<EnKoPhrase>>,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -356,7 +368,7 @@ pub fn search(packs: &[&PackDb], query: &str, limit: Option<usize>) -> Result<Se
     let limit = limit.unwrap_or(DEFAULT_LIMIT).max(1);
     let q = normalize_query(query);
     if q.is_empty() {
-        return Ok(SearchResult { mode: "english", rows: vec![], hanja: None, deconj: None, grammar_hints: None });
+        return Ok(SearchResult { mode: "english", rows: vec![], hanja: None, deconj: None, grammar_hints: None, ..Default::default() });
     }
     // the Chinese packs only take part in Han-script queries
     let (korean, han_packs) = split_han(packs);
@@ -394,7 +406,9 @@ pub fn search(packs: &[&PackDb], query: &str, limit: Option<usize>) -> Result<Se
         }
         Ok(r)
     } else {
-        search_english(packs, &q, limit)
+        let mut r = search_english(packs, &q, limit)?;
+        enko::attach(packs, &q, &mut r)?;
+        Ok(r)
     }
 }
 
@@ -408,7 +422,7 @@ fn search_choseong(packs: &[&PackDb], q: &str, limit: usize) -> Result<Option<Se
     let sql = |_: &PackDb| format!("SELECT id, rank FROM entries WHERE cho = ?1 ORDER BY rank LIMIT {PREFIX_LIMIT}");
     let cands = top_ids(&with, &sql, &[q.into()], limit.min(PREFIX_LIMIT))?;
     let rows = rows_for(&with, &cands, Some("prefix"))?;
-    Ok(Some(SearchResult { mode: "hangul", rows, hanja: None, deconj: None, grammar_hints: None }))
+    Ok(Some(SearchResult { mode: "hangul", rows, hanja: None, deconj: None, grammar_hints: None, ..Default::default() }))
 }
 
 /// Steps 1-3 of the Hangul search: exact headword, listed forms, deconjugation candidates that
@@ -510,6 +524,7 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
         hanja: None,
         deconj: if deconj_out.is_empty() { None } else { Some(deconj_out) },
         grammar_hints: if hints.is_empty() { None } else { Some(hints) },
+        ..Default::default()
     })
 }
 
@@ -700,7 +715,7 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
     let mut seen = HashSet::new();
     push_new(&mut out, &mut seen, v.into_iter().map(|h| h.row).collect());
     out.truncate(limit);
-    Ok(SearchResult { mode: "english", rows: out, hanja: None, deconj: None, grammar_hints: None })
+    Ok(SearchResult { mode: "english", rows: out, hanja: None, deconj: None, grammar_hints: None, ..Default::default() })
 }
 
 /// The original English search for one pack without `gloss_terms`.
@@ -820,6 +835,7 @@ fn search_hanja(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResult
         hanja: if cards.is_empty() { None } else { Some(cards) },
         deconj: None,
         grammar_hints: None,
+        ..Default::default()
     })
 }
 
@@ -1167,6 +1183,9 @@ pub fn word_of_day(packs: &[&PackDb], date: &str) -> Result<Option<ResultRow>> {
 
 #[cfg(test)]
 mod tests;
+
+mod enko;
+pub use enko::{EnKoPhrase, EnKoSense, EnKoWord};
 
 mod lookup;
 pub use lookup::{lookup_in_text, TextMatch};
