@@ -62,9 +62,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Both sijo versions (溪水 vs 桂樹, 어려오니 vs 어려웨라) and the hansi translate faithfully; anecdote hedged as traditional. Left for human: hansi gloss 부복환 (orig verbatim) vs standard 불복환."
   }
 }

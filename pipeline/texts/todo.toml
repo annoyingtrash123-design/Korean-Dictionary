@@ -1,0 +1,12 @@
+# Status overrides for the Reader's "To add" tab (texts not in the library yet).
+# The pipeline guesses a status (no raw source → "source", rejected raw → "repair", reviewer
+# hold → "held", otherwise "preparing"); list an id here when the real reason differs.
+# Values: "source" | "repair" | "held" | "preparing".
+[status]
+dangun_samgukyusa = "source"     # fetched page has 王曆 only; 古朝鮮 (紀異) page not found yet
+mangbokssajeopogi = "held"       # source is a modern translation by an unnamed translator
+anjunggeun_dongyang = "held"     # source is a modern translation by an unnamed translator
+balhaego_seo = "repair"          # source mixes original and translation in a table
+sihon = "repair"                 # transcription lost old-Hangul characters ('?')
+mokminsimseo = "repair"          # 청심 body missing, mixed transcriptions
+taepyeongcheonha = "repair"      # gap inside chapter 15

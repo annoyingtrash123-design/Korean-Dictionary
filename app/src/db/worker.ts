@@ -74,6 +74,7 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async grammarList() { await ready; return engine.grammarList(); },
   async lookupInText(t: string, o: number, opts: { packs: string[]; limit?: number }) { await ready; return engine.lookupInText(t, o, opts); },
   async listTexts() { await ready; return engine.listTexts(); },
+  async pendingTexts() { await ready; return engine.pendingTexts(); },
   async getText(id: string) { await ready; return engine.getText(id); },
   async diagnostics() { await ready; return engine.diagnostics(); },
   async wordOfDay(d: string) { await ready; return engine.wordOfDay(d); },

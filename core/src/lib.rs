@@ -174,6 +174,12 @@ mod wasm_api {
         }
 
         /// `TextSummary[]` of the Reader library (`texts` pack); `[]` when it is not installed.
+        /// Catalogue texts not yet in the Reader library (`[]` without the pack).
+        #[wasm_bindgen(js_name = pendingTexts)]
+        pub async fn pending_texts(&self) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&crate::texts::pending_texts(s.texts_pack()).map_err(js_err)?))
+        }
+
         #[wasm_bindgen(js_name = listTexts)]
         pub async fn list_texts(&self) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&crate::texts::list_texts(s.texts_pack()).map_err(js_err)?))

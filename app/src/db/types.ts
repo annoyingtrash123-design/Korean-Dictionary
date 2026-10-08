@@ -48,6 +48,14 @@ export interface SearchResult {
 
 // ---- Reader (see docs/READER.md "texts pack + engine API") ----
 export interface TextLabels { notes?: 'ai' | null; translation?: string | null; modern?: 'ai' | 'wikisource' | null; text?: 'original' | 'ai' | null }
+/** A catalogue text not in the Reader library yet (the "To add" tab). */
+export interface PendingText {
+  id: string; title_ko: string; title_en: string; author_ko: string; author_en: string;
+  shelf: string; period: string; year: number; date: string;
+  /** source = no usable source yet · repair = source text needs fixing · held = copyright/source check · preparing = notes/translation in preparation */
+  status: 'source' | 'repair' | 'held' | 'preparing';
+}
+
 export interface TextSummary {
   id: string; shelf: string; period?: string | null; year?: number | null; script: 'hangul' | 'hanmun' | 'mixed' | string;
   level?: string | null; chars: number; title_ko: string; title_en?: string | null; author_ko?: string | null; author_en?: string | null;
@@ -87,6 +95,7 @@ export interface Engine {
   grammarList(): Promise<GrammarRow[]>;
   wordOfDay(date: string): Promise<ResultRow | null>;
   listTexts(): Promise<TextSummary[]>;
+  pendingTexts(): Promise<PendingText[]>;
   getText(id: string): Promise<TextDoc | null>;
   lookupInText(text: string, offset: number, opts: { packs: string[]; limit?: number }): Promise<TextMatch>;
   /** Background warm-up step over `packs`; resolves to whether more steps remain. */

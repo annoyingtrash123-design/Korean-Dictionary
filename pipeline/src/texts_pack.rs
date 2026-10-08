@@ -7,7 +7,7 @@ use crate::texts_catalog::{self, Entry};
 use anyhow::{Context, Result};
 use rusqlite::{params, Connection};
 use serde_json::{json, Map, Value};
-use std::collections::{BTreeMap, HashSet};
+use std::collections::{BTreeMap, HashMap, HashSet};
 use std::fs;
 use std::path::{Path, PathBuf};
 
@@ -845,6 +845,61 @@ fn collect(
 
 /// Build `texts.sqlite`. `Ok(None)` when no text is available at all (no catalogue, or nothing
 /// fetched / approved yet).
+/// Catalogue texts that are not in the pack yet, for the Reader's "To add" tab:
+/// `[{id, title_ko, title_en, author_ko, author_en, shelf, period, year, date, status}]`.
+/// `status`: "source" (no usable source text found yet), "repair" (the source text needs
+/// fixing), "held" (a reviewer held it: copyright or source questions) or "preparing"
+/// (translation and notes in preparation).
+fn pending_texts(o: &TextsOpts, packed: &[Packed], stats: &Value) -> Result<Value> {
+    let cat = texts_catalog::load(&o.dir.join("catalog.toml"))?;
+    let have: HashSet<&str> = packed.iter().map(|t| t.id.as_str()).collect();
+    let rejected: HashSet<String> = stats["rejected_raw"]
+        .as_array()
+        .map(|a| a.iter().filter_map(|r| r["id"].as_str().map(String::from)).collect())
+        .unwrap_or_default();
+    let overrides: HashMap<String, String> = match fs::read_to_string(o.dir.join("todo.toml")) {
+        Ok(t) => {
+            let v: toml::Value = toml::from_str(&t).context("texts/todo.toml")?;
+            let mut m = HashMap::new();
+            for (k, st) in v.get("status").and_then(|s| s.as_table()).into_iter().flatten() {
+                let st = st.as_str().unwrap_or_default();
+                anyhow::ensure!(["source", "repair", "held", "preparing"].contains(&st), "todo.toml: {k}: unknown status {st:?}");
+                m.insert(k.clone(), st.to_string());
+            }
+            m
+        }
+        Err(_) => HashMap::new(),
+    };
+    let mut out = Vec::new();
+    for e in &cat.texts {
+        if have.contains(e.id.as_str()) {
+            continue;
+        }
+        let raw = o.dir.join("raw").join(format!("{}.json", e.id));
+        let enr: Option<Value> = fs::read_to_string(o.dir.join("enriched").join(format!("{}.json", e.id)))
+            .ok()
+            .and_then(|s| serde_json::from_str(&s).ok());
+        let held = enr.as_ref().and_then(|v| v.pointer("/review/status")).and_then(Value::as_str) == Some("changes");
+        let status = if let Some(st) = overrides.get(&e.id) {
+            st.as_str()
+        } else if !raw.exists() {
+            "source"
+        } else if rejected.contains(&e.id) {
+            "repair"
+        } else if held {
+            "held"
+        } else {
+            "preparing"
+        };
+        out.push(json!({
+            "id": e.id, "title_ko": e.title_ko, "title_en": e.title_en, "author_ko": e.author_ko,
+            "author_en": e.author_en, "shelf": e.shelf, "period": e.period, "year": e.year,
+            "date": e.date, "status": status,
+        }));
+    }
+    Ok(Value::Array(out))
+}
+
 pub fn build_texts(o: &TextsOpts) -> Result<Option<TextsResult>> {
     if !o.dir.join("catalog.toml").exists() {
         return Ok(None);
@@ -917,6 +972,8 @@ pub fn build_texts(o: &TextsOpts) -> Result<Option<TextsResult>> {
     set_meta(&conn, "version", o.version)?;
     set_meta(&conn, "built_at", o.built_at)?;
     set_meta(&conn, "counts", &counts.to_string())?;
+    let pending = pending_texts(o, &texts, &stats)?;
+    set_meta(&conn, "pending", &pending.to_string())?;
     conn.execute_batch("COMMIT")?;
     finish_db(conn)?;
     Ok(Some(TextsResult { path, counts }))

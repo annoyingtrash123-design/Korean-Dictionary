@@ -170,6 +170,11 @@ News articles are texts with shelf `news` (period `modern`), refreshed each buil
   `meta.note` holds the attribution line, `provenance.revision_timestamp` is the publication date.
 - **`sort`** is chronological (`year`, then `id`); `chars` is the number of characters of all `orig`
   paragraphs.
+- **To add**: the pack's `meta.pending` lists catalogue texts not in the library yet —
+  `{id, title_ko, title_en, author_ko, author_en, shelf, period, year, date, status}` with status
+  `source` | `repair` | `held` | `preparing` (guessed from raw/enrichment state; overrides in
+  `pipeline/texts/todo.toml`). `pendingTexts()` returns it (`[]` for older packs); the Reader shows
+  it as a third tab beside Shelves and Timeline (titles only, not openable).
 - **Engine**: `listTexts()` rows additionally carry `summary_ko` / `summary_en` (card blurbs, `""`
   when absent); `excerpt` is a boolean. `getText(id)` returns `vocab` / `questions` as `null` when
   the text has none. Without the pack: `listTexts() = []`, `getText() = null`. The `texts` pack

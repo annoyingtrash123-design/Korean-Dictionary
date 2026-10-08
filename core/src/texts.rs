@@ -64,6 +64,14 @@ fn str_of(v: &Value, k: &str) -> String {
 }
 
 /// The library list; empty when the pack is not installed.
+/// `pendingTexts()`: catalogue texts not in the pack yet (the Reader's "To add" tab), as
+/// stored by the pipeline in `meta.pending`; `[]` without the pack or for older packs.
+pub fn pending_texts(pack: Option<&PackDb>) -> Result<Value> {
+    let Some(p) = pack.filter(|p| p.caps.texts) else { return Ok(Value::Array(vec![])) };
+    let rows = p.conn.query("SELECT value FROM meta WHERE key = 'pending'", &[]).unwrap_or_default();
+    Ok(rows.first().map(|r| json(r, 0)).filter(Value::is_array).unwrap_or(Value::Array(vec![])))
+}
+
 pub fn list_texts(pack: Option<&PackDb>) -> Result<Vec<TextSummary>> {
     let Some(p) = pack.filter(|p| p.caps.texts) else { return Ok(vec![]) };
     let rows = p.conn.query("SELECT id, shelf, period, year, script, level, chars, meta, card, labels FROM texts ORDER BY sort, id", &[])?;
@@ -184,6 +192,16 @@ INSERT INTO paragraphs VALUES ('a-text', 1, '둘째', '둘째m', NULL, 'Second')
         assert!(b.vocab.is_null() && b.questions.is_null());
         assert_eq!(b.paragraphs[0].en, None);
         assert_eq!(get_text(Some(&p), "nope").unwrap(), None);
+    }
+
+    #[test]
+    fn pending_list_from_meta() {
+        let p = pack();
+        assert_eq!(pending_texts(Some(&p)).unwrap(), serde_json::json!([]), "older packs: empty");
+        p.conn.exec(r#"INSERT INTO meta VALUES ('pending', '[{"id":"chunhyang","title_ko":"춘향전","status":"source"}]')"#).unwrap();
+        let v = pending_texts(Some(&p)).unwrap();
+        assert_eq!(v[0]["status"], "source");
+        assert_eq!(pending_texts(None).unwrap(), serde_json::json!([]));
     }
 
     #[test]

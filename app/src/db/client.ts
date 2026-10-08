@@ -1,6 +1,6 @@
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, PendingText, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -88,9 +88,10 @@ export const enabledPacks = (): string[] => activePacks(settings.get(), packStat
 
 // Reader library (texts pack), cached until the pack changes.
 let textList: Promise<TextSummary[]> | undefined;
+let pendingList: Promise<PendingText[]> | undefined;
 const textDocs = new Map<string, Promise<TextDoc | null>>();
 /** Forget cached texts (after the texts pack is installed or removed). */
-export const resetTexts = () => { textList = undefined; textDocs.clear(); };
+export const resetTexts = () => { textList = undefined; pendingList = undefined; textDocs.clear(); };
 
 // Search coalescing: while one search runs, only the newest pending query is kept; superseded ones resolve empty.
 const EMPTY: SearchResult = { mode: 'english', rows: [] };
@@ -137,6 +138,7 @@ export const db = {
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),
   wordsWithHanja: (ch: string, limit: number, offset = 0) => call<ResultRow[]>('wordsWithHanja', ch, limit, offset),
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
+  pendingTexts: (): Promise<PendingText[]> => (pendingList ??= call<PendingText[]>('pendingTexts').catch((e) => { pendingList = undefined; throw e; })),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {
     let p = textDocs.get(id);

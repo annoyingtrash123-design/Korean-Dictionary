@@ -142,6 +142,15 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   await page.getByRole('button', { name: /Download Reader library/ }).click();
   await expect(page.locator('.rd-row').first()).toBeVisible({ timeout: 120_000 });
 
+  // "To add": planned texts that are not ready yet are listed (not openable), then back to shelves
+  await page.getByRole('tab', { name: 'To add' }).click();
+  await expect(page.locator('.rd-todo-row').first()).toBeVisible();
+  await expect(page.locator('.rd-todo-row a')).toHaveCount(0);
+  await page.waitForTimeout(300);
+  await shot(page, 'to-add');
+  await page.getByRole('tab', { name: 'Shelves' }).click();
+  await expect(page.locator('.rd-todo')).toHaveCount(0);
+
   await readerFlow(page);
 
   // settings sheet, dark theme
@@ -169,6 +178,11 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   await page.goto('/#/reader');
   await expect(page.getByText('Choose a text')).toBeVisible();
   await expect(page.locator('.pane-left .rd-row').first()).toBeVisible();
+  await page.getByRole('tab', { name: 'To add' }).click();
+  await expect(page.locator('.pane-left .rd-todo-row').first()).toBeVisible();
+  await page.waitForTimeout(300);
+  await shot(page, 'to-add-ipad');
+  await page.getByRole('tab', { name: 'Shelves' }).click();
   await readerFlow2(page);
 });
 

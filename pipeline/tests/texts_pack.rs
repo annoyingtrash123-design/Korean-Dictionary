@@ -484,3 +484,34 @@ fn heading_only_source_is_left_out_not_fatal() {
     let c = Connection::open(&r.path).unwrap();
     assert!(q(&c, "SELECT id FROM texts WHERE id='poem'").is_empty());
 }
+
+#[test]
+fn unfinished_catalogue_texts_are_listed_as_pending() {
+    let fx = Fx::new();
+    fs::write(fx.t().join("raw_review.toml"), "[approved]\nids = []\n").unwrap();
+    let r = fx.build(true).unwrap().unwrap();
+    let c = Connection::open(&r.path).unwrap();
+    let pending: Value = serde_json::from_str(&q(&c, "SELECT value FROM meta WHERE key='pending'")[0]).unwrap();
+    let status = |id: &str| pending.as_array().unwrap().iter().find(|p| p["id"] == id).map(|p| p["status"].as_str().unwrap().to_string());
+    assert_eq!(status("noraw").as_deref(), Some("source"));
+    assert_eq!(status("unapproved").as_deref(), Some("preparing"));
+    assert_eq!(status("good"), None, "packed texts are not pending");
+    let first = &pending.as_array().unwrap()[0];
+    for k in ["title_ko", "title_en", "author_ko", "shelf", "year"] {
+        assert!(first.get(k).is_some(), "{k}");
+    }
+}
+
+#[test]
+fn todo_overrides_pending_status() {
+    let fx = Fx::new();
+    fs::write(fx.t().join("raw_review.toml"), "[approved]\nids = []\n").unwrap();
+    fs::write(fx.t().join("todo.toml"), "[status]\nunapproved = \"held\"\n").unwrap();
+    let r = fx.build(true).unwrap().unwrap();
+    let c = Connection::open(&r.path).unwrap();
+    let pending: Value = serde_json::from_str(&q(&c, "SELECT value FROM meta WHERE key='pending'")[0]).unwrap();
+    let st = pending.as_array().unwrap().iter().find(|p| p["id"] == "unapproved").unwrap()["status"].clone();
+    assert_eq!(st, "held");
+    fs::write(fx.t().join("todo.toml"), "[status]\nunapproved = \"later\"\n").unwrap();
+    assert!(format!("{:#}", fx.build(true).unwrap_err()).contains("unknown status"));
+}

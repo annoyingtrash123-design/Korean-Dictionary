@@ -35,6 +35,7 @@ export function createEngine(): Engine {
     wordOfDay: (date) => e().wordOfDay(date),
     lookupInText: (text, offset, opts) => e().lookupInText(text, offset, opts),
     listTexts: () => e().listTexts(),
+    pendingTexts: () => e().pendingTexts(),
     getText: (id) => e().getText(id),
     warm: (step, packs) => e().warm(step, packs),
     diagnostics: async () => e().diagnostics(),

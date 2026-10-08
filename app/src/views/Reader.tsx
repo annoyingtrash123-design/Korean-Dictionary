@@ -12,11 +12,11 @@ import {
   LENGTHS, LEVELS, NO_FILTERS, PERIODS, SCRIPTS, SHELVES, THEMES, activeFilterCount, byPeriod, byShelf, byline, fmtChars, fmtYear, matches,
   periodId, type Filters,
 } from '../lib/reader-library';
-import type { Manifest, TextSummary } from '../lib/types';
+import type { Manifest, PendingText, TextSummary } from '../lib/types';
 
-type View = 'shelves' | 'timeline';
+type View = 'shelves' | 'timeline' | 'todo';
 const VIEW_KEY = 'kd.reader.view';
-const loadView = (): View => { try { return localStorage.getItem(VIEW_KEY) === 'timeline' ? 'timeline' : 'shelves'; } catch { return 'shelves'; } };
+const loadView = (): View => { try { const v = localStorage.getItem(VIEW_KEY); return v === 'timeline' || v === 'todo' ? v : 'shelves'; } catch { return 'shelves'; } };
 const view$ = createStore<View>(loadView());
 view$.subscribe((v) => { try { localStorage.setItem(VIEW_KEY, v); } catch { /* */ } });
 const filters$ = createStore<Filters>({ ...NO_FILTERS });
@@ -85,6 +85,48 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   );
 }
 
+const PENDING_STATUS: Record<PendingText['status'], { label: string; ko: string }> = {
+  preparing: { label: 'Notes and translation in preparation', ko: '해설·번역 준비 중' },
+  repair: { label: 'Source text needs repair', ko: '원문 정리 필요' },
+  held: { label: 'On hold: source or copyright check', ko: '출처·저작권 확인 중' },
+  source: { label: 'Looking for a public-domain source', ko: '원문 찾는 중' },
+};
+
+/** The "To add" tab: catalogue texts that are planned but not in the library yet. */
+function ToAdd() {
+  const list = useAsync(() => db.pendingTexts(), []);
+  const all = list.data ?? [];
+  if (list.loading) return <div class="skeleton" />;
+  if (!all.length) return <Empty title="Nothing waiting">Every planned text is in the library.</Empty>;
+  const order: PendingText['status'][] = ['preparing', 'repair', 'held', 'source'];
+  return (
+    <div class="rd-todo">
+      <p class="small muted">Planned texts that are not ready yet. They join the library once their source is checked and their notes are reviewed.</p>
+      {order.map((st) => {
+        const texts = all.filter((t) => t.status === st).sort((a, b) => a.year - b.year);
+        if (!texts.length) return null;
+        const s = PENDING_STATUS[st];
+        return (
+          <section key={st} class="rd-shelf" aria-label={s.label}>
+            <h2 class="rd-shelf-h"><span>{s.label}</span><span class="rd-shelf-ko" lang="ko">{s.ko}</span><span class="rd-count">{texts.length}</span></h2>
+            <ul class="plain rd-rows">
+              {texts.map((t) => (
+                <li key={t.id} class="rd-row rd-todo-row" data-id={t.id}>
+                  <div class="rd-row-main">
+                    <div class="rd-row-title"><span lang="ko">{t.title_ko}</span></div>
+                    {t.title_en && <div class="rd-row-en">{t.title_en}</div>}
+                    <div class="rd-row-by"><span lang="ko">{t.author_ko}</span>{t.date ? ` · ${t.date}` : ''}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
 export function ReaderLibrary({ currentId }: { currentId?: string }) {
   const ready = useTextsReady();
   const view = useStore(view$);
@@ -109,10 +151,11 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
           <div class="seg inline" role="tablist" aria-label="Library view">
             <button type="button" role="tab" aria-selected={view === 'shelves'} class={view === 'shelves' ? 'on' : ''} onClick={() => view$.set('shelves')}>Shelves</button>
             <button type="button" role="tab" aria-selected={view === 'timeline'} class={view === 'timeline' ? 'on' : ''} onClick={() => view$.set('timeline')}>Timeline</button>
+            <button type="button" role="tab" aria-selected={view === 'todo'} class={view === 'todo' ? 'on' : ''} onClick={() => view$.set('todo')}>To add</button>
           </div>
-          <button type="button" class={`pill${open || n ? ' on' : ''}`} aria-expanded={open} onClick={() => setOpen(!open)}>Filters{n ? ` · ${n}` : ''}</button>
+          {view !== 'todo' && <button type="button" class={`pill${open || n ? ' on' : ''}`} aria-expanded={open} onClick={() => setOpen(!open)}>Filters{n ? ` · ${n}` : ''}</button>}
         </div>
-        {open && (
+        {open && view !== 'todo' && (
           <div class="rd-filters">
             <Select label="Shelf" value={f.shelf} onChange={set('shelf')} options={shelves.map((s) => ({ id: s.id, label: s.label }))} />
             <Select label="Period" value={f.period} onChange={set('period')} options={periodsPresent.map((p) => ({ id: p.id, label: p.label }))} />
@@ -125,7 +168,8 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
         )}
       </header>
       {list.error && <Empty title="Could not open the library">{list.error}</Empty>}
-      {!list.error && !list.loading && !shown.length && <Empty title="No texts match">{n ? 'Try removing a filter.' : 'The library is empty.'}</Empty>}
+      {view === 'todo' && <ToAdd />}
+      {view !== 'todo' && !list.error && !list.loading && !shown.length && <Empty title="No texts match">{n ? 'Try removing a filter.' : 'The library is empty.'}</Empty>}
       {view === 'shelves' && byShelf(all, f).map(({ shelf, texts, total }) => (
         <section key={shelf.id} class="rd-shelf" aria-label={shelf.label}>
           <h2 class="rd-shelf-h"><span>{shelf.label}</span><span class="rd-shelf-ko" lang="ko">{shelf.ko}</span><span class="rd-count">{texts.length === total ? total : `${texts.length}/${total}`}</span></h2>
