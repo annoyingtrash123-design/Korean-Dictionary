@@ -731,8 +731,10 @@ fn collect(
                 problems,
             );
         }
-        if raw.is_some() && raw_paras.is_empty() && enriched.is_none() {
-            problems.push(format!("{}: raw source has no text", e.id));
+        if raw.is_some() && raw_paras.is_empty() {
+            // e.g. a page that only transcludes scans: nothing to show, never a reason to fail
+            log::warn!("texts: {}: raw source has no text, left out", e.id);
+            rejected.push(json!({"id": e.id, "why": "raw source has no text"}));
             continue;
         }
         if enriched.is_none() && !raw_ok.contains(&e.id) {

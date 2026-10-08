@@ -475,3 +475,12 @@ fn card_and_notes_only_enrichment_uses_raw_paragraphs() {
     write(&fx.t().join("enriched/poem.json"), &v);
     assert!(format!("{:#}", fx.build(false).unwrap_err()).contains("needs labels.translation = null"));
 }
+
+#[test]
+fn heading_only_source_is_left_out_not_fatal() {
+    let fx = Fx::new();
+    write(&fx.t().join("raw/poem.json"), &raw("poem", "## 청구영언\n\n## 가곡원류\n"));
+    let r = fx.build(false).unwrap().unwrap();
+    let c = Connection::open(&r.path).unwrap();
+    assert!(q(&c, "SELECT id FROM texts WHERE id='poem'").is_empty());
+}
