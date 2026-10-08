@@ -58,6 +58,8 @@ Joseon, Colonial era & independence, Modern Korea, Sino-Korean relations.
 1. `kdict-pipeline fetch-texts` (GitHub Actions, `fetch-texts.yml`, manual) resolves the catalogue
    (`pipeline/texts/catalog.toml`) against Wikisource / other sources and commits raw texts +
    provenance (page, revision id, URL, licence, fetch date) to `pipeline/texts/raw/`.
+   Texts are fetched in full (no length cap); `sections` selects parts of a bigger page, and
+   `<pages>` scan transclusions are expanded from the `Page:` transcriptions.
 2. Enrichment (intros, translations, modernised spelling, graded readers) is authored into
    `pipeline/texts/enriched/<id>.json`, reviewed, committed.
 3. `kdict-pipeline build` produces the `texts` pack (SQLite) and the dictionary packs.

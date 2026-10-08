@@ -338,16 +338,14 @@ fn versions_page_is_followed_only_with_prefer_edition() {
 }
 
 #[test]
-fn excerpt_without_sections_is_cut_and_flagged() {
+fn excerpt_without_sections_is_fetched_in_full() {
     let long: String = (0..400).map(|i| format!("{i}번째 문단입니다. 아주 긴 문장이 계속 이어집니다 가나다라마바사.")).collect::<Vec<_>>().join("\n\n");
     let src = entry("hj", "classical-prose", "wikisource-ko", "한중록", "hangul", &[]).replace("pd_basis", "excerpt = true\nexcerpt_note = \"first chapters only for the test\"\npd_basis");
     let e = catalog_entry(&src);
     let http = Mock::new(vec![(allpages_needle("한중록"), empty_allpages()), (titles_needle("한중록"), pages_json(json!([page("한중록", 1, &long)])))]);
     let Outcome::Resolved(d) = texts_fetch::fetch_entry(&http, &e, 10) else { panic!() };
-    assert!(d.needs_sections && d.truncated);
-    let n = d.text.chars().count();
-    assert!((10_000..=15_000).contains(&n), "{n}");
-    assert!(d.text.ends_with("가나다라마바사."), "cut at a paragraph boundary");
+    assert!(!d.needs_sections && !d.truncated);
+    assert!(d.text.ends_with("399번째 문단입니다. 아주 긴 문장이 계속 이어집니다 가나다라마바사."), "no excerpt cap");
 }
 
 #[test]

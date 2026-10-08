@@ -28,8 +28,6 @@ pub struct Opts {
     pub discover: bool,
 }
 
-/// Excerpt entries without `sections` keep only about this many characters.
-pub const EXCERPT_CHARS: usize = 15_000;
 const CONTENT_BATCH: usize = 25;
 
 // ---------------------------------------------------------------- MediaWiki client
@@ -605,27 +603,6 @@ pub fn filter_headings(text: &str, names: &[String]) -> String {
     out.join("\n\n")
 }
 
-/// Cut `text` to about `limit` characters at a paragraph boundary.
-pub fn truncate_paragraphs(text: &str, limit: usize) -> (String, bool) {
-    if text.chars().count() <= limit {
-        return (text.to_string(), false);
-    }
-    let mut out = String::new();
-    for para in text.split("\n\n") {
-        if !out.is_empty() && out.chars().count() + para.chars().count() > limit {
-            break;
-        }
-        if !out.is_empty() {
-            out.push_str("\n\n");
-        }
-        out.push_str(para);
-        if out.chars().count() > limit {
-            out = out.chars().take(limit).collect();
-            break;
-        }
-    }
-    (out, true)
-}
 
 fn section_match(main_title: &str, sub: &str, names: &[String]) -> bool {
     let suffix = sub.strip_prefix(&format!("{main_title}/")).unwrap_or(sub);
@@ -643,7 +620,6 @@ fn build_doc(wiki: &Wiki, e: &Entry, title: String, main: Option<Page>, via: &st
     };
     let layout = layout_for(e);
     let nospace = e.script == "hanmun";
-    let limited = e.excerpt && e.sections.is_empty();
     let mut main_text = main.as_ref().map(|p| wt::clean(&p.content, layout, nospace));
     let main_title = main.as_ref().map(|p| p.title.clone()).unwrap_or_else(|| title.clone());
     let subs = wiki.subpages(&main_title)?;
@@ -656,7 +632,7 @@ fn build_doc(wiki: &Wiki, e: &Entry, title: String, main: Option<Page>, via: &st
         }
         log::info!("{}: sections {:?} keep {}/{before} subpages", e.id, e.sections, subs.len());
     }
-    let mut truncated = subs.len() > max_subpages;
+    let truncated = subs.len() > max_subpages;
     if truncated {
         log::warn!("{}: {} subpages, keeping the first {max_subpages}", e.id, subs.len());
         subs.truncate(max_subpages);
@@ -665,22 +641,16 @@ fn build_doc(wiki: &Wiki, e: &Entry, title: String, main: Option<Page>, via: &st
     let mut wikitext_parts: Vec<String> = Vec::new();
     let mut edition = main_text.as_ref().and_then(|c| c.edition.clone());
     let mut sub_meta = Vec::new();
-    let mut total_chars = 0usize;
     if let (Some(p), Some(c)) = (&main, &main_text) {
         wikitext_parts.push(p.content.clone());
         if !c.text.is_empty() {
-            total_chars += c.text.chars().count();
             text_parts.push(c.text.clone());
         }
     }
     let (mut rev, mut ts) = main.as_ref().map(|p| (p.revision_id, p.timestamp.clone())).unwrap_or((0, String::new()));
-    let step = if limited { 3 } else { 10 };
-    let mut needs_sections = false;
-    for chunk in subs.chunks(step) {
-        if limited && total_chars >= EXCERPT_CHARS {
-            needs_sections = true;
-            break;
-        }
+    // Full text always (no excerpt cap): `sections` selects parts, `max_subpages` bounds size.
+    let needs_sections = false;
+    for chunk in subs.chunks(10) {
         for (req, page) in wiki.get_pages(chunk)? {
             let Some(p) = page else {
                 log::warn!("{}: subpage {req} vanished", e.id);
@@ -699,18 +669,11 @@ fn build_doc(wiki: &Wiki, e: &Entry, title: String, main: Option<Page>, via: &st
             if c.text.is_empty() {
                 continue;
             }
-            total_chars += c.text.chars().count();
             let label = p.title.strip_prefix(&format!("{main_title}/")).unwrap_or(&p.title).to_string();
             text_parts.push(if c.text.starts_with("## ") { c.text } else { format!("## {label}\n\n{}", c.text) });
         }
     }
-    let mut text = text_parts.join("\n\n");
-    if limited {
-        let (t, cut) = truncate_paragraphs(&text, EXCERPT_CHARS);
-        text = t;
-        needs_sections |= cut;
-        truncated |= needs_sections;
-    }
+    let text = text_parts.join("\n\n");
     if text.trim().is_empty() {
         return Ok(Outcome::Failed(format!("page {main_title:?} resolved but its cleaned text is empty")));
     }
@@ -1156,7 +1119,7 @@ pub fn run_with(http: &dyn Http, opts: &Opts) -> Result<RunSummary> {
                 Ok(()) => {
                     log::info!("  ok: {} ({} chars, {} subpages, via {})", d.page_title, d.text.chars().count(), d.subpages.len(), d.resolved_via);
                     if d.needs_sections {
-                        log::warn!("  {}: excerpt without `sections` - cut to ~{EXCERPT_CHARS} chars", e.id);
+                        log::warn!("  {}: excerpt without `sections`", e.id);
                         needs.push(json!({"id": e.id, "page_title": d.page_title, "chars_kept": d.text.chars().count(), "subpages": d.subpages.iter().filter_map(|s| s["title"].as_str()).collect::<Vec<_>>()}));
                     }
                     resolved.push(json!({"id": e.id, "source": d.source, "page_title": d.page_title, "url": d.url, "revision_id": d.revision_id, "chars": d.text.chars().count(), "subpages": d.subpages.len(), "resolved_via": d.resolved_via, "truncated": d.truncated, "needs_sections": d.needs_sections}));
