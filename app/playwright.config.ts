@@ -14,6 +14,8 @@ function findChromium(): string | undefined {
 
 export default defineConfig({
   testDir: 'e2e',
+  // agent worktrees under .claude/ hold other checkouts of the same specs
+  testIgnore: ['**/.claude/**'],
   timeout: 600_000,
   workers: 1,
   expect: { timeout: 60_000 },

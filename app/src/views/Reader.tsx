@@ -9,7 +9,7 @@ import { href, readerPath } from '../lib/router';
 import { createStore } from '../lib/store';
 import { readIds } from '../lib/reader-prefs';
 import {
-  LENGTHS, LEVELS, NO_FILTERS, PERIODS, SCRIPTS, SHELVES, THEMES, activeFilterCount, byPeriod, byShelf, byline, fmtChars, fmtYear, matches,
+  LENGTHS, LEVELS, NO_FILTERS, levelId, PERIODS, SCRIPTS, SHELVES, THEMES, activeFilterCount, byPeriod, byShelf, byline, fmtChars, fmtYear, matches,
   periodId, type Filters,
 } from '../lib/reader-library';
 import type { Manifest, PendingText, TextSummary } from '../lib/types';
@@ -150,6 +150,7 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
   const shown = all.filter((t) => matches(t, f));
   const periodsPresent = PERIODS.filter((p) => all.some((t) => periodId(t) === p.id));
   const shelves = SHELVES.filter((s) => all.some((t) => t.shelf === s.id));
+  const levelsPresent = LEVELS.filter((l) => all.some((t) => levelId(t.level) === l.id));
   return (
     <div class="rd-lib">
       <header class="rd-lib-head">
@@ -167,7 +168,7 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
             <Select label="Shelf" value={f.shelf} onChange={set('shelf')} options={shelves.map((s) => ({ id: s.id, label: s.label }))} />
             <Select label="Period" value={f.period} onChange={set('period')} options={periodsPresent.map((p) => ({ id: p.id, label: p.label }))} />
             <Select label="Theme" value={f.theme} onChange={set('theme')} options={THEMES} />
-            <Select label="Level" value={f.level} onChange={set('level')} options={LEVELS} />
+            <Select label="Level" value={f.level} onChange={set('level')} options={levelsPresent} />
             <Select label="Length" value={f.length} onChange={set('length')} options={LENGTHS} />
             <Select label="Script" value={f.script} onChange={set('script')} options={SCRIPTS} />
             {n > 0 && <button type="button" class="link rd-clear" onClick={() => filters$.set({ ...NO_FILTERS })}>Clear filters</button>}

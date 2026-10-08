@@ -11,3 +11,5 @@ app/public/data/
 *.sqlite.gz
 app/src/core-wasm/
 target/
+.claude/worktrees/
+test-results/

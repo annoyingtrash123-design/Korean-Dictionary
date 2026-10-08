@@ -43,7 +43,7 @@ async function readerFlow(page: Page) {
     await page.getByRole('button', { name: /Filters/ }).click();
     const total = await page.locator('.rd-row').count();
     expect(total).toBeGreaterThan(30);
-    await page.getByLabel('Level', { exact: true }).selectOption('topik12');
+    await page.getByLabel('Level', { exact: true }).selectOption('classical');
     await expect.poll(() => page.locator('.rd-row').count()).toBeLessThan(total);
     expect(await page.locator('.rd-row').count()).toBeGreaterThan(0);
     await page.getByLabel('Level', { exact: true }).selectOption('');
@@ -73,7 +73,7 @@ async function readerFlow(page: Page) {
   await page.locator('.rd-row', { hasText: '대한민국 임시헌장' }).first().click();
   await expect(root.locator('.rd-title')).toHaveText('대한민국 임시헌장');
   await expect(root.locator('.rd-trl')).toContainText('AI translation');
-  await expect(page.locator('.rd-en').first()).toBeVisible();
+  await expect(page.locator('.rd-body:not(.rd-bg-text) .rd-en').first()).toBeVisible();
   await page.waitForTimeout(400);
   await shot(page, 'text-light');
 
@@ -97,7 +97,7 @@ async function readerFlow(page: Page) {
   await expect(page.locator('.lk-hw')).toBeVisible();
   await expect(page.locator('.lk[data-loading="0"]')).toBeVisible();
   // highlight is accent-tinted and the paragraph is not split into per-character elements
-  expect(await page.locator('.rd-body:not(.rd-bg-text) .rd-ko').nth(1).evaluate((el) => el.children.length)).toBe(1);
+  expect(await page.locator('[data-ko="2"]').evaluate((el) => el.children.length)).toBe(1);
   await page.waitForTimeout(300);
   await shot(page, 'popup-phone');
 
@@ -132,7 +132,7 @@ async function readerFlow(page: Page) {
   await page.getByRole('switch', { name: 'Show English translation' }).click();
   await expect(page.locator('.rd-en')).toHaveCount(0);
   await page.getByRole('switch', { name: 'Show English translation' }).click();
-  await expect(page.locator('.rd-en').first()).toBeVisible();
+  await expect(page.locator('.rd-body:not(.rd-bg-text) .rd-en').first()).toBeVisible();
   await page.getByRole('button', { name: 'Close' }).click();
 
   // notes are rendered as elements (no raw markdown markers)
