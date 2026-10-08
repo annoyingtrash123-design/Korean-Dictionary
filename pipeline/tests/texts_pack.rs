@@ -56,6 +56,7 @@ fn enriched(id: &str, status: &str, origs: &[&str]) -> Value {
 fn graded(id: &str, words: &[&str]) -> Value {
     json!({
         "id": id,
+        "attach_to": "good",
         "meta": {"title_ko": "단군", "title_en": "Dangun", "author_ko": "AI", "author_en": "AI", "date": "2026", "year": -2333, "period": "Ancient",
                  "themes": ["Ancient & Goryeo"], "shelf": "graded", "script": "hangul", "excerpt": false, "source": "original", "pd_basis": "Original"},
         "card": {"summary_ko": "요", "summary_en": "S", "level": "TOPIK 2", "edition_ko": "e", "edition_en": "e"},
@@ -209,7 +210,7 @@ fn unreviewed_raw_texts_are_not_packed() {
 fn builds_enriched_original_only_graded_and_news() {
     let fx = Fx::new();
     let r = fx.build(false).unwrap().unwrap();
-    assert_eq!(r.counts["texts"], 6);
+    assert_eq!(r.counts["texts"], 5);
     assert_eq!(r.counts["enriched"], 2);
     assert_eq!(r.counts["original_only"], 2);
     assert_eq!(r.counts["graded"], 1);
@@ -217,11 +218,9 @@ fn builds_enriched_original_only_graded_and_news() {
     assert_eq!(r.counts["unapproved_ignored"], 2, "{}", r.counts);
     let c = Connection::open(&r.path).unwrap();
 
-    // chronological sort: graded (-2333) first, news (2026) last
-    assert_eq!(
-        q(&c, "SELECT id FROM texts ORDER BY sort").first().unwrap(),
-        "graded-dangun"
-    );
+    // AI essays are never standalone texts
+    assert!(q(&c, "SELECT id FROM texts WHERE id='graded-dangun'").is_empty());
+    // chronological sort: news (2026) last
     assert_eq!(
         q(&c, "SELECT id FROM texts ORDER BY sort").last().unwrap(),
         "news-1"
@@ -300,39 +299,16 @@ fn builds_enriched_original_only_graded_and_news() {
         vec!["하나", "넷"]
     );
 
-    // graded reader: own meta, slugged period/theme, shelf graded, level recomputed, questions kept
-    assert_eq!(
-        q(
-            &c,
-            "SELECT shelf, period, year, level FROM texts WHERE id='graded-dangun'"
-        )[0],
-        "graded|ancient|-2333|TOPIK 2"
-    );
-    assert_eq!(
-        q(
-            &c,
-            "SELECT json_extract(meta,'$.themes[0]') FROM texts WHERE id='graded-dangun'"
-        )[0],
-        "ancient-goryeo"
-    );
-    assert_eq!(
-        q(
-            &c,
-            "SELECT json_extract(vocab,'$[0].level') FROM texts WHERE id='graded-dangun'"
-        )[0],
-        "1"
-    );
-    assert_eq!(
-        q(&c, "SELECT count(*) FROM texts WHERE questions IS NOT NULL")[0],
-        "1"
-    );
-    assert_eq!(
-        q(
-            &c,
-            "SELECT json_extract(labels,'$.text') FROM texts WHERE id='graded-dangun'"
-        )[0],
-        "ai"
-    );
+    // AI essay: attached to its source as notes.background (paragraphs, vocab levels, questions)
+    let bg = |k: &str| q(&c, &format!("SELECT json_extract(notes,'$.background.{k}') FROM texts WHERE id='good'"))[0].clone();
+    assert_eq!(bg("id"), "graded-dangun");
+    assert_eq!(bg("paragraphs[0].ko"), "학교에 갔어요.");
+    assert_eq!(bg("paragraphs[0].en"), "Went to school.");
+    assert_eq!(bg("vocab[0].level"), "1");
+    assert_eq!(bg("questions[0].answer_en"), "!");
+    assert_eq!(bg("level"), "TOPIK 2");
+    // the source's own notes stay
+    assert_eq!(q(&c, "SELECT json_extract(notes,'$.ko') FROM texts WHERE id='good'")[0], "노트");
 
     // news
     assert_eq!(
@@ -412,7 +388,7 @@ fn unresolved_vocab_fails_listing_words() {
     assert_eq!(
         q(
             &c,
-            "SELECT json_extract(vocab,'$[1].level') FROM texts WHERE id='graded-dangun'"
+            "SELECT json_extract(notes,'$.background.vocab[1].level') FROM texts WHERE id='good'"
         )[0],
         "∅"
     );
@@ -514,4 +490,19 @@ fn todo_overrides_pending_status() {
     assert_eq!(st, "held");
     fs::write(fx.t().join("todo.toml"), "[status]\nunapproved = \"later\"\n").unwrap();
     assert!(format!("{:#}", fx.build(true).unwrap_err()).contains("unknown status"));
+}
+
+#[test]
+fn essays_need_a_source_and_wait_for_it() {
+    let fx = Fx::new();
+    let mut g = graded("graded-dangun", &["학교"]);
+    g["attach_to"] = json!("noraw");
+    write(&fx.t().join("enriched/graded-dangun.json"), &g);
+    let r = fx.build(false).unwrap().unwrap();
+    assert_eq!(r.counts["graded"], 0);
+    assert_eq!(r.counts["background_held"][0]["source"], "noraw");
+    g.as_object_mut().unwrap().remove("attach_to");
+    write(&fx.t().join("enriched/graded-dangun.json"), &g);
+    let err = format!("{:#}", fx.build(false).unwrap_err());
+    assert!(err.contains("without `attach_to`"), "{err}");
 }
