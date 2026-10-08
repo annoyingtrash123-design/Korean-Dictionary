@@ -1163,13 +1163,13 @@ uncertain = ["source_title"]
 
 [[text]]
 id = "euljimundeok_sijo"
-title_ko = "여수장우중문시"
-title_hanja = "與隋將于仲文詩"
-title_en = "Poem to General You Zhongwen of Sui"
+title_ko = "을지문덕전 (여수장우중문시)"
+title_hanja = "乙支文德傳"
+title_en = "Life of Eulji Mundeok, with his Poem to Yu Zhongwen"
 author_ko = "을지문덕"
 author_en = "Eulji Mundeok"
 author_dates = "fl. 612"
-date = "612"
+date = "1145 (events of 612)"
 year = 612
 period = "three-kingdoms"
 themes = ["ancient-goryeo", "sino-korean"]
@@ -1181,7 +1181,7 @@ source_title = "三國史記/卷44"
 search = ["여수장우중문시", "與隋將于仲文詩", "을지문덕"]
 sections = ["乙支文德"]
 pd_basis = "Ancient/classical work by an author who died over a thousand years ago; public domain."
-note = "Preserved in Samguk sagi vol. 44."
+note = "The biography of Eulji Mundeok in Samguk sagi (1145) vol. 44, which preserves his poem to the Sui general Yu Zhongwen (612)."
 uncertain = ["date", "source_title", "author_dates"]
 
 [[text]]

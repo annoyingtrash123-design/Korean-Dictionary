@@ -1,0 +1,196 @@
+{
+  "id": "imsi_heonjang",
+  "card": {
+    "summary_ko": "1919년 4월 상하이의 임시의정원이 공포한 대한민국 최초의 헌법적 문서로, '민주공화제'를 선언한 10개 조항과 선서문·정강을 담고 있다.",
+    "summary_en": "The first constitutional document of the Republic of Korea, promulgated in April 1919 by the Provisional Legislative Council; its ten articles declare a democratic republic, followed by an oath and a platform.",
+    "level": "advanced",
+    "edition_ko": "한국어 위키문헌 '대한민국임시헌장 (제1호)' (개정 456188, 2026-07-05), 전사 CC BY-SA 4.0; 원저작은 공공 영역",
+    "edition_en": "Korean Wikisource, 'Provisional Charter of the Republic of Korea (No. 1)' (revision 456188, 2026-07-05), transcription CC BY-SA 4.0; original work in the public domain"
+  },
+  "notes": {
+    "ko": "**배경** 1919년 3·1운동 직후 중국 상하이에서 모인 임시의정원이 1919년 4월 11일 대한민국 임시정부 수립과 함께 의결·공포한 헌장으로, 흔히 '대한민국 임시헌장'(임시정부법령 제1호)이라 부른다. 같은 해 9월에 통합 정부의 '대한민국 임시헌법'이 제정되어 이 헌장을 대체했다. 기초에는 조소앙이 크게 관여한 것으로 알려져 있다. 이 판본은 선포문·헌장 10개조·선서문·정강으로 이루어져 있고, 날짜의 '일'은 비어 있다.\n\n**의의** 제1조 '대한민국은 민주공화제로 함'은 군주제를 버리고 국민주권의 공화국을 세우겠다는 선언으로, 오늘날 헌법 제1조의 뿌리로 흔히 꼽힌다. 남녀·귀천·빈부의 차별 없는 평등(제3조), 자유권(제4조), 선거권(제5조), 공창제 폐지(제9조) 등 당시로서는 진보적인 조항이 들어 있다.\n\n**형식과 주제** 국한문 혼용의 법령문체로, 조항은 '-함'으로 끝나는 명사형 종결을 쓴다. 선서문은 '-노라', '-ㄹ지어다' 같은 격앙된 선언조이다. 이 파일에는 한글 전용으로 옮긴 같은 글이 한 번 더 이어지므로 내용이 두 번 나온다.\n\n**읽기 도움**\n- `-하야` = 현대어 `-하여`; `-함` 종결 = 법령 문체.\n- 享有(향유): 누리다 / 公民(공민) / 選擧權·被選擧權(선거권·피선거권)\n- 全廢(전폐): 모두 없앰 / 召集(소집)\n- 特赦(특사): 특별 사면 / 遵守(준수)\n- 翕然(흡연): 한결같이 모이는 모양 / 戮力(육력): 힘을 합침\n- 原文의 '一適'은 '一滴', '適'(정강 마지막 문장)은 '敵'의 오기로 보이며, '本政府一全國民'의 '一'은 조사 자리의 표기로 보인다. 본문에는 그대로 두었다.",
+    "en": "**Background** Convened in Shanghai in the wake of the March First Movement of 1919, the Provisional Legislative Council adopted and promulgated this charter on 11 April 1919, together with the founding of the Provisional Government of the Republic of Korea. It is usually called the Provisional Charter (Provisional Government Law No. 1). It was replaced by a fuller Provisional Constitution in September 1919 when the exile governments were merged. Jo So-ang is known to have played a large part in drafting it. This edition contains the proclamation, ten articles, an oath and a platform; the day of the month is left blank.\n\n**Significance** Article 1, \"The Republic of Korea shall be a democratic republic\", rejects monarchy in favour of a popular republic and is often cited as the root of Article 1 of today's constitution. For its time the charter was progressive: equality regardless of sex or class (Art. 3), civil liberties (Art. 4), suffrage (Art. 5) and abolition of licensed prostitution (Art. 9).\n\n**Form and themes** The language is the mixed-script (kukhanmun) style of legal documents; articles end in the nominal ending -함. The oath is in a rousing declarative register (-노라, -ㄹ지어다). The file then repeats the whole text in a Hangul-only transcription, so everything appears twice.\n\n**Reading help**\n- `-하야` = modern `-하여`; the `-함` ending is statute style.\n- 享有 (hyangyu): to enjoy / 公民 citizen / 選擧權·被選擧權 right to vote and to stand for election\n- 全廢 (jeonpye): abolish entirely / 召集 convene\n- 特赦 (teukssa): special pardon / 遵守 observe, comply with\n- 翕然 (heubyeon): in perfect accord / 戮力 (yungnyeok): to join forces\n- In the source, 一適 appears to be a slip for 一滴 (\"one drop\") and the final 適 of the platform for 敵 (\"enemy\"); the 一 in 本政府一全國民 seems to stand in for a particle. The original text is left as transcribed."
+  },
+  "paragraphs": [
+    {
+      "orig": "## 원문",
+      "modern": "## 원문(原文)",
+      "reading": null,
+      "en": "## Original text (mixed script)"
+    },
+    {
+      "orig": "## 大韓民國 臨時憲章 宣布文",
+      "modern": "## 대한민국 임시헌장 선포문(大韓民國 臨時憲章 宣布文)",
+      "reading": null,
+      "en": "## Proclamation of the Provisional Charter of the Republic of Korea"
+    },
+    {
+      "orig": "神人一致로 中外協應하야 漢城에 起義한지 三十有日에 平和的 獨立을 三百餘州에 光復하고 國民의 信任으로 完全히 다시 組織한 臨時政府는 恒久完全한 自主獨立의 福利로 我子孫黎民에 世傳키 爲하여 臨時議政院의 決議로 臨時憲章을 宣布하노라.",
+      "modern": "신인일치(神人一致)로 중외협응(中外協應)하여 한성(漢城)에서 의거(起義)한 지 삼십여 일에 평화적 독립을 삼백여 주(三百餘州)에 광복하고, 국민의 신임으로 완전히 다시 조직한 임시정부는 항구완전한 자주독립의 복리를 우리 자손과 여민(黎民)에게 대대로 전하기 위하여 임시의정원의 결의로 임시헌장을 선포하노라.",
+      "reading": null,
+      "en": "With gods and men at one, with those at home and abroad responding in concert, thirty-odd days after rising in righteous uprising in Hanseong, we have restored a peaceful independence across the three hundred and more districts of the land; and the Provisional Government, wholly reconstituted by the trust of the people, in order to hand down to our descendants and the common people, generation after generation, the blessings of a lasting and complete self-reliant independence, hereby proclaims the Provisional Charter by resolution of the Provisional Legislative Council."
+    },
+    {
+      "orig": "## 大韓民國 臨時憲章",
+      "modern": "## 대한민국 임시헌장(大韓民國 臨時憲章)",
+      "reading": null,
+      "en": "## Provisional Charter of the Republic of Korea"
+    },
+    {
+      "orig": "제1조 大韓民國은 民主共和制로 함. 제2조 大韓民國은 臨時政府가 臨時議政院의 決議에 依하야 此를 統治함. 제3조 大韓民國의 人民은 男女 貴賤 及 貧富의 階級이 無하고 一切 平等임. 제4조 大韓民國의 人民은 信敎 言論 著作 出版 結社 集會 信書 住所 移轉 身體 及 所有의 自由를 享有함. 제5조 大韓民國의 人民으로 公民 資格이 有한 者는 選擧權 及 被選擧權이 有함. 제6조 大韓民國의 人民은 敎育 納稅 及 兵役의 義務가 有함. 제7조 大韓民國은 神의 意思에 依하여 建國한 精神을 世界에 發揮하며 進하야 人類의 文化 及 平和에 貢獻하기 위하야 國際聯盟에 加入함. 제8조 大韓民國은 舊皇室을 優待함. 제9조 生命刑 身體刑 及 公娼制를 全廢함. 제10조 臨時政府는 國土恢復後 滿一個年內에 國會를 召集함.",
+      "modern": "제1조 대한민국은 민주공화제로 함. 제2조 대한민국은 임시정부가 임시의정원의 결의에 의하여 이를 통치함. 제3조 대한민국의 인민은 남녀·귀천 및 빈부의 계급이 없고 일체 평등임. 제4조 대한민국의 인민은 신교(信敎)·언론·저작·출판·결사·집회·신서(信書)·주소 이전·신체 및 소유의 자유를 향유함. 제5조 대한민국의 인민으로 공민 자격이 있는 자는 선거권 및 피선거권이 있음. 제6조 대한민국의 인민은 교육·납세 및 병역의 의무가 있음. 제7조 대한민국은 신(神)의 의사에 의하여 건국한 정신을 세계에 발휘하며 나아가 인류의 문화 및 평화에 공헌하기 위하여 국제연맹에 가입함. 제8조 대한민국은 구황실(舊皇室)을 우대함. 제9조 생명형·신체형 및 공창제(公娼制)를 전폐함. 제10조 임시정부는 국토 회복 후 만 1개년 내에 국회를 소집함.",
+      "reading": null,
+      "en": "Article 1. The Republic of Korea shall be a democratic republic. Article 2. The Republic of Korea shall be governed by the Provisional Government in accordance with the resolutions of the Provisional Legislative Council. Article 3. The people of the Republic of Korea are all equal, with no class distinctions of man and woman, noble and base, rich and poor. Article 4. The people of the Republic of Korea shall enjoy freedom of religion, speech, writing, publication, association, assembly, correspondence, residence and movement, of the person, and of property. Article 5. Those among the people of the Republic of Korea who have the qualifications of citizens shall have the right to vote and to stand for election. Article 6. The people of the Republic of Korea shall have the duties of education, taxation and military service. Article 7. The Republic of Korea shall join the League of Nations, in order to manifest to the world the spirit in which it was founded by the will of God and, going further, to contribute to the culture and peace of mankind. Article 8. The Republic of Korea shall treat the former imperial house with preferential courtesy. Article 9. Capital punishment, corporal punishment and the licensed-prostitution system shall be abolished entirely. Article 10. The Provisional Government shall convene the National Assembly within one full year after the recovery of the national territory."
+    },
+    {
+      "orig": "大韓民國 元年 四月 日",
+      "modern": "대한민국 원년 4월 일",
+      "reading": null,
+      "en": "Year 1 of the Republic of Korea, fourth month, [day left blank]"
+    },
+    {
+      "orig": "臨時議政院 議長 李東寧",
+      "modern": "임시의정원 의장 이동녕(李東寧)",
+      "reading": null,
+      "en": "Yi Dong-nyeong, Speaker of the Provisional Legislative Council"
+    },
+    {
+      "orig": "臨時政府 國務總理 李承晩 內務總長 安昌浩 外務總長 金奎植 法務總長 李始榮 財務總長 崔在亨 軍務總長 李東輝 交通總長 文昌範",
+      "modern": "임시정부 국무총리 이승만(李承晩) 내무총장 안창호(安昌浩) 외무총장 김규식(金奎植) 법무총장 이시영(李始榮) 재무총장 최재형(崔在亨) 군무총장 이동휘(李東輝) 교통총장 문창범(文昌範)",
+      "reading": null,
+      "en": "Provisional Government: Prime Minister Yi Seung-man (Syngman Rhee); Minister of the Interior An Chang-ho; Minister of Foreign Affairs Kim Gyu-sik; Minister of Justice Yi Si-yeong; Minister of Finance Choe Jae-hyeong; Minister of Military Affairs Yi Dong-hwi; Minister of Communications Mun Chang-beom."
+    },
+    {
+      "orig": "## 宣誓文",
+      "modern": "## 선서문(宣誓文)",
+      "reading": null,
+      "en": "## Oath"
+    },
+    {
+      "orig": "尊敬하고 敬愛하는 我二千萬 同胞 國民이여, 民國 元年 三月一日 我 大韓民族이 獨立宣言함으로부터 男과 女와 老와 少와 모든 階級과 모든 宗派를 勿論하고 一致코 團結하야 東洋의 獨逸인 日本의 非人道的 暴行下에 極히 公明하게 極히 忍辱하게 我 民族의 獨立과 自由를 渴望하는 思와 正義와 人道를 愛好하는 國民性을 表現한지라 今에 世界의 同情이 翕然히 我 集中하였도다. 此時를 當하야 本政府一全國民의 委任을 受하야 組織되었나니 本政府一全國民으로 더불어 專心코 戮力하야 臨時憲法과 國際道德의 命하는바를 遵守하야 國土 光復과 邦基確固의 大使命을 課하기를 玆에 宣言하노라. 國民 同胞이여 奮起할지어다. 우리의 流하는 一適의 血이 子孫萬代의 自由와 福樂의 價이요 神의 國의 建設의 貴한 基礎이니라. 우리의 人道一마침내 日本의 野蠻을 敎化할지요 우리의 正義一마침내 日本의 暴力을 勝할지니 同胞여 起하야 最後의 一人까지 鬪爭할지어다.",
+      "modern": "존경하고 경애하는 우리 이천만 동포 국민이여, 민국 원년 3월 1일 우리 대한민족이 독립을 선언한 때로부터 남녀노소와 모든 계급과 모든 종파를 막론하고 일치하여 단결하여, 동양의 독일인 일본의 비인도적 폭행 아래에서 극히 공명하게 극히 인욕(忍辱)하게 우리 민족의 독립과 자유를 갈망하는 마음과 정의와 인도를 애호하는 국민성을 표현한지라, 이제 세계의 동정이 흡연(翕然)히 우리에게 집중하였도다. 이때를 당하여 본 정부는 전 국민의 위임을 받아 조직되었나니, 본 정부는 전 국민과 더불어 전심(專心)으로 육력(戮力)하여 임시헌법과 국제도덕이 명하는 바를 준수하여 국토 광복과 나라의 기초를 확고히 할 대사명을 맡을 것을 이에 선언하노라. 국민 동포여, 분기할지어다. 우리가 흘리는 한 방울의 피[一滴의 血]가 자손만대의 자유와 복락의 값이요 신의 나라 건설의 귀한 기초이니라. 우리의 인도는 마침내 일본의 야만을 교화할 것이요 우리의 정의는 마침내 일본의 폭력을 이길 것이니, 동포여, 일어나 최후의 한 사람까지 투쟁할지어다.",
+      "reading": null,
+      "en": "Respected and beloved twenty million compatriots, fellow citizens! Ever since our Korean people declared independence on 1 March, Year 1 of the Republic, men and women, old and young, regardless of class or sect, have united as one; and beneath the inhumane violence of Japan, the Germany of the East, they have shown most righteously and most patiently their longing for the independence and freedom of our nation and a national character that loves justice and humanity, so that the sympathy of the world has now converged upon us as one. At this moment the present government has been organized by the commission of the whole nation, and we hereby declare that, together with the whole nation, devoting ourselves wholeheartedly and with united strength, we shall obey what the provisional constitution and international morality command, and shoulder the great mission of restoring the national territory and firmly establishing the foundations of the state. Fellow citizens and compatriots, rise up! Every drop of blood we shed is the price of freedom and happiness for generations of descendants and a precious foundation for building the Kingdom of God. Our humanity will in the end civilize Japan's barbarism, and our justice will in the end overcome Japan's violence. Compatriots, rise up and struggle to the last man!"
+    },
+    {
+      "orig": "## 政綱",
+      "modern": "## 정강(政綱)",
+      "reading": null,
+      "en": "## Platform"
+    },
+    {
+      "orig": "民族平等 國家平等 及 人類平等의 大義를 宣傳함. 外國人의 生命財産을 保護함. 一切 政治犯人을 特赦함. 外國에 對한 權利義務는 民國政府와 締結하는 條約에 一依함. 絶對獨立을 誓圖함. 臨時政府의 法令을 違越하는 者는 適으로 認함.",
+      "modern": "민족평등·국가평등 및 인류평등의 대의를 선전함. 외국인의 생명재산을 보호함. 일체 정치범인을 특사(特赦)함. 외국에 대한 권리의무는 민국정부와 체결하는 조약에 따름[一依]. 절대독립을 맹세하고 도모함[誓圖]. 임시정부의 법령을 위반하는 자는 적(敵)으로 인정함.",
+      "reading": null,
+      "en": "We shall proclaim the great principle of equality of peoples, equality of states and equality of mankind. We shall protect the lives and property of foreigners. We shall grant a special pardon to all political prisoners. Rights and obligations toward foreign countries shall be governed solely by the treaties concluded with the government of the Republic. We pledge ourselves to absolute independence. Those who violate the laws and ordinances of the Provisional Government shall be regarded as enemies."
+    },
+    {
+      "orig": "大韓民國 元年 四月 日",
+      "modern": "대한민국 원년 4월 일",
+      "reading": null,
+      "en": "Year 1 of the Republic of Korea, fourth month, [day left blank]"
+    },
+    {
+      "orig": "大韓民國臨時政府",
+      "modern": "대한민국 임시정부",
+      "reading": null,
+      "en": "The Provisional Government of the Republic of Korea"
+    },
+    {
+      "orig": "## 한글 전용 표기",
+      "modern": "## 한글 전용 표기",
+      "reading": null,
+      "en": "## Hangul-only transcription (a second copy of the same text)"
+    },
+    {
+      "orig": "## 대한민국 임시헌장 선포문",
+      "modern": "## 대한민국 임시헌장 선포문",
+      "reading": null,
+      "en": "## Proclamation of the Provisional Charter of the Republic of Korea"
+    },
+    {
+      "orig": "신인일치로 중외협응하야 한성에 기의한지 삼십유일에 평화적 독립을 삼백여주에 광복하고 국민의 신임으로 완전히 다시 조직한 임시정부는 항구완전한 자주독립의 복리로 아자손려민에 세전키 위하여 임시의정원의 결의로 임시헌장을 선포하노라.",
+      "modern": "신인일치로 중외협응하여 한성에서 의거한 지 삼십여 일에 평화적 독립을 삼백여 주에 광복하고, 국민의 신임으로 완전히 다시 조직한 임시정부는 항구완전한 자주독립의 복리를 우리 자손과 여민에게 대대로 전하기 위하여 임시의정원의 결의로 임시헌장을 선포하노라.",
+      "reading": null,
+      "en": "With gods and men at one, with those at home and abroad responding in concert, thirty-odd days after rising in righteous uprising in Hanseong, we have restored a peaceful independence across the three hundred and more districts of the land; and the Provisional Government, wholly reconstituted by the trust of the people, in order to hand down to our descendants and the common people, generation after generation, the blessings of a lasting and complete self-reliant independence, hereby proclaims the Provisional Charter by resolution of the Provisional Legislative Council."
+    },
+    {
+      "orig": "## 대한민국 임시헌장",
+      "modern": "## 대한민국 임시헌장",
+      "reading": null,
+      "en": "## Provisional Charter of the Republic of Korea"
+    },
+    {
+      "orig": "제1조 대한민국은 민주공화제로 함. 제2조 대한민국은 임시정부가 임시의정원의 결의에 의하야 이를 통치함. 제3조 대한민국의 인민은 남녀 귀천 및 빈부의 계급이 무하고 일체 평등임. 제4조 대한민국의 인민은 신교 언론 저작 출판 결사 집회 신서 주소 이전 신체 및 소유의 자유를 향유함. 제5조 대한민국의 인민으로 공민 자격이 유한 자는 선거권 및 피선거권이 유함. 제6조 대한민국의 인민은 교육 납세 및 병역의 의무가 유함. 제7조 대한민국은 신의 의사에 의하여 건국한 정신을 세계에 발휘하며 진하야 인류의 문화 및 평화에 공헌하기 위하야 국제연맹에 가입함. 제8조 대한민국은 구 황실을 우대함. 제9조 생명형 신체형 및 공창제를 전폐함. 제10조 임시정부는 국토회복 후 만 1개년 내에 국회를 소집함.",
+      "modern": "제1조 대한민국은 민주공화제로 함. 제2조 대한민국은 임시정부가 임시의정원의 결의에 의하여 이를 통치함. 제3조 대한민국의 인민은 남녀·귀천 및 빈부의 계급이 없고 일체 평등임. 제4조 대한민국의 인민은 신교·언론·저작·출판·결사·집회·신서·주소 이전·신체 및 소유의 자유를 향유함. 제5조 대한민국의 인민으로 공민 자격이 있는 자는 선거권 및 피선거권이 있음. 제6조 대한민국의 인민은 교육·납세 및 병역의 의무가 있음. 제7조 대한민국은 신의 의사에 의하여 건국한 정신을 세계에 발휘하며 나아가 인류의 문화 및 평화에 공헌하기 위하여 국제연맹에 가입함. 제8조 대한민국은 구황실을 우대함. 제9조 생명형·신체형 및 공창제를 전폐함. 제10조 임시정부는 국토 회복 후 만 1개년 내에 국회를 소집함.",
+      "reading": null,
+      "en": "Article 1. The Republic of Korea shall be a democratic republic. Article 2. The Republic of Korea shall be governed by the Provisional Government in accordance with the resolutions of the Provisional Legislative Council. Article 3. The people of the Republic of Korea are all equal, with no class distinctions of man and woman, noble and base, rich and poor. Article 4. The people of the Republic of Korea shall enjoy freedom of religion, speech, writing, publication, association, assembly, correspondence, residence and movement, of the person, and of property. Article 5. Those among the people of the Republic of Korea who have the qualifications of citizens shall have the right to vote and to stand for election. Article 6. The people of the Republic of Korea shall have the duties of education, taxation and military service. Article 7. The Republic of Korea shall join the League of Nations, in order to manifest to the world the spirit in which it was founded by the will of God and, going further, to contribute to the culture and peace of mankind. Article 8. The Republic of Korea shall treat the former imperial house with preferential courtesy. Article 9. Capital punishment, corporal punishment and the licensed-prostitution system shall be abolished entirely. Article 10. The Provisional Government shall convene the National Assembly within one full year after the recovery of the national territory."
+    },
+    {
+      "orig": "대한민국 원년 4월 일",
+      "modern": "대한민국 원년 4월 일",
+      "reading": null,
+      "en": "Year 1 of the Republic of Korea, fourth month, [day left blank]"
+    },
+    {
+      "orig": "임시의정원 의장 이동녕",
+      "modern": "임시의정원 의장 이동녕",
+      "reading": null,
+      "en": "Yi Dong-nyeong, Speaker of the Provisional Legislative Council"
+    },
+    {
+      "orig": "임시정부 국무총리 이승만 내무총장 안창호 외무총장 김규식 법무총장 이시영 재무총장 최재형 군무총장 이동휘 교통총장 문창범",
+      "modern": "임시정부 국무총리 이승만 내무총장 안창호 외무총장 김규식 법무총장 이시영 재무총장 최재형 군무총장 이동휘 교통총장 문창범",
+      "reading": null,
+      "en": "Provisional Government: Prime Minister Yi Seung-man (Syngman Rhee); Minister of the Interior An Chang-ho; Minister of Foreign Affairs Kim Gyu-sik; Minister of Justice Yi Si-yeong; Minister of Finance Choe Jae-hyeong; Minister of Military Affairs Yi Dong-hwi; Minister of Communications Mun Chang-beom."
+    },
+    {
+      "orig": "## 선서문",
+      "modern": "## 선서문",
+      "reading": null,
+      "en": "## Oath"
+    },
+    {
+      "orig": "존경하고 경애하는 아이천만 동포 국민이여, 민국 원년 3월 1일 아 대한민족이 독립선언함으로부터 남과 여와 노와 소와 모든 계급과 모든 종파를 물론하고 일치코 단결하야 동양의 독일인 일본의 비인도적 폭행하에 극히 공명하게 극히 인욕하게 아 민족의 독립과 자유를 갈망하는 사와 정의와 인도를 애호하는 국민성을 표현한지라 금에 세계의 동정이 흡연히 아 집중하였도다. 차시를 당하야 본정부 전국민의 위임을 수하야 조직되었나니 본정부 전국민으로 더불어 전심코 육력하야 임시헌법과 국제도덕의 명하는 바를 준수하야 국토광복과 방기확고의 대사명을 과하기를 자에 선언하노라. 국민 동포이여 분기할지어다. 우리의 유하는 일적의 혈이 자손만대의 자유와 복락의 가이요 신의 국의 건설의 귀한 기초이니라. 우리의 인도 마침내 일본의 야만을 교화할지요 우리의 정의 마침내 일본의 폭력을 승할지니 동포여 기하야 최후의 일인까지 투쟁할지어다.",
+      "modern": "존경하고 경애하는 우리 이천만 동포 국민이여, 민국 원년 3월 1일 우리 대한민족이 독립을 선언한 때로부터 남녀노소와 모든 계급과 모든 종파를 막론하고 일치하여 단결하여, 동양의 독일인 일본의 비인도적 폭행 아래에서 극히 공명하게 극히 인욕하게 우리 민족의 독립과 자유를 갈망하는 마음과 정의와 인도를 애호하는 국민성을 표현한지라, 이제 세계의 동정이 흡연히 우리에게 집중하였도다. 이때를 당하여 본 정부는 전 국민의 위임을 받아 조직되었나니, 본 정부는 전 국민과 더불어 전심으로 육력하여 임시헌법과 국제도덕이 명하는 바를 준수하여 국토 광복과 나라의 기초를 확고히 할 대사명을 맡을 것을 이에 선언하노라. 국민 동포여, 분기할지어다. 우리가 흘리는 한 방울의 피가 자손만대의 자유와 복락의 값이요 신의 나라 건설의 귀한 기초이니라. 우리의 인도는 마침내 일본의 야만을 교화할 것이요 우리의 정의는 마침내 일본의 폭력을 이길 것이니, 동포여, 일어나 최후의 한 사람까지 투쟁할지어다.",
+      "reading": null,
+      "en": "Respected and beloved twenty million compatriots, fellow citizens! Ever since our Korean people declared independence on 1 March, Year 1 of the Republic, men and women, old and young, regardless of class or sect, have united as one; and beneath the inhumane violence of Japan, the Germany of the East, they have shown most righteously and most patiently their longing for the independence and freedom of our nation and a national character that loves justice and humanity, so that the sympathy of the world has now converged upon us as one. At this moment the present government has been organized by the commission of the whole nation, and we hereby declare that, together with the whole nation, devoting ourselves wholeheartedly and with united strength, we shall obey what the provisional constitution and international morality command, and shoulder the great mission of restoring the national territory and firmly establishing the foundations of the state. Fellow citizens and compatriots, rise up! Every drop of blood we shed is the price of freedom and happiness for generations of descendants and a precious foundation for building the Kingdom of God. Our humanity will in the end civilize Japan's barbarism, and our justice will in the end overcome Japan's violence. Compatriots, rise up and struggle to the last man!"
+    },
+    {
+      "orig": "## 정강",
+      "modern": "## 정강",
+      "reading": null,
+      "en": "## Platform"
+    },
+    {
+      "orig": "민족평등 국가평등 및 인류평등의 대의를 선전함. 외국인의 생명재산을 보호함. 일체 정치범인을 특사함. 외국에 대한 권리의무는 민국정부와 체결하는 조약에 일의함. 절대독립을 서도함. 임시정부의 법령을 위월하는 자는 적으로 인함.",
+      "modern": "민족평등·국가평등 및 인류평등의 대의를 선전함. 외국인의 생명재산을 보호함. 일체 정치범인을 특사함. 외국에 대한 권리의무는 민국정부와 체결하는 조약에 따름. 절대독립을 맹세하고 도모함. 임시정부의 법령을 위반하는 자는 적으로 인정함.",
+      "reading": null,
+      "en": "We shall proclaim the great principle of equality of peoples, equality of states and equality of mankind. We shall protect the lives and property of foreigners. We shall grant a special pardon to all political prisoners. Rights and obligations toward foreign countries shall be governed solely by the treaties concluded with the government of the Republic. We pledge ourselves to absolute independence. Those who violate the laws and ordinances of the Provisional Government shall be regarded as enemies."
+    },
+    {
+      "orig": "대한민국 원년 4월 일",
+      "modern": "대한민국 원년 4월 일",
+      "reading": null,
+      "en": "Year 1 of the Republic of Korea, fourth month, [day left blank]"
+    },
+    {
+      "orig": "대한민국임시정부",
+      "modern": "대한민국 임시정부",
+      "reading": null,
+      "en": "The Provisional Government of the Republic of Korea"
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}
