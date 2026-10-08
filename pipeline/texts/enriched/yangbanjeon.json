@@ -1,0 +1,34 @@
+{
+  "id": "yangbanjeon",
+  "card": {
+    "summary_ko": "박지원이 젊은 시절 쓴 한문 단편집 《방경각외전》(연암집 별집) 전체. 가난한 양반이 환곡 빚 때문에 신분을 부자에게 팔았다가 매매 문서를 보고 물러서는 〈양반전〉을 포함한다.",
+    "summary_en": "The whole Bangyeonggak oejeon volume (Yeonam jip, supplementary collection) by Park Ji-won, including the Tale of the Yangban, in which a poor yangban sells his rank to a rich commoner who backs out on reading the contract.",
+    "level": "classical",
+    "edition_ko": "한국어 위키문헌 「연암집/제8권 별집」 (개정 413307, 2025-10-17), 원저작 퍼블릭 도메인, 전사 CC BY-SA 4.0 — 〈양반전〉만이 아니라 별집 한 권 전체(서문, 전 7편, 결본 2편의 제목, 발문)를 수록, 원문만·번역 없음",
+    "edition_en": "Korean Wikisource 「연암집/제8권 별집」 (revision 413307, 2025-10-17); original in the public domain, transcription CC BY-SA 4.0. Not only the Yangban-jeon: the whole volume (preface, seven tales, titles of two lost tales, postscript). Original text only, no translation."
+  },
+  "notes": {
+    "ko": "**배경**\n박지원(朴趾源, 1737–1805, 호 연암)은 조선 후기 북학파를 대표하는 문인이다. 〈양반전〉은 그의 젊은 시절 한문 단편을 모은 《방경각외전(放璚閣外傳)》에 실려 있고, 이 책은 《연암집》 별집으로 전한다. 끝의 발문(아들 종간의 글)은 아홉 편이 모두 ‘약관 때’ 지은 것이며, 박지원이 나중에 없애라고 했으나 이미 퍼져 막을 수 없었다고 적는다. 그러므로 창작 시기는 대략 청년기로 볼 수 있으나 정확한 연대는 확정하기 어렵다.\n\n**내용 (이 판 전체)**\n이 판에는 〈양반전〉 한 편이 아니라 별집 한 권이 통째로 들어 있다.\n- 自序: 아홉 편 각각의 집필 취지를 한두 줄로 밝힌 서문.\n- 馬駔傳(마장전), 穢德先生傳(예덕선생전), 閔翁傳(민옹전), 廣文者傳(광문자전)과 書廣文傳後, 兩班傳(양반전), 金神仙傳(김신선전), 虞裳傳(우상전).\n- 易學大盜傳(역학대도전)은 ‘本文缺’이라 본문이 없고, 鳳山學者傳(봉산학자전)은 제목과 ‘竊聞之’ 한 구만 남았다. 마지막에 발문이 붙는다.\n〈양반전〉(문단 17)의 줄거리: 정선 고을의 가난한 양반이 관청 곡식(환곡) 천 섬을 갚지 못해 갇히게 되자, 그 고을 부자가 곡식을 대신 갚아 주고 양반 신분을 산다. 군수가 증인을 모아 매매 문서를 쓰는데, 첫 문서는 양반이 지켜야 할 번거로운 행실만 늘어놓는다. 부자가 “양반이 겨우 이뿐이냐”며 고쳐 달라고 하자 둘째 문서에는 양반의 특권과 횡포가 적히고, 부자는 “나를 도둑으로 만들 셈이냐”며 달아나 다시는 양반 이야기를 하지 않는다.\n\n**의의**\n양반의 허울과 신분 매매를 풍자한 조선 후기 한문 소설의 대표작으로 꼽힌다. 발문은 이 글이 왕포의 〈동약(僮約)〉을 본뜬 것이라 하고, 말이 속되다는 지적도 함께 전한다.\n\n**읽기 도움**\n- 兩班(양반): 문반·무반(東班·西班)을 아울러 이르는 사족.\n- 糶·糴(조·적): 관청 곡식을 꾸어 주고 거두는 환곡의 팔기와 사기.\n- 觀察使·郡守: 도 단위·고을 단위 수령.\n- 鄕所·座首·別監: 고을의 자치 기구와 그 임원. 通引: 관청 심부름꾼.\n- 明文·券: 매매 문서. 乾隆十年은 1745년으로, 이야기 속 가상의 날짜로 보인다.\n- 小人: 자신을 낮추는 말. 氈笠: 털로 만든 서민의 갓.\n- 孟浪: 터무니없다. 士·大夫·君子: 문서 첫머리에서 양반을 정의하는 말.\n- ▼(厂+串), ？: 전사에서 글자를 못 써 대신 적은 표시. 兩班傳 문서 첫머리와 虞裳傳 시 곳곳에 있다.\n- 缺: 원문 자체가 빠진 곳(虞裳傳 끝, 易學大盜傳).",
+    "en": "**Background**\nPark Ji-won (1737-1805, pen name Yeonam) was a leading writer of the Northern Learning (Bukhak) school in late Joseon. The Tale of the Yangban (Yangban-jeon) belongs to the Bangyeonggak oejeon, a set of short Literary Chinese tales from his youth, transmitted as the supplementary collection of the Yeonam jip. The postscript, signed by his son Jong-gan, says all nine pieces were written when he was about twenty, and that he later wanted them burned but they had already spread too widely. The date of writing is therefore roughly his youth; the exact year is hard to fix.\n\n**Contents (of this whole volume)**\nThis edition holds the entire volume, not just one tale:\n- Self-preface (自序): one or two lines on the purpose of each of the nine tales.\n- Majang-jeon, Yedeok seonsaeng-jeon, Minong-jeon, Gwangmunja-jeon (with a postscript to it), Yangban-jeon, Gim Sinseon-jeon, Usang-jeon.\n- Yeokhak daedo-jeon has only the note 本文缺 (text missing), and Bongsan hakja-jeon is a title plus the fragment 竊聞之. The son's postscript closes the volume.\nThe Yangban-jeon (paragraph 17): a poor yangban of Jeongseon county cannot repay 1,000 seok of state grain loans and faces prison. A rich man of the county pays the debt and buys his rank. The governor gathers witnesses and drafts a deed; the first deed lists only the burdensome duties of a yangban. The rich man protests that this is all there is to it, so a second deed lists the yangban's privileges and abuses, and he flees, saying he is being made a thief, never speaking of yangban again.\n\n**Significance**\nIt is counted among the best satires of the yangban and of the trade in status in late Joseon fiction. The postscript says it imitates Wang Bao's Tongyue (Contract with a Servant), and notes that its language is rather colloquial.\n\n**Reading help**\n- 兩班: yangban, the civil (east) and military (west) ranks, the gentry class.\n- 糶 / 糴: selling and buying grain, here the state grain-loan system.\n- 觀察使 / 郡守: provincial governor / county magistrate.\n- 鄕所, 座首, 別監: the local gentry office and its officers; 通引: office runner.\n- 明文, 券: deed. 乾隆十年 is 1745, probably a fictional date.\n- 小人: self-abasing \"your humble servant\"; 氈笠: commoner's felt hat.\n- 孟浪: absurd, reckless.\n- ▼(厂+串) and ？: placeholders for characters the transcriber could not enter (start of the deed, poems in Usang-jeon).\n- 缺: a gap in the original text itself (end of Usang-jeon, Yeokhak daedo-jeon)."
+  },
+  "paragraphs": [
+    {
+      "orig": "== 兩班傳 ==兩班者。士族之尊稱也。旌善之郡。有一兩班。賢而好讀書。每郡守新至。必親造其廬而禮之。然家貧。歲食郡糶。積歲至千石。觀察使巡行郡邑。閱糶糴。大怒曰。何物兩班。乃乏軍興。命囚其兩班。郡守意哀其兩班貧。無以爲償。不忍囚之。亦無可柰何。兩班日夜泣。計不知所出。其妻罵曰。生平子好讀書。無益縣官糴。咄兩班。兩班不直一錢。其里之富人。私相議曰。兩班雖貧。常尊榮。我雖富。常卑賤。不敢騎馬。見兩班則跼蹜屛營。匍匐拜庭。曳鼻膝行。我常如此。其僇辱也。今兩班貧不能償糴。方大窘。其勢誠不能保其兩班。我且買而有之。遂踵門而請償其糴。兩班大喜許諾。於是富人立輸其糴於官。郡守大驚異之。自往勞其兩班。且問償糴狀。兩班氈笠。衣短衣。伏塗謁稱小人。不敢仰視。郡守大驚。下扶曰。足下何自貶辱若是。兩班益恐懼頓首俯伏曰。惶悚小人。非敢自辱。已自鬻其兩班。以償糴。里之富人。乃兩班也。小人復安敢冒其舊號而自尊乎。郡守歎曰。君子哉富人也。兩班哉富人也。富而不吝。義也。急人之難。仁也。惡卑而慕尊。智也。此眞兩班。雖然。私自交易而不立券。訟之端也。我與汝。約郡人而證之。立券而信之。郡守當自署之。於是郡守歸府。悉召郡中之士族及農工商賈。悉至于庭。富人坐鄕所之右。兩班立於公兄之下。乃爲立券曰。乾隆十年九月日。右明文段。▼(厂+串)賣兩班爲償官糓。其直千斛。維厥兩班。名謂多端。讀書曰士。從政爲大夫。有德爲君子。武階列西。文秩叙東。是爲兩班。任爾所從。絶棄鄙事。希古尙志。五更常起。點硫燃脂。目視鼻端。會踵支尻。東萊博議。誦如氷瓢。忍饑耐寒。口不說貧。叩齒彈腦。細嗽嚥津。袖刷毳冠。拂塵生波。盥無擦拳。漱口無過。長聲喚婢。緩步曳履。古文眞寶。唐詩品彙。鈔寫如荏。一行百字。手毋執錢。不問米價。暑毋跣襪。飯毋徒髻。食毋先羹。歠毋流聲。下箸毋舂。毋餌生葱。飮醪毋嘬鬚。吸煙毋輔窳。忿毋搏妻。怒毋踢器。毋拳敺兒女。毋詈死奴僕。叱牛馬。毋辱鬻主。病毋招巫。祭不齋僧。爐不煑手。語不齒唾。毋屠牛。毋賭錢。凡此百行。有違兩班。持此文記。卞正于官城主。旌善郡守押。座首別監證署。於是通引搨印錯落。聲中嚴皷。斗縱參橫。戶長讀旣畢。富人悵然久之曰。兩班只此而已耶。吾聞兩班如神仙。審如是。太乾沒。願改爲可利。於是乃更作券曰。維天生民。其民維四。四民之中。最貴者士。稱以兩班。利莫大矣。不耕不商。粗涉文史。大决文科。小成進士。文科紅牌。不過二尺。百物備具。維錢之槖。進士三十。乃筮初仕。猶爲名蔭。善事雄南。耳白傘風。腹皤鈴諾。室珥冶妓。庭糓鳴鶴。窮士居鄕。猶能武斷。先耕隣牛。借耘里氓。孰敢慢我。灰灌汝鼻。暈髻汰鬢。無敢怨咨。富人中其券而吐舌曰。已之已之。孟浪哉。將使我爲盜耶。掉頭而去。終身不復言兩班之事。",
+      "modern": null,
+      "reading": null,
+      "en": null
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": null,
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": "Right author/volume but the raw is the whole Yeonam jip byeoljip (Bangyeonggak oejeon), not only the Yangban-jeon: preface, 7 tales (Yangban-jeon is paragraph 17 only, complete), 2 lost tales (title/fragment), son's postscript. Minor damage: placeholders (U+FF1F, 厂+串) in Usang-jeon and the first deed. Catalogue date c.1780 conflicts with the postscript (written in youth); title/excerpt flag misleading. LEAD: Reader now shows only 兩班傳 (paragraph 16 of the 방경각외전 volume); card/notes must describe 양반전 itself, mentioning the volume only as context."
+  }
+}
