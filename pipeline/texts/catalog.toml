@@ -4096,3 +4096,413 @@ alt_titles = ["丈夫歌", "안중근/장부가", "안중근의 장부가", "안
 search = ["장부가 안중근", "丈夫歌 安重根", "丈夫處世兮 其志大矣", "안응칠 역사 장부가"]
 pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the original is in the public domain."
 uncertain = ["date", "source_title", "search", "script"]
+
+# ── 2026-10: Korean Empire (1897–1910) ──
+
+# Period note: 안응칠 역사 and 절명시 are dated 1910 but kept in period "korean-empire" because both concern the Empire's end.
+
+# resource: ko.wikisource has no per-edict page for sure; the zh sillok page 朝鮮王朝實錄/高宗實錄/三十四年 (광무 1년 = 건양 2년/고종 34년) 10월 12일–13일 entries hold the 즉위·국호 조서. Low-medium confidence on the ko title.
+[[text]]
+id = "gojong_jeuguwi_daehan_jo"
+title_ko = "고종 황제 즉위 및 국호 '대한' 반포 조서"
+title_hanja = "高宗實錄 光武元年十月"
+title_en = "Edict on Emperor Gojong's Accession and the Name 'Daehan' (Oct 1897)"
+author_ko = "고종 (실록청 편찬)"
+author_en = "Gojong (Veritable Records bureau)"
+author_dates = "1852–1919"
+date = "1897-10-12 / 10-13 (광무 1년 10월)"
+year = 1897
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep only the 광무 1년 10월 12일–13일 entries: the 환구단 accession rite, the 즉위 조서 and the proclamation of 국호 '대한'; about 2-4k characters."
+source = "wikisource-zh"
+source_title = "朝鮮王朝實錄/高宗實錄/三十四年/十月"
+alt_titles = ["朝鮮王朝實錄/高宗實錄/卷三十六", "朝鮮王朝實錄/高宗太皇帝實錄/三十四年", "高宗實錄/三十四年", "고종실록 광무 1년 10월"]
+sections = ["十月"]
+search = ["고종실록 광무 1년 10월 즉위 조서", "高宗實錄 光武 十月 國號 大韓", "大韓 國號 皇帝 即位 詔 1897", "대한제국 건국 조서"]
+pd_basis = "Official state document (imperial edict; Copyright Act art. 7); Gojong also died 1919."
+uncertain = ["source_title", "sections", "date", "search"]
+
+# resource: law text, likely on ko.wikisource as 대한제국 칙령 제41호 or 칙령 제41호; also in 관보 제1716호 (1900-10-27)
+[[text]]
+id = "chikryeong_41ho_uldo"
+title_ko = "대한제국 칙령 제41호 「울릉도를 울도로 개칭하고 도감을 군수로 개정한 건」"
+title_hanja = "鬱陵島를 鬱島로 改稱하고 島監을 郡守로 改正한 件"
+title_en = "Imperial Ordinance No. 41: Renaming Ulleungdo as Uldo and Upgrading the Magistrate (1900)"
+author_ko = "대한제국 (고종)"
+author_en = "Korean Empire (Emperor Gojong)"
+author_dates = ""
+date = "1900-10-25 (published in 관보 1900-10-27)"
+year = 1900
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "칙령 제41호"
+alt_titles = ["대한제국 칙령 제41호", "대한제국 칙령 제41호 울릉도를 울도로 개칭하고 도감을 군수로 개정한 건", "울릉도를 울도로 개칭하고 도감을 군수로 개정한 건", "鬱陵島를 鬱島로 改稱하고 島監을 郡守로 改正한 件", "칙령 제41호 (1900)"]
+search = ["칙령 제41호 울도군", "울릉도를 울도로 개칭", "鬱島郡 勅令 第四十一號", "대한제국 칙령 울도군수 석도"]
+pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
+uncertain = ["source_title", "title_ko", "search", "script"]
+
+# resource: LOW-MEDIUM; text was printed in 대한매일신보 1907-01-16 (English in London Daily Mail / Korea Review); ko page may be titled 고종의 친서 / 을사조약 무효 선언 친서 or exist only as a news clipping
+[[text]]
+id = "gojong_chinseo_eulsa_muhyo"
+title_ko = "고종 친서 (을사조약 무효 선언)"
+title_en = "Gojong's Personal Letter Declaring the 1905 Treaty Invalid (dated 1906; published Jan 1907)"
+author_ko = "고종"
+author_en = "Emperor Gojong"
+author_dates = "1852–1919"
+date = "Letter dated 1906-06 (to the Daily Mail / Western heads of state); published in 대한매일신보 1907-01"
+year = 1906
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "treaties"
+script = "mixed"
+excerpt = false
+note = "Dating is debated: the letter is dated 1906 but reached the press in Jan 1907, and its transmission route is still discussed. Pair with the 헤이그 특사 credential."
+source = "wikisource-ko"
+source_title = "고종의 친서"
+alt_titles = ["고종 친서", "고종황제 친서", "을사조약 무효 선언 친서", "대한매일신보/1907년 1월 16일", "고종의 을사조약 무효 선언"]
+search = ["고종 친서 을사조약 무효", "고종황제 친서 대한매일신보 1907", "짐은 총칼의 위협과 강요로 조약", "朕이 總劍의 威脅과 强要로"]
+pd_basis = "Author died 1919; Korean term (life+50) expired 1969, so the original is in the public domain. Official state letter (art. 7) as well."
+uncertain = ["date", "year", "source_title", "title_ko", "search"]
+
+# resource: ko.wikisource may hold 대한제국 애국가 (lyrics, 1902, music Franz Eckert); lyrics' author is uncertain (민영환 traditionally); the 1902 score is by Eckert (d. 1916)
+[[text]]
+id = "daehanjeguk_aegukga"
+title_ko = "대한제국 애국가"
+title_en = "Patriotic Song of the Korean Empire (1902)"
+author_ko = "작자 미상 (곡: 프란츠 에케르트)"
+author_en = "Lyricist uncertain (music: Franz Eckert, 1852–1916)"
+author_dates = ""
+date = "1902-08-15 (official adoption of the Eckert-composed anthem)"
+year = 1902
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "verse"
+script = "mixed"
+excerpt = false
+note = "Not the later 애국가 sung to Auld Lang Syne. Lyrics: 상제는 우리 황제를 도우소서. The lyricist is uncertain; the melody's composer Eckert died 1916 (the text alone is read here)."
+source = "wikisource-ko"
+source_title = "대한제국 애국가"
+alt_titles = ["대한제국애국가", "대한제국 국가", "대한제국의 애국가", "大韓帝國愛國歌", "애국가 (대한제국)"]
+search = ["대한제국 애국가", "상제는 우리 황제를 도우소서", "대한제국 국가 에케르트", "大韓帝國 愛國歌 1902"]
+pd_basis = "Lyricist unknown/state anthem adopted by the Empire (art. 7 official symbol); any identified contributor died before 1963 (Eckert 1916, 민영환 1905)."
+uncertain = ["author", "author_dates", "source_title", "date", "search", "pd_basis"]
+
+# resource: likely exists under 민영환 or 민영환/유서; the famous Korean-language 경고 대한 이천만 동포 유서 plus letters to the British/French/US/German envoys (hanmun)
+[[text]]
+id = "min_yeonghwan_yuseo"
+title_ko = "민영환 유서 (경고 대한 이천만 동포)"
+title_hanja = "警告大韓二千萬同胞遺書"
+title_en = "Min Yeong-hwan's Testament: To the Twenty Million Compatriots of Korea (1905)"
+author_ko = "민영환"
+author_en = "Min Yeong-hwan"
+author_dates = "1861–1905"
+date = "1905-11-30 (written before his suicide)"
+year = 1905
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "mixed"
+excerpt = false
+note = "Includes the letters to the foreign envoys only if they sit on the same page; otherwise the compatriots' testament alone."
+source = "wikisource-ko"
+source_title = "민영환 유서"
+alt_titles = ["경고 대한 이천만 동포 유서", "경고 한국 이천만 동포", "민영환의 유서", "閔泳煥 遺書", "民泳煥 遺書", "민영환/유서"]
+search = ["민영환 유서", "경고 대한 이천만 동포", "鳴呼 國恥民辱 乃至於此 閔泳煥", "민영환 유서 이천만 동포 각국 공사"]
+pd_basis = "Author died 1905; Korean term (life+50) expired 1955, before the 2013 extension, so the work is in the public domain."
+uncertain = ["source_title", "title_ko", "search", "script"]
+
+# resource: 포고팔도사민 (1906, Taein uprising proclamation) is the better-known call; 창의토적소 is the longer memorial; take 포고팔도사민. zh/ko Wikisource may hold it under 면암집 or 최익현
+[[text]]
+id = "choe_ikhyeon_pogo_paldo"
+title_ko = "포고팔도사민 (최익현 의병 격문)"
+title_hanja = "布告八道士民"
+title_en = "Proclamation to the Scholars and People of the Eight Provinces (Choe Ik-hyeon, 1906)"
+author_ko = "최익현"
+author_en = "Choe Ik-hyeon"
+author_dates = "1833–1907"
+date = "1906-06 (Taein uprising)"
+year = 1906
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "hanmun"
+excerpt = false
+note = "The longer 창의토적소 (memorial raising the righteous army) is the alternative if this page is missing."
+source = "wikisource-ko"
+source_title = "포고팔도사민"
+alt_titles = ["布告八道士民", "최익현/포고팔도사민", "창의토적소", "倡義討賊疏", "면암집/포고팔도사민", "勉菴集/布告八道士民"]
+search = ["포고팔도사민", "布告八道士民 崔益鉉", "최익현 의병 격문 1906", "창의토적소 최익현"]
+pd_basis = "Author died 1907; Korean term (life+50) expired 1957, before the 2013 extension, so the work is in the public domain."
+uncertain = ["source_title", "title_ko", "search", "script"]
+
+# resource: LOW-MEDIUM; 매천집 (梅泉集) poems on zh/ko Wikisource; 絶命詩 four poems (Sept 1910), probably under 絶命詩 or 매천집
+[[text]]
+id = "hwang_hyeon_jeolmyeongsi"
+title_ko = "절명시"
+title_hanja = "絶命詩"
+title_en = "Poems of Farewell to Life (Hwang Hyeon, 1910)"
+author_ko = "황현"
+author_en = "Hwang Hyeon"
+author_dates = "1855–1910"
+date = "1910-09 (before his suicide after the annexation)"
+year = 1910
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "verse"
+script = "hanmun"
+excerpt = false
+note = "Four poems (絶命詩 四首); dated 1910 but shelved in the Empire period because they mourn its end."
+source = "wikisource-ko"
+source_title = "절명시"
+alt_titles = ["絶命詩", "절명시 (황현)", "황현/절명시", "梅泉集/絶命詩", "매천집/절명시"]
+search = ["절명시 황현", "絶命詩 黃玹", "鳥獸哀鳴海岳嚬", "亂離滾到白頭年", "매천 절명시 4수"]
+pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the work is in the public domain."
+uncertain = ["source_title", "title_ko", "search", "script"]
+
+# resource: LOW-MEDIUM; original is hanmun (Ahn wrote it in prison); ko page may be a Korean rendering by others (not PD), so prefer a hanmun original 安應七歷史 (zh)
+[[text]]
+id = "anjunggeun_aneungchil_yeoksa"
+title_ko = "안응칠 역사"
+title_hanja = "安應七歷史"
+title_en = "The History of An Eungchil (An Jung-geun's autobiography, 1910)"
+author_ko = "안중근"
+author_en = "An Jung-geun"
+author_dates = "1879–1910"
+date = "1910-03 (written in Lushun prison; finished before his execution on 1910-03-26)"
+year = 1910
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "documents"
+script = "hanmun"
+excerpt = true
+excerpt_note = "Keep the passages on his motives (leaving for the Maritime Province, the righteous-army years) and the Harbin shooting of 이토 히로부미 (1909-10-26), plus the court-examination and trial passages; about 8-10k characters."
+source = "wikisource-ko"
+source_title = "안응칠 역사"
+alt_titles = ["安應七歷史", "안응칠역사", "안중근/안응칠 역사", "안중근 자서전", "安重根自傳"]
+search = ["안응칠 역사", "安應七歷史", "안응칠 역사 안중근 하얼빈", "안중근 자서전 옥중"]
+pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the original is in the public domain. A modern Korean translation, if that is the only page, is not."
+uncertain = ["source_title", "script", "sections", "search", "pd_basis"]
+
+# resource: LOW-MEDIUM; 대한자강회월보 제1호 (1906-07) 취지서; probably titled 대한자강회 취지서 or 대한자강회취지서
+[[text]]
+id = "daehan_jagang_hoe_chwiji"
+title_ko = "대한자강회 취지서"
+title_hanja = "大韓自强會趣旨書"
+title_en = "Prospectus of the Korean Self-Strengthening Society (1906)"
+author_ko = "대한자강회 (윤효정 등)"
+author_en = "Korean Self-Strengthening Society (Yun Hyojeong et al.)"
+author_dates = ""
+date = "1906-04 (society founded 1906-04-14; prospectus in 월보 제1호, 1906-07)"
+year = 1906
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "mixed"
+excerpt = false
+note = "Collective authorship; the draftsman (often given as 장지연 or 윤효정) is uncertain."
+source = "wikisource-ko"
+source_title = "대한자강회 취지서"
+alt_titles = ["대한자강회취지서", "大韓自强會趣旨書", "大韓自强會 趣旨書", "대한자강회월보/취지서", "대한자강회 월보 제1호"]
+search = ["대한자강회 취지서", "大韓自强會 趣旨書", "대한자강회월보 제1호", "自强의 術 教育 殖産"]
+pd_basis = "Collective society statement of 1906; all plausible drafters died before 1963 (장지연 1921, 윤효정 1929)."
+uncertain = ["author", "author_dates", "source_title", "date", "search", "pd_basis"]
+
+# resource: LOW; 신민회 취지서 (1907) was a secret society's prospectus, often cited in 한국독립운동사 and not widely transcribed; try 신민회 and 신민회 취지서
+[[text]]
+id = "sinminhoe_chwiji"
+title_ko = "신민회 취지서"
+title_hanja = "新民會趣旨書"
+title_en = "Prospectus of the New People's Association (Sinminhoe, 1907)"
+author_ko = "신민회 (안창호·양기탁 등)"
+author_en = "Sinminhoe (circle of Ahn Changho and Yang Gi-tak)"
+author_dates = ""
+date = "1907 (society founded April 1907)"
+year = 1907
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "mixed"
+excerpt = false
+note = "Collective authorship, attributed to the Ahn Changho / Yang Gi-tak circle; the original was a secret document and the surviving text derives from later 신민회 records."
+source = "wikisource-ko"
+source_title = "신민회 취지서"
+alt_titles = ["신민회취지서", "新民會 趣旨書", "신민회 통용장정", "신민회 (취지서)", "대한신민회 취지서"]
+search = ["신민회 취지서", "新民會 趣旨書", "신민회 창립 취지 1907", "신민회 안창호 양기탁 취지"]
+pd_basis = "Collective 1907 statement; the attributed drafters died before 1963 (안창호 1938, 양기탁 1938)."
+uncertain = ["author", "author_dates", "source_title", "date", "search", "pd_basis"]
+
+# resource: likely exists as 유교구신론; originally in 서북학회월보 (1909-08) in mixed script
+[[text]]
+id = "bak_eunsik_yugyo_gusinron"
+title_ko = "유교구신론"
+title_hanja = "儒敎求新論"
+title_en = "On the Need to Renew Confucianism (Bak Eun-sik, 1909)"
+author_ko = "박은식"
+author_en = "Bak Eun-sik"
+author_dates = "1859–1925"
+date = "1909-03 (serialised in 서북학회월보)"
+year = 1909
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "mixed"
+excerpt = false
+source = "wikisource-ko"
+source_title = "유교구신론"
+alt_titles = ["儒敎求新論", "유교 구신론", "박은식/유교구신론", "서북학회월보/유교구신론"]
+search = ["유교구신론", "儒敎求新論 朴殷植", "박은식 유교구신론", "유교구신론 서북학회월보"]
+pd_basis = "Author died 1925; Korean term (life+50) expired 1975, before the 2013 extension, so the work is in the public domain."
+uncertain = ["date", "source_title", "search"]
+
+# resource: likely exists; serial in 대한매일신보 1908-08-27 to 12-13; 서론 plus 총론 and first sections
+[[text]]
+id = "sin_chaeho_doksa_sinron"
+title_ko = "독사신론"
+title_hanja = "讀史新論"
+title_en = "A New Reading of History (Sin Chae-ho, 1908)"
+author_ko = "신채호"
+author_en = "Sin Chae-ho"
+author_dates = "1880–1936"
+date = "1908-08/12 (serialised in 대한매일신보)"
+year = 1908
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "mixed"
+excerpt = true
+excerpt_note = "Keep the 서론 (introduction on how history should be written, the nation as subject) and the first sections (총론 and the opening of 단군 and 부여 narrative); about 5-8k characters."
+source = "wikisource-ko"
+source_title = "독사신론"
+alt_titles = ["讀史新論", "신채호/독사신론", "독사 신론", "대한매일신보/독사신론"]
+search = ["독사신론", "讀史新論 申采浩", "신채호 독사신론 서론", "독사신론 대한매일신보 1908"]
+pd_basis = "Author died 1936; Korean term (life+50) expired 1986, before the 2013 extension, so the work is in the public domain."
+uncertain = ["date", "source_title", "sections", "search"]
+
+# resource: LOW-MEDIUM; 황성신문 창간호 (1898-09-05) 논설/창간사; maybe under 황성신문/창간사 or 황성신문 1898년 9월 5일
+[[text]]
+id = "hwangseong_sinmun_changgansa"
+title_ko = "황성신문 창간사"
+title_hanja = "皇城新聞創刊辭"
+title_en = "Founding Editorial of the Hwangseong sinmun (1898)"
+author_ko = "남궁억"
+author_en = "Namgung Eok"
+author_dates = "1863–1939"
+date = "1898-09-05"
+year = 1898
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "mixed"
+excerpt = false
+note = "Authorship by Namgung Eok (the first publisher) is traditional; the unsigned editorial may be collective."
+source = "wikisource-ko"
+source_title = "황성신문 창간사"
+alt_titles = ["皇城新聞 創刊辭", "황성신문/창간사", "황성신문 1898년 9월 5일", "황성신문 창간호 논설", "皇城新聞 第1號"]
+search = ["황성신문 창간사", "皇城新聞 創刊辭", "황성신문 창간호 논설 1898", "남궁억 황성신문 창간"]
+pd_basis = "Author died 1939; Korean term (life+50) expired 1989, before the 2013 extension, so the work is in the public domain."
+uncertain = ["author", "date", "source_title", "search"]
+
+# resource: LOW-MEDIUM; 제국신문 창간호 (1898-08-10), pure-hangul daily; may be titled 제국신문 창간사 or 데국신문 (original spelling)
+[[text]]
+id = "jeguk_sinmun_changgansa"
+title_ko = "제국신문 창간사"
+title_en = "Founding Editorial of the Jeguk sinmun (1898)"
+author_ko = "이종일"
+author_en = "Yi Jong-il"
+author_dates = "1858–1925"
+date = "1898-08-10"
+year = 1898
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "hangul"
+excerpt = false
+note = "Written in pure hangul for women and commoners; the paper was first titled 뎨국신문."
+source = "wikisource-ko"
+source_title = "제국신문 창간사"
+alt_titles = ["뎨국신문 창간사", "제국신문/창간사", "제국신문 1898년 8월 10일", "뎨국신문 창간호 논설", "帝國新聞 創刊辭"]
+search = ["제국신문 창간사", "뎨국신문 창간사", "이종일 제국신문 창간", "제국신문 창간호 1898"]
+pd_basis = "Author died 1925; Korean term (life+50) expired 1975, before the 2013 extension, so the work is in the public domain."
+uncertain = ["author", "date", "source_title", "search"]
+
+# resource: likely exists as 혈의 누; both the 1906 serial (만세보) and 1907 book
+[[text]]
+id = "hyeorui_nu"
+title_ko = "혈의 누"
+title_hanja = "血의淚"
+title_en = "Tears of Blood (Hyeorui nu, 1906)"
+author_ko = "이인직"
+author_en = "Yi In-jik"
+author_dates = "1862–1916"
+date = "1906-07/10 (만세보 serial); book 1907"
+year = 1906
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep the opening chapters (제1회 to about 제5회: the Pyongyang war scene, Okryeon's separation from her mother, and her rescue by the Japanese colonel); about 6-9k characters."
+note = "Yi In-jik was a pro-Japanese collaborator (he worked on the 1910 annexation, as a secretary of 이완용) and wrote this first 'new novel' in that milieu; its sympathy for the Japanese side is part of the text's context."
+source = "wikisource-ko"
+source_title = "혈의 누"
+alt_titles = ["血의 淚", "혈의누", "血의淚", "이인직/혈의 누", "혈의 누 (이인직)"]
+search = ["혈의 누", "혈의누 이인직", "血의淚 李人稙", "일청전쟁의 총소리 평양성", "옥련 혈의 누"]
+pd_basis = "Author died 1916; Korean term (life+50) expired 1966, before the 2013 extension, so the work is in the public domain."
+uncertain = ["source_title", "sections", "search"]
+
+# resource: likely exists; short work (a few thousand words in ~8 sections), so the full text fits; 1908 Hwangseong sinmun-sa edition
+[[text]]
+id = "geumsu_hoeuirok"
+title_ko = "금수회의록"
+title_hanja = "禽獸會議錄"
+title_en = "Proceedings of the Animals' Assembly (Geumsu hoeuirok, 1908)"
+author_ko = "안국선"
+author_en = "An Guk-seon"
+author_dates = "1878–1926"
+date = "1908-02 (book, 황성서적업조합)"
+year = 1908
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = false
+note = "Short enough to read whole; the prologue and eight animal speeches (까마귀, 여우, 개구리, 벌, 게, 파리, 호랑이, 원앙) satirise human society. The work was banned in 1909."
+source = "wikisource-ko"
+source_title = "금수회의록"
+alt_titles = ["禽獸會議錄", "금수회의록 (안국선)", "안국선/금수회의록", "금수 회의록"]
+search = ["금수회의록", "禽獸會議錄 安國善", "안국선 금수회의록", "인류 반포효 까마귀 연설"]
+pd_basis = "Author died 1926; Korean term (life+50) expired 1976, before the 2013 extension, so the work is in the public domain."
+uncertain = ["source_title", "search"]
+
+# resource: likely exists; 1910 book (광학서포), a four-woman debate; 1910-07 date
+[[text]]
+id = "jayujong"
+title_ko = "자유종"
+title_hanja = "自由鍾"
+title_en = "The Bell of Freedom (Jayujong, 1910)"
+author_ko = "이해조"
+author_en = "Yi Hae-jo"
+author_dates = "1869–1927"
+date = "1910-07 (book, 광학서포)"
+year = 1910
+period = "korean-empire"
+themes = ["colonial-independence"]
+shelf = "modern-fiction"
+script = "hangul"
+excerpt = true
+excerpt_note = "Keep the opening setting (the four women at 이매경's birthday party) and the first speeches on women's education and national self-strengthening; about 6-9k characters."
+note = "A debate novel (토론체 소설) of four women; dated 1910 but shelved in the Empire period. Its form is closer to a dialogue than to narrative."
+source = "wikisource-ko"
+source_title = "자유종"
+alt_titles = ["自由鍾", "자유종 (이해조)", "이해조/자유종", "자유 종"]
+search = ["자유종 이해조", "自由鍾 李海朝", "이매경 신설헌 홍국란 강금운", "자유종 토론체 소설"]
+pd_basis = "Author died 1927; Korean term (life+50) expired 1977, before the 2013 extension, so the work is in the public domain."
+uncertain = ["source_title", "sections", "search"]
