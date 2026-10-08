@@ -486,6 +486,111 @@ fn licence_for(e: &Entry, source: &str) -> String {
 }
 
 /// Keep only the paragraphs under headings whose title equals/contains one of `names`.
+/// One `<pages index="…" from=… to=… fromsection="…" tosection="…" />` transclusion.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Transclusion {
+    pub tag: String,
+    pub index: String,
+    pub from: u32,
+    pub to: u32,
+    pub fromsection: Option<String>,
+    pub tosection: Option<String>,
+}
+
+fn tag_attr(tag: &str, name: &str) -> Option<String> {
+    let lower = tag.to_ascii_lowercase();
+    let mut at = 0;
+    while let Some(i) = lower[at..].find(name).map(|i| i + at) {
+        at = i + name.len();
+        let before_ok = i == 0 || !lower.as_bytes()[i - 1].is_ascii_alphanumeric();
+        let rest = tag[at..].trim_start();
+        if !before_ok || !rest.starts_with('=') {
+            continue;
+        }
+        let v = rest[1..].trim_start();
+        return Some(match v.chars().next() {
+            Some(q @ ('"' | '\'')) => v[1..].split(q).next().unwrap_or("").to_string(),
+            _ => v.split(|c: char| c.is_whitespace() || c == '/' || c == '>').next().unwrap_or("").to_string(),
+        });
+    }
+    None
+}
+
+/// The `<pages …/>` transclusions of a page (ProofreadPage scans), in order.
+pub fn transclusions(content: &str) -> Vec<Transclusion> {
+    let lower = content.to_ascii_lowercase();
+    let mut out = Vec::new();
+    let mut at = 0;
+    while let Some(i) = lower[at..].find("<pages").map(|i| i + at) {
+        let Some(end) = lower[i..].find('>').map(|j| i + j + 1) else { break };
+        at = end;
+        let tag = &content[i..end];
+        let (Some(index), Some(from)) = (tag_attr(tag, "index"), tag_attr(tag, "from").and_then(|v| v.parse().ok())) else { continue };
+        let to = tag_attr(tag, "to").and_then(|v| v.parse().ok()).unwrap_or(from);
+        out.push(Transclusion { tag: tag.to_string(), index, from, to: to.max(from), fromsection: tag_attr(tag, "fromsection"), tosection: tag_attr(tag, "tosection") });
+    }
+    out
+}
+
+/// The part of a scan page between `<section begin="name"/>` and `<section end="name"/>`
+/// (the whole page when the section is not marked).
+pub fn page_section(page: &str, name: &str) -> String {
+    let find = |kind: &str| {
+        let lower = page.to_ascii_lowercase();
+        let mut at = 0;
+        while let Some(i) = lower[at..].find("<section").map(|i| i + at) {
+            let end = lower[i..].find('>').map(|j| i + j + 1).unwrap_or(page.len());
+            at = end;
+            if tag_attr(&page[i..end], kind).as_deref() == Some(name) {
+                return Some((i, end));
+            }
+        }
+        None
+    };
+    match (find("begin"), find("end")) {
+        (Some((_, b)), Some((e, _))) if b <= e => page[b..e].to_string(),
+        (Some((_, b)), None) => page[b..].to_string(),
+        _ => page.to_string(),
+    }
+}
+
+/// Replace `<pages …/>` transclusions with the transcribed text of those scan pages, so pages
+/// that only embed proofread scans (many sijo) yield their text.
+fn expand_pages(wiki: &Wiki, content: &str) -> Result<String> {
+    let tr = transclusions(content);
+    if tr.is_empty() {
+        return Ok(content.to_string());
+    }
+    let mut out = content.to_string();
+    for t in tr {
+        let titles: Vec<String> = (t.from..=t.to.min(t.from + 20)).map(|n| format!("Page:{}/{n}", t.index)).collect();
+        let pages = wiki.get_pages(&titles)?;
+        let last = pages.len().saturating_sub(1);
+        let mut text = String::new();
+        for (k, (_, page)) in pages.iter().enumerate() {
+            let Some(p) = page else { continue };
+            let mut part = p.content.clone();
+            if k == 0 {
+                if let Some(s) = &t.fromsection {
+                    part = page_section(&part, s);
+                }
+            }
+            if k == last && k > 0 {
+                if let Some(s) = &t.tosection {
+                    part = page_section(&part, s);
+                }
+            }
+            text.push_str(&part);
+            text.push('\n');
+        }
+        if text.trim().is_empty() {
+            log::warn!("transclusion {} found no scan text", t.tag);
+        }
+        out = out.replacen(&t.tag, &format!("\n{text}\n"), 1);
+    }
+    Ok(out)
+}
+
 pub fn filter_headings(text: &str, names: &[String]) -> String {
     let mut keep = false;
     let mut out: Vec<&str> = Vec::new();
@@ -529,6 +634,13 @@ fn section_match(main_title: &str, sub: &str, names: &[String]) -> bool {
 
 /// Fetch a resolved page plus its subpages and assemble the raw document.
 fn build_doc(wiki: &Wiki, e: &Entry, title: String, main: Option<Page>, via: &str, max_subpages: usize) -> Result<Outcome> {
+    let main = match main {
+        Some(mut p) => {
+            p.content = expand_pages(wiki, &p.content)?;
+            Some(p)
+        }
+        None => None,
+    };
     let layout = layout_for(e);
     let nospace = e.script == "hanmun";
     let limited = e.excerpt && e.sections.is_empty();
@@ -574,7 +686,7 @@ fn build_doc(wiki: &Wiki, e: &Entry, title: String, main: Option<Page>, via: &st
                 log::warn!("{}: subpage {req} vanished", e.id);
                 continue;
             };
-            let c = wt::clean(&p.content, layout, nospace);
+            let c = wt::clean(&expand_pages(wiki, &p.content)?, layout, nospace);
             if rev == 0 {
                 rev = p.revision_id;
                 ts = p.timestamp.clone();
@@ -625,7 +737,14 @@ fn try_host(http: &dyn Http, cache: Option<&Cache>, host: &str, e: &Entry, max_s
     let wiki = Wiki { http, host: host.to_string(), cache };
     let mut found: Option<(String, Option<Page>)> = None;
     for t in accepted_titles(e) {
-        let main = wiki.get_page(&t)?;
+        let main = match wiki.get_page(&t)? {
+            // scan transclusions first, so a page that only embeds proofread scans is not "empty"
+            Some(mut p) => {
+                p.content = expand_pages(&wiki, &p.content)?;
+                Some(p)
+            }
+            None => None,
+        };
         if main.is_some() || !wiki.subpages(&t)?.is_empty() {
             found = Some((t, main));
             break;

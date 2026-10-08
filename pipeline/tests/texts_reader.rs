@@ -334,7 +334,7 @@ fn versions_page_is_followed_only_with_prefer_edition() {
     assert_eq!((d.page_title.as_str(), d.resolved_via.as_str()), ("홍길동전 (경판 24장본)", "prefer_edition"));
     // classifier unit checks
     assert!(matches!(texts_fetch::classify("토끼전", "", "7자", &[]), texts_fetch::Kind::Index { .. }));
-    assert_eq!(texts_fetch::classify("가시리", "", &"가시리 가시리잇고 나난 바리고 가시리잇고", &[]), texts_fetch::Kind::Normal);
+    assert_eq!(texts_fetch::classify("가시리", "", "가시리 가시리잇고 나난 바리고 가시리잇고", &[]), texts_fetch::Kind::Normal);
 }
 
 #[test]
@@ -662,4 +662,30 @@ fn goryeo_song_ruby_indent_and_licence() {
 fn hangul_reading_subs_are_dropped_hanja_notes_kept() {
     let c = clean("<poem>至<sub>지</sub>匊<sub>국</sub>於<sub>ᄉᆞ</sub>\nᄇᆡ떠라</poem>\n\n===東明王篇<sub>幷序</sub>===\n", Layout::Verse, false);
     assert_eq!(c.text, "至匊於\nᄇᆡ떠라\n\n## 東明王篇幷序");
+}
+
+#[test]
+fn transclusion_attrs_and_sections() {
+    let t = texts_fetch::transclusions(r#"x <pages index="김천택 청구영언 (1728).pdf" from=85 to=85 fromsection="길재" tosection="길재" /> y"#);
+    assert_eq!(t.len(), 1);
+    assert_eq!((t[0].index.as_str(), t[0].from, t[0].to), ("김천택 청구영언 (1728).pdf", 85, 85));
+    assert_eq!(t[0].fromsection.as_deref(), Some("길재"));
+    let page = "앞 시조\n<section begin=\"길재\" />五百年 都邑地를\n匹馬로 도라드니<section end=\"길재\" />\n뒤 시조";
+    assert_eq!(texts_fetch::page_section(page, "길재"), "五百年 都邑地를\n匹馬로 도라드니");
+    assert_eq!(texts_fetch::page_section(page, "없음"), page);
+}
+
+#[test]
+fn scan_only_page_is_filled_from_its_transclusions() {
+    let e = catalog_entry(&entry("hoe", "verse", "wikisource-ko", "회고가", "hangul", &[]));
+    let main = "{{머리말|제목=회고가}}\n=== 청구영언 ===\n<pages index=\"청구영언.pdf\" from=85 to=85 fromsection=\"길재\" tosection=\"길재\" />\n==저작권==\n{{PD-old-100}}\n";
+    let scan = "<noinclude>{{머리}}</noinclude>앞 노래\n<section begin=\"길재\" /><poem>五百年 都邑地를 匹馬로 도라드니\n山川은 依舊ᄒᆞ되 人傑은 간 듸 업다</poem><section end=\"길재\" />\n뒤 노래<noinclude>{{꼬리}}</noinclude>";
+    let http = Mock::new(vec![
+        (allpages_needle("회고가"), empty_allpages()),
+        (titles_needle("Page:청구영언.pdf/85"), pages_json(json!([page("Page:청구영언.pdf/85", 77, scan)]))),
+        (titles_needle("회고가"), pages_json(json!([page("회고가", 10, main)]))),
+    ]);
+    let o = texts_fetch::fetch_entry(&http, &e, 50);
+    let Outcome::Resolved(d) = o else { panic!("not resolved: {o:?} {:?}", http.hits.borrow()) };
+    assert_eq!(d.text, "## 청구영언\n\n五百年 都邑地를 匹馬로 도라드니\n山川은 依舊ᄒᆞ되 人傑은 간 듸 업다");
 }
