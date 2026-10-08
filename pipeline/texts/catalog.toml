@@ -2469,11 +2469,10 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "대한민국 임시헌법"
+source_title = "대한민국임시헌법 (제2호)"
 alt_titles = ["대한민국임시헌법", "대한민국 임시헌법 (1919년)", "대한민국 임시헌법 (제1차 개헌)"]
 search = ["대한민국 임시헌법", "임시헌법 1919", "대한민국임시헌법 1919년"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Promulgated 11 September 1919 by the Provisional Legislative Council."
-uncertain = ["source_title"]
 
 # resource: guess: 건국강령 is likely a standalone page; promulgation date 28 Nov 1941 from memory
 [[text]]
@@ -2491,11 +2490,10 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "대한민국 건국강령"
+source_title = "대한민국 임시정부 건국 강령"
 alt_titles = ["건국강령", "대한민국임시정부 건국강령"]
 search = ["대한민국 건국강령", "건국강령 1941", "임시정부 건국강령"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Promulgated by the Provisional Government in November 1941; drafted by 조소앙 (d. 1958), whose term has also expired."
-uncertain = ["source_title"]
 
 # resource: guess: page title may use spaces or 대일선전포고문
 [[text]]
@@ -2535,11 +2533,10 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "한국광복군 선언문"
+source_title = "한국 광복군 선언문"
 alt_titles = ["광복군 선언문", "한국광복군 총사령부 성립 선언문", "한국광복군선언문"]
 search = ["한국광복군 선언문", "광복군 선언문", "한국광복군 성립 선언", "韓國光復軍宣言"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Proclaimed by the Provisional Government's army headquarters at its founding in Chongqing, 17 Sept 1940; organisational and over 70 years old."
-uncertain = ["source_title"]
 
 # resource: guess: the book likely has a main page with chapter subpages; the 1947 edition is the sourced text
 [[text]]
@@ -2563,7 +2560,7 @@ alt_titles = ["백범일지/하권", "백범일지/상권"]
 sections = ["하권", "상해"]
 search = ["백범일지", "백범 일지", "김구 백범일지"]
 pd_basis = "Author died 1949; Korean term (life+50) expired 1999, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "date"]
+uncertain = ["date", "sections"]
 
 # resource: guess: Wikisource may hold it as 백범일지 appendix 나의 소원 (백범일지/나의 소원)
 [[text]]
@@ -2581,7 +2578,8 @@ shelf = "political-writing"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "나의 소원"
+source_title = "백범일지"
+sections = ["나의 소원"]
 alt_titles = ["백범일지/나의 소원", "나의 소원 (김구)"]
 search = ["나의 소원 김구", "나의소원", "김구 나의 소원"]
 pd_basis = "Author died 1949; Korean term (life+50) expired 1999, before the 2013 extension to life+70, so the work is in the public domain."
@@ -2672,11 +2670,10 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "강보에 싸인 두 병정에게"
+source_title = "윤봉길의 유서"
 alt_titles = ["강보에싸인 두 병정에게", "윤봉길 유서", "강보에 싸인 두 병정에게 (윤봉길)"]
 search = ["강보에 싸인 두 병정에게", "윤봉길 유서", "윤봉길 두 아들에게"]
 pd_basis = "Author died 1932; Korean term (life+50) expired 1982, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: low confidence: probably only a Korean-translation page exists; classical-Chinese original may be absent
 [[text]]
@@ -2740,11 +2737,11 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "조선건국준비위원회 선언"
+source_title = "조선독립의 당위성 외/건준 선언과 강령"
 alt_titles = ["조선건국준비위원회 강령", "건국준비위원회 선언문", "조선건국준비위원회 선언 및 강령"]
 search = ["건국준비위원회 선언", "조선건국준비위원회 강령", "건준 선언 강령 1945"]
 pd_basis = "Anonymous/organisational document of 1945, more than 70 years old; no living author, in the public domain. Issued Aug-Sept 1945 by a committee led by 여운형."
-uncertain = ["source_title", "date"]
+uncertain = ["date"]
 
 # resource: guess: ko Wikisource may hold 서유견문/제4편 and 제5편..; chapter numbering from memory (인민의 권리 in 편4, 정부의 직분 in 편5 or later) needs checking
 [[text]]
@@ -2856,11 +2853,11 @@ shelf = "political-writing"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "조선물산장려회 취지서"
+source_title = "조선물산장려회취지서"
 alt_titles = ["물산장려회 취지서", "조선물산장려회 궐기문", "물산장려 궐기문"]
 search = ["조선물산장려회 취지서", "물산장려회 취지서", "물산장려운동 취지서", "조선물산장려회 궐기문"]
 pd_basis = "Anonymous/organisational document of 1923, more than 70 years old; no living author, in the public domain. Issued by a society whose members cannot be individually identified; if an individual author is later shown to be alive in the last 70 years this needs recheck."
-uncertain = ["source_title", "date"]
+uncertain = ["date"]
 
 # resource: guess: likely exists as one page of the 개벽 text
 [[text]]
@@ -2883,7 +2880,6 @@ source_title = "민족개조론"
 alt_titles = ["민족 개조론", "민족개조론 (이광수)"]
 search = ["민족개조론", "민족 개조론", "이광수 민족개조론"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: guess: yearly/volume page scheme for 純宗實錄 differs from the Joseon sillok (隆熙元年七月); entry text is in 卷1 or 卷2
 [[text]]
@@ -2903,12 +2899,12 @@ script = "hanmun"
 excerpt = false
 note = "Keep only the 7월 31일 (陽曆) entry containing the edict on reducing/disbanding the army; sections to be pinned after discover."
 source = "wikisource-zh"
-source_title = "朝鮮王朝實錄/純宗實錄/卷一"
+source_title = "朝鮮王朝實錄/純宗實錄/卽位年"
 alt_titles = ["朝鮮王朝實錄/純宗實錄/隆熙元年", "朝鮮王朝實錄/純宗實錄/卷二", "純宗實錄/隆熙元年"]
-sections = ["七月三十一日", "7月31日"]
+sections = ["7月31日", "8月1日"]
 search = ["군대해산 조칙", "순종실록 융희 원년 7월 31일", "軍隊解散 詔勅", "純宗實錄 軍隊解散"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Imperial edict of 1907, recorded in the Sunjong sillok (compiled under colonial government; itself an official compilation)."
-uncertain = ["source_title", "sections"]
+uncertain = ["sections"]
 
 # resource: guess: Wikisource often has 한일신협약 (정미7조약); the secret memorandum (군대해산 등) may be a separate subpage
 [[text]]
@@ -2931,7 +2927,6 @@ source_title = "한일신협약"
 alt_titles = ["정미7조약", "제3차 한일협약", "한일신협약 (정미7조약)", "정미조약"]
 search = ["한일신협약", "정미7조약", "정미 7조약", "제3차 한일협약", "한일 신협약 비밀각서"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Treaty and annexed memorandum, 1907."
-uncertain = ["source_title"]
 
 # resource: low confidence a Wikisource page exists; possible only inside 매천야록 or a news article. The note is variously reported in Korean mixed script and hanmun, so script is a guess
 [[text]]
@@ -3084,11 +3079,11 @@ script = "mixed"
 excerpt = true
 excerpt_note = "Keep the analysis of the character of the revolution (bourgeois-democratic) and the platform sections; about 8k characters."
 source = "wikisource-ko"
-source_title = "8월 테제"
+source_title = "현 정세와 우리의 임무"
 alt_titles = ["8월테제", "현재 정세와 우리의 임무", "조선공산당 8월 테제"]
 search = ["8월 테제", "팔월 테제", "현재의 정세와 우리의 임무", "박헌영 8월 테제"]
 pd_basis = "Author died 1955; Korean term (life+50) expired 2005, before the 2013 extension to life+70, so the work is in the public domain. Death date given as 1955 (some sources say 1956); either way before 1963."
-uncertain = ["source_title", "author_dates", "date"]
+uncertain = ["author_dates", "date"]
 
 # resource: guess: 동아일보 1925 essay; page likely exists as 浪客의 新年漫筆
 [[text]]
@@ -3106,11 +3101,10 @@ shelf = "political-writing"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "낭객의 신년만필"
+source_title = "낭객의 신년 만필"
 alt_titles = ["浪客의 新年漫筆", "낭객의 신년 만필", "낭객의 新年漫筆"]
 search = ["낭객의 신년만필", "낭객의 新年漫筆", "신채호 낭객의 신년만필", "浪客의 新年漫筆"]
 pd_basis = "Author died 1936; Korean term (life+50) expired 1986, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: guess: zh Wikisource has parts of 與猶堂全書; 田論 may sit in 詩文集 卷十一; ko may have a translation only
 [[text]]
@@ -3156,10 +3150,10 @@ excerpt_note = "Keep only 13th-year entries concerning the Jinju uprising, 안�
 source = "wikisource-zh"
 source_title = "朝鮮王朝實錄/哲宗實錄/十三年"
 alt_titles = ["朝鮮王朝實錄/哲宗實錄/卷十三", "朝鮮王朝實錄/哲宗大王實錄/十三年"]
-sections = ["五月", "閏八月"]
+sections = ["5月", "閏8月"]
 search = ["철종실록 진주 안핵사", "哲宗實錄 十三年 晉州", "朴珪壽 按覈使 狀啓", "임술민란 진주 안핵사 박규수"]
 pd_basis = "Author died 1877; Korean term (life+50) expired 1927, before the 2013 extension to life+70, so the work is in the public domain. Recorded in the Cheoljong sillok, an official compilation."
-uncertain = ["source_title", "sections"]
+uncertain = ["sections"]
 
 # resource: guess: Wikisource ko may have 무장 포고문 (Muzhang). Classical-Chinese original with Korean gloss
 [[text]]
@@ -3247,12 +3241,11 @@ themes = ["joseon"]
 shelf = "documents"
 script = "mixed"
 excerpt = false
-source = "wikisource-ko"
-source_title = "홍범14조"
+source = "wikisource-zh"
+source_title = "洪範十四條"
 alt_titles = ["홍범 14조", "洪範十四條", "홍범십사조"]
 search = ["홍범14조", "홍범 14조", "洪範十四條", "홍범십사조"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Royal oath/charter of January 1895."
-uncertain = ["source_title"]
 
 # resource: guess: Wikisource text may be a newspaper clipping (대한매일신보 1907-02) rather than a standalone page
 [[text]]
@@ -3297,7 +3290,6 @@ source_title = "시일야방성대곡"
 alt_titles = ["是日也放聲大哭", "시일야 방성대곡"]
 search = ["시일야방성대곡", "是日也放聲大哭", "황성신문 시일야방성대곡"]
 pd_basis = "Author died 1921; Korean term (life+50) expired 1971, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: likely exists; Wikisource often has modern-fiction pages in original orthography
 [[text]]
@@ -3319,7 +3311,6 @@ source_title = "술 권하는 사회"
 alt_titles = ["술권하는 사회"]
 search = ["술 권하는 사회", "술권하는 사회", "현진건 술 권하는 사회"]
 pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: likely exists; title spaced either way
 [[text]]
@@ -3341,7 +3332,6 @@ source_title = "레디메이드 인생"
 alt_titles = ["레디메이드인생", "레디·메이드 인생"]
 search = ["레디메이드 인생", "레디메이드인생", "채만식 레디메이드 인생"]
 pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: likely exists; Kim Yu-jeong's stories are widely transcribed
 [[text]]
@@ -3362,7 +3352,6 @@ source = "wikisource-ko"
 source_title = "만무방"
 search = ["만무방", "김유정 만무방"]
 pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
 
 # resource: low confidence on a full text; a serial novel, the page may be partial
 [[text]]
@@ -3385,7 +3374,7 @@ source_title = "인간문제"
 sections = ["제1회", "제10회"]
 search = ["인간문제", "인간 문제 강경애", "강경애 인간문제"]
 pd_basis = "Author died 1944; Korean term (life+50) expired 1994, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
+uncertain = ["sections"]
 
 # resource: guess: ko title could be 강화도 조약 or 조일수호조규; text in classical Chinese
 [[text]]
@@ -3403,12 +3392,11 @@ themes = ["joseon"]
 shelf = "treaties"
 script = "hanmun"
 excerpt = false
-source = "wikisource-ko"
-source_title = "조일수호조규"
+source = "wikisource-zh"
+source_title = "江華島條約"
 alt_titles = ["강화도 조약", "강화도조약", "조일수호조규(강화도조약)", "병자수호조규", "日朝修好條規"]
 search = ["조일수호조규", "강화도조약", "병자수호조약", "日朝修好條規"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title"]
 
 # resource: guess: classical-Chinese text; ko title likely 조미수호통상조약 (조선·미국 수호통상조약)
 [[text]]
@@ -3429,9 +3417,9 @@ excerpt = false
 source = "wikisource-ko"
 source_title = "조미수호통상조약"
 alt_titles = ["조미 수호 통상 조약", "조미수호조약", "朝美修好通商條約", "조미조약"]
+sections = ["원문"]
 search = ["조미수호통상조약", "조미수호조약", "朝美修好通商條約", "Shufeldt treaty 1882"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title"]
 
 # resource: guess: classical-Chinese text; may only exist on zh Wikisource as 朝鮮國水陸貿易章程
 [[text]]
@@ -3449,12 +3437,11 @@ themes = ["joseon"]
 shelf = "treaties"
 script = "hanmun"
 excerpt = false
-source = "wikisource-ko"
-source_title = "조청상민수륙무역장정"
+source = "wikisource-zh"
+source_title = "中朝商民水陸貿易章程"
 alt_titles = ["조청 상민 수륙 무역 장정", "朝淸商民水陸貿易章程", "朝鮮商民水陸貿易章程", "中朝商民水陸貿易章程"]
 search = ["조청상민수륙무역장정", "朝淸商民水陸貿易章程", "수륙무역장정 1882"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title"]
 
 # resource: low confidence on exact sections: the 고종실록 31년 (1894) entries on 동학 are 4월–6월 (청병 요청 and 전주 화약 reports); page scheme is 高宗實錄/三十一年 or 卷31
 [[text]]
@@ -3476,10 +3463,10 @@ excerpt_note = "Keep only the 31st-year entries about the Donghak rebel advance,
 source = "wikisource-zh"
 source_title = "朝鮮王朝實錄/高宗實錄/三十一年"
 alt_titles = ["朝鮮王朝實錄/高宗實錄/卷三十一", "朝鮮王朝實錄/高宗太皇帝實錄/三十一年", "高宗實錄/三十一年"]
-sections = ["四月", "五月", "六月"]
+sections = ["4月", "5月"]
 search = ["고종실록 31년 동학 청병", "高宗實錄 三十一年 東學 淸兵", "전주화약 고종실록", "동학 청군 차병 1894"]
 pd_basis = "Official compilation (Veritable Records); the king died 1919 and the text is over 70 years old."
-uncertain = ["source_title", "sections"]
+uncertain = ["sections"]
 
 # resource: likely exists; may be titled 한일의정서 (韓日議定書)
 [[text]]
@@ -3501,7 +3488,6 @@ source_title = "한일의정서"
 alt_titles = ["韓日議定書", "한일 의정서"]
 search = ["한일의정서", "韓日議定書", "1904 한일의정서"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title"]
 
 # resource: likely exists; names vary: 제2차 한일협약 / 한일협상조약 / 을사늑약
 [[text]]
@@ -3520,11 +3506,11 @@ shelf = "treaties"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "을사조약"
+source_title = "제2차 한일협약"
 alt_titles = ["제2차 한일협약", "한일협상조약", "을사늑약", "을사보호조약", "乙巳條約"]
+sections = ["한국어"]
 search = ["을사조약", "제2차 한일협약", "을사늑약", "한일협상조약"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title"]
 
 # resource: low confidence a Wikisource page exists; the document may be only a scanned image (nominal credential) plus Korean/English translation by others, which is not PD
 [[text]]
