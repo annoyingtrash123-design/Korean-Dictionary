@@ -106,6 +106,20 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .link.danger, .btn.danger { color: var(--danger); }
 
 .notice { margin: 8px 16px 4px; padding: 10px 12px; border-radius: 10px; background: var(--accent-soft); font-size: 14.5px; }
+.enko { margin: 8px 16px 4px; padding: 10px 12px 8px; border-radius: 10px; background: var(--surface-2); }
+.enko-h { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 0 0 6px; font-size: 15px; font-weight: 650; }
+.enko-src { font-size: 11.5px; font-weight: 400; color: var(--muted); white-space: nowrap; }
+.enko-list { margin: 0; padding: 0; }
+.enko-row { display: grid; grid-template-columns: 2.6em minmax(0, 1fr); gap: 0 6px; align-items: baseline; padding: 5px 0; font-size: 14.5px; line-height: 1.35; }
+.enko-prow { grid-template-columns: minmax(0, 1fr); }
+.enko-row + .enko-row { border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent); }
+.enko-body { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; min-width: 0; }
+.enko-sense { flex: 1 1 9em; font-size: 13.5px; overflow-wrap: anywhere; }
+.enko-term { flex: 1 1 9em; overflow-wrap: anywhere; }
+.enko-words { flex: 1 1 6em; }
+.enko-words a { text-decoration: none; }
+.enko-words a:hover, .enko-words a:focus-visible { text-decoration: underline; }
+.enko-more { margin-top: 6px; }
 .banner { display: block; margin: 8px 16px; padding: 10px 14px; border-radius: 12px; background: var(--accent); color: var(--on-accent); font-size: 14px; }
 .banner strong { display: block; }
 .empty { padding: 48px 24px; text-align: center; }

@@ -9,6 +9,7 @@ import { useStore } from '../lib/store';
 import { normHeadword } from '../lib/search-mode';
 import type { SearchResult } from '../lib/types';
 import { Empty, GroupRow } from '../components/common';
+import { EnKoPhrases, EnKoTranslations } from '../components/EnKo';
 import { entryPath, hanjaPath, href, useRoute, withoutTab, wordPath } from '../lib/router';
 
 const cache = new Lru<SearchResult>(40);
@@ -65,7 +66,7 @@ export function Results({ q }: { q: string }) {
     // once the first screenful is painted (by then its pages are cached).
     const done = (r: SearchResult, final: boolean) => {
       if (!live || r.rows === undefined) return;
-      if (final && (r.rows.length || r.mode !== 'english' || r.hanja)) cache.set(ck(q), r);
+      if (final && (r.rows.length || r.mode !== 'english' || r.hanja || r.translations || r.phrases)) cache.set(ck(q), r);
       setRes(r); setErr(undefined); setBusy(false);
     };
     const fail = (e: any) => { if (live) { setErr(String(e?.message ?? e)); setBusy(false); } };
@@ -112,6 +113,7 @@ export function Results({ q }: { q: string }) {
           </div>
         </a>
       ))}
+      {shown?.translations?.length ? <EnKoTranslations senses={shown.translations} /> : null}
       {deconjGroups.length > 0 && (
         <div class="notice">
           Did you mean:{' '}
@@ -120,7 +122,7 @@ export function Results({ q }: { q: string }) {
           ))}
         </div>
       )}
-      {!busy && groups.length === 0 && !shown?.hanja?.length && (
+      {!busy && groups.length === 0 && !shown?.hanja?.length && !shown?.translations?.length && !shown?.phrases?.length && (
         <Empty title={`No results for “${q}”`}>Try another spelling, the dictionary form, or an English word.</Empty>
       )}
       {(() => {
@@ -136,6 +138,7 @@ export function Results({ q }: { q: string }) {
           </section>
         ));
       })()}
+      {shown?.phrases?.length ? <EnKoPhrases key={res?.q} phrases={shown.phrases} /> : null}
     </div>
   );
 }

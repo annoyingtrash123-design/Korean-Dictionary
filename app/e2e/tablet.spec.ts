@@ -1,10 +1,18 @@
 import { downloadAll, expect, test, type Page } from './fixtures';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const SHOTS = join(process.cwd(), '..', 'docs', 'screenshots');
 mkdirSync(SHOTS, { recursive: true });
 const shot = (page: Page, name: string) => page.screenshot({ path: join(SHOTS, `tablet-${name}.png`) });
+
+/** The core pack carries Wiktionary translation tables (`en_ko`, optional source). */
+const HAS_EN_KO = (() => {
+  try {
+    const m = JSON.parse(readFileSync(join(process.cwd(), 'public', 'data', 'manifest.json'), 'utf8'));
+    return (m.packs?.find((p: { id: string }) => p.id === 'core')?.counts?.en_ko ?? 0) > 0;
+  } catch { return false; }
+})();
 /** Dict | Words | Chars | Sents: each tab renders for 학교, ?tab= drives Back/Forward, the choice is remembered. */
 async function tabs(page: Page, scope: string, shotPrefix: string, shotFn: (p: Page, n: string) => Promise<unknown>) {
   const root = page.locator(scope);
@@ -70,6 +78,7 @@ test('two-pane tablet layout', async ({ page }) => {
   await search(page, 'report');
   await expect(page.locator('.pane-left .pos-h').first()).toBeVisible();
   await expect(page.locator('.pane-left .pos-h', { hasText: 'Nouns' })).toHaveCount(1);
+  if (HAS_EN_KO) await expect(page.locator('.pane-left').getByRole('region', { name: 'Wiktionary translations' })).toBeVisible();
   await page.waitForTimeout(500);
   await shot(page, 'light-results-report');
 

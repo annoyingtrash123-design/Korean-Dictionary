@@ -43,6 +43,16 @@ licensed separately.
 * Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
   https://creativecommons.org/licenses/by-sa/4.0/ and the GNU Free Documentation License.
 
+## Wiktionary English → Korean translations (via kaikki.org)
+* Content used: the Korean entries of the translation tables of English Wiktionary entries
+  (English term, part of speech, sense label, Korean word, romanisation), shown for English
+  searches as "Wiktionary translations" and "English phrases" (`en_ko` table of `core.sqlite`).
+  Hanja in brackets, non-Hangul items and "translations to be checked" are left out.
+* Source: English Wiktionary contributors; machine-readable extraction by
+  Tatu Ylonen's wiktextract (https://kaikki.org/dictionary/English/).
+* Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
+  https://creativecommons.org/licenses/by-sa/4.0/ and the GNU Free Documentation License.
+
 ## kengdic
 * Author: Charles Muller / Garfield Nate (https://github.com/garfieldnate/kengdic),
   derived from the EZ-Corean / Korean-English dictionary data.

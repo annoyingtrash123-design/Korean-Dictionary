@@ -1,10 +1,18 @@
 import { downloadAll, expect, test, type Page } from './fixtures';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const SHOTS = join(process.cwd(), '..', 'docs', 'screenshots');
 mkdirSync(SHOTS, { recursive: true });
 const shot = (page: Page, name: string) => page.screenshot({ path: join(SHOTS, name + '.png') });
+
+/** The core pack carries Wiktionary translation tables (`en_ko`, optional source). */
+const HAS_EN_KO = (() => {
+  try {
+    const m = JSON.parse(readFileSync(join(process.cwd(), 'public', 'data', 'manifest.json'), 'utf8'));
+    return (m.packs?.find((p: { id: string }) => p.id === 'core')?.counts?.en_ko ?? 0) > 0;
+  } catch { return false; }
+})();
 const search = async (page: Page, q: string) => {
   await page.getByRole('searchbox', { name: 'Search' }).fill(q);
   await page.waitForURL((u) => u.hash.includes('q=') && decodeURIComponent(u.hash).includes(q));
@@ -64,6 +72,21 @@ async function tour(page: Page, theme: 'light' | 'dark') {
   await expect(page.locator('.row .hw').first()).toBeVisible();
   await expect(page.locator('.pos-h', { hasText: 'Verbs' })).toHaveCount(1);
   await shot(page, `${theme}-results-eat`);
+  // English search: Wiktionary translations block on top, phrases (collapsible) below the rows
+  await search(page, 'report');
+  await expect(page.locator('.row .hw').first()).toBeVisible();
+  if (HAS_EN_KO) {
+    await expect(page.getByRole('region', { name: 'Wiktionary translations' })).toBeVisible();
+    await expect(page.locator('.enko .enko-words a').first()).toBeVisible();
+    await page.waitForTimeout(300);
+    await shot(page, `${theme}-results-report`);
+    const phrases = page.getByRole('region', { name: 'English phrases', exact: true });
+    if (await phrases.count()) {
+      await phrases.scrollIntoViewIfNeeded();
+      await page.waitForTimeout(200);
+      await shot(page, `${theme}-results-report-phrases`);
+    }
+  }
   await search(page, '먹다');
   await page.locator('.row', { hasText: '먹다' }).first().click();
   await expect(page.locator('h1')).toContainText('먹다');
