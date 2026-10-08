@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T19:40:01Z",
+  "generated_at": "2026-10-08T19:45:43Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -1298,18 +1298,6 @@
       "needs_sections": false
     },
     {
-      "id": "geonguk_gangnyeong",
-      "source": "wikisource-ko",
-      "page_title": "대한민국 임시정부 건국 강령",
-      "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%9E%84%EC%8B%9C%EC%A0%95%EB%B6%80_%EA%B1%B4%EA%B5%AD_%EA%B0%95%EB%A0%B9",
-      "revision_id": 368329,
-      "chars": 3512,
-      "subpages": 0,
-      "resolved_via": "title",
-      "truncated": false,
-      "needs_sections": false
-    },
-    {
       "id": "gwangbokgun_seoneon",
       "source": "wikisource-ko",
       "page_title": "한국 광복군 선언문",
@@ -1570,6 +1558,78 @@
       "chars": 712,
       "subpages": 0,
       "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "geonguk_gangnyeong",
+      "source": "history-db",
+      "page_title": "kd_002_0010_0010_0110",
+      "url": "https://db.history.go.kr/diachronic/level.do?levelId=kd_002_0010_0010_0110",
+      "revision_id": 0,
+      "chars": 4754,
+      "subpages": 0,
+      "resolved_via": "level_ids",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "daeil_seonjeon",
+      "source": "history-db",
+      "page_title": "kd_002_0020_0010_0050",
+      "url": "https://db.history.go.kr/diachronic/level.do?levelId=kd_002_0020_0010_0050",
+      "revision_id": 0,
+      "chars": 318,
+      "subpages": 0,
+      "resolved_via": "level_ids",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "seoyu_gyeonmun_minkwon",
+      "source": "history-db",
+      "page_title": "ykc_001_0070_0010",
+      "url": "https://db.history.go.kr/diachronic/level.do?levelId=ykc_001_0070_0010",
+      "revision_id": 0,
+      "chars": 9677,
+      "subpages": 0,
+      "resolved_via": "level_ids",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "maecheon_yarok_gundae_haesan",
+      "source": "history-db",
+      "page_title": "sa_001_0050_0090_0260, sa_001_0050_0090_0270, sa_001_0050_0090_0280, sa_001_0050_0090_0290, sa_001_0050_0090_0300",
+      "url": "https://db.history.go.kr/diachronic/level.do?levelId=sa_001_0050_0090_0260",
+      "revision_id": 0,
+      "chars": 1185,
+      "subpages": 0,
+      "resolved_via": "level_ids",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "donghak_mujang_pogomun",
+      "source": "history-db",
+      "page_title": "prd_002_0030_0060",
+      "url": "https://db.history.go.kr/diachronic/level.do?levelId=prd_002_0030_0060",
+      "revision_id": 0,
+      "chars": 1981,
+      "subpages": 0,
+      "resolved_via": "level_ids",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "donghak_pyejeong_gaehyeok_12jo",
+      "source": "history-db",
+      "page_title": "prd_002_0030_0110",
+      "url": "https://db.history.go.kr/diachronic/level.do?levelId=prd_002_0030_0110",
+      "revision_id": 0,
+      "chars": 505,
+      "subpages": 0,
+      "resolved_via": "level_ids",
       "truncated": false,
       "needs_sections": false
     }
