@@ -1,0 +1,286 @@
+{
+  "id": "eobusasiga",
+  "card": {
+    "summary_ko": "윤선도가 1651년 보길도에서 지은 연시조로, 봄·여름·가을·겨울 각 10수, 모두 40수로 어부의 하루와 사계절의 흥취를 노래한다.",
+    "summary_en": "A cycle of forty sijo that Yun Seon-do composed in 1651 on Bogil Island, ten each for spring, summer, autumn and winter, singing a fisherman's day and the pleasures of the four seasons.",
+    "level": "classical",
+    "edition_ko": "한국어 위키문헌 「어부사시사」(개정 460039), CC BY-SA 4.0. 춘·하·추·동 40수 전체(발췌 아님).",
+    "edition_en": "Korean Wikisource, \"어부사시사\" (revision 460039), CC BY-SA 4.0. All 40 poems, spring through winter (not an excerpt)."
+  },
+  "notes": {
+    "ko": "**배경.** 〈어부사시사〉는 윤선도(尹善道, 1587–1671)가 1651년(효종 2년) 전라남도 보길도 부용동에서 지은 연시조로 전한다. 『고산유고』에 실려 있으며, 이현보(李賢輔)가 고려 이래의 〈어부가〉를 고쳐 엮은 〈어부사〉를 윤선도가 다시 손질해 새로 지은 작품이라고 설명된다. 춘·하·추·동 각 10수, 모두 40수다.\n\n**의의.** 조선 시대 강호 시가(江湖詩歌)의 대표작으로 꼽히며, 사계절의 어촌 생활을 하루의 흐름(배를 띄움에서 배를 댐까지)에 겹쳐 놓은 짜임이 돋보인다. 고유어로 자연을 그려 낸 점도 자주 언급된다.\n\n**형식과 주제.** 한 수는 초장·중장·종장의 시조 형식에 두 개의 여음(후렴)이 끼어든 5행 구성이다. 첫 여음은 배를 부리는 호령이며, 두 번째 여음은 노 젓는 소리를 흉내 낸 것으로 풀이된다. 이 판본에서는 40수가 모두 실려 있다(원문 4개 제목 + 시 39단락; 겨울 5·6수는 한 단락으로 묶여 있음). 주제는 속세를 벗어난 어부의 한가로운 흥취, 은일, 그리고 고사(故事)를 끌어 쓴 세상에 대한 거리두기다.\n\n**읽기 도움.**\n- **배 떠라 → 닻 들어라 → 돛 달아라 → 이어라 → 돛 내려라 → 배 세워라 → 배 매어라 → 닻 내려라 → 배 붙여라**: 각 수 둘째 줄의 호령. 순서는 계절마다 같다(원문 ᄇᆡ떠라, 닫드러라, 돋드라라, 이어라, 돋디여라, ᄇᆡ셰여라, ᄇᆡᄆᆡ여라, 닫디여라, ᄇᆡ브텨라). 닫=닻, 돋=돛.\n- **지국총 지국총 어사와**: 넷째 줄 여음. 至匊悤(지국총)은 한자 표기이나 뜻보다 소리가 중요한 의성어로 읽는다.\n- **ㆍ(아래아)**: 'ᄒᆞ다, ᄂᆞᆫ, ᄀᆞᆯ며기'처럼 쓰이며 현대어에서는 주로 ㅏ 또는 ㅡ로 나타난다(ᄒᆞ다 → 하다).\n- **됴타, 디다, 믈**: 좋다, 지다, 물. 구개음화 이전의 ㄷ·ㅌ 표기.\n- **낟믈 / 밤믈**: 낮물(밀물) / 밤물(썰물) 정도로 풀이된다.\n- **어엿브다**: 옛말에서는 '불쌍하다'와 '예쁘다'가 겹치는 말.\n- 한자 뒤의 작은 한글은 한자음 병기이며, 띄어쓰기가 없다.\n",
+    "en": "**Background.** *Eobu sasi-sa* (\"Fisherman's Calendar of the Four Seasons\") is a sijo cycle that Yun Seon-do (1587-1671) is recorded as composing in 1651 (the 2nd year of King Hyojong) at Buyong-dong on Bogil Island, in South Jeolla. It is included in his collected works, *Gosan yugo*, and is described as a fresh reworking of the *Eobu-sa* that Yi Hyeon-bo had himself reshaped from the older \"Fisherman's Songs\". It has ten poems for each of spring, summer, autumn and winter: forty in all.\n\n**Significance.** It is counted among the central works of Joseon \"rivers-and-lakes\" poetry. Its structure overlays the seasons of fishing-village life onto the course of a single day's outing, from pushing off to mooring, and it is often praised for describing nature in native Korean vocabulary.\n\n**Form and themes.** Each poem is a sijo of three lines (opening, middle, closing) with two refrains inserted, giving five lines. The first refrain is a command to the boat; the second is generally read as an imitation of the sound of rowing. This edition contains all forty poems: the raw text has four season headings and 39 verse paragraphs, because winter poems 5 and 6 are joined in one paragraph. The themes are the leisure of a fisherman who has left the world, reclusion, and a distance from worldly affairs expressed through classical allusions.\n\n**Reading help.**\n- **Push off - Weigh anchor - Hoist the sail - Row on - Lower the sail - Stop the boat - Moor the boat - Drop anchor - Bring her ashore**: the command refrain in line 2 of each poem, in the same order every season (original ᄇᆡ떠라, 닫드러라, 돋드라라, 이어라, 돋디여라, ᄇᆡ셰여라, ᄇᆡᄆᆡ여라, 닫디여라, ᄇᆡ브텨라). 닫 = modern 닻, 돋 = modern 돛.\n- **지국총 지국총 어사와** (Jigukchong, jigukchong, eosawa): the refrain in line 4. The hanja 至匊悤 are phonetic; read it as a sound word rather than a phrase.\n- **ㆍ (arae-a)**: written in ᄒᆞ다, ᄂᆞᆫ, ᄀᆞᆯ며기; in modern spelling it appears mostly as ㅏ or ㅡ (ᄒᆞ다 becomes 하다).\n- **됴타, 디다, 믈**: modern 좋다, 지다, 물; spellings from before palatalization.\n- **낟믈 / 밤믈**: roughly \"day water\" and \"night water\", i.e. tides.\n- **어엿브다**: in older Korean, a word overlapping \"pitiable\" and \"lovely\".\n- The small hangul after each hanja is its Sino-Korean reading; the text is unspaced.\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "## 春츈",
+      "modern": "## 춘(春)",
+      "reading": null,
+      "en": "## Spring (春)"
+    },
+    {
+      "orig": "압개예안개것고뒫뫼희ᄒᆡ비췬다\nᄇᆡ떠라ᄇᆡ떠라\n밤믈은거의디고낟믈이미러온다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n江강村촌온갓고지먼빗치더옥됴타",
+      "modern": "앞개에 안개 걷고 뒷산에 해 비친다\n배 떠라 배 떠라\n밤물은 거의 지고 낮물이 밀려온다\n지국총 지국총 어사와\n강촌(江村)의 온갖 꽃이 먼 빛이 더욱 좋다",
+      "reading": null,
+      "en": "Mist lifts from the inlet in front; sunlight falls on the hills behind.\nPush off, push off.\nThe night tide has nearly ebbed; the day tide comes pushing in.\nJigukchong, jigukchong, eosawa.\nThe flowers of the river village, seen in the far colours, grow lovelier still."
+    },
+    {
+      "orig": "날이덥도다믈우희고기떧다\n닫드러라닫드러라\nᄀᆞᆯ며기둘식세식오락가락ᄒᆞᄂᆞ고야\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n낫대ᄂᆞᆫ쥐여잇다濁탁酒쥬ᄉᅠ甁병시럿ᄂᆞ냐",
+      "modern": "날이 덥도다 물 위에 고기 떴다\n닻 들어라 닻 들어라\n갈매기 둘씩 셋씩 오락가락 하는구나\n지국총 지국총 어사와\n낚싯대는 쥐고 있다 탁주(濁酒) 병 실었느냐",
+      "reading": null,
+      "en": "The day is warm; fish have risen to the water's surface.\nWeigh anchor, weigh anchor.\nThe gulls, two and three together, fly back and forth.\nJigukchong, jigukchong, eosawa.\nI am holding the fishing rod; have you loaded the bottle of cloudy wine?"
+    },
+    {
+      "orig": "東동風풍이건듣부니믉결이고이닌다\n돋ᄃᆞ라라돋ᄃᆞ라라\n東동湖호ᄅᆞᆯ도라보며西셔湖호로가쟈스라\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n압뫼히디나가고뒫뫼희나아온다",
+      "modern": "동풍(東風)이 건듯 부니 물결이 곱게 인다\n돛 달아라 돛 달아라\n동호(東湖)를 돌아보며 서호(西湖)로 가자꾸나\n지국총 지국총 어사와\n앞산이 지나가고 뒷산이 나아온다",
+      "reading": null,
+      "en": "The east wind blows lightly, and soft ripples rise.\nHoist the sail, hoist the sail.\nLooking back at East Lake, let us go on to West Lake.\nJigukchong, jigukchong, eosawa.\nThe hills ahead slip past, and the hills behind come forward."
+    },
+    {
+      "orig": "우ᄂᆞᆫ거시벅구기가프른거시버들숩가\n이어라이어라\n漁어村촌두어집이ᄂᆡᆺ속의나락들락\n至지匊국忩총至지匊국忩총아ᄉᆞ와\n말가ᄒᆞᆫ기픈소희온갇고기뛰노ᄂᆞᆫ다",
+      "modern": "우는 것이 뻐꾸기냐 푸른 것이 버들숲이냐\n이어라 이어라\n어촌(漁村) 두어 집이 내[煙霧] 속에 나락들락\n지국총 지국총 아사와\n맑고 깊은 못에 온갖 고기 뛰노는구나",
+      "reading": null,
+      "en": "Is that the cuckoo calling? Is that green the willow grove?\nRow on, row on.\nTwo or three houses of the fishing village, in and out of the haze.\nJigukchong, jigukchong, asawa.\nIn the clear, deep pool, fish of every kind leap and play."
+    },
+    {
+      "orig": "고운볃티ᄶᅬ얀ᄂᆞᆫᄃᆡ믉결이기름ᄀᆞᆺ다\n이어라이어라\n그물을주여두랴낙시ᄅᆞᆯ노흘일가\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n濯탁纓영歌가의興흥이나니고기도니즐로다",
+      "modern": "고운 볕이 쬐는데 물결이 기름 같다\n이어라 이어라\n그물을 쥐어 두랴 낚시를 놓을 것이냐\n지국총 지국총 어사와\n탁영가(濯纓歌)의 흥이 나니 고기도 잊겠도다",
+      "reading": null,
+      "en": "Under the fine sunshine the waves are smooth as oil.\nRow on, row on.\nShall I keep the net in hand, or let down the line?\nJigukchong, jigukchong, eosawa.\nStirred by the joy of the Song of Washing the Cap-Strings, I forget even the fish."
+    },
+    {
+      "orig": "夕셕陽양이빗겨시니그만ᄒᆞ야도라가쟈\n돋디여라돋디여라\n岸안柳류汀뎡化화는고븨고븨새롭고야\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n三삼公공을불리소냐萬만事ᄉᆞᄅᆞᆯᄉᆡᆼ각ᄒᆞ랴",
+      "modern": "석양(夕陽)이 비꼈으니 그만하고 돌아가자\n돛 내려라 돛 내려라\n안류정화(岸柳汀花)는 굽이굽이 새롭구나\n지국총 지국총 어사와\n삼공(三公)을 부러워하랴 만사(萬事)를 생각하랴",
+      "reading": null,
+      "en": "The evening sun slants low; enough, let us turn back.\nLower the sail, lower the sail.\nWillows on the bank and flowers on the shore are new at every bend.\nJigukchong, jigukchong, eosawa.\nWould I envy the Three Ministers? Would I fret over the ten thousand affairs?"
+    },
+    {
+      "orig": "防방草초ᄅᆞᆯᄇᆞᆯ와보며蘭난芷지도뜨더보쟈\nᄇᆡ셰여라ᄇᆡ셰여라\n一일葉엽片편舟쥬에시른거시므스것고\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n갈제ᄂᆞᆫᄂᆡ뿐이오올제ᄂᆞᆫᄃᆞᆯ이로다",
+      "modern": "방초(芳草)를 밟아 보며 난지(蘭芷)도 뜯어 보자\n배 세워라 배 세워라\n일엽편주(一葉片舟)에 실은 것이 무엇인가\n지국총 지국총 어사와\n갈 때는 내뿐이요 올 때는 달이로다",
+      "reading": null,
+      "en": "Treading the fragrant grasses, let us pick orchid and angelica too.\nStop the boat, stop the boat.\nWhat is it that this leaf of a boat carries?\nJigukchong, jigukchong, eosawa.\nGoing out, only myself; coming back, the moon."
+    },
+    {
+      "orig": "醉ᄎᆔᄒᆞ야누얻다가여흘아래ᄂᆞ리려다\nᄇᆡᄆᆡ여라ᄇᆡᄆᆡ여라\n落락紅홍이흘러오니桃도源원이갓갑도다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n人인世세紅홍塵딘이언메나ᄀᆞ렷ᄂᆞ니",
+      "modern": "취하여 누웠다가 여울 아래 내리려다\n배 매어라 배 매어라\n낙홍(落紅)이 흘러오니 도원(桃源)이 가깝도다\n지국총 지국총 어사와\n인세(人世) 홍진(紅塵)이 얼마나 가렸느냐",
+      "reading": null,
+      "en": "Drunk, I lay down, and almost drifted down the rapids.\nMoor the boat, moor the boat.\nFallen red petals float toward me; the Peach Blossom Spring must be near.\nJigukchong, jigukchong, eosawa.\nHow much of the red dust of the human world still lies between us?"
+    },
+    {
+      "orig": "낙시줄거더노코篷봉窓창의ᄃᆞᆯ을보쟈\n닫디여라닫디여라\nᄒᆞ마밤들거냐子ᄌᆞ規규소ᄅᆡᄆᆞᆰ게난다\n至지匊국忩총至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n나믄興흥이無무窮궁ᄒᆞ니갈길흘니젓딷다",
+      "modern": "낚싯줄 걷어 놓고 봉창(篷窓)의 달을 보자\n닻 내려라 닻 내려라\n벌써 밤이 들었느냐 자규(子規) 소리 맑게 난다\n지국총 지국총 지국총 어사와\n남은 흥이 무궁하니 갈 길을 잊었도다",
+      "reading": null,
+      "en": "Reel in the line, and let us watch the moon through the window of the thatched awning.\nDrop anchor, drop anchor.\nHas night fallen already? The cuckoo's cry rings clear.\nJigukchong, jigukchong, jigukchong, eosawa.\nMy lingering joy is without end, and I have forgotten the way home."
+    },
+    {
+      "orig": "來ᄅᆡ日일이또업스랴봄밤이몃덛새리\nᄇᆡ브텨라ᄇᆡ브텨라\n낫대로막대삼고柴싀扉비ᄅᆞᆯᄎᆞ자보쟈\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n漁어父부生ᄉᆡᆼ涯애ᄂᆞᆫ이렁구리디낼로다",
+      "modern": "내일이 또 없으랴 봄밤이 얼마나 새랴\n배 붙여라 배 붙여라\n낚싯대로 막대 삼고 시비(柴扉)를 찾아보자\n지국총 지국총 어사와\n어부생애(漁父生涯)는 이렇게 지낼 것이로다",
+      "reading": null,
+      "en": "Will there be no tomorrow? How long can a spring night last?\nBring her ashore, bring her ashore.\nUsing the fishing rod as a staff, let us look for the brushwood gate.\nJigukchong, jigukchong, eosawa.\nThe fisherman's life is to be passed just like this."
+    },
+    {
+      "orig": "## 夏하",
+      "modern": "## 하(夏)",
+      "reading": null,
+      "en": "## Summer (夏)"
+    },
+    {
+      "orig": "구즌비머저가고시낻물이ᄆᆞᆰ아온다\nᄇᆡ떠라ᄇᆡ떠라\n낫대ᄅᆞᆯ두러메니기픈興흥을禁금못ᄒᆞᆯ되\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n烟연江강疊덥嶂쟝은뉘라셔그려낸고",
+      "modern": "궂은비 멎어 가고 시냇물이 맑아 온다\n배 떠라 배 떠라\n낚싯대를 둘러메니 깊은 흥을 금할 수 없는데\n지국총 지국총 어사와\n연강첩장(烟江疊嶂)은 누가 그려 낸고",
+      "reading": null,
+      "en": "The foul rain has stopped, and the stream runs clearer.\nPush off, push off.\nI shoulder the fishing rod and cannot hold back my deep delight.\nJigukchong, jigukchong, eosawa.\nWho painted these misty rivers and layered peaks?"
+    },
+    {
+      "orig": "년닙희밥싸두고반찬으란쟝만마라\n닫드러라닫드더라\n靑창蒻약笠립은써있노라綠녹蓑사衣의가져오냐\n至지匊국忩총至지匊국忩총어사와\n無무心심ᄒᆞᆫ白ᄇᆡᆨ駒구는내좃ᄂᆞᆫ가제좃ᄂᆞᆫ가",
+      "modern": "연잎에 밥 싸 두고 반찬은 장만 마라\n닻 들어라 닻 들어라\n청약립(靑蒻笠)은 쓰고 있노라 녹사의(綠蓑衣) 가져왔느냐\n지국총 지국총 어사와\n무심(無心)한 백구(白鷗)는 내가 좇는가 제가 좇는가",
+      "reading": null,
+      "en": "Wrap the rice in a lotus leaf; do not bother preparing side dishes.\nWeigh anchor, weigh anchor.\nI am already wearing the green reed hat; did you bring the green rain-cape?\nJigukchong, jigukchong, eosawa.\nThe carefree white gull: am I following it, or is it following me?"
+    },
+    {
+      "orig": "마람닙희ᄇᆞ람나니篷봉窓창이서ᄂᆞᆯ코야\n돋ᄃᆞ라라돋ᄃᆞ라라\n녀ᄅᆞᆷᄇᆞ람뎡ᄒᆞᆯ소냐가ᄂᆞᆫ대로ᄇᆡ시켜라\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n北븍浦포南남江강이어ᄃᆡ아니됴흘러니",
+      "modern": "마름잎에 바람 나니 봉창(篷窓)이 서늘하구나\n돛 달아라 돛 달아라\n여름 바람 일정하랴 가는 대로 배 시켜라\n지국총 지국총 어사와\n북포(北浦) 남강(南江)이 어디 아니 좋으랴",
+      "reading": null,
+      "en": "Wind stirs among the water-chestnut leaves, and the awning window turns cool.\nHoist the sail, hoist the sail.\nIs a summer wind ever steady? Let the boat go where it goes.\nJigukchong, jigukchong, eosawa.\nNorth shore, south river: which of them is not good?"
+    },
+    {
+      "orig": "믉결이흐리거든발을싯다엇더ᄒᆞ리\n이어라이어라\n吳오江강의가쟈ᄒᆞ니千천年년怒노濤도슬플로다\n至지匊국忩총지국청於어思ᄉᆞ卧와\n초강의가쟈ᄒᆞ니魚어腹복忠튱魂혼낟글셰라",
+      "modern": "물결이 흐리거든 발을 씻은들 어떠하리\n이어라 이어라\n오강(吳江)에 가자 하니 천년노도(千年怒濤) 슬프도다\n지국총 지국총 어사와\n초강(楚江)에 가자 하니 어복충혼(魚腹忠魂) 낚을세라",
+      "reading": null,
+      "en": "If the water is muddy, what harm in washing my feet in it?\nRow on, row on.\nGo to the Wu River? The thousand-year raging waves are sorrowful.\nJigukchong, jigukchong, eosawa.\nGo to the Chu River? I might hook the loyal soul in the fish's belly."
+    },
+    {
+      "orig": "萬만柳류綠록陰음어릔고ᄃᆡ一일便편苔ᄐᆡ磯긔奇긔特특하다\n이어라이어라\nᄃᆞ리예다닫가든漁어人인爭ᄌᆡᆼ渡도허믈마라\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n鶴학髮발老로翁옹만나거든雷뢰澤ᄐᆡᆨ讓양居거效효側측ᄒᆞ쟈",
+      "modern": "만류녹음(萬柳綠陰) 어린 곳에 일편태기(一便苔磯) 기특하다\n이어라 이어라\n다리에 다다르거든 어인쟁도(漁人爭渡) 허물 마라\n지국총 지국총 어사와\n학발노옹(鶴髮老翁) 만나거든 뇌택양거(雷澤讓居) 효측(效側)하자",
+      "reading": null,
+      "en": "Where the green shade of ten thousand willows gathers, the mossy fishing rock on one side is wonderful.\nRow on, row on.\nWhen we reach the bridge, do not blame the fishermen racing one another across.\nJigukchong, jigukchong, eosawa.\nIf we meet a white-haired old man, let us follow the example of yielding places at Leize."
+    },
+    {
+      "orig": "긴날이져므ᄂᆞᆫ줄興흥의미쳐모ᄅᆞ도다\n돋디여라돋디여라\nᄇᆡᆺ대랄두드리고水슈調도歌가ᄅᆞᆯ블러보쟈\n至지匊국忩총지구총於어思ᄉᆞ卧와\n애내셩듕에萬만古고心심을긔뉘알고",
+      "modern": "긴 날이 저무는 줄 흥에 겨워 모르도다\n돛 내려라 돛 내려라\n뱃대를 두드리고 수조가(水調歌)를 불러 보자\n지국총 지국총 어사와\n애내성(欸乃聲) 중에 만고심(萬古心)을 그 누가 알꼬",
+      "reading": null,
+      "en": "Carried away by delight, I do not notice that the long day is ending.\nLower the sail, lower the sail.\nBeating on the boat's rail, let us sing the Shuidiao song.\nJigukchong, jigukchong, eosawa.\nIn the creak of the oars, who knows the heart of ten thousand ages?"
+    },
+    {
+      "orig": "夕석陽양이됴타마ᄂᆞᆫ黃황昏혼이갓깁거다\nᄇᆡ셰여라ᄇᆡ셰여라\n바회우희에구븐길솔아래빗겨잇다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n碧벽樹슈鶯ᄋᆡᆼ聲셩이곧곧이들리ᄂᆞ다",
+      "modern": "석양(夕陽)이 좋다마는 황혼(黃昏)이 가깝도다\n배 세워라 배 세워라\n바위 위에 굽은 길 솔 아래 비껴 있다\n지국총 지국총 어사와\n벽수(碧樹) 앵성(鶯聲)이 곳곳에 들린다",
+      "reading": null,
+      "en": "The sunset is lovely, but dusk is near.\nStop the boat, stop the boat.\nA winding path above the rocks lies slanting beneath the pines.\nJigukchong, jigukchong, eosawa.\nThe orioles' song from the green trees is heard everywhere."
+    },
+    {
+      "orig": "몰쾌우희그믈널고둠미틔누어쉬쟈\nᄇᆡᄆᆡ어라ᄇᆡᄆᆡ어라\n모괴ᄅᆞᆯ믭다ᄒᆞ랴蒼창蠅승과엇더하니\n至지匊국忩총至지匊국忩총어사와\n다만ᄒᆞᆫ근심은桑상大대大부드르려다",
+      "modern": "물가 위에 그물 널고 뜸 밑에 누워 쉬자\n배 매어라 배 매어라\n모기를 밉다 하랴 창승(蒼蠅)과 어떠하니\n지국총 지국총 어사와\n다만 한 근심은 상대부(桑大夫) 들을까 하노라",
+      "reading": null,
+      "en": "Spread the net out on the shore, and lie down under the thatch awning to rest.\nMoor the boat, moor the boat.\nCan I call mosquitoes hateful, compared with bluebottle flies?\nJigukchong, jigukchong, eosawa.\nMy only worry is that Grand Master Sang may hear of it."
+    },
+    {
+      "orig": "밤ᄉᆞ이風풍浪낭을미리어이짐쟉하리\n닫디여라닫디여라\n夜야渡横도橫횡舟쥬ᄅᆞᆯ뉘라셔닐러ᄂᆞᆫ고\n至지匊국忩총至지匊국忩총아ᄉᆞ와\n澗간邊변幽유草초진실로어엳브다",
+      "modern": "밤사이 풍랑(風浪)을 미리 어찌 짐작하리\n닻 내려라 닻 내려라\n야도횡주(夜渡橫舟)를 누가 일렀는고\n지국총 지국총 아사와\n간변유초(澗邊幽草) 진실로 어여쁘다",
+      "reading": null,
+      "en": "Who can foretell in advance the wind and waves of the night?\nDrop anchor, drop anchor.\n\"At the night crossing the ferry lies across the stream\": who was it that said so?\nJigukchong, jigukchong, asawa.\n\"The secluded grass by the stream\": truly to be cherished."
+    },
+    {
+      "orig": "蝸와室실을ᄇᆞ라보니白백雲운이ᄃᆞᆯ러잇다\nᄇᆡ븟텨라ᄇᆡ븟텨라\n부들부체ᄀᆞᄅᆞ쥐고石셕逕경으로올라가쟈\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n漁어漁옹이閑한暇가터냐이거시구실이라",
+      "modern": "와실(蝸室)을 바라보니 백운(白雲)이 둘러 있다\n배 붙여라 배 붙여라\n부들부채 가로쥐고 돌길로 올라가자\n지국총 지국총 어사와\n어옹(漁翁)이 한가하더냐 이것이 구실이라",
+      "reading": null,
+      "en": "Looking toward my snail-shell hut, I see white clouds wreathed around it.\nBring her ashore, bring her ashore.\nHolding the cattail fan crosswise, let us climb the stony path.\nJigukchong, jigukchong, eosawa.\nWas the old fisherman ever idle? This is his appointed work."
+    },
+    {
+      "orig": "## 秋추",
+      "modern": "## 추(秋)",
+      "reading": null,
+      "en": "## Autumn (秋)"
+    },
+    {
+      "orig": "物물外외예조ᄒᆞᆫ일이漁어夫부生생涯애아니러냐\nᄇᆡ떠라ᄇᆡ떠라\n漁어翁옹을옫디마라그림마다그렷더라\n지구총至지匊국忩총於어思ᄉᆞ卧와\n四ᄉᆞ時시興흥이한가지나츄강이읃듬이라",
+      "modern": "물외(物外)에 좋은 일이 어부생애(漁父生涯) 아니더냐\n배 떠라 배 떠라\n어옹(漁翁)을 웃지 마라 그림마다 그렸더라\n지국총 지국총 어사와\n사시흥(四時興)이 한가지나 추강(秋江)이 으뜸이라",
+      "reading": null,
+      "en": "Is not the fisherman's life the finest of things beyond the world?\nPush off, push off.\nDo not laugh at the old fisherman; he is painted in every picture.\nJigukchong, jigukchong, eosawa.\nThe pleasures of the four seasons are alike, yet the autumn river is the best."
+    },
+    {
+      "orig": "水슈國국의ᄀᆞᄋᆞᆯ이드니고기마다ᄉᆞᆯ져읻다\n닫드러라닫드러라\n萬만頃경澄딩波파의슬카지容용與여ᄒᆞ쟈\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n人인間간을도랴보니머도록더욱됴탸",
+      "modern": "수국(水國)에 가을이 드니 고기마다 살져 있다\n닻 들어라 닻 들어라\n만경징파(萬頃澄波)에 실컷 용여(容與)하자\n지국총 지국총 어사와\n인간(人間)을 돌아보니 멀수록 더욱 좋다",
+      "reading": null,
+      "en": "Autumn has come to the water country, and every fish is plump.\nWeigh anchor, weigh anchor.\nOn the clear waves of ten thousand acres, let us drift at ease to our heart's content.\nJigukchong, jigukchong, eosawa.\nLooking back at the human world, the farther away it is, the better."
+    },
+    {
+      "orig": "白ᄇᆡᆨ雲운이니러나고나모긋티흐느긴다\n돋ᄃᆞ라라돋ᄃᆞ라라\n밀믈의西셔湖호ᅟᅵ오혈믈의동호가쟈\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n白ᄇᆡᆨ蘋빈紅홍蓼료는곳마다景경이로다",
+      "modern": "백운(白雲)이 일어나고 나무 끝이 흔들린다\n돛 달아라 돛 달아라\n밀물에는 서호(西湖)요 썰물에는 동호(東湖) 가자\n지국총 지국총 어사와\n백빈홍료(白蘋紅蓼)는 곳마다 경(景)이로다",
+      "reading": null,
+      "en": "White clouds rise, and the treetops sway.\nHoist the sail, hoist the sail.\nOn the flood tide to West Lake; on the ebb tide to East Lake, let us go.\nJigukchong, jigukchong, eosawa.\nWhite duckweed and red knotweed make a scene wherever they grow."
+    },
+    {
+      "orig": "그러기떳ᄂᆞᆫ박긔못보던뫼뵈ᄂᆞ고야\n이어라이어라\n낙시질도ᄒᆞ려니와趣ᄎᆔᄒᆞᆫ거시이興흥이라\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n夕셕陽양이ᄇᆞᄋᆡ니天쳔山산이錦금繡슈ᅟᅵ로다",
+      "modern": "기러기 떠 있는 밖에 못 보던 산이 보이는구나\n이어라 이어라\n낚시질도 하려니와 취한 것이 이 흥이라\n지국총 지국총 어사와\n석양(夕陽)이 비치니 천산(天山)이 금수(錦繡)로다",
+      "reading": null,
+      "en": "Beyond where the wild geese float, mountains I had never seen come into view.\nRow on, row on.\nFishing is well enough, but what truly intoxicates me is this delight.\nJigukchong, jigukchong, eosawa.\nThe setting sun shines, and the heavenly mountains are brocade."
+    },
+    {
+      "orig": "銀은脣슌玉옥尺쳑이몇치나걸럿ᄂᆞ니\n이어라이어라\n蘆로花화의블부러ᄀᆞᆯᄒᆡ야구어노코\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n딜병을거후리혀박구기예브어다고",
+      "modern": "은순옥척(銀脣玉尺)이 몇 치나 걸렸느냐\n이어라 이어라\n노화(蘆花)에 불 붙여 구워 놓고\n지국총 지국총 어사와\n질병을 기울여 박 구기에 부어 다오",
+      "reading": null,
+      "en": "Silver-lipped, jade-ruler fish: how many inches have you hooked?\nRow on, row on.\nSet fire to the reed flowers and roast them.\nJigukchong, jigukchong, eosawa.\nTilt the earthen bottle and pour it into the gourd dipper for me."
+    },
+    {
+      "orig": "녑ᄇᆞ람이고이부니ᄃᆞ론돋긔도라와다\n돋디여라돋디여라\n暝명色ᄉᆡᆨ은나아오ᄃᆡ쳥흥은머러읻다\n至지匊국忩총至지匊국忩총아ᄉᆞ와\n紅홍樹슈淸쳥江강이슬믜디도아니ᄒᆞᆫ다",
+      "modern": "옆바람이 곱게 부니 돌린 돛에 돌아왔다\n돛 내려라 돛 내려라\n명색(暝色)은 나아오되 청흥(淸興)은 멀었다\n지국총 지국총 아사와\n홍수청강(紅樹淸江)이 싫증도 나지 않는다",
+      "reading": null,
+      "en": "A side wind blows gently, and on the turned sail we have come back.\nLower the sail, lower the sail.\nThe twilight draws near, yet my pure delight is far from done.\nJigukchong, jigukchong, asawa.\nRed-leaved trees and the clear river: I never tire of them."
+    },
+    {
+      "orig": "흰이슬빋견ᄂᆞᆫᄃᆡᄇᆞᆯ근ᄃᆞᆯ도다온다\nᄇᆡ셰여라ᄇᆡ셰여라\n鳳봉凰황樓루渺묘然연ᄒᆞ니淸쳥光광을눌을줄고\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n玉옥兎토의띤ᄂᆞᆫ藥약을豪호客객을먹이고쟈",
+      "modern": "흰 이슬 비꼈는데 밝은 달도 돋아 온다\n배 세워라 배 세워라\n봉황루(鳳凰樓)가 아득하니 청광(淸光)을 누구에게 줄꼬\n지국총 지국총 어사와\n옥토(玉兎)가 찧는 약을 호객(豪客)에게 먹이고자",
+      "reading": null,
+      "en": "White dew lies slanting, and the bright moon rises.\nStop the boat, stop the boat.\nThe Phoenix Tower is far and faint; to whom shall I give this clear light?\nJigukchong, jigukchong, eosawa.\nThe medicine the Jade Hare pounds, I would give it to a bold guest to drink."
+    },
+    {
+      "orig": "乾건坤곤이제공인가이거시어드메오\nᄇᆡᄆᆡ여라ᄇᆡᄆᆡ여라\n西셔風풍塵딘몯미츠니부체ᄒᆞ야머엇ᄒᆞ리\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n드론말이업서시시귀시서머엇하리",
+      "modern": "건곤(乾坤)이 제 곰인가 이것이 어디메오\n배 매어라 배 매어라\n서풍진(西風塵) 못 미치니 부채 하여 무엇 하리\n지국총 지국총 어사와\n들은 말이 없으니 귀 씻어 무엇 하리",
+      "reading": null,
+      "en": "Are heaven and earth each its own realm here? Where on earth is this?\nMoor the boat, moor the boat.\nThe dust of the west wind cannot reach us; what use is a fan?\nJigukchong, jigukchong, eosawa.\nI have heard nothing; what use is washing my ears?"
+    },
+    {
+      "orig": "옷우희서리오ᄃᆡ치운줄을모ᄅᆞᆯ로다\n닫디여라닫디여라\n釣됴船션이좁다하나浮부說셰와얻더ᄒᆞ니\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\nᄂᆡ일도이리ᄒᆞ고모뢰도이리ᄒᆞ쟈",
+      "modern": "옷 위에 서리 오되 추운 줄을 모르겠도다\n닻 내려라 닻 내려라\n조선(釣船)이 좁다 하나 부세(浮世)와 어떠하니\n지국총 지국총 어사와\n내일도 이리하고 모레도 이리하자",
+      "reading": null,
+      "en": "Frost settles on my clothes, yet I do not feel the cold.\nDrop anchor, drop anchor.\nThey say the fishing boat is cramped, but how does it compare with the floating world?\nJigukchong, jigukchong, eosawa.\nLet us do the same tomorrow, and the same the day after."
+    },
+    {
+      "orig": "松숑間간石셕室실의가曉효月월을보쟈ᄒᆞ니\nᄇᆡ브텨라ᄇᆡ브텨라\n空공山산落락葉엽의길흘엇디아라볼고\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n白백雲운이좃차오니如녀蘿라衣의므겁고야",
+      "modern": "송간석실(松間石室)에 가 효월(曉月)을 보자 하니\n배 붙여라 배 붙여라\n공산낙엽(空山落葉)에 길을 어찌 알아볼꼬\n지국총 지국총 어사와\n백운(白雲)이 좇아오니 여라의(女蘿衣) 무겁구나",
+      "reading": null,
+      "en": "I mean to go to the stone chamber among the pines and watch the dawn moon,\nBring her ashore, bring her ashore.\nbut in the empty mountain under fallen leaves, how shall I find the path?\nJigukchong, jigukchong, eosawa.\nWhite clouds follow me, and my robe of mountain vine grows heavy."
+    },
+    {
+      "orig": "## 冬동",
+      "modern": "## 동(冬)",
+      "reading": null,
+      "en": "## Winter (冬)"
+    },
+    {
+      "orig": "구룸거둔후의횓빋치두텁거다\nᄇᆡ떠라ᄇᆡ떠라\n天텬地디閉폐塞ᄉᆡᆨ호ᄃᆡ바다흔依의舊구ᄒᆞ다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\nᄀᆞ업슨믉결이깁편ᄃᆞᆺᄒᆞ여잇다",
+      "modern": "구름 걷은 후에 햇빛이 두텁구나\n배 떠라 배 떠라\n천지폐색(天地閉塞)하되 바다는 의구(依舊)하다\n지국총 지국총 어사와\n가없는 물결이 비단 편 듯하여 있다",
+      "reading": null,
+      "en": "After the clouds have cleared, the sunlight is thick and warm.\nPush off, push off.\nHeaven and earth are shut tight, yet the sea is as it always was.\nJigukchong, jigukchong, eosawa.\nThe boundless waves lie like unrolled silk."
+    },
+    {
+      "orig": "주대다ᄉᆞ리고ᄇᆡᆺ밥을박앋ᄂᆞ냐\n닫드러라닫드러라\n瀟쇼湘샹洞동庭뎡은그믈이언나ᄒᆞᆫ다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n이때예漁어釣됴ᄒᆞ기이만ᄒᆞᆫᄃᆡ업도다",
+      "modern": "낚싯줄 다스리고 뱃밥을 박았느냐\n닻 들어라 닻 들어라\n소상(瀟湘) 동정(洞庭)은 그물이 얼었다 한다\n지국총 지국총 어사와\n이때에 어조(漁釣)하기 이만한 데 없도다",
+      "reading": null,
+      "en": "Have you set the fishing line in order and caulked the boat?\nWeigh anchor, weigh anchor.\nThey say the nets are frozen at Xiaoxiang and Dongting.\nJigukchong, jigukchong, eosawa.\nAt this season there is no place so good for fishing as here."
+    },
+    {
+      "orig": "여튼갣고기들히먼소ᄒᆡ다갇ᄂᆞ니\n돋ᄃᆞ라라돋ᄃᆞ라라\n져근덛날됴흔제바탕의가나보쟈\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n밋기곧다오면굴근고기믄다ᄒᆞᆫ다",
+      "modern": "얕은 개울 고기들이 먼 소(沼)에 다 갔나니\n돛 달아라 돛 달아라\n잠깐 날 좋은 때 낚시터에 가 보자\n지국총 지국총 어사와\n미끼 곧 달아 오면 굵은 고기 문다 한다",
+      "reading": null,
+      "en": "The fish of the shallow creeks have all gone off to the distant pools.\nHoist the sail, hoist the sail.\nWhile the weather is fair for a little while, let us go to the fishing ground.\nJigukchong, jigukchong, eosawa.\nThey say that once the bait is set, the big fish bite."
+    },
+    {
+      "orig": "간밤의눈갠後후에경물이달랃고야\n이어라이어라\n압희ᄂᆞᆫ萬만頃경琉유璃리뒤희ᄂᆞᆫ千천疊텹玉옥山산\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n仙션界계ᄂ가佛불界계ᄂ가人인間간이아니로다",
+      "modern": "간밤에 눈 갠 후에 경물(景物)이 다르구나\n이어라 이어라\n앞에는 만경유리(萬頃琉璃) 뒤에는 천첩옥산(千疊玉山)\n지국총 지국총 어사와\n선계(仙界)인가 불계(佛界)인가 인간(人間)이 아니로다",
+      "reading": null,
+      "en": "After last night's snow cleared, the scenery is changed.\nRow on, row on.\nBefore us ten thousand acres of crystal glass; behind us a thousand folds of jade mountains.\nJigukchong, jigukchong, eosawa.\nIs it the realm of immortals, or the Buddha's realm? It is not the human world."
+    },
+    {
+      "orig": "그믈낙시니저두고ᄇᆡᆺ젼을두드린다\n이어라이어라\n압개를건너고쟈멷번이나혜여본고\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n無무端단ᄒᆞᆫ된ᄇᆞ람이ᄒᆡᆼ혀아니부러올까\n돋디여라돋디여라\n압길히어두우니暮모雪셜이자자뎓다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n鵝아鴨입池디ᄅᆞᆯ뉘텨서草조木목斬참을싣돋던고",
+      "modern": "그물 낚시 잊어 두고 뱃전을 두드린다\n이어라 이어라\n앞개를 건너고자 몇 번이나 헤아려 본고\n지국총 지국총 어사와\n무단(無端)한 된바람이 행여 아니 불어올까\n돛 내려라 돛 내려라\n앞길이 어두우니 모설(暮雪)이 자주 졌다\n지국총 지국총 어사와\n아압지(鵝鴨池)를 누가 쳐서 초목참(草木斬)을 싣돋던고",
+      "reading": null,
+      "en": "Setting aside net and hook, I beat on the boat's side.\nRow on, row on.\nWanting to cross the inlet ahead, how many times have I weighed it up?\nJigukchong, jigukchong, eosawa.\nMight some groundless north wind not spring up after all?\nLower the sail, lower the sail.\nThe road ahead is dark, for the evening snow has come down thick and often.\nJigukchong, jigukchong, eosawa.\nWho struck at the Goose-and-Duck Pond and loaded the cut grass and trees?"
+    },
+    {
+      "orig": "丹단崖애翠취碧벽이畫화屛병ᄀᆞᆮ티둘럿ᄂᆞᆫᄃᆡ\nᄇᆡ셰여라ᄇᆡ셰여라\n巨거口구細셰鱗린을낟그나몬낟그나\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n孤고舟주簑사笠립에興흥계워안잣노라",
+      "modern": "단애취벽(丹崖翠碧)이 화병(畫屛)같이 둘렀는데\n배 세워라 배 세워라\n거구세린(巨口細鱗)을 낚으나 못 낚으나\n지국총 지국총 어사와\n고주사립(孤舟簑笠)에 흥겨워 앉았노라",
+      "reading": null,
+      "en": "Red cliffs and emerald-green walls ring us round like a painted screen.\nStop the boat, stop the boat.\nWhether I catch the big-mouthed, fine-scaled fish or not,\nJigukchong, jigukchong, eosawa.\nin my lone boat, in straw cape and hat, I sit brimming with joy."
+    },
+    {
+      "orig": "믉ᄀᆞ의외로운솔혼자어이싁싁ᄒᆞᆫ고\nᄇᆡᄆᆡ여라ᄇᆡᄆᆡ여라\n머흔구룸恨ᄒᆞᆫ티마라世셰上샹을ᄀᆞ리온다\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n波파浪랑聲셩을厭염티마라塵딘暄훤을막ᄂᆞᆫ또다",
+      "modern": "물가의 외로운 솔 혼자 어찌 씩씩한가\n배 매어라 배 매어라\n험한 구름 한(恨)하지 마라 세상(世上)을 가린다\n지국총 지국총 어사와\n파랑성(波浪聲)을 싫어하지 마라 진훤(塵喧)을 막는도다",
+      "reading": null,
+      "en": "The lone pine by the water: why does it stand so austere, all alone?\nMoor the boat, moor the boat.\nDo not resent the menacing clouds; they screen off the world.\nJigukchong, jigukchong, eosawa.\nDo not dislike the sound of the waves; it shuts out the clamour of the dust."
+    },
+    {
+      "orig": "滄챵州쥬吾오道도를녜브터닐럳더라\n닫디여라닫디여라\n七칠里리여흘羊양皮피옷슨긔얻더ᄒᆞ니런고\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n三삼千쳔六뉵白ᄇᆡᆨ낙시질은손고븐제엇더턴고",
+      "modern": "창주(滄洲) 오도(吾道)를 예부터 일렀더라\n닻 내려라 닻 내려라\n칠리(七里) 여울 양피(羊皮)옷은 그 어떠하던고\n지국총 지국총 어사와\n삼천육백(三千六百) 낚시질은 손 곱은 제 어떠하던고",
+      "reading": null,
+      "en": "\"Cangzhou, my way\": so it has been said since ancient times.\nDrop anchor, drop anchor.\nThat sheepskin coat at Seven-Li Rapids: what was it like?\nJigukchong, jigukchong, eosawa.\nThe three thousand six hundred days of fishing: what was it like when his hands were numb with cold?"
+    },
+    {
+      "orig": "어와져므러간다宴연息식이맏당토다\nᄇᆡ븟텨라ᄇᆡ븟텨라\nᄀᆞᄂᆞᆫ눈쁘린길블근곳흣터딘ᄒᆡ흥치며거러가셔\n至지匊국忩총至지匊국忩총於어思ᄉᆞ卧와\n雪셜月월이西셔峰봉의넘도록松숑窓챵을비겨잇쟈",
+      "modern": "아아 저물어 간다 연식(宴息)이 마땅하도다\n배 붙여라 배 붙여라\n가는 눈 뿌린 길 붉은 꽃 흩어진 데 흥겨워하며 걸어가서\n지국총 지국총 어사와\n설월(雪月)이 서봉(西峰)에 넘도록 송창(松窓)에 기대어 있자",
+      "reading": null,
+      "en": "Ah, it is growing dark; it is fitting to rest.\nBring her ashore, bring her ashore.\nAlong the path sprinkled with fine snow, where red blossoms lie scattered, walking on in high spirits,\nJigukchong, jigukchong, eosawa.\nlet us lean on the pine-framed window until the snow-moon sinks past the western peak."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": "Winter 5 and 6 are one raw paragraph. Uncertain lines: spring 5 line 3; summer 8 line 1 (몰쾌); autumn 6 line 1, autumn 8 line 1 (제곰); winter 5/6 last line (아압지/초목참); several raw hanja typos (白駒, 汀化, 防草, 桑大大夫, 浮說, 效側)."
+  }
+}

@@ -118,7 +118,7 @@
       "orig": "그러나 여보십시오, 그 곳에 陰影이 업다고 하십니?. 안입니다 안입니다, 호젓이 빗추는 달밤의 달빗아래에는 亦是 그에 ? 固有한 陰影이 잇는 것입니다. 支那唐以의 蘇子膽의 句에『積水空明』이라는 말이 잇습니다. 이것이 곧 이러한 밤, 이러한 光景의 陰影을 ?내인 것입니다. 달밤에는, 달밤에 ? 固有한 陰影이 잇고, 淸麗한 ??리의 노래에는, 亦是 그에 ? 相當한 陰影이 잇는 것입니다. 陰影 없는 物體가 어듸 잇겟습니까. 나는 存在에는 반드시 陰影이 ?른다고 합니다. 다만 가튼 物體일지라도 空間과 時間의 如何에 依하야, 그 陰影에 光度의 强弱만은 잇슬 것입니다. 곳, 陰影에 그 深淺은 잇슬지라도, 陰影이 업기도 하다고는 할 수 업는 것입니다. 英詩人, 아더·시몬드의",
       "modern": "그러나 여보십시오, 그곳에 음영이 없다고 하십니까. 아닙니다 아닙니다, 호젓이 비추는 달밤의 달빛 아래에는 역시 그에 알맞은 고유(固有)한 음영이 있는 것입니다. 지나(支那) 당송(唐宋)의 소자첨(蘇子瞻)의 구(句)에 『적수공명(積水空明)』이라는 말이 있습니다. 이것이 곧 이러한 밤, 이러한 광경의 음영을 그려 낸 것입니다. 달밤에는, 달밤에 알맞은 고유한 음영이 있고, 청려(淸麗)한 개구리 소리의 노래에는, 역시 그에 알맞은 상당한 음영이 있는 것입니다. 음영 없는 물체가 어디 있겠습니까. 나는 존재에는 반드시 음영이 따른다고 합니다. 다만 같은 물체일지라도 공간과 시간의 여하에 의하여, 그 음영에 광도(光度)의 강약만은 있을 것입니다. 곧, 음영에 그 깊고 얕음은 있을지라도, 음영이 없기도 하다고는 할 수 없는 것입니다. 영국 시인, 아서 시먼스의",
       "reading": null,
-      "en": "But look, please: do you say there is no shadow there? No, no—beneath the lonely shining moonlight of a moonlit night there is, after all, a shadow proper to it. In the verse of Su Zizhan of China, of Tang and Song times, there is the phrase “积水空明”—“pooled water, empty and bright.” This is precisely what depicts the shadows of such a night and such a scene. A moonlit night has the shadows proper to a moonlit night, and the song of the clear, lovely frogs likewise has the considerable shadows proper to it. Where is there an object without a shadow? I say that shadow always accompanies existence. Only, even for the same object, depending on the space and the time, there will be a difference of strength in the light of its shadow. That is, though a shadow may be deep or shallow, one cannot say that it is ever absent. The English poet Arthur Symons’s"
+      "en": "But look, please: do you say there is no shadow there? No, no—beneath the lonely shining moonlight of a moonlit night there is, after all, a shadow proper to it. In the verse of Su Zizhan of China, of Tang and Song times, there is the phrase “積水空明”—“pooled water, empty and bright.” This is precisely what depicts the shadows of such a night and such a scene. A moonlit night has the shadows proper to a moonlit night, and the song of the clear, lovely frogs likewise has the considerable shadows proper to it. Where is there an object without a shadow? I say that shadow always accompanies existence. Only, even for the same object, depending on the space and the time, there will be a difference of strength in the light of its shadow. That is, though a shadow may be deep or shallow, one cannot say that it is ever absent. The English poet Arthur Symons’s"
     },
     {
       "orig": "“Night, and the silence of the night; In the Venice far away a song; As if the lyrics water made Itself a serenade; As if the waters silence were a song, Sent up in to the night,",
@@ -242,9 +242,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "changes",
+    "by": "pipeline-lead",
     "date": "2026-10-08",
-    "notes": "Raw Wikisource transcription has ~50 \"?\" placeholders for unrendered (old-jamo/cluster) characters; all guessed from context in `modern` and `en` (low confidence: 꿈, 개구리 [spring chorus; raw shows ??리], 귀뚜라미 [autumn; raw ??], 찬란한 [raw ?내한], 더 짙고 [raw 더딧고], 졸작 [raw 掘作 = 拙作]). Su Shi cited as 蘇子膽 (= 子瞻) and 唐以 (= 唐宋) in raw; 十李曲坊 kept as written. Poem quotes are Sowol poems reviewed by Kim Eok; 28-31 poem not identified. Paragraph 31 \"아니도\" kept as in raw."
+    "notes": "Source transcription has ~50 '?' placeholders for lost old-jamo characters; not shippable until a clean source is found."
   }
 }

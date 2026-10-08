@@ -2351,8 +2351,8 @@ title_en = "In Praise of Children"
 author_ko = "방정환"
 author_en = "Bang Jeong-hwan"
 author_dates = "1899–1931"
-date = "1923"
-year = 1923
+date = "1924"
+year = 1924
 period = "colonial"
 themes = ["colonial-independence"]
 shelf = "essays-children"
@@ -2362,6 +2362,7 @@ source = "wikisource-ko"
 source_title = "어린이 찬미"
 search = ["어린이 찬미", "방정환"]
 pd_basis = "Author died 1931; Korean term (life+50) expired 1981, before the 2013 extension to life+70, so the work is in the public domain."
+note = "First published in 신여성, June 1924 (dated 15 May 1924 at the end of the text)."
 uncertain = ["source_title"]
 
 [[text]]

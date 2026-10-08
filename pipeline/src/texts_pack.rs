@@ -475,6 +475,16 @@ pub fn raw_problem(paras: &[String]) -> Option<String> {
             return Some(format!("licence section kept: {}", p.trim()));
         }
     }
+    // lost characters: a transcription that turned old jamo into '?' ("?는", "봄?") — a real
+    // question mark is followed by a space, quote or line end, not glued to a Hangul syllable
+    let glued = paras
+        .iter()
+        .flat_map(|p| p.chars().zip(p.chars().skip(1)).collect::<Vec<_>>())
+        .filter(|&(a, b)| a == '?' && ('\u{AC00}'..='\u{D7A3}').contains(&b))
+        .count();
+    if glued >= 3 {
+        return Some(format!("{glued} '?' placeholders glued to Hangul (characters lost in transcription)"));
+    }
     if !paras.iter().any(|p| !p.trim_start().starts_with("## ") && !p.trim().is_empty()) {
         return Some("only section headings, no text".into());
     }
@@ -715,7 +725,7 @@ fn collect(
             n_unreviewed += 1;
             continue;
         }
-        if enriched.is_none() {
+        if raw.is_some() {
             if let Some(why) = raw_problem(&raw_paras) {
                 // never ship markup leftovers or a heading-only page as a Reader text
                 log::warn!("texts: {}: raw text left out of the pack: {why}", e.id);
@@ -960,5 +970,7 @@ mod raw_problem_tests {
         assert!(raw_problem(&v(&["## 청구영언", "## 가곡원류"])).unwrap().contains("headings"));
         assert!(raw_problem(&v(&["본문 {{틀}}"])).unwrap().contains("markup"));
         assert_eq!(raw_problem(&v(&["## 1장", "본문입니다."])), None);
+        assert!(raw_problem(&v(&["봄?는 ?과 ?이 온다"])).unwrap().contains("placeholders"));
+        assert_eq!(raw_problem(&v(&["왜 그랬니? 몰라? 정말?"])), None);
     }
 }
