@@ -1,0 +1,100 @@
+{
+  "id": "dareul_ssoda",
+  "card": {
+    "summary_ko": "깊은 가을밤, 멀리 있는 벗의 편지에 마음이 흔들린 화자가 달밤의 못가에서 달에게 돌을 던지고 활을 만드는 산문.",
+    "summary_en": "A prose piece in which, on a deep autumn night, the narrator is shaken by a letter from a distant friend, goes out to a pond under the moon, hurls a stone at it, and finally makes a bow to shoot it.",
+    "level": "advanced",
+    "edition_ko": "Wikisource 「달을 쏘다」 (판 129481); 원저작물 공유 저작물, 전사: 위키문헌 기여자, CC BY-SA 4.0",
+    "edition_en": "Korean Wikisource, “달을 쏘다” (revision 129481); original work in the public domain, transcription by Wikisource contributors, CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**배경** 윤동주(1917–1945)는 북간도 출신 시인으로, 연희전문학교 시절(1938년 입학)에 동시와 시, 산문을 썼다. 이 글은 1930년대 말에 쓴 산문(수필)으로, 신문 학생란에 실렸다고 알려져 있다. 위키문헌 머리말에는 동요 「산울림」과 관련된 설명이 붙어 있으나 이 글과는 맞지 않는 것으로 보인다. 정확한 발표 지면은 확인이 필요하다.\n\n**의의** 시로 널리 알려진 윤동주의 초기 산문으로, 「자화상」 「쉽게 씌어진 시」 등에서 보이는 자기 성찰과 쓸쓸한 정서가 산문에서 먼저 나타난다. 우정의 상실이라는 사적인 감정을 달밤 풍경으로 옮긴 점이 돋보인다.\n\n**형식과 주제** 밤(기숙사 방) → 편지(과거의 사건) → 정원과 못(행동) → 활(결의)로 이어지는 짧은 구성이다. 달은 아름다움이자 원망의 대상이고, 돌로 깨뜨려도 곧 되살아나는 달은 지워지지 않는 슬픔을 상징한다. 마지막 문장 \"달을 쏘다\"는 서술이면서 제목의 반복이며, 체념하지 않고 다시 겨누는 태도를 보여 준다. 1930년대식 한자어와 문어체 문장이 많다.\n\n**읽기 도움**\n- 사위(四圍): 주위.\n- 저윽이(적이): 꽤, 어지간히.\n- 수습하다: 정리하다.\n- 해득하다: 뜻을 깨쳐 알다.\n- 홍안서생: 얼굴이 붉은 젊은 서생(젊은 학생).\n- 지기(知己): 마음을 알아주는 벗.\n- 삼경: 한밤중(밤 11시~새벽 1시경).\n- 팔매질: 돌 따위를 멀리 던지는 일.\n- 띠: 줄을 꼬는 데 쓰는 풀.",
+    "en": "**Background** Yun Dong-ju (1917–1945) was a poet from Bukgando (Jiandao) who wrote poems, children’s verse and prose, and entered Yonhi Professional School in 1938. This piece is a prose essay of the late 1930s, said to have been printed on a newspaper’s student page. The Wikisource header note mentions the children’s poem “Echo” (산울림), which does not seem to fit this text; the exact place of first publication should be checked.\n\n**Significance** It is an early prose work by a writer known chiefly for his poems. The self-scrutiny and loneliness of poems such as “Self-Portrait” and “A Poem Easily Written” already appear here. Its strength is turning a private sorrow, the loss of a friendship, into a moonlit landscape.\n\n**Form and themes** The structure is short and moves from the night room (dormitory) to the letter (a past event), to the garden and pond (action), to the bow (resolve). The moon is both beauty and an object of resentment; a moon that is shattered by a stone and at once revives symbolises a sorrow that cannot be erased. The last sentence repeats the title as narration and shows an attitude of aiming again rather than giving up. The prose uses many Sino-Korean words and a written, 1930s style.\n\n**Reading help**\n- 사위(四圍): surroundings.\n- 저윽이 (modern 적이): fairly, rather.\n- 수습하다: to tidy up, put in order.\n- 해득하다: to grasp the meaning.\n- 홍안서생: a rosy-cheeked young scholar (student).\n- 지기(知己): a friend who understands one’s heart.\n- 삼경: the dead of night (roughly 11 pm–1 am).\n- 팔매질: throwing stones.\n- 띠: cogon grass, used here for making string."
+  },
+  "paragraphs": [
+    {
+      "orig": "번거롭던 사위(四圍)가 잠잠해지고 시계 소리가 또렷하나 보니 밤은 저윽이 깊을 대로 깊은 모양이다. 보던 책자를 책상머리에 밀어놓고 잠자리를 수습한 다음 잠옷을 걸치는 것이다. 『딱』스위치 소리와 함께 전등을 끄고 창녘의 침대에 드러 누우니 이때까지 밖은 휘양찬 달밤이었던 것을 감각치 못하였었다. 이것도 밝은 전등의 혜택이었을까.",
+      "modern": "번거롭던 사위(四圍)가 잠잠해지고 시계 소리가 또렷하나 보니 밤은 적이 깊을 대로 깊은 모양이다. 보던 책자를 책상머리에 밀어놓고 잠자리를 수습한 다음 잠옷을 걸치는 것이다. 『딱』 스위치 소리와 함께 전등을 끄고 창녘의 침대에 드러누우니 이때까지 밖은 휘영청 밝은 달밤이었던 것을 감각하지 못하였었다. 이것도 밝은 전등의 혜택이었을까.",
+      "reading": null,
+      "en": "As the bustle all around has quieted and the sound of the clock has grown distinct, the night seems to have deepened as far as a night can deepen. I push the book I was reading to the edge of my desk, tidy up my bedding, and throw on my nightclothes. With the click of the switch I turn off the electric light and lie down on the bed by the window, and only then do I realise that, all this while, it had been a brilliantly moonlit night outside and I had not sensed it. Was this, too, a “blessing” of the bright electric light?"
+    },
+    {
+      "orig": "나의 누추한 방이 달빛에 잠겨 아름다운 그림이 된다는 것보다도 오히려 슬픈 선창이 되는 것이다. 창살이 이마로부터 콧마루, 입술, 이렇게 햐얀 가슴에 여민 손등에까지 어른거려 나의 마음을 간지르는 것이다. 옆에 누운 분의 숨소리에 방은 무시무시해진다. 아이처럼 황황해지는 가슴에 눈을 치떠서 밖을 내다보니 가을 하늘은 역시 맑고 우거진 송림은 한 폭의 묵화다. 달빛은 솔가지에 솔가지에 쏟아져 바람인 양 솨-소리가 날 듯하다. 들리는 것은 시계 소리와 숨소리와 귀또리 울음뿐 벅쩍 고던 기숙사도 절간보다 더 한층 고요한 것이 아니냐?",
+      "modern": "나의 누추한 방이 달빛에 잠겨 아름다운 그림이 된다는 것보다도 오히려 슬픈 선창이 되는 것이다. 창살이 이마로부터 콧마루, 입술, 이렇게 하얀 가슴에 여민 손등에까지 어른거려 나의 마음을 간질이는 것이다. 옆에 누운 분의 숨소리에 방은 무시무시해진다. 아이처럼 황황해지는 가슴에 눈을 치떠서 밖을 내다보니 가을 하늘은 역시 맑고 우거진 송림은 한 폭의 묵화다. 달빛은 솔가지에 솔가지에 쏟아져 바람인 양 솨 소리가 날 듯하다. 들리는 것은 시계 소리와 숨소리와 귀뚜라미 울음뿐, 북적이던 기숙사도 절간보다 더 한층 고요한 것이 아니냐?",
+      "reading": null,
+      "en": "Rather than my shabby room being steeped in moonlight and turning into a beautiful picture, it becomes a sorrowful window. The shadows of the window bars flicker over my forehead, the bridge of my nose, my lips, and on down to the backs of my hands folded over my white chest, tickling my heart. At the breathing of the person lying beside me, the room turns eerie. With a heart that flutters like a child’s, I roll my eyes upward and look outside: the autumn sky is as clear as ever, and the thick pine grove is a single ink painting. Moonlight pours down onto branch after pine branch, so that it seems a rushing sound like wind might rise. All that can be heard is the clock, the breathing, and the crying of crickets. Is not the dormitory, once so bustling, even quieter than a temple?"
+    },
+    {
+      "orig": "나는 깊은 사념에 잠기우기 한창이다. 딴은 사랑스런 아가씨를 사유(私有)할 수 있는 아름다운 상화(想華)도 좋고, 어린적 미련을 두고 온 고향에의 향수도 좋거니와 그보다 손쉽게 표현 못할 심각한 그 무엇이 있다.",
+      "modern": "나는 깊은 사념에 잠기기 한창이다. 딴은 사랑스러운 아가씨를 사유(私有)할 수 있는 아름다운 상화(想華)도 좋고, 어릴 적 미련을 두고 온 고향에의 향수도 좋거니와 그보다 손쉽게 표현 못할 심각한 그 무엇이 있다.",
+      "reading": null,
+      "en": "I am in the very midst of deep reflection. True, the beautiful fancy of having a lovable young lady all to myself is nice, and so is the longing for my hometown, where I left my childhood attachments behind; but there is something more profound than these, something that cannot be expressed so easily."
+    },
+    {
+      "orig": "바다를 건너온 H군의 편지 사연을 곰곰 생각할수록 사람과 사람 사이의 감정이란 미묘한 것이다. 감상적인 그에게도 필연코 가을은 왔나보다.",
+      "modern": "바다를 건너온 H군의 편지 사연을 곰곰 생각할수록 사람과 사람 사이의 감정이란 미묘한 것이다. 감상적인 그에게도 필연코 가을은 왔나 보다.",
+      "reading": null,
+      "en": "The more I turn over the contents of the letter from H, who has crossed the sea, the more subtle I find the feelings between one person and another. Autumn must surely have come even to him, sentimental as he is."
+    },
+    {
+      "orig": "편지는 너무나 지나치지 않았던가. 그 중 한 토막,",
+      "modern": "편지는 너무나 지나치지 않았던가. 그중 한 토막,",
+      "reading": null,
+      "en": "Wasn’t the letter far too excessive? One passage of it:"
+    },
+    {
+      "orig": "\" 군아, 나는 지금 울며울며 이 글을 쓴다. 이 밤도 달이 뜨고, 바람이 불고, 인간인 까닭에 가을이란 흙냄새도 안다. 정의 눈물, 따뜻한 예술학도였던 정의 눈물도 이 밤이 마지막이다. \"",
+      "modern": null,
+      "reading": null,
+      "en": "“Friend, I am writing this in tears, tears upon tears. Tonight too the moon has risen and the wind blows, and because I am human I know even the earthy smell called autumn. The tears of Jeong, the tears of Jeong who was a warm student of art—tonight’s are the last.”"
+    },
+    {
+      "orig": "또 마지막 켠으로 이런 구절이 있다. \" 당신은 나를 영원히 쫓아버리는 것이 정직할 것이오. \"",
+      "modern": null,
+      "reading": null,
+      "en": "And near the end there is this phrase as well: “It would be honest of you to drive me away forever.”"
+    },
+    {
+      "orig": "나는 이 글의 뉘앙스를 해득할 수 있다. 그러나 사실 나는 그에게 아픈 소리 한마디 한 일이 없고 서러운 글 한 쪽 보낸 일이 없지 아니한가. 생각컨대 이 죄는 다만 가을에게 지워보낼 수밖에 없다.",
+      "modern": "나는 이 글의 뉘앙스를 해득할 수 있다. 그러나 사실 나는 그에게 아픈 소리 한마디 한 일이 없고 서러운 글 한 쪽 보낸 일이 없지 아니한가. 생각건대 이 죄는 다만 가을에게 지워 보낼 수밖에 없다.",
+      "reading": null,
+      "en": "I can grasp the nuance of this letter. But in fact I have never said a single hurtful word to him, nor sent him a single sorrowful line. Thinking about it, there is nothing to be done but to lay this sin on autumn."
+    },
+    {
+      "orig": "홍안서생으로 이런 단안을 내리는 것은 외람한 일이나 동무란 한낱 괴로운 존재요 우정이란 진정코 위태로운 잔에 떠놓은 물이다. 이 말을 반대할 자 누구랴. 그러나 지기 하나 얻기 힘든다 하거늘 알뜰한 동무 하나 잃어버린다는 것이 살을 베어내는 아픔이다.",
+      "modern": "홍안서생으로 이런 단안을 내리는 것은 외람한 일이나 동무란 한낱 괴로운 존재요 우정이란 진정코 위태로운 잔에 떠놓은 물이다. 이 말을 반대할 자 누구랴. 그러나 지기 하나 얻기 힘들다 하거늘 알뜰한 동무 하나 잃어버린다는 것이 살을 베어내는 아픔이다.",
+      "reading": null,
+      "en": "For a rosy-cheeked young student like me to pass such a verdict is presumptuous, but a friend is nothing but a painful presence, and friendship is truly water set in a precarious cup. Who could argue with that? Yet they say it is hard to win even one bosom friend, and to lose one dear friend is an agony like having the flesh cut from one’s body."
+    },
+    {
+      "orig": "나는 나를 정원에서 발견하고 창을 넘어 나왔다든가 방문을 열고 나왔다든가 왜 나왔느냐 하는 어리석은 생각에 두뇌를 괴롭게 할 필요는 없는 것이다. 다만 귀뚜라미 울음에도 수줍어지는 코스모스 앞에 그윽히 서서 닥터 빌링스의 동상 그림자처럼 슬퍼지면 그만이다. 나는 이 마음을 아무에게나 전가시킬 심보는 없다. 옷깃은 민감이어서 달빛에도 싸늘히 추워지고 가을 이슬이란 선득선득하여서 설운 사나이의 눈물인 것이다. 발걸음은 몸뚱이를 옮겨 못가에 세워줄 때 못 속에도 역시 가을이 있고, 삼경이 있고, 나무가 있고 달이 있다.",
+      "modern": "나는 나를 정원에서 발견하고 창을 넘어 나왔다든가 방문을 열고 나왔다든가 왜 나왔느냐 하는 어리석은 생각에 두뇌를 괴롭게 할 필요는 없는 것이다. 다만 귀뚜라미 울음에도 수줍어지는 코스모스 앞에 그윽이 서서 닥터 빌링스의 동상 그림자처럼 슬퍼지면 그만이다. 나는 이 마음을 아무에게나 전가시킬 심보는 없다. 옷깃은 민감이어서 달빛에도 싸늘히 추워지고 가을 이슬이란 선득선득하여서 서러운 사나이의 눈물인 것이다. 발걸음은 몸뚱이를 옮겨 못가에 세워 줄 때 못 속에도 역시 가을이 있고, 삼경이 있고, 나무가 있고 달이 있다.",
+      "reading": null,
+      "en": "I find myself in the garden. I need not trouble my mind with foolish thoughts about whether I climbed out through the window or opened the door and came out, or why I came out. It is enough simply to stand quietly in front of a cosmos that grows shy even at a cricket’s cry and to turn sad like the shadow of Dr. Billings’s statue. I have no intention of passing this feeling on to anyone. My collar is sensitive and chills even in the moonlight; autumn dew is shivery cold—the tears of a sorrowful man. When my steps carry my body and set it down at the pond’s edge, in the pond too there is autumn, there is the third watch of the night, there are trees, and there is a moon."
+    },
+    {
+      "orig": "그 찰나 가을이 원망스럽고 달이 미워진다. 더듬어 돌을 찾아 달을 향하여 죽어라고 팔매질을 하였다. 통쾌! 달은 산산히 부서지고 말았다. 그러나 놀랐던 물결이 잦아들 때 오래잖아 달은 도로 살아난 것이 아니냐, 문득 하늘을 쳐다보니 얄미운 달은 머리위에서 빈정대는 것을......",
+      "modern": "그 찰나 가을이 원망스럽고 달이 미워진다. 더듬어 돌을 찾아 달을 향하여 죽어라고 팔매질을 하였다. 통쾌! 달은 산산이 부서지고 말았다. 그러나 놀랐던 물결이 잦아들 때 오래잖아 달은 도로 살아난 것이 아니냐, 문득 하늘을 쳐다보니 얄미운 달은 머리 위에서 빈정대는 것을......",
+      "reading": null,
+      "en": "At that instant I resent autumn and begin to hate the moon. Groping, I find a stone and hurl it at the moon with all my strength. Exhilarating! The moon was shattered to pieces. But when the startled ripples settle, before long has not the moon come back to life? Suddenly I look up at the sky, and the spiteful moon is jeering from overhead......"
+    },
+    {
+      "orig": "나는 곳곳한 나무가지를 고나 띠를 째서 줄을 매어 훌륭한 활을 만들었다. 그리고 좀 탄탄한 갈대로 화살을 삼아 무사의 마음을 먹고 달을 쏘다.",
+      "modern": "나는 꼿꼿한 나뭇가지를 골라 띠를 째서 줄을 매어 훌륭한 활을 만들었다. 그리고 좀 탄탄한 갈대로 화살을 삼아 무사의 마음을 먹고 달을 쏘다.",
+      "reading": null,
+      "en": "I picked a stiff branch, split a strip of cogon grass to make a string, and made a splendid bow. Then, taking a fairly sturdy reed for an arrow and setting my mind like a warrior’s, I shot the moon."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": "ai",
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-08",
+    "notes": ""
+  }
+}
