@@ -2,9 +2,9 @@
 
 use anyhow::{anyhow, Result};
 use std::fs;
-use std::io::{self, Read};
+use std::io::{self, BufRead, BufReader, Read, Write};
 use std::path::Path;
-use std::process::Command;
+use std::process::{Command, Stdio};
 use std::time::Duration;
 
 pub const NIKL_URL: &str = "https://github.com/spellcheck-ko/korean-dict-nikl";
@@ -21,6 +21,89 @@ pub const FILES: &[(&str, &str)] = &[
     // multi-GB; skipped when KDICT_SKIP_ZHWIKT is set (the zhwikt pack is then not built)
     ("kaikki-zh.jsonl", "https://kaikki.org/dictionary/Chinese/kaikki.org-dictionary-Chinese.jsonl"),
 ];
+
+/// English Wiktionary extract (several GB). `fetch` streams it and keeps only the lines that
+/// mention Korean ([`crate::enwikt::mentions_korean`]), so the work directory and the CI source
+/// cache hold a few hundred MB at most. Skipped when `KDICT_SKIP_ENWIKT` is set.
+pub const ENWIKT_FILE: &str = "kaikki-en-ko.jsonl";
+pub const ENWIKT_URL: &str = "https://kaikki.org/dictionary/English/kaikki.org-dictionary-English.jsonl";
+
+/// Copy the lines of `rd` for which `keep` holds into `out`; returns (lines read, lines kept).
+pub fn filter_lines<R: Read, W: Write>(rd: R, out: &mut W, keep: fn(&[u8]) -> bool) -> Result<(u64, u64)> {
+    let mut br = BufReader::with_capacity(1 << 20, rd);
+    let (mut n, mut k) = (0u64, 0u64);
+    let mut line = Vec::new();
+    loop {
+        line.clear();
+        if br.read_until(b'\n', &mut line)? == 0 {
+            break;
+        }
+        n += 1;
+        if keep(&line) {
+            out.write_all(&line)?;
+            if !line.ends_with(b"\n") {
+                out.write_all(b"\n")?;
+            }
+            k += 1;
+        }
+    }
+    out.flush()?;
+    Ok((n, k))
+}
+
+/// Stream `url` through [`filter_lines`] into `dest` (ureq, then curl as a fallback).
+pub fn download_filtered(url: &str, dest: &Path, keep: fn(&[u8]) -> bool) -> Result<(u64, u64)> {
+    if let Some(d) = dest.parent() {
+        fs::create_dir_all(d)?;
+    }
+    let tmp = dest.with_extension("part");
+    let via_ureq = || -> Result<(u64, u64)> {
+        let agent = ureq::AgentBuilder::new()
+            .timeout_connect(Duration::from_secs(30))
+            .timeout_read(Duration::from_secs(120))
+            .user_agent("kdict-pipeline/0.1 (+https://github.com/)")
+            .try_proxy_from_env(true)
+            .build();
+        let resp = agent.get(url).call().map_err(|e| anyhow!("{e}"))?;
+        let mut f = io::BufWriter::new(fs::File::create(&tmp)?);
+        filter_lines(resp.into_reader(), &mut f, keep)
+    };
+    let via_curl = || -> Result<(u64, u64)> {
+        let mut child = Command::new("curl").args(["-fsSL", "--retry", "2"]).arg(url).stdout(Stdio::piped()).spawn()?;
+        let mut f = io::BufWriter::new(fs::File::create(&tmp)?);
+        let r = filter_lines(child.stdout.take().ok_or_else(|| anyhow!("no curl stdout"))?, &mut f, keep);
+        let st = child.wait()?;
+        if !st.success() {
+            return Err(anyhow!("curl exit {st}"));
+        }
+        r
+    };
+    let res = match via_ureq() {
+        Ok(r) if r.1 > 0 => Ok(r),
+        first => {
+            let first = match first {
+                Ok(_) => "no matching lines".to_string(),
+                Err(e) => e.to_string(),
+            };
+            log::debug!("filtered download via ureq failed for {url}: {first}");
+            match via_curl() {
+                Ok(r) if r.1 > 0 => Ok(r),
+                Ok(_) => Err(anyhow!("{first}; curl fallback: no matching lines")),
+                Err(e) => Err(anyhow!("{first}; curl fallback: {e}")),
+            }
+        }
+    };
+    match res {
+        Ok(r) => {
+            fs::rename(&tmp, dest)?;
+            Ok(r)
+        }
+        Err(e) => {
+            let _ = fs::remove_file(&tmp);
+            Err(e)
+        }
+    }
+}
 
 fn download_ureq(url: &str, tmp: &Path) -> Result<u64> {
     let agent = ureq::AgentBuilder::new()
@@ -117,11 +200,28 @@ pub fn fetch_nikl(work: &Path) -> Result<()> {
     Ok(())
 }
 
+/// The English Wiktionary extract, cut to lines mentioning Korean (optional; failures only warn).
+fn fetch_enwikt(work: &Path) {
+    let dest = work.join(ENWIKT_FILE);
+    if std::env::var_os("KDICT_SKIP_ENWIKT").is_some() {
+        log::info!("{ENWIKT_FILE}: KDICT_SKIP_ENWIKT is set, skipping");
+    } else if fs::metadata(&dest).map(|m| m.len() > 0).unwrap_or(false) {
+        log::info!("{ENWIKT_FILE}: already present, skipping");
+    } else {
+        log::info!("downloading {ENWIKT_URL} (keeping lines that mention Korean)");
+        match download_filtered(ENWIKT_URL, &dest, crate::enwikt::mentions_korean) {
+            Ok((n, k)) => log::info!("{ENWIKT_FILE}: kept {k} of {n} lines, {} bytes", fs::metadata(&dest).map(|m| m.len()).unwrap_or(0)),
+            Err(e) => log::warn!("{ENWIKT_FILE}: download failed ({ENWIKT_URL}): {e:#}"),
+        }
+    }
+}
+
 pub fn run(work: &Path) -> Result<()> {
     fs::create_dir_all(work)?;
     if let Err(e) = fetch_nikl(work) {
         log::warn!("NIKL (krdict/stdict/opendict) fetch failed: {e:#}");
     }
+    fetch_enwikt(work);
     for (name, url) in FILES {
         if *name == "kaikki-zh.jsonl" && std::env::var_os("KDICT_SKIP_ZHWIKT").is_some() {
             log::info!("{name}: KDICT_SKIP_ZHWIKT is set, skipping");

@@ -40,10 +40,19 @@ export interface HanjaChar { ch: string; readings?: string; meaning_en?: string;
 export interface GrammarRow { id: number; entry_id?: number; pattern: string; category: string; level?: number; summary_en?: string; sort?: number }
 export interface Sentence { ko: string; en: string | null; source: string | null; id?: number }
 
+/** Wiktionary translation-table data for English queries (`en_ko`, core pack, optional). */
+export interface EnKoWord { ko: string; roman?: string | null }
+export interface EnKoSense { term: string; pos: string; sense?: string | null; words: EnKoWord[] }
+export interface EnKoPhrase { term: string; pos: string; sense?: string | null; words: EnKoWord[] }
+
 export type SearchMode = 'hangul' | 'latin' | 'han' | 'empty';   // UI-side script detection
 export interface SearchResult {
   mode: 'hangul' | 'english' | 'hanja'; rows: ResultRow[]; hanja?: HanjaChar[];
   deconj?: { lemma: string; rule: string }[]; grammarHints?: string[];
+  /** English queries: Korean translations of the query term, by part of speech and sense. */
+  translations?: EnKoSense[];
+  /** English queries: multi-word expressions starting with / containing the query. */
+  phrases?: EnKoPhrase[];
 }
 
 // ---- Reader (see docs/READER.md "texts pack + engine API") ----

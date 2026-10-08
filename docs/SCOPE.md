@@ -49,6 +49,7 @@ GitHub Actions (full internet)                     Phone (offline)
 | kengdic | ~130k Korean–English pairs + hanja | MPL 2.0 / LGPL | raw.githubusercontent.com/garfieldnate/kengdic |
 | Tatoeba | Korean–English sentence pairs | CC BY 2.0 FR | downloads.tatoeba.org |
 | CC-CEDICT (optional `cedict` pack) | Chinese–English, traditional/simplified, pinyin | CC BY-SA 4.0 | mdbg.net |
+| Wiktionary English translation tables (optional `en_ko` table in core) | English term → Korean translations by sense, English phrases | CC BY-SA 4.0 | kaikki.org English JSONL (multi-GB; `fetch` keeps only lines mentioning Korean → `kaikki-en-ko.jsonl`; `KDICT_SKIP_ENWIKT` skips it) |
 | Wiktionary Chinese (optional `zhwikt` pack) | classical senses, Middle Chinese / Sino-Korean readings | CC BY-SA 4.0 | kaikki.org Chinese JSONL |
 | Unihan | Hanja readings (kHangul), English meaning, strokes, radical | Unicode licence | unicode.org |
 | FrequencyWords (OpenSubtitles) | Word frequency for ranking | CC BY-SA 4.0 | raw.githubusercontent.com/hermitdave/FrequencyWords |
@@ -131,6 +132,32 @@ CREATE TABLE grammar (
   `counts.dropped_not_korean` records the rest. They have the same `entries`/`forms`/`hanja_words` tables, `lang 'en'`, `source` = pack id, no FTS/gloss_terms:
   `headword` = `hw_norm` = `hanja` = traditional; `forms.form` = simplified; `pron` = Sino-Korean reading in hangul; `data.simplified`, `data.pinyin` (tone marks), `data.pinyin_num`, `data.cl` (cedict); `data.pron` {mandarin, middle_chinese, cantonese, sino_korean, sino_vietnamese, sino_japanese}, `data.classical`, `data.etym` (zhwikt). Chinese packs rank after all Korean ranks.
 * Engine: Han-script searches also query installed `cedict`/`zhwikt` (exact, simplified via `forms`, longest known prefix, words starting with the query), rows after the Korean ones with `via: 'hanja'`. `lookupInText(text, offset, {packs, limit?}) -> {match, start, end, rows, hanja?, deconj?}` (offsets are UTF-16 code units) serves the Reader; extra `via` values: `hist`, `spelling`, `prefix`.
+
+### Contract additions: English → Korean translations (core, optional)
+Present only when the English Wiktionary extract was fetched (the build skips both tables otherwise;
+the engine checks `Caps.en_ko` / `Caps.en_ko_words` and returns no translations for packs without them).
+
+```sql
+-- Korean items of English Wiktionary translation tables. term_norm = lower-cased, whitespace collapsed;
+-- term = display form when it differs (capitals: 'Korea'), else NULL; pos = readable English POS
+-- ('noun', 'verb', 'adjective', 'proper noun', 'phrase', …); sense = the table's sense label (or the
+-- sense's first gloss), ≤ 90 chars; ko = Hangul only (bracketed hanja removed, items with Latin/Han
+-- dropped); rank = order within the term (source order). Deduplicated per (term, pos, sense, ko);
+-- caps: 12 (pos, sense) groups, 6 words per group, 48 rows per term. "Translations to be checked" skipped.
+CREATE TABLE en_ko (term_norm TEXT NOT NULL, term TEXT, pos TEXT NOT NULL, sense TEXT,
+                    ko TEXT NOT NULL, roman TEXT, rank INTEGER NOT NULL);
+CREATE INDEX en_ko_term ON en_ko(term_norm, rank);
+-- "phrases containing": every word after the first of a multi-word term_norm (punctuation trimmed,
+-- stop words such as a/the/of/to/one's skipped). Words in first position use the term_norm range.
+CREATE TABLE en_ko_words (word TEXT NOT NULL, term_norm TEXT NOT NULL, PRIMARY KEY (word, term_norm)) WITHOUT ROWID;
+```
+`meta.counts` gains `en_ko`, `en_ko_terms` and `en_ko_gz_bytes` (gzip size of the two tables' text,
+budget 6 MB, a warning above it); the quality gate wants `en_ko ≥ 20 000` when the table was built.
+Engine: an English search (Latin script only) adds `translations` (the query term's rows, leading
+"to " dropped, grouped by (pos, sense), pos groups in order of first appearance:
+`{term, pos, sense?, words: {ko, roman?}[]}[]`) and `phrases` (≤ 30 terms that start with
+"<query> " or contain the query as a later word run, those starting with it first, then shortest:
+`{term, pos, sense?, words}[]`, ≤ 6 words each). Both are omitted when empty; `rows` is unchanged.
 
 ### EntryData JSON
 
