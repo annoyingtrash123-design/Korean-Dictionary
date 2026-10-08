@@ -22,7 +22,7 @@
       "orig": "五百年 都邑地를 匹馬로 도라드니\n山川은 依舊ᄒᆞ되 人傑은 간 듸 업다\n어즈버 太平烟月이 ᄭᅮᆷ이런가 ᄒᆞ노라",
       "modern": "오백 년 도읍지(都邑地)를 필마(匹馬)로 돌아드니\n산천(山川)은 의구(依舊)하되 인걸(人傑)은 간 데 없다\n아아, 태평연월(太平烟月)이 꿈이런가 하노라",
       "reading": null,
-      "en": "Riding a single horse through the capital of five hundred years,\nthe hills and rivers are as of old, but the great men are gone nowhere to be found.\nAlas, was the age of peaceful smoke and moonlight only a dream?"
+      "en": "Riding a single horse through the capital of five hundred years,\nthe hills and rivers are as of old, but the great men are gone, nowhere to be found.\nAlas, was the age of peaceful smoke and moonlight a dream?"
     },
     {
       "orig": "## 가곡원류",
@@ -34,7 +34,7 @@
       "orig": "五百年 都邑地를 匹馬로 도라드니\n山川은 依舊커늘 人傑은 어듸 간고\n어즈버 太平烟月이 ᄭᅮᆷ이런가 ᄒᆞ노라",
       "modern": "오백 년 도읍지를 필마로 돌아드니\n산천은 의구하거늘 인걸은 어디 간고\n아아, 태평연월이 꿈이런가 하노라",
       "reading": null,
-      "en": "Riding a single horse through the capital of five hundred years,\nthe hills and rivers are as of old, so where have the great men gone?\nAlas, was the age of peaceful smoke and moonlight only a dream?"
+      "en": "Riding a single horse through the capital of five hundred years,\nthe hills and rivers are as of old, so where have the great men gone?\nAlas, was the age of peaceful smoke and moonlight a dream?"
     }
   ],
   "labels": {
@@ -44,9 +44,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
+    "status": "approved",
+    "by": "content-review",
     "date": "2026-10-08",
-    "notes": ""
+    "notes": "Checked both versions line by line against raw (line 2 of each follows its own text); facts and editions OK. Removed an added 'only' in en."
   }
 }
