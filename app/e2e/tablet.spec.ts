@@ -66,6 +66,13 @@ test('two-pane tablet layout', async ({ page }) => {
   await expect(page.getByText('Search or pick a word')).toBeVisible();
   await shot(page, 'light-empty');
 
+  // English search: Korean results grouped by part of speech, glosses on two lines
+  await search(page, 'report');
+  await expect(page.locator('.pane-left .pos-h').first()).toBeVisible();
+  await expect(page.locator('.pane-left .pos-h', { hasText: 'Nouns' })).toHaveCount(1);
+  await page.waitForTimeout(500);
+  await shot(page, 'light-results-report');
+
   // results on the left
   await search(page, '학교');
   const rows = page.locator('.pane-left .list .row');

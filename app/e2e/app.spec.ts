@@ -62,6 +62,7 @@ async function tour(page: Page, theme: 'light' | 'dark') {
   await shot(page, `${theme}-results`);
   await search(page, 'eat');
   await expect(page.locator('.row .hw').first()).toBeVisible();
+  await expect(page.locator('.pos-h', { hasText: 'Verbs' })).toHaveCount(1);
   await shot(page, `${theme}-results-eat`);
   await search(page, '먹다');
   await page.locator('.row', { hasText: '먹다' }).first().click();

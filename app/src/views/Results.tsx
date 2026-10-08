@@ -12,6 +12,33 @@ import { Empty, GroupRow } from '../components/common';
 import { entryPath, hanjaPath, href, useRoute, withoutTab, wordPath } from '../lib/router';
 
 const cache = new Lru<SearchResult>(40);
+
+/** English searches: Korean results grouped by part of speech (nouns, verbs, …), in rank order. */
+const POS_BUCKETS: { id: string; label: string; ko: string; pos: string[] }[] = [
+  { id: 'noun', label: 'Nouns', ko: '명사', pos: ['noun', 'bound noun', 'pronoun', 'numeral'] },
+  { id: 'verb', label: 'Verbs', ko: '동사', pos: ['verb', 'auxiliary verb'] },
+  { id: 'adj', label: 'Adjectives', ko: '형용사·관형사', pos: ['adjective', 'auxiliary adjective', 'determiner'] },
+  { id: 'adv', label: 'Adverbs', ko: '부사', pos: ['adverb'] },
+  { id: 'phrase', label: 'Phrases & idioms', ko: '구·관용구', pos: ['phrase', 'idiom', 'expression', 'proverb'] },
+];
+export function posBucket(pos: string | undefined): string {
+  const p = (pos ?? '').trim().toLowerCase();
+  return POS_BUCKETS.find((b) => b.pos.includes(p))?.id ?? 'other';
+}
+export function byPos<T extends { pos: string[] }>(groups: T[]): { id: string; label: string; ko: string; items: T[] }[] {
+  const out: { id: string; label: string; ko: string; items: T[] }[] = [];
+  for (const g of groups) {
+    const id = posBucket(g.pos[0]);
+    let b = out.find((x) => x.id === id);
+    if (!b) {
+      const def = POS_BUCKETS.find((x) => x.id === id) ?? { id: 'other', label: 'Other', ko: '기타', pos: [] };
+      b = { id, label: def.label, ko: def.ko, items: [] };
+      out.push(b);
+    }
+    b.items.push(g);
+  }
+  return out;
+}
 const FIRST_PAINT = 15;
 export const FIRST_PAGE = 20;
 const FULL_PAGE = 50;
@@ -96,11 +123,19 @@ export function Results({ q }: { q: string }) {
       {!busy && groups.length === 0 && !shown?.hanja?.length && (
         <Empty title={`No results for “${q}”`}>Try another spelling, the dictionary form, or an English word.</Empty>
       )}
-      <ul class="plain list">
-        {visible.map((g) => (
+      {(() => {
+        const row = (g: (typeof visible)[number]) => (
           <li key={g.key}><GroupRow g={g} current={withoutTab(route.raw) === entryPath(g.primary.source, g.primary.id, g.headword)} note={g.via === 'deconj' ? `← ${q}${ruleFor(g.headword) ? ` · ${ruleFor(g.headword)}` : ''}` : g.via === 'form' ? `form: ${q}` : undefined} /></li>
-        ))}
-      </ul>
+        );
+        const sections = shown?.mode === 'english' ? byPos(visible) : [];
+        if (sections.length < 2) return <ul class="plain list">{visible.map(row)}</ul>;
+        return sections.map((sec) => (
+          <section key={sec.id} class="pos-sec" aria-label={sec.label}>
+            <h2 class="pos-h"><span>{sec.label}</span><span class="pos-ko" lang="ko">{sec.ko}</span><span class="pos-n">{sec.items.length}</span></h2>
+            <ul class="plain list">{sec.items.map(row)}</ul>
+          </section>
+        ));
+      })()}
     </div>
   );
 }
