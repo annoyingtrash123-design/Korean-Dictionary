@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T18:32:07Z",
+  "generated_at": "2026-10-12T18:36:01Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -1310,18 +1310,6 @@
       "needs_sections": false
     },
     {
-      "id": "minjok_gaejoron",
-      "source": "wikisource-ko",
-      "page_title": "민족개조론",
-      "url": "https://ko.wikisource.org/wiki/%EB%AF%BC%EC%A1%B1%EA%B0%9C%EC%A1%B0%EB%A1%A0",
-      "revision_id": 402723,
-      "chars": 115240,
-      "subpages": 0,
-      "resolved_via": "title",
-      "truncated": false,
-      "needs_sections": false
-    },
-    {
       "id": "gundae_haesan_jochik",
       "source": "wikisource-zh",
       "page_title": "朝鮮王朝實錄/純宗實錄/卽位年",
@@ -1666,6 +1654,18 @@
       "chars": 498,
       "subpages": 0,
       "resolved_via": "level_ids",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "minjok_gaejoron",
+      "source": "wikisource-ko",
+      "page_title": "민족개조론",
+      "url": "https://ko.wikisource.org/wiki/%EB%AF%BC%EC%A1%B1%EA%B0%9C%EC%A1%B0%EB%A1%A0",
+      "revision_id": 402723,
+      "chars": 12459,
+      "subpages": 0,
+      "resolved_via": "title",
       "truncated": false,
       "needs_sections": false
     }
