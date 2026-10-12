@@ -705,3 +705,11 @@ fn history_db_leaves_are_joined_in_order() {
     let bad = texts_catalog::parse(&src.replace("sa_001_0050_0090_0270", "sa_001r_0050_0090_0270")).unwrap();
     assert!(texts_catalog::validate(&bad).iter().any(|p| p.contains("translation")));
 }
+
+#[test]
+fn paragraph_range_cuts_an_excerpt() {
+    let src = entry("novel", "modern-fiction", "wikisource-ko", "소설", "hangul", &[]).replace("pd_basis", "paragraph_range = [1, 3]\npd_basis");
+    let e = catalog_entry(&src);
+    let p = kdict_pipeline::texts_pack::entry_paragraphs(&e, "하나\n\n둘\n\n셋\n\n넷");
+    assert_eq!(p, vec!["둘", "셋"]);
+}

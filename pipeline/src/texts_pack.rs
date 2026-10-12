@@ -83,6 +83,16 @@ struct Para {
 
 /// Split raw text into paragraphs on blank lines. Verse keeps its line breaks; prose lines are
 /// joined (with a space, or directly for hanmun).
+/// The paragraphs of a catalogue text as the pack ships them (split, then `paragraph_range`).
+pub fn entry_paragraphs(e: &Entry, text: &str) -> Vec<String> {
+    let mut p = split_paragraphs(text, VERSE_SHELVES.contains(&e.shelf.as_str()), e.script == "hanmun");
+    if let Some([a, b]) = e.paragraph_range {
+        let b = b.min(p.len());
+        p = if a < b { p[a..b].to_vec() } else { Vec::new() };
+    }
+    p
+}
+
 /// Remove broken page-break tags left inside words by some transcriptions ("도pb n='15a'> 든").
 fn strip_page_breaks(t: &str) -> String {
     let mut out = String::with_capacity(t.len());
@@ -762,7 +772,7 @@ fn collect(
         let raw_paras = raw
             .as_ref()
             .and_then(|r| r.get("text").and_then(Value::as_str))
-            .map(|t| split_paragraphs(t, VERSE_SHELVES.contains(&e.shelf.as_str()), hanmun))
+            .map(|t| entry_paragraphs(e, t))
             .unwrap_or_default();
         // `"paragraphs": "raw"`: card + notes only (long works awaiting translation) — the text
         // is the raw source, untranslated; only allowed without a translation label.
@@ -1180,4 +1190,23 @@ mod raw_problem_tests {
         assert!(raw_problem(&v(&["봄?는 ?과 ?이 온다"])).unwrap().contains("placeholders"));
         assert_eq!(raw_problem(&v(&["왜 그랬니? 몰라? 정말?"])), None);
     }
+}
+
+/// Write `<out>/<id>.json` = `{id, shelf, script, meta, provenance, paragraphs}` for fetched texts,
+/// with the paragraphs split exactly as the pack does (input for enrichment writers).
+pub fn export_paras(dir: &Path, out: &Path, only: &[String]) -> Result<()> {
+    let cat = texts_catalog::load(&dir.join("catalog.toml"))?;
+    fs::create_dir_all(out)?;
+    let mut n = 0;
+    for e in cat.texts.iter().filter(|e| only.is_empty() || only.contains(&e.id)) {
+        let Ok(s) = fs::read_to_string(dir.join("raw").join(format!("{}.json", e.id))) else { continue };
+        let raw: Value = serde_json::from_str(&s)?;
+        let paras = raw.get("text").and_then(Value::as_str).map(|t| entry_paragraphs(e, t)).unwrap_or_default();
+        let v = json!({"id": e.id, "shelf": e.shelf, "script": e.script, "meta": catalog_meta(e),
+            "provenance": provenance_from_raw(&raw, None, e), "paragraphs": paras});
+        fs::write(out.join(format!("{}.json", e.id)), serde_json::to_string_pretty(&v)?)?;
+        n += 1;
+    }
+    log::info!("texts-paras: {n} file(s) written to {}", out.display());
+    Ok(())
 }

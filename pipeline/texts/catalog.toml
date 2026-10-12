@@ -2783,7 +2783,8 @@ themes = ["colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
 excerpt = true
-excerpt_note = "Keep the opening (취지) and the concluding sections stating the programme of 개조 and the 개조 동맹 proposal; about 12k characters."
+excerpt_note = "The preface (辯言), 民族改造의 意義, 甲申以來의 朝鮮의 改造運動 and the 結論 of the 1922 開闢 text; the page's appended modern Korean rendering (한글 해석) is left out. About 12k characters."
+sections = ["辯言", "民族改造의 意義", "甲申以來의 朝鮮의 改造運動", "結論"]
 source = "wikisource-ko"
 source_title = "민족개조론"
 alt_titles = ["민족 개조론", "민족개조론 (이광수)"]
@@ -3106,7 +3107,8 @@ themes = ["colonial-independence"]
 shelf = "modern-fiction"
 script = "hangul"
 excerpt = true
-excerpt_note = "Keep the opening 원소 village chapters (제1-제10 in the serial's first section) and one factory/Incheon chapter; about 10k characters."
+excerpt_note = "The opening chapters set in 용연 village (the 원소 legend, 정덕호 the landlord, 선비 and 첫째), paragraphs 1-250 of the serial; about 14k characters."
+paragraph_range = [0, 250]
 source = "wikisource-ko"
 source_title = "인간문제"
 search = ["인간문제", "인간 문제 강경애", "강경애 인간문제"]
@@ -3267,12 +3269,12 @@ shelf = "hanmun"
 script = "hanmun"
 excerpt = true
 excerpt_note = "Keep the opening founding legend (Chumo/Jumong, 惟昔始祖鄒牟王之創基也 … 黃龍來下迎王) and the summary of the 永樂 campaigns (永樂五年 Baekje/Silla, 永樂九年–十四年 Wa and Baekje, 永樂二十年 Buyeo); omit the tomb-guardian household list."
-source = "wikisource-ko"
-source_title = "광개토왕릉비"
-alt_titles = ["광개토대왕릉비", "광개토왕릉비문", "광개토대왕릉비문", "廣開土王碑", "好太王碑"]
+source = "wikisource-zh"
+source_title = "國岡上廣開土境平安好太王碑"
+alt_titles = ["好太王碑文", "廣開土王碑", "好太王碑"]
 search = ["광개토왕릉비", "광개토대왕릉비문", "廣開土王碑", "好太王碑", "永樂五年歲在乙未"]
 pd_basis = "Pre-modern royal inscription of 414; anonymous and far beyond any copyright term."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: likely exists as part of 삼국유사 권5 (효선 제9); page scheme uncertain
 [[text]]
@@ -3298,7 +3300,7 @@ alt_titles = ["三國遺事/卷五", "삼국유사/권5", "삼국유사/효선",
 sections = ["大城孝二世父母"]
 search = ["대성효이세부모", "大城孝二世父母", "삼국유사 대성 불국사 석불사", "三國遺事 孝善第九"]
 pd_basis = "Author died 1289; centuries-old work in the public domain."
-uncertain = ["date", "year", "source_title", "search", "sections"]
+uncertain = ["date", "year", "search", "sections"]
 
 # resource: 高麗史 世家 page scheme 高麗史/卷二; the 훈요십조 sits in 太祖 26年 4月
 [[text]]
@@ -3323,7 +3325,7 @@ alt_titles = ["高麗史/卷二/世家", "高麗史/卷002", "고려사/권2", "
 sections = ["二十六年"]
 search = ["훈요십조", "訓要十條", "고려사 태조 26년", "高麗史 太祖二十六年 訓要"]
 pd_basis = "Pre-modern official royal text (943) preserved in the Goryeosa (1451); public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: zh 宣和奉使高麗圖經 likely exists in volumes (卷三十一 器皿一, 卷三十二 器皿二); ko page unlikely
 [[text]]
@@ -3348,7 +3350,7 @@ alt_titles = ["宣和奉使高麗圖經/卷第三十二", "宣和奉使高麗圖
 sections = ["陶尊", "器皿"]
 search = ["선화봉사고려도경", "宣和奉使高麗圖經 器皿", "陶尊 翡色", "高麗圖經 翡色", "서긍 고려도경 청자"]
 pd_basis = "Author (Xu Jing) died 1153; centuries-old work in the public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: 東國李相國集 on zh/ko wikisource; chapter number is a guess (기고문 section, c. 卷二十五)
 [[text]]
@@ -3372,7 +3374,7 @@ alt_titles = ["東國李相國全集/卷二十五", "東國李相國全集/卷�
 sections = ["大藏刻板君臣祈告文"]
 search = ["대장각판군신기고문", "大藏刻板君臣祈告文", "이규보 기고문", "東國李相國集 祈告文"]
 pd_basis = "Author died 1241; centuries-old work in the public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: 高麗史 列傳 卷第四十三 (叛逆); 裴仲孫 volume number is a guess
 [[text]]
@@ -3397,7 +3399,7 @@ alt_titles = ["高麗史/卷130", "高麗史/列傳卷第四十三", "高麗史/
 sections = ["裴仲孫"]
 search = ["배중손", "裴仲孫", "삼별초 고려사 열전", "高麗史 裴仲孫 三別抄", "승화후 온 삼별초"]
 pd_basis = "Official compilation of 1451 (anonymous/collective); public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: LOW confidence; the colophon may exist only inside a page on the Jikji text or on a ko article, not as a Wikisource page
 [[text]]
@@ -3441,12 +3443,12 @@ script = "hanmun"
 excerpt = true
 excerpt_note = "Keep the 7月丁未 entry on the enthronement at 壽昌宮 and the full 敎書 beginning 王若曰 (the new dynasty's reform programme: 國號, 儀章法制, 科擧, 賦役, 刑法); omit the preceding 七月 entries."
 source = "wikisource-zh"
-source_title = "朝鮮王朝實錄/太祖實錄/卷一"
+source_title = "朝鮮王朝實錄/太祖實錄/元年"
 alt_titles = ["朝鮮王朝實錄/太祖康獻大王實錄/卷一", "朝鮮王朝實錄/太祖實錄/一年", "太祖實錄/卷一"]
-sections = ["七月", "丁未"]
+sections = ["7月28日"]
 search = ["태조 즉위교서", "太祖實錄 卷一 即位教書", "太祖元年七月丁未 王若曰", "태조실록 1년 7월 28일"]
 pd_basis = "Official royal edict preserved in the Veritable Records; centuries old, public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: 世宗實錄 yearly pages (sejong_sillok_changje uses 二十五年); 報漏閣 entry is in 世宗 16年 7月 1日 (卷六十五)
 [[text]]
@@ -3468,10 +3470,10 @@ excerpt_note = "Keep only the 世宗十六年七月 entry that describes the 報
 source = "wikisource-zh"
 source_title = "朝鮮王朝實錄/世宗實錄/十六年"
 alt_titles = ["朝鮮王朝實錄/世宗莊憲大王實錄/十六年", "朝鮮王朝實錄/世宗實錄/卷六十五", "世宗實錄/卷六十五"]
-sections = ["七月"]
+sections = ["7月1日"]
 search = ["세종실록 보루각 자격루", "報漏閣記 自擊漏", "世宗實錄 十六年 七月 報漏閣", "장영실 자격루 세종실록"]
 pd_basis = "Official compilation (Veritable Records); centuries old, public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: 난중일기 exists on ko wikisource in per-year pages (임진일기, 정유일기); original is hanmun, check it is not a modern translation
 [[text]]
@@ -3561,11 +3563,10 @@ shelf = "constitution"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "대한국 국제"
-alt_titles = ["대한국국제", "大韓國國制", "대한국 국제 (1899)"]
+source_title = "대한제국 대한국국제"
+alt_titles = ["대한국 국제", "대한국국제", "大韓國國制"]
 search = ["대한국 국제", "大韓國國制", "대한제국 국제 1899"]
 pd_basis = "Official state document (imperial edict/fundamental law; Copyright Act art. 7)."
-uncertain = ["source_title"]
 
 # resource: likely exists; also titled 한일병합조약 / 韓國倂合ニ關スル條約. The 순종 유조 (1926) is deliberately left out: treaty only.
 [[text]]
@@ -3584,11 +3585,11 @@ shelf = "treaties"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "한국병합에 관한 조약"
+source_title = "한일병합조약"
 alt_titles = ["한일병합조약", "한일합병조약", "韓國倂合ニ關スル條約", "한국 병합에 관한 조약", "경술국치조약"]
 search = ["한국병합에 관한 조약", "한일병합조약", "韓國倂合ニ關スル條約", "한일합방조약"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title", "search"]
+uncertain = ["search"]
 
 # resource: LOW-MEDIUM; judgment text was Japanese (mixed kana/kanji); Wikisource copies may be a Korean rendering by others; check provenance
 [[text]]
@@ -3653,12 +3654,12 @@ script = "mixed"
 excerpt = true
 excerpt_note = "Keep the preamble (서문) and the headings plus first paragraphs of 제1조 (군사분계선과 비무장지대) and 제2조 (정전의 구체적 조치, 정전 감시기구); omit articles 제3조 onward and all annexes."
 source = "wikisource-ko"
-source_title = "한국 군사정전에 관한 협정"
-alt_titles = ["한국군사정전에관한협정", "정전협정", "한국 정전 협정", "한국 군사 정전에 관한 협정", "6.25 정전협정"]
-sections = ["서문", "제1조", "제2조"]
+source_title = "정전협정문"
+alt_titles = ["한국전쟁 정전협정문", "한국군사정전에관한협정"]
+sections = ["서 언", "제1조", "제2조"]
 search = ["한국 군사정전에 관한 협정", "정전협정", "한국군사정전에관한협정", "Korean Armistice Agreement 한글"]
 pd_basis = "Official state/government document (armistice agreement; Copyright Act art. 7)."
-uncertain = ["source_title", "search", "sections"]
+uncertain = ["search", "sections"]
 
 # resource: medium; statement text widely transcribed; author is the President's office (Rhee died 1965, so authorship is attributed to the state, not the person)
 [[text]]
@@ -3702,7 +3703,7 @@ source_title = "5·18민주화운동 등에 관한 특별법"
 alt_titles = ["5.18민주화운동 등에 관한 특별법", "5ㆍ18민주화운동 등에 관한 특별법"]
 search = ["5·18민주화운동 등에 관한 특별법", "5.18민주화운동 등에 관한 특별법", "5ㆍ18민주화운동등에관한특별법"]
 pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
-uncertain = ["source_title", "search", "date", "year"]
+uncertain = ["search", "date", "year"]
 
 # resource: LOW; an official 1962 plan document may not be on Wikisource; the plan text was issued by 경제기획원/건설부-era 최고회의 and its copyright status is not settled
 [[text]]
@@ -3744,11 +3745,11 @@ script = "mixed"
 excerpt = true
 excerpt_note = "Keep the purpose article (제1조 목적), the definitions and the articles creating the 서울올림픽대회조직위원회 and the state's support duties; omit penal and supplementary provisions."
 source = "law"
-source_title = "서울올림픽대회 및 아시아경기대회 지원법"
-alt_titles = ["서울올림픽대회지원법", "서울올림픽대회조직위원회 지원 법률", "서울올림픽대회 및 제10회 아시아경기대회 지원법", "88서울올림픽대회지원법"]
+source_title = "서울아시아경기대회·올림픽대회조직위원회지원법"
+alt_titles = ["서울올림픽대회 및 아시아경기대회 지원법", "서울올림픽대회지원법"]
 search = ["서울올림픽대회 지원법", "서울올림픽대회조직위원회 지원", "서울올림픽 지원 법률 1982", "제24회 올림픽대회 지원법"]
 pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
-uncertain = ["date", "year", "source_title", "search", "pd_basis"]
+uncertain = ["date", "year", "search", "pd_basis"]
 
 # resource: statute; the `law` source should find it by name (법률 제5929호, 1999-02-08)
 [[text]]
@@ -3767,12 +3768,12 @@ script = "mixed"
 excerpt = true
 excerpt_note = "Keep 제1조 (목적) and 제2조 (정의: 문화산업, 문화상품, 문화콘텐츠 etc.); omit all later chapters and supplementary provisions."
 source = "law"
-source_title = "문화산업진흥 기본법"
-alt_titles = ["문화산업진흥기본법"]
+source_title = "문화산업진흥 기본법 (제9424호)"
+alt_titles = ["문화산업진흥 기본법", "문화산업진흥 기본법 (제9071호)", "문화산업진흥기본법"]
 sections = ["제1조", "제2조"]
 search = ["문화산업진흥 기본법", "문화산업진흥기본법"]
 pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
-uncertain = ["date", "source_title", "search", "sections"]
+uncertain = ["date", "search", "sections"]
 
 # resource: LOW-MEDIUM; 장부가 (1909) is a short hanmun poem in An's own words; the ko page may hold only a Korean rendering or the poem inside an article. A better original source: 안응칠 역사 (1910, hanmun) or 동양평화론 서문 if a non-translated page is found.
 [[text]]
@@ -3819,12 +3820,12 @@ script = "hanmun"
 excerpt = true
 excerpt_note = "Keep only the 광무 1년 10월 12일–13일 entries: the 환구단 accession rite, the 즉위 조서 and the proclamation of 국호 '대한'; about 2-4k characters."
 source = "wikisource-zh"
-source_title = "朝鮮王朝實錄/高宗實錄/三十四年/十月"
+source_title = "朝鮮王朝實錄/高宗實錄/三十四年"
 alt_titles = ["朝鮮王朝實錄/高宗實錄/卷三十六", "朝鮮王朝實錄/高宗太皇帝實錄/三十四年", "高宗實錄/三十四年", "고종실록 광무 1년 10월"]
-sections = ["十月"]
+sections = ["10月12日", "10月13日"]
 search = ["고종실록 광무 1년 10월 즉위 조서", "高宗實錄 光武 十月 國號 大韓", "大韓 國號 皇帝 即位 詔 1897", "대한제국 건국 조서"]
 pd_basis = "Official state document (imperial edict; Copyright Act art. 7); Gojong also died 1919."
-uncertain = ["source_title", "sections", "date", "search"]
+uncertain = ["sections", "date", "search"]
 
 # resource: law text, likely on ko.wikisource as 대한제국 칙령 제41호 or 칙령 제41호; also in 관보 제1716호 (1900-10-27)
 [[text]]
@@ -3843,11 +3844,11 @@ shelf = "documents"
 script = "mixed"
 excerpt = false
 source = "wikisource-ko"
-source_title = "칙령 제41호"
-alt_titles = ["대한제국 칙령 제41호", "대한제국 칙령 제41호 울릉도를 울도로 개칭하고 도감을 군수로 개정한 건", "울릉도를 울도로 개칭하고 도감을 군수로 개정한 건", "鬱陵島를 鬱島로 改稱하고 島監을 郡守로 改正한 件", "칙령 제41호 (1900)"]
+source_title = "광무 4년 칙령 제41호"
+alt_titles = ["칙령 제41호", "대한제국 칙령 제41호"]
 search = ["칙령 제41호 울도군", "울릉도를 울도로 개칭", "鬱島郡 勅令 第四十一號", "대한제국 칙령 울도군수 석도"]
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
-uncertain = ["source_title", "title_ko", "search", "script"]
+uncertain = ["title_ko", "search", "script"]
 
 # resource: LOW-MEDIUM; text was printed in 대한매일신보 1907-01-16 (English in London Daily Mail / Korea Review); ko page may be titled 고종의 친서 / 을사조약 무효 선언 친서 or exist only as a news clipping
 [[text]]
@@ -3889,11 +3890,11 @@ script = "mixed"
 excerpt = false
 note = "Not the later 애국가 sung to Auld Lang Syne. Lyrics: 상제는 우리 황제를 도우소서. The lyricist is uncertain; the melody's composer Eckert died 1916 (the text alone is read here)."
 source = "wikisource-ko"
-source_title = "대한제국 애국가"
+source_title = "애국가 (대한제국)"
 alt_titles = ["대한제국애국가", "대한제국 국가", "대한제국의 애국가", "大韓帝國愛國歌", "애국가 (대한제국)"]
 search = ["대한제국 애국가", "상제는 우리 황제를 도우소서", "대한제국 국가 에케르트", "大韓帝國 愛國歌 1902"]
 pd_basis = "Lyricist unknown/state anthem adopted by the Empire (art. 7 official symbol); any identified contributor died before 1963 (Eckert 1916, 민영환 1905)."
-uncertain = ["author", "author_dates", "source_title", "date", "search", "pd_basis"]
+uncertain = ["author", "author_dates", "date", "search", "pd_basis"]
 
 # resource: likely exists under 민영환 or 민영환/유서; the famous Korean-language 경고 대한 이천만 동포 유서 plus letters to the British/French/US/German envoys (hanmun)
 [[text]]
@@ -3913,11 +3914,11 @@ script = "mixed"
 excerpt = false
 note = "Includes the letters to the foreign envoys only if they sit on the same page; otherwise the compatriots' testament alone."
 source = "wikisource-ko"
-source_title = "민영환 유서"
-alt_titles = ["경고 대한 이천만 동포 유서", "경고 한국 이천만 동포", "민영환의 유서", "閔泳煥 遺書", "民泳煥 遺書", "민영환/유서"]
+source_title = "민영환의 유서"
+alt_titles = ["민영환 유서", "閔泳煥 遺書"]
 search = ["민영환 유서", "경고 대한 이천만 동포", "鳴呼 國恥民辱 乃至於此 閔泳煥", "민영환 유서 이천만 동포 각국 공사"]
 pd_basis = "Author died 1905; Korean term (life+50) expired 1955, before the 2013 extension, so the work is in the public domain."
-uncertain = ["source_title", "title_ko", "search", "script"]
+uncertain = ["title_ko", "search", "script"]
 
 # resource: 포고팔도사민 (1906, Taein uprising proclamation) is the better-known call; 창의토적소 is the longer memorial; take 포고팔도사민. zh/ko Wikisource may hold it under 면암집 or 최익현
 [[text]]
@@ -3960,12 +3961,12 @@ shelf = "verse"
 script = "hanmun"
 excerpt = false
 note = "Four poems (絶命詩 四首); dated 1910 but shelved in the Empire period because they mourn its end."
-source = "wikisource-ko"
-source_title = "절명시"
-alt_titles = ["絶命詩", "절명시 (황현)", "황현/절명시", "梅泉集/絶命詩", "매천집/절명시"]
+source = "wikisource-zh"
+source_title = "絕命詩 (黃玹)"
+alt_titles = ["絶命詩 (黃玹)", "絕命詩"]
 search = ["절명시 황현", "絶命詩 黃玹", "鳥獸哀鳴海岳嚬", "亂離滾到白頭年", "매천 절명시 4수"]
 pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the work is in the public domain."
-uncertain = ["source_title", "title_ko", "search", "script"]
+uncertain = ["title_ko", "search", "script"]
 
 # resource: LOW-MEDIUM; original is hanmun (Ahn wrote it in prison); ko page may be a Korean rendering by others (not PD), so prefer a hanmun original 安應七歷史 (zh)
 [[text]]

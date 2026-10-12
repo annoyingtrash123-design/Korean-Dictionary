@@ -82,6 +82,9 @@ pub struct Entry {
     /// Subpage names (or heading names) to keep for long works.
     #[serde(default)]
     pub sections: Vec<String>,
+    /// Keep only paragraphs `[start, end)` of the fetched text (an excerpt of a long work without
+    /// usable headings, e.g. the opening chapters of a novel).
+    pub paragraph_range: Option<[usize; 2]>,
     pub pd_basis: String,
     pub note: Option<String>,
     pub english_pd: Option<EnglishPd>,

@@ -73,6 +73,16 @@ enum Cmd {
         #[arg(long)]
         discover: bool,
     },
+    /// Reader: write the paragraphs of fetched texts exactly as the pack splits them (for enrichment)
+    TextsParas {
+        #[arg(long, default_value = "pipeline/texts")]
+        texts: PathBuf,
+        #[arg(long)]
+        out: PathBuf,
+        /// Catalogue ids (comma-separated)
+        #[arg(long, value_delimiter = ',')]
+        only: Vec<String>,
+    },
     /// Reader: recent 정책브리핑 (korea.kr) articles marked 공공누리 제1유형
     FetchNews {
         #[arg(long, default_value = "pipeline/texts/catalog.toml")]
@@ -101,6 +111,7 @@ fn main() -> Result<()> {
             Ok(())
         }
         Cmd::FetchTexts { catalog, out, only, force, max_subpages, discover } => texts_fetch::run(&texts_fetch::Opts { catalog, out, only, force, max_subpages, discover }),
+        Cmd::TextsParas { texts, out, only } => kdict_pipeline::texts_pack::export_paras(&texts, &out, &only),
         Cmd::FetchNews { catalog, out, max, force, feed } => texts_news::run(&texts_news::NewsOpts { catalog, out, max, force, feeds: feed }),
     }
 }
