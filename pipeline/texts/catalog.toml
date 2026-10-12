@@ -224,28 +224,6 @@ sections = ["1권"]
 pd_basis = "Author died 1816; the work is centuries old and in the public domain."
 uncertain = ["source_title"]
 
-[[text]]
-id = "mangbokssajeopogi"
-title_ko = "만복사저포기"
-title_hanja = "萬福寺樗蒲記"
-title_en = "The Game of Yut at Manboksa"
-author_ko = "김시습"
-author_en = "Kim Si-seup"
-author_dates = "1435–1493"
-date = "c. 1465–1470"
-year = 1467
-period = "joseon-early"
-themes = ["joseon"]
-shelf = "classical-prose"
-script = "hanmun"
-collection = "금오신화 (Geumo sinhwa)"
-excerpt = false
-source = "wikisource-ko"
-source_title = "만복사저포기"
-search = ["만복사저포기", "萬福寺樗蒲記", "금오신화"]
-pd_basis = "Author died 1493; the work is centuries old and in the public domain."
-uncertain = ["date", "year", "source_title"]
-
 # resource: zh 金鰲新話 (61 KB) is one page with ## heading per story (萬福寺摴蒲記 first seen); heading 李生窺墻傳 matched by substring "李生窺" (墻/牆, 洲/州 variants)
 [[text]]
 id = "iseang_gyujangjeon"
@@ -454,28 +432,6 @@ note = "Attributed to 유리왕 (King Yuri), recorded in the Samguk sagi."
 uncertain = ["date", "year", "author", "source_title"]
 
 # resource: 처용가 exists (1191 B, license/scan stub - now expandable); fallbacks are disambiguations and the 삼국유사 item containing the 향찰 text
-[[text]]
-id = "cheoyongga"
-title_ko = "처용가"
-title_hanja = "處容歌"
-title_en = "Song of Cheoyong"
-author_ko = "작자 미상"
-author_en = "Anonymous"
-author_dates = ""
-date = "879 (Silla, King Heongang)"
-year = 879
-period = "unified-silla"
-themes = ["ancient-goryeo"]
-shelf = "verse"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "처용가"
-alt_titles = ["처용가 (향가)", "처용가 (신라)", "삼국유사/기이/처용랑 망해사"]
-search = ["처용가", "處容歌"]
-pd_basis = "Anonymous pre-modern or collective work; no living author, in the public domain."
-uncertain = ["source_title"]
-
 [[text]]
 id = "dansimga"
 title_ko = "단심가"
@@ -887,28 +843,6 @@ uncertain = ["source_title"]
 
 # resource: zh 卷第一 lacks 紀異第一 (卷第二 starts at 紀異第二 下); ko has per-chapter 삼국유사/<편>[/<조목>] pages (피은, 효선, 감통, 흥법/보덕이암) so 紀異 item should be 삼국유사/기이/고조선
 [[text]]
-id = "dangun_samgukyusa"
-title_ko = "단군 조 (고조선·왕검조선)"
-title_hanja = "古朝鮮 王儉朝鮮"
-title_en = "The Founding of Gojoseon by Dangun (Samguk yusa)"
-author_ko = "일연"
-author_en = "Iryeon"
-author_dates = "1206–1289"
-date = "c. 1281"
-year = 1281
-period = "goryeo"
-themes = ["ancient-goryeo"]
-shelf = "hanmun"
-script = "hanmun"
-excerpt = false
-source = "wikisource-ko"
-source_title = "삼국유사/기이/고조선"
-alt_titles = ["삼국유사/기이/고조선(왕검조선)", "삼국유사/기이/고조선 왕검조선", "삼국유사/기이", "삼국유사/기이1"]
-search = ["삼국유사 고조선", "古朝鮮 王儉朝鮮", "三國遺事 紀異"]
-pd_basis = "Author died 1289; the work is centuries old and in the public domain."
-uncertain = ["source_title"]
-
-[[text]]
 id = "ondal_samguksagi"
 title_ko = "온달전"
 title_hanja = "溫達傳"
@@ -1282,28 +1216,6 @@ pd_basis = "Ancient/classical work by an author who died over a thousand years a
 uncertain = ["source_title"]
 
 [[text]]
-id = "anjunggeun_dongyang"
-title_ko = "동양평화론"
-title_hanja = "東洋平和論"
-title_en = "On Peace in the East (Dongyang pyeonghwaron)"
-author_ko = "안중근"
-author_en = "An Jung-geun"
-author_dates = "1879–1910"
-date = "1910"
-year = 1910
-period = "korean-empire"
-themes = ["colonial-independence", "sino-korean"]
-shelf = "sino-korean"
-script = "mixed"
-excerpt = true
-excerpt_note = "Keep the preface and the first section; ~6k characters."
-source = "wikisource-ko"
-source_title = "동양평화론"
-search = ["동양평화론", "東洋平和論", "안중근"]
-pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title"]
-
-[[text]]
 id = "hunminjeongeum_haerye"
 title_ko = "훈민정음 (해례본) 어제서문·예의"
 title_hanja = "訓民正音"
@@ -1441,27 +1353,6 @@ search = ["기미독립선언서", "3·1 독립선언서", "己未獨立宣言�
 pd_basis = "Collective/anonymous 1919 document; authors long dead (drafted by Choe Nam-seon, d. 1957); in the public domain."
 
 # resource: page exists (542 B header+scan); author 조소앙 d.1958, official document
-[[text]]
-id = "daehan_declaration"
-title_ko = "대한독립선언서 (무오독립선언서)"
-title_en = "Proclamation of Korean Independence (Muo Declaration)"
-author_ko = "조소앙 등"
-author_en = "Jo So-ang et al."
-author_dates = "1887–1958"
-date = "1919 (dated 1918 lunar year Muo)"
-year = 1919
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "대한독립선언서"
-alt_titles = ["무오독립선언서", "대한독립선언서 (무오독립선언서)"]
-search = ["대한독립선언서", "무오독립선언서", "戊午獨立宣言書"]
-pd_basis = "Author died 1958; Korean term (life+50) expired 2008, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "date"]
-
 [[text]]
 id = "imsi_heonjang"
 title_ko = "대한민국 임시헌장"
@@ -2713,37 +2604,41 @@ period = "korean-empire"
 themes = ["joseon", "colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
-excerpt = false
-note = "Unsigned editorial; keep only the 논설 column of the issue."
+excerpt = true
+excerpt_note = "The 논셜 (editorial) column only; news, verse and advertisements omitted."
+paragraph_range = [2, 8]
+note = "Unsigned editorial."
 source = "wikisource-ko"
 source_title = "독립신문/1896년/7월/4일"
 alt_titles = ["독립신문/1896년/7월", "독립신문/1896년/6월/20일"]
 search = ["독립신문 1896년 7월 4일", "독립신문 독립문 논설", "독립협회 독립문 건립 논설"]
 pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain. Unsigned editorial attributed to 서재필 and the paper's staff."
-uncertain = ["source_title", "date", "year"]
+uncertain = []
 
 # resource: low confidence on the exact issue: a CI discover run should pick a 1896 editorial on 인민의 권리 / 관리 부패 / 문명개화 if this date fails
 [[text]]
 id = "dongnip_sinmun_nonseol_minkwon"
-title_ko = "독립신문 논설: 백성과 정부 (1896)"
-title_en = "Independent editorial on the people and the government (1896)"
+title_ko = "독립신문 논설: 깨끗한 물과 백성의 건강 (1896)"
+title_en = "Independent editorial on clean water and public health (1896)"
 author_ko = "서재필"
 author_en = "Seo Jae-pil (Philip Jaisohn)"
 author_dates = "1864–1951"
-date = "1896-05"
+date = "1896-05-02"
 year = 1896
 period = "korean-empire"
 themes = ["joseon", "colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
-excerpt = false
-note = "Keep only the 논설 column."
+excerpt = true
+excerpt_note = "The 논셜 (editorial) column only; notices, court gazette, news and advertisements omitted."
+paragraph_range = [6, 8]
+note = "Unsigned editorial on hygiene: clean water, boiling well water, washing children."
 source = "wikisource-ko"
 source_title = "독립신문/1896년/5월/2일"
 alt_titles = ["독립신문/1896년/5월", "독립신문/1896년/4월/21일"]
 search = ["독립신문 1896년 5월 논설", "독립신문 정부 인민 논설", "독립신문 논설 관민"]
 pd_basis = "Author died 1951; Korean term (life+50) expired 2001, before the 2013 extension to life+70, so the work is in the public domain. Unsigned editorial attributed to 서재필 and the paper's staff."
-uncertain = ["source_title", "date", "year", "title_ko"]
+uncertain = []
 
 # resource: guess: page may be titled 헌의 6조 or 관민공동회 헌의6조
 # resource: low confidence a Wikisource page exists; the text may appear in newspaper pages (동아일보 1923) instead
@@ -3407,29 +3302,6 @@ pd_basis = "Official compilation of 1451 (anonymous/collective); public domain."
 uncertain = ["search", "sections"]
 
 # resource: LOW confidence; the colophon may exist only inside a page on the Jikji text or on a ko article, not as a Wikisource page
-[[text]]
-id = "jikji_colophon"
-title_ko = "직지 간기 (백운화상초록불조직지심체요절)"
-title_hanja = "白雲和尙抄錄佛祖直指心體要節 跋"
-title_en = "Jikji: Colophon of the Metal-Type Printing (1377)"
-author_ko = "백운 경한 (석찬·달담 발문)"
-author_en = "Baegun Gyeonghan (colophon by disciples Seokchan and Dadam)"
-author_dates = "1298–1374"
-date = "1377 (Xuanguang 7, 7th month)"
-year = 1377
-period = "goryeo"
-themes = ["ancient-goryeo", "sino-korean"]
-shelf = "hanmun"
-script = "hanmun"
-excerpt = true
-excerpt_note = "Keep only the closing colophon lines (the 宣光七年丁巳七月 日 清州牧外興德寺鑄字印施 printing notice and the 緣化門人釋璨・達湛 sponsor names); a few lines, no body text."
-source = "wikisource-zh"
-source_title = "白雲和尚抄錄佛祖直指心體要節"
-alt_titles = ["白雲和尙抄錄佛祖直指心體要節", "직지심체요절", "직지", "佛祖直指心體要節", "백운화상초록불조직지심체요절"]
-search = ["직지심체요절", "白雲和尙抄錄佛祖直指心體要節", "直指心體要節 興德寺", "宣光七年丁巳七月 興德寺鑄字印施"]
-pd_basis = "Pre-modern Buddhist anthology and printer's colophon of 1377; anonymous/centuries-old, public domain."
-uncertain = ["date", "year", "author", "source_title", "search", "sections"]
-
 # resource: 太祖實錄 卷一, 1年7月丁未 (28th); zh page scheme 朝鮮王朝實錄/太祖實錄/卷一
 [[text]]
 id = "taejo_jeuk_wi_gyoseo"
@@ -3506,28 +3378,6 @@ pd_basis = "Author died 1598; centuries-old work in the public domain."
 uncertain = []
 
 # resource: 표암유고 / 단원기; may exist on ko as 단원기 (檀園記)
-[[text]]
-id = "danwongi"
-title_ko = "단원기"
-title_hanja = "檀園記"
-title_en = "Record of Danwon (Kang Se-hwang on Kim Hong-do)"
-author_ko = "강세황"
-author_en = "Kang Se-hwang"
-author_dates = "1713–1791"
-date = "1784"
-year = 1784
-period = "joseon-late"
-themes = ["joseon", "sino-korean"]
-shelf = "hanmun"
-script = "hanmun"
-excerpt = false
-source = "wikisource-ko"
-source_title = "단원기"
-alt_titles = ["檀園記", "표암유고/단원기", "豹菴遺稿/檀園記"]
-search = ["단원기", "檀園記", "강세황 단원기 김홍도", "豹菴遺稿 檀園記"]
-pd_basis = "Author died 1791; centuries-old work in the public domain."
-uncertain = ["source_title", "search"]
-
 # resource: 與猶堂全書 第一集 詩文集 卷十 (說) 城說; ko may only have a translation
 [[text]]
 id = "seongseol"
@@ -3598,51 +3448,7 @@ pd_basis = "Official state/government document (laws, edicts, treaties, proclama
 uncertain = ["search"]
 
 # resource: LOW-MEDIUM; judgment text was Japanese (mixed kana/kanji); Wikisource copies may be a Korean rendering by others; check provenance
-[[text]]
-id = "yu_gwansun_pangyeolmun"
-title_ko = "유관순 판결문 (경성복심법원, 1920)"
-title_hanja = "柳寬順 判決文"
-title_en = "Judgment on Yu Gwan-sun (Keijo Court of Appeal, 1920)"
-author_ko = "경성복심법원 (조선총독부 재판소)"
-author_en = "Keijo Court of Appeal (Government-General court)"
-author_dates = ""
-date = "1920-03-21 (appeal; first instance 1919-09-11 at Gyeongseong Chiang Court)"
-year = 1920
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "documents"
-script = "mixed"
-excerpt = true
-excerpt_note = "Keep only the 主文 and 理由 sections of the judgment on Yu Gwan-sun (the Aunae market 1919.4.1 demonstration, the charges of 保安法違反 and 騷擾); omit the co-defendants' identification boilerplate."
-source = "wikisource-ko"
-source_title = "유관순 판결문"
-alt_titles = ["유관순 재판 판결문", "柳寬順 判決文", "유관순 판결문 (경성복심법원)", "유관순 (판결문)"]
-search = ["유관순 판결문", "유관순 경성복심법원 판결", "柳寬順 判決 保安法 騷擾", "경성복심법원 판결 유관순 1920"]
-pd_basis = "Court judgment; judgments are unprotected official documents (Copyright Act art. 7)."
-uncertain = ["date", "year", "source_title", "script", "search", "sections", "pd_basis"]
-
 # resource: likely exists as 맥아더 포고 제1호 / 조선인민에게 고함; Korean text official US Army Pacific release
-[[text]]
-id = "macarthur_pogo_1"
-title_ko = "조선인민에게 고함 (맥아더 포고 제1호)"
-title_en = "To the People of Korea (MacArthur Proclamation No. 1, 1945)"
-author_ko = "미국 태평양육군총사령부 (맥아더 포고)"
-author_en = "U.S. Army Forces Pacific (MacArthur Proclamation No. 1)"
-author_dates = ""
-date = "1945-09-07"
-year = 1945
-period = "modern"
-themes = ["modern-korea"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "조선인민에게 고함"
-alt_titles = ["맥아더 포고 제1호", "태평양미국육군총사령부 포고 제1호", "포고 제1호", "조선 인민에게 고함"]
-search = ["조선인민에게 고함", "맥아더 포고 제1호", "태평양미국육군총사령부 포고", "포고 제1호 1945 9월 7일"]
-pd_basis = "Official occupation-authority proclamation (an official state document; Copyright Act art. 7; US government work)."
-uncertain = ["source_title", "search"]
-
 # resource: likely exists; long text, keep excerpt
 [[text]]
 id = "armistice_agreement_ko"
@@ -3782,32 +3588,6 @@ pd_basis = "Statutes and legal texts are not protected by copyright (Copyright A
 uncertain = ["date", "search", "sections"]
 
 # resource: LOW-MEDIUM; 장부가 (1909) is a short hanmun poem in An's own words; the ko page may hold only a Korean rendering or the poem inside an article. A better original source: 안응칠 역사 (1910, hanmun) or 동양평화론 서문 if a non-translated page is found.
-[[text]]
-id = "anjunggeun_jangbuga"
-title_ko = "장부가"
-title_hanja = "丈夫歌"
-title_en = "Song of the Brave Man (An Jung-geun, 1909)"
-author_ko = "안중근"
-author_en = "An Jung-geun"
-author_dates = "1879–1910"
-date = "1909-10 (before the Harbin shooting)"
-year = 1909
-period = "korean-empire"
-themes = ["colonial-independence", "sino-korean"]
-shelf = "hanmun"
-script = "hanmun"
-excerpt = false
-source = "wikisource-ko"
-source_title = "장부가"
-alt_titles = ["丈夫歌", "안중근/장부가", "안중근의 장부가", "안응칠 역사/장부가"]
-search = ["장부가 안중근", "丈夫歌 安重根", "丈夫處世兮 其志大矣", "안응칠 역사 장부가"]
-pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the original is in the public domain."
-uncertain = ["date", "source_title", "search", "script"]
-
-# ── 2026-10: Korean Empire (1897–1910) ──
-
-# Period note: 안응칠 역사 and 절명시 are dated 1910 but kept in period "korean-empire" because both concern the Empire's end.
-
 # resource: ko.wikisource has no per-edict page for sure; the zh sillok page 朝鮮王朝實錄/高宗實錄/三十四年 (광무 1년 = 건양 2년/고종 34년) 10월 12일–13일 entries hold the 즉위·국호 조서. Low-medium confidence on the ko title.
 [[text]]
 id = "gojong_jeuguwi_daehan_jo"
@@ -3857,28 +3637,6 @@ pd_basis = "Official state/government document (laws, edicts, treaties, proclama
 uncertain = ["title_ko", "search", "script"]
 
 # resource: LOW-MEDIUM; text was printed in 대한매일신보 1907-01-16 (English in London Daily Mail / Korea Review); ko page may be titled 고종의 친서 / 을사조약 무효 선언 친서 or exist only as a news clipping
-[[text]]
-id = "gojong_chinseo_eulsa_muhyo"
-title_ko = "고종 친서 (을사조약 무효 선언)"
-title_en = "Gojong's Personal Letter Declaring the 1905 Treaty Invalid (dated 1906; published Jan 1907)"
-author_ko = "고종"
-author_en = "Emperor Gojong"
-author_dates = "1852–1919"
-date = "Letter dated 1906-06 (to the Daily Mail / Western heads of state); published in 대한매일신보 1907-01"
-year = 1906
-period = "korean-empire"
-themes = ["colonial-independence"]
-shelf = "treaties"
-script = "mixed"
-excerpt = false
-note = "Dating is debated: the letter is dated 1906 but reached the press in Jan 1907, and its transmission route is still discussed. Pair with the 헤이그 특사 credential."
-source = "wikisource-ko"
-source_title = "고종의 친서"
-alt_titles = ["고종 친서", "고종황제 친서", "을사조약 무효 선언 친서", "대한매일신보/1907년 1월 16일", "고종의 을사조약 무효 선언"]
-search = ["고종 친서 을사조약 무효", "고종황제 친서 대한매일신보 1907", "짐은 총칼의 위협과 강요로 조약", "朕이 總劍의 威脅과 强要로"]
-pd_basis = "Author died 1919; Korean term (life+50) expired 1969, so the original is in the public domain. Official state letter (art. 7) as well."
-uncertain = ["date", "year", "source_title", "title_ko", "search"]
-
 # resource: ko.wikisource may hold 대한제국 애국가 (lyrics, 1902, music Franz Eckert); lyrics' author is uncertain (민영환 traditionally); the 1902 score is by Eckert (d. 1916)
 [[text]]
 id = "daehanjeguk_aegukga"
@@ -3976,29 +3734,6 @@ pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 201
 uncertain = ["title_ko", "search", "script"]
 
 # resource: LOW-MEDIUM; original is hanmun (Ahn wrote it in prison); ko page may be a Korean rendering by others (not PD), so prefer a hanmun original 安應七歷史 (zh)
-[[text]]
-id = "anjunggeun_aneungchil_yeoksa"
-title_ko = "안응칠 역사"
-title_hanja = "安應七歷史"
-title_en = "The History of An Eungchil (An Jung-geun's autobiography, 1910)"
-author_ko = "안중근"
-author_en = "An Jung-geun"
-author_dates = "1879–1910"
-date = "1910-03 (written in Lushun prison; finished before his execution on 1910-03-26)"
-year = 1910
-period = "korean-empire"
-themes = ["colonial-independence"]
-shelf = "documents"
-script = "hanmun"
-excerpt = true
-excerpt_note = "Keep the passages on his motives (leaving for the Maritime Province, the righteous-army years) and the Harbin shooting of 이토 히로부미 (1909-10-26), plus the court-examination and trial passages; about 8-10k characters."
-source = "wikisource-ko"
-source_title = "안응칠 역사"
-alt_titles = ["安應七歷史", "안응칠역사", "안중근/안응칠 역사", "안중근 자서전", "安重根自傳"]
-search = ["안응칠 역사", "安應七歷史", "안응칠 역사 안중근 하얼빈", "안중근 자서전 옥중"]
-pd_basis = "Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the original is in the public domain. A modern Korean translation, if that is the only page, is not."
-uncertain = ["source_title", "script", "sections", "search", "pd_basis"]
-
 # resource: LOW-MEDIUM; 대한자강회월보 제1호 (1906-07) 취지서; probably titled 대한자강회 취지서 or 대한자강회취지서
 [[text]]
 id = "daehan_jagang_hoe_chwiji"
@@ -4027,29 +3762,6 @@ pd_basis = "Collective society statement of 1906; all plausible drafters died be
 uncertain = ["author", "author_dates"]
 
 # resource: LOW; 신민회 취지서 (1907) was a secret society's prospectus, often cited in 한국독립운동사 and not widely transcribed; try 신민회 and 신민회 취지서
-[[text]]
-id = "sinminhoe_chwiji"
-title_ko = "신민회 취지서"
-title_hanja = "新民會趣旨書"
-title_en = "Prospectus of the New People's Association (Sinminhoe, 1907)"
-author_ko = "신민회 (안창호·양기탁 등)"
-author_en = "Sinminhoe (circle of Ahn Changho and Yang Gi-tak)"
-author_dates = ""
-date = "1907 (society founded April 1907)"
-year = 1907
-period = "korean-empire"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = false
-note = "Collective authorship, attributed to the Ahn Changho / Yang Gi-tak circle; the original was a secret document and the surviving text derives from later 신민회 records."
-source = "wikisource-ko"
-source_title = "신민회 취지서"
-alt_titles = ["신민회취지서", "新民會 趣旨書", "신민회 통용장정", "신민회 (취지서)", "대한신민회 취지서"]
-search = ["신민회 취지서", "新民會 趣旨書", "신민회 창립 취지 1907", "신민회 안창호 양기탁 취지"]
-pd_basis = "Collective 1907 statement; the attributed drafters died before 1963 (안창호 1938, 양기탁 1938)."
-uncertain = ["author", "author_dates", "source_title", "date", "search", "pd_basis"]
-
 # resource: likely exists as 유교구신론; originally in 서북학회월보 (1909-08) in mixed script
 [[text]]
 id = "bak_eunsik_yugyo_gusinron"
@@ -4076,76 +3788,8 @@ uncertain = []
 note = "Signed 謙谷生 (박은식's pen name). The 국사편찬위원회 transcription drops some hangul 하 (不得은, 如히); that is the source text."
 
 # resource: likely exists; serial in 대한매일신보 1908-08-27 to 12-13; 서론 plus 총론 and first sections
-[[text]]
-id = "sin_chaeho_doksa_sinron"
-title_ko = "독사신론"
-title_hanja = "讀史新論"
-title_en = "A New Reading of History (Sin Chae-ho, 1908)"
-author_ko = "신채호"
-author_en = "Sin Chae-ho"
-author_dates = "1880–1936"
-date = "1908-08/12 (serialised in 대한매일신보)"
-year = 1908
-period = "korean-empire"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = true
-excerpt_note = "Keep the 서론 (introduction on how history should be written, the nation as subject) and the first sections (총론 and the opening of 단군 and 부여 narrative); about 5-8k characters."
-source = "wikisource-ko"
-source_title = "독사신론"
-alt_titles = ["讀史新論", "신채호/독사신론", "독사 신론", "대한매일신보/독사신론"]
-search = ["독사신론", "讀史新論 申采浩", "신채호 독사신론 서론", "독사신론 대한매일신보 1908"]
-pd_basis = "Author died 1936; Korean term (life+50) expired 1986, before the 2013 extension, so the work is in the public domain."
-uncertain = ["date", "source_title", "sections", "search"]
-
 # resource: LOW-MEDIUM; 황성신문 창간호 (1898-09-05) 논설/창간사; maybe under 황성신문/창간사 or 황성신문 1898년 9월 5일
-[[text]]
-id = "hwangseong_sinmun_changgansa"
-title_ko = "황성신문 창간사"
-title_hanja = "皇城新聞創刊辭"
-title_en = "Founding Editorial of the Hwangseong sinmun (1898)"
-author_ko = "남궁억"
-author_en = "Namgung Eok"
-author_dates = "1863–1939"
-date = "1898-09-05"
-year = 1898
-period = "korean-empire"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = false
-note = "Authorship by Namgung Eok (the first publisher) is traditional; the unsigned editorial may be collective."
-source = "wikisource-ko"
-source_title = "황성신문 창간사"
-alt_titles = ["皇城新聞 創刊辭", "황성신문/창간사", "황성신문 1898년 9월 5일", "황성신문 창간호 논설", "皇城新聞 第1號"]
-search = ["황성신문 창간사", "皇城新聞 創刊辭", "황성신문 창간호 논설 1898", "남궁억 황성신문 창간"]
-pd_basis = "Author died 1939; Korean term (life+50) expired 1989, before the 2013 extension, so the work is in the public domain."
-uncertain = ["author", "date", "source_title", "search"]
-
 # resource: LOW-MEDIUM; 제국신문 창간호 (1898-08-10), pure-hangul daily; may be titled 제국신문 창간사 or 데국신문 (original spelling)
-[[text]]
-id = "jeguk_sinmun_changgansa"
-title_ko = "제국신문 창간사"
-title_en = "Founding Editorial of the Jeguk sinmun (1898)"
-author_ko = "이종일"
-author_en = "Yi Jong-il"
-author_dates = "1858–1925"
-date = "1898-08-10"
-year = 1898
-period = "korean-empire"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "hangul"
-excerpt = false
-note = "Written in pure hangul for women and commoners; the paper was first titled 뎨국신문."
-source = "wikisource-ko"
-source_title = "제국신문 창간사"
-alt_titles = ["뎨국신문 창간사", "제국신문/창간사", "제국신문 1898년 8월 10일", "뎨국신문 창간호 논설", "帝國新聞 創刊辭"]
-search = ["제국신문 창간사", "뎨국신문 창간사", "이종일 제국신문 창간", "제국신문 창간호 1898"]
-pd_basis = "Author died 1925; Korean term (life+50) expired 1975, before the 2013 extension, so the work is in the public domain."
-uncertain = ["author", "date", "source_title", "search"]
-
 # resource: likely exists as 혈의 누; both the 1906 serial (만세보) and 1907 book
 [[text]]
 id = "hyeorui_nu"

@@ -20,12 +20,15 @@ const loadView = (): View => { try { const v = localStorage.getItem(VIEW_KEY); r
 const view$ = createStore<View>(loadView());
 view$.subscribe((v) => { try { localStorage.setItem(VIEW_KEY, v); } catch { /* */ } });
 const filters$ = createStore<Filters>({ ...NO_FILTERS });
-/** Collapsed shelf / period sections (`shelf:<id>`, `period:<id>`), remembered per device. */
-const FOLD_KEY = 'kd.reader.collapsed';
-const loadFolds = (): string[] => { try { const v = JSON.parse(localStorage.getItem(FOLD_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } };
-const folds$ = createStore<string[]>(loadFolds());
-folds$.subscribe((v) => { try { localStorage.setItem(FOLD_KEY, JSON.stringify(v)); } catch { /* */ } });
-const toggleFold = (k: string) => folds$.set((p) => (p.includes(k) ? p.filter((x) => x !== k) : [...p, k]));
+/** Shelf / period sections (`shelf:<id>`, `period:<id>`) start collapsed; the ones opened are
+ *  remembered per device. While filters are active every section starts open instead, and
+ *  `filterFolds$` (this session only) holds the ones closed meanwhile. */
+const OPEN_KEY = 'kd.reader.open';
+const loadOpen = (): string[] => { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } };
+const opened$ = createStore<string[]>(loadOpen());
+opened$.subscribe((v) => { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* */ } });
+const filterFolds$ = createStore<string[]>([]);
+const flip = (k: string) => (p: string[]) => (p.includes(k) ? p.filter((x) => x !== k) : [...p, k]);
 
 /** Is the `texts` pack usable (installed)? `undefined` while the engine is still starting. */
 export function useTextsReady(): boolean | undefined {
@@ -137,7 +140,8 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
   const ready = useTextsReady();
   const view = useStore(view$);
   const f = useStore(filters$);
-  const folds = new Set(useStore(folds$));
+  const opened = new Set(useStore(opened$));
+  const filterFolds = new Set(useStore(filterFolds$));
   const [open, setOpen] = useState(false);
   const list = useAsync(() => (ready ? db.listTexts() : Promise.resolve([] as TextSummary[])), [ready]);
   const read = new Set(readIds());
@@ -151,6 +155,8 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
   const periodsPresent = PERIODS.filter((p) => all.some((t) => periodId(t) === p.id));
   const shelves = SHELVES.filter((s) => all.some((t) => t.shelf === s.id));
   const levelsPresent = LEVELS.filter((l) => all.some((t) => levelId(t.level) === l.id));
+  const isOpen = (k: string) => (n ? !filterFolds.has(k) : opened.has(k));
+  const toggle = (k: string) => (n ? filterFolds$ : opened$).set(flip(k));
   return (
     <div class="rd-lib">
       <header class="rd-lib-head">
@@ -180,18 +186,18 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
       {view !== 'todo' && !list.error && !list.loading && !shown.length && <Empty title="No texts match">{n ? 'Try removing a filter.' : 'The library is empty.'}</Empty>}
       {view === 'shelves' && byShelf(all, f).map(({ shelf, texts, total }) => (
         <section key={shelf.id} class="rd-shelf" aria-label={shelf.label}>
-          <h2 class="rd-shelf-h"><button type="button" class="rd-fold" aria-expanded={!folds.has(`shelf:${shelf.id}`)} onClick={() => toggleFold(`shelf:${shelf.id}`)}>
+          <h2 class="rd-shelf-h"><button type="button" class="rd-fold" aria-expanded={isOpen(`shelf:${shelf.id}`)} onClick={() => toggle(`shelf:${shelf.id}`)}>
             <span class="rd-chev" aria-hidden="true" /><span>{shelf.label}</span><span class="rd-shelf-ko" lang="ko">{shelf.ko}</span><span class="rd-count">{texts.length === total ? total : `${texts.length}/${total}`}</span></button></h2>
-          {!folds.has(`shelf:${shelf.id}`) && <div class="rd-rows">{texts.map((t) => <Row key={t.id} t={t} current={t.id === currentId} read={read.has(t.id)} />)}</div>}
+          {isOpen(`shelf:${shelf.id}`) && <div class="rd-rows">{texts.map((t) => <Row key={t.id} t={t} current={t.id === currentId} read={read.has(t.id)} />)}</div>}
         </section>
       ))}
       {view === 'timeline' && (
         <div class="tl" role="list" aria-label="Timeline, Gojoseon to today">
           {byPeriod(all, f).map(({ period, texts }) => (
             <section key={period.id} class="tl-band" aria-label={period.label}>
-              <h2 class="tl-h"><button type="button" class="rd-fold" aria-expanded={!folds.has(`period:${period.id}`)} onClick={() => toggleFold(`period:${period.id}`)}>
+              <h2 class="tl-h"><button type="button" class="rd-fold" aria-expanded={isOpen(`period:${period.id}`)} onClick={() => toggle(`period:${period.id}`)}>
                 <span class="rd-chev" aria-hidden="true" /><span class="tl-name">{period.label}</span><span class="tl-ko" lang="ko">{period.ko}</span><span class="tl-span">{period.span}</span><span class="rd-count">{texts.length}</span></button></h2>
-              {!folds.has(`period:${period.id}`) && texts.map((t) => (
+              {isOpen(`period:${period.id}`) && texts.map((t) => (
                 <div key={t.id} class="tl-item" role="listitem">
                   <div class="tl-year">{t.year != null ? fmtYear(t.year) : ''}</div>
                   <Row t={t} current={t.id === currentId} read={read.has(t.id)} compact />

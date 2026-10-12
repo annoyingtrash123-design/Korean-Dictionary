@@ -31,42 +31,41 @@ async function readerFlow(page: Page) {
   const root = page.locator('#main');
   await page.getByRole('link', { name: 'Reader' }).click();
   await expect(page.getByRole('heading', { name: /Reader/ })).toBeVisible();
-  await expect(page.locator('.rd-row').first()).toBeVisible();
+  // shelves start collapsed
+  await expect(page.locator('.rd-shelf-h .rd-fold').first()).toHaveAttribute('aria-expanded', 'false');
+  await expect(page.locator('.rd-row')).toHaveCount(0);
   await page.waitForTimeout(600);
   await shot(page, 'library');
 
   {
     await page.getByRole('tab', { name: 'Timeline' }).click();
     await expect(page.locator('.tl-band').first()).toBeVisible();
+    await expect(page.locator('.rd-row')).toHaveCount(0);
     await page.waitForTimeout(300);
     await shot(page, 'timeline');
+    // a filter opens every matching section; clearing it folds them again
     await page.getByRole('button', { name: /Filters/ }).click();
-    const total = await page.locator('.rd-row').count();
-    expect(total).toBeGreaterThan(30);
     await page.getByLabel('Level', { exact: true }).selectOption('classical');
-    await expect.poll(() => page.locator('.rd-row').count()).toBeLessThan(total);
-    expect(await page.locator('.rd-row').count()).toBeGreaterThan(0);
+    await expect.poll(() => page.locator('.rd-row').count()).toBeGreaterThan(0);
     await page.getByLabel('Level', { exact: true }).selectOption('');
-    await expect.poll(() => page.locator('.rd-row').count()).toBe(total);
+    await expect(page.locator('.rd-row')).toHaveCount(0);
     await page.getByRole('button', { name: /Filters/ }).click();
-    // period headings fold away and come back (remembered per device)
+    // a period opens and folds again (opened sections are remembered per device)
     const band = page.locator('.tl-h .rd-fold').first();
-    await expect(band).toHaveAttribute('aria-expanded', 'true');
-    await band.click();
     await expect(band).toHaveAttribute('aria-expanded', 'false');
-    await expect.poll(() => page.locator('.rd-row').count()).toBeLessThan(total);
-    await page.waitForTimeout(200);
-    await shot(page, 'timeline-folded');
     await band.click();
-    await expect.poll(() => page.locator('.rd-row').count()).toBe(total);
-    await page.getByRole('tab', { name: 'Shelves' }).click();
-    const shelf = page.locator('.rd-shelf-h .rd-fold').first();
-    await shelf.click();
-    await expect(shelf).toHaveAttribute('aria-expanded', 'false');
+    await expect(band).toHaveAttribute('aria-expanded', 'true');
+    await expect.poll(() => page.locator('.rd-row').count()).toBeGreaterThan(0);
     await page.waitForTimeout(200);
-    await shot(page, 'shelves-folded');
+    await shot(page, 'timeline-open');
+    await band.click();
+    await expect(page.locator('.rd-row')).toHaveCount(0);
+    await page.getByRole('tab', { name: 'Shelves' }).click();
+    const shelf = page.locator('.rd-shelf-h .rd-fold', { hasText: 'Historical documents' });
     await shelf.click();
     await expect(shelf).toHaveAttribute('aria-expanded', 'true');
+    await page.waitForTimeout(200);
+    await shot(page, 'shelves-open');
   }
 
   // open a primary source with an AI translation and an AI background essay
@@ -168,7 +167,7 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   await page.waitForTimeout(500);
   await shot(page, 'download-prompt');
   await page.getByRole('button', { name: /Download Reader library/ }).click();
-  await expect(page.locator('.rd-row').first()).toBeVisible({ timeout: 120_000 });
+  await expect(page.locator('.rd-shelf-h .rd-fold').first()).toBeVisible({ timeout: 120_000 });
 
   // "To add": planned texts that are not ready yet are listed (not openable), then back to shelves
   await page.getByRole('tab', { name: 'To add' }).click();
@@ -205,6 +204,7 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   await expect(page.locator('.app.wide')).toBeVisible();
   await page.goto('/#/reader');
   await expect(page.getByText('Choose a text')).toBeVisible();
+  // the Historical documents shelf opened on the phone is still open (remembered)
   await expect(page.locator('.pane-left .rd-row').first()).toBeVisible();
   await page.getByRole('tab', { name: 'To add' }).click();
   await expect(page.locator('.pane-left .rd-todo-row').first()).toBeVisible();

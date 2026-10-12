@@ -116,3 +116,9 @@ licensed separately.
 * `app/public/fonts/yethangul-jamo.woff2`: subset of 나눔명조 옛한글 (NanumMyeongjo YetHangul),
   © 2014 NHN Corporation (NAVER), designed by FONTRIX Inc., SIL Open Font License 1.1. Used only to
   render Old Hangul (옛한글) jamo sequences.
+
+## Hanyang PUA → Unicode old-Hangul table
+* `pipeline/data/hanyang_pua.tsv` converts the Hanyang private-use-area code points (한양 PUA) used by
+  국사편찬위원회 한국사데이터베이스 for archaic Hangul into standard Unicode conjoining jamo.
+* Derived from the p2jc table of hypua2jamo 0.7 by mete0r (https://github.com/mete0r/hypua2jamo).
+* Licence: GNU Lesser General Public License v3.0 (LGPL-3.0) — https://www.gnu.org/licenses/lgpl-3.0.html.
