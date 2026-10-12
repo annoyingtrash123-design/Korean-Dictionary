@@ -3023,11 +3023,12 @@ period = "korean-empire"
 themes = ["joseon", "colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
-excerpt = false
+excerpt = true
 source = "wikisource-ko"
 source_title = "시일야방성대곡"
 alt_titles = ["是日也放聲大哭", "시일야 방성대곡"]
 search = ["시일야방성대곡", "是日也放聲大哭", "황성신문 시일야방성대곡"]
+excerpt_note = "The original 國漢文 editorial only; the Wikisource page's modern-Korean rendering (## 현대어 역) is left out."
 pd_basis = "Author died 1921; Korean term (life+50) expired 1971, before the 2013 extension to life+70, so the work is in the public domain."
 
 # resource: likely exists; Wikisource often has modern-fiction pages in original orthography
