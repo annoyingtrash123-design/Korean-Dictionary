@@ -3496,14 +3496,14 @@ themes = ["joseon"]
 shelf = "hanmun"
 script = "hanmun"
 excerpt = true
-excerpt_note = "Keep the opening days of 壬辰日記 (1592, 正月 first days through the early 2nd month) and the 丁酉日記 entries for 九月十四日–十七日 on the Myeongnyang battle (필사즉생 / 十三隻); omit all other years."
+excerpt_note = "The 1592 first month (壬辰正月) from 李忠武公全書 卷五, the 1795 printed edition. 卷八 (丁酉, Myeongnyang) is not transcribed on Wikisource."
 source = "wikisource-ko"
-source_title = "난중일기"
+source_title = "이충무공전서/제5권"
 alt_titles = ["亂中日記", "난중일기/임진일기", "난중일기/정유일기", "이충무공전서/난중일기"]
-sections = ["임진일기", "정유일기"]
+sections = ["[壬辰]正月"]
 search = ["난중일기", "亂中日記", "이순신 난중일기 명량", "정유일기 九月十六日"]
 pd_basis = "Author died 1598; centuries-old work in the public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = []
 
 # resource: 표암유고 / 단원기; may exist on ko as 단원기 (檀園記)
 [[text]]
@@ -3545,11 +3545,12 @@ shelf = "hanmun"
 script = "hanmun"
 excerpt = false
 source = "wikisource-zh"
-source_title = "與猶堂全書/第一集 詩文集/第十卷/城說"
+source_title = "與猶堂全書/第一集/第十卷"
+sections = ["城說"]
 alt_titles = ["與猶堂全書/第一集/詩文集/卷十/城說", "與猶堂全書/第一集 詩文集/卷十/城說", "城說", "성설", "여유당전서/성설"]
 search = ["성설 정약용", "城說 丁若鏞", "與猶堂全書 城說", "화성 성설 정약용"]
 pd_basis = "Author died 1836; centuries-old work in the public domain."
-uncertain = ["source_title", "search", "sections"]
+uncertain = []
 
 # resource: likely exists; mixed Sino-Korean script
 [[text]]
@@ -3928,9 +3929,9 @@ uncertain = ["title_ko", "search", "script"]
 # resource: 포고팔도사민 (1906, Taein uprising proclamation) is the better-known call; 창의토적소 is the longer memorial; take 포고팔도사민. zh/ko Wikisource may hold it under 면암집 or 최익현
 [[text]]
 id = "choe_ikhyeon_pogo_paldo"
-title_ko = "포고팔도사민 (최익현 의병 격문)"
-title_hanja = "布告八道士民"
-title_en = "Proclamation to the Scholars and People of the Eight Provinces (Choe Ik-hyeon, 1906)"
+title_ko = "최익현의 거의와 유소 (매천야록)"
+title_hanja = "崔益鉉擧義·遺疏"
+title_en = "Choe Ik-hyeon's Uprising Memorial and Last Memorial (as recorded in the Maecheon yarok)"
 author_ko = "최익현"
 author_en = "Choe Ik-hyeon"
 author_dates = "1833–1907"
@@ -3941,13 +3942,14 @@ themes = ["colonial-independence"]
 shelf = "documents"
 script = "hanmun"
 excerpt = false
-note = "The longer 창의토적소 (memorial raising the righteous army) is the alternative if this page is missing."
-source = "wikisource-ko"
-source_title = "포고팔도사민"
+note = "布告八道士民 itself has no open transcription. This is 黃玹's 梅泉野錄 record: his narrative frame around Choe's 1906 倡義討賊疏 (quoted in part), the letter to the Japanese government, and the 遺疏 written before his death in Tsushima (1907)."
+source = "history-db"
+source_title = "梅泉野錄 卷五 (崔益鉉의 擧義; 崔益鉉의 遺疏)"
+level_ids = ["sa_001_0050_0030_0010", "sa_001_0050_0070_0310"]
 alt_titles = ["布告八道士民", "최익현/포고팔도사민", "창의토적소", "倡義討賊疏", "면암집/포고팔도사민", "勉菴集/布告八道士民"]
 search = ["포고팔도사민", "布告八道士民 崔益鉉", "최익현 의병 격문 1906", "창의토적소 최익현"]
 pd_basis = "Author died 1907; Korean term (life+50) expired 1957, before the 2013 extension, so the work is in the public domain."
-uncertain = ["source_title", "title_ko", "search", "script"]
+uncertain = []
 
 # resource: LOW-MEDIUM; 매천집 (梅泉集) poems on zh/ko Wikisource; 絶命詩 four poems (Sept 1910), probably under 絶命詩 or 매천집
 [[text]]
@@ -4006,20 +4008,23 @@ title_en = "Prospectus of the Korean Self-Strengthening Society (1906)"
 author_ko = "대한자강회 (윤효정 등)"
 author_en = "Korean Self-Strengthening Society (Yun Hyojeong et al.)"
 author_dates = ""
-date = "1906-04 (society founded 1906-04-14; prospectus in 월보 제1호, 1906-07)"
+date = "31 March 1906 (光武十年三月三十一日, date on the prospectus; printed in 월보 제1호, July 1906)"
 year = 1906
 period = "korean-empire"
 themes = ["colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
 excerpt = false
-note = "Collective authorship; the draftsman (often given as 장지연 or 윤효정) is uncertain."
-source = "wikisource-ko"
-source_title = "대한자강회 취지서"
+note = "Collective authorship; signed by the founders 張志淵, 尹孝正, 沈宜性, 林珍洙, 金相範. The 국사편찬위원회 transcription drops some hangul 하 in verb endings (e.g. 不講於自强之術야); that is the source text, not a fetch error."
+source = "history-db"
+source_title = "大韓自强會趣旨書 (大韓自强會月報 第1號, 本會會報)"
+level_ids = ["ma_001_0010_0030"]
+text_from = "大韓自强會趣旨書"
+text_to = "大韓自强會 規則"
 alt_titles = ["대한자강회취지서", "大韓自强會趣旨書", "大韓自强會 趣旨書", "대한자강회월보/취지서", "대한자강회 월보 제1호"]
 search = ["대한자강회 취지서", "大韓自强會 趣旨書", "대한자강회월보 제1호", "自强의 術 教育 殖産"]
 pd_basis = "Collective society statement of 1906; all plausible drafters died before 1963 (장지연 1921, 윤효정 1929)."
-uncertain = ["author", "author_dates", "source_title", "date", "search", "pd_basis"]
+uncertain = ["author", "author_dates"]
 
 # resource: LOW; 신민회 취지서 (1907) was a secret society's prospectus, often cited in 한국독립운동사 and not widely transcribed; try 신민회 and 신민회 취지서
 [[text]]
@@ -4061,12 +4066,14 @@ themes = ["colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
 excerpt = false
-source = "wikisource-ko"
-source_title = "유교구신론"
+source = "history-db"
+source_title = "儒敎求新論 (西北學會月報 第10號)"
+level_ids = ["ma_004_0100_0040"]
 alt_titles = ["儒敎求新論", "유교 구신론", "박은식/유교구신론", "서북학회월보/유교구신론"]
 search = ["유교구신론", "儒敎求新論 朴殷植", "박은식 유교구신론", "유교구신론 서북학회월보"]
 pd_basis = "Author died 1925; Korean term (life+50) expired 1975, before the 2013 extension, so the work is in the public domain."
-uncertain = ["date", "source_title", "search"]
+uncertain = []
+note = "Signed 謙谷生 (박은식's pen name). The 국사편찬위원회 transcription drops some hangul 하 (不得은, 如히); that is the source text."
 
 # resource: likely exists; serial in 대한매일신보 1908-08-27 to 12-13; 서론 plus 총론 and first sections
 [[text]]

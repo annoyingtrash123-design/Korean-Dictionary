@@ -232,7 +232,7 @@ fn is_named_param(p: &str) -> Option<(&str, &str)> {
 const KEEP_FIRST: &[&str] = &[
     "center", "centre", "가운데", "중앙", "larger", "smaller", "큰글씨", "작은글씨", "nowrap", "bold", "굵게", "small", "big", "한자", "hanja", "ruby", "루비", "underline", "밑줄", "u", "indent", "들여쓰기", "right", "오른쪽", "block center", "sc", "ib", "overstrike", "strike", "blockquote", "인용문", "quote", "텍스트", "글",
     // ruby: {{윗주|大|대}} keeps the base text
-    "윗주", "덧말", "furigana",
+    "윗주", "덧말", "furigana", "ul", "uline",
     // text-bearing markup seen in the catalogue: {{du|죠션}} marks proper names (독립신문),
     // size changes, {{古韓文|ᅟᅮᆫ}}, {{!|𬋖|⿳艹執火}} / {{?|⿰山㤙}} (rare or unencoded characters)
     "du", "c", "크게", "더크게", "더더크게", "더더더크게", "더더더더크게", "더 크게", "작게", "sic", "古韓文", "드러냄표", "복원", "yl", "!", "?", "漏", "另",
