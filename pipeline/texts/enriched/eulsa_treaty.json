@@ -56,9 +56,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
-    "date": "2026-10-09",
-    "notes": ""
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-08",
+    "notes": "Checked the English article by article against the Korean/Hanja text, the modernised spelling (orthography only), and all notes facts (signatories and dates, Ito, five ministers, 17/18 Nov timing, Min Yeong-hwan, Jang Ji-yeon, 1965 Basic Relations Treaty art. 2). Validity positions are properly attributed to Korea and Japan rather than asserted. No changes needed."
   }
 }

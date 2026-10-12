@@ -70,7 +70,7 @@
       "orig": "欽差署理北洋通商大臣太子太傅前文華殿大學士直隸總督部堂一等肅毅伯李督同二品銜津海關道周馥、二品銜候選道馬建忠會同朝鮮國奏副使金宏集、奏正使趙寧夏、問議官魚允中議定。",
       "modern": null,
       "reading": "흠차서리북양통상대신태자태부전문화전대학사직례총독부당일등숙의백이독동이품함진해관도주복, 이품함후선도마건충회동조선국주부사김굉집, 주정사조영하, 문의관어윤중의정.",
-      "en": "Agreed in conference by: the Imperial Commissioner, Acting Superintendent of Trade for the Northern Ports, Grand Guardian of the Heir Apparent, former Grand Secretary of the Wenhua Hall, Governor-General of Zhili, Earl Suyi of the first rank, Li; with Zhou Fu, Tianjin Customs Circuit Intendant, holding second-rank title, and Ma Jianzhong, expectant intendant, holding second-rank title; together with the Joseon Deputy Envoy of Memorial Kim Hong-jip, Envoy of Memorial Jo Nyeong-ha, and Advisory Official Eo Yun-jung."
+      "en": "Agreed in conference by: the Imperial Commissioner, Acting Superintendent of Trade for the Northern Ports, Grand Guardian of the Heir Apparent, former Grand Secretary of the Wenhua Hall, Governor-General of Zhili, Earl Suyi of the first rank, Li; with Zhou Fu, Tianjin Customs Circuit Intendant, holding second-rank title, and Ma Jianzhong, expectant intendant, holding second-rank title; together with the Joseon envoys sent to present a memorial (jinju): Deputy Envoy Kim Hong-jip and Chief Envoy Jo Nyeong-ha, and Advisory Official Eo Yun-jung."
     }
   ],
   "labels": {
@@ -80,9 +80,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
-    "date": "2026-10-09",
-    "notes": ""
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-08",
+    "notes": "Checked all 10 paragraphs' translations line by line (text has known typos, rendered by sense), readings character by character against a hanja lookup (no errors), and notes facts (Li, Zhou Fu, Ma Jianzhong, Jo Nyeong-ha 1845-84, Imo Mutiny/Daewongun, Shimonoseki). Fixed only the clumsy rendering of the 奏正使/奏副使 titles. Catalogue date 1882-10-04 vs header 1 Oct (8th month 20th) left for a human."
   }
 }
