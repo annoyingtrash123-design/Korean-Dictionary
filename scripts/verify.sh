@@ -12,6 +12,8 @@ step "guard: /dev/null is a character device"
 [[ -c /dev/null ]] || { echo "/dev/null is not a device — something replaced it"; exit 1; }
 step "guard: no generated/large files staged"
 if git diff --cached --name-only | grep -E '\.(sqlite|sqlite3)$|app/public/data/|core-wasm/' ; then echo "generated files staged"; exit 1; fi
+# downloaded packages/archives must never land in the repo (tracked, staged or about to be added)
+if { git ls-files; git ls-files --others --exclude-standard; } | grep -E '\.(whl|tar\.gz|tgz|zip)$' ; then echo "package archives in the working tree: remove them"; exit 1; fi
 
 step "rust: tests"
 cargo test -q -p kdict-pipeline -p kdict-core 2>&1 | grep -E "^test result|FAILED|panicked|error" || true
