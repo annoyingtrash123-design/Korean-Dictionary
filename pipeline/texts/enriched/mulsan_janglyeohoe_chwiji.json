@@ -28,7 +28,7 @@
       "orig": "一. 衣服은爲先男子는周衣女子는裳(치마)을陰曆癸亥正月一日로부터朝鮮人産品又난加工品을染色하야着用할일",
       "modern": "一. 衣服은 爲先 男子는 周衣 女子는 裳(치마)을 陰曆 癸亥 正月 一日로부터 朝鮮人 産品 又는 加工品을 染色하여 着用할 일",
       "reading": null,
-      "en": "1. As for clothing, to begin with, men are to wear the coat (jubui) and women the skirt (chima), dyed and made from Joseon-made goods or processed goods, from the first day of the first month of the lunar year Gye-hae."
+      "en": "1. As for clothing, to begin with, men are to wear the coat (jubui) and women the skirt (chima), from the first day of the first month of the lunar year Gye-hae, dyeing and wearing Joseon-made products or processed goods."
     },
     {
       "orig": "一. 飮食物에對하야는食鹽, 砂糖, 果物淸凉飮料等을除한外는全혀朝鮮人産物을使用할일",
@@ -50,9 +50,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
-    "date": "2026-10-09",
-    "notes": ""
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-08",
+    "notes": "Raw text complete; fixed the clothing clause (Art. 1) of the translation; 조만식/물산장려운동/실력양성론/2월 16일 (lunar new year 1923) facts verified; \"삼람\" misprint explained in notes."
   }
 }
