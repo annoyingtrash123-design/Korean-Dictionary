@@ -233,9 +233,15 @@ const KEEP_FIRST: &[&str] = &[
     "center", "centre", "가운데", "중앙", "larger", "smaller", "큰글씨", "작은글씨", "nowrap", "bold", "굵게", "small", "big", "한자", "hanja", "ruby", "루비", "underline", "밑줄", "u", "indent", "들여쓰기", "right", "오른쪽", "block center", "sc", "ib", "overstrike", "strike", "blockquote", "인용문", "quote", "텍스트", "글",
     // ruby: {{윗주|大|대}} keeps the base text
     "윗주", "덧말", "furigana",
+    // text-bearing markup seen in the catalogue: {{du|죠션}} marks proper names (독립신문),
+    // size changes, {{古韓文|ᅟᅮᆫ}}, {{!|𬋖|⿳艹執火}} / {{?|⿰山㤙}} (rare or unencoded characters)
+    "du", "c", "크게", "더크게", "더더크게", "더더더크게", "더더더더크게", "더 크게", "작게", "sic", "古韓文", "드러냄표", "복원", "yl", "!", "?", "漏", "另",
 ];
+// interlinear notes (分註): {{*|他式謂稱臣也。}} — kept, in parentheses
+const KEEP_NOTE: &[&str] = &["*", "參"];
 const KEEP_POEM: &[&str] = &["poem", "시", "verse", "운문", "시구"];
-const KEEP_LAST: &[&str] = &["lang", "언어", "font", "폰트", "linktext", "rubi"];
+// {{校|printed|corrected}} reads the corrected text; {{왼쪽 여백|1em|text}}
+const KEEP_LAST: &[&str] = &["lang", "언어", "font", "폰트", "linktext", "rubi", "校", "왼쪽 여백"];
 
 fn process_templates(s: &str, depth: usize) -> String {
     let mut out = String::with_capacity(s.len());
@@ -277,7 +283,7 @@ fn expand_template(inner: &str, depth: usize) -> String {
         }
     }
     let pick_named = || named.iter().find(|(k, _)| matches!(k.as_str(), "1" | "text" | "content" | "내용")).map(|(_, v)| v.clone());
-    let arg = if KEEP_FIRST.contains(&name.as_str()) || KEEP_POEM.contains(&name.as_str()) {
+    let arg = if KEEP_FIRST.contains(&name.as_str()) || KEEP_POEM.contains(&name.as_str()) || KEEP_NOTE.contains(&name.as_str()) {
         positional.first().cloned().or_else(pick_named)
     } else if KEEP_LAST.contains(&name.as_str()) {
         positional.last().cloned().or_else(pick_named)
@@ -288,6 +294,9 @@ fn expand_template(inner: &str, depth: usize) -> String {
     let mut v = process_templates(&arg, depth + 1);
     if KEEP_POEM.contains(&name.as_str()) {
         v = format!("\n{}\n", keep_line_breaks(&v));
+    }
+    if KEEP_NOTE.contains(&name.as_str()) && !v.trim().is_empty() {
+        v = format!("({})", v.trim());
     }
     v
 }

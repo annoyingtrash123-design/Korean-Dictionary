@@ -794,6 +794,13 @@ fn try_historydb(http: &dyn Http, e: &Entry) -> Result<Outcome> {
         raw.push_str(&texts_html::element_by_token(&html, &["section-read"]).unwrap_or_default());
         raw.push('\n');
     }
+    let mut text = paras.join("\n\n");
+    if e.text_from.is_some() || e.text_to.is_some() {
+        match crate::texts_historydb::cut(&text, e.text_from.as_deref(), e.text_to.as_deref()) {
+            Some(t) => text = t,
+            None => return Ok(Outcome::Missing { tried: vec![format!("{}: start marker {:?} not found", e.id, e.text_from)] }),
+        }
+    }
     Ok(Outcome::Resolved(Box::new(Doc {
         source: "history-db".into(),
         url: crate::texts_historydb::leaf_url(&e.level_ids[0]),
@@ -801,7 +808,7 @@ fn try_historydb(http: &dyn Http, e: &Entry) -> Result<Outcome> {
         revision_id: 0,
         revision_timestamp: String::new(),
         wikitext: raw,
-        text: paras.join("\n\n"),
+        text,
         edition: None,
         subpages: vec![],
         licence: licence_for(e, "history-db"),

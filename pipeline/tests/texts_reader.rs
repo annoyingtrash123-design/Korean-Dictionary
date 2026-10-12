@@ -164,6 +164,18 @@ fn hanmun_joins_without_spaces() {
 }
 
 #[test]
+fn text_bearing_templates_keep_their_text() {
+    // 독립신문 double-underlines proper names: {{du|…}} must not drop the name
+    let c = clean("{{du|죠션}} {{du|대군쥬}} 폐하와 {{크게|독립}}", Layout::Prose, false);
+    assert_eq!(c.text, "죠션 대군쥬 폐하와 독립");
+    // interlinear notes in parentheses; collation reads the corrected text; rare characters kept
+    let h = clean("稱臣{{*|他式謂稱臣也。}}{{校|戶書|戶曹}}{{!|𬋖|⿳艹執火}}{{왼쪽 여백|1em|終}}", Layout::Prose, true);
+    assert_eq!(h.text, "稱臣(他式謂稱臣也。)戶曹𬋖終");
+    // unknown templates are still dropped
+    assert_eq!(clean("가{{둘러보기|x}}나", Layout::Prose, false).text, "가나");
+}
+
+#[test]
 fn tables_keep_content_and_pages_index() {
     let src = "<pages index=\"열녀춘향수절가.pdf\" from=1 to=3 />\n{| class=\"wikitable\"\n|-\n! 조 !! 내용\n|-\n| style=\"x\" | 제1조 || 모든 사람은 자유롭다.\n|}\n";
     let c = clean(src, Layout::Prose, false);

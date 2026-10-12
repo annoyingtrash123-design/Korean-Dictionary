@@ -57,10 +57,45 @@ fn is_citation(p: &str) -> bool {
     t.chars().count() < 60 && t.ends_with('面') && (t.contains('第') || t.contains('輯') || t.contains('集'))
 }
 
-/// A page marker "<406>" left as its own line.
+/// A page marker "<406>" / "＜12-18＞" left as its own line.
 fn is_page_marker(line: &str) -> bool {
-    let t = line.trim();
-    t.starts_with('<') && t.ends_with('>') && t[1..t.len() - 1].chars().all(|c| c.is_ascii_digit()) && t.len() > 2
+    strip_page_markers(line).trim().is_empty() && !line.trim().is_empty()
+}
+
+/// Remove page markers "<406>", "＜9＞", "＜12-18＞" wherever they occur.
+fn strip_page_markers(s: &str) -> String {
+    let mut out = String::with_capacity(s.len());
+    let mut it = s.char_indices().peekable();
+    while let Some((i, c)) = it.next() {
+        if c == '<' || c == '＜' {
+            let close = if c == '<' { '>' } else { '＞' };
+            let rest = &s[i + c.len_utf8()..];
+            if let Some(end) = rest.find(close) {
+                let inner = &rest[..end];
+                if !inner.is_empty() && inner.len() <= 12 && inner.chars().all(|x| x.is_ascii_digit() || x == '-') {
+                    let skip = inner.chars().count() + 1;
+                    for _ in 0..skip {
+                        it.next();
+                    }
+                    continue;
+                }
+            }
+        }
+        out.push(c);
+    }
+    out
+}
+
+/// Cut one document out of a longer text: from the first line containing `from` (inclusive) to
+/// the first later line containing `to` (exclusive). `None` when `from` is not found.
+pub fn cut(text: &str, from: Option<&str>, to: Option<&str>) -> Option<String> {
+    let lines: Vec<&str> = text.split('\n').collect();
+    let a = match from {
+        Some(f) => lines.iter().position(|l| l.contains(f))?,
+        None => 0,
+    };
+    let b = to.and_then(|t| lines[a + 1..].iter().position(|l| l.contains(t)).map(|k| a + 1 + k)).unwrap_or(lines.len());
+    Some(lines[a..b].join("\n").trim().to_string())
 }
 
 /// Paragraphs of original text in a leaf page (empty when the page has no reading section).
@@ -83,7 +118,7 @@ pub fn extract(html: &str) -> Vec<String> {
         }
         // <h6> holds the printed source citation ("韓國獨立運動文類 第一集 二◯-二一面")
         let block = remove_element(&block, "h6");
-        let text = from_hanyang_pua(&html_to_text(&block));
+        let text = strip_page_markers(&from_hanyang_pua(&html_to_text(&block)));
         let lines: Vec<&str> = text.lines().map(str::trim).filter(|l| !l.is_empty() && !is_page_marker(l)).collect();
         // a page marker or <br> inside a sentence is not a paragraph break; unspaced
         // manuscript text (東學史 草稿本) is joined without inventing spaces
@@ -132,6 +167,16 @@ mod tests {
         assert_eq!(p.len(), 1);
         assert!(p[0].starts_with("世上에서사람을貴타함은人倫이라"), "{p:?}");
         assert!(!p[0].chars().any(|c| ('\u{e000}'..='\u{f8ff}').contains(&c)), "{p:?}");
+    }
+
+    #[test]
+    fn page_markers_and_cuts() {
+        assert_eq!(strip_page_markers("天下＜9＞之事<406>也"), "天下之事也");
+        assert!(is_page_marker("＜12-18＞"));
+        assert!(!is_page_marker("<b>"));
+        let t = "會報\n\n大韓自强會趣旨書\n\n本文\n\n大韓自强會 規則\n\n第一條";
+        assert_eq!(cut(t, Some("趣旨書"), Some("規則")).unwrap(), "大韓自强會趣旨書\n\n本文");
+        assert!(cut(t, Some("없음"), None).is_none());
     }
 
     #[test]

@@ -72,6 +72,11 @@ pub struct Entry {
     /// `history-db`: 한국사데이터베이스 leaf ids (original-text items only, in reading order).
     #[serde(default)]
     pub level_ids: Vec<String>,
+    /// Keep the fetched text from the first line containing this marker (inclusive) …
+    pub text_from: Option<String>,
+    /// … up to the first later line containing this one (exclusive). For one document inside a
+    /// longer page (e.g. a society's prospectus inside a magazine issue).
+    pub text_to: Option<String>,
     #[serde(default)]
     pub search: Vec<String>,
     /// Other exact page titles that are accepted for this text (search results never are).
