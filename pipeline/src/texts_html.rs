@@ -146,6 +146,11 @@ pub fn element_by_token(html: &str, tokens: &[&str]) -> Option<String> {
 /// Inner HTML of every element whose `class` attribute contains the class `cls` (document order,
 /// outermost match only).
 pub fn elements_by_class(html: &str, cls: &str) -> Vec<String> {
+    elements_by_class_with_attrs(html, cls).into_iter().map(|(_, inner)| inner).collect()
+}
+
+/// Like [`elements_by_class`], with each element's attribute string.
+pub fn elements_by_class_with_attrs(html: &str, cls: &str) -> Vec<(String, String)> {
     let mut out = Vec::new();
     let mut i = 0;
     while let Some(p) = html[i..].find('<').map(|x| x + i) {
@@ -160,7 +165,7 @@ pub fn elements_by_class(html: &str, cls: &str) -> Vec<String> {
         let hit = attr_value(t.attrs, "class").is_some_and(|v| v.split_whitespace().any(|c| c == cls));
         if hit {
             if let Some(e) = matching_close(html, t.end, &t.name) {
-                out.push(html[t.end..e].to_string());
+                out.push((t.attrs.to_string(), html[t.end..e].to_string()));
                 i = e;
             }
         }

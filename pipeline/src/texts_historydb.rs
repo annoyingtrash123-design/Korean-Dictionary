@@ -5,7 +5,40 @@
 //! editorial headings, page markers or source-citation lines. Leaf page:
 //! `/diachronic/level.do?levelId=<id>` → `#section-read .txt-wrap` blocks, one paragraph each.
 
-use crate::texts_html::{element_by_token, elements_by_class, html_to_text};
+use crate::texts_html::{element_by_token, elements_by_class_with_attrs, html_to_text};
+use crate::texts_wikitext::remove_element;
+use std::collections::HashMap;
+use std::sync::OnceLock;
+
+/// Hanyang PUA (한양 PUA, the old-Hangul private-use encoding used by the DB) → Unicode.
+fn pua_table() -> &'static HashMap<char, String> {
+    static T: OnceLock<HashMap<char, String>> = OnceLock::new();
+    T.get_or_init(|| {
+        include_str!("../data/hanyang_pua.tsv")
+            .lines()
+            .filter(|l| !l.starts_with('#') && !l.trim().is_empty())
+            .filter_map(|l| {
+                let (a, b) = l.split_once('\t')?;
+                let k = char::from_u32(u32::from_str_radix(a, 16).ok()?)?;
+                let v: String = b.split_whitespace().filter_map(|x| u32::from_str_radix(x, 16).ok().and_then(char::from_u32)).collect();
+                Some((k, v))
+            })
+            .collect()
+    })
+}
+
+/// Replace Hanyang-PUA code points with standard old-Hangul jamo sequences.
+pub fn from_hanyang_pua(s: &str) -> String {
+    let t = pua_table();
+    let mut out = String::with_capacity(s.len());
+    for c in s.chars() {
+        match t.get(&c) {
+            Some(v) => out.push_str(v),
+            None => out.push(c),
+        }
+    }
+    out
+}
 
 pub const BASE: &str = "https://db.history.go.kr";
 
@@ -36,16 +69,33 @@ pub fn extract(html: &str) -> Vec<String> {
         return Vec::new();
     };
     let mut out = Vec::new();
-    for block in elements_by_class(&read, "txt-wrap") {
+    for (attrs, block) in elements_by_class_with_attrs(&read, "txt-wrap") {
+        let low = block.to_ascii_lowercase();
+        let indented = attrs.replace(' ', "").contains("padding-left:15px");
         // editorial sub-headings are set in the DB's blue
-        if block.to_ascii_lowercase().contains("#4863a0") {
+        if low.contains("#4863a0") {
             continue;
         }
-        let text = html_to_text(&block);
+        // the DB's own item title (<strong>…</strong> alone in a block) is not part of the text
+        let bare = html_to_text(&remove_element(&block, "strong"));
+        if low.contains("<strong") && bare.trim().is_empty() {
+            continue;
+        }
+        // <h6> holds the printed source citation ("韓國獨立運動文類 第一集 二◯-二一面")
+        let block = remove_element(&block, "h6");
+        let text = from_hanyang_pua(&html_to_text(&block));
         let lines: Vec<&str> = text.lines().map(str::trim).filter(|l| !l.is_empty() && !is_page_marker(l)).collect();
-        // a page marker or <br> inside a sentence is not a paragraph break
-        let para = lines.join(" ");
+        // a page marker or <br> inside a sentence is not a paragraph break; unspaced
+        // manuscript text (東學史 草稿本) is joined without inventing spaces
+        let chars: usize = lines.iter().map(|l| l.chars().count()).sum();
+        let spaces: usize = lines.iter().map(|l| l.chars().filter(|c| *c == ' ').count()).sum();
+        let sep = if chars > 0 && spaces * 50 < chars { "" } else { " " };
+        let para = lines.join(sep);
         if para.is_empty() || (out.is_empty() && is_citation(&para)) {
+            continue;
+        }
+        // a short indented first block is the DB editor's title for the item (倡義文「內譯」)
+        if out.is_empty() && indented && para.chars().count() < 30 {
             continue;
         }
         out.push(para);
@@ -73,6 +123,15 @@ mod tests {
         assert!(p[0].contains("二十三日"));
         assert_eq!(p[1], "七月以後爲隆熙元年");
         assert!(extract("<html>no reading section</html>").is_empty());
+        let kd = r#"<section id="section-read"><div class="txt-wrap"><strong>5. 臨時政府 對日宣戰聲明書</strong></div>
+<div class="txt-wrap"><h6>韓國獨立運動文類 第一集 二◯-二一面</h6> 大韓民國臨時政府<span title="기타">對日宣戰聲明書</span></div>
+<div class="txt-wrap"> 吾人代表三千萬韓人</div></section>"#;
+        assert_eq!(extract(kd), vec!["大韓民國臨時政府對日宣戰聲明書", "吾人代表三千萬韓人"]);
+        let prd = "<section id=\"section-read\"><div class=\"txt-wrap\" style=\"padding-left: 15px;\">倡義文「內譯」</div><div class=\"txt-wrap\" style=\"padding-left: 0px;\">世上에서사람을貴타함은<br/>人倫이라\u{ea7f}문이다</div></section>";
+        let p = extract(prd);
+        assert_eq!(p.len(), 1);
+        assert!(p[0].starts_with("世上에서사람을貴타함은人倫이라"), "{p:?}");
+        assert!(!p[0].chars().any(|c| ('\u{e000}'..='\u{f8ff}').contains(&c)), "{p:?}");
     }
 
     #[test]
