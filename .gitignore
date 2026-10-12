@@ -13,3 +13,5 @@ app/src/core-wasm/
 target/
 .claude/worktrees/
 test-results/
+/*.whl
+/*.tar.gz
