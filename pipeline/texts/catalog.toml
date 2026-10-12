@@ -2806,13 +2806,14 @@ period = "korean-empire"
 themes = ["joseon"]
 shelf = "documents"
 script = "hanmun"
-excerpt = false
+excerpt = true
 note = "Keep only the 7월 31일 (陽曆) entry containing the edict on reducing/disbanding the army; sections to be pinned after discover."
 source = "wikisource-zh"
 source_title = "朝鮮王朝實錄/純宗實錄/卽位年"
 alt_titles = ["朝鮮王朝實錄/純宗實錄/隆熙元年", "朝鮮王朝實錄/純宗實錄/卷二", "純宗實錄/隆熙元年"]
 sections = ["7月31日", "8月1日"]
 search = ["군대해산 조칙", "순종실록 융희 원년 7월 31일", "軍隊解散 詔勅", "純宗實錄 軍隊解散"]
+excerpt_note = "Only the 31 July 1907 edict disbanding the army; the unrelated entries of the same day are left out."
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Imperial edict of 1907, recorded in the Sunjong sillok (compiled under colonial government; itself an official compilation)."
 uncertain = ["sections"]
 
@@ -2830,12 +2831,13 @@ period = "korean-empire"
 themes = ["joseon"]
 shelf = "treaties"
 script = "mixed"
-excerpt = false
+excerpt = true
 note = "Keep the seven articles; include the 비밀각서 (secret memorandum on army disbandment) if present on the page."
 source = "wikisource-ko"
 source_title = "한일신협약"
 alt_titles = ["정미7조약", "제3차 한일협약", "한일신협약 (정미7조약)", "정미조약"]
 search = ["한일신협약", "정미7조약", "정미 7조약", "제3차 한일협약", "한일 신협약 비밀각서"]
+excerpt_note = "The original agreement only; the Wikisource page's modern-Korean rendering (given twice) is left out. The unpublished memorandum is not on the page."
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Treaty and annexed memorandum, 1907."
 
 # resource: low confidence a Wikisource page exists; possible only inside 매천야록 or a news article. The note is variously reported in Korean mixed script and hanmun, so script is a guess
@@ -3000,11 +3002,12 @@ period = "joseon-late"
 themes = ["joseon"]
 shelf = "documents"
 script = "mixed"
-excerpt = false
+excerpt = true
 source = "wikisource-zh"
 source_title = "洪範十四條"
 alt_titles = ["홍범 14조", "洪範十四條", "홍범십사조"]
 search = ["홍범14조", "홍범 14조", "洪範十四條", "홍범십사조"]
+excerpt_note = "One copy only: the 官報 text of the 誓告文 and the fourteen articles (the duplicate 實錄 copy in simplified characters is left out)."
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7). Royal oath/charter of January 1895."
 
 # resource: guess: Wikisource text may be a newspaper clipping (대한매일신보 1907-02) rather than a standalone page
@@ -3222,11 +3225,12 @@ period = "korean-empire"
 themes = ["joseon"]
 shelf = "treaties"
 script = "mixed"
-excerpt = false
+excerpt = true
 source = "wikisource-ko"
 source_title = "한일의정서"
 alt_titles = ["韓日議定書", "한일 의정서"]
 search = ["한일의정서", "韓日議定書", "1904 한일의정서"]
+excerpt_note = "The original treaty text only; the Wikisource page's modern-Korean rendering (## 현대어 번역) is left out."
 pd_basis = "Official state/government document (laws, edicts, treaties, proclamations are unprotected: Copyright Act art. 7)."
 
 # resource: likely exists; names vary: 제2차 한일협약 / 한일협상조약 / 을사늑약
