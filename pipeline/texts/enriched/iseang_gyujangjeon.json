@@ -1,0 +1,304 @@
+{
+  "id": "iseang_gyujangjeon",
+  "card": {
+    "summary_ko": "송도의 서생 이생과 부잣집 딸 최씨가 담 너머로 시를 주고받으며 사랑하고 혼인하지만, 홍건적의 난으로 아내가 죽고 혼령으로 돌아와 재회했다가 이별하는 이야기입니다. 김시습 《금오신화》 가운데 한 편입니다.",
+    "summary_en": "Master Yi of Songdo and Choi, a rich man's daughter, fall in love by trading poems over a wall and marry, but she is killed in the Red Turban invasion, returns as a ghost to be with him for a time, and then departs for good. One of the five tales of Kim Si-seup's Geumo sinhwa.",
+    "level": "classical",
+    "edition_ko": "중국어 위키문헌 「金鰲新話」(개정 2416021, 2024-06-02)의 「李生窺牆傳」 부분. 원저작 퍼블릭 도메인, 전사 CC BY-SA 4.0",
+    "edition_en": "Chinese Wikisource 「金鰲新話」 (revision 2416021, 2024-06-02), the section 「李生窺牆傳」; original in the public domain, transcription CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**저자** 김시습(金時習, 1435–1493)은 한양 출신으로 호는 매월당, 법명은 설잠입니다. 어려서부터 신동으로 이름이 났다고 전합니다. 1455년 수양대군(세조)이 단종에게서 왕위를 빼앗자 책을 불사르고 승려가 되어 떠돌았다고 알려져 있으며, 세조 정권에서 끝내 벼슬하지 않아 남효온·원호·이맹전·조려·성담수와 함께 '생육신'으로 꼽힙니다. 승려의 모습으로 살았으나 유교 윤리를 버리지 않았고, 불교와 유교 사이의 독특한 자리에 선 인물이라는 평가를 받습니다. 정치적 성향은 개혁보다는 세조의 왕위 찬탈에 맞선 절의와 저항 쪽에 있다고 보는 것이 일반적입니다. 1493년 충청도 홍산의 무량사에서 세상을 떠났습니다.\n\n**시대적 맥락** 이야기의 배경은 고려 말입니다. '신축년'은 1361년으로 보는 것이 통설이며, 이때 홍건적이 개경을 점령하고 공민왕이 복주(안동)로 피란했습니다. 작가가 활동한 때는 조선 초 세조 집권기여서, 전란과 왕조 교체로 인한 상실이라는 주제에 작가 자신의 경험이 겹쳐 읽히기도 합니다. 《금오신화》는 대략 1465–1470년경 경주 금오산에서 쓴 것으로 전하나 연대는 분명하지 않습니다.\n\n**배경** 《금오신화》는 한문 전기(傳奇) 다섯 편을 묶은 소설집이며, 이 판은 중국어 위키문헌의 전사본입니다. 중국 《전등신화》의 영향이 자주 지적되고, 특히 같은 책의 〈애경전〉과의 유사성이 거론되지만 영향의 정도에 대해서는 의견이 갈립니다. 일부 글자가 비어 있습니다(▩).\n\n**의의** 사랑이 죽음도 넘어선다는 줄거리로 한국 고전소설의 이른바 명혼(冥婚) 모티프를 대표하는 작품으로 읽힙니다. 이생이 집안의 반대를 넘어 혼인하고, 아내가 정절을 지켜 죽음을 택하며, 부모의 장례까지 치르는 대목에서는 유교적 가치와 개인의 정이 함께 나타납니다.\n\n**형식과 주제** 산문과 한시가 번갈아 나오는 전기체입니다. 두 사람의 주고받는 시, 방 안의 네 계절 그림에 붙은 시, 이별의 노래가 줄거리를 이끕니다. 주제는 자유로운 연애와 부모의 허락, 전란 속의 정절, 삶과 죽음의 경계를 넘는 사랑입니다.\n\n**읽기 도움**\n- 窺牆(규장): 담 너머로 엿보다.\n- 鞦韆(추천): 그네.\n- 定省(정성): 아침저녁으로 부모께 문안드리는 일.\n- 倚閭而望(의려이망): 문에 기대어 자식을 기다림.\n- 媒妁(매작): 중매. 同牢(동뢰): 혼례에서 부부가 함께 음식을 드는 의식.\n- 摽梅(표매): 혼기가 찬 여자를 가리키는 《시경》의 표현.\n- 鬼籙(귀록): 저승의 명부.\n- 暴棄(포기): 내버려 두다, 시신을 방치하다.\n- 千生喬怨, 渭兒之行 같은 구절은 전거나 글자가 분명치 않아 잠정적으로 옮겼습니다.\n",
+    "en": "**About the author** Kim Si-seup (金時習, 1435–1493) was born in Hanyang (Seoul); his pen-name was Maewoldang and his Buddhist name Seoljam. He is said to have been a child prodigy. When Prince Suyang (King Sejo) took the throne from Danjong in 1455, he is traditionally said to have burned his books and become a wandering monk. He never served under Sejo, and is counted with Nam Hyo-on, Won Ho, Yi Maeng-jeon, Jo Ryeo and Seong Dam-su as one of the \"Six Living Loyal Ministers\" (saengyuksin). He lived in monastic guise yet never abandoned Confucian ethics, and is seen as occupying a distinctive place between Buddhism and Confucianism. His politics are usually described as loyalist resistance to Sejo's usurpation rather than reformism. He died in 1493 at Muryangsa in Hongsan, Chungcheong.\n\n**Historical context** The story is set in the late Goryeo. The year \"Sinchuk\" is generally taken as 1361, when the Red Turbans occupied Gaegyeong and King Gongmin fled to Bokju (Andong). The author lived under Sejo in the early Joseon, so the theme of loss through war and dynastic change is sometimes read alongside his own experience. The Geumo sinhwa is said to have been written at Mt. Geumo near Gyeongju around 1465–1470, though the dating is uncertain.\n\n**Background** The Geumo sinhwa is a collection of five hanmun *chuanqi* tales; this text is the Chinese Wikisource transcription. Influence from the Chinese *Jiandeng xinhua* is often noted, and similarity to its tale \"Aiqing zhuan\" in particular is raised, though scholars differ on how far the influence goes. Some characters are missing (▩).\n\n**Significance** With a plot in which love outlasts death, it is read as a leading example of the \"spirit marriage\" motif in classical Korean fiction. In the way Yi marries despite his family's resistance, his wife chooses death to keep her chastity, and she then even sees to the burial of his parents, Confucian values and personal feeling appear side by side.\n\n**Form and themes** It is a *chuanqi* in which prose alternates with Chinese poems: the exchanged verses of the lovers, the poems on the four seasonal paintings in her room, and the song of parting drive the story. Its themes are free courtship versus parental consent, chastity in wartime, and love that crosses the border between life and death.\n\n**Reading help**\n- 窺牆 (gyujang): to peep over a wall.\n- 鞦韆 (chucheon): a swing.\n- 定省 (jeongseong): the daily morning and evening greeting to one's parents.\n- 倚閭而望 (uiryeo i mang): to lean on the gate waiting for one's child.\n- 媒妁 (maejak): matchmaking; 同牢 (dongnoe): the wedding rite of husband and wife sharing food.\n- 摽梅 (pyomae): the Book of Odes' term for a woman of marriageable age.\n- 鬼籙 (gwirok): the register of the underworld.\n- 暴棄 (pogi) here means \"thrown away, left exposed\".\n- Phrases such as 千生喬怨 and 渭兒之行 have unclear allusions or characters and are translated tentatively.\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "## 李生窺牆傳",
+      "modern": null,
+      "reading": "## 이생규장전",
+      "en": "## Yi Saeng Peers over the Wall"
+    },
+    {
+      "orig": "松都有李生者，居駱駝橋之側. 年十八，風韻淸邁，天資英秀. 常詣國學，讀詩路傍. 善竹里，有巨室處崔氏，年可十五六，態度艶麗，工於刺繡，而長於詩賦. 世稱: “風流李氏子. 窈窕崔家娘. 才色若可餐，可以療飢腸.”",
+      "modern": null,
+      "reading": "송도유이생자，거낙타교지측. 연십팔，풍운청매，천자영수. 상예국학，독시로방. 선죽리，유거실처최씨，연가십오륙，태도염려，공어자수，이장어시부. 세칭: “풍류이씨자. 요조최가낭. 재색약가찬，가이료기장.”",
+      "en": "In Songdo there was a student Yi who lived beside Nakta Bridge. He was eighteen, pure and lofty in bearing, with excellent natural gifts. He regularly went to the National Academy, reading verses as he walked along the road. In Seonjuk-ri lived a great household, the Chois; their daughter was about fifteen or sixteen, lovely in manner, skilled at embroidery and excellent at poetry and rhapsody. People said: \"The elegant young Master Yi, the graceful maiden of the Choi house: if talent and beauty could be eaten, they could cure a hungry belly.\""
+    },
+    {
+      "orig": "李生嘗挾冊詣學，常過崔氏之家，北牆外，垂楊裊裊，數十株環列，李生憩於其下. 一日窺牆內，名花盛開，蜂鳥爭喧，傍有小樓，隱映於花叢之間，株簾半掩，羅幃低垂. 有一美人，倦繡停針，支頥而吟曰:",
+      "modern": null,
+      "reading": "이생상협책예학，상과최씨지가，북장외，수양뇨뇨，수십주환열，이생게어기하. 일일규장내，명화성개，봉조쟁훤，방유소루，은영어화총지간，주렴반엄，나위저수. 유일미인，권수정침，지이이음왈:",
+      "en": "Yi, carrying his books to the academy, would always pass the Chois' house. Outside the north wall, dozens of willows stood in a ring, trailing and swaying, and Yi would rest beneath them. One day he peered over the wall: famous flowers were in full bloom, bees and birds vied in chatter, and beside them was a small pavilion, half hidden among the flowers, with a bead curtain half drawn and gauze hangings hanging low. A beautiful woman, weary of embroidery, had stopped her needle and, propping her chin, was chanting:"
+    },
+    {
+      "orig": "獨倚紗窓刺繡遲，百花叢裏囀黃鸝.無端暗結東風怨，不語停針有所思.",
+      "modern": null,
+      "reading": "독의사창자수지，백화총리전황리.무단암결동풍원，불어정침유소사.",
+      "en": "Alone by the gauze window, slow at my embroidery,\namong the hundred flowers an oriole warbles.\nFor no reason I secretly knot a grudge against the east wind;\nsilent, I stop my needle, thinking of something."
+    },
+    {
+      "orig": "路上誰家白面郞，靑衿大帶映垂楊.何方可化堂中燕，低掠珠簾斜度墻.",
+      "modern": null,
+      "reading": "노상수가백면랑，청금대대영수양.하방가화당중연，저략주렴사도장.",
+      "en": "Whose is that white-faced young man on the road?\nBlue collar and broad sash shine among the drooping willows.\nHow might I turn into a swallow in the hall,\nsweep low through the bead curtain and cross the wall aslant?"
+    },
+    {
+      "orig": "生聞之，不勝技癢，然其門戶高峻，庭闈深邃，但怏怏而去. 還時以白紙一幅，作詩三首，繫瓦礫投之曰:",
+      "modern": null,
+      "reading": "생문지，불승기양，연기문호고준，정위심수，단앙앙이거. 환시이백지일폭，작시삼수，계와력투지왈:",
+      "en": "Hearing this, he could not contain his itch to answer in verse, but the gate was high and forbidding and the courtyard and inner rooms deep, so he merely left, dejected. On his way back he wrote three poems on a sheet of white paper, tied it to a piece of tile and threw it over, saying:"
+    },
+    {
+      "orig": "巫山六六霧重回，半露尖峰紫翠堆.惱却襄王孤枕夢，肯爲雲雨下陽臺.",
+      "modern": null,
+      "reading": "무산륙륙무중회，반로첨봉자취퇴.뇌각양왕고침몽，긍위운우하양대.",
+      "en": "The thirty-six peaks of Wushan are heavy with returning mist;\nhalf revealed, the sharp peaks pile up green and purple.\nThey vex King Xiang's dream on his lonely pillow:\nwould she be willing to come down to Yangtai as cloud and rain?"
+    },
+    {
+      "orig": "相如欲挑卓文君，多少情懷已十分.紅粉墻頭桃李艶，隨風何處落繽紛.",
+      "modern": null,
+      "reading": "상여욕도탁문군，다소정회이십분.홍분장두도리염，수풍하처락빈분.",
+      "en": "Xiangru wished to tempt Zhuo Wenjun;\nhow much feeling he had, already ten parts in ten.\nOver the wall the rouged peach and plum are lovely;\nin the wind, where will they fall in scattered profusion?"
+    },
+    {
+      "orig": "好因緣邪惡因緣，空把愁腸日抵年.二十八字媒已就，藍橋何日遇神仙.",
+      "modern": null,
+      "reading": "호인연야악인연，공파수장일저년.이십팔자매이취，남교하일우신선.",
+      "en": "A good bond, or an evil bond:\nI only hold my sorrow, day after day, year after year.\nThe matchmaking of twenty-eight characters is done;\non what day shall I meet the immortal at Lanqiao?"
+    },
+    {
+      "orig": "崔氏，命侍婢香兒，往取見之，卽李生詩也. 披讀再三，心自喜之. 以片簡，又書八字，投之曰: “將子無疑，昏以爲期.” 生如其言，乘昏而往，忽見桃花一枝，過墻而有搖裊之影. 往視之則以鞦韆絨索，繫竹兜下垂. 生攀緣而踰，會月上東山，花影在地，淸香可愛. 生意謂已入仙境，心雖竊喜，而情密事秘，毛髮盡竪，回眄左右，女已在花叢裏，與香兒，折花相戴，鋪罽僻地，見生微笑，口占二句，先唱曰:",
+      "modern": null,
+      "reading": "최씨，명시비향아，왕취견지，즉이생시야. 피독재삼，심자희지. 이편간，우서팔자，투지왈: “장자무의，혼이위기.” 생여기언，승혼이왕，홀견도화일지，과장이유요뇨지영. 왕시지즉이추천융색，계죽두하수. 생반연이유，회월상동산，화영재지，청향가애. 생의위이입선경，심수절희，이정밀사비，모발진수，회면좌우，여이재화총리，여향아，절화상대，포계벽지，견생미소，구점이구，선창왈:",
+      "en": "Choi told her maid Hyang'a to go and fetch it, and it was Yi's poem. She read it again and again, rejoicing in her heart. On a slip of paper she wrote eight characters and threw it back: \"Please, sir, have no doubt; let dusk be the time.\" Yi did as she said and went at dusk. Suddenly he saw a branch of peach blossom passing over the wall, its shadow swaying. He went to look and found a rope of silk swing-cord tied to a bamboo basket and let down. Yi climbed it and went over. The moon was just rising over the eastern hill, flower shadows lay on the ground, and the pure fragrance was lovely. Yi thought he had entered the land of immortals; inwardly he was glad, but because the feeling was intimate and the matter secret, the hairs on his body stood on end. Looking round to left and right, he saw that the lady was already among the flowers with Hyang'a, plucking blossoms and putting them in each other's hair, with a rug spread in a secluded spot. Seeing Yi she smiled slightly and composed two lines, chanting first:"
+    },
+    {
+      "orig": "桃李枝間花富貴，鴛鴦枕上月嬋娟.",
+      "modern": null,
+      "reading": "도리지간화부귀，원앙침상월선연.",
+      "en": "Among the peach and plum boughs the flowers are rich and noble;\non the mandarin-duck pillow the moon is bright."
+    },
+    {
+      "orig": "生續吟曰:",
+      "modern": null,
+      "reading": "생속음왈:",
+      "en": "Yi continued, chanting:"
+    },
+    {
+      "orig": "他時漏洩春消息，風雨無情亦可憐.",
+      "modern": null,
+      "reading": "타시루설춘소식，풍우무정역가련.",
+      "en": "If at some time the news of spring leaks out,\nthe pitiless wind and rain would also be pitiable."
+    },
+    {
+      "orig": "女變色而言曰: “本欲與君，終奉箕帚，永結歡娛，郞何言之若是遽也? 妾雖女類，心意泰然，丈夫意氣，肯作此語乎 ? 他日閨中事洩，親庭譴責，妾以身當之. 香兒可於房中，賫酒果以進.” 兒如命而往，四座寂寥，闃無人聲，生問曰: “此是何處?\"",
+      "modern": null,
+      "reading": "여변색이언왈: “본욕여군，종봉기추，영결환오，낭하언지약시거야? 첩수녀류，심의태연，장부의기，긍작차어호 ? 타일규중사설，친정견책，첩이신당지. 향아가어방중，재주과이진.” 아여명이왕，사좌적요，격무인성，생문왈: “차시하처?\"",
+      "en": "The lady's face changed and she said: \"I wished to serve you, sir, with broom and dustpan to the end, and to join in joy for ever; why do you speak so rashly? Though I am a woman, my heart is steady; would a man with a man's spirit utter such a line? If some day this affair of the women's quarters leaks out and my parents scold me, I will take it upon myself. Hyang'a, bring wine and fruit to the room.\" The girl went as commanded; on all sides it was silent, still, without a human voice. Yi asked, \"What place is this?\""
+    },
+    {
+      "orig": "女曰: “此是北園中小樓下也. 父母以我一女，情鍾甚篤，別構此樓于芙蓉池畔，方春時，名花盛開，欲使從侍兒遨遊耳. 親闈之居，閨閤深邃，雖笑語啞咿，亦不能卒爾相聞也.” 女酌綠蟻一巵，口占古風一篇曰:",
+      "modern": null,
+      "reading": "여왈: “차시북원중소루하야. 부모이아일녀，정종심독，별구차루우부용지반，방춘시，명화성개，욕사종시아오유이. 친위지거，규합심수，수소어아이，역불능졸이상문야.” 여작록의일치，구점고풍일편왈:",
+      "en": "The lady said: \"This is below the small pavilion in the north garden. My parents, having only me as a daughter, are deeply fond of me; they built this pavilion separately beside Lotus Pond, so that in spring, when the famous flowers bloom, I might stroll about with my maids. My parents' quarters are secluded and deep inside; even if we laughed and talked it would not be heard at once.\" The lady poured a goblet of green ant wine and chanted an old-style poem:"
+    },
+    {
+      "orig": "曲欄下壓芙蓉池，池上花叢人共語.香霧霏霏春融融，製出新詞歌白紵.月轉花陰入氍毹，共挽長條落紅雨.風攪淸香香襲衣，賈女初踏春陽舞.羅衫輕拂海棠枝，驚起花間宿鸚鵡.",
+      "modern": null,
+      "reading": "곡란하압부용지，지상화총인공어.향무비비춘융융，제출신사가백저.월전화음입구유，공만장조락홍우.풍교청향향습의，가녀초답춘양무.나삼경불해당지，경기화간숙앵무.",
+      "en": "Below the curved balustrade lies the lotus pond,\nand by the pond, among the flowers, two people talk.\nFragrant mist drifts thick, the spring is warm and mellow;\nI make new words and sing \"White Ramie.\"\nThe moon turns the flower shade into a woolen rug;\ntogether we pull down long boughs and red petals fall like rain.\nThe wind stirs pure fragrance, the fragrance fills our robes;\nMiss Jia first treads the dance in the spring sun.\nHer gauze sleeves lightly brush the begonia boughs\nand startle the parrots sleeping among the flowers."
+    },
+    {
+      "orig": "生卽和之曰:",
+      "modern": null,
+      "reading": "생즉화지왈:",
+      "en": "Yi at once replied in the same rhyme:"
+    },
+    {
+      "orig": "誤入桃源花爛熳，多少情懷不能語.翠鬟雙綰金▩低，楚楚春衫裁綠紵.東風初拆竝帶花，莫使繁枝戰風雨.飄飄仙袂影婆婆，叢桂陰中素娥舞.勝事未了愁必隨，莫製新詞敎鸚鵡.",
+      "modern": null,
+      "reading": "오입도원화란만，다소정회불능어.취환쌍관금▩저，초초춘삼재록저.동풍초탁병대화，막사번지전풍우.표표선몌영파파，총계음중소아무.승사미료수필수，막제신사교앵무.",
+      "en": "I have strayed into Peach Spring, the flowers in riot;\nhow much feeling I have and cannot put into words.\nTwin green coils pinned low with gold ▩,\ntrim spring blouses cut from green ramie.\nThe east wind has just opened the paired-stem flowers;\ndo not let the thick boughs fight the wind and rain.\nFluttering immortal sleeves, shadows swaying,\namong the cassia shade Chang'e dances.\nFine affairs are not done before sorrow must follow;\ndo not make new words to teach the parrots."
+    },
+    {
+      "orig": "吟罷，女謂生曰: “今日之事，必非小綠，郞須尾我，以遂情款.” 言訖，女從北窓入，生隨之，樓梯在房中. 綠梯而昇，果其樓也. 文房几案，極其濟楚. 一壁展煙江疊嶂圖，幽篁古木圖，皆名畵也. 題詩其上，詩不知何人所作. 其一曰:",
+      "modern": null,
+      "reading": "음파，여위생왈: “금일지사，필비소록，낭수미아，이수정관.” 언흘，여종북창입，생수지，누제재방중. 녹제이승，과기루야. 문방궤안，극기제초. 일벽전연강첩장도，유황고목도，개명화야. 제시기상，시부지하인소작. 기일왈:",
+      "en": "When the chanting was over, the lady said to Yi: \"What has happened today is surely no small bond. Follow me, sir, and let us fulfil our feelings.\" When she had spoken she went in through the north window and Yi followed her; the stairs of the pavilion were inside the room. They climbed the stairs, and it was indeed the pavilion. The study desk and tables were extremely neat and elegant. On one wall hung a picture of \"Misty River and Layered Peaks\" and one of \"Secluded Bamboo and Ancient Trees,\" both famous paintings. Poems were inscribed on them, though no one knew who had written them. The first said:"
+    },
+    {
+      "orig": "何人筆端有餘力，寫此江心千疊山.壯哉方壺三萬丈，半出縹緲烟雲間.遠勢微茫幾百里，近見崒嵂靑螺鬟.滄波淼淼浮遠空，日暮遙望愁鄕關.對此令人意蕭索，疑泛湘江風雨灣.",
+      "modern": null,
+      "reading": "하인필단유여력，사차강심천첩산.장재방호삼만장，반출표묘연운간.원세미망기백리，근견줄율청라환.창파묘묘부원공，일모요망수향관.대차령인의소색，의범상강풍우만.",
+      "en": "Whose brush has strength to spare,\nto paint these thousand layered hills in the river's heart?\nHow magnificent, the thirty thousand fathoms of Fanghu,\nhalf emerging amid the faint and drifting mist and cloud!\nThe distant forms stretch faintly for hundreds of li;\nclose by are steep green snail-coil peaks.\nBlue waves, wide and misty, float into the far sky;\nat sunset I gaze afar and grieve for my homeland.\nFacing this it makes one forlorn,\nas if adrift in the stormy bays of the Xiang River."
+    },
+    {
+      "orig": "其二曰:",
+      "modern": null,
+      "reading": "기이왈:",
+      "en": "The second said:"
+    },
+    {
+      "orig": "幽篁蕭颯如有聲，古木偃蹇如有情.狂根盤屈惹苺苔，老幹夭矯排風雷.胸中自有造化窟，妙處豈與傍人說.韋偃與可已爲鬼，漏洩天機知有幾.晴窓嗒然淡相對，愛看幻墨神三昧.",
+      "modern": null,
+      "reading": "유황소삽여유성，고목언건여유정.광근반굴야매태，노간요교배풍뢰.흉중자유조화굴，묘처기여방인설.위언여가이위귀，누설천기지유기.청창탑연담상대，애간환묵신삼매.",
+      "en": "Secluded bamboo rustles as if it had a voice;\nancient trees bend as if they had feeling.\nWild roots coil and twist, trailing moss;\nold trunks arch and curl, rivaling wind and thunder.\nIn the breast there is naturally a cave of creation;\nits wonders, how could one tell them to bystanders?\nWei Yan and Wen Yuke have already become ghosts;\nhow many are there who know the leaked secrets of Heaven?\nBy the clear window, in silence, I face it calmly,\nloving to watch the divine samadhi of the magic ink."
+    },
+    {
+      "orig": "一壁貼四時景，各四首，亦不知爲何人所作. 其筆，則摹松雪眞字，體極精姸. 其一幅曰:",
+      "modern": null,
+      "reading": "일벽첩사시경，각사수，역부지위하인소작. 기필，즉모송설진자，체극정연. 기일폭왈:",
+      "en": "On another wall hung scenes of the four seasons, four poems for each, and again no one knew who had written them. The calligraphy imitated the true script of Songxue and was extremely refined and beautiful. The first panel said:"
+    },
+    {
+      "orig": "芙蓉帳暖香如縷，窓外霏霏紅杏雨.樓頭殘夢五更鐘，百舌啼在辛夷塢.燕子日長閨閤深，懶來無語停金針.花底雙雙飛蝶蛺，爭趰落花庭院陰.嫩寒輕透綠羅裳，空對春風暗斷腸.脉脉此情誰料得，百花叢裏舞鴛鴦.春色深藏黃四家，深紅淺綠映窓紗.一庭芳草春心苦，輕揭珠簾看落花.",
+      "modern": null,
+      "reading": "부용장난향여루，창외비비홍행우.누두잔몽오경종，백설제재신이오.연자일장규합심，나래무어정금침.화저쌍쌍비접협，쟁이락화정원음.눈한경투록라상，공대춘풍암단장.맥맥차정수료득，백화총리무원앙.춘색심장황사가，심홍천록영창사.일정방초춘심고，경게주렴간락화.",
+      "en": "The lotus-patterned curtain is warm, the incense like a thread;\noutside the window fine red apricot rain falls.\nFrom the top of the tower, a remnant dream and the fifth-watch bell;\na mockingbird cries in the magnolia hollow.\nThe swallows' day grows long, the inner chambers deep;\nlazy and wordless, she stops her golden needle.\nBeneath the flowers pairs of butterflies fly,\nvying to chase fallen petals into the courtyard shade.\nA tender chill lightly passes through her green gauze skirt;\nin vain she faces the spring wind, secretly heartbroken.\nWho can guess this tender feeling?\nAmong the hundred flowers mandarin ducks dance.\nSpring color lies deep in the Huang family's four gardens,\ndeep red and pale green reflected on the window gauze.\nIn the courtyard fragrant grass, the spring heart is bitter;\nlightly she lifts the bead curtain to watch the falling flowers."
+    },
+    {
+      "orig": "其二幅曰:",
+      "modern": null,
+      "reading": "기이폭왈:",
+      "en": "The second panel said:"
+    },
+    {
+      "orig": "小麥初胎乳燕斜，南園開遍石榴花.綠窓工女幷刀饗，擬試紅裙剪紫霞.黃梅時節雨簾纖，鸎囀槐陰燕入簾.又是一年風景老，棟花零落笋生尖.手拈靑杏打鸎兒，風過南軒日影遲.荷葉已香池水滿，碧波深處浴鸕鶿.藤牀筠簟浪波紋，屛畵瀟湘一抹雲.懶慢不堪醒午夢，半窓斜日欲西曛.",
+      "modern": null,
+      "reading": "소맥초태유연사，남원개편석류화.녹창공녀병도향，의시홍군전자하.황매시절우렴섬，앵전괴음연입렴.우시일년풍경로，동화령락순생첨.수념청행타앵아，풍과남헌일영지.하엽이향지수만，벽파심처욕로자.등상균점랑파문，병화소상일말운.나만불감성오몽，반창사일욕서훈.",
+      "en": "The wheat has just conceived, young swallows slant;\nin the south garden pomegranate flowers bloom everywhere.\nAt the green window the seamstress, scissors in hand,\nmeans to try cutting a crimson skirt from purple haze.\nIn the plum-rain season the rain curtain is fine;\norioles warble in the locust shade, swallows enter the curtain.\nAnother year's scenery has grown old;\nchinaberry blossoms fall and bamboo shoots show their sharp tips.\nBy hand she plucks a green apricot to strike the oriole;\nwind passes the south pavilion, the sun's shadow lingers.\nThe lotus leaves are already fragrant, the pond water full;\nin the depths of the blue waves cormorants bathe.\nOn the rattan couch and bamboo mat, ripples of pattern;\nthe screen's picture is Xiao and Xiang, a smear of cloud.\nLanguid, she cannot bear to wake from her noon dream;\nhalf the window is slanting sun, about to turn to western dusk."
+    },
+    {
+      "orig": "其三幅曰:",
+      "modern": null,
+      "reading": "기삼폭왈:",
+      "en": "The third panel said:"
+    },
+    {
+      "orig": "秋風策策秋露凝，秋月娟娟秋水碧.一聲二聲鴻雁歸，更聽金井梧桐葉.床下百蟲鳴喞喞，床上佳人珠淚滴.良人萬里事征戰，今夜玉門關月白.新衣欲裁剪刀冷，低喚丫兒呼熨斗.熨斗火銷全未省，細撥秦箏又搔首.小池荷盡芭蕉黃，鴛鴦瓦上粘新霜.舊愁新恨不能禁，況聞蟋蟀鳴洞房.",
+      "modern": null,
+      "reading": "추풍책책추로응，추월연연추수벽.일성이성홍안귀，갱청금정오동엽.상하백충명즉즉，상상가인주루적.양인만리사정전，금야옥문관월백.신의욕재전도랭，저환아아호위두.위두화소전미성，세발진쟁우소수.소지하진파초황，원앙와상점신상.구수신한불능금，황문실솔명동방.",
+      "en": "The autumn wind sighs, the autumn dew congeals;\nthe autumn moon is radiant, the autumn water green.\nOne cry, two cries, the wild geese return;\nagain I hear leaves of the parasol tree by the golden well.\nUnder the bed a hundred insects chirp;\non the bed the fair one's pearl tears drip.\nHer husband is ten thousand li away at war;\ntonight the moon is white over Jade Gate Pass.\nShe would cut a new robe but the scissors are cold;\nsoftly she calls her maid to bring the iron.\nThe fire in the iron has died and she never noticed;\nshe plucks the Qin zither gently and scratches her head.\nIn the small pond the lotus is spent, the plantain yellow;\non the mandarin-duck tiles new frost clings.\nOld sorrow and new regret cannot be borne,\nand still she hears crickets chirp in the inner room."
+    },
+    {
+      "orig": "其四幅曰:",
+      "modern": null,
+      "reading": "기사폭왈:",
+      "en": "The fourth panel said:"
+    },
+    {
+      "orig": "一枝梅影向窓橫，風緊西廊月色明.爐火未銷金筋撥，旋呼丫髻換茶鐺.林葉頻驚半夜霜，回風飄雪入長廊.無端一夜相思夢，都在氷河古戰場.滿窓紅日似春溫，愁鎖眉峰著睡痕.膽甁小梅腮半吐，含羞不語繡雙鴛.剪剪霜風掠北林，寒鳥啼月正關心.燈前爲有思人淚，滴在穿絲小挫針.",
+      "modern": null,
+      "reading": "일지매영향창횡，풍긴서랑월색명.노화미소금근발，선호아계환다당.임엽빈경반야상，회풍표설입장랑.무단일야상사몽，도재빙하고전장.만창홍일사춘온，수쇄미봉저수흔.담병소매시반토，함수불어수쌍원.전전상풍략북림，한조제월정관심.등전위유사인루，적재천사소좌침.",
+      "en": "A branch of plum shadow lies across the window;\nthe wind is sharp in the west corridor, the moonlight bright.\nThe brazier fire is not out; she stirs it with golden tongs\nand soon calls the girl in double buns to change the tea kettle.\nThe forest leaves keep startling at the half-night frost;\na turning wind drifts snow into the long corridor.\nFor no reason, one night, a dream of longing\nlies wholly in the icy river, on the ancient battlefield.\nThe window is full of red sun, like the warmth of spring;\nsorrow locks her brows and sleep-marks show.\nIn the vase the small plum, its cheek half open;\nshy and wordless, she embroiders a pair of mandarin ducks.\nSharp and cutting, the frost wind sweeps the northern forest;\na cold bird cries at the moon, and it plucks the heart.\nBefore the lamp, tears for the one she thinks of\ndrip onto the small needle threaded with silk."
+    },
+    {
+      "orig": "一傍，別有小室一區，帳褥衾枕，亦甚整麗. 帳外爇麝臍，燃蘭膏，熒煌映徹，恍如白晝. 生與女，極其情歡，遂留數日，生謂女曰: “先聖有言，父母在. 遊必有方，而今我定省. 已過三日，親必倚閭而望，非人子之道也.” 女惻然而頷之，踰垣而遣之. 生自是以後，無已不往.",
+      "modern": null,
+      "reading": "일방，별유소실일구，장욕금침，역심정려. 장외설사제，연란고，형황영철，황여백주. 생여녀，극기정환，수류수일，생위녀왈: “선성유언，부모재. 유필유방，이금아정성. 이과삼일，친필의려이망，비인자지도야.” 여측연이암지，유원이견지. 생자시이후，무이불왕.",
+      "en": "At one side there was also a small room, with curtains, bedding, quilts and pillows likewise very neat and handsome. Outside the curtains musk was burning and orchid-oil lamps were lit, glowing so that it seemed bright as day. Yi and the lady took their fill of joy, and he stayed several days. Yi said to her: \"The former sage said, 'When one's parents are alive, one's travels must have a destination.' And I have not paid my morning and evening respects for three days now; my parents will surely be leaning on the gate, watching, which is not the way of a son.\" The lady nodded sadly and sent him off over the wall. From then on Yi went every evening without fail."
+    },
+    {
+      "orig": "一夕，李生之父，問曰: “汝朝出而暮還者，將以學先聖仁義之格言，昏出而曉還，當爲何事? 必作輕薄子，踰垣牆，折樹壇耳. 事如彰露，人皆譴我敎子之不嚴，而如其女，定是高門右族，則必以爾之狂狡，穢彼門戶，獲戾人家，其事不小，速去嶺南，率奴隷監農，勿得復還.” 卽於翌日，謫送蔚州.",
+      "modern": null,
+      "reading": "일석，이생지부，문왈: “여조출이모환자，장이학선성인의지격언，혼출이효환，당위하사? 필작경박자，유원장，절수단이. 사여창로，인개견아교자지불엄，이여기녀，정시고문우족，즉필이이지광교，예피문호，획려인가，기사불소，속거령남，솔노례감농，물득부환.” 즉어익일，적송울주.",
+      "en": "One evening Yi's father asked: \"You go out in the morning and come back at dusk to study the sages' maxims of benevolence and righteousness; but now you go out at dusk and return at dawn, what are you up to? You must have become a frivolous fellow, climbing walls and breaking trees. If the matter comes to light, people will all blame me for not teaching my son strictly; and if the girl is indeed from a high house and powerful clan, then through your wildness and cunning you will have defiled their gate and incurred the blame of another family, which would be no small matter. Go quickly to Yeongnam, lead the slaves and oversee the farms, and do not come back.\" The very next day he was sent in exile to Ulju."
+    },
+    {
+      "orig": "女每夕，於花園待之，數月不還. 女意其得病，命香兒，密問於李生之鄰，鄰人曰: “李郞，得罪於家君，去嶺南，已數月矣.” 女聞之，臥疾在床，轉轉不起，水醬不入於口，言語支離，肌膚憔悴，父母怪之，問其病狀，喑喑不言. 搜其箱篋，得李生前日唱和詩，擊節驚訝曰: “幾乎失我女子矣.” 問曰: “李生誰耶?” 至是，女不能復隱，細語在咽中，告父母曰: “父親母親，鞠育恩深，不能相匿. 竊念男女相感，人情至重. 是以，摽梅迨吉，咏於周南，咸腓之凶，刑於羲易. 自將蒲柳之質，不念桑落之詩，行露沾衣，竊被傍人之嗤. 絲蘿托木，已作渭兒之行. 罪已貫盈，累及門戶. 然而彼狡童兮，一偸賈香，千生喬怨，以眇眇之弱軀，忍悄悄之獨處，情念日深，沈痾日篤，濱於死地，將化窮鬼. 父母如從我願，終保餘生，倘違情款，斃而有已. 當與李生，重遊黃壞之下，誓不登他門也.”",
+      "modern": null,
+      "reading": "여매석，어화원대지，수월불환. 여의기득병，명향아，밀문어이생지린，인인왈: “이랑，득죄어가군，거령남，이수월의.” 여문지，와질재상，전전불기，수장불입어구，언어지리，기부초췌，부모괴지，문기병상，음음불언. 수기상협，득이생전일창화시，격절경아왈: “기호실아녀자의.” 문왈: “이생수야?” 지시，여불능부은，세어재인중，고부모왈: “부친모친，국육은심，불능상닉. 절념남녀상감，인정지중. 시이，표매태길，영어주남，함비지흉，형어희역. 자장포류지질，불념상락지시，행로첨의，절피방인지치. 사라탁목，이작위아지행. 죄이관영，누급문호. 연이피교동혜，일투가향，천생교원，이묘묘지약구，인초초지독처，정념일심，침아일독，빈어사지，장화궁귀. 부모여종아원，종보여생，당위정관，폐이유이. 당여이생，중유황괴지하，서부등타문야.”",
+      "en": "Each evening the girl waited for him in the flower garden, but for months he did not return. She thought he might be ill, and ordered Hyang'a to ask discreetly among Yi's neighbours. A neighbour said, \"Young Master Yi offended his father and went to Yeongnam; it has been several months already.\" Hearing this, she lay sick in bed, tossing and unable to rise; neither water nor broth entered her mouth, her words wandered, her skin and flesh grew wasted. Her parents were troubled and asked about her illness, but she was silent and would not speak. They searched her chests and found the poems Yi had exchanged with her earlier, and slapping the table in astonishment they said, \"I almost lost my daughter!\" They asked, \"Who is this Yi?\" At this point the girl could no longer hide it, and said in a thin voice in her throat to her parents: \"Father, Mother, your nurturing kindness is deep, and I cannot conceal it from you. I have secretly thought that the mutual attraction of man and woman is of the greatest weight in human feeling. Therefore 'the plums fall; let there be an auspicious day' is sung in the Zhounan, and the ill omen of 'moved in the calf' is recorded in the Changes of Fu Xi. I, a willow of the marsh by nature, did not think of the poem of the falling mulberry leaves; with 'the dew on the road wetting my clothes,' I secretly bore the ridicule of bystanders. Like dodder clinging to a tree, I have already acted like the Wei girl. My offence is full to the brim and has involved the family. But that 'wily youth,' once he had stolen the incense of Jia, bred in a thousand lives a lofty resentment; with my slight and frail body I endured solitude and distress, my thoughts of him deepened daily and my chronic illness worsened daily, until I came to the edge of death and was about to become a poor ghost. If my parents will follow my wish I may keep what remains of my life; if you go against my sincere feelings, I shall die and that will be the end. I shall go with Master Yi to wander again beneath the Yellow Springs, and I swear I will never climb another man's door.\""
+    },
+    {
+      "orig": "於是，父母已知其志，不復問病，且警且誘，以寬其心，復修媒妁之禮，問于李家. 李氏問崔家門戶優劣曰: “吾家豚犬，雖年少風狂，學問精通，身彩似人，所冀捷龍頭於異日，占鳳鳴於他年，不願速求婚媾也.” 媒者，以言返告，崔氏復遣曰: “一時朋伴，皆稱令嗣才華邁人，今雖蟠屈，豈是池中之物. 宜速定嘉會之晨，以合二姓之好.” 媒者，又以其言，返告李生之父，父曰: “吾亦自少，把冊窮經，年老無成. 奴僕逋逃，親戚寡助，生涯疎闊，家計伶俜，而況巨家大族，豈以一人寒儒，留意爲贅郞乎. 是必好事者，過譽吾家，以誣高門也.” 媒，又告崔家，崔家曰: “納采之禮，漿束之事，吾盡辨矣. 宜差穀旦，以定花燭之期.” 媒者，又返告之. 李家至是，稍回其意，卽遣人，召生問之. 生喜不自勝，乃作詩曰:",
+      "modern": null,
+      "reading": "어시，부모이지기지，불부문병，차경차유，이관기심，부수매작지례，문우이가. 이씨문최가문호우열왈: “오가돈견，수년소풍광，학문정통，신채사인，소기첩용두어이일，점봉명어타년，불원속구혼구야.” 매자，이언반고，최씨부견왈: “일시붕반，개칭령사재화매인，금수반굴，기시지중지물. 의속정가회지신，이합이성지호.” 매자，우이기언，반고이생지부，부왈: “오역자소，파책궁경，연로무성. 노복포도，친척과조，생애소활，가계령빙，이황거가대족，기이일인한유，유의위췌랑호. 시필호사자，과예오가，이무고문야.” 매，우고최가，최가왈: “납채지례，장속지사，오진변의. 의차곡단，이정화촉지기.” 매자，우반고지. 이가지시，초회기의，즉견인，소생문지. 생희부자승，내작시왈:",
+      "en": "Then her parents, knowing her will, no longer asked about her illness but warned and coaxed her to ease her mind, and again performed the rites of the matchmaker, sending to the Yi house. Master Yi, asking about the standing of the Choi house, said: \"My piglet of a son, though young and wild, is thoroughly versed in learning and of respectable appearance; I hope that some day he will win the dragon-head of the examination and take the phoenix's call in another year. I do not wish to seek a match in haste.\" The go-between reported his words, and the Chois sent again: \"His companions of the time all say your son's talent surpasses that of other men; though he is coiled for now, how can he be a creature of the pond? We should quickly fix the auspicious morning and join the goodwill of our two families.\" The go-between again took this to Yi's father, who said: \"I too, in youth, held the books and plumbed the classics, and in old age have achieved nothing. My servants have fled, my relatives are few to help me, my livelihood is sparse and my household straitened; how could a great house and powerful clan pay heed to a poor scholar and take him as a live-in son-in-law? Surely some busybody is overpraising my family in order to deceive a high house.\" The go-between told the Chois again, who said: \"The betrothal gifts and the arrangements of rice-drink and bundles, I have prepared them all. Please choose a fine morning and fix the date for the flower candles.\" The go-between reported once more. The Yi family now softened a little and sent at once to summon Yi and ask him. Yi, beside himself with joy, composed a poem:"
+    },
+    {
+      "orig": "破鏡重圓會有時，天津烏鵲助佳期.從今月老纏繩去，莫向東風怨子規.",
+      "modern": null,
+      "reading": "파경중원회유시，천진오작조가기.종금월로전승거，막향동풍원자규.",
+      "en": "A broken mirror made whole again: there will be a time;\nthe magpies of the Heavenly Ford help the happy meeting.\nFrom now on the Old Man of the Moon ties the cord;\ndo not resent the east wind in front of the cuckoo."
+    },
+    {
+      "orig": "女聞之，病亦稍愈，又作詩曰:",
+      "modern": null,
+      "reading": "여문지，병역초유，우작시왈:",
+      "en": "Hearing of it, the girl's illness also eased a little, and she too composed a poem:"
+    },
+    {
+      "orig": "惡因緣是好因緣，盟語終須到底圓.共輓鹿車何日是，倩人扶起理花鈿.",
+      "modern": null,
+      "reading": "악인연시호인연，맹어종수도저원.공만록차하일시，천인부기리화전.",
+      "en": "An ill bond has become a good bond;\nthe vow must in the end come to completion.\nOn what day shall we draw the deer cart together?\nI ask someone to help me up to arrange my flower hairpin."
+    },
+    {
+      "orig": "於是，擇吉日，遂定婚禮，而續其絃焉. 自同牢之後，夫婦愛而敬之，相待如賓，雖鴻光鮑桓，不足言其節義也. 生翌年，捷高科，登顯仕，聲價聞于朝著.",
+      "modern": null,
+      "reading": "어시，택길일，수정혼례，이속기현언. 자동뢰지후，부부애이경지，상대여빈，수홍광포환，부족언기절의야. 생익년，첩고과，등현사，성가문우조저.",
+      "en": "Then an auspicious day was chosen, the wedding rite was fixed, and Yi took her as his new wife. After the sharing of the sacrificial meal, husband and wife loved and respected each other, and treated one another as guests; even Hong Guang and Bao Huan could not match their fidelity. The next year Yi passed the examination with high rank, rose to distinguished office, and his reputation was heard at court."
+    },
+    {
+      "orig": "辛丑年，紅賊據京城，王移福州. 賊焚蕩室廬，臠炙人畜. 夫婦親戚，不能相保，東奔西竄，各自逃生. 生挈家，隱匿窮崖. 有一賊，拔劍而逐. 生奔走得脫，女爲賊所虜，欲逼之，女大罵曰: “虎鬼殺啗我，寧死葬於豺狼之腹中，安能作狗彘之匹乎?” 賊怒，殺而剮之.",
+      "modern": null,
+      "reading": "신축년，홍적거경성，왕이복주. 적분탕실려，연자인축. 부부친척，불능상보，동분서찬，각자도생. 생설가，은닉궁애. 유일적，발검이축. 생분주득탈，여위적소로，욕핍지，여대매왈: “호귀살담아，영사장어시랑지복중，안능작구체지필호?” 적로，살이과지.",
+      "en": "In the year Sinchuk the Red Turbans occupied the capital and the king moved to Bokju. The rebels burned houses and roasted people and animals. Husbands and wives and relatives could not protect one another; they ran east and west, each fleeing for his own life. Yi took his family and hid in a deep ravine. A rebel drew a sword and chased them. Yi ran and escaped, but his wife was captured by the rebel, who tried to force her. She cursed him roundly, saying: \"You tiger-ghost, kill and devour me! I would rather die and be buried in the belly of jackals and wolves; how can I be the mate of a dog or a pig?\" The rebel, enraged, killed her and cut her to pieces."
+    },
+    {
+      "orig": "生竄于荒野，僅保餘軀. 聞賊已滅，遂尋父母舊居，其家已爲兵火所焚. 又至女家，廊廡荒凉，鼠喞鳥喧. 悲不自勝，登于小樓，收淚長噓. 奄至日暮，塊然獨坐，佇思前遊，宛如一夢.",
+      "modern": null,
+      "reading": "생찬우황야，근보여구. 문적이멸，수심부모구거，기가이위병화소분. 우지녀가，낭무황량，서즉조훤. 비부자승，등우소루，수루장허. 엄지일모，괴연독좌，저사전유，완여일몽.",
+      "en": "Yi hid in the wilderness and barely kept his body alive. Hearing that the rebels had been destroyed, he went to look for his parents' old home, but the house had been burned in the war. He went on to the girl's house: the corridors were desolate, rats squeaked and birds clamoured. Unable to bear his grief, he climbed to the small pavilion, wiped away his tears and sighed long. Soon it was dusk; he sat alone like a clod, standing in thought over former times that seemed now like a dream."
+    },
+    {
+      "orig": "將及二更，月色微吐，光照屋梁. 漸聞廊下，有跫然之音，自遠而近，至則崔氏也. 生雖知已死，愛之甚篤，不復疑訝. 遽問曰: “避於何處，全其軀命?” 女執生手，慟哭一聲. 乃敍情曰: “妾本良族，幼承庭訓，工刺繡裁縫之事，學詩書仁義之方，但識閨門之治，豈解境外之修. 然而一窺紅杏之墻，自獻碧海之珠. 花前一笑，恩結平生，帳裏重遘，情愈百年. 言至於此，悲慙曷勝. 將謂偕老而歸居，豈意橫折而顚溝，終不委身於豺虎，自取磔肉於泥沙，固天性之自然，匪人情之可忍. 却恨一別於窮崖，竟作分飛之匹鳥. 家亡親沒，傷殢魄之無依，義重命輕，幸殘軀之免辱. 誰憐寸寸之灰心，徒結斷斷之腐腸，骨骸暴野，肝膽塗地. 細料昔時之歡娛，適爲當日之愁寃. 今則鄒律已吹於幽谷，倩女再返於陽閒. 蓬萊一紀之約綢繆，聚窟三生之香芬郁，重契闊於此時，期不負乎前盟，如或不忘，終以爲好，李郞其許之乎?” 生喜且感曰: “固所願也.” 相與款曲抒情. 言及家産被寇掠有無，女曰: “一分不失，埋於某山某谷也.” 又問: “兩家父母骸骨安在?” 女曰: “暴棄某處.” 敍情罷，同寢極歡如昔.",
+      "modern": null,
+      "reading": "장급이경，월색미토，광조옥량. 점문랑하，유공연지음，자원이근，지즉최씨야. 생수지이사，애지심독，불부의아. 거문왈: “피어하처，전기구명?” 여집생수，통곡일성. 내서정왈: “첩본량족，유승정훈，공자수재봉지사，학시서인의지방，단식규문지치，기해경외지수. 연이일규홍행지장，자헌벽해지주. 화전일소，은결평생，장리중구，정유백년. 언지어차，비참갈승. 장위해로이귀거，기의횡절이전구，종불위신어시호，자취책육어니사，고천성지자연，비인정지가인. 각한일별어궁애，경작분비지필조. 가망친몰，상체백지무의，의중명경，행잔구지면욕. 수련촌촌지회심，도결단단지부장，골해폭야，간담도지. 세료석시지환오，적위당일지수원. 금즉추율이취어유곡，천녀재반어양한. 봉래일기지약주무，취굴삼생지향분욱，중계활어차시，기불부호전맹，여혹불망，종이위호，이랑기허지호?” 생희차감왈: “고소원야.” 상여관곡서정. 언급가산피구략유무，여왈: “일분불실，매어모산모곡야.” 우문: “양가부모해골안재?” 여왈: “포기모처.” 서정파，동침극환여석.",
+      "en": "Near the second watch the moonlight thinly appeared and shone on the roof beam. Gradually he heard footsteps in the corridor, coming from far to near, and it was Choi. Although Yi knew she was dead, he loved her so deeply that he felt no further doubt or alarm. He asked at once, \"Where did you hide to save your life?\" She took Yi's hand and gave one cry of grief. Then she told her feelings: \"I was born into a good family, and from childhood I received the family's teaching; I was skilled in embroidery and sewing and learned the ways of poetry, documents, benevolence and righteousness. I knew only the management of the women's quarters; how could I understand matters beyond the border? And yet I once peeped over the wall at the red apricot, and offered of my own accord a pearl from the blue sea. A smile before the flowers tied a bond for a lifetime; meeting again within the curtains deepened our feeling beyond a hundred years. To speak of it now, how can I bear the grief and shame? I thought we would grow old together and return home; who could have thought I would be cut down and fall into a ditch? In the end I did not give my body to the jackals and tigers, but chose to be hacked to pieces in the mud and sand. This was surely the nature of heaven, not something human feeling could endure. Yet I regret that parting in the deep ravine, which made us a pair of birds flying apart. My home is ruined and my parents are dead; I grieve that my lingering soul has nothing to rely on, but righteousness weighs heavy and life is light, and I am glad that my remaining body was spared disgrace. Who pities this heart that is ash in every inch? In vain I tie up a rotting gut; my bones lie exposed in the wilds, my liver and gall smeared on the ground. Thinking over the joys of former times, I see that they were only the sorrow and grievance of that day. Now Zou Yan's pitch-pipe has blown in the dark valley, and Qiannü has again returned to the world of light. The promise of a Penglai cycle of twelve years is bound close; the fragrance of the Jukgul incense of three lives is rich. We renew our union at this time, hoping not to betray our former pledge; if you have not forgotten, and in the end hold me as good, will you, Master Yi, consent?\" Yi, glad and moved, said, \"It is indeed my wish.\" They poured out their feelings together in tenderness. When their talk turned to whether the family property had been plundered by the bandits, she said, \"Not a part is lost; it is buried in such-and-such a mountain, such-and-such a valley.\" He asked also, \"Where are the remains of our two sets of parents?\" She said, \"They were cast away at such-and-such place.\" When they had finished telling their feelings, they lay together with the same joy as before."
+    },
+    {
+      "orig": "明日，與生俱往尋瘞處，果得金銀數錠及財物若干. 又得收拾兩家父母骸骨. 貿金賣財，各合葬於五冠山麓，封樹祭獻，皆盡其禮. 其後，生亦不求仕官，與崔氏居焉. 幹僕之逃生者，亦自來赴. 生自是以後，懶於人事，雖親戚賓客賀弔，杜門不出，常與崔氏，或酬或和，琴瑟偕和，荏苒數年.",
+      "modern": null,
+      "reading": "명일，여생구왕심예처，과득금은수정급재물약간. 우득수습량가부모해골. 무금매재，각합장어오관산록，봉수제헌，개진기례. 기후，생역불구사관，여최씨거언. 간복지도생자，역자래부. 생자시이후，나어인사，수친척빈객하조，두문불출，상여최씨，혹수혹화，금슬해화，임염수년.",
+      "en": "The next day she went with Yi to look for the burial places, and they indeed found several ingots of gold and silver and some goods. They also gathered the remains of both sets of parents. Selling the gold and goods, they buried each of them in the foothills of Mt. Ogwan, set up trees on the mounds and made sacrifices, fulfilling all the rites. After that Yi no longer sought office but lived with Choi. The servants who had escaped with their lives came of their own accord to rejoin them. From then on Yi became lazy about worldly affairs; even when relatives and guests came to congratulate or condole, he shut his door and did not go out, constantly exchanging poems with Choi, harmonizing like zither and lute, and so the years passed by."
+    },
+    {
+      "orig": "一夕，女謂生曰: “三遇佳期，世事蹉跎，歡娛不厭，哀別遽至.” 遂嗚咽，生驚問曰: “何故至此?” 女曰: “冥數不可躱也，天帝以妾與生，緣分未斷，又無罪障，假以幻體，與生暫割愁腸，非久留人世，以惑陽人.” 命婢兒進酒，歌玉樓春一闋，以侑生，歌曰:",
+      "modern": null,
+      "reading": "일석，여위생왈: “삼우가기，세사차타，환오불염，애별거지.” 수오열，생경문왈: “하고지차?” 여왈: “명수불가타야，천제이첩여생，연분미단，우무죄장，가이환체，여생잠할수장，비구류인세，이혹양인.” 명비아진주，가옥루춘일결，이유생，가왈:",
+      "en": "One evening the lady said to Yi: \"Three times we have met on a fine occasion, worldly affairs have been delayed, and joy is never satisfied, yet bitter parting now suddenly arrives.\" Then she sobbed. Yi asked in alarm, \"Why has it come to this?\" She said: \"The destiny of the underworld cannot be evaded. The Lord of Heaven, because the bond between you and me has not been cut off, and because I have no sin-barrier, has lent me a phantom body to ease your grief for a little while; I may not stay long in the human world to bewilder the living.\" She ordered her maid to serve wine, and sang a Jade Pavilion Spring tune to urge Yi to drink. The song said:"
+    },
+    {
+      "orig": "干戈滿目交揮處，玉碎花飛鴛失侶.殘骸狼籍竟誰埋，血汚遊魂無與語.高唐一下巫山女，破鏡重分心慘楚.從玆一別兩茫茫，天上人間音信阻.",
+      "modern": null,
+      "reading": "간과만목교휘처，옥쇄화비원실려.잔해랑적경수매，혈오유혼무여어.고당일하무산녀，파경중분심참초.종자일별량망망，천상인간음신조.",
+      "en": "Spears and shields filled the eye, clashing everywhere;\njade shattered, flowers flew, the mandarin duck lost her mate.\nHer scattered remains lay in disorder; who buried them?\nA blood-stained wandering soul, with no one to speak to.\nGaotang once came down: the maiden of Wushan;\nthe broken mirror parted again, my heart bitter with grief.\nFrom this parting we are both lost in the vast and dim;\nbetween Heaven and the human world, news is blocked."
+    },
+    {
+      "orig": "每歌一聲，飮泣數下，殆不成腔. 生亦悽惋不已曰: “寧與娘子，同入九泉，豈可無聊獨保殘生. 向者，傷亂之後，親戚僮僕，各相亂離，亡親骸 狼籍原野，儻非娘子，誰能奠埋. 古人云: 生事之以禮，死葬之以禮. 盡在娘子，天性之純孝，人情之篤厚也. 感激無已，自愧可勝. 願娘子，淹留人世，百年之後，同作塵土.” 女曰: “李郞之壽，剩有餘紀，妾已載鬼籙，不能久視. 若固眷戀人間，違犯條令，非唯罪我，兼亦累及於君. 但妾之遺骸，散於某處，倘若垂恩，勿暴風日.” 相視泣下數行云: “李郞珍重.” 言訖漸滅，了無踪迹.",
+      "modern": null,
+      "reading": "매가일성，음읍수하，태불성강. 생역처완불이왈: “영여낭자，동입구천，기가무료독보잔생. 향자，상란지후，친척동복，각상란리，망친해 낭적원야，당비낭자，수능전매. 고인운: 생사지이례，사장지이례. 진재낭자，천성지순효，인정지독후야. 감격무이，자괴가승. 원낭자，엄류인세，백년지후，동작진토.” 여왈: “이랑지수，잉유여기，첩이재귀록，불능구시. 약고권련인간，위범조령，비유죄아，겸역루급어군. 단첩지유해，산어모처，당약수은，물폭풍일.” 상시읍하수행운: “이랑진중.” 언흘점멸，요무종적.",
+      "en": "At every line she sang she swallowed tears several times, almost unable to complete the tune. Yi too was grieved and said unceasingly: \"I would rather go with you into the Nine Springs; how could I live on alone, without any comfort? Earlier, after the turmoil, relatives and servants were scattered, and my parents' bones lay strewn across the plain; had it not been for you, who could have buried them? The ancients said, 'Serve them in life with propriety, bury them in death with propriety.' All this lies in your pure filial nature and the depth of your human warmth. I cannot cease to be moved, and how can I not feel shame? I wish you would stay on in the human world, and after a hundred years we shall turn to dust together.\" She said: \"Master Yi's life has still a few years to spare; I have already been entered in the ghost register and cannot stay long. If I cling to the human world and violate the regulations, not only would I be guilty, but I would involve you too. But my remains are scattered at such-and-such a place; if you will show grace, do not let them be exposed to wind and sun.\" They looked at each other and shed streams of tears, and she said, \"Master Yi, take care of yourself.\" When she had spoken she gradually faded, and left no trace."
+    },
+    {
+      "orig": "生拾骨，附葬于親墓傍. 旣葬，生亦以追念之故，得病數月而卒. 聞者莫不傷歎，而慕其義焉.",
+      "modern": null,
+      "reading": "생습골，부장우친묘방. 기장，생역이추념지고，득병수월이졸. 문자막불상탄，이모기의언.",
+      "en": "Yi gathered her bones and buried them beside his parents' graves. After the burial, Yi too, because of his constant remembrance of her, fell ill and died within a few months. All who heard of it were grieved and sighed, and admired his righteousness."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-09",
+    "notes": ""
+  }
+}
