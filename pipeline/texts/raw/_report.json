@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T19:15:06Z",
+  "generated_at": "2026-10-12T23:57:53Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -1668,6 +1668,54 @@
       "resolved_via": "title",
       "truncated": false,
       "needs_sections": false
+    },
+    {
+      "id": "nanjung_ilgi",
+      "source": "wikisource-ko",
+      "page_title": "이충무공전서/제5권",
+      "url": "https://ko.wikisource.org/wiki/%EC%9D%B4%EC%B6%A9%EB%AC%B4%EA%B3%B5%EC%A0%84%EC%84%9C/%EC%A0%9C5%EA%B6%8C",
+      "revision_id": 181337,
+      "chars": 955,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "seongseol",
+      "source": "wikisource-zh",
+      "page_title": "與猶堂全書/第一集/第十卷",
+      "url": "https://zh.wikisource.org/wiki/%E8%88%87%E7%8C%B6%E5%A0%82%E5%85%A8%E6%9B%B8/%E7%AC%AC%E4%B8%80%E9%9B%86/%E7%AC%AC%E5%8D%81%E5%8D%B7",
+      "revision_id": 2417442,
+      "chars": 3169,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "min_yeonghwan_yuseo",
+      "source": "wikisource-ko",
+      "page_title": "민영환의 유서",
+      "url": "https://ko.wikisource.org/wiki/%EB%AF%BC%EC%98%81%ED%99%98%EC%9D%98_%EC%9C%A0%EC%84%9C",
+      "revision_id": 383062,
+      "chars": 191,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "hyeorui_nu",
+      "source": "wikisource-ko",
+      "page_title": "혈의 누",
+      "url": "https://ko.wikisource.org/wiki/%ED%98%88%EC%9D%98_%EB%88%84",
+      "revision_id": 403458,
+      "chars": 70078,
+      "subpages": 1,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
     }
   ],
   "missing": [],
@@ -2986,6 +3034,18 @@
     {
       "id": "hunminjeongeum_jeonginji",
       "error": "page \"訓民正音\" resolved but its cleaned text is empty; page \"훈민정음\" resolved but its cleaned text is empty"
+    },
+    {
+      "id": "choe_ikhyeon_pogo_paldo",
+      "error": "history-db: https://db.history.go.kr/diachronic/level.do?levelId=sa_001_0050_0030_0010: Connection Failed: Connect error: connection timed out"
+    },
+    {
+      "id": "daehan_jagang_hoe_chwiji",
+      "error": "history-db: https://db.history.go.kr/diachronic/level.do?levelId=ma_001_0010_0030: Connection Failed: Connect error: connection timed out"
+    },
+    {
+      "id": "bak_eunsik_yugyo_gusinron",
+      "error": "history-db: https://db.history.go.kr/diachronic/level.do?levelId=ma_004_0100_0040: Connection Failed: Connect error: connection timed out"
     }
   ],
   "needs_sections": [],

@@ -1,0 +1,24 @@
+{
+  "id": "min_yeonghwan_yuseo",
+  "source": "wikisource-ko",
+  "url": "https://ko.wikisource.org/wiki/%EB%AF%BC%EC%98%81%ED%99%98%EC%9D%98_%EC%9C%A0%EC%84%9C",
+  "page_title": "민영환의 유서",
+  "revision_id": 383062,
+  "revision_timestamp": "2025-03-09T13:51:33Z",
+  "fetched_at": "2026-10-12T23:35:33Z",
+  "licence": "Original work: public domain (Author died 1905; Korean term (life+50) expired 1955, before the 2013 extension, so the work is in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{머리말\n|제목 = 警告大韓二千萬同胞遺書 (경고대한 이천만 동포유서)\n|저자 = [[저자:민영환|민영환]]\n|역자 =\n|부제 =\n|이전 =\n|다음 =\n|설명 =  1905년 11월 20일, 민영환 시종무관장이 을사조약 체결 이후 자결하고 남긴 유서}}\n\n<poem>\n嗚呼라. \n國恥民辱이 乃至於此하니 \n我人民은 將且殄滅於生存競爭之中矣리라.\n夫要生者는 必死하고 期死者는 得生이니, \n諸公은 豈不諒只아. \n泳煥은 徒以一死로 仰報皇恩하고 \n以謝我二千萬同胞兄弟하노라.\n\n泳煥은 死而不死하고 期助諸君於九泉之下하리니, \n幸我同胞兄弟는 益加奮勵하고 \n堅乃志氣하여 勉其學問하며, \n決心戮力하여 復我自主獨立이면 \n則死子當喜笑於冥冥之中矣리라.\n</poem>\n\n== 라이선스 ==\n{{PD-old-100}}\n\n[[분류:유서]]\n[[분류:1905년 작품]]",
+  "text": "嗚呼라.\n國恥民辱이 乃至於此하니\n我人民은 將且殄滅於生存競爭之中矣리라.\n夫要生者는 必死하고 期死者는 得生이니,\n諸公은 豈不諒只아.\n泳煥은 徒以一死로 仰報皇恩하고\n以謝我二千萬同胞兄弟하노라.\n\n泳煥은 死而不死하고 期助諸君於九泉之下하리니,\n幸我同胞兄弟는 益加奮勵하고\n堅乃志氣하여 勉其學問하며,\n決心戮力하여 復我自主獨立이면\n則死子當喜笑於冥冥之中矣리라.",
+  "edition": {
+    "template": "머리말",
+    "params": {
+      "제목": "警告大韓二千萬同胞遺書 (경고대한 이천만 동포유서)",
+      "저자": "민영환",
+      "설명": "1905년 11월 20일, 민영환 시종무관장이 을사조약 체결 이후 자결하고 남긴 유서"
+    }
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}
