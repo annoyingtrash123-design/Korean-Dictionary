@@ -1,0 +1,244 @@
+{
+  "id": "yonggungbuyeonrok",
+  "card": {
+    "summary_ko": "고려의 문사 한생이 개성 천마산 박연의 용왕에게 초대받아 용궁에서 새 누각의 상량문을 지어 주고, 잔치와 용궁 구경 뒤 구슬과 비단을 받아 돌아와 명예를 버리고 산으로 들어가는 이야기입니다. 김시습 《금오신화》 가운데 한 편입니다.",
+    "summary_en": "The Goryeo scholar Han is invited by the dragon king of Pyoyeon Pool on Mt. Cheonma near Gaeseong, writes the ridgepole text for a new pavilion at the Dragon Palace, enjoys a banquet and a tour, and on returning home with a gift of pearls and silk gives up the pursuit of fame and enters the mountains. One of the five tales of Kim Si-seup's Geumo sinhwa.",
+    "level": "classical",
+    "edition_ko": "중국어 위키문헌 「金鰲新話」(개정 2416021, 2024-06-02)의 「龍宮赴宴錄」 부분. 원저작 퍼블릭 도메인, 전사 CC BY-SA 4.0",
+    "edition_en": "Chinese Wikisource 「金鰲新話」 (revision 2416021, 2024-06-02), the section 「龍宮赴宴錄」; original in the public domain, transcription CC BY-SA 4.0"
+  },
+  "notes": {
+    "ko": "**저자** 김시습(金時習, 1435–1493)은 한양 출신으로 호는 매월당, 법명은 설잠입니다. 어려서 신동으로 이름이 났다고 전하며, 1455년 수양대군(세조)이 단종의 왕위를 빼앗자 책을 불사르고 승려가 되어 떠돌았다고 알려져 있습니다. 세조 정권 아래에서 끝내 벼슬하지 않아 남효온·원호·이맹전·조려·성담수와 함께 '생육신'으로 꼽힙니다. 승려의 모습으로 살았지만 유교 윤리를 버리지 않았고, 유교와 불교 사이의 독특한 위치에 있었다는 평가를 받습니다. 정치적으로는 개혁론자라기보다 세조의 찬탈에 맞선 절의의 상징으로 기억됩니다. 1493년 충청도 홍산 무량사에서 세상을 떠났습니다.\n\n**시대적 맥락** 이야기는 '전조(前朝)', 곧 고려를 배경으로 합니다. 천마산과 박연폭포는 개성 가까이에 있는 명승이며, 나라에서 해마다 제사를 지냈다고 이 글에도 적혀 있습니다. 작가는 단종 폐위 뒤 벼슬에서 물러나 경주 금오산에서 이 작품들을 썼다고 전합니다(대략 1465–1470년경이라는 설이 일반적이나 확실하지 않습니다). 글 솜씨가 있어도 쓰이지 못하는 선비라는 설정에는 작가 자신의 처지가 겹친다는 해석이 많습니다.\n\n**배경** 《금오신화》는 한문 전기(傳奇) 다섯 편을 묶은 소설집입니다. 용궁 이야기는 《전등신화》의 〈수궁경회록〉 같은 중국 작품과의 관련이 자주 언급되지만 영향의 정도는 학자마다 다릅니다. 이 판은 중국어 위키문헌의 전사본으로 일부 글자가 비어 있습니다(▩).\n\n**의의** 현실의 선비가 용궁에 초대되어 문장으로 인정받는다는 구성은 현실에서 뜻을 펴지 못한 지식인의 보상 심리를 보여 준다고 읽힙니다. 상량문을 직접 짓는 장면은 한문 문체의 실제 모범을 소설 안에 넣은 것으로 주목받습니다.\n\n**형식과 주제** 산문 사이에 상량문(변려문), 노래, 시가 길게 들어 있습니다. 게·거북 등 수족이 노래하는 대목이 특이하고, 마지막은 부귀와 명예를 버리고 입산하는 결말입니다. 주제는 문장의 힘, 현실과 환상 세계의 대비, 은둔입니다.\n\n**읽기 도움**\n- 上梁文(상량문): 집의 마룻대를 올릴 때 짓는 글.\n- 抛梁(포량): 상량식에서 대들보를 던지며 읊는 노래의 구절.\n- 水晶宮(수정궁): 용왕의 궁전.\n- 閽者(혼자): 문지기.\n- 潤筆宴(윤필연): 글을 지어 준 이에게 베푸는 잔치.\n- 郭介士(곽개사)·玄先生(현선생): 게와 거북을 사람처럼 부른 이름.\n- 瓢淵(표연): 박연폭포 아래의 못.\n- ▩와 '*사,'는 전사본의 빈칸 또는 주기로 보이며, 독음에서는 제외했습니다.\n",
+    "en": "**About the author** Kim Si-seup (金時習, 1435–1493) was born in Hanyang (Seoul); his pen-name was Maewoldang and his Buddhist name Seoljam. Said to have been a child prodigy, he is traditionally told to have burned his books and become a wandering monk when Prince Suyang (King Sejo) took the throne from Danjong in 1455. He never served under Sejo, and is counted with Nam Hyo-on, Won Ho, Yi Maeng-jeon, Jo Ryeo and Seong Dam-su among the \"Six Living Loyal Ministers\" (saengyuksin). He lived in monastic dress without abandoning Confucian ethics, and is seen as standing in a distinctive place between Confucianism and Buddhism. Politically he is remembered as a symbol of loyalist resistance to Sejo's usurpation rather than as a reformer. He died in 1493 at Muryangsa in Hongsan, Chungcheong.\n\n**Historical context** The tale is set in the \"former dynasty,\" Goryeo. Mt. Cheonma and Park Yeon Falls lie near Gaeseong, and the text itself says the state sacrificed to the pool every year. The author is said to have written these tales on Mt. Geumo near Gyeongju after withdrawing from office following Danjong's deposition (about 1465–1470 is the common suggestion, but not certain). Many readers see the author's own situation in the figure of a gifted scholar who is not put to use.\n\n**Background** The Geumo sinhwa is a collection of five hanmun *chuanqi* tales. Links between the dragon-palace story and Chinese works such as \"Shuigong qinghui lu\" in the *Jiandeng xinhua* are often mentioned, though scholars differ on the extent. This is the Chinese Wikisource transcription and has some missing characters (▩).\n\n**Significance** A real-world scholar invited to the Dragon Palace and recognized for his writing is read as compensation for a gifted man who could not realize his aims in the world. The scene in which he writes the ridgepole text is noted for placing a working model of hanmun style inside a story.\n\n**Form and themes** Long pieces of parallel prose (the ridgepole text), songs and poems are set among the narrative. The songs of crabs and turtles are unusual, and the ending, in which Han gives up riches and fame and enters the mountains, is the closing note. Its themes are the power of literary skill, the contrast of real and fantastic worlds, and withdrawal from the world.\n\n**Reading help**\n- 上梁文 (sangnyangmun): the text composed when the ridgepole of a house is raised.\n- 抛梁 (pogyang): \"throw the beam,\" the refrain of the ridgepole song.\n- 水晶宮 (sujeonggung): the Crystal Palace, the dragon king's palace.\n- 閽者 (honja): a gatekeeper.\n- 潤筆宴 (yunpilyeon): \"brush-moistening banquet,\" given for the writer of a text.\n- 郭介士 (Gwak Gaeseol), 玄先生 (Hyeon Seonsaeng): names that treat a crab and a turtle as men.\n- 瓢淵 (Pyoyeon): the pool below Park Yeon Falls.\n- The ▩ and \"*사,\" marks appear to be blanks or annotations in the transcription and are left out of the readings.\n"
+  },
+  "paragraphs": [
+    {
+      "orig": "## 龍宮赴宴錄",
+      "modern": null,
+      "reading": "## 용궁부연록",
+      "en": "## A Banquet at the Dragon Palace"
+    },
+    {
+      "orig": "松都有天磨山. 其山高揷而峭秀，故曰天磨山. 中有龍湫，名曰瓢淵，窄而深，不知其幾丈，溢而爲瀑，可百餘丈. 景槪淸麗，遊僧過客，必於此而觀覽焉. 夙著異靈，載諸傳記，國家歲時，以牲牢祀之.",
+      "modern": null,
+      "reading": "송도유천마산. 기산고삽이초수，고왈천마산. 중유용추，명왈표연，착이심，부지기기장，일이위폭，가백여장. 경개청려，유승과객，필어차이관람언. 숙저이령，재제전기，국가세시，이생뢰사지.",
+      "en": "In Songdo there is Mt. Cheonma. The mountain is high and steep, which is why it is called Cheonma, \"Heaven-Touching.\" In it is a dragon pool named Pyoyeon, \"Gourd Pool,\" narrow and deep, no one knows how many fathoms; its overflow makes a waterfall of a hundred fathoms or more. The scenery is clear and beautiful, and wandering monks and passing guests always come to view it. It has long been known for its numinous marvels, which are recorded in the records, and the state sacrifices to it with livestock at the seasons of the year."
+    },
+    {
+      "orig": "前朝有韓生者，少而能文，著於朝廷，以文士稱之. 嘗於所居室，日晩宴坐，忽有靑衫▩頭郞官二人，從空而下，俯伏於庭曰: “瓢淵神龍奉邀.” 生愕然變色曰: “神人路隔，安能相及? 且水府汗漫，波浪相囓，安可利往?” 二人曰: “有駿足在門，願勿辭也.” 遂鞠躬挽袂出門，果有驄馬，金鞍玉勒，蓋黃羅帕，而有翼者也. 從者皆紅巾抹額，而錦袴者十餘人. 扶生上馬，幢蓋前導，妓樂後隨，二人執笏從之. 其馬緣空而飛，但見足下煙雲苒惹，不見地之在下也.",
+      "modern": null,
+      "reading": "전조유한생자，소이능문，저어조정，이문사칭지. 상어소거실，일만연좌，홀유청삼▩두랑관이인，종공이하，부복어정왈: “표연신룡봉요.” 생악연변색왈: “신인로격，안능상급? 차수부한만，파랑상설，안가리왕?” 이인왈: “유준족재문，원물사야.” 수국궁만몌출문，과유총마，금안옥륵，개황라말，이유익자야. 종자개홍건말액，이금고자십여인. 부생상마，당개전도，기악후수，이인집홀종지. 기마연공이비，단견족하연운염야，불견지지재하야.",
+      "en": "In the former dynasty there was a Han, who from youth was able in letters, and whose name was known at court; he was called a man of letters. Once, at his residence, while he sat at ease in the late day, two court officials in blue robes with ▩ headgear suddenly descended from the sky, prostrated themselves in the courtyard and said: \"The divine dragon of Pyoyeon respectfully invites you.\" Han changed colour in astonishment and said: \"Spirits and men are separated by roads; how can we reach each other? And the water-palace is vast and boundless, waves gnaw at each other; how could I safely go there?\" The two said: \"A swift horse stands at the gate; we beg you not to decline.\" They bowed and took him by the sleeve and led him out of the door, and there indeed was a dark-bay horse with golden saddle and jade bridle, covered with a yellow silk cloth, and it had wings. The attendants, more than ten of them, all wore red kerchiefs tied across their foreheads and brocade trousers. They helped Han mount; banners and canopies led the way, music followed, and the two carried tablets and went with him. The horse flew through the sky; he saw only clouds and mist trailing beneath its feet, and did not see the ground below."
+    },
+    {
+      "orig": "頃刻間，已至於宮門之外，下馬而立. 守門者，皆著彭蜞鰲鱉之甲，矛戟森然，眼眶可寸許. 見生皆低頭交拜，鋪牀請憩，似有預待. 二人趨入報之，俄而靑童二人，拱手引入. 生舒步而進，仰視宮門，榜曰含仁之門. 生纔入門，神王戴切雲冠，佩劍秉簡而下，延之上階，升殿請坐，卽水晶宮白玉牀也. 生屈伏固辭曰: “下土愚人，甘與草木同腐，安得干冒神威，濫承寵接?” 神王曰. “久望令聞，仰屈尊儀，幸毋見訝.” 遂揮手揖坐，生三讓而登. 神王南向，踞七寶華牀，生西向而坐.",
+      "modern": null,
+      "reading": "경각간，이지어궁문지외，하마이립. 수문자，개저팽기오별지갑，모극삼연，안광가촌허. 견생개저두교배，포상청게，사유예대. 이인추입보지，아이청동이인，공수인입. 생서보이진，앙시궁문，방왈함인지문. 생재입문，신왕대절운관，패검병간이하，연지상계，승전청좌，즉수정궁백옥상야. 생굴복고사왈: “하토우인，감여초목동부，안득간모신위，남승총접?” 신왕왈. “구망령문，앙굴존의，행무견아.” 수휘수읍좌，생삼양이등. 신왕남향，거칠보화상，생서향이좌.",
+      "en": "In an instant they had arrived outside the palace gate, and he dismounted and stood. The gatekeepers all wore armour made from crabs, great turtles and soft-shelled turtles, with spears and halberds bristling, and their eye sockets an inch wide. Seeing Han they all lowered their heads and bowed, spread a couch and begged him to rest, as if they had been expecting him. The two hurried in to report, and soon two young attendants in blue joined hands and led him in. Han went forward at an easy pace and, looking up at the palace gate, saw a plaque reading \"Gate of Benevolence.\" Han had just entered the gate when the Divine King, wearing a cloud-cutting cap, sword at his side and tablet in hand, came down, led him up the steps and bade him be seated in the hall, which was the Crystal Palace with a white-jade couch. Han bowed low and firmly declined, saying: \"I am a lowly and ignorant man of the earth, content to rot with the grass and trees; how could I dare to offend your divine majesty and unduly receive your favour?\" The Divine King said: \"I have long hoped to hear of your fame, and I have humbled your honoured person; I hope you will not be offended.\" He waved his hand and bowed him to sit; Han declined three times and then ascended. The Divine King sat facing south on a seven-treasure flowery couch, and Han sat facing west."
+    },
+    {
+      "orig": "坐未定，閽者傳言曰: “賓至.” 王又出門迎接. 見有三人，著紅袍，承綵輦，威儀侍從，儼若王者. 王又延之殿上. 生隱於牖下，欲竢其定而請謁. 王勸三人，東向揖坐而告曰: “適有文士在陽界，奉邀，諸君勿相疑也.” 命左右引入，生趨進禮拜，諸人皆俛首答拜. 生讓坐曰: “尊神貴重，僕乃一介寒儒，敢當高座?” 固辭. 諸人曰: “陰陽路殊，不相統攝，而神王威重，鑑人惟明，子必人間文章鉅公，神王是命，請勿拒也.” 神王曰: “坐.” 三人一時就坐. 生乃跼蹐而登，跪於席邊. 神王曰: “安坐.” 座定，行茶一巡.",
+      "modern": null,
+      "reading": "좌미정，혼자전언왈: “빈지.” 왕우출문영접. 견유삼인，저홍포，승채련，위의시종，엄약왕자. 왕우연지전상. 생은어유하，욕사기정이청알. 왕권삼인，동향읍좌이고왈: “적유문사재양계，봉요，제군물상의야.” 명좌우인입，생추진례배，제인개면수답배. 생양좌왈: “존신귀중，복내일개한유，감당고좌?” 고사. 제인왈: “음양로수，불상통섭，이신왕위중，감인유명，자필인간문장거공，신왕시명，청물거야.” 신왕왈: “좌.” 삼인일시취좌. 생내국척이등，궤어석변. 신왕왈: “안좌.” 좌정，행다일순.",
+      "en": "Before they were seated, the gatekeeper announced, \"Guests have arrived.\" The King went out again to the gate to receive them. There were three persons in red robes, riding in coloured palanquins, with attendants whose dignity was like that of a king. The King led them too up into the hall. Han hid beneath the window, wishing to wait until they were seated to request an audience. The King invited the three to sit facing east and said: \"By chance a man of letters from the Yang world is here, invited by me; gentlemen, please do not be suspicious.\" He ordered his attendants to bring Han in; Han came forward and bowed, and all the others bowed their heads in reply. Han yielded the seat, saying: \"You are venerable and noble spirits, while I am a mere poor scholar; how dare I take a high seat?\" and firmly declined. The others said: \"The roads of yin and yang differ and we do not rule one another, and the Divine King is weighty and dignified, clear in his judgement of men; you must be a great master of letters in the human world, and the Divine King has so commanded; please do not refuse.\" The Divine King said, \"Sit.\" The three sat down at once. Han then took his place, cramped, and knelt at the edge of the mat. The Divine King said, \"Sit at ease.\" When all were settled, a round of tea was served."
+    },
+    {
+      "orig": "神王告曰: “寡人止有一女，已加冠笄，將欲適人，而弊居僻陋，無迎待之館，花燭之房，今欲別構一閣，命名佳會，工匠已集，木石咸具，而所乏者，上梁文耳. 側聞秀才，名著三韓，才冠百家，故特遠招，幸爲寡人製之.” 言未旣，有二丫童，一捧碧玉之硯，湘竹之管，一捧氷綃一丈，跪進於前. 生俛伏而起，染翰立成，雲煙相糺.",
+      "modern": null,
+      "reading": "신왕고왈: “과인지유일녀，이가관계，장욕적인，이폐거벽루，무영대지관，화촉지방，금욕별구일각，명명가회，공장이집，목석함구，이소핍자，상량문이. 측문수재，명저삼한，재관백가，고특원초，행위과인제지.” 언미기，유이아동，일봉벽옥지연，상죽지관，일봉빙초일장，궤진어전. 생면복이기，염한립성，운연상규.",
+      "en": "The Divine King said: \"I have only one daughter, who has reached the age of putting on the hair-pin and is about to marry; but my humble dwelling is remote and mean, without a hall in which to receive her husband or a chamber for the flower candles. Now I wish to build a separate pavilion and name it Gahoe, 'Fine Meeting.' The craftsmen have gathered, timber and stone are all ready, and what is lacking is only the ridgepole text. I have heard that you, scholar, are famed throughout the Three Han and crown the hundred schools in talent, and so I have specially invited you from afar; please compose it for me.\" Before he had finished speaking, two boys with double topknots came, one bearing an ink-stone of green jade and a brush of Xiang bamboo, the other a length of ice-silk ten feet long, and knelt before him. Han bent down, then rose, and with a dip of the brush the text was done at once, clouds and mist entwined."
+    },
+    {
+      "orig": "其詞曰: “切以堪輿之內，龍神最靈，人物之間，配匹至重，旣有潤物之功，可無衍福之基，是以關雎好逑，所以著萬化之始，飛龍利見，亦以象靈變之迹. 是用新構阿房，昭揭盛號，集蜃鼉而作力，聚寶貝以爲材，竪水晶珊瑚之柱，掛龍骨琅玗之梁，珠簾捲而山靄靑葱，玉戶開而洞雲繚繞. 宜室宜家，享胡福於萬年，鼓瑟鼓琴，毓金枝於億世. 用資風雲之變，永補造化之功，在天在淵，蘇下民之渴望，或潛或躍，祐上帝之仁心，騰翥快於乾坤，威德洽于遐邇，玄龜赤鯉，踊躍而助唱，木怪山魈，次第而來賀，宜作短歌，用揭雕梁.",
+      "modern": null,
+      "reading": "기사왈: “절이감여지내，용신최령，인물지간，배필지중，기유윤물지공，가무연복지기，시이관저호구，소이저만화지시，비룡이현，역이상령변지적. 시용신구아방，소게성호，집신타이작력，취보패이위재，수수정산호지주，괘용골랑우지량，주렴권이산애청총，옥호개이동운료요. 의실의가，향호복어만년，고슬고금，육금지어억세. 용자풍운지변，영보조화지공，재천재연，소하민지갈망，혹잠혹약，우상제지인심，등저쾌어건곤，위덕흡우하이，현구적리，용약이조창，목괴산소，차제이래하，의작단가，용게조량.",
+      "en": "The text said: \"Humbly: within heaven and earth the dragon-spirit is the most numinous, and among people and things the matching of mates is the most weighty. Since there is the merit of moistening things, how can there be no foundation for spreading blessing? Therefore 'Guanju' and the fine mate mark the beginning of the myriad transformations, and 'the flying dragon appears in the field' also symbolizes the traces of numinous change. For this reason a new Efang palace is built and a grand name displayed; clams and alligators join their strength, jewels are gathered for materials; pillars of crystal and coral are raised, beams of dragon-bone and langgan jade are hung; the pearl curtain is rolled up and the mountain mist is green and lush, the jade door is opened and the cave clouds coil around. May it suit the chamber and suit the house, enjoying great blessings for ten thousand years; may zither and lute be played, and golden branches be bred for a hundred million generations. May it assist the changes of wind and cloud and forever supplement the work of creation; in heaven and in the deep, may it relieve the thirst of the people below; whether submerged or leaping, may it aid the benevolent heart of the Supreme Lord. Soaring is joyous between heaven and earth, majesty and virtue spread near and far; the dark tortoise and the red carp leap up and chant in support, wood-monsters and mountain-sprites come in turn to congratulate. A short song should be composed to raise upon the carved beam."
+    },
+    {
+      "orig": "抛梁東，紫翠岧繞撑碧空. 一夜雷聲喧繞澗，蒼崖萬仞珠玲瓏.抛梁西，征轉巖廻山鳥啼. 湛湛深湫知幾丈，一泓春水似玻瓈.抛梁南，十里松杉橫翠嵐. 誰識神宮宏且壯，碧琉璃底影相涵.抛梁北，曉日初升潭鏡碧. 素練橫空三百丈，翻疑天上銀河落.抛梁上，手捫白虹遊莽蒼. 渤海扶桑千萬里，顧視人寰如一掌.抛梁下，可惜春疇飛野馬. 願將一滴靈源水，四海便作甘雨灑.",
+      "modern": null,
+      "reading": "포량동，자취초요탱벽공. 일야뢰성훤요간，창애만인주령롱.포량서，정전암회산조제. 담담심추지기장，일홍춘수사파려.포량남，십리송삼횡취람. 수식신궁굉차장，벽류리저영상함.포량북，효일초승담경벽. 소련횡공삼백장，번의천상은하락.포량상，수문백홍유망창. 발해부상천만리，고시인환여일장.포량하，가석춘주비야마. 원장일적령원수，사해편작감우쇄.",
+      "en": "Throw the beam to the east:\npurple and green peaks soar high, propping up the blue sky.\nOne night of thunder echoes around the stream;\nblue cliffs ten thousand fathoms high, gems tinkling.\nThrow the beam to the west:\nthe rock path winds and turns, mountain birds cry.\nThe clear, clear pool, who knows how many fathoms deep?\nOne pool of spring water is like crystal.\nThrow the beam to the south:\nfor ten li pine and fir cross in the green mist.\nWho knows the divine palace is so vast and grand?\nBeneath the blue lapis, shadows soak into each other.\nThrow the beam to the north:\nthe morning sun first rises, the pool a green mirror.\nWhite silk hangs across the sky three hundred fathoms,\nand I half doubt the Silver River is falling from heaven.\nThrow the beam up:\nwith my hand I touch the white rainbow and roam the vast blue.\nBohai and Fusang lie ten thousand li away;\nlooking back on the human world it is like a palm.\nThrow the beam down:\nwhat a pity that in the spring fields the haze flies.\nI wish one drop of water from the numinous source\nwould at once become sweet rain scattered over the four seas."
+    },
+    {
+      "orig": "伏願營室之後，合巹之晨，萬福咸臻，千祥畢至，瑤宮玉殿，挾卿雲之靉靆，鳳枕鴦衾，聳歡聲之騰沸，不顯其德，以赫厥靈.”",
+      "modern": null,
+      "reading": "복원영실지후，합근지신，만복함진，천상필지，요궁옥전，협경운지애체，봉침앙금，용환성지등비，불현기덕，이혁궐령.”",
+      "en": "Humbly I pray that after the building of the house, on the morning of the nuptial cup, ten thousand blessings may all arrive and a thousand auspicious signs come together; that the jade palace and jewelled hall may be flanked by auspicious clouds in profusion, and that the phoenix pillow and mandarin-duck quilt may rise with the surging sound of joy. His virtue is not hidden; he is radiant in his spirit.\""
+    },
+    {
+      "orig": "書畢進呈，神王大喜. 乃命三神傳閱，三神皆嘖嘖歎賞. 於是，神王開潤筆宴. 生跪曰: “尊神畢集，不敢問諱.” 神王曰: “秀才陽人，固不知矣. 一祖江神，二洛河神，三碧瀾神也. 余欲與秀才光伴，故相邀爾.” 酒盡樂作，有蛾眉十餘輩，搖翠袖，戴瓊花，相進相退，舞而歌碧潭之曲曰:",
+      "modern": null,
+      "reading": "서필진정，신왕대희. 내명삼신전열，삼신개책책탄상. 어시，신왕개윤필연. 생궤왈: “존신필집，불감문휘.” 신왕왈: “수재양인，고부지의. 일조강신，이락하신，삼벽란신야. 여욕여수재광반，고상요이.” 주진악작，유아미십여배，요취수，대경화，상진상퇴，무이가벽담지곡왈:",
+      "en": "When it was finished he presented it, and the Divine King was greatly pleased. He ordered the three gods to read it in turn, and the three gods all praised it with clucks. Then the Divine King held a brush-moistening banquet. Han knelt and said: \"The honoured gods are all assembled; I do not dare to ask their names.\" The Divine King said: \"You are a man of the Yang world, scholar, and naturally would not know. The first is the god of the Jo River, the second the god of the Nak River, and the third the god of Byeokran. I wished to have you as a bright companion, and so I invited you.\" When the wine was drained and the music rose, more than ten maidens with moth-eyebrows, shaking green sleeves and wearing jade-flower crowns, advanced and retreated, dancing and singing the song of the Green Pool:"
+    },
+    {
+      "orig": "靑山兮蒼蒼，碧潭兮汪汪.飛澗兮泱泱，接天上之銀潢.若有人兮波中央，振環珮兮琳琅.威炎赫兮煌煌，羌氣宇兮軒昻.擇吉日兮辰良，占鳳鳴之鏘鏘.有翼兮華堂，有祥兮靈長.招文士兮製短章，歌盛化兮擧脩梁.酌桂酒兮飛羽觴，輕燕回兮踏春陽.獸口噴兮瑞香，豕服沸兮瓊漿.擊魚鼓兮郞當，吹龍笛兮趨蹌.神儼然而在牀，仰至德兮不可忘.",
+      "modern": null,
+      "reading": "청산혜창창，벽담혜왕왕.비간혜앙앙，접천상지은황.약유인혜파중앙，진환패혜림랑.위염혁혜황황，강기우혜헌앙.택길일혜진량，점봉명지장장.유익혜화당，유상혜령장.초문사혜제단장，가성화혜거수량.작계주혜비우상，경연회혜답춘양.수구분혜서향，시복비혜경장.격어고혜랑당，취용적혜추창.신엄연이재상，앙지덕혜불가망.",
+      "en": "The green hills, ah, are deep green;\nthe blue pool, ah, is vast and deep.\nThe flying torrent, ah, rolls wide,\njoining the Silver River of the sky.\nThere is someone, ah, in the midst of the waves,\nshaking her girdle-jades, tinkling.\nMajesty and flame, blazing and bright;\nah, the bearing is lofty.\nA lucky day is chosen, ah, an hour of good omen;\nthe phoenix call is foretold, clear and ringing.\nThere are wings, ah, the splendid hall;\nthere is good omen, ah, long and numinous.\nWe summon a man of letters, ah, to make a short piece;\nwe sing the great transformation, ah, and raise the long beam.\nPour cassia wine, ah, fly the feathered cups;\nlight swallows turn and tread the spring sun.\nThe beast's mouth, ah, spouts auspicious incense;\nthe pig-robe, ah, boils the jade liquor.\nStrike the fish-drum, ah, with a clang;\nblow the dragon flute, ah, with quick steps.\nThe god sits solemn upon his couch;\nlooking up to his supreme virtue, ah, we cannot forget."
+    },
+    {
+      "orig": "舞竟，復有總角十餘輩，左執籥，右執翿，相旋相顧，而歌回風之曲曰:",
+      "modern": null,
+      "reading": "무경，부유총각십여배，좌집약，우집도，상선상고，이가회풍지곡왈:",
+      "en": "When the dance was over, there were again more than ten youths with hair in tufts, holding flutes in the left hand and feather banners in the right, wheeling and glancing, and they sang the song of the Returning Wind:"
+    },
+    {
+      "orig": "若有人兮山之阿，披薛荔兮帶女蘿.日將暮兮淸波，生細紋兮如羅.風瓢瓢兮鬢鬖*사, 雲冉冉兮衣婆娑.周旋兮委蛇，巧笑兮相過.損余褋兮鳴渦，解余環兮寒沙.露浥兮庭莎，煙暝兮嶔峨.望遠峰之嵾嵯，若江上之靑螺.疏擊兮銅鑼，醉舞兮傞傞.有酒兮如泥，有肉兮如坡.賓旣醉兮顔酡，製新曲兮酣歌.或相扶兮相拖，或相拍兮相呵.擊玉壺兮飮無何，淸興闌兮哀情多.",
+      "modern": null,
+      "reading": "약유인혜산지아，피설려혜대녀라.일장모혜청파，생세문혜여라.풍표표혜빈삼, 운염염혜의파사.주선혜위사，교소혜상과.손여접혜명와，해여환혜한사.노읍혜정사，연명혜금아.망원봉지참차，약강상지청라.소격혜동라，취무혜사사.유주혜여니，유육혜여파.빈기취혜안타，제신곡혜감가.혹상부혜상타，혹상박혜상가.격옥호혜음무하，청흥란혜애정다.",
+      "en": "There is someone, ah, in the nook of the hill,\nclad in fig-vine, belted with creeper.\nThe day is about to set, ah, on the clear waves,\nwhich rise in fine ripples like gauze.\nThe wind sways, ah, her hair hangs loose;\nclouds drift, ah, her robes billow.\nShe circles, ah, winding and gliding,\nand passes with a skillful smile.\nShe casts off my jacket, ah, at the singing whirlpool;\nunties my ring, ah, on the cold sand.\nDew wets, ah, the courtyard sedge;\nmist darkens, ah, the high peaks.\nLooking at the far peaks towering,\nthey are like blue snails on the river.\nSparse beats on the copper gong;\ndrunken dancing, ah, swaying and swaying.\nThere is wine like mud;\nthere is meat like a hill.\nThe guests are drunk, ah, red-faced;\nthey make new tunes, ah, and sing merrily.\nSome support each other, drag each other;\nsome clap each other, laugh at each other.\nStrike the jade pot and drink without end;\nwhen pure delight is spent, ah, sad feelings are many."
+    },
+    {
+      "orig": "舞竟，神王喜抃，洗爵捧觥，致於生前，自吹玉龍之笛，歌水龍吟一闋，以盡歡娛之情. 其詞曰:",
+      "modern": null,
+      "reading": "무경，신왕희변，세작봉굉，치어생전，자취옥룡지적，가수룡음일결，이진환오지정. 기사왈:",
+      "en": "When the dance was over, the Divine King clapped in delight, washed a cup, lifted a horn and set it before Han, and himself played the jade dragon flute and sang a \"Water Dragon Chant\" to the full measure of their joy. The words said:"
+    },
+    {
+      "orig": "管絃聲裏傳觴，瑞麟口噴靑龍腦.橫吹片玉一聲，天上碧雲如掃.響激波濤，曲翻風月，景閑人老.悵光陰似箭，風流若夢，歡娛又生煩惱.西嶺綵嵐初散，喜東峰氷盤凝灝.擧杯爲問，靑天明月，幾看醜好?酒滿金罍，人頹玉峀，誰人推倒?爲佳賓，脫盡十載雲泥臺鬱，快登蒼昊.",
+      "modern": null,
+      "reading": "관현성리전상，서린구분청용뇌.횡취편옥일성，천상벽운여소.향격파도，곡번풍월，경한인로.창광음사전，풍류약몽，환오우생번뇌.서령채람초산，희동봉빙반응호.거배위문，청천명월，기간추호?주만금뢰，인퇴옥수，수인추도?위가빈，탈진십재운니대울，쾌등창호.",
+      "en": "Amid the sound of pipes and strings the cups are passed;\nthe auspicious unicorn's mouth spouts blue dragon-brain incense.\nA slip of jade flute across, one note,\nand the blue clouds of heaven seem swept away.\nThe sound stirs the waves, the tune turns wind and moon,\nthe scene is calm and men grow old.\nI lament that time is like an arrow,\nthat elegance is like a dream,\nand that joy gives rise to vexation again.\nOn the west ridge the coloured mist has just scattered;\nI rejoice that on the east peak the ice plate gathers its bright glow.\nI raise a cup and ask\nthe blue sky and the bright moon:\nhow many times have you seen ugly and fair?\nWine fills the golden jar,\nmen droop like a jade mountain: who will push them over?\nFor the fine guest, shed completely ten years of the gloom of cloud and mud,\nand swiftly ascend the azure sky."
+    },
+    {
+      "orig": "歌竟，顧謂左右曰: “此間伎戱，不類人間，爾等爲嘉賓呈之.” 有一人，自稱郭介士，擧足橫行. 進而告曰: “僕巖中隱士，沙穴幽人，八月風淸，輸芒東海之濱，九天雲散，含光南井之傍，中黃外圓，被堅執銳. 常支解以入鼎，縱摩頂而利人. 滋味風流，可解壯士之顔，形摸郭索，終貽婦人之笑. 趙倫雖惡於水中，錢昆常思於外郡，死入畢吏部之手，神依韓晉公之筆. 且逢場而作戱，宜弄脚以周旋.” 卽於席前，負甲執戈，噴沫瞪視，回瞳搖肢，蹣跚趨蹌，進前退後，作八風之舞，其類數十，折旋俯伏，一時中節，乃作歌曰.",
+      "modern": null,
+      "reading": "가경，고위좌우왈: “차간기희，불류인간，이등위가빈정지.” 유일인，자칭곽개사，거족횡행. 진이고왈: “복암중은사，사혈유인，팔월풍청，수망동해지빈，구천운산，함광남정지방，중황외원，피견집예. 상지해이입정，종마정이리인. 자미풍류，가해장사지안，형모곽색，종이부인지소. 조륜수오어수중，전곤상사어외군，사입필리부지수，신의한진공지필. 차봉장이작희，의롱각이주선.” 즉어석전，부갑집과，분말징시，회동요지，만산추창，진전퇴후，작팔풍지무，기류수십，절선부복，일시중절，내작가왈.",
+      "en": "He looked to left and right and said: \"The entertainments here are not like those of the human world; you should present them for our fine guest.\" One person, calling himself Gwak Gaeseol, lifted his feet and walked sideways. Advancing, he said: \"I am a hermit of the rocks, a recluse of the sand burrows. In the eighth month, when the wind is clear, I bring my awns to the eastern seashore; when the clouds of the nine heavens scatter, I hold my light beside the Southern Well. Yellow within and round without, I wear armour and carry sharp weapons. Often I am dismembered and put in the cauldron; even if they rub my head, I benefit people. My flavour and elegance can relieve the faces of strong men; my crawling form in the end provokes the laughter of women. Zhao Lun, though he hated me in the water, and Qian Kun, who always longed for me in an outer post, and dead I fell into the hands of Bi of the Board of Personnel, and my spirit rests in the brush of Han, Duke of Jin. Moreover, meeting the occasion I shall play, and it is fitting to move my legs and wheel about.\" At once before the mat, wearing armour and holding a halberd, spewing foam and glaring, rolling his eyes and swaying his limbs, he staggered and scuttled, advancing and retreating, and performed the dance of the eight winds; a score or so of his kind wheeled and bowed, all in time. Then he composed a song:"
+    },
+    {
+      "orig": "依江海以穴處兮，吐氣宇與虎爭.身九尺而入貢，類十種而多名.喜神王之嘉會，羌頓足而橫行.愛淵潛以獨處，驚江浦之燈光.匪酬恩而泣珠，非報仇而橫槍.嗟濠梁之巨族，笑我謂我無腸.然可比於君子，德充腹而內黃.美在中而暢四肢兮，螯流玉而凝香.羌今夕兮何夕，赴瑤池之霞觴.神矯首而載歌，賓旣醉而彷徨.黃金殿兮白玉牀，傳巨觥兮咽絲簧.弄君山三管之奇聲，飽仙府九盌之神漿.山鬼趠兮翺翔，水族跳兮騰驤.山有榛兮濕有笭，懷美人兮不能忘.",
+      "modern": null,
+      "reading": "의강해이혈처혜，토기우여호쟁.신구척이입공，유십종이다명.희신왕지가회，강돈족이횡행.애연잠이독처，경강포지등광.비수은이읍주，비보구이횡창.차호량지거족，소아위아무장.연가비어군자，덕충복이내황.미재중이창사지혜，오류옥이응향.강금석혜하석，부요지지하상.신교수이재가，빈기취이방황.황금전혜백옥상，전거굉혜열사황.농군산삼관지기성，포선부구완지신장.산귀초혜고상，수족도혜등양.산유진혜습유령，회미인혜불능망.",
+      "en": "Dwelling in holes by river and sea,\nI breathe out qi and vie with tigers.\nNine feet long, I enter as tribute;\nmy kind are of ten species, with many names.\nI rejoice at the Divine King's fine gathering,\nand stamp my feet and walk sideways.\nI love the deep and live alone;\nthe lamps on the river bank startle me.\nIt is not to repay kindness that I weep pearls,\nnor to avenge a wrong that I wield a spear.\nAlas, great clan of the Hao bridge,\nthey laugh at me and say I have no guts.\nYet I may be compared to the gentleman:\nvirtue fills the belly and is yellow within.\nBeauty within spreads through the four limbs;\nthe claws flow jade and congeal fragrance.\nAh, what night is tonight!\nI go to the rosy cups of the Jade Pool.\nThe god raises his head and sings;\nthe guests are drunk and hesitate.\nGolden hall, white-jade couch,\nthe great horn is passed and silk strings and reeds sound.\nI play the strange sounds of the three pipes of Mt. Jun,\nand eat my fill of the divine drink of the nine bowls of the immortal land.\nThe mountain spirits strut and soar,\nthe water tribes leap and gallop.\nIn the hills are hazels, in the marsh are water-lotus;\nI long for the beautiful one and cannot forget her."
+    },
+    {
+      "orig": "於是，左旋右折，殿後奔前，滿座皆輾轉失笑. 戱畢，又有一人，自稱玄先生，曳尾延頸，吐氣凝眸，進而告曰: “僕蓍叢隱者，蓮葉遊人，洛水負文，已旌夏禹之功，淸江被網，曾著元君之策. 縱刳腸以利人，恐脫殼之難堪. 山節藻梲，殼爲臧公之珍，石腸玄甲，胸吐壯士之氣. 盧敖踞我於海上，毛寶放我於江中. 生爲嘉世之珍，死作靈道之寶. 宜張口而呵呻，聊以舒千年藏六之胸懷.” 卽於席前，吐氣裊裊如縷，長百餘尺，吸之則無迹，或縮頸藏肢，或引頸搖項，俄而，進蹈安徐，作九功之舞，獨進獨退，乃作歌曰.",
+      "modern": null,
+      "reading": "어시，좌선우절，전후분전，만좌개전전실소. 희필，우유일인，자칭현선생，예미연경，토기응모，진이고왈: “복시총은자，연엽유인，낙수부문，이정하우지공，청강피망，증저원군지책. 종고장이리인，공탈각지난감. 산절조탈，각위장공지진，석장현갑，흉토장사지기. 노오거아어해상，모보방아어강중. 생위가세지진，사작령도지보. 의장구이가신，요이서천년장륙지흉회.” 즉어석전，토기뇨뇨여루，장백여척，흡지즉무적，혹축경장지，혹인경요항，아이，진도안서，작구공지무，독진독퇴，내작가왈.",
+      "en": "Then he turned left and right and ran back and forth in the hall, and everyone present rolled with laughter. When the play was done, another person, calling himself Master Hyeon, trailing his tail and stretching his neck, breathing out and fixing his gaze, came forward and said: \"I am a hermit among the yarrow stalks, a wanderer on the lotus leaves. On the Luo River I bore the writing and already displayed the merit of Yu of Xia; in the clear river caught in a net, I once appeared in the divination of Lord Yuan. If I were slit open to benefit people, I would fear the pain of shedding my shell. In the hall with mountain-carved pillars and pond-weed-painted beams, my shell was Zang's treasure; with stone entrails and black armour, my chest breathes out the spirit of strong men. Lu Ao sat on me by the sea; Mao Bao let me go in the river. Alive I am a treasure of a fine age; dead I become a jewel of the numinous Way. Let me open my mouth and breathe and sigh, to ease the thousand years of the six things hidden in my chest.\" At once before the mat he breathed out qi, curling like a thread, a hundred feet and more in length, and drew it back leaving no trace; now he drew in his neck and hid his limbs, now stretched out his neck and shook his head; presently he stepped forward calmly and performed the dance of the nine merits, advancing and retreating alone, and composed a song:"
+    },
+    {
+      "orig": "依山澤以介處兮，愛呼吸而長生.生千歲而五聚，搖十尾而最靈.寧曳尾於泥途兮，不願藏乎廟堂.匪鍊丹而久視，非學道而靈長.遭聖明於千載，呈瑞應之昭彰.我爲水族之長兮，助連山與歸藏.負文字而有數兮，告吉凶而成策.然而多智有所危困，多能有所不及.未免剖心而灼背兮，侶魚蝦而屛迹.羌伸頸而擧踵兮，預高堂之燕席.賀飛龍之靈變，玩呑龜之筆力.酒旣進而樂作，羌歡娛兮無極.擊鼉鼓而吹鳳簫兮，舞潛虯於幽壑.集山澤之魑魅，聚江河之君長.若溫嶠之燃犀，慚禹鼎之罔象.相舞蹈於前庭，或謔笑而撫掌.日欲落兮風生，魚龍翔兮波滃泱.時不可兮驟得，心矯厲而慨慷.",
+      "modern": null,
+      "reading": "의산택이개처혜，애호흡이장생.생천세이오취，요십미이최령.영예미어니도혜，불원장호묘당.비련단이구시，비학도이령장.조성명어천재，정서응지소창.아위수족지장혜，조련산여귀장.부문자이유수혜，고길흉이성책.연이다지유소위곤，다능유소불급.미면부심이작배혜，여어하이병적.강신경이거종혜，예고당지연석.하비룡지령변，완탄구지필력.주기진이악작，강환오혜무극.격타고이취봉소혜，무잠규어유학.집산택지리매，취강하지군장.약온교지연서，참우정지망상.상무도어전정，혹학소이무장.일욕락혜풍생，어룡상혜파옹앙.시불가혜취득，심교려이개강.",
+      "en": "Dwelling in hills and marshes under a shell,\nI love breathing and long life.\nLiving a thousand years, five times gathering,\nI shake my ten tails and am the most numinous.\nI would rather drag my tail in the mud\nthan be shut up in a temple hall.\nIt is not by refining cinnabar that I live long,\nnor by studying the Way that I am numinous.\nI met a sage age a thousand years ago\nand displayed the bright signs of auspicious response.\nI am chief of the water tribes,\nhelping the Lianshan and the Guizang.\nBearing writing, I have number;\ntelling good and ill, I make the yarrow-casting.\nYet the wise are in danger,\nand the able fall short.\nI did not escape being cut at the heart and burned on the back;\nkeeping company with fish and shrimp I conceal my traces.\nAlas, stretching my neck and lifting my heel,\nI join the banquet in the high hall.\nI congratulate the flying dragon on his numinous change\nand enjoy the power of the brush that swallowed the tortoise.\nWine has been served and music rises,\nah, joy without limit!\nBeat the alligator drum, play the phoenix pipes,\nand dance the hidden dragon in the dark gorge.\nGather the sprites of mountain and marsh,\nassemble the chiefs of rivers and streams.\nLike Wen Qiao burning the rhinoceros horn,\nI am ashamed before the images on Yu's tripod.\nDancing together in the front courtyard,\nsome joke and laugh and clap their hands.\nThe sun is about to fall, the wind rises;\nfish and dragons soar, the waves surge.\nTime cannot be quickly gained;\nmy heart is stirred and I sigh with passion."
+    },
+    {
+      "orig": "曲終，夷猶恍惚，跳梁低昻，莫辨其狀，萬座嗢噱. 戱畢，於是，木石魍魎，山林精怪，起而各呈所能，或嘯或歌，或舞或吹，或忭或踊，異狀同音，乃作歌曰:",
+      "modern": null,
+      "reading": "곡종，이유황홀，도량저앙，막변기상，만좌올갹. 희필，어시，목석망량，산림정괴，기이각정소능，혹소혹가，혹무혹취，혹변혹용，이상동음，내작가왈:",
+      "en": "When the tune ended, lingering and dazed, leaping and swooping, high and low, with forms that could not be told apart, the whole hall roared with laughter. When the play was over, the wood and stone goblins and the spirits of mountains and forests rose and each displayed what he could do: some whistling, some singing, some dancing, some blowing, some clapping, some leaping, with different forms but the same voice, and they composed a song:"
+    },
+    {
+      "orig": "神龍在淵，或躍于天. 於千萬年，厥祚延綿.卑禮招賢，儼若神仙. 玩彼新篇，珠玉相聯.琬琰以鑴，千載永傳. 君子言旋，開此瓊筵.歌以採蓮，妙舞躚翩. 伐鼓淵淵，和彼繁絃.一棹航船，鯨吸百川. 揖讓周旋，樂且無愆.",
+      "modern": null,
+      "reading": "신룡재연，혹약우천. 어천만년，궐조연면.비례초현，엄약신선. 완피신편，주옥상련.완염이휴，천재영전. 군자언선，개차경연.가이채련，묘무선편. 벌고연연，화피번현.일도항선，경흡백천. 읍양주선，락차무건.",
+      "en": "The divine dragon is in the deep, or leaps to the sky.\nFor a thousand ten thousand years may his throne extend without end.\nLowly in courtesy he summons the worthy, solemn as an immortal.\nWe enjoy this new piece, pearls and jade strung together.\nCarve it on fine jade, to be handed down for a thousand years.\nThe gentleman is returning; open this jewelled feast.\nWe sing \"Picking Lotus,\" and the marvellous dance flutters.\nBeat the drum, throbbing, in harmony with the many strings.\nWith one oar the boat sails on; the whale draws in a hundred rivers.\nBowing and yielding, circling in courtesy, joyful and without fault."
+    },
+    {
+      "orig": "歌竟，於是. 江河君長，跪而陳詩，其第一座曰:",
+      "modern": null,
+      "reading": "가경，어시. 강하군장，궤이진시，기제일좌왈:",
+      "en": "When the song was over, the lords of the rivers knelt and presented poems. The first seat said:"
+    },
+    {
+      "orig": "碧海朝宗勢未休，奔波汨汨負輕舟.雲初散後月沈浦，潮欲起時風滿洲.日煖龜魚閑出沒，波明鳧鴨任沈浮.年年觸石多鳴咽，此夕歡娛蕩百憂.’",
+      "modern": null,
+      "reading": "벽해조종세미휴，분파골골부경주.운초산후월침포，조욕기시풍만주.일난구어한출몰，파명부압임침부.연년촉석다명열，차석환오탕백우.’",
+      "en": "The sea pays court with unceasing force,\nrushing waves babble, bearing a light boat.\nAfter the clouds first scatter, the moon sinks into the creek;\nwhen the tide is about to rise, wind fills the isle.\nOn warm days tortoises and fish drift in and out;\non bright waves ducks float or sink at will.\nYear after year striking the rocks, I sob much;\ntonight's joy sweeps away the hundred cares."
+    },
+    {
+      "orig": "第二座曰:",
+      "modern": null,
+      "reading": "제이좌왈:",
+      "en": "The second seat said:"
+    },
+    {
+      "orig": "五花樹影蔭重茵，籩豆笙簧次第陳.雲母帳中歌宛轉，水晶簾裏舞逡巡.神龍豈是池中物，文士由來席上珍.安得長繩繫白日，留連泥醉艶陽春.",
+      "modern": null,
+      "reading": "오화수영음중인，변두생황차제진.운모장중가완전，수정렴리무준순.신룡기시지중물，문사유래석상진.안득장승계백일，유련니취염양춘.",
+      "en": "Shadows of five-flowered trees shade the layered mats;\nbamboo and wooden vessels and reed organs are laid out in order.\nIn the mica curtain songs turn lilting;\ninside the crystal blinds the dancers hesitate and glide.\nThe divine dragon is no creature of the pool;\nthe man of letters has always been the jewel of the mat.\nHow could I tie the sun with a long rope\nand linger, drunk as mud, in the bright spring?"
+    },
+    {
+      "orig": "第三座曰:",
+      "modern": null,
+      "reading": "제삼좌왈:",
+      "en": "The third seat said:"
+    },
+    {
+      "orig": "神王酩酊倚金牀，山靄霏霏已夕陽.妙舞傞傞廻錦袖，淸歌細細遶彫梁.幾年孤憤翻銀島，今日同歡擧玉觴.流盡光陰人不識，古今世事太忽忙.",
+      "modern": null,
+      "reading": "신왕명정의금상，산애비비이석양.묘무사사회금수，청가세세요조량.기년고분번은도，금일동환거옥상.유진광음인불식，고금세사태홀망.",
+      "en": "The Divine King, tipsy, leans on his golden couch;\nthe mountain haze is dim, and it is already the evening sun.\nIn the marvellous dance, swaying, brocade sleeves turn;\nin the clear song, softly, voices circle the carved beam.\nFor years the lonely indignation turned the silver isle;\ntoday in joy together we raise the jade cups.\nLight and shade flow away and people know it not;\npast and present, worldly affairs, how swift and hurried!"
+    },
+    {
+      "orig": "題畢進呈，神王笑閱，使人授生. 生受之跪讀，三復賞玩，卽於座前，題二十韻，以陳盛事，詞曰:",
+      "modern": null,
+      "reading": "제필진정，신왕소열，사인수생. 생수지궤독，삼부상완，즉어좌전，제이십운，이진성사，사왈:",
+      "en": "When he had finished writing, he presented the poems, and the Divine King read them with a smile and had someone give them to Han. Han received them kneeling, read them, admired and savoured them three times over, and at once before the seat wrote a poem of twenty rhymes to describe the grand occasion. The words said:"
+    },
+    {
+      "orig": "天磨高出漢，巖溜遠飛空. 直下穿林壑，奔流作巨淙.波心涵月窟，潭底悶龍宮. 變化留神迹，騰拏建大功.煙熅生細霧，駘蕩起祥風. 碧落分符重，靑丘列爵崇.乘雲朝紫極，行雨駕靑驄. 金闕開佳燕，瑤階奏別鴻.流霞浮茗椀，湛露滴荷紅. 揖讓威儀重，周旋禮度豊.衣冠文璨爛，環珮響玲瓏. 魚鼈來朝賀，江河亦會同.靈機何恍惚，玄德更淵沖. 苑擊催花鼓，樽垂吸酒虹.天姝吹玉笛，王母理絲桐. 百拜傳醪醴，三呼祝華嵩.煙沈霜雪果，盤映水晶葱. 珍味充喉潤，恩波浹骨融.還如湌沆瀣，宛似到瀛蓬. 歡罷應相別，風流一夢中.",
+      "modern": null,
+      "reading": "천마고출한，암류원비공. 직하천림학，분류작거종.파심함월굴，담저민용궁. 변화류신적，등라건대공.연온생세무，태탕기상풍. 벽락분부중，청구열작숭.승운조자극，행우가청총. 금궐개가연，요계주별홍.유하부명완，담로적하홍. 읍양위의중，주선례도풍.의관문찬란，환패향령롱. 어별래조하，강하역회동.영기하황홀，현덕갱연충. 원격최화고，준수흡주홍.천주취옥적，왕모리사동. 백배전료례，삼호축화숭.연침상설과，반영수정총. 진미충후윤，은파협골융.환여찬항해，완사도영봉. 환파응상별，풍류일몽중.",
+      "en": "Mt. Cheonma stands high above the Milky Way,\ncliff-water flies far through the air.\nStraight down it pierces the grove and gorge,\nrushing, it makes a great torrent.\nIn the heart of the waves a moon-cave soaks;\nat the pool's bottom lies the hidden dragon palace.\nTransformation leaves divine traces,\nsoaring and seizing build great merit.\nHaze and mist give birth to fine fog,\nmild and sweeping, auspicious winds rise.\nIn the blue sky the tally is weighty;\nin Cheonggu the ranks of nobles are high.\nRiding cloud, he attends the Purple Pole;\ndriving rain, he harnesses the blue dappled horse.\nIn the golden gate a fine banquet opens;\non the jade steps a separate swan sings.\nFlowing rosy mist floats on the tea bowls;\nheavy dew drips on the red lotus.\nBowing and yielding, his dignity is weighty;\ncircling, his ritual measure is abundant.\nRobes and caps, the writing brilliant;\ngirdle-jades ring, tinkling.\nFish and turtles come to pay court and congratulate;\nrivers and streams assemble together.\nHow dazzling the numinous mechanism!\nHis dark virtue deeper still and serene.\nIn the garden drums are beaten to hasten the flowers;\ncups tip, drinking like a rainbow.\nHeavenly maidens blow jade flutes;\nthe Queen Mother tunes silk and paulownia.\nA hundred bows pass the sweet wine;\nthree shouts wish him long life like Mt. Hua.\nSmoke sinks on the frost-and-snow fruit;\nthe plates reflect crystal onions.\nRare flavours moisten the throat;\nthe wave of grace soaks to the bone.\nIt is like eating the mist and dew\nand seems to have arrived at Yingpeng.\nJoy ends, and we shall part;\nelegance is a dream."
+    },
+    {
+      "orig": "詩進，滿座皆歎賞不已. 神王謝曰: “當勒之金石，以爲弊居之寶.”",
+      "modern": null,
+      "reading": "시진，만좌개탄상불이. 신왕사왈: “당륵지금석，이위폐거지보.”",
+      "en": "When the poem was presented, the whole company admired it without end. The Divine King thanked him, saying: \"It shall be carved in metal and stone, to be a treasure of my humble dwelling.\""
+    },
+    {
+      "orig": "生拜謝，進而告曰: “龍宮勝事，已盡見之矣. 且宮室之廣，疆域之壯，可周覽不?” 神王曰: “可”. 生受命，出戶盱衡，但見綵雲繚繞，不辨東西. 神王命吹雲者掃之. 有一人，於殿庭，蹙口一吹，天宇晃朗，無山石巖崖，但見世界平闊，如碁局，可數十里，瓊花琪樹，列植其中，布以金沙，繚以金墉，其廊廡庭除，皆鋪碧琉璃塼，光影相涵.",
+      "modern": null,
+      "reading": "생배사，진이고왈: “용궁승사，이진견지의. 차궁실지광，강역지장，가주람불?” 신왕왈: “가”. 생수명，출호우형，단견채운료요，불변동서. 신왕명취운자소지. 유일인，어전정，축구일취，천우황랑，무산석암애，단견세계평활，여기국，가수십리，경화기수，열식기중，포이금사，요이금용，기랑무정제，개포벽류리전，광영상함.",
+      "en": "Han bowed in thanks, came forward and said: \"I have now seen all the splendid affairs of the Dragon Palace. May I also tour the breadth of the palace and the extent of its domain?\" The Divine King said, \"You may.\" Han received the command and went out of the door, looked up and across, but saw only coloured clouds coiling and swirling and could not tell east from west. The Divine King ordered the Cloud-blower to sweep them away. One man in the courtyard of the hall puckered his mouth and blew once, and the sky became bright and clear, with no mountains or rocks or cliffs, but only a broad and level world like a chessboard, some tens of li across, in which jade flowers and gem trees stood in rows, strewn with golden sand and enclosed by golden walls. Its corridors, halls and courtyards were all paved with blue lapis tiles, their lights and shadows soaking into each other."
+    },
+    {
+      "orig": "神王命二人，指揮觀覽，行到一樓，名曰朝元之樓，純是玻瓈所成，飾以珠玉，錯以金碧，登之若凌虛焉. 其層十級. 生欲盡登，使者曰: “神王以神力自登，僕等亦不能盡覽矣.” 蓋上級，與雲霄幷，非塵凡可及，生登七層而下.",
+      "modern": null,
+      "reading": "신왕명이인，지휘관람，행도일루，명왈조원지루，순시파려소성，식이주옥，착이금벽，등지약릉허언. 기층십급. 생욕진등，사자왈: “신왕이신력자등，복등역불능진람의.” 개상급，여운소병，비진범가급，생등칠층이하.",
+      "en": "The Divine King ordered two persons to guide his tour. They came to a tower called the Tower of Court at the Origin, wholly made of crystal, decorated with pearls and jade and inlaid with gold and jade-green, so that climbing it was like walking on emptiness. It had ten levels. Han wished to climb them all, but the guide said: \"The Divine King climbs to the top by divine power; even we cannot see it all.\" The upper levels were level with the clouds and heavens and not reachable by earthly mortals, and Han climbed seven levels and came down."
+    },
+    {
+      "orig": "又到一閣，名曰凌虛之閣. 生問曰: “此閣何用?” 曰: “此神王朝天之時，整其儀仗，飾其衣冠之處.” 生請曰: “願觀儀仗.” 使者，引至一處，有一物，如圓鏡，燁燁有光，眩目不可諦視. 生曰: “此何物也?” 曰: “電母之鏡.” 又有鼓，大小相稱. 生欲擊之. 使者止之曰: “若一擊，則百物皆震，卽雷公之鼓也.” 又有一物，如橐籥. 生欲搖之. 使者復止之曰: “若一搖，則山石盡崩，大木斯拔，卽哨風之橐也.” 又有一物，如拂箒，而水甕在邊. 生欲灑之. 使者又止之曰: “若一灑，洪水滂沱，懷山襄陵.” 生曰: “然則何乃不置噓雲之器?” 曰: “雲則神王，神力所化，非機括可做.” 生又曰: “雷公電母，風伯雨師，何在?” 曰: “天帝囚於幽處，使不得遊，王出則斯集矣.” 其餘器具，不能盡識.",
+      "modern": null,
+      "reading": "우도일각，명왈릉허지각. 생문왈: “차각하용?” 왈: “차신왕조천지시，정기의장，식기의관지처.” 생청왈: “원관의장.” 사자，인지일처，유일물，여원경，엽엽유광，현목불가체시. 생왈: “차하물야?” 왈: “전모지경.” 우유고，대소상칭. 생욕격지. 사자지지왈: “약일격，즉백물개진，즉뢰공지고야.” 우유일물，여탁약. 생욕요지. 사자부지지왈: “약일요，즉산석진붕，대목사발，즉초풍지탁야.” 우유일물，여불추，이수옹재변. 생욕쇄지. 사자우지지왈: “약일쇄，홍수방타，회산양릉.” 생왈: “연즉하내불치허운지기?” 왈: “운즉신왕，신력소화，비기괄가주.” 생우왈: “뇌공전모，풍백우사，하재?” 왈: “천제수어유처，사부득유，왕출즉사집의.” 기여기구，불능진식.",
+      "en": "They came to another pavilion called the Pavilion of Rising Void. Han asked: \"What is this pavilion used for?\" The guide said: \"It is where the Divine King arranges his procession and puts on his robes and cap when he goes to court in Heaven.\" Han requested: \"I should like to see the procession.\" The guide led him to a place where there was an object like a round mirror, glittering and dazzling, too bright to look at. Han asked, \"What is this?\" \"The Mirror of the Lightning Mother.\" There was also a drum, its large and small parts matching one another. Han wished to strike it, but the guide stopped him, saying: \"If it is struck once, all things shake; it is the Thunder Duke's drum.\" There was also an object like a bellows. Han wished to shake it; the guide again stopped him, saying: \"If it is shaken once, the mountains and rocks all collapse and great trees are uprooted; it is the whistling-wind bellows.\" There was also an object like a whisk, with a water jar beside it. Han wished to sprinkle it. The guide again stopped him, saying: \"If it is sprinkled once, a flood will pour down and engulf mountains and drown hills.\" Han said: \"Then why is there no device for blowing out clouds?\" \"The clouds are transformed by the Divine King's divine power; they cannot be made with a mechanism.\" Han asked again: \"Where are the Thunder Duke, the Lightning Mother, the Wind Earl and the Rain Master?\" \"The Heavenly Emperor has imprisoned them in a hidden place so that they cannot roam about; when the King goes out, they assemble.\" The other implements he could not all recognize."
+    },
+    {
+      "orig": "又有長廊，連亘數里，戶牖鎖以金龍之鑰. 生問: “此何處?” 使者曰: “此神王，七寶之藏也.” 周覽許時，不能遍見. 生曰: “欲還.” 使者曰: “唯.” 生將還，其門戶重重，迷不知其所之，命使者而先導焉.",
+      "modern": null,
+      "reading": "우유장랑，연긍수리，호유쇄이금룡지약. 생문: “차하처?” 사자왈: “차신왕，칠보지장야.” 주람허시，불능편견. 생왈: “욕환.” 사자왈: “유.” 생장환，기문호중중，미부지기소지，명사자이선도언.",
+      "en": "There was also a long corridor stretching continuously for several li, with its doors and windows locked by golden dragon keys. Han asked, \"What place is this?\" The guide said, \"This is the Divine King's store of the seven treasures.\" They toured it for a time but could not see it all. Han said, \"I wish to return.\" The guide said, \"Yes.\" As Han was about to return, the doors and gates were layer upon layer, and he was lost and did not know where he was; he ordered the guide to go ahead and lead the way."
+    },
+    {
+      "orig": "生到本座，致謝於王曰: “厚蒙恩榮，周覽佳境.” 再拜而別. 於是，神王以珊瑚盤，盛明珠二顆，氷綃二匹，爲贐行之資，拜別門外. 三神同時拜辭，三神乘輦直返. 復命二使者，持穿山簸水之角，揮以送之. 一人謂生曰: “可登吾背，閉目半餉.” 生如其言. 一人揮角先導，恰似登空，唯聞風水聲，移時不絶，聲止開目，但偃臥居室而已.",
+      "modern": null,
+      "reading": "생도본좌，치사어왕왈: “후몽은영，주람가경.” 재배이별. 어시，신왕이산호반，성명주이과，빙초이필，위신행지자，배별문외. 삼신동시배사，삼신승련직반. 부명이사자，지천산파수지각，휘이송지. 일인위생왈: “가등오배，폐목반향.” 생여기언. 일인휘각선도，흡사등공，유문풍수성，이시부절，성지개목，단언와거실이이.",
+      "en": "Han returned to his seat and thanked the King: \"I have received great kindness and honour, and toured your fine realm.\" He bowed twice and took leave. Then the Divine King, on a coral tray, laid two bright pearls and two bolts of ice-silk as parting gifts, and bade him farewell outside the gate. The three gods bowed and took leave at the same time, and the three gods went off in their palanquins and returned straight. Again two envoys, carrying a horn that pierces mountains and winnows waters, waved it to see him off. One of them said to Han: \"You may climb on my back; close your eyes for half a meal.\" Han did as he said. The other waved the horn and went ahead; it was just as if he were rising into the air; he heard only the sound of wind and water, which went on for some time. When the sound stopped, he opened his eyes and was lying in his room."
+    },
+    {
+      "orig": "生出戶視之，大星初稀，東方向明，鷄三鳴而更五點矣. 急探其懷而視之，則珠綃在焉. 生藏之巾箱，以爲至寶，不肯示人. 其後，生不以名爲懷，入名山，不知所終.",
+      "modern": null,
+      "reading": "생출호시지，대성초희，동방향명，계삼명이경오점의. 급탐기회이시지，즉주초재언. 생장지건상，이위지보，불긍시인. 기후，생불이명위회，입명산，부지소종.",
+      "en": "Han went out of the door and looked: the great stars had just thinned, the east was growing light, the cock had crowed three times and the fifth watch had struck. He quickly felt in his bosom and looked, and the pearls and silk were there. Han stored them in a kerchief box as treasure and would not show them to anyone. Afterwards Han did not care for fame; he entered a famous mountain and no one knows how it ended."
+    }
+  ],
+  "labels": {
+    "notes": "ai",
+    "translation": "ai",
+    "modern": null,
+    "text": "original"
+  },
+  "review": {
+    "status": "draft",
+    "by": "writer",
+    "date": "2026-10-09",
+    "notes": ""
+  }
+}
