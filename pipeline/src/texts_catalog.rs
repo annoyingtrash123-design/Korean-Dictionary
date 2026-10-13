@@ -21,6 +21,7 @@ pub const SHELVES: &[&str] = &[
     "modern-poetry",
     "modern-fiction",
     "essays-children",
+    "press",
 ];
 pub const SCRIPTS: &[&str] = &["hangul", "hanmun", "mixed"];
 pub const SOURCES: &[&str] = &["wikisource-ko", "wikisource-zh", "law", "ohchr", "korea-kr", "history-db", "gutenberg", "archive-org"];
