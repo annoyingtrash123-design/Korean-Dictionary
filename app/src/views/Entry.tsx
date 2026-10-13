@@ -16,6 +16,7 @@ import { Empty, IconButton, LevelBadge, Pos, Sheet } from '../components/common'
 import { Icon } from '../components/Icons';
 import { hanjaPath, href, searchPath, wordPath } from '../lib/router';
 import { useWide } from '../lib/layout';
+import { altReadings, hanjaParts, usualReading } from '../lib/hanja-marks';
 
 type Loaded = { primary: Entry | null; entries: Entry[] };
 const viewCache = new Lru<Loaded>(40);
@@ -101,8 +102,8 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
       <div class="entry-meta">
         {primary.hanja && (
           <span class="hanja-chars">
-            {[...primary.hanja].map((c, i) => /[㐀-鿿豈-﫿]/.test(c)
-              ? <a key={i} class="hanja hj-link" lang="zh-Hant" href={href(hanjaPath(c))} aria-label={`Hanja ${c}`}>{c}</a>
+            {hanjaParts(primary.hanja).map(({ ch: c, alt }, i) => /[㐀-鿿豈-﫿]/.test(c)
+              ? <a key={i} class={alt ? 'hanja hj-link hj-alt' : 'hanja hj-link'} lang="zh-Hant" href={href(hanjaPath(c))} aria-label={`Hanja ${c}`}>{c}</a>
               : <span key={i} class="hanja">{c}</span>)}
           </span>
         )}
@@ -111,6 +112,7 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
         <LevelBadge level={level} />
         {primary.kind !== 'word' && <span class="pos">{primary.kind}</span>}
       </div>
+      {primary.hanja && <AltReadings headword={primary.headword} hanja={primary.hanja} />}
       {sheet && (
         <FolderSheet marked={marked} bm={bm} entry={primary} onClose={() => setSheet(false)} />
       )}
@@ -220,5 +222,30 @@ function EntryBody({ e, many, showKo }: { e: Entry; many: boolean; showKo: boole
       {e.data?.origin_note && <div class="note">{e.data.origin_note}</div>}
       <Chips rels={e.data?.related} />
     </section>
+  );
+}
+
+/** The dictionary marks characters read here with other than their usual sound (困難▽ 곤란):
+ *  say which, and what the usual reading is. */
+function AltReadings({ headword, hanja }: { headword: string; hanja: string }) {
+  const alts = altReadings(headword, hanja);
+  const [usual, setUsual] = useState<Record<string, string | undefined>>({});
+  useEffect(() => {
+    let live = true;
+    Promise.all(alts.map(async (a) => [a.ch, usualReading((await db.hanjaChar(a.ch).catch(() => null))?.readings)] as const))
+      .then((r) => { if (live) setUsual(Object.fromEntries(r)); });
+    return () => { live = false; };
+  }, [headword, hanja]);
+  if (!alts.length) return null;
+  return (
+    <p class="hj-note">
+      {alts.map((a, i) => (
+        <span key={a.ch}>
+          {i > 0 && '; '}
+          <span class="hanja hj-alt" lang="zh-Hant">{a.ch}</span> is read <span class="hangul" lang="ko">{a.here}</span> here
+          {usual[a.ch] && usual[a.ch] !== a.here ? <> (usually <span class="hangul" lang="ko">{usual[a.ch]}</span>)</> : ''}
+        </span>
+      ))}
+    </p>
   );
 }

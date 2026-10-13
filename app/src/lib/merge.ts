@@ -1,5 +1,6 @@
 import { SOURCE_ORDER, isKoSource, type MatchKind, type ResultRow, type Source } from './types';
 import { normHeadword } from './search-mode';
+import { hanjaKey, hasMarks } from './hanja-marks';
 
 export interface ResultGroup {
   key: string;
@@ -33,12 +34,14 @@ export function mergeRows(...lists: ResultRow[][]): ResultRow[] {
 export function groupResults(rows: ResultRow[]): ResultGroup[] {
   const groups = new Map<string, ResultGroup>();
   for (const r of rows) {
-    const key = `${normHeadword(r.headword)}|${r.hanja ?? ''}`;
+    // 卷▽煙▽ and 卷煙 are the same word: compare without the dictionary's reading marks
+    const key = `${normHeadword(r.headword)}|${hanjaKey(r.hanja)}`;
     let g = groups.get(key);
     if (!g) {
       g = { key, headword: r.headword, hanja: r.hanja, rows: [], primary: r, level: undefined, pos: [], gloss: '', sources: [], via: r.via ?? 'prefix' };
       groups.set(key, g);
     }
+    if (hasMarks(r.hanja) && !hasMarks(g.hanja)) g.hanja = r.hanja;   // show the version that says how it is read
     g.rows.push(r);
   }
   // A row without hanja (e.g. Wiktionary) is the same word as a hanja-tagged group with the same
@@ -93,10 +96,10 @@ export function sameWordRows<T extends { headword: string; hanja?: string | null
   all: T[], primary: { headword: string; hanja?: string | null },
 ): T[] {
   const k = normHeadword(primary.headword);
-  const hanjas = new Set(all.filter((e) => normHeadword(e.headword) === k && e.hanja).map((e) => e.hanja));
+  const hanjas = new Set(all.filter((e) => normHeadword(e.headword) === k && e.hanja).map((e) => hanjaKey(e.hanja)));
   const unique = !!primary.hanja && hanjas.size === 1;
   return all
     // rows without hanja (e.g. Wiktionary) belong with the hanja-tagged word when it is the only one
-    .filter((e) => normHeadword(e.headword) === k && ((e.hanja ?? '') === (primary.hanja ?? '') || (!e.hanja && unique)))
+    .filter((e) => normHeadword(e.headword) === k && (hanjaKey(e.hanja) === hanjaKey(primary.hanja) || (!e.hanja && unique)))
     .sort((a, b) => srcIdx(a.source) - srcIdx(b.source) || (a.rank ?? 0) - (b.rank ?? 0) || (a.homonym ?? 0) - (b.homonym ?? 0) || a.id - b.id);
 }

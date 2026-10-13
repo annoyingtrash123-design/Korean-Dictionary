@@ -9,6 +9,7 @@ import { groupResults } from '../lib/merge';
 import { classOf } from '../lib/reader-text';
 import { entryPath, hanjaPath, href } from '../lib/router';
 import { SOURCE_TITLE, isKoSource, type HanjaChar, type ResultRow, type TextMatch } from '../lib/types';
+import { hanjaKey } from '../lib/hanja-marks';
 
 export interface LookupState { match: TextMatch | null; loading: boolean; manual: boolean; text: string }
 
@@ -70,7 +71,7 @@ export function LookupCard({ st, onClose, onStep, onResize, onPick }: {
         <div class="lk-head">
           <span class={han ? 'hanja lk-hw' : 'hangul lk-hw'} lang="ko">{head || '…'}</span>
           {sub && <span class="hangul lk-sub" lang="ko">{sub}</span>}
-          {!han && top?.hanja && <span class="hanja lk-hj" lang="zh-Hant">{top.hanja}</span>}
+          {!han && top?.hanja && <span class="hanja lk-hj" lang="zh-Hant">{hanjaKey(top.hanja)}</span>}
         </div>
         {primary && <button type="button" class={`iconbtn${saved ? ' on' : ''}`} aria-label={saved ? 'Remove bookmark' : 'Add bookmark'} aria-pressed={!!saved}
           onClick={() => (saved ? removeBookmark(saved.key) : addBookmark({ source: primary.source, headword: primary.headword, homonym: primary.homonym, pos: primary.pos, hanja: primary.hanja, gloss: primary.gloss }))}><Icon name="star" fill={!!saved} /></button>}

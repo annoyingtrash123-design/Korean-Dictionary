@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'preact/hooks';
 import { Icon } from './Icons';
-import { navigate, searchPath, useRoute } from '../lib/router';
+import { navigate, searchPath, undoBack, useRoute } from '../lib/router';
 import { query } from '../lib/app-state';
 import { useStore } from '../lib/store';
 import { db } from '../db/client';
@@ -20,6 +20,18 @@ export function SearchBar() {
     if (route.name === 'home') { if (query.get()) query.set(''); }
     else if (route.name === 'search') { const rq = route.params.get('q') ?? ''; if (rq !== query.get()) query.set(rq); }
   }, [route.raw]);
+
+  // Phone/tablet back while typing: close the keyboard and stay; the next back navigates.
+  useEffect(() => {
+    const onPop = () => {
+      const el = input.current;
+      if (!el || document.activeElement !== el || !matchMedia('(pointer: coarse)').matches) return;
+      el.blur();
+      undoBack();
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
 
   // Fire on every keystroke: results components drop stale responses, the client coalesces to the newest query.
   const go = (v: string) => {

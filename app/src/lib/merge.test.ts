@@ -89,3 +89,15 @@ describe('sameWordRows', () => {
     expect(sameWordRows(two, { headword: '학교', hanja: '學校' }).map((e) => e.id)).toEqual([2, 1]);
   });
 });
+
+describe('reading marks', () => {
+  it('merges 卷▽煙▽ and 卷煙 into one word and shows the marked hanja', () => {
+    const g = groupResults([
+      row({ source: 'krdict', id: 1, headword: '권련', hanja: '卷▽煙▽', gloss: 'cigarette', level: 3 }),
+      row({ source: 'kengdic', id: 2, headword: '권련', hanja: '卷煙', gloss: 'cigarette' }),
+    ]);
+    expect(g).toHaveLength(1);
+    expect(g[0].hanja).toBe('卷▽煙▽');
+    expect(g[0].rows).toHaveLength(2);
+  });
+});

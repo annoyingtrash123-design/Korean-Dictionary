@@ -2,6 +2,7 @@ import type { ComponentChildren } from 'preact';
 import { Icon } from './Icons';
 import { entryPath, href } from '../lib/router';
 import type { ResultGroup } from '../lib/merge';
+import { hanjaParts, hasMarks } from '../lib/hanja-marks';
 
 export const LEVEL_LABEL: Record<number, string> = { 1: '초', 2: '중', 3: '고' };
 export const LEVEL_NAME: Record<number, string> = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced' };
@@ -12,8 +13,14 @@ export function LevelBadge({ level }: { level: number | null | undefined }) {
 }
 export const Pos = ({ pos }: { pos?: string | null }) => (pos ? <span class="pos">{pos}</span> : null);
 
+/** Hanja with the dictionary's reading marks shown as an underline (困難▽ -> 困<u>難</u>). */
 export function Hanja({ text }: { text: string }) {
-  return <span class="hanja" lang="zh-Hant">{text}</span>;
+  if (!hasMarks(text)) return <span class="hanja" lang="zh-Hant">{text.replace(/×/g, '')}</span>;
+  return (
+    <span class="hanja" lang="zh-Hant">
+      {hanjaParts(text).map((p, i) => (p.alt ? <span key={i} class="hj-alt" title="Read with other than its usual sound">{p.ch}</span> : p.ch))}
+    </span>
+  );
 }
 
 export function GroupRow({ g, note, current }: { g: ResultGroup; note?: string; current?: boolean }) {

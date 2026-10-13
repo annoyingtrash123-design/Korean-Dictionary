@@ -11,18 +11,37 @@ export function parseHash(hash: string): Route {
 export const currentRoute = (): Route => parseHash(location.hash);
 
 const EVT = 'kd-route';
+
+// Back while typing (keyboard up) should only close the keyboard: `undoBack` steps forward again
+// and the router ignores that round trip (hashchanges until the hash is back where it was).
+let shown = typeof location === 'undefined' ? '' : location.hash;   // hash the app shows
+let holdAt: string | null = null;
+if (typeof window !== 'undefined') {
+  window.addEventListener('hashchange', () => {
+    if (holdAt === null) shown = location.hash;
+    else if (location.hash === holdAt) holdAt = null;
+  });
+}
+/** Call from a popstate handler: undo the back step that just happened, without a route change. */
+export function undoBack(): void {
+  if (location.hash === shown) return;   // same URL: nothing for the router to see
+  holdAt = shown;
+  history.go(1);
+}
+
 export function navigate(path: string, replace = false): void {
   const h = '#' + path;
   if (location.hash === h) return;
   if (replace) {
     history.replaceState(history.state, '', h);
+    shown = h;
     window.dispatchEvent(new Event(EVT));
   } else location.hash = h;
 }
 export function useRoute(): Route {
   const [r, setR] = useState(currentRoute);
   useEffect(() => {
-    const f = () => setR(currentRoute());
+    const f = () => { if (holdAt === null) setR(currentRoute()); };
     window.addEventListener('hashchange', f);
     window.addEventListener(EVT, f);
     return () => { window.removeEventListener('hashchange', f); window.removeEventListener(EVT, f); };

@@ -549,3 +549,7 @@ mark.hl { background: var(--rd-hl); color: inherit; border-radius: 4px; box-shad
 .rd-bg-title-en { font-size: 14px; margin-bottom: 8px; }
 .rd-bg-text { padding: 0; }
 .rd-bg-vocab { margin-top: 10px; }
+
+/* a hanja the dictionary marks as read with other than its usual sound (困難▽ 곤란) */
+.hj-alt { text-decoration: underline dotted; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.hj-note { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
