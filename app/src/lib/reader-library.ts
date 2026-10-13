@@ -14,6 +14,7 @@ export const SHELVES: { id: string; label: string; ko: string }[] = [
   { id: 'modern-fiction', label: 'Modern fiction', ko: '현대 소설' },
   { id: 'essays-children', label: "Essays & children's", ko: '수필·동화' },
   { id: 'press', label: 'Newspapers & magazines', ko: '신문·잡지' },
+  { id: 'speeches', label: 'Speeches & statements', ko: '연설·담화' },
   { id: 'news', label: 'News', ko: '뉴스' },
   { id: 'graded', label: 'Graded readers', ko: '단계별 읽기' },
 ];

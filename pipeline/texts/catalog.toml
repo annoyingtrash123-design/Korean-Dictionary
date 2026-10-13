@@ -2532,15 +2532,16 @@ title_en = "Yeo Un-hyeong's Speech at the Imperial Hotel, Tokyo (Dec 1919)"
 author_ko = "여운형"
 author_en = "Yeo Un-hyeong"
 author_dates = "1886–1947"
-date = "1919-12"
+date = "1919-11-27"
 year = 1919
 period = "colonial"
 themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
+shelf = "speeches"
+script = "hangul"
+note = "Given in Japanese at a press conference at the Imperial Hotel, Tokyo (27 November 1919); this is a Korean rendering of the press reports (sources cited on the page include 박은식, 한국독립운동지혈사, and the Mainichi of 28 November 1919), not the original wording."
 excerpt = false
 source = "wikisource-ko"
-source_title = "여운형 제국호텔 연설"
+source_title = "여운형 도쿄 제국호텔 기자회견 연설"
 alt_titles = ["제국호텔 연설", "여운형의 제국호텔 연설", "呂運亨 帝國호텔 演說"]
 search = ["여운형 제국호텔 연설", "제국호텔 연설", "여운형 동경 연설 1919", "呂運亨 帝國호텔"]
 pd_basis = "Author died 1947; Korean term (life+50) expired 1997, before the 2013 extension to life+70, so the work is in the public domain."
@@ -3473,27 +3474,6 @@ search = ["한국 군사정전에 관한 협정", "정전협정", "한국군사�
 pd_basis = "Official state/government document (armistice agreement; Copyright Act art. 7)."
 uncertain = ["search", "sections"]
 
-# resource: medium; statement text widely transcribed; author is the President's office (Rhee died 1965, so authorship is attributed to the state, not the person)
-[[text]]
-id = "rhee_haya_seongmyeong"
-title_ko = "이승만 대통령 하야 성명"
-title_en = "President Syngman Rhee's Resignation Statement (1960)"
-author_ko = "대한민국 대통령 (공식 성명)"
-author_en = "President of the Republic of Korea (official statement)"
-author_dates = ""
-date = "1960-04-26"
-year = 1960
-period = "modern"
-themes = ["modern-korea"]
-shelf = "documents"
-script = "mixed"
-excerpt = false
-source = "wikisource-ko"
-source_title = "이승만 대통령 하야 성명"
-alt_titles = ["이승만 하야 성명", "이승만 대통령 하야성명서", "이승만 대통령의 하야 성명", "대통령 하야 성명서"]
-search = ["이승만 하야 성명", "이승만 대통령 하야 성명서", "국민이 원한다면 대통령직 사임", "1960 4월 26일 하야 성명"]
-pd_basis = "Official presidential statement issued by the state; treated as an unprotected official document (Copyright Act art. 7) and not as a personal literary work (Rhee died 1965)."
-uncertain = ["source_title", "search", "pd_basis"]
 
 # resource: statute; the `law` source should find it by name (법률 제5029호, 1995-12-21)
 [[text]]
@@ -4019,4 +3999,362 @@ source = "wikisource-ko"
 source_title = "동아일보/1936년/8월 10일/호외1"
 search = ["동아일보 1936년 8월 10일 호외", "손기정 동아일보 호외"]
 pd_basis = "Unsigned newspaper item published in 1936: an anonymous work published before 1963, whose term (50 years from publication under the pre-2013 law) has expired."
+uncertain = []
+
+[[text]]
+id = "inaugural_4"
+title_ko = "제4대 대통령 취임사 (윤보선)"
+title_en = "Inaugural Address of the 4th President (Yun Bo-seon, 1960)"
+author_ko = "윤보선"
+author_en = "Yun Bo-seon (as President: an official state work)"
+author_dates = ""
+date = "1960-08-13"
+year = 1960
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "Second Republic, after the April Revolution"
+source = "wikisource-ko"
+source_title = "제4대 대한민국 대통령 취임사"
+search = ["제4대 대한민국 대통령 취임사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = []
+
+[[text]]
+id = "inaugural_17"
+title_ko = "제17대 대통령 취임사 (이명박)"
+title_en = "Inaugural Address of the 17th President (Lee Myung-bak, 2008)"
+author_ko = "이명박"
+author_en = "Lee Myung-bak (as President: an official state work)"
+author_dates = ""
+date = "2008-02-25"
+year = 2008
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제17대 대한민국 대통령 취임사"
+search = ["제17대 대한민국 대통령 취임사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = []
+
+[[text]]
+id = "inaugural_18"
+title_ko = "제18대 대통령 취임사 (박근혜)"
+title_en = "Inaugural Address of the 18th President (Park Geun-hye, 2013)"
+author_ko = "박근혜"
+author_en = "Park Geun-hye (as President: an official state work)"
+author_dates = ""
+date = "2013-02-25"
+year = 2013
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제18대 대한민국 대통령 취임사"
+search = ["제18대 대한민국 대통령 취임사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = []
+
+[[text]]
+id = "inaugural_19"
+title_ko = "제19대 대통령 취임사 (문재인)"
+title_en = "Inaugural Address of the 19th President (Moon Jae-in, 2017)"
+author_ko = "문재인"
+author_en = "Moon Jae-in (as President: an official state work)"
+author_dates = ""
+date = "2017-05-10"
+year = 2017
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "given on taking office the day after the snap election, without the usual ceremony"
+source = "wikisource-ko"
+source_title = "제19대 대한민국 대통령 취임사"
+search = ["제19대 대한민국 대통령 취임사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription. The page is also marked 공공누리 제1유형 (KOGL type 1)."
+uncertain = []
+
+[[text]]
+id = "inaugural_20"
+title_ko = "제20대 대통령 취임사 (윤석열)"
+title_en = "Inaugural Address of the 20th President (Yoon Suk Yeol, 2022)"
+author_ko = "윤석열"
+author_en = "Yoon Suk Yeol (as President: an official state work)"
+author_dates = ""
+date = "2022-05-10"
+year = 2022
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제20대 대한민국 대통령 취임사"
+search = ["제20대 대한민국 대통령 취임사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription. The page is also marked 공공누리 제1유형 (KOGL type 1)."
+uncertain = []
+
+[[text]]
+id = "rhee_banmin_damhwa_1948"
+title_ko = "반민자 처단은 민의, 법운영은 보복보다 개과천선토록 하라 (이승만 담화, 1948)"
+title_en = "Syngman Rhee's Statement on Punishing Collaborators (24 September 1948)"
+author_ko = "이승만"
+author_en = "Syngman Rhee (as President: an official state work)"
+author_dates = ""
+date = "1948-09-24"
+year = 1948
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "mixed"
+excerpt = false
+note = "Presidential statement on the Anti-National Acts Punishment Law (반민족행위처벌법) passed two weeks earlier."
+source = "wikisource-ko"
+source_title = "반민자 처단은 민의, 법운영은 보복보다 개과천선토록 하라"
+search = ["반민자 처단은 민의 이승만 담화"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription. The page is also marked 공공누리 제1유형 (대통령기록관)."
+uncertain = []
+
+[[text]]
+id = "rhee_gwangbokjeol_1950"
+title_ko = "제2주년 광복절 경축사 (이승만, 1950)"
+title_en = "Syngman Rhee's Liberation Day Address, 15 August 1950"
+author_ko = "이승만"
+author_en = "Syngman Rhee (as President: an official state work)"
+author_dates = ""
+date = "1950-08-15"
+year = 1950
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "mixed"
+excerpt = false
+note = "Delivered in Daegu during the Korean War, on the second anniversary of the government's founding (the Wikisource header gives 1947, but the text refers to the wartime move of the capital). Source: 대통령이승만박사담화집 (공보처, 1953)."
+source = "wikisource-ko"
+source_title = "제2주년 광복절 경축사"
+search = ["제2주년 광복절 경축사 이승만"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription. Printed in the 공보처's 대통령이승만박사담화집 (1953)."
+uncertain = ["date"]
+
+[[text]]
+id = "geonjun_seoneon_1945"
+title_ko = "건국준비위원회 선언과 강령 (1945)"
+title_en = "Declaration and Platform of the Committee for the Preparation of Korean Independence (1945)"
+author_ko = "조선건국준비위원회 (위원장 여운형)"
+author_en = "Committee for the Preparation of Korean Independence (chair Yeo Un-hyeong)"
+author_dates = ""
+date = "1945-08-28 (published in 매일신보, 3 September 1945)"
+year = 1945
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "Text from the 범우사 edition of 여운형's writings on Wikisource, in modernised spelling."
+source = "wikisource-ko"
+source_title = "조선독립의 당위성 외/건준 선언과 강령"
+search = ["건준 선언과 강령", "건국준비위원회 강령"]
+pd_basis = "Collective statement of 1945 issued under 여운형 (d. 1947); his term (life+50) expired 1997, before the 2013 extension. The Wikisource edition is marked PD (공유마당)."
+uncertain = []
+
+[[text]]
+id = "daedong_dangyeol_1917"
+title_ko = "대동단결의 선언 (1917)"
+title_hanja = "大同團結의 宣言"
+title_en = "Declaration of Great Unity (1917)"
+author_ko = "신규식·박은식·조소앙 외"
+author_en = "Sin Gyu-sik, Bak Eun-sik, Jo So-ang and others"
+author_dates = ""
+date = "1917-07"
+year = 1917
+period = "colonial"
+themes = ["colonial-independence"]
+shelf = "political-writing"
+script = "mixed"
+excerpt = false
+note = "Issued in Shanghai by 14 exiles including 신규식 (d. 1922) and 박은식; drafted by 조소앙. It argued that sovereignty passed from the emperor to the people when Sunjong 'abandoned' it in 1910, an idea later taken up by the Provisional Government."
+source = "wikisource-ko"
+source_title = "대동단결의선언"
+search = ["대동단결의선언", "대동단결선언 1917"]
+pd_basis = "Signed by 14 exiles; the principal signers died before 1963 (신규식 1922, 박은식 1925); 조소앙 (d. 1958) drafted it. Wikisource marks it PD-old-60."
+uncertain = ["author"]
+
+[[text]]
+id = "park_6th_assembly_1963"
+title_ko = "제6대 국회 개원식 대통령 연설 (박정희, 1963)"
+title_en = "Park Chung-hee's Address at the Opening of the 6th National Assembly (1963)"
+author_ko = "박정희"
+author_en = "Park Chung-hee (as President: an official state work)"
+author_dates = ""
+date = "1963-12-17"
+year = 1963
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "Delivered the day he took office as President of the Third Republic, in the second year of the First Five-Year Economic Development Plan (1962–66); the closest open primary source on the plan."
+source = "wikisource-ko"
+source_title = "제6대 국회 개원식 대통령 연설"
+search = ["제6대 국회 개원식 대통령 연설"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = ["date"]
+
+[[text]]
+id = "park_yushin_damhwa_1972"
+title_ko = "헌법 개정안 공고에 즈음한 특별담화문 (박정희, 1972)"
+title_en = "Park Chung-hee's Special Statement on Announcing the Constitutional Amendment (Yushin, 1972)"
+author_ko = "박정희"
+author_en = "Park Chung-hee (as President: an official state work)"
+author_dates = ""
+date = "1972-10-27"
+year = 1972
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "Issued as the Yushin constitution was put to referendum, ten days after martial law was declared and the National Assembly dissolved (17 October 1972)."
+source = "wikisource-ko"
+source_title = "헌법 개정안 공고에 즈음한 특별담화문"
+search = ["헌법 개정안 공고에 즈음한 특별담화문"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = ["date"]
+
+[[text]]
+id = "chun_11th_assembly_1981"
+title_ko = "제11대 국회 개원식 대통령 연설 (전두환, 1981)"
+title_en = "Chun Doo-hwan's Address at the Opening of the 11th National Assembly (1981)"
+author_ko = "전두환"
+author_en = "Chun Doo-hwan (as President: an official state work)"
+author_dates = ""
+date = "1981-04-11"
+year = 1981
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제11대 국회 개원식 대통령 연설"
+search = ["제11대 국회 개원식 대통령 연설"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = ["date"]
+
+[[text]]
+id = "roh_gwangbokjeol_1989"
+title_ko = "제44주년 광복절 경축사 (노태우, 1989)"
+title_en = "Roh Tae-woo's Liberation Day Address (1989)"
+author_ko = "노태우"
+author_en = "Roh Tae-woo (as President: an official state work)"
+author_dates = ""
+date = "1989-08-15"
+year = 1989
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제44주년 광복절 경축사"
+search = ["제44주년 광복절 경축사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = []
+
+[[text]]
+id = "kimys_15th_assembly_1996"
+title_ko = "제15대 국회 개원식 대통령 연설 (김영삼, 1996)"
+title_en = "Kim Young-sam's Address at the Opening of the 15th National Assembly (1996)"
+author_ko = "김영삼"
+author_en = "Kim Young-sam (as President: an official state work)"
+author_dates = ""
+date = "1996-07-08"
+year = 1996
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제15대 국회 개원식 대통령 연설"
+search = ["제15대 국회 개원식 대통령 연설"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = ["date"]
+
+[[text]]
+id = "kimdj_16th_assembly_2000"
+title_ko = "제16대 국회 개원식 대통령 연설 (김대중, 2000)"
+title_en = "Kim Dae-jung's Address at the Opening of the 16th National Assembly (2000)"
+author_ko = "김대중"
+author_en = "Kim Dae-jung (as President: an official state work)"
+author_dates = ""
+date = "2000-06-05"
+year = 2000
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "Given days before the first inter-Korean summit (Pyongyang, 13–15 June 2000)."
+source = "wikisource-ko"
+source_title = "제16대 국회 개원식 대통령 연설"
+search = ["제16대 국회 개원식 대통령 연설"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = ["date"]
+
+[[text]]
+id = "roh_mh_japan_diet_2003"
+title_ko = "일본 국회 연설 (노무현, 2003)"
+title_en = "Roh Moo-hyun's Address to the Japanese Diet (2003)"
+author_ko = "노무현"
+author_en = "Roh Moo-hyun (as President: an official state work)"
+author_dates = ""
+date = "2003-06-09"
+year = 2003
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+note = "Delivered in Tokyo during a state visit; this is the Korean text."
+source = "wikisource-ko"
+source_title = "2003년 일본 국회 연설문"
+search = ["2003년 일본 국회 연설문"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
+uncertain = ["date"]
+
+[[text]]
+id = "lee_jm_samiljeol_2026"
+title_ko = "제107주년 삼일절 기념사 (이재명, 2026)"
+title_en = "Lee Jae-myung's March First Movement Day Address (2026)"
+author_ko = "이재명"
+author_en = "Lee Jae-myung (as President: an official state work)"
+author_dates = ""
+date = "2026-03-01"
+year = 2026
+period = "modern"
+themes = ["modern-korea"]
+shelf = "speeches"
+script = "hangul"
+excerpt = false
+
+source = "wikisource-ko"
+source_title = "제107주년 삼일절 기념사"
+search = ["제107주년 삼일절 기념사"]
+pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
 uncertain = []
