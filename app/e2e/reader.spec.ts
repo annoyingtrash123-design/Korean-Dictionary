@@ -171,6 +171,12 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
 
   // the library has Shelves and Timeline only (no "To add" list of planned texts)
   await expect(page.getByRole('tab')).toHaveText(['Shelves', 'Timeline']);
+  // the app is pinned to the screen: the tab bar stays at the bottom and the page itself never scrolls
+  await page.locator('main').evaluate((m) => m.scrollTo(0, 1e6));
+  const pin = await page.evaluate(() => ({ bottom: document.querySelector('.tabbar')!.getBoundingClientRect().bottom, h: innerHeight, doc: document.documentElement.scrollHeight }));
+  expect(Math.round(pin.bottom)).toBe(pin.h);
+  expect(pin.doc).toBe(pin.h);
+  await page.locator('main').evaluate((m) => m.scrollTo(0, 0));
 
   await readerFlow(page);
 
