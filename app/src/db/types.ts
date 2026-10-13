@@ -116,6 +116,8 @@ export interface Engine {
   entry(source: string, id: number): Promise<Entry | null>;
   hanjaChar(ch: string): Promise<HanjaChar | null>;
   wordsWithHanja(ch: string, limit: number, offset: number): Promise<ResultRow[]>;
+  /** Other words whose first English gloss is one of this entry's first two gloss items. */
+  similarWords(source: string, id: number, limit: number): Promise<ResultRow[]>;
   sentences(text: string, limit: number): Promise<{ ko: string; en: string | null; source: string | null }[]>;
   grammarList(): Promise<GrammarRow[]>;
   wordOfDay(date: string): Promise<ResultRow | null>;

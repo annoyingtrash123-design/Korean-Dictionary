@@ -1044,6 +1044,48 @@ pub fn hanja_char(packs: &[&PackDb], ch: &str) -> Result<Option<HanjaChar>> {
     Ok(None)
 }
 
+/// Words with the same meaning as an entry: other single words of the same part of speech whose
+/// first English gloss is the entry's first gloss item (똥 "feces" -> 변, 대변, 인분); the second
+/// item is tried only when the first finds nothing (a later item is often another sense: 먹다
+/// "eat; have"). Entries without an English gloss (Korean-Korean packs) get none.
+pub fn similar_words(packs: &[&PackDb], source: &str, id: i64, limit: usize) -> Result<Vec<ResultRow>> {
+    let Some(e) = entry(packs, source, id)? else { return Ok(vec![]) };
+    let terms: Vec<String> = e
+        .gloss
+        .as_deref()
+        .unwrap_or("")
+        .split([';', ','])
+        .map(|t| {
+            let t = t.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase();
+            t.strip_prefix("to ").map(str::to_string).unwrap_or(t)
+        })
+        .filter(|t| !t.is_empty() && t.chars().count() <= 40)
+        .take(2)
+        .collect();
+    let pack_idx: HashMap<&str, usize> = packs.iter().enumerate().map(|(i, p)| (p.id.as_str(), i)).collect();
+    for t in &terms {
+        let mut cands: Vec<(i64, usize, i64)> = Vec::new();
+        for (pi, p) in packs.iter().enumerate().filter(|(_, p)| p.caps.gloss_terms) {
+            for r in p.conn.query("SELECT score, entry_id FROM gloss_terms WHERE term = ?1 AND tier = 0 ORDER BY score LIMIT 40", &[t.as_str().into()])? {
+                cands.push((r.int(0).unwrap_or(i64::MAX), pi, r.int(1).unwrap_or(0)));
+            }
+        }
+        let order: HashMap<(usize, i64), i64> = cands.iter().map(|c| ((c.1, c.2), c.0)).collect();
+        let mut rows: Vec<ResultRow> = rows_for(packs, &cands, Some("similar"))?
+            .into_iter()
+            .filter(|r| r.kind == "word" && r.hw_norm != e.hw_norm && (e.pos.is_none() || r.pos == e.pos))
+            .collect();
+        rows.sort_by_key(|r| order.get(&(pack_idx[r.pack.as_str()], r.id)).copied().unwrap_or(i64::MAX));
+        let mut seen = HashSet::new();
+        rows.retain(|r| seen.insert(r.hw_norm.clone()));
+        if !rows.is_empty() {
+            rows.truncate(limit);
+            return Ok(rows);
+        }
+    }
+    Ok(vec![])
+}
+
 /// Entries containing the hanja character, most important first.
 pub fn words_with_hanja(packs: &[&PackDb], ch: &str, limit: usize, offset: usize) -> Result<Vec<ResultRow>> {
     let ch: String = ch.chars().take(1).collect();

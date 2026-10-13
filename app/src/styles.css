@@ -186,6 +186,9 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .ex-en { font-size: .85em; line-height: 1.35; color: var(--muted); }
 .sents { padding: 0 16px 8px; } .sents .ex { margin-top: 12px; } .sents .ex:first-child { margin-top: 4px; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 8px; }
+.similar { margin: 14px 0 4px; }
+.similar-h { display: flex; align-items: baseline; gap: 8px; margin: 0 0 4px; font-size: 13px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
+.similar-h .muted { text-transform: none; letter-spacing: 0; font-weight: 400; }
 .chip { display: inline-flex; align-items: baseline; gap: 5px; padding: 3px 10px; border-radius: 14px; background: var(--surface-2); color: inherit; font-size: .9em; }
 .chip:active { background: var(--accent-soft); }
 .chip-type { font-size: .72em; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
@@ -273,7 +276,9 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .toast .link.dim { text-decoration: none; opacity: .8; font-size: 18px; }
 
 .firstrun { max-width: 480px; margin: 0 auto; min-height: 100dvh; padding: calc(env(safe-area-inset-top) + 40px) 20px 32px; display: flex; flex-direction: column; align-items: stretch; }
-.logo { width: 76px; height: 76px; border-radius: 20px; background: var(--surface-2); display: grid; place-items: center; margin-bottom: 18px; }
+.logo { width: 76px; height: 76px; border-radius: 20px; background: var(--bar); display: grid; place-items: center; margin-bottom: 18px; }
+/* the mark on its forest tile (as in the app icon), in both themes */
+.logo, .pane-empty-mark { --brand-leaf: #9db08f; --brand-bud: #a7835e; --brand-bud-2: #c9a57d; --brand-earth: #a7835e; --brand-globe: #f1e8d5; }
 .firstrun h1 { font-size: 28px; font-weight: 700; }
 .lead { color: var(--muted); font-size: 16px; margin: 8px 0 24px; }
 .card { border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 16px 16px; background: var(--surface); }
@@ -320,7 +325,7 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .pane-left .hanja-card { margin-inline: 12px; }
 .pane-empty { height: 100%; min-height: 60vh; max-width: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 6px; padding: 0 24px; }
 .pane-empty .empty-title { margin: 0; color: var(--text); }
-.pane-empty-mark { width: 72px; height: 72px; border-radius: 20px; display: grid; place-items: center; margin-bottom: 14px; background: var(--surface-2); }
+.pane-empty-mark { width: 72px; height: 72px; border-radius: 20px; display: grid; place-items: center; margin-bottom: 14px; background: var(--bar); }
 
 /* ---------- Reader (읽기) ---------- */
 :root {

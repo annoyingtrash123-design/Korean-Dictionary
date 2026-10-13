@@ -30,6 +30,7 @@ export function createEngine(): Engine {
     entry: (source, id) => e().entry(source, id),
     hanjaChar: (ch) => e().hanjaChar(ch),
     wordsWithHanja: (ch, limit, offset) => e().wordsWithHanja(ch, limit, offset),
+    similarWords: (source, id, limit) => e().similarWords(source, id, limit),
     sentences: (text, limit) => e().sentences(text, limit),
     grammarList: () => e().grammarList(),
     wordOfDay: (date) => e().wordOfDay(date),

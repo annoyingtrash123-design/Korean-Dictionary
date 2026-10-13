@@ -104,6 +104,16 @@ test('two-pane tablet layout', async ({ page }) => {
   // an inflected form nothing glosses is searched by its base form, and says so
   await search(page, 'took');
   await expect(page.locator('.pane-left .notice', { hasText: 'Showing results for take' })).toBeVisible();
+  // an entry links words with the same main English meaning (똥 "feces" → 대변, 변, 인분)
+  await search(page, '똥');
+  await page.locator('.pane-left .list .row').first().click();
+  const sim = page.locator('.pane-right').getByRole('region', { name: 'Similar words' });
+  await expect(sim).toBeVisible();
+  await expect(sim.getByRole('link', { name: /대변/ })).toBeVisible();
+  await page.waitForTimeout(300);
+  await shot(page, 'light-entry-similar');
+  await page.goto('/#/');
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible();
 
   // results on the left
   await search(page, '학교');

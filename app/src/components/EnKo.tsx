@@ -71,13 +71,13 @@ export function EnKoPhrases({ phrases }: { phrases: EnKoPhrase[] }) {
 }
 
 /** "Similar English words" block: for a part of speech the Korean dictionaries never gloss the
- *  query with, Korean words reached through its WordNet synonyms (matched automatically, so
+ *  query with, Korean words reached through its short Wiktionary definition or WordNet synonyms (matched automatically, so
  *  each word shows the English synonym it came through). */
 export function EnRel({ senses, term }: { senses: EnRelSense[]; term: string }) {
   let last = '';
   return (
     <section class="enko enko-rel" aria-label="Similar English words">
-      <h2 class="enko-h"><span>Through similar words</span><span class="enko-src">WordNet, CC BY 4.0 · matched automatically</span></h2>
+      <h2 class="enko-h"><span>Through similar words</span><span class="enko-src">WordNet &amp; Wiktionary · matched automatically</span></h2>
       <p class="muted small enko-note">No Korean entry glosses “{term}” in these senses; these are Korean words for its English synonyms.</p>
       <ul class="plain enko-list">
         {senses.map((s) => {

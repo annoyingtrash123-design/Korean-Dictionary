@@ -242,3 +242,60 @@ pub fn phrase_words(term_norm: &str) -> Vec<String> {
     }
     out
 }
+
+/// Most items kept per (word, pos) in the short-definitions file.
+const DEF_ITEMS: usize = 8;
+/// A definition counts as "short" (a synonym, not an explanation) up to this many words.
+const DEF_WORDS: usize = 3;
+
+/// Line of `kaikki-en-defs.tsv` for an English kaikki entry: `word \t kaikki pos \t item|item…`,
+/// the items being what the entry is defined as when that is a word or two ("poo": "(childish)
+/// Feces." -> `feces`), the targets of "alternative form / form of" senses and listed synonyms.
+/// `None` for other languages, multi-word terms and entries without such items. Used to route
+/// English words the Korean dictionaries never gloss to Korean words (`en_rel`).
+pub fn short_defs(line: &[u8]) -> Option<String> {
+    const EN: &[u8] = b"\"lang_code\": \"en\"";
+    if !line.windows(EN.len()).any(|w| w == EN) {
+        return None;
+    }
+    let v: Value = serde_json::from_slice(line).ok()?;
+    let word = norm_term(s(&v, "word"));
+    let pos = s(&v, "pos");
+    if s(&v, "lang_code") != "en" || word.is_empty() || word.contains(' ') || pos.is_empty() || pos == "name" {
+        return None;
+    }
+    let mut items: Vec<String> = Vec::new();
+    let mut push = |t: &str| {
+        let t = norm_term(t.trim().trim_end_matches(['.', ';', ',']));
+        let n = t.split(' ').count();
+        if !t.is_empty() && t != word && n <= DEF_WORDS && t.chars().all(|c| c.is_alphabetic() || " -'".contains(c)) && !items.contains(&t) {
+            items.push(t);
+        }
+    };
+    let words_of = |x: &Value| -> Vec<String> {
+        x.as_array().map(|a| a.iter().map(|w| s(w, "word").to_string()).collect()).unwrap_or_default()
+    };
+    for sense in v.get("senses").and_then(Value::as_array).into_iter().flatten().take(4) {
+        for k in ["alt_of", "form_of"] {
+            for w in words_of(&sense[k]) {
+                push(&w);
+            }
+        }
+        if let Some(g) = sense.get("glosses").and_then(Value::as_array).and_then(|a| a.first()).and_then(Value::as_str) {
+            // "Feces." / "Excrement; feces." / "A journalist." (a leading article is dropped)
+            for part in g.split([';', ',']) {
+                let p = part.trim();
+                let p = p.strip_prefix("A ").or_else(|| p.strip_prefix("An ")).or_else(|| p.strip_prefix("To ")).unwrap_or(p);
+                push(p);
+            }
+        }
+        for w in words_of(&sense["synonyms"]) {
+            push(&w);
+        }
+    }
+    for w in words_of(&v["synonyms"]) {
+        push(&w);
+    }
+    items.truncate(DEF_ITEMS);
+    (!items.is_empty()).then(|| format!("{word}\t{pos}\t{}", items.join("|")))
+}

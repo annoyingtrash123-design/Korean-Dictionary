@@ -137,6 +137,7 @@ export const db = {
   getEntry: (source: string, id: number) => call<Entry | null>('entry', source, id),
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),
   wordsWithHanja: (ch: string, limit: number, offset = 0) => call<ResultRow[]>('wordsWithHanja', ch, limit, offset),
+  similarWords: (source: string, id: number, limit = 8) => call<ResultRow[]>('similarWords', source, id, limit),
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
   pendingTexts: (): Promise<PendingText[]> => (pendingList ??= call<PendingText[]>('pendingTexts').catch((e) => { pendingList = undefined; throw e; })),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),

@@ -29,10 +29,19 @@ pub const FILES: &[(&str, &str)] = &[
 /// mention Korean ([`crate::enwikt::mentions_korean`]), so the work directory and the CI source
 /// cache hold a few hundred MB at most. Skipped when `KDICT_SKIP_ENWIKT` is set.
 pub const ENWIKT_FILE: &str = "kaikki-en-ko.jsonl";
+/// Short definitions / synonyms of every English Wiktionary word ([`crate::enwikt::short_defs`]),
+/// derived while streaming the same extract.
+pub const ENWIKT_DEFS_FILE: &str = "kaikki-en-defs.tsv";
 pub const ENWIKT_URL: &str = "https://kaikki.org/dictionary/English/kaikki.org-dictionary-English.jsonl";
 
 /// Copy the lines of `rd` for which `keep` holds into `out`; returns (lines read, lines kept).
 pub fn filter_lines<R: Read, W: Write>(rd: R, out: &mut W, keep: fn(&[u8]) -> bool) -> Result<(u64, u64)> {
+    filter_lines_and_derive(rd, out, keep, None)
+}
+
+/// [`filter_lines`], also writing `derive(line)` (when `Some`) of every line to a second output.
+pub type Derive<'a> = Option<(&'a mut dyn Write, fn(&[u8]) -> Option<String>)>;
+pub fn filter_lines_and_derive<R: Read, W: Write>(rd: R, out: &mut W, keep: fn(&[u8]) -> bool, mut derive: Derive) -> Result<(u64, u64)> {
     let mut br = BufReader::with_capacity(1 << 20, rd);
     let (mut n, mut k) = (0u64, 0u64);
     let mut line = Vec::new();
@@ -42,6 +51,11 @@ pub fn filter_lines<R: Read, W: Write>(rd: R, out: &mut W, keep: fn(&[u8]) -> bo
             break;
         }
         n += 1;
+        if let Some((w, f)) = derive.as_mut() {
+            if let Some(d) = f(&line) {
+                writeln!(w, "{d}")?;
+            }
+        }
         if keep(&line) {
             out.write_all(&line)?;
             if !line.ends_with(b"\n") {
@@ -51,15 +65,32 @@ pub fn filter_lines<R: Read, W: Write>(rd: R, out: &mut W, keep: fn(&[u8]) -> bo
         }
     }
     out.flush()?;
+    if let Some((w, _)) = derive.as_mut() {
+        w.flush()?;
+    }
     Ok((n, k))
 }
 
-/// Stream `url` through [`filter_lines`] into `dest` (ureq, then curl as a fallback).
-pub fn download_filtered(url: &str, dest: &Path, keep: fn(&[u8]) -> bool) -> Result<(u64, u64)> {
+/// Stream `url` through [`filter_lines`] into `dest` (ureq, then curl as a fallback); with
+/// `derive`, every line's derived row (if any) also goes to that second file.
+/// A derived output: (file, line -> derived row).
+pub type DeriveTo<'a> = Option<(&'a Path, fn(&[u8]) -> Option<String>)>;
+pub fn download_filtered(url: &str, dest: &Path, keep: fn(&[u8]) -> bool, derive: DeriveTo) -> Result<(u64, u64)> {
     if let Some(d) = dest.parent() {
         fs::create_dir_all(d)?;
     }
     let tmp = dest.with_extension("part");
+    let dtmp = derive.map(|(p, _)| p.with_extension("part"));
+    let run = |rd: &mut dyn Read| -> Result<(u64, u64)> {
+        let mut f = io::BufWriter::new(fs::File::create(&tmp)?);
+        match (derive, &dtmp) {
+            (Some((_, func)), Some(dp)) => {
+                let mut d = io::BufWriter::new(fs::File::create(dp)?);
+                filter_lines_and_derive(rd, &mut f, keep, Some((&mut d, func)))
+            }
+            _ => filter_lines(rd, &mut f, keep),
+        }
+    };
     let via_ureq = || -> Result<(u64, u64)> {
         let agent = ureq::AgentBuilder::new()
             .timeout_connect(Duration::from_secs(30))
@@ -68,13 +99,11 @@ pub fn download_filtered(url: &str, dest: &Path, keep: fn(&[u8]) -> bool) -> Res
             .try_proxy_from_env(true)
             .build();
         let resp = agent.get(url).call().map_err(|e| anyhow!("{e}"))?;
-        let mut f = io::BufWriter::new(fs::File::create(&tmp)?);
-        filter_lines(resp.into_reader(), &mut f, keep)
+        run(&mut resp.into_reader())
     };
     let via_curl = || -> Result<(u64, u64)> {
         let mut child = Command::new("curl").args(["-fsSL", "--retry", "2"]).arg(url).stdout(Stdio::piped()).spawn()?;
-        let mut f = io::BufWriter::new(fs::File::create(&tmp)?);
-        let r = filter_lines(child.stdout.take().ok_or_else(|| anyhow!("no curl stdout"))?, &mut f, keep);
+        let r = run(&mut child.stdout.take().ok_or_else(|| anyhow!("no curl stdout"))?);
         let st = child.wait()?;
         if !st.success() {
             return Err(anyhow!("curl exit {st}"));
@@ -99,10 +128,16 @@ pub fn download_filtered(url: &str, dest: &Path, keep: fn(&[u8]) -> bool) -> Res
     match res {
         Ok(r) => {
             fs::rename(&tmp, dest)?;
+            if let (Some((p, _)), Some(dp)) = (derive, &dtmp) {
+                fs::rename(dp, p)?;
+            }
             Ok(r)
         }
         Err(e) => {
             let _ = fs::remove_file(&tmp);
+            if let Some(dp) = &dtmp {
+                let _ = fs::remove_file(dp);
+            }
             Err(e)
         }
     }
@@ -206,14 +241,20 @@ pub fn fetch_nikl(work: &Path) -> Result<()> {
 /// The English Wiktionary extract, cut to lines mentioning Korean (optional; failures only warn).
 fn fetch_enwikt(work: &Path) {
     let dest = work.join(ENWIKT_FILE);
+    let defs = work.join(ENWIKT_DEFS_FILE);
+    let present = |p: &Path| fs::metadata(p).map(|m| m.len() > 0).unwrap_or(false);
     if std::env::var_os("KDICT_SKIP_ENWIKT").is_some() {
         log::info!("{ENWIKT_FILE}: KDICT_SKIP_ENWIKT is set, skipping");
-    } else if fs::metadata(&dest).map(|m| m.len() > 0).unwrap_or(false) {
-        log::info!("{ENWIKT_FILE}: already present, skipping");
+    } else if present(&dest) && present(&defs) {
+        log::info!("{ENWIKT_FILE}, {ENWIKT_DEFS_FILE}: already present, skipping");
     } else {
-        log::info!("downloading {ENWIKT_URL} (keeping lines that mention Korean)");
-        match download_filtered(ENWIKT_URL, &dest, crate::enwikt::mentions_korean) {
-            Ok((n, k)) => log::info!("{ENWIKT_FILE}: kept {k} of {n} lines, {} bytes", fs::metadata(&dest).map(|m| m.len()).unwrap_or(0)),
+        log::info!("downloading {ENWIKT_URL} (keeping lines that mention Korean, and short definitions)");
+        match download_filtered(ENWIKT_URL, &dest, crate::enwikt::mentions_korean, Some((&defs, crate::enwikt::short_defs))) {
+            Ok((n, k)) => log::info!(
+                "{ENWIKT_FILE}: kept {k} of {n} lines, {} bytes; {ENWIKT_DEFS_FILE}: {} bytes",
+                fs::metadata(&dest).map(|m| m.len()).unwrap_or(0),
+                fs::metadata(&defs).map(|m| m.len()).unwrap_or(0)
+            ),
             Err(e) => log::warn!("{ENWIKT_FILE}: download failed ({ENWIKT_URL}): {e:#}"),
         }
     }

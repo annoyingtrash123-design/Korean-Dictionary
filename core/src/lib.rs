@@ -213,6 +213,13 @@ mod wasm_api {
             })
         }
 
+        #[wasm_bindgen(js_name = similarWords)]
+        pub async fn similar_words(&self, source: String, id: f64, limit: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| {
+                to_js(&search::similar_words(&s.all(), &source, id as i64, limit as usize).map_err(js_err)?)
+            })
+        }
+
         pub async fn sentences(&self, text: String, limit: u32) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&search::sentences(&s.all(), &text, limit as usize).map_err(js_err)?))
         }

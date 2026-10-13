@@ -70,6 +70,7 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async entry(s: string, id: number) { await ready; return engine.entry(s, id); },
   async hanjaChar(ch: string) { await ready; return engine.hanjaChar(ch); },
   async wordsWithHanja(ch: string, l: number, o: number) { await ready; return engine.wordsWithHanja(ch, l, o); },
+  async similarWords(s: string, id: number, l: number) { await ready; return engine.similarWords(s, id, l); },
   async sentences(t: string, l: number) { await ready; return engine.sentences(t, l); },
   async grammarList() { await ready; return engine.grammarList(); },
   async lookupInText(t: string, o: number, opts: { packs: string[]; limit?: number }) { await ready; return engine.lookupInText(t, o, opts); },

@@ -76,6 +76,7 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
             {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
           </details>
         ))}
+        {tab === 'dict' && <SimilarWords primary={primary} />}
         {tab === 'words' && <WordsTab primary={primary} />}
         {tab === 'chars' && <CharsTab primary={primary} />}
         {tab === 'sents' && <SentsTab headword={primary.headword} />}
@@ -151,6 +152,26 @@ function Chips({ rels }: { rels?: { type: string; word: string }[] }) {
         <a key={i} class="chip" href={href(wide ? wordPath(r.word) : searchPath(r.word))}><span class="chip-type">{RELTYPE[r.type] ?? r.type}</span> <span class="hangul" lang="ko">{r.word}</span></a>
       ))}
     </div>
+  );
+}
+
+/** Other words with the same main English meaning (똥 "feces" → 변, 대변, 인분), linked. */
+function SimilarWords({ primary }: { primary: Entry }) {
+  const wide = useWide();
+  const r = useAsync(() => db.similarWords(primary.source, primary.id, 8), [primary.source, primary.id]);
+  const rows = r.data ?? [];
+  if (!rows.length) return null;
+  return (
+    <section class="similar" aria-label="Similar words">
+      <h2 class="similar-h">Similar words <span class="muted small">same English meaning</span></h2>
+      <div class="chips">
+        {rows.map((w) => (
+          <a key={`${w.source}${w.id}`} class="chip" href={href(wide ? wordPath(w.headword) : searchPath(w.headword))} title={w.gloss ?? undefined}>
+            <span class="hangul" lang="ko">{w.headword}</span>{w.gloss ? <span class="chip-type"> {w.gloss.split(/[;,]/)[0]}</span> : null}
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }
 

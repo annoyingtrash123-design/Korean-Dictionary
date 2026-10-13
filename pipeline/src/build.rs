@@ -34,6 +34,9 @@ pub struct Sources {
     pub enwikt: Option<PathBuf>,
     /// Open English WordNet (WN-LMF XML, gzipped): optional `en_rel` table of the core pack.
     pub wordnet: Option<PathBuf>,
+    /// Short English Wiktionary definitions (`kaikki-en-defs.tsv`, derived by `fetch`): a
+    /// further route into `en_rel` ("poo" -> feces -> 똥).
+    pub enwikt_defs: Option<PathBuf>,
 }
 
 fn xml_files(dir: &Path, limit: Option<usize>) -> Vec<PathBuf> {
@@ -92,6 +95,7 @@ impl Sources {
             zhwikt: opt(work.join("kaikki-zh.jsonl"), "kaikki Chinese JSONL (skipping the zhwikt pack)"),
             enwikt: opt(work.join(crate::fetch::ENWIKT_FILE), "kaikki English JSONL (skipping the en_ko table)"),
             wordnet: opt(work.join(crate::fetch::WORDNET_FILE), "Open English WordNet (skipping the en_rel table)"),
+            enwikt_defs: opt(work.join(crate::fetch::ENWIKT_DEFS_FILE), "English Wiktionary short definitions (en_rel uses WordNet only)"),
         }
     }
 }
@@ -797,7 +801,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     };
     // WordNet synonyms -> en_rel (optional; needs gloss_terms)
     let en_rel = match &src.wordnet {
-        Some(p) => build_en_rel(&conn, p)?,
+        Some(p) => build_en_rel(&conn, p, src.enwikt_defs.as_deref())?,
         None => None,
     };
 
@@ -985,7 +989,7 @@ pub struct EnRelStats {
 
 /// WordNet synonyms -> `en_rel` (inside the open transaction, after `gloss_terms`). A parse
 /// failure only logs a warning and leaves the table out.
-pub fn build_en_rel(conn: &Connection, p: &Path) -> Result<Option<EnRelStats>> {
+pub fn build_en_rel(conn: &Connection, p: &Path, defs: Option<&Path>) -> Result<Option<EnRelStats>> {
     use std::io::Write;
     let t = Instant::now();
     let open = || -> Result<_> { Ok(flate2::read::GzDecoder::new(BufReader::with_capacity(1 << 20, fs::File::open(p)?))) };
@@ -996,8 +1000,16 @@ pub fn build_en_rel(conn: &Connection, p: &Path) -> Result<Option<EnRelStats>> {
             return Ok(None);
         }
     };
+    let defs = match defs.map(|d| fs::File::open(d).map_err(anyhow::Error::from).and_then(|f| crate::wordnet::parse_defs(BufReader::new(f)))) {
+        Some(Ok(d)) => d,
+        Some(Err(e)) => {
+            log::warn!("English Wiktionary short definitions failed: {e:#}");
+            Default::default()
+        }
+        None => Default::default(),
+    };
     let mut hits = crate::wordnet::sql_hits(conn);
-    let rows = crate::wordnet::rows(&wn, &mut hits)?;
+    let rows = crate::wordnet::rows(&wn, &defs, &mut hits)?;
     conn.execute_batch(schema::EN_REL)?;
     let mut gz = flate2::write::GzEncoder::new(Vec::new(), flate2::Compression::default());
     let mut terms = 0i64;
@@ -1016,8 +1028,8 @@ pub fn build_en_rel(conn: &Connection, p: &Path) -> Result<Option<EnRelStats>> {
     conn.execute_batch(schema::EN_REL_INDEX)?;
     let gz_bytes = gz.finish()?.len() as i64;
     log::info!(
-        "en_rel: {} rows for {} English words ({} WordNet lemmas), ~{:.1} MB gz ({:.1}s)",
-        rows.len(), terms, wn.entries.len(), gz_bytes as f64 / 1e6, t.elapsed().as_secs_f32()
+        "en_rel: {} rows for {} English words ({} WordNet lemmas, {} Wiktionary short definitions), ~{:.1} MB gz ({:.1}s)",
+        rows.len(), terms, wn.entries.len(), defs.len(), gz_bytes as f64 / 1e6, t.elapsed().as_secs_f32()
     );
     if gz_bytes > MAX_EN_REL_GZ {
         log::warn!("en_rel is over its size budget: ~{gz_bytes} bytes gz (> {MAX_EN_REL_GZ})");

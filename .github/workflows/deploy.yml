@@ -54,7 +54,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: pipeline/.work
-          key: sources-${{ steps.key.outputs.month }}
+          key: sources-v2-${{ steps.key.outputs.month }}
 
       - name: Fetch sources
         if: steps.datacache.outputs.cache-hit != 'true'

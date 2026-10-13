@@ -441,6 +441,9 @@ fn end_to_end_mini_build() {
 </Lexicon></LexicalResource>"#).unwrap();
         gz.finish().unwrap();
     }
+    // a short Wiktionary definition: "schoolhouse" is not needed here, "academy" is defined as a school
+    let defs = dir.path().join("defs.tsv");
+    std::fs::write(&defs, "academy\tnoun\tschool|college\n").unwrap();
     let src = Sources {
         krdict: vec![fx("krdict_sample.xml")],
         stdict: vec![fx("stdict_sample.xml")],
@@ -454,6 +457,7 @@ fn end_to_end_mini_build() {
         zhwikt: Some(fx("zhwikt_sample.jsonl")),
         enwikt: Some(fx("kaikki_en_sample.jsonl")),
         wordnet: Some(wn),
+        enwikt_defs: Some(defs),
     };
     let out = dir.path().join("out");
     let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
@@ -513,7 +517,8 @@ fn end_to_end_mini_build() {
     // en_rel (WordNet synonyms): only words without a Korean gloss of their own get rows
     assert_eq!(q::<String>(&c, "SELECT ko || '<' || via || '>' || pos FROM en_rel WHERE term_norm='schoolhouse'"), "학교<school>noun");
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM en_rel WHERE term_norm='school'"), 0);
-    assert_eq!(core_counts["en_rel"].as_i64(), Some(1));
+    assert_eq!(q::<String>(&c, "SELECT ko || '<' || via || '>' || sense FROM en_rel WHERE term_norm='academy'"), "학교<school>“school, college”");
+    assert_eq!(core_counts["en_rel"].as_i64(), Some(2));
     assert!(q::<String>(&c, "SELECT value FROM meta WHERE key='sources'").contains("wordnet"));
     // covering-index plans for the hot queries
     let plan = |sql: &str| -> String {
@@ -899,4 +904,20 @@ fn quality_gate_en_ko_only_when_built() {
     let mut full = base.clone();
     full["en_ko"] = json!(200000);
     assert!(build::quality_gate(&full, None).is_empty());
+}
+
+#[test]
+fn enwikt_short_definitions() {
+    use kdict_pipeline::enwikt::short_defs;
+    let poo = br#"{"word": "poo", "pos": "noun", "lang_code": "en", "senses": [{"glosses": ["Feces."], "tags": ["childish"]}, {"glosses": ["An act of defecation."]}], "synonyms": [{"word": "poop"}, {"word": "number two"}]}"#;
+    assert_eq!(short_defs(poo).as_deref(), Some("poo\tnoun\tfeces|act of defecation|poop|number two"));
+    let alt = br#"{"word": "colour", "pos": "noun", "lang_code": "en", "senses": [{"glosses": ["Alternative spelling of color"], "alt_of": [{"word": "color"}]}]}"#;
+    assert_eq!(short_defs(alt).as_deref(), Some("colour\tnoun\tcolor"));
+    let rep = br#"{"word": "reporter", "pos": "noun", "lang_code": "en", "senses": [{"glosses": ["A journalist."]}]}"#;
+    assert_eq!(short_defs(rep).as_deref(), Some("reporter\tnoun\tjournalist"));
+    // long definitions, other languages, names and phrases give nothing
+    assert!(short_defs(br#"{"word": "report", "pos": "noun", "lang_code": "en", "senses": [{"glosses": ["A piece of information describing events."]}]}"#).is_none());
+    assert!(short_defs(br#"{"word": "rapport", "pos": "noun", "lang_code": "fr", "senses": [{"glosses": ["report"]}]}"#).is_none());
+    assert!(short_defs(br#"{"word": "Korea", "pos": "name", "lang_code": "en", "senses": [{"glosses": ["Peninsula."]}]}"#).is_none());
+    assert!(short_defs(br#"{"word": "report card", "pos": "noun", "lang_code": "en", "senses": [{"glosses": ["Grades."]}]}"#).is_none());
 }

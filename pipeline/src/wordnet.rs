@@ -117,22 +117,88 @@ fn clip(s: &str) -> String {
 /// Korean (headword, tier) hits of an English gloss item, restricted to a Korean pos ("" = any).
 type Hits<'a> = dyn FnMut(&str, &str) -> Result<Vec<(String, i64)>> + 'a;
 
-/// The `en_rel` rows: for every single-word WordNet lemma and part of speech that has no
-/// same-pos Korean gloss match of its own.
-pub fn rows(wn: &WordNet, hits: &mut Hits) -> Result<Vec<RelRow>> {
-    let mut keys: Vec<&(String, char)> =
-        wn.entries.keys().filter(|(l, _)| l.chars().count() >= 3 && l.chars().all(|c| c.is_alphabetic() || c == '-')).collect();
-    keys.sort();
-    let mut cache: HashMap<(String, &str), Vec<(String, i64)>> = HashMap::new();
-    // `kpos` "" = any part of speech
-    let mut get = |w: &str, kpos: &'static str, hits: &mut Hits| -> Result<Vec<(String, i64)>> {
-        if let Some(v) = cache.get(&(w.to_string(), kpos)) {
+/// Short Wiktionary definitions: (word, pos letter) -> items ("poo" noun -> feces, poop, …).
+pub type Defs = HashMap<(String, char), Vec<String>>;
+
+/// Read `kaikki-en-defs.tsv` (`word \t kaikki pos \t item|item…`); other parts of speech are skipped.
+pub fn parse_defs<R: std::io::BufRead>(rd: R) -> Result<Defs> {
+    let mut out: Defs = HashMap::new();
+    for line in rd.lines() {
+        let line = line?;
+        let mut it = line.split('\t');
+        let (Some(w), Some(pos), Some(items)) = (it.next(), it.next(), it.next()) else { continue };
+        let p = match pos {
+            "noun" => 'n',
+            "verb" => 'v',
+            "adj" => 'a',
+            "adv" => 'r',
+            _ => continue,
+        };
+        let v = out.entry((w.to_string(), p)).or_default();
+        for i in items.split('|') {
+            if !v.iter().any(|x| x == i) {
+                v.push(i.to_string());
+            }
+        }
+    }
+    Ok(out)
+}
+
+/// Memoised gloss lookups.
+struct Lookup<'a, 'b> {
+    hits: &'a mut Hits<'b>,
+    cache: HashMap<(String, &'static str), Vec<(String, i64)>>,
+}
+
+impl Lookup<'_, '_> {
+    /// `kpos` "" = any part of speech
+    fn get(&mut self, w: &str, kpos: &'static str) -> Result<Vec<(String, i64)>> {
+        if let Some(v) = self.cache.get(&(w.to_string(), kpos)) {
             return Ok(v.clone());
         }
-        let v = hits(w, kpos)?;
-        cache.insert((w.to_string(), kpos), v.clone());
+        let v = (self.hits)(w, kpos)?;
+        self.cache.insert((w.to_string(), kpos), v.clone());
         Ok(v)
-    };
+    }
+
+    /// Korean words reached through `cands` (single words other than `lemma`): kept when a
+    /// candidate is their first gloss (2 points) or two candidates reach them; (ko, via).
+    fn through(&mut self, lemma: &str, p: char, cands: &[String]) -> Result<Vec<(String, String)>> {
+        let mut seen: HashSet<String> = HashSet::new();
+        let mut score: HashMap<String, (i64, usize, String)> = HashMap::new(); // ko -> (score, first seen, via)
+        for c in cands {
+            let cl = c.to_lowercase();
+            // multi-word synonyms ("sound out") match Korean words too loosely
+            if cl == lemma || cl.contains(' ') || !seen.insert(cl.clone()) {
+                continue;
+            }
+            let mut this: HashSet<String> = HashSet::new();
+            for (ko, tier) in self.get(&cl, pos_names(p).1)?.into_iter().take(HITS_PER_SYNONYM) {
+                if !this.insert(ko.clone()) {
+                    continue;
+                }
+                let n = score.len();
+                let e = score.entry(ko).or_insert((0, n, cl.clone()));
+                e.0 += if tier == 0 { 2 } else { 1 };
+            }
+        }
+        let mut words: Vec<(usize, String, String)> =
+            score.into_iter().filter(|(_, (s, _, _))| *s >= 2).map(|(ko, (_, i, via))| (i, ko, via)).collect();
+        words.sort();
+        words.truncate(MAX_WORDS);
+        Ok(words.into_iter().map(|(_, ko, via)| (ko, via)).collect())
+    }
+}
+
+/// The `en_rel` rows: for every single-word English word (WordNet lemma or Wiktionary entry) and
+/// part of speech without a same-pos Korean gloss match of its own. A short Wiktionary definition
+/// ("poo": feces) is the first route; WordNet synsets are used only when it finds nothing.
+pub fn rows(wn: &WordNet, defs: &Defs, hits: &mut Hits) -> Result<Vec<RelRow>> {
+    let ok = |l: &str| l.chars().count() >= 3 && l.chars().all(|c| c.is_alphabetic() || c == '-');
+    let mut keys: Vec<&(String, char)> = wn.entries.keys().chain(defs.keys()).filter(|(l, _)| ok(l)).collect();
+    keys.sort();
+    keys.dedup();
+    let mut lk = Lookup { hits, cache: HashMap::new() };
     let mut out = Vec::new();
     // rank runs on across the parts of speech of one lemma (keys are sorted by lemma)
     let mut rank = 0;
@@ -142,14 +208,26 @@ pub fn rows(wn: &WordNet, hits: &mut Hits) -> Result<Vec<RelRow>> {
             rank = 0;
             prev = Some(lemma);
         }
-        if FUNCTION_WORDS.contains(&lemma.as_str()) || !get(lemma, pos_names(*p).1, hits)?.is_empty() {
+        if FUNCTION_WORDS.contains(&lemma.as_str()) || !lk.get(lemma, pos_names(*p).1)?.is_empty() {
             continue; // the dictionaries already answer this word in this pos
         }
-        if get(lemma, "", hits)?.iter().filter(|(_, t)| *t == 0).count() >= WELL_COVERED {
+        if lk.get(lemma, "")?.iter().filter(|(_, t)| *t == 0).count() >= WELL_COVERED {
             continue;
         }
+        let key = (lemma.clone(), *p);
+        if let Some(items) = defs.get(&key) {
+            let words = lk.through(lemma, *p, items)?;
+            if !words.is_empty() {
+                let sense = clip(&format!("“{}”", items.iter().take(4).cloned().collect::<Vec<_>>().join(", ")));
+                for (ko, via) in words {
+                    out.push(RelRow { term_norm: lemma.clone(), pos: pos_names(*p).0, sense: sense.clone(), via, ko, rank });
+                    rank += 1;
+                }
+                continue;
+            }
+        }
         let mut senses = 0;
-        for sid in &wn.entries[&(lemma.clone(), *p)] {
+        for sid in wn.entries.get(&key).into_iter().flatten() {
             let Some((members, def, similar)) = wn.synsets.get(sid) else { continue };
             let mut cands: Vec<String> = members.clone();
             if *p == 'a' {
@@ -159,33 +237,12 @@ pub fn rows(wn: &WordNet, hits: &mut Hits) -> Result<Vec<RelRow>> {
                     }
                 }
             }
-            let mut seen: HashSet<String> = HashSet::new();
-            let mut score: HashMap<String, (i64, usize, String)> = HashMap::new(); // ko -> (score, first seen, via)
-            for c in cands {
-                let cl = c.to_lowercase();
-                // multi-word synonyms ("sound out") match Korean words too loosely
-                if cl == *lemma || cl.contains(' ') || !seen.insert(cl.clone()) {
-                    continue;
-                }
-                let mut this: HashSet<String> = HashSet::new();
-                for (ko, tier) in get(&cl, pos_names(*p).1, hits)?.into_iter().take(HITS_PER_SYNONYM) {
-                    if !this.insert(ko.clone()) {
-                        continue;
-                    }
-                    let n = score.len();
-                    let e = score.entry(ko).or_insert((0, n, cl.clone()));
-                    e.0 += if tier == 0 { 2 } else { 1 };
-                }
-            }
-            let mut words: Vec<(usize, String, String)> =
-                score.into_iter().filter(|(_, (s, _, _))| *s >= 2).map(|(ko, (_, i, via))| (i, ko, via)).collect();
+            let words = lk.through(lemma, *p, &cands)?;
             if words.is_empty() {
                 continue;
             }
-            words.sort();
-            words.truncate(MAX_WORDS);
             let sense = clip(def);
-            for (_, ko, via) in words {
+            for (ko, via) in words {
                 out.push(RelRow { term_norm: lemma.clone(), pos: pos_names(*p).0, sense: sense.clone(), via, ko, rank });
                 rank += 1;
             }
@@ -253,7 +310,7 @@ mod tests {
                 _ => vec![],
             })
         };
-        let rows = rows(&wn, &mut hits).unwrap();
+        let rows = rows(&wn, &Defs::new(), &mut hits).unwrap();
         let art: Vec<(&str, &str, &str)> =
             rows.iter().filter(|r| r.term_norm == "articulate").map(|r| (r.ko.as_str(), r.via.as_str(), r.pos)).collect();
         assert_eq!(art, vec![("명료하다", "eloquent", "adjective"), ("유창하다", "fluent", "adjective"), ("발음하다", "pronounce", "verb")]);
@@ -268,7 +325,7 @@ mod tests {
                 _ => vec![],
             })
         };
-        assert!(super::rows(&wn, &mut hits2).unwrap().iter().all(|r| r.term_norm != "articulate"));
+        assert!(super::rows(&wn, &Defs::new(), &mut hits2).unwrap().iter().all(|r| r.term_norm != "articulate"));
         assert!(rows[0].sense.starts_with("expressing yourself easily"));
         assert!(rows[0].sense.chars().count() <= SENSE_CHARS + 1);
     }

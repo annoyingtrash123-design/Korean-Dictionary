@@ -876,3 +876,21 @@ fn warm_up_runs_in_many_small_steps_then_stops() {
     assert!(steps > 100, "only {steps} warm-up steps");
     assert!(!warm_step(&packs, steps + 1));
 }
+
+#[test]
+fn similar_words_share_a_first_gloss() {
+    let base = build_core();
+    // a second noun glossed "study" (copied from 공부, id 11)
+    base.conn.exec("CREATE TEMP TABLE t AS SELECT * FROM entries WHERE id = 11; UPDATE t SET id = 99, headword = '학습', hw_norm = '학습', rank = 90, gloss = 'study; learning'; INSERT INTO entries SELECT * FROM t;").unwrap();
+    let core = modernize(base);
+    // 공부 "study; studies" -> 학습 "study; learning" (same first gloss item, both nouns)
+    let r = similar_words(&[&core], "krdict", 11, 8).unwrap();
+    assert_eq!(r.iter().map(|x| x.headword.as_str()).collect::<Vec<_>>(), ["학습"]);
+    // 공부하다 "to study" is a verb: the nouns are not offered
+    assert!(similar_words(&[&core], "krdict", 10, 8).unwrap().is_empty());
+    // other dictionaries' 학교 entries are the same word, not a similar one
+    assert!(similar_words(&[&core], "krdict", 1, 8).unwrap().is_empty());
+    // unknown entry, and packs without gloss_terms
+    assert!(similar_words(&[&core], "krdict", 999, 8).unwrap().is_empty());
+    assert!(similar_words(&[&build_core()], "krdict", 11, 8).unwrap().is_empty());
+}

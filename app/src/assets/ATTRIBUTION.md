@@ -47,6 +47,8 @@ licensed separately.
 * Content used: the Korean entries of the translation tables of English Wiktionary entries
   (English term, part of speech, sense label, Korean word, romanisation), shown for English
   searches as "Wiktionary translations" and "English phrases" (`en_ko` table of `core.sqlite`).
+  Short definitions and synonyms of English entries ("poo": feces) are also used to suggest
+  Korean words for English words the dictionaries never gloss (`en_rel`, "Through similar words").
   Hanja in brackets, non-Hangul items and "translations to be checked" are left out.
 * Source: English Wiktionary contributors; machine-readable extraction by
   Tatu Ylonen's wiktextract (https://kaikki.org/dictionary/English/).
