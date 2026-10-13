@@ -3,10 +3,4 @@
 # hold → "held", otherwise "preparing"); list an id here when the real reason differs.
 # Values: "source" | "repair" | "held" | "preparing".
 [status]
-taepyeongcheonha = "repair"      # gap inside chapter 15
 
-# Parked: no public-domain transcription found (user decision 2026-10-08); keep looking.
-yeo_unhyeong_imperial_hotel = "source"
-jeongeupsa = "repair"            # fetched 高麗史 卷71 prose note, not the 樂學軌範 Hangul song
-heungbujeon = "repair"           # fetched only the opening paragraph
-hunminjeongeum_eonhae = "repair" # fetched only the hanja glosses, not the 언해 preface

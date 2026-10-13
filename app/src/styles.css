@@ -519,9 +519,6 @@ mark.hl { background: var(--rd-hl); color: inherit; border-radius: 4px; box-shad
 .rd-ctl { margin: 12px 0 4px; }
 .rd-trl { display: flex; align-items: center; gap: 8px; }
 .rd-body { margin-top: 12px; }
-.rd-todo > p { margin: 4px 0 6px; padding: 0 16px; }
-.rd-todo-row { cursor: default; }
-.rd-todo-row .rd-row-title { color: var(--muted); }
 
 /* background essay (AI-written context for a primary source) */
 .rd-bg { margin: 4px 16px 10px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }

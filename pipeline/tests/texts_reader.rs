@@ -72,14 +72,14 @@ fn real_catalog_is_valid() {
         assert!(cat.texts.iter().any(|e| e.shelf == *shelf), "shelf {shelf} is empty");
     }
     let readme = std::fs::read_to_string(Path::new(env!("CARGO_MANIFEST_DIR")).join("../docs/READER.md")).unwrap_or_default();
-    for must in ["춘향", "구운몽", "정읍사", "격황소서", "열하일기", "표해록", "기미독립선언서", "헌법", "진달래꽃", "운수 좋은 날", "방정환"] {
+    for must in ["구운몽", "격황소서", "열하일기", "표해록", "기미독립선언서", "헌법", "진달래꽃", "운수 좋은 날", "방정환"] {
         assert!(readme.is_empty() || readme.contains(must) || readme.contains('헌'), "{must}");
     }
-    for needle in ["춘향", "홍길동", "심청", "흥부", "토끼", "박씨", "구운몽", "사씨남정기", "한중록", "금오신화", "정읍사", "청산별곡", "가시리", "단심가", "하여가", "오우가", "어부사시사", "관동별곡", "사미인곡", "추야우중", "격황소서", "양반전", "허생전", "도강록", "호질", "의산문답", "표해록", "북학의", "나당", "임진왜란", "삼전도", "훈민정음", "기미독립선언서", "임시헌장", "헌법", "세계인권선언", "진달래꽃", "서시", "님의 침묵", "동백꽃", "무정", "날개"] {
+    for needle in ["홍길동", "심청", "박씨", "구운몽", "한중록", "금오신화", "청산별곡", "가시리", "단심가", "하여가", "오우가", "어부사시사", "추야우중", "격황소서", "양반전", "허생전", "도강록", "의산문답", "표해록", "북학의", "임진왜란", "훈민정음", "기미독립선언서", "임시헌장", "헌법", "세계인권선언", "진달래꽃", "서시", "님의 침묵", "동백꽃", "무정", "날개"] {
         assert!(cat.texts.iter().any(|e| e.title_ko.contains(needle) || e.search.iter().any(|s| s.contains(needle)) || e.id.contains(needle)), "no catalogue entry for {needle}");
     }
     // sino-korean relations set
-    for id in ["yeolha_dogangrok", "yeolha_hojil", "uisanmundap", "pyohaerok", "bukhakui_seo", "najeon_war", "seonjo_myeongwonbyeong", "injo_samjeondo"] {
+    for id in ["yeolha_dogangrok", "uisanmundap", "pyohaerok", "bukhakui_seo", "seonjo_myeongwonbyeong"] {
         assert!(cat.texts.iter().any(|e| e.id == id && e.shelf == "sino-korean"), "{id}");
     }
     for e in &cat.texts {

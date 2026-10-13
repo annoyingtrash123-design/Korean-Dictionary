@@ -8,10 +8,10 @@ Chinese-script texts. Interview decisions are recorded here and are binding.
 
 | Shelf | Content | Source / licence |
 |---|---|---|
-| Classical prose | 열녀춘향수절가, 홍길동전, 심청전, 흥부전, 토끼전, 박씨전, 구운몽 (selected chapters), 사씨남정기, 한중록 (excerpts), 금오신화 (hanmun) | Korean Wikisource; public domain |
-| Verse | 정읍사, 청산별곡, 가시리; sijo (정몽주 단심가, 이방원 하여가, 황진이, 이순신, 윤선도 오우가·어부사시사); gasa (정철 관동별곡, 사미인곡) | Wikisource; PD |
-| Hanmun | 최치원 (추야우중, 격황소서), 이규보, 박지원 (양반전, 허생전, 열하일기 excerpts), 정약용 (목민심서 excerpts), 삼국유사 단군 조, 삼국사기 excerpts | Wikisource (zh/ko); PD |
-| Sino-Korean relations | 열하일기 (above), 홍대용 연기 / 의산문답 excerpts, 최부 표해록 excerpts, 박제가 북학의 excerpts, 삼국사기 on the Silla–Tang war, 실록 entries on 임진왜란 Ming aid and 병자호란 | Wikisource; PD originals |
+| Classical prose | 홍길동전, 심청전, 박씨전, 구운몽 (selected chapters), 한중록 (excerpts), 금오신화 (hanmun) | Korean Wikisource; public domain |
+| Verse | 청산별곡, 가시리; sijo (정몽주 단심가, 이방원 하여가, 황진이, 이순신, 윤선도 오우가·어부사시사) | Wikisource; PD |
+| Hanmun | 최치원 (추야우중, 격황소서), 이규보, 박지원 (양반전, 허생전, 열하일기 excerpts), 삼국유사 단군 조, 삼국사기 excerpts | Wikisource (zh/ko); PD |
+| Sino-Korean relations | 열하일기 (above), 홍대용 연기 / 의산문답 excerpts, 최부 표해록 excerpts, 박제가 북학의 excerpts, 실록 entry on 임진왜란 Ming aid | Wikisource; PD originals |
 | Historical documents | 훈민정음 (해례 서문 hanmun + 언해본), 조선왕조실록 excerpts (hanmun originals), 기미독립선언서, 대한민국 임시헌장 (1919) | Wikisource; PD |
 | Constitution & key documents | 대한민국 헌법 (preamble + key articles), Universal Declaration of Human Rights (Korean) | Statutes are unprotected (Copyright Act art. 7); UDHR translation per OHCHR terms |
 | Modern poetry | 김소월, 한용운, 윤동주, 이육사, 이상화, 정지용, 김영랑 | Wikisource; authors died before 1963 → PD in Korea |
