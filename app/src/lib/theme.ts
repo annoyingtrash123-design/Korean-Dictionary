@@ -3,10 +3,12 @@ import type { ColorKey, Settings } from './settings';
 export const COLOR_VARS: Record<ColorKey, string> = {
   accent: '--accent', bg: '--bg', text: '--text', hangul: '--hangul', hanja: '--hanja',
 };
-export const THEME_COLOR_FALLBACK = { light: '#f1e8d5', dark: '#1d1915', sepia: '#e4d3b2' } as const;
+export const THEME_COLOR_FALLBACK = { light: '#f1e8d5', dark: '#1d1915' } as const;
 
-export function resolveTheme(theme: Settings['theme'], prefersDark: boolean): 'light' | 'dark' | 'sepia' {
-  return theme === 'system' ? (prefersDark ? 'dark' : 'light') : theme;
+/** Light (parchment) or dark. A stored 'sepia' (an older theme) is now light. */
+export function resolveTheme(theme: Settings['theme'], prefersDark: boolean): 'light' | 'dark' {
+  if (theme === 'system') return prefersDark ? 'dark' : 'light';
+  return theme === 'dark' ? 'dark' : 'light';
 }
 
 /** Apply settings to the document: data-theme, custom colour overrides, entry font size. */

@@ -15,7 +15,7 @@ import { inlineParts, parseMarkdown } from '../lib/markdown';
 import { bytesNeeded, fmtMB } from '../lib/storage';
 import type { Manifest } from '../lib/types';
 
-const THEMES: [ThemeName, string][] = [['light', 'Light'], ['dark', 'Dark'], ['sepia', 'Sepia'], ['system', 'System']];
+const THEMES: [ThemeName, string][] = [['light', 'Light'], ['dark', 'Dark'], ['system', 'System']];
 const COLORS: [ColorKey, string][] = [['accent', 'Accent'], ['bg', 'Background'], ['text', 'Text'], ['hangul', 'Hangul'], ['hanja', 'Hanja']];
 
 export function checkForUpdate(): Promise<Manifest | null> {

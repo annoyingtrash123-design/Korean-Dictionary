@@ -20,13 +20,14 @@
           var s = JSON.parse(localStorage.getItem('kd.settings') || '{}');
           var t = s.theme || 'system';
           if (t === 'system') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          if (t !== 'dark') t = 'light'; // the old Sepia theme is now Light (parchment)
           var r = document.documentElement;
           r.setAttribute('data-theme', t);
           var m = { accent: '--accent', bg: '--bg', text: '--text', hangul: '--hangul', hanja: '--hanja' };
           var c = s.colors || {};
           for (var k in m) if (c[k]) r.style.setProperty(m[k], c[k]);
           r.style.setProperty('--entry-font-size', (s.fontSize || 17) + 'px');
-          var bg = c.bg || { light: '#f1e8d5', dark: '#1d1915', sepia: '#e4d3b2' }[t];
+          var bg = c.bg || { light: '#f1e8d5', dark: '#1d1915' }[t];
           if (bg) document.querySelector('meta[name=theme-color]').setAttribute('content', bg);
         } catch (e) {}
       })();

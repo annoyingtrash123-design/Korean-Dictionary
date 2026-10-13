@@ -9,7 +9,7 @@ describe('theme', () => {
   it('resolves system theme', () => {
     expect(resolveTheme('system', true)).toBe('dark');
     expect(resolveTheme('system', false)).toBe('light');
-    expect(resolveTheme('sepia', true)).toBe('sepia');
+    expect(resolveTheme('sepia', true)).toBe('light');
   });
   it('sets data-theme, custom colours and font size', () => {
     const t = applyTheme({ theme: 'dark', colors: { accent: '#ff0000', hanja: '#00ff00' }, fontSize: 20 }, document);
