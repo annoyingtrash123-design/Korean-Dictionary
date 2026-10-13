@@ -53,6 +53,15 @@ licensed separately.
 * Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
   https://creativecommons.org/licenses/by-sa/4.0/ and the GNU Free Documentation License.
 
+## Open English WordNet
+* Content used: lemmas, synset membership, "similar" relations and definitions, combined with
+  the dictionaries' own English glosses to suggest Korean words for English words they never
+  use as a gloss ("Through similar words", `en_rel` table of `core.sqlite`). Matches are
+  computed automatically and labelled as such.
+* Source: Open English WordNet 2024 (https://en-word.net), derived from Princeton WordNet 3.0
+  (© 2006 Princeton University, WordNet 3.0 licence).
+* Licence: Creative Commons Attribution 4.0 (CC BY 4.0) — https://creativecommons.org/licenses/by/4.0/
+
 ## kengdic
 * Author: Charles Muller / Garfield Nate (https://github.com/garfieldnate/kengdic),
   derived from the EZ-Corean / Korean-English dictionary data.

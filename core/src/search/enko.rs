@@ -40,6 +40,146 @@ pub struct EnKoPhrase {
     pub words: Vec<EnKoWord>,
 }
 
+/// A Korean word reached through an English synonym (`via`).
+#[derive(Debug, Clone, Serialize, PartialEq)]
+pub struct EnRelWord {
+    pub ko: String,
+    pub via: String,
+}
+
+/// Korean words for one WordNet sense of the query term (a part of speech the Korean
+/// dictionaries never gloss it with), through its synonyms.
+#[derive(Debug, Clone, Serialize, PartialEq)]
+pub struct EnRelSense {
+    pub pos: String,
+    pub sense: Option<String>,
+    pub words: Vec<EnRelWord>,
+}
+
+/// `en_rel` rows of `t`, grouped by (pos, sense) in rank order.
+pub fn related(p: &PackDb, t: &str) -> Result<Vec<EnRelSense>> {
+    let rows = p.conn.query("SELECT pos, sense, via, ko FROM en_rel WHERE term_norm = ?1 ORDER BY rank", &[t.into()])?;
+    let mut out: Vec<EnRelSense> = Vec::new();
+    for r in rows {
+        let (pos, sense) = (r.string(0), r.text(1));
+        let w = EnRelWord { via: r.string(2), ko: r.string(3) };
+        match out.last_mut() {
+            Some(g) if g.pos == pos && g.sense == sense => g.words.push(w),
+            _ => out.push(EnRelSense { pos, sense, words: vec![w] }),
+        }
+    }
+    Ok(out)
+}
+
+/// Irregular English forms -> base form (the common ones; regular endings are handled by rule).
+const IRREGULAR: &[(&str, &str)] = &[
+    ("am", "be"), ("is", "be"), ("are", "be"), ("was", "be"), ("were", "be"), ("been", "be"), ("being", "be"),
+    ("has", "have"), ("had", "have"), ("does", "do"), ("did", "do"), ("done", "do"), ("went", "go"), ("gone", "go"),
+    ("took", "take"), ("taken", "take"), ("gave", "give"), ("given", "give"), ("came", "come"), ("saw", "see"),
+    ("seen", "see"), ("made", "make"), ("said", "say"), ("got", "get"), ("gotten", "get"), ("knew", "know"),
+    ("known", "know"), ("thought", "think"), ("told", "tell"), ("found", "find"), ("left", "leave"), ("felt", "feel"),
+    ("brought", "bring"), ("bought", "buy"), ("caught", "catch"), ("taught", "teach"), ("sought", "seek"),
+    ("fought", "fight"), ("kept", "keep"), ("slept", "sleep"), ("meant", "mean"), ("met", "meet"), ("sent", "send"),
+    ("spent", "spend"), ("built", "build"), ("held", "hold"), ("stood", "stand"), ("understood", "understand"),
+    ("lost", "lose"), ("paid", "pay"), ("laid", "lay"), ("led", "lead"), ("fed", "feed"), ("fled", "flee"),
+    ("ran", "run"), ("began", "begin"), ("begun", "begin"), ("drank", "drink"), ("drunk", "drink"), ("sang", "sing"),
+    ("sung", "sing"), ("swam", "swim"), ("rang", "ring"), ("sank", "sink"), ("wrote", "write"), ("written", "write"),
+    ("rode", "ride"), ("ridden", "ride"), ("drove", "drive"), ("driven", "drive"), ("rose", "rise"), ("risen", "rise"),
+    ("ate", "eat"), ("eaten", "eat"), ("fell", "fall"), ("fallen", "fall"), ("forgot", "forget"), ("forgotten", "forget"),
+    ("chose", "choose"), ("chosen", "choose"), ("spoke", "speak"), ("spoken", "speak"), ("broke", "break"),
+    ("broken", "break"), ("woke", "wake"), ("woken", "wake"), ("wore", "wear"), ("worn", "wear"), ("tore", "tear"),
+    ("torn", "tear"), ("bore", "bear"), ("born", "bear"), ("stole", "steal"), ("stolen", "steal"), ("froze", "freeze"),
+    ("frozen", "freeze"), ("grew", "grow"), ("grown", "grow"), ("threw", "throw"), ("thrown", "throw"), ("flew", "fly"),
+    ("flown", "fly"), ("drew", "draw"), ("drawn", "draw"), ("blew", "blow"), ("blown", "blow"), ("shook", "shake"),
+    ("shaken", "shake"), ("hid", "hide"), ("hidden", "hide"), ("bit", "bite"), ("bitten", "bite"), ("won", "win"),
+    ("sat", "sit"), ("struck", "strike"), ("stuck", "stick"), ("hung", "hang"), ("dug", "dig"), ("lent", "lend"),
+    ("bent", "bend"), ("heard", "hear"), ("sold", "sell"), ("shot", "shoot"), ("lit", "light"), ("slid", "slide"),
+    ("men", "man"), ("women", "woman"), ("children", "child"), ("people", "person"), ("feet", "foot"),
+    ("teeth", "tooth"), ("geese", "goose"), ("mice", "mouse"), ("lives", "life"), ("wives", "wife"),
+    ("knives", "knife"), ("leaves", "leaf"), ("wolves", "wolf"), ("halves", "half"), ("shelves", "shelf"),
+    ("better", "good"), ("best", "good"), ("worse", "bad"), ("worst", "bad"), ("further", "far"), ("farther", "far"),
+];
+
+/// Base-form candidates of a single English word, most likely first ("studies" -> "study").
+pub fn en_lemmas(w: &str) -> Vec<String> {
+    let mut v: Vec<String> = Vec::new();
+    if let Some((_, b)) = IRREGULAR.iter().find(|(f, _)| *f == w) {
+        v.push(b.to_string());
+    }
+    let n = w.chars().count();
+    if n < 4 || !w.chars().all(|c| c.is_ascii_lowercase() || c == '-') {
+        return v;
+    }
+    let stem = |suf: &str| w.strip_suffix(suf).map(str::to_string);
+    let undouble = |s: &str| -> Option<String> {
+        let b = s.as_bytes();
+        let k = b.len();
+        (k >= 3 && b[k - 1] == b[k - 2] && !b"aeiouslz".contains(&b[k - 1])).then(|| s[..k - 1].to_string())
+    };
+    let mut push = |s: Option<String>| {
+        if let Some(s) = s {
+            if s.len() >= 2 && s != w && !v.contains(&s) {
+                v.push(s);
+            }
+        }
+    };
+    for (suf, rep) in [("ies", "y"), ("ied", "y"), ("ier", "y"), ("iest", "y"), ("ily", "y")] {
+        push(stem(suf).map(|s| s + rep));
+    }
+    for suf in ["ing", "ed", "er", "est"] {
+        if let Some(s) = stem(suf) {
+            push(undouble(&s));
+            push(Some(s.clone()));
+            push(Some(s + "e"));
+        }
+    }
+    for suf in ["es", "s", "ly", "ness"] {
+        push(stem(suf));
+    }
+    v
+}
+
+/// Does any pack answer `t` (a gloss item, a Wiktionary translation, and with `rel` also a
+/// WordNet row)?
+fn known(packs: &[&PackDb], t: &str, rel: bool) -> Result<bool> {
+    for p in packs {
+        let mut sqls: Vec<&str> = Vec::new();
+        if p.caps.gloss_terms {
+            sqls.push("SELECT 1 FROM gloss_terms WHERE term = ?1 LIMIT 1");
+        }
+        if p.caps.en_ko {
+            sqls.push("SELECT 1 FROM en_ko WHERE term_norm = ?1 LIMIT 1");
+        }
+        if rel && p.caps.en_rel {
+            sqls.push("SELECT 1 FROM en_rel WHERE term_norm = ?1 LIMIT 1");
+        }
+        for sql in sqls {
+            if !p.conn.query(sql, &[t.into()])?.is_empty() {
+                return Ok(true);
+            }
+        }
+    }
+    Ok(false)
+}
+
+/// The base form to search instead of a single English word that nothing answers directly
+/// ("took" -> "take", "articulated" -> "articulate"); `None` when the query itself is known
+/// or no candidate is.
+pub fn base_form(packs: &[&PackDb], q: &str) -> Result<Option<String>> {
+    let t = en_term(q);
+    // WordNet rows of the query itself do not count: WordNet lists inflected forms as words too
+    // ("said", "going"), and the base form ("say", "go") answers those better
+    if t.contains(' ') || !packs.iter().any(|p| p.caps.gloss_terms) || known(packs, &t, false)? {
+        return Ok(None);
+    }
+    for c in en_lemmas(&t) {
+        if known(packs, &c, true)? {
+            return Ok(Some(c));
+        }
+    }
+    Ok(None)
+}
+
 /// Lookup form of an English query: lower-cased, whitespace collapsed, leading "to " dropped.
 pub fn en_term(q: &str) -> String {
     let ql = q.split_whitespace().collect::<Vec<_>>().join(" ").to_lowercase();
@@ -143,6 +283,12 @@ pub fn attach(packs: &[&PackDb], q: &str, r: &mut SearchResult) -> Result<()> {
     if t.is_empty() || !t.chars().any(|c| c.is_alphabetic()) {
         return Ok(());
     }
+    for p in packs.iter().filter(|p| p.caps.en_rel) {
+        let rel = related(p, &t)?;
+        if !rel.is_empty() && r.related.is_none() {
+            r.related = Some(rel);
+        }
+    }
     for p in packs.iter().filter(|p| p.caps.en_ko) {
         let tr = translations(p, &t)?;
         let ph = phrases(p, &t)?;
@@ -192,6 +338,11 @@ INSERT INTO en_ko VALUES
   ('reporter', NULL, 'noun', NULL, '기자', NULL, 0),
   ('korea', 'Korea', 'proper noun', 'peninsula', '한국', 'han''guk', 0);
 INSERT INTO en_ko_words VALUES ('report', 'file a report'), ('report', 'weather report'), ('card', 'report card'), ('sick', 'report sick');
+CREATE TABLE en_rel (term_norm TEXT NOT NULL, pos TEXT NOT NULL, sense TEXT, via TEXT NOT NULL, ko TEXT NOT NULL, rank INTEGER NOT NULL);
+INSERT INTO en_rel VALUES
+  ('articulate', 'adjective', 'expressing yourself easily', 'fluent', '유창하다', 0),
+  ('articulate', 'adjective', 'expressing yourself easily', 'fluent', '유려하다', 1),
+  ('articulate', 'verb', 'speak in a certain way', 'pronounce', '발음하다', 2);
 "#;
 
     fn pack(with_en_ko: bool) -> PackDb {
@@ -258,6 +409,44 @@ INSERT INTO en_ko_words VALUES ('report', 'file a report'), ('report', 'weather 
         let r = search(&[&old], "report", None).unwrap();
         assert_eq!(r.rows.len(), 1);
         assert!(r.translations.is_none() && r.phrases.is_none());
+    }
+
+    #[test]
+    fn related_words_and_base_forms() {
+        let p = pack(true);
+        assert!(p.caps.en_rel);
+        let r = search(&[&p], "articulate", None).unwrap();
+        let rel = r.related.unwrap();
+        let got: Vec<(&str, Vec<(&str, &str)>)> =
+            rel.iter().map(|g| (g.pos.as_str(), g.words.iter().map(|w| (w.ko.as_str(), w.via.as_str())).collect())).collect();
+        assert_eq!(got, vec![("adjective", vec![("유창하다", "fluent"), ("유려하다", "fluent")]), ("verb", vec![("발음하다", "pronounce")])]);
+        assert!(r.en_base.is_none());
+        // an inflected form nothing answers falls back to its base form, and says so
+        let r = search(&[&p], "reports", None).unwrap();
+        assert_eq!(r.en_base.as_deref(), Some("report"));
+        assert_eq!(r.rows[0].headword, "보고");
+        // a base form known only through WordNet still counts
+        let r = search(&[&p], "articulated", None).unwrap();
+        assert_eq!(r.en_base.as_deref(), Some("articulate"));
+        assert!(r.related.is_some());
+        // known words and unknown words without a known base are searched as typed
+        assert!(search(&[&p], "report", None).unwrap().en_base.is_none());
+        assert!(search(&[&p], "zebras", None).unwrap().en_base.is_none());
+        let j = serde_json::to_value(search(&[&p], "report", None).unwrap()).unwrap();
+        assert!(j.get("related").is_none() && j.get("enBase").is_none());
+    }
+
+    #[test]
+    fn lemma_candidates() {
+        assert_eq!(en_lemmas("took"), ["take"]);
+        assert!(en_lemmas("studies").starts_with(&["study".to_string()]));
+        assert!(en_lemmas("stopped").contains(&"stop".to_string()));
+        assert!(en_lemmas("making").contains(&"make".to_string()));
+        assert!(en_lemmas("walked").contains(&"walk".to_string()));
+        assert!(en_lemmas("boxes").contains(&"box".to_string()));
+        assert!(en_lemmas("successfully").contains(&"successful".to_string()));
+        assert!(en_lemmas("cat").is_empty());
+        assert!(en_lemmas("Hello").is_empty());
     }
 
     #[test]

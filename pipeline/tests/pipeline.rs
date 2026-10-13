@@ -430,6 +430,17 @@ fn end_to_end_mini_build() {
         }
         zw.finish().unwrap();
     }
+    // a two-entry WordNet: "schoolhouse" (no Korean gloss of its own) shares a synset with "school"
+    let wn = dir.path().join("wn.xml.gz");
+    {
+        let mut gz = flate2::write::GzEncoder::new(std::fs::File::create(&wn).unwrap(), flate2::Compression::default());
+        gz.write_all(br#"<?xml version="1.0"?><LexicalResource><Lexicon id="t">
+<LexicalEntry id="e1"><Lemma writtenForm="school" partOfSpeech="n"/><Sense id="s1" synset="S1"/></LexicalEntry>
+<LexicalEntry id="e2"><Lemma writtenForm="schoolhouse" partOfSpeech="n"/><Sense id="s2" synset="S1"/></LexicalEntry>
+<Synset id="S1" partOfSpeech="n" members="e1 e2"><Definition>a building where young people receive education</Definition></Synset>
+</Lexicon></LexicalResource>"#).unwrap();
+        gz.finish().unwrap();
+    }
     let src = Sources {
         krdict: vec![fx("krdict_sample.xml")],
         stdict: vec![fx("stdict_sample.xml")],
@@ -442,6 +453,7 @@ fn end_to_end_mini_build() {
         cedict: Some(fx("cedict_sample.u8")),
         zhwikt: Some(fx("zhwikt_sample.jsonl")),
         enwikt: Some(fx("kaikki_en_sample.jsonl")),
+        wordnet: Some(wn),
     };
     let out = dir.path().join("out");
     let manifest = build::run(&BuildOpts { out: out.clone(), sources: src, chunk_bytes: 20_000_000, allow_partial: true, texts: None }).unwrap();
@@ -498,6 +510,11 @@ fn end_to_end_mini_build() {
     assert_eq!(core_counts["en_ko"].as_i64(), Some(11));
     assert!(core_counts["en_ko_gz_bytes"].as_i64().unwrap() > 0);
     assert!(q::<String>(&c, "SELECT value FROM meta WHERE key='sources'").contains("enwikt"));
+    // en_rel (WordNet synonyms): only words without a Korean gloss of their own get rows
+    assert_eq!(q::<String>(&c, "SELECT ko || '<' || via || '>' || pos FROM en_rel WHERE term_norm='schoolhouse'"), "학교<school>noun");
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM en_rel WHERE term_norm='school'"), 0);
+    assert_eq!(core_counts["en_rel"].as_i64(), Some(1));
+    assert!(q::<String>(&c, "SELECT value FROM meta WHERE key='sources'").contains("wordnet"));
     // covering-index plans for the hot queries
     let plan = |sql: &str| -> String {
         let mut st = c.prepare(&format!("EXPLAIN QUERY PLAN {sql}")).unwrap();

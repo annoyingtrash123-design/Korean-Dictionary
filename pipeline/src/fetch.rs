@@ -7,12 +7,15 @@ use std::path::Path;
 use std::process::{Command, Stdio};
 use std::time::Duration;
 
+pub const WORDNET_FILE: &str = "english-wordnet.xml.gz";
 pub const NIKL_URL: &str = "https://github.com/spellcheck-ko/korean-dict-nikl";
 pub const FILES: &[(&str, &str)] = &[
     ("kaikki-ko.jsonl", "https://kaikki.org/dictionary/Korean/kaikki.org-dictionary-Korean.jsonl"),
     ("kengdic.tsv", "https://raw.githubusercontent.com/garfieldnate/kengdic/master/kengdic.tsv"),
     ("ko_50k.txt", "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/ko/ko_50k.txt"),
     ("Unihan.zip", "https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip"),
+    // Open English WordNet (CC BY 4.0): the optional en_rel table
+    (WORDNET_FILE, "https://github.com/globalwordnet/english-wordnet/releases/download/2024-edition/english-wordnet-2024.xml.gz"),
     ("tatoeba/kor_sentences.tsv.bz2", "https://downloads.tatoeba.org/exports/per_language/kor/kor_sentences.tsv.bz2"),
     ("tatoeba/eng_sentences.tsv.bz2", "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2"),
     ("tatoeba/links.tar.bz2", "https://downloads.tatoeba.org/exports/links.tar.bz2"),

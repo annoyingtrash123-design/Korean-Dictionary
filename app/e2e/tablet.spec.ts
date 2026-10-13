@@ -6,6 +6,14 @@ const SHOTS = join(process.cwd(), '..', 'docs', 'screenshots');
 mkdirSync(SHOTS, { recursive: true });
 const shot = (page: Page, name: string) => page.screenshot({ path: join(SHOTS, `tablet-${name}.png`) });
 
+/** The core pack carries WordNet-derived related words (`en_rel`, optional source). */
+const HAS_EN_REL = (() => {
+  try {
+    const m = JSON.parse(readFileSync(join(process.cwd(), 'public', 'data', 'manifest.json'), 'utf8'));
+    return (m.packs?.find((p: { id: string }) => p.id === 'core')?.counts?.en_rel ?? 0) > 0;
+  } catch { return false; }
+})();
+
 /** The core pack carries Wiktionary translation tables (`en_ko`, optional source). */
 const HAS_EN_KO = (() => {
   try {
@@ -83,6 +91,19 @@ test('two-pane tablet layout', async ({ page }) => {
   if (HAS_EN_KO) await expect(page.locator('.pane-left').getByRole('region', { name: 'Wiktionary translations' })).toBeVisible();
   await page.waitForTimeout(500);
   await shot(page, 'light-results-report');
+
+  // an English word no Korean entry glosses as an adjective: Korean words through its synonyms
+  if (HAS_EN_REL) {
+    await search(page, 'articulate');
+    const rel = page.locator('.pane-left').getByRole('region', { name: 'Similar English words' });
+    await expect(rel).toBeVisible();
+    await expect(rel.getByRole('link', { name: '유창하다' })).toBeVisible();
+    await page.waitForTimeout(300);
+    await shot(page, 'light-results-articulate');
+  }
+  // an inflected form nothing glosses is searched by its base form, and says so
+  await search(page, 'took');
+  await expect(page.locator('.pane-left .notice', { hasText: 'Showing results for take' })).toBeVisible();
 
   // results on the left
   await search(page, '학교');

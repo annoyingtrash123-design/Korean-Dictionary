@@ -44,6 +44,9 @@ export interface Sentence { ko: string; en: string | null; source: string | null
 export interface EnKoWord { ko: string; roman?: string | null }
 export interface EnKoSense { term: string; pos: string; sense?: string | null; words: EnKoWord[] }
 export interface EnKoPhrase { term: string; pos: string; sense?: string | null; words: EnKoWord[] }
+/** A Korean word reached through an English synonym (`via`), from WordNet. */
+export interface EnRelWord { ko: string; via: string }
+export interface EnRelSense { pos: string; sense?: string | null; words: EnRelWord[] }
 
 export type SearchMode = 'hangul' | 'latin' | 'han' | 'empty';   // UI-side script detection
 export interface SearchResult {
@@ -51,6 +54,11 @@ export interface SearchResult {
   deconj?: { lemma: string; rule: string }[]; grammarHints?: string[];
   /** English queries: Korean translations of the query term, by part of speech and sense. */
   translations?: EnKoSense[];
+  /** English queries: Korean words through WordNet synonyms, for parts of speech the Korean
+   *  dictionaries never gloss the query with ("articulate" adj. → fluent → 유창하다). */
+  related?: EnRelSense[];
+  /** English queries: base form searched instead of the query ("took" → "take"). */
+  enBase?: string;
   /** English queries: multi-word expressions starting with / containing the query. */
   phrases?: EnKoPhrase[];
 }

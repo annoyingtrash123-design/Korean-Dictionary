@@ -45,6 +45,8 @@ pub struct Caps {
     pub en_ko: bool,
     /// `en_ko_words` (word -> multi-word `en_ko` term) exists.
     pub en_ko_words: bool,
+    /// `en_rel` (Korean words reached through WordNet synonyms) exists.
+    pub en_rel: bool,
 }
 
 /// An opened pack database.
@@ -84,6 +86,7 @@ impl PackDb {
             texts: false,
             en_ko: names.contains("en_ko"),
             en_ko_words: names.contains("en_ko_words"),
+            en_rel: names.contains("en_rel"),
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
@@ -186,6 +189,14 @@ pub struct SearchResult {
     /// English queries: multi-word expressions starting with / containing the query, with Korean.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub phrases: Option<Vec<EnKoPhrase>>,
+    /// English queries without a Korean gloss in some part of speech: Korean words reached
+    /// through WordNet synonyms, by pos and sense.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub related: Option<Vec<EnRelSense>>,
+    /// English queries: the base form actually searched ("took" -> "take"), when the query
+    /// itself matched nothing.
+    #[serde(rename = "enBase", skip_serializing_if = "Option::is_none")]
+    pub en_base: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -406,8 +417,11 @@ pub fn search(packs: &[&PackDb], query: &str, limit: Option<usize>) -> Result<Se
         }
         Ok(r)
     } else {
-        let mut r = search_english(packs, &q, limit)?;
-        enko::attach(packs, &q, &mut r)?;
+        let base = enko::base_form(packs, &q)?;
+        let qq = base.as_deref().unwrap_or(&q);
+        let mut r = search_english(packs, qq, limit)?;
+        enko::attach(packs, qq, &mut r)?;
+        r.en_base = base;
         Ok(r)
     }
 }
@@ -1185,7 +1199,7 @@ pub fn word_of_day(packs: &[&PackDb], date: &str) -> Result<Option<ResultRow>> {
 mod tests;
 
 mod enko;
-pub use enko::{EnKoPhrase, EnKoSense, EnKoWord};
+pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;
 pub use lookup::{lookup_in_text, TextMatch};

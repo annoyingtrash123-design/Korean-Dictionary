@@ -32,6 +32,8 @@ pub struct Sources {
     /// English Wiktionary (kaikki English JSONL, cut to lines mentioning Korean by `fetch`):
     /// optional `en_ko` table of the core pack.
     pub enwikt: Option<PathBuf>,
+    /// Open English WordNet (WN-LMF XML, gzipped): optional `en_rel` table of the core pack.
+    pub wordnet: Option<PathBuf>,
 }
 
 fn xml_files(dir: &Path, limit: Option<usize>) -> Vec<PathBuf> {
@@ -89,6 +91,7 @@ impl Sources {
             cedict: opt(work.join("cedict.zip"), "CC-CEDICT (skipping the cedict pack)"),
             zhwikt: opt(work.join("kaikki-zh.jsonl"), "kaikki Chinese JSONL (skipping the zhwikt pack)"),
             enwikt: opt(work.join(crate::fetch::ENWIKT_FILE), "kaikki English JSONL (skipping the en_ko table)"),
+            wordnet: opt(work.join(crate::fetch::WORDNET_FILE), "Open English WordNet (skipping the en_rel table)"),
         }
     }
 }
@@ -538,6 +541,7 @@ fn source_info(name: &str, n: i64) -> Value {
         "cedict" => ("CC BY-SA 4.0", "https://www.mdbg.net/chinese/dictionary?page=cc-cedict"),
         "zhwikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/Chinese/"),
         "enwikt" => ("CC BY-SA 4.0", "https://kaikki.org/dictionary/English/"),
+        "wordnet" => ("CC BY 4.0", "https://en-word.net (Open English WordNet 2024)"),
         "unihan" => ("Unicode License", "https://www.unicode.org/charts/unihan.html"),
         "freq" => ("CC BY-SA 4.0", "https://github.com/hermitdave/FrequencyWords"),
         _ => ("", ""),
@@ -791,6 +795,11 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         Some(p) => build_en_ko(&conn, p)?,
         None => None,
     };
+    // WordNet synonyms -> en_rel (optional; needs gloss_terms)
+    let en_rel = match &src.wordnet {
+        Some(p) => build_en_rel(&conn, p)?,
+        None => None,
+    };
 
     conn.execute_batch(
         "INSERT INTO wotd(n, entry_id) SELECT row_number() OVER (ORDER BY id) - 1, id FROM entries \
@@ -878,11 +887,19 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         counts.insert("en_ko_terms".into(), ek.terms.into());
         counts.insert("en_ko_gz_bytes".into(), ek.gz_bytes.into());
     }
+    if let Some(er) = &en_rel {
+        counts.insert("en_rel".into(), er.rows.into());
+        counts.insert("en_rel_terms".into(), er.terms.into());
+        counts.insert("en_rel_gz_bytes".into(), er.gz_bytes.into());
+    }
     let counts = Value::Object(counts);
 
     let mut sources = Map::new();
     if let Some(ek) = &en_ko {
         sources.insert("enwikt".into(), source_info("enwikt", ek.terms));
+    }
+    if let Some(er) = &en_rel {
+        sources.insert("wordnet".into(), source_info("wordnet", er.terms));
     }
     for s in ["krdict", "wikt", "kengdic"] {
         sources.insert(s.into(), source_info(s, c.by_source.get(s).copied().unwrap_or(0)));
@@ -958,6 +975,60 @@ pub fn build_en_ko(conn: &Connection, p: &Path) -> Result<Option<EnKoStats>> {
     }
     Ok(Some(stats))
 }
+
+/// Summary of the `en_rel` table: (rows, terms, gzip bytes of its text).
+pub struct EnRelStats {
+    pub rows: i64,
+    pub terms: i64,
+    pub gz_bytes: i64,
+}
+
+/// WordNet synonyms -> `en_rel` (inside the open transaction, after `gloss_terms`). A parse
+/// failure only logs a warning and leaves the table out.
+pub fn build_en_rel(conn: &Connection, p: &Path) -> Result<Option<EnRelStats>> {
+    use std::io::Write;
+    let t = Instant::now();
+    let open = || -> Result<_> { Ok(flate2::read::GzDecoder::new(BufReader::with_capacity(1 << 20, fs::File::open(p)?))) };
+    let wn = match crate::wordnet::parse(open) {
+        Ok(w) => w,
+        Err(e) => {
+            log::warn!("WordNet failed: {e:#}");
+            return Ok(None);
+        }
+    };
+    let mut hits = crate::wordnet::sql_hits(conn);
+    let rows = crate::wordnet::rows(&wn, &mut hits)?;
+    conn.execute_batch(schema::EN_REL)?;
+    let mut gz = flate2::write::GzEncoder::new(Vec::new(), flate2::Compression::default());
+    let mut terms = 0i64;
+    {
+        let mut st = conn.prepare("INSERT INTO en_rel(term_norm,pos,sense,via,ko,rank) VALUES(?,?,?,?,?,?)")?;
+        let mut last = "";
+        for r in &rows {
+            st.execute(params![r.term_norm, r.pos, r.sense, r.via, r.ko, r.rank])?;
+            writeln!(gz, "{}\t{}\t{}\t{}\t{}\t{}", r.term_norm, r.pos, r.sense, r.via, r.ko, r.rank)?;
+            if r.term_norm != last {
+                terms += 1;
+                last = &r.term_norm;
+            }
+        }
+    }
+    conn.execute_batch(schema::EN_REL_INDEX)?;
+    let gz_bytes = gz.finish()?.len() as i64;
+    log::info!(
+        "en_rel: {} rows for {} English words ({} WordNet lemmas), ~{:.1} MB gz ({:.1}s)",
+        rows.len(), terms, wn.entries.len(), gz_bytes as f64 / 1e6, t.elapsed().as_secs_f32()
+    );
+    if gz_bytes > MAX_EN_REL_GZ {
+        log::warn!("en_rel is over its size budget: ~{gz_bytes} bytes gz (> {MAX_EN_REL_GZ})");
+    }
+    Ok(Some(EnRelStats { rows: rows.len() as i64, terms, gz_bytes }))
+}
+
+/// Size budget of the `en_rel` table (gzip of its text); over it the build logs a warning.
+pub const MAX_EN_REL_GZ: i64 = 2_000_000;
+/// Minimum `en_rel` rows when WordNet was present (a healthy build has ~45k).
+pub const MIN_EN_REL: i64 = 10_000;
 
 /// Size budget of the `en_ko` tables (gzip of their text); over it the build logs a warning.
 pub const MAX_EN_KO_GZ: i64 = 6_000_000;
@@ -1240,6 +1311,9 @@ pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
     // en_ko is optional: checked only when it was built (its counts are present)
     if core.get("en_ko").is_some() && n(core, "en_ko") < MIN_EN_KO {
         bad.push(format!("core.en_ko = {} (< {MIN_EN_KO})", n(core, "en_ko")));
+    }
+    if core.get("en_rel").is_some() && n(core, "en_rel") < MIN_EN_REL {
+        bad.push(format!("core.en_rel = {} (< {MIN_EN_REL})", n(core, "en_rel")));
     }
     if let Some(st) = stdict {
         if n(st, "entries") < MIN_STDICT {

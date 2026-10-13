@@ -82,3 +82,10 @@ CREATE TABLE en_ko (
 CREATE TABLE en_ko_words (word TEXT NOT NULL, term_norm TEXT NOT NULL, PRIMARY KEY (word, term_norm)) WITHOUT ROWID;
 "#;
 pub const EN_KO_INDEX: &str = "CREATE INDEX en_ko_term ON en_ko(term_norm, rank);";
+/// Korean words for English words reached through WordNet synonyms (optional, core pack).
+pub const EN_REL: &str = r#"
+CREATE TABLE en_rel (
+  term_norm TEXT NOT NULL, pos TEXT NOT NULL, sense TEXT, via TEXT NOT NULL, ko TEXT NOT NULL, rank INTEGER NOT NULL
+);
+"#;
+pub const EN_REL_INDEX: &str = "CREATE INDEX en_rel_term ON en_rel(term_norm, rank);";

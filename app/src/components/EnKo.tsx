@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import type { EnKoPhrase, EnKoSense, EnKoWord } from '../lib/types';
+import type { EnKoPhrase, EnKoSense, EnKoWord, EnRelSense } from '../lib/types';
 import { PHRASES_COLLAPSED, SENSES_COLLAPSED, collapse, groupTranslations, posShort, visiblePhrases } from '../lib/enko';
 import { href, searchPath } from '../lib/router';
 
@@ -66,6 +66,38 @@ export function EnKoPhrases({ phrases }: { phrases: EnKoPhrase[] }) {
         ))}
       </ul>
       {(hidden > 0 || (open && phrases.length > PHRASES_COLLAPSED + 2)) && <More open={open} total={phrases.length} label="All phrases" onToggle={() => setOpen(!open)} />}
+    </section>
+  );
+}
+
+/** "Similar English words" block: for a part of speech the Korean dictionaries never gloss the
+ *  query with, Korean words reached through its WordNet synonyms (matched automatically, so
+ *  each word shows the English synonym it came through). */
+export function EnRel({ senses, term }: { senses: EnRelSense[]; term: string }) {
+  let last = '';
+  return (
+    <section class="enko enko-rel" aria-label="Similar English words">
+      <h2 class="enko-h"><span>Through similar words</span><span class="enko-src">WordNet, CC BY 4.0 · matched automatically</span></h2>
+      <p class="muted small enko-note">No Korean entry glosses “{term}” in these senses; these are Korean words for its English synonyms.</p>
+      <ul class="plain enko-list">
+        {senses.map((s) => {
+          const pos = s.pos !== last ? s.pos : '';
+          last = s.pos;
+          return (
+            <li class="enko-row" key={`${s.pos}|${s.sense ?? ''}`}>
+              <span class="pos" title={pos || undefined}>{pos ? posShort(pos) : ''}</span>
+              <span class="enko-body">
+                {s.sense ? <span class="muted enko-sense">{s.sense}</span> : null}
+                <span class="enko-words">
+                  {s.words.map((w, i) => (
+                    <span key={w.ko}>{i > 0 && ', '}<a class="hangul" lang="ko" href={href(searchPath(w.ko))}>{w.ko}</a><span class="muted enko-via"> ({w.via})</span></span>
+                  ))}
+                </span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }

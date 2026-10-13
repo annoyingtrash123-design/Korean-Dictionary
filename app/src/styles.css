@@ -120,6 +120,10 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .enko-words a { text-decoration: none; }
 .enko-words a:hover, .enko-words a:focus-visible { text-decoration: underline; }
 .enko-more { margin-top: 6px; }
+.enko-rel .enko-h { flex-wrap: wrap; }
+.enko-rel .enko-src { white-space: normal; }
+.enko-note { margin: 0 0 4px; font-size: 12.5px; }
+.enko-via { font-size: 12.5px; }
 .banner { display: block; margin: 8px 16px; padding: 10px 14px; border-radius: 12px; background: var(--accent); color: var(--on-accent); font-size: 14px; }
 .banner strong { display: block; }
 .empty { padding: 48px 24px; text-align: center; }
