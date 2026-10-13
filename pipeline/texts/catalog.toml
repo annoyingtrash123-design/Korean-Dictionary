@@ -3730,7 +3730,7 @@ themes = ["colonial-independence"]
 shelf = "political-writing"
 script = "mixed"
 excerpt = false
-note = "Collective authorship; signed by the founders 張志淵, 尹孝正, 沈宜性, 林珍洙, 金相範. The 국사편찬위원회 transcription drops some hangul 하 in verb endings (e.g. 不講於自强之術야); that is the source text, not a fetch error."
+note = "Collective authorship; signed by the founders 張志淵, 尹孝定, 沈宜性, 林珍洙, 金相範. The 국사편찬위원회 transcription drops some hangul 하 in verb endings (e.g. 不講於自强之術야); that is the source text, not a fetch error."
 source = "history-db"
 source_title = "大韓自强會趣旨書 (大韓自强會月報 第1號, 本會會報)"
 level_ids = ["ma_001_0010_0030"]
@@ -3738,7 +3738,7 @@ text_from = "大韓自强會趣旨書"
 text_to = "大韓自强會 規則"
 alt_titles = ["대한자강회취지서", "大韓自强會趣旨書", "大韓自强會 趣旨書", "대한자강회월보/취지서", "대한자강회 월보 제1호"]
 search = ["대한자강회 취지서", "大韓自强會 趣旨書", "대한자강회월보 제1호", "自强의 術 教育 殖産"]
-pd_basis = "Collective society statement of 1906; all plausible drafters died before 1963 (장지연 1921, 윤효정 1929)."
+pd_basis = "Collective society statement of 1906; all plausible drafters died before 1963 (장지연 1921, 윤효정 1939)."
 uncertain = ["author", "author_dates"]
 
 # resource: LOW; 신민회 취지서 (1907) was a secret society's prospectus, often cited in 한국독립운동사 and not widely transcribed; try 신민회 and 신민회 취지서
