@@ -3,7 +3,7 @@ import type { ColorKey, Settings } from './settings';
 export const COLOR_VARS: Record<ColorKey, string> = {
   accent: '--accent', bg: '--bg', text: '--text', hangul: '--hangul', hanja: '--hanja',
 };
-export const THEME_COLOR_FALLBACK = { light: '#faf8f5', dark: '#16181a', sepia: '#f3e8d2' } as const;
+export const THEME_COLOR_FALLBACK = { light: '#f1e8d5', dark: '#1d1915', sepia: '#e4d3b2' } as const;
 
 export function resolveTheme(theme: Settings['theme'], prefersDark: boolean): 'light' | 'dark' | 'sepia' {
   return theme === 'system' ? (prefersDark ? 'dark' : 'light') : theme;

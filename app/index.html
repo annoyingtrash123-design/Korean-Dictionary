@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Korean Dictionary</title>
     <meta name="description" content="Offline Korean–English dictionary" />
-    <meta name="theme-color" content="#faf8f5" />
+    <meta name="theme-color" content="#f1e8d5" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -26,7 +26,7 @@
           var c = s.colors || {};
           for (var k in m) if (c[k]) r.style.setProperty(m[k], c[k]);
           r.style.setProperty('--entry-font-size', (s.fontSize || 17) + 'px');
-          var bg = c.bg || { light: '#faf8f5', dark: '#16181a', sepia: '#f3e8d2' }[t];
+          var bg = c.bg || { light: '#f1e8d5', dark: '#1d1915', sepia: '#e4d3b2' }[t];
           if (bg) document.querySelector('meta[name=theme-color]').setAttribute('content', bg);
         } catch (e) {}
       })();

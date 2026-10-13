@@ -8,6 +8,7 @@ import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
 import { settings, updateSettings } from '../lib/settings';
 import { useStore } from '../lib/store';
 import type { Manifest } from '../lib/types';
+import { LogoMark } from '../components/Logo';
 
 export function FirstRun() {
   const s = useStore(settings);
@@ -32,7 +33,7 @@ export function FirstRun() {
 
   return (
     <div class="firstrun">
-      <div class="logo" aria-hidden="true">한</div>
+      <div class="logo" aria-hidden="true"><LogoMark size={62} /></div>
       <h1>Korean Dictionary</h1>
       <p class="lead">A fast, private Korean–English dictionary that works offline. It needs a one-time download of the dictionary data.</p>
       {needsHomeScreenHint(persisted, isStandalone(), dismissed) && (

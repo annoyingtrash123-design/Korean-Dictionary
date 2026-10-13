@@ -6,15 +6,19 @@
 }
 /* ---------- Theme tokens (presets; custom colours are set inline on :root) ---------- */
 :root, :root[data-theme='light'] {
-  --bg: #faf8f5; --text: #1f2321; --accent: #2f6f5e; --hangul: #14324d; --hanja: #a2492b;
+  /* Parchment, Ink Brown, Forest Canopy, Walnut; hanja a deepened Antique Sepia (text contrast) */
+  --bg: #f1e8d5; --text: #342c25; --accent: #294d38; --hangul: #684b37; --hanja: #7a4c2b;
+  --moss: #718366; --sepia: #a7835e;
   color-scheme: light;
 }
 :root[data-theme='dark'] {
-  --bg: #16181a; --text: #e8e6e1; --accent: #62bfa2; --hangul: #a8cdf5; --hanja: #e5a883;
+  --bg: #1d1915; --text: #ede3cf; --accent: #8db89a; --hangul: #d9be98; --hanja: #e2a878;
+  --moss: #9db08f; --sepia: #c9a57d;
   color-scheme: dark;
 }
 :root[data-theme='sepia'] {
-  --bg: #f3e8d2; --text: #3b2f1e; --accent: #7d5026; --hangul: #4b2f17; --hanja: #943a21;
+  --bg: #e4d3b2; --text: #261f19; --accent: #294d38; --hangul: #5a3f2c; --hanja: #6a3f1f;
+  --moss: #5f7054; --sepia: #8f6a45;
   color-scheme: light;
 }
 :root {
@@ -24,6 +28,8 @@
   --muted: color-mix(in srgb, var(--text) 76%, var(--bg)); /* >= 4.5:1 on bg, surface and surface-2 in light, dark and sepia */
   --accent-soft: color-mix(in srgb, var(--accent) 13%, var(--bg));
   --on-accent: var(--bg);
+  /* the 한 mark (bud · earth · bulb · strokes) */
+  --brand-bud: var(--sepia); --brand-leaf: var(--moss); --brand-earth: var(--hangul); --brand-stroke: var(--accent);
   --danger: #c0392b;
   --entry-font-size: 17px;
   --radius: 14px;
@@ -149,7 +155,7 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .pron { color: var(--muted); font-size: .92em; }
 .iconbtn { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); padding: 0; flex: none; }
 .iconbtn:active { background: var(--surface-2); }
-.iconbtn.on { color: #d9a21b; }
+.iconbtn.on { color: var(--sepia); }
 .dict { margin: 0; border-top: 1px solid var(--border); }
 .etab-panel > .dict:first-child { border-top: 0; }
 .dict > summary { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px 4px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); cursor: pointer; list-style: none; }
@@ -268,7 +274,7 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .toast .link.dim { text-decoration: none; opacity: .8; font-size: 18px; }
 
 .firstrun { max-width: 480px; margin: 0 auto; min-height: 100dvh; padding: calc(env(safe-area-inset-top) + 40px) 20px 32px; display: flex; flex-direction: column; align-items: stretch; }
-.logo { width: 76px; height: 76px; border-radius: 20px; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font: 700 44px var(--font-ko); margin-bottom: 18px; }
+.logo { width: 76px; height: 76px; border-radius: 20px; background: var(--surface-2); display: grid; place-items: center; margin-bottom: 18px; }
 .firstrun h1 { font-size: 28px; font-weight: 700; }
 .lead { color: var(--muted); font-size: 16px; margin: 8px 0 24px; }
 .card { border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 16px 16px; background: var(--surface); }
@@ -315,7 +321,7 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .pane-left .hanja-card { margin-inline: 12px; }
 .pane-empty { height: 100%; min-height: 60vh; max-width: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 6px; padding: 0 24px; }
 .pane-empty .empty-title { margin: 0; color: var(--text); }
-.pane-empty-mark { width: 72px; height: 72px; border-radius: 20px; display: grid; place-items: center; margin-bottom: 14px; font: 600 36px var(--font-ko); background: var(--surface-2); color: var(--muted); }
+.pane-empty-mark { width: 72px; height: 72px; border-radius: 20px; display: grid; place-items: center; margin-bottom: 14px; background: var(--surface-2); }
 
 /* ---------- Reader (읽기) ---------- */
 :root {

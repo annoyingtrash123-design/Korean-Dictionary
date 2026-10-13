@@ -22,6 +22,7 @@ import { loadHistory, upgradeHistory } from './lib/history';
 import { UpdateToast } from './components/UpdateToast';
 import { refFromParams } from './lib/entry-key';
 import { Empty } from './components/common';
+import { LogoMark } from './components/Logo';
 
 export function App() {
   const status = useStore(packStatus$);
@@ -113,7 +114,7 @@ const ENTRY_ROUTES = ['entry', 'word', 'hanja'];
 function PaneEmpty({ bookmarks }: { bookmarks: boolean }) {
   return (
     <div class="pane-empty">
-      <div class="pane-empty-mark" aria-hidden="true">한</div>
+      <div class="pane-empty-mark" aria-hidden="true"><LogoMark size={58} /></div>
       <div class="empty-title">{bookmarks ? 'Pick a saved word' : 'Search or pick a word'}</div>
       <div class="muted small">{bookmarks ? 'Choose a bookmark on the left to read it here.' : 'Type in the search box, or choose a recent word. Press / to jump to search.'}</div>
     </div>
