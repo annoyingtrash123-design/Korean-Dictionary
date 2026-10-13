@@ -310,7 +310,7 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .app.wide .tab:hover { background: color-mix(in srgb, var(--on-bar) 10%, var(--bar)); }
 .app.wide .tab.on { background: color-mix(in srgb, var(--on-bar) 18%, var(--bar)); }
 .pane-left { flex: none; width: var(--list-w); display: flex; flex-direction: column; min-width: 0; border-right: 1px solid var(--border); }
-.pane-left .topbar { padding-top: calc(env(safe-area-inset-top) + 14px); padding-bottom: 10px; }
+.pane-left .topbar, .pane-left .rd-lib-head { padding-top: calc(env(safe-area-inset-top) + 14px); padding-bottom: 10px; }
 .pane-scroll { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding-bottom: calc(env(safe-area-inset-bottom) + 12px); }
 .pane-right { flex: 1; min-width: 0; overflow-y: auto; overscroll-behavior: contain; padding: calc(env(safe-area-inset-top) + 18px) 28px calc(env(safe-area-inset-bottom) + 48px); }
 .pane-right > * { max-width: 720px; margin-inline: auto; }
@@ -342,18 +342,21 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 main.reader-host, .pane-right.reader-host { position: relative; overflow: hidden; padding: 0; }
 .pane-right.reader-host > * { max-width: none; margin-inline: 0; }
 .rd-lib { padding-bottom: 24px; }
-.rd-lib-head { position: sticky; top: 0; z-index: 4; background: var(--bar); color: var(--on-bar); padding: calc(env(safe-area-inset-top) + 14px) 16px 10px; }
+.rd-lib-head { position: sticky; top: 0; z-index: 4; background: var(--bar); color: var(--on-bar); padding: calc(env(safe-area-inset-top) + 10px) 16px 10px; }
+/* one row, the same height as the search bar on the other tabs */
+.rd-lib-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; height: 48px; }
+.rd-lib-count { margin: 10px 16px 0; text-align: right; }
 /* Library header sits on the forest bar like the search bar: light text, outlined chips. */
 .rd-lib-head h1, .rd-lib-head .rd-h-en, .rd-lib-head .muted { color: var(--on-bar); }
 .rd-lib-head .rd-h-en, .rd-lib-head .muted { opacity: .8; }
 .rd-lib-head .seg button, .rd-lib-head .pill { border-color: color-mix(in srgb, var(--on-bar) 40%, var(--bar)); color: var(--on-bar); }
 .rd-lib-head .seg button.on, .rd-lib-head .pill.on { background: var(--on-bar); border-color: var(--on-bar); color: var(--bar); }
 .rd-lib-head .rd-filters { padding: 10px; border-radius: 12px; background: var(--bg); color: var(--text); }
-.rd-lib-title { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-.rd-lib-title h1 { font-size: 26px; font-weight: 650; letter-spacing: -.01em; }
-.rd-lib-title h1 [lang=ko] { font-family: var(--rd-serif); }
+.rd-lib-title { flex: none; font-size: 24px; font-weight: 650; letter-spacing: -.01em; white-space: nowrap; }
+@media (max-width: 440px) { .rd-lib-title .rd-h-en { display: none; } }
+.rd-lib-title [lang=ko] { font-family: var(--rd-serif); }
 .rd-h-en { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: .02em; }
-.rd-lib-tools { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
+.rd-lib-tools { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .seg.inline { padding: 0; }
 .seg.inline button { height: 32px; }
 .pill { position: relative; height: 32px; padding: 0 13px; border-radius: 16px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 14px; white-space: nowrap; }
@@ -417,7 +420,7 @@ main.reader-host, .pane-right.reader-host { position: relative; overflow: hidden
 /* text view */
 .rd-host { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--bg); --rd-font: var(--rd-serif); }
 .rd-host[data-serif='0'] { --rd-font: var(--rd-sans); }
-.rd-bar { flex: none; display: flex; align-items: center; gap: 4px; min-height: 52px; padding: calc(env(safe-area-inset-top) + 4px) 8px 4px 4px; background: var(--bar); color: var(--on-bar); }
+.rd-bar { flex: none; display: flex; align-items: center; gap: 4px; min-height: calc(env(safe-area-inset-top) + 68px); padding: calc(env(safe-area-inset-top) + 10px) 8px 10px 4px; background: var(--bar); color: var(--on-bar); }
 .rd-bar .iconbtn { color: var(--on-bar); }
 .rd-bar .iconbtn:active { background: color-mix(in srgb, var(--on-bar) 15%, var(--bar)); }
 .pane-right .rd-bar { padding-left: 20px; }

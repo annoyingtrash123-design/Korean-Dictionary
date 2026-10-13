@@ -118,13 +118,15 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
   return (
     <div class="rd-lib">
       <header class="rd-lib-head">
-        <div class="rd-lib-title"><h1><span lang="ko">읽기</span> <span class="rd-h-en">Reader</span></h1><span class="muted small" aria-live="polite">{list.loading ? '' : n ? `${shown.length} of ${all.length} texts` : `${all.length} texts`}</span></div>
+        <div class="rd-lib-bar">
+        <h1 class="rd-lib-title"><span lang="ko">읽기</span> <span class="rd-h-en">Reader</span></h1>
         <div class="rd-lib-tools">
           <div class="seg inline" role="tablist" aria-label="Library view">
             <button type="button" role="tab" aria-selected={view === 'shelves'} class={view === 'shelves' ? 'on' : ''} onClick={() => view$.set('shelves')}>Shelves</button>
             <button type="button" role="tab" aria-selected={view === 'timeline'} class={view === 'timeline' ? 'on' : ''} onClick={() => view$.set('timeline')}>Timeline</button>
           </div>
           {<button type="button" class={`pill${open || n ? ' on' : ''}`} aria-expanded={open} onClick={() => setOpen(!open)}>Filters{n ? ` · ${n}` : ''}</button>}
+        </div>
         </div>
         {open && (
           <div class="rd-filters">
@@ -138,6 +140,7 @@ export function ReaderLibrary({ currentId }: { currentId?: string }) {
           </div>
         )}
       </header>
+      <p class="rd-lib-count muted small" aria-live="polite">{list.loading ? '' : n ? `${shown.length} of ${all.length} texts` : `${all.length} texts`}</p>
       {list.error && <Empty title="Could not open the library">{list.error}</Empty>}
       {!list.error && !list.loading && !shown.length && <Empty title="No texts match">{n ? 'Try removing a filter.' : 'The library is empty.'}</Empty>}
       {view === 'shelves' && byShelf(all, f).map(({ shelf, texts, total }) => (
