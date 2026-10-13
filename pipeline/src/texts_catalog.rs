@@ -144,7 +144,7 @@ pub fn validate(cat: &Catalog) -> Vec<String> {
                 bad(format!("{name} is empty"));
             }
         }
-        if !(-2400..=2025).contains(&e.year) {
+        if !(-2400..=2030).contains(&e.year) {
             bad(format!("implausible year {}", e.year));
         }
         if !PERIODS.contains(&e.period.as_str()) {
