@@ -15,3 +15,4 @@ jeongeupsa = "repair"            # fetched 高麗史 卷71 prose note, not the �
 heungbujeon = "repair"           # fetched only the opening paragraph
 hunminjeongeum_eonhae = "repair" # fetched only the hanja glosses, not the 언해 preface
 daedong_dangyeol_1917 = "repair"   # Wikisource transcribes only the first ~300 characters (scan transclusion marked 미완성)
+park_6th_assembly_1963 = "repair"  # Wikisource transcription breaks off mid-sentence
