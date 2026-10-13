@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Never push red: the fast gates must pass (a chained command once pushed past a failing verify).
+# Enable once per clone: git config core.hooksPath .githooks
+log="$(git rev-parse --git-dir)/pre-push-verify.log"
+scripts/verify.sh --fast >"$log" 2>&1 || { echo "pre-push: scripts/verify.sh --fast failed (see $log)"; exit 1; }

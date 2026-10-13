@@ -6,6 +6,7 @@ Rust→WASM engine (`core/`) searches them in the browser, Preact UI (`app/`). S
 
 ## Process (skills are process written down — see `.claude/skills/`)
 - **Verify before every push**: `scripts/verify.sh` (or `--fast` while iterating). Never push red.
+  `git config core.hooksPath .githooks` once per clone: the pre-push hook runs the fast gates.
   `main` auto-deploys to GitHub Pages; CI re-runs the same gates and only deploys when green.
 - **Every recurring mistake becomes a check**, not a note: add a guard to `scripts/verify.sh`,
   a test, or a lint — then fix the instance.
