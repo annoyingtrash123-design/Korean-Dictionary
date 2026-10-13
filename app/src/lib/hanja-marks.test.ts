@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { altReadings, hanjaKey, hanjaParts, usualReading } from './hanja-marks';
+import { altReadings, hanjaKey, hanjaParts, usualForm, usualReading } from './hanja-marks';
 
 describe('hanja marks', () => {
   it('compares without the marks', () => {
@@ -18,5 +18,10 @@ describe('hanja marks', () => {
   it('takes the first Hangul reading', () => {
     expect(usualReading('난,란')).toBe('난');
     expect(usualReading('nan')).toBeUndefined();
+  });
+  it('spells the word with the usual readings', () => {
+    expect(usualForm('곤란', '困難▽', ['난'])).toBe('곤난');
+    expect(usualForm('권련', '卷▽煙▽', ['권', '연'])).toBe('권연');
+    expect(usualForm('곤란하다', '困難▽하다', ['난'])).toBe('곤난하다');
   });
 });

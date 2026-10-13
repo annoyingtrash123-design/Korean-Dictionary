@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'preact/hooks';
 import { Icon } from './Icons';
-import { navigate, searchPath, undoBack, useRoute } from '../lib/router';
+import { isTraversal, navigate, searchPath, undoBack, useRoute } from '../lib/router';
 import { query } from '../lib/app-state';
 import { useStore } from '../lib/store';
 import { db } from '../db/client';
@@ -25,7 +25,7 @@ export function SearchBar() {
   useEffect(() => {
     const onPop = () => {
       const el = input.current;
-      if (!el || document.activeElement !== el || !matchMedia('(pointer: coarse)').matches) return;
+      if (!isTraversal() || !el || document.activeElement !== el || !matchMedia('(pointer: coarse)').matches) return;
       el.blur();
       undoBack();
     };

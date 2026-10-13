@@ -34,3 +34,12 @@ export function altReadings(headword: string, hanja: string): { ch: string; here
 
 /** First Hangul reading listed for a character ("난,란" -> "난"). */
 export const usualReading = (readings?: string | null) => (readings ?? '').split(/[,;\s]+/).find((r) => /^[가-힣]$/.test(r));
+
+/** The word as its characters are usually read: the headword's syllables with each marked
+ *  character's syllable replaced by its usual reading (`usual` in the order of `altReadings`). */
+export function usualForm(headword: string, hanja: string, usual: string[]): string {
+  const parts = hanjaParts(hanja).filter((p) => p.ch.trim() && !/[-―—←]/.test(p.ch));
+  const syl = [...headword].filter(isHangulSyllable);
+  let k = 0;
+  return syl.map((s, i) => (parts[i]?.alt ? usual[k++] ?? s : s)).join('');
+}

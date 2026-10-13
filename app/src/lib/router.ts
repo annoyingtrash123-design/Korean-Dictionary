@@ -16,12 +16,19 @@ const EVT = 'kd-route';
 // and the router ignores that round trip (hashchanges until the hash is back where it was).
 let shown = typeof location === 'undefined' ? '' : location.hash;   // hash the app shows
 let holdAt: string | null = null;
+// popstate also fires for new hash navigations (links, `navigate`); only a traversal (Back/Forward)
+// leaves history.length unchanged.
+let histLen = typeof history === 'undefined' ? 0 : history.length;
+let traversal = false;
 if (typeof window !== 'undefined') {
+  window.addEventListener('popstate', () => { traversal = history.length === histLen; histLen = history.length; });
   window.addEventListener('hashchange', () => {
     if (holdAt === null) shown = location.hash;
     else if (location.hash === holdAt) holdAt = null;
   });
 }
+/** In a popstate handler: was this Back/Forward (not a link or `navigate`)? */
+export const isTraversal = () => traversal;
 /** Call from a popstate handler: undo the back step that just happened, without a route change. */
 export function undoBack(): void {
   if (location.hash === shown) return;   // same URL: nothing for the router to see
