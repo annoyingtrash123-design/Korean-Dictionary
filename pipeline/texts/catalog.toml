@@ -818,28 +818,6 @@ pd_basis = "Author died 1805; the work is centuries old and in the public domain
 note = "From Okgap yahwa in the Yeolha ilgi."
 uncertain = ["date", "year"]
 
-[[text]]
-id = "mokminsimseo"
-title_ko = "목민심서"
-title_hanja = "牧民心書"
-title_en = "Admonitions on Governing the People (Mongmin simseo)"
-author_ko = "정약용"
-author_en = "Jeong Yak-yong"
-author_dates = "1762–1836"
-date = "1818"
-year = 1818
-period = "joseon-late"
-themes = ["joseon"]
-shelf = "hanmun"
-script = "hanmun"
-excerpt = true
-excerpt_note = "Keep the preface (자서) and the 율기 (self-discipline) section on 청심; ~8k characters."
-source = "wikisource-ko"
-source_title = "목민심서"
-search = ["목민심서", "牧民心書", "정약용"]
-sections = ["서", "율기"]
-pd_basis = "Author died 1836; the work is centuries old and in the public domain."
-uncertain = ["source_title"]
 
 # resource: zh 卷第一 lacks 紀異第一 (卷第二 starts at 紀異第二 下); ko has per-chapter 삼국유사/<편>[/<조목>] pages (피은, 효선, 감통, 흥법/보덕이암) so 紀異 item should be 삼국유사/기이/고조선
 [[text]]
@@ -911,26 +889,6 @@ search = ["송인", "送人", "정지상"]
 pd_basis = "Author died 1135; the work is centuries old and in the public domain."
 uncertain = ["date", "year", "source_title"]
 
-[[text]]
-id = "balhaego_seo"
-title_ko = "발해고 서"
-title_hanja = "渤海考序"
-title_en = "Preface to Reflections on Balhae"
-author_ko = "유득공"
-author_en = "Yu Deuk-gong"
-author_dates = "1748–1807"
-date = "1784"
-year = 1784
-period = "joseon-late"
-themes = ["joseon", "sino-korean"]
-shelf = "hanmun"
-script = "hanmun"
-excerpt = false
-source = "wikisource-ko"
-source_title = "발해고/발해고서"
-search = ["발해고 서", "渤海考序", "유득공"]
-pd_basis = "Author died 1807; the work is centuries old and in the public domain."
-uncertain = ["source_title"]
 
 [[text]]
 id = "yeolha_dogangrok"
@@ -2258,24 +2216,6 @@ search = ["달을 쏘다", "윤동주"]
 pd_basis = "Author died 1945; Korean term (life+50) expired 1995, before the 2013 extension to life+70, so the work is in the public domain."
 uncertain = ["source_title", "date"]
 
-[[text]]
-id = "sihon"
-title_ko = "시혼"
-title_en = "Poetic Spirit"
-author_ko = "김소월"
-author_en = "Kim Sowol"
-author_dates = "1902–1934"
-date = "1925"
-year = 1925
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "essays-children"
-script = "hangul"
-excerpt = false
-source = "wikisource-ko"
-source_title = "시혼"
-search = ["시혼", "김소월"]
-pd_basis = "Author died 1934; Korean term (life+50) expired 1984, before the 2013 extension to life+70, so the work is in the public domain."
 
 [[text]]
 id = "eorini_chanmi"
@@ -2500,29 +2440,6 @@ alt_titles = ["강보에싸인 두 병정에게", "윤봉길 유서", "강보에
 search = ["강보에 싸인 두 병정에게", "윤봉길 유서", "윤봉길 두 아들에게"]
 pd_basis = "Author died 1932; Korean term (life+50) expired 1982, before the 2013 extension to life+70, so the work is in the public domain."
 
-# resource: low confidence: probably only a Korean-translation page exists; classical-Chinese original may be absent
-[[text]]
-id = "hanguk_hon"
-title_ko = "한국혼"
-title_hanja = "韓國魂"
-title_en = "The Soul of Korea"
-author_ko = "신규식"
-author_en = "Sin Gyu-sik"
-author_dates = "1880–1922"
-date = "1912 (written), 1914 (published)"
-year = 1914
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "hanmun"
-excerpt = true
-excerpt_note = "Keep the opening chapters stating the thesis of 魂/spirit and the preface; about 4k characters."
-source = "wikisource-zh"
-source_title = "韓國魂"
-alt_titles = ["한국혼", "한국혼 (신규식)"]
-search = ["한국혼 신규식", "韓國魂", "申圭植 韓國魂"]
-pd_basis = "Author died 1922; Korean term (life+50) expired 1972, before the 2013 extension to life+70, so the work is in the public domain."
-uncertain = ["source_title", "date"]
 
 # resource: low confidence a Wikisource page exists; the speech survives in Japanese press records and Korean translation, so a PD rendering may be missing
 [[text]]
@@ -3497,28 +3414,6 @@ search = ["5·18민주화운동 등에 관한 특별법", "5.18민주화운동 �
 pd_basis = "Statutes and legal texts are not protected by copyright (Copyright Act of the Republic of Korea, art. 7)."
 uncertain = ["search", "date", "year"]
 
-# resource: LOW; an official 1962 plan document may not be on Wikisource; the plan text was issued by 경제기획원/건설부-era 최고회의 and its copyright status is not settled
-[[text]]
-id = "first_five_year_plan_1962"
-title_ko = "제1차 경제개발 5개년계획 (1962)"
-title_en = "First Five-Year Economic Development Plan (1962)"
-author_ko = "대한민국 정부 (경제기획원)"
-author_en = "Government of the Republic of Korea (Economic Planning Board)"
-author_dates = ""
-date = "1962-01-13 (announced); 1962 plan period 1962–1966"
-year = 1962
-period = "modern"
-themes = ["modern-korea"]
-shelf = "documents"
-script = "mixed"
-excerpt = true
-excerpt_note = "Keep only the plan's 서문 / 계획의 목표와 기본방침 (the opening statement of objectives and basic policy, and the list of key sectors); omit statistical tables and sector-by-sector annexes."
-source = "wikisource-ko"
-source_title = "제1차 경제개발 5개년계획"
-alt_titles = ["제1차 경제개발5개년계획", "제1차 경제개발 5개년 계획", "경제개발 5개년계획 공고", "제1차 경제개발 5개년계획 (1962~1966)"]
-search = ["제1차 경제개발 5개년계획", "경제개발5개년계획 공고 1962", "경제기획원 5개년계획 서문", "제1차 5개년계획 1962"]
-pd_basis = "Official government planning document; treated as an unprotected state document (Copyright Act art. 7) but the status of a full policy publication is unsettled."
-uncertain = ["date", "source_title", "search", "sections", "pd_basis"]
 
 # resource: LOW-MEDIUM; repealed statutes may not be on the `law` source (current statutes only); the statute is 서울올림픽대회 및 아시아경기대회 지원법 (name varied over amendments)
 [[text]]
@@ -4149,69 +4044,6 @@ search = ["제2주년 광복절 경축사 이승만"]
 pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription. Printed in the 공보처's 대통령이승만박사담화집 (1953)."
 uncertain = ["date"]
 
-[[text]]
-id = "geonjun_seoneon_1945"
-title_ko = "건국준비위원회 선언과 강령 (1945)"
-title_en = "Declaration and Platform of the Committee for the Preparation of Korean Independence (1945)"
-author_ko = "조선건국준비위원회 (위원장 여운형)"
-author_en = "Committee for the Preparation of Korean Independence (chair Yeo Un-hyeong)"
-author_dates = ""
-date = "1945-08-28 (published in 매일신보, 3 September 1945)"
-year = 1945
-period = "modern"
-themes = ["modern-korea"]
-shelf = "speeches"
-script = "hangul"
-excerpt = false
-note = "Text from the 범우사 edition of 여운형's writings on Wikisource, in modernised spelling."
-source = "wikisource-ko"
-source_title = "조선독립의 당위성 외/건준 선언과 강령"
-search = ["건준 선언과 강령", "건국준비위원회 강령"]
-pd_basis = "Collective statement of 1945 issued under 여운형 (d. 1947); his term (life+50) expired 1997, before the 2013 extension. The Wikisource edition is marked PD (공유마당)."
-uncertain = []
-
-[[text]]
-id = "daedong_dangyeol_1917"
-title_ko = "대동단결의 선언 (1917)"
-title_hanja = "大同團結의 宣言"
-title_en = "Declaration of Great Unity (1917)"
-author_ko = "신규식·박은식·조소앙 외"
-author_en = "Sin Gyu-sik, Bak Eun-sik, Jo So-ang and others"
-author_dates = ""
-date = "1917-07"
-year = 1917
-period = "colonial"
-themes = ["colonial-independence"]
-shelf = "political-writing"
-script = "mixed"
-excerpt = false
-note = "Issued in Shanghai by 14 exiles including 신규식 (d. 1922) and 박은식; drafted by 조소앙. It argued that sovereignty passed from the emperor to the people when Sunjong 'abandoned' it in 1910, an idea later taken up by the Provisional Government."
-source = "wikisource-ko"
-source_title = "대동단결의선언"
-search = ["대동단결의선언", "대동단결선언 1917"]
-pd_basis = "Signed by 14 exiles; the principal signers died before 1963 (신규식 1922, 박은식 1925); 조소앙 (d. 1958) drafted it. Wikisource marks it PD-old-60."
-uncertain = ["author"]
-
-[[text]]
-id = "park_6th_assembly_1963"
-title_ko = "제6대 국회 개원식 대통령 연설 (박정희, 1963)"
-title_en = "Park Chung-hee's Address at the Opening of the 6th National Assembly (1963)"
-author_ko = "박정희"
-author_en = "Park Chung-hee (as President: an official state work)"
-author_dates = ""
-date = "1963-12-17"
-year = 1963
-period = "modern"
-themes = ["modern-korea"]
-shelf = "speeches"
-script = "hangul"
-excerpt = false
-note = "Delivered the day he took office as President of the Third Republic (17 December 1963). The Wikisource transcription breaks off mid-sentence and the surviving part speaks of poor harvests, prices and stabilisation, not of the Five-Year Plan by name."
-source = "wikisource-ko"
-source_title = "제6대 국회 개원식 대통령 연설"
-search = ["제6대 국회 개원식 대통령 연설"]
-pd_basis = "Official speech or statement of the President of the Republic of Korea, a work made by the state in the course of its duties: free to use under Copyright Act art. 24-2 (공공저작물). Wikisource transcription."
-uncertain = ["date"]
 
 [[text]]
 id = "park_yushin_damhwa_1972"
