@@ -19,7 +19,7 @@ describe('theme', () => {
     expect(r.style.getPropertyValue('--accent')).toBe('#ff0000');
     expect(r.style.getPropertyValue('--hanja')).toBe('#00ff00');
     expect(r.style.getPropertyValue('--entry-font-size')).toBe('20px');
-    expect(document.querySelector('meta[name=theme-color]')!.getAttribute('content')).toBe('#1d1915');
+    expect(document.querySelector('meta[name=theme-color]')!.getAttribute('content')).toBe('#1f3a2a');
   });
   it('clears overrides when colours are reset', () => {
     applyTheme({ theme: 'light', colors: { accent: '#ff0000' }, fontSize: 17 }, document);

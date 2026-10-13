@@ -57,7 +57,9 @@ h1, h2 { margin: 0; color: var(--heading); }
 
 /* ---------- Shell ---------- */
 .app { display: flex; flex-direction: column; height: 100dvh; max-width: 820px; margin: 0 auto; }
-.topbar { padding: calc(env(safe-area-inset-top) + 10px) 16px 8px; background: var(--bg); z-index: 5; }
+.topbar { padding: calc(env(safe-area-inset-top) + 10px) 16px 10px; background: var(--bar); z-index: 5; }
+.topbar .searchbar { background: var(--bg); }
+.topbar .searchbar:focus-within { border-color: var(--on-bar); }
 main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: none; padding-bottom: 12px; }
 .page { padding-bottom: 16px; }
 .page.busy { opacity: .85; }

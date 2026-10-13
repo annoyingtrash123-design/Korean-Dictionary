@@ -3,7 +3,8 @@ import type { ColorKey, Settings } from './settings';
 export const COLOR_VARS: Record<ColorKey, string> = {
   accent: '--accent', bg: '--bg', text: '--text', hangul: '--hangul', hanja: '--hanja',
 };
-export const THEME_COLOR_FALLBACK = { light: '#f1e8d5', dark: '#1d1915' } as const;
+/** Browser/OS status-bar colour: the forest menu-bar colour (`--bar`), so the top of the app is closed in. */
+export const THEME_COLOR_FALLBACK = { light: '#294d38', dark: '#1f3a2a' } as const;
 
 /** Light (parchment) or dark. A stored 'sepia' (an older theme) is now light. */
 export function resolveTheme(theme: Settings['theme'], prefersDark: boolean): 'light' | 'dark' {
@@ -23,8 +24,7 @@ export function applyTheme(s: Pick<Settings, 'theme' | 'colors' | 'fontSize'>, d
     else root.style.removeProperty(COLOR_VARS[k]);
   }
   root.style.setProperty('--entry-font-size', `${s.fontSize}px`);
-  const bg = s.colors.bg ?? THEME_COLOR_FALLBACK[t];
-  doc.querySelector('meta[name=theme-color]')?.setAttribute('content', bg);
+  doc.querySelector('meta[name=theme-color]')?.setAttribute('content', THEME_COLOR_FALLBACK[t]);
   return t;
 }
 
