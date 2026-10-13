@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# GitHub skips the whole CI run when a skip-CI marker appears ANYWHERE in the head commit's message,
+# so a commit that merely mentions it in its body silently never deployed. Allow the marker only as
+# the very end of the subject line (an intentional work-in-progress commit).
+# Enable once per clone: git config core.hooksPath .githooks
+pat='\[(skip ci|ci skip|no ci|skip actions|actions skip)\]|\[skip-ci\]'
+subject="$(sed -n 1p "$1")"
+body="$(sed '1d' "$1" | grep -v '^#')"
+if grep -Eiq "$pat" <<<"$body"; then
+  echo "commit-msg: the body mentions a skip-CI marker; GitHub would skip the deploy. Reword it (e.g. 'skip-ci tag')." >&2; exit 1
+fi
+if grep -Eiq "$pat" <<<"$subject" && ! grep -Eiq "($pat)\s*$" <<<"$subject"; then
+  echo "commit-msg: put the skip-CI marker at the very end of the subject line, or drop it." >&2; exit 1
+fi

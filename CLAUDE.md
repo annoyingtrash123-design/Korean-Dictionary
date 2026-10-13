@@ -16,8 +16,10 @@ Rust→WASM engine (`core/`) searches them in the browser, Preact UI (`app/`). S
 - **AI-written content** (translations, notes, modernised spelling, graded readers) ships only
   after an independent verifier pass (`content-review` skill) and is always labelled in the UI.
 - Small, focused commits. Work-in-progress pushes use `[skip ci]`.
-  GitHub skips CI for a whole push when its *last* commit says `[skip ci]` — never end a push that
-  carries real changes with a `[skip ci]` commit (or dispatch "Build data & deploy app" by hand).
+  GitHub skips CI for a whole push when the marker appears *anywhere* in the head commit's message
+  (even in the body: a real commit once mentioned it in a sentence and never deployed) — never end a
+  push that carries real changes with such a commit (or dispatch "Build data & deploy app" by hand).
+  `.githooks/commit-msg` rejects the marker anywhere but the very end of the subject line.
 - Never write to `/dev`, never create symlinks outside the repo or the scratchpad.
 
 ## Facts worth knowing
