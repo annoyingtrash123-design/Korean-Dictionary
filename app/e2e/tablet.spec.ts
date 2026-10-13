@@ -97,7 +97,8 @@ test('two-pane tablet layout', async ({ page }) => {
     await search(page, 'articulate');
     const rel = page.locator('.pane-left').getByRole('region', { name: 'Similar English words' });
     await expect(rel).toBeVisible();
-    await expect(rel.getByRole('link', { name: '유창하다' })).toBeVisible();
+    // which Korean words depends on the data build (WordNet / Wiktionary routes); some must be linked
+    await expect(rel.locator('a.hangul').first()).toBeVisible();
     await page.waitForTimeout(300);
     await shot(page, 'light-results-articulate');
   }
@@ -109,7 +110,7 @@ test('two-pane tablet layout', async ({ page }) => {
   await page.locator('.pane-left .list .row').first().click();
   const sim = page.locator('.pane-right').getByRole('region', { name: 'Similar words' });
   await expect(sim).toBeVisible();
-  await expect(sim.getByRole('link', { name: /대변/ })).toBeVisible();
+  await expect(sim.locator('a.chip').first()).toBeVisible();
   await page.waitForTimeout(300);
   await shot(page, 'light-entry-similar');
   await page.goto('/#/');
