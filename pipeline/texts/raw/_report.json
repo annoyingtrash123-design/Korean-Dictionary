@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T01:07:08Z",
+  "generated_at": "2026-10-13T05:14:58Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -2052,414 +2052,238 @@
       "resolved_via": "title",
       "truncated": false,
       "needs_sections": false
+    },
+    {
+      "id": "gwanggaeto_stele",
+      "source": "wikisource-zh",
+      "page_title": "國岡上廣開土境平安好太王碑",
+      "url": "https://zh.wikisource.org/wiki/%E5%9C%8B%E5%B2%A1%E4%B8%8A%E5%BB%A3%E9%96%8B%E5%9C%9F%E5%A2%83%E5%B9%B3%E5%AE%89%E5%A5%BD%E5%A4%AA%E7%8E%8B%E7%A2%91",
+      "revision_id": 5707653,
+      "chars": 2171,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "samguk_yusa_daeseong",
+      "source": "wikisource-zh",
+      "page_title": "三國遺事/卷第五",
+      "url": "https://zh.wikisource.org/wiki/%E4%B8%89%E5%9C%8B%E9%81%BA%E4%BA%8B/%E5%8D%B7%E7%AC%AC%E4%BA%94",
+      "revision_id": 334900,
+      "chars": 690,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "hunyo_sipjo",
+      "source": "wikisource-zh",
+      "page_title": "高麗史/卷二",
+      "url": "https://zh.wikisource.org/wiki/%E9%AB%98%E9%BA%97%E5%8F%B2/%E5%8D%B7%E4%BA%8C",
+      "revision_id": 2335683,
+      "chars": 1597,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "goryeo_dogyeong_celadon",
+      "source": "wikisource-zh",
+      "page_title": "宣和奉使高麗圖經/卷三十二",
+      "url": "https://zh.wikisource.org/wiki/%E5%AE%A3%E5%92%8C%E5%A5%89%E4%BD%BF%E9%AB%98%E9%BA%97%E5%9C%96%E7%B6%93/%E5%8D%B7%E4%B8%89%E5%8D%81%E4%BA%8C",
+      "revision_id": 2340326,
+      "chars": 109,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "daejanggak_pangunsin_gigomun",
+      "source": "wikisource-zh",
+      "page_title": "東國李相國全集/卷二十五",
+      "url": "https://zh.wikisource.org/wiki/%E6%9D%B1%E5%9C%8B%E6%9D%8E%E7%9B%B8%E5%9C%8B%E5%85%A8%E9%9B%86/%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%BA%94",
+      "revision_id": 2401490,
+      "chars": 623,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "goryeosa_bae_jungson",
+      "source": "wikisource-zh",
+      "page_title": "高麗史/卷一百三十",
+      "url": "https://zh.wikisource.org/wiki/%E9%AB%98%E9%BA%97%E5%8F%B2/%E5%8D%B7%E4%B8%80%E7%99%BE%E4%B8%89%E5%8D%81",
+      "revision_id": 2067699,
+      "chars": 967,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "taejo_jeuk_wi_gyoseo",
+      "source": "wikisource-zh",
+      "page_title": "朝鮮王朝實錄/太祖實錄/元年",
+      "url": "https://zh.wikisource.org/wiki/%E6%9C%9D%E9%AE%AE%E7%8E%8B%E6%9C%9D%E5%AF%A6%E9%8C%84/%E5%A4%AA%E7%A5%96%E5%AF%A6%E9%8C%84/%E5%85%83%E5%B9%B4",
+      "revision_id": 2158003,
+      "chars": 6897,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "sejong_sillok_jagyeongnu",
+      "source": "wikisource-zh",
+      "page_title": "朝鮮王朝實錄/世宗實錄/十六年",
+      "url": "https://zh.wikisource.org/wiki/%E6%9C%9D%E9%AE%AE%E7%8E%8B%E6%9C%9D%E5%AF%A6%E9%8C%84/%E4%B8%96%E5%AE%97%E5%AF%A6%E9%8C%84/%E5%8D%81%E5%85%AD%E5%B9%B4",
+      "revision_id": 2107632,
+      "chars": 2814,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "daehanguk_gukje",
+      "source": "wikisource-ko",
+      "page_title": "대한제국 대한국국제",
+      "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EC%A0%9C%EA%B5%AD_%EB%8C%80%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C",
+      "revision_id": 455515,
+      "chars": 2049,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "hanil_byeonghap_treaty",
+      "source": "wikisource-ko",
+      "page_title": "한일병합조약",
+      "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EC%9D%BC%EB%B3%91%ED%95%A9%EC%A1%B0%EC%95%BD",
+      "revision_id": 458222,
+      "chars": 1864,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "armistice_agreement_ko",
+      "source": "wikisource-ko",
+      "page_title": "한국전쟁 정전협정문",
+      "url": "https://ko.wikisource.org/wiki/%ED%95%9C%EA%B5%AD%EC%A0%84%EC%9F%81_%EC%A0%95%EC%A0%84%ED%98%91%EC%A0%95%EB%AC%B8",
+      "revision_id": 459820,
+      "chars": 299,
+      "subpages": 0,
+      "resolved_via": "redirect",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "special_act_518",
+      "source": "law",
+      "page_title": "5·18민주화운동 등에 관한 특별법",
+      "url": "https://ko.wikisource.org/wiki/5%C2%B718%EB%AF%BC%EC%A3%BC%ED%99%94%EC%9A%B4%EB%8F%99_%EB%93%B1%EC%97%90_%EA%B4%80%ED%95%9C_%ED%8A%B9%EB%B3%84%EB%B2%95",
+      "revision_id": 404445,
+      "chars": 1923,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "seoul_olympic_support_act",
+      "source": "law",
+      "page_title": "서울아시아경기대회·올림픽대회조직위원회지원법",
+      "url": "https://ko.wikisource.org/wiki/%EC%84%9C%EC%9A%B8%EC%95%84%EC%8B%9C%EC%95%84%EA%B2%BD%EA%B8%B0%EB%8C%80%ED%9A%8C%C2%B7%EC%98%AC%EB%A6%BC%ED%94%BD%EB%8C%80%ED%9A%8C%EC%A1%B0%EC%A7%81%EC%9C%84%EC%9B%90%ED%9A%8C%EC%A7%80%EC%9B%90%EB%B2%95",
+      "revision_id": 409237,
+      "chars": 4882,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "gojong_jeuguwi_daehan_jo",
+      "source": "wikisource-zh",
+      "page_title": "朝鮮王朝實錄/高宗實錄/三十四年",
+      "url": "https://zh.wikisource.org/wiki/%E6%9C%9D%E9%AE%AE%E7%8E%8B%E6%9C%9D%E5%AF%A6%E9%8C%84/%E9%AB%98%E5%AE%97%E5%AF%A6%E9%8C%84/%E4%B8%89%E5%8D%81%E5%9B%9B%E5%B9%B4",
+      "revision_id": 2493738,
+      "chars": 1744,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "chikryeong_41ho_uldo",
+      "source": "wikisource-ko",
+      "page_title": "광무 4년 칙령 제41호",
+      "url": "https://ko.wikisource.org/wiki/%EA%B4%91%EB%AC%B4_4%EB%85%84_%EC%B9%99%EB%A0%B9_%EC%A0%9C41%ED%98%B8",
+      "revision_id": 405926,
+      "chars": 842,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "daehanjeguk_aegukga",
+      "source": "wikisource-ko",
+      "page_title": "애국가 (대한제국)",
+      "url": "https://ko.wikisource.org/wiki/%EC%95%A0%EA%B5%AD%EA%B0%80_%28%EB%8C%80%ED%95%9C%EC%A0%9C%EA%B5%AD%29",
+      "revision_id": 431059,
+      "chars": 627,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "hwang_hyeon_jeolmyeongsi",
+      "source": "wikisource-zh",
+      "page_title": "絕命詩 (黃玹)",
+      "url": "https://zh.wikisource.org/wiki/%E7%B5%95%E5%91%BD%E8%A9%A9_%28%E9%BB%83%E7%8E%B9%29",
+      "revision_id": 1335757,
+      "chars": 138,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "geumsu_hoeuirok",
+      "source": "wikisource-ko",
+      "page_title": "금수회의록",
+      "url": "https://ko.wikisource.org/wiki/%EA%B8%88%EC%88%98%ED%9A%8C%EC%9D%98%EB%A1%9D",
+      "revision_id": 431541,
+      "chars": 8775,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "jayujong",
+      "source": "wikisource-ko",
+      "page_title": "자유종",
+      "url": "https://ko.wikisource.org/wiki/%EC%9E%90%EC%9C%A0%EC%A2%85",
+      "revision_id": 430594,
+      "chars": 14359,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
     }
   ],
   "missing": [],
   "ambiguous": [
-    {
-      "id": "chunhyangjeon",
-      "source_title": "열녀춘향수절가 (완판 84장본)",
-      "candidates": [
-        {
-          "host": "ko.wikisource.org",
-          "title": "춘향가",
-          "namespace": 0,
-          "bytes": 138467,
-          "preview": "<아니리> 영웅열사(英雄烈士)와 절대가인(絶對佳人)이 삼겨날 제 강산정기(江山精氣)를 타고 나는디 군산만학부형문(群山萬壑赴荊門)에 왕소군(王昭君)이 삼겨나고 금강활 이아미수(錦江滑 峨嵋秀)에 설도문군탄생(薛濤文君誕生",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/판 소 리/판소리의 창본",
-          "namespace": 0,
-          "bytes": 12959,
-          "preview": "## 판소리의 창본〔개설〕 －唱本〔槪說〕 '판소리'란 광대(廣大)가 한 손에 합죽선(合竹扇)을 멋있게 들고 온갖 너름새를 곱게 섞어가면서 고수(鼓手)의 북장단에 맞추어 소리로써 보는 이에게 연극적 효과를 전달하는 우",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/판 소 리/판소리의 종류",
-          "namespace": 0,
-          "bytes": 12345,
-          "preview": "## 판소리의 종류〔개설〕 －種類〔槪說〕 판소리가 하나의 민속음악으로서의 내용과 형식을 갖추고 완성의 단계에 이른 시기는 대체로 조선왕조 숙종(肅宗)조로부터 영조(英祖)조까지의 시기라 생각된다. 또한 판소리의 전성시",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/한국사/근대사회의 태동/문화의 새 기운/서민예술",
-          "namespace": 0,
-          "bytes": 15924,
-          "preview": "## 서민예술〔槪說〕 양반 중심의 유교적 사회에 대한 항의는 사상면에서만이 아니라 문학에서도 나타났다. 문학에 있어서는 한글로 된 서민문학이 특히 성하였다.김만중 같은 평론가는 한글로 적은 문학이라야 진정한 문학이라",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/현대 문학/현대 전기 문학/개화사조와 신소설",
-          "namespace": 0,
-          "bytes": 22266,
-          "preview": "## 신소설의 개념 新小說-槪念 갑오경장 이후개화·계몽기를 배경으로 해서 이루어진 소설이 바로 신소설인데, 이것은 근대적인 신문학을 대표하는 문학 양식(樣式)이라고 할 수 있다. 신소설은 재래의 구소설, 즉 고대소설",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/동양사상/한국의 사상/조선후기의 사상/조선후기의 문예사상",
-          "namespace": 0,
-          "bytes": 18117,
-          "preview": "## 조선후기의 문예사상〔槪說〕 조선왕조 일대를 통틀어서 그 전기의 성리학파와 후기의 실학파가 문예사상의 주조(主潮)를 이루었다. 이제 그 후기의 문예사상을 밝히려면 먼저 위로 거슬러 올라서 광해조(光海朝)의 교산(",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
-          "namespace": 0,
-          "bytes": 1262278,
-          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
-          "redirected_to": null
-        }
-      ]
-    },
-    {
-      "id": "sassinamjeonggi",
-      "source_title": "사씨남정기",
-      "candidates": [
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/동양사상/한국의 사상/조선후기의 사상/조선후기의 문예사상",
-          "namespace": 0,
-          "bytes": 18117,
-          "preview": "## 조선후기의 문예사상〔槪說〕 조선왕조 일대를 통틀어서 그 전기의 성리학파와 후기의 실학파가 문예사상의 주조(主潮)를 이루었다. 이제 그 후기의 문예사상을 밝히려면 먼저 위로 거슬러 올라서 광해조(光海朝)의 교산(",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/창 극/창극의 창우",
-          "namespace": 0,
-          "bytes": 10363,
-          "preview": "## 창극의 창우〔개설〕 唱劇－唱優〔槪說〕 창극은 판소리를 몇 사람이 배역을 나누어 부르는 입체창(立體唱)에서 비롯된 것이므로 창극이 싹트기 시작했던 원각사(圓覺社) 시절에는 창극의 명인이 따로 없고 당시 판소리 명",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/조선 후기의 문학〔개설〕",
-          "namespace": 0,
-          "bytes": 11564,
-          "preview": "朝鮮後期－文學 〔槪說〕임진왜란 이후부터 1894년 갑오경장(甲午更張)에 이르는 약 300년간의 문학은 조선 후기의 문학에 속한다. 선조 25년(1592)에 일어난 임진왜란은 일찍이 없었던 큰 전쟁이었고 7년 동안이나",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/소설문학의 발흥",
-          "namespace": 0,
-          "bytes": 62103,
-          "preview": "## 패관문학과 소설의 대두 稗官文學－小說－擡頭 조선 초의 소설이란 개념은 현재 우리가 쓰고 있는 소설이란 개념과는 거리가 멀다. 본래 소설이란 개념은 근대의 대표적인 문학의 한 장르로, 그 본질은 인간의 행위(성격",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/한국의 신파극/신파극의 작가와 작품",
-          "namespace": 0,
-          "bytes": 24060,
-          "preview": "## 신파극의 작가와 작품〔개설〕 新派劇－作家－作品〔槪說〕우리나라 신파극운동의 흐름을 보면 시대적 조건과 연극여건에 따라 그 성쇠(盛衰)의 굴곡이 발생으로부터 소멸까지 40여년 동안에 세 번 나타난다. 즉 1910년",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "소년의 비애",
-          "namespace": 0,
-          "bytes": 30458,
-          "preview": "## 소년의 비애 ## 1 난수는 사랑스럽고 얌전하고 재조있는 처녀라. 그 종형 되는 문호는 여러 종매들을 다 사랑하는 중에도 특별히 난수를 사랑한다. 문호는 이제 십팔 세 되는 시골 어느 중등 정도 학생인 청년이나",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/한문학과 실학파",
-          "namespace": 0,
-          "bytes": 39019,
-          "preview": "## 한문학 漢文學 연산군(燕山君) 이후 네 차례의 사화(士禍)와 사색(四色)의 당쟁을 피해 뜻있는 학자와 문인들은 산림에 숨어 음풍 영월과 시주(詩酒)로 세월을 보내니, 이들을 산림학파라 한다. 일찍이 성리학자 조",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/한국사/근세사회의 발전/조선의 성립과 발전/조선 왕조의 경제·사회적 구조",
-          "namespace": 0,
-          "bytes": 104028,
-          "preview": "## 조선 왕조의 경제·사회적 구조〔槪說〕 조선왕조 건국 주체세력이 추구하던 경제구조는 민생안정과 더불어 국가수입을 증대시켜 부강한 재무국가(財務國家)를 만드는 것이었다. 즉 국가가 국민을 위해 봉사하려면 재무구조가",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/인명사전/한 국 인 명/ㄱ",
-          "namespace": 0,
-          "bytes": 181046,
-          "preview": "## 가실왕 嘉悉(實)王 6세기경 가야의 왕. 당나라의 악기를 보고 우륵으로 하여금 12현으로 된 가야금을 만들게 하였다. 가야가 멸망하자, 우륵은 신라 진흥왕에게로 돌아갔다고 전하는데, 당시의 6가야 중 어느 가야",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/동양사상/종합사상사연표",
-          "namespace": 0,
-          "bytes": 399,
-          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=종합사상사연표 |이전=[[글로벌 세계 대백과사전/동양사상/한국의 사상/한국의 현대사상/한국의 현대 과학사상|한국의 현대 과학사상]] |다음=[[글로벌 세계 대백",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/세계사상/종합사상사연표",
-          "namespace": 0,
-          "bytes": 335,
-          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=종합사상사연표 |이전=[[글로벌 세계 대백과사전/세계사상/사 상 용 어|사 상 용 어]] |다음=[[글로벌 세계 대백과사전/종교·철학|종교·철학]] }} {{:",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "사회 6-1 (5차 교육과정)/2. 근대화의 노력",
-          "namespace": 0,
-          "bytes": 37539,
-          "preview": "오랜 역사를 이어 오면서 우리 나라의 많은 지도자들은 나라를 잘 다스려 백성들이 잘 살도록 힘썼다. 그리고 외적의 침략을 받았을 때는 온 겨레가 힘을 합쳐 이를 막아내고 나라를 지켰다. 그러나 조선 후기에 이르러서는",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/동양사상/종합사상사연표/자료",
-          "namespace": 0,
-          "bytes": 83247,
-          "preview": "연 대 서 양 연 대 중국·인도·이슬람 사상 연 대 한 국 B.C. 800경 750경 585 582경 515경 490경 470경 434경 427 420? 399 387? 385? 384 361경 335 300 280",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/문학사 연표",
-          "namespace": 0,
-          "bytes": 406,
-          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=문학사 연표 |이전=[[글로벌 세계 대백과사전/언어I·한국문학·논술/문학 용어|문학 용어]] |다음=[[글로벌 세계 대백과사전/언어II·세계문학·논술|언어II·",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/문화·민속/예능 연표/연극 연표",
-          "namespace": 0,
-          "bytes": 357,
-          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=연극 연표 |이전=[[글로벌 세계 대백과사전/문화·민속/예능 연표|예능 연표]] |다음=[[글로벌 세계 대백과사전/문화·민속/예능 연표/무용 연표|무용 연표]]",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/세계사/근대 유럽과 아시아/계몽주의와 프랑스 혁명/청 및 네덜란드의 동남아시아 진출",
-          "namespace": 0,
-          "bytes": 6139,
-          "preview": "## 청 및 네덜란드의 동남아시아 진출〔槪說〕 청(淸)나라는 18세기에 전성기를 맞아, 대청제국(大淸帝國)은 동아시아의 거의 전지역을 세력하에 두었을 뿐 아니라, 동남아시아 방면에도 많이 진출했다. 베트남에는 서산당",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "영웅기",
-          "namespace": 0,
-          "bytes": 55967,
-          "preview": "## 曹操 曹操與劉備密言，備泄之於袁紹，紹知操有圖己之意〔01〕。操自咋其舌流血，以失言戒後世。 建安中，曹操於南皮攻袁譚，斬之。操作鼓吹，自稱萬歲，於馬上舞〔02〕。十二年，攻烏桓蹹頓，一戰，斬蹹頓首，擊 馬鞍，於馬上抃舞。 曹操進軍至",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "조선사온고",
-          "namespace": 0,
-          "bytes": 143651,
-          "preview": "## 전기(前記) 하고 싶던 말 ─ 하고 싶으면서도 못하던 말을 할 기회를 얻는다는 것은 진실로 시원한 일이다. 지난 옛날(惡夢時節이었다.) 역사 소설이나 史譚을 쓰고자 역사책을 뒤적이노라면, 모두가 눈에 거슬리는 ",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "죽서기년/부문3",
-          "namespace": 0,
-          "bytes": 62849,
-          "preview": "《疏證》除廣倉學宭叢書本外，有《遺書》本，曾兩次印布；初名《王忠愨公遺書》，所收《疏證》係鉛印本；續印名《海寧王靜安先生遺書》，係石印本。今據《遺書》兩本互校，有初印不誤而續印諸誤者，亦有續印改正者，皆擇是而從，其有兩本皆誤，或所據今本有誤",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "고본죽서기년/주기",
-          "namespace": 0,
-          "bytes": 36750,
-          "preview": "周 纪 〔一〕《竹书》：十一年庚寅，周始伐商。 案：此唐代一行《历议》所引， “庚寅”二字为一行推算所得，非《纪年》原文。唐兰 先生云：“唐代一行根据《尚书·武成》的月日，用他 的‘大衍历’来推算，认为伐纣应该是庚寅。”（《中 国古代历史上",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "죽서기년/부문5",
-          "namespace": 0,
-          "bytes": 25912,
-          "preview": "〔一〕《汲紀年》：帝王之沒皆曰陟。《發揮》卷五案：韓愈《黃陵廟碑》云：「舜陟方乃死。……余謂《竹書紀年》帝王之沒皆曰陟。陟，昇也。」此引《紀年》乃韓氏隱括之語。《路史》所引見《辨帝舜塚》條，又引《黃陵廟碑》文，所本即此。 〔二〕《汲書》亦云",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "금본죽서기년/하기",
-          "namespace": 0,
-          "bytes": 8733,
-          "preview": "## 帝禹夏-{后}-氏 母曰修己，出行，見流星貫昴，夢接意感，既而吞神珠。修己背剖，而生禹於石紐，虎鼻大口，兩耳參鏤，首戴鉤鈴，胸有玉斗，足文履已，故名文命。長有聖德。長九尺九寸。夢自洗於河，取水飲之。又有白狐九尾之瑞。當堯之時，舜舉之。",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "삼황본기",
-          "namespace": 0,
-          "bytes": 17960,
-          "preview": "소사마씨(사마정 자신)가 이르기를, 태사공(사마천을 높임말)이 사기를 지었는데, 옛날과 현재, 군신(君臣), 마땅히 위로는 천지개벽으로부터, 아래로는 당대에 까지 기록을 하는것이 한 국가의 머리부터 꼬리(즉,처음부터",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "삼국지 (배송지 주)/권01",
-          "namespace": 0,
-          "bytes": 100102,
-          "preview": "태조 무황제는 패국 초현 사람이다. 성은 조, 휘는 조, 자는 맹덕이다. 한나라 상국 조참의 후예이다. 환제 때 조등을 중상시 대장추로 삼고 비정후에 봉하였다. 양자 조숭(曹嵩)이 이어, 태위에까지 이르렀고, 그 출",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "죽서기년/부문4",
-          "namespace": 0,
-          "bytes": 26586,
-          "preview": "[一］《汲纪年》：帝王之没皆曰陟。《 发挥》卷五 案：韩愈《黄陵庙碑》云：‘舜陟方乃死。……余谓《竹书纪年》帝王之没皆曰陟。陟，升也。’此引《纪年》乃韩氏隐括之语。《路史》所引见《辨帝舜冢》条，又引《黄陵庙碑》文，所本即此。 ［二］《汲书》",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "금본죽서기년/은기",
-          "namespace": 0,
-          "bytes": 10834,
-          "preview": "## 湯 名履。湯有七名而九征。放桀於南巢而還，諸侯八譯而朝者千八百國，奇肱氏以車至，乃同尊天乙履為天子，三讓，遂即天子之位。初，高辛氏之世妃曰簡狄，以春分玄鳥至之日，從帝祀郊禖，與其妹浴於玄丘之水。有玄鳥銜卵而墜之，五色甚好，二人競取，覆",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
-          "namespace": 0,
-          "bytes": 1262278,
-          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "東觀漢記 (武英殿聚珍本)/提要",
-          "namespace": 0,
-          "bytes": 5571,
-          "preview": "## 提要 臣等謹案：《東觀漢記》，《隋書·經籍志》稱長水校尉劉珍等撰。今考之范書，珍未嘗爲長水校尉，且此書創始在明帝時，不可題珍等居首。案范書《班固傳》云，明帝始詔班固與睢陽令陳宗、長陵令尹敏、司隸從事孟異，共成《世祖本紀》，固又撰功臣、",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "任氏傳",
-          "namespace": 0,
-          "bytes": 11365,
-          "preview": "任氏，女妖也。有韋使君者，名崟，第九，信安王祎之外孫。少落拓，好飲酒。其從父妹婿曰鄭六，不記其名。早習武藝，亦好酒色，貧無家，托身於妻族；與崟相得，遊處不間。天寶九年夏六月，，崟與鄭子偕行於長安陌中，將會飲於新昌裏。至宣平之南，鄭子辭有故，",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "蜀中廣記 (四庫全書本)/卷037",
-          "namespace": 0,
-          "bytes": 13151,
-          "preview": "欽定四庫全書 明 曹學佺 撰 上川東 遵義道開府夜郎與總戎同城而居近以建南有事大將軍移鎮以游擊一員代其他材官將領各有差嵗抽通省民兵五千名歛其食餉而已説者謂蕩平既乆當以播供播勿煩内地為也然盈庭不决則任事之難耳漢書南夷君長以十數夜郎最大在蜀郡徼",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "呂氏家塾讀詩記 (四部叢刊本)/卷二十四",
-          "namespace": 0,
-          "bytes": 284,
-          "preview": "{{四部叢刊頁眉|title=呂氏家塾讀詩記|section=卷二十四|prev=卷二十三|next=卷二十五|type=經|notes=宋 呂祖謙 撰 景常熟瞿氏鐵琴銅劍樓藏宋刊本}} <pages from=\"2\" to=\"53\" in",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "太平寰宇記/卷001",
-          "namespace": 0,
-          "bytes": 21943,
-          "preview": "## 河南道 ## 開封府 《禹貢》爲兗、豫二州之域，星分房、宿。在春秋時爲鄭地，戰國時爲魏都。《史記》云：「魏惠王自安邑徙都大梁」，即今西南浚儀縣故城是也。後秦始皇二十二年，攻魏，因引河水灌城而拔之，即以爲三川郡地。漢祖起沛，酈生說曰：「",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "蜀中廣記 (四庫全書本)/卷040",
-          "namespace": 0,
-          "bytes": 6896,
-          "preview": "欽定四庫全書 明 曹學佺 撰 川北 華陽國志秦昭襄王時白虎為害自秦蜀巴漢患之秦王乃重募國中有能煞虎者邑萬家金帛稱之於是夷朐䏰廖仲藥何射虎秦精等乃作白竹弩於髙樓上射虎巾頭三節白虎常從羣虎瞋恚盡摶煞羣虎大呴而死秦王嘉之曰虎厯四郡害千二百人一朝患",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "吕氏家塾讀詩記 (四庫全書本)/卷24",
-          "namespace": 0,
-          "bytes": 33039,
-          "preview": "欽定四庫全書 宋 吕祖謙 撰 都人士周人刺衣服無常也古者長民衣服不貳從容有常以齊其民則民徳歸壹傷今不復見古人也 董氏曰緇衣公孫尼子作也其書曰長民者衣服不貳從容有常以齊其民則民徳一詩序葢雜出於古之遺言也 彼都人士狐裘黄黄其容不改出言有章行歸于",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "封氏聞見記 (四庫全書本)/全覽",
-          "namespace": 0,
-          "bytes": 1381,
-          "preview": "﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "南窗記談",
-          "namespace": 0,
-          "bytes": 17320,
-          "preview": "士大夫要不可有所好，一為所蔽未有不為害者。房次律平生自視為何等人，是豈逢君之欲托賤役以自售者哉？史稱，天寶中，明皇有逸誌，數巡幸廣溫泉，為華清宮，環宮所置百司區署，以琯資機算，時方為給事中，詔總經度驪山，疏剔巖藪，為天子遊觀。此等事在當時韋",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "翠微南征録 (四庫全書本)/卷06",
-          "namespace": 0,
-          "bytes": 10997,
-          "preview": "欽定四庫全書 宋 華岳 撰 題富沙廟 平政橋頭火爍空富沙宫殿烈煙中地形難撲徒臨水天意能囘遽反風十里爆雷驚客夢萬家全璧賴神㓛君王注意恢神武更乞威靈為寶冲 溪南風物照扉溪北蘭舟纜翠㣲雙槳碧雲苔浦合一簾紅雨杏花飛只知有酒酧佳景却恨無繩繫落暉更約風",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "太平寰宇記 (四庫全書本)/卷010",
-          "namespace": 0,
-          "bytes": 12425,
-          "preview": "欽定四庫全書 宋 樂史 撰 陳州 陳州淮陽郡今理宛邱縣昔庖犧氏所都曰太皥之墟禹貢為豫州之域星分心宿二度周初為陳國武王封舜后胡公媯滿于此以奉舜祀以備三恪至春秋時為楚靈王所滅乃縣之後五年復立陳惠公後五十六年楚惠王復滅陳而其地盡為楚所有又楚襄王自",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "征韓偉略/卷之一",
-          "namespace": 0,
-          "bytes": 53559,
-          "preview": "水藩彰考館編修總裁川口長孺著 正親町帝天正十四年丙戌，往古朝廷之盛，三韓朝貢。其服也，綏懷撫安；其叛也，征討聲罪。或置日本府其地以統馭，遇之以蕃國之禮。後王綱解紐，郡國分崩，海外之事，朝家不遑。及足利氏之爲將軍，與之修好，通信四國，九州諸矦",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "封氏聞見記 (四庫全書本)/卷06",
-          "namespace": 0,
-          "bytes": 11684,
-          "preview": "欽定四庫全書 封氏聞見記卷六 唐 封演 撰 茶早采者為茶晚采者為茗本草云止渇令人不眠南人好飲之北人初不多飲開元中泰山巖寺有降魔師大興禪敎學禪務於不寐又不夕食皆許其飲茶人自懐挾到處煮飲從此轉相倣效遂成風俗自鄒齊滄棣漸至京邑城市多開店鋪煎茶賣之",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "翠微南征録 (四庫全書本)/全覽",
-          "namespace": 0,
-          "bytes": 1475,
-          "preview": "﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "翠微南征錄 (四部叢刊本)/卷之二",
-          "namespace": 0,
-          "bytes": 247,
-          "preview": "{{四部叢刊頁眉|title=翠微南征錄|section=卷之二|prev=卷之一|next=卷之三|type=集|notes=宋 華岳 撰 張元濟 撰校勘記 舊鈔本}} <pages from=\"14\" to=\"33\" index=\"Si",
-          "redirected_to": null
-        }
-      ]
-    },
     {
       "id": "dangun_samgukyusa",
       "source_title": "삼국유사/기이/고조선",
@@ -3343,6 +3167,410 @@
       ]
     },
     {
+      "id": "chunhyangjeon",
+      "source_title": "열녀춘향수절가 (완판 84장본)",
+      "candidates": [
+        {
+          "host": "ko.wikisource.org",
+          "title": "춘향가",
+          "namespace": 0,
+          "bytes": 138467,
+          "preview": "<아니리> 영웅열사(英雄烈士)와 절대가인(絶對佳人)이 삼겨날 제 강산정기(江山精氣)를 타고 나는디 군산만학부형문(群山萬壑赴荊門)에 왕소군(王昭君)이 삼겨나고 금강활 이아미수(錦江滑 峨嵋秀)에 설도문군탄생(薛濤文君誕生",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/판 소 리/판소리의 창본",
+          "namespace": 0,
+          "bytes": 12959,
+          "preview": "## 판소리의 창본〔개설〕 －唱本〔槪說〕 '판소리'란 광대(廣大)가 한 손에 합죽선(合竹扇)을 멋있게 들고 온갖 너름새를 곱게 섞어가면서 고수(鼓手)의 북장단에 맞추어 소리로써 보는 이에게 연극적 효과를 전달하는 우",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/판 소 리/판소리의 종류",
+          "namespace": 0,
+          "bytes": 12345,
+          "preview": "## 판소리의 종류〔개설〕 －種類〔槪說〕 판소리가 하나의 민속음악으로서의 내용과 형식을 갖추고 완성의 단계에 이른 시기는 대체로 조선왕조 숙종(肅宗)조로부터 영조(英祖)조까지의 시기라 생각된다. 또한 판소리의 전성시",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/한국사/근대사회의 태동/문화의 새 기운/서민예술",
+          "namespace": 0,
+          "bytes": 15924,
+          "preview": "## 서민예술〔槪說〕 양반 중심의 유교적 사회에 대한 항의는 사상면에서만이 아니라 문학에서도 나타났다. 문학에 있어서는 한글로 된 서민문학이 특히 성하였다.김만중 같은 평론가는 한글로 적은 문학이라야 진정한 문학이라",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/현대 문학/현대 전기 문학/개화사조와 신소설",
+          "namespace": 0,
+          "bytes": 22266,
+          "preview": "## 신소설의 개념 新小說-槪念 갑오경장 이후개화·계몽기를 배경으로 해서 이루어진 소설이 바로 신소설인데, 이것은 근대적인 신문학을 대표하는 문학 양식(樣式)이라고 할 수 있다. 신소설은 재래의 구소설, 즉 고대소설",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/동양사상/한국의 사상/조선후기의 사상/조선후기의 문예사상",
+          "namespace": 0,
+          "bytes": 18117,
+          "preview": "## 조선후기의 문예사상〔槪說〕 조선왕조 일대를 통틀어서 그 전기의 성리학파와 후기의 실학파가 문예사상의 주조(主潮)를 이루었다. 이제 그 후기의 문예사상을 밝히려면 먼저 위로 거슬러 올라서 광해조(光海朝)의 교산(",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
+          "namespace": 0,
+          "bytes": 1262278,
+          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
+          "redirected_to": null
+        }
+      ]
+    },
+    {
+      "id": "sassinamjeonggi",
+      "source_title": "사씨남정기",
+      "candidates": [
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/동양사상/한국의 사상/조선후기의 사상/조선후기의 문예사상",
+          "namespace": 0,
+          "bytes": 18117,
+          "preview": "## 조선후기의 문예사상〔槪說〕 조선왕조 일대를 통틀어서 그 전기의 성리학파와 후기의 실학파가 문예사상의 주조(主潮)를 이루었다. 이제 그 후기의 문예사상을 밝히려면 먼저 위로 거슬러 올라서 광해조(光海朝)의 교산(",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/창 극/창극의 창우",
+          "namespace": 0,
+          "bytes": 10363,
+          "preview": "## 창극의 창우〔개설〕 唱劇－唱優〔槪說〕 창극은 판소리를 몇 사람이 배역을 나누어 부르는 입체창(立體唱)에서 비롯된 것이므로 창극이 싹트기 시작했던 원각사(圓覺社) 시절에는 창극의 명인이 따로 없고 당시 판소리 명",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/조선 후기의 문학〔개설〕",
+          "namespace": 0,
+          "bytes": 11564,
+          "preview": "朝鮮後期－文學 〔槪說〕임진왜란 이후부터 1894년 갑오경장(甲午更張)에 이르는 약 300년간의 문학은 조선 후기의 문학에 속한다. 선조 25년(1592)에 일어난 임진왜란은 일찍이 없었던 큰 전쟁이었고 7년 동안이나",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/소설문학의 발흥",
+          "namespace": 0,
+          "bytes": 62103,
+          "preview": "## 패관문학과 소설의 대두 稗官文學－小說－擡頭 조선 초의 소설이란 개념은 현재 우리가 쓰고 있는 소설이란 개념과는 거리가 멀다. 본래 소설이란 개념은 근대의 대표적인 문학의 한 장르로, 그 본질은 인간의 행위(성격",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/문화·민속/한국의 연극/한국의 신파극/신파극의 작가와 작품",
+          "namespace": 0,
+          "bytes": 24060,
+          "preview": "## 신파극의 작가와 작품〔개설〕 新派劇－作家－作品〔槪說〕우리나라 신파극운동의 흐름을 보면 시대적 조건과 연극여건에 따라 그 성쇠(盛衰)의 굴곡이 발생으로부터 소멸까지 40여년 동안에 세 번 나타난다. 즉 1910년",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "소년의 비애",
+          "namespace": 0,
+          "bytes": 30458,
+          "preview": "## 소년의 비애 ## 1 난수는 사랑스럽고 얌전하고 재조있는 처녀라. 그 종형 되는 문호는 여러 종매들을 다 사랑하는 중에도 특별히 난수를 사랑한다. 문호는 이제 십팔 세 되는 시골 어느 중등 정도 학생인 청년이나",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/고려-조선의 문학/조선 후기 문학/한문학과 실학파",
+          "namespace": 0,
+          "bytes": 39019,
+          "preview": "## 한문학 漢文學 연산군(燕山君) 이후 네 차례의 사화(士禍)와 사색(四色)의 당쟁을 피해 뜻있는 학자와 문인들은 산림에 숨어 음풍 영월과 시주(詩酒)로 세월을 보내니, 이들을 산림학파라 한다. 일찍이 성리학자 조",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/한국사/근세사회의 발전/조선의 성립과 발전/조선 왕조의 경제·사회적 구조",
+          "namespace": 0,
+          "bytes": 104028,
+          "preview": "## 조선 왕조의 경제·사회적 구조〔槪說〕 조선왕조 건국 주체세력이 추구하던 경제구조는 민생안정과 더불어 국가수입을 증대시켜 부강한 재무국가(財務國家)를 만드는 것이었다. 즉 국가가 국민을 위해 봉사하려면 재무구조가",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/인명사전/한 국 인 명/ㄱ",
+          "namespace": 0,
+          "bytes": 181046,
+          "preview": "## 가실왕 嘉悉(實)王 6세기경 가야의 왕. 당나라의 악기를 보고 우륵으로 하여금 12현으로 된 가야금을 만들게 하였다. 가야가 멸망하자, 우륵은 신라 진흥왕에게로 돌아갔다고 전하는데, 당시의 6가야 중 어느 가야",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/동양사상/종합사상사연표",
+          "namespace": 0,
+          "bytes": 399,
+          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=종합사상사연표 |이전=[[글로벌 세계 대백과사전/동양사상/한국의 사상/한국의 현대사상/한국의 현대 과학사상|한국의 현대 과학사상]] |다음=[[글로벌 세계 대백",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/세계사상/종합사상사연표",
+          "namespace": 0,
+          "bytes": 335,
+          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=종합사상사연표 |이전=[[글로벌 세계 대백과사전/세계사상/사 상 용 어|사 상 용 어]] |다음=[[글로벌 세계 대백과사전/종교·철학|종교·철학]] }} {{:",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "사회 6-1 (5차 교육과정)/2. 근대화의 노력",
+          "namespace": 0,
+          "bytes": 37539,
+          "preview": "오랜 역사를 이어 오면서 우리 나라의 많은 지도자들은 나라를 잘 다스려 백성들이 잘 살도록 힘썼다. 그리고 외적의 침략을 받았을 때는 온 겨레가 힘을 합쳐 이를 막아내고 나라를 지켰다. 그러나 조선 후기에 이르러서는",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/동양사상/종합사상사연표/자료",
+          "namespace": 0,
+          "bytes": 83247,
+          "preview": "연 대 서 양 연 대 중국·인도·이슬람 사상 연 대 한 국 B.C. 800경 750경 585 582경 515경 490경 470경 434경 427 420? 399 387? 385? 384 361경 335 300 280",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/문학사 연표",
+          "namespace": 0,
+          "bytes": 406,
+          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=문학사 연표 |이전=[[글로벌 세계 대백과사전/언어I·한국문학·논술/문학 용어|문학 용어]] |다음=[[글로벌 세계 대백과사전/언어II·세계문학·논술|언어II·",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/예술·스포츠·취미/예능 연표/연극 연표",
+          "namespace": 0,
+          "bytes": 393,
+          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=연극 연표 |이전=[[글로벌 세계 대백과사전/예술·스포츠·취미/예능 연표|예능 연표]] |다음=[[글로벌 세계 대백과사전/예술·스포츠·취미/예능 연표/무용 연표",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "글로벌 세계 대백과사전/세계사/근대 유럽과 아시아/계몽주의와 프랑스 혁명/청 및 네덜란드의 동남아시아 진출",
+          "namespace": 0,
+          "bytes": 6139,
+          "preview": "## 청 및 네덜란드의 동남아시아 진출〔槪說〕 청(淸)나라는 18세기에 전성기를 맞아, 대청제국(大淸帝國)은 동아시아의 거의 전지역을 세력하에 두었을 뿐 아니라, 동남아시아 방면에도 많이 진출했다. 베트남에는 서산당",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "영웅기",
+          "namespace": 0,
+          "bytes": 55967,
+          "preview": "## 曹操 曹操與劉備密言，備泄之於袁紹，紹知操有圖己之意〔01〕。操自咋其舌流血，以失言戒後世。(《藝文》十七 又《御覽》三百六十七。) 建安中，曹操於南皮攻袁譚，斬之。操作鼓吹，自稱萬歲，於馬上舞〔02〕。十二年，攻烏桓蹹頓，一戰，斬蹹",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "조선사온고",
+          "namespace": 0,
+          "bytes": 143651,
+          "preview": "## 전기(前記) 하고 싶던 말 ─ 하고 싶으면서도 못하던 말을 할 기회를 얻는다는 것은 진실로 시원한 일이다. 지난 옛날(惡夢時節이었다.) 역사 소설이나 史譚을 쓰고자 역사책을 뒤적이노라면, 모두가 눈에 거슬리는 ",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "죽서기년/부문3",
+          "namespace": 0,
+          "bytes": 62849,
+          "preview": "《疏證》除廣倉學宭叢書本外，有《遺書》本，曾兩次印布；初名《王忠愨公遺書》，所收《疏證》係鉛印本；續印名《海寧王靜安先生遺書》，係石印本。今據《遺書》兩本互校，有初印不誤而續印諸誤者，亦有續印改正者，皆擇是而從，其有兩本皆誤，或所據今本有誤",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "고본죽서기년/주기",
+          "namespace": 0,
+          "bytes": 36750,
+          "preview": "周 纪 〔一〕《竹书》：十一年庚寅，周始伐商。(《 新唐书·历志》) 案：此唐代一行《历议》所引， “庚寅”二字为一行推算所得，非《纪年》原文。唐兰 先生云：“唐代一行根据《尚书·武成》的月日，用他 的‘大衍历’来推算，认为伐纣应该是庚寅。",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "죽서기년/부문5",
+          "namespace": 0,
+          "bytes": 25912,
+          "preview": "〔一〕《汲紀年》：帝王之沒皆曰陟。《發揮》卷五案：韓愈《黃陵廟碑》云：「舜陟方乃死。……余謂《竹書紀年》帝王之沒皆曰陟。陟，昇也。」此引《紀年》乃韓氏隱括之語。《路史》所引見《辨帝舜塚》條，又引《黃陵廟碑》文，所本即此。 〔二〕《汲書》亦云",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "금본죽서기년/하기",
+          "namespace": 0,
+          "bytes": 8733,
+          "preview": "## 帝禹夏后氏 母曰修己，出行，見流星貫昴，夢接意感，既而吞神珠。修己背剖，而生禹於石紐，虎鼻大口，兩耳參鏤，首戴鉤鈴，胸有玉斗，足文履已，故名文命。長有聖德。長九尺九寸。夢自洗於河，取水飲之。又有白狐九尾之瑞。當堯之時，舜舉之。禹觀於河",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "삼황본기",
+          "namespace": 0,
+          "bytes": 17960,
+          "preview": "소사마씨(사마정 자신)가 이르기를, 태사공(사마천을 높임말)이 사기를 지었는데, 옛날과 현재, 군신(君臣), 마땅히 위로는 천지개벽으로부터, 아래로는 당대에 까지 기록을 하는것이 한 국가의 머리부터 꼬리(즉,처음부터",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "삼국지 (배송지 주)/권01",
+          "namespace": 0,
+          "bytes": 100102,
+          "preview": "태조 무황제는 패국 초현 사람이다. 성은 조, 휘는 조, 자는 맹덕이다. 한나라 상국 조참의 후예이다. (〔《曹瞞傳》曰〕：太祖一名吉利，小字阿瞞。王沈《魏書》曰：其先出於黃帝。當高陽世，陸終之子曰安，是為曹姓。周武王克殷，存先",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "죽서기년/부문4",
+          "namespace": 0,
+          "bytes": 26586,
+          "preview": "[一］《汲纪年》：帝王之没皆曰陟。《 发挥》卷五 案：韩愈《黄陵庙碑》云：‘舜陟方乃死。……余谓《竹书纪年》帝王之没皆曰陟。陟，升也。’此引《纪年》乃韩氏隐括之语。《路史》所引见《辨帝舜冢》条，又引《黄陵庙碑》文，所本即此。 ［二］《汲书》",
+          "redirected_to": null
+        },
+        {
+          "host": "ko.wikisource.org",
+          "title": "금본죽서기년/은기",
+          "namespace": 0,
+          "bytes": 10834,
+          "preview": "## 湯 名履。湯有七名而九征。放桀於南巢而還，諸侯八譯而朝者千八百國，奇肱氏以車至，乃同尊天乙履為天子，三讓，遂即天子之位。初，高辛氏之世妃曰簡狄，以春分玄鳥至之日，從帝祀郊禖，與其妹浴於玄丘之水。有玄鳥銜卵而墜之，五色甚好，二人競取，覆",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
+          "namespace": 0,
+          "bytes": 1262278,
+          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "東觀漢記 (武英殿聚珍本)/提要",
+          "namespace": 0,
+          "bytes": 5571,
+          "preview": "## 提要 臣等謹案：《東觀漢記》，《隋書·經籍志》稱長水校尉劉珍等撰。今考之范書，珍未嘗爲長水校尉，且此書創始在明帝時，不可題珍等居首。案范書《班固傳》云，明帝始詔班固與睢陽令陳宗、長陵令尹敏、司隸從事孟異，共成《世祖本紀》，固又撰功臣、",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "任氏傳",
+          "namespace": 0,
+          "bytes": 11365,
+          "preview": "任氏，女妖也。有韋使君者，名崟，第九，信安王祎之外孫。少落拓，好飲酒。其從父妹婿曰鄭六，不記其名。早習武藝，亦好酒色，貧無家，托身於妻族；與崟相得，遊處不間。天寶九年夏六月，，崟與鄭子偕行於長安陌中，將會飲於新昌裏。至宣平之南，鄭子辭有故，",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "蜀中廣記 (四庫全書本)/卷037",
+          "namespace": 0,
+          "bytes": 13151,
+          "preview": "欽定四庫全書 明 曹學佺 撰 上川東 遵義道開府夜郎與總戎同城而居近以建南有事大將軍移鎮以游擊一員代其他材官將領各有差嵗抽通省民兵五千名歛其食餉而已説者謂蕩平既乆當以播供播勿煩内地為也然盈庭不决則任事之難耳漢書南夷君長以十數夜郎最大在蜀郡徼",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "吕氏家塾讀詩記 (四庫全書本)/卷24",
+          "namespace": 0,
+          "bytes": 33039,
+          "preview": "欽定四庫全書 宋 吕祖謙 撰 都人士周人刺衣服無常也古者長民衣服不貳從容有常以齊其民則民徳歸壹傷今不復見古人也 董氏曰緇衣公孫尼子作也其書曰長民者衣服不貳從容有常以齊其民則民徳一詩序葢雜出於古之遺言也 彼都人士狐裘黄黄其容不改出言有章行歸于",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "呂氏家塾讀詩記 (四部叢刊本)/卷二十四",
+          "namespace": 0,
+          "bytes": 284,
+          "preview": "{{四部叢刊頁眉|title=呂氏家塾讀詩記|section=卷二十四|prev=卷二十三|next=卷二十五|type=經|notes=宋 呂祖謙 撰 景常熟瞿氏鐵琴銅劍樓藏宋刊本}} <pages from=\"2\" to=\"53\" in",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "太平寰宇記/卷001",
+          "namespace": 0,
+          "bytes": 21943,
+          "preview": "## 河南道 ## 開封府 (今理開封、浚儀二縣。) 《禹貢》爲兗、豫二州之域，星分房、宿。在春秋時爲鄭地，戰國時爲魏都。《史記》云：「魏惠王自安邑徙都大梁」，即今西南浚儀縣故城是也。後秦始皇二十二年，攻魏，因引河水灌城而拔之，即以爲三川郡",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "蜀中廣記 (四庫全書本)/卷040",
+          "namespace": 0,
+          "bytes": 6896,
+          "preview": "欽定四庫全書 明 曹學佺 撰 川北 華陽國志秦昭襄王時白虎為害自秦蜀巴漢患之秦王乃重募國中有能煞虎者邑萬家金帛稱之於是夷朐䏰廖仲藥何射虎秦精等乃作白竹弩於髙樓上射虎巾頭三節白虎常從羣虎瞋恚盡摶煞羣虎大呴而死秦王嘉之曰虎厯四郡害千二百人一朝患",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "封氏聞見記 (四庫全書本)/全覽",
+          "namespace": 0,
+          "bytes": 1381,
+          "preview": "﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "封氏聞見記 (四庫全書本)/卷06",
+          "namespace": 0,
+          "bytes": 11684,
+          "preview": "欽定四庫全書 封氏聞見記卷六 唐 封演 撰 茶早采者為茶晚采者為茗本草云止渇令人不眠南人好飲之北人初不多飲開元中泰山巖寺有降魔師大興禪敎學禪務於不寐又不夕食皆許其飲茶人自懐挾到處煮飲從此轉相倣效遂成風俗自鄒齊滄棣漸至京邑城市多開店鋪煎茶賣之",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "石柱記箋釋 (四庫全書本)/卷2",
+          "namespace": 0,
+          "bytes": 20500,
+          "preview": "欽定四庫全書 歸安鄭元慶撰 吳興長城令晉太康三年分烏程 吳郡長城縣平陳廢仁夀二年復有雉山 長城望大業末沈法興置長州武徳四年更置綏州因古綏安縣名之又更置雉州并置原郷縣七年州廢省原郷以長城來屬有西湖漑田三千頃其後湮廢貞元十三年刺史于頔復之人頼其",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "南窗記談",
+          "namespace": 0,
+          "bytes": 17320,
+          "preview": "士大夫要不可有所好，一為所蔽未有不為害者。房次律平生自視為何等人，是豈逢君之欲托賤役以自售者哉？史稱，天寶中，明皇有逸誌，數巡幸廣溫泉，為華清宮，環宮所置百司區署，以琯資機算，時方為給事中，詔總經度驪山，疏剔巖藪，為天子遊觀。此等事在當時韋",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "翠微南征録 (四庫全書本)/全覽",
+          "namespace": 0,
+          "bytes": 1475,
+          "preview": "﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "翠微南征録 (四庫全書本)/卷06",
+          "namespace": 0,
+          "bytes": 10997,
+          "preview": "欽定四庫全書 宋 華岳 撰 題富沙廟 平政橋頭火爍空富沙宫殿烈煙中地形難撲徒臨水天意能囘遽反風十里爆雷驚客夢萬家全璧賴神㓛君王注意恢神武更乞威靈為寶冲 溪南風物照扉溪北蘭舟纜翠㣲雙槳碧雲苔浦合一簾紅雨杏花飛只知有酒酧佳景却恨無繩繫落暉更約風",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "太平廣記/卷第141",
+          "namespace": 0,
+          "bytes": 5636,
+          "preview": "## 孔子 孔子謂子夏曰：「得麟之月，天當有血書魯端門。」孔聖沒，周室亡。子夏往觀，逢一郎云：「門有血，飛為赤鳥，化而為書云。」(（出《說題辭》）) ## 蕭士義 後漢黃門郎蕭士義，和帝永元二年被戮。數日前，家中常所養狗，來向其婦前而語曰：",
+          "redirected_to": null
+        },
+        {
+          "host": "zh.wikisource.org",
+          "title": "太平寰宇記 (四庫全書本)/卷010",
+          "namespace": 0,
+          "bytes": 12425,
+          "preview": "欽定四庫全書 宋 樂史 撰 陳州 陳州淮陽郡今理宛邱縣昔庖犧氏所都曰太皥之墟禹貢為豫州之域星分心宿二度周初為陳國武王封舜后胡公媯滿于此以奉舜祀以備三恪至春秋時為楚靈王所滅乃縣之後五年復立陳惠公後五十六年楚惠王復滅陳而其地盡為楚所有又楚襄王自",
+          "redirected_to": null
+        }
+      ]
+    },
+    {
       "id": "gangbo_dubyeongjeong",
       "source_title": "윤봉길의 유서",
       "candidates": [
@@ -3370,6 +3598,10 @@
     {
       "id": "hunminjeongeum_jeonginji",
       "error": "page \"訓民正音\" resolved but its cleaned text is empty; page \"훈민정음\" resolved but its cleaned text is empty"
+    },
+    {
+      "id": "munhwa_saneop_jinheung_gibonbeop",
+      "error": "page \"문화산업진흥 기본법 (제9424호)\" resolved but its cleaned text is empty"
     }
   ],
   "needs_sections": [],
