@@ -46,7 +46,7 @@
       "orig": "존경하는 국민 여러분, 지난 몇달 우리는 유례없는 정치적 격변기를 보냈습니다. 정치는 혼란스러웠지만 국민은 위대했습니다. 현직 대통령의 탄핵과 구속 앞에서도 국민들이 대한민국의 앞길을 열어주셨습니다. 우리 국민들은 좌절하지 않고 오히려 이를 전화위복의 계기로 승화시켜 마침내 오늘 새로운 세상을 열었습니다. 대한민국의 위대함은 국민의 위대함입니다.",
       "modern": null,
       "reading": null,
-      "en": "Respected citizens, over the past few months we have passed through an unprecedented period of political upheaval. Politics was in chaos, but the people were great. Even in the face of the impeachment and detention of a sitting president, the people opened the way forward for the Republic of Korea. Our people did not despair but instead turned it into an occasion for turning misfortune into blessing, and today they have at last opened a new world. The greatness of the Republic of Korea is the greatness of its people."
+      "en": "Respected citizens, over the past few months we have passed through an unprecedented period of political upheaval. Politics was in chaos, but the people were great. Even in the face of the impeachment and detention of a sitting president, the people opened the way forward for the Republic of Korea. Our people did not despair but instead sublimated it into an occasion for turning misfortune into blessing, and today they have at last opened a new world. The greatness of the Republic of Korea is the greatness of its people."
     },
     {
       "orig": "그리고 이번 대선에서 우리국민들은 또 하나의 역사를 만들어주셨습니다. 전국 각지에서 골고른 지지로 새로운 대통령을 선택해주셨습니다.",
@@ -218,9 +218,9 @@
     "text": "original"
   },
   "review": {
-    "status": "draft",
-    "by": "writer",
-    "date": "2026-10-09",
-    "notes": ""
+    "status": "approved",
+    "by": "content-review",
+    "date": "2026-10-13",
+    "notes": "Checked all 33 paragraphs line by line; faithful. Author/context facts (Park removed 10 Mar 2017, election 9 May, Gwanghwamun plan not carried out) verified, neutral; ko/en notes agree. Minor wording fix in para 5."
   }
 }
