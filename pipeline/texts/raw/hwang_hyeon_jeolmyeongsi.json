@@ -1,0 +1,25 @@
+{
+  "id": "hwang_hyeon_jeolmyeongsi",
+  "source": "wikisource-zh",
+  "url": "https://zh.wikisource.org/wiki/%E7%B5%95%E5%91%BD%E8%A9%A9_%28%E9%BB%83%E7%8E%B9%29",
+  "page_title": "絕命詩 (黃玹)",
+  "revision_id": 1335757,
+  "revision_timestamp": "2018-01-01T08:22:19Z",
+  "fetched_at": "2026-10-13T05:13:07Z",
+  "licence": "Original work: public domain (Author died 1910; Korean term (life+50) expired 1960, before the 2013 extension, so the work is in the public domain.). Transcription: Wikisource contributors, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).",
+  "wikitext": "{{Header|title=絕命詩|author=黃玹|section=|year=1910|previous=|next=|type=|from=|notes=黃玹，朝鮮狀元，強直愛國。1910年8月，日本強行吞併朝鮮，黃玹于9月10日（陰曆八月六日）遺詩四首，吞下鴉片自殺殉國，享年五十六。}}<onlyinclude><poem>\n亂離滾到白頭年，幾合捐生却未然，\n今日眞成無可奈，輝輝風燭照蒼天。\n</poem>\n\n<poem>\n妖氛晻翳帝星移，九闕沉沉晝漏遲，\n詔勅從今無復有，琳琅一紙淚千絲。\n</poem>\n\n<poem>\n鳥獸哀鳴海岳嚬，槿花世界已沉淪，\n秋燈掩卷懷千古，難作人間識字人。\n</poem>\n\n<poem>\n曾無支厦半椽功，只是成人不是忠，\n止意僅能追尹糓，當時愧不躡陳東。\n</poem></onlyinclude>",
+  "text": "亂離滾到白頭年，幾合捐生却未然，\n今日眞成無可奈，輝輝風燭照蒼天。\n\n妖氛晻翳帝星移，九闕沉沉晝漏遲，\n詔勅從今無復有，琳琅一紙淚千絲。\n\n鳥獸哀鳴海岳嚬，槿花世界已沉淪，\n秋燈掩卷懷千古，難作人間識字人。\n\n曾無支厦半椽功，只是成人不是忠，\n止意僅能追尹糓，當時愧不躡陳東。",
+  "edition": {
+    "template": "Header",
+    "params": {
+      "title": "絕命詩",
+      "author": "黃玹",
+      "year": "1910",
+      "notes": "黃玹，朝鮮狀元，強直愛國。1910年8月，日本強行吞併朝鮮，黃玹于9月10日（陰曆八月六日）遺詩四首，吞下鴉片自殺殉國，享年五十六。"
+    }
+  },
+  "subpages": [],
+  "resolved_via": "title",
+  "truncated": false,
+  "needs_sections": false
+}
