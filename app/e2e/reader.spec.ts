@@ -176,6 +176,9 @@ test('reader: library, timeline, tap lookup, resume (phone + iPad)', async ({ pa
   const pin = await page.evaluate(() => ({ bottom: document.querySelector('.tabbar')!.getBoundingClientRect().bottom, h: innerHeight, doc: document.documentElement.scrollHeight }));
   expect(Math.round(pin.bottom)).toBe(pin.h);
   expect(pin.doc).toBe(pin.h);
+  // the Reader header is one row, the same height as the search bar on the other tabs
+  const headH = await page.evaluate(() => document.querySelector('.rd-lib-head')!.getBoundingClientRect().height);
+  expect(headH).toBeLessThanOrEqual(76);
   await page.locator('main').evaluate((m) => m.scrollTo(0, 0));
 
   await readerFlow(page);

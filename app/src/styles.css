@@ -353,7 +353,7 @@ main.reader-host, .pane-right.reader-host { position: relative; overflow: hidden
 .rd-lib-head .seg button.on, .rd-lib-head .pill.on { background: var(--on-bar); border-color: var(--on-bar); color: var(--bar); }
 .rd-lib-head .rd-filters { padding: 10px; border-radius: 12px; background: var(--bg); color: var(--text); }
 .rd-lib-title { flex: none; font-size: 24px; font-weight: 650; letter-spacing: -.01em; white-space: nowrap; }
-@media (max-width: 440px) { .rd-lib-title .rd-h-en { display: none; } }
+@media (max-width: 440px) { .rd-lib-title .rd-h-en { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } } /* still read out */
 .rd-lib-title [lang=ko] { font-family: var(--rd-serif); }
 .rd-h-en { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: .02em; }
 .rd-lib-tools { display: flex; align-items: center; gap: 6px; min-width: 0; }
