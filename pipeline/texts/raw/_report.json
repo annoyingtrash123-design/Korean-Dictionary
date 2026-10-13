@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T00:45:00Z",
+  "generated_at": "2026-10-13T00:59:03Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -1824,6 +1824,18 @@
       "resolved_via": "title",
       "truncated": false,
       "needs_sections": false
+    },
+    {
+      "id": "hyeonjingeon_gatjaneun_soseol_1929",
+      "source": "wikisource-ko",
+      "page_title": "같잖은 소설로 문제",
+      "url": "https://ko.wikisource.org/wiki/%EA%B0%99%EC%9E%96%EC%9D%80_%EC%86%8C%EC%84%A4%EB%A1%9C_%EB%AC%B8%EC%A0%9C",
+      "revision_id": 430647,
+      "chars": 876,
+      "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
     }
   ],
   "missing": [],
@@ -3125,116 +3137,6 @@
           "bytes": 2025,
           "preview": "{{머리말 | 제목 = 유서 | 부제 = | 저자 = [[저자:윤봉길|윤봉길]] | 이전 = | 다음 = | 설명 = 대한민국의 보물 제568-2호. 1932년 4월 27일 공원을 답사한 직후 작성한 것으로, 이 자",
           "note": "index page: page is almost empty"
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "GB 18030-2022 信息技术 中文编码字符集/附录C（规范性）四字节字符表/8130~8431",
-          "namespace": 0,
-          "bytes": 1262278,
-          "preview": "30 31 32 33 34 35 36 37 38 39 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F 90 91 92 93 94 95 96 97 98 99 9A 9B 9C 9D 9E ",
-          "redirected_to": null
-        }
-      ]
-    },
-    {
-      "id": "hyeonjingeon_gatjaneun_soseol_1929",
-      "source_title": "갓잔은 소설로 문제",
-      "candidates": [
-        {
-          "host": "ko.wikisource.org",
-          "title": "같잖은 소설로 문제",
-          "namespace": 0,
-          "bytes": 2671,
-          "preview": "나는 只今으로부터 約 八九年前에 엇던 新聞社에 잇슬 ᄯᅢ에 筆者의 이름도 잘 모르고 內容도 그리 변변치 못한 엇던 西洋小說을 한아 飜譯하야 『白髮』이란 題로 發表한 일이 잇섯는데 그 뒤에 東明社에 잇슬 ᄯᅢ에 나에게",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/현대 문학/현대 전기 문학/근대 문예사조와 본격 문학기",
-          "namespace": 0,
-          "bytes": 260574,
-          "preview": "## 근대 문학 近代文學 문학을 하나의 여기(餘技)로 생각하지 아니하고, 권선징악이나 설교 또는 계몽적인 목적의식에서 벗어나 진지한 자세로 현실과 대결하는 한편 문학 본래의 예술성을 창조하려는 움직임이 3·1운동 이",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "문단 30년의 자취",
-          "namespace": 0,
-          "bytes": 266768,
-          "preview": "1918년 12월 스무닷샛날 밤이었다. 일본 동경 本鄕[본향]에 있는 내 하숙에는 나하고 朱耀翰[주요한]하고가 화로를 끼고 마주 앉아 이야기를 하고 있었다. 파우리스타의 커피 시럽을 진하게 타서 마시면서 그날 저녁(",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "신문지와 철장",
-          "namespace": 0,
-          "bytes": 25590,
-          "preview": "나는 어쭙잖은 일로 삼남 지방 T경찰서 유치장에서 며츨을 보낸 일이 있었다. 사월 그믐께 서울에서는 창경원 밤 꽃구경이 한참일 무렵이었다. 앞문 목 책과 뒤 쇠창살 사이로 햇발은 금강석과 같이 부시다. 조각밖에 아니",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "지새는 안개/제2장",
-          "namespace": 0,
-          "bytes": 49934,
-          "preview": "## 1 밤은 자정을 넘은 지 오래다. 태양의 광선을 따라 대지를 입맞추던 이른 봄의 입김도 얼어버리고 새맑은 하늘이 검은내 가물거리는 공간을 서늘서늘하게 덮고 있었다. 무덤 같은 침묵이 쓸쓸하게 미닫이를 대지르고 ",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "적도",
-          "namespace": 0,
-          "bytes": 529161,
-          "preview": "## 출옥 서울의 봄은 눈 속에서 온다. 남산의 푸르던 소나무는 가지가 휘도록 철겨운 눈덩이를 안고 함박꽃이 피었다. 달아나는 자동차와 전차들도 새로운 흰 지붕을 이었다. 아스팔트 다진 길바닥. 펑퍼짐한 빌딩 꼭지에",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "흑치상지",
-          "namespace": 0,
-          "bytes": 251406,
-          "preview": "## 죽음보담 슬프다 육로로 숯재 탄현(炭峴[ ])를 지나 황산벌로 해서 짓쳐 들어온 신라군 오만 명과, 수로로 기벌포(伎伐浦)를 거쳐 사자수(泗.水[사차수])를 거슬러 올라온 13만 당병(唐兵)은 서로 합세하여 물",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "백발",
-          "namespace": 0,
-          "bytes": 472907,
-          "preview": "## 서언 독자 제씨에게. 이 소설은 이태리 소설(伊太利 小說)이올시다. 아니 소설이 아니라 사실기담(事實奇談)이올시다. 세계 의학계(世界 醫學界)를 진동한 죽었다가 살아난 사람이 지은 자서전(自敍傳)이올시다. 이 ",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/문학사 연표",
-          "namespace": 0,
-          "bytes": 406,
-          "preview": "{{머리말 |제목=[[글로벌 세계 대백과사전]] |부제=문학사 연표 |이전=[[글로벌 세계 대백과사전/언어I·한국문학·논술/문학 용어|문학 용어]] |다음=[[글로벌 세계 대백과사전/언어II·세계문학·논술|언어II·",
-          "redirected_to": null
-        },
-        {
-          "host": "ko.wikisource.org",
-          "title": "글로벌 세계 대백과사전/언어I·한국문학·논술/문학사 연표/자료",
-          "namespace": 0,
-          "bytes": 212881,
-          "preview": "연 대 유 럽 · 아 메 리 카 연 대 동 양 연 대 한 국 B.C. 800 770 600∼ 500 470 441/1 431 428 425 397 386 385 351 347 338 335 325 322 140 55",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "蘆溪先生文集 (朴仁老)/卷三",
-          "namespace": 0,
-          "bytes": 39500,
-          "preview": "## 歌 ## 太平詞戊戌季冬。釜山屯賊。乘夜奔潰。時公佐左兵使成允文幕。兵使聞卽率軍馳到釜山。留十餘日後還到本營。明日。使之作此歌。 나라히偏小ᄒᆞ야海東애ᄇᆞ려셔도箕子遺風이古今업시淳厚ᄒᆞ야二百年來예禮義을崇尙ᄒᆞ니衣冠文物이漢唐宋이",
-          "redirected_to": null
-        },
-        {
-          "host": "zh.wikisource.org",
-          "title": "華夷譯語/朝鮮館譯語",
-          "namespace": 0,
-          "bytes": 39053,
-          "preview": "## 天文門 編號 詞彙 訓讀 古諺文 音讀 古諺文 1 天 哈嫩二 하늘 忝 텬(텬) 2 日 害 해 忍 ᅀᅵᆯ(ᅀᅵᇙ) 3 月 得二 ᄃᆞᆯ 臥 월(ᅌᅯᇙ) 4 星 別二 별 省 셔ᇰ(셔ᇰ) 5 風 把論 ᄇᆞᄅᆞᆷ 捧 푸ᇰ(",
-          "redirected_to": null
         },
         {
           "host": "zh.wikisource.org",
