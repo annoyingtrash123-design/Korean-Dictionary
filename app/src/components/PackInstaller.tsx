@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { db, MANIFEST_URL, progress } from '../db/client';
+import { db, fetchManifest, MANIFEST_URL, progress } from '../db/client';
+import { installLive } from '../lib/install-live';
 import { fmtBytes } from '../lib/app-state';
 import { useStore } from '../lib/store';
 import type { Manifest } from '../lib/types';
@@ -49,7 +50,7 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
       if (problem) throw new Error(problem);
       await requestPersist();
       await takeLock();
-      for (const p of packs) await db.install(p, MANIFEST_URL(), manifest.version);
+      await installLive(manifest, packIds, fetchManifest, (p, v) => db.install(p, MANIFEST_URL(), v));
       await db.packStatus();
       dropLock();
       running.current = false;
