@@ -112,6 +112,10 @@ export interface Engine {
   similarWords(source: string, id: number, limit: number): Promise<ResultRow[]>;
   sentences(text: string, limit: number): Promise<{ ko: string; en: string | null; source: string | null }[]>;
   grammarList(): Promise<GrammarRow[]>;
+  gameWords(level: number, limit: number): Promise<GameWord[]>;
+  gameWordsFor(headwords: string[]): Promise<GameWord[]>;
+  chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
+  chainCheck(word: string): Promise<GameWord | null>;
   wordOfDay(date: string): Promise<ResultRow | null>;
   listTexts(): Promise<TextSummary[]>;
   getText(id: string): Promise<TextDoc | null>;
@@ -134,3 +138,6 @@ export interface ManifestPack {
 export interface Manifest { version: string; packs: ManifestPack[] }
 
 export interface Progress { pack: string; phase: 'download' | 'install' | 'done'; done: number; total: number; chunk?: number; chunks?: number }
+
+/** A quiz word (Games tab). `examples`: Korean example sentences for Fill the gap. */
+export interface GameWord { source: string; id: number; headword: string; hanja?: string | null; pos?: string | null; level?: number | null; gloss: string; examples: string[] }

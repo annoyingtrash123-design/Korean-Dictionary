@@ -894,3 +894,42 @@ fn similar_words_share_a_first_gloss() {
     assert!(similar_words(&[&core], "krdict", 999, 8).unwrap().is_empty());
     assert!(similar_words(&[&build_core()], "krdict", 11, 8).unwrap().is_empty());
 }
+
+// ---- games ---------------------------------------------------------------------------------
+
+#[test]
+fn game_words_by_level() {
+    let core = build_core();
+    let packs = [&core];
+    let w = game_words(&packs, 1, 50).unwrap();
+    assert!(w.len() >= 10, "{}", w.len());
+    assert!(w.iter().all(|x| x.level == Some(1) && x.source == "krdict" && !x.gloss.is_empty()));
+    // content words only: no endings
+    assert!(w.iter().all(|x| x.pos.as_deref() != Some("ending")));
+    assert!(w.iter().any(|x| !x.examples.is_empty()));
+    assert!(game_words(&packs, 9, 10).unwrap().is_empty());
+}
+
+#[test]
+fn game_words_for_headwords_prefers_krdict() {
+    let core = build_core();
+    let w = game_words_for(&[&core], &["학교".into(), "없는말".into(), "사랑".into()]).unwrap();
+    assert_eq!(w.iter().map(|x| x.headword.as_str()).collect::<Vec<_>>(), ["학교", "사랑"]);
+    assert_eq!(w[0].source, "krdict");
+}
+
+#[test]
+fn word_chain_moves_and_checks() {
+    let core = build_core();
+    let packs = [&core];
+    // 학교 -> a noun starting with 교? none in the fixture; 학 -> 학교, 학생, 학년 (not 학 itself: one syllable)
+    let c = chain_candidates(&packs, &["학".into()], &["학교".into()], 10).unwrap();
+    let hws: Vec<&str> = c.iter().map(|x| x.headword.as_str()).collect();
+    assert!(hws.contains(&"학생") && hws.contains(&"학년"), "{hws:?}");
+    assert!(!hws.contains(&"학교") && !hws.contains(&"학"), "{hws:?}");
+    assert!(c.iter().all(|x| x.pos.as_deref() == Some("noun")));
+    // a verb is not a noun; a one-syllable word does not count
+    assert!(chain_check(&packs, "학생").unwrap().is_some());
+    assert!(chain_check(&packs, "가다").unwrap().is_none());
+    assert!(chain_check(&packs, "학").unwrap().is_none());
+}

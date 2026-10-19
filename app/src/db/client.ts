@@ -1,6 +1,6 @@
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, GameWord, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -137,6 +137,10 @@ export const db = {
   hanjaChar: (ch: string) => call<HanjaChar | null>('hanjaChar', ch),
   wordsWithHanja: (ch: string, limit: number, offset = 0) => call<ResultRow[]>('wordsWithHanja', ch, limit, offset),
   similarWords: (source: string, id: number, limit = 8) => call<ResultRow[]>('similarWords', source, id, limit),
+  gameWords: (level: number, limit: number) => call<GameWord[]>('gameWords', level, limit),
+  gameWordsFor: (headwords: string[]) => call<GameWord[]>('gameWordsFor', headwords),
+  chainCandidates: (starts: string[], used: string[], limit = 20) => call<GameWord[]>('chainCandidates', starts, used, limit),
+  chainCheck: (word: string) => call<GameWord | null>('chainCheck', word),
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {

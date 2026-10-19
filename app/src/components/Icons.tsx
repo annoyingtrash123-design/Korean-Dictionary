@@ -15,6 +15,7 @@ const P: Record<string, JSX.Element> = {
   edit: <><path d="M4 20h4L19 9l-4-4L4 16z" /></>,
   folder: <path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H10l2 2.5h7.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" />,
   download: <><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14" /></>,
+  dice: <><rect x="4" y="4" width="16" height="16" rx="3.5" /><circle cx="9" cy="9" r="1.1" fill="currentColor" /><circle cx="15" cy="9" r="1.1" fill="currentColor" /><circle cx="12" cy="12" r="1.1" fill="currentColor" /><circle cx="9" cy="15" r="1.1" fill="currentColor" /><circle cx="15" cy="15" r="1.1" fill="currentColor" /></>,
   link: <path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1" />,
 };
 export function Icon({ name, size = 22, fill = false, label }: { name: keyof typeof P | string; size?: number; fill?: boolean; label?: string }) {

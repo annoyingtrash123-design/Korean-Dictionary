@@ -1245,6 +1245,8 @@ pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;
 pub use lookup::{lookup_in_text, TextMatch};
+mod games;
+pub use games::{chain_candidates, chain_check, game_words, game_words_for, GameWord};
 
 /// Background warm-up: step `step` reads one slice of a search index into SQLite's page cache,
 /// so that first-time queries don't pay for slow storage reads. Returns false when done.

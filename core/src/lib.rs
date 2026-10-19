@@ -220,6 +220,30 @@ mod wasm_api {
             })
         }
 
+        /// Games: `limit` random quiz words of a krdict level (1–3) as `GameWord[]`.
+        #[wasm_bindgen(js_name = gameWords)]
+        pub async fn game_words(&self, level: u32, limit: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::game_words(&s.all(), level as i64, limit as usize).map_err(js_err)?))
+        }
+
+        /// Games: the best quiz entry for each headword, in order (recent lookups, Reader words).
+        #[wasm_bindgen(js_name = gameWordsFor)]
+        pub async fn game_words_for(&self, headwords: Vec<String>) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::game_words_for(&s.all(), &headwords).map_err(js_err)?))
+        }
+
+        /// 끝말잇기: nouns starting with any of `starts`, skipping `used`.
+        #[wasm_bindgen(js_name = chainCandidates)]
+        pub async fn chain_candidates(&self, starts: Vec<String>, used: Vec<String>, limit: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::chain_candidates(&s.all(), &starts, &used, limit as usize).map_err(js_err)?))
+        }
+
+        /// 끝말잇기: the noun entry for a played word, or null.
+        #[wasm_bindgen(js_name = chainCheck)]
+        pub async fn chain_check(&self, word: String) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::chain_check(&s.all(), &word).map_err(js_err)?))
+        }
+
         pub async fn sentences(&self, text: String, limit: u32) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&search::sentences(&s.all(), &text, limit as usize).map_err(js_err)?))
         }

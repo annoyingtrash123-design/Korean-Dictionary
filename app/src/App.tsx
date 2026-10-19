@@ -7,6 +7,7 @@ import { EntryView } from './views/Entry';
 import { HanjaPage } from './views/HanjaPage';
 import { BookmarksView } from './views/Bookmarks';
 import { SettingsView } from './views/Settings';
+import { GamesView } from './views/Games';
 import { FirstRun } from './views/FirstRun';
 import { ReaderLibrary, ReaderEmpty } from './views/Reader';
 import { TextView } from './views/TextView';
@@ -51,7 +52,7 @@ export function App() {
   const leftQ = route.name === 'search' ? (route.params.get('q') ?? '') : q;
   const left = useRef<HTMLElement>(null);
   // Remember which list tab the open entry came from, so the left pane keeps showing it.
-  useEffect(() => { if (route.name === 'bookmarks') listTab.set('bookmarks'); else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings') listTab.set('search'); }, [route.name]);
+  useEffect(() => { if (route.name === 'bookmarks') listTab.set('bookmarks'); else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings' && route.name !== 'games') listTab.set('search'); }, [route.name]);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
   useScrollMemo(main, wide ? route.raw + '|w' : route.raw);
   useScrollMemo(left, wide ? `L:${leftKind}:${leftKind === 'search' ? leftQ : ''}` : 'unused');
@@ -80,7 +81,7 @@ export function App() {
   if (status && !status.packs.core?.installed) return <FirstRun />;
 
   if (wide) {
-    const single = route.name === 'settings';
+    const single = route.name === 'settings' || route.name === 'games';
     return (
       <div class="app wide">
         <TabBar />
@@ -92,7 +93,7 @@ export function App() {
             </main>
           </section>
         )}
-        <main ref={main} id="main" tabIndex={-1} class={single ? 'pane-right single' : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
+        <main ref={main} id="main" tabIndex={-1} class={single ? `pane-right single${route.name === 'games' ? ' flush' : ''}` : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
           {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty bookmarks={leftKind === 'bookmarks'} />}
         </main>
         <UpdateToast />
@@ -101,7 +102,7 @@ export function App() {
   }
   return (
     <div class="app">
-      {!readerRoute && <header class="topbar"><SearchBar /></header>}
+      {!readerRoute && route.name !== 'games' && <header class="topbar"><SearchBar /></header>}
       <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
       <TabBar />
       <UpdateToast />
@@ -132,6 +133,7 @@ function view(r: Route) {
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
     case 'bookmarks': return <BookmarksView />;
     case 'settings': return <SettingsView />;
+    case 'games': return <GamesView />;
     case 'reader': return r.parts[0] ? <TextView key={r.parts[0]} id={r.parts[0]} /> : <ReaderLibrary />;
     default: return <Home />;
   }
