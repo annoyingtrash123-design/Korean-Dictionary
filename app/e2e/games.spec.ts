@@ -24,14 +24,19 @@ test('games: tab order, six games, smart review, word chain', async ({ page }) =
   await card(page, 'Meaning quiz').click();
   await expect(page.locator('.gm-choice')).toHaveCount(4);
   await shot(page, 'games-meaning');
-  for (let i = 0; i < 12 && !(await page.locator('.gm-score').isVisible()); i++) {
-    await page.locator('.gm-choice').first().click();
-    const next = page.getByRole('button', { name: 'Next' });
-    await Promise.race([next.waitFor({ timeout: 1500 }).then(() => next.click()), page.waitForTimeout(1200)]).catch(() => undefined);
+  // one step at a time: answer, then wait for Next (wrong), the next question (right) or the results
+  const score = page.locator('.gm-score');
+  for (let i = 0; i < 10; i++) {
+    const before = (await page.locator('.gm-progress').textContent()) ?? '';
+    await page.locator('.gm-choice:not([disabled])').first().click();
+    const next = page.getByRole('button', { name: 'Next', exact: true });
+    await expect(next.or(score).or(page.locator('.gm-progress', { hasNotText: before }))).toBeVisible();
+    if (await next.isVisible()) await next.click();
+    if (await score.isVisible()) break;
   }
   await expect(page.locator('.gm-score')).toHaveText(/\d+ \/ 10/);
   await shot(page, 'games-results');
-  await page.getByRole('button', { name: 'Back to games' }).click();
+  await page.getByRole('button', { name: 'Back to games', exact: true }).click();
   // the misses are now due for review
   await expect(page.locator('.gm-stats')).toContainText(/🔥 1/);
 
