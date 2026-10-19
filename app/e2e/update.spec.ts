@@ -49,4 +49,20 @@ test('update keeps the old pack usable; corrupt download is rejected', async ({ 
   await page.reload();
   await search(page, '사랑');
   await expect(firstRow(page)).toHaveText('사랑');
+
+  // Updates are manual: opening the app neither checks for new data nor nags with a banner.
+  let checks = 0;
+  page.on('request', (r) => { if (r.url().includes('/data/manifest.json')) checks++; });
+  await page.unroute('**/data/manifest.json*');
+  await serveManifest(page, (m) => { m.version += '-z'; });
+  await page.goto('/');
+  await page.reload();
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible();
+  await page.waitForTimeout(1500);
+  expect(checks, 'manifest fetched on startup').toBe(0);
+  await expect(page.getByText('Dictionary update available')).toHaveCount(0);
+  // …but Settings → Check for update finds it.
+  await page.goto('/#/settings');
+  await page.getByRole('button', { name: 'Check for update' }).click();
+  await expect(page.getByRole('button', { name: 'Update now' })).toBeVisible();
 });

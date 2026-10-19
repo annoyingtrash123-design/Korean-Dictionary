@@ -6,7 +6,7 @@ import { Results } from './views/Results';
 import { EntryView } from './views/Entry';
 import { HanjaPage } from './views/HanjaPage';
 import { BookmarksView } from './views/Bookmarks';
-import { SettingsView, checkForUpdate } from './views/Settings';
+import { SettingsView } from './views/Settings';
 import { FirstRun } from './views/FirstRun';
 import { ReaderLibrary, ReaderEmpty } from './views/Reader';
 import { TextView } from './views/TextView';
@@ -40,7 +40,7 @@ export function App() {
   }, [s.theme]);
   useEffect(() => {
     loadBookmarks(); loadHistory();
-    refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } if (navigator.onLine) checkForUpdate(); }).catch(() => undefined);
+    refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } /* dictionary updates are manual: Settings → Check for update */ }).catch(() => undefined);
   }, []);
   const wide = useWide();
   const list = useStore(listTab);

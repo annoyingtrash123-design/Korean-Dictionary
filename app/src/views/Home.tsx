@@ -3,14 +3,12 @@ import { useStore } from '../lib/store';
 import { href, useRoute, withoutTab } from '../lib/router';
 import { savedPath } from '../lib/entry-key';
 import { Hanja } from '../components/common';
-import { UpdateBanner } from '../components/UpdateBanner';
 
 export function Home() {
   const hist = useStore(history);
   const route = useRoute();
   return (
     <div class="page">
-      <UpdateBanner />
       <div class="section-head">
         <h2>Recent</h2>
         {hist.length > 0 && <button type="button" class="link" onClick={() => clearHistory()}>Clear</button>}
