@@ -23,6 +23,9 @@ const COLS: &str = "e.source, e.id, e.headword, e.hanja, e.pos, e.level, e.gloss
 /// Content words with a short English gloss: what a quiz can ask about.
 const QUIZ_POS: &str = "('noun','verb','adjective','adverb')";
 const MAX_EXAMPLES: usize = 4;
+/// Leave out contractions (알바 < 아르바이트, 샘 < 선생님): krdict defines them as "…이 줄어든 말"
+/// or "…의 준말".
+const NOT_CONTRACTION: &str = "e.data NOT LIKE '%줄어든 말%' AND e.data NOT LIKE '%준말%'";
 
 fn word(r: &Row) -> GameWord {
     let data: serde_json::Value = serde_json::from_str(&r.string(7)).unwrap_or_default();
@@ -54,7 +57,7 @@ pub fn game_words(packs: &[&PackDb], level: i64, limit: usize) -> Result<Vec<Gam
         let sql = format!(
             "SELECT {COLS} FROM entries e WHERE e.source = 'krdict' AND e.kind = 'word' AND e.level = ?1 \
              AND e.pos IN {QUIZ_POS} AND e.gloss IS NOT NULL AND e.gloss != '' AND length(e.gloss) <= 60 \
-             ORDER BY random() LIMIT ?2"
+             AND {NOT_CONTRACTION} ORDER BY random() LIMIT ?2"
         );
         let rows = p.conn.query(&sql, &[level.into(), (limit as i64).into()])?;
         if !rows.is_empty() {

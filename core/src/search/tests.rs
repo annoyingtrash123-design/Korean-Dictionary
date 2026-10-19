@@ -74,6 +74,7 @@ const CORE: &[E] = &[
     e(20, "사랑", None, "noun", "krdict", Some(1), 80, "love", &[]),
     e(21, "학", None, "noun", "krdict", Some(3), 900, "crane (bird)", &[]),
     e(22, "선생님", None, "noun", "krdict", Some(1), 90, "teacher", &[]),
+    e(23, "샘", None, "noun", "krdict", Some(1), 95, "teacher (short for 선생님의 준말)", &[]),
 ];
 
 const STDICT: &[E] = &[
@@ -907,6 +908,8 @@ fn game_words_by_level() {
     // content words only: no endings
     assert!(w.iter().all(|x| x.pos.as_deref() != Some("ending")));
     assert!(w.iter().any(|x| !x.examples.is_empty()));
+    // contractions are left out (샘 = 선생님의 준말)
+    assert!(w.iter().all(|x| x.headword != "샘"), "{w:?}");
     assert!(game_words(&packs, 9, 10).unwrap().is_empty());
 }
 
