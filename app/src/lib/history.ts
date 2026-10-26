@@ -2,6 +2,7 @@ import { get, set } from 'idb-keyval';
 import { createStore } from './store';
 import { userDb } from './idb';
 import { legacyKey, stableKey, upgradeLegacy, type EntryRef, type SavedRef } from './entry-key';
+import { fromMirror, mirror } from './backup';
 
 export interface HistoryItem extends SavedRef { key: string; ts: number; legacyId?: number }
 export const MAX_HISTORY = 100;
@@ -28,9 +29,14 @@ export function sanitizeHistory(raw: unknown): HistoryItem[] {
 }
 
 export function loadHistory(): Promise<void> {
-  return (loaded ??= get('history', userDb()).catch(() => undefined).then((v) => { if (v) history.set(sanitizeHistory(v)); }));
+  return (loaded ??= get('history', userDb()).catch(() => undefined).then((v) => {
+    const saved = v ?? fromMirror('history');   // IndexedDB cleared by the browser: use the copy
+    if (saved) history.set(sanitizeHistory(saved));
+    if (!v && saved) void set('history', saved, userDb()).catch(() => undefined);
+    if (v) mirror('history', v);
+  }));
 }
-const save = (h: HistoryItem[]) => set('history', h, userDb()).catch(() => undefined);
+const save = (h: HistoryItem[]) => { mirror('history', h); return set('history', h, userDb()).catch(() => undefined); };
 
 export async function upgradeHistory(lookup: Parameters<typeof upgradeLegacy>[1]): Promise<void> {
   await loadHistory();

@@ -77,10 +77,16 @@ export function restartWorker() {
 export const PACKS_HINT = 'kd.packs';
 /** Installed pack ids remembered from the last run, so the UI can start before the engine is ready. */
 export const packsHint = (): string[] => { try { return JSON.parse(localStorage.getItem(PACKS_HINT) || '[]'); } catch { return []; } };
+/** True when the dictionaries this device had are gone without the user deleting them: the
+ *  browser cleared the site's storage to free space (it keeps localStorage, so we can tell). */
+export const storageCleared$ = createStore(false);
+const saveHint = (s: PackStatus) => { try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* ignore */ } };
 export async function refreshStatus(): Promise<PackStatus> {
   const s = await call<PackStatus>('packStatus');
   try { performance.mark('kd-engine-ready'); } catch { /* ignore */ }
-  try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* ignore */ }
+  if (!s.error && packsHint().includes('core') && !s.packs.core?.installed) storageCleared$.set(true);
+  if (s.packs.core?.installed) storageCleared$.set(false);
+  saveHint(s);
   packStatus$.set(s);
   return s;
 }
@@ -168,7 +174,7 @@ export const db = {
       resetTexts(); await refreshStatus().catch(() => undefined);
     }
   },
-  removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); resetTexts(); packStatus$.set(s); return s; },
+  removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); resetTexts(); saveHint(s); packStatus$.set(s); return s; },
 };
 
 export const MANIFEST_URL = () => new URL(import.meta.env.BASE_URL + 'data/manifest.json', location.origin).toString();

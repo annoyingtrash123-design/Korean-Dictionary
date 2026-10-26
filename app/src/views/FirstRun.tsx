@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { dismissHint, hintDismissed, isStandalone, needsHomeScreenHint, persisted$, requestPersist } from '../lib/persist';
 import { bytesNeeded, fmtMB } from '../lib/storage';
-import { cachedManifest, fetchManifest, refreshStatus } from '../db/client';
+import { cachedManifest, fetchManifest, refreshStatus, storageCleared$ } from '../db/client';
 import { fmtBytes } from '../lib/app-state';
 import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
@@ -17,6 +17,7 @@ export function FirstRun() {
   const [tick, setTick] = useState(0);
   const persisted = useStore(persisted$);
   const [dismissed, setDismissed] = useState(hintDismissed());
+  const cleared = useStore(storageCleared$);
   useEffect(() => { void requestPersist(); }, []);
   useEffect(() => {
     fetchManifest().then((m) => { setManifest(m); setErr(undefined); }, (e) => setErr(String(e?.message ?? e)));
@@ -36,9 +37,15 @@ export function FirstRun() {
       <div class="logo" aria-hidden="true"><LogoMark size={62} /></div>
       <h1>Korean Dictionary</h1>
       <p class="lead">A fast, private Korean–English dictionary that works offline. It needs a one-time download of the dictionary data.</p>
+      {cleared && (
+        <div class="notice" role="alert">
+          <strong>Your browser cleared the downloaded dictionaries to free up space on the phone.</strong>
+          <p class="small">Your bookmarks, history and game progress were kept. {persisted ? 'Storage protection is now on, so after this download the browser will keep the data.' : 'Add the app to your Home Screen (below), then download again: installed apps get their storage protected.'}</p>
+        </div>
+      )}
       {needsHomeScreenHint(persisted, isStandalone(), dismissed) && (
         <div class="notice a2hs" role="note">
-          <strong>Tip: Add to Home Screen so iOS keeps your dictionary data</strong>
+          <strong>Tip: Add to Home Screen so your phone keeps the dictionary data</strong>
           <ul class="plain small">
             <li><b>iPhone / iPad:</b> tap Share, then “Add to Home Screen”.</li>
             <li><b>Android:</b> tap ⋮, then “Install app” (or “Add to Home screen”).</li>

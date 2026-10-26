@@ -2,6 +2,7 @@ import { createStore } from './store';
 import { get, set } from 'idb-keyval';
 import { userDb } from './idb';
 import { legacyKey, stableKey, upgradeLegacy, type EntryRef, type SavedRef } from './entry-key';
+import { fromMirror, mirror } from './backup';
 
 export const MAX_IMPORT_BYTES = 5 * 1024 * 1024;
 export const MAX_IMPORT_ITEMS = 50_000;
@@ -50,7 +51,7 @@ export function sanitize(raw: unknown): BookmarkData {
   return out;
 }
 
-function persist(d: BookmarkData) { return set('bookmarks', d, userDb()).catch(() => undefined); }
+function persist(d: BookmarkData) { mirror('bookmarks', d); return set('bookmarks', d, userDb()).catch(() => undefined); }
 async function mutate(fn: (d: BookmarkData) => BookmarkData) {
   await loadBookmarks();
   const next = fn(bookmarks.get());
@@ -61,7 +62,13 @@ async function mutate(fn: (d: BookmarkData) => BookmarkData) {
 export function loadBookmarks(): Promise<void> {
   return (loaded ??= get('bookmarks', userDb())
     .catch(() => undefined)
-    .then((v) => { if (v) bookmarks.set(sanitize(v)); }));
+    .then((v) => {
+      // IndexedDB cleared by the browser: restore from the localStorage copy
+      const saved = v ?? fromMirror('bookmarks');
+      if (saved) bookmarks.set(sanitize(saved));
+      if (!v && saved) void set('bookmarks', saved, userDb()).catch(() => undefined);
+      if (v) mirror('bookmarks', v);   // keep the copy current for data saved before it existed
+    }));
 }
 /** Resolve legacy `source:id` bookmarks once the engine is up (ids still match the data they were saved from). */
 export async function upgradeBookmarks(lookup: Parameters<typeof upgradeLegacy>[1]): Promise<void> {

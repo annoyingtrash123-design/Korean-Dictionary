@@ -14,6 +14,7 @@ import attribution from '../assets/ATTRIBUTION.md?raw';
 import { inlineParts, parseMarkdown } from '../lib/markdown';
 import { bytesNeeded, fmtMB } from '../lib/storage';
 import type { Manifest } from '../lib/types';
+import { persisted$ } from '../lib/persist';
 
 const THEMES: [ThemeName, string][] = [['light', 'Light'], ['dark', 'Dark'], ['system', 'System']];
 const COLORS: [ColorKey, string][] = [['accent', 'Accent'], ['bg', 'Background'], ['text', 'Text'], ['hangul', 'Hangul'], ['hanja', 'Hanja']];
@@ -30,6 +31,7 @@ export function SettingsView() {
   const s = useStore(settings);
   const st = useStore(packStatus$);
   const upd = useStore(update);
+  const persisted = useStore(persisted$);
   const bm = useStore(bookmarks);
   const [msg, setMsg] = useState('');
   const [installing, setInstalling] = useState<string[] | null>(null);
@@ -109,6 +111,7 @@ export function SettingsView() {
           <dt>Installed version</dt><dd>{core?.version ?? '–'}</dd>
           <dt>Latest online</dt><dd>{manifest?.version ?? '–'}</dd>
           <dt>Storage used</dt><dd>{fmtBytes(est.data?.usage)}{est.data?.quota ? ` of ${fmtBytes(est.data.quota)}` : ''}</dd>
+          <dt>Kept when space is low</dt><dd>{persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>
         </dl>
         <div class="btn-row">
           <button type="button" class="btn" onClick={doCheck}>Check for update</button>

@@ -24,6 +24,7 @@ import { UpdateToast } from './components/UpdateToast';
 import { refFromParams } from './lib/entry-key';
 import { Empty } from './components/common';
 import { LogoMark } from './components/Logo';
+import { requestPersist } from './lib/persist';
 
 export function App() {
   const status = useStore(packStatus$);
@@ -41,6 +42,8 @@ export function App() {
   }, [s.theme]);
   useEffect(() => {
     loadBookmarks(); loadHistory();
+    // ask on every launch: browsers grant persistent storage once the app is installed, not before
+    void requestPersist();
     refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } /* dictionary updates are manual: Settings → Check for update */ }).catch(() => undefined);
   }, []);
   const wide = useWide();

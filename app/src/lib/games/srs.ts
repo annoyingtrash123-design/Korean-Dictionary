@@ -5,6 +5,7 @@ import { get, set } from 'idb-keyval';
 import { userDb } from '../idb';
 import type { GameWord } from '../types';
 import { syllables } from './hangul';
+import { fromMirror, mirror } from '../backup';
 
 export const INTERVAL_DAYS = [0, 1, 3, 7, 16, 35];
 const DAY = 86_400_000;
@@ -52,8 +53,9 @@ export function streak(days: string[], now: number): number {
 
 // ---- persistence ---------------------------------------------------------------------------
 
-export const loadDeck = () => get<Deck>('games:deck', userDb()).then((d) => d ?? {}).catch(() => ({} as Deck));
-export const loadDays = () => get<string[]>('games:days', userDb()).then((d) => d ?? []).catch(() => [] as string[]);
+// IndexedDB first; the localStorage copy when the browser has cleared it
+export const loadDeck = () => get<Deck>('games:deck', userDb()).catch(() => undefined).then((d) => d ?? fromMirror<Deck>('games:deck') ?? {});
+export const loadDays = () => get<string[]>('games:days', userDb()).catch(() => undefined).then((d) => d ?? fromMirror<string[]>('games:days') ?? []);
 
 /** Record a finished round's answers and mark today as played. */
 export async function saveRound(answers: { word: GameWord; correct: boolean }[], now = Date.now()): Promise<void> {
@@ -61,6 +63,10 @@ export async function saveRound(answers: { word: GameWord; correct: boolean }[],
   for (const a of answers) deck[cardKey(a.word)] = review(deck[cardKey(a.word)], a.word, a.correct, now);
   const days = await loadDays();
   const today = dayKey(now);
+  const newDays = days.includes(today) ? days : [...days, today].slice(-400);
+  // the copy drops example sentences to stay small; the quiz word itself is kept
+  mirror('games:deck', Object.fromEntries(Object.entries(deck).map(([k, c]) => [k, { ...c, word: { ...c.word, examples: [] } }])));
+  mirror('games:days', newDays);
   await Promise.all([
     set('games:deck', deck, userDb()),
     days.includes(today) ? Promise.resolve() : set('games:days', [...days, today].slice(-400), userDb()),
