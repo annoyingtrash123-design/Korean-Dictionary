@@ -68,6 +68,10 @@ async function call<T>(method: string, ...args: unknown[]): Promise<T> {
   });
 }
 
+/** A new worker with fresh storage handles, keeping the UI state (used to recover a download whose
+ *  storage folders vanished under it, e.g. after the browser cleared site data while the app was open). */
+export function freshWorker() { releaseWorker(); }
+
 /** Drop the worker (and with it a failed engine init, e.g. storage locked by another tab) and start a fresh one. */
 export function restartWorker() {
   releaseWorker();

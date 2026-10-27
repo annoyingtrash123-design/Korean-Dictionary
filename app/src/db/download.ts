@@ -75,7 +75,7 @@ async function installPackInner(
   const stateKey = 'dl:' + pack.id;
   let st = await get<DlState>(stateKey);
   if (!st || st.version !== version) { // new version: discard stale chunks
-    for await (const k of (dir as unknown as { keys(): AsyncIterable<string> }).keys()) await dir.removeEntry(k);
+    for await (const k of (dir as unknown as { keys(): AsyncIterable<string> }).keys()) await dir.removeEntry(k).catch(() => undefined); // already gone is fine
     st = { version, done: 0 };
     await set(stateKey, st);
   }

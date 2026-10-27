@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bytesNeeded, freeSpaceProblem, isFatalInstallMessage, isQuotaError, noSpaceMessage } from './storage';
+import { bytesNeeded, freeSpaceProblem, isFatalInstallMessage, isNotFoundError, isQuotaError, noSpaceMessage } from './storage';
 
 const MB = 1048576;
 describe('free space check', () => {
@@ -21,5 +21,13 @@ describe('free space check', () => {
     expect(isQuotaError('SQLITE_FULL')).toBe(true);
     expect(isQuotaError(new Error('Download failed (404)'))).toBe(false);
     expect(isFatalInstallMessage(noSpaceMessage(MB))).toBe(true);
+  });
+});
+
+describe('storage gone', () => {
+  it('recognises the OPFS NotFoundError, also as a plain message from the worker', () => {
+    expect(isNotFoundError(new DOMException('x', 'NotFoundError'))).toBe(true);
+    expect(isNotFoundError(new Error('A requested file or directory could not be found at the time an operation was processed.'))).toBe(true);
+    expect(isNotFoundError(new Error('Download failed (404) for core.sqlite.gz.000'))).toBe(false);
   });
 });

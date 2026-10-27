@@ -26,3 +26,10 @@ export function isQuotaError(e: unknown): boolean {
 }
 /** Errors for which "resume" would not help (the user must free space / retry from scratch). */
 export const isFatalInstallMessage = (m: string) => m.startsWith(NO_SPACE_PREFIX) || m.startsWith('Downloaded data is corrupt');
+
+/** OPFS "NotFoundError": a storage folder or file vanished during the operation. */
+export const isNotFoundError = (e: unknown) => {
+  const x = e as { name?: string; message?: string } | null;
+  return x?.name === 'NotFoundError' || /could not be found at the time an operation was processed|NotFoundError/i.test(String(x?.message ?? x));
+};
+export const STORAGE_GONE_MSG = 'The phone\'s storage changed during the download (is the app open in another window or tab?). Close other copies of the app, then tap Try again.';

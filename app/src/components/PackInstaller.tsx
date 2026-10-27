@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { db, fetchManifest, MANIFEST_URL, progress } from '../db/client';
+import { db, fetchManifest, freshWorker, MANIFEST_URL, progress } from '../db/client';
 import { installLive } from '../lib/install-live';
 import { fmtBytes } from '../lib/app-state';
 import { useStore } from '../lib/store';
@@ -7,7 +7,7 @@ import type { Manifest } from '../lib/types';
 
 import { packLabel } from '../lib/packs';
 import { requestPersist } from '../lib/persist';
-import { bytesNeeded, freeSpaceProblem, isFatalInstallMessage, isQuotaError, noSpaceMessage } from '../lib/storage';
+import { bytesNeeded, freeSpaceProblem, isFatalInstallMessage, isNotFoundError, isQuotaError, noSpaceMessage, STORAGE_GONE_MSG } from '../lib/storage';
 
 type WakeLockSentinelLike = { release(): Promise<void> };
 
@@ -50,7 +50,13 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
       if (problem) throw new Error(problem);
       await requestPersist();
       await takeLock();
-      await installLive(manifest, packIds, fetchManifest, (p, v) => db.install(p, MANIFEST_URL(), v));
+      const go = () => installLive(manifest, packIds, fetchManifest, (p, v) => db.install(p, MANIFEST_URL(), v));
+      try { await go(); } catch (e) {
+        if (!isNotFoundError(e)) throw e;
+        // the worker's storage handles point at folders that no longer exist: start a fresh worker, retry once
+        freshWorker();
+        try { await go(); } catch (e2) { throw isNotFoundError(e2) ? new Error(STORAGE_GONE_MSG) : e2; }
+      }
       await db.packStatus();
       dropLock();
       running.current = false;
