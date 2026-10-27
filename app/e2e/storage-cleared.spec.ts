@@ -18,6 +18,16 @@ test('after the browser clears storage: explain it, keep bookmarks and history',
   const ls = await page.evaluate(() => Object.fromEntries(Object.keys(localStorage).map((k) => [k, localStorage.getItem(k)!])));
   expect(Object.keys(ls)).toEqual(expect.arrayContaining(['kd.packs', 'kd.backup.bookmarks', 'kd.backup.history']));
 
+  // Settings → Data → Technical details: always there, shows the packs and the engine's startup log
+  await page.goto('/#/settings');
+  await page.getByText('Technical details').click();
+  const pre = page.locator('.diag pre');
+  await expect(pre).toContainText(/storage in use: \d+ MB/);
+  await expect(pre).toContainText(/installed:\n\s+core /);
+  await expect(pre).toContainText(/(installed|opened) core/);
+  await pre.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: '../docs/screenshots/settings-tech-details.png' });
+
   // a fresh profile with only the old localStorage = what Chrome leaves after its clean-up
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
   await ctx.addInitScript((data: Record<string, string>) => {

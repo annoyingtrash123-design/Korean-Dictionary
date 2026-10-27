@@ -89,7 +89,7 @@ export const storageCleared$ = createStore(false);
 export interface StorageReport { usageMB: number | null; persisted: boolean | null; lastOk: string | null; build: string; diag: string }
 export const storageReport$ = createStore<StorageReport | null>(null);
 const LAST_OK = 'kd.lastOk';
-async function makeReport(): Promise<StorageReport> {
+export async function makeReport(): Promise<StorageReport> {
   const est = await navigator.storage?.estimate?.().catch(() => undefined);
   const persisted = await navigator.storage?.persisted?.().catch(() => null) ?? null;
   const diag = await call<string>('diagnostics').catch((e) => String(e?.message ?? e));

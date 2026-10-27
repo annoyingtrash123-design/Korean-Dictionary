@@ -128,6 +128,7 @@ impl Store {
         };
         self.close_pack(id);
         self.packs.push(db);
+        diag(format!("installed {id} {version} -> {new_file}"));
         let old = self.live.insert(id.to_string(), new_file.to_string());
         if let Some(old) = old.filter(|o| o != new_file) {
             let r = self.remove_file(&old);

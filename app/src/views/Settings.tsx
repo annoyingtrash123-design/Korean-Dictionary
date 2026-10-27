@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import { settings, updateSettings, type ColorKey, type ThemeName } from '../lib/settings';
 import { currentColor } from '../lib/theme';
 import { useStore } from '../lib/store';
-import { db, fetchManifest, packStatus$ } from '../db/client';
+import { db, fetchManifest, makeReport, packStatus$, type StorageReport } from '../db/client';
 import { fmtBytes, stalePacks, update } from '../lib/app-state';
 import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
@@ -113,6 +113,7 @@ export function SettingsView() {
           <dt>Storage used</dt><dd>{fmtBytes(est.data?.usage)}{est.data?.quota ? ` of ${fmtBytes(est.data.quota)}` : ''}</dd>
           <dt>Kept when space is low</dt><dd>{persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>
         </dl>
+        <TechDetails />
         <div class="btn-row">
           <button type="button" class="btn" onClick={doCheck}>Check for update</button>
           {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(upd.stale)}>Update now</button>}
@@ -148,5 +149,19 @@ function Markdown({ src }: { src: string }) {
         : b.t === 'ul' ? <ul key={i} class="plain small">{b.items.map((it, j) => <li key={j}>{inline(it)}</li>)}</ul>
         : <p key={i} class="small">{inline(b.text)}</p>)}
     </div>
+  );
+}
+
+/** Storage diagnostics, always available: proof that the data is in place (and, if it ever goes
+ *  missing, the evidence of why). Loaded when opened. */
+function TechDetails() {
+  const [r, setR] = useState<StorageReport | null>(null);
+  const st = useStore(packStatus$);
+  const packs = Object.values(st?.packs ?? {}).filter((p) => p.installed).map((p) => `  ${p.id} ${p.version ?? ''} · ${fmtBytes(p.bytes)}`).join('\n');
+  return (
+    <details class="small diag" onToggle={(e) => { if ((e.currentTarget as HTMLDetailsElement).open) makeReport().then(setR, () => setR(null)); }}>
+      <summary>Technical details</summary>
+      <pre>{r ? `storage in use: ${r.usageMB ?? '?'} MB · protected: ${r.persisted}\nlast working: ${r.lastOk ?? 'unknown'}\napp: ${r.build}\ninstalled:\n${packs || '  (none)'}\n${r.diag}` : 'Loading…'}</pre>
+    </details>
   );
 }
