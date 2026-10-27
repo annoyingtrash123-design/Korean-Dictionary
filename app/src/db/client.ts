@@ -84,12 +84,31 @@ export const packsHint = (): string[] => { try { return JSON.parse(localStorage.
 /** True when the dictionaries this device had are gone without the user deleting them: the
  *  browser cleared the site's storage to free space (it keeps localStorage, so we can tell). */
 export const storageCleared$ = createStore(false);
+/** What the device looked like when the dictionaries went missing, to tell "the browser deleted
+ *  the files" (little storage in use) from "the app could not open files still on the device". */
+export interface StorageReport { usageMB: number | null; persisted: boolean | null; lastOk: string | null; build: string; diag: string }
+export const storageReport$ = createStore<StorageReport | null>(null);
+const LAST_OK = 'kd.lastOk';
+async function makeReport(): Promise<StorageReport> {
+  const est = await navigator.storage?.estimate?.().catch(() => undefined);
+  const persisted = await navigator.storage?.persisted?.().catch(() => null) ?? null;
+  const diag = await call<string>('diagnostics').catch((e) => String(e?.message ?? e));
+  let lastOk: string | null = null;
+  try { lastOk = localStorage.getItem(LAST_OK); } catch { /* */ }
+  return { usageMB: est?.usage != null ? Math.round(est.usage / 1048576) : null, persisted, lastOk, build: __BUILD__, diag };
+}
 const saveHint = (s: PackStatus) => { try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* ignore */ } };
 export async function refreshStatus(): Promise<PackStatus> {
   const s = await call<PackStatus>('packStatus');
   try { performance.mark('kd-engine-ready'); } catch { /* ignore */ }
-  if (!s.error && packsHint().includes('core') && !s.packs.core?.installed) storageCleared$.set(true);
-  if (s.packs.core?.installed) storageCleared$.set(false);
+  if (!s.error && packsHint().includes('core') && !s.packs.core?.installed) {
+    storageCleared$.set(true);
+    void makeReport().then((r) => storageReport$.set(r));
+  }
+  if (s.packs.core?.installed) {
+    storageCleared$.set(false);
+    try { localStorage.setItem(LAST_OK, `${new Date().toISOString().slice(0, 16)} · app ${__BUILD__} · ${Object.keys(s.packs).join(', ')}`); } catch { /* */ }
+  }
   saveHint(s);
   packStatus$.set(s);
   return s;

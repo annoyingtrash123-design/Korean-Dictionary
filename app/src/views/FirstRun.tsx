@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { dismissHint, hintDismissed, isStandalone, needsHomeScreenHint, persisted$, requestPersist } from '../lib/persist';
 import { bytesNeeded, fmtMB } from '../lib/storage';
-import { cachedManifest, fetchManifest, refreshStatus, storageCleared$ } from '../db/client';
+import { cachedManifest, fetchManifest, refreshStatus, restartWorker, storageCleared$, storageReport$ } from '../db/client';
 import { fmtBytes } from '../lib/app-state';
 import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
@@ -18,6 +18,9 @@ export function FirstRun() {
   const persisted = useStore(persisted$);
   const [dismissed, setDismissed] = useState(hintDismissed());
   const cleared = useStore(storageCleared$);
+  const report = useStore(storageReport$);
+  // a full dictionary download uses well over 30 MB; if that much is still in use, the files are there
+  const stillThere = !!report && (report.usageMB ?? 0) > 30;
   useEffect(() => { void requestPersist(); }, []);
   useEffect(() => {
     fetchManifest().then((m) => { setManifest(m); setErr(undefined); }, (e) => setErr(String(e?.message ?? e)));
@@ -39,8 +42,24 @@ export function FirstRun() {
       <p class="lead">A fast, private Korean–English dictionary that works offline. It needs a one-time download of the dictionary data.</p>
       {cleared && (
         <div class="notice" role="alert">
-          <strong>Your browser cleared the downloaded dictionaries to free up space on the phone.</strong>
-          <p class="small">Your bookmarks, history and game progress were kept. {persisted ? 'Storage protection is now on, so after this download the browser will keep the data.' : 'Add the app to your Home Screen (below), then download again: installed apps get their storage protected.'}</p>
+          {stillThere ? (
+            <>
+              <strong>The app could not open the dictionaries saved on this phone.</strong>
+              <p class="small">They still take up {report!.usageMB} MB, so they were not deleted. Try again first; download again only if that does not help.</p>
+              <button type="button" class="btn" onClick={() => { restartWorker(); refreshStatus().catch(() => undefined); }}>Try again</button>
+            </>
+          ) : (
+            <>
+              <strong>The downloaded dictionaries are no longer on this phone.</strong>
+              <p class="small">Your bookmarks, history and game progress were kept. {persisted ? 'Storage protection is on.' : 'Add the app to your Home Screen (below), then download again: installed apps get their storage protected.'}</p>
+            </>
+          )}
+          {report && (
+            <details class="small diag">
+              <summary>Technical details (please send a screenshot)</summary>
+              <pre>{`storage in use: ${report.usageMB ?? '?'} MB · protected: ${report.persisted}\nlast working: ${report.lastOk ?? 'unknown'}\napp now: ${report.build}\n${report.diag}`}</pre>
+            </details>
+          )}
         </div>
       )}
       {needsHomeScreenHint(persisted, isStandalone(), dismissed) && (

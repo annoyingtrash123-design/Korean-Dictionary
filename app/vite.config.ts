@@ -6,6 +6,7 @@ const base = process.env.BASE_PATH ?? '/Korean-Dictionary/';
 
 export default defineConfig({
   base,
+  define: { __BUILD__: JSON.stringify(new Date().toISOString().slice(0, 16)) },   // shown in storage diagnostics
   plugins: [
     preact(),
     VitePWA({

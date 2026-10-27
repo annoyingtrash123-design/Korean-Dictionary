@@ -27,7 +27,10 @@ test('after the browser clears storage: explain it, keep bookmarks and history',
   }, ls);
   const p2 = await ctx.newPage();
   await p2.goto('/');
-  await expect(p2.getByText(/browser cleared the downloaded dictionaries/)).toBeVisible({ timeout: 60_000 });
+  await expect(p2.getByText(/dictionaries are no longer on this phone/)).toBeVisible({ timeout: 60_000 });
+  await p2.getByText(/Technical details/).click();
+  await expect(p2.locator('.diag pre')).toContainText(/storage in use: \d+ MB/);
+  await expect(p2.locator('.diag pre')).toContainText(/last working: \d{4}-/);
   await expect(p2.getByText(/bookmarks, history and game progress were kept/)).toBeVisible();
   await p2.screenshot({ path: '../docs/screenshots/storage-cleared.png' });
   await downloadAll(p2);
