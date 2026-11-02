@@ -1110,7 +1110,7 @@ pub fn words_with_hanja(packs: &[&PackDb], ch: &str, limit: usize, offset: usize
     Ok(rows.into_iter().skip(offset).take(limit).collect())
 }
 
-/// Example sentences containing `text`. Uses the trigram FTS index (needs >= 3 characters)
+/// Example sentences containing `text`, translated ones first. Uses the trigram FTS index (needs >= 3 characters)
 /// and falls back to LIKE for shorter input.
 pub fn sentences(packs: &[&PackDb], text: &str, limit: usize) -> Result<Vec<SentenceRow>> {
     let t: String = text.trim().chars().take(MAX_QUERY_CHARS).collect();
@@ -1124,13 +1124,13 @@ pub fn sentences(packs: &[&PackDb], text: &str, limit: usize) -> Result<Vec<Sent
             let m = format!("\"{}\"", t.replace('"', "\"\""));
             p.conn.query(
                 "SELECT s.ko, s.en, s.source FROM sentences_fts f JOIN sentences s ON s.id = f.rowid \
-                 WHERE sentences_fts MATCH ?1 ORDER BY length(s.ko), s.id LIMIT ?2",
+                 WHERE sentences_fts MATCH ?1 ORDER BY (s.en IS NULL), length(s.ko), s.id LIMIT ?2",
                 &[m.as_str().into(), (limit as i64).into()],
             )?
         } else {
             let esc = t.replace('\\', "\\\\").replace('%', "\\%").replace('_', "\\_");
             p.conn.query(
-                "SELECT ko, en, source FROM sentences WHERE ko LIKE ?1 ESCAPE '\\' ORDER BY length(ko), id LIMIT ?2",
+                "SELECT ko, en, source FROM sentences WHERE ko LIKE ?1 ESCAPE '\\' ORDER BY (en IS NULL), length(ko), id LIMIT ?2",
                 &[format!("%{esc}%").into(), (limit as i64).into()],
             )?
         };
@@ -1138,7 +1138,8 @@ pub fn sentences(packs: &[&PackDb], text: &str, limit: usize) -> Result<Vec<Sent
             out.push(SentenceRow { ko: r.string(0), en: r.text(1), source: r.string(2) });
         }
     }
-    out.sort_by_key(|s| s.ko.chars().count());
+    // translated sentences first, then the shortest
+    out.sort_by_key(|s| (s.en.is_none(), s.ko.chars().count()));
     out.truncate(limit);
     Ok(out)
 }

@@ -586,6 +586,10 @@ fn end_to_end_mini_build() {
     // sentences: tatoeba + wikt, deduped; trigram search works
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sentences WHERE source='tatoeba'"), 2);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sentences WHERE source='wikt'"), 1); // 학교에 가요. already from tatoeba
+    // krdict full-sentence examples, Korean only, deduped against the translated ones
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sentences WHERE source='krdict'"), 1);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sentences WHERE source='krdict' AND en IS NULL AND ko='동생은 아침마다 학교에 걸어서 간다.'"), 1);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sentences WHERE ko='학교에 가요.'"), 1);
     assert_eq!(q::<String>(&c, "SELECT en FROM sentences s JOIN sentences_fts f ON f.rowid=s.id WHERE sentences_fts MATCH '\"책을 읽\"'"), "I read a book.");
     // grammar table
     let cats: Vec<(String, i64)> = {

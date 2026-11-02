@@ -574,6 +574,12 @@ fn fill_cho(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
+/// A usable example sentence: one line, and more than a single word.
+pub fn is_sentence(ko: &str) -> bool {
+    let t = ko.trim();
+    !t.is_empty() && !t.contains('\n') && t.split_whitespace().count() >= 2
+}
+
 pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, built_at: &str) -> Result<PackResult> {
     let path = out.join("core.sqlite");
     let conn = open_db(&path)?;
@@ -770,11 +776,33 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     }
     let mut n_wikt_s = 0i64;
     for (ko, en) in wikt_sentences {
+        // a bare word with its gloss ("희미해지다" / "to fade away") is not an example sentence
+        if !is_sentence(&ko) {
+            continue;
+        }
         if sent_seen.insert(ko.clone()) {
             conn.prepare_cached("INSERT INTO sentences(ko,en,source) VALUES(?,?,'wikt')")?.execute(params![ko, en])?;
             n_wikt_s += 1;
         }
     }
+    // krdict's full-sentence examples (Korean only; its phrase and dialogue examples stay on the
+    // entry): real usage for words that have no translated sentence
+    let mut n_krdict_s = 0i64;
+    {
+        let mut st = conn.prepare(
+            "SELECT json_extract(x.value, '$.ko') FROM entries e, json_each(e.data, '$.senses') s, json_each(s.value, '$.examples') x \
+             WHERE e.source = 'krdict' AND json_extract(x.value, '$.type') = 'sentence' ORDER BY e.rank, e.id",
+        )?;
+        let rows: Vec<String> = st.query_map([], |r| r.get::<_, Option<String>>(0))?.filter_map(|r| r.ok().flatten()).collect();
+        for ko in rows {
+            let ko = ko.trim().to_string();
+            if is_sentence(&ko) && sent_seen.insert(ko.clone()) {
+                conn.prepare_cached("INSERT INTO sentences(ko,en,source) VALUES(?,NULL,'krdict')")?.execute(params![ko])?;
+                n_krdict_s += 1;
+            }
+        }
+    }
+    log::info!("sentences: {n_tat} tatoeba, {n_wikt_s} wikt, {n_krdict_s} krdict");
     conn.execute_batch("INSERT INTO sentences_fts(sentences_fts) VALUES('rebuild')")?;
 
     // grammar table
@@ -884,6 +912,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("sentences".into(), q("SELECT COUNT(*) FROM sentences")?.into());
     counts.insert("sentences_tatoeba".into(), n_tat.into());
     counts.insert("sentences_wikt".into(), n_wikt_s.into());
+    counts.insert("sentences_krdict".into(), n_krdict_s.into());
     counts.insert("grammar".into(), q("SELECT COUNT(*) FROM grammar")?.into());
     counts.insert("gloss_terms".into(), q("SELECT COUNT(*) FROM gloss_terms")?.into());
     if let Some(ek) = &en_ko {

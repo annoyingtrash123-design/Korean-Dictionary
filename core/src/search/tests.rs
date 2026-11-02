@@ -168,6 +168,8 @@ fn build_core() -> PackDb {
         c.query("INSERT INTO sentences VALUES (?1,?2,?3,'tatoeba')", &[(i as i64 + 1).into(), (*ko).into(), (*en).into()])
             .unwrap();
     }
+    // a krdict example: Korean only, shorter than the translated ones
+    c.query("INSERT INTO sentences VALUES (6, '학교에 간다.', NULL, 'krdict')", &[]).unwrap();
     c.exec("INSERT INTO sentences_fts(sentences_fts) VALUES('rebuild')").unwrap();
     c.exec(
         "INSERT INTO grammar VALUES (1, 18, '-아서/어서', 'Connective endings', 1, 'because', 2), \
@@ -514,14 +516,18 @@ fn sentences_trigram_and_like_fallback() {
     let (core, st) = (build_core(), build_stdict());
     // >= 3 chars: FTS5 trigram
     let s = sentences(&[&core, &st], "학교에", 10).unwrap();
-    assert_eq!(s.len(), 1);
-    assert_eq!(s[0].ko, "저는 학교에 갑니다.");
+    assert_eq!(s.len(), 2);
+    assert_eq!(s[0].ko, "저는 학교에 갑니다."); // translated first, though longer
     assert_eq!(s[0].en.as_deref(), Some("I go to school."));
     assert_eq!(s[0].source, "tatoeba");
-    // 2 chars: LIKE fallback, shortest first
+    assert_eq!((s[1].ko.as_str(), s[1].en.as_deref(), s[1].source.as_str()), ("학교에 간다.", None, "krdict"));
+    // the limit keeps translated sentences
+    assert_eq!(sentences(&[&core], "학교에", 1).unwrap()[0].source, "tatoeba");
+    // 2 chars: LIKE fallback, translated then shortest first
     let s = sentences(&[&core], "학교", 10).unwrap();
-    assert_eq!(s.len(), 3);
+    assert_eq!(s.len(), 4);
     assert_eq!(s[0].ko, "학교");
+    assert_eq!(s[3].ko, "학교에 간다.");
     assert_eq!(sentences(&[&core], "학교", 2).unwrap().len(), 2);
     // LIKE wildcards are literal
     assert!(sentences(&[&core], "%", 5).unwrap().is_empty());

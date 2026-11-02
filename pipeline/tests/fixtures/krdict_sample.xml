@@ -32,6 +32,14 @@
 					<feat att="example" val="가: 어디 가요?" />
 					<feat att="example" val="나: 학교에 가요." />
 				</SenseExample>
+				<SenseExample>
+					<feat att="type" val="문장" />
+					<feat att="example" val="동생은 아침마다 학교에 걸어서 간다." />
+				</SenseExample>
+				<SenseExample>
+					<feat att="type" val="문장" />
+					<feat att="example" val="학교에 가요." />
+				</SenseExample>
 				<SenseRelation>
 					<feat att="type" val="유의어" />
 					<feat att="lemma" val="학원" />

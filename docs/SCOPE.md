@@ -112,7 +112,7 @@ CREATE TABLE hanja_chars (
   ch TEXT PRIMARY KEY, readings TEXT,   -- '학' (comma-separated if several)
   meaning_en TEXT, strokes INTEGER, radical TEXT, word_count INTEGER
 );
-CREATE TABLE sentences (id INTEGER PRIMARY KEY, ko TEXT NOT NULL, en TEXT, source TEXT);  -- Tatoeba + wikt
+CREATE TABLE sentences (id INTEGER PRIMARY KEY, ko TEXT NOT NULL, en TEXT, source TEXT);  -- Tatoeba + wikt (translated), krdict full-sentence examples (en NULL)
 CREATE VIRTUAL TABLE sentences_fts USING fts5(ko, content='sentences', content_rowid='id', tokenize='trigram');
 CREATE TABLE grammar (
   id INTEGER PRIMARY KEY, entry_id INTEGER, pattern TEXT NOT NULL,  -- '-아서/어서'
