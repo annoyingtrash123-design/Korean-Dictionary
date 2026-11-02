@@ -10,6 +10,7 @@ import { resolveEntry, type EntryRef } from '../lib/entry-key';
 import { recordHistory } from '../lib/history';
 import { sameWordRows } from '../lib/merge';
 import { hanChars } from '../lib/search-mode';
+import { TAP } from '../components/TapLookup';
 import { TabBar, WordsTab, CharsTab, SentsTab, useEntryTab } from './EntryTabs';
 import { SOURCE_ORDER, SOURCE_TITLE, type Entry, type Sense } from '../lib/types';
 import { Empty, IconButton, LevelBadge, Pos, Sheet } from '../components/common';
@@ -188,12 +189,12 @@ function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolea
         {s.gloss ? <span class="gloss">{s.gloss}</span> : s.roman ? <span class="roman">{s.roman}</span> : null}
         {s.tags?.length ? <span class="tags">{s.tags.map((t) => <span key={t} class="tag">{t}</span>)}</span> : null}
         {s.def && <div class="def">{s.def}</div>}
-        {s.ko_def && (showKo || isKo) && <div class={isKo ? 'def ko-main hangul' : 'def ko'} lang="ko">{s.ko_def}</div>}
+        {s.ko_def && (showKo || isKo) && <div class={isKo ? 'def ko-main hangul' : 'def ko'} lang="ko" {...TAP}>{s.ko_def}</div>}
         {s.note && <div class="note">{s.note}</div>}
         {s.pattern && <div class="pattern" lang="ko">{s.pattern}</div>}
         {shownEx.map((x, i) => (
           <div key={i} class="ex">
-            {x.ko.split('\n').map((l, j) => <div key={j} class="ex-ko hangul" lang="ko">{l}</div>)}
+            {x.ko.split('\n').map((l, j) => <div key={j} class="ex-ko hangul" lang="ko" {...TAP}>{l}</div>)}
             {x.en && x.en.split('\n').map((l, j) => <div key={j} class="ex-en">{l}</div>)}
           </div>
         ))}

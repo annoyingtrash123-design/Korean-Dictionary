@@ -1,4 +1,20 @@
-import { downloadAll, expect, test } from './fixtures';
+import { downloadAll, expect, test, type Page } from './fixtures';
+import type { Locator } from '@playwright/test';
+
+/** Tap the centre of `word` inside element `el` (viewport coordinates via a DOM Range). */
+async function tapWord(page: Page, el: Locator, word: string) {
+  await el.scrollIntoViewIfNeeded();
+  const p = await el.evaluate((root, w) => {
+    const t = root.firstChild as Text; const i = t.data.indexOf(w);
+    const r = document.createRange(); r.setStart(t, i); r.setEnd(t, i + w.length);
+    const b = r.getBoundingClientRect(); return { x: b.left + b.width / 2, y: b.top + b.height / 2 };
+  }, word);
+  await page.mouse.click(p.x, p.y);
+}
+const hlText = (page: Page) => page.evaluate(() => {
+  const h = (CSS as unknown as { highlights: Map<string, Set<Range>> }).highlights.get('tap-word');
+  return h ? [...h][0].toString() : null;
+});
 
 /** A kengdic-only word (no translated sentence) gets real krdict example sentences in Sents. */
 test('Sents tab: real Korean examples for a word without translated ones', async ({ page }) => {
@@ -20,7 +36,57 @@ test('Sents tab: real Korean examples for a word without translated ones', async
   }
   await page.waitForTimeout(300);
   await page.screenshot({ path: '../docs/screenshots/sents-krdict-phone.png' });
+
+  // tap a word in a sentence: the Reader's lookup card, the word highlighted
+  const sent = page.locator('.sents .ex-ko', { hasText: '정신을' });
+  await tapWord(page, sent, '정신');
+  const card = page.getByRole('dialog', { name: 'Dictionary lookup' });
+  await expect(card).toBeVisible();
+  await expect(card.locator('.lk-hw')).toHaveText('정신');
+  await expect(card.locator('.lk-gloss li').first()).toBeVisible();
+  expect(await hlText(page)).toContain('정신');   // the eojeol as written (정신을), as in the Reader
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '../docs/screenshots/tap-lookup-phone.png' });
+  // ▶ moves to the next word
+  await card.getByRole('button', { name: 'Next word' }).click();
+  await expect(card.locator('.lk-hw')).toHaveText('겨우');
+  expect(await hlText(page)).toContain('겨우');
+  // tapping elsewhere closes it
+  await page.locator('h1').click();
+  await expect(card).toHaveCount(0);
+  expect(await hlText(page)).toBeNull();
+
   await page.setViewportSize({ width: 1180, height: 820 });
   await page.waitForTimeout(500);
   await page.screenshot({ path: '../docs/screenshots/sents-krdict-ipad.png' });
+  await tapWord(page, page.locator('.sents .ex-ko', { hasText: '정신을' }), '정신');
+  await expect(card.locator('.lk-hw')).toHaveText('정신');
+  // the card sits in the entry pane, not over the results list
+  const cb = (await card.boundingBox())!, pb = (await page.locator('main#main').boundingBox())!;
+  expect(cb.x).toBeGreaterThanOrEqual(pb.x - 1);
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '../docs/screenshots/tap-lookup-ipad.png' });
+  // Open full entry navigates and closes the card
+  await card.getByRole('link', { name: 'Open full entry' }).click();
+  await expect(page.locator('h1')).toContainText('정신');
+  await expect(card).toHaveCount(0);
+});
+
+test('Dict tab: example sentences and Korean definitions are tappable', async ({ page }) => {
+  test.setTimeout(300_000);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await downloadAll(page);
+  await page.getByRole('searchbox', { name: 'Search' }).fill('학교');
+  await page.locator('.row', { hasText: '학교' }).first().click();
+  await expect(page.locator('h1')).toContainText('학교');
+  const ex = page.locator('.sense .ex-ko[data-tap]').first();
+  await expect(ex).toBeVisible();
+  const first = (await ex.textContent())!.trim().split(/\s+/)[0];
+  await tapWord(page, ex, first);
+  const card = page.getByRole('dialog', { name: 'Dictionary lookup' });
+  await expect(card).toBeVisible();
+  await expect(card).toHaveAttribute('data-loading', '0');
+  expect(first).toContain((await card.locator('.lk-hw').textContent())!.slice(0, 1));
+  await expect(page.locator('.def[data-tap]').first()).toBeAttached();
 });

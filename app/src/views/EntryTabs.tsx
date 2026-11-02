@@ -1,4 +1,5 @@
 import { useRef } from 'preact/hooks';
+import { TAP } from '../components/TapLookup';
 import { db } from '../db/client';
 import { useAsync } from '../lib/useAsync';
 import { Lru } from '../lib/cache';
@@ -137,7 +138,7 @@ export function SentsTab({ headword }: { headword: string }) {
   return (
     <div class="sents">
       {r.data.map((x, i) => (
-        <div key={i} class="ex"><div class="ex-ko hangul" lang="ko">{x.ko}</div>{x.en && <div class="ex-en">{x.en}</div>}</div>
+        <div key={i} class="ex"><div class="ex-ko hangul" lang="ko" {...TAP}>{x.ko}</div>{x.en && <div class="ex-en">{x.en}</div>}</div>
       ))}
     </div>
   );

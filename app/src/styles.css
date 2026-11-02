@@ -514,6 +514,11 @@ mark.hl { background: var(--rd-hl); color: inherit; border-radius: 4px; box-shad
 .lk-nav button { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--accent); font-size: 17px; line-height: 1; padding: 0; }
 .lk-nav button:active { background: var(--accent-soft); }
 .lk .lk-open { min-height: 44px; color: var(--accent); white-space: nowrap; }
+/* tap-to-look-up outside the Reader (example sentences, Korean definitions): the card covers the pane */
+.tl-host { position: fixed; z-index: 25; pointer-events: none; }
+.tl-host .lk { pointer-events: auto; }
+[data-tap] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+::highlight(tap-word) { background-color: var(--rd-hl); color: inherit; }
 .app.wide .lk { left: 0; right: 0; margin-inline: auto; bottom: 18px; width: min(560px, calc(100% - 40px)); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.22), 0 0 0 1px var(--border); padding-bottom: 10px; animation: none; }
 .app.wide .lk-grip { display: none; }
 @media (prefers-reduced-motion: reduce) { .lk { animation: none; } }

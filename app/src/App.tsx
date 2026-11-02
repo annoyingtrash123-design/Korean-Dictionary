@@ -11,6 +11,7 @@ import { GamesView } from './views/Games';
 import { FirstRun } from './views/FirstRun';
 import { ReaderLibrary, ReaderEmpty } from './views/Reader';
 import { TextView } from './views/TextView';
+import { TapLookup } from './components/TapLookup';
 import { db, packStatus$, packsHint, refreshStatus, restartWorker } from './db/client';
 import { useStore } from './lib/store';
 import { useRoute, type Route } from './lib/router';
@@ -100,6 +101,7 @@ export function App() {
           {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty bookmarks={leftKind === 'bookmarks'} />}
         </main>
         <UpdateToast />
+        <TapLookup />
       </div>
     );
   }
@@ -109,6 +111,7 @@ export function App() {
       <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
       <TabBar />
       <UpdateToast />
+      <TapLookup />
     </div>
   );
 }

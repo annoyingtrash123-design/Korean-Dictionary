@@ -5,7 +5,7 @@ import { useAsync } from '../lib/useAsync';
 import { useStore } from '../lib/store';
 import { useWide } from '../lib/layout';
 import { readerPrefs, updatePrefs, getPos, setPos, type ReaderPrefs } from '../lib/reader-prefs';
-import { classOf, extendSpan, nextWordStart, prevWordChar, rangeAt, runAt, shrinkSpan, snapOffset, splitHighlight, textOffsetIn, type Span } from '../lib/reader-text';
+import { classOf, extendSpan, nextWordStart, offsetAtPoint, prevWordChar, runAt, shrinkSpan, snapOffset, splitHighlight, type Span } from '../lib/reader-text';
 import { parseNotes, type Inline, type MdBlock } from '../lib/reader-markdown';
 import { fmtChars, fmtYear, shelfLabel } from '../lib/reader-library';
 import { groupResults } from '../lib/merge';
@@ -96,33 +96,6 @@ function ReadingSettings({ p, hasModern, hasReading, label, onClose }: { p: Read
       </div>
     </Sheet>
   );
-}
-
-// ---------- caret hit-testing ----------
-function caretAt(x: number, y: number): { node: Node; off: number } | null {
-  const d = document as Document & { caretPositionFromPoint?: (x: number, y: number) => { offsetNode: Node; offset: number } | null; caretRangeFromPoint?: (x: number, y: number) => Range | null };
-  if (d.caretPositionFromPoint) { const p = d.caretPositionFromPoint(x, y); if (p) return { node: p.offsetNode, off: p.offset }; }
-  if (d.caretRangeFromPoint) { const r = d.caretRangeFromPoint(x, y); if (r) return { node: r.startContainer, off: r.startOffset }; }
-  return null;
-}
-const rectDist = (r: DOMRect, x: number, y: number) => Math.hypot(Math.max(r.left - x, 0, x - r.right), Math.max(r.top - y, 0, y - r.bottom));
-/** UTF-16 offset of the character under (x, y) inside paragraph element `root`, or null when the tap is not near any text. */
-export function offsetAtPoint(root: HTMLElement, x: number, y: number): number | null {
-  const c = caretAt(x, y);
-  if (!c || !root.contains(c.node)) return null;
-  const text = root.textContent ?? '';
-  const o = textOffsetIn(root, c.node, c.off);
-  let best: { i: number; d: number } | null = null;
-  for (const raw of [o, o - 1]) {
-    if (raw < 0 || raw >= text.length) continue;
-    const i = snapOffset(text, raw);
-    const end = i + (text.codePointAt(i)! > 0xffff ? 2 : 1);
-    const r = rangeAt(root, i, end)?.getBoundingClientRect();
-    if (!r) continue;
-    const d = rectDist(r, x, y);
-    if (!best || d < best.d) best = { i, d };
-  }
-  return best && best.d <= 22 ? best.i : null;
 }
 
 // ---------- the view ----------
