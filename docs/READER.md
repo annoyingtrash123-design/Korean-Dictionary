@@ -197,3 +197,17 @@ sino-korean 67k, constitutions 33k, essays 19k, documents 12k, hanmun 1k). Agree
   (의산문답 is one 14k-character paragraph, 양반전 one paragraph) and re-check every text.
 - **Chapters / collapsible subheadings for long works** (novels, long tales, diaries) so they
   read in bite-sized study chunks; use the work's own chapter divisions where it has them.
+
+### Chapters / collapsible headings: agreed list (owner approved 2026-11-03, do with the above)
+
+1. **Make existing headings collapsible** (UI only, no content change): constitutions
+   (constitution_1948, constitution_rok, imsi_heonbeop_1919), travel diaries (pyohaerok by day,
+   yeolha_dogangrok), long essays/declarations (joseon_hyeongmyeong, naui_sowon, gwontae,
+   dongnip_sinmun_changgan, nangaek_sinnyeon_manpil, seonjo_myeongwonbyeong).
+2. **Add chapters to long stories** (reviewed): classical tales guunmong (its own 16 chapters),
+   simcheongjeon, bakssijeon, honggildongjeon; modern fiction mujeong (serial instalments),
+   nalgae, ingan_munje, chisuk, bicheo, mullebanga, baettaragi, bombom; memoir hanjungnok
+   (split its very long paragraphs, then sections).
+3. **Split into sensible paragraphs, then sections**: uisanmundap (by speaker turn, grouped by
+   topic), seoyu_gyeonmun_minkwon, hongdaeyong_yeongi.
+4. **Leave as is**: speeches, poems, treaties, short stories under ~8k characters.
