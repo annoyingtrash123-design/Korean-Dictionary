@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T05:14:58Z",
+  "generated_at": "2026-11-03T23:55:44Z",
   "resolved": [
     {
       "id": "hanjungnok",
@@ -633,18 +633,6 @@
       "revision_id": 221326,
       "chars": 22516,
       "subpages": 0,
-      "resolved_via": "title",
-      "truncated": false,
-      "needs_sections": false
-    },
-    {
-      "id": "mujeong",
-      "source": "wikisource-ko",
-      "page_title": "무정",
-      "url": "https://ko.wikisource.org/wiki/%EB%AC%B4%EC%A0%95",
-      "revision_id": 324221,
-      "chars": 53030,
-      "subpages": 1,
       "resolved_via": "title",
       "truncated": false,
       "needs_sections": false
@@ -2277,6 +2265,18 @@
       "revision_id": 430594,
       "chars": 14359,
       "subpages": 0,
+      "resolved_via": "title",
+      "truncated": false,
+      "needs_sections": false
+    },
+    {
+      "id": "mujeong",
+      "source": "wikisource-ko",
+      "page_title": "무정",
+      "url": "https://ko.wikisource.org/wiki/%EB%AC%B4%EC%A0%95",
+      "revision_id": 324221,
+      "chars": 324899,
+      "subpages": 7,
       "resolved_via": "title",
       "truncated": false,
       "needs_sections": false
