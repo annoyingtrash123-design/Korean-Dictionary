@@ -64,7 +64,9 @@ export interface SearchResult {
 }
 
 // ---- Reader (see docs/READER.md "texts pack + engine API") ----
-export interface TextLabels { notes?: 'ai' | null; translation?: string | null; modern?: 'ai' | 'wikisource' | null; text?: 'original' | 'ai' | null }
+export interface TextLabels { notes?: 'ai' | null; translation?: string | null; modern?: 'ai' | 'wikisource' | null; text?: 'original' | 'ai' | null;
+  /** "ai": paragraph breaks and chapter headings were added by an editor (the text itself is unchanged). */
+  sections?: 'ai' | null }
 /** AI-written learner essay attached to a primary source as context (`notes.background`). */
 export interface TextBackground {
   id: string; title_ko?: string | null; title_en?: string | null; level?: string | null;

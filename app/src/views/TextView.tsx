@@ -36,6 +36,8 @@ export function Notes({ blocks }: { blocks: MdBlock[] }) {
 export function translationLabel(l: TextLabels, prov?: TextProvenance | null): string {
   const t = l.translation ?? 'ai';
   if (t === 'ai') return 'AI-generated translation — may contain errors';
+  // the work's own authoritative English text (e.g. the UN's UDHR), not a translation of the Korean
+  if (t.startsWith('official:')) return `English: the official text — ${t.slice(9)}`;
   const ref = t.replace(/^pd:/, '');
   return `Translation: ${prov?.english_source || ref.replace(/[-_]/g, ' ')} (public domain)`;
 }
@@ -384,6 +386,7 @@ export function TextView({ id }: { id: string }) {
                   {(prov?.licence || m.pd_basis) && <><dt>Licence</dt><dd>{prov?.licence || m.pd_basis}</dd></>}
                   {hasEn && <><dt>English</dt><dd>{translationLabel(doc.labels, prov)}</dd></>}
                   {hasModern && modernLabel(doc.labels) && <><dt>Modern</dt><dd>{modernLabel(doc.labels)}</dd></>}
+                  {doc.labels.sections === 'ai' && <><dt>Layout</dt><dd>Paragraph breaks and chapter headings added by AI; the text itself is unchanged</dd></>}
                 </dl>
                 {(notesKo.length > 0 || notesEn.length > 0) && (
                   <div class="rd-notes">

@@ -172,15 +172,48 @@ pub fn norm_ws(s: &str, hanmun: bool) -> String {
 }
 
 /// Check the enriched `orig` paragraphs against the raw paragraphs. Exact sequence, or for
-/// catalogue excerpts an ordered selection of raw paragraphs. Returns a problem description.
+/// catalogue excerpts an ordered selection of raw paragraphs. With `resegmented`
+/// (`labels.sections = "ai"`: paragraphs re-split and chapter headings added by an editor) the
+/// text must still be the raw text exactly, only divided differently: the enriched paragraphs
+/// without the added `## ` headings, joined, equal the raw paragraphs joined. Returns a problem
+/// description.
 pub fn check_integrity(
     enriched: &[String],
     raw: &[String],
     excerpt: bool,
     hanmun: bool,
+    resegmented: bool,
 ) -> Option<String> {
     let e: Vec<String> = enriched.iter().map(|p| norm_ws(p, hanmun)).collect();
     let r: Vec<String> = raw.iter().map(|p| norm_ws(p, hanmun)).collect();
+    if resegmented && !excerpt {
+        let mut raw_heads: Vec<&String> = r.iter().filter(|p| p.starts_with("## ")).collect();
+        let kept: Vec<&String> = e
+            .iter()
+            .filter(|p| {
+                if !p.starts_with("## ") {
+                    return true;
+                }
+                // a heading of the source stays; any other heading is an added chapter title
+                match raw_heads.iter().position(|h| h == p) {
+                    Some(i) => {
+                        raw_heads.remove(i);
+                        true
+                    }
+                    None => false,
+                }
+            })
+            .collect();
+        let sep = if hanmun { "" } else { " " };
+        let join = |v: Vec<&String>| v.iter().map(|s| s.as_str()).collect::<Vec<_>>().join(sep);
+        let (a, b) = (join(kept), join(r.iter().collect()));
+        if a == b {
+            return None;
+        }
+        let at = a.chars().zip(b.chars()).take_while(|(x, y)| x == y).count();
+        let ctx = |s: &str| s.chars().skip(at.saturating_sub(8)).take(24).collect::<String>();
+        return Some(format!("re-divided text differs from the raw source at character {at}: enriched {:?} vs raw {:?}", ctx(&a), ctx(&b)));
+    }
     if !excerpt {
         if e.len() != r.len() {
             return Some(format!(
@@ -812,7 +845,8 @@ fn collect(
             if raw.is_some() {
                 let enr_orig: Vec<String> =
                     paras_from_enriched(v).into_iter().map(|p| p.orig).collect();
-                if let Some(m) = check_integrity(&enr_orig, &raw_paras, e.excerpt, hanmun) {
+                let reseg = v.pointer("/labels/sections").and_then(Value::as_str) == Some("ai");
+                if let Some(m) = check_integrity(&enr_orig, &raw_paras, e.excerpt, hanmun, reseg) {
                     note(
                         true,
                         format!("{}: enriched text does not match the raw source: {m}", e.id),
@@ -1142,17 +1176,35 @@ mod tests {
             .iter()
             .map(|s| s.to_string())
             .collect();
-        assert!(check_integrity(&same, &raw, false, false).is_none());
-        assert!(check_integrity(&same[..2], &raw, false, false).is_some());
-        assert!(check_integrity(&[same[0].clone(), same[3].clone()], &raw, true, false).is_none());
-        assert!(check_integrity(&[same[3].clone(), same[0].clone()], &raw, true, false).is_some());
+        assert!(check_integrity(&same, &raw, false, false, false).is_none());
+        assert!(check_integrity(&same[..2], &raw, false, false, false).is_some());
+        assert!(check_integrity(&[same[0].clone(), same[3].clone()], &raw, true, false, false).is_none());
+        assert!(check_integrity(&[same[3].clone(), same[0].clone()], &raw, true, false, false).is_some());
         let changed: Vec<String> = ["가 나", "다!", "라", "마"]
             .iter()
             .map(|s| s.to_string())
             .collect();
-        assert!(check_integrity(&changed, &raw, false, false)
+        assert!(check_integrity(&changed, &raw, false, false, false)
             .unwrap()
             .contains("paragraph 1"));
+    }
+
+    #[test]
+    fn integrity_resegmented() {
+        let v = |a: &[&str]| a.iter().map(|s| s.to_string()).collect::<Vec<String>>();
+        let raw = v(&["## 원문", "가 나 다. 라 마 바.", "사 아"]);
+        // split at a sentence, chapter headings added, the source heading kept
+        let ok = v(&["## 원문", "## 1", "가 나 다.", "라 마 바.", "## 2", "사 아"]);
+        assert!(check_integrity(&ok, &raw, false, false, true).is_none());
+        // without the label the sequence must match exactly
+        assert!(check_integrity(&ok, &raw, false, false, false).is_some());
+        // a changed character, a dropped sentence or a dropped source heading are caught
+        assert!(check_integrity(&v(&["## 원문", "가 나 다!", "라 마 바.", "사 아"]), &raw, false, false, true).unwrap().contains("character 11"));
+        assert!(check_integrity(&v(&["## 원문", "가 나 다.", "사 아"]), &raw, false, false, true).is_some());
+        assert!(check_integrity(&v(&["가 나 다.", "라 마 바.", "사 아"]), &raw, false, false, true).is_some());
+        // hanmun joins without spaces
+        let hraw = v(&["兩班者。士族之尊稱也。旌善之郡。"]);
+        assert!(check_integrity(&v(&["兩班者。士族之尊稱也。", "旌善之郡。"]), &hraw, false, true, true).is_none());
     }
 
     #[test]
