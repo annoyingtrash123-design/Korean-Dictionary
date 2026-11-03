@@ -33,7 +33,7 @@ export function App() {
   const route = useRoute();
   const main = useRef<HTMLElement>(null);
 
-  useEffect(() => { applyTheme(s); }, [s.theme, s.colors, s.fontSize]);
+  useEffect(() => { applyTheme(s); }, [s.theme, s.colors, s.fontSize, s.font]);
   useEffect(() => {
     if (s.theme !== 'system' || !matchMedia) return;
     const mq = matchMedia('(prefers-color-scheme: dark)');

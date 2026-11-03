@@ -6,6 +6,10 @@ describe('settings migration & packs', () => {
   it('migrates stdict boolean', () => {
     expect(migrateSettings({ stdict: false }).packs).toEqual({ stdict: false, opendict: false });
     expect(migrateSettings({}).packs).toEqual({ stdict: true, opendict: false });
+    // font: default, kept when valid, reset when unknown
+    expect(migrateSettings({}).font).toBe('system');
+    expect(migrateSettings({ font: 'batang' }).font).toBe('batang');
+    expect(migrateSettings({ font: 'comic-sans' }).font).toBe('system');
     expect(migrateSettings({ packs: { opendict: true } }).packs).toEqual({ stdict: true, opendict: true });
     expect('stdict' in migrateSettings({ stdict: true })).toBe(false);
   });

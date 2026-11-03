@@ -12,12 +12,13 @@ export function resolveTheme(theme: Settings['theme'], prefersDark: boolean): 'l
   return theme === 'dark' ? 'dark' : 'light';
 }
 
-/** Apply settings to the document: data-theme, custom colour overrides, entry font size. */
-export function applyTheme(s: Pick<Settings, 'theme' | 'colors' | 'fontSize'>, doc: Document = document, prefersDark?: boolean): string {
+/** Apply settings to the document: data-theme, data-font, custom colour overrides, entry font size. */
+export function applyTheme(s: Pick<Settings, 'theme' | 'colors' | 'fontSize'> & Partial<Pick<Settings, 'font'>>, doc: Document = document, prefersDark?: boolean): string {
   const dark = prefersDark ?? (typeof matchMedia === 'function' && matchMedia('(prefers-color-scheme: dark)').matches);
   const t = resolveTheme(s.theme, dark);
   const root = doc.documentElement;
   root.setAttribute('data-theme', t);
+  root.setAttribute('data-font', s.font ?? 'system');
   for (const k of Object.keys(COLOR_VARS) as ColorKey[]) {
     const v = s.colors[k];
     if (v) root.style.setProperty(COLOR_VARS[k], v);

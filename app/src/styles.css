@@ -4,6 +4,11 @@
   font-family: 'KD YetHangul'; src: url('/fonts/yethangul-jamo.woff2') format('woff2');
   unicode-range: U+1100-11FF, U+A960-A97F, U+D7B0-D7FF, U+302E-302F; font-display: swap;
 }
+/* Korean font options (Settings → Appearance), bundled OFL subsets; see public/fonts/README.txt */
+@font-face { font-family: 'KD Gowun Dodum'; src: url('/fonts/GowunDodum.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'KD Gowun Batang'; src: url('/fonts/GowunBatang.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'KD Nanum Myeongjo'; src: url('/fonts/NanumMyeongjo.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'KD Nanum Pen'; src: url('/fonts/NanumPenScript.woff2') format('woff2'); font-display: swap; }
 /* ---------- Theme tokens (presets; custom colours are set inline on :root) ---------- */
 :root, :root[data-theme='light'] {
   /* Parchment, Ink Brown, Forest Canopy, Walnut; hanja a deepened Antique Sepia (text contrast) */
@@ -339,6 +344,16 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
   --rd-sans: var(--font-ko);
   --rd-hl: color-mix(in srgb, var(--accent) 30%, transparent);
 }
+/* a chosen Korean font replaces the system Korean font everywhere, the Reader included
+   (old-Hangul jamo still come from KD YetHangul; hanja fall back to the system font) */
+:root[data-font='dodum'] { --font-pick: 'KD Gowun Dodum'; }
+:root[data-font='batang'] { --font-pick: 'KD Gowun Batang'; }
+:root[data-font='myeongjo'] { --font-pick: 'KD Nanum Myeongjo'; }
+:root[data-font='pen'] { --font-pick: 'KD Nanum Pen'; }
+:root[data-font]:not([data-font='system']) {
+  --font-ko: 'KD YetHangul', var(--font-pick), 'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto Sans CJK KR', system-ui, sans-serif;
+  --rd-serif: var(--font-ko); --rd-sans: var(--font-ko);
+}
 main.reader-host, .pane-right.reader-host { position: relative; overflow: hidden; padding: 0; }
 .pane-right.reader-host > * { max-width: none; margin-inline: 0; }
 .rd-lib { padding-bottom: 24px; }
@@ -641,3 +656,11 @@ mark.hl { background: var(--rd-hl); color: inherit; border-radius: 4px; box-shad
 .gm-missed a { display: block; padding: 10px 4px; border-bottom: 1px solid var(--border); }
 .firstrun .notice { margin-inline: 0; }
 .diag { margin-top: 10px; } .diag pre { white-space: pre-wrap; word-break: break-all; font-size: 11px; max-height: 40vh; overflow: auto; background: var(--surface-2); padding: 8px; border-radius: 8px; }
+
+/* Settings → Korean font: each option previewed in its own face */
+.fonts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 12px 0 4px; }
+.font-opt { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); text-align: left; min-height: 64px; }
+.font-opt.on { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); background: var(--accent-soft); }
+.font-opt .font-sample { font-size: 21px; line-height: 1.3; color: var(--hangul); }
+.font-opt .font-name { font-size: 12px; color: var(--muted); }
+

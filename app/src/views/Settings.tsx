@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { settings, updateSettings, type ColorKey, type ThemeName } from '../lib/settings';
 import { currentColor } from '../lib/theme';
+import { FONTS } from '../lib/fonts';
 import { useStore } from '../lib/store';
 import { db, fetchManifest, makeReport, packStatus$, type StorageReport } from '../db/client';
 import { fmtBytes, stalePacks, update } from '../lib/app-state';
@@ -77,6 +78,15 @@ export function SettingsView() {
           ))}
         </div>
         {Object.keys(s.colors).length > 0 && <button type="button" class="link" onClick={() => updateSettings({ colors: {} })}>Reset colours to preset</button>}
+        <div class="field-row"><span>Korean font</span></div>
+        <div class="fonts" role="radiogroup" aria-label="Korean font">
+          {FONTS.map((f) => (
+            <button key={f.id} type="button" role="radio" aria-checked={s.font === f.id} class={`font-opt${s.font === f.id ? ' on' : ''}`} onClick={() => updateSettings({ font: f.id })}>
+              <span class="font-sample" lang="ko" style={{ fontFamily: f.family }}>{f.ko} 한글</span>
+              <span class="font-name">{f.label}</span>
+            </button>
+          ))}
+        </div>
         <label class="field-row"><span>Entry text size <span class="muted">{s.fontSize}px</span></span>
           <input type="range" min={14} max={26} step={1} value={s.fontSize} onInput={(e) => updateSettings({ fontSize: +(e.currentTarget as HTMLInputElement).value })} aria-label="Entry text size" /></label>
         <label class="field-row"><span>Show Korean definitions</span>
