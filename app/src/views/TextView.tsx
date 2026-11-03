@@ -64,7 +64,7 @@ function Para({ n, text, hl, verse, hanmun, reading, en, showEn, showReading, fo
         <section class={`rd-para rd-sec fold${fold.open ? ' open' : ''}`} data-n={n}>
           <h3 class="rd-sec-h">
             <button type="button" class="rd-sec-btn" aria-expanded={fold.open} onClick={(e) => { e.stopPropagation(); fold.onToggle(); }}>
-              <span class="rd-chev" aria-hidden="true" />
+              <span class="rd-sec-chev" aria-hidden="true" />
               <span class="rd-sec-txt"><span class="rd-sec-ko" lang="ko">{h}</span>{sub && <span class="rd-sec-en" lang="en">{sub}</span>}</span>
               {!fold.open && fold.count > 0 && <span class="rd-sec-n">{fold.count} ¶</span>}
             </button>

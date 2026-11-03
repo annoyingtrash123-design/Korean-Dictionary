@@ -5,7 +5,13 @@ import { test as base, expect, type Page } from '@playwright/test';
  * console errors, engine diagnostics) to stdout. CI artifacts aren't always reachable, so the
  * job log alone must say why a test failed.
  */
-export const test = base.extend<{ failureDump: void }>({
+export const test = base.extend<{ failureDump: void; settingsOpen: void }>({
+  /** Settings sections start collapsed for users; tests that use Settings expect them open
+   *  (settings-groups.spec.ts tests the collapsing itself and clears this). */
+  settingsOpen: [async ({ page }, use) => {
+    await page.addInitScript(() => { try { if (localStorage.getItem('kd.settings.open') == null) localStorage.setItem('kd.settings.open', JSON.stringify(['appearance', 'dictionaries', 'data', 'backup', 'about'])); } catch { /* */ } });
+    await use();
+  }, { auto: true }],
   failureDump: [async ({ page }, use, info) => {
     const logs: string[] = [];
     page.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') logs.push(`[${m.type()}] ${m.text()}`); });

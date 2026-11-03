@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
+import type { ComponentChildren } from 'preact';
 import { settings, updateSettings, type ColorKey, type ThemeName } from '../lib/settings';
 import { currentColor } from '../lib/theme';
 import { FONTS } from '../lib/fonts';
@@ -46,6 +47,8 @@ export function SettingsView() {
   const installedIds = Object.keys(st?.packs ?? {}).filter((id) => id !== 'core' && st!.packs[id].installed);
   const optIds = [...new Set([...optionalPacks(manifest).map((p) => p.id), ...installedIds])];
   const allInstalled = ['core', ...installedIds];
+  const [open, setOpenState] = useState<string[]>(loadOpenGroups);
+  const toggle = (id: string) => setOpenState((o) => { const n = o.includes(id) ? o.filter((x) => x !== id) : [...o, id]; saveOpenGroups(n); return n; });
   const setColor = (k: ColorKey, v: string) => updateSettings({ colors: { ...s.colors, [k]: v } });
 
   const doCheck = async () => { setMsg('Checking…'); const m = await checkForUpdate(); setMsg(m ? (update.get().available ? 'Update available.' : 'Dictionary is up to date.') : 'Could not reach the server (offline?).'); };
@@ -67,8 +70,7 @@ export function SettingsView() {
   return (
     <div class="page settings">
       <UpdateBanner />
-      <section class="group">
-        <h2>Appearance</h2>
+      <Group id="appearance" title="Appearance" open={open} onToggle={toggle}>
         <div class="seg" role="radiogroup" aria-label="Theme">
           {THEMES.map(([v, l]) => <button key={v} type="button" role="radio" aria-checked={theme === v} class={theme === v ? 'on' : ''} onClick={() => updateSettings({ theme: v, colors: {} })}>{l}</button>)}
         </div>
@@ -92,10 +94,9 @@ export function SettingsView() {
         <label class="field-row"><span>Show Korean definitions</span>
           <input type="checkbox" role="switch" checked={s.showKoDef} onChange={(e) => updateSettings({ showKoDef: (e.currentTarget as HTMLInputElement).checked })} /></label>
         <div class="preview ex"><div class="ex-ko hangul" lang="ko">저는 학교에 갑니다. <span class="hanja" lang="zh-Hant">學校</span></div><div class="ex-en">I go to school.</div></div>
-      </section>
+      </Group>
 
-      <section class="group">
-        <h2>Dictionaries</h2>
+      <Group id="dictionaries" title="Dictionaries" open={open} onToggle={toggle}>
         <div class="pack-line"><div><strong>{packLabel('core')}</strong><div class="muted small">{core ? `v${core.version} · ${fmtBytes(core.bytes)}` : 'Not installed'}</div></div></div>
         {optIds.map((id) => {
           const inst = st?.packs[id]; const mp = manifest?.packs.find((p) => p.id === id);
@@ -113,10 +114,9 @@ export function SettingsView() {
           );
         })}
         {installing && manifest && <PackInstaller manifest={manifest} packIds={installing} label={upd.available && installing.every((i) => upd.stale.includes(i)) ? 'Update' : 'Download'} onDone={() => { const ids = installing; setInstalling(null); update.set((u) => ({ ...u, available: false, stale: [] })); updateSettings({ packs: { ...s.packs, ...Object.fromEntries(ids.filter((i) => i !== 'core' && !installedIds.includes(i)).map((i) => [i, true])) } }); checkForUpdate(); }} />}
-      </section>
+      </Group>
 
-      <section class="group">
-        <h2>Data</h2>
+      <Group id="data" title="Data" open={open} onToggle={toggle}>
         <dl class="facts wide">
           <dt>Installed version</dt><dd>{core?.version ?? '–'}</dd>
           <dt>Latest online</dt><dd>{manifest?.version ?? '–'}</dd>
@@ -130,22 +130,20 @@ export function SettingsView() {
           <button type="button" class="btn" onClick={() => startInstall(allInstalled)}>Re-download</button>
         </div>
         {msg && <p class="muted small" role="status">{msg}</p>}
-      </section>
+      </Group>
 
-      <section class="group">
-        <h2>Backup</h2>
+      <Group id="backup" title="Backup" open={open} onToggle={toggle}>
         <p class="muted small">{bm.items.length} saved word(s). Exports bookmarks and folders as a JSON file.</p>
         <div class="btn-row">
           <button type="button" class="btn" onClick={exportFile}>Export bookmarks</button>
           <button type="button" class="btn" onClick={() => fileRef.current?.click()}>Import…</button>
           <input ref={fileRef} type="file" accept="application/json,.json" hidden aria-label="Import backup file" onChange={(e) => importFile((e.currentTarget as HTMLInputElement).files?.[0])} />
         </div>
-      </section>
+      </Group>
 
-      <section class="group">
-        <h2>About &amp; licences</h2>
+      <Group id="about" title="About & licences" open={open} onToggle={toggle}>
         <Markdown src={attribution} />
-      </section>
+      </Group>
     </div>
   );
 }
@@ -173,5 +171,21 @@ function TechDetails() {
       <summary>Technical details</summary>
       <pre>{r ? `storage in use: ${r.usageMB ?? '?'} MB · protected: ${r.persisted}\nlast working: ${r.lastOk ?? 'unknown'}\napp: ${r.build}\ninstalled:\n${packs || '  (none)'}\n${r.diag}` : 'Loading…'}</pre>
     </details>
+  );
+}
+
+const OPEN_KEY = 'kd.settings.open';
+/** Sections left open, remembered; all closed on first visit. */
+function loadOpenGroups(): string[] { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } }
+function saveOpenGroups(v: string[]) { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* storage unavailable */ } }
+
+/** A collapsible settings section. Closed sections stay mounted (hidden), so a download keeps running. */
+function Group({ id, title, open, onToggle, children }: { id: string; title: string; open: string[]; onToggle: (id: string) => void; children: ComponentChildren }) {
+  const on = open.includes(id);
+  return (
+    <section class="group">
+      <h2 class="set-h"><button type="button" class="set-fold" aria-expanded={on} aria-controls={`set-${id}`} onClick={() => onToggle(id)}><span class="rd-chev" aria-hidden="true" /><span>{title}</span></button></h2>
+      <div id={`set-${id}`} class="set-body" hidden={!on}>{children}</div>
+    </section>
   );
 }
