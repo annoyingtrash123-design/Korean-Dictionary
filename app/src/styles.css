@@ -466,6 +466,14 @@ main.reader-host, .pane-right.reader-host { position: relative; overflow: hidden
 .rd-sec { margin-top: 1.6em; }
 .rd-sec-ko { margin: 0; font: 600 .82em/1.4 var(--rd-font); letter-spacing: .06em; color: var(--heading); }
 .rd-sec-en { margin: .15em 0 0; font: 500 12.5px/1.4 var(--font-ui); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.rd-sec.fold { margin-top: .9em; }
+.rd-sec-h { margin: 0; }
+.rd-sec-btn { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 6px 4px; border: 0; border-bottom: 1px solid var(--border); background: none; color: inherit; text-align: left; font: inherit; cursor: pointer; }
+.rd-sec-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.rd-sec-btn .rd-sec-en { display: block; }
+.rd-chev { flex: none; width: 8px; height: 8px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); transition: transform .15s; margin: 0 4px 0 2px; }
+.rd-sec.open .rd-chev { transform: rotate(45deg); }
+.rd-sec-n { flex: none; font: 500 12px var(--font-ui); color: var(--muted); }
 mark.hl { background: var(--rd-hl); color: inherit; border-radius: 4px; box-shadow: 0 0 0 2px var(--rd-hl); }
 .rd-extra { margin-top: 32px; padding-top: 6px; border-top: 1px solid var(--border); font-size: 16px; font-family: var(--font-ui); }
 .rd-extra h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 650; padding: 14px 0 6px; }

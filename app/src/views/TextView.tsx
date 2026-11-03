@@ -7,6 +7,7 @@ import { useWide } from '../lib/layout';
 import { readerPrefs, updatePrefs, getPos, setPos, type ReaderPrefs } from '../lib/reader-prefs';
 import { classOf, extendSpan, nextWordStart, offsetAtPoint, prevWordChar, runAt, shrinkSpan, snapOffset, splitHighlight, type Span } from '../lib/reader-text';
 import { parseNotes, type Inline, type MdBlock } from '../lib/reader-markdown';
+import { headingsOf, hidden, initialOpen, isHeading, loadOpen, saveOpen } from '../lib/reader-sections';
 import { fmtChars, fmtYear, shelfLabel } from '../lib/reader-library';
 import { groupResults } from '../lib/merge';
 import { LookupCard, type LookupState } from '../components/LookupCard';
@@ -46,17 +47,33 @@ const hasRev = (p?: TextProvenance | null): p is TextProvenance => !!p && p.revi
 const fmtDate = (s?: string) => (s ? s.slice(0, 10) : '');
 
 // ---------- paragraph ----------
-function Para({ n, text, hl, verse, hanmun, reading, en, showEn, showReading }: {
+function Para({ n, text, hl, verse, hanmun, reading, en, showEn, showReading, fold }: {
   n: number; text: string; hl: Span | null; verse: boolean; hanmun: boolean; reading?: string | null; en?: string | null; showEn: boolean; showReading: boolean;
+  /** A collapsible section heading: open state, paragraph count, toggle. */
+  fold?: { open: boolean; count: number; onToggle: () => void };
 }) {
   // section headings ("## …" in the source) render as headings, not as tappable text
-  if (text.startsWith('## ')) {
+  if (isHeading(text)) {
     const h = text.slice(3).trim();
     const he = en?.replace(/^##\s*/, '').trim();
+    const sub = showEn && he && he !== h ? he : null;
+    if (fold) {
+      return (
+        <section class={`rd-para rd-sec fold${fold.open ? ' open' : ''}`} data-n={n}>
+          <h3 class="rd-sec-h">
+            <button type="button" class="rd-sec-btn" aria-expanded={fold.open} onClick={(e) => { e.stopPropagation(); fold.onToggle(); }}>
+              <span class="rd-chev" aria-hidden="true" />
+              <span class="rd-sec-txt"><span class="rd-sec-ko" lang="ko">{h}</span>{sub && <span class="rd-sec-en" lang="en">{sub}</span>}</span>
+              {!fold.open && fold.count > 0 && <span class="rd-sec-n">{fold.count} ¶</span>}
+            </button>
+          </h3>
+        </section>
+      );
+    }
     return (
       <section class="rd-para rd-sec" data-n={n}>
         <h3 class="rd-sec-ko" lang="ko">{h}</h3>
-        {showEn && he && he !== h && <p class="rd-sec-en" lang="en">{he}</p>}
+        {sub && <p class="rd-sec-en" lang="en">{sub}</p>}
       </section>
     );
   }
@@ -171,6 +188,13 @@ export function TextView({ id }: { id: string }) {
     if (n >= BG) return bg!.paragraphs[n - BG].ko;
     const p = doc!.paragraphs[n]; return (useModern && p.modern) || p.orig;
   };
+  // collapsible sections (chapters): derived synchronously so the first render already folds
+  const headings = useMemo(() => (doc ? headingsOf(doc.paragraphs.map((p) => p.orig)) : []), [doc]);
+  const [openSt, setOpenSt] = useState<{ id: string; open: Set<number> } | null>(null);
+  const open = openSt && doc && openSt.id === doc.id ? openSt.open
+    : doc ? initialOpen(headings, loadOpen(doc.id), (() => { const p = getPos(doc.id); return p && p.n < BG ? p.n : null; })()) : new Set<number>();
+  const setOpen = (next: Set<number>) => { if (!doc) return; saveOpen(doc.id, next); setOpenSt({ id: doc.id, open: next }); };
+  const toggle = (h: number) => { const next = new Set(open); if (next.has(h)) next.delete(h); else next.add(h); setOpen(next); };
   const lastPara = (n: number) => (n >= BG ? BG + (bg?.paragraphs.length ?? 0) : doc!.paragraphs.length) - 1;
   const firstPara = (n: number) => (n >= BG ? BG : 0);
 
@@ -255,6 +279,11 @@ export function TextView({ id }: { id: string }) {
     if (off == null) { if (sel) clear(); return; }
     void selectAt(+ko.dataset.ko!, off);
   };
+
+  // stepping a lookup into a closed section opens it
+  useEffect(() => {
+    if (sel && sel.n < BG && hidden(headings, open, sel.n)) { const next = new Set(open); next.add(headings.filter((h) => h <= sel.n).pop()!); setOpen(next); }
+  }, [sel?.n]);
 
   // keep the highlighted word clear of the card
   useLayoutEffect(() => {
@@ -371,6 +400,9 @@ export function TextView({ id }: { id: string }) {
 
           <div class="rd-ctl" role="group" aria-label="Display">
             {hasReading && <button type="button" class={`pill${prefs.reading ? ' on' : ''}`} aria-pressed={prefs.reading} onClick={() => updatePrefs({ reading: !prefs.reading })}>음 reading</button>}
+            {headings.length > 0 && (open.size < headings.length
+              ? <button type="button" class="pill" onClick={() => setOpen(new Set(headings))}>Expand all</button>
+              : <button type="button" class="pill" onClick={() => setOpen(new Set())}>Collapse all</button>)}
           </div>
           {(hasEn && prefs.en) || useModern ? (
             <div class="rd-labels small">
@@ -381,10 +413,13 @@ export function TextView({ id }: { id: string }) {
           {(hanmun || m.script === 'mixed') && !cedict && <div class="rd-hint small">Tip: install CC-CEDICT in Settings → Dictionaries for fuller hanja lookups.</div>}
 
           <div class="rd-body" lang="ko">
-            {doc.paragraphs.map((p, i) => (
-              <Para key={p.n} n={i} text={shown(i)} hl={sel && sel.n === i ? sel.span : null} verse={verse} hanmun={hanmun}
-                reading={p.reading} en={p.en} showEn={prefs.en} showReading={prefs.reading} />
-            ))}
+            {doc.paragraphs.map((p, i) => {
+              if (hidden(headings, open, i)) return null;
+              const hi = headings.indexOf(i);
+              const fold = hi >= 0 ? { open: open.has(i), count: (headings[hi + 1] ?? doc.paragraphs.length) - i - 1, onToggle: () => toggle(i) } : undefined;
+              return <Para key={p.n} n={i} text={shown(i)} hl={sel && sel.n === i ? sel.span : null} verse={verse} hanmun={hanmun}
+                reading={p.reading} en={p.en} showEn={prefs.en} showReading={prefs.reading} fold={fold} />;
+            })}
           </div>
 
           {!!doc.vocab?.length && (
