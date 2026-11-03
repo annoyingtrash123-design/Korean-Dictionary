@@ -180,3 +180,20 @@ News articles are texts with shelf `news` (period `modern`), refreshed each buil
   the text has none. Without the pack: `listTexts() = []`, `getText() = null`. The `texts` pack
   has no `entries` table, so it never takes part in dictionary searches (`packs` options naming
   it are ignored by `search` / `lookupInText`).
+
+## Planned (on hold, owner's request 2026-11-03): full English + reading structure
+
+Not started; resume only when the owner says so (token budget). Scope measured 2026-11-03:
+108 of 136 texts have full paragraph-by-paragraph AI English; 28 have none (~517k Korean
+characters, about two-thirds of the library: classical prose 214k, modern fiction 171k,
+sino-korean 67k, constitutions 33k, essays 19k, documents 12k, hanmun 1k). Agreed approach:
+
+- **English for every text**, paragraph by paragraph, labelled AI and approved by the
+  `content-review` verifier before it ships. Use an authoritative English original where one
+  exists (UDHR: the UN text; 1919 Declaration: a public-domain contemporary translation).
+  Suggested order: modern fiction + essays + documents first, then the long classical tales
+  (구운몽, 심청전, 박씨전 are 161k characters on their own).
+- **Sensible paragraphs everywhere**, not only for new translations: split giant paragraphs
+  (의산문답 is one 14k-character paragraph, 양반전 one paragraph) and re-check every text.
+- **Chapters / collapsible subheadings for long works** (novels, long tales, diaries) so they
+  read in bite-sized study chunks; use the work's own chapter divisions where it has them.
