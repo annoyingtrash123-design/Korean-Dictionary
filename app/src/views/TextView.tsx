@@ -11,6 +11,7 @@ import { headingsOf, hidden, initialOpen, isHeading, loadOpen, saveOpen } from '
 import { fmtChars, fmtYear, shelfLabel } from '../lib/reader-library';
 import { groupResults } from '../lib/merge';
 import { LookupCard, type LookupState } from '../components/LookupCard';
+import { FastScroll } from '../components/FastScroll';
 import { Icon } from '../components/Icons';
 import { Empty, LevelBadge, Sheet } from '../components/common';
 import { href, readerPath, wordPath } from '../lib/router';
@@ -282,6 +283,16 @@ export function TextView({ id }: { id: string }) {
     void selectAt(+ko.dataset.ko!, off);
   };
 
+  /** Fast-scroll bubble: percentage and the chapter at the top of the screen. */
+  const posLabel = (f: number) => {
+    const sc = scroller.current; let h = '';
+    if (sc) {
+      const top = sc.getBoundingClientRect().top + 12;
+      for (const el of sc.querySelectorAll<HTMLElement>('.rd-sec')) { if (el.getBoundingClientRect().top <= top) h = el.querySelector('.rd-sec-ko')?.textContent ?? ''; else break; }
+    }
+    return `${Math.round(f * 100)}%${h ? ` · ${h}` : ''}`;
+  };
+
   // stepping a lookup into a closed section opens it
   useEffect(() => {
     if (sel && sel.n < BG && hidden(headings, open, sel.n)) { const next = new Set(open); next.add(headings.filter((h) => h <= sel.n).pop()!); setOpen(next); }
@@ -457,6 +468,7 @@ export function TextView({ id }: { id: string }) {
           <div class="rd-end" aria-hidden="true" />
         </article>
       </div>
+      <FastScroll target={scroller} label={posLabel} />
       {sel && <LookupCard st={lk} onClose={clear} onStep={step} onResize={setCardH} onPick={pick} />}
       {settingsOpen && <ReadingSettings p={prefs} hasModern={false} hasReading={hasReading} label={translationLabel(doc.labels, prov)} onClose={() => setSettingsOpen(false)} />}
     </div>
