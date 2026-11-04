@@ -112,6 +112,7 @@ uncertain = ["source_title"]
 
 [[text]]
 id = "hanjungnok"
+scope = "Volume 1 (1권) of 6 on Wikisource: the 1795 memoir of her early life and the death of Prince Sado in 1762; volumes 2–6 are not included"
 title_ko = "한중록"
 title_en = "Memoirs of Lady Hyegyeong (Hanjungnok)"
 author_ko = "혜경궁 홍씨"
@@ -732,6 +733,7 @@ uncertain = ["date", "year", "source_title"]
 
 [[text]]
 id = "yeolha_dogangrok"
+scope = "One chapter, 도강록 (Crossing the Yalu), of the 26 chapters of 열하일기"
 title_ko = "열하일기 도강록"
 title_hanja = "渡江錄"
 title_en = "The Jehol Diary: Crossing the Yalu (Yeolha ilgi, Dogangnok)"
@@ -780,6 +782,7 @@ uncertain = ["year", "source_title"]
 # resource: zh 湛軒書/外集卷三 (92 KB) has ## 乾凈衕筆談續 = the Ganjing Alley talks with Yan Cheng/Pan/Lu that the excerpt note asks for; 燕記 proper (外集7-10) is a stub on ko
 [[text]]
 id = "hongdaeyong_yeongi"
+scope = "One section (乾凈衕, the meetings at Ganjing Alley) of 담헌연기"
 title_ko = "담헌연기 (연행 기록 발췌)"
 title_hanja = "湛軒燕記"
 title_en = "Damheon's Beijing Journal: Meeting Chinese Scholars (Damheon yeongi, excerpt)"
@@ -804,6 +807,7 @@ uncertain = ["source_title"]
 
 [[text]]
 id = "pyohaerok"
+scope = "Book 1 (卷01) of 3: the shipwreck, the drift and the landing in China; Books 2–3 are not included"
 title_ko = "표해록"
 title_hanja = "漂海錄"
 title_en = "Record of Drifting across the Sea (Pyohaerok)"
@@ -897,6 +901,7 @@ uncertain = ["source_title"]
 # resource: zh yearly pages 朝鮮王朝實錄/宣祖實錄/<年> exist (二十五年 644 KB seen); 26th year Jan holds Li Rusong and the Pyongyang recovery; day headings "N月M日" (substring also matches 11月/12月 days)
 [[text]]
 id = "seonjo_myeongwonbyeong"
+scope = "Four daily entries (1593, first month, days 6–9) from the Annals of King Seonjo"
 title_ko = "선조실록 임진왜란 명 원군"
 title_en = "Annals of King Seonjo: The Ming Relief Army in the Imjin War"
 author_ko = "실록청 (편찬)"
@@ -921,6 +926,7 @@ uncertain = ["source_title"]
 
 [[text]]
 id = "hunminjeongeum_haerye"
+scope = "The royal preface (어제서문) and the 28 letters (예의) only; the 해례 explanations and examples are not included"
 title_ko = "훈민정음 (해례본) 어제서문·예의"
 title_hanja = "訓民正音"
 title_en = "The Correct Sounds for Instructing the People (Hunminjeongeum Haerye): King Sejong's Preface and Examples"
@@ -1085,7 +1091,7 @@ themes = ["modern-korea"]
 shelf = "constitution"
 script = "mixed"
 excerpt = true
-excerpt_note = "Preamble and Articles 1–110 (Chapters 1–5); later chapters not yet included."
+excerpt_note = "The full constitution (Preamble, Articles 1–130, Addenda); the law portal's navigation lists after it are part of the source page."
 source = "law"
 source_title = "대한민국 헌법"
 search = ["대한민국 헌법", "헌법 1987"]
@@ -1522,6 +1528,7 @@ pd_basis = "Author died 1950; Korean term (life+50) expired 2000, before the 201
 
 [[text]]
 id = "ogamdo"
+scope = "Poem No. 1 (시제1호), the first of the 15 poems of the 오감도 series"
 title_ko = "오감도 시제1호"
 title_en = "Crow's-eye View, Poem No. 1"
 author_ko = "이상"
@@ -1775,6 +1782,7 @@ pd_basis = "Author died 1937; Korean term (life+50) expired 1987, before the 201
 
 [[text]]
 id = "mujeong"
+scope = "Chapters 1–20 of 126 (1장~20장): the opening of the novel"
 title_ko = "무정"
 title_en = "The Heartless"
 author_ko = "이광수"
@@ -2341,6 +2349,7 @@ pd_basis = "Author died 1943; Korean term (life+50) expired 1993, before the 201
 # resource: low confidence on a full text; a serial novel, the page may be partial
 [[text]]
 id = "ingan_munje"
+scope = "The opening only: the first 250 paragraphs (about a tenth of the novel), set in Yongyeon village"
 title_ko = "인간문제"
 title_en = "The Human Question"
 author_ko = "강경애"

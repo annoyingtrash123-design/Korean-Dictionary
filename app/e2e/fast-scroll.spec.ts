@@ -37,7 +37,8 @@ test('reader: draggable fast scroll (phone + iPad)', async ({ page }) => {
   await page.goto('/#/reader/mujeong');
   await expect(page.locator('.rd-title')).toBeVisible();
   // an excerpt says so at the top
-  await expect(page.locator('.rd-excerpt')).toHaveText(/^Excerpt · .*126/);
+  await expect(page.locator('.rd-excerpt')).toHaveText(/^Not the complete work · Chapters 1–20 of 126 .*original text, unaltered/);
+  await expect(page.locator('.rd-card .eyebrow')).toContainText('part of the work');
   await page.screenshot({ path: '../docs/screenshots/reader-excerpt-phone.png' });
   await dragCheck(page, 'fast-scroll-phone.png');
   // chapters show in the bubble

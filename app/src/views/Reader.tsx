@@ -65,7 +65,7 @@ function Chips({ t }: { t: TextSummary }) {
       {t.level && <span class="chip-lvl">{t.level}</span>}
       <span class="rd-len">{fmtChars(t.chars)}</span>
       {t.labels?.translation === 'ai' && <span class="chip-quiet">AI translation</span>}
-      {t.excerpt && <span class="chip-quiet">excerpt</span>}
+      {t.excerpt && <span class="chip-quiet">part</span>}
     </div>
   );
 }

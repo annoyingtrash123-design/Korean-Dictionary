@@ -372,7 +372,7 @@ export function TextView({ id }: { id: string }) {
       <div class="rd-scroll" ref={scroller} onScroll={onScroll} onClick={onClick}>
         <article class="rd-article">
           <header class="rd-card">
-            <div class="eyebrow">{shelfLabel(m.shelf ?? '')}{m.excerpt ? ' · excerpt' : ''}</div>
+            <div class="eyebrow">{shelfLabel(m.shelf ?? '')}{m.scope ? ' · part of the work' : ''}</div>
             <h1 class="rd-title" lang="ko">{m.title_ko}</h1>
             {m.title_en && <div class="rd-title-en">{m.title_en}</div>}
             <div class="rd-by">
@@ -383,9 +383,8 @@ export function TextView({ id }: { id: string }) {
               {doc.card.level && <span class="chip-lvl">{doc.card.level}</span>}
               <span class="chip-quiet">{fmtChars(total)}</span>
               {doc.labels.text === 'ai' && <span class="chip-ai">AI-written</span>}
-              {m.excerpt && <span class="chip-quiet">excerpt</span>}
             </div>
-            {m.excerpt && <div class="rd-excerpt" role="note"><strong>Excerpt</strong> · {m.excerpt_note || 'part of a longer work'}</div>}
+            {m.scope && <div class="rd-excerpt" role="note"><strong>Not the complete work</strong> · {m.scope}. What is here is the original text, unaltered.</div>}
             <details class="rd-about">
               <summary><span>About this text</span><span class="rd-i" aria-hidden="true">i</span></summary>
               <div class="rd-about-body">

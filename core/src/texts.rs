@@ -23,7 +23,7 @@ pub struct TextSummary {
     pub author_en: String,
     pub date: String,
     pub themes: Vec<String>,
-    /// True when the text is an excerpt of a longer work.
+    /// True when the text is not the complete work (the catalogue gives a `scope` line).
     pub excerpt: bool,
     /// Blurb from the card (empty for texts without enrichment).
     pub summary_ko: String,
@@ -93,7 +93,7 @@ pub fn list_texts(pack: Option<&PackDb>) -> Result<Vec<TextSummary>> {
                 author_en: str_of(&meta, "author_en"),
                 date: str_of(&meta, "date"),
                 themes: meta.get("themes").and_then(Value::as_array).map(|a| a.iter().filter_map(Value::as_str).map(String::from).collect()).unwrap_or_default(),
-                excerpt: meta.get("excerpt").and_then(Value::as_bool).unwrap_or(false),
+                excerpt: meta.get("scope").and_then(Value::as_str).is_some_and(|s| !s.trim().is_empty()),
                 summary_ko: str_of(&card, "summary_ko"),
                 summary_en: str_of(&card, "summary_en"),
                 labels: json(r, 9),
@@ -146,7 +146,7 @@ INSERT INTO texts VALUES
   '{"summary_ko":"","summary_en":"","level":null}', '{"ko":"","en":"n"}', '{"source":"wikisource-ko","revision_id":7}', '{"text":"original"}',
   '{"status":"original-only"}', NULL, NULL),
  ('a-text', 1, 'graded', 'ancient', -2333, 'hangul', 'TOPIK 2', 12,
-  '{"title_ko":"단군","title_en":"Dangun","author_ko":"AI","author_en":"AI","date":"2026","themes":["ancient-goryeo","joseon"],"excerpt":true}',
+  '{"title_ko":"단군","title_en":"Dangun","author_ko":"AI","author_en":"AI","date":"2026","themes":["ancient-goryeo","joseon"],"excerpt":true,"scope":"Chapters 1–2 of 9"}',
   '{"summary_ko":"요약","summary_en":"Summary","level":"TOPIK 2"}', '{"ko":"k","en":"e"}', '{"source":"original"}', '{"text":"ai","translation":"ai"}',
   '{"status":"approved"}', '[{"word":"곰","gloss_en":"bear","level":1}]', '[{"q_ko":"?","q_en":"?","answer_en":"!"}]');
 INSERT INTO paragraphs VALUES ('a-text', 1, '둘째', '둘째m', NULL, 'Second'), ('a-text', 0, '첫째', NULL, NULL, 'First'), ('b-text', 0, '살어리', NULL, NULL, NULL);

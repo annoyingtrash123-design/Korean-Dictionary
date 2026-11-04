@@ -78,13 +78,13 @@ export interface TextBackground {
 export interface TextSummary {
   id: string; shelf: string; period?: string | null; year?: number | null; script: 'hangul' | 'hanmun' | 'mixed' | string;
   level?: string | null; chars: number; title_ko: string; title_en?: string | null; author_ko?: string | null; author_en?: string | null;
-  date?: string | null; themes: string[]; excerpt?: boolean; labels: TextLabels; summary_ko?: string; summary_en?: string;
+  date?: string | null; themes: string[]; /** not the complete work */ excerpt?: boolean; labels: TextLabels; summary_ko?: string; summary_en?: string;
 }
 export interface TextParagraph { n: number; orig: string; modern?: string | null; reading?: string | null; en?: string | null }
 export interface TextProvenance { source?: string; url?: string; page_title?: string; revision_id?: string | number; revision_timestamp?: string; edition?: string; licence?: string; fetched_at?: string; english_source?: string }
 export interface TextDoc {
   id: string;
-  meta: { title_ko: string; title_en?: string; author_ko?: string; author_en?: string; author_dates?: string; date?: string; year?: number; period?: string; themes?: string[]; shelf?: string; script?: string; excerpt?: boolean; excerpt_note?: string; pd_basis?: string; [k: string]: unknown };
+  meta: { title_ko: string; title_en?: string; author_ko?: string; author_en?: string; author_dates?: string; date?: string; year?: number; period?: string; themes?: string[]; shelf?: string; script?: string; excerpt?: boolean; excerpt_note?: string; scope?: string; pd_basis?: string; [k: string]: unknown };
   card: { summary_ko?: string; summary_en?: string; level?: string; edition_ko?: string; edition_en?: string };
   notes: { ko?: string; en?: string; background?: TextBackground | null };
   provenance?: TextProvenance | null;

@@ -211,3 +211,15 @@ sino-korean 67k, constitutions 33k, essays 19k, documents 12k, hanmun 1k). Agree
 3. **Split into sensible paragraphs, then sections**: uisanmundap (by speaker turn, grouped by
    topic), seoyu_gyeonmun_minkwon, hongdaeyong_yeongi.
 4. **Leave as is**: speeches, poems, treaties, short stories under ~8k characters.
+
+### Sectioning rules (agreed 2026-11-04)
+- The text never changes; only paragraph breaks and `## ` headings are added (`labels.sections =
+  "ai"`, checked character for character against the raw source, labelled in About this text).
+- Use the work's own divisions first (articles/chapters, 권/회/장, dated entries, numbered parts).
+- Otherwise break at scene, place, time or speaker changes, about 2,500–4,000 characters per
+  section; short numbered headings in Korean with English under them. 무정 (1장~20장): ~12–15
+  scene sections. Diaries by date (group by month when very long); tales by episode; essays by
+  argument step; dialogues (의산문답) split by speaker. Short texts are left alone.
+- Incomplete works carry a catalogue `scope` line, shown at the top ("Not the complete work · …");
+  complete works lifted from a busier page (one column, original without the modern rendering)
+  are not labelled as partial.

@@ -67,6 +67,10 @@ pub struct Entry {
     #[serde(default)]
     pub excerpt: bool,
     pub excerpt_note: Option<String>,
+    /// For a text that is not the complete work: what it contains, shown at the top of the text
+    /// ("Chapters 1–20 of 126 …"). Complete works lifted from a busier page (one column, the
+    /// original without a modern rendering) need no scope.
+    pub scope: Option<String>,
     pub source: String,
     pub source_title: String,
     /// Direct URL for sources that are not MediaWiki (e.g. the OHCHR page).
