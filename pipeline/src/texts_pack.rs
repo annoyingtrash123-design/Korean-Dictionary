@@ -187,15 +187,18 @@ pub fn check_integrity(
     let e: Vec<String> = enriched.iter().map(|p| norm_ws(p, hanmun)).collect();
     let r: Vec<String> = raw.iter().map(|p| norm_ws(p, hanmun)).collect();
     if resegmented && !excerpt {
-        let mut raw_heads: Vec<&String> = r.iter().filter(|p| p.starts_with("## ")).collect();
-        let kept: Vec<&String> = e
+        // headings are recognised on the original strings: hanmun normalisation drops the space in "## "
+        let is_head = |p: &String| p.trim_start().starts_with("## ");
+        let mut raw_heads: Vec<&String> = raw.iter().zip(&r).filter(|(o, _)| is_head(o)).map(|(_, n)| n).collect();
+        let kept: Vec<&String> = enriched
             .iter()
-            .filter(|p| {
-                if !p.starts_with("## ") {
+            .zip(&e)
+            .filter(|(o, p)| {
+                if !is_head(o) {
                     return true;
                 }
                 // a heading of the source stays; any other heading is an added chapter title
-                match raw_heads.iter().position(|h| h == p) {
+                match raw_heads.iter().position(|h| *h == *p) {
                     Some(i) => {
                         raw_heads.remove(i);
                         true
@@ -203,6 +206,7 @@ pub fn check_integrity(
                     None => false,
                 }
             })
+            .map(|(_, p)| p)
             .collect();
         let sep = if hanmun { "" } else { " " };
         let join = |v: Vec<&String>| v.iter().map(|s| s.as_str()).collect::<Vec<_>>().join(sep);
@@ -1205,6 +1209,10 @@ mod tests {
         // hanmun joins without spaces
         let hraw = v(&["兩班者。士族之尊稱也。旌善之郡。"]);
         assert!(check_integrity(&v(&["兩班者。士族之尊稱也。", "旌善之郡。"]), &hraw, false, true, true).is_none());
+        // …including added chapter headings (normalisation drops the space after "##")
+        let hraw2 = v(&["## 原文", "兩班者。士族之尊稱也。旌善之郡。"]);
+        assert!(check_integrity(&v(&["## 原文", "## 1. 양반", "兩班者。士族之尊稱也。", "## 2. 정선", "旌善之郡。"]), &hraw2, false, true, true).is_none());
+        assert!(check_integrity(&v(&["## 1. 양반", "兩班者。士族之尊稱也。旌善之郡。"]), &hraw2, false, true, true).is_some());
     }
 
     #[test]
