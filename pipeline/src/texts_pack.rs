@@ -208,8 +208,8 @@ pub fn check_integrity(
             })
             .map(|(_, p)| p)
             .collect();
-        let sep = if hanmun { "" } else { " " };
-        let join = |v: Vec<&String>| v.iter().map(|s| s.as_str()).collect::<Vec<_>>().join(sep);
+        // only the characters matter: a split may fall where the source had no space (국한문, hanmun)
+        let join = |v: Vec<&String>| v.iter().flat_map(|s| s.chars()).filter(|c| !c.is_whitespace()).collect::<String>();
         let (a, b) = (join(kept), join(r.iter().collect()));
         if a == b {
             return None;
@@ -1203,7 +1203,10 @@ mod tests {
         // without the label the sequence must match exactly
         assert!(check_integrity(&ok, &raw, false, false, false).is_some());
         // a changed character, a dropped sentence or a dropped source heading are caught
-        assert!(check_integrity(&v(&["## 원문", "가 나 다!", "라 마 바.", "사 아"]), &raw, false, false, true).unwrap().contains("character 11"));
+        assert!(check_integrity(&v(&["## 원문", "가 나 다!", "라 마 바.", "사 아"]), &raw, false, false, true).unwrap().contains("character 7"));
+        // a mixed-script split where the source has no space between the pieces
+        let mraw = v(&["自由의義는무엇인가.其意를論하면이러하다."]);
+        assert!(check_integrity(&v(&["自由의義는무엇인가.", "其意를論하면이러하다."]), &mraw, false, false, true).is_none());
         assert!(check_integrity(&v(&["## 원문", "가 나 다.", "사 아"]), &raw, false, false, true).is_some());
         assert!(check_integrity(&v(&["가 나 다.", "라 마 바.", "사 아"]), &raw, false, false, true).is_some());
         // hanmun joins without spaces
