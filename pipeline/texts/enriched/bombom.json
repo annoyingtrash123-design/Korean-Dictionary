@@ -13,6 +13,12 @@
   },
   "paragraphs": [
     {
+      "orig": "## 1. 자라지 않는 점순이",
+      "modern": null,
+      "reading": null,
+      "en": "1. The Girl Who Won't Grow"
+    },
+    {
       "orig": "“장인님! 인제 저…….”",
       "modern": null,
       "reading": null,
@@ -215,6 +221,12 @@
       "modern": null,
       "reading": null,
       "en": "He dug in his heels saying he wouldn't go and bellowed commands as he liked, but he's no match for my strength. Working me to the bone and not giving me his daughter, and on top of that hitting me, what is all this..."
+    },
+    {
+      "orig": "## 2. 점순이의 재촉과 구장님",
+      "modern": null,
+      "reading": null,
+      "en": "2. Jeom-sun's Urging and the Headman"
     },
     {
       "orig": "그러나 내 사실 참 장인님이 미워서 그런 것은 아니다. 그 전날, 왜 내가 새고 개 맞은 봉우리 화전밭을 혼자 갈고 있지 않았느냐. 밭가생이로 돌 적마다 야릇한 꽃내가 물컥물컥 코를 찌르고 머리 위에서 벌들은 가끔 붕, 붕, 소리를 친다. 바위 틈에서 샘물 소리밖에 안 들리는 산골짜기니까 맑은 하늘의 봄볕은 이불 속같이 따스하고 꼭 꿈꾸는 것 같다. 나는 몸이 나른하고 몸살(병을 아직 모르지만)이 날려구 그러는지 가슴이 울렁울렁하고 이랬다.",
@@ -439,6 +451,12 @@
       "en": "And so I had gone along without a peep until this morning."
     },
     {
+      "orig": "## 3. 뭉태의 이야기",
+      "modern": null,
+      "reading": null,
+      "en": "3. What Mungtae Said"
+    },
+    {
       "orig": "장인님과 내가 싸운 것은 지금 생각하면 전혀 뜻밖의 일이라 안할 수 없다.",
       "modern": null,
       "reading": null,
@@ -533,6 +551,12 @@
       "modern": null,
       "reading": null,
       "en": "But I didn't believe everything that fellow Mungtae said. If I really had, I would have come last night and fought with my father-in-law, and it couldn't have passed peacefully. So my father-in-law, who has lost respect even among his daughters, was the only bad one."
+    },
+    {
+      "orig": "## 4. 다시 꾀병",
+      "modern": null,
+      "reading": null,
+      "en": "4. Playing Sick Again"
     },
     {
       "orig": "실토이지 나는 점순이가 아침상을 가지고 나올 때까지는 오늘은 또 얼마나 밥을 담았나, 하고 이것만 생각했다. 상에는 된장찌개하고 간장 한 종지, 조밥 한 그릇, 그리고 밥보다 더 수부룩하게 담은 산나물이 한 대접, 이렇다. 나물은 점순이가 틈틈이 해오니까 두 대접이고 네 대접이고 멋대로 먹어도 좋으나 밥은 장인님이 한 사발 외엔 더 주지 말라고 해서 안된다. 그런데 점순이가 그 상을 내 앞에 내려 놓으며 제 말로 지껄이는 소리가,",
@@ -767,12 +791,13 @@
     "notes": "ai",
     "translation": "ai",
     "modern": null,
-    "text": "original"
+    "text": "original",
+    "sections": "ai"
   },
   "review": {
     "status": "approved",
     "by": "content-review",
     "date": "2026-11-03",
-    "notes": "Full story to the last line, right work, PD (Kim Yu-jeong d. 1937); 1935 date is well-established. The original summary skipped and misordered events (headman scene, next-morning fight, Jeom-sun's ear-pulling); rewritten against the text in both languages. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Read all 125 paragraphs. Fixes: 16 (대가릴 까놀자식 = skull-splitting threat, not 'shaved-head'), 17 (the rival tenant BRIBES the steward with money and wine; translation had it reversed), 18, 21 (건숭 = for show; ankle-sprain subject clarified), 42 (밤낮 일만 하다 말 텐가), 48 (심판 = what was going on), 74, 84 (fourth son-in-law 'should have come'), 87, 93 (병신 = dolt, not cripple), 114, 124. Register: 장인님 = 'father-in-law' throughout; 빙장님/빙모님 now 'Honoured Father-in-law/Mother-in-law' (paras 54, 55, 69, 106, 113), and the snake proverb in 54 is fixed (뱀두 뱀이래야 좋으냐 = does even a snake like being called a snake). The idiom 뿔 떨어지면 구워 먹지 does not occur in this text (it is in mullebanga). Remaining doubts: para 34 '새고 개 맞은 봉우리' is obscure and now rendered 'the peak across the pass' (previous 'struck by lightning' was unsupported); para 10 냇병 ('river sickness') is a guess at an unclear word; dialect lines 84-85 are standard prose and read fine."
+    "notes": "Full story to the last line, right work, PD (Kim Yu-jeong d. 1937); 1935 date is well-established. The original summary skipped and misordered events (headman scene, next-morning fight, Jeom-sun's ear-pulling); rewritten against the text in both languages. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Read all 125 paragraphs. Fixes: 16 (대가릴 까놀자식 = skull-splitting threat, not 'shaved-head'), 17 (the rival tenant BRIBES the steward with money and wine; translation had it reversed), 18, 21 (건숭 = for show; ankle-sprain subject clarified), 42 (밤낮 일만 하다 말 텐가), 48 (심판 = what was going on), 74, 84 (fourth son-in-law 'should have come'), 87, 93 (병신 = dolt, not cripple), 114, 124. Register: 장인님 = 'father-in-law' throughout; 빙장님/빙모님 now 'Honoured Father-in-law/Mother-in-law' (paras 54, 55, 69, 106, 113), and the snake proverb in 54 is fixed (뱀두 뱀이래야 좋으냐 = does even a snake like being called a snake). The idiom 뿔 떨어지면 구워 먹지 does not occur in this text (it is in mullebanga). Remaining doubts: para 34 '새고 개 맞은 봉우리' is obscure and now rendered 'the peak across the pass' (previous 'struck by lightning' was unsupported); para 10 냇병 ('river sickness') is a guess at an unclear word; dialect lines 84-85 are standard prose and read fine. Section headings (2026-11-04) added at scene breaks and source ornament breaks; titles checked against the story by the orchestrating reviewer; text unchanged (pack check)."
   }
 }

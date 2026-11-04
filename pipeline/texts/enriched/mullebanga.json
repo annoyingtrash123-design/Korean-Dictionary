@@ -13,6 +13,12 @@
   },
   "paragraphs": [
     {
+      "orig": "## 1. 물레방앗간의 밤",
+      "modern": null,
+      "reading": null,
+      "en": "1. Night at the Mill"
+    },
+    {
       "orig": "🙝🙟 덜컹덜컹 홈통에 들었다가 다시 쏟아져 흐르는 물이 육중한 물레방아를 번쩍 쳐들었다가 쿵 하고 확 속으로 내던질 제 머슴들의 콧소리는 허연 겨 가루가 켜켜 앉은 방앗간 속에서 청승스럽게 들려나온다.",
       "modern": null,
       "reading": null,
@@ -281,6 +287,12 @@
       "modern": null,
       "reading": null,
       "en": "The old man and the woman came out of the mill again twenty or thirty minutes later."
+    },
+    {
+      "orig": "## 2. 신치규의 부름",
+      "modern": null,
+      "reading": null,
+      "en": "2. Sin Chi-gyu's Summons"
     },
     {
       "orig": "🙝🙟",
@@ -563,6 +575,12 @@
       "modern": null,
       "reading": null,
       "en": "and made as if to stop them. Only the village children lined up in front of the yard and watched with round eyes."
+    },
+    {
+      "orig": "## 3. 방원의 분노",
+      "modern": null,
+      "reading": null,
+      "en": "3. Bang-won's Rage"
     },
     {
       "orig": "🙝🙟",
@@ -1063,6 +1081,12 @@
       "en": "Bang-won, bound with rope, and the woman, as she was, were dragged to the police substation, and Sin Chi-gyu was carried off on the backs of his farmhands."
     },
     {
+      "orig": "## 4. 출옥 이후",
+      "modern": null,
+      "reading": null,
+      "en": "4. After Prison"
+    },
+    {
       "orig": "🙝🙟",
       "modern": null,
       "reading": null,
@@ -1445,12 +1469,13 @@
     "notes": "ai",
     "translation": "ai",
     "modern": null,
-    "text": "original"
+    "text": "original",
+    "sections": "ai"
   },
   "review": {
     "status": "approved",
     "by": "content-review",
     "date": "2026-11-03",
-    "notes": "Full text to the double death, right work, PD (Na Do-hyang d. 1926); 조선문단 11호 1925.9 matches the header. Synopsis corrected against the text (dismissal, quarrel, stone beating, arrest, abduction to the mill) and ornament count fixed (four, one at the start). Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Read all 238 paragraphs. Fixes: ornament paragraphs 45, 92, 175 now '* * *' (para 0 had the glyph prefix removed from en); 65 (뿔 떨어지면 구워먹지 어느 천년에 = pie in the sky, never going to happen; the literal 'horns fall off' version was opaque); 101 (rhetorical question was inverted); 4, 6, 9, 16, 36, 71, 113, 115, 118, 131 smaller accuracy/naturalness fixes. 쇤네 할멈: kept as 'Old Soenne' because it is used by both Sin Chi-gyu and the wife as a label for the same go-between ('쇤네 할멈에게 듣다', '쇤네 할멈이 여쭈었지요'), which a humble first-person pronoun cannot be in the wife's mouth; it is evidently a nickname from her habit of saying 쇤네. 영감 kept as 'Master' in address and 'the old man' in narration. Remaining doubt: para 85 last sentence (두 사람 아니라 방원에게는) is ambiguous; para 115 애 어머니 rendered 'your wife' since the couple has no child."
+    "notes": "Full text to the double death, right work, PD (Na Do-hyang d. 1926); 조선문단 11호 1925.9 matches the header. Synopsis corrected against the text (dismissal, quarrel, stone beating, arrest, abduction to the mill) and ornament count fixed (four, one at the start). Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Read all 238 paragraphs. Fixes: ornament paragraphs 45, 92, 175 now '* * *' (para 0 had the glyph prefix removed from en); 65 (뿔 떨어지면 구워먹지 어느 천년에 = pie in the sky, never going to happen; the literal 'horns fall off' version was opaque); 101 (rhetorical question was inverted); 4, 6, 9, 16, 36, 71, 113, 115, 118, 131 smaller accuracy/naturalness fixes. 쇤네 할멈: kept as 'Old Soenne' because it is used by both Sin Chi-gyu and the wife as a label for the same go-between ('쇤네 할멈에게 듣다', '쇤네 할멈이 여쭈었지요'), which a humble first-person pronoun cannot be in the wife's mouth; it is evidently a nickname from her habit of saying 쇤네. 영감 kept as 'Master' in address and 'the old man' in narration. Remaining doubt: para 85 last sentence (두 사람 아니라 방원에게는) is ambiguous; para 115 애 어머니 rendered 'your wife' since the couple has no child. Section headings (2026-11-04) added at scene breaks and source ornament breaks; titles checked against the story by the orchestrating reviewer; text unchanged (pack check)."
   }
 }

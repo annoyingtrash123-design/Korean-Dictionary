@@ -13,6 +13,12 @@
   },
   "paragraphs": [
     {
+      "orig": "## 1. 대동강의 봄",
+      "modern": null,
+      "reading": null,
+      "en": "1. Spring on the Taedong River"
+    },
+    {
       "orig": "🙝🙟",
       "modern": null,
       "reading": null,
@@ -191,6 +197,12 @@
       "modern": null,
       "reading": null,
       "en": "Even if you must beg for rice to make gruel, for heaven's sake, never be a boatman. Eeeya, eogeuyeojiya."
+    },
+    {
+      "orig": "## 2. 배따라기 사내",
+      "modern": null,
+      "reading": null,
+      "en": "2. The Baettaragi Singer"
     },
     {
       "orig": "🙝🙟",
@@ -449,6 +461,12 @@
       "modern": null,
       "reading": null,
       "en": "The couple got on well, but, or rather precisely because they did, he was very jealous of his wife. And his wife did many things that invited jealousy. It wasn't that her conduct was bad; she was of a very innocent and cheerful nature, and was good at talking and charming anyone."
+    },
+    {
+      "orig": "## 3. 의심의 시작",
+      "modern": null,
+      "reading": null,
+      "en": "3. Seeds of Suspicion"
     },
     {
       "orig": "🙝🙟",
@@ -739,6 +757,12 @@
       "en": "If his wife had not been standing there dumbly outside that door with a worried face, looking in, he would surely have killed his wife and brother."
     },
     {
+      "orig": "## 4. 거울과 쥐",
+      "modern": null,
+      "reading": null,
+      "en": "4. The Mirror and the Rat"
+    },
+    {
       "orig": "🙝🙟",
       "modern": null,
       "reading": null,
@@ -1003,6 +1027,12 @@
       "en": "a look of reproach, as if he were saying it."
     },
     {
+      "orig": "## 5. 아우를 찾아서",
+      "modern": null,
+      "reading": null,
+      "en": "5. Searching for the Brother"
+    },
+    {
       "orig": "🙝🙟",
       "modern": null,
       "reading": null,
@@ -1217,12 +1247,13 @@
     "notes": "ai",
     "translation": "ai",
     "modern": null,
-    "text": "original"
+    "text": "original",
+    "sections": "ai"
   },
   "review": {
     "status": "approved",
     "by": "content-review",
     "date": "2026-11-03",
-    "notes": "Plot summary checked against the full text (frame, mirror/rat misunderstanding, wife's drowning, brother's disappearance, shipwreck reunion, narrator's failed search); 1921 Changjo and the edition line (complete text) are correct. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Alignment checked for all 200 paragraphs (en matches its own Korean throughout; counts equal). Checked faithfulness paragraph by paragraph. Fixes: 2 (smoother 'truest friend and understander'), 16, 24, 46 (tense/question: 'Why haven't you gone home'), 95 (wife's words strike his heart, not 'that wife's'), 102 (picks a fight with him), 104/108/111 (못난둥이 = good-for-nothing, not coward), 133 (it is the wife who thinks of the coming beating), 166 (멧산자 보따리 = bundle tied in 山 style), 177 (되게 = terribly pale). Sung lines 22/27/29 read acceptably as prose. Minor residual doubts: the odd 'Yeongyu: I do not know the name' (para 24) and 'low woman/low-born' renderings of 샹년 are matters of taste."
+    "notes": "Plot summary checked against the full text (frame, mirror/rat misunderstanding, wife's drowning, brother's disappearance, shipwreck reunion, narrator's failed search); 1921 Changjo and the edition line (complete text) are correct. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Alignment checked for all 200 paragraphs (en matches its own Korean throughout; counts equal). Checked faithfulness paragraph by paragraph. Fixes: 2 (smoother 'truest friend and understander'), 16, 24, 46 (tense/question: 'Why haven't you gone home'), 95 (wife's words strike his heart, not 'that wife's'), 102 (picks a fight with him), 104/108/111 (못난둥이 = good-for-nothing, not coward), 133 (it is the wife who thinks of the coming beating), 166 (멧산자 보따리 = bundle tied in 山 style), 177 (되게 = terribly pale). Sung lines 22/27/29 read acceptably as prose. Minor residual doubts: the odd 'Yeongyu: I do not know the name' (para 24) and 'low woman/low-born' renderings of 샹년 are matters of taste. Section headings (2026-11-04) added at scene breaks and source ornament breaks; titles checked against the story by the orchestrating reviewer; text unchanged (pack check)."
   }
 }

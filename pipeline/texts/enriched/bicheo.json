@@ -13,6 +13,12 @@
   },
   "paragraphs": [
     {
+      "orig": "## 1. 빈 장롱",
+      "modern": null,
+      "reading": null,
+      "en": "1. The Empty Wardrobe"
+    },
+    {
       "orig": "🙝🙟",
       "modern": null,
       "reading": null,
@@ -335,6 +341,12 @@
       "modern": null,
       "reading": null,
       "en": "The desolate sound of rain, thick and thin, sounded still more mournful in the lonely night air as ever, and the light in the soot-stained lamp chimney, like moonlight veiled by clouds, wept and dozed, glinting on the gilt titles of the few Western books I had managed to acquire in poverty."
+    },
+    {
+      "orig": "## 2. 아내의 고생",
+      "modern": null,
+      "reading": null,
+      "en": "2. My Wife's Hardships"
     },
     {
       "orig": "🙝🙟",
@@ -733,6 +745,12 @@
       "en": "Looking at my wife's face, streaked with traces of tears, as she softly defended herself, I finally felt light in body and spirit."
     },
     {
+      "orig": "## 3. 처가에 가는 길",
+      "modern": null,
+      "reading": null,
+      "en": "3. Visiting Her Family"
+    },
+    {
       "orig": "🙝🙟",
       "modern": null,
       "reading": null,
@@ -1049,6 +1067,12 @@
       "modern": null,
       "reading": null,
       "en": "I said."
+    },
+    {
+      "orig": "## 4. 처형의 선물",
+      "modern": null,
+      "reading": null,
+      "en": "4. Her Sister's Gift"
     },
     {
       "orig": "🙝🙟",
@@ -1469,12 +1493,13 @@
     "notes": "ai",
     "translation": "ai",
     "modern": null,
-    "text": "original"
+    "text": "original",
+    "sections": "ai"
   },
   "review": {
     "status": "approved",
     "by": "content-review",
     "date": "2026-11-03",
-    "notes": "Work and author are right (Hyeon Jin-geon, Bicheo, Gaebyeok 1921); complete text. The synopsis was corrected to follow the actual plot (quarrel over T's parasol, wife's family birthday, sister-in-law's visit with the shoes, the wife's trust) and an unsupported 'romantic tendency' remark was removed. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Alignment checked for all 242 paragraphs; no off-by-one shifts remain. Faithfulness checked throughout. Fixes: 44 (차차 될 때 = in time things will work out), 58 (형님 here is the wife's own elder sister, 처형, not a sister-in-law), 89 (손잡이 = door handle), 126 (자미가 나시더래도 = however much you enjoy keeping house), 226 (the sister's husband, not 'her brother-in-law'). Terms consistent (처형 = her elder sister/her sister, mobondan, gisaeng). Remaining doubt: 말유(末由) in para 87 rendered loosely as 'disarray'."
+    "notes": "Work and author are right (Hyeon Jin-geon, Bicheo, Gaebyeok 1921); complete text. The synopsis was corrected to follow the actual plot (quarrel over T's parasol, wife's family birthday, sister-in-law's visit with the shoes, the wife's trust) and an unsupported 'romantic tendency' remark was removed. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 1). Translation (2026-11-03) reviewed by an independent content-review agent: Alignment checked for all 242 paragraphs; no off-by-one shifts remain. Faithfulness checked throughout. Fixes: 44 (차차 될 때 = in time things will work out), 58 (형님 here is the wife's own elder sister, 처형, not a sister-in-law), 89 (손잡이 = door handle), 126 (자미가 나시더래도 = however much you enjoy keeping house), 226 (the sister's husband, not 'her brother-in-law'). Terms consistent (처형 = her elder sister/her sister, mobondan, gisaeng). Remaining doubt: 말유(末由) in para 87 rendered loosely as 'disarray'. Section headings (2026-11-04) added at scene breaks and source ornament breaks; titles checked against the story by the orchestrating reviewer; text unchanged (pack check)."
   }
 }

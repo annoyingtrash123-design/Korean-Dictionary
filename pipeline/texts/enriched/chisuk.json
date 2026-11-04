@@ -13,6 +13,12 @@
   },
   "paragraphs": [
     {
+      "orig": "## 1. 우리 아저씨와 아주머니",
+      "modern": null,
+      "reading": null,
+      "en": "1. My Uncle and Aunt"
+    },
+    {
       "orig": "우리 아저씨 말이지요? 아따 저 거시키, 한참 당년에 무엇이냐 그놈의 것, 사회주의라더냐 막덕이라더냐, 그걸 하다 징역 살고 나와서 폐병으로 시방 앓고 누웠는 우리 오촌 고모부(姑母夫) 그 양반…….",
       "modern": null,
       "reading": null,
@@ -167,6 +173,12 @@
       "modern": null,
       "reading": null,
       "en": "Anyway, even apart from that, honestly, no word of a lie, to this very day I've looked after a great deal of my aunt's affairs. And I'm not without a debt of gratitude to her, either."
+    },
+    {
+      "orig": "## 2. 아주머니와 나",
+      "modern": null,
+      "reading": null,
+      "en": "2. My Aunt and Me"
     },
     {
       "orig": "내가 일곱 살에 부모를 잃었지요. 그리고 나서 의탁할 곳이 없이 됐는데 그때 마침 소박을 맞고 친정살이를 하는 그 아주머니가 나를 데려다가 길러 주었지요.",
@@ -335,6 +347,12 @@
       "modern": null,
       "reading": null,
       "en": "I suppose that thing is just like opium. That's why once they get a taste of it they can't give it up, no?"
+    },
+    {
+      "orig": "## 3. 사회주의라는 것",
+      "modern": null,
+      "reading": null,
+      "en": "3. About Socialism"
     },
     {
       "orig": "그렇지만 실상 알고 보면 그게 그다지 재미가 난다거나 맛이 있다거나 그런 것도 아니더군 그래요. 부랑당패던데요. 하릴없이 부랑당팹디다.",
@@ -643,6 +661,12 @@
       "en": "Not knowing his own bottom stinks, and then carrying on about other people: it must have been said of that very uncle of mine."
     },
     {
+      "orig": "## 4. 아저씨가 쓴 글",
+      "modern": null,
+      "reading": null,
+      "en": "4. My Uncle's Writing"
+    },
+    {
       "orig": "그날도 실상 이랬더라우. 혼을 내주었더니, 아주머니더러 그런 소리를 하더란 그날 말이오.",
       "modern": null,
       "reading": null,
@@ -767,6 +791,12 @@
       "modern": null,
       "reading": null,
       "en": "I was irritated, so I gave up reading it and spread the passage out in front of me, meaning to corner my uncle and drive him to the wall."
+    },
+    {
+      "orig": "## 5. 아저씨와 나눈 이야기",
+      "modern": null,
+      "reading": null,
+      "en": "5. A Talk with My Uncle"
     },
     {
       "orig": "\"아저씨?\"",
@@ -1667,12 +1697,13 @@
     "notes": "ai",
     "translation": "ai",
     "modern": null,
-    "text": "original"
+    "text": "original",
+    "sections": "ai"
   },
   "review": {
     "status": "approved",
     "by": "content-review",
     "date": "2026-11-03",
-    "notes": "Right work, author and complete text; plot matches. The serialisation dates (Wikisource gives 25-30 March, other sources 7-14 March 1938) were softened to 'March 1938', and the 'great-uncle' wording was corrected. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 0). Translation (2026-11-03) reviewed by an independent content-review agent: Alignment checked for all 275 paragraphs; no mismatches. Voice (smug pro-Japanese nephew, 내지 = mainland, 국어 = national language) comes through well and is consistent. Fixes: 15 (the sarcastic 누가 이쁘달까 봐 had been wrongly applied to the wife's looks, contradicting para 16; 색시 재미 = pleasures of women), 49 (고쓰카이 romanized kozukai, comparison clarified), 66 (곶감 idiom clarified), 91 (천주학 was mistranslated as the uncle being a 'Christian heretic'), 92 (proverb: weasel-hair brush, not fox), 100 (小僧/番頭 romanized kozō/bantō). Remaining doubts: 다이쇼 left as 'the boss'; 용 꼴 in para 41 ('a veritable dragon') is a loose rendering of 'in great shape'."
+    "notes": "Right work, author and complete text; plot matches. The serialisation dates (Wikisource gives 25-30 March, other sources 7-14 March 1938) were softened to 'March 1938', and the 'great-uncle' wording was corrected. Author/context sections added 2026-10-08 and fact-checked by an independent reviewer (batch 0). Translation (2026-11-03) reviewed by an independent content-review agent: Alignment checked for all 275 paragraphs; no mismatches. Voice (smug pro-Japanese nephew, 내지 = mainland, 국어 = national language) comes through well and is consistent. Fixes: 15 (the sarcastic 누가 이쁘달까 봐 had been wrongly applied to the wife's looks, contradicting para 16; 색시 재미 = pleasures of women), 49 (고쓰카이 romanized kozukai, comparison clarified), 66 (곶감 idiom clarified), 91 (천주학 was mistranslated as the uncle being a 'Christian heretic'), 92 (proverb: weasel-hair brush, not fox), 100 (小僧/番頭 romanized kozō/bantō). Remaining doubts: 다이쇼 left as 'the boss'; 용 꼴 in para 41 ('a veritable dragon') is a loose rendering of 'in great shape'. Section headings (2026-11-04) added at scene breaks and source ornament breaks; titles checked against the story by the orchestrating reviewer; text unchanged (pack check)."
   }
 }
