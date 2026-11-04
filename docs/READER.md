@@ -223,3 +223,9 @@ sino-korean 67k, constitutions 33k, essays 19k, documents 12k, hanmun 1k). Agree
 - Incomplete works carry a catalogue `scope` line, shown at the top ("Not the complete work · …");
   complete works lifted from a busier page (one column, original without the modern rendering)
   are not labelled as partial.
+
+### 춘향전: not available as a public-domain Korean text (checked 2026-11-04)
+Korean Wikisource has no woodblock or early print 춘향전 (열녀춘향수절가, 남원고사, 옥중화, 별춘향전,
+경판 all absent). Its 춘향가 page is the 만정(김소희, 1917–1995)판 sung text: a modern singer's version,
+in copyright until 2065, so it must not be packed. The only other full Korean text is 이광수's
+일설 춘향전 (1925–26, PD), a modern novelisation. The owner wants a traditional Korean version only.
