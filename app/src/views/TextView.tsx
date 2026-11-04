@@ -385,6 +385,7 @@ export function TextView({ id }: { id: string }) {
               {doc.labels.text === 'ai' && <span class="chip-ai">AI-written</span>}
               {m.excerpt && <span class="chip-quiet">excerpt</span>}
             </div>
+            {m.excerpt && <div class="rd-excerpt" role="note"><strong>Excerpt</strong> · {m.excerpt_note || 'part of a longer work'}</div>}
             <details class="rd-about">
               <summary><span>About this text</span><span class="rd-i" aria-hidden="true">i</span></summary>
               <div class="rd-about-body">
