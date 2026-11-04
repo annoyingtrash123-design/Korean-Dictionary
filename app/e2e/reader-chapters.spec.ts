@@ -14,9 +14,8 @@ test('reader: collapsible chapters (phone + iPad)', async ({ page }) => {
   const heads = page.locator('.rd-sec-btn');
   await expect(heads.first()).toBeVisible();
   expect(await heads.count()).toBe(16);
-  // first visit: only the first section is open
-  await expect(heads.first()).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.locator('.rd-sec-btn[aria-expanded="true"]')).toHaveCount(1);
+  // every section starts closed
+  await expect(page.locator('.rd-sec-btn[aria-expanded="true"]')).toHaveCount(0);
   const ch2 = page.locator('.rd-sec-btn', { hasText: '제2장' });
   await expect(ch2).toHaveAttribute('aria-expanded', 'false');
   await expect(ch2.locator('.rd-sec-n')).toHaveText(/\d+ ¶/);
@@ -27,17 +26,18 @@ test('reader: collapsible chapters (phone + iPad)', async ({ page }) => {
   await page.waitForTimeout(300);
   await page.screenshot({ path: '../docs/screenshots/reader-chapters-phone.png' });
 
-  // remembered across visits
+  // closed again the next time the text is opened
   await page.goto('/#/reader');
   await page.goto('/#/reader/constitution_1948');
-  await expect(page.locator('.rd-sec-btn', { hasText: '제2장' })).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.locator('.rd-sec-btn[aria-expanded="true"]')).toHaveCount(0);
+  await page.locator('.rd-sec-btn', { hasText: '제2장' }).click();
 
   // expand all / collapse all
   await page.getByRole('button', { name: 'Expand all' }).click();
   await expect(page.locator('.rd-sec-btn[aria-expanded="false"]')).toHaveCount(0);
   await page.getByRole('button', { name: 'Collapse all' }).click();
   await expect(page.locator('.rd-sec-btn[aria-expanded="true"]')).toHaveCount(0);
-  expect(await page.locator('.rd-ko').count()).toBeLessThan(before);
+  expect(await page.locator('.rd-ko').count()).toBe(before);
 
   // a short poem's version headings do not fold
   await page.goto('/#/reader/alsuopseoyo');

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { headingsOf, hidden, initialOpen, sectionOf } from './reader-sections';
+import { headingsOf, hidden, sectionOf } from './reader-sections';
 
 const long = (t: string) => t + '가'.repeat(1000);
 const doc = ['intro', '## 1', long('a'), long('b'), '## 2', long('c'), '## 3'];
@@ -20,13 +20,5 @@ describe('reader sections', () => {
     const h = headingsOf(doc);
     const open = new Set([4]);
     expect([0, 1, 2, 3, 4, 5, 6].map((n) => hidden(h, open, n))).toEqual([false, false, true, true, false, false, false]);
-  });
-  it('opens the section of the reading position on a first visit, else the saved set', () => {
-    const h = headingsOf(doc);
-    expect([...initialOpen(h, null, null)]).toEqual([1]);
-    expect([...initialOpen(h, null, 5)]).toEqual([4]);
-    expect([...initialOpen(h, null, 0)]).toEqual([1]);
-    expect([...initialOpen(h, [4, 6, 99], 2)]).toEqual([4, 6]);
-    expect([...initialOpen([], null, 2)]).toEqual([]);
   });
 });

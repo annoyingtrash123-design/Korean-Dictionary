@@ -7,7 +7,7 @@ import { useWide } from '../lib/layout';
 import { readerPrefs, updatePrefs, getPos, setPos, type ReaderPrefs } from '../lib/reader-prefs';
 import { classOf, extendSpan, nextWordStart, offsetAtPoint, prevWordChar, runAt, shrinkSpan, snapOffset, splitHighlight, type Span } from '../lib/reader-text';
 import { parseNotes, type Inline, type MdBlock } from '../lib/reader-markdown';
-import { headingsOf, hidden, initialOpen, isHeading, loadOpen, saveOpen } from '../lib/reader-sections';
+import { headingsOf, hidden, isHeading } from '../lib/reader-sections';
 import { fmtChars, fmtYear, shelfLabel } from '../lib/reader-library';
 import { groupResults } from '../lib/merge';
 import { LookupCard, type LookupState } from '../components/LookupCard';
@@ -195,8 +195,8 @@ export function TextView({ id }: { id: string }) {
   const headings = useMemo(() => (doc ? headingsOf(doc.paragraphs.map((p) => p.orig)) : []), [doc]);
   const [openSt, setOpenSt] = useState<{ id: string; open: Set<number> } | null>(null);
   const open = openSt && doc && openSt.id === doc.id ? openSt.open
-    : doc ? initialOpen(headings, loadOpen(doc.id), (() => { const p = getPos(doc.id); return p && p.n < BG ? p.n : null; })()) : new Set<number>();
-  const setOpen = (next: Set<number>) => { if (!doc) return; saveOpen(doc.id, next); setOpenSt({ id: doc.id, open: next }); };
+    : new Set<number>();   // every section starts closed each time a text is opened
+  const setOpen = (next: Set<number>) => { if (!doc) return; setOpenSt({ id: doc.id, open: next }); };
   const toggle = (h: number) => { const next = new Set(open); if (next.has(h)) next.delete(h); else next.add(h); setOpen(next); };
   const lastPara = (n: number) => (n >= BG ? BG + (bg?.paragraphs.length ?? 0) : doc!.paragraphs.length) - 1;
   const firstPara = (n: number) => (n >= BG ? BG : 0);
