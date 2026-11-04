@@ -40,6 +40,8 @@ test('reader: draggable fast scroll (phone + iPad)', async ({ page }) => {
   await expect(page.locator('.rd-excerpt')).toHaveText(/^Not the complete work · Chapters 1–20 of 126 .*original text, unaltered/);
   await expect(page.locator('.rd-card .eyebrow')).toContainText('part of the work');
   await page.screenshot({ path: '../docs/screenshots/reader-excerpt-phone.png' });
+  // sections start collapsed; opened, the novel is long enough for the bar
+  await page.getByRole('button', { name: 'Expand all' }).click();
   await dragCheck(page, 'fast-scroll-phone.png');
   // chapters show in the bubble
   await page.goto('/#/reader/constitution_rok');
@@ -48,7 +50,7 @@ test('reader: draggable fast scroll (phone + iPad)', async ({ page }) => {
   await page.mouse.move(tb.x + tb.width / 2, tb.y + 30);
   await page.mouse.down();
   await page.mouse.move(tb.x + tb.width / 2, tb.y + tb.height * 0.6, { steps: 6 });
-  await expect(page.locator('.fs-bubble')).toHaveText(/^\d+% · 제\d+[장절]/);
+  await expect(page.locator('.fs-bubble')).toHaveText(/^\d+% · 제\d+[장절관]/);
   await page.mouse.up();
   // a short poem has no bar
   await page.goto('/#/reader/hayeoga');   // a four-line sijo: no bar
@@ -58,6 +60,7 @@ test('reader: draggable fast scroll (phone + iPad)', async ({ page }) => {
   await page.setViewportSize({ width: 1180, height: 820 });
   await page.goto('/#/reader/mujeong');
   await expect(page.locator('.rd-title')).toBeVisible();
+  await page.getByRole('button', { name: 'Expand all' }).click();
   await page.locator('.rd-scroll').evaluate((e) => { e.scrollTop = 0; });
   await dragCheck(page, 'fast-scroll-ipad.png');
 });
