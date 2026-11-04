@@ -725,3 +725,31 @@ fn paragraph_range_cuts_an_excerpt() {
     let p = kdict_pipeline::texts_pack::entry_paragraphs(&e, "하나\n\n둘\n\n셋\n\n넷");
     assert_eq!(p, vec!["둘", "셋"]);
 }
+
+/// Every approved enriched text matches its raw source exactly as the deploy's texts pack checks
+/// it (a re-divided excerpt once passed locally and failed every deploy).
+#[test]
+fn real_enriched_texts_match_raw() {
+    let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("texts");
+    let cat = texts_catalog::load(&dir.join("catalog.toml")).unwrap();
+    let mut bad = Vec::new();
+    for e in &cat.texts {
+        let (Ok(raw), Ok(enr)) = (
+            std::fs::read_to_string(dir.join(format!("raw/{}.json", e.id))),
+            std::fs::read_to_string(dir.join(format!("enriched/{}.json", e.id))),
+        ) else { continue };
+        let raw: serde_json::Value = serde_json::from_str(&raw).unwrap();
+        let enr: serde_json::Value = serde_json::from_str(&enr).unwrap();
+        if enr.pointer("/review/status").and_then(|v| v.as_str()) != Some("approved") {
+            continue;
+        }
+        let Some(paras) = enr.get("paragraphs").and_then(|v| v.as_array()) else { continue };
+        let orig: Vec<String> = paras.iter().map(|p| p["orig"].as_str().unwrap_or("").to_string()).collect();
+        let raw_paras = kdict_pipeline::texts_pack::entry_paragraphs(e, raw["text"].as_str().unwrap_or(""));
+        let reseg = enr.pointer("/labels/sections").and_then(|v| v.as_str()) == Some("ai");
+        if let Some(m) = kdict_pipeline::texts_pack::check_integrity(&orig, &raw_paras, e.excerpt, e.script == "hanmun", reseg) {
+            bad.push(format!("{}: {m}", e.id));
+        }
+    }
+    assert!(bad.is_empty(), "{}", bad.join("\n"));
+}

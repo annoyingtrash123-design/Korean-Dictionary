@@ -186,7 +186,7 @@ pub fn check_integrity(
 ) -> Option<String> {
     let e: Vec<String> = enriched.iter().map(|p| norm_ws(p, hanmun)).collect();
     let r: Vec<String> = raw.iter().map(|p| norm_ws(p, hanmun)).collect();
-    if resegmented && !excerpt {
+    if resegmented {
         // headings are recognised on the original strings: hanmun normalisation drops the space in "## "
         let is_head = |p: &String| p.trim_start().starts_with("## ");
         let mut raw_heads: Vec<&String> = raw.iter().zip(&r).filter(|(o, _)| is_head(o)).map(|(_, n)| n).collect();
@@ -210,7 +210,24 @@ pub fn check_integrity(
             .collect();
         // only the characters matter: a split may fall where the source had no space (국한문, hanmun)
         let join = |v: Vec<&String>| v.iter().flat_map(|s| s.chars()).filter(|c| !c.is_whitespace()).collect::<String>();
-        let (a, b) = (join(kept), join(r.iter().collect()));
+        let a = join(kept);
+        if excerpt {
+            // an excerpt that is also re-divided: its text must be an in-order selection of whole
+            // raw paragraphs, joined (greedy: take each raw paragraph that continues the text)
+            let mut rest = a.as_str();
+            for p in &r {
+                let p: String = p.chars().filter(|c| !c.is_whitespace()).collect();
+                if !p.is_empty() && rest.starts_with(p.as_str()) {
+                    rest = &rest[p.len()..];
+                }
+            }
+            if rest.is_empty() {
+                return None;
+            }
+            let at = a.chars().count() - rest.chars().count();
+            return Some(format!("re-divided excerpt is not an in-order selection of raw paragraphs from character {at}: {:?}", rest.chars().take(24).collect::<String>()));
+        }
+        let b = join(r.iter().collect());
         if a == b {
             return None;
         }
@@ -1209,6 +1226,11 @@ mod tests {
         assert!(check_integrity(&v(&["自由의義는무엇인가.", "其意를論하면이러하다."]), &mraw, false, false, true).is_none());
         assert!(check_integrity(&v(&["## 원문", "가 나 다.", "사 아"]), &raw, false, false, true).is_some());
         assert!(check_integrity(&v(&["가 나 다.", "라 마 바.", "사 아"]), &raw, false, false, true).is_some());
+        // a re-divided excerpt: an in-order selection of whole raw paragraphs, split and headed
+        let xraw = v(&["## 원문", "가 나. 다 라.", "건너뛴 문단", "마 바."]);
+        assert!(check_integrity(&v(&["## 원문", "## 1. 처음", "가 나.", "다 라.", "마 바."]), &xraw, true, false, true).is_none());
+        assert!(check_integrity(&v(&["## 원문", "가 나.", "마 바.", "다 라."]), &xraw, true, false, true).is_some()); // out of order
+        assert!(check_integrity(&v(&["## 원문", "가 나!", "다 라."]), &xraw, true, false, true).is_some()); // changed
         // hanmun joins without spaces
         let hraw = v(&["兩班者。士族之尊稱也。旌善之郡。"]);
         assert!(check_integrity(&v(&["兩班者。士族之尊稱也。", "旌善之郡。"]), &hraw, false, true, true).is_none());
