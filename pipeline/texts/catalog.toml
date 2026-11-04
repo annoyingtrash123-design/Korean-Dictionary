@@ -68,12 +68,12 @@ uncertain = ["date", "year", "source_title"]
 
 [[text]]
 id = "chunhyangjeon"
-title_ko = "춘향전 (열녀춘향수절가)"
-title_en = "The Tale of Chunhyang (Yeollyeo Chunhyang sujeol ga)"
+title_ko = "춘향가 (판소리 사설)"
+title_en = "The Song of Chunhyang (pansori text)"
 author_ko = "작자 미상"
 author_en = "Anonymous"
 author_dates = ""
-date = "19th century (Wanpan 84-leaf woodblock text, 열녀춘향수절가)"
+date = "18th–19th century tradition (pansori sung text; edition to be confirmed from the source page)"
 year = 1850
 period = "joseon-late"
 themes = ["joseon"]
@@ -81,11 +81,10 @@ shelf = "classical-prose"
 script = "hangul"
 excerpt = false
 source = "wikisource-ko"
-source_title = "열녀춘향수절가"
-search = ["열녀춘향수절가", "춘향전", "춘향전 완판본", "옥중화", "남원고사", "춘향가", "별춘향전", "춘향전 경판", "고대본 춘향전"]
-prefer_edition = "완판"
+source_title = "춘향가"
+search = ["춘향가"]
 pd_basis = "Anonymous woodblock text of the 19th century; long in the public domain."
-note = "Many versions exist; the Wanpan 84-leaf 열녀춘향수절가 is the best known."
+note = "Korean Wikisource has no woodblock 춘향전 (열녀춘향수절가); its 춘향가 page is the pansori sung text (아니리/창). Edition and licence to be confirmed before it ships."
 uncertain = ["date", "year", "source_title"]
 
 [[text]]
