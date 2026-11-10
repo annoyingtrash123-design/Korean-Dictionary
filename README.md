@@ -1,4 +1,4 @@
-# Korean Dictionary
+# 한뿌리 (Hanppuri) — Korean Dictionary
 
 An offline, Pleco-inspired Korean–English dictionary for iPhone and Android, installed from the
 browser as a web app (PWA). After a one-time download it works with no connection.
