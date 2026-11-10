@@ -74,6 +74,12 @@ test('Sents tab: real Korean examples for a word without translated ones', async
 
 test('Dict tab: example sentences and Korean definitions are tappable', async ({ page }) => {
   test.setTimeout(300_000);
+  // record what the listen button would say (the test browser has no Korean voice)
+  await page.addInitScript(() => {
+    const w = window as unknown as { __said: string[] };
+    w.__said = [];
+    window.speechSynthesis.speak = (u: SpeechSynthesisUtterance) => { w.__said.push(u.text); };
+  });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   await downloadAll(page);
@@ -89,4 +95,24 @@ test('Dict tab: example sentences and Korean definitions are tappable', async ({
   await expect(card).toHaveAttribute('data-loading', '0');
   expect(first).toContain((await card.locator('.lk-hw').textContent())!.slice(0, 1));
   await expect(page.locator('.def[data-tap]').first()).toBeAttached();
+  await page.getByRole('button', { name: 'Close lookup' }).click();
+
+  // examples are numbered, dialogues are speaker turns, and 🔊 reads the sentence aloud
+  const first = page.locator('.sense').first();
+  const nums = await first.locator('.exs > .ex').evaluateAll((els) => els.map((e) => getComputedStyle(e, '::before').content));
+  expect(nums.slice(0, 3)).toEqual(['"1"', '"2"', '"3"']);
+  await first.getByRole('button', { name: /Show \d+ more examples/ }).click();
+  const turn = page.locator('.ex-turn').first();
+  await expect(turn).toBeVisible();
+  await expect(turn.locator('.ex-who')).toHaveText(/^[가-힣A-Z]{1,3}$/);
+  await page.locator('.ex', { has: turn }).getByRole('button', { name: 'Listen' }).click();
+  const said = await page.evaluate(() => (window as unknown as { __said: string[] }).__said);
+  expect(said.length).toBe(1);
+  expect(said[0]).not.toMatch(/(^|\s)[가나]\s*:/);   // speaker labels are not read out
+  await turn.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '../docs/screenshots/examples-phone.png' });
+  await page.setViewportSize({ width: 1180, height: 820 });
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: '../docs/screenshots/examples-ipad.png' });
 });

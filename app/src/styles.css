@@ -192,10 +192,21 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .def.ko-main { font-size: 1em; }
 .note { margin-top: 4px; font-size: .88em; color: var(--muted); font-style: italic; }
 .pattern { display: inline-block; margin-top: 5px; padding: 2px 8px; border-radius: 6px; background: var(--surface-2); font-size: .85em; font-family: var(--font-ko); }
-.ex { margin: 8px 0 0; padding-left: 8px; border-left: 2px solid var(--border); }
-.ex-ko { font-size: .92em; line-height: 1.4; }
-.ex-en { font-size: .85em; line-height: 1.35; color: var(--muted); }
-.sents { padding: 0 16px 8px; } .sents .ex { margin-top: 12px; } .sents .ex:first-child { margin-top: 4px; }
+/* numbered example sentences (components/Examples.tsx) */
+.exs { list-style: none; margin: 10px 0 0; padding: 0; counter-reset: ex; }
+.ex { counter-increment: ex; position: relative; margin: 0 0 14px; padding-left: 26px; }
+.ex::before { content: counter(ex); position: absolute; left: 0; top: .15em; min-width: 18px; height: 18px; padding: 0 4px; box-sizing: border-box; border-radius: 9px;
+  background: var(--surface-2); color: var(--muted); font: 600 11px/18px var(--font-ui); text-align: center; }
+.ex-main { display: flex; align-items: flex-start; gap: 6px; }
+.ex-text { flex: 1; min-width: 0; }
+.ex-ko { font-size: .95em; line-height: 1.55; }
+.ex-en { margin-top: 3px; font-size: .86em; line-height: 1.45; color: var(--muted); }
+.ex-turn { display: flex; gap: 8px; align-items: baseline; }
+.ex-turn + .ex-turn { margin-top: 2px; }
+.ex-who { flex: none; font-size: .8em; font-weight: 700; color: var(--accent); }
+.ex-say { flex: none; width: 36px; height: 36px; margin: -6px -6px 0 0; display: grid; place-items: center; border: 0; border-radius: 18px; background: none; color: var(--accent); opacity: .75; }
+.ex-say:active { background: var(--accent-soft); opacity: 1; }
+.sents { padding: 0 16px 8px; } .sents .exs { margin-top: 6px; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 8px; }
 .similar { margin: 14px 0 4px; }
 .similar-h { display: flex; align-items: baseline; gap: 8px; margin: 0 0 4px; font-size: 13px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
