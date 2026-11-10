@@ -38,8 +38,8 @@ export function FirstRun() {
   return (
     <div class="firstrun">
       <div class="logo" aria-hidden="true"><LogoMark size={62} /></div>
-      <h1>Korean Dictionary</h1>
-      <p class="lead">A fast, private Korean–English dictionary that works offline. It needs a one-time download of the dictionary data.</p>
+      <h1 lang="ko">한뿌리</h1>
+      <p class="lead">Hanppuri, "one root": a fast, private Korean–English dictionary that works offline. It needs a one-time download of the dictionary data.</p>
       {cleared && (
         <div class="notice" role="alert">
           {stillThere ? (

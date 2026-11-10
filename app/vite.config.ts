@@ -13,8 +13,8 @@ export default defineConfig({
       registerType: 'prompt',
       injectRegister: false,
       manifest: {
-        name: 'Korean Dictionary',
-        short_name: '한영사전',
+        name: '한뿌리 · Korean Dictionary',
+        short_name: '한뿌리',
         description: 'Offline Korean–English dictionary',
         start_url: base,
         scope: base,

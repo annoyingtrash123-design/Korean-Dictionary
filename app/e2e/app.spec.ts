@@ -103,7 +103,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   page.on('pageerror', (e) => console.log('PAGEERROR', e.message));
   await page.goto('/');
   // ---- first-run download ----
-  await expect(page.getByRole('heading', { name: 'Korean Dictionary' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '한뿌리' })).toBeVisible();
   await expect(page.getByRole('switch', { name: /표준국어대사전/ })).toBeChecked();
   await expect(page.getByRole('switch', { name: /우리말샘/ })).not.toBeChecked(); // large optional pack: default off
   await shot(page, 'light-firstrun');
