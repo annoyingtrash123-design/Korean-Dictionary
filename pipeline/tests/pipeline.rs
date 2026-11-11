@@ -502,8 +502,8 @@ fn end_to_end_mini_build() {
     // "eat; smoke" on a later sense: 'smoke' is a tier-1 item, 'eat' of the first sense tier 0
     assert!(q::<i64>(&c, "SELECT COUNT(*) FROM gloss_terms WHERE term='smoke' AND tier=1") >= 1);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM (SELECT term, entry_id FROM gloss_terms GROUP BY term, entry_id HAVING COUNT(*) > 1)"), 0);
-    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='krdict' AND level IN (1,2) AND kind='word' AND gloss IS NOT NULL AND gloss != ''"));
-    assert_eq!(q::<i64>(&c, "SELECT MAX(n) + 1 FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM wotd"));
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='krdict' AND level = 3 AND kind='word' AND gloss IS NOT NULL AND gloss != ''"));
+    assert_eq!(q::<i64>(&c, "SELECT COALESCE(MAX(n) + 1, 0) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM wotd"));
     // en_ko (English Wiktionary translation tables), only with the English extract
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sqlite_master WHERE name='en_ko_term'"), 1);
     assert_eq!(q::<String>(&c, "SELECT group_concat(ko, ',') FROM (SELECT ko FROM en_ko WHERE term_norm='report' AND pos='noun' ORDER BY rank)"), "보고,보고서,폭음");

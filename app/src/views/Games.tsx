@@ -13,8 +13,10 @@ import { dueWords, loadDays, loadDeck, pickRound, saveRound, streak } from '../l
 
 type Length = 'n10' | 'n20' | 't60';
 interface Prefs { source: Source; length: Length }
-const PREFS_KEY = 'kd.games';
-const DEFAULT_PREFS: Prefs = { source: { kind: 'level', level: 1 }, length: 'n10' };
+// v2: the owner is an advanced (TOPIK 5–6) learner, so the default word level is 고급; the new key
+// lets that default apply once over a previously saved level
+const PREFS_KEY = 'kd.games.v2';
+const DEFAULT_PREFS: Prefs = { source: { kind: 'level', level: 3 }, length: 'n10' };
 function loadPrefs(): Prefs {
   try { return { ...DEFAULT_PREFS, ...JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') }; } catch { return DEFAULT_PREFS; }
 }

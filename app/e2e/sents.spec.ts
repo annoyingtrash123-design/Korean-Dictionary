@@ -116,3 +116,25 @@ test('Dict tab: example sentences and Korean definitions are tappable', async ({
   await page.waitForTimeout(400);
   await page.screenshot({ path: '../docs/screenshots/examples-ipad.png' });
 });
+
+/** One reviewed AI translation per word: its English shows under the sentence with an AI tag. */
+test('AI-translated example English is shown and labelled', async ({ page }) => {
+  test.setTimeout(300_000);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await downloadAll(page);
+  await page.getByRole('searchbox', { name: 'Search' }).fill('맥주');
+  await page.locator('.row', { hasText: '맥주' }).first().click();
+  await expect(page.locator('h1')).toContainText('맥주');
+  const ex = page.locator('.ex', { hasText: '김이 빠져서' });
+  await expect(ex.locator('.ex-ai')).toHaveText('AI');
+  await expect(ex.locator('.ex-en')).toContainText(/beer/i);
+  await ex.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '../docs/screenshots/examples-ai-phone.png' });
+  await page.setViewportSize({ width: 1180, height: 820 });
+  await page.waitForTimeout(400);
+  await ex.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: '../docs/screenshots/examples-ai-ipad.png' });
+});
+

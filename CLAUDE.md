@@ -23,6 +23,8 @@ Rust→WASM engine (`core/`) searches them in the browser, Preact UI (`app/`). S
 - Never write to `/dev`, never create symlinks outside the repo or the scratchpad.
 
 ## Facts worth knowing
+- The owner is an advanced learner (TOPIK 5–6). Defaults that depend on level (games, word of the
+  day, which words get extra content first) start from 고급; ask before assuming a "typical" user.
 - Sandbox network: GitHub, crates.io, npm, PyPI only. Wikisource, kaikki, Tatoeba, Unicode,
   korea.kr are reachable from GitHub Actions only — fetch there, test parsers with fixtures here.
 - Public domain in Korea: authors who died before 1963. Laws/court rulings are unprotected.

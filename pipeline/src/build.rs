@@ -839,7 +839,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
 
     conn.execute_batch(
         "INSERT INTO wotd(n, entry_id) SELECT row_number() OVER (ORDER BY id) - 1, id FROM entries \
-         WHERE source = 'krdict' AND level IN (1, 2) AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''",
+         WHERE source = 'krdict' AND level = 3 AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''",
     )?;
 
     conn.execute_batch(schema::FILL_HANJA_RANK)?;

@@ -181,7 +181,8 @@ function SimilarWords({ primary }: { primary: Entry }) {
 
 function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolean; isKo: boolean }) {
   const [all, setAll] = useState(false);
-  const exs = s.examples ?? [];
+  // examples with English (a source translation or a reviewed AI one) first, so they are among the shown few
+  const exs = [...(s.examples ?? [])].sort((a, b) => Number(!a.en) - Number(!b.en));
   const shownEx = all || exs.length <= 4 ? exs : exs.slice(0, 3);
   return (
     <li class="sense">
