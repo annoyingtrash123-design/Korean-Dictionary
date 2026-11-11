@@ -13,7 +13,7 @@ export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', wikt: 'w
 /** Korean-only sources (lang 'ko'): never preferred over an English source. */
 export const isKoSource = (s: string) => s === 'stdict' || s === 'opendict';
 
-export interface Example { ko: string; en?: string; type?: 'phrase' | 'sentence' | 'dialogue' }
+export interface Example { ko: string; en?: string; type?: 'phrase' | 'sentence' | 'dialogue'; /** English is an AI translation (pipeline example_en) */ en_ai?: boolean }
 export interface Rel { type: string; word: string }
 export interface Sense {
   pos?: string; gloss?: string; roman?: string; def?: string; ko_def?: string; note?: string; pattern?: string;

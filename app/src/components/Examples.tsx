@@ -4,7 +4,7 @@ import { canSpeak, dialogueTurns, speak } from '../lib/examples';
 
 /** Numbered example sentences: tappable Korean (dialogues as speaker turns), English when the
  *  source has it, and a listen button that uses the device's Korean voice. */
-export function ExampleList({ items }: { items: { ko: string; en?: string | null; type?: string | null }[] }) {
+export function ExampleList({ items }: { items: { ko: string; en?: string | null; type?: string | null; en_ai?: boolean }[] }) {
   const voice = canSpeak();
   return (
     <ol class="exs">
@@ -19,7 +19,7 @@ export function ExampleList({ items }: { items: { ko: string; en?: string | null
                 {turns
                   ? turns.map((t, j) => <div key={j} class="ex-turn"><span class="ex-who" lang="ko">{t.who}</span><span class="ex-ko hangul" lang="ko" {...TAP}>{t.text}</span></div>)
                   : x.ko.split('\n').map((l, j) => <div key={j} class="ex-ko hangul" lang="ko" {...TAP}>{l}</div>)}
-                {en.map((l, j) => <div key={j} class="ex-en">{l}</div>)}
+                {en.map((l, j) => <div key={j} class="ex-en">{x.en_ai && j === 0 && <span class="chip-ai ex-ai" title="AI translation, reviewed">AI</span>}{l}</div>)}
               </div>
               {voice && <button type="button" class="ex-say" aria-label="Listen" title="Listen" onClick={() => speak(x.ko, x.type)}><Icon name="speaker" size={18} /></button>}
             </div>

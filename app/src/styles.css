@@ -201,6 +201,7 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .ex-text { flex: 1; min-width: 0; }
 .ex-ko { font-size: .95em; line-height: 1.55; }
 .ex-en { margin-top: 3px; font-size: .86em; line-height: 1.45; color: var(--muted); }
+.ex-ai { margin-right: 6px; font-size: 10px; padding: 0 5px; vertical-align: 1px; }
 .ex-turn { display: flex; gap: 8px; align-items: baseline; }
 .ex-turn + .ex-turn { margin-top: 2px; }
 .ex-who { flex: none; font-size: .8em; font-weight: 700; color: var(--accent); }
