@@ -6,6 +6,8 @@ describe('example sentences', () => {
     expect(dialogueTurns('가: 어디 가요?\n나: 학교에 가요.')).toEqual([{ who: '가', text: '어디 가요?' }, { who: '나', text: '학교에 가요.' }]);
     expect(dialogueTurns('학교에 가요.')).toBeNull();
     expect(dialogueTurns('첫 줄\n둘째 줄')).toBeNull();   // two lines but not a dialogue
+    // the dictionary's own dialogues: unlabelled lines, marked by type
+    expect(dialogueTurns('무슨 요일에 가요?\n월요일에 가요.', 'dialogue')).toEqual([{ who: '가', text: '무슨 요일에 가요?' }, { who: '나', text: '월요일에 가요.' }]);
   });
   it('reads dialogues without the speaker labels', () => {
     expect(speakable('가: 어디 가요?\n나: 학교에 가요.')).toBe('어디 가요? 학교에 가요.');

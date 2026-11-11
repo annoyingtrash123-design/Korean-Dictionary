@@ -98,10 +98,10 @@ test('Dict tab: example sentences and Korean definitions are tappable', async ({
   await page.getByRole('button', { name: 'Close lookup' }).click();
 
   // examples are numbered, dialogues are speaker turns, and 🔊 reads the sentence aloud
-  const first = page.locator('.sense').first();
-  const nums = await first.locator('.exs > .ex').evaluateAll((els) => els.map((e) => getComputedStyle(e, '::before').content));
-  expect(nums.slice(0, 3)).toEqual(['"1"', '"2"', '"3"']);
-  await first.getByRole('button', { name: /Show \d+ more examples/ }).click();
+  const sense1 = page.locator('.sense').first();
+  const nums = await sense1.locator('.exs > .ex > .ex-n').allTextContents();
+  expect(nums.slice(0, 3)).toEqual(['1', '2', '3']);
+  await sense1.getByRole('button', { name: /Show \d+ more examples/ }).click();
   const turn = page.locator('.ex-turn').first();
   await expect(turn).toBeVisible();
   await expect(turn.locator('.ex-who')).toHaveText(/^[가-힣A-Z]{1,3}$/);

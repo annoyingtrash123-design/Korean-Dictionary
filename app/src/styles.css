@@ -193,9 +193,9 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .note { margin-top: 4px; font-size: .88em; color: var(--muted); font-style: italic; }
 .pattern { display: inline-block; margin-top: 5px; padding: 2px 8px; border-radius: 6px; background: var(--surface-2); font-size: .85em; font-family: var(--font-ko); }
 /* numbered example sentences (components/Examples.tsx) */
-.exs { list-style: none; margin: 10px 0 0; padding: 0; counter-reset: ex; }
-.ex { counter-increment: ex; position: relative; margin: 0 0 14px; padding-left: 26px; }
-.ex::before { content: counter(ex); position: absolute; left: 0; top: .15em; min-width: 18px; height: 18px; padding: 0 4px; box-sizing: border-box; border-radius: 9px;
+.exs { list-style: none; margin: 10px 0 0; padding: 0; }
+.ex { position: relative; margin: 0 0 14px; padding-left: 26px; }
+.ex-n { position: absolute; left: 0; top: .15em; min-width: 18px; height: 18px; padding: 0 4px; box-sizing: border-box; border-radius: 9px;
   background: var(--surface-2); color: var(--muted); font: 600 11px/18px var(--font-ui); text-align: center; }
 .ex-main { display: flex; align-items: flex-start; gap: 6px; }
 .ex-text { flex: 1; min-width: 0; }

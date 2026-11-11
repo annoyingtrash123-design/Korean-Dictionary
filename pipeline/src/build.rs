@@ -611,6 +611,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     // krdict
     let mut krdict_ids: HashMap<String, Vec<(Option<i64>, i64)>> = HashMap::new();
     let mut pointers: Vec<(String, Pointer)> = Vec::new();
+    let example_en = crate::example_en::ExampleEn::builtin();
+    let mut n_example_en = 0usize;
     for p in &src.krdict {
         let t = Instant::now();
         let before = c.entries;
@@ -619,6 +621,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 pointers.push((e.headword.clone(), ptr));
                 return Ok(());
             }
+            n_example_en += example_en.apply(&mut e);
             let rank = ranker.rank(&e);
             let id = insert_entry(&conn, &e, rank, true, &mut c)?;
             krdict_ids.entry(hw_norm(&e.headword)).or_default().push((e.homonym, id));
@@ -633,6 +636,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         .with_context(|| format!("krdict {}", p.display()))?;
         log::info!("krdict {}: {} entries ({:.1}s)", p.file_name().unwrap().to_string_lossy(), c.entries - before, t.elapsed().as_secs_f32());
     }
+    log::info!("krdict example English (AI, reviewed): {n_example_en} of {} rows applied", example_en.len());
     // conjugation-pointer entries -> forms of the entries they point to
     {
         let (mut n_forms, mut unresolved) = (0i64, 0i64);

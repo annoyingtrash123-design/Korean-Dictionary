@@ -3,6 +3,7 @@ pub mod build;
 pub mod cedict;
 pub mod common;
 pub mod enwikt;
+pub mod example_en;
 pub mod fetch;
 pub mod freq;
 pub mod kaikki;

@@ -16,8 +16,12 @@ if git diff --cached --name-only | grep -E '\.(sqlite|sqlite3)$|app/public/data/
 if { git ls-files; git ls-files --others --exclude-standard; } | grep -E '\.(whl|tar\.gz|tgz|zip)$' ; then echo "package archives in the working tree: remove them"; exit 1; fi
 
 step "rust: tests"
-cargo test -q -p kdict-pipeline -p kdict-core 2>&1 | grep -E "^test result|FAILED|panicked|error" || true
-cargo test -q -p kdict-pipeline -p kdict-core >/dev/null
+# one run: keep its output so a failure (even an intermittent one) names the test and its panic
+if ! cargo test -q -p kdict-pipeline -p kdict-core > .git/verify-rust-tests.log 2>&1; then
+  grep -E "^test result|FAILED|panicked|^---- " .git/verify-rust-tests.log
+  echo "rust tests failed: full output in .git/verify-rust-tests.log"; exit 1
+fi
+grep -E "^test result" .git/verify-rust-tests.log
 step "rust: clippy"
 cargo clippy -q -p kdict-pipeline -p kdict-core -- -D warnings
 
