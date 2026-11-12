@@ -1082,7 +1082,78 @@ pub const MIN_EN_KO: i64 = 20_000;
 
 // --- stdict pack ---------------------------------------------------------------
 
+/// Normalised key for matching a 우리말샘 sense to a 표준국어대사전 sense: headword, POS and the
+/// Korean definition with all whitespace removed (우리말샘 carries the 표준 definitions verbatim).
+fn def_key(hw: &str, pos: &str, ko_def: &str) -> String {
+    format!("{}\t{}\t{}", hw_norm(hw), pos, ko_def.chars().filter(|c| !c.is_whitespace()).collect::<String>())
+}
+
+/// 우리말샘's English equivalents (대역어) by sense, for the 표준 entries whose 우리말샘 copy is
+/// dropped as a duplicate: `def_key` -> English, and `hw\tpos` -> English of a single-sense entry.
+#[derive(Default)]
+pub struct OpendictEn {
+    by_def: HashMap<String, String>,
+    single: HashMap<String, String>,
+    seen: HashMap<String, u32>,
+}
+
+impl OpendictEn {
+    pub fn load(src: &Sources) -> Result<Self> {
+        let mut me = OpendictEn::default();
+        for p in &src.opendict {
+            opendict::parse_file(p, |e| {
+                let ss = senses(&e);
+                for s in ss {
+                    if let (Some(en), Some(kd)) = (s.get("gloss").and_then(Value::as_str), s.get("ko_def").and_then(Value::as_str)) {
+                        me.by_def.entry(def_key(&e.headword, &e.pos, kd)).or_insert_with(|| en.to_string());
+                    }
+                }
+                // single-sense fallback: only for a headword+POS that occurs once in 우리말샘
+                // (homonyms such as 배 "ship" / 배 "pear" share it and are left out)
+                let k = format!("{}\t{}", hw_norm(&e.headword), e.pos);
+                let en = match ss {
+                    [s] => s.get("gloss").and_then(Value::as_str).map(str::to_string),
+                    _ => None,
+                };
+                *me.seen.entry(k.clone()).or_insert(0) += 1;
+                if let Some(en) = en {
+                    me.single.entry(k).or_insert(en);
+                }
+                Ok(())
+            })
+            .with_context(|| format!("opendict {}", p.display()))?;
+        }
+        let seen = std::mem::take(&mut me.seen);
+        me.single.retain(|k, _| seen.get(k) == Some(&1));
+        Ok(me)
+    }
+
+    /// Give each sense of a 표준 entry that has no English gloss 우리말샘's English: by matching
+    /// definition, or, when both dictionaries have a single sense, that one. Returns senses filled.
+    pub fn apply(&self, e: &mut Entry) -> usize {
+        let key = format!("{}\t{}", hw_norm(&e.headword), e.pos);
+        let (hw, pos, homonym) = (e.headword.clone(), e.pos.clone(), e.homonym);
+        let Some(ss) = e.data.get_mut("senses").and_then(Value::as_array_mut) else { return 0 };
+        let one = ss.len() == 1 && homonym.is_none();
+        let mut n = 0;
+        for s in ss.iter_mut() {
+            let Some(o) = s.as_object_mut() else { continue };
+            if o.get("gloss").and_then(Value::as_str).is_some_and(|g| !g.is_empty()) {
+                continue;
+            }
+            let by_def = o.get("ko_def").and_then(Value::as_str).and_then(|kd| self.by_def.get(&def_key(&hw, &pos, kd)));
+            if let Some(en) = by_def.or_else(|| if one { self.single.get(&key) } else { None }) {
+                o.insert("gloss".into(), en.clone().into());
+                n += 1;
+            }
+        }
+        n
+    }
+}
+
 pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, built_at: &str) -> Result<PackResult> {
+    let od_en = if src.opendict.is_empty() { OpendictEn::default() } else { OpendictEn::load(src)? };
+    let mut n_en = 0usize;
     let path = out.join("stdict.sqlite");
     let conn = open_db(&path)?;
     conn.execute_batch(schema::COMMON)?;
@@ -1092,8 +1163,9 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
     for p in &src.stdict {
         let t = Instant::now();
         let before = c.entries;
-        stdict::parse_file(p, |e| {
+        stdict::parse_file(p, |mut e| {
             keys.insert(format!("{}\t{}", hw_norm(&e.headword), e.pos));
+            n_en += od_en.apply(&mut e);
             let rank = ranker.rank(&e);
             insert_entry(&conn, &e, rank, false, &mut c)?;
             Ok(())
@@ -1101,6 +1173,7 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
         .with_context(|| format!("stdict {}", p.display()))?;
         log::info!("stdict {}: {} entries ({:.1}s)", p.file_name().unwrap().to_string_lossy(), c.entries - before, t.elapsed().as_secs_f32());
     }
+    log::info!("stdict: {n_en} senses given 우리말샘's English equivalents");
     conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
     conn.execute_batch(schema::HIST_INDEX)?;
@@ -1110,6 +1183,7 @@ pub fn build_stdict(src: &Sources, ranker: &Ranker, out: &Path, version: &str, b
     counts.insert("forms".into(), q("SELECT COUNT(*) FROM forms")?.into());
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
     counts.insert("hist".into(), q("SELECT COUNT(*) FROM entries WHERE hist = 1")?.into());
+    counts.insert("senses_en_from_opendict".into(), n_en.into());
     let counts = Value::Object(counts);
     let mut sources = Map::new();
     sources.insert("stdict".into(), source_info("stdict", c.entries));
@@ -1593,5 +1667,38 @@ mod gate_tests {
         let degraded = json!({"entries": 60000, "krdict": 56000, "wikt": 0, "sentences": 0, "hanja_chars": 4999});
         let bad = quality_gate(&degraded, None);
         assert_eq!(bad.len(), 4, "{bad:?}"); // entries, wikt, sentences, hanja_chars
+    }
+}
+
+#[cfg(test)]
+mod opendict_en_tests {
+    use super::*;
+
+    fn entry(hw: &str, senses: Value) -> Entry {
+        Entry { source: "stdict", lang: "ko", headword: hw.into(), pos: "명사".into(), data: json!({ "senses": senses }), ..Default::default() }
+    }
+
+    #[test]
+    fn carries_english_by_definition_or_single_sense() {
+        let mut od = OpendictEn::default();
+        od.by_def.insert(def_key("선물환 시세", "명사", "선물환 거래에 적용되는 시세."), "forward rate".into());
+        od.single.insert(format!("{}\t명사", hw_norm("학교")), "school".into());
+        // matched by definition (whitespace differences ignored)
+        let mut e = entry("선물환 시세", json!([{ "ko_def": "선물환 거래에  적용되는 시세." }]));
+        assert_eq!(od.apply(&mut e), 1);
+        assert_eq!(e.data["senses"][0]["gloss"], "forward rate");
+        // a single-sense entry with a different definition takes the single 우리말샘 sense
+        let mut e = entry("학교", json!([{ "ko_def": "다른 정의." }]));
+        assert_eq!(od.apply(&mut e), 1);
+        assert_eq!(e.data["senses"][0]["gloss"], "school");
+        // several senses: only definition matches count; an existing gloss is kept
+        let mut e = entry("학교", json!([{ "ko_def": "다른 정의." }, { "ko_def": "또 다른 정의.", "gloss": "kept" }]));
+        assert_eq!(od.apply(&mut e), 0);
+        assert!(e.data["senses"][0].get("gloss").is_none());
+        assert_eq!(e.data["senses"][1]["gloss"], "kept");
+        // a numbered homonym never takes the single-sense fallback
+        let mut e = entry("학교", json!([{ "ko_def": "다른 정의." }]));
+        e.homonym = Some(2);
+        assert_eq!(od.apply(&mut e), 0);
     }
 }
