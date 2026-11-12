@@ -11,7 +11,7 @@ type Pack = Manifest['packs'][number];
 export async function installLive(
   start: Manifest, ids: string[], fetchLive: () => Promise<Manifest>, install: (p: Pack, version: string) => Promise<unknown>,
 ): Promise<Manifest> {
-  const live = async (fallback: Manifest) => { try { return await fetchLive(); } catch { return fallback; } };
+  const live = async (fallback: Manifest) => { try { return await fetchLive(); } catch { return fallback; /* offline or server down is expected: install from the manifest we have */ } };
   let m = await live(start);
   for (let attempt = 0; ; attempt++) {
     try {

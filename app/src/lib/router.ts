@@ -5,7 +5,7 @@ export interface Route { name: string; parts: string[]; params: URLSearchParams;
 export function parseHash(hash: string): Route {
   const raw = hash.replace(/^#/, '') || '/';
   const [path, qs = ''] = raw.split('?');
-  const parts = path.split('/').filter(Boolean).map((p) => { try { return decodeURIComponent(p); } catch { return p; } });
+  const parts = path.split('/').filter(Boolean).map((p) => { try { return decodeURIComponent(p); } catch { return p; /* malformed %-escape in a URL: use the raw segment */ } });
   return { name: parts[0] ?? 'home', parts: parts.slice(1), params: new URLSearchParams(qs), raw };
 }
 export const currentRoute = (): Route => parseHash(location.hash);

@@ -1,3 +1,4 @@
+import { logError } from './errlog';
 // Stable identity for saved words. entries.id is renumbered by every monthly data rebuild, so bookmarks and
 // history are keyed on `source|headword|homonym|pos` and re-resolved against the current database when opened.
 export interface EntryRef { source: string; headword: string; homonym?: number | null; pos?: string | null }
@@ -49,7 +50,7 @@ export async function upgradeLegacy<T extends SavedRef & { key: string; legacyId
   for (const it of items) {
     if (it.legacyId == null) { out.push(it); continue; }
     let e: Awaited<ReturnType<typeof lookup>> = null;
-    try { e = await lookup(it.source, it.legacyId); } catch { /* engine unavailable: keep as legacy */ return { items, changed: false }; }
+    try { e = await lookup(it.source, it.legacyId); } catch (e) { logError('upgrade-legacy', e); /* engine unavailable: keep as legacy */ return { items, changed: false }; }
     const next = { ...it, legacyId: undefined } as T;
     if (e && e.headword === it.headword) { next.homonym = e.homonym ?? null; next.pos = e.pos ?? null; }
     next.key = stableKey(next);

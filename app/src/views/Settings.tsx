@@ -1,3 +1,4 @@
+import { clearErrors, errors$, formatErrors, loadErrors, logError } from '../lib/errlog';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 import { settings, updateSettings, type ColorKey, type ThemeName } from '../lib/settings';
@@ -55,7 +56,7 @@ export function SettingsView() {
   const startInstall = async (ids: string[]) => { setMsg(''); const m = (await checkForUpdate()) ?? manifest; /* always the live manifest: chunk files of an older version are gone after a deploy */ if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
 
   const exportFile = () => {
-    const url = URL.createObjectURL(new Blob([exportBookmarks()], { type: 'application/json' }));
+    const url = URL.createObjectURL(new Blob([exportBookmarks(undefined, errors$.get())], { type: 'application/json' }));
     const a = Object.assign(document.createElement('a'), { href: url, download: `korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json` });
     document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
@@ -63,7 +64,7 @@ export function SettingsView() {
     if (!f) return;
     if (f.size > MAX_IMPORT_BYTES) { setMsg('That file is too large (limit 5 MB).'); if (fileRef.current) fileRef.current.value = ''; return; }
     try { const r = await importBookmarks(await f.text()); setMsg(`Imported ${r.items} bookmark(s) and ${r.folders} folder(s).`); }
-    catch (e) { setMsg(e instanceof ImportError ? e.message : 'That file is not a valid backup.'); }
+    catch (e) { if (!(e instanceof ImportError)) logError('backup-import', e); setMsg(e instanceof ImportError ? e.message : 'That file is not a valid backup.'); }
     if (fileRef.current) fileRef.current.value = '';
   };
 
@@ -166,17 +167,33 @@ function TechDetails() {
   const [r, setR] = useState<StorageReport | null>(null);
   const st = useStore(packStatus$);
   const packs = Object.values(st?.packs ?? {}).filter((p) => p.installed).map((p) => `  ${p.id} ${p.version ?? ''} · ${fmtBytes(p.bytes)}`).join('\n');
+  const errs = useStore(errors$);
+  const [copied, setCopied] = useState('');
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(formatErrors(errs)); setCopied('Copied.'); }
+    catch (e) { logError('clipboard', e); setCopied('Could not copy.'); }
+  };
   return (
-    <details class="small diag" onToggle={(e) => { if ((e.currentTarget as HTMLDetailsElement).open) makeReport().then(setR, () => setR(null)); }}>
+    <details class="small diag" onToggle={(e) => { if ((e.currentTarget as HTMLDetailsElement).open) { makeReport().then(setR, () => setR(null)); void loadErrors(); } }}>
       <summary>Technical details</summary>
       <pre>{r ? `storage in use: ${r.usageMB ?? '?'} MB · protected: ${r.persisted}\nlast working: ${r.lastOk ?? 'unknown'}\napp: ${r.build}\ninstalled:\n${packs || '  (none)'}\n${r.diag}` : 'Loading…'}</pre>
+      <details class="errlog">
+        <summary>Recent errors ({errs.length})</summary>
+        <p class="muted">Kept only on this device; never sent anywhere.</p>
+        {errs.length === 0 ? <p class="muted">No errors recorded.</p> : <pre>{formatErrors(errs)}</pre>}
+        <div class="field-row">
+          <button type="button" class="link" disabled={!errs.length} onClick={copy}>Copy</button>
+          <button type="button" class="link" disabled={!errs.length} onClick={() => { void clearErrors(); setCopied(''); }}>Clear</button>
+          <span class="muted" role="status">{copied}</span>
+        </div>
+      </details>
     </details>
   );
 }
 
 const OPEN_KEY = 'kd.settings.open';
 /** Sections left open, remembered; all closed on first visit. */
-function loadOpenGroups(): string[] { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } }
+function loadOpenGroups(): string[] { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; /* storage unavailable or unparsable: all sections closed */ } }
 function saveOpenGroups(v: string[]) { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* storage unavailable */ } }
 
 /** A collapsible settings section. Closed sections stay mounted (hidden), so a download keeps running. */

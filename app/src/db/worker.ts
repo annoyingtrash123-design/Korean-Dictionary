@@ -2,8 +2,10 @@
 import { createEngine } from './engine';
 import { forgetPack, getInstalled, installPack } from './download';
 import type { Evt, Req, Res } from './rpc';
+import { installWorkerErrorCapture, logError } from '../lib/errlog';
 import type { Engine, ManifestPack, PackStatus } from './types';
 
+installWorkerErrorCapture();
 const engine: Engine = createEngine();
 const post = (m: Res | Evt) => (self as unknown as Worker).postMessage(m);
 let initError: string | undefined;
@@ -16,6 +18,7 @@ async function initWithRetry(): Promise<void> {
     await new Promise((r) => setTimeout(r, Math.min(1000, 150 * (attempt + 1))));
   }
   initError = String((last as Error)?.message ?? last);
+  logError('engine-init', last);
 }
 const ready = initWithRetry();
 let installing = false;
@@ -126,6 +129,7 @@ self.onmessage = async (ev: MessageEvent<Req>) => {
     queue = run.then(() => undefined, () => undefined);
     try { post({ id, result: await run }); } finally { pending--; }
   } catch (e) {
+    logError(`worker:${method}`, e);
     post({ id, error: String((e as Error)?.message ?? e) });
   }
 };

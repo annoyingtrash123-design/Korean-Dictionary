@@ -1,6 +1,7 @@
 import { createStore } from './store';
 import { get, set } from 'idb-keyval';
 import { userDb } from './idb';
+import type { ErrEntry } from './errlog';
 import { legacyKey, stableKey, upgradeLegacy, type EntryRef, type SavedRef } from './entry-key';
 import { fromMirror, mirror } from './backup';
 
@@ -111,8 +112,9 @@ export const deleteFolder = (id: string) =>
     items: d.items.map((i) => (i.folder === id ? { ...i, folder: DEFAULT_FOLDER.id } : i)),
   }));
 
-export function exportBookmarks(d: BookmarkData = bookmarks.get()): string {
-  return JSON.stringify({ app: 'korean-dictionary', exportedAt: new Date().toISOString(), ...d }, null, 2);
+/** `errors` (the on-device error log) is an optional extra for diagnosis; import ignores it and works without it. */
+export function exportBookmarks(d: BookmarkData = bookmarks.get(), errors: ErrEntry[] = []): string {
+  return JSON.stringify({ app: 'korean-dictionary', exportedAt: new Date().toISOString(), ...d, ...(errors.length ? { errors } : {}) }, null, 2);
 }
 export class ImportError extends Error {}
 /** Merge an imported backup into the existing data (folders by id, items by key). */

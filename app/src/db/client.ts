@@ -5,6 +5,7 @@ import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
 import { installActive } from '../lib/sw-update';
+import { logError, recordEntry, sanitizeEntries } from '../lib/errlog';
 
 let worker: Worker | undefined;
 let seq = 0;
@@ -52,12 +53,13 @@ function w(): Worker {
   worker = new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' });
   worker.onmessage = (ev: MessageEvent<Res | Evt>) => {
     const m = ev.data as Res & Evt;
+    if (m.event === 'log') { const [e] = sanitizeEntries([m.payload]); if (e) recordEntry(e); return; } // worker errors go to the on-device log
     if (m.event === 'progress') { const p = m.payload as Progress; progress.set((s) => ({ ...s, [p.pack]: p })); return; }
     const p = pending.get(m.id); if (!p) return;
     pending.delete(m.id);
     if (m.error) p.err(new Error(m.error)); else p.ok(m.result);
   };
-  worker.onerror = (e) => { for (const p of pending.values()) p.err(new Error(e.message || 'Worker error')); pending.clear(); };
+  worker.onerror = (e) => { logError('worker', e.message || 'Worker error'); for (const p of pending.values()) p.err(new Error(e.message || 'Worker error')); pending.clear(); };
   return worker;
 }
 async function call<T>(method: string, ...args: unknown[]): Promise<T> {
@@ -80,7 +82,7 @@ export function restartWorker() {
 
 export const PACKS_HINT = 'kd.packs';
 /** Installed pack ids remembered from the last run, so the UI can start before the engine is ready. */
-export const packsHint = (): string[] => { try { return JSON.parse(localStorage.getItem(PACKS_HINT) || '[]'); } catch { return []; } };
+export const packsHint = (): string[] => { try { return JSON.parse(localStorage.getItem(PACKS_HINT) || '[]'); } catch { return []; /* storage unavailable or unparsable: no hint */ } };
 /** True when the dictionaries this device had are gone without the user deleting them: the
  *  browser cleared the site's storage to free space (it keeps localStorage, so we can tell). */
 export const storageCleared$ = createStore(false);
@@ -94,20 +96,20 @@ export async function makeReport(): Promise<StorageReport> {
   const persisted = await navigator.storage?.persisted?.().catch(() => null) ?? null;
   const diag = await call<string>('diagnostics').catch((e) => String(e?.message ?? e));
   let lastOk: string | null = null;
-  try { lastOk = localStorage.getItem(LAST_OK); } catch { /* */ }
+  try { lastOk = localStorage.getItem(LAST_OK); } catch { /* storage unavailable: the report just omits it */ }
   return { usageMB: est?.usage != null ? Math.round(est.usage / 1048576) : null, persisted, lastOk, build: __BUILD__, diag };
 }
-const saveHint = (s: PackStatus) => { try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* ignore */ } };
+const saveHint = (s: PackStatus) => { try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* storage unavailable: the hint is only a startup optimisation */ } };
 export async function refreshStatus(): Promise<PackStatus> {
   const s = await call<PackStatus>('packStatus');
-  try { performance.mark('kd-engine-ready'); } catch { /* ignore */ }
+  try { performance.mark('kd-engine-ready'); } catch { /* performance API unavailable: timing marks are optional */ }
   if (!s.error && packsHint().includes('core') && !s.packs.core?.installed) {
     storageCleared$.set(true);
     void makeReport().then((r) => storageReport$.set(r));
   }
   if (s.packs.core?.installed) {
     storageCleared$.set(false);
-    try { localStorage.setItem(LAST_OK, `${new Date().toISOString().slice(0, 16)} · app ${__BUILD__} · ${Object.keys(s.packs).join(', ')}`); } catch { /* */ }
+    try { localStorage.setItem(LAST_OK, `${new Date().toISOString().slice(0, 16)} · app ${__BUILD__} · ${Object.keys(s.packs).join(', ')}`); } catch { /* storage unavailable: this note is only a diagnostic aid */ }
   }
   saveHint(s);
   packStatus$.set(s);
@@ -206,10 +208,10 @@ export async function fetchManifest(): Promise<Manifest> {
   const res = await fetch(MANIFEST_URL(), { cache: 'no-store' });
   if (!res.ok) throw new Error(`Could not load the data manifest (${res.status})`);
   const m = (await res.json()) as Manifest;
-  try { localStorage.setItem(MANIFEST_CACHE, JSON.stringify(m)); } catch { /* */ }
+  try { localStorage.setItem(MANIFEST_CACHE, JSON.stringify(m)); } catch { /* storage unavailable or full: the manifest cache is optional */ }
   return m;
 }
-export const cachedManifest = (): Manifest | null => { try { return JSON.parse(localStorage.getItem(MANIFEST_CACHE) || 'null'); } catch { return null; } };
+export const cachedManifest = (): Manifest | null => { try { return JSON.parse(localStorage.getItem(MANIFEST_CACHE) || 'null'); } catch { return null; /* storage unavailable or unparsable: no cached manifest */ } };
 
 let installsInFlight = 0;
 // Test hook: number of pack installs still downloading/importing.

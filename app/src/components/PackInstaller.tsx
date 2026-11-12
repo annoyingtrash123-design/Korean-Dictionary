@@ -1,3 +1,4 @@
+import { logError } from '../lib/errlog';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { db, fetchManifest, freshWorker, MANIFEST_URL, progress } from '../db/client';
 import { installLive } from '../lib/install-live';
@@ -33,7 +34,7 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
   const autoResumed = useRef(false);
 
   const takeLock = async () => {
-    try { lock.current = (await (navigator as unknown as { wakeLock?: { request(t: 'screen'): Promise<WakeLockSentinelLike> } }).wakeLock?.request('screen')) ?? null; } catch { /* optional */ }
+    try { lock.current = (await (navigator as unknown as { wakeLock?: { request(t: 'screen'): Promise<WakeLockSentinelLike> } }).wakeLock?.request('screen')) ?? null; } catch { /* Wake Lock is optional and often unsupported or denied: expected */ }
   };
   const dropLock = () => { void lock.current?.release().catch(() => undefined); lock.current = null; };
 
@@ -62,6 +63,7 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
       running.current = false;
       onDone?.();
     } catch (e) {
+      logError('install', e);
       dropLock();
       running.current = false;
       const m = String((e as Error)?.message ?? e);

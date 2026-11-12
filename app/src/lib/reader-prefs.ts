@@ -10,7 +10,7 @@ export function sanitizePrefs(raw: any): ReaderPrefs {
   const b = (v: unknown, d: boolean) => (typeof v === 'boolean' ? v : d);
   return { size: clamp(r.size, 14, 32, DEFAULT_PREFS.size), lh: clamp(r.lh, 1.4, 2.6, DEFAULT_PREFS.lh), serif: b(r.serif, true), en: b(r.en, true), modern: b(r.modern, false), reading: b(r.reading, true) };
 }
-const load = (): ReaderPrefs => { try { return sanitizePrefs(JSON.parse(localStorage.getItem(KEY) || '{}')); } catch { return { ...DEFAULT_PREFS }; } };
+const load = (): ReaderPrefs => { try { return sanitizePrefs(JSON.parse(localStorage.getItem(KEY) || '{}')); } catch { return { ...DEFAULT_PREFS }; /* storage unavailable or unparsable: defaults */ } };
 export const readerPrefs = createStore<ReaderPrefs>(load());
 readerPrefs.subscribe((p) => { try { localStorage.setItem(KEY, JSON.stringify(p)); } catch { /* storage unavailable */ } });
 export const updatePrefs = (patch: Partial<ReaderPrefs>) => readerPrefs.set((p) => sanitizePrefs({ ...p, ...patch }));
@@ -27,7 +27,7 @@ export function sanitizePos(raw: any): Record<string, ReadPos> {
   return out;
 }
 export function getPos(id: string): ReadPos | null {
-  try { return sanitizePos(JSON.parse(localStorage.getItem(POS_KEY) || '{}'))[id] ?? null; } catch { return null; }
+  try { return sanitizePos(JSON.parse(localStorage.getItem(POS_KEY) || '{}'))[id] ?? null; } catch { return null; /* storage unavailable: no saved position */ }
 }
 export function setPos(id: string, pos: ReadPos): void {
   try {
@@ -38,4 +38,4 @@ export function setPos(id: string, pos: ReadPos): void {
     localStorage.setItem(POS_KEY, JSON.stringify(all));
   } catch { /* storage unavailable */ }
 }
-export function readIds(): string[] { try { return Object.keys(sanitizePos(JSON.parse(localStorage.getItem(POS_KEY) || '{}'))); } catch { return []; } }
+export function readIds(): string[] { try { return Object.keys(sanitizePos(JSON.parse(localStorage.getItem(POS_KEY) || '{}'))); } catch { return []; /* storage unavailable: nothing read yet */ } }
