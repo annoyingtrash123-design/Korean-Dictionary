@@ -1,0 +1,242 @@
+# Golden queries: what a learner expects the search to return (search-quality benchmark).
+#
+# Run (needs the real packs unpacked: core.sqlite, stdict.sqlite, e.g. pipeline/out after a pipeline build):
+#   KDICT_PACKS=pipeline/out cargo test --release -p kdict-core --test golden -- --ignored --nocapture
+# Packs default to core,stdict (the app's default); KDICT_GOLDEN_PACKS=core,stdict,opendict to change.
+# scripts/verify.sh runs it when pipeline/out/core.sqlite (or $KDICT_PACKS/core.sqlite) exists.
+# Prints pass / FAIL / known / FIXED per line and a score; fails only when a line not marked
+# "known" fails (a regression). A "known" line that passes is reported as FIXED: drop the mark.
+#
+# Columns (tab-separated): query, check, expected, status, note
+#   check     first      the first distinct headword is one of `expected`
+#             topN       one of `expected` is among the first N distinct headwords
+#             hanjaN     a row among the first N rows is headword=HANJA (e.g. 선물=膳物)
+#             nothanjaN  no row among the first N rows is headword=HANJA (a wrong hanja)
+#   expected  alternatives separated by |; headwords compare without spaces/hyphens (선물 가게 = 선물가게)
+#   status    ok, or known (a known failure of the current engine: reported, never fails the run)
+#
+# == Korean headwords: the word itself comes first
+학교	first	학교
+사랑	first	사랑
+먹다	first	먹다
+가다	first	가다
+친구	first	친구
+사람	first	사람
+시간	first	시간
+한국어	first	한국어
+공부하다	first	공부하다
+아름답다	first	아름답다
+감사하다	first	감사하다
+대학교	first	대학교
+선생님	first	선생님
+병원	first	병원
+아이스크림	first	아이스크림
+대한민국	first	대한민국
+# == homonyms: the word first, and its common meanings among the results with the right hanja
+배	first	배
+눈	first	눈
+말	first	말
+밤	first	밤
+다리	first	다리
+사기	first	사기
+사기	hanja10	사기=詐欺
+사기	hanja10	사기=士氣
+선물	first	선물
+선물	hanja5	선물=膳物
+선물	hanja10	선물=先物
+사과	hanja5	사과=沙果
+사과	hanja5	사과=謝過
+차	hanja10	차=車
+수도	hanja5	수도=首都
+수도	hanja10	수도=水道
+연기	hanja5	연기=煙氣
+연기	hanja5	연기=演技
+연기	hanja10	연기=延期
+의사	hanja5	의사=醫師
+의사	hanja10	의사=意思
+전기	hanja5	전기=電氣
+전기	hanja10	전기=傳記
+부자	hanja5	부자=富者
+정의	hanja5	정의=正義
+정의	hanja10	정의=定義
+기사	hanja10	기사=記事
+기사	hanja10	기사=技士|기사=騎士
+이상	hanja10	이상=以上
+이상	hanja10	이상=理想
+이상	hanja10	이상=異常
+감기	hanja5	감기=感氣
+# == conjugated forms: the dictionary form comes first
+갔어요	first	가다
+먹었는데	first	먹다
+추워요	first	춥다
+들었어요	top3	듣다
+도와주세요	top3	돕다|도와주다
+몰라요	first	모르다
+예뻐요	first	예쁘다
+걸어서	top3	걷다	ok	also 걸다 + -어서
+지어요	first	짓다	known	deconjugation ranks 지다 above ㅅ-irregular 짓다
+나았다	first	낫다
+불러요	first	부르다
+빨개요	first	빨갛다
+봤어요	first	보다
+와요	first	오다	known	rare exact headword 와요 瓦窯 outranks 오다
+갈게요	first	가다
+읽으면	first	읽다
+만들었어요	first	만들다
+바빠서	first	바쁘다
+가까워요	first	가깝다
+어려워요	first	어렵다
+공부했어요	first	공부하다
+배웠어요	first	배우다
+받았어요	first	받다
+잡혔다	first	잡히다
+먹고 싶어요	top3	먹다
+가르쳐	first	가르치다
+들어가세요	first	들어가다	known	들다 ranked above 들어가다
+흘렀다	first	흐르다
+# == particles attached: the noun first
+학교에	first	학교
+학교에서	first	학교
+친구가	first	친구
+책을	first	책
+선생님께서	first	선생님
+집으로	top3	집	ok	kengdic has 집으로 (homeward) itself
+사람들은	top3	사람	ok	사람들 is a headword too
+한국어로	first	한국어
+선물로	first	선물
+나한테	first	나
+# == spacing variants
+선물가게	top3	선물 가게
+한국 사람	top3	한국 사람|한국인	known	spaced words that are not one headword find nothing (should fall back to 한국 + 사람)
+공부 하다	top3	공부하다
+아이스 크림	top3	아이스크림
+대한 민국	top3	대한민국
+# == English: the everyday word first or near the top
+school	first	학교
+eat	first	먹다
+go	first	가다
+water	first	물
+snow	first	눈
+love	top3	사랑|사랑하다
+thank	top5	감사하다|고맙다
+beautiful	top3	아름답다
+gift	top3	선물
+present	top5	선물	known	선물 not in the top 5 (제시하다, 등장시키다 first)
+friend	first	친구
+teacher	top3	선생님|교사
+hospital	first	병원
+doctor	top3	의사
+weather	first	날씨
+book	first	책	known	책 only 6th, after 도서, 단행본, 저작
+time	top3	시간|때
+rain	first	비	known	치다 (to rain) above the noun 비
+car	top3	차|자동차
+tea	top3	차
+bridge	top3	다리
+leg	top3	다리
+pear	top3	배
+ship	top5	배
+stomach	top5	배
+apple	first	사과
+apology	top3	사과
+fraud	top5	사기
+morale	top5	사기
+sleep	top3	자다|잠
+run	top5	달리다|뛰다
+happy	top3	행복하다|기쁘다
+cold	top5	춥다|차갑다|감기
+to study	first	공부하다	known	"to" asks for the verb, 공부 (noun) comes first
+write	top3	쓰다
+learn	top3	배우다
+language	top3	언어|말
+ice cream	top3	아이스크림
+credit card	top3	신용 카드|신용카드
+gift shop	top3	선물 가게
+forward contract	top5	선물 계약|선물환
+futures	top10	선물	known	선물 先物 not reached from "futures"
+took	top10	가지다|잡다|타다|걸리다
+went	top10	가다
+children	top5	아이|어린이|아이들
+# == English: academic / technical (고급)
+economy	top3	경제
+democracy	first	민주주의
+election	first	선거
+constitution	top3	헌법
+environment	top3	환경
+pollution	top3	오염|공해
+photosynthesis	top3	광합성
+semiconductor	top3	반도체
+hypothesis	top3	가설
+metaphor	top3	은유|비유
+sovereignty	top3	주권
+impeachment	top3	탄핵
+embezzlement	top3	횡령
+bribery	top5	뇌물|뇌물 수수|증수회
+mortgage	top5	저당|담보|모기지|담보 대출
+dividend	top3	배당|배당금
+bankruptcy	top3	파산|도산
+recession	top5	불황|경기 침체|불경기|경기침체
+inflation	top3	인플레이션|물가 상승|통화 팽창
+algorithm	top3	알고리즘
+investment	top3	투자
+contract	top3	계약
+tax	top3	세금
+responsibility	top3	책임
+# == English-result hanja: the reading the meaning needs, never a wrong one
+gift shop	hanja5	선물 가게=膳物
+gift	nothanja20	선물=先物
+forward contract	hanja10	선물 계약=先物|선물환=先物換
+water	nothanja20	물=物
+love	nothanja20	사랑=舍廊
+stomach	nothanja30	배가 부르다=倍加
+# == hanja queries
+學校	first	학교
+先物	first	선물
+膳物	first	선물
+大韓民國	first	대한민국
+經濟	first	경제
+民主主義	first	민주주의
+學	top10	학교|학생|학문|대학
+# == 고급 vocabulary
+미묘하다	first	미묘하다
+모호하다	first	모호하다
+고질적	first	고질적
+편견	first	편견
+양극화	first	양극화
+저출산	first	저출산
+고령화	first	고령화
+불가피하다	first	불가피하다
+간과하다	first	간과하다
+도모하다	first	도모하다
+취약하다	first	취약하다
+역설	first	역설
+지양하다	first	지양하다
+막론하다	first	막론하다
+회의적	first	회의적
+경각심	first	경각심
+간과했다	first	간과하다
+도모하여	first	도모하다
+비롯한	first	비롯하다
+막론하고	top3	막론하다	ok	막론하고 is a headword too
+부각되었다	first	부각되다
+# == phrases, idioms, proverbs
+눈이 높다	top3	눈이 높다	known	idioms are inside entries, not headwords: nothing found
+발이 넓다	top3	발이 넓다	known	idioms are inside entries, not headwords: nothing found
+손이 크다	top3	손이 크다
+미역국을 먹다	top3	미역국을 먹다	known	idioms are inside entries, not headwords: nothing found
+그림의 떡	top3	그림의 떡
+식은 죽 먹기	top3	식은 죽 먹기
+하늘의 별 따기	top3	하늘의 별 따기
+티끌 모아 태산	top3	티끌 모아 태산
+우물 안 개구리	top3	우물 안 개구리|우물 안 개구리[고기]
+가는 날이 장날	top3	가는 날이 장날
+시치미를 떼다	top3	시치미를 떼다	known	idioms are inside entries, not headwords: nothing found
+눈코 뜰 새 없다	top3	눈코 뜰 새 없다	known	idioms are inside entries, not headwords: nothing found
+고생 끝에 낙이 온다	top3	고생 끝에 낙이 온다
+수고하셨습니다	top3	수고하다
+안녕하세요	top3	안녕하다|안녕하세요
+감사합니다	top3	감사하다|감사합니다
+# == initial consonants, mixed script
+ㅎㄱ	top5	학교|한국
+ㄱㅅ	top10	감사|가수|감사하다
+학교 school	first	학교

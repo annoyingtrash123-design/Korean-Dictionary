@@ -733,100 +733,287 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
     Ok(SearchResult { mode: "english", rows: out, hanja: None, deconj: None, grammar_hints: None, ..Default::default() })
 }
 
-/// Hanja for English results: English-dictionary rows (kengdic, Wiktionary…) mostly carry none,
-/// while 표준/우리말샘 have it for the same words. Each space-separated part of the headword
-/// (선물 가게 → 선물 + 가게) takes the hanja the packs give that word; a part with several (선물:
-/// 膳物 "gift" / 先物 "futures") takes the one whose dictionary words share English with the row
-/// ("gift shop" → 膳物 가게), and when nothing decides, the row is left without hanja. Every part
-/// must be a dictionary word, so a part with a particle (선물로) leaves the row as it is.
-fn fill_hanja(packs: &[&PackDb], rows: &mut [ResultRow]) -> Result<()> {
-    let has = |h: &Option<String>| h.as_deref().is_some_and(|h| !h.is_empty());
-    let mut parts: Vec<String> = rows
-        .iter()
-        .filter(|r| !has(&r.hanja))
-        .flat_map(|r| {
-            let mut v: Vec<String> = r.headword.split_whitespace().map(crate::hangul::norm_headword).collect();
-            v.push(r.hw_norm.clone()); // the whole phrase first: 선물 계약 → 先物契約
-            v
-        })
-        .collect();
-    parts.sort();
-    parts.dedup();
-    if parts.is_empty() {
-        return Ok(());
+/// Sources that record hanja for their Sino-Korean words: an entry of theirs without hanja is a
+/// native word or loanword (물, 사랑, 생각), never a Sino word that lost its hanja.
+const HANJA_SOURCES: &[&str] = &["krdict", "stdict", "opendict"];
+
+/// Candidates of a part read as an inflected form (가진 → 가지다, 극의 → 극) checked against the packs.
+const SUSPECT_LEMMAS: usize = 6;
+
+/// (shared words, all words) between the row's English and what a bare hanja word means.
+type EvidenceFn<'a> = dyn FnMut(&str, &HashSet<String>) -> Result<(usize, usize)> + 'a;
+
+/// What one headword part shows.
+#[derive(Debug, PartialEq)]
+enum Reading {
+    /// The hanja candidate with this index.
+    Hanja(usize),
+    /// The part as written (it reads as a native word / loanword).
+    Bare,
+    /// No clear winner: the row keeps no hanja at all.
+    Undecided,
+}
+
+/// Choose a part's reading by English evidence. `scores[i]` is how many content words the row's
+/// gloss shares with the dictionary words written with hanja candidate `i`; `native` the same for
+/// a native word / loanword of that spelling, when the packs have one. A reading wins with at
+/// least one shared word and at least twice as many as the runner-up. Only a lone hanja reading
+/// of a `safe` part (two or more syllables, not readable as an inflected form or noun + particle)
+/// needs no evidence.
+fn choose_reading(scores: &[usize], native: Option<usize>, safe: bool) -> Reading {
+    if scores.len() == 1 && native.is_none() && safe {
+        return Reading::Hanja(0);
     }
-    // part -> (known word?, distinct hanja as shown keyed by their bare characters)
-    let mut known: HashSet<String> = HashSet::new();
-    let mut cands: HashMap<String, Vec<(String, String)>> = HashMap::new();
-    for (hw, r) in rows_by_keys(packs, KeyCol::Headword, &parts, None)? {
-        known.insert(hw.clone());
-        if let Some(h) = r.hanja {
-            let bare: String = h.chars().filter(|&c| crate::hangul::is_han(c)).collect();
-            let v = cands.entry(hw).or_default();
-            if !bare.is_empty() && !v.iter().any(|(_, b)| *b == bare) {
-                v.push((h, bare));
-            }
-        }
+    let mut all: Vec<(usize, Option<usize>)> = scores.iter().enumerate().map(|(i, &n)| (n, Some(i))).collect();
+    all.extend(native.map(|n| (n, None)));
+    all.sort_by_key(|x| std::cmp::Reverse(x.0));
+    let Some(&(best, which)) = all.first() else { return Reading::Bare };
+    let second = all.get(1).map_or(0, |x| x.0);
+    if best == 0 || best < 2 * second {
+        return Reading::Undecided;
     }
-    let mut evidence: HashMap<String, HashSet<String>> = HashMap::new(); // bare hanja -> English words
-    for r in rows.iter_mut().filter(|r| !r.hanja.as_deref().is_some_and(|h| !h.is_empty())) {
-        let whole: Vec<String> = vec![r.hw_norm.clone()];
-        let split: Vec<String> = r.headword.split_whitespace().map(crate::hangul::norm_headword).collect();
-        let shown_whole: Vec<&str> = vec![r.headword.as_str()];
-        let shown_split: Vec<&str> = r.headword.split_whitespace().collect();
-        let (ps, shown_parts) = if cands.contains_key(&r.hw_norm) { (whole, shown_whole) } else { (split, shown_split) };
-        if !ps.iter().all(|p| known.contains(p)) || !ps.iter().any(|p| cands.contains_key(p)) {
-            continue;
-        }
-        let words = en_words(r.gloss.as_deref().unwrap_or(""));
-        let mut out: Vec<String> = Vec::new();
-        let mut ok = true;
-        for (p, shown) in ps.iter().zip(shown_parts) {
-            match cands.get(p).map(Vec::as_slice) {
-                None | Some([]) => out.push(shown.to_string()),
-                Some([(h, _)]) => out.push(h.clone()),
-                Some(many) => {
-                    let mut best: Option<(&String, usize)> = None;
-                    let mut tie = false;
-                    for (h, bare) in many {
-                        if !evidence.contains_key(bare) {
-                            let ev = hanja_english(packs, bare)?;
-                            evidence.insert(bare.clone(), ev);
+    which.map_or(Reading::Bare, Reading::Hanja)
+}
+
+/// What the packs say about the spellings of the result headwords and their parts.
+#[derive(Default)]
+struct Spellings {
+    /// spelling -> distinct hanja as shown, with their bare characters
+    hanja: HashMap<String, Vec<(String, String)>>,
+    /// spelling -> English words of its native / loanword entries (in [`HANJA_SOURCES`])
+    native: HashMap<String, HashSet<String>>,
+    /// spellings that are a dictionary word in some pack
+    known: HashSet<String>,
+}
+
+impl Spellings {
+    fn read(packs: &[&PackDb], keys: &[String]) -> Result<Spellings> {
+        let mut s = Spellings::default();
+        for p in packs {
+            for chunk in keys.chunks(40) {
+                let ph = (1..=chunk.len()).map(|i| format!("?{i}")).collect::<Vec<_>>().join(",");
+                let sql = format!("SELECT e.hw_norm, e.hanja, e.source, e.gloss FROM entries e WHERE e.hw_norm IN ({ph}) ORDER BY e.rank");
+                let params: Vec<Val> = chunk.iter().map(|k| Val::Text(k.clone())).collect();
+                for r in p.conn.query(&sql, &params)? {
+                    let hw = r.string(0);
+                    s.known.insert(hw.clone());
+                    let shown = r.string(1);
+                    let bare: String = shown.chars().filter(|&c| is_han(c)).collect();
+                    if !bare.is_empty() {
+                        let v = s.hanja.entry(hw).or_default();
+                        if !v.iter().any(|(_, b)| *b == bare) {
+                            v.push((shown, bare));
                         }
-                        let n = evidence[bare].intersection(&words).count();
-                        match best {
-                            Some((_, b)) if n == b => tie = true,
-                            Some((_, b)) if n < b => {}
-                            _ => {
-                                best = Some((h, n));
-                                tie = false;
-                            }
-                        }
-                    }
-                    match best {
-                        Some((h, n)) if n > 0 && !tie => out.push(h.clone()),
-                        _ => {
-                            ok = false;
-                            break;
+                    } else if HANJA_SOURCES.contains(&r.string(2).as_str()) {
+                        let g = r.string(3);
+                        let ev = s.native.entry(hw).or_default();
+                        if !has_hangul(&g) {
+                            ev.extend(en_words(&g));
                         }
                     }
                 }
             }
         }
-        if ok {
+        Ok(s)
+    }
+}
+
+/// Spellings that are a dictionary word in some pack.
+fn known_spellings(packs: &[&PackDb], keys: &[String]) -> Result<HashSet<String>> {
+    let mut out = HashSet::new();
+    for p in packs {
+        for chunk in keys.chunks(40) {
+            let ph = (1..=chunk.len()).map(|i| format!("?{i}")).collect::<Vec<_>>().join(",");
+            let sql = format!("SELECT DISTINCT hw_norm FROM entries WHERE hw_norm IN ({ph})");
+            let params: Vec<Val> = chunk.iter().map(|k| Val::Text(k.clone())).collect();
+            out.extend(p.conn.query(&sql, &params)?.iter().map(|r| r.string(0)));
+        }
+    }
+    Ok(out)
+}
+
+/// Hanja for English results: kengdic rows carry none, while 표준/우리말샘/krdict have it for
+/// the same words. Each space-separated part of the headword (선물 가게 → 선물 + 가게), or the
+/// whole phrase when the packs know it, takes the hanja the packs give that spelling. A wrong
+/// hanja is worse than none (audited by hand on ~140 real queries), so:
+/// * a part takes a hanja without English evidence only when it is the only reading of a word of
+///   3+ syllables that cannot be an inflected form or noun + particle (도서관학 → 圖書館學);
+/// * otherwise (선물: 膳物 "gift" / 先物 "futures"; 배: native "pear, ship" / 倍 / 杯…) the row's
+///   English must point clearly at one reading ([`choose_reading`]), or the row is left without;
+/// * in a phrase, a word must not mean something else (환경 보호국 "agency" is not 保護國), and a
+///   compound must not imply a reading of its first two syllables the English rejects (사례사
+///   "case history" is not 謝禮辭);
+/// * every part must be a dictionary word (선물로 leaves the row as it is), and rows of
+///   dictionaries that record hanja ([`HANJA_SOURCES`]) are never filled: they are native words.
+fn fill_hanja(packs: &[&PackDb], rows: &mut [ResultRow]) -> Result<()> {
+    let wants = |r: &ResultRow| !r.hanja.as_deref().is_some_and(|h| !h.is_empty()) && !HANJA_SOURCES.contains(&r.source.as_str());
+    let split = |r: &ResultRow| -> Vec<String> { r.headword.split_whitespace().map(norm_headword).collect() };
+    let mut keys: Vec<String> = rows
+        .iter()
+        .filter(|r| wants(r))
+        .flat_map(|r| {
+            let mut v = split(r);
+            v.push(r.hw_norm.clone()); // the whole phrase first: 선물 계약 → 先物契約
+            v
+        })
+        .collect();
+    // the first two syllables of longer words, to check the reading a compound implies (below)
+    let heads: Vec<String> = keys.iter().filter(|k| k.chars().count() >= 3).map(|k| k.chars().take(2).collect()).collect();
+    keys.extend(heads);
+    keys.sort();
+    keys.dedup();
+    if keys.is_empty() {
+        return Ok(());
+    }
+    let sp = Spellings::read(packs, &keys)?;
+
+    // Spellings with hanja that may instead be an inflected form or noun + particle of another
+    // dictionary word: 가진 (가지다), 친한 (친하다), 극의 (극 + 의), 전화로 (전화 + 로).
+    // (lemmas ending in 다 from an adnominal ending; other lemmas that are a prefix of the spelling)
+    let mut lemmas: HashMap<String, (Vec<String>, Vec<String>)> = HashMap::new();
+    for k in sp.hanja.keys() {
+        let adnominal = k.chars().last().and_then(crate::hangul::final_of).is_some_and(|f| f == 'ㄴ' || f == 'ㄹ');
+        let (mut verbs, mut stems) = (Vec::new(), Vec::new());
+        for c in deconjugate(k).into_iter().take(SUSPECT_LEMMAS) {
+            if c.lemma == *k || k.ends_with('다') {
+                continue;
+            }
+            if c.lemma.ends_with('다') {
+                if adnominal && c.rule.starts_with("adnominal") {
+                    verbs.push(c.lemma);
+                }
+            } else if k.starts_with(&c.lemma) {
+                stems.push(c.lemma);
+            }
+        }
+        lemmas.insert(k.clone(), (verbs, stems));
+    }
+    let mut lemma_keys: Vec<String> = lemmas.values().flat_map(|(v, s)| v.iter().chain(s)).cloned().collect();
+    lemma_keys.sort();
+    lemma_keys.dedup();
+    let lemma_known = known_spellings(packs, &lemma_keys)?;
+    // Whether a lone hanja reading of `p` may be taken without evidence. Two-syllable Sino words
+    // have many homographs, of which the packs may list only an unrelated one (마두 "horsepox" is
+    // 馬痘, the packs only have 馬頭): they always need evidence. A whole one-word headword written
+    // fully in hanja (가계도 家系圖, 진주만 眞珠灣) is a word, not noun + particle.
+    let safe = |p: &str, whole_word: bool| {
+        let syl = p.chars().count();
+        let Some((verbs, stems)) = lemmas.get(p) else { return false };
+        let full = sp.hanja[p].iter().all(|(_, b)| b.chars().count() == syl);
+        syl >= 3
+            && !verbs.iter().any(|l| lemma_known.contains(l))
+            && (whole_word && full || !stems.iter().any(|l| lemma_known.contains(l)))
+    };
+
+    // bare hanja -> English words of the dictionary words written with it (computed on demand)
+    let mut evidence: HashMap<String, HashSet<String>> = HashMap::new();
+    // (shared words, all words)
+    let mut ev = |bare: &str, words: &HashSet<String>| -> Result<(usize, usize)> {
+        if !evidence.contains_key(bare) {
+            evidence.insert(bare.to_string(), hanja_english(packs, bare)?);
+        }
+        Ok((evidence[bare].intersection(words).count(), evidence[bare].len()))
+    };
+    // The reading of spelling `p` that the English `words` point at (see `choose_reading`).
+    let read = |p: &str, words: &HashSet<String>, safe: bool, ev: &mut EvidenceFn| -> Result<Reading> {
+        let cands = &sp.hanja[p];
+        let native = sp.native.get(p).map(|e| e.intersection(words).count());
+        if cands.len() == 1 && native.is_none() && safe {
+            return Ok(Reading::Hanja(0));
+        }
+        let mut scores = Vec::with_capacity(cands.len());
+        for (_, bare) in cands {
+            scores.push(ev(bare, words)?.0);
+        }
+        Ok(choose_reading(&scores, native, safe))
+    };
+
+    for r in rows.iter_mut().filter(|r| wants(r)) {
+        let (ps, shown): (Vec<String>, Vec<&str>) = if sp.hanja.contains_key(&r.hw_norm) {
+            (vec![r.hw_norm.clone()], vec![r.headword.as_str()])
+        } else {
+            (split(r), r.headword.split_whitespace().collect())
+        };
+        if !ps.iter().all(|p| sp.known.contains(p)) || !ps.iter().any(|p| sp.hanja.contains_key(p)) {
+            continue;
+        }
+        let words = en_words(r.gloss.as_deref().unwrap_or(""));
+        let whole_word = ps.len() == 1 && !r.headword.trim().contains(char::is_whitespace);
+        let mut out: Vec<String> = Vec::new();
+        let mut filled = false;
+        let mut decided = true;
+        for (p, shown) in ps.iter().zip(shown) {
+            if !sp.hanja.contains_key(p) {
+                out.push(shown.to_string());
+                continue;
+            }
+            match read(p, &words, safe(p, whole_word), &mut ev)? {
+                Reading::Hanja(i) => {
+                    let (h, bare) = &sp.hanja[p][i];
+                    // In a phrase, a word taken on its own must not mean something else: what the
+                    // packs' words written 保護國 mean ("protected state") shares nothing with
+                    // 환경 보호국 "Environmental Protection Agency" (保護局).
+                    if ps.len() > 1 {
+                        let (shared, all) = ev(bare, &words)?;
+                        if shared == 0 && all > 0 {
+                            decided = false;
+                            break;
+                        }
+                    }
+                    // A compound's hanja implies a reading of its first two syllables: when the
+                    // English points at another one (사례사 "case history": 事例, not 謝禮辭), the
+                    // compound is a different word.
+                    let syl: Vec<char> = p.chars().collect();
+                    let han: Vec<char> = bare.chars().collect();
+                    if syl.len() >= 3 && han.len() == syl.len() {
+                        let head: String = syl[..2].iter().collect();
+                        let head_han: String = han[..2].iter().collect();
+                        let other = sp.hanja.contains_key(&head)
+                            && match read(&head, &words, false, &mut ev)? {
+                                Reading::Hanja(j) => sp.hanja[&head][j].1 != head_han,
+                                Reading::Bare => true,
+                                Reading::Undecided => false,
+                            };
+                        if other {
+                            decided = false;
+                            break;
+                        }
+                    }
+                    out.push(h.clone());
+                    filled = true;
+                }
+                Reading::Bare => out.push(shown.to_string()),
+                Reading::Undecided => {
+                    decided = false;
+                    break;
+                }
+            }
+        }
+        if decided && filled {
             r.hanja = Some(out.join(" "));
         }
     }
     Ok(())
 }
 
-/// Lower-cased content words of an English gloss.
+/// Lower-cased content words of an English gloss. Function words and very general words
+/// ("make", "thing", "state"…) are left out: they appear in the glosses of unrelated words and
+/// would otherwise decide which hanja a word gets.
 fn en_words(s: &str) -> HashSet<String> {
-    const STOP: &[&str] = &["a", "an", "the", "of", "to", "and", "or", "in", "on", "for", "with", "be", "by", "as", "at", "one", "s", "sth", "sb", "someone", "something"];
+    const STOP: &[&str] = &[
+        "a", "an", "the", "of", "to", "and", "or", "in", "on", "for", "with", "be", "by", "as", "at", "one", "s", "sth", "sb",
+        "someone", "something", "somebody", "it", "its", "is", "are", "not", "no", "from", "into", "up", "out", "off", "about",
+        "that", "this", "which", "who", "what", "etc", "e", "g", "i", "ie", "eg", "very", "much", "more", "most", "other",
+        "get", "make", "do", "have", "take", "give", "go", "come", "put", "set", "let", "keep", "become", "being", "use", "used",
+        "thing", "person", "people", "man", "state", "act", "action", "way", "kind", "sort", "type", "part", "form", "place",
+        "time", "matter", "fact", "having", "making", "doing", "one's", "oneself", "certain",
+        "general", "good", "bad", "great", "small", "large", "big", "new", "old",
+    ];
     s.split(|c: char| !c.is_ascii_alphabetic())
         .map(str::to_ascii_lowercase)
         .filter(|w| w.len() > 1 && !STOP.contains(&w.as_str()))
         .map(|w| w.strip_suffix('s').filter(|t| t.len() > 2).map(str::to_string).unwrap_or(w))
+        .filter(|w| !STOP.contains(&w.as_str()))
         .collect()
 }
 
@@ -839,7 +1026,7 @@ fn hanja_english(packs: &[&PackDb], bare: &str) -> Result<HashSet<String>> {
         let sql = "SELECT e.gloss FROM entries e WHERE e.hanja >= ?1 AND e.hanja < ?2 AND e.gloss IS NOT NULL ORDER BY e.rank LIMIT 40";
         for r in p.conn.query(sql, &[bare.into(), hi.as_str().into()])? {
             let g = r.string(0);
-            if !crate::hangul::has_hangul(&g) {
+            if !has_hangul(&g) {
                 out.extend(en_words(&g));
             }
         }

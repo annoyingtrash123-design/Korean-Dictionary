@@ -942,3 +942,170 @@ fn word_chain_moves_and_checks() {
     assert!(chain_check(&packs, "가다").unwrap().is_none());
     assert!(chain_check(&packs, "학").unwrap().is_none());
 }
+
+// ---- hanja for English results (`fill_hanja`) ------------------------------------------------
+
+/// core: kengdic rows without hanja + krdict words (English glosses = evidence of meaning);
+/// stdict: hanja for the same spellings, Korean definitions only.
+fn hanja_fixture() -> (PackDb, PackDb) {
+    const CORE_H: &[E] = &[
+        e(1, "선물", Some("膳物"), "noun", "krdict", Some(1), 100, "gift; present", &[]),
+        e(2, "계약", Some("契約"), "noun", "krdict", Some(2), 110, "contract; agreement", &[]),
+        e(3, "가게", None, "noun", "krdict", Some(1), 120, "store; shop", &[]),
+        e(4, "배", None, "noun", "krdict", Some(1), 130, "ship; pear; belly", &[]),
+        e(5, "가다", None, "verb", "krdict", Some(1), 140, "to go", &[]),
+        e(6, "사랑", None, "noun", "krdict", Some(1), 150, "love", &[]),
+        e(7, "선물환", Some("先物換"), "noun", "krdict", Some(6), 160, "forward exchange", &[]),
+        e(20, "선물 가게", None, "phrase", "kengdic", None, 9000, "gift shop", &[]),
+        e(21, "선물 계약", None, "phrase", "kengdic", None, 9000, "forward contract", &[]),
+        e(22, "선물", None, "noun", "kengdic", None, 9000, "souvenir", &[]),
+        e(23, "선물로 주다", None, "phrase", "kengdic", None, 9000, "to give as a gift", &[]),
+        e(24, "배로 가다", None, "phrase", "kengdic", None, 9000, "to go by ship", &[]),
+        e(25, "도서관학", None, "noun", "kengdic", None, 9000, "library science", &[]),
+        e(26, "마두", None, "noun", "kengdic", None, 9000, "horsepox", &[]),
+        e(27, "선물", None, "noun", "kengdic", None, 9000, "futures", &[]),
+    ];
+    const STDICT_H: &[E] = &[
+        e(1, "선물", Some("先物"), "noun", "stdict", None, 9100, "장래의 일정한 시기에 현품을 넘겨준다는 조건으로 매매 계약을 하는 거래 종목.", &[]),
+        e(2, "선물", Some("膳物"), "noun", "stdict", None, 9100, "남에게 어떤 물건 따위를 선사함.", &[]),
+        e(3, "가게", None, "noun", "stdict", None, 9110, "작은 규모로 물건을 파는 집.", &[]),
+        e(4, "배로", Some("焙爐"), "noun", "stdict", None, 9120, "불을 담아 두는 그릇.", &[]),
+        e(5, "도서관학", Some("圖書館學"), "noun", "stdict", None, 9130, "도서관에 관한 학문.", &[]),
+        e(6, "마두", Some("馬頭"), "noun", "stdict", None, 9140, "역마에 관한 일을 맡아보던 사람.", &[]),
+        e(7, "사랑", Some("舍廊"), "noun", "stdict", None, 9150, "집의 안채와 떨어져 있는 바깥주인의 거처.", &[]),
+        e(8, "선물거래", Some("先物去來"), "noun", "stdict", None, 9160, "futures trading", &[]),
+    ];
+    let open = |id: &str, items: &[E]| {
+        let c = Conn::open_memory().unwrap();
+        c.exec(SCHEMA).unwrap();
+        insert(&c, id, items);
+        PackDb::new(id, c).unwrap()
+    };
+    (open("core", CORE_H), open("stdict", STDICT_H))
+}
+
+/// The hanja `fill_hanja` gives each fixture row, by core id.
+fn filled(packs: &[&PackDb], ids: &[i64]) -> Vec<Option<String>> {
+    let mut rows: Vec<ResultRow> = ids
+        .iter()
+        .map(|id| {
+            let r = &packs[0].conn.query(&format!("SELECT {COLS} FROM entries e WHERE e.id = ?1"), &[(*id).into()]).unwrap()[0];
+            result_row("core", r, Some("fts"))
+        })
+        .collect();
+    fill_hanja(packs, &mut rows).unwrap();
+    rows.into_iter().map(|r| r.hanja).collect()
+}
+
+#[test]
+fn english_rows_take_hanja_by_meaning() {
+    let (core, st) = hanja_fixture();
+    let packs = [&core, &st];
+    let h = |id| filled(&packs, &[id]).remove(0);
+    // a part with several hanja takes the one whose words share the row's English
+    assert_eq!(h(20).as_deref(), Some("膳物 가게"), "gift shop");
+    assert_eq!(h(21).as_deref(), Some("先物 契約"), "forward contract");
+    assert_eq!(h(27).as_deref(), Some("先物"), "futures");
+    // the only reading of a longer word needs no evidence
+    assert_eq!(h(25).as_deref(), Some("圖書館學"));
+    // ambiguous without English evidence: nothing
+    assert_eq!(h(22), None, "선물 'souvenir'");
+    // a part with a particle: not a dictionary word (선물로), or a word that is also noun +
+    // particle (배로 焙爐 / 배 + 로)
+    assert_eq!(h(23), None);
+    assert_eq!(h(24), None);
+    // a two-syllable word whose only listed hanja may be a homograph (馬頭; horsepox is 馬痘)
+    assert_eq!(h(26), None);
+    // krdict marks its Sino words: its rows without hanja are native words (사랑 is not 舍廊)
+    assert_eq!(h(6), None);
+    assert_eq!(h(3), None);
+    // already written rows are left as they are
+    assert_eq!(h(1).as_deref(), Some("膳物"));
+}
+
+#[test]
+fn reading_needs_a_clear_margin() {
+    use Reading::*;
+    assert_eq!(choose_reading(&[0], None, true), Hanja(0)); // lone reading of a safe word
+    assert_eq!(choose_reading(&[0], None, false), Undecided);
+    assert_eq!(choose_reading(&[1], None, false), Hanja(0));
+    assert_eq!(choose_reading(&[2, 1], None, false), Hanja(0));
+    assert_eq!(choose_reading(&[0, 1], None, true), Hanja(1));
+    assert_eq!(choose_reading(&[1, 1], None, true), Undecided);
+    assert_eq!(choose_reading(&[3, 2], None, true), Undecided);
+    assert_eq!(choose_reading(&[0, 0], None, true), Undecided);
+    // a native word of the same spelling competes like any reading
+    assert_eq!(choose_reading(&[0], Some(1), true), Bare);
+    assert_eq!(choose_reading(&[2], Some(1), true), Hanja(0));
+    assert_eq!(choose_reading(&[1], Some(1), true), Undecided);
+}
+
+#[test]
+fn generic_english_is_no_evidence() {
+    let w = en_words("to make something; a thing or a person; state of things");
+    assert!(w.is_empty(), "{w:?}");
+    let w = en_words("Futures contracts; a gift");
+    assert_eq!(w, ["future", "contract", "gift"].iter().map(|s| s.to_string()).collect());
+}
+
+/// Packs for the real-data checks: `$KDICT_PACKS` (a folder of unpacked `<pack>.sqlite`), else
+/// the pipeline's output folder.
+fn real_packs_dir() -> std::path::PathBuf {
+    std::env::var_os("KDICT_PACKS")
+        .map(std::path::PathBuf::from)
+        .unwrap_or_else(|| std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out"))
+}
+
+/// Audit of `fill_hanja` on real data: every English-result row that got its hanja from another
+/// pack, with each reading's evidence (shared/all English words) per part, one tab-separated line
+/// per row on stdout. Queries one per line in `$KDICT_AUDIT_QUERIES`:
+/// `KDICT_PACKS=dir KDICT_AUDIT_QUERIES="$(cat q.txt)" cargo test --release -p kdict-core --lib hanja_fill_audit -- --ignored --nocapture`
+#[test]
+#[ignore]
+fn hanja_fill_audit() {
+    let dir = real_packs_dir();
+    let packs = open_cold(&dir);
+    if packs.is_empty() {
+        eprintln!("skipping: no packs in {}", dir.display());
+        return;
+    }
+    let refs: Vec<&PackDb> = packs.iter().collect();
+    let queries = std::env::var("KDICT_AUDIT_QUERIES").unwrap_or_default();
+    let mut n = 0;
+    for q in queries.lines().map(str::trim).filter(|q| !q.is_empty() && !q.starts_with('#')) {
+        let r = search(&refs, q, None).unwrap();
+        for row in &r.rows {
+            let Some(h) = row.hanja.as_deref().filter(|h| !h.is_empty()) else { continue };
+            let p = refs.iter().find(|p| p.id == row.pack).unwrap();
+            let orig = p.conn.query("SELECT hanja FROM entries WHERE id = ?1", &[row.id.into()]).unwrap()[0].text(0);
+            if orig.is_some_and(|o| !o.is_empty()) {
+                continue;
+            }
+            // per part: each hanja reading with its evidence count, the native reading if any
+            let mut keys: Vec<String> = row.headword.split_whitespace().map(norm_headword).collect();
+            keys.push(row.hw_norm.clone());
+            let sp = Spellings::read(&refs, &keys).unwrap();
+            let words = en_words(row.gloss.as_deref().unwrap_or(""));
+            let mut why: Vec<String> = Vec::new();
+            for k in &keys {
+                let Some(c) = sp.hanja.get(k) else { continue };
+                let mut s: Vec<String> = c
+                    .iter()
+                    .map(|(_, b)| {
+                        let ev = hanja_english(&refs, b).unwrap();
+                        let mut m: Vec<&String> = ev.intersection(&words).collect();
+                        m.sort();
+                        format!("{b}={}/{}{m:?}", m.len(), ev.len())
+                    })
+                    .collect();
+                if let Some(ev) = sp.native.get(k) {
+                    s.push(format!("native={}", ev.intersection(&words).count()));
+                }
+                why.push(format!("{k}: {}", s.join(" ")));
+            }
+            n += 1;
+            println!("{q}\t{}\t{}\t{}\t{h}\t{}", row.source, row.headword, row.gloss.as_deref().unwrap_or(""), why.join(" | "));
+        }
+    }
+    eprintln!("{n} rows filled");
+}
