@@ -11,7 +11,7 @@ export const isStandalone = (): boolean =>
 /** Ask the browser to keep our storage; false when denied or unsupported. */
 export async function requestPersist(): Promise<boolean> {
   let ok = false;
-  try { ok = (await navigator.storage?.persisted?.()) || (await navigator.storage?.persist?.()) || false; } catch { /* unsupported */ }
+  try { ok = (await navigator.storage?.persisted?.()) || (await navigator.storage?.persist?.()) || false; } catch { /* Storage API unsupported or denied: expected, not an error */ }
   persisted$.set(ok);
   return ok;
 }
@@ -19,5 +19,5 @@ export async function requestPersist(): Promise<boolean> {
 export const needsHomeScreenHint = (persisted: boolean | undefined, standalone: boolean, dismissed: boolean) =>
   persisted === false && !standalone && !dismissed;
 
-export const hintDismissed = (): boolean => { try { return localStorage.getItem(KEY) === '1'; } catch { return false; } };
-export const dismissHint = () => { try { localStorage.setItem(KEY, '1'); } catch { /* */ } };
+export const hintDismissed = (): boolean => { try { return localStorage.getItem(KEY) === '1'; } catch { return false; /* storage unavailable */ } };
+export const dismissHint = () => { try { localStorage.setItem(KEY, '1'); } catch { /* storage unavailable: the hint just shows again */ } };

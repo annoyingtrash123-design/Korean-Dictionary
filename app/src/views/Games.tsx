@@ -1,3 +1,4 @@
+import { logError } from '../lib/errlog';
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { db } from '../db/client';
 import { Icon } from '../components/Icons';
@@ -18,9 +19,9 @@ interface Prefs { source: Source; length: Length }
 const PREFS_KEY = 'kd.games.v2';
 const DEFAULT_PREFS: Prefs = { source: { kind: 'level', level: 3 }, length: 'n10' };
 function loadPrefs(): Prefs {
-  try { return { ...DEFAULT_PREFS, ...JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') }; } catch { return DEFAULT_PREFS; }
+  try { return { ...DEFAULT_PREFS, ...JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') }; } catch { return DEFAULT_PREFS; /* storage unavailable or unparsable: defaults */ }
 }
-const savePrefs = (p: Prefs) => { try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch { /* */ } };
+const savePrefs = (p: Prefs) => { try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch { /* storage unavailable: preferences are optional */ } };
 
 type GameId = 'meaning' | 'type' | 'match' | 'gap' | 'cho' | 'chain';
 const GAMES: { id: GameId; ko: string; en: string; desc: string; usesWords: boolean }[] = [
@@ -61,6 +62,7 @@ export function GamesView() {
       const words = pickRound(usable, deck, Math.min(n, usable.length), Date.now());
       setPlaying({ game, pool, words });
     } catch (e) {
+      logError('games', e);
       setErr(String((e as Error)?.message ?? e));
     } finally { setBusy(null); }
   };

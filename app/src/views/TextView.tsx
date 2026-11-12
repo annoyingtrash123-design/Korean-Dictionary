@@ -1,3 +1,4 @@
+import { logError } from '../lib/errlog';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 import { db, packStatus$ } from '../db/client';
@@ -220,7 +221,7 @@ export function TextView({ id }: { id: string }) {
     setSel({ n, span: run });
     setLk({ match: null, loading: true, manual: false, text });
     let m: TextMatch;
-    try { m = await db.lookupInText(text, offset); } catch { m = { match: text.slice(run.start, run.end), start: run.start, end: run.end, rows: [] }; }
+    try { m = await db.lookupInText(text, offset); } catch (e) { logError('lookup', e); m = { match: text.slice(run.start, run.end), start: run.start, end: run.end, rows: [] }; }
     if (my !== seq.current) return;
     let span: Span = m.rows.length || m.hanja ? { start: m.start, end: m.end } : classOf(text.codePointAt(snapOffset(text, offset))!) === 'han' ? { start: snapOffset(text, offset), end: snapOffset(text, offset) + (text.codePointAt(snapOffset(text, offset))! > 0xffff ? 2 : 1) } : run;
     if (clampEndTo != null && span.end > clampEndTo && span.start < clampEndTo) { span = { start: span.start, end: clampEndTo }; }
@@ -235,9 +236,9 @@ export function TextView({ id }: { id: string }) {
     setSel({ n, span });
     setLk((l) => ({ ...l, loading: true, manual: true, text }));
     let m: TextMatch | null = null;
-    try { m = await db.lookupInText(sub, 0); } catch { /* fall through to plain search */ }
+    try { m = await db.lookupInText(sub, 0); } catch (e) { logError('lookup', e); /* fall through to plain search */ }
     if (!m || (!m.rows.length && !m.hanja)) {
-      try { const s = await db.search(sub, { limit: 12 }); if (s.rows.length) m = { match: sub, start: 0, end: sub.length, rows: s.rows, hanja: s.hanja?.[0] }; } catch { /* none */ }
+      try { const s = await db.search(sub, { limit: 12 }); if (s.rows.length) m = { match: sub, start: 0, end: sub.length, rows: s.rows, hanja: s.hanja?.[0] }; } catch (e) { logError('search', e); /* no match */ }
     }
     if (my !== seq.current) return;
     setLk({ match: { ...(m ?? { rows: [] }), match: sub, start: span.start, end: span.end, rows: m?.rows ?? [] }, loading: false, manual: true, text });

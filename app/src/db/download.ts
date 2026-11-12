@@ -3,6 +3,7 @@
 // 2. stream chunk files -> ONE DecompressionStream('gzip') -> engine.writeChunk (never buffers the DB).
 import { get, set, del } from 'idb-keyval';
 import type { Engine, ManifestPack, Progress } from './types';
+import { logError } from '../lib/errlog';
 import { bytesNeeded, freeSpaceProblem, isQuotaError, noSpaceMessage } from '../lib/storage';
 
 export interface InstalledRecord { version: string; bytes: number; installedAt: number }
@@ -49,7 +50,7 @@ async function fetchToFile(url: string, dir: FileSystemDirectoryHandle, name: st
 
 /** Remove the staging directory (downloaded gz chunks) and resume state of a pack. */
 export async function clearStaging(id: string) {
-  try { const root = await navigator.storage.getDirectory(); const top = await root.getDirectoryHandle(DL_DIR); await top.removeEntry(id, { recursive: true }); } catch { /* nothing staged */ }
+  try { const root = await navigator.storage.getDirectory(); const top = await root.getDirectoryHandle(DL_DIR); await top.removeEntry(id, { recursive: true }); } catch { /* nothing staged: expected when there is no staging folder */ }
   await del('dl:' + id).catch(() => undefined);
 }
 
@@ -59,6 +60,7 @@ export async function installPack(
   let verified = false; // set once all chunks are downloaded: from then on a failure leaves useless staging
   try { await installPackInner(engine, pack, manifestUrl, version, emit, () => { verified = true; }); }
   catch (e) {
+    logError('install:' + pack.id, e);
     // Disk-full errors get one actionable message; free the staging space either way.
     const quota = isQuotaError(e);
     if (verified || quota) await clearStaging(pack.id);
@@ -89,7 +91,7 @@ async function installPackInner(
       const f = await (await dir.getFileHandle(chunks[start].name)).getFile();
       if (chunks[start].bytes != null && f.size !== chunks[start].bytes) break;
       got += f.size;
-    } catch { break; }
+    } catch { break; } // expected: a chunk is missing or unreadable, so resume from here
   }
   const problem = freeSpaceProblem(await navigator.storage?.estimate?.().catch(() => undefined), bytesNeeded([pack], got));
   if (problem) throw new Error(problem);

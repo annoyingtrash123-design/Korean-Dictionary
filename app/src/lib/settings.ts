@@ -1,3 +1,4 @@
+import { logError } from './errlog';
 import { createStore } from './store';
 
 export type ThemeName = 'light' | 'dark' | 'sepia' | 'system';
@@ -29,7 +30,8 @@ export function migrateSettings(raw: any): Settings {
 export function loadSettings(): Settings {
   try {
     return migrateSettings(JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}'));
-  } catch {
+  } catch (e) {
+    logError('settings-load', e); // corrupt stored settings: fall back to defaults
     return { ...DEFAULT_SETTINGS };
   }
 }

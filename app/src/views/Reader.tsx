@@ -16,17 +16,17 @@ import type { Manifest, TextSummary } from '../lib/types';
 
 type View = 'shelves' | 'timeline';
 const VIEW_KEY = 'kd.reader.view';
-const loadView = (): View => { try { const v = localStorage.getItem(VIEW_KEY); return v === 'timeline' ? v : 'shelves'; } catch { return 'shelves'; } };
+const loadView = (): View => { try { const v = localStorage.getItem(VIEW_KEY); return v === 'timeline' ? v : 'shelves'; } catch { return 'shelves'; /* storage unavailable: default view */ } };
 const view$ = createStore<View>(loadView());
-view$.subscribe((v) => { try { localStorage.setItem(VIEW_KEY, v); } catch { /* */ } });
+view$.subscribe((v) => { try { localStorage.setItem(VIEW_KEY, v); } catch { /* storage unavailable: a view preference is optional */ } });
 const filters$ = createStore<Filters>({ ...NO_FILTERS });
 /** Shelf / period sections (`shelf:<id>`, `period:<id>`) start collapsed; the ones opened are
  *  remembered per device. While filters are active every section starts open instead, and
  *  `filterFolds$` (this session only) holds the ones closed meanwhile. */
 const OPEN_KEY = 'kd.reader.open';
-const loadOpen = (): string[] => { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } };
+const loadOpen = (): string[] => { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; /* storage unavailable or unparsable: nothing remembered */ } };
 const opened$ = createStore<string[]>(loadOpen());
-opened$.subscribe((v) => { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* */ } });
+opened$.subscribe((v) => { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* storage unavailable: a view preference is optional */ } });
 const filterFolds$ = createStore<string[]>([]);
 const flip = (k: string) => (p: string[]) => (p.includes(k) ? p.filter((x) => x !== k) : [...p, k]);
 

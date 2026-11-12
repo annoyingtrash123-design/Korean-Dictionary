@@ -21,7 +21,7 @@ export const TABS: { id: TabId; label: string; ko: string }[] = [
 ];
 const TAB_KEY = 'kd.entryTab';
 const isTab = (v: unknown): v is TabId => TABS.some((t) => t.id === v);
-let remembered: TabId = (() => { try { const v = localStorage.getItem(TAB_KEY); return isTab(v) ? v : 'dict'; } catch { return 'dict'; } })();
+let remembered: TabId = (() => { try { const v = localStorage.getItem(TAB_KEY); return isTab(v) ? v : 'dict'; } catch { return 'dict'; /* storage unavailable: default tab */ } })();
 
 /** Active tab: explicit ?tab= wins, else the last one chosen (Pleco-style). Chars falls back to Dict without hanja. */
 export function useEntryTab(hasHanja: boolean): [TabId, (t: TabId) => void] {
