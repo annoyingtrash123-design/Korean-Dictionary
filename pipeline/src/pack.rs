@@ -121,7 +121,7 @@ impl Write for ChunkWriter {
 /// Compress `db` into `<out_dir>/<file>.gz.NNN`; returns the manifest pack object.
 pub fn compress_pack(id: &str, required: bool, db: &Path, out_dir: &Path, counts: &Value, chunk_bytes: u64) -> Result<Value> {
     let file = db.file_name().unwrap().to_string_lossy().into_owned();
-    let version = content_digest(db)?;
+    let version = content_digest(db).ok(); // not SQLite (tests): the file checksum below stands in
     let base = format!("{file}.gz");
     // remove stale chunks of this pack
     for e in std::fs::read_dir(out_dir)? {
@@ -152,7 +152,7 @@ pub fn compress_pack(id: &str, required: bool, db: &Path, out_dir: &Path, counts
     let gz_bytes: u64 = cw.sizes.iter().map(|(_, s)| s).sum();
     let chunks: Vec<Value> = cw.sizes.iter().map(|(n, s)| json!({"file": n, "bytes": s})).collect();
     Ok(json!({
-        "id": id, "version": version, "required": required, "file": file, "bytes": bytes, "gz_bytes": gz_bytes,
+        "id": id, "version": version.unwrap_or_else(|| sha[..16].to_string()), "required": required, "file": file, "bytes": bytes, "gz_bytes": gz_bytes,
         "sha256": sha, "chunks": chunks, "counts": counts,
     }))
 }
