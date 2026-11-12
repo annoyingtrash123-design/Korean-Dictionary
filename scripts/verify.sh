@@ -24,6 +24,19 @@ fi
 grep -E "^test result" .git/verify-rust-tests.log
 step "rust: clippy"
 cargo clippy -q -p kdict-pipeline -p kdict-core -- -D warnings
+step "search benchmark: core/tests/golden_queries.tsv (needs unpacked packs)"
+# Only where the real packs are unpacked (a local pipeline build); CI's verify job has only the gzip chunks.
+PACKS="${KDICT_PACKS:-pipeline/out}"
+if [[ -f "$PACKS/core.sqlite" && -f "$PACKS/stdict.sqlite" ]]; then
+  GOLDEN_LOG="$(git rev-parse --git-dir)/verify-golden.log"
+  if ! KDICT_PACKS="$(cd "$PACKS" && pwd)" cargo test -q -p kdict-core --test golden -- --ignored --nocapture > "$GOLDEN_LOG" 2>&1; then
+    grep -E "^(FAIL|FIXED)|^score|panicked|^  line [0-9]+:" "$GOLDEN_LOG" || tail -20 "$GOLDEN_LOG"
+    echo "search benchmark: a check that used to pass now fails (full output in $GOLDEN_LOG)"; exit 1
+  fi
+  grep -E "^FIXED|^score|^now passing|^  line [0-9]+:" "$GOLDEN_LOG"
+else
+  echo "skipped: no $PACKS/core.sqlite + stdict.sqlite (set KDICT_PACKS to a folder of unpacked packs)"
+fi
 
 cd app
 if [[ $FAST == 0 ]]; then step "wasm: build:core"; npm run -s build:core >/dev/null; fi
