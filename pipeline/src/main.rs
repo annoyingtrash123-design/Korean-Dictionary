@@ -1,6 +1,6 @@
 
 use anyhow::Result;
-use kdict_pipeline::{build, fetch, pack};
+use kdict_pipeline::{build, fetch, pack, provenance};
 use kdict_pipeline::{texts_fetch, texts_news};
 use clap::{Parser, Subcommand};
 use std::path::PathBuf;
@@ -53,6 +53,12 @@ enum Cmd {
         /// Reader library sources (catalog.toml, raw/, enriched/); the `texts` pack is skipped when absent
         #[arg(long, default_value = "pipeline/texts")]
         texts: PathBuf,
+        /// Previous deploy's sources.json: log which sources changed since then (optional)
+        #[arg(long)]
+        prev_sources: Option<PathBuf>,
+        /// Previous deploy's manifest.json: warn when a pack's counts drop by more than 2% (optional)
+        #[arg(long)]
+        prev_manifest: Option<PathBuf>,
     },
     /// Reader: resolve the text catalogue against Wikisource etc. and write raw texts + provenance
     FetchTexts {
@@ -105,9 +111,12 @@ fn main() -> Result<()> {
     log::set_max_level(log::LevelFilter::Info);
     match Cli::parse().cmd {
         Cmd::Fetch { work } => fetch::run(&work),
-        Cmd::Build { work, out, limit_files, allow_partial, texts } => {
+        Cmd::Build { work, out, limit_files, allow_partial, texts, prev_sources, prev_manifest } => {
             let sources = build::Sources::discover(&work, limit_files);
+            let site = out.join("site-data");
             build::run(&build::BuildOpts { out, sources, chunk_bytes: pack::CHUNK_BYTES, allow_partial, texts: Some(texts) })?;
+            let cur = provenance::write_site(&work, &site)?;
+            provenance::report(&site, &cur, prev_sources.as_deref(), prev_manifest.as_deref());
             Ok(())
         }
         Cmd::FetchTexts { catalog, out, only, force, max_subpages, discover } => texts_fetch::run(&texts_fetch::Opts { catalog, out, only, force, max_subpages, discover }),

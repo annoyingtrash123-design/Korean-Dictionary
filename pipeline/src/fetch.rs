@@ -7,8 +7,19 @@ use std::path::Path;
 use std::process::{Command, Stdio};
 use std::time::Duration;
 
+use crate::provenance::{record_fetch, HttpMeta};
+
 pub const WORDNET_FILE: &str = "english-wordnet.xml.gz";
 pub const NIKL_URL: &str = "https://github.com/spellcheck-ko/korean-dict-nikl";
+/// Pin the NIKL mirror to a commit SHA (`None` = latest). `KDICT_NIKL_REF` overrides it. The commit
+/// actually used is always recorded in `sources.json`.
+pub const NIKL_PIN: Option<&str> = None;
+
+/// The pinned NIKL commit, if any (env var first, then [`NIKL_PIN`]).
+pub fn nikl_ref() -> Option<String> {
+    let r = std::env::var("KDICT_NIKL_REF").ok().filter(|s| !s.trim().is_empty()).or_else(|| NIKL_PIN.map(String::from));
+    r.map(|s| s.trim().to_string())
+}
 pub const FILES: &[(&str, &str)] = &[
     ("kaikki-ko.jsonl", "https://kaikki.org/dictionary/Korean/kaikki.org-dictionary-Korean.jsonl"),
     ("kengdic.tsv", "https://raw.githubusercontent.com/garfieldnate/kengdic/master/kengdic.tsv"),
@@ -143,7 +154,7 @@ pub fn download_filtered(url: &str, dest: &Path, keep: fn(&[u8]) -> bool, derive
     }
 }
 
-fn download_ureq(url: &str, tmp: &Path) -> Result<u64> {
+fn download_ureq(url: &str, tmp: &Path) -> Result<(u64, HttpMeta)> {
     let agent = ureq::AgentBuilder::new()
         .timeout_connect(Duration::from_secs(30))
         .timeout_read(Duration::from_secs(120))
@@ -151,9 +162,11 @@ fn download_ureq(url: &str, tmp: &Path) -> Result<u64> {
         .try_proxy_from_env(true)
         .build();
     let resp = agent.get(url).call().map_err(|e| anyhow!("{e}"))?;
+    let hdr = |n: &str| resp.header(n).map(String::from);
+    let meta = HttpMeta { url: url.into(), final_url: Some(resp.get_url().to_string()), last_modified: hdr("last-modified"), etag: hdr("etag") };
     let mut rd = resp.into_reader();
     let mut f = fs::File::create(tmp)?;
-    Ok(io::copy(&mut rd.by_ref(), &mut f)?)
+    Ok((io::copy(&mut rd.by_ref(), &mut f)?, meta))
 }
 
 fn download_curl(url: &str, tmp: &Path) -> Result<u64> {
@@ -164,7 +177,8 @@ fn download_curl(url: &str, tmp: &Path) -> Result<u64> {
     Ok(fs::metadata(tmp)?.len())
 }
 
-pub fn download(url: &str, dest: &Path) -> Result<()> {
+/// Download `url` to `dest`; returns the HTTP metadata (just the URL after a curl fallback).
+pub fn download(url: &str, dest: &Path) -> Result<HttpMeta> {
     if let Some(d) = dest.parent() {
         fs::create_dir_all(d)?;
     }
@@ -172,9 +186,9 @@ pub fn download(url: &str, dest: &Path) -> Result<()> {
     let mut last = None;
     for attempt in 0..2 {
         match download_ureq(url, &tmp) {
-            Ok(n) if n > 0 => {
+            Ok((n, meta)) if n > 0 => {
                 fs::rename(&tmp, dest)?;
-                return Ok(());
+                return Ok(meta);
             }
             Ok(_) => last = Some(anyhow!("empty download")),
             Err(e) => last = Some(e),
@@ -185,7 +199,7 @@ pub fn download(url: &str, dest: &Path) -> Result<()> {
     match download_curl(url, &tmp) {
         Ok(n) if n > 0 => {
             fs::rename(&tmp, dest)?;
-            Ok(())
+            Ok(HttpMeta { url: url.into(), ..Default::default() })
         }
         other => {
             let _ = fs::remove_file(&tmp);
@@ -219,6 +233,11 @@ pub fn fetch_nikl(work: &Path) -> Result<()> {
     if !dir.join(".git").exists() && !dir.join("krdict").exists() {
         git(&["clone", "--depth", "1", "--filter=blob:none", "--sparse", NIKL_URL, &dir.to_string_lossy()], None)?;
     }
+    if let (Some(r), true) = (nikl_ref(), dir.join(".git").exists()) {
+        // pinned: fetch exactly that commit (shallow) and detach onto it; never pull
+        git(&["fetch", "--depth", "1", "origin", &r], Some(&dir))?;
+        git(&["checkout", "--detach", "FETCH_HEAD"], Some(&dir))?;
+    }
     if dir.join(".git").exists() {
         git(&["sparse-checkout", "set", "krdict", "stdict", "opendict"], Some(&dir))?;
         // make sure every blob in the sparse set is materialised (no-op when already present)
@@ -226,14 +245,17 @@ pub fn fetch_nikl(work: &Path) -> Result<()> {
             log::warn!("NIKL checkout: {e:#}");
         }
         // idempotent refresh; ignore failure (offline reruns keep what we have)
-        if let Err(e) = git(&["pull", "--ff-only", "--depth", "1"], Some(&dir)) {
-            log::debug!("NIKL pull skipped: {e:#}");
+        if nikl_ref().is_none() {
+            if let Err(e) = git(&["pull", "--ff-only", "--depth", "1"], Some(&dir)) {
+                log::debug!("NIKL pull skipped: {e:#}");
+            }
         }
     }
     let n = |d: &str| fs::read_dir(dir.join(d)).map(|r| r.count()).unwrap_or(0);
     if n("krdict") == 0 {
         return Err(anyhow!("no krdict files after checkout"));
     }
+    log::info!("NIKL commit: {}{}", crate::provenance::git_head(&dir).unwrap_or_else(|| "unknown".into()), if nikl_ref().is_some() { " (pinned)" } else { " (latest)" });
     log::info!("NIKL: {} krdict files, {} stdict files", n("krdict"), n("stdict"));
     Ok(())
 }
@@ -278,7 +300,10 @@ pub fn run(work: &Path) -> Result<()> {
         }
         log::info!("downloading {url}");
         match download(url, &dest) {
-            Ok(()) => log::info!("{name}: {} bytes", fs::metadata(&dest).map(|m| m.len()).unwrap_or(0)),
+            Ok(meta) => {
+                log::info!("{name}: {} bytes", fs::metadata(&dest).map(|m| m.len()).unwrap_or(0));
+                record_fetch(work, name, meta);
+            }
             Err(e) => log::warn!("{name}: download failed ({url}): {e:#}"),
         }
     }
