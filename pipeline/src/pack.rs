@@ -156,3 +156,29 @@ pub fn compress_pack(id: &str, required: bool, db: &Path, out_dir: &Path, counts
         "sha256": sha, "chunks": chunks, "counts": counts,
     }))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn db(dir: &Path, name: &str, built_at: &str, gloss: &str) -> PathBuf {
+        let p = dir.join(name);
+        let c = rusqlite::Connection::open(&p).unwrap();
+        c.execute_batch("CREATE TABLE meta(key TEXT PRIMARY KEY, value TEXT); CREATE TABLE entries(id INTEGER PRIMARY KEY, gloss TEXT); CREATE VIRTUAL TABLE entries_fts USING fts5(gloss);").unwrap();
+        c.execute("INSERT INTO meta VALUES ('version', ?1), ('built_at', ?1), ('schema', '1')", [built_at]).unwrap();
+        c.execute("INSERT INTO entries(gloss) VALUES (?1)", [gloss]).unwrap();
+        c.execute("INSERT INTO entries_fts(gloss) VALUES (?1)", [gloss]).unwrap();
+        p
+    }
+
+    #[test]
+    fn content_digest_ignores_the_build_stamp_but_not_the_data() {
+        let d = tempfile::tempdir().unwrap();
+        let a = content_digest(&db(d.path(), "a.sqlite", "20261101-0000", "school")).unwrap();
+        let b = content_digest(&db(d.path(), "b.sqlite", "20261201-0930", "school")).unwrap();
+        let c = content_digest(&db(d.path(), "c.sqlite", "20261101-0000", "schools")).unwrap();
+        assert_eq!(a.len(), 16);
+        assert_eq!(a, b, "same rows, different build stamp: same version (no re-download)");
+        assert_ne!(a, c, "a changed row must change the version");
+    }
+}
