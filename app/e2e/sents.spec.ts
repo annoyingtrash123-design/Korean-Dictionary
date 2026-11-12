@@ -159,6 +159,7 @@ test('우리말샘 English equivalents are shown', async ({ page }) => {
 
   // English search: rows from English dictionaries take the hanja that 표준/우리말샘 give the word
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole('link', { name: 'Search' }).click();
   await page.getByRole('searchbox', { name: 'Search' }).fill('forward contract');
   const sw = page.locator('.row', { has: page.locator('.hw', { hasText: /^선물환$/ }) }).first();
   await expect(sw.locator('.hanja')).toHaveText('先物換');
