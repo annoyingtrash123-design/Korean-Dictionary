@@ -11,6 +11,7 @@ pub mod kengdic;
 pub mod krdict;
 pub mod opendict;
 pub mod pack;
+pub mod provenance;
 pub mod schema;
 pub mod stdict;
 pub mod tatoeba;

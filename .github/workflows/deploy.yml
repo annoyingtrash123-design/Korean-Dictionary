@@ -62,11 +62,28 @@ jobs:
           cargo build --release -p kdict-pipeline
           ./target/release/kdict-pipeline fetch --work pipeline/.work
 
+      - name: Fetch previous deploy's sources.json / manifest.json (for change detection)
+        if: steps.datacache.outputs.cache-hit != 'true'
+        run: |
+          # absent on the first deploy or if the site is down: the comparison is then skipped
+          base=https://annoyingtrash123-design.github.io/Korean-Dictionary/data
+          mkdir -p pipeline/.prev
+          for f in sources.json manifest.json; do
+            curl -fsSL --retry 2 --max-time 60 -o "pipeline/.prev/$f" "$base/$f" || { echo "previous $f not available"; rm -f "pipeline/.prev/$f"; }
+          done
+
       - name: Build dictionary packs
         if: steps.datacache.outputs.cache-hit != 'true'
         run: |
+          prev=()
+          [ -s pipeline/.prev/sources.json ] && prev+=(--prev-sources pipeline/.prev/sources.json)
+          [ -s pipeline/.prev/manifest.json ] && prev+=(--prev-manifest pipeline/.prev/manifest.json)
           # no --allow-partial: the build fails when a source silently degraded (data quality gate)
-          ./target/release/kdict-pipeline build --work pipeline/.work --out pipeline/out
+          ./target/release/kdict-pipeline build --work pipeline/.work --out pipeline/out "${prev[@]}"
+          # source changes + pack count drops (>2%) vs the previous deploy: job log and job summary
+          cat pipeline/out/site-data/changes.md
+          cat pipeline/out/site-data/changes.md >> "$GITHUB_STEP_SUMMARY"
+          echo "::group::sources.json"; cat pipeline/out/site-data/sources.json; echo "::endgroup::"
           ls -la pipeline/out pipeline/out/site-data
           cat pipeline/out/site-data/manifest.json
 
