@@ -5,7 +5,7 @@ import { currentColor } from '../lib/theme';
 import { FONTS } from '../lib/fonts';
 import { useStore } from '../lib/store';
 import { db, fetchManifest, makeReport, packStatus$, type StorageReport } from '../db/client';
-import { fmtBytes, stalePacks, update } from '../lib/app-state';
+import { fmtBytes, stalePacks, todayStr, update } from '../lib/app-state';
 import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
 import { cachedManifest } from '../db/client';
@@ -97,14 +97,14 @@ export function SettingsView() {
       </Group>
 
       <Group id="dictionaries" title="Dictionaries" open={open} onToggle={toggle}>
-        <div class="pack-line"><div><strong>{packLabel('core')}</strong><div class="muted small">{core ? `v${core.version} · ${fmtBytes(core.bytes)}` : 'Not installed'}</div></div></div>
+        <div class="pack-line"><div><strong>{packLabel('core')}</strong><div class="muted small">{core ? `${fmtBytes(core.bytes)}${core.installedAt ? ` · updated ${todayStr(new Date(core.installedAt))}` : ''}` : 'Not installed'}</div></div></div>
         {optIds.map((id) => {
           const inst = st?.packs[id]; const mp = manifest?.packs.find((p) => p.id === id);
           return (
             <div key={id} class="pack-opt">
               <div class="pack-line">
                 <div><strong>{packLabel(id)}</strong><div class="muted small">{packDesc(id)}</div>
-                  <div class="muted small">{inst?.installed ? `v${inst.version} · ${fmtBytes(inst.bytes)} on device` : mp ? `Not downloaded · ${fmtBytes(mp.gz_bytes)} download, needs about ${fmtMB(bytesNeeded([mp]))} free` : 'Not downloaded'}</div></div>
+                  <div class="muted small">{inst?.installed ? `${fmtBytes(inst.bytes)} on device${inst.installedAt ? ` · updated ${todayStr(new Date(inst.installedAt))}` : ''}` : mp ? `Not downloaded · ${fmtBytes(mp.gz_bytes)} download, needs about ${fmtMB(bytesNeeded([mp]))} free` : 'Not downloaded'}</div></div>
                 {inst?.installed
                   ? (id === 'texts' ? <span class="muted small">Installed</span> : <input type="checkbox" role="switch" aria-label={`Use ${packLabel(id)} in search`} checked={packEnabled(s, id)} onChange={(e) => updateSettings({ packs: { ...s.packs, [id]: (e.currentTarget as HTMLInputElement).checked } })} />)
                   : <button type="button" class="btn" onClick={() => startInstall([id])}>Download</button>}
@@ -118,7 +118,7 @@ export function SettingsView() {
 
       <Group id="data" title="Data" open={open} onToggle={toggle}>
         <dl class="facts wide">
-          <dt>Installed version</dt><dd>{core?.version ?? '–'}</dd>
+          <dt>Dictionaries</dt><dd>{!core ? '–' : upd.stale.length ? `${upd.stale.length} to update` : 'Up to date'}</dd>
           <dt>Latest online</dt><dd>{manifest?.version ?? '–'}</dd>
           <dt>Storage used</dt><dd>{fmtBytes(est.data?.usage)}{est.data?.quota ? ` of ${fmtBytes(est.data.quota)}` : ''}</dd>
           <dt>Kept when space is low</dt><dd>{persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>

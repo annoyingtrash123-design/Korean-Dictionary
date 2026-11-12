@@ -24,4 +24,10 @@ describe('installLive', () => {
     await expect(installLive(man('v1'), ['core'], async () => man('v1'), async () => { throw new Error('boom'); })).rejects.toThrow('boom');
     await expect(installLive(man('v1'), ['core'], async () => { throw new Error('offline'); }, async () => { throw new Error('net'); })).rejects.toThrow('net');
   });
+  it('installs each pack at its own content version when the manifest has one', async () => {
+    const m = { version: 'b2', packs: [{ id: 'core', version: 'c9' }, { id: 'texts' }] } as unknown as Manifest;
+    const got: string[] = [];
+    await installLive(m, ['core', 'texts'], async () => m, async (p, v) => { got.push(`${p.id}@${v}`); });
+    expect(got).toEqual(['core@c9', 'texts@b2']);
+  });
 });

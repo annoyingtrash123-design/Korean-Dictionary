@@ -133,6 +133,8 @@ export interface PackStatus { ready: boolean; packs: Record<string, PackInfo>; e
 
 export interface ManifestChunk { file: string; bytes?: number }
 export interface ManifestPack {
+  /** Content fingerprint: changes only when the pack's data changes (older manifests: absent, use the manifest version). */
+  version?: string;
   id: string; required: boolean; file: string; bytes: number; gz_bytes: number; sha256?: string;
   chunks: (string | { file?: string; name?: string; url?: string; bytes?: number; gz_bytes?: number })[];
   counts?: Record<string, number>;

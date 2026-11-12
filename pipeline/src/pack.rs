@@ -9,6 +9,59 @@ use std::fs::File;
 use std::io::{Read, Write};
 use std::path::{Path, PathBuf};
 
+/// Meta keys that change on every build without the data changing.
+const VOLATILE_META: &[&str] = &["version", "built_at"];
+
+/// Fingerprint of what a pack *contains* (16 hex digits), independent of when it was built: every
+/// table's schema and rows, except the build stamp in `meta` and FTS indexes (derived from rows that
+/// are already hashed). It is the pack's version in the manifest, so the app re-downloads a pack
+/// only when its content changed, not on every release.
+pub fn content_digest(db: &Path) -> Result<String> {
+    let conn = rusqlite::Connection::open_with_flags(db, rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY)?;
+    let virt: Vec<String> = conn
+        .prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND sql LIKE 'CREATE VIRTUAL TABLE%'")?
+        .query_map([], |r| r.get(0))?
+        .collect::<rusqlite::Result<_>>()?;
+    let tables: Vec<(String, String)> = conn
+        .prepare("SELECT name, sql FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' ORDER BY name")?
+        .query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?
+        .collect::<rusqlite::Result<_>>()?;
+    let mut h = Sha256::new();
+    for (name, sql) in tables {
+        if virt.iter().any(|v| name == *v || name.starts_with(&format!("{v}_"))) {
+            h.update(sql.as_bytes()); // the index's definition still counts
+            continue;
+        }
+        h.update(b"\x00table\x00");
+        h.update(name.as_bytes());
+        h.update(sql.as_bytes());
+        let mut st = conn.prepare(&format!("SELECT * FROM \"{name}\""))?;
+        let n = st.column_count();
+        let mut rows = st.query([])?;
+        while let Some(r) = rows.next()? {
+            if name == "meta" {
+                if let Ok(k) = r.get::<_, String>(0) {
+                    if VOLATILE_META.contains(&k.as_str()) {
+                        continue;
+                    }
+                }
+            }
+            h.update(b"\x01");
+            for i in 0..n {
+                use rusqlite::types::ValueRef::*;
+                match r.get_ref(i)? {
+                    Null => h.update(b"n"),
+                    Integer(v) => { h.update(b"i"); h.update(v.to_le_bytes()); }
+                    Real(v) => { h.update(b"r"); h.update(v.to_le_bytes()); }
+                    Text(v) => { h.update(b"t"); h.update((v.len() as u64).to_le_bytes()); h.update(v); }
+                    Blob(v) => { h.update(b"b"); h.update((v.len() as u64).to_le_bytes()); h.update(v); }
+                }
+            }
+        }
+    }
+    Ok(h.finalize().iter().take(8).map(|b| format!("{b:02x}")).collect())
+}
+
 pub const CHUNK_BYTES: u64 = 20_000_000;
 
 struct ChunkWriter {
@@ -68,6 +121,7 @@ impl Write for ChunkWriter {
 /// Compress `db` into `<out_dir>/<file>.gz.NNN`; returns the manifest pack object.
 pub fn compress_pack(id: &str, required: bool, db: &Path, out_dir: &Path, counts: &Value, chunk_bytes: u64) -> Result<Value> {
     let file = db.file_name().unwrap().to_string_lossy().into_owned();
+    let version = content_digest(db)?;
     let base = format!("{file}.gz");
     // remove stale chunks of this pack
     for e in std::fs::read_dir(out_dir)? {
@@ -98,7 +152,7 @@ pub fn compress_pack(id: &str, required: bool, db: &Path, out_dir: &Path, counts
     let gz_bytes: u64 = cw.sizes.iter().map(|(_, s)| s).sum();
     let chunks: Vec<Value> = cw.sizes.iter().map(|(n, s)| json!({"file": n, "bytes": s})).collect();
     Ok(json!({
-        "id": id, "required": required, "file": file, "bytes": bytes, "gz_bytes": gz_bytes,
+        "id": id, "version": version, "required": required, "file": file, "bytes": bytes, "gz_bytes": gz_bytes,
         "sha256": sha, "chunks": chunks, "counts": counts,
     }))
 }

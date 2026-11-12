@@ -12,12 +12,12 @@ interface DlState { version: string; done: number }
 
 export const getInstalled = (id: string) => get<InstalledRecord>('installed:' + id);
 
-function chunkList(pack: ManifestPack, manifestUrl: string, version: string) {
+function chunkList(pack: ManifestPack, manifestUrl: string, build: string) {
   return pack.chunks.map((c, i) => {
     const o = typeof c === 'string' ? { file: c } : c;
     const file = o.file ?? o.name ?? o.url ?? `${pack.file}.gz.${String(i).padStart(3, '0')}`;
     const u = new URL(file, manifestUrl);
-    u.searchParams.set('v', version); // cache-bust per data version: a stale CDN/HTTP-cache chunk can never mix into a new build
+    u.searchParams.set('v', build); // cache-bust per build file: a stale CDN/HTTP-cache chunk can never mix into a new build
     return { name: file.split('/').pop()!, url: u.toString(), bytes: o.bytes ?? o.gz_bytes };
   });
 }
@@ -70,13 +70,16 @@ export async function installPack(
 async function installPackInner(
   engine: Engine, pack: ManifestPack, manifestUrl: string, version: string, emit: (p: Progress) => void, onDownloaded: () => void,
 ): Promise<void> {
-  const chunks = chunkList(pack, manifestUrl, version);
+  // Staged chunks belong to one exact build file (its checksum), not to the content version: two
+  // builds with the same content still differ in bytes, so their chunks must never be mixed.
+  const build = pack.sha256 ?? version;
+  const chunks = chunkList(pack, manifestUrl, build);
   const dir = await dirFor(pack.id, true);
   const stateKey = 'dl:' + pack.id;
   let st = await get<DlState>(stateKey);
-  if (!st || st.version !== version) { // new version: discard stale chunks
+  if (!st || st.version !== build) { // another build: discard stale chunks
     for await (const k of (dir as unknown as { keys(): AsyncIterable<string> }).keys()) await dir.removeEntry(k).catch(() => undefined); // already gone is fine
-    st = { version, done: 0 };
+    st = { version: build, done: 0 };
     await set(stateKey, st);
   }
   const total = pack.gz_bytes || chunks.reduce((a, c) => a + (c.bytes ?? 0), 0);
@@ -98,7 +101,7 @@ async function installPackInner(
     const before = got;
     const size = await fetchToFile(chunks[i].url, dir, chunks[i].name, (n) => { got += n; report(i); });
     if (chunks[i].bytes != null && size !== chunks[i].bytes) { got = before; throw new Error(`Chunk ${chunks[i].name} has wrong size (${size})`); }
-    await set(stateKey, { version, done: i + 1 });
+    await set(stateKey, { version: build, done: i + 1 });
   }
   emit({ pack: pack.id, phase: 'download', done: total, total, chunk: chunks.length, chunks: chunks.length });
 

@@ -1,5 +1,6 @@
 import { createStore } from './store';
 import type { Manifest } from '../db/types';
+import { packVersion } from './pack-version';
 
 /** Current text in the search bar. */
 export const query = createStore('');
@@ -8,10 +9,14 @@ export const listTab = createStore<'search' | 'bookmarks' | 'reader'>('search');
 /** Latest manifest seen online; `stale` lists installed packs whose version differs from it (each pack is compared). */
 export const update = createStore<{ manifest: Manifest | null; available: boolean; stale: string[] }>({ manifest: null, available: false, stale: [] });
 
-/** Installed packs whose version differs from the manifest's (core first). */
-export function stalePacks(packs: Record<string, { installed: boolean; version?: string }> | undefined, m: { version: string; packs: { id: string }[] } | null): string[] {
+/** Installed packs whose content differs from the manifest's (core first). Each pack is compared
+ *  by its own version, so only the dictionaries that actually changed are downloaded again. */
+export function stalePacks(packs: Record<string, { installed: boolean; version?: string }> | undefined, m: { version: string; packs: { id: string; version?: string }[] } | null): string[] {
   if (!m || !packs) return [];
-  return Object.keys(packs).filter((id) => packs[id].installed && m.packs.some((p) => p.id === id) && packs[id].version !== m.version)
+  return Object.keys(packs).filter((id) => {
+    const mp = m.packs.find((p) => p.id === id);
+    return packs[id].installed && !!mp && packs[id].version !== packVersion(mp, m);
+  })
     .sort((a, b) => (a === 'core' ? -1 : b === 'core' ? 1 : a.localeCompare(b)));
 }
 

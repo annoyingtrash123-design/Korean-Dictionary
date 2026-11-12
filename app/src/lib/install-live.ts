@@ -2,6 +2,7 @@
 // that lands mid-download swaps them under a manifest the client already holds: the download then
 // fails its checksum/size check (or 404s). A retry with the same stale manifest would fail forever.
 import type { Manifest } from './types';
+import { packVersion } from './pack-version';
 
 type Pack = Manifest['packs'][number];
 
@@ -14,7 +15,7 @@ export async function installLive(
   let m = await live(start);
   for (let attempt = 0; ; attempt++) {
     try {
-      for (const p of m.packs.filter((x) => ids.includes(x.id))) await install(p, m.version);
+      for (const p of m.packs.filter((x) => ids.includes(x.id))) await install(p, packVersion(p, m));
       return m;
     } catch (e) {
       if (attempt > 0) throw e;
