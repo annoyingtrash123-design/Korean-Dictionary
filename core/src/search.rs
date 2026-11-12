@@ -729,7 +729,122 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
     let mut seen = HashSet::new();
     push_new(&mut out, &mut seen, v.into_iter().map(|h| h.row).collect());
     out.truncate(limit);
+    fill_hanja(packs, &mut out)?;
     Ok(SearchResult { mode: "english", rows: out, hanja: None, deconj: None, grammar_hints: None, ..Default::default() })
+}
+
+/// Hanja for English results: English-dictionary rows (kengdic, Wiktionary…) mostly carry none,
+/// while 표준/우리말샘 have it for the same words. Each space-separated part of the headword
+/// (선물 가게 → 선물 + 가게) takes the hanja the packs give that word; a part with several (선물:
+/// 膳物 "gift" / 先物 "futures") takes the one whose dictionary words share English with the row
+/// ("gift shop" → 膳物 가게), and when nothing decides, the row is left without hanja. Every part
+/// must be a dictionary word, so a part with a particle (선물로) leaves the row as it is.
+fn fill_hanja(packs: &[&PackDb], rows: &mut [ResultRow]) -> Result<()> {
+    let has = |h: &Option<String>| h.as_deref().is_some_and(|h| !h.is_empty());
+    let mut parts: Vec<String> = rows
+        .iter()
+        .filter(|r| !has(&r.hanja))
+        .flat_map(|r| {
+            let mut v: Vec<String> = r.headword.split_whitespace().map(crate::hangul::norm_headword).collect();
+            v.push(r.hw_norm.clone()); // the whole phrase first: 선물 계약 → 先物契約
+            v
+        })
+        .collect();
+    parts.sort();
+    parts.dedup();
+    if parts.is_empty() {
+        return Ok(());
+    }
+    // part -> (known word?, distinct hanja as shown keyed by their bare characters)
+    let mut known: HashSet<String> = HashSet::new();
+    let mut cands: HashMap<String, Vec<(String, String)>> = HashMap::new();
+    for (hw, r) in rows_by_keys(packs, KeyCol::Headword, &parts, None)? {
+        known.insert(hw.clone());
+        if let Some(h) = r.hanja {
+            let bare: String = h.chars().filter(|&c| crate::hangul::is_han(c)).collect();
+            let v = cands.entry(hw).or_default();
+            if !bare.is_empty() && !v.iter().any(|(_, b)| *b == bare) {
+                v.push((h, bare));
+            }
+        }
+    }
+    let mut evidence: HashMap<String, HashSet<String>> = HashMap::new(); // bare hanja -> English words
+    for r in rows.iter_mut().filter(|r| !r.hanja.as_deref().is_some_and(|h| !h.is_empty())) {
+        let whole: Vec<String> = vec![r.hw_norm.clone()];
+        let split: Vec<String> = r.headword.split_whitespace().map(crate::hangul::norm_headword).collect();
+        let shown_whole: Vec<&str> = vec![r.headword.as_str()];
+        let shown_split: Vec<&str> = r.headword.split_whitespace().collect();
+        let (ps, shown_parts) = if cands.contains_key(&r.hw_norm) { (whole, shown_whole) } else { (split, shown_split) };
+        if !ps.iter().all(|p| known.contains(p)) || !ps.iter().any(|p| cands.contains_key(p)) {
+            continue;
+        }
+        let words = en_words(r.gloss.as_deref().unwrap_or(""));
+        let mut out: Vec<String> = Vec::new();
+        let mut ok = true;
+        for (p, shown) in ps.iter().zip(shown_parts) {
+            match cands.get(p).map(Vec::as_slice) {
+                None | Some([]) => out.push(shown.to_string()),
+                Some([(h, _)]) => out.push(h.clone()),
+                Some(many) => {
+                    let mut best: Option<(&String, usize)> = None;
+                    let mut tie = false;
+                    for (h, bare) in many {
+                        if !evidence.contains_key(bare) {
+                            let ev = hanja_english(packs, bare)?;
+                            evidence.insert(bare.clone(), ev);
+                        }
+                        let n = evidence[bare].intersection(&words).count();
+                        match best {
+                            Some((_, b)) if n == b => tie = true,
+                            Some((_, b)) if n < b => {}
+                            _ => {
+                                best = Some((h, n));
+                                tie = false;
+                            }
+                        }
+                    }
+                    match best {
+                        Some((h, n)) if n > 0 && !tie => out.push(h.clone()),
+                        _ => {
+                            ok = false;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if ok {
+            r.hanja = Some(out.join(" "));
+        }
+    }
+    Ok(())
+}
+
+/// Lower-cased content words of an English gloss.
+fn en_words(s: &str) -> HashSet<String> {
+    const STOP: &[&str] = &["a", "an", "the", "of", "to", "and", "or", "in", "on", "for", "with", "be", "by", "as", "at", "one", "s", "sth", "sb", "someone", "something"];
+    s.split(|c: char| !c.is_ascii_alphabetic())
+        .map(str::to_ascii_lowercase)
+        .filter(|w| w.len() > 1 && !STOP.contains(&w.as_str()))
+        .map(|w| w.strip_suffix('s').filter(|t| t.len() > 2).map(str::to_string).unwrap_or(w))
+        .collect()
+}
+
+/// English words from the glosses of dictionary words written with these hanja (先物 → 先物契約
+/// "forward exchange contracts", 先物去來 "forward trading"…): what this hanja word means.
+fn hanja_english(packs: &[&PackDb], bare: &str) -> Result<HashSet<String>> {
+    let mut out = HashSet::new();
+    let hi = format!("{bare}\u{10FFFF}");
+    for p in packs {
+        let sql = "SELECT e.gloss FROM entries e WHERE e.hanja >= ?1 AND e.hanja < ?2 AND e.gloss IS NOT NULL ORDER BY e.rank LIMIT 40";
+        for r in p.conn.query(sql, &[bare.into(), hi.as_str().into()])? {
+            let g = r.string(0);
+            if !crate::hangul::has_hangul(&g) {
+                out.extend(en_words(&g));
+            }
+        }
+    }
+    Ok(out)
 }
 
 /// The original English search for one pack without `gloss_terms`.
