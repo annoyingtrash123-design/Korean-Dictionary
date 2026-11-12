@@ -138,3 +138,22 @@ test('AI-translated example English is shown and labelled', async ({ page }) => 
   await page.screenshot({ path: '../docs/screenshots/examples-ai-ipad.png' });
 });
 
+
+/** 우리말샘's own English equivalents (e.g. for technical terms) show in results and on the entry. */
+test('우리말샘 English equivalents are shown', async ({ page }) => {
+  test.setTimeout(300_000);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await page.getByRole('switch', { name: /우리말샘/ }).click();   // the large optional pack
+  await downloadAll(page);
+  await page.getByRole('searchbox', { name: 'Search' }).fill('선물환');
+  const row = page.locator('.row', { hasText: '선물환 계약' }).first();
+  await expect(row).toContainText(/forward exchange contract/i);
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '../docs/screenshots/opendict-en-phone.png' });
+  await row.click();
+  await expect(page.locator('.sense .gloss').first()).toContainText(/forward exchange contract/i);
+  await page.setViewportSize({ width: 1180, height: 820 });
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: '../docs/screenshots/opendict-en-ipad.png' });
+});

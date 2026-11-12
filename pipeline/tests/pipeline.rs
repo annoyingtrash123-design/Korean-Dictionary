@@ -154,7 +154,7 @@ fn opendict_parsing() {
     assert_eq!(senses.len(), 2);
     assert_eq!(senses[0]["ko_def"], "교사가 학생을 가르치는 기관.");
     assert_eq!(senses[0]["rel"][0]["type"], "hypernym");
-    assert_eq!(senses[1]["en"], "school");
+    assert_eq!(senses[1]["gloss"], "school");
     // the example with a <source> citation is excluded
     let ex = senses[1]["examples"].as_array().unwrap();
     assert_eq!(ex.len(), 1);

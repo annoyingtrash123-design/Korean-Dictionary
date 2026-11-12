@@ -127,7 +127,8 @@ fn parse_item(item: &Node) -> Option<(String, Item)> {
         .filter(|x| !x.is_empty())
         .collect();
     if !en.is_empty() {
-        sense.insert("en".into(), en.join("; ").into());
+        // 우리말샘's own English equivalents (대역어): shown as the sense's English gloss
+        sense.insert("gloss".into(), en.join("; ").into());
     }
 
     let group = item.t("group_code");
