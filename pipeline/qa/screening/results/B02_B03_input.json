@@ -1,0 +1,1478 @@
+[
+ {
+  "id": "B03-0289",
+  "ext_id": "25366",
+  "sense": "0",
+  "ex": "5",
+  "word": "과년하다",
+  "meaning": "past one's marriageable age",
+  "ko": "가족들은 과년한 큰딸을 결혼시키기 위해 노력했다.",
+  "en_current": "The family worked hard to marry off their eldest daughter, who had reached marriageable age.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "“과년한” means past marriageable age, not merely having reached it.",
+    "suggested": "The family worked hard to marry off their eldest daughter, who was past marriageable age."
+   }
+  ]
+ },
+ {
+  "id": "B03-0410",
+  "ext_id": "41006",
+  "sense": "0",
+  "ex": "6",
+  "word": "관용어",
+  "meaning": "idiom",
+  "ko": "'비행기 태운다’는 말은 남을 지나치게 칭찬한다는 의미의 관용어이다.",
+  "en_current": "The expression 'to fly someone's airplane' is an idiom meaning to excessively praise someone.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "Literal rendering of the idiom “비행기 태우다” is unnatural and misleading.",
+    "suggested": "The expression “to flatter someone excessively” is an idiom meaning to praise someone too much."
+   }
+  ]
+ },
+ {
+  "id": "B03-0445",
+  "ext_id": "30727",
+  "sense": "0",
+  "ex": "0",
+  "word": "관형형",
+  "meaning": "adnominal form",
+  "ko": "'좋은'은 형용사 ‘좋다’의 관형형이다.",
+  "en_current": "The word joeun is the adnominal form of the adjective jota, meaning to be good.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“joeun” is an incorrect romanization of 좋은; it should be “joheun.”",
+    "suggested": "The word joheun is the adnominal form of the adjective jota, meaning to be good."
+   }
+  ]
+ },
+ {
+  "id": "B03-0486",
+  "ext_id": "31423",
+  "sense": "0",
+  "ex": "3",
+  "word": "광신하다",
+  "meaning": "believe fanatically",
+  "ko": "김 과장은 사장이 시키는 일이라면 도둑질도 할 만큼 그를 광신하였다.",
+  "en_current": "Manager Kim so fanatically idolized the president that he would even steal if the president asked him to.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“he” assigns an unstated gender to Manager Kim.",
+    "suggested": "Manager Kim so fanatically idolized the president that they would even steal if the president asked them to."
+   }
+  ]
+ },
+ {
+  "id": "B03-0517",
+  "ext_id": "30832",
+  "sense": "0",
+  "ex": "5",
+  "word": "괘씸죄",
+  "meaning": "being disliked for being annoying to others",
+  "ko": "나는 같은 잘못을 반복해서 괘씸죄까지 뒤집어썼다.",
+  "en_current": "Because I repeated the same mistake, I was even charged with the offense of being insolent.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Charged with the offense” misrepresents the figurative idiom 괘씸죄.",
+    "suggested": "Because I repeated the same mistake, I even incurred further resentment."
+   }
+  ]
+ },
+ {
+  "id": "B03-0564",
+  "ext_id": "30684",
+  "sense": "0",
+  "ex": "4",
+  "word": "교두보",
+  "meaning": "bridgehead; beachhead; foothold; springboard",
+  "ko": "군인들은 다리를 지키기 위해 미리 교두보를 쌓았다.",
+  "en_current": "The soldiers built a bridgehead in advance to defend the bridge.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Built a bridgehead” is an unnatural rendering of establishing a foothold.",
+    "suggested": "The soldiers established a foothold in advance to defend the bridge."
+   }
+  ]
+ },
+ {
+  "id": "B03-0663",
+  "ext_id": "37852",
+  "sense": "0",
+  "ex": "5",
+  "word": "구개음화",
+  "meaning": "palatalization",
+  "ko": "구개음화 현상의 예로 부사 ‘같이’의 발음이 [가치]로 나는 것을 들 수 있다.",
+  "en_current": "An example of palatalization is the adverb 'gati,' which is pronounced [gachi].",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“gati” is incorrect romanization; 같이 is romanized gachi.",
+    "suggested": "An example of palatalization is the adverb gachi, pronounced [gachi]."
+   }
+  ]
+ },
+ {
+  "id": "B03-0665",
+  "ext_id": "37860",
+  "sense": "0",
+  "ex": "6",
+  "word": "구걸하다",
+  "meaning": "beg; implore",
+  "ko": "아이는 병든 어머니를 대신해서 길거리로 구걸하러 나섰다.",
+  "en_current": "The child went out onto the street to beg in place of his sick mother.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“his” assigns an unstated gender to the child.",
+    "suggested": "The child went out onto the street to beg in place of their sick mother."
+   }
+  ]
+ },
+ {
+  "id": "B03-0673",
+  "ext_id": "34925",
+  "sense": "0",
+  "ex": "5",
+  "word": "구구절절이",
+  "meaning": "every single word",
+  "ko": "가난했던 시절에 대한 아저씨의 이야기는 구구절절이 안타까웠다.",
+  "en_current": "The uncle's story about the poverty of his youth was heartbreaking in every word.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Heartbreaking in every word” is an unnatural literal rendering of 구구절절이.",
+    "suggested": "The uncle’s story about the poverty of his youth was heartbreaking from beginning to end."
+   }
+  ]
+ },
+ {
+  "id": "B03-0740",
+  "ext_id": "89794",
+  "sense": "0",
+  "ex": "4",
+  "word": "구불대다",
+  "meaning": "twist and turn",
+  "ko": "화단의 흙에서 지렁이가 구불대며 기어가는 모습이 보였다.",
+  "en_current": "In the flower bed soil, I saw an earthworm crawling along in wriggles.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Crawling along in wriggles” is unnatural English.",
+    "suggested": "In the flower bed soil, I saw an earthworm wriggling along."
+   }
+  ]
+ },
+ {
+  "id": "B03-0770",
+  "ext_id": "36372",
+  "sense": "0",
+  "ex": "4",
+  "word": "구술",
+  "meaning": "oral statement",
+  "ko": "기자들은 대통령의 구술 내용을 열심히 받아 적었다.",
+  "en_current": "Reporters eagerly took down what the president dictated.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "구술 means spoken remarks here, not content dictated by the president.",
+    "suggested": "Reporters eagerly took down the president’s spoken remarks."
+   }
+  ]
+ },
+ {
+  "id": "B03-0774",
+  "ext_id": "36377",
+  "sense": "0",
+  "ex": "7",
+  "word": "구슬리다",
+  "meaning": "talk into; coax; chew over",
+  "ko": "지수는 떼쓰는 아이에게 말을 잘 들으면 사탕을 주겠다고 구슬렸다.",
+  "en_current": "Jisu coaxed the whining child by promising to give him candy if he behaved.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“him” assigns an unstated gender to the child.",
+    "suggested": "Jisu coaxed the whining child by promising them candy if they behaved."
+   }
+  ]
+ },
+ {
+  "id": "B03-0783",
+  "ext_id": "36392",
+  "sense": "0",
+  "ex": "6",
+  "word": "구심성",
+  "meaning": "centripetalism",
+  "ko": "끈에 묶은 돌을 돌릴 때 그 돌에는 구심성이 생겨 바깥쪽으로 날아가지 않는다.",
+  "en_current": "When a stone tied to a string is swung around, it acquires centripetality and does not fly outward.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Centripetality” is an unnatural technical rendering; the sentence means centripetal force.",
+    "suggested": "When a stone tied to a string is swung around, centripetal force acts on it and keeps it from flying outward."
+   }
+  ]
+ },
+ {
+  "id": "B03-0912",
+  "ext_id": "38574",
+  "sense": "0",
+  "ex": "6",
+  "word": "국상",
+  "meaning": "national funeral",
+  "ko": "국상이 있을 때는 모든 백성이 상복을 입었다.",
+  "en_current": "When there was a national mourning, all the people wore mourning clothes.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“A national mourning” is unidiomatic; use “a period of national mourning.”",
+    "suggested": "During a period of national mourning, all the people wore mourning clothes."
+   }
+  ]
+ },
+ {
+  "id": "B03-0921",
+  "ext_id": "38588",
+  "sense": "0",
+  "ex": "7",
+  "word": "국어학",
+  "meaning": "national language studies; Korean studies",
+  "ko": "나는 현대 시를 연구하는 국어학 학자가 되고 싶다.",
+  "en_current": "I want to become a Korean studies scholar who researches modern poetry.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "국어학 means Korean linguistics, not the broader field of Korean studies.",
+    "suggested": "I want to become a scholar of Korean linguistics who researches modern poetry."
+   }
+  ]
+ },
+ {
+  "id": "B03-0959",
+  "ext_id": "35543",
+  "sense": "0",
+  "ex": "5",
+  "word": "군기침",
+  "meaning": "dry cough",
+  "ko": "그는 사람들의 관심을 끌기 위해 군기침을 했다.",
+  "en_current": "He faked a cough to draw people's attention.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Faked a cough” misses the deliberate throat-clearing sense of 군기침.",
+    "suggested": "He cleared his throat to draw people’s attention."
+   }
+  ]
+ },
+ {
+  "id": "B03-1041",
+  "ext_id": "88386",
+  "sense": "0",
+  "ex": "5",
+  "word": "굼실대다",
+  "meaning": "crawl; make slow movements",
+  "ko": "바람이 불자 기다란 커튼 자락이 굼실대며 흔들린다.",
+  "en_current": "When the wind blew, the long curtain panels swayed and wriggled.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Curtain panels … wriggled” is an unnatural description of their movement.",
+    "suggested": "When the wind blew, the long curtain panels swayed and billowed."
+   }
+  ]
+ },
+ {
+  "id": "B03-1050",
+  "ext_id": "36187",
+  "sense": "0",
+  "ex": "5",
+  "word": "굽실대다",
+  "meaning": "bow; crawl to",
+  "ko": "지수는 선생님을 만나면 예의 바르게 허리를 굽실대며 인사했다.",
+  "en_current": "Whenever she met her teacher, Jisu bowed politely and greeted him with a deferential bow.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“him” assigns an unstated gender to the teacher.",
+    "suggested": "Whenever she met her teacher, Jisu bowed politely and greeted them respectfully."
+   }
+  ]
+ },
+ {
+  "id": "B03-1056",
+  "ext_id": "89272",
+  "sense": "0",
+  "ex": "5",
+  "word": "굽죄이다",
+  "meaning": "feel overawed; feel small; have qualms",
+  "ko": "나는 마음이 썩어 뭉그러지고 굽죄여서 아무 말도 못했다.",
+  "en_current": "My heart was rotting and I felt so overawed that I could not say a word.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“My heart was rotting” is a misleading literal rendering of emotional distress.",
+    "suggested": "I felt so crushed and intimidated that I could not say a word."
+   }
+  ]
+ },
+ {
+  "id": "B03-1072",
+  "ext_id": "34858",
+  "sense": "0",
+  "ex": "5",
+  "word": "궁여지책",
+  "meaning": "last resort",
+  "ko": "비록 궁여지책이기는 하지만 방법이 없는 것은 아니다.",
+  "en_current": "Although it is a last-resort measure, it is not that there is no way.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "The double-negative construction is awkward and misleading.",
+    "suggested": "Although it is a last resort, it is still a possible solution."
+   }
+  ]
+ },
+ {
+  "id": "B03-1085",
+  "ext_id": "37316",
+  "sense": "0",
+  "ex": "4",
+  "word": "권력층",
+  "meaning": "power class",
+  "ko": "왕을 중심으로 형성된 권력층에게는 부와 명예가 딸려 왔다.",
+  "en_current": "Wealth and honor came along with the power class formed around the king.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Power class” is an unnatural rendering; “ruling elite” is clearer.",
+    "suggested": "Wealth and honor came along with the ruling elite formed around the king."
+   }
+  ]
+ },
+ {
+  "id": "B03-1097",
+  "ext_id": "37389",
+  "sense": "0",
+  "ex": "7",
+  "word": "권위주의",
+  "meaning": "authoritarianism",
+  "ko": "가부장적 권위주의가 지배하는 우리 집에서는 아버지의 말씀에 대든다는 것은 상상도 못 할 일이다.",
+  "en_current": "In our house, where patriarchal authoritarianism reigns, talking back to my father's words is unimaginable.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Talking back to my father’s words” is an unnatural literal expression.",
+    "suggested": "In our house, where patriarchal authoritarianism reigns, talking back to my father is unimaginable."
+   }
+  ]
+ },
+ {
+  "id": "B03-1105",
+  "ext_id": "37400",
+  "sense": "0",
+  "ex": "7",
+  "word": "권태기",
+  "meaning": "period of lassitude",
+  "ko": "우리 부부는 권태기를 극복하기 위해 둘만의 여행을 떠났다.",
+  "en_current": "To overcome our period of marital boredom, my husband and I set off on a trip, just the two of us.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“My husband and I” adds an unsupported gender for the speaker.",
+    "suggested": "My spouse and I set off on a trip, just the two of us."
+   }
+  ]
+ },
+ {
+  "id": "B03-1107",
+  "ext_id": "37405",
+  "sense": "0",
+  "ex": "5",
+  "word": "궐기",
+  "meaning": "uprising",
+  "ko": "백만 명 이상의 시민들이 모여 독재자를 물러나게 하기 위한 궐기 대회를 열었다.",
+  "en_current": "More than a million citizens gathered and held a rally of uprising to force the dictator out.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“A rally of uprising” is an unnatural expression.",
+    "suggested": "More than a million citizens gathered and held a rally demanding the dictator’s removal."
+   }
+  ]
+ },
+ {
+  "id": "B03-1136",
+  "ext_id": "38221",
+  "sense": "0",
+  "ex": "5",
+  "word": "귀담아듣다",
+  "meaning": "listen attentively",
+  "ko": "내 동생은 눈을 반짝이며 내 말을 귀담아들었다.",
+  "en_current": "My younger sibling listened carefully to what I said, his eyes sparkling.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“his eyes” assigns an unstated gender to the younger sibling.",
+    "suggested": "My younger sibling listened carefully to what I said, their eyes sparkling."
+   }
+  ]
+ },
+ {
+  "id": "B03-1142",
+  "ext_id": "38240",
+  "sense": "0",
+  "ex": "5",
+  "word": "귀뚤귀뚤",
+  "meaning": "chirp",
+  "ko": "가을밤이 되자 귀뚜라미가 귀뚤귀뚤 하고 소리를 내며 울었다.",
+  "en_current": "On an autumn night, the crickets chirped kwi-ttul kwi-ttul.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“kwi-ttul kwi-ttul” is an unhelpful literal transliteration of chirping.",
+    "suggested": "On an autumn night, the crickets chirped."
+   }
+  ]
+ },
+ {
+  "id": "B03-1147",
+  "ext_id": "38266",
+  "sense": "0",
+  "ex": "4",
+  "word": "귀밑머리",
+  "meaning": "hair braided behind the ears; hair under the ears",
+  "ko": "나는 해마다 명절이면 한복을 곱게 차려입고 귀밑머리를 했다.",
+  "en_current": "Every year on holidays, I dressed neatly in a hanbok and styled my hair by my ears.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Styled my hair by my ears” is an unnatural rendering of 귀밑머리를 했다.",
+    "suggested": "Every year on holidays, I dressed neatly in a hanbok and styled my hair traditionally."
+   }
+  ]
+ },
+ {
+  "id": "B03-1156",
+  "ext_id": "88812",
+  "sense": "0",
+  "ex": "5",
+  "word": "귀신같다",
+  "meaning": "like a demon",
+  "ko": "사내는 귀신같은 사격 솜씨로 모든 목표물을 명중시켰다.",
+  "en_current": "With his demon-like marksmanship, the man hit every target.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Demon-like” misleadingly suggests evil rather than extraordinary skill.",
+    "suggested": "With his uncanny marksmanship, the man hit every target."
+   }
+  ]
+ },
+ {
+  "id": "B03-1168",
+  "ext_id": "34777",
+  "sense": "0",
+  "ex": "5",
+  "word": "귀중히",
+  "meaning": "valuably; preciously",
+  "ko": "그는 죽은 아내가 아끼던 목걸이를 딸에게 물려주면서 귀중히 간직하라고 당부했다.",
+  "en_current": "He handed down his late wife's cherished necklace to his daughter and urged her to keep it preciously.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Keep it preciously” is an unnatural literal expression.",
+    "suggested": "He handed down his late wife’s cherished necklace to his daughter and urged her to treasure it."
+   }
+  ]
+ },
+ {
+  "id": "B03-1244",
+  "ext_id": "89805",
+  "sense": "0",
+  "ex": "0",
+  "word": "그러니저러니",
+  "meaning": "An abbreviated word for '그러하다느니 저러하다느니' (saying this or that).",
+  "ko": "승규네 부부의 이혼을 두고 이웃들은 그러니저러니 수군댔다.",
+  "en_current": "The neighbors whispered this and that about the divorce of Seunggyu's couple.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Seunggyu’s couple” is unnatural English for 승규네 부부.",
+    "suggested": "The neighbors whispered various things about Seunggyu and his wife getting divorced."
+   }
+  ]
+ },
+ {
+  "id": "B03-1246",
+  "ext_id": "36277",
+  "sense": "0",
+  "ex": "10",
+  "word": "그러안다",
+  "meaning": "embrace; bear; assume",
+  "ko": "아이는 엄마와 떨어지기 싫은지 엄마를 그러안고 울면서 떼를 썼다.",
+  "en_current": "Unwilling to be separated from her, the child clung to his mother, crying and throwing a tantrum.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“his mother” assigns an unstated gender to the child.",
+    "suggested": "Unwilling to be separated from her, the child clung to their mother, crying and throwing a tantrum."
+   }
+  ]
+ },
+ {
+  "id": "B03-1263",
+  "ext_id": "31628",
+  "sense": "0",
+  "ex": "5",
+  "word": "그만그만하다",
+  "meaning": "be of a sort; almost the same",
+  "ko": "그 집안은 형제가 모두 셋인데 그만그만한 형편으로 특별히 잘사는 사람은 없었다.",
+  "en_current": "That family has three brothers, all in roughly similar circumstances, and none of them is especially well off.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Brothers” assumes all three siblings are male.",
+    "suggested": "That family has three siblings, all in roughly similar circumstances, and none of them is especially well off."
+   }
+  ]
+ },
+ {
+  "id": "B03-1273",
+  "ext_id": "30893",
+  "sense": "0",
+  "ex": "0",
+  "word": "그예",
+  "meaning": "after all; finally",
+  "ko": "동생은 울음을 참았지만 그예 눈물이 뚝 떨어졌다.",
+  "en_current": "My younger sibling held back the crying, but in the end a tear dropped.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Held back the crying” is an unnatural expression.",
+    "suggested": "My younger sibling tried to hold back tears, but one finally fell."
+   }
+  ]
+ },
+ {
+  "id": "B03-1274",
+  "ext_id": "36087",
+  "sense": "0",
+  "ex": "3",
+  "word": "그윽이",
+  "meaning": "quietly; intimately; gently; mildly",
+  "ko": "두 남녀는 서로 그윽이 바라보았다.",
+  "en_current": "The two lovers gazed at each other with deep tenderness.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "“Lovers” adds an unsupported romantic relationship; 남녀 means a man and a woman.",
+    "suggested": "The man and woman gazed at each other tenderly."
+   }
+  ]
+ },
+ {
+  "id": "B03-1278",
+  "ext_id": "32104",
+  "sense": "0",
+  "ex": "5",
+  "word": "그지없이",
+  "meaning": "boundlessly; endlessly; limitlessly",
+  "ko": "오랜만에 소식을 알려 온 친구의 편지는 그지없이 반가웠다.",
+  "en_current": "The letter from my friend, who had finally sent word after so long, was endlessly welcome.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Endlessly welcome” is an unnatural literal rendering of 그지없이 반가웠다.",
+    "suggested": "The letter from my friend, who had finally sent word after so long, was immensely welcome."
+   }
+  ]
+ },
+ {
+  "id": "B03-1283",
+  "ext_id": "32821",
+  "sense": "0",
+  "ex": "8",
+  "word": "극대",
+  "meaning": "maximum",
+  "ko": "기업은 이윤의 극대를 목적으로 한다.",
+  "en_current": "A company aims at the maximum of its profits.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“The maximum of its profits” is an awkward rendering of profit maximization.",
+    "suggested": "A company aims to maximize its profits."
+   }
+  ]
+ },
+ {
+  "id": "B03-1288",
+  "ext_id": "32183",
+  "sense": "0",
+  "ex": "10",
+  "word": "극도",
+  "meaning": "extreme; utmost",
+  "ko": "할아버지는 건강이 극도로 나빠지셔서 중환자실로 옮겨지셨다.",
+  "en_current": "Grandfather's health deteriorated to an extreme, and he was moved to the intensive care unit.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Deteriorated to an extreme” is unnatural English.",
+    "suggested": "Grandfather’s health deteriorated severely, and he was moved to the intensive care unit."
+   }
+  ]
+ },
+ {
+  "id": "B03-1307",
+  "ext_id": "32207",
+  "sense": "0",
+  "ex": "6",
+  "word": "극성스럽다",
+  "meaning": "aggressive; oversolicitious",
+  "ko": "유명 가수가 출국하기 하루 전부터 공항은 그를 배웅하려는 극성스러운 팬들로 가득했다.",
+  "en_current": "From the day before the famous singer left the country, the airport was packed with overzealous fans who came to see him off.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“him” assigns an unstated gender to the famous singer.",
+    "suggested": "From the day before the famous singer left the country, the airport was packed with overzealous fans who came to see them off."
+   }
+  ]
+ },
+ {
+  "id": "B03-1333",
+  "ext_id": "32597",
+  "sense": "0",
+  "ex": "6",
+  "word": "극화",
+  "meaning": "dramatization",
+  "ko": "성공한 기업가의 일생이 극화를 통해 한 편의 영화로 탄생했다.",
+  "en_current": "The life of a successful entrepreneur was dramatized and born as a single film.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Born as a single film” is an unnatural literal translation.",
+    "suggested": "The life of a successful entrepreneur was dramatized in a film."
+   }
+  ]
+ },
+ {
+  "id": "B03-1442",
+  "ext_id": "35021",
+  "sense": "0",
+  "ex": "4",
+  "word": "금속제",
+  "meaning": "metal goods",
+  "ko": "이 그릇은 금속제 그릇이라 깨지거나 상하지 않는다.",
+  "en_current": "This bowl is made of metal, so it will not break or spoil.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Spoil” is inappropriate for a metal bowl; use “be damaged.”",
+    "suggested": "This bowl is made of metal, so it will not break or be damaged."
+   }
+  ]
+ },
+ {
+  "id": "B03-1443",
+  "ext_id": "600841",
+  "sense": "0",
+  "ex": "0",
+  "word": "금손",
+  "meaning": "(figurative) A person with excellent manual dexterity.",
+  "ko": "유민이는 손재주가 좋아 친구들에게 금손으로 불린다.",
+  "en_current": "Yumin is so handy with her hands that her friends call her a golden hand.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Golden hand” is a literal Korean expression, not natural English.",
+    "suggested": "Yumin is so dexterous that her friends call her a whiz with her hands."
+   }
+  ]
+ },
+ {
+  "id": "B03-1465",
+  "ext_id": "39933",
+  "sense": "0",
+  "ex": "6",
+  "word": "금자탑",
+  "meaning": "monumental achievement",
+  "ko": "그는 올림픽 삼 연패의 금자탑을 세웠다.",
+  "en_current": "He built a monument of achievement by winning three Olympic titles in a row.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Built a monument of achievement” mistranslates the idiomatic expression 금자탑을 세우다.",
+    "suggested": "He achieved the remarkable feat of winning three Olympic titles in a row."
+   }
+  ]
+ },
+ {
+  "id": "B03-1480",
+  "ext_id": "41309",
+  "sense": "0",
+  "ex": "5",
+  "word": "급강하",
+  "meaning": "sudden drop; nosedive",
+  "ko": "갑작스러운 기온의 급강하 때문에 감기 환자들이 속출하고 있다.",
+  "en_current": "Because of the sudden drop in temperature, cold patients are appearing one after another.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Cold patients are appearing” is an unnatural expression.",
+    "suggested": "Because of the sudden drop in temperature, people are coming down with colds one after another."
+   }
+  ]
+ },
+ {
+  "id": "B03-1482",
+  "ext_id": "41323",
+  "sense": "0",
+  "ex": "5",
+  "word": "급거",
+  "meaning": "in haste; hurriedly",
+  "ko": "화재 신고가 들어오자 구조대원들은 신고 장소로 급거 출동하였다.",
+  "en_current": "When a fire report came in, the rescue workers hurriedly dispatched to the reported location.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "The translation lacks a finite verb and is grammatically incomplete.",
+    "suggested": "When a fire report came in, the rescue workers rushed to the reported location."
+   }
+  ]
+ },
+ {
+  "id": "B03-1583",
+  "ext_id": "89870",
+  "sense": "0",
+  "ex": "3",
+  "word": "기공되다",
+  "meaning": "(ground) be broken",
+  "ko": "건물이 기공된 지 삼 년이 지났지만 아직도 완성되지 못했다.",
+  "en_current": "Three years have passed since the building broke ground, yet it still has not been completed.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“The building broke ground” is an incorrect construction; the project breaks ground.",
+    "suggested": "Three years have passed since ground was broken for the building, yet it still has not been completed."
+   }
+  ]
+ },
+ {
+  "id": "B03-1587",
+  "ext_id": "38757",
+  "sense": "0",
+  "ex": "4",
+  "word": "기관원",
+  "meaning": "agent",
+  "ko": "그 기자는 국가 기관원을 사칭하며 출입 제한 구역까지 취재하였다.",
+  "en_current": "That reporter posed as a national intelligence agent and covered news even in restricted areas.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "“Intelligence agent” adds a specific agency type not stated in 기관원.",
+    "suggested": "The reporter posed as an official of a government agency and reported from restricted areas as well."
+   }
+  ]
+ },
+ {
+  "id": "B03-1623",
+  "ext_id": "38124",
+  "sense": "0",
+  "ex": "5",
+  "word": "기똥차다",
+  "meaning": "terrific; superb",
+  "ko": "민준이는 별다른 능력은 없지만 머리 하나는 기똥차게 좋다.",
+  "en_current": "Minjun has no special abilities, but his brain is terrifically good.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“His brain is terrifically good” is unnatural English.",
+    "suggested": "Minjun has no special abilities, but he has an exceptionally sharp mind."
+   }
+  ]
+ },
+ {
+  "id": "B03-1633",
+  "ext_id": "40025",
+  "sense": "0",
+  "ex": "5",
+  "word": "기름기",
+  "meaning": "oily element; richness",
+  "ko": "지수는 다이어트를 하느라 기름기를 뺀 고기만 먹었다.",
+  "en_current": "Jisu, on a diet, ate only lean meat with the oil removed.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Oil removed” is awkward; lean meat means meat with little fat.",
+    "suggested": "Jisu, on a diet, ate only lean meat."
+   }
+  ]
+ },
+ {
+  "id": "B03-1652",
+  "ext_id": "23586",
+  "sense": "0",
+  "ex": "6",
+  "word": "기별",
+  "meaning": "word; news",
+  "ko": "유학을 떠난 친구에게서 아무런 기별도 오지 않아서 그가 어떻게 지내는지 모르겠다.",
+  "en_current": "No word has come from my friend who left to study abroad, so I do not know how he is doing.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“he” assigns an unstated gender to the friend.",
+    "suggested": "No word has come from my friend who left to study abroad, so I do not know how they are doing."
+   }
+  ]
+ },
+ {
+  "id": "B03-1694",
+  "ext_id": "38658",
+  "sense": "0",
+  "ex": "5",
+  "word": "기승전결",
+  "meaning": "four steps in composition",
+  "ko": "모두 오 연으로 이루어진 이 한시는 기승전결의 구조를 택하고 있다.",
+  "en_current": "This classical Chinese poem, made up of five couplets in all, follows the four-part structure of introduction, development, turn, and conclusion.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "“Five couplets” mistranslates 오 연, which means five stanzas.",
+    "suggested": "This classical Chinese poem, consisting of five stanzas, follows the four-part structure of introduction, development, turn, and conclusion."
+   }
+  ]
+ },
+ {
+  "id": "B03-1704",
+  "ext_id": "38686",
+  "sense": "0",
+  "ex": "7",
+  "word": "기약하다",
+  "meaning": "promise",
+  "ko": "김 선생은 이별을 못내 아쉬워하며 다시 만날 날을 기약했다.",
+  "en_current": "Teacher Kim, sorry to part, promised a day when they would meet again.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Promised a day” is unnatural and misses the sense of looking forward to meeting again.",
+    "suggested": "Teacher Kim was reluctant to part and promised they would meet again."
+   }
+  ]
+ },
+ {
+  "id": "B03-1715",
+  "ext_id": "38096",
+  "sense": "0",
+  "ex": "2",
+  "word": "기왕지사",
+  "meaning": "past event",
+  "ko": "민준이는 기왕지사로 회장을 맡게 된 마당에 임기 동안 열심히 하겠노라고 이야기했다.",
+  "en_current": "Since he had become chairman through the events of the past, Minjun said he would work hard throughout his term.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "기왕지사 means “now that things have come to this,” not “through past events.”",
+    "suggested": "Now that he had become chairman, Minjun said he would work hard throughout his term."
+   }
+  ]
+ },
+ {
+  "id": "B03-1787",
+  "ext_id": "38490",
+  "sense": "0",
+  "ex": "5",
+  "word": "기함",
+  "meaning": "losing strength; becoming unconscious",
+  "ko": "노인은 힘든 일을 하다가 기함을 하여 몸져눕고 말았다.",
+  "en_current": "The old man lost strength while doing hard labor and ended up bedridden.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "기함하다 means to faint or collapse, not merely lose strength.",
+    "suggested": "The old man fainted while doing hard labor and ended up bedridden."
+   }
+  ]
+ },
+ {
+  "id": "B03-1827",
+  "ext_id": "26350",
+  "sense": "0",
+  "ex": "5",
+  "word": "길동무",
+  "meaning": "traveling companion; company",
+  "ko": "나는 해외여행 중에 길동무를 만나 그와 함께 유럽 전역을 여행했다.",
+  "en_current": "During my overseas trip, I met a travel companion and traveled with him across all of Europe.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“him” assigns an unstated gender to the travel companion.",
+    "suggested": "During my overseas trip, I met a travel companion and traveled with them across Europe."
+   }
+  ]
+ },
+ {
+  "id": "B03-1948",
+  "ext_id": "38460",
+  "sense": "0",
+  "ex": "3",
+  "word": "깜깜절벽",
+  "meaning": "darkness; thorough ignorance",
+  "ko": "시험에서 낙방한 내 미래는 마치 깜깜절벽처럼 느껴졌다.",
+  "en_current": "After failing the exam, my future felt like a pitch-black cliff.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“Pitch-black cliff” is an unnatural literal rendering of a bleak future.",
+    "suggested": "After failing the exam, my future felt utterly bleak."
+   }
+  ]
+ },
+ {
+  "id": "B03-1982",
+  "ext_id": "41471",
+  "sense": "0",
+  "ex": "7",
+  "word": "깨나다",
+  "meaning": "wake up; sober up; recover; get well",
+  "ko": "아이가 낮잠에서 깨나 엄마를 찾으며 울었다.",
+  "en_current": "The child woke from his nap and cried, looking for his mother.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MINOR",
+    "reason": "“his” assigns an unstated gender to the child.",
+    "suggested": "The child woke from their nap and cried, looking for their mother."
+   }
+  ]
+ },
+ {
+  "id": "B03-1995",
+  "ext_id": "41540",
+  "sense": "0",
+  "ex": "9",
+  "word": "깻잎",
+  "meaning": "sesame leaf",
+  "ko": "나는 간장에 무친 깻잎 반찬을 좋아한다.",
+  "en_current": "I love side dishes of sesame leaves seasoned with soy sauce.",
+  "flags": [
+   {
+    "model": "B03",
+    "label": "MAJOR",
+    "reason": "깻잎 means perilla leaves, not sesame leaves.",
+    "suggested": "I like the side dish of perilla leaves seasoned with soy sauce."
+   }
+  ]
+ },
+ {
+  "id": "B02-0020",
+  "ext_id": "83429",
+  "sense": "0",
+  "ex": "9",
+  "word": "지휘하다",
+  "meaning": "lead; conduct",
+  "ko": "박 부장은 이 사업을 총괄하여 지휘하고 있다.",
+  "en_current": "Section Chief Park is overseeing and directing this entire project.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Title mistranslated: 부장 is department head, not section chief",
+    "suggested": "Department Head Park is overseeing and directing this entire project."
+   }
+  ]
+ },
+ {
+  "id": "B02-0042",
+  "ext_id": "74616",
+  "sense": "0",
+  "ex": "6",
+  "word": "저작권",
+  "meaning": "copyright",
+  "ko": "김 씨는 컴퓨터 프로그램의 저작권을 침해한 혐의로 벌금을 물었다.",
+  "en_current": "Mr. Kim paid a fine on suspicion of infringing the copyright of a computer program.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated",
+    "suggested": "Kim paid a fine on suspicion of infringing the copyright of a computer program."
+   }
+  ]
+ },
+ {
+  "id": "B02-0091",
+  "ext_id": "56839",
+  "sense": "0",
+  "ex": "10",
+  "word": "발부",
+  "meaning": "issuance",
+  "ko": "경찰은 구속 영장 발부와 동시에 범인인 김 씨를 즉시 구속하였다.",
+  "en_current": "The police immediately detained Mr. Kim, the culprit, at the same time that the arrest warrant was issued.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated",
+    "suggested": "The police immediately detained Kim, the culprit, as soon as the arrest warrant was issued."
+   }
+  ]
+ },
+ {
+  "id": "B02-0097",
+  "ext_id": "61371",
+  "sense": "0",
+  "ex": "9",
+  "word": "사법",
+  "meaning": "justice; being judicial; being legal; law enforcement",
+  "ko": "검찰은 주가 조작 혐의로 구속된 그에 대하여 사법 처리를 검토하기로 하였다.",
+  "en_current": "The prosecution decided to review judicial proceedings against them, who was detained on charges of stock manipulation.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Pronoun 그 must be rendered as him, not them",
+    "suggested": "The prosecution decided to review judicial proceedings against him, who was detained on charges of stock manipulation."
+   }
+  ]
+ },
+ {
+  "id": "B02-0230",
+  "ext_id": "14418",
+  "sense": "0",
+  "ex": "5",
+  "word": "가불",
+  "meaning": "advance payment",
+  "ko": "김 대리는 어머니 수술비를 마련하기 위해 회사에 가불을 신청했다.",
+  "en_current": "Assistant Manager Kim applied to the company for an advance payment to raise money for his mother's surgery.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"his\" for 김 대리 whose sex is unstated",
+    "suggested": "Assistant Manager Kim applied to the company for an advance payment to pay for their mother's surgery."
+   }
+  ]
+ },
+ {
+  "id": "B02-0287",
+  "ext_id": "16359",
+  "sense": "0",
+  "ex": "5",
+  "word": "가작",
+  "meaning": "eminent work; runner-up",
+  "ko": "김 화백은 예술성이 뛰어난 가작을 많이 남긴 화가였다.",
+  "en_current": "Mr. Kim was a painter who left behind many excellent works of outstanding artistic quality.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" and drops title 화백 for 김 화백",
+    "suggested": "Painter Kim was an artist who left behind many excellent works of outstanding artistic quality."
+   }
+  ]
+ },
+ {
+  "id": "B02-0375",
+  "ext_id": "15260",
+  "sense": "0",
+  "ex": "5",
+  "word": "각하하다",
+  "meaning": "reject; dismiss",
+  "ko": "헌법 재판소는 김 모 씨가 제기한 헌법 소원에 대해 청구 자체가 부적합하다며 각하하였다.",
+  "en_current": "The Constitutional Court dismissed the constitutional complaint filed by Mr. Kim, saying the claim itself was improper.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" for 김 모 씨 whose sex is unstated",
+    "suggested": "The Constitutional Court dismissed the constitutional complaint filed by a certain Kim, saying the claim itself was improper."
+   }
+  ]
+ },
+ {
+  "id": "B02-0376",
+  "ext_id": "35601",
+  "sense": "0",
+  "ex": "6",
+  "word": "간간하다",
+  "meaning": "pleasantly salty",
+  "ko": "어머니는 밥이랑 먹어도 싱겁지 않도록 나물을 간간하게 무쳤다.",
+  "en_current": "Mother seasoned the namul lightly so that it would not be bland even when eaten with rice.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Headword 간간하다 (pleasantly salty) mistranslated as lightly",
+    "suggested": "Mother seasoned the namul so it was pleasantly salty and would not taste bland even with rice."
+   }
+  ]
+ },
+ {
+  "id": "B02-0442",
+  "ext_id": "14899",
+  "sense": "0",
+  "ex": "6",
+  "word": "간첩죄",
+  "meaning": "espionage",
+  "ko": "이웃 마을의 김 씨는 간첩죄로 체포되어 사형을 선고받았다.",
+  "en_current": "Mr. Kim from the neighboring village was arrested for espionage and sentenced to death.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated",
+    "suggested": "Kim from the neighboring village was arrested for espionage and sentenced to death."
+   }
+  ]
+ },
+ {
+  "id": "B02-0524",
+  "ext_id": "14786",
+  "sense": "0",
+  "ex": "7",
+  "word": "감시망",
+  "meaning": "surveillance system; surveillance network",
+  "ko": "김 씨는 경찰의 허술한 감시망을 틈타 탈옥에 성공했다.",
+  "en_current": "Mr. Kim took advantage of the police's lax surveillance network and succeeded in escaping prison.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated",
+    "suggested": "Kim took advantage of the police's lax surveillance network and succeeded in escaping prison."
+   }
+  ]
+ },
+ {
+  "id": "B02-0559",
+  "ext_id": "20185",
+  "sense": "0",
+  "ex": "7",
+  "word": "감찰",
+  "meaning": "inspection; supervision",
+  "ko": "김 의원은 권력 비리를 예방하기 위한 감찰 수사를 해야 한다고 주장했다.",
+  "en_current": "Assemblyman Kim argued that an inspection investigation should be conducted to prevent abuses of power.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"Assemblyman\" for 김 의원 whose sex is unstated",
+    "suggested": "Lawmaker Kim argued that an inspection investigation should be conducted to prevent abuses of power."
+   }
+  ]
+ },
+ {
+  "id": "B02-0582",
+  "ext_id": "64466",
+  "sense": "0",
+  "ex": "5",
+  "word": "감형되다",
+  "meaning": "be commuted; be remitted",
+  "ko": "박 씨는 모범수로 뽑혀 형이 감형되었다.",
+  "en_current": "Mr. Park was selected as a model prisoner, and his sentence was reduced.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" and \"his\" for 박 씨 whose sex is unstated",
+    "suggested": "Park was selected as a model prisoner, and their sentence was reduced."
+   }
+  ]
+ },
+ {
+  "id": "B02-0618",
+  "ext_id": "17488",
+  "sense": "0",
+  "ex": "5",
+  "word": "강권하다",
+  "meaning": "recommend forcibly; press",
+  "ko": "김 과장은 술을 못 마시는 직원들에게도 술을 강권했다.",
+  "en_current": "Manager Kim pressed alcohol on employees even though they could not drink.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Title mistranslated: 과장 is section chief, not manager",
+    "suggested": "Section Chief Kim pressed alcohol on employees even though they could not drink."
+   }
+  ]
+ },
+ {
+  "id": "B02-0684",
+  "ext_id": "19667",
+  "sense": "0",
+  "ex": "5",
+  "word": "강탈하다",
+  "meaning": "rob; extort",
+  "ko": "홍 사장은 경쟁 회사 직원을 협박해 신기술이 담긴 문서를 강탈했다.",
+  "en_current": "Chairman Hong threatened an employee of a rival company and seized documents containing the new technology.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Title mistranslated: 사장 is company president, not chairman",
+    "suggested": "President Hong threatened an employee of a rival company and seized documents containing the new technology."
+   }
+  ]
+ },
+ {
+  "id": "B02-0802",
+  "ext_id": "18607",
+  "sense": "0",
+  "ex": "6",
+  "word": "개조하다",
+  "meaning": "remodel; renovate",
+  "ko": "아버지는 이 층에 있는 창고를 방으로 개조해서 서재로 사용하셨다.",
+  "en_current": "Father converted the storage room on this floor into a study and used it as his study.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "이 층 means second floor (spelled out), not this floor",
+    "suggested": "Father converted the storage room on the second floor into a room and used it as a study."
+   }
+  ]
+ },
+ {
+  "id": "B02-0842",
+  "ext_id": "23422",
+  "sense": "0",
+  "ex": "5",
+  "word": "개평",
+  "meaning": "winner's tip",
+  "ko": "조 사장은 도박으로 천만 원이나 잃고 개평으로 겨우 차비만 얻었다.",
+  "en_current": "Chair Jo lost ten million won gambling and got just enough from the winners' leftover pickings to cover their fare.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Title mistranslated: 사장 is company president, not chair",
+    "suggested": "President Jo lost ten million won gambling and got just enough from the winners' leftover pickings to cover their fare."
+   }
+  ]
+ },
+ {
+  "id": "B02-0904",
+  "ext_id": "26349",
+  "sense": "0",
+  "ex": "5",
+  "word": "거꾸러뜨리다",
+  "meaning": "make fall head-first; make fall flat; overthrow; bring down; kill",
+  "ko": "민준이는 지나가는 친구에게 발을 걸어 앞으로 거꾸러뜨렸다.",
+  "en_current": "Minjun hooked his foot around a passing friend's leg and sent him sprawling forward.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"him\" for an unnamed friend whose sex is unstated",
+    "suggested": "Minjun hooked his foot around a passing friend's leg and sent them sprawling forward."
+   }
+  ]
+ },
+ {
+  "id": "B02-0956",
+  "ext_id": "27715",
+  "sense": "0",
+  "ex": "5",
+  "word": "거무데데하다",
+  "meaning": "darkish; murky; dusky",
+  "ko": "구두닦이의 얼굴과 손은 항상 거무데데한 상태였다.",
+  "en_current": "The shoeshine man's face and hands were always grimy and dark.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"shoeshine man\" for 구두닦이 whose sex is unstated",
+    "suggested": "The shoeshiner's face and hands were always grimy and dark."
+   }
+  ]
+ },
+ {
+  "id": "B02-1089",
+  "ext_id": "25381",
+  "sense": "0",
+  "ex": "6",
+  "word": "걷어채다",
+  "meaning": "be kicked; be abandoned; be forsaken",
+  "ko": "민준이는 친구와 싸우다가 친구에게 다리를 발로 걷어챘다.",
+  "en_current": "While fighting with a friend, Minjun was kicked in the leg by him.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"him\" for an unnamed friend whose sex is unstated",
+    "suggested": "While fighting with a friend, Minjun was kicked in the leg by them."
+   }
+  ]
+ },
+ {
+  "id": "B02-1109",
+  "ext_id": "31512",
+  "sense": "0",
+  "ex": "5",
+  "word": "걸터타다",
+  "meaning": "ride on; mount",
+  "ko": "아이는 아버지가 논으로 끌고 가는 소 등에 걸터탔다.",
+  "en_current": "The child straddled the back of the ox that his father was leading to the rice paddy.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"his\" for 아이 whose sex is unstated",
+    "suggested": "The child straddled the back of the ox that their father was leading to the rice paddy."
+   }
+  ]
+ },
+ {
+  "id": "B02-1114",
+  "ext_id": "31518",
+  "sense": "0",
+  "ex": "9",
+  "word": "검거망",
+  "meaning": "dragnet",
+  "ko": "경찰은 유괴범 이 씨를 잡기 위해 검거망을 전국으로 확대했다.",
+  "en_current": "To catch the kidnapper Mr. Lee, police expanded the dragnet nationwide.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Adds gender \"Mr.\" for 이 씨 whose sex is unstated",
+    "suggested": "To catch the kidnapper Lee, police expanded the dragnet nationwide."
+   }
+  ]
+ },
+ {
+  "id": "B02-1144",
+  "ext_id": "30059",
+  "sense": "0",
+  "ex": "9",
+  "word": "검정고시",
+  "meaning": "qualification exam",
+  "ko": "일흔 살의 노인이 고등학교 검정고시에 합격하여 화제가 되고 있다.",
+  "en_current": "A seventy-year-old man passed the high school equivalency exam, and it has become a topic of discussion.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"man\" for 노인 whose sex is unstated",
+    "suggested": "A seventy-year-old passed the high school equivalency exam, and it has become a topic of discussion."
+   }
+  ]
+ },
+ {
+  "id": "B02-1177",
+  "ext_id": "31350",
+  "sense": "0",
+  "ex": "4",
+  "word": "겉치레",
+  "meaning": "show; pretense; pose",
+  "ko": "우리 부부는 결혼할 때 겉치레는 다 빼고 결혼반지만 주고받았다.",
+  "en_current": "When we married, my husband and I dispensed with all the pomp and only exchanged wedding rings.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MINOR",
+    "reason": "Uses gendered \"my husband\" for 우리 부부 whose sex is unstated",
+    "suggested": "When my spouse and I married, we dispensed with all the pomp and only exchanged wedding rings."
+   }
+  ]
+ },
+ {
+  "id": "B02-1237",
+  "ext_id": "33035",
+  "sense": "0",
+  "ex": "7",
+  "word": "격상되다",
+  "meaning": "be promoted; be elevated",
+  "ko": "이번 인사이동 결과 김 과장은 부장으로 그 지위가 격상되었다.",
+  "en_current": "As a result of this personnel reshuffle, Manager Kim was promoted to department head.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Title mistranslated: 과장 is section chief, not manager",
+    "suggested": "As a result of this personnel reshuffle, Section Chief Kim was promoted to department head."
+   }
+  ]
+ },
+ {
+  "id": "B02-1538",
+  "ext_id": "30415",
+  "sense": "0",
+  "ex": "3",
+  "word": "경장",
+  "meaning": "police corporal",
+  "ko": "경장이었던 삼촌이 이번 승진 시험에 합격하여 경사가 되었다.",
+  "en_current": "My uncle, who was a police corporal, passed this promotion exam, which was a happy event for the family.",
+  "flags": [
+   {
+    "model": "B02",
+    "label": "MAJOR",
+    "reason": "Misread police rank 경사 (sergeant) as 경사 (happy event)",
+    "suggested": "My uncle, who was a police corporal, passed this promotion exam and became a police sergeant."
+   }
+  ]
+ }
+]

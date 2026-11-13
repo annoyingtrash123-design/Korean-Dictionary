@@ -1,0 +1,26 @@
+B02-0020 | MAJOR | Title mistranslated: 부장 is department head, not section chief | Department Head Park is overseeing and directing this entire project.
+B02-0042 | MINOR | Adds gender "Mr." for 김 씨 whose sex is unstated | Kim paid a fine on suspicion of infringing the copyright of a computer program.
+B02-0091 | MINOR | Adds gender "Mr." for 김 씨 whose sex is unstated | The police immediately detained Kim, the culprit, as soon as the arrest warrant was issued.
+B02-0097 | MAJOR | Pronoun 그 must be rendered as him, not them | The prosecution decided to review judicial proceedings against him, who was detained on charges of stock manipulation.
+B02-0230 | MINOR | Uses gendered "his" for 김 대리 whose sex is unstated | Assistant Manager Kim applied to the company for an advance payment to pay for their mother's surgery.
+B02-0287 | MINOR | Adds gender "Mr." and drops title 화백 for 김 화백 | Painter Kim was an artist who left behind many excellent works of outstanding artistic quality.
+B02-0375 | MINOR | Adds gender "Mr." for 김 모 씨 whose sex is unstated | The Constitutional Court dismissed the constitutional complaint filed by a certain Kim, saying the claim itself was improper.
+B02-0376 | MAJOR | Headword 간간하다 (pleasantly salty) mistranslated as lightly | Mother seasoned the namul so it was pleasantly salty and would not taste bland even with rice.
+B02-0442 | MINOR | Adds gender "Mr." for 김 씨 whose sex is unstated | Kim from the neighboring village was arrested for espionage and sentenced to death.
+B02-0524 | MINOR | Adds gender "Mr." for 김 씨 whose sex is unstated | Kim took advantage of the police's lax surveillance network and succeeded in escaping prison.
+B02-0559 | MINOR | Uses gendered "Assemblyman" for 김 의원 whose sex is unstated | Lawmaker Kim argued that an inspection investigation should be conducted to prevent abuses of power.
+B02-0582 | MINOR | Adds gender "Mr." and "his" for 박 씨 whose sex is unstated | Park was selected as a model prisoner, and their sentence was reduced.
+B02-0618 | MAJOR | Title mistranslated: 과장 is section chief, not manager | Section Chief Kim pressed alcohol on employees even though they could not drink.
+B02-0684 | MAJOR | Title mistranslated: 사장 is company president, not chairman | President Hong threatened an employee of a rival company and seized documents containing the new technology.
+B02-0802 | MAJOR | 이 층 means second floor (spelled out), not this floor | Father converted the storage room on the second floor into a room and used it as a study.
+B02-0842 | MAJOR | Title mistranslated: 사장 is company president, not chair | President Jo lost ten million won gambling and got just enough from the winners' leftover pickings to cover their fare.
+B02-0904 | MINOR | Uses gendered "him" for an unnamed friend whose sex is unstated | Minjun hooked his foot around a passing friend's leg and sent them sprawling forward.
+B02-0956 | MINOR | Uses gendered "shoeshine man" for 구두닦이 whose sex is unstated | The shoeshiner's face and hands were always grimy and dark.
+B02-1089 | MINOR | Uses gendered "him" for an unnamed friend whose sex is unstated | While fighting with a friend, Minjun was kicked in the leg by them.
+B02-1109 | MINOR | Uses gendered "his" for 아이 whose sex is unstated | The child straddled the back of the ox that their father was leading to the rice paddy.
+B02-1114 | MINOR | Adds gender "Mr." for 이 씨 whose sex is unstated | To catch the kidnapper Lee, police expanded the dragnet nationwide.
+B02-1144 | MINOR | Uses gendered "man" for 노인 whose sex is unstated | A seventy-year-old passed the high school equivalency exam, and it has become a topic of discussion.
+B02-1177 | MINOR | Uses gendered "my husband" for 우리 부부 whose sex is unstated | When my spouse and I married, we dispensed with all the pomp and only exchanged wedding rings.
+B02-1237 | MAJOR | Title mistranslated: 과장 is section chief, not manager | As a result of this personnel reshuffle, Section Chief Kim was promoted to department head.
+B02-1538 | MAJOR | Misread police rank 경사 (sergeant) as 경사 (happy event) | My uncle, who was a police corporal, passed this promotion exam and became a police sergeant.
+END B02 (checked 1841 rows)
