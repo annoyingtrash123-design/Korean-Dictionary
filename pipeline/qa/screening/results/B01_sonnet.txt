@@ -1,0 +1,13 @@
+B01-0177 | MAJOR | Tense wrong: Korean is past (사시면서 누리셨다), English present. | Grandfather lived in the countryside and enjoyed clean air and refreshing breezes.
+B01-0211 | MAJOR | 과장 is section chief, not "Manager". | Section Chief Kim had to quietly slip away from the meeting because an urgent matter came up.
+B01-0257 | MINOR | "his father's" assumes sex of unnamed 박 중위; Korean gives none. | First Lieutenant Park was proud to have followed their father and become a fighter pilot.
+B01-0270 | MAJOR | 사부님 here means teacher's husband, not master teacher. | The Korean language teacher's husband was also a teacher who had majored in Korean.
+B01-0300 | MINOR | "him" assumes sex of the child (꼬맹이); Korean gives none. | Uncle lightly pinched the little rascal's cheek, as if he found the kid adorable.
+B01-0381 | MAJOR | 부장 is department head, not "Director". | Department Head Kim was arrested on suspicion of leaking the company's top-secret management information.
+B01-0476 | MINOR | 네놈 is a rude "you", not "that fellow" (father addressed the speaker). | My father, who often swore, always called me "you brat."
+B01-0361 | MINOR | "Mr." assumes sex of 김 씨; Korean gives none. | Kim was caught stealing and spent several years in prison.
+B01-0515 | MAJOR | 죽게 되었다 means died, not "nearly died"; also "Mr." unsupported. | Kim suffered a severe gunshot wound in the shootout and died.
+B01-0551 | MINOR | "him" assumes sex of unnamed entertainer. | That entertainer denied the allegations against them to the very end.
+B01-0635 | MAJOR | 부장 is department head, not "Director". | Department Head Kim took a deep breath and then cautiously knocked on the president's office door.
+B01-0742 | MAJOR | 다람쥐 is a chipmunk, not a squirrel. | A chipmunk cracked open acorns under a tree and ate them.
+B01-0775 | MAJOR | 무진장 애를 먹었다 means had a very hard time; "sheer number" is invented. | The problems were harder than Seung-gyu had expected, and he had a terrible time throughout the entire test.

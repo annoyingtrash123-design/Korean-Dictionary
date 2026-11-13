@@ -1,0 +1,24 @@
+B05-0028 | MAJOR | 아버지 (father) rendered as Grandfather | After fleeing south during the war, my father is said to have lived as a dependent in a relative's house.
+B05-0032 | MAJOR | 덕망 (virtue and popular esteem) rendered as "rule" | A ruler's virtue and esteem come, above all, from letting the people live in peace.
+B05-0041 | MINOR | garbled "fidgeted with the chair with no ease"; 덜거덕거렸다 means rattled | Ji-su, feeling awkward, kept rattling the chair for no reason.
+B05-0046 | MAJOR | 밥을 지으시는지 (probably cooking rice) mistranslated as washing dishes | Mother, perhaps cooking rice, clattered the dishes in the kitchen.
+B05-0087 | MINOR | 사장 left untranslated as "Sa-jang" | President Kim bought the accessories cheaply at a dumping price.
+B05-0105 | MINOR | 동생 sex unstated, rendered as "brother" | Yumin put a sweater on over her younger sibling's shirt.
+B05-0130 | MINOR | "Riot" police added; Korean says only 경찰 | The police were dispatched to suppress the demonstrators who were staging a violent protest in front of city hall.
+B05-0134 | MAJOR | Timeframe changed: bestseller less than a year after debut, not debut within a year | She became a bestselling author less than a year after making her debut as a writer in the literary world.
+B05-0170 | MINOR | "A man named" adds sex not given for 김 씨 | Mr. Kim was arrested for breaking into an empty house and stealing.
+B05-0206 | MINOR | 도미하다 means go to the US, not necessarily emigrate | He suddenly announced his intention to go to the United States, surprising those around him.
+B05-0234 | MINOR | 중심으로 (centering on) turned into a causal "since"; meaning shifted | The farming population has declined rapidly, especially in urbanized areas.
+B05-0302 | MINOR | 동생 sex unstated, rendered as "younger brother" | My younger sibling is playing alone, drawing pictures with crayons on drawing paper.
+B05-0339 | MINOR | 독신주의 means principle of staying single, not "celibate" | My older sister, who is forty this year, still holds to her principle of staying single.
+B05-0341 | MINOR | 천주 교인 (Catholics) rendered as "Christians" | Two devout Catholics, who met three years ago at a gathering of Catholics, plan to hold their wedding in the church next month.
+B05-0364 | MAJOR | Title 과장 (section chief) changed to "Manager" | Section Chief Lee pressed subordinates to finish the work quickly and report back.
+B05-0437 | MINOR | "first move" added; garbled rendering of 경기 시작과 함께 | From the start of the game, this player opened a breakthrough in the attack on the left flank.
+B05-0448 | MINOR | "cohabiting group" garbled; 동거 생활 means living together | We lived together while attending university.
+B05-0453 | MINOR | 동결하여 건조한 is freeze-dried; "dried food frozen by freezing" garbled | Freeze-dried food is said to lose few nutrients.
+B05-0471 | MAJOR | Subject changed: 여인 (a woman) became "I", with "my" circumstances | A woman could not simply send away a begging beggar, so despite her difficult circumstances she gave him something to eat.
+B05-0472 | MINOR | Singular 그 후보자 rendered as plural "Candidates" | That candidate went around every neighborhood campaigning.
+B05-0474 | MAJOR | 동년 (the same year) rendered as "the following May" | We married in January and had a child in May of the same year.
+B05-0477 | MAJOR | Name/title 김 작가 dropped | Writer Kim, apparently unable to get the writing going, crumpled up the manuscript and threw it into the trash can.
+B05-0493 | MINOR | 연예인 (entertainer) rendered as "actress" | The entertainer has a pretty real name, but since a senior has the same name, she works under a stage name.
+B05-0496 | MINOR | 국회의원 rendered as male "congressman" | The lawmaker deliberately gave irrelevant answers at the hearing, which provoked public resentment.

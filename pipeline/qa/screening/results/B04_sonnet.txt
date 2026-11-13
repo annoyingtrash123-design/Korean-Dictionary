@@ -1,0 +1,13 @@
+B04-0007 | MINOR | "he" for child of unstated sex | My wife seems uneasy about having left the child behind when the child did not want to be separated.
+B04-0059 | MINOR | "he" for child of unstated sex | Yumin bundled the child in layers of clothing for fear the child would catch a cold.
+B04-0070 | MINOR | "fluffy" added; 꼬들꼬들 means firm/dry | Unlike me, who prefers soft rice, my husband likes firm, slightly hard rice.
+B04-0173 | MINOR | "him" for teacher of unstated sex | Minjun, walking along and meeting his teacher, bowed his head and greeted the teacher.
+B04-0312 | MAJOR | tense changed to present; "I don't know" added | Wherever he was wandering off to, he left the house empty all day and did not answer even when called.
+B04-0321 | MINOR | "husband" for 부부 spouse unsupported | My spouse and I go on an outing to a nearby park on weekends.
+B04-0370 | MINOR | "his mother" gender of child unstated | The child ran to their mother, their long black hair fluttering.
+B04-0428 | MINOR | "disqualified" implies rule violation; 낙천 means not nominated | Those who were not nominated as candidates for chairman are very dissatisfied.
+B04-0429 | MINOR | "disqualified" implies rule violation; 낙천 means not nominated | Representative Kim was not nominated and could not run in the mayoral election.
+B04-0431 | MINOR | "disqualified" implies rule violation; 낙천 means not nominated | Among the board members, those who were not nominated as candidates for the next chairman expressed their dissatisfaction.
+B04-0537 | MINOR | "a bag" added; Korean only says snatch-theft | The culprit was caught by passengers while committing a snatch theft on a crowded bus.
+B04-0675 | MAJOR | 사장님 (company president) rendered as "the owner" | The company president had a new sign made and hung it at the entrance of the building.
+B04-0695 | MINOR | "him" for child of unstated sex | When the child's fever soared, Father carried the child on his back and dashed to the hospital.
