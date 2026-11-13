@@ -1,0 +1,1174 @@
+[
+ {
+  "ext_id": "77742",
+  "sense": "0",
+  "ex": "7",
+  "ko": "점점 사회가 혼란스러워지자 여기저기에서 부당하게 징집하는 탐관오리가 생겨났다.",
+  "decision": "fix",
+  "en_new": "As society grew increasingly chaotic, corrupt officials who unjustly conscripted people sprang up everywhere.",
+  "note": "징집하다 means conscript, not levy taxes"
+ },
+ {
+  "ext_id": "72197",
+  "sense": "0",
+  "ex": "2",
+  "ko": "승규는 일구이언을 일삼아 아무도 그의 말을 귀담아 듣지 않았다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "69337",
+  "sense": "0",
+  "ex": "4",
+  "ko": "아이는 울먹울먹 학교에서의 일을 이야기했다.",
+  "decision": "fix",
+  "en_new": "On the verge of tears, the child told me about what had happened at school.",
+  "note": "울먹울먹 means on the verge of tears, not pouting"
+ },
+ {
+  "ext_id": "83166",
+  "sense": "0",
+  "ex": "4",
+  "ko": "아버지는 국에 밥을 두어 술 말아 드셨다.",
+  "decision": "fix",
+  "en_new": "Father mixed a couple of spoonfuls of rice into the soup and ate it.",
+  "note": "두어 술 means a couple of spoonfuls, not one"
+ },
+ {
+  "ext_id": "64231",
+  "sense": "0",
+  "ex": "5",
+  "ko": "쇠고집인 윌 동생은 부모님이 그렇게 먹지 말라는 음식을 항상 먹었다.",
+  "decision": "fix",
+  "en_new": "Will's stubborn younger sibling always ate the foods their parents told them not to eat.",
+  "note": "윌 동생 = Will's younger sibling; name dropped"
+ },
+ {
+  "ext_id": "34895",
+  "sense": "0",
+  "ex": "0",
+  "ko": "작년부터 우리 집에 받는 사람 난에 ‘박승규 귀하’라고 쓰여 있는 우편물이 잘못 오고 있다.",
+  "decision": "fix",
+  "en_new": "Since last year, mail addressed to \"Mr. Park Seung-gyu\" has been wrongly delivered to our house.",
+  "note": "귀하 omitted"
+ },
+ {
+  "ext_id": "74776",
+  "sense": "0",
+  "ex": "7",
+  "ko": "조합원들은 간부들에게 해체당한 노동조합에 대한 재조직을 요구하였다.",
+  "decision": "fix",
+  "en_new": "Union members demanded the reorganization of the labor union that the executives had dissolved.",
+  "note": "omits that executives dissolved the union"
+ },
+ {
+  "ext_id": "23962",
+  "sense": "0",
+  "ex": "5",
+  "ko": "대학생인 내 동생은 과외로 시간을 내어 틈틈이 자원봉사를 한다.",
+  "decision": "fix",
+  "en_new": "My younger sibling, a college student, makes extra time on the side to do volunteer work whenever possible.",
+  "note": "과외로 = as an extra, not tutoring"
+ },
+ {
+  "ext_id": "66525",
+  "sense": "0",
+  "ex": "3",
+  "ko": "그녀는 가난한 집안 살림으로 돈 한 푼 제대로 쓰지 않는 어머니의 악착에 눈물이 났다.",
+  "decision": "fix",
+  "en_new": "She was moved to tears by her mother's tenacity: with the household so poor, her mother would not spend even a single penny freely.",
+  "note": "Subject changed: 그녀 (she) was moved, not \"I\""
+ },
+ {
+  "ext_id": "14874",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 한 달 동안 용돈을 얼마나 썼는지 계를 구했다.",
+  "decision": "fix",
+  "en_new": "Jisu calculated the total of how much she had spent on pocket money over a month.",
+  "note": "구하다 here means calculate, not ask for"
+ },
+ {
+  "ext_id": "56767",
+  "sense": "0",
+  "ex": "4",
+  "ko": "할머니는 반닫이를 열어 외출용 옷가지를 꺼내셨다.",
+  "decision": "fix",
+  "en_new": "Grandmother opened the bandaji chest and took out clothes for going out.",
+  "note": "banga-dach garbled for 반닫이"
+ },
+ {
+  "ext_id": "89750",
+  "sense": "0",
+  "ex": "0",
+  "ko": "내가 화를 내고 이러자 친구도 얼굴이 벌게졌다.",
+  "decision": "fix",
+  "en_new": "When I got angry and carried on like that, my friend's face turned red too.",
+  "note": "이러자 = when I acted like this"
+ },
+ {
+  "ext_id": "73488",
+  "sense": "0",
+  "ex": "5",
+  "ko": "십칠 년을 함께 가족처럼 살아온 애완견이 자연사했다.",
+  "decision": "fix",
+  "en_new": "Our pet dog, who had lived with us like family for seventeen years, died a natural death.",
+  "note": "자연사 = natural death, not old age"
+ },
+ {
+  "ext_id": "64840",
+  "sense": "0",
+  "ex": "5",
+  "ko": "현충일은 순국선열을 기리며 추모하는 국경일이다.",
+  "decision": "fix",
+  "en_new": "Memorial Day is a national holiday to commemorate and honor the patriotic martyrs.",
+  "note": "현충일 is Memorial Day; \"Patriotic Martyrs Day\" is invented"
+ },
+ {
+  "ext_id": "22528",
+  "sense": "0",
+  "ex": "6",
+  "ko": "썰물이 끝나자 물고기들이 갯고랑에 갇혀 파닥거리고 있었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "76498",
+  "sense": "0",
+  "ex": "5",
+  "ko": "나는 진갑을 보낸 게 엊그제 같은데 어느새 칠순이 되었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "91821",
+  "sense": "0",
+  "ex": "4",
+  "ko": "형은 술을 너무 마시다가 술독 증상으로 병원에 갔다.",
+  "decision": "fix",
+  "en_new": "My older brother drank too much and went to the hospital with a blotchy, flushed face from alcohol.",
+  "note": "술독 = blotchy flushed face from drinking"
+ },
+ {
+  "ext_id": "66123",
+  "sense": "0",
+  "ex": "5",
+  "ko": "촬영 팀은 영화 후반부의 신을 찍기 위해 카메라와 장비를 야외 세트로 옮겼다.",
+  "decision": "fix",
+  "en_new": "To film a scene from the latter part of the movie, the crew moved the cameras and equipment to an outdoor set.",
+  "note": "후반부의 신 = a scene in the latter part"
+ },
+ {
+  "ext_id": "90062",
+  "sense": "0",
+  "ex": "5",
+  "ko": "승규는 못 본 사이에 몸이 야위고 얼굴이 상해 있었다.",
+  "decision": "fix",
+  "en_new": "Seung-gyu had grown thin since I last saw him, and his face looked worn.",
+  "note": "\"While I was away\" is added; Korean says \"since I last saw him\""
+ },
+ {
+  "ext_id": "15615",
+  "sense": "0",
+  "ex": "0",
+  "ko": "친구를 보면 그 사람을 알 수 있다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "20571",
+  "sense": "0",
+  "ex": "6",
+  "ko": "추운 날씨에 얼어 죽은 강시는 몸이 뻣뻣했다.",
+  "decision": "fix",
+  "en_new": "The corpse that had frozen to death in the cold was stiff and rigid.",
+  "note": "강시 = frozen corpse"
+ },
+ {
+  "ext_id": "91189",
+  "sense": "0",
+  "ex": "6",
+  "ko": "당첨이 무효화돼서 받은 당첨금 모두를 되돌려 주게 되었다.",
+  "decision": "fix",
+  "en_new": "Because the win was invalidated, all the prize money received had to be returned.",
+  "note": "모두 modifies the prize money, not \"everyone\""
+ },
+ {
+  "ext_id": "90201",
+  "sense": "0",
+  "ex": "3",
+  "ko": "나는 가슴이 마구 뚝딱뚝딱해서 귀까지 먹먹했다.",
+  "decision": "fix",
+  "en_new": "My heart was pounding so hard that even my ears felt muffled.",
+  "note": "귀가 먹먹하다 = muffled/blocked ears, not numb"
+ },
+ {
+  "ext_id": "62374",
+  "sense": "0",
+  "ex": "6",
+  "ko": "쥐가 뛰어다니는지 하루 종일 천장에서 쿵쿵거리는 소리가 들렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "15074",
+  "sense": "0",
+  "ex": "5",
+  "ko": "언니는 속이 타는지 단숨에 맥주 한 컵을 다 들이켰다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "37808",
+  "sense": "0",
+  "ex": "5",
+  "ko": "한국의 남동 방향에는 일본이 있다.",
+  "decision": "fix",
+  "en_new": "Japan lies to the southeast of Korea.",
+  "note": "Japan lies to the southeast of Korea, not in Korea"
+ },
+ {
+  "ext_id": "87857",
+  "sense": "0",
+  "ex": "6",
+  "ko": "계속 구부정하게 앉아 있었더니 허리가 곱는 기분이다.",
+  "decision": "fix",
+  "en_new": "I have been sitting hunched for so long that my back feels bent.",
+  "note": "허리가 곱다 = back bent/hunched, not cramped"
+ },
+ {
+  "ext_id": "64194",
+  "sense": "0",
+  "ex": "5",
+  "ko": "여인의 붉은빛 치마 속으로 하얀 속곳이 살짝 보였다.",
+  "decision": "fix",
+  "en_new": "Under the woman's red skirt, white under-trousers were slightly visible.",
+  "note": "속곳 = pants-like underwear, not an underskirt"
+ },
+ {
+  "ext_id": "17538",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 남자들도 받기 힘든 훈련을 받을 만큼 강단이 세다.",
+  "decision": "fix",
+  "en_new": "Jisu has such strong resolve that she can endure training even men find difficult.",
+  "note": "\"she\" adds gender for 지수"
+ },
+ {
+  "ext_id": "91089",
+  "sense": "0",
+  "ex": "4",
+  "ko": "거센 바람에 건물의 간판들이 덜커덕덜커덕 흔들렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "67028",
+  "sense": "0",
+  "ex": "6",
+  "ko": "날이 풀리자 서둘러 어선들이 바다로 고기잡이에 나섰다.",
+  "decision": "fix",
+  "en_new": "When the weather turned mild, fishing boats hurried out to sea to fish.",
+  "note": "날이 풀리다 = the cold let up, not the weather cleared"
+ },
+ {
+  "ext_id": "57247",
+  "sense": "0",
+  "ex": "4",
+  "ko": "발표자는 청중의 예상치 못한 반문에 당황해서 대답을 하지 못했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "83162",
+  "sense": "0",
+  "ex": "10",
+  "ko": "어머니는 항상 자식 걱정을 한다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "23094",
+  "sense": "0",
+  "ex": "2",
+  "ko": "가장 윗자리에는 어른이 앉고 아이들은 아랫자리에 앉았다.",
+  "decision": "fix",
+  "en_new": "The elder sat in the top seat, and the children sat in the lower seats.",
+  "note": "어른이 = one elder in the top seat, not adults"
+ },
+ {
+  "ext_id": "30552",
+  "sense": "0",
+  "ex": "5",
+  "ko": "경비행기를 조종하는 법을 배워서 하늘을 멋지게 나는 게 내 꿈이다.",
+  "decision": "fix",
+  "en_new": "My dream is to learn to fly a light aircraft and soar beautifully through the sky.",
+  "note": "Tense wrong: dream is to learn to fly, not already learned"
+ },
+ {
+  "ext_id": "70515",
+  "sense": "0",
+  "ex": "5",
+  "ko": "커튼 사이로 새어 들어온 햇빛이 방 안에서 어물거렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "58033",
+  "sense": "0",
+  "ex": "0",
+  "ko": "아낙은 남편이 나무라면 말 한 마디도 지지 않고 뒤받아 대꾸를 했다.",
+  "decision": "fix",
+  "en_new": "Whenever her husband scolded her, the wife talked back, never yielding a single word.",
+  "note": "한 마디도 지지 않다 = did not yield a word"
+ },
+ {
+  "ext_id": "87866",
+  "sense": "0",
+  "ex": "6",
+  "ko": "탈옥한 흉악범에게 여러 명이 희생되었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "56284",
+  "sense": "0",
+  "ex": "3",
+  "ko": "집을 짓기 위해서는 물목을 잘 살펴봐야 한다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "66092",
+  "sense": "0",
+  "ex": "5",
+  "ko": "문을 열고 나갔더니 싸느란 바깥 공기에 소름이 돋았다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "83588",
+  "sense": "0",
+  "ex": "3",
+  "ko": "김 씨가 푸석푸석 거칠어진 손을 내밀었다.",
+  "decision": "fix",
+  "en_new": "Kim held out a dry, rough hand.",
+  "note": "푸석푸석 means dry and rough; \"swollen\" unsupported"
+ },
+ {
+  "ext_id": "61599",
+  "sense": "0",
+  "ex": "4",
+  "ko": "사위 사랑은 장모라고 하더니 사돈은 김 서방만 보면 흐뭇한 미소를 지었다.",
+  "decision": "fix",
+  "en_new": "They say a mother-in-law dotes on her son-in-law, and sure enough, the in-law smiled warmly whenever they saw Mr. Kim.",
+  "note": "\"his in-law\" and \"he\" unsupported possessive/gender"
+ },
+ {
+  "ext_id": "90122",
+  "sense": "0",
+  "ex": "4",
+  "ko": "지수는 아쉬운 표정을 지으며 입맛을 쩝쩝했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "70554",
+  "sense": "0",
+  "ex": "5",
+  "ko": "소나기가 내린 날이면 유실물 보관소에는 사람들이 챙겨 가지 못한 우산이 가득했다.",
+  "decision": "fix",
+  "en_new": "On days when a sudden shower fell, the lost-and-found office was full of umbrellas that people had not taken home.",
+  "note": "날이면 = whenever a shower falls, not one day"
+ },
+ {
+  "ext_id": "64366",
+  "sense": "0",
+  "ex": "38",
+  "ko": "이 정도 돈이면 열흘은 견딜 수 있을 것 같았다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "14299",
+  "sense": "0",
+  "ex": "6",
+  "ko": "나는 자와 각도기로 크기가 똑같은 사각형을 그렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "80633",
+  "sense": "0",
+  "ex": "5",
+  "ko": "음산한 구름이 칙칙하게 깔려 있는 하늘이 오늘따라 유난히 어두워 보였다.",
+  "decision": "fix",
+  "en_new": "The sky, spread with gloomy, dingy clouds, looked especially dark today.",
+  "note": "the sky looked especially dark, not everything"
+ },
+ {
+  "ext_id": "47183",
+  "sense": "0",
+  "ex": "4",
+  "ko": "부부 동반 모임에 나타난 친구 부부는 닭살 애정을 과시했다.",
+  "decision": "fix",
+  "en_new": "My friend and their spouse, who showed up at the couples' gathering, flaunted their lovey-dovey affection.",
+  "note": "친구 부부 = the friend and spouse"
+ },
+ {
+  "ext_id": "85284",
+  "sense": "0",
+  "ex": "5",
+  "ko": "김 씨는 지난달 입북하여 북한에 국가 기밀을 누설한 혐의를 받고 있다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "64712",
+  "sense": "0",
+  "ex": "5",
+  "ko": "우리 집에는 엄마가 요리 책을 오려 붙여 만드신 스크랩북이 몇 권이나 있다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "38480",
+  "sense": "0",
+  "ex": "6",
+  "ko": "노부인의 우아하고 단정한 옷차림에서 기품이 느껴졌다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "64454",
+  "sense": "0",
+  "ex": "14",
+  "ko": "정부는 올 하반기에도 우리 경제의 성장세가 지속될 것이라고 예상했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "28154",
+  "sense": "0",
+  "ex": "5",
+  "ko": "승규는 어제 회식에서 과음을 해서 컨디션이 좋지 않았다.",
+  "decision": "fix",
+  "en_new": "Seung-gyu drank too much at yesterday's company dinner, so he was not in good condition.",
+  "note": "tense wrong: condition was bad yesterday, not is"
+ },
+ {
+  "ext_id": "33053",
+  "sense": "0",
+  "ex": "6",
+  "ko": "아군과 적군이 모두 총공격을 하여 일대 격전이 벌어졌다.",
+  "decision": "fix",
+  "en_new": "Both our forces and the enemy launched all-out attacks, and a great, fierce battle broke out.",
+  "note": "일대 격전 = a great battle (一大), not \"across the area\""
+ },
+ {
+  "ext_id": "82316",
+  "sense": "0",
+  "ex": "7",
+  "ko": "친구는 툭하면 버럭버럭 화를 내곤 했다.",
+  "decision": "fix",
+  "en_new": "My friend used to flare up in anger at the drop of a hat.",
+  "note": "tense: 곤 했다 is past habitual, not present"
+ },
+ {
+  "ext_id": "27757",
+  "sense": "0",
+  "ex": "5",
+  "ko": "그 나이 많은 아저씨는 첫사랑을 잊지 못해서 지금껏 혼자 산다.",
+  "decision": "fix",
+  "en_new": "That older man has lived alone until now, unable to forget his first love.",
+  "note": "아저씨 = older man, not uncle"
+ },
+ {
+  "ext_id": "68015",
+  "sense": "0",
+  "ex": "5",
+  "ko": "아이들이 오순도순 모여 앉아서 도시락을 먹고 있다.",
+  "decision": "fix",
+  "en_new": "The children are sitting together harmoniously, eating their packed lunches.",
+  "note": "먹고 있다 = present progressive"
+ },
+ {
+  "ext_id": "87332",
+  "sense": "0",
+  "ex": "5",
+  "ko": "할아버지께서는 거실에서 확대경을 끼신 채 신문을 읽고 계셨다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "24582",
+  "sense": "0",
+  "ex": "5",
+  "ko": "아이디 또는 비밀번호가 일치하지 않으니 확인하시기 바랍니다.",
+  "decision": "fix",
+  "en_new": "The ID or password does not match, so please check it.",
+  "note": "또는 means \"or\" and the sentence is not conditional"
+ },
+ {
+  "ext_id": "65247",
+  "sense": "0",
+  "ex": "5",
+  "ko": "유민이는 승규가 안 보는 사이에 승규의 과자를 슬쩍슬쩍 집어 먹는다.",
+  "decision": "fix",
+  "en_new": "Yu-min furtively takes and eats Seung-gyu's snacks while he is not looking.",
+  "note": "집어 먹는다 = present habitual"
+ },
+ {
+  "ext_id": "90375",
+  "sense": "0",
+  "ex": "5",
+  "ko": "민준이는 장작을 넣고 은근히 불을 지폈다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "54046",
+  "sense": "0",
+  "ex": "5",
+  "ko": "어려서부터 친했던 우리 자매들은 각자 결혼한 후에도 동기간 모임을 자주 갖는다.",
+  "decision": "fix",
+  "en_new": "Having been close since childhood, we sisters still often hold sibling get-togethers even after each of us has married.",
+  "note": "우리 자매들 = we sisters; among themselves"
+ },
+ {
+  "ext_id": "27552",
+  "sense": "0",
+  "ex": "6",
+  "ko": "민준이는 고집스러워서 절대 자기의 주장을 꺾지 않았다.",
+  "decision": "fix",
+  "en_new": "Min-jun was so stubborn that he never backed down from his own opinion.",
+  "note": "꺾지 않았다 is past"
+ },
+ {
+  "ext_id": "76736",
+  "sense": "0",
+  "ex": "8",
+  "ko": "자기 직업관이 뚜렷한 승규는 자신이 하고 있는 일에 만족하며 즐기면서 했다.",
+  "decision": "fix",
+  "en_new": "Seung-gyu had a clear work ethic and was satisfied with, and enjoyed, the work he did.",
+  "note": "했다 is past"
+ },
+ {
+  "ext_id": "60088",
+  "sense": "0",
+  "ex": "5",
+  "ko": "김 사장은 빌려 간 돈을 본전에 이자까지 쳐서 성실하게 갚았다.",
+  "decision": "fix",
+  "en_new": "President Kim faithfully repaid the borrowed money, principal plus interest.",
+  "note": "김 사장 title 사장 dropped"
+ },
+ {
+  "ext_id": "36282",
+  "sense": "0",
+  "ex": "8",
+  "ko": "저는 요즘 그럭저럭 살아요.",
+  "decision": "fix",
+  "en_new": "I'm getting by, more or less, these days.",
+  "note": "그럭저럭 = getting by so-so, not fairly well"
+ },
+ {
+  "ext_id": "86389",
+  "sense": "0",
+  "ex": "5",
+  "ko": "최 사장은 지금 회사 형편이 어떤지 전혀 모르고 있었다.",
+  "decision": "fix",
+  "en_new": "President Choi had no idea at all what the company's situation was now.",
+  "note": "사장 is company president, not chairman"
+ },
+ {
+  "ext_id": "66023",
+  "sense": "0",
+  "ex": "3",
+  "ko": "나는 바쁜 어머니를 돕기 위해 장을 보며 심부름했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "68070",
+  "sense": "0",
+  "ex": "8",
+  "ko": "그 저택의 외곽은 높은 담으로 둘러쳐져 있었다.",
+  "decision": "fix",
+  "en_new": "The mansion's perimeter was enclosed by a high wall.",
+  "note": "외곽 here means outer perimeter; \"outskirts of a mansion\" is odd"
+ },
+ {
+  "ext_id": "81306",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 심한 들창코여서 콧구멍 속이 훤히 들여다보인다.",
+  "decision": "fix",
+  "en_new": "Ji-su has a very upturned nose, so you can see right into her nostrils.",
+  "note": "들창코 = upturned nose, not nostrils"
+ },
+ {
+  "ext_id": "91454",
+  "sense": "0",
+  "ex": "0",
+  "ko": "고따위 얄팍한 수작은 내게는 통하지 않는다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "57991",
+  "sense": "0",
+  "ex": "9",
+  "ko": "김 부장은 뛰어난 업무 능력 발휘로 상사와 부하 직원의 신임을 얻고 있다.",
+  "decision": "fix",
+  "en_new": "Department Head Kim is gaining the trust of superiors and subordinates by displaying outstanding work ability.",
+  "note": "김 부장 = department head, not section chief"
+ },
+ {
+  "ext_id": "89146",
+  "sense": "0",
+  "ex": "8",
+  "ko": "시에는 일반적인 언어로 환언이 어려운 시의 언어가 있다.",
+  "decision": "source",
+  "note": "sentence uses 환언 (paraphrase), not 환원"
+ },
+ {
+  "ext_id": "79232",
+  "sense": "0",
+  "ex": "7",
+  "ko": "박 의원의 활동은 지지자들의 찬동을 얻었다.",
+  "decision": "fix",
+  "en_new": "Lawmaker Park's activities won the approval of supporters.",
+  "note": "의원 sex unstated; \"Assemblyman\" adds gender"
+ },
+ {
+  "ext_id": "63090",
+  "sense": "0",
+  "ex": "0",
+  "ko": "지수는 한기가 선뜩선뜩 느껴지자 외투를 걸쳤다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "30253",
+  "sense": "0",
+  "ex": "5",
+  "ko": "부친상을 당한 과장님의 장례식장에 직원들은 경조 화환을 보냈다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "74880",
+  "sense": "0",
+  "ex": "6",
+  "ko": "민준이는 사랑하는 연인과 섹스하는 것을 원하였다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "39540",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 이 일은 왠지 하면 안 될 것 같은 께름칙한 기분이 들었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "14601",
+  "sense": "0",
+  "ex": "4",
+  "ko": "용돈이 다 떨어져서 친구에게 곁다리를 붙어서 밥을 얻어 먹었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "52062",
+  "sense": "0",
+  "ex": "2",
+  "ko": "승규는 첫눈에 반한 상대가 있으면 주저하지 않고 자신의 명함을 건네며 랑데부를 청했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "73666",
+  "sense": "0",
+  "ex": "8",
+  "ko": "그 형사는 정체를 숨긴 채 큰 범죄 조직에 들어가 잠입 수사를 펼쳤다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "74012",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수의 눈가에 어리던 눈물이 이내 주르륵 흘러내렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "58456",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수의 인기를 방증하는 듯 함께 식사를 하는 내내 지수의 전화가 쉴 새 없이 울렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "50993",
+  "sense": "0",
+  "ex": "3",
+  "ko": "득남한 형님네 부부가 병원에서 돌아왔다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "601365",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 엄마와 함께 옷을 사러 아웃렛에 갔다.",
+  "decision": "fix",
+  "en_new": "Jisu went to an outlet with her mom to buy clothes.",
+  "note": "\"the mother\" unnatural; 엄마 is Jisu's mom"
+ },
+ {
+  "ext_id": "54978",
+  "sense": "0",
+  "ex": "5",
+  "ko": "동생에게 화를 내다가 스스로의 모습에 멈칫 놀라 엉엉 우는 동생에게 사과를 했다.",
+  "decision": "fix",
+  "en_new": "I got angry at my younger sibling, then, startled at how I was acting, apologized to them as they cried loudly.",
+  "note": "모습 here means behavior, not appearance"
+ },
+ {
+  "ext_id": "63322",
+  "sense": "0",
+  "ex": "9",
+  "ko": "지수는 자신을 도와준 친구에게 고마움의 표시로 멋진 그림을 선사했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "73434",
+  "sense": "0",
+  "ex": "5",
+  "ko": "승규는 입신양명의 꿈을 꾸며 하루하루 최선을 다하고 있다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "36523",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 입안의 금니가 다 드러날 만큼 환하게 웃었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "40138",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 손에 꾸겨 든 손수건으로 눈물을 닦았다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "48193",
+  "sense": "0",
+  "ex": "2",
+  "ko": "민준은 병에 걸려 죽을 지경에 이르렀으나 어머니의 간호를 받고 되살아났다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "58843",
+  "sense": "0",
+  "ex": "5",
+  "ko": "승규는 병역을 마치고 이번 학기에 복학한다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "61736",
+  "sense": "0",
+  "ex": "2",
+  "ko": "민준이는 뻐드렁니에 대한 콤플렉스가 있다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "601573",
+  "sense": "0",
+  "ex": "2",
+  "ko": "유민이의 로망은 본인이 살 집을 직접 짓는 것이다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "38474",
+  "sense": "0",
+  "ex": "6",
+  "ko": "아주머니는 학비를 스스로 벌겠다는 지수의 기특한 생각을 듣고 매우 흐뭇해하셨다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "51709",
+  "sense": "0",
+  "ex": "4",
+  "ko": "승규는 띄엄띄엄 책을 읽어 친구들한테 말더듬이라고 놀림을 받았다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "55875",
+  "sense": "0",
+  "ex": "5",
+  "ko": "민준은 목욕물을 바가지로 퍼서 몸에 끼얹었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "74189",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 독서를 하기 전에 왜 그 책을 읽으려는지 전기를 작성하고 있다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "56142",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 새로 산 구두 때문에 발뒤꿈치에 물집이 잡혔다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "26840",
+  "sense": "0",
+  "ex": "3",
+  "ko": "넓은 초원에서 양치기가 양들에게 풀을 뜯기고 있었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "64257",
+  "sense": "0",
+  "ex": "5",
+  "ko": "남자는 연인에게 귓속말로 사랑을 속삭거렸다.",
+  "decision": "fix",
+  "en_new": "The man whispered his love into his lover's ear.",
+  "note": "연인 sex unstated; \"her ear\" added"
+ },
+ {
+  "ext_id": "66018",
+  "sense": "0",
+  "ex": "5",
+  "ko": "경찰은 범인을 심문하여 범인의 자백을 받아 냈다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "32557",
+  "sense": "0",
+  "ex": "7",
+  "ko": "내 친구는 뒷골목에서 깡패에게 돈을 빼앗겼다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "92459",
+  "sense": "0",
+  "ex": "7",
+  "ko": "동업을 하는 친구와 나는 이익을 일대일로 나누기로 했다.",
+  "decision": "fix",
+  "en_new": "My friend and I, who run a business together, decided to split the profits fifty-fifty.",
+  "note": "일대일 means an even 1:1 split; \"one-on-one\" misleads"
+ },
+ {
+  "ext_id": "56877",
+  "sense": "0",
+  "ex": "6",
+  "ko": "승규는 새 수납장에 물건들을 차곡차곡 반듯하게 정리하였다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "26702",
+  "sense": "0",
+  "ex": "4",
+  "ko": "승규가 동생의 장난감을 빼앗아 동생을 울렸다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "25626",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 이별 후 느껴지는 공허감에 식욕도 잃을 지경이었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "70932",
+  "sense": "0",
+  "ex": "6",
+  "ko": "민준이는 리어카 바퀴가 뻑뻑하다며 바퀴에 윤활유를 쳤다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "73701",
+  "sense": "0",
+  "ex": "7",
+  "ko": "오랜만에 본 민준이는 어깨까지 머리를 기른 장발이었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "84797",
+  "sense": "0",
+  "ex": "5",
+  "ko": "적군은 우리의 무장을 해제하고 우리가 가진 무기들을 모두 빼앗아 갔다.",
+  "decision": "fix",
+  "en_new": "The enemy disarmed us and took away all the weapons we had.",
+  "note": "\"disarmed our weapons\" unnatural; people are disarmed"
+ },
+ {
+  "ext_id": "69810",
+  "sense": "0",
+  "ex": "6",
+  "ko": "지수는 생일날 원뿔형 모자를 쓰고 케이크의 불을 껐다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "41982",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 긴 머리를 단정히 묶어 단아한 모습이었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "19833",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 자신의 능력에 대해 과소평가를 받아서 자존심이 상했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "73936",
+  "sense": "0",
+  "ex": "3",
+  "ko": "승규는 자기기만에 빠져 자기의 능력을 넘는 일을 할 수 있다고 믿었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "69653",
+  "sense": "0",
+  "ex": "8",
+  "ko": "지수는 튼튼한 위장 덕분에 한 번도 체한 적이 없었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "92041",
+  "sense": "0",
+  "ex": "10",
+  "ko": "지수는 영어로 말하기를 잘하고 싶어서 회화 연습이 가능한 앱을 구매했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "68023",
+  "sense": "0",
+  "ex": "6",
+  "ko": "승규는 싸움을 잘해서 또래들 사이에서 왕초 노릇을 했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "58917",
+  "sense": "0",
+  "ex": "4",
+  "ko": "승규는 우아하게 춤을 추다가 발을 헛디뎌 넘어지지 않으려고 버둥대며 무대에서 떨어졌다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "43805",
+  "sense": "0",
+  "ex": "6",
+  "ko": "유민이는 친구들에게 농담을 하는 것을 좋아한다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "72425",
+  "sense": "0",
+  "ex": "2",
+  "ko": "지수는 대학생 때 학원 재단에서 등록금을 받았다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "18612",
+  "sense": "0",
+  "ex": "5",
+  "ko": "곱상한 얼굴의 승규는 여학생들 사이에서 인기가 많다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "57211",
+  "sense": "0",
+  "ex": "5",
+  "ko": "그 여자가 악을 쓰며 날뛰는 모습은 마치 발작하는 광인같이 보였다.",
+  "decision": "fix",
+  "en_new": "The way that woman screamed and raged looked like a lunatic having a seizure.",
+  "note": "광인 sex unstated; \"madman\" gendered"
+ },
+ {
+  "ext_id": "42175",
+  "sense": "0",
+  "ex": "6",
+  "ko": "민준이는 금속 공예를 할 때 필요한 금속 원료를 직접 단련해서 쓴다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "65244",
+  "sense": "0",
+  "ex": "5",
+  "ko": "책 속의 주인공이 너무나 가엾어서 책을 읽는 내내 슬피 울었다.",
+  "decision": "fix",
+  "en_new": "The main character in the book was so pitiful that I cried sadly the whole time I read it.",
+  "note": "주인공 sex unstated; \"heroine\" adds gender"
+ },
+ {
+  "ext_id": "55489",
+  "sense": "0",
+  "ex": "5",
+  "ko": "유민은 시장에서 사 온 모시조개를 넣고 된장국을 끓였다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "41345",
+  "sense": "0",
+  "ex": "5",
+  "ko": "그 거만한 상사는 종종 아랫사람을 깔보고 능욕하곤 했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "19830",
+  "sense": "0",
+  "ex": "7",
+  "ko": "승규는 과소비를 줄이기 위해 신용 카드의 사용 한도를 최저로 설정하였다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "91133",
+  "sense": "0",
+  "ex": "1",
+  "ko": "유민이는 한동안 요리에만 매진을 하더니 꽤 요리를 잘하게 되었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "62097",
+  "sense": "0",
+  "ex": "9",
+  "ko": "승규는 전 재산을 모교에 기부하기로 했다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "72407",
+  "sense": "0",
+  "ex": "6",
+  "ko": "승규는 묵고 있던 하숙집에서 방세를 올려달라고 해서 이사를 갔다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "79374",
+  "sense": "0",
+  "ex": "4",
+  "ko": "이 치마는 치마폭이 좁아 걷기가 불편하다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "90948",
+  "sense": "0",
+  "ex": "5",
+  "ko": "이 글은 너무 어려워서 뜻풀이된 자료가 없이는 이해하기 어렵다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "68494",
+  "sense": "0",
+  "ex": "5",
+  "ko": "아이는 출근하는 엄마의 옷자락을 붙잡고 놓아주질 않았다.",
+  "decision": "fix",
+  "en_new": "The child clung to their mother's hem as she left for work and would not let go.",
+  "note": "child's sex unstated; \"his\" unsupported"
+ },
+ {
+  "ext_id": "55224",
+  "sense": "0",
+  "ex": "5",
+  "ko": "아이는 진열장에 전시된 인형에 눈을 떼지 못한 채 매혹이 된 눈길을 보내고 있었다.",
+  "decision": "fix",
+  "en_new": "The child could not take their eyes off the doll displayed in the showcase, gazing at it, fascinated.",
+  "note": "child's sex unstated; \"his\" unsupported"
+ },
+ {
+  "ext_id": "49370",
+  "sense": "0",
+  "ex": "1",
+  "ko": "아버지가 손수레를 끌자 고무바퀴가 둘둘 굴러갔다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "89020",
+  "sense": "0",
+  "ex": "3",
+  "ko": "울에 합성 섬유가 혼방된 니트가 따뜻해 보였다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "58145",
+  "sense": "0",
+  "ex": "5",
+  "ko": "사무실로 찾아가 보았지만 김지수 씨는 자리에 없었다.",
+  "decision": "keep",
+  "note": "acceptable as is"
+ },
+ {
+  "ext_id": "23918",
+  "sense": "0",
+  "ex": "5",
+  "ko": "김 의원은 독재 정권에 맞서 민주주의를 실현하고자 한 개혁자였다.",
+  "decision": "fix",
+  "en_new": "Lawmaker Kim was a reformer who stood against the dictatorship and sought to achieve democracy.",
+  "note": "김 의원's sex unstated; \"Assemblyman\" unsupported"
+ },
+ {
+  "ext_id": "59725",
+  "sense": "0",
+  "ex": "5",
+  "ko": "정 사장은 사업에 성공해서 돈이 많은 부자가 되었다.",
+  "decision": "fix",
+  "en_new": "President Jeong succeeded in business and became wealthy, with plenty of money.",
+  "note": "정 사장's sex unstated; \"man\" unsupported"
+ }
+]

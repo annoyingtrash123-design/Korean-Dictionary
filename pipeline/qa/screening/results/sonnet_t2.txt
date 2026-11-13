@@ -1,0 +1,73 @@
+s0009 | MINOR | 의원 sex unstated; "Assemblyman" adds gender | Lawmaker Park's activities won the approval of supporters.
+s0015 | MINOR | Gender/possessive "her" not stated for 지수 | Ji-su put on a coat when feeling a chill.
+s0029 | MINOR | 과장님 sex unstated; "his father" adds gender | The staff sent condolence wreaths to the funeral hall of the section chief, whose father had died.
+s0031 | MINOR | 민준 gender "he" not stated | Minjun wanted to have sex with the lover Minjun loved.
+s0035 | MINOR | 지수 gender "she" not stated | Jisu had an uneasy feeling that this was something Jisu should not do.
+s0055 | MAJOR | 모두 modifies the prize money, not "everyone" | Because the win was invalidated, all the prize money received had to be returned.
+s0058 | MINOR | Friend's sex unstated; "his" added | I ran out of pocket money, so I tagged along with a friend and got a meal at their expense.
+s0060 | MINOR | 승규 gender "he/his" not stated | If Seung-gyu fell for someone at first sight, Seung-gyu would hand over a business card without hesitation and ask for a rendezvous.
+s0072 | MINOR | 그 형사 is "that detective"; "his" adds gender | That detective concealed their identity, infiltrated a major criminal organization, and conducted an undercover investigation.
+s0085 | MINOR | 뛰어다니는지 is speculation, not a stated cause | All day long a thumping sound came from the ceiling, as if a mouse were running around.
+s0099 | MAJOR | 속이 타다 means anxious/on edge, not thirsty | Apparently on edge, my older sister downed a whole glass of beer in one go.
+s0105 | MINOR | "her face" adds gender for 지수 | The tears that had welled up in Jisu's eyes soon streamed down Jisu's cheeks.
+s0123 | MINOR | "her phone" adds gender for 지수 | As if to attest to Jisu's popularity, Jisu's phone kept ringing nonstop throughout the whole meal we shared.
+s0136 | MAJOR | 두어 술 means a couple of spoonfuls, not one | Father mixed a couple of spoonfuls of rice into the soup and ate it.
+s0140 | MINOR | Baby coming back with them is not in the Korean | My older brother and his wife, who had had a baby boy, came back from the hospital.
+s0143 | MINOR | "the mother" unnatural; 엄마 is Jisu's mom | Jisu went to an outlet with Mom to buy clothes.
+s0157 | MAJOR | 울먹울먹 means on the verge of tears, not pouting | On the verge of tears, the child told me about what had happened at school.
+s0161 | MINOR | 모습 here means behavior, not appearance | I got angry at my younger sibling, then, startled at how I had acted, apologized to them as they cried loudly.
+s0176 | MINOR | "her friend/her" adds gender for 지수 | Ji-su presented a wonderful painting to the friend who had helped Ji-su, as a token of gratitude.
+s0180 | MINOR | "he" adds gender for 승규 | Seungkyu dreams of rising in the world and gaining fame, and is doing the best every day.
+s0206 | MINOR | "her mouth" adds gender for 지수 | Jisu smiled so brightly that the gold tooth in Jisu's mouth was fully visible.
+s0247 | MINOR | "her tears" adds gender for 지수 | Jisu wiped away tears with a handkerchief held crumpled in the hand.
+s0256 | MINOR | "his mother" adds gender for 민준 | Min-jun fell ill and nearly died, but recovered thanks to his mother's care.
+s0277 | MINOR | "his" adds gender for 승규 | Seung-gyu will finish military service and return to school this semester.
+s0282 | MINOR | 현충일 is Memorial Day; "Patriotic Martyrs Day" invented | Memorial Day is a national holiday to commemorate and honor the patriotic martyrs.
+s0292 | MINOR | "his" adds gender for 민준 | Minjun has a complex about protruding front teeth.
+s0304 | MINOR | "she/her own" adds gender for 유민 | Yumin's dream is to build the house Yumin will live in with own hands.
+s0311 | MINOR | "her" for 지수; 아주머니 is a middle-aged woman, not "aunt" | The woman was very pleased to hear Jisu's admirable idea of earning tuition on their own.
+s0325 | MINOR | "his friends/him" adds gender for 승규 | Seung-gyu reads books haltingly, so friends teased Seung-gyu as a stutterer.
+s0328 | MINOR | "his body" adds gender for 민준 | Min-jun scooped bathwater with a gourd ladle and poured it over the body.
+s0329 | MINOR | "she" adds gender for 지수 | Before reading the book, Jisu is writing an introduction explaining why Jisu wants to read it.
+s0331 | MINOR | "she" adds gender for 지수 | Jisu has such strong resolve as to undergo training that even men find difficult.
+s0333 | MINOR | "her heel" adds gender for 지수 | Jisu got a blister on the heel because of the new shoes bought.
+s0335 | MINOR | "his sheep" adds gender for shepherd | On the wide grassland, a shepherd was letting the sheep graze on the grass.
+s0349 | MINOR | 연인 sex unstated; "her ear" added | The man whispered his love into his lover's ear.
+s0379 | MINOR | "his confession" adds gender for criminal | The police interrogated the criminal and obtained a confession.
+s0447 | MAJOR | 그녀 is the daughter who wept; subject rendered as "I", tears not "moved" | She burst into tears at her mother's frugality, as the poor household budget meant her mother would not spend even a penny freely.
+s0509 | MINOR | "his money" adds gender for friend | My friend was robbed of money by gangsters in a back alley.
+s0519 | MAJOR | Tense wrong: dream is to learn to fly, not already learned | My dream is to learn to fly a light aircraft and soar beautifully through the sky.
+s0523 | MINOR | 일대일 means an even 1:1 split; "one-on-one" misleads | My friend, who runs the business with me, and I decided to split the profits evenly, one to one.
+s0533 | MINOR | "his" adds gender for 승규 | Seungkyu neatly arranged the items in the new cabinet, stacking them in order.
+s0536 | MINOR | "his" adds gender for 승규 | Seungkyu snatched the younger sibling's toy and made the sibling cry.
+s0545 | MINOR | "she" adds gender for 지수 | After the breakup, Jisu felt such emptiness that Jisu nearly lost appetite.
+s0592 | MINOR | "he" adds gender for 민준 | Minjun said the wheels of the cart were stiff and applied lubricating oil to them.
+s0623 | MINOR | "he" adds gender for 민준 | When I saw Min-jun again after so long, Min-jun had long hair reaching down to the shoulders.
+s0626 | MINOR | "disarmed our weapons" unnatural; people are disarmed | The enemy disarmed us and took away all the weapons we had.
+s0627 | MINOR | "her birthday" adds gender for 지수 | On the birthday, Jisu wore a cone-shaped hat and blew out the candles on the cake.
+s0655 | MINOR | "her long hair" adds gender for 지수 | Ji-su tied up the long hair neatly and looked elegant.
+s0665 | MINOR | "her abilities" adds gender for 지수 | Jisu's pride was hurt because Jisu's own abilities were underestimated.
+s0719 | MINOR | "he" adds gender for 승규 | Seungkyu fell into self-deception and believed Seungkyu could do work beyond own ability.
+s0734 | MINOR | no gendered pronoun needed for 지수 | Thanks to a strong stomach, Jisu had never once had indigestion.
+s0737 | MINOR | "she" adds gender for 지수 | Jisu wanted to get better at speaking English, so Jisu bought an app that allows conversation practice.
+s0743 | MINOR | "he" adds gender for 승규 | Seung-gyu was good at fighting, so Seung-gyu played the boss among peers.
+s0747 | MINOR | "he" adds gender for 승규 | Seung-gyu danced gracefully, but stumbled, flailed to keep from falling, and fell off the stage.
+s0753 | MINOR | "her" adds gender for 유민 | Yumin likes to joke around with friends.
+s0756 | MINOR | "she/her" adds gender for 지수 | When Jisu was a university student, Jisu received tuition from the academy's foundation.
+s0760 | MINOR | 푸석푸석 means dry and rough; "swollen" unsupported | Kim held out a dry, rough hand.
+s0770 | MINOR | "his" adds gender for 승규 | Seung-gyu, with a pretty, fine-featured face, is popular among the female students.
+s0773 | MINOR | 광인 sex unstated; "madman" gendered | The way that woman screamed and raged looked like someone having a seizure.
+s0786 | MINOR | "his in-law" and "he" unsupported possessive/gender | They say a mother-in-law dotes on her son-in-law, but the in-law smiled warmly every time Mr. Kim was seen.
+s0803 | MINOR | "he/his" adds gender for 민준 | Minjun tempers the metal material needed for metal crafts before using it.
+s0815 | MINOR | "the busy mother" unnatural; it is the speaker's mother | I ran errands while shopping to help my busy mother.
+s0829 | MINOR | 입맛을 쩝쩝하다 is smacking lips, not clicking tongue | Ji-su made a regretful face and smacked their lips.
+s0867 | MINOR | 주인공 sex unstated; "heroine" adds gender | The main character in the book was so pitiful that I cried sadly the whole time I read it.
+s0875 | MINOR | "she" adds gender for 유민 | Yumin added short-necked clams bought at the market and boiled a doenjang soup.
+s0910 | MINOR | 계를 구하다 means calculated the total, not asked for it | Jisu calculated the total of how much pocket money was spent over a month.
+s0913 | MINOR | "his subordinates" adds gender for 상사 | That arrogant boss often looked down on and humiliated subordinates.
+s0986 | MINOR | "his" adds gender for 승규 | To reduce overspending, Seung-gyu set the credit card's spending limit to the minimum.
+s0990 | MINOR | 혐의를 받다 means suspected, not formally charged | Mr. Kim entered North Korea last month and is suspected of leaking national secrets to the North.
+s0991 | MINOR | "herself/she" adds gender for 유민 | Yumin devoted effort only to cooking for a while and became quite good at it.
+s0994 | MINOR | "his" adds gender for 승규 | Seungkyu decided to donate all property to the alma mater.
+s1000 | MINOR | "he/him" adds gender for 승규 | Seunggyu moved out after the boarding house where Seunggyu was staying asked for higher rent.
+END (checked 1000 rows)

@@ -1,0 +1,22 @@
+=== KOREAN DICTIONARY TRANSLATION CHECK — BATCH B01 of B23 (2000 rows, B01-0001 to B01-2000) ===
+
+You are checking English translations of Korean example sentences from a Korean–English learner's dictionary. Each data line below is:
+id | word (Korean headword the sentence illustrates) | meaning (English meaning of that word in this sense) | korean sentence | english translation (written by an AI)
+
+Read EVERY row and compare the English with the Korean. Report only rows with a problem.
+
+MAJOR = the meaning is wrong:
+- the headword is translated in a different sense than "meaning", or an idiom / fixed expression is misread (e.g. 속이 타다 = be anxious, not "thirsty"; 두어 술 = a couple of spoonfuls)
+- who does what to whom is changed; subject and object swapped
+- negation, tense or aspect, a number, quantity, date or place is wrong
+- something meaningful is added or left out
+- a person's name or title is added, dropped or changed (사장 = company president, 부장 = department head, 과장 = section chief)
+- 그 (he) or 그녀 (she) not rendered as he / she
+MINOR = meaning right but a clear flaw: a garbled or non-existent English word; a gender (he/she/Mr./actress) for an unnamed person whose sex the Korean doesn't give; a "my/his/her" the Korean doesn't support; a word-for-word rendering a learner could misunderstand.
+Do NOT report: plain or slightly stiff but correct wording; singular "they" for a person of unstated sex (intended); he/his for the recurring names 승규, 민준 and she/her for 지수, 유민 (house convention); a faithful translation of an odd Korean sentence. Korean fractions put the denominator first ("2분의 3" = 3/2).
+
+REPLY FORMAT — plain text only, no tables, no headings, no commentary. One line per problem row:
+id | MAJOR or MINOR | short reason (max 15 words) | corrected English (faithful, natural, nothing added)
+Then a last line exactly: END B01 (checked N rows)
+If you run out of space before END, stop at a row boundary and I will ask you to continue from the last id.
+

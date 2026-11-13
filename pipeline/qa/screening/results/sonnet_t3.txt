@@ -1,0 +1,35 @@
+t0046 | MAJOR | 울먹울먹 means on the verge of tears, not pouting | Choking up, the child told me about what had happened at school.
+t0049 | MAJOR | 징집하다 means conscript, not levy taxes | As society grew increasingly chaotic, corrupt officials who unjustly conscripted people appeared everywhere.
+t0051 | MINOR | 치마폭 is the skirt's width; "panel" is unclear | This skirt is narrow, so it is uncomfortable to walk in.
+t0054 | MINOR | 뛰어다니는지 expresses speculation, lost in translation | Maybe a mouse was running around; a thumping sound came from the ceiling all day.
+t0061 | MINOR | 뜻풀이된 자료 means materials with definitions; "explained" is vague | This text is so difficult that it is hard to understand without materials that give definitions.
+t0093 | MINOR | child's sex unstated; "his" unsupported | The child clung to the mother's hem as she left for work and would not let go.
+t0099 | MINOR | detective's sex unstated; "his" unsupported | That detective concealed their identity, infiltrated a major criminal organization, and conducted an undercover investigation.
+t0113 | MINOR | 과장님's sex unstated; "his father" unsupported | The staff sent condolence wreaths to the funeral hall of the section chief, whose father had died.
+t0146 | MAJOR | Subject changed: 그녀 (she) was moved, not "I" | She was moved to tears by her mother's tenacity, who was so frugal she did not spend even a penny carelessly on the poor family's budget.
+t0149 | MINOR | "sacrificed" is unnatural; people were victimized | Several people fell victim to the violent criminal who had escaped from prison.
+t0150 | MINOR | boss's sex unstated; "his" unsupported | That arrogant boss often looked down on and humiliated their subordinates.
+t0158 | MINOR | 사장 is company president, not chairman | President Choi had no idea at all what the company's situation was now.
+t0163 | MAJOR | tense wrong: condition was bad yesterday, not is | Seung-gyu drank too much at yesterday's company dinner, so he was not in good condition.
+t0175 | MAJOR | 두어 술 means a couple of spoonfuls, not one | Father mixed a couple of spoonfuls of rice into the soup and ate it.
+t0194 | MINOR | omits that executives dissolved the union | Union members demanded the reorganization of the labor union that the executives had dissolved.
+t0207 | MAJOR | tense: 곤 했다 is past habitual, not present | My friend would often fly into a rage at the slightest thing.
+t0208 | MINOR | friend's sex unstated; "his" unsupported | My friend had money taken by gangsters in a back alley.
+t0216 | MINOR | child's sex unstated; "his" unsupported | The child could not take their eyes off the doll displayed in the showcase, gazing at it, fascinated.
+t0217 | MINOR | 현충일 is Memorial Day; "Patriotic Martyrs Day" is invented | Memorial Day is a national holiday to commemorate and honor those who gave their lives for the country.
+t0249 | MINOR | shepherd's sex unstated; "his" unsupported | On the wide grassland, a shepherd was letting the sheep graze.
+t0297 | MINOR | "with the baby" is added; not in Korean | My older brother and his wife, who had had a baby boy, came back from the hospital.
+t0304 | MINOR | 입맛을 쩝쩝하다 is smacking lips, not clicking tongue | Jisu made a regretful face and smacked their lips.
+t0308 | MINOR | 또는 means "or" and the sentence is not conditional | The ID or password does not match, so please check it.
+t0310 | MINOR | 외곽 here means outer perimeter; "outskirts of a mansion" is odd | The mansion's perimeter was enclosed by a high wall.
+t0334 | MINOR | "rolled along in a roll" is nonsensical word-for-word rendering | When Father pulled the handcart, the rubber wheels rolled along, turning round and round.
+t0353 | MINOR | garbled; the knit is wool blended with synthetic fiber | A knit of wool blended with synthetic fibers looked warm.
+t0382 | MINOR | sex of 김지수 씨 unstated; "her", "Ms." unsupported | I went to the office to look for Kim Jisu, but they were not at their desk.
+t0385 | MINOR | 김 의원's sex unstated; "Assemblyman" unsupported | Legislator Kim was a reformer who stood against the dictatorship and sought to achieve democracy.
+t0386 | MINOR | 정 사장's sex unstated; "man" unsupported | President Jeong succeeded in business and became wealthy.
+t0403 | MAJOR | 구하다 here means calculate, not ask for | Jisu calculated the total of how much they had spent on pocket money over a month.
+t0406 | MINOR | criminal's sex unstated; "his" unsupported | The police interrogated the criminal and obtained a confession.
+t0412 | MAJOR | 속이 타다 means anxious, not thirsty | Apparently on edge, my older sister downed a whole glass of beer in one gulp.
+t0432 | MINOR | "While I was away" is added; Korean says "since I last saw him" | Seung-gyu had grown thin since I last saw him, and his face looked worn.
+t0464 | MINOR | friend's sex unstated; "his" unsupported | I ran out of pocket money, so I tagged along with a friend and got a free meal.
+END (checked 500 rows)
