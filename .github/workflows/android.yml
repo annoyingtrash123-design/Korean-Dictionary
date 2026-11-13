@@ -78,7 +78,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - uses: android-actions/setup-android@v3
+      # GitHub's ubuntu runners ship the Android SDK (ANDROID_HOME); setup-android's default install of
+      # the obsolete 'tools' package fails, so it is not used.
+      - name: Android SDK
+        run: echo "ANDROID_HOME=$ANDROID_HOME" && test -d "$ANDROID_HOME"
 
       - name: Decode keystore
         env:
