@@ -54,7 +54,16 @@ export function SettingsView() {
   const toggle = (id: string) => setOpenState((o) => { const n = o.includes(id) ? o.filter((x) => x !== id) : [...o, id]; saveOpenGroups(n); return n; });
   const setColor = (k: ColorKey, v: string) => updateSettings({ colors: { ...s.colors, [k]: v } });
 
-  const doCheck = async () => { setMsg('Checking…'); const m = await checkForUpdate(); setMsg(m ? (update.get().available ? 'Update available.' : 'Dictionary is up to date.') : 'Could not reach the server (offline?).'); };
+  const [appUpd, setAppUpd] = useState<{ latest: string; url: string } | null>(null);
+  /** One button: the dictionaries, and in the Android app also the app itself (a new APK to install). */
+  const doCheck = async () => {
+    setMsg('Checking…'); setAppUpd(null);
+    const [m, app] = await Promise.all([checkForUpdate(), IS_NATIVE ? checkAppUpdate() : Promise.resolve(null)]);
+    setAppUpd(app);
+    if (!m) { setMsg('Could not reach the server (offline?).'); return; }
+    const dict = update.get().available ? 'Dictionaries: update available.' : 'Dictionaries: up to date.';
+    setMsg(IS_NATIVE ? `${dict} App: ${app ? `version ${app.latest} available.` : 'up to date.'}` : dict);
+  };
   const startInstall = async (ids: string[]) => { setMsg(''); const m = (await checkForUpdate()) ?? manifest; /* always the live manifest: chunk files of an older version are gone after a deploy */ if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
 
   const exportFile = () => {
@@ -130,11 +139,11 @@ export function SettingsView() {
         </dl>
         <TechDetails />
         <div class="btn-row">
-          <button type="button" class="btn" onClick={doCheck}>Check for update</button>
+          <button type="button" class="btn" onClick={doCheck}>Check for updates</button>
           {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(upd.stale)}>Update now</button>}
           <button type="button" class="btn" onClick={() => startInstall(allInstalled)}>Re-download</button>
         </div>
-        {IS_NATIVE && <AppUpdate />}
+        {appUpd && <div class="btn-row"><a class="btn primary" href={appUpd.url} target="_blank" rel="noopener">Download app version {appUpd.latest}</a></div>}
         {msg && <p class="muted small" role="status">{msg}</p>}
       </Group>
 
@@ -212,16 +221,3 @@ function Group({ id, title, open, onToggle, children }: { id: string; title: str
   );
 }
 
-/** Android app only: is a newer APK published? Updates install over the app; data is kept. */
-function AppUpdate() {
-  const [st, setSt] = useState<{ latest: string; url: string } | null | 'checking' | 'none'>(null);
-  const check = async () => { setSt('checking'); setSt((await checkAppUpdate()) ?? 'none'); };
-  return (
-    <div class="btn-row">
-      <button type="button" class="btn" onClick={check}>Check for app update</button>
-      {st === 'checking' && <span class="muted small" role="status">Checking…</span>}
-      {st === 'none' && <span class="muted small" role="status">The app is up to date (or offline).</span>}
-      {st && typeof st === 'object' && <a class="btn primary" href={st.url} target="_blank" rel="noopener">Download version {st.latest}</a>}
-    </div>
-  );
-}

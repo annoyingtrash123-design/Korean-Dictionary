@@ -66,6 +66,6 @@ test('update keeps the old pack usable; corrupt download is rejected', async ({ 
   await expect(page.getByText('Dictionary update available')).toHaveCount(0);
   // …but Settings → Check for update finds it.
   await page.goto('/#/settings');
-  await page.getByRole('button', { name: 'Check for update' }).click();
+  await page.getByRole('button', { name: 'Check for updates' }).click();
   await expect(page.getByRole('button', { name: 'Update now' })).toBeVisible();
 });
