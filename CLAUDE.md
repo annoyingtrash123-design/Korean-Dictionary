@@ -30,3 +30,8 @@ Rust→WASM engine (`core/`) searches them in the browser, Preact UI (`app/`). S
 - Public domain in Korea: authors who died before 1963. Laws/court rulings are unprotected.
 - wasm-opt: `export PATH=/tmp/claude-0/binaryen/bin:$PATH` in this sandbox before `npm run build:core`.
 - Local data for e2e: `cp -r pipeline/out/site-data app/public/data` after a pipeline build.
+- Android app (the owner's main install): Capacitor 8 in `app/android/`, app-only behaviour behind
+  `VITE_NATIVE=1` in `app/src/lib/native.ts`. `.github/workflows/android.yml` builds a signed APK on
+  pushes touching app/ or core/ and publishes it to the `android-latest` release. The signing key lives
+  only in repo secrets ANDROID_KEYSTORE_B64 / ANDROID_KEYSTORE_PASSWORD (alias `hanppuri`); never commit
+  it, and never change it (updates would stop installing over the app).
