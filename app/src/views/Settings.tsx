@@ -1,4 +1,5 @@
 import { IS_NATIVE, nativeSaveFile } from '../lib/native';
+import { checkAppUpdate } from '../lib/app-update';
 import { clearErrors, errors$, formatErrors, loadErrors, logError } from '../lib/errlog';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
@@ -124,6 +125,7 @@ export function SettingsView() {
           <dt>Dictionaries</dt><dd>{!core ? '–' : upd.stale.length ? `${upd.stale.length} to update` : 'Up to date'}</dd>
           <dt>Latest online</dt><dd>{manifest?.version ?? '–'}</dd>
           <dt>Storage used</dt><dd>{fmtBytes(est.data?.usage)}{est.data?.quota ? ` of ${fmtBytes(est.data.quota)}` : ''}</dd>
+          {IS_NATIVE && <><dt>App version</dt><dd>{__APP_VERSION__}</dd></>}
           <dt>Kept when space is low</dt><dd>{IS_NATIVE ? 'Yes — kept in the app’s own storage' : persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>
         </dl>
         <TechDetails />
@@ -132,6 +134,7 @@ export function SettingsView() {
           {upd.available && <button type="button" class="btn primary" onClick={() => startInstall(upd.stale)}>Update now</button>}
           <button type="button" class="btn" onClick={() => startInstall(allInstalled)}>Re-download</button>
         </div>
+        {IS_NATIVE && <AppUpdate />}
         {msg && <p class="muted small" role="status">{msg}</p>}
       </Group>
 
@@ -206,5 +209,19 @@ function Group({ id, title, open, onToggle, children }: { id: string; title: str
       <h2 class="set-h"><button type="button" class="set-fold" aria-expanded={on} aria-controls={`set-${id}`} onClick={() => onToggle(id)}><span class="rd-chev" aria-hidden="true" /><span>{title}</span></button></h2>
       <div id={`set-${id}`} class="set-body" hidden={!on}>{children}</div>
     </section>
+  );
+}
+
+/** Android app only: is a newer APK published? Updates install over the app; data is kept. */
+function AppUpdate() {
+  const [st, setSt] = useState<{ latest: string; url: string } | null | 'checking' | 'none'>(null);
+  const check = async () => { setSt('checking'); setSt((await checkAppUpdate()) ?? 'none'); };
+  return (
+    <div class="btn-row">
+      <button type="button" class="btn" onClick={check}>Check for app update</button>
+      {st === 'checking' && <span class="muted small" role="status">Checking…</span>}
+      {st === 'none' && <span class="muted small" role="status">The app is up to date (or offline).</span>}
+      {st && typeof st === 'object' && <a class="btn primary" href={st.url} target="_blank" rel="noopener">Download version {st.latest}</a>}
+    </div>
   );
 }
