@@ -1,3 +1,5 @@
+import { IS_NATIVE, nativeSpeak } from './native';
+import { logError } from './errlog';
 /** Example sentences: dialogue turns and speech. */
 
 const SPEAKERS = ['가', '나', '다', '라'];
@@ -15,11 +17,12 @@ export function dialogueTurns(ko: string, type?: string | null): { who: string; 
 /** The text to read aloud: speaker labels dropped. */
 export const speakable = (ko: string, type?: string | null) => (dialogueTurns(ko, type)?.map((t) => t.text).join(' ') ?? ko.replace(/\n/g, ' '));
 
-export const canSpeak = () => typeof window !== 'undefined' && 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined';
+export const canSpeak = () => IS_NATIVE || (typeof window !== 'undefined' && 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined');
 
 /** Read Korean aloud with the device's own voice (offline on most phones). */
 export function speak(ko: string, type?: string | null) {
   if (!canSpeak()) return;
+  if (IS_NATIVE) { nativeSpeak(speakable(ko, type)).catch((e) => logError('speak', e)); return; }
   const s = window.speechSynthesis;
   s.cancel();
   const u = new SpeechSynthesisUtterance(speakable(ko, type));

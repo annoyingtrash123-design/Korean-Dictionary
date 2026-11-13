@@ -7,7 +7,9 @@ import './styles.css';
 
 installErrorCapture();
 render(<App />, document.getElementById('app')!);
-if (import.meta.env.PROD) {
+import { IS_NATIVE, installBackButton } from './lib/native';
+void installBackButton();
+if (import.meta.env.PROD && !IS_NATIVE) {
   // registerType 'prompt': a new service worker waits until the user taps "Reload" in the toast (never mid-install).
   const updateSW = registerSW({ immediate: true, onNeedRefresh: () => swWaiting.set(true) });
   setApplyUpdate(() => { void updateSW(true); });

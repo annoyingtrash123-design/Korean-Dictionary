@@ -1,3 +1,4 @@
+import { IS_NATIVE } from './native';
 import { createStore } from './store';
 
 const KEY = 'kd.hint.a2hs';
@@ -5,6 +6,7 @@ const KEY = 'kd.hint.a2hs';
 export const persisted$ = createStore<boolean | undefined>(undefined);
 
 export const isStandalone = (): boolean =>
+  IS_NATIVE ||   // the Android app is its own app: no 'Add to Home Screen' advice
   (typeof matchMedia === 'function' && matchMedia('(display-mode: standalone)').matches) ||
   (navigator as unknown as { standalone?: boolean }).standalone === true;
 

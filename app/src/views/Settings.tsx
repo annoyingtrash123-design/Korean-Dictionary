@@ -1,3 +1,4 @@
+import { IS_NATIVE, nativeSaveFile } from '../lib/native';
 import { clearErrors, errors$, formatErrors, loadErrors, logError } from '../lib/errlog';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
@@ -56,6 +57,7 @@ export function SettingsView() {
   const startInstall = async (ids: string[]) => { setMsg(''); const m = (await checkForUpdate()) ?? manifest; /* always the live manifest: chunk files of an older version are gone after a deploy */ if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
 
   const exportFile = () => {
+    if (IS_NATIVE) { nativeSaveFile(`korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json`, exportBookmarks(undefined, errors$.get())).catch((e) => { logError('backup export', e); setMsg('Could not save the backup.'); }); return; }
     const url = URL.createObjectURL(new Blob([exportBookmarks(undefined, errors$.get())], { type: 'application/json' }));
     const a = Object.assign(document.createElement('a'), { href: url, download: `korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json` });
     document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -122,7 +124,7 @@ export function SettingsView() {
           <dt>Dictionaries</dt><dd>{!core ? '–' : upd.stale.length ? `${upd.stale.length} to update` : 'Up to date'}</dd>
           <dt>Latest online</dt><dd>{manifest?.version ?? '–'}</dd>
           <dt>Storage used</dt><dd>{fmtBytes(est.data?.usage)}{est.data?.quota ? ` of ${fmtBytes(est.data.quota)}` : ''}</dd>
-          <dt>Kept when space is low</dt><dd>{persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>
+          <dt>Kept when space is low</dt><dd>{IS_NATIVE ? 'Yes — kept in the app’s own storage' : persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>
         </dl>
         <TechDetails />
         <div class="btn-row">

@@ -1,3 +1,4 @@
+import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
 import type { Entry, GameWord, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
@@ -202,7 +203,7 @@ export const db = {
   removePack: async (id: string) => { const s = await call<PackStatus>('removePack', id); resetTexts(); saveHint(s); packStatus$.set(s); return s; },
 };
 
-export const MANIFEST_URL = () => new URL(import.meta.env.BASE_URL + 'data/manifest.json', location.origin).toString();
+export const MANIFEST_URL = () => new URL(DATA_BASE + 'data/manifest.json', location.origin).toString();
 const MANIFEST_CACHE = 'kd.manifest';
 export async function fetchManifest(): Promise<Manifest> {
   const res = await fetch(MANIFEST_URL(), { cache: 'no-store' });
