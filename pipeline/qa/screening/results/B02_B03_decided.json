@@ -1,0 +1,809 @@
+[
+ {
+  "id": "B03-0289",
+  "ext_id": "25366",
+  "sense": "0",
+  "ex": "5",
+  "ko": "가족들은 과년한 큰딸을 결혼시키기 위해 노력했다.",
+  "decision": "fix",
+  "en_new": "The family worked hard to marry off their eldest daughter, who was past marriageable age.",
+  "note": "“과년한” means past marriageable age, not merely having reached it."
+ },
+ {
+  "id": "B03-0410",
+  "ext_id": "41006",
+  "sense": "0",
+  "ex": "6",
+  "ko": "'비행기 태운다’는 말은 남을 지나치게 칭찬한다는 의미의 관용어이다.",
+  "decision": "fix",
+  "en_new": "The expression 'to give someone an airplane ride' is an idiom meaning to praise someone excessively.",
+  "note": "Literal rendering of the idiom “비행기 태우다” is unnatural and misleading."
+ },
+ {
+  "id": "B03-0445",
+  "ext_id": "30727",
+  "sense": "0",
+  "ex": "0",
+  "ko": "'좋은'은 형용사 ‘좋다’의 관형형이다.",
+  "decision": "keep",
+  "note": "RR of joeun/jota is correct (silent h)."
+ },
+ {
+  "id": "B03-0486",
+  "ext_id": "31423",
+  "sense": "0",
+  "ex": "3",
+  "ko": "김 과장은 사장이 시키는 일이라면 도둑질도 할 만큼 그를 광신하였다.",
+  "decision": "fix",
+  "en_new": "Section Chief Kim idolized the company president so fanatically that they would even steal if he told them to.",
+  "note": "“he” assigns an unstated gender to Manager Kim."
+ },
+ {
+  "id": "B03-0517",
+  "ext_id": "30832",
+  "sense": "0",
+  "ex": "5",
+  "ko": "나는 같은 잘못을 반복해서 괘씸죄까지 뒤집어썼다.",
+  "decision": "fix",
+  "en_new": "Because I repeated the same mistake, I even fell out of favor for being insolent.",
+  "note": "“Charged with the offense” misrepresents the figurative idiom 괘씸죄."
+ },
+ {
+  "id": "B03-0564",
+  "ext_id": "30684",
+  "sense": "0",
+  "ex": "4",
+  "ko": "군인들은 다리를 지키기 위해 미리 교두보를 쌓았다.",
+  "decision": "keep",
+  "note": "bridgehead is a gloss; fine."
+ },
+ {
+  "id": "B03-0663",
+  "ext_id": "37852",
+  "sense": "0",
+  "ex": "5",
+  "ko": "구개음화 현상의 예로 부사 ‘같이’의 발음이 [가치]로 나는 것을 들 수 있다.",
+  "decision": "fix",
+  "en_new": "An example of palatalization is the adverb gachi ('together'), spelled as if gati but pronounced [gachi].",
+  "note": "“gati” is incorrect romanization; 같이 is romanized gachi."
+ },
+ {
+  "id": "B03-0665",
+  "ext_id": "37860",
+  "sense": "0",
+  "ex": "6",
+  "ko": "아이는 병든 어머니를 대신해서 길거리로 구걸하러 나섰다.",
+  "decision": "fix",
+  "en_new": "The child went out onto the street to beg in place of their sick mother.",
+  "note": "“his” assigns an unstated gender to the child."
+ },
+ {
+  "id": "B03-0673",
+  "ext_id": "34925",
+  "sense": "0",
+  "ex": "5",
+  "ko": "가난했던 시절에 대한 아저씨의 이야기는 구구절절이 안타까웠다.",
+  "decision": "fix",
+  "en_new": "The man's story about the days when he was poor was heartbreaking in every word.",
+  "note": "“Heartbreaking in every word” is an unnatural literal rendering of 구구절절이."
+ },
+ {
+  "id": "B03-0740",
+  "ext_id": "89794",
+  "sense": "0",
+  "ex": "4",
+  "ko": "화단의 흙에서 지렁이가 구불대며 기어가는 모습이 보였다.",
+  "decision": "fix",
+  "en_new": "In the flower bed soil, I saw an earthworm wriggling along.",
+  "note": "“Crawling along in wriggles” is unnatural English."
+ },
+ {
+  "id": "B03-0770",
+  "ext_id": "36372",
+  "sense": "0",
+  "ex": "4",
+  "ko": "기자들은 대통령의 구술 내용을 열심히 받아 적었다.",
+  "decision": "keep",
+  "note": "dictated is acceptable for oral statement."
+ },
+ {
+  "id": "B03-0774",
+  "ext_id": "36377",
+  "sense": "0",
+  "ex": "7",
+  "ko": "지수는 떼쓰는 아이에게 말을 잘 들으면 사탕을 주겠다고 구슬렸다.",
+  "decision": "fix",
+  "en_new": "Jisu coaxed the whining child by promising them candy if they behaved.",
+  "note": "“him” assigns an unstated gender to the child."
+ },
+ {
+  "id": "B03-0783",
+  "ext_id": "36392",
+  "sense": "0",
+  "ex": "6",
+  "ko": "끈에 묶은 돌을 돌릴 때 그 돌에는 구심성이 생겨 바깥쪽으로 날아가지 않는다.",
+  "decision": "fix",
+  "en_new": "When a stone tied to a string is swung around, a centripetal pull acts on it, so it does not fly outward.",
+  "note": "“Centripetality” is an unnatural technical rendering; the sentence means centripetal force."
+ },
+ {
+  "id": "B03-0912",
+  "ext_id": "38574",
+  "sense": "0",
+  "ex": "6",
+  "ko": "국상이 있을 때는 모든 백성이 상복을 입었다.",
+  "decision": "keep",
+  "note": "taste."
+ },
+ {
+  "id": "B03-0921",
+  "ext_id": "38588",
+  "sense": "0",
+  "ex": "7",
+  "ko": "나는 현대 시를 연구하는 국어학 학자가 되고 싶다.",
+  "decision": "keep",
+  "note": "gloss is Korean studies; acceptable."
+ },
+ {
+  "id": "B03-0959",
+  "ext_id": "35543",
+  "sense": "0",
+  "ex": "5",
+  "ko": "그는 사람들의 관심을 끌기 위해 군기침을 했다.",
+  "decision": "keep",
+  "note": "faked cough ok for deliberate cough."
+ },
+ {
+  "id": "B03-1041",
+  "ext_id": "88386",
+  "sense": "0",
+  "ex": "5",
+  "ko": "바람이 불자 기다란 커튼 자락이 굼실대며 흔들린다.",
+  "decision": "fix",
+  "en_new": "When the wind blew, the long curtain panels swayed with slow, rippling movements.",
+  "note": "“Curtain panels … wriggled” is an unnatural description of their movement."
+ },
+ {
+  "id": "B03-1050",
+  "ext_id": "36187",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 선생님을 만나면 예의 바르게 허리를 굽실대며 인사했다.",
+  "decision": "fix",
+  "en_new": "Whenever she met her teacher, Jisu bowed deferentially and greeted them politely.",
+  "note": "“him” assigns an unstated gender to the teacher."
+ },
+ {
+  "id": "B03-1056",
+  "ext_id": "89272",
+  "sense": "0",
+  "ex": "5",
+  "ko": "나는 마음이 썩어 뭉그러지고 굽죄여서 아무 말도 못했다.",
+  "decision": "fix",
+  "en_new": "Heartsick and utterly overawed, I could not say a word.",
+  "note": "“My heart was rotting” is a misleading literal rendering of emotional distress."
+ },
+ {
+  "id": "B03-1072",
+  "ext_id": "34858",
+  "sense": "0",
+  "ex": "5",
+  "ko": "비록 궁여지책이기는 하지만 방법이 없는 것은 아니다.",
+  "decision": "keep",
+  "note": "double negative mirrors Korean; clear."
+ },
+ {
+  "id": "B03-1085",
+  "ext_id": "37316",
+  "sense": "0",
+  "ex": "4",
+  "ko": "왕을 중심으로 형성된 권력층에게는 부와 명예가 딸려 왔다.",
+  "decision": "keep",
+  "note": "matches gloss."
+ },
+ {
+  "id": "B03-1097",
+  "ext_id": "37389",
+  "sense": "0",
+  "ex": "7",
+  "ko": "가부장적 권위주의가 지배하는 우리 집에서는 아버지의 말씀에 대든다는 것은 상상도 못 할 일이다.",
+  "decision": "fix",
+  "en_new": "In our house, where patriarchal authoritarianism reigns, talking back to my father is unimaginable.",
+  "note": "“Talking back to my father’s words” is an unnatural literal expression."
+ },
+ {
+  "id": "B03-1105",
+  "ext_id": "37400",
+  "sense": "0",
+  "ex": "7",
+  "ko": "우리 부부는 권태기를 극복하기 위해 둘만의 여행을 떠났다.",
+  "decision": "fix",
+  "en_new": "To get over a rut in our marriage, my spouse and I went on a trip, just the two of us.",
+  "note": "“My husband and I” adds an unsupported gender for the speaker."
+ },
+ {
+  "id": "B03-1107",
+  "ext_id": "37405",
+  "sense": "0",
+  "ex": "5",
+  "ko": "백만 명 이상의 시민들이 모여 독재자를 물러나게 하기 위한 궐기 대회를 열었다.",
+  "decision": "fix",
+  "en_new": "More than a million citizens gathered and held a mass protest rally to force the dictator out.",
+  "note": "“A rally of uprising” is an unnatural expression."
+ },
+ {
+  "id": "B03-1136",
+  "ext_id": "38221",
+  "sense": "0",
+  "ex": "5",
+  "ko": "내 동생은 눈을 반짝이며 내 말을 귀담아들었다.",
+  "decision": "fix",
+  "en_new": "My younger sibling listened carefully to what I said, their eyes sparkling.",
+  "note": "“his eyes” assigns an unstated gender to the younger sibling."
+ },
+ {
+  "id": "B03-1142",
+  "ext_id": "38240",
+  "sense": "0",
+  "ex": "5",
+  "ko": "가을밤이 되자 귀뚜라미가 귀뚤귀뚤 하고 소리를 내며 울었다.",
+  "decision": "fix",
+  "en_new": "On an autumn night, the crickets chirped, gwittul gwittul.",
+  "note": "“kwi-ttul kwi-ttul” is an unhelpful literal transliteration of chirping."
+ },
+ {
+  "id": "B03-1147",
+  "ext_id": "38266",
+  "sense": "0",
+  "ex": "4",
+  "ko": "나는 해마다 명절이면 한복을 곱게 차려입고 귀밑머리를 했다.",
+  "decision": "fix",
+  "en_new": "Every year on holidays, I dressed neatly in a hanbok and braided my hair behind my ears in the traditional style.",
+  "note": "“Styled my hair by my ears” is an unnatural rendering of 귀밑머리를 했다."
+ },
+ {
+  "id": "B03-1156",
+  "ext_id": "88812",
+  "sense": "0",
+  "ex": "5",
+  "ko": "사내는 귀신같은 사격 솜씨로 모든 목표물을 명중시켰다.",
+  "decision": "fix",
+  "en_new": "With his uncanny marksmanship, the man hit every target.",
+  "note": "“Demon-like” misleadingly suggests evil rather than extraordinary skill."
+ },
+ {
+  "id": "B03-1168",
+  "ext_id": "34777",
+  "sense": "0",
+  "ex": "5",
+  "ko": "그는 죽은 아내가 아끼던 목걸이를 딸에게 물려주면서 귀중히 간직하라고 당부했다.",
+  "decision": "fix",
+  "en_new": "He handed down his late wife's cherished necklace to his daughter and urged her to treasure it.",
+  "note": "“Keep it preciously” is an unnatural literal expression."
+ },
+ {
+  "id": "B03-1244",
+  "ext_id": "89805",
+  "sense": "0",
+  "ex": "0",
+  "ko": "승규네 부부의 이혼을 두고 이웃들은 그러니저러니 수군댔다.",
+  "decision": "fix",
+  "en_new": "The neighbors whispered this and that about Seunggyu and his wife getting divorced.",
+  "note": "“Seunggyu’s couple” is unnatural English for 승규네 부부."
+ },
+ {
+  "id": "B03-1246",
+  "ext_id": "36277",
+  "sense": "0",
+  "ex": "10",
+  "ko": "아이는 엄마와 떨어지기 싫은지 엄마를 그러안고 울면서 떼를 썼다.",
+  "decision": "fix",
+  "en_new": "Unwilling to be separated from her, the child clung to their mother, crying and throwing a tantrum.",
+  "note": "“his mother” assigns an unstated gender to the child."
+ },
+ {
+  "id": "B03-1263",
+  "ext_id": "31628",
+  "sense": "0",
+  "ex": "5",
+  "ko": "그 집안은 형제가 모두 셋인데 그만그만한 형편으로 특별히 잘사는 사람은 없었다.",
+  "decision": "fix",
+  "en_new": "That family has three siblings, all in roughly similar circumstances, and none of them is especially well off.",
+  "note": "“Brothers” assumes all three siblings are male."
+ },
+ {
+  "id": "B03-1273",
+  "ext_id": "30893",
+  "sense": "0",
+  "ex": "0",
+  "ko": "동생은 울음을 참았지만 그예 눈물이 뚝 떨어졌다.",
+  "decision": "fix",
+  "en_new": "My younger sibling tried to hold back tears, but in the end a tear fell.",
+  "note": "“Held back the crying” is an unnatural expression."
+ },
+ {
+  "id": "B03-1274",
+  "ext_id": "36087",
+  "sense": "0",
+  "ex": "3",
+  "ko": "두 남녀는 서로 그윽이 바라보았다.",
+  "decision": "fix",
+  "en_new": "The man and the woman gazed at each other tenderly.",
+  "note": "“Lovers” adds an unsupported romantic relationship; 남녀 means a man and a woman."
+ },
+ {
+  "id": "B03-1278",
+  "ext_id": "32104",
+  "sense": "0",
+  "ex": "5",
+  "ko": "오랜만에 소식을 알려 온 친구의 편지는 그지없이 반가웠다.",
+  "decision": "keep",
+  "note": "taste."
+ },
+ {
+  "id": "B03-1283",
+  "ext_id": "32821",
+  "sense": "0",
+  "ex": "8",
+  "ko": "기업은 이윤의 극대를 목적으로 한다.",
+  "decision": "fix",
+  "en_new": "A company aims to maximize its profits.",
+  "note": "“The maximum of its profits” is an awkward rendering of profit maximization."
+ },
+ {
+  "id": "B03-1288",
+  "ext_id": "32183",
+  "sense": "0",
+  "ex": "10",
+  "ko": "할아버지는 건강이 극도로 나빠지셔서 중환자실로 옮겨지셨다.",
+  "decision": "keep",
+  "note": "clear."
+ },
+ {
+  "id": "B03-1307",
+  "ext_id": "32207",
+  "sense": "0",
+  "ex": "6",
+  "ko": "유명 가수가 출국하기 하루 전부터 공항은 그를 배웅하려는 극성스러운 팬들로 가득했다.",
+  "decision": "keep",
+  "note": "그를 = him; correct."
+ },
+ {
+  "id": "B03-1333",
+  "ext_id": "32597",
+  "sense": "0",
+  "ex": "6",
+  "ko": "성공한 기업가의 일생이 극화를 통해 한 편의 영화로 탄생했다.",
+  "decision": "fix",
+  "en_new": "The life of a successful entrepreneur was dramatized and made into a film.",
+  "note": "“Born as a single film” is an unnatural literal translation."
+ },
+ {
+  "id": "B03-1442",
+  "ext_id": "35021",
+  "sense": "0",
+  "ex": "4",
+  "ko": "이 그릇은 금속제 그릇이라 깨지거나 상하지 않는다.",
+  "decision": "fix",
+  "en_new": "This bowl is made of metal, so it will not break or get damaged.",
+  "note": "“Spoil” is inappropriate for a metal bowl; use “be damaged.”"
+ },
+ {
+  "id": "B03-1443",
+  "ext_id": "600841",
+  "sense": "0",
+  "ex": "0",
+  "ko": "유민이는 손재주가 좋아 친구들에게 금손으로 불린다.",
+  "decision": "fix",
+  "en_new": "Yumin is so skilled with her hands that her friends say she has magic hands.",
+  "note": "“Golden hand” is a literal Korean expression, not natural English."
+ },
+ {
+  "id": "B03-1465",
+  "ext_id": "39933",
+  "sense": "0",
+  "ex": "6",
+  "ko": "그는 올림픽 삼 연패의 금자탑을 세웠다.",
+  "decision": "fix",
+  "en_new": "He achieved the monumental feat of winning three consecutive Olympic titles.",
+  "note": "“Built a monument of achievement” mistranslates the idiomatic expression 금자탑을 세우다."
+ },
+ {
+  "id": "B03-1480",
+  "ext_id": "41309",
+  "sense": "0",
+  "ex": "5",
+  "ko": "갑작스러운 기온의 급강하 때문에 감기 환자들이 속출하고 있다.",
+  "decision": "fix",
+  "en_new": "Because of the sudden drop in temperature, people are coming down with colds one after another.",
+  "note": "“Cold patients are appearing” is an unnatural expression."
+ },
+ {
+  "id": "B03-1482",
+  "ext_id": "41323",
+  "sense": "0",
+  "ex": "5",
+  "ko": "화재 신고가 들어오자 구조대원들은 신고 장소로 급거 출동하였다.",
+  "decision": "fix",
+  "en_new": "When a fire report came in, the rescue workers rushed to the reported location.",
+  "note": "The translation lacks a finite verb and is grammatically incomplete."
+ },
+ {
+  "id": "B03-1583",
+  "ext_id": "89870",
+  "sense": "0",
+  "ex": "3",
+  "ko": "건물이 기공된 지 삼 년이 지났지만 아직도 완성되지 못했다.",
+  "decision": "fix",
+  "en_new": "Three years have passed since ground was broken for the building, yet it still has not been completed.",
+  "note": "“The building broke ground” is an incorrect construction; the project breaks ground."
+ },
+ {
+  "id": "B03-1587",
+  "ext_id": "38757",
+  "sense": "0",
+  "ex": "4",
+  "ko": "그 기자는 국가 기관원을 사칭하며 출입 제한 구역까지 취재하였다.",
+  "decision": "fix",
+  "en_new": "That reporter posed as a government agent and gathered news even in restricted areas.",
+  "note": "“Intelligence agent” adds a specific agency type not stated in 기관원."
+ },
+ {
+  "id": "B03-1623",
+  "ext_id": "38124",
+  "sense": "0",
+  "ex": "5",
+  "ko": "민준이는 별다른 능력은 없지만 머리 하나는 기똥차게 좋다.",
+  "decision": "fix",
+  "en_new": "Minjun has no special abilities, but he is incredibly smart.",
+  "note": "“His brain is terrifically good” is unnatural English."
+ },
+ {
+  "id": "B03-1633",
+  "ext_id": "40025",
+  "sense": "0",
+  "ex": "5",
+  "ko": "지수는 다이어트를 하느라 기름기를 뺀 고기만 먹었다.",
+  "decision": "fix",
+  "en_new": "Jisu, on a diet, ate only meat with the fat trimmed off.",
+  "note": "“Oil removed” is awkward; lean meat means meat with little fat."
+ },
+ {
+  "id": "B03-1652",
+  "ext_id": "23586",
+  "sense": "0",
+  "ex": "6",
+  "ko": "유학을 떠난 친구에게서 아무런 기별도 오지 않아서 그가 어떻게 지내는지 모르겠다.",
+  "decision": "fix",
+  "en_new": "No word has come from my friend who left to study abroad, so I do not know how they are doing.",
+  "note": "“he” assigns an unstated gender to the friend."
+ },
+ {
+  "id": "B03-1694",
+  "ext_id": "38658",
+  "sense": "0",
+  "ex": "5",
+  "ko": "모두 오 연으로 이루어진 이 한시는 기승전결의 구조를 택하고 있다.",
+  "decision": "keep",
+  "note": "yeon in hansi = couplet; fine."
+ },
+ {
+  "id": "B03-1704",
+  "ext_id": "38686",
+  "sense": "0",
+  "ex": "7",
+  "ko": "김 선생은 이별을 못내 아쉬워하며 다시 만날 날을 기약했다.",
+  "decision": "keep",
+  "note": "clear."
+ },
+ {
+  "id": "B03-1715",
+  "ext_id": "38096",
+  "sense": "0",
+  "ex": "2",
+  "ko": "민준이는 기왕지사로 회장을 맡게 된 마당에 임기 동안 열심히 하겠노라고 이야기했다.",
+  "decision": "fix",
+  "en_new": "Now that he had taken on the chairmanship anyway, Minjun said he would work hard throughout his term.",
+  "note": "기왕지사 means “now that things have come to this,” not “through past events.”"
+ },
+ {
+  "id": "B03-1787",
+  "ext_id": "38490",
+  "sense": "0",
+  "ex": "5",
+  "ko": "노인은 힘든 일을 하다가 기함을 하여 몸져눕고 말았다.",
+  "decision": "fix",
+  "en_new": "The old man collapsed while doing hard labor and ended up bedridden.",
+  "note": "기함하다 means to faint or collapse, not merely lose strength."
+ },
+ {
+  "id": "B03-1827",
+  "ext_id": "26350",
+  "sense": "0",
+  "ex": "5",
+  "ko": "나는 해외여행 중에 길동무를 만나 그와 함께 유럽 전역을 여행했다.",
+  "decision": "fix",
+  "en_new": "During my overseas trip, I met a travel companion and traveled with them across Europe.",
+  "note": "“him” assigns an unstated gender to the travel companion."
+ },
+ {
+  "id": "B03-1948",
+  "ext_id": "38460",
+  "sense": "0",
+  "ex": "3",
+  "ko": "시험에서 낙방한 내 미래는 마치 깜깜절벽처럼 느껴졌다.",
+  "decision": "fix",
+  "en_new": "After failing the exam, my future felt as bleak as pitch darkness.",
+  "note": "“Pitch-black cliff” is an unnatural literal rendering of a bleak future."
+ },
+ {
+  "id": "B03-1982",
+  "ext_id": "41471",
+  "sense": "0",
+  "ex": "7",
+  "ko": "아이가 낮잠에서 깨나 엄마를 찾으며 울었다.",
+  "decision": "fix",
+  "en_new": "The child woke from their nap and cried, looking for their mother.",
+  "note": "“his” assigns an unstated gender to the child."
+ },
+ {
+  "id": "B03-1995",
+  "ext_id": "41540",
+  "sense": "0",
+  "ex": "9",
+  "ko": "나는 간장에 무친 깻잎 반찬을 좋아한다.",
+  "decision": "fix",
+  "en_new": "I like side dishes of perilla leaves seasoned with soy sauce.",
+  "note": "깻잎 means perilla leaves, not sesame leaves."
+ },
+ {
+  "id": "B02-0020",
+  "ext_id": "83429",
+  "sense": "0",
+  "ex": "9",
+  "ko": "박 부장은 이 사업을 총괄하여 지휘하고 있다.",
+  "decision": "fix",
+  "en_new": "Department Head Park is overseeing and directing this entire project.",
+  "note": "Title mistranslated: 부장 is department head, not section chief"
+ },
+ {
+  "id": "B02-0042",
+  "ext_id": "74616",
+  "sense": "0",
+  "ex": "6",
+  "ko": "김 씨는 컴퓨터 프로그램의 저작권을 침해한 혐의로 벌금을 물었다.",
+  "decision": "fix",
+  "en_new": "Kim paid a fine on charges of infringing the copyright of a computer program.",
+  "note": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-0091",
+  "ext_id": "56839",
+  "sense": "0",
+  "ex": "10",
+  "ko": "경찰은 구속 영장 발부와 동시에 범인인 김 씨를 즉시 구속하였다.",
+  "decision": "fix",
+  "en_new": "The police immediately detained Kim, the culprit, as soon as the arrest warrant was issued.",
+  "note": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-0097",
+  "ext_id": "61371",
+  "sense": "0",
+  "ex": "9",
+  "ko": "검찰은 주가 조작 혐의로 구속된 그에 대하여 사법 처리를 검토하기로 하였다.",
+  "decision": "fix",
+  "en_new": "The prosecution decided to consider legal action against him, as he had been arrested on charges of stock manipulation.",
+  "note": "Pronoun 그 must be rendered as him, not them"
+ },
+ {
+  "id": "B02-0230",
+  "ext_id": "14418",
+  "sense": "0",
+  "ex": "5",
+  "ko": "김 대리는 어머니 수술비를 마련하기 위해 회사에 가불을 신청했다.",
+  "decision": "fix",
+  "en_new": "Assistant Manager Kim applied to the company for a salary advance to pay for their mother's surgery.",
+  "note": "Uses gendered \"his\" for 김 대리 whose sex is unstated"
+ },
+ {
+  "id": "B02-0287",
+  "ext_id": "16359",
+  "sense": "0",
+  "ex": "5",
+  "ko": "김 화백은 예술성이 뛰어난 가작을 많이 남긴 화가였다.",
+  "decision": "fix",
+  "en_new": "Kim, the painter, left behind many fine works of outstanding artistic quality.",
+  "note": "Adds gender \"Mr.\" and drops title 화백 for 김 화백"
+ },
+ {
+  "id": "B02-0375",
+  "ext_id": "15260",
+  "sense": "0",
+  "ex": "5",
+  "ko": "헌법 재판소는 김 모 씨가 제기한 헌법 소원에 대해 청구 자체가 부적합하다며 각하하였다.",
+  "decision": "fix",
+  "en_new": "The Constitutional Court dismissed the constitutional complaint filed by a certain Kim, saying the claim itself was improper.",
+  "note": "Adds gender \"Mr.\" for 김 모 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-0376",
+  "ext_id": "35601",
+  "sense": "0",
+  "ex": "6",
+  "ko": "어머니는 밥이랑 먹어도 싱겁지 않도록 나물을 간간하게 무쳤다.",
+  "decision": "fix",
+  "en_new": "Mother seasoned the namul pleasantly salty so that it would not taste bland even when eaten with rice.",
+  "note": "Headword 간간하다 (pleasantly salty) mistranslated as lightly"
+ },
+ {
+  "id": "B02-0442",
+  "ext_id": "14899",
+  "sense": "0",
+  "ex": "6",
+  "ko": "이웃 마을의 김 씨는 간첩죄로 체포되어 사형을 선고받았다.",
+  "decision": "fix",
+  "en_new": "Kim from the neighboring village was arrested for espionage and sentenced to death.",
+  "note": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-0524",
+  "ext_id": "14786",
+  "sense": "0",
+  "ex": "7",
+  "ko": "김 씨는 경찰의 허술한 감시망을 틈타 탈옥에 성공했다.",
+  "decision": "fix",
+  "en_new": "Kim took advantage of the police's lax surveillance network and succeeded in escaping prison.",
+  "note": "Adds gender \"Mr.\" for 김 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-0559",
+  "ext_id": "20185",
+  "sense": "0",
+  "ex": "7",
+  "ko": "김 의원은 권력 비리를 예방하기 위한 감찰 수사를 해야 한다고 주장했다.",
+  "decision": "fix",
+  "en_new": "Lawmaker Kim argued that an inspection investigation should be conducted to prevent abuses of power.",
+  "note": "Uses gendered \"Assemblyman\" for 김 의원 whose sex is unstated"
+ },
+ {
+  "id": "B02-0582",
+  "ext_id": "64466",
+  "sense": "0",
+  "ex": "5",
+  "ko": "박 씨는 모범수로 뽑혀 형이 감형되었다.",
+  "decision": "fix",
+  "en_new": "Park was selected as a model prisoner, and their sentence was reduced.",
+  "note": "Adds gender \"Mr.\" and \"his\" for 박 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-0618",
+  "ext_id": "17488",
+  "sense": "0",
+  "ex": "5",
+  "ko": "김 과장은 술을 못 마시는 직원들에게도 술을 강권했다.",
+  "decision": "fix",
+  "en_new": "Section Chief Kim pressed alcohol even on employees who could not drink.",
+  "note": "Title mistranslated: 과장 is section chief, not manager"
+ },
+ {
+  "id": "B02-0684",
+  "ext_id": "19667",
+  "sense": "0",
+  "ex": "5",
+  "ko": "홍 사장은 경쟁 회사 직원을 협박해 신기술이 담긴 문서를 강탈했다.",
+  "decision": "fix",
+  "en_new": "President Hong threatened an employee of a rival company and seized documents containing the new technology.",
+  "note": "Title mistranslated: 사장 is company president, not chairman"
+ },
+ {
+  "id": "B02-0802",
+  "ext_id": "18607",
+  "sense": "0",
+  "ex": "6",
+  "ko": "아버지는 이 층에 있는 창고를 방으로 개조해서 서재로 사용하셨다.",
+  "decision": "fix",
+  "en_new": "Father converted the storage room on the second floor into a room and used it as his study.",
+  "note": "이 층 means second floor (spelled out), not this floor"
+ },
+ {
+  "id": "B02-0842",
+  "ext_id": "23422",
+  "sense": "0",
+  "ex": "5",
+  "ko": "조 사장은 도박으로 천만 원이나 잃고 개평으로 겨우 차비만 얻었다.",
+  "decision": "fix",
+  "en_new": "President Jo lost ten million won gambling and got just enough from the winners' tip to cover their fare.",
+  "note": "Title mistranslated: 사장 is company president, not chair"
+ },
+ {
+  "id": "B02-0904",
+  "ext_id": "26349",
+  "sense": "0",
+  "ex": "5",
+  "ko": "민준이는 지나가는 친구에게 발을 걸어 앞으로 거꾸러뜨렸다.",
+  "decision": "fix",
+  "en_new": "Minjun tripped a passing friend and sent them sprawling forward.",
+  "note": "Uses gendered \"him\" for an unnamed friend whose sex is unstated"
+ },
+ {
+  "id": "B02-0956",
+  "ext_id": "27715",
+  "sense": "0",
+  "ex": "5",
+  "ko": "구두닦이의 얼굴과 손은 항상 거무데데한 상태였다.",
+  "decision": "fix",
+  "en_new": "The shoeshiner's face and hands were always grimy and dark.",
+  "note": "Uses gendered \"shoeshine man\" for 구두닦이 whose sex is unstated"
+ },
+ {
+  "id": "B02-1089",
+  "ext_id": "25381",
+  "sense": "0",
+  "ex": "6",
+  "ko": "민준이는 친구와 싸우다가 친구에게 다리를 발로 걷어챘다.",
+  "decision": "fix",
+  "en_new": "While fighting with a friend, Minjun was kicked in the leg by them.",
+  "note": "Uses gendered \"him\" for an unnamed friend whose sex is unstated"
+ },
+ {
+  "id": "B02-1109",
+  "ext_id": "31512",
+  "sense": "0",
+  "ex": "5",
+  "ko": "아이는 아버지가 논으로 끌고 가는 소 등에 걸터탔다.",
+  "decision": "fix",
+  "en_new": "The child straddled the back of the ox that their father was leading to the rice paddy.",
+  "note": "Uses gendered \"his\" for 아이 whose sex is unstated"
+ },
+ {
+  "id": "B02-1114",
+  "ext_id": "31518",
+  "sense": "0",
+  "ex": "9",
+  "ko": "경찰은 유괴범 이 씨를 잡기 위해 검거망을 전국으로 확대했다.",
+  "decision": "fix",
+  "en_new": "To catch the kidnapper Lee, police expanded the dragnet nationwide.",
+  "note": "Adds gender \"Mr.\" for 이 씨 whose sex is unstated"
+ },
+ {
+  "id": "B02-1144",
+  "ext_id": "30059",
+  "sense": "0",
+  "ex": "9",
+  "ko": "일흔 살의 노인이 고등학교 검정고시에 합격하여 화제가 되고 있다.",
+  "decision": "fix",
+  "en_new": "A seventy-year-old passed the high school equivalency exam, and it has become a topic of discussion.",
+  "note": "Uses gendered \"man\" for 노인 whose sex is unstated"
+ },
+ {
+  "id": "B02-1177",
+  "ext_id": "31350",
+  "sense": "0",
+  "ex": "4",
+  "ko": "우리 부부는 결혼할 때 겉치레는 다 빼고 결혼반지만 주고받았다.",
+  "decision": "fix",
+  "en_new": "When my spouse and I married, we dispensed with all the pomp and only exchanged wedding rings.",
+  "note": "Uses gendered \"my husband\" for 우리 부부 whose sex is unstated"
+ },
+ {
+  "id": "B02-1237",
+  "ext_id": "33035",
+  "sense": "0",
+  "ex": "7",
+  "ko": "이번 인사이동 결과 김 과장은 부장으로 그 지위가 격상되었다.",
+  "decision": "fix",
+  "en_new": "As a result of this personnel reshuffle, Section Chief Kim was promoted to department head.",
+  "note": "Title mistranslated: 과장 is section chief, not manager"
+ },
+ {
+  "id": "B02-1538",
+  "ext_id": "30415",
+  "sense": "0",
+  "ex": "3",
+  "ko": "경장이었던 삼촌이 이번 승진 시험에 합격하여 경사가 되었다.",
+  "decision": "fix",
+  "en_new": "My uncle, who was a police corporal, passed this promotion exam and became a police sergeant.",
+  "note": "Misread police rank 경사 (sergeant) as 경사 (happy event)"
+ }
+]
