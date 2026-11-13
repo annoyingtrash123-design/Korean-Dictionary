@@ -1,0 +1,140 @@
+B03 — Translation review findings Only clear translation errors are
+listed below, in ascending ID order.
+
+B03-0289 | MAJOR | “과년한” means past marriageable age, not merely
+having reached it. | The family worked hard to marry off their eldest
+daughter, who was past marriageable age. B03-0410 | MINOR | Literal
+rendering of the idiom “비행기 태우다” is unnatural and misleading. |
+The expression “to flatter someone excessively” is an idiom meaning to
+praise someone too much. B03-0445 | MINOR | “joeun” is an incorrect
+romanization of 좋은; it should be “joheun.” | The word joheun is the
+adnominal form of the adjective jota, meaning to be good. B03-0486 |
+MINOR | “he” assigns an unstated gender to Manager Kim. | Manager Kim so
+fanatically idolized the president that they would even steal if the
+president asked them to. B03-0517 | MINOR | “Charged with the offense”
+misrepresents the figurative idiom 괘씸죄. | Because I repeated the same
+mistake, I even incurred further resentment. B03-0564 | MINOR | “Built a
+bridgehead” is an unnatural rendering of establishing a foothold. | The
+soldiers established a foothold in advance to defend the bridge.
+B03-0663 | MINOR | “gati” is incorrect romanization; 같이 is romanized
+gachi. | An example of palatalization is the adverb gachi, pronounced
+[gachi]. B03-0665 | MINOR | “his” assigns an unstated gender to the
+child. | The child went out onto the street to beg in place of their
+sick mother. B03-0673 | MINOR | “Heartbreaking in every word” is an
+unnatural literal rendering of 구구절절이. | The uncle’s story about the
+poverty of his youth was heartbreaking from beginning to end. B03-0740 |
+MINOR | “Crawling along in wriggles” is unnatural English. | In the
+flower bed soil, I saw an earthworm wriggling along. B03-0770 | MAJOR |
+구술 means spoken remarks here, not content dictated by the president. |
+Reporters eagerly took down the president’s spoken remarks. B03-0774 |
+MINOR | “him” assigns an unstated gender to the child. | Jisu coaxed the
+whining child by promising them candy if they behaved. B03-0783 | MINOR
+| “Centripetality” is an unnatural technical rendering; the sentence
+means centripetal force. | When a stone tied to a string is swung
+around, centripetal force acts on it and keeps it from flying outward.
+B03-0912 | MINOR | “A national mourning” is unidiomatic; use “a period
+of national mourning.” | During a period of national mourning, all the
+people wore mourning clothes. B03-0921 | MAJOR | 국어학 means Korean
+linguistics, not the broader field of Korean studies. | I want to become
+a scholar of Korean linguistics who researches modern poetry. B03-0959 |
+MINOR | “Faked a cough” misses the deliberate throat-clearing sense of
+군기침. | He cleared his throat to draw people’s attention. B03-1041 |
+MINOR | “Curtain panels … wriggled” is an unnatural description of their
+movement. | When the wind blew, the long curtain panels swayed and
+billowed. B03-1050 | MINOR | “him” assigns an unstated gender to the
+teacher. | Whenever she met her teacher, Jisu bowed politely and greeted
+them respectfully. B03-1056 | MINOR | “My heart was rotting” is a
+misleading literal rendering of emotional distress. | I felt so crushed
+and intimidated that I could not say a word. B03-1072 | MINOR | The
+double-negative construction is awkward and misleading. | Although it is
+a last resort, it is still a possible solution. B03-1085 | MINOR |
+“Power class” is an unnatural rendering; “ruling elite” is clearer. |
+Wealth and honor came along with the ruling elite formed around the
+king. B03-1097 | MINOR | “Talking back to my father’s words” is an
+unnatural literal expression. | In our house, where patriarchal
+authoritarianism reigns, talking back to my father is unimaginable.
+B03-1105 | MINOR | “My husband and I” adds an unsupported gender for the
+speaker. | My spouse and I set off on a trip, just the two of us.
+B03-1107 | MINOR | “A rally of uprising” is an unnatural expression. |
+More than a million citizens gathered and held a rally demanding the
+dictator’s removal. B03-1136 | MINOR | “his eyes” assigns an unstated
+gender to the younger sibling. | My younger sibling listened carefully
+to what I said, their eyes sparkling. B03-1142 | MINOR | “kwi-ttul
+kwi-ttul” is an unhelpful literal transliteration of chirping. | On an
+autumn night, the crickets chirped. B03-1147 | MINOR | “Styled my hair
+by my ears” is an unnatural rendering of 귀밑머리를 했다. | Every year
+on holidays, I dressed neatly in a hanbok and styled my hair
+traditionally. B03-1156 | MINOR | “Demon-like” misleadingly suggests
+evil rather than extraordinary skill. | With his uncanny marksmanship,
+the man hit every target. B03-1168 | MINOR | “Keep it preciously” is an
+unnatural literal expression. | He handed down his late wife’s cherished
+necklace to his daughter and urged her to treasure it. B03-1244 | MINOR
+| “Seunggyu’s couple” is unnatural English for 승규네 부부. | The
+neighbors whispered various things about Seunggyu and his wife getting
+divorced. B03-1246 | MINOR | “his mother” assigns an unstated gender to
+the child. | Unwilling to be separated from her, the child clung to
+their mother, crying and throwing a tantrum. B03-1263 | MINOR |
+“Brothers” assumes all three siblings are male. | That family has three
+siblings, all in roughly similar circumstances, and none of them is
+especially well off. B03-1273 | MINOR | “Held back the crying” is an
+unnatural expression. | My younger sibling tried to hold back tears, but
+one finally fell. B03-1274 | MAJOR | “Lovers” adds an unsupported
+romantic relationship; 남녀 means a man and a woman. | The man and woman
+gazed at each other tenderly. B03-1278 | MINOR | “Endlessly welcome” is
+an unnatural literal rendering of 그지없이 반가웠다. | The letter from
+my friend, who had finally sent word after so long, was immensely
+welcome. B03-1283 | MINOR | “The maximum of its profits” is an awkward
+rendering of profit maximization. | A company aims to maximize its
+profits. B03-1288 | MINOR | “Deteriorated to an extreme” is unnatural
+English. | Grandfather’s health deteriorated severely, and he was moved
+to the intensive care unit. B03-1307 | MINOR | “him” assigns an unstated
+gender to the famous singer. | From the day before the famous singer
+left the country, the airport was packed with overzealous fans who came
+to see them off. B03-1333 | MINOR | “Born as a single film” is an
+unnatural literal translation. | The life of a successful entrepreneur
+was dramatized in a film. B03-1442 | MINOR | “Spoil” is inappropriate
+for a metal bowl; use “be damaged.” | This bowl is made of metal, so it
+will not break or be damaged. B03-1443 | MINOR | “Golden hand” is a
+literal Korean expression, not natural English. | Yumin is so dexterous
+that her friends call her a whiz with her hands. B03-1465 | MINOR |
+“Built a monument of achievement” mistranslates the idiomatic expression
+금자탑을 세우다. | He achieved the remarkable feat of winning three
+Olympic titles in a row. B03-1480 | MINOR | “Cold patients are
+appearing” is an unnatural expression. | Because of the sudden drop in
+temperature, people are coming down with colds one after another.
+B03-1482 | MINOR | The translation lacks a finite verb and is
+grammatically incomplete. | When a fire report came in, the rescue
+workers rushed to the reported location. B03-1583 | MINOR | “The
+building broke ground” is an incorrect construction; the project breaks
+ground. | Three years have passed since ground was broken for the
+building, yet it still has not been completed. B03-1587 | MAJOR |
+“Intelligence agent” adds a specific agency type not stated in 기관원. |
+The reporter posed as an official of a government agency and reported
+from restricted areas as well. B03-1623 | MINOR | “His brain is
+terrifically good” is unnatural English. | Minjun has no special
+abilities, but he has an exceptionally sharp mind. B03-1633 | MINOR |
+“Oil removed” is awkward; lean meat means meat with little fat. | Jisu,
+on a diet, ate only lean meat. B03-1652 | MINOR | “he” assigns an
+unstated gender to the friend. | No word has come from my friend who
+left to study abroad, so I do not know how they are doing. B03-1694 |
+MAJOR | “Five couplets” mistranslates 오 연, which means five stanzas. |
+This classical Chinese poem, consisting of five stanzas, follows the
+four-part structure of introduction, development, turn, and conclusion.
+B03-1704 | MINOR | “Promised a day” is unnatural and misses the sense of
+looking forward to meeting again. | Teacher Kim was reluctant to part
+and promised they would meet again. B03-1715 | MAJOR | 기왕지사 means
+“now that things have come to this,” not “through past events.” | Now
+that he had become chairman, Minjun said he would work hard throughout
+his term. B03-1787 | MAJOR | 기함하다 means to faint or collapse, not
+merely lose strength. | The old man fainted while doing hard labor and
+ended up bedridden. B03-1827 | MINOR | “him” assigns an unstated gender
+to the travel companion. | During my overseas trip, I met a travel
+companion and traveled with them across Europe. B03-1948 | MINOR |
+“Pitch-black cliff” is an unnatural literal rendering of a bleak future.
+| After failing the exam, my future felt utterly bleak. B03-1982 | MINOR
+| “his” assigns an unstated gender to the child. | The child woke from
+their nap and cried, looking for their mother. B03-1995 | MAJOR | 깻잎
+means perilla leaves, not sesame leaves. | I like the side dish of
+perilla leaves seasoned with soy sauce.
+
+END B03 (checked 2000 rows)
