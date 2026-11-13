@@ -26,6 +26,14 @@ export const test = base.extend<{ failureDump: void; settingsOpen: void }>({
       if (alerts.length) out.push('alerts:', ...alerts);
       const diag = await page.evaluate(() => (globalThis as unknown as { __kdDiagnostics?: () => Promise<string> }).__kdDiagnostics?.().catch((e) => String(e)));
       if (diag) out.push('engine diagnostics:', diag.slice(-1500));
+      const extra = await page.evaluate(async () => {
+        const g = globalThis as unknown as { __kdErrors?: () => { src: string; msg: string }[] };
+        const est = await navigator.storage?.estimate?.().catch(() => undefined);
+        let settings = ''; try { settings = localStorage.getItem('kd.settings') ?? ''; } catch { /* */ }
+        return { errors: (g.__kdErrors?.() ?? []).map((e) => `[${e.src}] ${e.msg}`), usage: est?.usage, quota: est?.quota, settings: settings.slice(0, 400) };
+      });
+      out.push(`storage: ${extra.usage} of ${extra.quota}`, `settings: ${extra.settings}`);
+      if (extra.errors.length) out.push('app error log:', ...extra.errors.slice(-15));
     } catch (e) { out.push(`(page not readable: ${String(e)})`); }
     if (logs.length) out.push('console:', ...logs.slice(-30));
     console.log(out.join('\n'));

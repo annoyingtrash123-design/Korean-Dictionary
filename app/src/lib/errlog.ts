@@ -12,6 +12,8 @@ const MAX_MSG = 500;
 const MAX_STACK = 600;
 
 export const errors$ = createStore<ErrEntry[]>([]); // oldest first
+// read by the e2e failure dump (app/e2e/fixtures.ts): the job log then shows what the app recorded
+if (typeof globalThis !== 'undefined') (globalThis as unknown as { __kdErrors?: () => ErrEntry[] }).__kdErrors = () => errors$.get();
 
 const inWorker = () => typeof WorkerGlobalScope !== 'undefined' && typeof self !== 'undefined' && self instanceof WorkerGlobalScope;
 
