@@ -6,7 +6,10 @@ const base = process.env.BASE_PATH ?? '/Korean-Dictionary/';
 
 export default defineConfig({
   base,
-  define: { __BUILD__: JSON.stringify(new Date().toISOString().slice(0, 16)) },   // shown in storage diagnostics
+  define: {
+    __BUILD__: JSON.stringify(new Date().toISOString().slice(0, 16)),   // shown in storage diagnostics
+    __APP_VERSION__: JSON.stringify(process.env.ANDROID_VERSION_NAME ?? 'dev'),   // Android app's versionName
+  },
   plugins: [
     preact(),
     VitePWA({
