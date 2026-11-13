@@ -22,7 +22,8 @@ export function isQuotaError(e: unknown): boolean {
   const x = e as { name?: string; message?: string } | string | null | undefined;
   const name = typeof x === 'object' && x ? x.name ?? '' : '';
   const msg = typeof x === 'string' ? x : x?.message ?? String(x ?? '');
-  return name === 'QuotaExceededError' || /quota|SQLITE_FULL|disk is full|database or disk|\bvfs\b.*\bfull\b|no space/i.test(msg);
+  // the OPFS VFS reports Chromium's FILE_ERROR_NO_SPACE (-8) as a short write of 2^32-8 bytes
+  return name === 'QuotaExceededError' || /quota|SQLITE_FULL|disk is full|database or disk|\bvfs\b.*\bfull\b|no space|got 4294967288\b/i.test(msg);
 }
 /** Errors for which "resume" would not help (the user must free space / retry from scratch). */
 export const isFatalInstallMessage = (m: string) => m.startsWith(NO_SPACE_PREFIX) || m.startsWith('Downloaded data is corrupt');

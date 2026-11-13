@@ -110,6 +110,14 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      # The e2e suite downloads the full packs into a browser profile per test (~0.5-1 GB each); the
+      # runner's free disk ran out mid-suite (Chromium write error -8 = no space). Remove preinstalled
+      # SDKs this job never uses, and print the free space so a repeat is obvious in the log.
+      - name: Free disk space
+        run: |
+          df -h /
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/.ghcup /opt/hostedtoolcache/CodeQL || true
+          df -h /
       - uses: actions/setup-node@v4
         with:
           node-version: 22

@@ -18,6 +18,7 @@ describe('free space check', () => {
   it('classifies quota errors', () => {
     expect(isQuotaError(Object.assign(new Error('x'), { name: 'QuotaExceededError' }))).toBe(true);
     expect(isQuotaError(new Error('database or disk is full'))).toBe(true);
+    expect(isQuotaError(new Error("import of 'opendict' failed: write file: expected 65536 bytes, got 4294967288"))).toBe(true);
     expect(isQuotaError('SQLITE_FULL')).toBe(true);
     expect(isQuotaError(new Error('Download failed (404)'))).toBe(false);
     expect(isFatalInstallMessage(noSpaceMessage(MB))).toBe(true);
