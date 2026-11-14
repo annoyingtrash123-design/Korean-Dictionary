@@ -11,3 +11,9 @@ errors by outside models (Gemini, Grok, ChatGPT), then each flagged row is judge
 - `results/`: model replies (`Bxx_<model>.txt`) and the decisions applied (`Bxx_decided.json`).
 
 Progress is the list of `results/Bxx_decided.json` files.
+
+## idmap guard (C batches)
+`batches_c1000.idmap.tsv` once carried an idiom's 뜻 (idioms/proverbs share the parent word's ext_id) and the
+word's merged all-senses gloss instead of this sense's. C01–C03 went out like that; the judge input is rebuilt
+from the corrected idmap. After any rebuild of the idmap run
+`python3 -I pipeline/qa/screening/check_idmap.py <unpacked core.sqlite>` — it must report 0 bad rows.

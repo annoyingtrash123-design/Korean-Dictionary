@@ -1,0 +1,2802 @@
+[
+ {
+  "id": "C02-0037",
+  "ext_id": "14753",
+  "sense": "0",
+  "ex": "6",
+  "word": "도장",
+  "gloss_current": "seal; stamp",
+  "ko_def": "나무, 수정 등의 재료를 깎아 이름을 새겨 개인이나 단체가 어떤 것을 확인했음을 표시하는 데 쓰는 물건.",
+  "ko": "김 부장은 회사의 물품 구매 동의서에 도장을 찍었다.",
+  "en_current": "Director Kim stamped their seal on the company's goods purchase approval form.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "MAJOR",
+    "reason": "부장 is department head, not director.",
+    "suggested": "Department Head Kim stamped their seal on the company's goods purchase approval form."
+   }
+  ]
+ },
+ {
+  "id": "C02-0189",
+  "ext_id": "34825",
+  "sense": "0",
+  "ex": "5",
+  "word": "구린내",
+  "gloss_current": "nasty smell; stink",
+  "ko_def": "똥이나 방귀 냄새와 같이 고약한 냄새.",
+  "ko": "누가 방귀를 뀌었는지 방 안에 구린내가 진동을 했다.",
+  "en_current": "Someone had passed gas, and a foul stench filled the room.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes something suspicious, not an unpleasant smell.",
+    "suggested": "something fishy; suspicious; arousing suspicion"
+   }
+  ]
+ },
+ {
+  "id": "C02-0232",
+  "ext_id": "18349",
+  "sense": "0",
+  "ex": "7",
+  "word": "골수",
+  "gloss_current": "bone marrow",
+  "ko_def": "뼈의 중심부에 가득 차 있는 연한 물질.",
+  "ko": "민준이는 골수에 염증이 생겨서 고통을 느꼈다.",
+  "en_current": "Minjun felt pain because inflammation had developed in his bone marrow.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition means remembering something firmly, not bone marrow.",
+    "suggested": "keep firmly in mind; engrave on one's memory"
+   }
+  ]
+ },
+ {
+  "id": "C02-0267",
+  "ext_id": "45653",
+  "sense": "0",
+  "ex": "5",
+  "word": "누이",
+  "gloss_current": "sister",
+  "ko_def": "같은 부모에게서 태어난 사이나 일가친척 가운데 남자가 여자 형제를 이르는 말.",
+  "ko": "민준은 어린 누이를 맡아서 보살피는 좋은 오빠이다.",
+  "en_current": "Minjun is a good older brother who takes care of and looks after his young sister.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The Korean definition describes mutual benefit, not a sister.",
+    "suggested": "mutually beneficial; a win-win situation"
+   }
+  ]
+ },
+ {
+  "id": "C02-0436",
+  "ext_id": "65914",
+  "sense": "0",
+  "ex": "5",
+  "word": "십자가",
+  "gloss_current": "cross",
+  "ko_def": "예수를 매달아 처형한 ‘十’ 자 모양의 형틀.",
+  "ko": "나는 십자가를 등에 지고 언덕을 오를 때의 예수님의 고통을 떠올려 보았다.",
+  "en_current": "I thought about the suffering of Jesus when he climbed the hill carrying the cross on his back.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition is figurative: taking on another person's suffering or responsibilities.",
+    "suggested": "take on another person's sins, suffering, or responsibilities"
+   }
+  ]
+ },
+ {
+  "id": "C02-0443",
+  "ext_id": "17937",
+  "sense": "0",
+  "ex": "8",
+  "word": "나사",
+  "gloss_current": "screw",
+  "ko_def": "한 방향으로 비틀어 돌려 물체를 조이는 데 쓰는 홈이 파인 못.",
+  "ko": "안경테의 나사가 헐거워져서 드라이버로 꽉 조였다.",
+  "en_current": "The screw on the eyeglass frame had come loose, so I tightened it firmly with a screwdriver.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition means regaining mental composure, not a mechanical screw.",
+    "suggested": "pull oneself together; regain one's composure"
+   }
+  ]
+ },
+ {
+  "id": "C02-0464",
+  "ext_id": "70563",
+  "sense": "0",
+  "ex": "2",
+  "word": "유심히",
+  "gloss_current": "mindfully",
+  "ko_def": "마음속에 품고 있는 뜻이 있게.",
+  "ko": "민준이의 말은 나를 응원하는 것이었지만 숨은 뜻이 있는 것처럼 유심히 느껴졌다.",
+  "en_current": "Minjun's words were meant to cheer me on, but they struck me as meaningful, as if they carried a hidden intent.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "MAJOR",
+    "reason": "\"Noticed carefully\" misrepresents the implication of hidden meaning.",
+    "suggested": "Minjun's words were meant to encourage me, but they seemed to carry a hidden meaning."
+   },
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes having a particular meaning or intention in mind.",
+    "suggested": "with a particular or hidden intention; meaningfully"
+   }
+  ]
+ },
+ {
+  "id": "C02-0488",
+  "ext_id": "77008",
+  "sense": "0",
+  "ex": "5",
+  "word": "주장",
+  "gloss_current": "chief general",
+  "ko_def": "군사를 이끄는 장수 가운데 우두머리가 되는 장수.",
+  "ko": "병사들은 주장을 믿고 전쟁터로 나갔다.",
+  "en_current": "The soldiers trusted their commanding general and went out to the battlefield.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "MAJOR",
+    "reason": "주장 is the chief military commander, not simply a captain.",
+    "suggested": "The soldiers trusted their commander and went out to the battlefield."
+   },
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition specifies the highest-ranking military commander.",
+    "suggested": "commander-in-chief; chief military commander"
+   }
+  ]
+ },
+ {
+  "id": "C02-0562",
+  "ext_id": "73767",
+  "sense": "0",
+  "ex": "6",
+  "word": "장부",
+  "gloss_current": "man",
+  "ko_def": "다 자란 씩씩한 남자.",
+  "ko": "어린 시절 헤어졌던 친구들을 장부가 되어서야 만나게 되었다.",
+  "en_current": "I did not meet the friends I had parted from in childhood until we had become grown men.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes a resolute man who persists despite obstacles.",
+    "suggested": "resolute man; man of strong determination"
+   }
+  ]
+ },
+ {
+  "id": "C02-0588",
+  "ext_id": "67061",
+  "sense": "0",
+  "ex": "5",
+  "word": "뒤통수",
+  "gloss_current": "the back of the head",
+  "ko_def": "머리의 뒷부분.",
+  "ko": "아기는 이마와 뒤통수가 남들보다 튀어나왔다.",
+  "en_current": "The baby's forehead and the back of the head stick out more than other babies'.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes betrayal, not the anatomical back of the head.",
+    "suggested": "be betrayed; be stabbed in the back"
+   }
+  ]
+ },
+ {
+  "id": "C02-0607",
+  "ext_id": "61913",
+  "sense": "0",
+  "ex": "5",
+  "word": "상수",
+  "gloss_current": "portable water; service water",
+  "ko_def": "마시거나 사용할 목적으로 수도관을 통해 보내는 맑은 물.",
+  "ko": "학교에서도 상수를 공급받아 마실 물로 사용한다.",
+  "en_current": "The school also receives a supply of tap water and uses it as drinking water.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes clean piped water; \"portable water\" is erroneous.",
+    "suggested": "tap water; municipal water supply"
+   }
+  ]
+ },
+ {
+  "id": "C02-0613",
+  "ext_id": "74807",
+  "sense": "0",
+  "ex": "6",
+  "word": "전이",
+  "gloss_current": "change; evolution",
+  "ko_def": "자리나 위치 등을 다른 곳으로 옮김.",
+  "ko": "청결한 환경을 유지함으로써 세균의 전이를 막을 수 있다.",
+  "en_current": "By maintaining a clean environment, the spread of bacteria can be prevented.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes movement or transfer to another location.",
+    "suggested": "transfer; movement from one place to another"
+   }
+  ]
+ },
+ {
+  "id": "C02-0619",
+  "ext_id": "82801",
+  "sense": "0",
+  "ex": "5",
+  "word": "창자",
+  "gloss_current": "intestines",
+  "ko_def": "사람이나 동물의 큰창자와 작은창자.",
+  "ko": "소화가 완료되고 영양분을 흡수하는 것은 창자에서 담당한다.",
+  "en_current": "Digestion is completed and nutrients are absorbed in the intestines.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes intense emotional distress, not intestines.",
+    "suggested": "feel deep anguish; be consumed by distress"
+   }
+  ]
+ },
+ {
+  "id": "C02-0627",
+  "ext_id": "64097",
+  "sense": "0",
+  "ex": "7",
+  "word": "세균",
+  "gloss_current": "virus; germ; bacteria",
+  "ko_def": "사람들을 병에 걸리게 하거나 음식을 썩게 하는 아주 작은 생물.",
+  "ko": "화장실에 다녀온 후 손을 깨끗이 씻지 않으면 세균에 감염되기 쉽다.",
+  "en_current": "If you do not wash your hands thoroughly after using the toilet, you can easily become infected with germs.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "세균 means bacteria or germs, not viruses.",
+    "suggested": "bacterium; bacteria; germ"
+   }
+  ]
+ },
+ {
+  "id": "C02-0631",
+  "ext_id": "55991",
+  "sense": "0",
+  "ex": "5",
+  "word": "모로",
+  "gloss_current": "diagonally",
+  "ko_def": "비껴서. 또는 대각선으로.",
+  "ko": "나는 종이를 모로 잘라 준비해 놓았다.",
+  "en_current": "I cut the paper diagonally and had it ready.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition means achieving an objective by whatever method.",
+    "suggested": "by any means; by whatever method"
+   }
+  ]
+ },
+ {
+  "id": "C02-0648",
+  "ext_id": "36216",
+  "sense": "0",
+  "ex": "4",
+  "word": "굼벵이",
+  "gloss_current": "cicada larva",
+  "ko_def": "매미나 풍뎅이의 애벌레.",
+  "ko": "나는 흙 밑에 혹시 굼벵이라도 있는지 뒤져 보았다.",
+  "en_current": "I searched beneath the soil to see whether there might be any cicada larvae.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition refers to the proverb that even an inept person has a special ability.",
+    "suggested": "even a seemingly inept person has a useful knack"
+   }
+  ]
+ },
+ {
+  "id": "C02-0663",
+  "ext_id": "53099",
+  "sense": "0",
+  "ex": "5",
+  "word": "똥구멍",
+  "gloss_current": "asshole",
+  "ko_def": "(속된 말로) 똥을 몸 밖으로 내보내는 구멍.",
+  "ko": "아이는 용변을 보고 난 후 휴지로 똥구멍을 쓱 닦았다.",
+  "en_current": "After relieving themselves, the child quickly wiped their bottom with tissue paper.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition means being extremely poor, not an anatomical opening.",
+    "suggested": "be dirt poor; be in extreme poverty"
+   }
+  ]
+ },
+ {
+  "id": "C02-0687",
+  "ext_id": "87414",
+  "sense": "0",
+  "ex": "5",
+  "word": "황소",
+  "gloss_current": "bull",
+  "ko_def": "몸집이 큰, 수컷 소.",
+  "ko": "큰 황소가 달구지를 끌고 간다.",
+  "en_current": "A large bull is pulling a cart along.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes an accidental achievement or lucky guess, not a bull.",
+    "suggested": "happen by chance; make a lucky guess"
+   }
+  ]
+ },
+ {
+  "id": "C02-0721",
+  "ext_id": "63908",
+  "sense": "0",
+  "ex": "1",
+  "word": "손가락질",
+  "gloss_current": "finger-pointing; pointing",
+  "ko_def": "손가락으로 무엇을 가리키는 행동.",
+  "ko": "아기가 손가락질을 하며 엄마를 가리켰다.",
+  "en_current": "The baby pointed at his mother with a finger.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "MINOR",
+    "reason": "The baby's sex is unspecified; \"his\" is invented.",
+    "suggested": "The baby pointed at their mother with a finger."
+   },
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes being mocked or criticized, not simply pointing.",
+    "suggested": "be pointed at; be mocked or criticized"
+   }
+  ]
+ },
+ {
+  "id": "C02-0820",
+  "ext_id": "66841",
+  "sense": "0",
+  "ex": "0",
+  "word": "아비",
+  "gloss_current": "dad; father",
+  "ko_def": "(낮춤말로) 자녀를 둔 남자. 또는 그 사람을 부르는 말.",
+  "ko": "요새 승규 아비는 통 보이질 않네.",
+  "en_current": "Seung-gyu's father has not been seen around at all these days.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition describes parental devotion to children, not simply a father.",
+    "suggested": "a father's deep devotion to and concern for their children"
+   }
+  ]
+ },
+ {
+  "id": "C02-0876",
+  "ext_id": "36375",
+  "sense": "0",
+  "ex": "7",
+  "word": "구슬",
+  "gloss_current": "marble; bead",
+  "ko_def": "보석이나 유리 등으로 둥글게 만든 물건.",
+  "ko": "보석 상자에 들어 있는 동그란 진주 구슬 목걸이가 정말 예뻤다.",
+  "en_current": "The necklace of round pearl beads in the jewelry box was truly pretty.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition refers to the proverb that valuable things must be put to use.",
+    "suggested": "a fine thing is valuable only when put to good use"
+   }
+  ]
+ },
+ {
+  "id": "C02-0896",
+  "ext_id": "41466",
+  "sense": "0",
+  "ex": "7",
+  "word": "깡통",
+  "gloss_current": "can",
+  "ko_def": "양철로 만든 원기둥 모양의 통.",
+  "ko": "깡통에 담긴 음식은 잘 상하지 않기 때문에 오래 두고 먹기에 편하다.",
+  "en_current": "Food packed in cans does not spoil easily, so it is convenient to keep and eat over a long time.",
+  "flags": [
+   {
+    "model": "chatgpt",
+    "label": "GLOSS",
+    "reason": "The definition means becoming destitute, not a tin can.",
+    "suggested": "become destitute; end up like a beggar"
+   }
+  ]
+ },
+ {
+  "id": "C03-0009",
+  "ext_id": "18769",
+  "sense": "0",
+  "ex": "5",
+  "word": "고약스럽다",
+  "gloss_current": "ill-natured; evil; wicked",
+  "ko_def": "날씨나 사람의 성격이나 언행, 또는 맛과 냄새 등이 나쁜 데가 있다.",
+  "ko": "언니는 눈이 아주 나빠서 사람을 쳐다볼 때 얼굴을 찡그려 그 인상이 여간 고약스럽지 않다.",
+  "en_current": "My older sister has very poor eyesight, so she scowls when looking at people, and her expression is quite unpleasant.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss covers only character; 뜻 includes weather, taste, smell.",
+    "suggested": "unpleasant in weather, character, taste, or smell"
+   }
+  ]
+ },
+ {
+  "id": "C03-0010",
+  "ext_id": "18770",
+  "sense": "0",
+  "ex": "5",
+  "word": "고약하다",
+  "gloss_current": "bad; nasty; disgusting",
+  "ko_def": "맛, 냄새 등이 역하거나 매우 좋지 않다.",
+  "ko": "이를 닦고 달콤한 오렌지 주스를 마시면 그 맛이 고약하게 느껴진다.",
+  "en_current": "After brushing my teeth, sweet orange juice tastes unpleasant.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss adds character senses; 뜻 is only taste or smell.",
+    "suggested": "unpleasant in taste or smell"
+   }
+  ]
+ },
+ {
+  "id": "C03-0021",
+  "ext_id": "18800",
+  "sense": "0",
+  "ex": "4",
+  "word": "고용살이",
+  "gloss_current": "life of an employee",
+  "ko_def": "다른 사람에게 고용되어 살아감.",
+  "ko": "회사에서 월급을 받으며 일하는 직장인들도 고용살이를 하는 것으로 볼 수 있다.",
+  "en_current": "Office workers who work for a salary can also be seen as living the life of hired labor.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Live-in\" is not in the 뜻.",
+    "suggested": "life as a hired employee"
+   }
+  ]
+ },
+ {
+  "id": "C03-0022",
+  "ext_id": "18801",
+  "sense": "0",
+  "ex": "5",
+  "word": "고용원",
+  "gloss_current": "employee",
+  "ko_def": "고용되어 일을 하는 사람.",
+  "ko": "새로 생긴 회사는 자금이 부족해서 고용원을 두지 못했다.",
+  "en_current": "The newly founded company lacked funds and could not hire any employees.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Public official in labor service\" is not in the 뜻.",
+    "suggested": "employee; hired worker"
+   }
+  ]
+ },
+ {
+  "id": "C03-0031",
+  "ext_id": "18829",
+  "sense": "0",
+  "ex": "5",
+  "word": "고육지계",
+  "gloss_current": "desparate measure; desparate plan",
+  "ko_def": "어떤 문제를 해결하는 데 다른 방법이 없어서 나쁘지만 어쩔 수 없이 쓰는 방법.",
+  "ko": "공교육의 질을 높이기 위한 고육지계로 무능한 교사를 퇴출시키는 방법이 있다.",
+  "en_current": "As a desperate measure to raise the quality of public education, there is a way of removing incompetent teachers.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Desparate\" misspells desperate.",
+    "suggested": "desperate measure; desperate plan"
+   }
+  ]
+ },
+ {
+  "id": "C03-0036",
+  "ext_id": "18843",
+  "sense": "0",
+  "ex": "5",
+  "word": "고이다",
+  "gloss_current": "stagnate",
+  "ko_def": "우묵한 곳이나 좁은 넓이의 공간에 액체나 냄새, 기체 등이 모이다.",
+  "ko": "아버지는 아침 일찍 일어나 마을 뒷산의 샘에 고인 물을 떠 오셨다.",
+  "en_current": "Father woke early and drew water that had collected in the spring on the hill behind the village.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Tears and salivate do not match failing to progress.",
+    "suggested": "fail to advance; stay stuck"
+   }
+  ]
+ },
+ {
+  "id": "C03-0058",
+  "ext_id": "27177",
+  "sense": "0",
+  "ex": "5",
+  "word": "고조하다",
+  "gloss_current": "raise",
+  "ko_def": "음이나 목소리 등의 가락을 높이다.",
+  "ko": "피아노 반주가 절정에 이르자 연주자는 음을 한층 더 고조했다.",
+  "en_current": "As the piano accompaniment reached its climax, the performer raised the pitch even higher.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Elate; enhance\" do not mean raising musical pitch.",
+    "suggested": "raise the pitch"
+   }
+  ]
+ },
+ {
+  "id": "C03-0066",
+  "ext_id": "27210",
+  "sense": "0",
+  "ex": "5",
+  "word": "고즈넉이",
+  "gloss_current": "snugly; cozily",
+  "ko_def": "조용하고 편안하게.",
+  "ko": "할아버지는 정원의 꽃을 고즈넉이 쳐다보셨다.",
+  "en_current": "Grandfather gazed quietly at the flowers in the garden.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Quiety\" misspells quietly.",
+    "suggested": "snugly; cozily; quietly; gently"
+   }
+  ]
+ },
+ {
+  "id": "C03-0081",
+  "ext_id": "27267",
+  "sense": "0",
+  "ex": "5",
+  "word": "고차원",
+  "gloss_current": "high level; high dimension",
+  "ko_def": "뛰어나고 높은 수준.",
+  "ko": "우주는 고차원의 세계라서 우리가 그 구조를 이해하기는 쉽지 않다.",
+  "en_current": "The universe is a higher-dimensional world, so it is not easy for us to understand its structure.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"High dimension\" mismatches a high, excellent level.",
+    "suggested": "high level; excellent level"
+   }
+  ]
+ },
+ {
+  "id": "C03-0086",
+  "ext_id": "27287",
+  "sense": "0",
+  "ex": "5",
+  "word": "고착화",
+  "gloss_current": "adhesion",
+  "ko_def": "일정한 상태로 굳어져 변하지 않게 됨. 또는 그렇게 함.",
+  "ko": "가난의 고착화를 막기 위해서는 빈곤한 가정을 지원하는 정책이 마련되어야 한다.",
+  "en_current": "To prevent poverty from becoming entrenched, policies supporting poor families must be put in place.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Adhesion\" mismatches becoming fixed in place.",
+    "suggested": "entrenchment; becoming fixed"
+   }
+  ]
+ },
+ {
+  "id": "C03-0106",
+  "ext_id": "18395",
+  "sense": "0",
+  "ex": "6",
+  "word": "고하",
+  "gloss_current": "being old and young",
+  "ko_def": "나이의 많음과 적음.",
+  "ko": "가창력이 뛰어난 가수는 나이의 고하를 떠나서 모든 사람들로부터 사랑을 받았다.",
+  "en_current": "The singer with outstanding vocal ability was loved by everyone, regardless of age.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "사랑을 받았다 is past, not \"is loved.\"",
+    "suggested": "A singer with outstanding vocal ability was loved by everyone, regardless of age."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss adds rank and price; 뜻 is only age.",
+    "suggested": "being older and younger"
+   }
+  ]
+ },
+ {
+  "id": "C03-0116",
+  "ext_id": "16309",
+  "sense": "0",
+  "ex": "5",
+  "word": "고혈",
+  "gloss_current": "hard-earned money; sweat and blood",
+  "ko_def": "(비유적으로) 매우 고생하여 어렵게 모은 적은 재물.",
+  "ko": "김 씨는 평생 공사장에서 막노동을 하며 어렵게 모은 고혈을 기부했다.",
+  "en_current": "Kim donated the hard-earned money they had saved by doing manual labor at construction sites their whole life.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is extorting hard-earned wealth, not the money.",
+    "suggested": "extort hard-earned wealth"
+   }
+  ]
+ },
+ {
+  "id": "C03-0124",
+  "ext_id": "27559",
+  "sense": "0",
+  "ex": "5",
+  "word": "곡기",
+  "gloss_current": "grain",
+  "ko_def": "곡식으로 만든 음식.",
+  "ko": "계속 된 가뭄 때문에 사람들은 여러 날 동안 곡기 구경도 못 했다.",
+  "en_current": "Because of the continued drought, people went days without seeing any grain to eat.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is refusing to eat, not grain itself.",
+    "suggested": "go without food; refuse to eat"
+   }
+  ]
+ },
+ {
+  "id": "C03-0139",
+  "ext_id": "27586",
+  "sense": "0",
+  "ex": "7",
+  "word": "곡주",
+  "gloss_current": "grain whiskey",
+  "ko_def": "곡식으로 만든 술.",
+  "ko": "쌀을 원료로 만든 막걸리는 한국의 대표적인 곡주이다.",
+  "en_current": "Makgeolli, made from rice, is a representative Korean grain liquor.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Grain liquor, not whiskey.",
+    "suggested": "grain liquor"
+   }
+  ]
+ },
+ {
+  "id": "C03-0173",
+  "ext_id": "39537",
+  "sense": "0",
+  "ex": "5",
+  "word": "꺼벙하다",
+  "gloss_current": "poor; loose",
+  "ko_def": "모양이나 차림새가 거칠고 엉성하다.",
+  "ko": "뒤늦게 회의장에 나타난 김 대리는 급히 준비하고 나왔는지 꺼벙한 차림이었다.",
+  "en_current": "Assistant Manager Kim, who appeared late at the meeting room, looked disheveled, as if they had rushed out after preparing in haste.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss is slow-witted; 뜻 is sloppy dress.",
+    "suggested": "sloppy; disheveled in appearance"
+   }
+  ]
+ },
+ {
+  "id": "C03-0212",
+  "ext_id": "64508",
+  "sense": "0",
+  "ex": "6",
+  "word": "껑충하다",
+  "gloss_current": "lanky",
+  "ko_def": "멋없이 키가 크고 다리가 길다.",
+  "ko": "승규는 방학 동안 키만 껑충하게 컸다.",
+  "en_current": "During the vacation, Seunggyu only grew tall and lanky.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Short\" contradicts unattractively tall with long legs.",
+    "suggested": "lanky; unattractively tall"
+   }
+  ]
+ },
+ {
+  "id": "C03-0255",
+  "ext_id": "40675",
+  "sense": "0",
+  "ex": "5",
+  "word": "꼬집다",
+  "gloss_current": "pinch",
+  "ko_def": "주로 엄지와 검지로 살을 집어서 잡아 뜯듯이 당기거나 비틀다.",
+  "ko": "선생님은 숙제를 안 해 온 아이들의 볼을 세게 꼬집었다.",
+  "en_current": "The teacher pinched the cheeks of the children who had not done their homework, hard.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is pointing something out, not pinching.",
+    "suggested": "point out clearly"
+   }
+  ]
+ },
+ {
+  "id": "C03-0256",
+  "ext_id": "40677",
+  "sense": "0",
+  "ex": "6",
+  "word": "꼬집히다",
+  "gloss_current": "be pinched",
+  "ko_def": "다른 사람에게 손가락이나 손톱으로 살이 집혀 잡아 뜯기거나 비틀어지다.",
+  "ko": "아이는 같은 반 친구에게 허벅지를 꼬집혀 시퍼런 멍이 들어 있었다.",
+  "en_current": "The child had their thigh pinched by a classmate and had a deep blue bruise.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Cynical comment\" is not in the pinch 뜻.",
+    "suggested": "be pinched"
+   }
+  ]
+ },
+ {
+  "id": "C03-0258",
+  "ext_id": "40682",
+  "sense": "0",
+  "ex": "6",
+  "word": "꼬투리",
+  "gloss_current": "clue",
+  "ko_def": "어떤 이야기나 사건의 실마리.",
+  "ko": "김 형사는 조그만 꼬투리라도 찾아내기 위해 사건 현장을 샅샅이 뒤졌다.",
+  "en_current": "Detective Kim searched the crime scene thoroughly to find even the smallest clue.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss is a clue or pod; 뜻 is a pretext.",
+    "suggested": "pretext for a quarrel"
+   }
+  ]
+ },
+ {
+  "id": "C03-0269",
+  "ext_id": "38184",
+  "sense": "0",
+  "ex": "6",
+  "word": "꼴뚜기",
+  "gloss_current": "small kind of octopus; baby octopus",
+  "ko_def": "오징어와 비슷하게 생겼으나 크기는 그보다 작으며 다리가 열 개인 뼈가 없는 동물.",
+  "ko": "어머니는 젓갈을 만들기 위해 시장에서 싱싱한 꼴뚜기를 사 오셨다.",
+  "en_current": "Mother bought fresh small squid at the market to make salted seafood.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "꼴뚜기 is a small squid, not a baby octopus.",
+    "suggested": "Mother bought fresh small squid at the market to make salted seafood."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Squid-like, with ten legs; not a baby octopus.",
+    "suggested": "small squid"
+   }
+  ]
+ },
+ {
+  "id": "C03-0286",
+  "ext_id": "38207",
+  "sense": "0",
+  "ex": "5",
+  "word": "꽁지",
+  "gloss_current": "bird's tail",
+  "ko_def": "새의 꽁무니 부분.",
+  "ko": "꿩의 수컷은 암컷보다 꽁지가 길고 아름답다.",
+  "en_current": "Among pheasants, the male has a longer and more beautiful tail than the female.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is \"very fast,\" not a bird's tail.",
+    "suggested": "very fast"
+   }
+  ]
+ },
+ {
+  "id": "C03-0295",
+  "ext_id": "38258",
+  "sense": "0",
+  "ex": "5",
+  "word": "꽃뱀",
+  "gloss_current": "colorful snake",
+  "ko_def": "알록달록하게 화려한 무늬를 가지고 있는 뱀.",
+  "ko": "나는 산에서 내려오다가 바위에서 몸을 사리고 있는 꽃뱀 한 마리를 만났다.",
+  "en_current": "Coming down from the mountain, I met a colorful snake crouching on a rock.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Gold digger\" is not this colorful-snake sense.",
+    "suggested": "colorful snake"
+   }
+  ]
+ },
+ {
+  "id": "C03-0351",
+  "ext_id": "17545",
+  "sense": "0",
+  "ex": "3",
+  "word": "꿀단지",
+  "gloss_current": "honey jar",
+  "ko_def": "꿀을 담아 두는 항아리.",
+  "ko": "이번 명절에는 값비싼 꿀단지가 선물로 들어왔다.",
+  "en_current": "This holiday, an expensive honey jar came in as a gift.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is hiding something good, not a honey jar.",
+    "suggested": "hide something good away"
+   }
+  ]
+ },
+ {
+  "id": "C03-0355",
+  "ext_id": "17549",
+  "sense": "0",
+  "ex": "7",
+  "word": "꿀밤",
+  "gloss_current": "Dutch rub",
+  "ko_def": "주먹 끝으로 머리를 살짝 때리는 것.",
+  "ko": "숙제를 안 한 벌로 선생님께 꿀밤을 한 대 맞았다.",
+  "en_current": "As punishment for not doing my homework, I got a flick on the head from the teacher.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "A knuckle flick, not a Dutch rub.",
+    "suggested": "knuckle flick on the head"
+   }
+  ]
+ },
+ {
+  "id": "C03-0361",
+  "ext_id": "37895",
+  "sense": "0",
+  "ex": "5",
+  "word": "꿈나라",
+  "gloss_current": "dream world; dream land",
+  "ko_def": "꿈속의 세계.",
+  "ko": "아기가 꿈나라에서 돌아와 엄마를 찾는다.",
+  "en_current": "The baby, returning from the land of dreams, looks for its mother.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is falling deeply asleep, not a fantasy place.",
+    "suggested": "fall deeply asleep"
+   }
+  ]
+ },
+ {
+  "id": "C03-0362",
+  "ext_id": "37896",
+  "sense": "0",
+  "ex": "5",
+  "word": "꿈나무",
+  "gloss_current": "promising kid; prominent person",
+  "ko_def": "(비유적으로) 재능이 있는 어린이.",
+  "ko": "십 년 전의 어린 꿈나무가 이젠 훌륭한 선수로 성장하였다.",
+  "en_current": "The young promising kid from ten years ago has grown into an excellent athlete.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Prominent person\" is not a talented child.",
+    "suggested": "promising child; talented youngster"
+   }
+  ]
+ },
+ {
+  "id": "C03-0369",
+  "ext_id": "37904",
+  "sense": "0",
+  "ex": "2",
+  "word": "꿈쩍",
+  "gloss_current": "with a big move",
+  "ko_def": "가만히 있던 것이 크게 한번 움직이는 모양.",
+  "ko": "그는 꿈쩍 놀라며 벌떡 일어났다.",
+  "en_current": "He startled with a jolt and jumped up.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is not yielding, not a big movement.",
+    "suggested": "not yield; not budge"
+   }
+  ]
+ },
+ {
+  "id": "C03-0387",
+  "ext_id": "37789",
+  "sense": "0",
+  "ex": "5",
+  "word": "꿰차다",
+  "gloss_current": "be familiar with; be well-informed; go together; occupy; hold",
+  "ko_def": "물건을 급히 아무렇게나 몸에 지니다.",
+  "ko": "나는 급한 대로 눈에 보이는 아무 가방을 꿰차고 집을 나섰다.",
+  "en_current": "In a hurry, I grabbed whatever bag was in sight and left the house.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss misses hastily slinging something on.",
+    "suggested": "hastily sling on; carry anyhow"
+   }
+  ]
+ },
+ {
+  "id": "C03-0400",
+  "ext_id": "37871",
+  "sense": "0",
+  "ex": "5",
+  "word": "끈기",
+  "gloss_current": "viscosity; glutinosity",
+  "ko_def": "끈끈한 성질.",
+  "ko": "쌀을 오래 묵혔더니 밥을 해도 끈기가 떨어져서 푸석푸석했다.",
+  "en_current": "Because I had left the rice to age for a long time, even when cooked it lacked stickiness and was dry and crumbly.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Patience senses are extra; 뜻 is stickiness.",
+    "suggested": "stickiness; glutinousness"
+   }
+  ]
+ },
+ {
+  "id": "C03-0425",
+  "ext_id": "38374",
+  "sense": "0",
+  "ex": "6",
+  "word": "끔찍스럽다",
+  "gloss_current": "horrible; terrible; awful",
+  "ko_def": "보기에 정도가 지나쳐 놀랄 만한 데가 있다.",
+  "ko": "밤새 끔찍스럽게 쌓인 눈을 치울 생각을 하니 눈앞이 캄캄했다.",
+  "en_current": "When I thought of having to clear the snow that had piled up dreadfully overnight, I felt utterly hopeless.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "눈앞이 캄캄하다 is despair, not lost sight.",
+    "suggested": "Thinking of clearing the dreadfully piled snow, I felt utterly hopeless."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Devoted; ardent\" are not this shocking sense.",
+    "suggested": "horrible; dreadful; shocking"
+   }
+  ]
+ },
+ {
+  "id": "C03-0454",
+  "ext_id": "39096",
+  "sense": "0",
+  "ex": "0",
+  "word": "끽하다",
+  "gloss_current": "be only",
+  "ko_def": "할 수 있는 만큼 다하다.",
+  "ko": "우리 아버지에게 행패를 부린 청년들은 끽해야 스무 살을 갓 넘은 듯 보였다.",
+  "en_current": "The young men who caused trouble for my father looked to be barely past twenty years old at most.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Be only\" mismatches doing all one can.",
+    "suggested": "do all one can"
+   }
+  ]
+ },
+ {
+  "id": "C03-0496",
+  "ext_id": "38861",
+  "sense": "0",
+  "ex": "7",
+  "word": "나박나박",
+  "gloss_current": "into cubes",
+  "ko_def": "무 등의 채소를 얇고 네모나게 써는 모양.",
+  "ko": "어머니는 무를 나박나박 얇게 썰어서 깍두기를 담그셨다.",
+  "en_current": "Mother sliced the radish into thin flat pieces and made kkakdugi.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Cubes\" contradicts thin square slices.",
+    "suggested": "in thin squares"
+   }
+  ]
+ },
+ {
+  "id": "C03-0497",
+  "ext_id": "38863",
+  "sense": "0",
+  "ex": "5",
+  "word": "나발",
+  "gloss_current": "nabal; bugle; horn",
+  "ko_def": "위는 가늘고 길며 끝은 넓게 퍼진 모양의, 입으로 바람을 불어 넣어 소리를 내는 옛날의 관악기.",
+  "ko": "그는 남들의 시선은 아랑곳하지 않고 하루 종일 나발을 연주하는 연습을 했다.",
+  "en_current": "Paying no heed to others' glances, he practiced playing the bugle all day long.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is drinking from the bottle, not a bugle.",
+    "suggested": "drink liquor straight from the bottle"
+   }
+  ]
+ },
+ {
+  "id": "C03-0514",
+  "ext_id": "38901",
+  "sense": "0",
+  "ex": "5",
+  "word": "나이트가운",
+  "gloss_current": "nightgown",
+  "ko_def": "잠옷 위에 덧입는 길고 가벼운 겉옷.",
+  "ko": "나는 외출했다가 돌아오자마자 나이트가운으로 갈아입고 침대에 누웠다.",
+  "en_current": "As soon as I returned from going out, I changed into a robe and lay down on the bed.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "나이트가운 is a robe over pajamas, not a nightgown.",
+    "suggested": "As soon as I got back, I changed into a robe over my sleepwear and lay down."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "A robe over sleepwear, not a nightgown.",
+    "suggested": "robe worn over sleepwear"
+   }
+  ]
+ },
+ {
+  "id": "C03-0571",
+  "ext_id": "18048",
+  "sense": "0",
+  "ex": "5",
+  "word": "낙장",
+  "gloss_current": "missing pages; missing leaf",
+  "ko_def": "책이 만들어지거나 오랜 세월 동안 전해지는 과정에서 책장이 빠지는 것. 또는 그 책장.",
+  "ko": "지금 읽고 있는 소설책에 낙장이 있어서 중간 내용을 알 수가 없다.",
+  "en_current": "The novel I am reading has missing pages, so I cannot tell what happens in the middle.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Bet\" is not a missing page.",
+    "suggested": "missing page; lost leaf"
+   }
+  ]
+ },
+ {
+  "id": "C03-0580",
+  "ext_id": "18203",
+  "sense": "0",
+  "ex": "4",
+  "word": "낙차",
+  "gloss_current": "head",
+  "ko_def": "물이 높은 곳에서 낮은 곳으로 떨어질 때 생기는 위치의 차이.",
+  "ko": "이 폭포는 낙차가 무려 칠백 미터로 떨어질 때의 모습이 장관을 이룬다.",
+  "en_current": "This waterfall has a drop of as much as seven hundred meters, and the sight of it falling forms a spectacle.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Difference in time\" is not a drop in height.",
+    "suggested": "drop; difference in height"
+   }
+  ]
+ },
+ {
+  "id": "C03-0610",
+  "ext_id": "37248",
+  "sense": "0",
+  "ex": "3",
+  "word": "난도질하다",
+  "gloss_current": "hack; chop; mutilate",
+  "ko_def": "칼로 사람이나 물건을 마구 베다.",
+  "ko": "살인범은 피해자를 죽인 후, 잔인하게 그 시체를 난도질하였다.",
+  "en_current": "After killing the victim, the murderer brutally hacked the corpse to pieces.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Edit\" is not hacking with a knife.",
+    "suggested": "hack wildly; chop up"
+   }
+  ]
+ },
+ {
+  "id": "C03-0645",
+  "ext_id": "40752",
+  "sense": "0",
+  "ex": "6",
+  "word": "난치",
+  "gloss_current": "being incurable",
+  "ko_def": "병을 고치기 어려움.",
+  "ko": "난치 암도 조기에 발견하면 치료가 가능한 것으로 알려져 있다.",
+  "en_current": "It is known that even cancers that are hard to cure can be treated if they are detected early.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "\"Incurable\" contradicts treatment being possible.",
+    "suggested": "Even a hard-to-cure cancer can be treated if found early."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "난치 is hard to cure, not incurable.",
+    "suggested": "difficult to cure"
+   }
+  ]
+ },
+ {
+  "id": "C03-0646",
+  "ext_id": "40757",
+  "sense": "0",
+  "ex": "8",
+  "word": "난치병",
+  "gloss_current": "incurable disease",
+  "ko_def": "고치기 어려운 병.",
+  "ko": "우리 연구소는 희귀 난치병 치료제를 개발하기 위해 삼 년째 연구 중이다.",
+  "en_current": "Our research institute has been researching for three years to develop a treatment for rare, intractable diseases.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "난치병 is hard to cure, not incurable.",
+    "suggested": "Our institute has researched for three years a treatment for rare diseases that are hard to cure."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Incurable\" mismatches a disease hard to cure.",
+    "suggested": "disease difficult to cure"
+   }
+  ]
+ },
+ {
+  "id": "C03-0662",
+  "ext_id": "18498",
+  "sense": "0",
+  "ex": "5",
+  "word": "난행",
+  "gloss_current": "unruly conduct; misconduct",
+  "ko_def": "과격하고 비정상적인 행동.",
+  "ko": "길에서 난행으로 사람들에게 해를 입힌 행인이 경찰에 붙잡혔다.",
+  "en_current": "A passerby who harmed people through misconduct on the street was caught by the police.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Lecherous\" is not this extreme-behavior sense.",
+    "suggested": "extreme, abnormal conduct"
+   }
+  ]
+ },
+ {
+  "id": "C03-0666",
+  "ext_id": "18501",
+  "sense": "0",
+  "ex": "6",
+  "word": "날갯죽지",
+  "gloss_current": "wing joint",
+  "ko_def": "새의 날개가 붙은 몸의 부분.",
+  "ko": "잡은 오리가 퍼덕이지 못하도록 날갯죽지를 움켜잡았다.",
+  "en_current": "To keep the caught duck from flapping, I grabbed hold of its wing joints.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "A wishbone is not the wing's base.",
+    "suggested": "wing joint; base of the wing"
+   }
+  ]
+ },
+ {
+  "id": "C03-0676",
+  "ext_id": "40839",
+  "sense": "0",
+  "ex": "3",
+  "word": "날름",
+  "gloss_current": "with a quick snatch; like a flash",
+  "ko_def": "혀를 재빨리 입 밖으로 내밀었다 넣는 모양.",
+  "ko": "유민이는 혀를 날름 내밀어 동생의 아이스크림을 빼앗아 먹었다.",
+  "en_current": "Yumin flicked out her tongue and snatched her younger sibling's ice cream to eat.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss is a snatch; 뜻 is the tongue flicking.",
+    "suggested": "flicking the tongue quickly out and in"
+   }
+  ]
+ },
+ {
+  "id": "C03-0678",
+  "ext_id": "88191",
+  "sense": "0",
+  "ex": "2",
+  "word": "날름날름",
+  "gloss_current": "with quick snatches; peeking sneakily",
+  "ko_def": "혀를 재빨리 자꾸 입 밖으로 내밀었다 넣었다 하는 모양.",
+  "ko": "아이는 혀를 날름날름 내밀면서 친구를 놀렸다.",
+  "en_current": "The child kept flicking out their tongue to tease their friend.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Peeking sneakily\" mismatches the tongue 뜻.",
+    "suggested": "repeatedly flicking the tongue out"
+   }
+  ]
+ },
+ {
+  "id": "C03-0685",
+  "ext_id": "18504",
+  "sense": "0",
+  "ex": "3",
+  "word": "날벼락",
+  "gloss_current": "unexpected lightening",
+  "ko_def": "맑은 날씨에 갑자기 치는 벼락.",
+  "ko": "조금 전까지 맑았던 하늘이 어두워지더니 천둥과 함께 날벼락이 쳤다.",
+  "en_current": "The sky, which had been clear a moment before, darkened, and a bolt of lightning struck with thunder.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Lightening\" is misspelled; this sense is lightning.",
+    "suggested": "a sudden bolt of lightning"
+   }
+  ]
+ },
+ {
+  "id": "C03-0698",
+  "ext_id": "36838",
+  "sense": "0",
+  "ex": "3",
+  "word": "날치다",
+  "gloss_current": "act recklessly",
+  "ko_def": "보기에 안 좋을 만큼 잘난 듯이 마음대로 행동하다.",
+  "ko": "그 녀석은 자기가 공부를 잘한다고 너무 날쳤다.",
+  "en_current": "That guy showed off far too much about being good at studying.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "날치다 is showing off, not acting recklessly.",
+    "suggested": "That guy showed off too much about being good at studying."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Act recklessly\" misses showing off.",
+    "suggested": "act cocky; show off"
+   }
+  ]
+ },
+ {
+  "id": "C03-0722",
+  "ext_id": "27591",
+  "sense": "0",
+  "ex": "5",
+  "word": "남방",
+  "gloss_current": "south",
+  "ko_def": "동서남북 네 방위 중의 하나로, 나침반의 에스(S) 극이 가리키는 쪽.",
+  "ko": "우리 일행은 배에 몸을 싣고 남방으로 여정을 떠났다.",
+  "en_current": "Our party boarded a ship and set off on a journey to the south.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Shirt\" is not this south-direction sense.",
+    "suggested": "south"
+   }
+  ]
+ },
+ {
+  "id": "C03-0737",
+  "ext_id": "37343",
+  "sense": "0",
+  "ex": "5",
+  "word": "남우",
+  "gloss_current": "actor",
+  "ko_def": "남자 배우.",
+  "ko": "감독은 외모와 연기력이 모두 뛰어난 남우를 찾고 있다.",
+  "en_current": "The director is looking for a male actor who excels in both appearance and acting ability.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "\"Male\" is dropped from 남우.",
+    "suggested": "The director is looking for a male actor excellent in both looks and acting."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "남우 is a male actor, not just an actor.",
+    "suggested": "male actor"
+   }
+  ]
+ },
+ {
+  "id": "C03-0742",
+  "ext_id": "38117",
+  "sense": "0",
+  "ex": "5",
+  "word": "남정네",
+  "gloss_current": "menfolk; husbands",
+  "ko_def": "어른인 남자.",
+  "ko": "옆집 아줌마는 여자들끼리 있을 때와 달리 남정네들 앞에서는 매우 조용하다.",
+  "en_current": "The neighbor lady, unlike when she is with other women, is very quiet in front of men.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Husbands\" is not in \"adult men.\"",
+    "suggested": "adult men; menfolk"
+   }
+  ]
+ },
+ {
+  "id": "C03-0751",
+  "ext_id": "25318",
+  "sense": "0",
+  "ex": "5",
+  "word": "남침",
+  "gloss_current": "invasion of South Korea",
+  "ko_def": "북쪽에서 남쪽을 침략함.",
+  "ko": "한국은 북방 민족의 남침을 자주 겪었다.",
+  "en_current": "Korea frequently suffered southward invasions by peoples from the north.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Of South Korea\" is narrower than invading southward.",
+    "suggested": "southward invasion from the north"
+   }
+  ]
+ },
+ {
+  "id": "C03-0752",
+  "ext_id": "38714",
+  "sense": "0",
+  "ex": "4",
+  "word": "남침하다",
+  "gloss_current": "invade South Korea",
+  "ko_def": "북쪽에서 남쪽을 침략하다.",
+  "ko": "수많은 부대를 이끌고 남침한 북쪽 세력은 일주일 만에 수도를 빼앗았다.",
+  "en_current": "The northern forces, leading numerous units in a southward invasion, seized the capital within a week.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Invade South Korea\" is narrower than the 뜻.",
+    "suggested": "invade southward from the north"
+   }
+  ]
+ },
+ {
+  "id": "C03-0753",
+  "ext_id": "25331",
+  "sense": "0",
+  "ex": "5",
+  "word": "남파",
+  "gloss_current": "dispatching a spy to the south",
+  "ko_def": "임무를 주어 남쪽으로 보냄.",
+  "ko": "그는 간첩 임무를 띠고 남파를 위해 신분을 위장하였다.",
+  "en_current": "Carrying a spy mission, he disguised his identity in preparation for being dispatched south.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Spy\" is not in sending someone south.",
+    "suggested": "sending someone south on a mission"
+   }
+  ]
+ },
+ {
+  "id": "C03-0754",
+  "ext_id": "38721",
+  "sense": "0",
+  "ex": "5",
+  "word": "남파되다",
+  "gloss_current": "dispatch a spy to the south",
+  "ko_def": "임무가 주어져 남쪽으로 보내지다.",
+  "ko": "북한 공작원들이 당을 재건하라는 비밀 임무을 띠고 남파됐다.",
+  "en_current": "North Korean agents were dispatched south on a secret mission to rebuild the party.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Passive headword glossed as an active dispatch.",
+    "suggested": "be sent south on a mission"
+   }
+  ]
+ },
+ {
+  "id": "C03-0755",
+  "ext_id": "38722",
+  "sense": "0",
+  "ex": "5",
+  "word": "남파하다",
+  "gloss_current": "dispatch a spy to the south",
+  "ko_def": "임무를 주어 남쪽으로 보내다.",
+  "ko": "북측에서 남파한 공작원 세 명이 경찰에 붙잡혔다.",
+  "en_current": "Three agents dispatched south by the North were caught by the police.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Spy\" is not in the 뜻.",
+    "suggested": "send someone south on a mission"
+   }
+  ]
+ },
+ {
+  "id": "C03-0773",
+  "ext_id": "38011",
+  "sense": "0",
+  "ex": "5",
+  "word": "납량",
+  "gloss_current": "relishing cool air",
+  "ko_def": "여름에 더위를 잊기 위해 무서운 것을 통해 서늘한 느낌을 즐김.",
+  "ko": "납량 특집극에 나오는 귀신들은 무더위를 잊을 만큼 오싹하고 섬뜩하다.",
+  "en_current": "The ghosts appearing in the summer-chill special drama are so eerie and creepy that they make one forget the sweltering heat.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss drops enjoying a chill through scary things.",
+    "suggested": "enjoying a chill through something scary"
+   }
+  ]
+ },
+ {
+  "id": "C03-0789",
+  "ext_id": "38634",
+  "sense": "0",
+  "ex": "2",
+  "word": "납작코",
+  "gloss_current": "flat nose",
+  "ko_def": "콧대가 낮고 콧방울이 납작하게 퍼진 코.",
+  "ko": "지수는 성형 수술을 한 뒤 납작코가 뾰족한 코가 되었다.",
+  "en_current": "After plastic surgery, Jisu's flat nose became a pointed one.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is losing face, not a flat nose.",
+    "suggested": "lose face; have one's pride hurt"
+   }
+  ]
+ },
+ {
+  "id": "C03-0798",
+  "ext_id": "38528",
+  "sense": "0",
+  "ex": "5",
+  "word": "낭랑하다",
+  "gloss_current": "sonorous; silvery",
+  "ko_def": "소리가 매우 맑고 또렷하다.",
+  "ko": "어디선가 울려 퍼지는 낭랑한 피아노 소리가 내 귀에 또렷하게 들려왔다.",
+  "en_current": "The clear piano sound ringing out from somewhere reached my ears distinctly.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Incandescent\" is not a clear ringing sound.",
+    "suggested": "sonorous; clear and ringing"
+   }
+  ]
+ },
+ {
+  "id": "C03-0808",
+  "ext_id": "41269",
+  "sense": "0",
+  "ex": "5",
+  "word": "낭자하다",
+  "gloss_current": "being in wild disorder",
+  "ko_def": "어지럽게 널려 있다.",
+  "ko": "바람이 불고 난 뒤 붉은 꽃잎이 낭자하게 바닥에 흩어져 있었다.",
+  "en_current": "After the wind blew, red petals lay scattered in disorder across the ground.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Clamorous\" means noisy, not strewn about.",
+    "suggested": "strewn in disorder"
+   }
+  ]
+ },
+ {
+  "id": "C03-0811",
+  "ext_id": "41277",
+  "sense": "0",
+  "ex": "5",
+  "word": "낭패스럽다",
+  "gloss_current": "embarrassing",
+  "ko_def": "계획한 대로 되지 않거나 기대에 어긋나서 곤란하다.",
+  "ko": "휴일이라 그런지 동네에 문을 연 약국이 없어서 낭패스러웠다.",
+  "en_current": "Perhaps because it was a holiday, no pharmacy in the neighborhood was open, and I was in a real fix.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Embarrassing\" misses being in a fix.",
+    "suggested": "in a fix; at a loss"
+   }
+  ]
+ },
+ {
+  "id": "C03-0816",
+  "ext_id": "41287",
+  "sense": "0",
+  "ex": "3",
+  "word": "낮춤말",
+  "gloss_current": "familiar speech",
+  "ko_def": "사람이나 사물을 낮게 대우하여 이르는 말.",
+  "ko": "한국어에는 높임말과 낮춤말이 있다.",
+  "en_current": "The Korean language has honorific speech and plain speech.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Familiar\" misses speech that lowers the referent.",
+    "suggested": "lowering speech; plain speech"
+   }
+  ]
+ },
+ {
+  "id": "C03-0819",
+  "ext_id": "41304",
+  "sense": "0",
+  "ex": "3",
+  "word": "낯모르다",
+  "gloss_current": "not know one's face",
+  "ko_def": "누구인 줄 모르다.",
+  "ko": "길을 가는데 낯모르는 사람이 와서 나에게 아는 척을 했다.",
+  "en_current": "As I was walking down the road, a stranger came up and acted as if they knew me.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Reads as not knowing one's own face.",
+    "suggested": "not recognize who someone is"
+   }
+  ]
+ },
+ {
+  "id": "C03-0823",
+  "ext_id": "41342",
+  "sense": "0",
+  "ex": "2",
+  "word": "낯짝",
+  "gloss_current": "face; mug",
+  "ko_def": "(속된 말로) 눈, 코, 입 등이 있는 얼굴의 바닥.",
+  "ko": "나는 얄미운 짓만 하는 승규의 낯짝을 한 대 때려 주고 싶었다.",
+  "en_current": "I wanted to slap Seunggyu's face for doing nothing but irritating things.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "뜻 is feeling ashamed, not the face itself.",
+    "suggested": "be deeply ashamed"
+   }
+  ]
+ },
+ {
+  "id": "C03-0833",
+  "ext_id": "41406",
+  "sense": "0",
+  "ex": "5",
+  "word": "내갈기다",
+  "gloss_current": "strike; hit; beat; slap",
+  "ko_def": "사람이나 동물의 몸 등을 주먹이나 채찍 등으로 매우 심하게 때리거나 치다.",
+  "ko": "승규는 민준이의 얼굴을 내갈겼다.",
+  "en_current": "Seunggyu struck Minjun's face hard.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Wildy\" is a typo; this sense is only beating.",
+    "suggested": "beat very hard"
+   }
+  ]
+ },
+ {
+  "id": "C03-0856",
+  "ext_id": "41868",
+  "sense": "0",
+  "ex": "5",
+  "word": "내란죄",
+  "gloss_current": "treason",
+  "ko_def": "무력을 써서 현재의 정부를 무너뜨리려고 하거나 폭동을 일으켜 국가를 위태롭게 하는 죄.",
+  "ko": "혁명을 꿈꾸던 무리들은 계획이 발각되어 내란죄로 사형을 당했다.",
+  "en_current": "The group that dreamed of revolution had its plan discovered and was executed for insurrection.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "MAJOR",
+    "reason": "\"Treason\" misnames 내란죄.",
+    "suggested": "The group that dreamed of revolution had its plan discovered and was executed for insurrection."
+   },
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "내란죄 is insurrection, not treason.",
+    "suggested": "insurrection"
+   }
+  ]
+ },
+ {
+  "id": "C03-0878",
+  "ext_id": "41909",
+  "sense": "0",
+  "ex": "5",
+  "word": "내리막",
+  "gloss_current": "downhill",
+  "ko_def": "높은 곳에서 낮은 곳으로 비탈진 곳.",
+  "ko": "등산객들은 가파른 내리막을 조심조심 내려갔다.",
+  "en_current": "The hikers carefully made their way down the steep downhill slope.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Decent\" is a typo for descent.",
+    "suggested": "downhill; descent"
+   }
+  ]
+ },
+ {
+  "id": "C03-0879",
+  "ext_id": "41910",
+  "sense": "0",
+  "ex": "5",
+  "word": "내리막길",
+  "gloss_current": "downhill road",
+  "ko_def": "높은 곳에서 낮은 곳으로 비탈진 길.",
+  "ko": "내리막길을 주행할 때에는 특히 서행을 하며 조심해야 한다.",
+  "en_current": "When driving on a downhill road, one should especially drive slowly and carefully.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Decent\" does not mean a downhill road.",
+    "suggested": "downhill road; descent"
+   }
+  ]
+ },
+ {
+  "id": "C03-0910",
+  "ext_id": "40646",
+  "sense": "0",
+  "ex": "5",
+  "word": "내불다",
+  "gloss_current": "blow; breath out",
+  "ko_def": "앞을 향해 입김이나 숨을 불다.",
+  "ko": "그는 담배 연기를 길게 내불었다.",
+  "en_current": "He blew out a long stream of cigarette smoke.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Breath out\" should be \"breathe out.\"",
+    "suggested": "blow; breathe out"
+   }
+  ]
+ },
+ {
+  "id": "C03-0918",
+  "ext_id": "40622",
+  "sense": "0",
+  "ex": "3",
+  "word": "내뽑다",
+  "gloss_current": "emit",
+  "ko_def": "속에서 밖으로 세게 나오게 하다.",
+  "ko": "장군은 칼을 내뽑아 적군의 목을 쳤다.",
+  "en_current": "The general drew their sword and struck the enemy soldier's neck.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Yell and sing are not this draw-out sense.",
+    "suggested": "draw out forcefully"
+   }
+  ]
+ },
+ {
+  "id": "C03-0958",
+  "ext_id": "39885",
+  "sense": "0",
+  "ex": "5",
+  "word": "내장하다",
+  "gloss_current": "be built-in",
+  "ko_def": "기계가 어떤 기능이나 장치를 겉으로 보이지 않도록 속에 갖추고 있다.",
+  "ko": "우리 회사에서는 인공 지능 칩을 내장한 로봇을 개발했다.",
+  "en_current": "Our company developed a robot with a built-in artificial intelligence chip.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "Gloss is passive; the 뜻 is equipping inside.",
+    "suggested": "build in; have built in"
+   }
+  ]
+ },
+ {
+  "id": "C03-0989",
+  "ext_id": "20348",
+  "sense": "0",
+  "ex": "4",
+  "word": "내향",
+  "gloss_current": "being introrse",
+  "ko_def": "안쪽으로 향한 모양.",
+  "ko": "나는 발톱이 살 안으로 파고드는 내향 발톱을 가졌다.",
+  "en_current": "I have an ingrown toenail, where the nail grows inward into the flesh.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Introversion\" is psychological, not an inward shape.",
+    "suggested": "inward-facing; introrse"
+   }
+  ]
+ },
+ {
+  "id": "C03-0990",
+  "ext_id": "41157",
+  "sense": "0",
+  "ex": "3",
+  "word": "내훈",
+  "gloss_current": "secret instruction",
+  "ko_def": "밖으로 드러나지 않도록 비밀스럽게 내리는 명령이나 가르침.",
+  "ko": "공작원들은 내훈을 적은 비밀 서신을 받았다.",
+  "en_current": "The agents received a secret letter containing internal instructions.",
+  "flags": [
+   {
+    "model": "grok",
+    "label": "GLOSS",
+    "reason": "\"Moral teachings for females\" is not this secret-order sense.",
+    "suggested": "secret instruction"
+   }
+  ]
+ },
+ {
+  "id": "C01-0003",
+  "ext_id": "61175",
+  "sense": "0",
+  "ex": "0",
+  "word": "정말",
+  "gloss_current": "oh no; darn it",
+  "ko_def": "놀랍거나 어떤 일을 심각하게 생각할 때 쓰는 말.",
+  "ko": "너무 놀라면 목소리가 안 나온다더니, 정말!",
+  "en_current": "They say your voice disappears when you're too shocked, and how true that is!",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"oh no; darn it; damn\" does not match 정말 (really/truly)",
+    "suggested": "really; truly; indeed"
+   }
+  ]
+ },
+ {
+  "id": "C01-0005",
+  "ext_id": "92457",
+  "sense": "0",
+  "ex": "5",
+  "word": "이다",
+  "gloss_current": "put on the head",
+  "ko_def": "물건을 머리 위에 얹다.",
+  "ko": "나를 보자마자 오빠가 머리에 인 짐부터 내려 줬다.",
+  "en_current": "The moment he saw me, my older brother lifted the bundle off his head and set it down for me.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Bundle was on speaker's head (내려 줬다), not brother's head",
+    "suggested": "The moment he saw me, my older brother first took down the bundle I was carrying on my head."
+   }
+  ]
+ },
+ {
+  "id": "C01-0017",
+  "ext_id": "73935",
+  "sense": "0",
+  "ex": "6",
+  "word": "자기",
+  "gloss_current": "porcelain; china",
+  "ko_def": "진흙으로 빚어서 아주 높은 온도로 구운 그릇.",
+  "ko": "장인은 손으로 빚은 자기를 가마에 넣고 구웠다.",
+  "en_current": "The craftsman placed the porcelain he had shaped by hand into the kiln and fired it.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Invents male gender (\"he\") for 장인 (artisan of unstated sex)",
+    "suggested": "The artisan placed the porcelain they had shaped by hand into the kiln and fired it."
+   }
+  ]
+ },
+ {
+  "id": "C01-0032",
+  "ext_id": "67412",
+  "sense": "0",
+  "ex": "4",
+  "word": "뭐하다",
+  "gloss_current": "awkward",
+  "ko_def": "무엇을 하기가 거북하거나 곤란하거나 난처한 상황이어서 마음이 편하지 않다.",
+  "ko": "유민이가 모르고 한 일 같아서 화를 내기도 뭐했다.",
+  "en_current": "It seemed Yumin had done it without knowing, so I didn't really know how to get angry.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "뭐하다 means awkward/uncomfortable to do, not not knowing how",
+    "suggested": "It seemed Yumin had done it without knowing, so it felt awkward to get angry."
+   }
+  ]
+ },
+ {
+  "id": "C01-0042",
+  "ext_id": "61478",
+  "sense": "0",
+  "ex": "5",
+  "word": "받다",
+  "gloss_current": "butt; gore",
+  "ko_def": "머리나 뿔 등으로 세게 부딪치다.",
+  "ko": "산돼지가 머리로 사냥꾼을 받아서 사냥꾼이 그 자리에 쓰러졌다.",
+  "en_current": "A wild boar charged at the hunter with its head, and the hunter collapsed on the spot.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "받다 means butt/ram with impact, not merely \"charged at\"",
+    "suggested": "A wild boar butted the hunter with its head, and the hunter collapsed on the spot."
+   }
+  ]
+ },
+ {
+  "id": "C01-0056",
+  "ext_id": "92053",
+  "sense": "0",
+  "ex": "6",
+  "word": "자식",
+  "gloss_current": "chap",
+  "ko_def": "(낮추는 말로) 남자.",
+  "ko": "이 자식, 너 방금 뭐라고 그랬어?",
+  "en_current": "Hey, you punk, what did you just say?",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"chap\" is friendly/polite, whereas 자식 here is derogatory",
+    "suggested": "guy; fellow; punk; jerk"
+   }
+  ]
+ },
+ {
+  "id": "C01-0064",
+  "ext_id": "76711",
+  "sense": "0",
+  "ex": "3",
+  "word": "죽지",
+  "gloss_current": "shoulder joint",
+  "ko_def": "팔과 어깨가 이어진 부분.",
+  "ko": "왼쪽 팔목부터 죽지를 넘어 어깨까지 통증이 이어졌다.",
+  "en_current": "The pain ran from my left wrist, over the wing joint, all the way to my shoulder.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Garbled literal rendering \"wing joint\" for human shoulder joint (죽지)",
+    "suggested": "The pain ran from my left wrist, past my shoulder joint, all the way to my shoulder."
+   }
+  ]
+ },
+ {
+  "id": "C01-0073",
+  "ext_id": "71331",
+  "sense": "0",
+  "ex": "0",
+  "word": "아무래도",
+  "gloss_current": "anything; anywhere; anyhow",
+  "ko_def": "어떤 상태나 조건이 무엇이든 관계없이.",
+  "ko": "지수가 나를 어떻게 생각하는지는 아무래도 상관없었다.",
+  "en_current": "Whatever Jisu thinks of me, it doesn't matter anyhow.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Past tense 상관없었다 mistranslated as present tense (\"doesn't matter\")",
+    "suggested": "Whatever Jisu thought of me, it didn't matter at all."
+   }
+  ]
+ },
+ {
+  "id": "C01-0074",
+  "ext_id": "91197",
+  "sense": "0",
+  "ex": "7",
+  "word": "물다",
+  "gloss_current": "repay",
+  "ko_def": "갚아야 할 것을 내주다.",
+  "ko": "민준이는 가게에서 제품을 고르고 나서 물건값을 물었다.",
+  "en_current": "Minjun picked out a product in the store and then paid for it.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"recover\" is the opposite of 물다 (pay/compensate what is owed)",
+    "suggested": "pay; repay; compensate; reimburse"
+   }
+  ]
+ },
+ {
+  "id": "C01-0088",
+  "ext_id": "74609",
+  "sense": "0",
+  "ex": "10",
+  "word": "저의",
+  "gloss_current": "ultimate motive",
+  "ko_def": "겉으로 드러나지 않은, 속에 품고 있는 생각.",
+  "ko": "나는 새삼스레 내 일을 도와주겠다는 지수의 저의가 궁금했다.",
+  "en_current": "I suddenly wondered about Jisu's ultimate motive for offering to help with my work.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "저의 means ulterior motive/hidden intention, not \"ultimate motive\"",
+    "suggested": "I suddenly wondered about Jisu's ulterior motive for offering to help with my work."
+   },
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"ultimate motive\" misrenders 저의 (hidden/ulterior intention)",
+    "suggested": "ulterior motive; hidden intention"
+   }
+  ]
+ },
+ {
+  "id": "C01-0112",
+  "ext_id": "66829",
+  "sense": "0",
+  "ex": "0",
+  "word": "아멘",
+  "gloss_current": "An exclamation uttered at the end of a prayer, a hymnal song, or a sermon in Christianity in hope that it will be reali…",
+  "ko_def": "기독교에서, 기도나 찬송 또는 설교 끝에 그것이 이루어지기를 바란다는 뜻으로 하는 말.",
+  "ko": "저희의 기도를 들어주시옵소서, 아멘.",
+  "en_current": "Hear our prayer, Lord, amen.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Adds vocative \"Lord\" not present in 저희의 기도를 들어주시옵소서, 아멘.",
+    "suggested": "Hear our prayer, amen."
+   }
+  ]
+ },
+ {
+  "id": "C01-0141",
+  "ext_id": "78391",
+  "sense": "0",
+  "ex": "6",
+  "word": "집도",
+  "gloss_current": "surgery; surgical operation",
+  "ko_def": "수술이나 해부를 하기 위하여 수술용 칼을 잡음.",
+  "ko": "김 박사의 집도로 시체의 부검이 실시되었다.",
+  "en_current": "The autopsy of the body was carried out under Dr. Kim's direction.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "집도 means personally performing the autopsy with a scalpel, not directing",
+    "suggested": "The autopsy of the body was performed by Dr. Kim."
+   }
+  ]
+ },
+ {
+  "id": "C01-0142",
+  "ext_id": "89235",
+  "sense": "0",
+  "ex": "5",
+  "word": "흑인",
+  "gloss_current": "Negroid",
+  "ko_def": "피부색이 검은색 또는 갈색을 띤 인종에 속하는 사람.",
+  "ko": "나는 재즈와 같은 흑인 음악을 즐겨 듣는다.",
+  "en_current": "I enjoy listening to Black music, such as jazz.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"Negroid\" is outdated and offensive for 흑인",
+    "suggested": "Black person"
+   }
+  ]
+ },
+ {
+  "id": "C01-0144",
+  "ext_id": "31482",
+  "sense": "0",
+  "ex": "0",
+  "word": "번호",
+  "gloss_current": "Roll call!",
+  "ko_def": "군대에서, 지휘자가 군인들에게 차례로 번호를 붙여 말하라는 구령.",
+  "ko": "소대장이 “번호!” 구령을 내리자 군인들은 차례대로 번호를 외치기 시작했다.",
+  "en_current": "When the platoon leader called out 'Roll call!' the soldiers began calling out their numbers in turn.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Military command 번호! means \"Count off!\", not \"Roll call!\"",
+    "suggested": "When the platoon leader called out 'Count off!' the soldiers began calling out their numbers in turn."
+   },
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "Military command 번호! means \"Count off!\", not \"Roll call!\"",
+    "suggested": "Count off!"
+   }
+  ]
+ },
+ {
+  "id": "C01-0167",
+  "ext_id": "61657",
+  "sense": "0",
+  "ex": "6",
+  "word": "살기",
+  "gloss_current": "threatening mood",
+  "ko_def": "독하고 무서운 기운이나 분위기.",
+  "ko": "평생 많은 역경을 혼자서 헤쳐 온 그의 눈에는 어떤 살기가 어려 있었다.",
+  "en_current": "In the eyes of a man who had weathered many hardships alone all his life, a menacing look lingered.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Replaces 그 (\"his eyes\") with indefinite \"a man\"",
+    "suggested": "In his eyes, having weathered many hardships alone all his life, a menacing look lingered."
+   }
+  ]
+ },
+ {
+  "id": "C01-0176",
+  "ext_id": "79561",
+  "sense": "0",
+  "ex": "5",
+  "word": "추적",
+  "gloss_current": "chasing; running after",
+  "ko_def": "도망하는 사람을 따라가며 쫓음.",
+  "ko": "범인은 형사의 추적을 피하기 위해 일부러 전국 곳곳을 돌아다니며 몸을 숨겼다.",
+  "en_current": "To evade the detective's pursuit, the culprit deliberately wandered all over the country and hid himself.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Invents male gender (\"himself\") for 범인 (culprit of unstated sex)",
+    "suggested": "To evade the detective's pursuit, the culprit deliberately wandered all over the country and hid."
+   }
+  ]
+ },
+ {
+  "id": "C01-0177",
+  "ext_id": "74794",
+  "sense": "0",
+  "ex": "7",
+  "word": "전원",
+  "gloss_current": "country",
+  "ko_def": "논과 밭 등이 많은 한적한 시골.",
+  "ko": "할아버지께서는 전원에 사시면서 깨끗한 공기와 상쾌한 바람을 누리셨다.",
+  "en_current": "Grandfather lives in the countryside and enjoys clean air and refreshing breezes.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Past tense 누리셨다 mistranslated as present tense (\"lives... enjoys\")",
+    "suggested": "Grandfather lived in the countryside and enjoyed clean air and refreshing breezes."
+   }
+  ]
+ },
+ {
+  "id": "C01-0211",
+  "ext_id": "65248",
+  "sense": "0",
+  "ex": "5",
+  "word": "슬슬",
+  "gloss_current": "stealthily",
+  "ko_def": "남이 알아차리지 못하게 천천히 조용하게 행동하는 모양.",
+  "ko": "김 과장은 급한 일이 생겨서 회의 도중에 슬슬 자리를 떠야 했다.",
+  "en_current": "Manager Kim had to quietly slip away from the meeting because an urgent matter came up.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Title 과장 must be \"Section Chief\", not \"Manager\"",
+    "suggested": "Section Chief Kim had to quietly slip away from the meeting because an urgent matter came up."
+   }
+  ]
+ },
+ {
+  "id": "C01-0226",
+  "ext_id": "82230",
+  "sense": "0",
+  "ex": "5",
+  "word": "파란",
+  "gloss_current": "ripple; wave",
+  "ko_def": "크고 작은 물결.",
+  "ko": "바다에 있던 물고기들이 파란에 휩쓸려 뭍으로 떠내려왔다.",
+  "en_current": "Fish from the sea were swept away by the turmoil and washed up onto the shore.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "파란 means physical waves (크고 작은 물결), not figurative \"turmoil\"",
+    "suggested": "Fish from the sea were swept away by the waves and washed up onto the shore."
+   }
+  ]
+ },
+ {
+  "id": "C01-0235",
+  "ext_id": "84189",
+  "sense": "0",
+  "ex": "6",
+  "word": "하오",
+  "gloss_current": "afternoon",
+  "ko_def": "낮 열두 시부터 밤 열두 시까지의 시간.",
+  "ko": "친구는 하오 일곱 시에 미국으로 가는 비행기를 탔다.",
+  "en_current": "My friend boarded a plane bound for America at seven in the afternoon.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Awkward literal rendering \"seven in the afternoon\" for 하오 일곱 시",
+    "suggested": "My friend boarded a plane bound for America at seven in the evening."
+   }
+  ]
+ },
+ {
+  "id": "C01-0237",
+  "ext_id": "25372",
+  "sense": "0",
+  "ex": "6",
+  "word": "과다",
+  "gloss_current": "extreme",
+  "ko_def": "지나치게 많음.",
+  "ko": "아무리 몸에 좋다는 약도 과다 복용할 경우 부작용이 나타날 수 있다.",
+  "en_current": "No matter how good a medicine is said to be for the body, excessive dosage can cause side effects.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"extreme\" is misleading for 과다 (excessive quantity)",
+    "suggested": "excess; excessive; over-"
+   }
+  ]
+ },
+ {
+  "id": "C01-0270",
+  "ext_id": "93626",
+  "sense": "0",
+  "ex": "2",
+  "word": "사부님",
+  "gloss_current": "teacher's husband",
+  "ko_def": "(높이는 말로) 스승의 남편.",
+  "ko": "국어 선생님의 사부님 역시 국어를 전공하신 선생님이셨다.",
+  "en_current": "The Korean language teacher's own master teacher was also a teacher who had majored in Korean.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "사부님 means teacher's husband (스승의 남편), not \"master teacher\"",
+    "suggested": "The Korean language teacher's husband was also a teacher who had majored in Korean."
+   }
+  ]
+ },
+ {
+  "id": "C01-0271",
+  "ext_id": "74806",
+  "sense": "0",
+  "ex": "6",
+  "word": "전의",
+  "gloss_current": "morale",
+  "ko_def": "싸우려고 하는 마음이나 의지.",
+  "ko": "장군은 폐허가 된 마을을 보고 적을 향해 전의를 불태웠다.",
+  "en_current": "Seeing the ruined village, the general fired up their troops' fighting spirit against the enemy.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Adds \"their troops'\"; general burned with his own fighting spirit",
+    "suggested": "Seeing the ruined village, the general burned with fighting spirit against the enemy."
+   }
+  ]
+ },
+ {
+  "id": "C01-0300",
+  "ext_id": "26536",
+  "sense": "0",
+  "ex": "5",
+  "word": "꼬맹이",
+  "gloss_current": "rascal; small fry; brat",
+  "ko_def": "(낮잡아 이르는 말로) 어린아이.",
+  "ko": "삼촌은 그 꼬맹이가 귀엽다는 듯이 볼을 가볍게 꼬집었다.",
+  "en_current": "Uncle lightly pinched the little rascal's cheek, as if he found him adorable.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Invents male gender (\"him\") for 그 꼬맹이 (child of unstated sex)",
+    "suggested": "Uncle lightly pinched the little rascal's cheek, as if he found them adorable."
+   }
+  ]
+ },
+ {
+  "id": "C01-0311",
+  "ext_id": "601759",
+  "sense": "0",
+  "ex": "5",
+  "word": "진작에",
+  "gloss_current": "long ago",
+  "ko_def": "조금 더 먼저. 또는 그때 이미.",
+  "ko": "진작에 알았으면 이 고생을 안 했을 텐데.",
+  "en_current": "If I had known long ago, I wouldn't have had to go through all this trouble.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "진작에 means earlier/sooner (조금 더 먼저), not \"long ago\"",
+    "suggested": "If I had known earlier, I wouldn't have had to go through all this trouble."
+   },
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"long ago\" misrenders 진작에 (earlier/sooner)",
+    "suggested": "earlier; sooner; beforehand"
+   }
+  ]
+ },
+ {
+  "id": "C01-0319",
+  "ext_id": "48628",
+  "sense": "0",
+  "ex": "4",
+  "word": "돌리다",
+  "gloss_current": "turn the corner",
+  "ko_def": "환자가 위험한 상황을 넘기게 하다.",
+  "ko": "아이가 열이 내리자 병세를 돌렸다.",
+  "en_current": "When the child's fever came down, the illness turned around.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "아이가 병세를 돌렸다 means child turned the corner, not the illness",
+    "suggested": "When the child's fever came down, they turned the corner."
+   }
+  ]
+ },
+ {
+  "id": "C01-0322",
+  "ext_id": "72679",
+  "sense": "0",
+  "ex": "8",
+  "word": "일인",
+  "gloss_current": "one person; one man",
+  "ko_def": "한 사람. 또는 어떤 사람.",
+  "ko": "하루는 일인이 승규를 찾아갔다.",
+  "en_current": "One day, one man went to find Seung-gyu.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Invents male gender (\"one man\") for 일인 (one person)",
+    "suggested": "One day, someone went to see Seung-gyu."
+   }
+  ]
+ },
+ {
+  "id": "C01-0361",
+  "ext_id": "30682",
+  "sense": "0",
+  "ex": "6",
+  "word": "교도소",
+  "gloss_current": "prison; jail",
+  "ko_def": "죄를 지은 사람을 가두어 두고 관리하는 시설.",
+  "ko": "김 씨는 도둑질을 하다가 잡혀 몇 년 동안 교도소에 있었다.",
+  "en_current": "Mr. Kim was caught stealing and spent several years in prison.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Invents male gender (\"Mr.\") for 김 씨 (unisex surname)",
+    "suggested": "Kim was caught stealing and spent several years in prison."
+   }
+  ]
+ },
+ {
+  "id": "C01-0380",
+  "ext_id": "55812",
+  "sense": "0",
+  "ex": "5",
+  "word": "멍청하다",
+  "gloss_current": "stunned; numbed",
+  "ko_def": "정신이 나간 것처럼 멍한 상태로 있다.",
+  "ko": "민준이는 수업 시간 내내 멍청한 표정으로 가만히 앉아만 있었다.",
+  "en_current": "Minjun sat quietly all through class with a stunned expression.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "멍청하다 (멍한 상태로 있다) means vacant/blank, not \"stunned\"",
+    "suggested": "Minjun sat quietly all through class with a blank expression."
+   },
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"stunned; numbed\" misrenders 멍청하다 (blank/vacant)",
+    "suggested": "blank; vacant; dazed"
+   }
+  ]
+ },
+ {
+  "id": "C01-0381",
+  "ext_id": "40061",
+  "sense": "0",
+  "ex": "7",
+  "word": "기밀",
+  "gloss_current": "top secret",
+  "ko_def": "남이 절대로 알아서는 안 되는 아주 중요한 비밀.",
+  "ko": "김 부장은 회사 경영 기밀을 유출한 혐의로 구속되었다.",
+  "en_current": "Director Kim was arrested on suspicion of leaking the company's top-secret management information.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Title 부장 must be \"Department Head\", not \"Director\"",
+    "suggested": "Department Head Kim was arrested on suspicion of leaking the company's top-secret management information."
+   }
+  ]
+ },
+ {
+  "id": "C01-0399",
+  "ext_id": "61732",
+  "sense": "0",
+  "ex": "3",
+  "word": "상사",
+  "gloss_current": "master sergeant; first sergeant",
+  "ko_def": "군대에서 원사의 아래, 중사의 위인 계급. 또는 그 계급인 군인.",
+  "ko": "상사는 병사들을 불러 지시 사항을 전달했다.",
+  "en_current": "The sergeant called the soldiers over and passed on their instructions.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Rank 상사 is \"master sergeant\" or \"first sergeant\", not generic \"sergeant\"",
+    "suggested": "The master sergeant called the soldiers over and passed on their instructions."
+   }
+  ]
+ },
+ {
+  "id": "C01-0421",
+  "ext_id": "69187",
+  "sense": "0",
+  "ex": "6",
+  "word": "요괴",
+  "gloss_current": "monster; goblin; ghost",
+  "ko_def": "사람에게 해를 끼치는 귀신.",
+  "ko": "용맹한 사람이 사람들을 괴롭히던 요괴를 잡아 영웅이 되었다.",
+  "en_current": "A brave man captured the monster that had been tormenting people and became a hero.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MINOR",
+    "reason": "Invents male gender (\"man\") for 용맹한 사람 (person of unstated sex)",
+    "suggested": "A brave person captured the monster that had been tormenting people and became a hero."
+   }
+  ]
+ },
+ {
+  "id": "C01-0430",
+  "ext_id": "84261",
+  "sense": "0",
+  "ex": "7",
+  "word": "함께하다",
+  "gloss_current": "share; join",
+  "ko_def": "다른 사람과 어떤 일을 함께 하면서 시간을 보내다.",
+  "ko": "유민이는 전쟁터에서 나와 생사를 함께한 친구이다.",
+  "en_current": "Yumin is a friend with whom I came out of the battlefield, sharing life and death.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "Misreads 나와 (\"with me\") as verb \"came out of\"",
+    "suggested": "Yumin is a friend who shared life and death with me on the battlefield."
+   }
+  ]
+ },
+ {
+  "id": "C01-0441",
+  "ext_id": "37203",
+  "sense": "0",
+  "ex": "5",
+  "word": "금고",
+  "gloss_current": "safety; strongbox",
+  "ko_def": "도둑이나 재난으로부터 보호하기 위해 돈, 보석, 중요한 서류 등 귀중한 물건을 보관하는 데 사용하는 상자나 창고.",
+  "ko": "도둑이 금고에 있던 현금을 모두 훔쳐 갔다.",
+  "en_current": "The thief stole all the cash that had been in the safe.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "\"safety\" is wrong for 금고 (safe/strongbox)",
+    "suggested": "safe; strongbox; finance company; credit cooperative; credit union"
+   }
+  ]
+ },
+ {
+  "id": "C01-0476",
+  "ext_id": "41446",
+  "sense": "0",
+  "ex": "0",
+  "word": "네놈",
+  "gloss_current": "this man",
+  "ko_def": "(욕하는 말로) 듣는 사람이 남자일 때, 그 사람을 가리키는 말.",
+  "ko": "평소에 욕을 잘했던 아버지는 나를 항상 네놈이라고 불렀다.",
+  "en_current": "My father, who often swore, always called me that fellow.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "네놈 is second-person derogatory (\"you bastard\"), not \"that fellow\"",
+    "suggested": "My father, who often swore, always called me 'you bastard.'"
+   },
+   {
+    "model": "gemini",
+    "label": "GLOSS",
+    "reason": "네놈 is second-person derogatory pronoun, not third-person \"this man\"",
+    "suggested": "you bastard; you punk; you wretch"
+   }
+  ]
+ },
+ {
+  "id": "C01-0493",
+  "ext_id": "85869",
+  "sense": "0",
+  "ex": "6",
+  "word": "호도",
+  "gloss_current": "glossing over; misleading",
+  "ko_def": "(비유적으로) 확실하게 결말을 내지 않고 잠시 감추거나 흐지부지 덮어 버림.",
+  "ko": "언론은 거짓 호도를 하여 국민을 혼란에 빠뜨렸다.",
+  "en_current": "The media engaged in false distortion, plunging the public into confusion.",
+  "flags": [
+   {
+    "model": "gemini",
+    "label": "MAJOR",
+    "reason": "호도 means glossing over/covering up, not \"distortion\"",
+    "suggested": "The media glossed things over with falsehoods, plunging the public into confusion."
+   }
+  ]
+ },
+ {
+  "id": "C01-0504",
+  "ext_id": "73273",
+  "sense": "0",
+  "ex": "5",
+  "word": "필름",
+  "gloss_current": "film",
+  "ko_def": "셀로판과 같은 엷은 막.",
+  "ko": "다행히 필름이 있어서 긁힌 자국이 남지 않았다.",
+  "en_current": "Fortunately, there was a protective film, so no scratch marks were left behind.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "GLOSS",
+    "reason": "뜻 is slang for drunken memory blackout, not film",
+    "suggested": "blackout (memory loss from drinking); (also: photographic film)"
+   }
+  ]
+ },
+ {
+  "id": "C01-0515",
+  "ext_id": "80493",
+  "sense": "0",
+  "ex": "5",
+  "word": "총상",
+  "gloss_current": "bullet wound",
+  "ko_def": "총알에 맞아 생긴 상처.",
+  "ko": "김 씨는 총격전에서 심한 총상을 입고 죽게 되었다.",
+  "en_current": "Mr. Kim suffered a severe gunshot wound in the shootout and nearly died.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "죽게 되었다 means died, not nearly died",
+    "suggested": "Mr. Kim suffered a severe gunshot wound in the shootout and died."
+   }
+  ]
+ },
+ {
+  "id": "C01-0551",
+  "ext_id": "85330",
+  "sense": "0",
+  "ex": "2",
+  "word": "피의",
+  "gloss_current": "suspicion; doubt",
+  "ko_def": "범죄를 저질렀을 가능성이 있다는 의심을 받음.",
+  "ko": "그 연예인은 끝까지 자신의 피의 사실을 부인했다.",
+  "en_current": "That entertainer denied the allegations against him to the very end.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MINOR",
+    "reason": "Gender \"him\" invented for entertainer",
+    "suggested": "That entertainer denied the allegations against them to the very end."
+   }
+  ]
+ },
+ {
+  "id": "C01-0590",
+  "ext_id": "42879",
+  "sense": "0",
+  "ex": "10",
+  "word": "노예",
+  "gloss_current": "slave",
+  "ko_def": "(옛날에) 물건처럼 사고팔리어 남이 시키는 대로 일을 하는 사람.",
+  "ko": "그는 돈을 주고 노예를 사 와서 그에게 온갖 일을 다 시켰다.",
+  "en_current": "He paid money to buy a slave and made him do every kind of work.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MINOR",
+    "reason": "Gender \"him\" invented for the slave",
+    "suggested": "He paid money to buy a slave and made them do every kind of work."
+   }
+  ]
+ },
+ {
+  "id": "C01-0607",
+  "ext_id": "53200",
+  "sense": "0",
+  "ex": "5",
+  "word": "뚱보",
+  "gloss_current": "fatso",
+  "ko_def": "(놀리는 말로) 살이 쪄서 뚱뚱한 사람.",
+  "ko": "한 뚱보가 살을 빼려고 헬스장에서 운동 중이다.",
+  "en_current": "A chubby guy is working out at the gym to lose weight.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MINOR",
+    "reason": "\"guy\" invents male gender; 뚱보 is a person, not \"chubby guy\"",
+    "suggested": "A fat person is working out at the gym to lose weight."
+   }
+  ]
+ },
+ {
+  "id": "C01-0635",
+  "ext_id": "91893",
+  "sense": "0",
+  "ex": "2",
+  "word": "심호흡",
+  "gloss_current": "deep breath; deep respiration",
+  "ko_def": "배나 가슴으로 깊게 숨을 쉼.",
+  "ko": "김 부장은 심호흡을 한 번 한 뒤 조심스럽게 사장실 문을 노크했다.",
+  "en_current": "Director Kim took a deep breath and then cautiously knocked on the president's office door.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MINOR",
+    "reason": "부장 is department head, not \"Director\"",
+    "suggested": "Department Head Kim took a deep breath and then cautiously knocked on the president's office door."
+   }
+  ]
+ },
+ {
+  "id": "C01-0704",
+  "ext_id": "38778",
+  "sense": "0",
+  "ex": "5",
+  "word": "기껏",
+  "gloss_current": "to the utmost; as much as one can",
+  "ko_def": "힘이나 정도가 미치는 데까지 최대한.",
+  "ko": "기껏 차려입고 나갔는데 소나기가 쏟아져 온몸이 다 젖어 버렸다.",
+  "en_current": "I dressed up as best I could and went out, but a sudden shower poured down and soaked me through.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "기껏 here means \"after going to the trouble\", not \"as best I could\"",
+    "suggested": "I went to all the trouble of dressing up and headed out, but a sudden shower soaked me through."
+   }
+  ]
+ },
+ {
+  "id": "C01-0775",
+  "ext_id": "55162",
+  "sense": "0",
+  "ex": "8",
+  "word": "무진장",
+  "gloss_current": "limitlessness",
+  "ko_def": "끝이 없을 정도로 매우 많음.",
+  "ko": "승규는 생각보다 문제가 어려워 시험 보는 내내 무진장으로 애를 먹었다.",
+  "en_current": "The problems were harder than Seung-gyu had expected, and he struggled with the sheer number of them throughout the entire test.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "애를 먹다 = had a hard time; not struggling with the number of problems",
+    "suggested": "The problems were harder than Seung-gyu had expected, so he had an extremely hard time throughout the test."
+   }
+  ]
+ },
+ {
+  "id": "C01-0780",
+  "ext_id": "23114",
+  "sense": "0",
+  "ex": "3",
+  "word": "아웃",
+  "gloss_current": "being out",
+  "ko_def": "테니스, 탁구, 농구, 배구 등에서 공이 일정한 선 밖으로 나가는 일.",
+  "ko": "나는 공을 차는 족족 아웃이 되어 짜증이 났다.",
+  "en_current": "Every time I kicked the ball, I was called out, which annoyed me.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "The kicked ball goes out of bounds; no one is \"called out\"",
+    "suggested": "Every time I kicked the ball, it went out of bounds, which annoyed me."
+   }
+  ]
+ },
+ {
+  "id": "C01-0813",
+  "ext_id": "69221",
+  "sense": "0",
+  "ex": "6",
+  "word": "용납",
+  "gloss_current": "toleration; pardon",
+  "ko_def": "너그러운 마음으로 다른 사람의 말이나 생각, 행동 또는 물건이나 상황 등을 받아들임.",
+  "ko": "김 사장은 작은 실수도 용납 못 하는 사람이다.",
+  "en_current": "Mr. Kim is the type of person who cannot tolerate even the smallest mistake.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "사장 (company president) title dropped as \"Mr.\"",
+    "suggested": "President Kim is someone who cannot tolerate even the smallest mistake."
+   }
+  ]
+ },
+ {
+  "id": "C01-0814",
+  "ext_id": "76727",
+  "sense": "0",
+  "ex": "6",
+  "word": "지로",
+  "gloss_current": "electronic billing",
+  "ko_def": "은행에서, 돈을 보내는 사람을 대신하여 단체나 회사 등의 예금 계좌에 돈을 보내 주는 방법.",
+  "ko": "승규는 이번 달 전기 요금을 지로로 납부하였다.",
+  "en_current": "Seung-gyu paid this month's electricity bill through giro.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "GLOSS",
+    "reason": "지로 is a bank giro payment, not electronic billing",
+    "suggested": "giro (bank giro payment)"
+   }
+  ]
+ },
+ {
+  "id": "C01-0837",
+  "ext_id": "79745",
+  "sense": "0",
+  "ex": "7",
+  "word": "타이밍",
+  "gloss_current": "The right time for obtaining a good result.",
+  "ko_def": "좋은 결과를 얻기 위한 적절한 시기.",
+  "ko": "김 사장은 새로운 사업에 뛰어들 타이밍을 기다리고 있다.",
+  "en_current": "Mr. Kim is waiting for the right timing to jump into the new business.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "사장 (company president) title dropped as \"Mr.\"",
+    "suggested": "President Kim is waiting for the right timing to jump into the new business."
+   }
+  ]
+ },
+ {
+  "id": "C01-0846",
+  "ext_id": "73110",
+  "sense": "0",
+  "ex": "9",
+  "word": "임대",
+  "gloss_current": "lending",
+  "ko_def": "물건이나 건물, 땅 등을 남에게 빌려줌.",
+  "ko": "앞집 아주머니는 빌딩 두 채를 가지고 임대 사업을 해서 큰돈을 벌었다.",
+  "en_current": "The lady next door owns two office buildings and earned a lot of money through the rental business.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MINOR",
+    "reason": "\"office\" added; Korean says only buildings",
+    "suggested": "The lady across the way owns two buildings and earned a lot of money through the rental business."
+   }
+  ]
+ },
+ {
+  "id": "C01-0858",
+  "ext_id": "91266",
+  "sense": "0",
+  "ex": "6",
+  "word": "신중히",
+  "gloss_current": "carefully",
+  "ko_def": "매우 조심스럽게.",
+  "ko": "김 사장은 새로운 사업 분야에 진출할지 여부를 신중히 검토하고 있다.",
+  "en_current": "Mr. Kim is carefully considering whether to enter a new business field.",
+  "flags": [
+   {
+    "model": "sonnet",
+    "label": "MAJOR",
+    "reason": "사장 (company president) title dropped as \"Mr.\"",
+    "suggested": "President Kim is carefully considering whether to enter a new business field."
+   }
+  ]
+ }
+]

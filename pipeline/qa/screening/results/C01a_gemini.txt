@@ -1,0 +1,42 @@
+C01-0003 | GLOSS | "oh no; darn it; damn" does not match 정말 (really/truly) | really; truly; indeed
+C01-0005 | MAJOR | Bundle was on speaker's head (내려 줬다), not brother's head | The moment he saw me, my older brother first took down the bundle I was carrying on my head.
+C01-0017 | MINOR | Invents male gender ("he") for 장인 (artisan of unstated sex) | The artisan placed the porcelain they had shaped by hand into the kiln and fired it.
+C01-0032 | MAJOR | 뭐하다 means awkward/uncomfortable to do, not not knowing how | It seemed Yumin had done it without knowing, so it felt awkward to get angry.
+C01-0042 | MAJOR | 받다 means butt/ram with impact, not merely "charged at" | A wild boar butted the hunter with its head, and the hunter collapsed on the spot.
+C01-0056 | GLOSS | "chap" is friendly/polite, whereas 자식 here is derogatory | guy; fellow; punk; jerk
+C01-0064 | MINOR | Garbled literal rendering "wing joint" for human shoulder joint (죽지) | The pain ran from my left wrist, past my shoulder joint, all the way to my shoulder.
+C01-0073 | MAJOR | Past tense 상관없었다 mistranslated as present tense ("doesn't matter") | Whatever Jisu thought of me, it didn't matter at all.
+C01-0074 | GLOSS | "recover" is the opposite of 물다 (pay/compensate what is owed) | pay; repay; compensate; reimburse
+C01-0088 | MAJOR | 저의 means ulterior motive/hidden intention, not "ultimate motive" | I suddenly wondered about Jisu's ulterior motive for offering to help with my work.
+C01-0088 | GLOSS | "ultimate motive" misrenders 저의 (hidden/ulterior intention) | ulterior motive; hidden intention
+C01-0112 | MAJOR | Adds vocative "Lord" not present in 저희의 기도를 들어주시옵소서, 아멘. | Hear our prayer, amen.
+C01-0141 | MAJOR | 집도 means personally performing the autopsy with a scalpel, not directing | The autopsy of the body was performed by Dr. Kim.
+C01-0142 | GLOSS | "Negroid" is outdated and offensive for 흑인 | Black person
+C01-0144 | MAJOR | Military command 번호! means "Count off!", not "Roll call!" | When the platoon leader called out 'Count off!' the soldiers began calling out their numbers in turn.
+C01-0144 | GLOSS | Military command 번호! means "Count off!", not "Roll call!" | Count off!
+C01-0167 | MAJOR | Replaces 그 ("his eyes") with indefinite "a man" | In his eyes, having weathered many hardships alone all his life, a menacing look lingered.
+C01-0176 | MINOR | Invents male gender ("himself") for 범인 (culprit of unstated sex) | To evade the detective's pursuit, the culprit deliberately wandered all over the country and hid.
+C01-0177 | MAJOR | Past tense 누리셨다 mistranslated as present tense ("lives... enjoys") | Grandfather lived in the countryside and enjoyed clean air and refreshing breezes.
+C01-0211 | MAJOR | Title 과장 must be "Section Chief", not "Manager" | Section Chief Kim had to quietly slip away from the meeting because an urgent matter came up.
+C01-0226 | MAJOR | 파란 means physical waves (크고 작은 물결), not figurative "turmoil" | Fish from the sea were swept away by the waves and washed up onto the shore.
+C01-0235 | MINOR | Awkward literal rendering "seven in the afternoon" for 하오 일곱 시 | My friend boarded a plane bound for America at seven in the evening.
+C01-0237 | GLOSS | "extreme" is misleading for 과다 (excessive quantity) | excess; excessive; over-
+C01-0270 | MAJOR | 사부님 means teacher's husband (스승의 남편), not "master teacher" | The Korean language teacher's husband was also a teacher who had majored in Korean.
+C01-0271 | MAJOR | Adds "their troops'"; general burned with his own fighting spirit | Seeing the ruined village, the general burned with fighting spirit against the enemy.
+C01-0300 | MINOR | Invents male gender ("him") for 그 꼬맹이 (child of unstated sex) | Uncle lightly pinched the little rascal's cheek, as if he found them adorable.
+C01-0311 | MINOR | 진작에 means earlier/sooner (조금 더 먼저), not "long ago" | If I had known earlier, I wouldn't have had to go through all this trouble.
+C01-0311 | GLOSS | "long ago" misrenders 진작에 (earlier/sooner) | earlier; sooner; beforehand
+C01-0319 | MINOR | 아이가 병세를 돌렸다 means child turned the corner, not the illness | When the child's fever came down, they turned the corner.
+C01-0322 | MINOR | Invents male gender ("one man") for 일인 (one person) | One day, someone went to see Seung-gyu.
+C01-0361 | MINOR | Invents male gender ("Mr.") for 김 씨 (unisex surname) | Kim was caught stealing and spent several years in prison.
+C01-0380 | MAJOR | 멍청하다 (멍한 상태로 있다) means vacant/blank, not "stunned" | Minjun sat quietly all through class with a blank expression.
+C01-0380 | GLOSS | "stunned; numbed" misrenders 멍청하다 (blank/vacant) | blank; vacant; dazed
+C01-0381 | MAJOR | Title 부장 must be "Department Head", not "Director" | Department Head Kim was arrested on suspicion of leaking the company's top-secret management information.
+C01-0399 | MAJOR | Rank 상사 is "master sergeant" or "first sergeant", not generic "sergeant" | The master sergeant called the soldiers over and passed on their instructions.
+C01-0421 | MINOR | Invents male gender ("man") for 용맹한 사람 (person of unstated sex) | A brave person captured the monster that had been tormenting people and became a hero.
+C01-0430 | MAJOR | Misreads 나와 ("with me") as verb "came out of" | Yumin is a friend who shared life and death with me on the battlefield.
+C01-0441 | GLOSS | "safety" is wrong for 금고 (safe/strongbox) | safe; strongbox; finance company; credit cooperative; credit union
+C01-0476 | MAJOR | 네놈 is second-person derogatory ("you bastard"), not "that fellow" | My father, who often swore, always called me 'you bastard.'
+C01-0476 | GLOSS | 네놈 is second-person derogatory pronoun, not third-person "this man" | you bastard; you punk; you wretch
+C01-0493 | MAJOR | 호도 means glossing over/covering up, not "distortion" | The media glossed things over with falsehoods, plunging the public into confusion.
+END C01a (checked 500 rows)
