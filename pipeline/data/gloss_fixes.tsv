@@ -1,3 +1,49 @@
 # Reviewed corrections to krdict English sense glosses (AI-proposed, independently verified); merged into the core pack.
 # A row applies only while the sense's ko_def and current gloss still match, so an upstream fix retires it silently.
 # ext_id	sense (0-based)	ko_def	old_gloss	new_gloss
+70563	0	마음속에 품고 있는 뜻이 있게.	mindfully	meaningfully; with a hidden intention
+61913	0	마시거나 사용할 목적으로 수도관을 통해 보내는 맑은 물.	portable water; service water	potable water; tap water; service water
+74807	0	자리나 위치 등을 다른 곳으로 옮김.	change; evolution	transfer; shift; spread
+64097	0	사람들을 병에 걸리게 하거나 음식을 썩게 하는 아주 작은 생물.	virus; germ; bacteria	germ; bacteria
+18769	0	날씨나 사람의 성격이나 언행, 또는 맛과 냄새 등이 나쁜 데가 있다.	ill-natured; evil; wicked	ill-natured; nasty; unpleasant
+18829	0	어떤 문제를 해결하는 데 다른 방법이 없어서 나쁘지만 어쩔 수 없이 쓰는 방법.	desparate measure; desparate plan	desperate measure; desperate plan
+18843	0	우묵한 곳이나 좁은 넓이의 공간에 액체나 냄새, 기체 등이 모이다.	stagnate	collect; pool; stagnate
+27210	0	조용하고 편안하게.	snugly; cozily	quietly; peacefully; cozily
+27287	0	일정한 상태로 굳어져 변하지 않게 됨. 또는 그렇게 함.	adhesion	entrenchment; fixation
+27586	0	곡식으로 만든 술.	grain whiskey	grain liquor; grain alcohol
+39537	0	모양이나 차림새가 거칠고 엉성하다.	poor; loose	sloppy; shabby; disheveled
+38184	0	오징어와 비슷하게 생겼으나 크기는 그보다 작으며 다리가 열 개인 뼈가 없는 동물.	small kind of octopus; baby octopus	small squid; beka squid
+17549	0	주먹 끝으로 머리를 살짝 때리는 것.	Dutch rub	rap on the head; knuckle tap
+37896	0	(비유적으로) 재능이 있는 어린이.	promising kid; prominent person	promising kid; budding talent
+39096	0	할 수 있는 만큼 다하다.	be only	do one's utmost; be at most
+38861	0	무 등의 채소를 얇고 네모나게 써는 모양.	into cubes	in thin square slices
+38901	0	잠옷 위에 덧입는 길고 가벼운 겉옷.	nightgown	dressing gown; robe
+18203	0	물이 높은 곳에서 낮은 곳으로 떨어질 때 생기는 위치의 차이.	head	drop; head; difference in height
+40752	0	병을 고치기 어려움.	being incurable	being hard to cure; being intractable
+40757	0	고치기 어려운 병.	incurable disease	intractable disease; hard-to-cure disease
+18504	0	맑은 날씨에 갑자기 치는 벼락.	unexpected lightening	unexpected lightning; bolt from the blue
+36838	0	보기에 안 좋을 만큼 잘난 듯이 마음대로 행동하다.	act recklessly	show off; act cocky
+37343	0	남자 배우.	actor	male actor; actor
+38117	0	어른인 남자.	menfolk; husbands	menfolk; men
+25318	0	북쪽에서 남쪽을 침략함.	invasion of South Korea	southward invasion; invasion of the South
+38714	0	북쪽에서 남쪽을 침략하다.	invade South Korea	invade southward; invade the South
+38721	0	임무가 주어져 남쪽으로 보내지다.	dispatch a spy to the south	be dispatched to the south
+38011	0	여름에 더위를 잊기 위해 무서운 것을 통해 서늘한 느낌을 즐김.	relishing cool air	relishing cool air; summer chills from horror
+41277	0	계획한 대로 되지 않거나 기대에 어긋나서 곤란하다.	embarrassing	frustrating; in a fix; awkward
+41304	0	누구인 줄 모르다.	not know one's face	not know someone's face; be unacquainted
+41868	0	무력을 써서 현재의 정부를 무너뜨리려고 하거나 폭동을 일으켜 국가를 위태롭게 하는 죄.	treason	insurrection; crime of insurrection
+40646	0	앞을 향해 입김이나 숨을 불다.	blow; breath out	blow; breathe out
+40622	0	속에서 밖으로 세게 나오게 하다.	emit	draw out; pull out; emit
+39885	0	기계가 어떤 기능이나 장치를 겉으로 보이지 않도록 속에 갖추고 있다.	be built-in	have built in; be equipped with
+20348	0	안쪽으로 향한 모양.	being introrse	facing inward; inward
+61175	0	놀랍거나 어떤 일을 심각하게 생각할 때 쓰는 말.	oh no; darn it	really; honestly; oh my
+92053	0	(낮추는 말로) 남자.	chap	jerk; punk; bastard
+74609	0	겉으로 드러나지 않은, 속에 품고 있는 생각.	ultimate motive	ulterior motive; hidden intention
+89235	0	피부색이 검은색 또는 갈색을 띤 인종에 속하는 사람.	Negroid	Black person
+31482	0	군대에서, 지휘자가 군인들에게 차례로 번호를 붙여 말하라는 구령.	Roll call!	count off
+25372	0	지나치게 많음.	extreme	excess; overabundance
+601759	0	조금 더 먼저. 또는 그때 이미.	long ago	earlier; sooner; already
+55812	0	정신이 나간 것처럼 멍한 상태로 있다.	stunned; numbed	dazed; blank; stunned
+37203	0	도둑이나 재난으로부터 보호하기 위해 돈, 보석, 중요한 서류 등 귀중한 물건을 보관하는 데 사용하는 상자나 창고.	safety; strongbox	safe; strongbox
+41446	0	(욕하는 말로) 듣는 사람이 남자일 때, 그 사람을 가리키는 말.	this man	you bastard; you punk
+76727	0	은행에서, 돈을 보내는 사람을 대신하여 단체나 회사 등의 예금 계좌에 돈을 보내 주는 방법.	electronic billing	giro; giro transfer
