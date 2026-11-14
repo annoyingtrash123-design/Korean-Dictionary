@@ -1,0 +1,15 @@
+C01-0504 | GLOSS | 뜻 is slang for drunken memory blackout, not film | blackout (memory loss from drinking); (also: photographic film)
+C01-0515 | MAJOR | 죽게 되었다 means died, not nearly died | Mr. Kim suffered a severe gunshot wound in the shootout and died.
+C01-0551 | MINOR | Gender "him" invented for entertainer | That entertainer denied the allegations against them to the very end.
+C01-0590 | MINOR | Gender "him" invented for the slave | He paid money to buy a slave and made them do every kind of work.
+C01-0607 | MINOR | "guy" invents male gender; 뚱보 is a person, not "chubby guy" | A fat person is working out at the gym to lose weight.
+C01-0635 | MINOR | 부장 is department head, not "Director" | Department Head Kim took a deep breath and then cautiously knocked on the president's office door.
+C01-0704 | MAJOR | 기껏 here means "after going to the trouble", not "as best I could" | I went to all the trouble of dressing up and headed out, but a sudden shower soaked me through.
+C01-0775 | MAJOR | 애를 먹다 = had a hard time; not struggling with the number of problems | The problems were harder than Seung-gyu had expected, so he had an extremely hard time throughout the test.
+C01-0780 | MAJOR | The kicked ball goes out of bounds; no one is "called out" | Every time I kicked the ball, it went out of bounds, which annoyed me.
+C01-0813 | MAJOR | 사장 (company president) title dropped as "Mr." | President Kim is someone who cannot tolerate even the smallest mistake.
+C01-0837 | MAJOR | 사장 (company president) title dropped as "Mr." | President Kim is waiting for the right timing to jump into the new business.
+C01-0846 | MINOR | "office" added; Korean says only buildings | The lady across the way owns two buildings and earned a lot of money through the rental business.
+C01-0814 | GLOSS | 지로 is a bank giro payment, not electronic billing | giro (bank giro payment)
+C01-0858 | MAJOR | 사장 (company president) title dropped as "Mr." | President Kim is carefully considering whether to enter a new business field.
+END C01b (checked 500 rows)
