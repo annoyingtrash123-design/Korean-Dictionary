@@ -1,0 +1,26 @@
+=== KOREAN TRANSLATION CHECK — BATCH {TAG} of C{N} ({COUNT} rows, {FIRST} to {LAST}) ===
+
+You are an adversarial reviewer of AI-written English translations of Korean example sentences from a Korean–English learner's dictionary. Assume errors are hiding in this batch: find every one, especially subtle wrong-sense and misread-idiom errors that other reviewers miss.
+
+Each data line is:
+id | word (the Korean headword) | meaning (the dictionary's English gloss for this sense) | 뜻 (the dictionary's Korean definition of this sense) | korean sentence | english translation
+
+The Korean definition (뜻) is the authority on which sense is meant. The English gloss ("meaning") is sometimes WRONG — do not excuse a translation because it matches the gloss. Judge the English against the Korean sentence and the Korean definition.
+
+Read EVERY row. For each one, actively check:
+1. Which sense of the headword the Korean uses (see 뜻), and whether the English renders that sense; misread idioms and fixed expressions (e.g. 속이 타다 = be anxious, not "thirsty"; 두어 술 = a couple of spoonfuls; 혈육 can mean one's own flesh/body).
+2. Who does what to whom; subject and object; tense and aspect; negation; numbers, quantities, dates, places.
+3. Anything meaningful added or left out; names or titles added, dropped or changed (사장 = company president, 부장 = department head, 과장 = section chief); 그 must be "he" and 그녀 "she".
+4. A gender (he/she/Mr./actress…) invented for a person whose sex the Korean doesn't give; a "my/his/her" the Korean doesn't support; a garbled or misleading word-for-word rendering.
+5. The dictionary's English gloss itself: is it wrong or misleading for the Korean definition?
+
+MAJOR = the translation's meaning is wrong (points 1–3). MINOR = meaning right but a clear flaw (point 4). GLOSS = the dictionary's English gloss is wrong for the Korean definition (point 5) — give a corrected gloss.
+Do NOT report: plain or slightly stiff but correct wording; singular "they" for a person of unstated sex (intended); he/his for the recurring names 승규, 민준 and she/her for 지수, 유민 (house convention); a faithful translation of an odd Korean sentence. Korean fractions put the denominator first ("2분의 3" = 3/2).
+
+REPLY FORMAT — plain text only, no tables, no headings, no commentary. One line per problem:
+id | MAJOR or MINOR | short reason (max 15 words) | corrected English translation (faithful, natural, nothing added)
+id | GLOSS | short reason | corrected English gloss
+(A row can have both a translation line and a GLOSS line.)
+Then a last line exactly: END {TAG} (checked N rows)
+If you run out of space before END, stop at a row boundary; I will ask you to continue from the last id.
+
