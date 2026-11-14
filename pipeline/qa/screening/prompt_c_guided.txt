@@ -1,0 +1,50 @@
+=== KOREAN TRANSLATION CHECK — BATCH {TAG} of C{N} ({COUNT} rows, {FIRST} to {LAST}) ===
+
+You are an adversarial reviewer of AI-written English translations of Korean example sentences from a Korean–English learner's dictionary. Assume errors are hiding in this batch: find every one, especially subtle wrong-sense and misread-idiom errors that other reviewers miss.
+
+Each data line is:
+id | word (the Korean headword) | meaning (the dictionary's English gloss for this sense) | 뜻 (the dictionary's Korean definition of this sense) | korean sentence | english translation
+
+The Korean definition (뜻) is the authority on which sense is meant. The English gloss ("meaning") is sometimes WRONG — do not excuse a translation because it matches the gloss. Judge the English against the Korean sentence and the Korean definition.
+
+Read EVERY row. For each one, actively check:
+1. Which sense of the headword the Korean uses (see 뜻), and whether the English renders that sense; misread idioms and fixed expressions (e.g. 속이 타다 = be anxious, not "thirsty"; 손이 크다 = generous; 발이 넓다 = well-connected).
+2. Who does what to whom; subject and object; tense and aspect; negation; numbers, quantities, dates, places.
+3. Anything meaningful added or left out; names or titles added, dropped or changed (사장 = company president, 부장 = department head, 과장 = section chief); 그 must be "he" and 그녀 "she".
+4. A gender (he/she/Mr./actress…) invented for a person whose sex the Korean doesn't give; a "my/his/her" the Korean doesn't support; a garbled or misleading word-for-word rendering.
+5. The dictionary's English gloss itself: is it wrong or misleading for the Korean definition?
+
+CHECKLIST (from past screens: the errors most often missed were wrong word sense, idioms read literally, who-did-what, quantities and verb endings; fluent English is NOT evidence that it is right):
+A. Read the Korean BEFORE the English. Work out each clause: who (이/가/은/는), does what, to whom (을/를), with whom (와/과: 나와 = "with me"), where/when (에/에서/으로), and what each modifier attaches to (모두/다/만, ~의, -ㄴ/-는 clauses). Only then compare the English clause by clause.
+B. Headword and every strong content word: restate the 뜻 sense in a few words; check the English has the same sense, the same physical action and the same strength.
+   - 받다 = butt (not "charge at"); 집도 = perform the surgery yourself (not "direct"); 껄껄 = roar with laughter (not "chuckle"); 꿈쩍하다 = one big movement (not "slight"); 호도 = gloss over; 저의 = ulterior motive; 소아 = young child; 박차다 = kick open (not "slam"); 낙천 = not nominated (not "disqualified"); 생을 마감하다 = die (English "ended his life" = suicide).
+C. Set phrases are units: 날이 풀리다 = the cold eases (not "weather cleared"); 귀가 먹먹하다 = ears feel muffled; 애를 먹다 = have a hard time; 남부럽지 않다 = need envy no one (not "no one could envy"); 꼴값하다 = act as one's looks suggest; 보란 듯이 = pointedly, for all to see; 필름이 끊기다 = black out from drinking.
+D. Read every ending:
+   -았/었- past | -았었- had/used to | -게 되었다 = it happened (죽게 되었다 = died, not "nearly died") | -ㄹ 뻔했다 = nearly (did not happen)
+   -는지/-ㄴ지, -나 보다, -는 모양이다 = a guess ("apparently", "seemed to") | -(으)면, 날이면 = whenever (habit, not one day)
+   -ㄹ 만큼 = enough to (not "did") | -는 게 꿈이다, -려고 = not done yet | -다가 = in the middle of | -아/어 주다 = for someone (who benefits?)
+E. Numbers, times, plural: 하오 일곱 시 = 7 in the evening; 반나절 = a few hours; 반 이하 = half or less; spaced 이 층 = second floor, 이 학년 = second year; 일대일로 나누다 = fifty-fifty; 어른이 (one seat) = one elder, not "adults"; a bare noun can be plural.
+F. Added or dropped: no "Lord", "their troops", "office", "a bag", "riot", "everything including" that the Korean lacks; no dropped title, scene, name or object.
+G. Fixed renderings (MAJOR when wrong): 사장/사장님 = (company) president (not boss/owner/chairman/Mr.); 부장 = department head (not director/section chief); 과장 = section chief (not manager); 대리 = assistant manager; 의원 = lawmaker (not Assemblyman); 화백 = painter (keep the title); military 상사 = master sergeant; 경사 after a police rank = police sergeant (not "happy event"); 사부님 follows 뜻 (may be "teacher's husband"); 아주머니 = a woman/ma'am (not aunt); 사돈 = in-law; 고조할머니 = great-great-grandmother from the speaker's view; 형제 = siblings; 동생 = younger sibling; 우리 부부 = my spouse and I; 친구 부부 = my friend and their spouse.
+H. People (MINOR): surname + ssi = "Kim" (not "Mr. Kim"); surname + 모 + ssi = "a certain Kim"; 노인/젊은이/아이/친구/선생님/주인공 have no sex; no invented his/her. 그 (pronoun) = he and 그녀 = she (MAJOR if rendered "them" or "a man"); 그 + noun = "that …".
+I. Register: 네놈 = "you bastard" (a rude second-person, not "that fellow"); abusive 자식 = bastard/punk (not "chap"); 뚱보 = fatso; 멍멍이 = doggy (child's word, not puppy); 귀신같다 = uncanny (not "demon-like").
+J. English a learner would misread is MINOR: "wing joint" for a person, "lonelily", "golden hand", "as a goof", "keep it preciously".
+K. GLOSS: test every item between semicolons against 뜻: spelling (desparate, lightening, portable→potable, breath out), wrong sense (safety for a safe; virus for 세균), active vs passive, too narrow (invade South Korea) or too strong (incurable for 난치 = hard to cure), wrong register (chap for an insult), offensive or obsolete (Negroid).
+DO NOT FLAG (all were rejected before):
+- he/his for 승규, 민준 and she/her for 지수, 유민; singular "they" — house conventions.
+- sex the context gives: someone who calls a person 누나 is male; a man with an 아내 can be "Mr."; 그에게 referring back to a person = him.
+- 그 used as "that" (그 장수 = that general); narrative present vs past where the meaning is the same; tone or taste preferences for plain but correct English.
+- a gloss for missing an idiom or proverb sense that 뜻 does not give, or for an item that is not in the gloss.
+- Revised Romanization you have not checked (좋은 = joeun is correct); a synonym within the word's range; a faithful rendering of an odd sentence.
+- a reason that does not name a word in THIS row's Korean (check you have not slipped to the next row).
+
+MAJOR = the translation's meaning is wrong (points 1–3). MINOR = meaning right but a clear flaw (point 4). GLOSS = the dictionary's English gloss is wrong for the Korean definition (point 5) — give a corrected gloss.
+Do NOT report: plain or slightly stiff but correct wording; singular "they" for a person of unstated sex (intended); he/his for the recurring names 승규, 민준 and she/her for 지수, 유민 (house convention); a faithful translation of an odd Korean sentence. Korean fractions put the denominator first ("2분의 3" = 3/2).
+
+REPLY FORMAT — plain text only, no tables, no headings, no commentary. One line per problem:
+id | MAJOR or MINOR | short reason (max 15 words) | corrected English translation (faithful, natural, nothing added)
+id | GLOSS | short reason | corrected English gloss
+(A row can have both a translation line and a GLOSS line.)
+Then a last line exactly: END {TAG} (checked N rows)
+If you run out of space before END, stop at a row boundary; I will ask you to continue from the last id.
+
