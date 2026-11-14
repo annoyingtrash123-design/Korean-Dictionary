@@ -4,6 +4,7 @@ pub mod cedict;
 pub mod common;
 pub mod enwikt;
 pub mod example_en;
+pub mod gloss_fixes;
 pub mod fetch;
 pub mod freq;
 pub mod kaikki;
