@@ -1,0 +1,136 @@
+C03-0009 | GLOSS | Gloss covers only character; 뜻 includes weather, taste, smell. | unpleasant in weather, character, taste, or smell
+C03-0010 | GLOSS | Gloss adds character senses; 뜻 is only taste or smell. | unpleasant in taste or smell
+C03-0011 | MINOR | "Young man" invents the young person's sex. | The elders could not hide their anger at the young person's inconsiderate, wicked behavior.
+C03-0021 | GLOSS | "Live-in" is not in the 뜻. | life as a hired employee
+C03-0022 | GLOSS | "Public official in labor service" is not in the 뜻. | employee; hired worker
+C03-0031 | GLOSS | "Desparate" misspells desperate. | desperate measure; desperate plan
+C03-0032 | MAJOR | 어수선하다 is disorderly, not bustling. | On market days, the town was in great disorder.
+C03-0035 | MAJOR | 있는지 is a guess, not a sure date. | Perhaps having a date, Jisu left the house carefully and beautifully dressed.
+C03-0036 | GLOSS | Tears and salivate do not match failing to progress. | fail to advance; stay stuck
+C03-0054 | MAJOR | Government intervention modifies the worsening economy. | Despite the economy worsening due to government intervention, prices became fixed.
+C03-0058 | GLOSS | "Elate; enhance" do not mean raising musical pitch. | raise the pitch
+C03-0059 | MAJOR | Caregiver is grandmother's grandmother, not her great-great-grandmother. | Because my great-grandmother died early, my grandmother was raised by her grandmother.
+C03-0061 | MAJOR | 사장 is company president, not just president. | Seeing that he, a high school graduate, rose to company president, education and ability do not always go together.
+C03-0066 | GLOSS | "Quiety" misspells quietly. | snugly; cozily; quietly; gently
+C03-0079 | MINOR | "His" invents the child's sex. | The child stubbornly threw a tantrum, refusing kindergarten, and was scolded by their mother.
+C03-0081 | GLOSS | "High dimension" mismatches a high, excellent level. | high level; excellent level
+C03-0082 | MINOR | A seized screw is forced, not pushed. | The clock's screw seems to have seized, and no matter how hard I forced it, it would not loosen.
+C03-0086 | GLOSS | "Adhesion" mismatches becoming fixed in place. | entrenchment; becoming fixed
+C03-0106 | MAJOR | 사랑을 받았다 is past, not "is loved." | A singer with outstanding vocal ability was loved by everyone, regardless of age.
+C03-0106 | GLOSS | Gloss adds rank and price; 뜻 is only age. | being older and younger
+C03-0112 | MINOR | "He" invents the sibling's sex. | Jisu told Mother that her younger sibling had broken the vase.
+C03-0116 | GLOSS | 뜻 is extorting hard-earned wealth, not the money. | extort hard-earned wealth
+C03-0124 | GLOSS | 뜻 is refusing to eat, not grain itself. | go without food; refuse to eat
+C03-0135 | MAJOR | 탄성을 지르다 is a cry of wonder, not gasping. | People cried out in wonder as they watched the acrobat do a handstand on a tightrope.
+C03-0139 | GLOSS | Grain liquor, not whiskey. | grain liquor
+C03-0157 | MAJOR | 곤드라지다 is collapsed, not dozing. | My husband, passed out drunk, was brought on a friend's back.
+C03-0159 | MAJOR | No alcohol is mentioned; "dead drunk" is invented. | My husband came home from overtime, collapsed, and slept.
+C03-0166 | MINOR | "He" invents the child's sex. | My wife seems uneasy about having left the child who did not want to be separated.
+C03-0172 | MAJOR | 꺼벙이 means dim-witted, not a goof. | Friends teased the naive Seunggyu, calling him a dimwit.
+C03-0173 | GLOSS | Gloss is slow-witted; 뜻 is sloppy dress. | sloppy; disheveled in appearance
+C03-0175 | MINOR | "His" invents the child's sex. | The child touched their father's coarse beard and said it was prickly.
+C03-0186 | MAJOR | 껄껄 is a hearty guffaw, not a chuckle. | Whenever Grandfather sees me, he guffaws.
+C03-0189 | MAJOR | 껄떡거리다 here is gulping liquor, not gasping. | The man gulped and choked as he forced the liquor down.
+C03-0212 | GLOSS | "Short" contradicts unattractively tall with long legs. | lanky; unattractively tall
+C03-0218 | MINOR | "He" invents the child's sex. | Yumin bundled the child in layers for fear they would catch a cold.
+C03-0229 | MAJOR | 꼬들꼬들한 밥 is firm and dry, not fluffy. | Unlike me, who likes soft rice, my husband likes firm, dry rice.
+C03-0241 | MINOR | "His" invents the child's sex. | The child faithfully copied their older sister.
+C03-0251 | MINOR | "Gentleman" invents the person's sex. | That person is still hale and straight-backed.
+C03-0255 | GLOSS | 뜻 is pointing something out, not pinching. | point out clearly
+C03-0256 | GLOSS | "Cynical comment" is not in the pinch 뜻. | be pinched
+C03-0258 | GLOSS | Gloss is a clue or pod; 뜻 is a pretext. | pretext for a quarrel
+C03-0260 | MAJOR | 꼭두새벽 is before dawn, not midnight. | We got up in the predawn hours to prepare to see the sunrise.
+C03-0263 | MAJOR | 꼴값하다 is acting as one looks, not above oneself. | Pretty Jisu keeps changing boyfriends because she acts just like her looks.
+C03-0269 | MAJOR | 꼴뚜기 is a small squid, not a baby octopus. | Mother bought fresh small squid at the market to make salted seafood.
+C03-0269 | GLOSS | Squid-like, with ten legs; not a baby octopus. | small squid
+C03-0286 | GLOSS | 뜻 is "very fast," not a bird's tail. | very fast
+C03-0295 | GLOSS | "Gold digger" is not this colorful-snake sense. | colorful snake
+C03-0332 | MINOR | "Him" invents the teacher's sex. | Minjun met his teacher on the way and bowed his head in greeting.
+C03-0351 | GLOSS | 뜻 is hiding something good, not a honey jar. | hide something good away
+C03-0355 | GLOSS | A knuckle flick, not a Dutch rub. | knuckle flick on the head
+C03-0361 | GLOSS | 뜻 is falling deeply asleep, not a fantasy place. | fall deeply asleep
+C03-0362 | GLOSS | "Prominent person" is not a talented child. | promising child; talented youngster
+C03-0369 | GLOSS | 뜻 is not yielding, not a big movement. | not yield; not budge
+C03-0370 | MAJOR | "Slight" contradicts one big movement. | He smiled, giving his eyes one big flick.
+C03-0382 | MAJOR | "Everything" widens it beyond the hidden slush fund. | Spill the whole slush fund you hid without my knowing.
+C03-0387 | GLOSS | Gloss misses hastily slinging something on. | hastily sling on; carry anyhow
+C03-0400 | GLOSS | Patience senses are extra; 뜻 is stickiness. | stickiness; glutinousness
+C03-0425 | MAJOR | 눈앞이 캄캄하다 is despair, not lost sight. | Thinking of clearing the dreadfully piled snow, I felt utterly hopeless.
+C03-0425 | GLOSS | "Devoted; ardent" are not this shocking sense. | horrible; dreadful; shocking
+C03-0454 | GLOSS | "Be only" mismatches doing all one can. | do all one can
+C03-0455 | MAJOR | 웃는다 is present, not past. | The onlookers are snickering.
+C03-0471 | MAJOR | 받지 않았다 is past, not a present habit. | I don't know where he wanders; he was out all day and didn't answer when I called.
+C03-0480 | MINOR | "Husband" makes the couple's speaker the wife. | We as a couple go on an outing to a nearby park on weekends.
+C03-0495 | MINOR | "Old man" invents the elder's sex. | A white-haired elderly person sat on a tree stump, passing the time.
+C03-0496 | GLOSS | "Cubes" contradicts thin square slices. | in thin squares
+C03-0497 | GLOSS | 뜻 is drinking from the bottle, not a bugle. | drink liquor straight from the bottle
+C03-0514 | MAJOR | 나이트가운 is a robe over pajamas, not a nightgown. | As soon as I got back, I changed into a robe over my sleepwear and lay down.
+C03-0514 | GLOSS | A robe over sleepwear, not a nightgown. | robe worn over sleepwear
+C03-0518 | MAJOR | 반 나절 is about half the daylight, not half a day. | He waited for his friend at the meeting place for about half the daylight hours.
+C03-0529 | MINOR | "His" invents the child's sex. | The child ran to their mother, long black hair fluttering.
+C03-0566 | MAJOR | Soldiers are plural, and the number is half or less. | Excluding the soldiers who fell behind from the advance party during the retreat, the number had dropped to half or less.
+C03-0571 | GLOSS | "Bet" is not a missing page. | missing page; lost leaf
+C03-0578 | MAJOR | Spaced 이 학년 is this grade, not the second year. | Seunggyu failed this semester and could not advance to this grade.
+C03-0580 | GLOSS | "Difference in time" is not a drop in height. | drop; difference in height
+C03-0586 | MAJOR | 운동장 is an athletic field, not a stadium. | The government decided to award construction of the new athletic field to a private construction company.
+C03-0587 | MAJOR | 낙천 means not nominated, not disqualified. | Those who failed to be nominated for chairman are very dissatisfied.
+C03-0588 | MAJOR | 낙천 means denied nomination, not disqualified. | Representative Kim was not nominated and could not run in the mayoral election.
+C03-0590 | MAJOR | 낙천하다 means failed to be nominated. | Among the board members, those not nominated for the next chairmanship voiced dissatisfaction.
+C03-0595 | MAJOR | Petals are falling, and "lonelily" is not English. | Climbing the hill and watching the petals fall forlornly, I grew sad without noticing.
+C03-0602 | MINOR | The snatch simile is reversed and circular. | Curious about the article, Father picked up the newspaper as if snatching it.
+C03-0610 | GLOSS | "Edit" is not hacking with a knife. | hack wildly; chop up
+C03-0629 | MAJOR | "Ended his life" implies suicide; he died. | Born in turbulent times, he could not show his talent as a scholar and died young.
+C03-0645 | MAJOR | "Incurable" contradicts treatment being possible. | Even a hard-to-cure cancer can be treated if found early.
+C03-0645 | GLOSS | 난치 is hard to cure, not incurable. | difficult to cure
+C03-0646 | MAJOR | 난치병 is hard to cure, not incurable. | Our institute has researched for three years a treatment for rare diseases that are hard to cure.
+C03-0646 | GLOSS | "Incurable" mismatches a disease hard to cure. | disease difficult to cure
+C03-0657 | MINOR | 순화되다 is being reformed, not tamed. | Prisoners who had behaved violently are gradually being reformed as they care for animals.
+C03-0662 | GLOSS | "Lecherous" is not this extreme-behavior sense. | extreme, abnormal conduct
+C03-0666 | GLOSS | A wishbone is not the wing's base. | wing joint; base of the wing
+C03-0667 | MAJOR | "On the lake" locates the takeoff, not the feeding. | A flock that had been feeding flapped their wings and all rose at once from the lake.
+C03-0676 | GLOSS | Gloss is a snatch; 뜻 is the tongue flicking. | flicking the tongue quickly out and in
+C03-0678 | GLOSS | "Peeking sneakily" mismatches the tongue 뜻. | repeatedly flicking the tongue out
+C03-0685 | GLOSS | "Lightening" is misspelled; this sense is lightning. | a sudden bolt of lightning
+C03-0689 | MAJOR | 맴돈다 is present; "flew" is past. | An insect flies in through the open window and circles around the room.
+C03-0696 | MAJOR | "A bag" is not in the Korean. | The culprit was caught by passengers while snatch-thieving on a crowded bus.
+C03-0698 | MAJOR | 날치다 is showing off, not acting recklessly. | That guy showed off too much about being good at studying.
+C03-0698 | GLOSS | "Act recklessly" misses showing off. | act cocky; show off
+C03-0722 | GLOSS | "Shirt" is not this south-direction sense. | south
+C03-0724 | MAJOR | He need not envy others, not "whom no one envies." | He worked hard all his life and became rich enough not to envy others.
+C03-0729 | MAJOR | 남상 is a woman's mannish face. | That actress was famous for her masculine face and popular for her androgynous charm.
+C03-0737 | MAJOR | "Male" is dropped from 남우. | The director is looking for a male actor excellent in both looks and acting.
+C03-0737 | GLOSS | 남우 is a male actor, not just an actor. | male actor
+C03-0742 | GLOSS | "Husbands" is not in "adult men." | adult men; menfolk
+C03-0751 | GLOSS | "Of South Korea" is narrower than invading southward. | southward invasion from the north
+C03-0752 | GLOSS | "Invade South Korea" is narrower than the 뜻. | invade southward from the north
+C03-0753 | GLOSS | "Spy" is not in sending someone south. | sending someone south on a mission
+C03-0754 | GLOSS | Passive headword glossed as an active dispatch. | be sent south on a mission
+C03-0755 | GLOSS | "Spy" is not in the 뜻. | send someone south on a mission
+C03-0756 | MAJOR | 없었다 is past, not "there is." | Jisu is of marriageable age and looking for a husband, but there was no one she liked.
+C03-0773 | GLOSS | Gloss drops enjoying a chill through scary things. | enjoying a chill through something scary
+C03-0785 | MAJOR | 국공립 is national and public, not only public. | Over several years, fees at kindergartens and national and public universities rose sharply.
+C03-0789 | GLOSS | 뜻 is losing face, not a flat nose. | lose face; have one's pride hurt
+C03-0798 | GLOSS | "Incandescent" is not a clear ringing sound. | sonorous; clear and ringing
+C03-0808 | GLOSS | "Clamorous" means noisy, not strewn about. | strewn in disorder
+C03-0811 | GLOSS | "Embarrassing" misses being in a fix. | in a fix; at a loss
+C03-0816 | GLOSS | "Familiar" misses speech that lowers the referent. | lowering speech; plain speech
+C03-0819 | GLOSS | Reads as not knowing one's own face. | not recognize who someone is
+C03-0823 | GLOSS | 뜻 is feeling ashamed, not the face itself. | be deeply ashamed
+C03-0833 | GLOSS | "Wildy" is a typo; this sense is only beating. | beat very hard
+C03-0834 | MAJOR | 사장님 is the company president, not the owner. | The company president had a new sign made and hung it at the building entrance.
+C03-0848 | MAJOR | 내돌리다 means letting others handle it, not driving. | Seunggyu, who treasures his car, never let it be passed around carelessly.
+C03-0854 | MINOR | "Him" invents the child's sex. | When the child's fever soared, Father carried the child on his back and dashed to the hospital.
+C03-0855 | MAJOR | 희생되다 means fell victim, not were sacrificed. | As the national rebellion grew serious, even children and the elderly fell victim.
+C03-0856 | MAJOR | "Treason" misnames 내란죄. | The group that dreamed of revolution had its plan discovered and was executed for insurrection.
+C03-0856 | GLOSS | 내란죄 is insurrection, not treason. | insurrection
+C03-0878 | GLOSS | "Decent" is a typo for descent. | downhill; descent
+C03-0879 | GLOSS | "Decent" does not mean a downhill road. | downhill road; descent
+C03-0897 | MINOR | "Men" genders the young people. | Soldiers were rounding up all the young people and driving them to the battlefield.
+C03-0910 | GLOSS | "Breath out" should be "breathe out." | blow; breathe out
+C03-0918 | GLOSS | Yell and sing are not this draw-out sense. | draw out forcefully
+C03-0958 | GLOSS | Gloss is passive; the 뜻 is equipping inside. | build in; have built in
+C03-0963 | MAJOR | 사장님 is the company president, not the boss. | When the company president urged him to have more liquor, Seunggyu hurriedly waved his hand to decline.
+C03-0981 | MINOR | "Show it off" misses defiant 보란 듯이. | She flung the bouquet I gave her onto the ground, defiantly, for me to see.
+C03-0989 | GLOSS | "Introversion" is psychological, not an inward shape. | inward-facing; introrse
+C03-0990 | GLOSS | "Moral teachings for females" is not this secret-order sense. | secret instruction
+END C03 (checked 1000 rows)
