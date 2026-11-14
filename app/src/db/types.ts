@@ -18,6 +18,8 @@ export interface Rel { type: string; word: string }
 export interface Sense {
   pos?: string; gloss?: string; roman?: string; def?: string; ko_def?: string; note?: string; pattern?: string;
   tags?: string[]; examples?: Example[]; rel?: Rel[];
+  /** gloss is an AI-reviewed correction of the source English (pipeline gloss_fixes) */
+  gloss_ai?: boolean;
 }
 export interface EntryData {
   senses: Sense[]; related?: Rel[]; category?: string; etym?: string; origin_note?: string;

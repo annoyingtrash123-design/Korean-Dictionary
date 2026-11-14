@@ -1,0 +1,3 @@
+# Reviewed corrections to krdict English sense glosses (AI-proposed, independently verified); merged into the core pack.
+# A row applies only while the sense's ko_def and current gloss still match, so an upstream fix retires it silently.
+# ext_id	sense (0-based)	ko_def	old_gloss	new_gloss

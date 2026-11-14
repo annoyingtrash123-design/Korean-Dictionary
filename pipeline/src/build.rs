@@ -613,6 +613,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     let mut pointers: Vec<(String, Pointer)> = Vec::new();
     let example_en = crate::example_en::ExampleEn::builtin();
     let mut n_example_en = 0usize;
+    let gloss_fixes = crate::gloss_fixes::GlossFixes::builtin();
+    let mut n_gloss_fixes = 0usize;
     for p in &src.krdict {
         let t = Instant::now();
         let before = c.entries;
@@ -622,6 +624,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 return Ok(());
             }
             n_example_en += example_en.apply(&mut e);
+            n_gloss_fixes += gloss_fixes.apply(&mut e); // before insert_entry computes the entry-level gloss
             let rank = ranker.rank(&e);
             let id = insert_entry(&conn, &e, rank, true, &mut c)?;
             krdict_ids.entry(hw_norm(&e.headword)).or_default().push((e.homonym, id));
@@ -637,6 +640,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         log::info!("krdict {}: {} entries ({:.1}s)", p.file_name().unwrap().to_string_lossy(), c.entries - before, t.elapsed().as_secs_f32());
     }
     log::info!("krdict example English (AI, reviewed): {n_example_en} of {} rows applied", example_en.len());
+    log::info!("krdict gloss corrections (AI, reviewed): {n_gloss_fixes} of {} rows applied", gloss_fixes.len());
     // conjugation-pointer entries -> forms of the entries they point to
     {
         let (mut n_forms, mut unresolved) = (0i64, 0i64);
