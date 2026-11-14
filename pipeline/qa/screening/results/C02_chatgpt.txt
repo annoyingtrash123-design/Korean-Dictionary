@@ -1,0 +1,58 @@
+C02-0015 | MINOR | Ji-su is female; "alumnus" is masculine. | Ji-su is an alumna of the same university I graduated from.
+C02-0037 | MAJOR | 부장 is department head, not director. | Department Head Kim stamped their seal on the company's goods purchase approval form.
+C02-0041 | MAJOR | 부장 is department head, not director. | Department Head Kim manages their subordinates by offering praise and admonition at appropriate times.
+C02-0075 | MAJOR | 사장 is company president, not simply boss. | The company president dismissed employees with poor work attitudes who were lazy.
+C02-0093 | MINOR | The child's sex is unspecified; "his" is invented. | The child clung to their mother's hem and would not let go as she left for work.
+C02-0113 | MINOR | The section chief's sex is unspecified; "his" is invented. | The staff sent condolence wreaths to the funeral home for the section chief's father's funeral.
+C02-0149 | MAJOR | 희생되다 means fall victim to, not be sacrificed to. | Several people fell victim to the violent criminal who had escaped from prison.
+C02-0158 | MAJOR | 사장 means company president, not chairman. | Company President Choi had no idea what the company's current situation was.
+C02-0163 | MAJOR | The Korean is past tense; "is not good" changes the tense. | Seung-gyu drank too much at yesterday's company dinner, so he wasn't feeling well.
+C02-0175 | MAJOR | 두어 술 means a couple of spoonfuls, not one. | Father mixed a couple of spoonfuls of rice into the soup and ate it.
+C02-0189 | GLOSS | The definition describes something suspicious, not an unpleasant smell. | something fishy; suspicious; arousing suspicion
+C02-0199 | MAJOR | "Words being thrust at him" is a misleading literal rendering of confrontational remarks. | The old man simply smoked, neither surprised nor angry at the man's confrontational remarks.
+C02-0232 | GLOSS | The definition means remembering something firmly, not bone marrow. | keep firmly in mind; engrave on one's memory
+C02-0238 | MAJOR | The translation reverses the subject and object of 써먹다. | I wonder whether that kid will ever be good for anything if he doesn't study like that.
+C02-0251 | MAJOR | Coconut liquid is coconut water, not coconut sap. | When exhausted from the heat, cool coconut water was the best drink.
+C02-0267 | GLOSS | The Korean definition describes mutual benefit, not a sister. | mutually beneficial; a win-win situation
+C02-0325 | MINOR | The prisoner's sex is unspecified; "he" is invented. | The death-row inmate led to the gallows left a message expressing regret to the victims' families.
+C02-0335 | MAJOR | 재워 두다 means pile up here, not leave to salt. | I piled up the cabbages I had bought for making kimchi in the yard.
+C02-0419 | MINOR | The robber's sex is unspecified; "he" and "his" are invented. | The robber threatened Seung-gyu verbally, and when that failed, pulled a dagger from their clothing.
+C02-0436 | GLOSS | The definition is figurative: taking on another person's suffering or responsibilities. | take on another person's sins, suffering, or responsibilities
+C02-0443 | GLOSS | The definition means regaining mental composure, not a mechanical screw. | pull oneself together; regain one's composure
+C02-0464 | MAJOR | "Noticed carefully" misrepresents the implication of hidden meaning. | Minjun's words were meant to encourage me, but they seemed to carry a hidden meaning.
+C02-0464 | GLOSS | The definition describes having a particular meaning or intention in mind. | with a particular or hidden intention; meaningfully
+C02-0465 | MINOR | 김 씨 has unspecified sex; "Mr." is invented. | Kim paced restlessly in front of the operating room until his wife's surgery was over.
+C02-0488 | MAJOR | 주장 is the chief military commander, not simply a captain. | The soldiers trusted their commander and went out to the battlefield.
+C02-0488 | GLOSS | The definition specifies the highest-ranking military commander. | commander-in-chief; chief military commander
+C02-0555 | MAJOR | 그 requires "he" under the specified pronoun convention. | That general drew his sword from its scabbard.
+C02-0562 | GLOSS | The definition describes a resolute man who persists despite obstacles. | resolute man; man of strong determination
+C02-0571 | MAJOR | 소아 means young children, not specifically infants. | While volunteering, I was responsible for caring for sick children.
+C02-0577 | MINOR | 김 선수 has unspecified sex; "Mr." is invented. | It is so unfortunate that Kim was left crippled by a severe ankle injury.
+C02-0578 | MAJOR | 맨션 here means an upscale apartment, not a mansion. | Jisu lives in an upscale apartment with plenty of green space around it.
+C02-0588 | GLOSS | The definition describes betrayal, not the anatomical back of the head. | be betrayed; be stabbed in the back
+C02-0600 | MINOR | 김 모 씨 has unspecified sex; "Mr." is invented. | Kim reported the culprit to the police anonymously.
+C02-0607 | GLOSS | The definition describes clean piped water; "portable water" is erroneous. | tap water; municipal water supply
+C02-0613 | GLOSS | The definition describes movement or transfer to another location. | transfer; movement from one place to another
+C02-0619 | GLOSS | The definition describes intense emotional distress, not intestines. | feel deep anguish; be consumed by distress
+C02-0627 | GLOSS | 세균 means bacteria or germs, not viruses. | bacterium; bacteria; germ
+C02-0631 | GLOSS | The definition means achieving an objective by whatever method. | by any means; by whatever method
+C02-0648 | GLOSS | The definition refers to the proverb that even an inept person has a special ability. | even a seemingly inept person has a useful knack
+C02-0663 | GLOSS | The definition means being extremely poor, not an anatomical opening. | be dirt poor; be in extreme poverty
+C02-0687 | GLOSS | The definition describes an accidental achievement or lucky guess, not a bull. | happen by chance; make a lucky guess
+C02-0713 | MAJOR | 의경 means auxiliary police, not civil defense auxiliary police. | Last weekend our family visited my older brother, who is serving as an auxiliary police officer.
+C02-0721 | MINOR | The baby's sex is unspecified; "his" is invented. | The baby pointed at their mother with a finger.
+C02-0721 | GLOSS | The definition describes being mocked or criticized, not simply pointing. | be pointed at; be mocked or criticized
+C02-0748 | MAJOR | 명분 means justification or principle, not reputation. | That politician agonized between principle and practical gain.
+C02-0762 | MAJOR | 부장 is department head, not section chief. | Work related to marketing falls under Department Head Kim's supervision.
+C02-0820 | GLOSS | The definition describes parental devotion to children, not simply a father. | a father's deep devotion to and concern for their children
+C02-0849 | MAJOR | 유모 specifically means wet nurse, not a generic nanny. | Seung-gyu lost his mother early and was raised by a wet nurse.
+C02-0857 | MAJOR | 박차고 나가 means kick open and leave, not slam the door. | Seung-gyu kicked the door open so hard that the room shook and stormed out.
+C02-0876 | GLOSS | The definition refers to the proverb that valuable things must be put to use. | a fine thing is valuable only when put to good use
+C02-0896 | GLOSS | The definition means becoming destitute, not a tin can. | become destitute; end up like a beggar
+C02-0905 | MAJOR | 아줌마 means a middle-aged woman here, not necessarily an aunt. | The woman's husband was a drunkard who was drunk every single day.
+C02-0907 | MINOR | 김 씨 has unspecified sex; "Mr." is invented. | Kim practices sharing every year by donating hundreds of books.
+C02-0923 | MAJOR | "Clothes made thickly" is a garbled rendering of densely woven fabric. | Fortunately, I wasn't cold, perhaps because I was wearing thickly woven clothes.
+C02-0933 | MAJOR | 싸돌며 means circling around, not roaming around. | We circled around the Christmas tree, singing carols.
+C02-0938 | MAJOR | 멍멍이 means dog; puppy incorrectly specifies its age. | Our dog does not bark even when it sees a stranger.
+C02-0963 | MAJOR | 엄살 specifically means feigning or exaggerating pain, not merely making a fuss. | When the man who had been punched on the chin rolled around on the floor, he told him not to exaggerate his pain.
+END C02 (checked 1000 rows)
