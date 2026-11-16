@@ -49,6 +49,8 @@ export function useRoute(): Route {
   const [r, setR] = useState(currentRoute);
   useEffect(() => {
     const f = () => { if (holdAt === null) setR(currentRoute()); };
+    // the hash may have changed between the first render and this effect (a link tapped while the app starts)
+    if (holdAt === null && currentRoute().raw !== r.raw) f();
     window.addEventListener('hashchange', f);
     window.addEventListener(EVT, f);
     return () => { window.removeEventListener('hashchange', f); window.removeEventListener(EVT, f); };
