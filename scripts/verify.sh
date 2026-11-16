@@ -15,13 +15,19 @@ if git diff --cached --name-only | grep -E '\.(sqlite|sqlite3)$|app/public/data/
 # downloaded packages/archives must never land in the repo (tracked, staged or about to be added)
 if { git ls-files; git ls-files --others --exclude-standard; } | grep -E '\.(whl|tar\.gz|tgz|zip)$' ; then echo "package archives in the working tree: remove them"; exit 1; fi
 
+step "guard: scripts find the git dir with rev-parse (in a worktree .git is a file)"
+GITDIR_RE='(^|[^A-Za-z_-])\.git''/'
+if grep -nE "$GITDIR_RE" scripts/*.sh .githooks/* 2>/dev/null; then echo "use \$(git rev-parse --git-dir) instead"; exit 1; fi
+
 step "rust: tests"
-# one run: keep its output so a failure (even an intermittent one) names the test and its panic
-if ! cargo test -q -p kdict-pipeline -p kdict-core > .git/verify-rust-tests.log 2>&1; then
-  grep -E "^test result|FAILED|panicked|^---- " .git/verify-rust-tests.log
-  echo "rust tests failed: full output in .git/verify-rust-tests.log"; exit 1
+# one run: keep its output so a failure (even an intermittent one) names the test and its panic.
+# In a git worktree .git is a file, so logs go to the real git dir.
+RUST_LOG_FILE="$(git rev-parse --git-dir)/verify-rust-tests.log"
+if ! cargo test -q -p kdict-pipeline -p kdict-core > "$RUST_LOG_FILE" 2>&1; then
+  grep -E "^test result|FAILED|panicked|^---- " "$RUST_LOG_FILE"
+  echo "rust tests failed: full output in $RUST_LOG_FILE"; exit 1
 fi
-grep -E "^test result" .git/verify-rust-tests.log
+grep -E "^test result" "$RUST_LOG_FILE"
 step "rust: clippy"
 cargo clippy -q -p kdict-pipeline -p kdict-core -- -D warnings
 step "search benchmark: core/tests/golden_queries.tsv (needs unpacked packs)"

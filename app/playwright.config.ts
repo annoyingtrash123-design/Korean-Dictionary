@@ -1,5 +1,9 @@
 import { defineConfig } from '@playwright/test';
 import { existsSync, readdirSync } from 'node:fs';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
 
 // The preinstalled chromium may not match the playwright version; fall back to whatever is in PLAYWRIGHT_BROWSERS_PATH.
 function findChromium(): string | undefined {
@@ -14,8 +18,9 @@ function findChromium(): string | undefined {
 
 export default defineConfig({
   testDir: 'e2e',
-  // agent worktrees under .claude/ hold other checkouts of the same specs
-  testIgnore: ['**/.claude/**'],
+  // agent worktrees under .claude/ hold other checkouts of the same specs. Only ignore those below this
+  // checkout: a checkout that itself lives in .claude/worktrees/ must still run its own specs.
+  testIgnore: new RegExp(`^${HERE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/.*\\.claude/`),
   timeout: 600_000,
   workers: 1,
   expect: { timeout: 60_000 },
