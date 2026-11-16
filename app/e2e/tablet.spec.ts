@@ -162,20 +162,20 @@ test('two-pane tablet layout', async ({ page }) => {
   await page.keyboard.press('/');
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeFocused();
 
-  // bookmarks split
+  // lists split
   await page.locator('.pane-left .row', { hasText: '학교' }).first().click();
   await expect(page.locator('.pane-right h1')).toContainText('학교');
-  await page.getByRole('button', { name: 'Add bookmark' }).click();
-  await page.getByRole('button', { name: 'Saved' }).click();
-  await page.getByRole('link', { name: 'Bookmarks' }).click();
+  await page.getByRole('button', { name: 'Save to Saved words' }).click();
+  await page.getByRole('link', { name: 'Lists', exact: true }).click();
+  await page.locator('.pane-left .list-row', { hasText: 'Saved words' }).click();
   await expect(page.locator('.pane-left .bm .hw', { hasText: '학교' })).toBeVisible();
   await expect(page.getByText('Pick a saved word')).toBeVisible();
   await page.locator('.pane-left .bm .row', { hasText: '학교' }).click();
   await expect(page.locator('.pane-right h1')).toContainText('학교');
   await expect(page.locator('.pane-left .bm .row[aria-current="true"]')).toHaveCount(1);
-  await expect(page.getByRole('link', { name: 'Bookmarks' })).toHaveAttribute('aria-current', 'page');
+  await expect(page.getByRole('link', { name: 'Lists', exact: true })).toHaveAttribute('aria-current', 'page');
   await page.waitForTimeout(300);
-  await shot(page, 'light-bookmarks');
+  await shot(page, 'light-lists');
 
   // settings: single column
   await page.getByRole('link', { name: 'Settings' }).click();
@@ -191,10 +191,11 @@ test('two-pane tablet layout', async ({ page }) => {
   await expect(page.locator('.pane-right h1')).toContainText('학교');
   await page.waitForTimeout(500);
   await shot(page, 'dark-entry');
-  await page.getByRole('link', { name: 'Bookmarks' }).click();
+  await page.getByRole('link', { name: 'Lists', exact: true }).click();
+  await page.locator('.pane-left .list-row', { hasText: 'Saved words' }).click();
   await page.locator('.pane-left .bm .row', { hasText: '학교' }).click();
   await page.waitForTimeout(300);
-  await shot(page, 'dark-bookmarks');
+  await shot(page, 'dark-lists');
 
   // portrait (< 900px): phone layout, centred in a wider column
   await page.setViewportSize({ width: 820, height: 1180 });

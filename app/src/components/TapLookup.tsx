@@ -96,7 +96,7 @@ export function TapLookup() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (t.closest('.tl-host .lk')) return;
+      if (t.closest('.tl-host .lk, .sheet-wrap, .toast-host')) return;   // the card's own list picker and toast keep it open
       const el = t.closest<HTMLElement>('[data-tap]');
       const s = window.getSelection();
       if (s && !s.isCollapsed && s.toString().trim()) return;   // selecting text, not tapping
@@ -107,7 +107,7 @@ export function TapLookup() {
       setBox(pane.getBoundingClientRect());
       void selectAt(el, off);
     };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape' && selRef.current) clear(); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape' && selRef.current && !document.querySelector('.sheet-wrap')) clear(); };
     const onNav = () => clear();
     document.addEventListener('click', onClick);
     window.addEventListener('keydown', onKey);

@@ -13,7 +13,7 @@ delivered as an installable Progressive Web App (PWA) hosted on GitHub Pages.
 | Dictionaries | English: krdict (NIKL learner's dict), Wiktionary (kaikki), kengdic. Korean–Korean: 표준국어대사전 (stdict) as a secondary, toggleable dictionary |
 | Per entry | Headword, hanja, pronunciation, POS, level, English definitions, example sentences, related words / synonyms / antonyms, usage notes |
 | Search | Korean (prefix + exact), conjugation-aware (갔어요 → 가다), English → Korean, hanja (學 → 학교, 학생…) |
-| Extra features | Bookmarks in folders, search history, hanja character breakdown, grammar reference, usage notes |
+| Extra features | Word lists (entries and grammar patterns), search history, hanja character breakdown, grammar reference, usage notes |
 | Home screen | Word of the day + recent history |
 | Theming | Light / dark / sepia presets + custom accent, background, text, hangul and hanja colours, font size |
 | Not included | OCR, flashcards, TTS, romanization input, text reader (can be added later) |
@@ -201,7 +201,7 @@ Exact numeric formula lives in `pipeline/build.py`; only ordering matters to the
   section that breaks the word down per character with other words sharing each character,
   and a link to the grammar reference for grammar entries. Bookmark button.
 * **Grammar reference**: browse by category and level, then open the full entry.
-* **Bookmarks**: folders, add/remove/move, export/import JSON backup.
+* **Lists** (replaced Bookmarks): user lists of entries and grammar patterns (keyed on `source|headword|homonym|pos` / pattern text, never on row ids); tap the star to save to the last-used list, long-press / right-click / Shift+F10 to pick lists; old bookmarks migrate into "Saved words"; export/import JSON backup (old bookmark backups still import). Built-in read-only lists plug in as further `ListSource`s (`app/src/lib/list-sources.ts`).
 * **History**: recent lookups on the home screen; clearable.
 * **Word of the day**: deterministic pick from krdict level 1–2 entries by date.
 * **Settings**: theme presets + colour pickers, font size, enable/disable stdict, data

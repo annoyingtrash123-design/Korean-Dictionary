@@ -97,7 +97,7 @@ async function tour(page: Page, theme: 'light' | 'dark') {
   await shot(page, `${theme}-settings`);
 }
 
-test('first run, search, bookmarks, themes, offline persistence', async ({ page, context }) => {
+test('first run, search, lists, themes, offline persistence', async ({ page, context }) => {
   test.setTimeout(600_000);
   page.on('console', (m) => { if (m.text().startsWith('KDPERF')) console.log(m.text()); });
   page.on('pageerror', (e) => console.log('PAGEERROR', e.message));
@@ -127,24 +127,25 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await expect(page.locator('.hanja-card')).toContainText('學'); // readings/meaning are empty in the current real pack (Unihan missing)
   await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
 
-  // ---- entry + bookmark ----
+  // ---- entry + save to a list ----
   await search(page, '학교');
   await page.locator('.row', { hasText: '학교' }).first().click();
   await expect(page.locator('h1')).toContainText('학교');
   await expect(page.getByText('krdict 한국어기초사전')).toBeVisible();
-  await page.getByRole('button', { name: 'Add bookmark' }).click();
-  await page.getByRole('button', { name: 'Saved' }).click();
-  await expect(page.getByRole('button', { name: 'Edit bookmark' })).toBeVisible();
+  await page.getByRole('button', { name: 'Save to Saved words' }).click();
+  await expect(page.locator('.app-toast')).toContainText('Saved to Saved words');
+  await expect(page.getByRole('button', { name: 'Remove from Saved words' })).toBeVisible();
   await tabs(page, 'main', 'phone-entry-tab', shot);
   await page.locator('.hj-link', { hasText: '學' }).click();
   await expect(page.locator('.hanja-giant')).toHaveText('學');
-  await page.getByRole('link', { name: 'Bookmarks' }).click();
+  await page.getByRole('link', { name: 'Lists', exact: true }).click();
+  await page.locator('.list-row', { hasText: 'Saved words' }).click();
   await expect(page.locator('.bm .hw', { hasText: '학교' })).toBeVisible();
-  // bookmarks open by headword (stable across data rebuilds), not by entry id
+  // saved words open by headword (stable across data rebuilds), not by entry id
   await page.locator('.bm .row', { hasText: '학교' }).click();
   await expect(page).toHaveURL(/#\/word\//);
   await expect(page.locator('h1')).toContainText('학교');
-  await expect(page.getByRole('button', { name: 'Edit bookmark' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Remove from Saved words' })).toBeVisible();
 
   // ---- light screenshots, then dark theme ----
   await page.goto('/#/settings');
@@ -153,10 +154,11 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await page.getByRole('radio', { name: 'Dark' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await tour(page, 'dark');
-  await page.goto('/#/bookmarks');
-  await shot(page, 'dark-bookmarks');
+  await page.goto('/#/lists/saved');
+  await expect(page.locator('.bm .hw', { hasText: '학교' })).toBeVisible();
+  await shot(page, 'dark-lists');
 
-  // ---- reload offline: data, theme and bookmarks persist ----
+  // ---- reload offline: data, theme and lists persist ----
   await page.goto('/');
   await page.evaluate(() => navigator.serviceWorker?.ready);
   await context.setOffline(true);
@@ -165,7 +167,7 @@ test('first run, search, bookmarks, themes, offline persistence', async ({ page,
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 30_000 });
   await search(page, '먹다');
   await expect(page.locator('.row .hw', { hasText: '먹다' }).first()).toBeVisible();
-  await page.goto('/#/bookmarks');
+  await page.goto('/#/lists/saved');
   await expect(page.locator('.bm .hw', { hasText: '학교' })).toBeVisible();
   await context.setOffline(false);
 });
@@ -234,7 +236,7 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
     history.back();
   }));
   const tabs: number[] = [];
-  for (const name of ['Bookmarks', 'Settings', 'Bookmarks']) {
+  for (const name of ['Lists', 'Settings', 'Lists']) {
     tabs.push(await page.evaluate((n) => new Promise<number>((resolve) => {
       const t = performance.now();
       const main = document.querySelector('main')!;

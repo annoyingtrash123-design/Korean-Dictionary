@@ -13,7 +13,7 @@ import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
 import { cachedManifest } from '../db/client';
 import { UpdateBanner } from '../components/UpdateBanner';
-import { bookmarks, exportBookmarks, ImportError, importBookmarks, MAX_IMPORT_BYTES } from '../lib/bookmarks';
+import { exportBackup, ImportError, importBackup, itemCount, lists, MAX_IMPORT_BYTES } from '../lib/lists';
 import { useAsync } from '../lib/useAsync';
 import attribution from '../assets/ATTRIBUTION.md?raw';
 import { inlineParts, parseMarkdown } from '../lib/markdown';
@@ -37,7 +37,7 @@ export function SettingsView() {
   const st = useStore(packStatus$);
   const upd = useStore(update);
   const persisted = useStore(persisted$);
-  const bm = useStore(bookmarks);
+  const ls = useStore(lists);
   const [msg, setMsg] = useState('');
   const [installing, setInstalling] = useState<string[] | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -67,15 +67,15 @@ export function SettingsView() {
   const startInstall = async (ids: string[]) => { setMsg(''); const m = (await checkForUpdate()) ?? manifest; /* always the live manifest: chunk files of an older version are gone after a deploy */ if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
 
   const exportFile = () => {
-    if (IS_NATIVE) { nativeSaveFile(`korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json`, exportBookmarks(undefined, errors$.get())).catch((e) => { logError('backup export', e); setMsg('Could not save the backup.'); }); return; }
-    const url = URL.createObjectURL(new Blob([exportBookmarks(undefined, errors$.get())], { type: 'application/json' }));
+    if (IS_NATIVE) { nativeSaveFile(`korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json`, exportBackup(undefined, errors$.get())).catch((e) => { logError('backup export', e); setMsg('Could not save the backup.'); }); return; }
+    const url = URL.createObjectURL(new Blob([exportBackup(undefined, errors$.get())], { type: 'application/json' }));
     const a = Object.assign(document.createElement('a'), { href: url, download: `korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json` });
     document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
   const importFile = async (f: File | undefined) => {
     if (!f) return;
     if (f.size > MAX_IMPORT_BYTES) { setMsg('That file is too large (limit 5 MB).'); if (fileRef.current) fileRef.current.value = ''; return; }
-    try { const r = await importBookmarks(await f.text()); setMsg(`Imported ${r.items} bookmark(s) and ${r.folders} folder(s).`); }
+    try { const r = await importBackup(await f.text()); setMsg(`Imported ${r.items} item(s) and ${r.lists} new list(s).`); }
     catch (e) { if (!(e instanceof ImportError)) logError('backup-import', e); setMsg(e instanceof ImportError ? e.message : 'That file is not a valid backup.'); }
     if (fileRef.current) fileRef.current.value = '';
   };
@@ -148,9 +148,9 @@ export function SettingsView() {
       </Group>
 
       <Group id="backup" title="Backup" open={open} onToggle={toggle}>
-        <p class="muted small">{bm.items.length} saved word(s). Exports bookmarks and folders as a JSON file.</p>
+        <p class="muted small">{ls.lists.length} list(s), {itemCount(ls)} saved item(s). Exports all your lists as a JSON file; older bookmark backups can be imported too.</p>
         <div class="btn-row">
-          <button type="button" class="btn" onClick={exportFile}>Export bookmarks</button>
+          <button type="button" class="btn" onClick={exportFile}>Export lists</button>
           <button type="button" class="btn" onClick={() => fileRef.current?.click()}>Import…</button>
           <input ref={fileRef} type="file" accept="application/json,.json" hidden aria-label="Import backup file" onChange={(e) => importFile((e.currentTarget as HTMLInputElement).files?.[0])} />
         </div>

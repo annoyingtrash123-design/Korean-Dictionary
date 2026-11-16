@@ -52,7 +52,7 @@ export function FirstRun() {
           ) : (
             <>
               <strong>The downloaded dictionaries are no longer on this phone.</strong>
-              <p class="small">Your bookmarks, history and game progress were kept. {persisted || IS_NATIVE ? 'Storage protection is on.' : 'Add the app to your Home Screen (below), then download again: installed apps get their storage protected.'}</p>
+              <p class="small">Your lists, history and game progress were kept. {persisted || IS_NATIVE ? 'Storage protection is on.' : 'Add the app to your Home Screen (below), then download again: installed apps get their storage protected.'}</p>
             </>
           )}
           {report && (

@@ -1,5 +1,5 @@
 import { logError } from './errlog';
-// Stable identity for saved words. entries.id is renumbered by every monthly data rebuild, so bookmarks and
+// Stable identity for saved words. entries.id is renumbered by every monthly data rebuild, so saved items and
 // history are keyed on `source|headword|homonym|pos` and re-resolved against the current database when opened.
 export interface EntryRef { source: string; headword: string; homonym?: number | null; pos?: string | null }
 /** What a saved item remembers about its entry. */

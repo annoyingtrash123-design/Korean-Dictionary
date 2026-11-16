@@ -1,4 +1,4 @@
-// A copy of the user's own data (bookmarks, history, game progress) in localStorage.
+// A copy of the user's own data (lists, history, game progress) in localStorage.
 // When Chrome is short of space it clears a site's IndexedDB and file storage but keeps its
 // localStorage, so this copy brings the data back after such a clean-up.
 

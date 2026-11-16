@@ -1,110 +1,194 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
-  addBookmark, bookmarks, createFolder, deleteFolder, emptyData, exportBookmarks, findBookmark, importBookmarks, isBookmarked,
-  MAX_IMPORT_BYTES, MAX_IMPORT_ITEMS, moveBookmark, removeBookmark, renameFolder, sanitize, upgradeBookmarks,
-} from './bookmarks';
+  addToList, createList, deleteList, DEFAULT_LIST, emptyLists, exportBackup, findList, grammarKey, importBackup, inList, itemCount, lists, listsWith,
+  MAX_IMPORT_BYTES, MAX_IMPORT_ITEMS, migrateBookmarks, removeFromList, renameList, restoreItem, sanitizeLists, setLastUsed, targetList, toggleSave,
+  upgradeLists, type ItemInput,
+} from './lists';
+import { sanitizeBookmarks } from './bookmarks';
 import { sanitizeHistory } from './history';
 import { refFromParams, resolveEntry, savedPath, stableKey } from './entry-key';
 
-const ref = (n: number, extra = {}) => ({ source: 'krdict', headword: 'w' + n, homonym: null, pos: 'noun', hanja: null, gloss: 'g', ...extra });
+const word = (n: number, extra = {}): ItemInput & { kind: 'entry' } => ({ kind: 'entry', source: 'krdict', headword: 'w' + n, homonym: null, pos: 'noun', hanja: null, gloss: 'g', ...extra });
+const gram = (pattern: string): ItemInput => ({ kind: 'grammar', pattern, summary: 'because', level: 1, ref: { source: 'krdict', homonym: null, pos: null } });
+const saved = () => findList(lists.get(), DEFAULT_LIST.id)!;
+const keys = (id: string) => findList(lists.get(), id)!.items.map((i) => i.key);
 
-describe('bookmark store', () => {
-  beforeEach(() => bookmarks.set(emptyData()));
+describe('list store', () => {
+  beforeEach(() => lists.set(emptyLists()));
 
-  it('keys bookmarks on source|headword|homonym|pos, not on ids', async () => {
-    await addBookmark(ref(1, { homonym: 2 }));
-    expect(bookmarks.get().items[0].key).toBe('krdict|w1|2|noun');
-    expect(bookmarks.get().items[0]).not.toHaveProperty('id');
+  it('starts with an empty "Saved words" that taps go to', () => {
+    expect(lists.get().lists.map((l) => l.name)).toEqual(['Saved words']);
+    expect(targetList(lists.get())!.id).toBe('saved');
   });
-  it('adds, dedupes and removes', async () => {
-    await addBookmark(ref(1));
-    await addBookmark(ref(1));
-    await addBookmark(ref(2));
-    expect(bookmarks.get().items.map((i) => i.headword)).toEqual(['w2', 'w1']);
-    expect(isBookmarked(bookmarks.get(), ref(1))).toBe(true);
-    await removeBookmark(stableKey(ref(1)));
-    expect(isBookmarked(bookmarks.get(), ref(1))).toBe(false);
+  it('keys entries on source|headword|homonym|pos and grammar on the pattern text', async () => {
+    await addToList('saved', word(1, { homonym: 2 }));
+    await addToList('saved', gram('-아서/어서'));
+    expect(keys('saved')).toEqual([grammarKey('-아서/어서'), 'krdict|w1|2|noun']);
+    expect(saved().items[0]).toMatchObject({ kind: 'grammar', pattern: '-아서/어서', summary: 'because', level: 1 });
+    expect(saved().items[1]).not.toHaveProperty('id');
   });
-  it('tells homonyms and parts of speech apart', async () => {
-    await addBookmark(ref(1, { homonym: 1 }));
-    await addBookmark(ref(1, { homonym: 2 }));
-    await addBookmark(ref(1, { homonym: 2, pos: 'verb' }));
-    expect(bookmarks.get().items).toHaveLength(3);
-    expect(findBookmark(bookmarks.get(), ref(1, { homonym: 2, pos: 'verb' }))).toBeTruthy();
+  it('adds newest first, dedupes, removes', async () => {
+    await addToList('saved', word(1));
+    await addToList('saved', word(1));
+    await addToList('saved', word(2));
+    expect(saved().items.map((i) => i.kind === 'entry' && i.headword)).toEqual(['w2', 'w1']);
+    await removeFromList('saved', stableKey(word(1)));
+    expect(keys('saved')).toEqual([stableKey(word(2))]);
   });
-  it('manages folders and moves items', async () => {
-    await createFolder('Verbs');
-    const f = bookmarks.get().folders.find((x) => x.name === 'Verbs')!;
-    await addBookmark(ref(1));
-    await moveBookmark(stableKey(ref(1)), f.id);
-    expect(bookmarks.get().items[0].folder).toBe(f.id);
-    await renameFolder(f.id, 'Verbs 2');
-    expect(bookmarks.get().folders.find((x) => x.id === f.id)!.name).toBe('Verbs 2');
-    await deleteFolder(f.id);
-    expect(bookmarks.get().items[0].folder).toBe('saved');
-    await deleteFolder('saved'); // default folder cannot be deleted
-    expect(bookmarks.get().folders.some((x) => x.id === 'saved')).toBe(true);
+  it('keeps one item in several lists', async () => {
+    const verbs = await createList('  Verbs   to   learn ');
+    expect(findList(lists.get(), verbs)!.name).toBe('Verbs to learn');
+    await addToList('saved', word(1));
+    await addToList(verbs, word(1));
+    expect(listsWith(lists.get(), stableKey(word(1))).map((l) => l.id)).toEqual(['saved', verbs]);
+    expect(itemCount(lists.get())).toBe(1);
+    await removeFromList(verbs, stableKey(word(1)));
+    expect(inList(saved(), stableKey(word(1)))).toBe(true);
   });
-  it('round-trips export/import and merges', async () => {
-    await createFolder('A');
-    const fid = bookmarks.get().folders[1].id;
-    await addBookmark(ref(1, { folder: fid, homonym: 3 }));
-    const json = exportBookmarks();
-    bookmarks.set(emptyData());
-    expect(await importBookmarks(json)).toEqual({ folders: 1, items: 1 });
-    expect(bookmarks.get().items[0].folder).toBe(fid);
-    expect(bookmarks.get().items[0].homonym).toBe(3);
-    expect(await importBookmarks(json)).toEqual({ folders: 0, items: 0 });
+  it('renames and deletes lists', async () => {
+    const id = await createList('A');
+    await renameList(id, 'B');
+    expect(findList(lists.get(), id)!.name).toBe('B');
+    await renameList(id, '   ');
+    expect(findList(lists.get(), id)!.name).toBe('B');
+    await deleteList(id);
+    expect(findList(lists.get(), id)).toBeUndefined();
   });
-  it('sanitises garbage', () => {
-    const d = sanitize({ folders: [{ id: 'x' }, { id: 'ok', name: 'Ok' }], items: [{ source: 'a', id: 1, headword: 'h', folder: 'nope' }, { bad: 1 }] });
-    expect(d.folders.map((f) => f.id)).toEqual(['saved', 'ok']);
-    expect(d.items).toHaveLength(1);
-    expect(d.items[0].folder).toBe('saved');
+  it('tap toggles the item in the last-used list', async () => {
+    const id = await createList('Topik');
+    await setLastUsed(id);
+    expect(await toggleSave(word(1))).toMatchObject({ removed: false, list: { id } });
+    expect(inList(findList(lists.get(), id), stableKey(word(1)))).toBe(true);
+    expect(inList(saved(), stableKey(word(1)))).toBe(false);
+    expect(await toggleSave(word(1))).toMatchObject({ removed: true, list: { id } });
+    expect(findList(lists.get(), id)!.items).toHaveLength(0);
   });
-  it('rejects invalid import JSON', async () => {
-    await expect(importBookmarks('not json')).rejects.toThrow();
+  it('falls back to "Saved words" when the last-used list is gone, and makes it again if needed', async () => {
+    const id = await createList('Gone');
+    await setLastUsed(id);
+    await deleteList(id);
+    expect((await toggleSave(word(1))).list.id).toBe('saved');
+    await deleteList('saved');
+    expect(lists.get().lists).toHaveLength(0);
+    const r = await toggleSave(word(2));
+    expect(r.list.name).toBe('Saved words');
+    expect(keys('saved')).toEqual([stableKey(word(2))]);
   });
-  it('rejects oversized imports (bytes and item count)', async () => {
-    await expect(importBookmarks(' '.repeat(MAX_IMPORT_BYTES + 1))).rejects.toThrow(/too large/);
-    const many = JSON.stringify({ items: Array.from({ length: MAX_IMPORT_ITEMS + 1 }, (_, i) => ref(i)) });
-    await expect(importBookmarks(many)).rejects.toThrow(/too many/);
-    const ok = JSON.stringify({ items: Array.from({ length: 1000 }, (_, i) => ref(i)) });
-    expect((await importBookmarks(ok)).items).toBe(1000);
+  it('undo puts a removed item back where it was', async () => {
+    for (const n of [1, 2, 3]) await addToList('saved', word(n));
+    const it = saved().items[1];
+    await removeFromList('saved', it.key);
+    await restoreItem('saved', it, 1);
+    expect(saved().items.map((i) => i.key)).toEqual([3, 2, 1].map((n) => stableKey(word(n))));
+    await restoreItem('saved', it, 1);   // twice: no duplicate
+    expect(saved().items).toHaveLength(3);
   });
 });
 
-describe('legacy source:id bookmarks', () => {
-  beforeEach(() => bookmarks.set(emptyData()));
-  const old = { version: 1, folders: [], items: [
-    { key: 'krdict:10', source: 'krdict', id: 10, headword: '배', hanja: null, gloss: 'pear', folder: 'saved', added: 1 },
-    { key: 'krdict:11', source: 'krdict', id: 11, headword: '배', hanja: null, gloss: 'ship', folder: 'saved', added: 2 },
-    { key: 'wikt:5', source: 'wikt', id: 5, headword: '밥', hanja: null, gloss: 'rice', folder: 'saved', added: 3 },
-  ] };
-  it('keeps same-headword legacy items apart until migrated', () => {
-    const d = sanitize(old);
-    expect(d.items).toHaveLength(3);
-    expect(new Set(d.items.map((i) => i.key)).size).toBe(3);
-    expect(d.items.every((i) => i.legacyId != null)).toBe(true);
+describe('bookmarks become lists', () => {
+  const old = {
+    version: 1,
+    folders: [{ id: 'saved', name: 'Saved' }, { id: 'fverbs', name: 'Verbs' }, { id: 'fempty', name: 'Empty' }],
+    items: [
+      { key: 'krdict|가다||verb', source: 'krdict', headword: '가다', homonym: null, pos: 'verb', hanja: null, gloss: 'go', folder: 'fverbs', added: 30 },
+      { key: 'krdict|학교||noun', source: 'krdict', headword: '학교', homonym: null, pos: 'noun', hanja: '學校', gloss: 'school', folder: 'saved', added: 20 },
+      { key: 'krdict:10', source: 'krdict', id: 10, headword: '배', hanja: null, gloss: 'pear', folder: 'saved', added: 10 },
+    ],
+  };
+  it('puts the default folder in "Saved words" and every other folder in a list of its name', () => {
+    const d = migrateBookmarks(emptyLists(), sanitizeBookmarks(old));
+    expect(d.migrated).toBe(true);
+    expect(d.lists.map((l) => [l.id, l.name, l.items.length])).toEqual([['saved', 'Saved words', 2], ['fverbs', 'Verbs', 1], ['fempty', 'Empty', 0]]);
+    expect(d.lists[0].items.map((i) => i.key)).toEqual(['krdict|학교||noun', 'krdict|배||#10']);
+    expect(d.lists[0].items[0]).toMatchObject({ kind: 'entry', hanja: '學校', gloss: 'school', added: 20 });
+    expect(d.lists[1]).toMatchObject({ created: 30, updated: 30 });
   });
-  it('migrates to stable keys using the old ids', async () => {
-    bookmarks.set(sanitize(old));
-    const db: Record<string, { headword: string; homonym?: number; pos?: string }> = {
-      'krdict:10': { headword: '배', homonym: 1, pos: 'noun' }, 'krdict:11': { headword: '배', homonym: 2, pos: 'noun' },
-      'wikt:5': { headword: 'DIFFERENT', pos: 'noun' }, // id now points elsewhere (data rebuilt)
-    };
-    // loadBookmarks() reads IndexedDB (empty here) so the in-memory legacy items stay as set above
-    await upgradeBookmarks(async (s, id) => db[`${s}:${id}`] ?? null);
-    const keys = bookmarks.get().items.map((i) => i.key).sort();
-    expect(keys).toEqual(['krdict|배|1|noun', 'krdict|배|2|noun', 'wikt|밥||']);
-    expect(bookmarks.get().items.some((i) => i.legacyId != null)).toBe(false);
-    expect(bookmarks.get().items.find((i) => i.headword === '밥')!.gloss).toBe('rice');
+  it('is idempotent', () => {
+    const once = migrateBookmarks(emptyLists(), sanitizeBookmarks(old));
+    const twice = migrateBookmarks(once, sanitizeBookmarks(old));
+    expect(twice).toEqual(once);
   });
-  it('leaves legacy items untouched if the engine is unavailable', async () => {
-    bookmarks.set(sanitize(old));
-    await upgradeBookmarks(async () => { throw new Error('no engine'); });
-    expect(bookmarks.get().items.every((i) => i.legacyId != null)).toBe(true);
+  it('merges into lists that already exist without losing anything', () => {
+    const base = emptyLists();
+    base.lists[0].items.push({ kind: 'grammar', key: grammarKey('-고'), pattern: '-고', summary: null, level: null, added: 99, ref: null });
+    const d = migrateBookmarks(base, sanitizeBookmarks(old));
+    expect(d.lists[0].items.map((i) => i.key)).toEqual([grammarKey('-고'), 'krdict|학교||noun', 'krdict|배||#10']);
   });
+  it('resolves legacy source:id items in every list once the engine is up', async () => {
+    lists.set(migrateBookmarks(emptyLists(), sanitizeBookmarks(old)));
+    const verbs = 'fverbs';
+    await addToList(verbs, { kind: 'entry', source: 'krdict', headword: '배', homonym: 1, pos: 'noun' });
+    const l = findList(lists.get(), verbs)!;
+    l.items.push({ ...saved().items[1] });   // the same legacy item in a second list
+    await upgradeLists(async (s, id) => (s === 'krdict' && id === 10 ? { headword: '배', homonym: 1, pos: 'noun' } : null));
+    expect(keys('saved')).toEqual(['krdict|학교||noun', 'krdict|배|1|noun']);
+    expect(keys(verbs)).toEqual(['krdict|배|1|noun', 'krdict|가다||verb']);   // deduped
+    expect(lists.get().lists.flatMap((x) => x.items).some((i) => i.kind === 'entry' && i.legacyId != null)).toBe(false);
+  });
+  it('leaves legacy items alone if the engine is unavailable', async () => {
+    lists.set(migrateBookmarks(emptyLists(), sanitizeBookmarks(old)));
+    await upgradeLists(async () => { throw new Error('no engine'); });
+    expect(keys('saved')).toContain('krdict|배||#10');
+  });
+});
+
+describe('backup', () => {
+  beforeEach(() => lists.set(emptyLists()));
+
+  it('round-trips all lists, grammar items and the last-used list, and merges', async () => {
+    const id = await createList('Grammar');
+    await addToList(id, gram('-(으)니까'));
+    await addToList('saved', word(1, { homonym: 3 }));
+    await addToList(id, word(1, { homonym: 3 }));
+    await setLastUsed(id);
+    const json = exportBackup();
+    lists.set(emptyLists());
+    expect(await importBackup(json)).toEqual({ lists: 1, items: 3 });
+    expect(lists.get().lists.map((l) => l.name)).toEqual(['Saved words', 'Grammar']);
+    expect(findList(lists.get(), id)!.items[1]).toMatchObject({ kind: 'grammar', pattern: '-(으)니까', summary: 'because', ref: { source: 'krdict' } });
+    expect(findList(lists.get(), 'saved')!.items[0]).toMatchObject({ kind: 'entry', homonym: 3 });
+    expect(await importBackup(json)).toEqual({ lists: 0, items: 0 });
+    // the backup is the stored data itself
+    expect(sanitizeLists(JSON.parse(json)).lastUsed).toBe(id);
+  });
+  it('imports an old bookmarks-only backup into "Saved words" (and folder lists)', async () => {
+    const oldBackup = JSON.stringify({
+      app: 'korean-dictionary', exportedAt: '2026-01-01T00:00:00Z', version: 1,
+      folders: [{ id: 'saved', name: 'Saved' }, { id: 'fx', name: 'Food' }],
+      items: [
+        { key: 'krdict|밥||noun', source: 'krdict', headword: '밥', homonym: null, pos: 'noun', hanja: null, gloss: 'rice', folder: 'saved', added: 1 },
+        { key: 'krdict|김치||noun', source: 'krdict', headword: '김치', homonym: null, pos: 'noun', hanja: null, gloss: 'kimchi', folder: 'fx', added: 2 },
+      ],
+    });
+    await addToList('saved', word(9));
+    expect(await importBackup(oldBackup)).toEqual({ lists: 1, items: 2 });
+    expect(keys('saved')).toEqual([stableKey(word(9)), 'krdict|밥||noun']);
+    expect(findList(lists.get(), 'fx')).toMatchObject({ name: 'Food' });
+    expect(await importBackup(oldBackup)).toEqual({ lists: 0, items: 0 });
+  });
+  it('rejects bad files', async () => {
+    await expect(importBackup('not json')).rejects.toThrow();
+    await expect(importBackup(' '.repeat(MAX_IMPORT_BYTES + 1))).rejects.toThrow(/too large/);
+    const many = (n: number) => Array.from({ length: n }, (_, i) => ({ source: 'k', headword: 'w' + i, pos: null }));
+    await expect(importBackup(JSON.stringify({ items: many(MAX_IMPORT_ITEMS + 1) }))).rejects.toThrow(/too many/);
+    await expect(importBackup(JSON.stringify({ lists: [{ id: 'a', name: 'A', items: many(MAX_IMPORT_ITEMS + 1) }] }))).rejects.toThrow(/too many/);
+    expect((await importBackup(JSON.stringify({ lists: [{ id: 'a', name: 'A', items: many(1000) }] }))).items).toBe(1000);
+  });
+  it('sanitises garbage', () => {
+    const d = sanitizeLists({
+      lists: [{ id: 'x' }, { id: 'ok', name: 'Ok', items: [{ kind: 'grammar' }, { kind: 'grammar', pattern: '-고' }, { source: 'a', headword: 'h', pos: null }, { bad: 1 }, null] },
+        { id: 'ok', name: 'dup' }, { id: 'n', name: 'x'.repeat(500), items: 'nope' }],
+      lastUsed: 'missing',
+    });
+    expect(d.lists.map((l) => l.id)).toEqual(['ok', 'n']);
+    expect(d.lists[0].items.map((i) => i.key)).toEqual([grammarKey('-고'), 'a|h||']);
+    expect(d.lists[1].name).toHaveLength(80);
+    expect(d.lastUsed).toBe('saved');
+    expect(d.migrated).toBe(false);
+  });
+});
+
+describe('legacy history', () => {
   it('migrates stored history the same way', () => {
     const h = sanitizeHistory([{ key: 'krdict:10', source: 'krdict', id: 10, headword: '배', hanja: null, gloss: 'pear', ts: 5 }, { junk: 1 }]);
     expect(h).toHaveLength(1);

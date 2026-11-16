@@ -5,7 +5,9 @@ import { packVersion } from './pack-version';
 /** Current text in the search bar. */
 export const query = createStore('');
 /** Which list tab the two-pane layout shows on the left while an entry is open. */
-export const listTab = createStore<'search' | 'bookmarks' | 'reader'>('search');
+export const listTab = createStore<'search' | 'lists' | 'reader'>('search');
+/** The list last opened on the Lists tab (the two-pane layout keeps showing it next to an entry). */
+export const openList = createStore<string | undefined>(undefined);
 /** Latest manifest seen online; `stale` lists installed packs whose version differs from it (each pack is compared). */
 export const update = createStore<{ manifest: Manifest | null; available: boolean; stale: string[] }>({ manifest: null, available: false, stale: [] });
 

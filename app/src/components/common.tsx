@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 import { Icon } from './Icons';
 import { entryPath, href } from '../lib/router';
@@ -44,12 +45,31 @@ export function IconButton({ icon, label, onClick, active, size }: { icon: strin
   return <button type="button" class={`iconbtn${active ? ' on' : ''}`} aria-label={label} title={label} onClick={onClick}><Icon name={icon} size={size} fill={active && icon === 'star'} /></button>;
 }
 
-export function Sheet({ title, onClose, children }: { title: string; onClose: () => void; children: ComponentChildren }) {
+/** Modal bottom sheet: focus moves into it (to the `data-autofocus` element, else the sheet), stays in it (Tab wraps), Escape closes it, and focus goes
+ *  back to `back` (or what had it before) when it closes. */
+export function Sheet({ title, onClose, children, back }: { title: string; onClose: () => void; children: ComponentChildren; back?: HTMLElement | null }) {
+  const el = useRef<HTMLDivElement>(null);
+  const close = useRef(onClose);
+  close.current = onClose;
+  useEffect(() => {
+    const prev = back ?? (document.activeElement as HTMLElement | null);
+    (el.current?.querySelector<HTMLElement>('[data-autofocus]') ?? el.current)?.focus();
+    return () => { if (prev?.isConnected) prev.focus(); };
+  }, []);
+  const onKey = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') { e.preventDefault(); close.current(); return; }
+    if (e.key !== 'Tab' || !el.current) return;
+    const f = [...el.current.querySelectorAll<HTMLElement>('button:not(:disabled), input:not(:disabled), a[href], [tabindex]:not([tabindex="-1"])')];
+    if (!f.length) return;
+    const i = f.indexOf(document.activeElement as HTMLElement);
+    if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+  };
   return (
     <div class="sheet-wrap" onClick={onClose}>
-      <div class="sheet" role="dialog" aria-label={title} onClick={(e) => e.stopPropagation()}>
+      <div ref={el} class="sheet" role="dialog" aria-modal="true" aria-label={title} tabIndex={-1} onKeyDown={onKey} onClick={(e) => e.stopPropagation()}>
         <div class="sheet-head"><strong>{title}</strong><IconButton icon="x" label="Close" onClick={onClose} /></div>
-        {children}
+        <div class="sheet-body">{children}</div>
       </div>
     </div>
   );

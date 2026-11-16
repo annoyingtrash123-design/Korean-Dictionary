@@ -2,7 +2,7 @@ import { downloadAll, expect, test } from './fixtures';
 
 // Chrome, short of space, clears a site's IndexedDB and file storage but keeps localStorage.
 // Simulate that: carry only localStorage into a fresh browser profile.
-test('after the browser clears storage: explain it, keep bookmarks and history', async ({ page, browser }) => {
+test('after the browser clears storage: explain it, keep lists and history', async ({ page, browser }) => {
   test.setTimeout(400_000);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
@@ -11,12 +11,11 @@ test('after the browser clears storage: explain it, keep bookmarks and history',
   await box.fill('학교');
   await page.locator('.row', { hasText: '학교' }).first().click();
   await expect(page.locator('h1')).toContainText('학교');
-  await page.getByRole('button', { name: 'Add bookmark' }).click();
-  await page.getByRole('button', { name: 'Saved' }).click();
-  await expect(page.getByRole('button', { name: 'Edit bookmark' })).toBeVisible();
+  await page.getByRole('button', { name: 'Save to Saved words' }).click();
+  await expect(page.getByRole('button', { name: 'Remove from Saved words' })).toBeVisible();
   await page.waitForTimeout(500);
   const ls = await page.evaluate(() => Object.fromEntries(Object.keys(localStorage).map((k) => [k, localStorage.getItem(k)!])));
-  expect(Object.keys(ls)).toEqual(expect.arrayContaining(['kd.packs', 'kd.backup.bookmarks', 'kd.backup.history']));
+  expect(Object.keys(ls)).toEqual(expect.arrayContaining(['kd.packs', 'kd.backup.lists', 'kd.backup.history']));
 
   // Settings → Data → Technical details: always there, shows the packs and the engine's startup log
   await page.goto('/#/settings');
@@ -41,10 +40,11 @@ test('after the browser clears storage: explain it, keep bookmarks and history',
   await p2.getByText(/Technical details/).click();
   await expect(p2.locator('.diag pre')).toContainText(/storage in use: \d+ MB/);
   await expect(p2.locator('.diag pre')).toContainText(/last working: \d{4}-/);
-  await expect(p2.getByText(/bookmarks, history and game progress were kept/)).toBeVisible();
+  await expect(p2.getByText(/lists, history and game progress were kept/)).toBeVisible();
   await p2.screenshot({ path: '../docs/screenshots/storage-cleared.png' });
   await downloadAll(p2);
-  await p2.getByRole('link', { name: 'Bookmarks' }).click();
+  await p2.getByRole('link', { name: 'Lists', exact: true }).click();
+  await p2.locator('.list-row', { hasText: 'Saved words' }).click();
   await expect(p2.locator('.hw', { hasText: '학교' }).first()).toBeVisible();
   await p2.getByRole('link', { name: 'Search' }).click();
   await expect(p2.locator('.hw', { hasText: '학교' }).first()).toBeVisible();   // recent lookups

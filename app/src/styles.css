@@ -303,6 +303,37 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 12px); z-index: 30; display: flex; align-items: center; gap: 14px; max-width: calc(100% - 32px); padding: 8px 8px 8px 16px; border-radius: 22px; background: var(--text); color: var(--bg); font-size: 14px; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
 .toast .link { color: inherit; font-weight: 700; padding: 0 6px; min-height: 28px; text-decoration: underline; }
 .toast .link.dim { text-decoration: none; opacity: .8; font-size: 18px; }
+.app-toast { animation: toast-in .16s ease-out; }
+.toast-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@keyframes toast-in { from { opacity: 0; translate: 0 8px; } }
+@media (prefers-reduced-motion: reduce) { .app-toast { animation: none; } }
+
+/* ---------- Lists ---------- */
+.save-btn { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+.picker-what { margin: 0 0 6px; font-size: 18px; }
+.picker-lists { border-top: 1px solid var(--border); }
+.sheet-item.pick { cursor: pointer; }
+.sheet-item.pick input[type=checkbox] { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--accent); }
+.pick-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pick-last { flex: none; font-size: 11.5px; color: var(--accent); background: var(--accent-soft); border-radius: 9px; padding: 1px 8px; }
+.sheet-item .count, .list-row .count { flex: none; min-width: 1.5em; text-align: right; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.new-list-btn { color: var(--accent); font-weight: 500; }
+.name-form { display: flex; gap: 8px; align-items: center; padding: 8px 0; }
+.name-form .field { flex: 1; min-width: 0; }
+.sheet .name-form .btn { width: auto; margin-top: 0; }
+.btn.ghost { background: transparent; border-color: transparent; color: var(--accent); padding: 0 8px; }
+.lists .pad { padding-top: 4px; padding-bottom: 8px; }
+.list-row { color: inherit; }
+.list-row > svg:last-child { flex: none; color: var(--muted); }
+.list-ico { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.list-name { font-size: 17px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; }
+.list-row .row-gloss { font-size: 13px; color: var(--muted); }
+.back-link { display: inline-flex; align-items: center; gap: 4px; margin: 10px 10px 0; padding: 6px 6px; font-size: 15px; font-weight: 500; }
+.list-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 16px 0; }
+.list-title { font-size: 24px; line-height: 1.25; min-width: 0; overflow-wrap: anywhere; }
+.list-sub { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 40px; padding: 2px 16px 6px; }
+.list-edit { display: flex; gap: 8px; padding: 2px 16px 10px; }
+.list-edit .btn { flex: 1; }
 
 .firstrun { max-width: 480px; margin: 0 auto; min-height: 100dvh; padding: calc(env(safe-area-inset-top) + 40px) 20px 32px; display: flex; flex-direction: column; align-items: stretch; }
 .logo { width: 76px; height: 76px; border-radius: 20px; background: var(--bar); display: grid; place-items: center; margin-bottom: 18px; }
@@ -344,6 +375,8 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .pane-right .hanja-hero { padding-inline: 0; }
 .pane-right .sents, .pane-right .chars { padding-inline: 0; }
 .app.wide .toast { bottom: calc(env(safe-area-inset-bottom) + 20px); }
+.app.wide .sheet-wrap { align-items: flex-end; padding-bottom: 18px; }
+.app.wide .sheet { max-width: 560px; border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.22); }
 /* selected row: persistent accent bar + tint so it is clear what is open on the right */
 .pane-left .row { position: relative; }
 .pane-left .row:hover { background: var(--surface); }

@@ -8,7 +8,7 @@ const TABS = [
   { name: 'search', icon: 'search', label: 'Search', match: ['home', 'search', 'entry', 'word', 'hanja'] },
   { name: 'reader', icon: 'book', label: 'Reader', match: ['reader'] },
   { name: 'games', icon: 'dice', label: 'Games', match: ['games'] },
-  { name: 'bookmarks', icon: 'star', label: 'Bookmarks', match: ['bookmarks'] },
+  { name: 'lists', icon: 'lists', label: 'Lists', match: ['lists', 'bookmarks'] },
   { name: 'settings', icon: 'gear', label: 'Settings', match: ['settings'] },
 ];
 
@@ -24,7 +24,7 @@ export function TabBar() {
         const to = t.name === 'search' ? (query.get().trim() ? searchPath(query.get()) : '/') : '/' + t.name;
         return (
           <a key={t.name} href={href(to)} class={active ? 'tab on' : 'tab'} aria-current={active ? 'page' : undefined}>
-            <Icon name={t.icon} size={23} fill={active && t.icon === 'star'} />
+            <Icon name={t.icon} size={23} />
             <span>{t.label}</span>
           </a>
         );

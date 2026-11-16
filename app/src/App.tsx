@@ -5,7 +5,7 @@ import { Home } from './views/Home';
 import { Results } from './views/Results';
 import { EntryView } from './views/Entry';
 import { HanjaPage } from './views/HanjaPage';
-import { BookmarksView } from './views/Bookmarks';
+import { ListsView } from './views/Lists';
 import { SettingsView } from './views/Settings';
 import { GamesView } from './views/Games';
 import { FirstRun } from './views/FirstRun';
@@ -14,14 +14,16 @@ import { TextView } from './views/TextView';
 import { TapLookup } from './components/TapLookup';
 import { db, packStatus$, packsHint, refreshStatus, restartWorker } from './db/client';
 import { useStore } from './lib/store';
-import { useRoute, type Route } from './lib/router';
+import { navigate, useRoute, type Route } from './lib/router';
 import { useWide, useScrollMemo } from './lib/layout';
-import { listTab, query } from './lib/app-state';
+import { listTab, openList, query } from './lib/app-state';
 import { settings } from './lib/settings';
 import { applyTheme } from './lib/theme';
-import { loadBookmarks, upgradeBookmarks } from './lib/bookmarks';
+import { loadLists, upgradeLists } from './lib/lists';
 import { loadHistory, upgradeHistory } from './lib/history';
 import { UpdateToast } from './components/UpdateToast';
+import { Toast } from './components/Toast';
+import { ListPicker } from './components/SaveButton';
 import { refFromParams } from './lib/entry-key';
 import { Empty } from './components/common';
 import { LogoMark } from './components/Logo';
@@ -42,24 +44,28 @@ export function App() {
     return () => mq.removeEventListener('change', f);
   }, [s.theme]);
   useEffect(() => {
-    loadBookmarks(); loadHistory();
+    void loadLists(); loadHistory();
     // ask on every launch: browsers grant persistent storage once the app is installed, not before
     void requestPersist();
-    refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeBookmarks(lookup); void upgradeHistory(lookup); } /* dictionary updates are manual: Settings → Check for update */ }).catch(() => undefined);
+    refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeLists(lookup); void upgradeHistory(lookup); } /* dictionary updates are manual: Settings → Check for update */ }).catch(() => undefined);
   }, []);
   const wide = useWide();
   const list = useStore(listTab);
   const q = useStore(query);
   const entryRoute = ENTRY_ROUTES.includes(route.name);
   const readerRoute = route.name === 'reader';
-  const leftKind: 'search' | 'bookmarks' | 'reader' = readerRoute ? 'reader' : route.name === 'bookmarks' ? 'bookmarks' : entryRoute ? list : 'search';
+  const listsRoute = route.name === 'lists';
+  const openL = useStore(openList);
+  const leftKind: 'search' | 'lists' | 'reader' = readerRoute ? 'reader' : listsRoute ? 'lists' : entryRoute ? list : 'search';
   const leftQ = route.name === 'search' ? (route.params.get('q') ?? '') : q;
   const left = useRef<HTMLElement>(null);
   // Remember which list tab the open entry came from, so the left pane keeps showing it.
-  useEffect(() => { if (route.name === 'bookmarks') listTab.set('bookmarks'); else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings' && route.name !== 'games') listTab.set('search'); }, [route.name]);
+  useEffect(() => { if (listsRoute) { listTab.set('lists'); openList.set(route.parts[0]); } else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings' && route.name !== 'games') listTab.set('search'); }, [route.name, route.parts[0]]);
+  // The Bookmarks tab became Lists: old links and history entries land there.
+  useEffect(() => { if (route.name === 'bookmarks') navigate('/lists', true); }, [route.name]);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
   useScrollMemo(main, wide ? route.raw + '|w' : route.raw);
-  useScrollMemo(left, wide ? `L:${leftKind}:${leftKind === 'search' ? leftQ : ''}` : 'unused');
+  useScrollMemo(left, wide ? `L:${leftKind}:${leftKind === 'search' ? leftQ : leftKind === 'lists' ? openL ?? '' : ''}` : 'unused');
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const t = e.target as HTMLElement | null;
@@ -90,17 +96,19 @@ export function App() {
       <div class="app wide">
         <TabBar />
         {!single && (
-          <section class="pane-left" aria-label={leftKind === 'bookmarks' ? 'Bookmarks' : leftKind === 'reader' ? 'Reader library' : 'Search'}>
+          <section class="pane-left" aria-label={leftKind === 'lists' ? 'Lists' : leftKind === 'reader' ? 'Reader library' : 'Search'}>
             {leftKind !== 'reader' && <header class="topbar"><SearchBar /></header>}
             <main ref={left} class="pane-scroll">
-              {leftKind === 'reader' ? <ReaderLibrary currentId={readerRoute ? route.parts[0] : undefined} /> : leftKind === 'bookmarks' ? <BookmarksView /> : leftQ.trim() ? <Results q={leftQ} /> : <Home />}
+              {leftKind === 'reader' ? <ReaderLibrary currentId={readerRoute ? route.parts[0] : undefined} /> : leftKind === 'lists' ? <ListsView listId={listsRoute ? route.parts[0] : openL} /> : leftQ.trim() ? <Results q={leftQ} /> : <Home />}
             </main>
           </section>
         )}
         <main ref={main} id="main" tabIndex={-1} class={single ? `pane-right single${route.name === 'games' ? ' flush' : ''}` : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
-          {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty bookmarks={leftKind === 'bookmarks'} />}
+          {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty lists={leftKind === 'lists'} />}
         </main>
         <UpdateToast />
+        <Toast />
+        <ListPicker />
         <TapLookup />
       </div>
     );
@@ -111,6 +119,8 @@ export function App() {
       <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
       <TabBar />
       <UpdateToast />
+      <Toast />
+      <ListPicker />
       <TapLookup />
     </div>
   );
@@ -118,12 +128,12 @@ export function App() {
 
 const ENTRY_ROUTES = ['entry', 'word', 'hanja'];
 
-function PaneEmpty({ bookmarks }: { bookmarks: boolean }) {
+function PaneEmpty({ lists }: { lists: boolean }) {
   return (
     <div class="pane-empty">
       <div class="pane-empty-mark" aria-hidden="true"><LogoMark size={64} /></div>
-      <div class="empty-title">{bookmarks ? 'Pick a saved word' : 'Search or pick a word'}</div>
-      <div class="muted small">{bookmarks ? 'Choose a bookmark on the left to read it here.' : 'Type in the search box, or choose a recent word. Press / to jump to search.'}</div>
+      <div class="empty-title">{lists ? 'Pick a saved word' : 'Search or pick a word'}</div>
+      <div class="muted small">{lists ? 'Choose a list on the left, then a word in it, to read it here.' : 'Type in the search box, or choose a recent word. Press / to jump to search.'}</div>
     </div>
   );
 }
@@ -137,7 +147,7 @@ function view(r: Route) {
     case 'entry': return <EntryView key={entryKey(r)} source={r.parts[0]} id={Number(r.parts[1])} hw={r.params.get('hw') ?? undefined} />;
     case 'word': return <EntryView key={entryKey(r)} word={r.parts[0]} pref={r.params.has('s') ? refFromParams(r.params) : undefined} />;
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
-    case 'bookmarks': return <BookmarksView />;
+    case 'lists': case 'bookmarks': return <ListsView listId={r.name === 'lists' ? r.parts[0] : undefined} />;
     case 'settings': return <SettingsView />;
     case 'games': return <GamesView />;
     case 'reader': return r.parts[0] ? <TextView key={r.parts[0]} id={r.parts[0]} /> : <ReaderLibrary />;

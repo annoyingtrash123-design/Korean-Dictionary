@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { get } from 'idb-keyval';
 import { userDb } from './idb';
-import { bookmarks, emptyData, exportBookmarks, importBookmarks, addBookmark } from './bookmarks';
+import { addToList, emptyLists, exportBackup, importBackup, lists } from './lists';
 import { clearErrors, errors$, formatErrors, logError, makeEntry, MAX_ENTRIES, sanitizeEntries } from './errlog';
 
 const flush = () => new Promise((r) => setTimeout(r, 20));
@@ -48,20 +48,20 @@ describe('errlog', () => {
 });
 
 describe('backup round trip with the error log', () => {
-  beforeEach(() => bookmarks.set(emptyData()));
+  beforeEach(() => lists.set(emptyLists()));
 
   it('includes the log in the export and imports fine with or without it', async () => {
-    await addBookmark({ source: 'krdict', headword: '학교', homonym: null, pos: 'noun', hanja: null, gloss: 'school' });
+    await addToList('saved', { kind: 'entry', source: 'krdict', headword: '학교', homonym: null, pos: 'noun', hanja: null, gloss: 'school' });
     const errs = [makeEntry('t', 'boom', 5)];
-    const withLog = exportBookmarks(undefined, errs);
+    const withLog = exportBackup(undefined, errs);
     expect(JSON.parse(withLog).errors).toEqual(errs);
-    expect(JSON.parse(exportBookmarks())).not.toHaveProperty('errors');
+    expect(JSON.parse(exportBackup())).not.toHaveProperty('errors');
 
-    for (const json of [withLog, exportBookmarks()]) {
-      bookmarks.set(emptyData());
-      const r = await importBookmarks(json);
+    for (const json of [withLog, exportBackup()]) {
+      lists.set(emptyLists());
+      const r = await importBackup(json);
       expect(r.items).toBe(1);
-      expect(bookmarks.get().items[0].headword).toBe('학교');
+      expect(lists.get().lists[0].items[0]).toMatchObject({ kind: 'entry', headword: '학교' });
     }
   });
 });

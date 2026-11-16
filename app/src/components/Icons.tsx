@@ -13,6 +13,7 @@ const P: Record<string, JSX.Element> = {
   plus: <path d="M12 5v14M5 12h14" />,
   trash: <><path d="M4 7h16M10 11v6M14 11v6" /><path d="M6 7l1 13h10l1-13M9 7V4h6v3" /></>,
   edit: <><path d="M4 20h4L19 9l-4-4L4 16z" /></>,
+  lists: <><path d="M9 6.5h11M9 12h11M9 17.5h11" /><circle cx="4.6" cy="6.5" r="1.1" fill="currentColor" /><circle cx="4.6" cy="12" r="1.1" fill="currentColor" /><circle cx="4.6" cy="17.5" r="1.1" fill="currentColor" /></>,
   folder: <path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H10l2 2.5h7.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z" />,
   download: <><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14" /></>,
   dice: <><rect x="4" y="4" width="16" height="16" rx="3.5" /><circle cx="9" cy="9" r="1.1" fill="currentColor" /><circle cx="15" cy="9" r="1.1" fill="currentColor" /><circle cx="12" cy="12" r="1.1" fill="currentColor" /><circle cx="9" cy="15" r="1.1" fill="currentColor" /><circle cx="15" cy="15" r="1.1" fill="currentColor" /></>,

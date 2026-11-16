@@ -5,7 +5,6 @@ import { useAsync, useDelayed } from '../lib/useAsync';
 import { Lru } from '../lib/cache';
 import { settings } from '../lib/settings';
 import { useStore } from '../lib/store';
-import { bookmarks, findBookmark, addBookmark, removeBookmark, moveBookmark } from '../lib/bookmarks';
 import { resolveEntry, type EntryRef } from '../lib/entry-key';
 import { recordHistory } from '../lib/history';
 import { sameWordRows } from '../lib/merge';
@@ -14,7 +13,9 @@ import { TAP } from '../components/TapLookup';
 import { ExampleList } from '../components/Examples';
 import { TabBar, WordsTab, CharsTab, SentsTab, useEntryTab } from './EntryTabs';
 import { SOURCE_ORDER, SOURCE_TITLE, type Entry, type Sense } from '../lib/types';
-import { Empty, IconButton, LevelBadge, Pos, Sheet } from '../components/common';
+import { Empty, LevelBadge, Pos } from '../components/common';
+import { SaveButton } from '../components/SaveButton';
+import type { ItemInput } from '../lib/lists';
 import { Icon } from '../components/Icons';
 import { hanjaPath, href, searchPath, wordPath } from '../lib/router';
 import { useWide } from '../lib/layout';
@@ -89,9 +90,7 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
 }
 
 function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
-  const bm = useStore(bookmarks);
-  const [sheet, setSheet] = useState(false);
-  const marked = !!findBookmark(bm, primary);
+  const save = useSaveItem(primary);
   const pron = entries.find((e) => e.pron)?.pron;
   const level = entries.map((e) => e.level).find((l) => l != null) ?? null;
   const hom = entries.filter((e) => e.source === primary.source).length > 1 ? undefined : primary.homonym;
@@ -99,7 +98,7 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
     <header class="entry-head">
       <div class="entry-title">
         <h1 class="hangul" lang="ko">{primary.headword}{hom ? <sup>{hom}</sup> : null}</h1>
-        <IconButton icon="star" label={marked ? 'Edit bookmark' : 'Add bookmark'} active={marked} onClick={() => setSheet(true)} size={26} />
+        <SaveButton item={save} title={primary.headword} size={26} />
       </div>
       <div class="entry-meta">
         {primary.hanja && (
@@ -115,35 +114,18 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
         <LevelBadge level={level} />
         {primary.kind !== 'word' && <span class="pos">{primary.kind}</span>}
       </div>
-      {sheet && (
-        <FolderSheet marked={marked} bm={bm} entry={primary} onClose={() => setSheet(false)} />
-      )}
     </header>
   );
 }
 
-function FolderSheet({ marked, bm, entry, onClose }: { marked: boolean; bm: ReturnType<typeof bookmarks.get>; entry: Entry; onClose: () => void }) {
-  const cur = findBookmark(bm, entry);
-  const pick = async (folder: string) => {
-    if (cur) await moveBookmark(cur.key, folder);
-    else await addBookmark({ source: entry.source, headword: entry.headword, homonym: entry.homonym, pos: entry.pos, hanja: entry.hanja, gloss: entry.gloss, folder });
-    onClose();
-  };
-  return (
-    <Sheet title={marked ? 'Bookmarked in…' : 'Save to…'} onClose={onClose}>
-      <ul class="plain">
-        {bm.folders.map((f) => (
-          <li key={f.id}>
-            <button type="button" class="sheet-item" onClick={() => pick(f.id)}>
-              <Icon name="folder" size={20} /> <span>{f.name}</span>
-              {cur?.folder === f.id && <span class="check" aria-label="Current folder">✓</span>}
-            </button>
-          </li>
-        ))}
-      </ul>
-      {marked && <button type="button" class="btn danger" onClick={async () => { await removeBookmark(cur!.key); onClose(); }}>Remove bookmark</button>}
-    </Sheet>
-  );
+/** What the save button keeps: the grammar pattern for an entry of the grammar reference (keyed on its
+ *  pattern text, which survives data rebuilds), else the dictionary entry. */
+function useSaveItem(e: Entry): ItemInput {
+  const g = useAsync(() => db.grammarList().catch(() => []), []);
+  const rows = (g.data ?? []).filter((r) => r.pattern === e.headword);
+  const row = rows.find((r) => r.entry_id === e.id) ?? rows[0];
+  if (row) return { kind: 'grammar', pattern: row.pattern, summary: row.summary_en ?? e.gloss ?? null, level: row.level ?? e.level ?? null, ref: { source: e.source, homonym: e.homonym ?? null, pos: e.pos ?? null } };
+  return { kind: 'entry', source: e.source, headword: e.headword, homonym: e.homonym, pos: e.pos, hanja: e.hanja, gloss: e.gloss };
 }
 
 const RELTYPE: Record<string, string> = { synonym: 'syn', antonym: 'ant', honorific: 'hon', humble: 'hum', 'see also': 'see', reference: 'ref', derived: 'der', variant: 'var', abbreviation: 'abbr' };

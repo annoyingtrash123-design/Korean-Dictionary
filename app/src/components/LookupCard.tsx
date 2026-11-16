@@ -4,7 +4,7 @@ import { Icon } from './Icons';
 import { LevelBadge, Pos } from './common';
 import { useAsync } from '../lib/useAsync';
 import { useStore } from '../lib/store';
-import { bookmarks, addBookmark, findBookmark, removeBookmark } from '../lib/bookmarks';
+import { SaveButton } from './SaveButton';
 import { groupResults } from '../lib/merge';
 import { classOf } from '../lib/reader-text';
 import { entryPath, hanjaPath, href } from '../lib/router';
@@ -42,7 +42,6 @@ export function LookupCard({ st, onClose, onStep, onResize, onPick }: {
   onStep: (what: 'prev' | 'next' | 'shrink' | 'extend') => void; onResize?: (h: number) => void;
   onPick?: (i: number) => void;
 }) {
-  const bm = useStore(bookmarks);
   const el = useRef<HTMLDivElement>(null);
   const m = st.match;
   const groups = m ? groupResults(m.rows) : [];
@@ -52,7 +51,6 @@ export function LookupCard({ st, onClose, onStep, onResize, onPick }: {
   const koRows = top ? top.rows.filter((r) => r.source !== 'cedict' && r.source !== 'zhwikt') : [];
   const glosses = glossesOf(koRows.length ? koRows : top?.rows ?? []);
   const primary = top?.primary;
-  const saved = primary ? findBookmark(bm, { source: primary.source, headword: primary.headword, homonym: primary.homonym, pos: primary.pos }) : undefined;
   const head = han ? m!.match : top?.headword ?? m?.match ?? '';
   const sub = han && top ? top.headword : undefined;
 
@@ -73,8 +71,7 @@ export function LookupCard({ st, onClose, onStep, onResize, onPick }: {
           {sub && <span class="hangul lk-sub" lang="ko">{sub}</span>}
           {!han && top?.hanja && <span class="hanja lk-hj" lang="zh-Hant">{hanjaKey(top.hanja)}</span>}
         </div>
-        {primary && <button type="button" class={`iconbtn${saved ? ' on' : ''}`} aria-label={saved ? 'Remove bookmark' : 'Add bookmark'} aria-pressed={!!saved}
-          onClick={() => (saved ? removeBookmark(saved.key) : addBookmark({ source: primary.source, headword: primary.headword, homonym: primary.homonym, pos: primary.pos, hanja: primary.hanja, gloss: primary.gloss }))}><Icon name="star" fill={!!saved} /></button>}
+        {primary && <SaveButton title={primary.headword} item={{ kind: 'entry', source: primary.source, headword: primary.headword, homonym: primary.homonym, pos: primary.pos, hanja: primary.hanja, gloss: primary.gloss }} />}
         <button type="button" class="iconbtn" aria-label="Close lookup" onClick={onClose}><Icon name="x" /></button>
       </div>
       <div class="lk-body">
