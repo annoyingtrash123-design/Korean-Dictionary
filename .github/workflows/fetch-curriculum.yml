@@ -1,0 +1,42 @@
+name: Fetch curriculum
+
+# One-off: download the 국립국어원 "국제 통용 한국어 표준 교육과정" materials (korean.go.kr is only
+# reachable from Actions) so they can be inspected. Results: artifact "curriculum". Inspection only.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test the parser
+        run: python3 -I pipeline/qa/curriculum/test_fetch_curriculum.py
+      - name: Fetch
+        run: |
+          mkdir -p out/curriculum
+          python3 pipeline/qa/curriculum/fetch_curriculum.py out/curriculum || echo "script failed: $?"
+      - name: Show results
+        if: always()
+        run: |
+          {
+            echo '## manifest.json'
+            echo '```json'
+            cat out/curriculum/manifest.json 2>/dev/null || echo '(no manifest)'
+            echo '```'
+            echo '## ls -la'
+            echo '```'
+            ls -laR out/curriculum 2>&1 || true
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: curriculum
+          path: out/curriculum
+          retention-days: 7
+          if-no-files-found: warn
