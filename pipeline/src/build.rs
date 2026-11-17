@@ -843,6 +843,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     // NIKL curriculum levels (needs entries and grammar)
     let (cw, cwt, cg, cgt) = crate::curriculum::build_table(&conn)?;
     log::info!("curriculum levels (NIKL standard curriculum): words {cw}/{cwt} matched, grammar {cg}/{cgt} matched");
+    // grammar mini-lessons: only the approved ones ship
+    crate::grammar_lessons::build_table(&conn)?;
 
     // topic: krdict's category per word, so the Topics study lists never parse JSON at runtime
     conn.execute_batch(
@@ -954,6 +956,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("sentences_krdict".into(), n_krdict_s.into());
     counts.insert("grammar".into(), q("SELECT COUNT(*) FROM grammar")?.into());
     counts.insert("curriculum".into(), q("SELECT COUNT(*) FROM curriculum")?.into());
+    counts.insert("grammar_lesson".into(), q("SELECT COUNT(*) FROM grammar_lesson")?.into());
     counts.insert("curriculum_matched".into(), q("SELECT COUNT(*) FROM curriculum WHERE entry_id IS NOT NULL")?.into());
     counts.insert("topic".into(), q("SELECT COUNT(*) FROM topic")?.into());
     counts.insert("gloss_terms".into(), q("SELECT COUNT(*) FROM gloss_terms")?.into());
