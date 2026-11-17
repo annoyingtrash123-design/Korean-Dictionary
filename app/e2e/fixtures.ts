@@ -1,4 +1,7 @@
 import { test as base, expect, type Page } from '@playwright/test';
+import { mkdtemp, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 /**
  * Shared `test`: when a test fails, print what the page showed (visible text of <main>, alerts,
@@ -6,6 +9,22 @@ import { test as base, expect, type Page } from '@playwright/test';
  * job log alone must say why a test failed.
  */
 export const test = base.extend<{ failureDump: void; settingsOpen: void }>({
+  /** Each test gets its own on-disk browser profile, closed and deleted afterwards. Playwright's default
+   *  contexts keep site storage in memory inside one long-lived browser; after ~20 full downloads in CI
+   *  the 500 MB opendict import failed with Chromium "no space" (write returned -8) although disk and
+   *  quota were free (runs 117–119, 123, 125). A fresh disk-backed profile per test can't accumulate. */
+  context: async ({ playwright, launchOptions, viewport, deviceScaleFactor, isMobile, hasTouch, baseURL, serviceWorkers, colorScheme }, use) => {
+    const dir = await mkdtemp(join(tmpdir(), 'kd-e2e-'));
+    const ctx = await playwright.chromium.launchPersistentContext(dir, {
+      ...launchOptions, viewport, deviceScaleFactor, isMobile, hasTouch, baseURL, serviceWorkers, colorScheme,
+    });
+    try {
+      await use(ctx);
+    } finally {
+      await ctx.close().catch(() => undefined);
+      await rm(dir, { recursive: true, force: true }).catch(() => undefined);
+    }
+  },
   /** Settings sections start collapsed for users; tests that use Settings expect them open
    *  (settings-groups.spec.ts tests the collapsing itself and clears this). */
   settingsOpen: [async ({ page }, use) => {
