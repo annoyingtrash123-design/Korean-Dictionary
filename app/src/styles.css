@@ -298,7 +298,6 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .licence p { margin: 6px 0; }
 .licence ul { margin: 4px 0; } .licence li { padding: 2px 0; }
 .licence a { text-decoration: underline; }
-.a2hs ul { margin: 6px 0 2px; } .a2hs li { padding: 2px 0; } .a2hs { margin: 0 0 16px; }
 
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 12px); z-index: 30; display: flex; align-items: center; gap: 14px; max-width: calc(100% - 32px); padding: 8px 8px 8px 16px; border-radius: 22px; background: var(--text); color: var(--bg); font-size: 14px; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
 .toast .link { color: inherit; font-weight: 700; padding: 0 6px; min-height: 28px; text-decoration: underline; }

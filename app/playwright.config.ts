@@ -32,7 +32,8 @@ export default defineConfig({
     launchOptions: { executablePath: process.env.CHROMIUM_PATH || findChromium() },
   },
   webServer: {
-    command: 'BASE_PATH=/ npm run build && BASE_PATH=/ npx vite preview --port 4173 --strictPort',
+    // the app normally downloads its data from the GitHub Pages data host; the tests use the local copy in public/data
+    command: 'VITE_DATA_BASE=/ npm run build && npx vite preview --port 4173 --strictPort',
     url: 'http://localhost:4173/',
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,

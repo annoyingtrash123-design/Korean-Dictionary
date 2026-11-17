@@ -1,8 +1,5 @@
 import { downloadAll, expect, test, type Page } from './fixtures';
 
-// The service worker would hide manifest requests from page.route().
-test.use({ serviceWorkers: 'block' });
-
 const firstRow = (page: Page) => page.locator('.row .hw').first();
 async function search(page: Page, q: string) {
   await page.getByRole('searchbox', { name: 'Search' }).fill(q);

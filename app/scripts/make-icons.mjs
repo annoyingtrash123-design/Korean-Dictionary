@@ -12,8 +12,5 @@ const svg = (pad = 0, radius = 96) => `<svg xmlns="http://www.w3.org/2000/svg" v
 </svg>`;
 writeFileSync(join(out, 'icon.svg'), svg());
 const png = (name, size, s) => sharp(Buffer.from(s)).resize(size, size).png().toFile(join(out, name));
-await png('icon-512.png', 512, svg());
-await png('icon-192.png', 192, svg());
-await png('apple-touch-icon.png', 180, svg(0, 0));      // iOS rounds the corners itself
-await png('icon-maskable-512.png', 512, svg(90, 0));    // full-bleed, glyph inside safe zone
+await png('icon-maskable-512.png', 512, svg(90, 0));    // full-bleed, glyph inside safe zone; source of the Android launcher icons (make-android-icons.mjs)
 console.log('icons written to', out);
