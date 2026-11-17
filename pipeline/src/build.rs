@@ -820,6 +820,10 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             .execute(params![g.entry_id, g.pattern, g.category, g.level, g.summary, i as i64])?;
     }
 
+    // NIKL curriculum levels (needs entries and grammar)
+    let (cw, cwt, cg, cgt) = crate::curriculum::build_table(&conn)?;
+    log::info!("curriculum levels (NIKL standard curriculum): words {cw}/{cwt} matched, grammar {cg}/{cgt} matched");
+
     // gloss_terms: sorted so the WITHOUT ROWID table is built by appending
     let mut terms = std::mem::take(&mut c.terms);
     terms.sort_unstable();
@@ -922,6 +926,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("sentences_wikt".into(), n_wikt_s.into());
     counts.insert("sentences_krdict".into(), n_krdict_s.into());
     counts.insert("grammar".into(), q("SELECT COUNT(*) FROM grammar")?.into());
+    counts.insert("curriculum".into(), q("SELECT COUNT(*) FROM curriculum")?.into());
+    counts.insert("curriculum_matched".into(), q("SELECT COUNT(*) FROM curriculum WHERE entry_id IS NOT NULL")?.into());
     counts.insert("gloss_terms".into(), q("SELECT COUNT(*) FROM gloss_terms")?.into());
     if let Some(ek) = &en_ko {
         counts.insert("en_ko".into(), ek.rows.into());
