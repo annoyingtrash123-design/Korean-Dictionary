@@ -125,7 +125,7 @@ fn day_indices(n: usize, salt: u64, day: u32, per_day: usize) -> Vec<usize> {
     pick_indices(n, salt, day as u64 * per_day as u64, per_day)
 }
 
-fn first_items(gloss: &str) -> String {
+pub(super) fn first_items(gloss: &str) -> String {
     let items: Vec<&str> = gloss.split(';').map(str::trim).filter(|s| !s.is_empty()).collect();
     items[..items.len().min(MAX_GLOSS_ITEMS)].join("; ")
 }

@@ -844,6 +844,13 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     let (cw, cwt, cg, cgt) = crate::curriculum::build_table(&conn)?;
     log::info!("curriculum levels (NIKL standard curriculum): words {cw}/{cwt} matched, grammar {cg}/{cgt} matched");
 
+    // topic: krdict's category per word, so the Topics study lists never parse JSON at runtime
+    conn.execute_batch(
+        "INSERT INTO topic(entry_id, category) SELECT id, json_extract(data, '$.category') FROM entries \
+         WHERE source = 'krdict' AND kind = 'word' AND json_extract(data, '$.category') IS NOT NULL AND json_extract(data, '$.category') != '';
+         CREATE INDEX topic_category ON topic(category, entry_id);",
+    )?;
+
     // gloss_terms: sorted so the WITHOUT ROWID table is built by appending
     let mut terms = std::mem::take(&mut c.terms);
     terms.sort_unstable();
@@ -948,6 +955,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("grammar".into(), q("SELECT COUNT(*) FROM grammar")?.into());
     counts.insert("curriculum".into(), q("SELECT COUNT(*) FROM curriculum")?.into());
     counts.insert("curriculum_matched".into(), q("SELECT COUNT(*) FROM curriculum WHERE entry_id IS NOT NULL")?.into());
+    counts.insert("topic".into(), q("SELECT COUNT(*) FROM topic")?.into());
     counts.insert("gloss_terms".into(), q("SELECT COUNT(*) FROM gloss_terms")?.into());
     if let Some(ek) = &en_ko {
         counts.insert("en_ko".into(), ek.rows.into());

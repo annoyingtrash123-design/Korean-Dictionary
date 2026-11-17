@@ -263,6 +263,30 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::home(&s.all(), day).map_err(js_err)?))
         }
 
+        /// Study lists: counts per curriculum level and topic category (empty without the tables).
+        #[wasm_bindgen(js_name = studyOverview)]
+        pub async fn study_overview(&self) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::study_overview(&s.all()).map_err(js_err)?))
+        }
+
+        /// Study lists: a page of the curriculum's words of `level`, in the official order.
+        #[wasm_bindgen(js_name = studyWords)]
+        pub async fn study_words(&self, level: u32, limit: u32, offset: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::study_words(&s.all(), level as i64, limit as usize, offset as usize).map_err(js_err)?))
+        }
+
+        /// Study lists: the curriculum's grammar patterns of `level`.
+        #[wasm_bindgen(js_name = studyGrammar)]
+        pub async fn study_grammar(&self, level: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::study_grammar(&s.all(), level as i64).map_err(js_err)?))
+        }
+
+        /// Study lists: a page of a topic's words (`category` full or top-level), by level then 가나다 or 가나다 only.
+        #[wasm_bindgen(js_name = studyTopicWords)]
+        pub async fn study_topic_words(&self, category: String, by_level: bool, limit: u32, offset: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::study_topic_words(&s.all(), &category, by_level, limit as usize, offset as usize).map_err(js_err)?))
+        }
+
         /// Version of the bundled SQLite (diagnostics).
         #[wasm_bindgen(js_name = sqliteVersion)]
         pub async fn sqlite_version(&self) -> Result<String, JsError> {

@@ -59,6 +59,8 @@ CREATE TABLE grammar (
   category TEXT NOT NULL,
   level INTEGER, summary_en TEXT, sort INTEGER
 );
+-- krdict's semantic category of each word ("인간 > 감각"), extracted from entries.data at build time
+CREATE TABLE topic (entry_id INTEGER NOT NULL, category TEXT NOT NULL);
 CREATE INDEX grammar_cat ON grammar(category, sort);
 CREATE INDEX grammar_entry ON grammar(entry_id);
 "#;

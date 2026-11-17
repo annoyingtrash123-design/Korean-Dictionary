@@ -3,7 +3,8 @@ import { Empty, Hanja, IconButton, LevelBadge } from '../components/common';
 import { Icon } from '../components/Icons';
 import { NameForm } from '../components/SaveButton';
 import { createList, deleteList, removeFromList, renameList, restoreItem, lists, type ListItem } from '../lib/lists';
-import { LIST_SOURCES, sourceOf, type ListSource } from '../lib/list-sources';
+import { LIST_SOURCES, sourceOf, type ListSource, type ListSummary } from '../lib/list-sources';
+import { PagedDetail } from './StudyList';
 import { href, navigate, useRoute, withoutTab } from '../lib/router';
 import { savedPath } from '../lib/entry-key';
 import { showToast } from '../lib/toast';
@@ -29,7 +30,7 @@ export function fmtWhen(t: number, now = new Date()): string {
   if (diff === 1) return 'yesterday';
   return `${d.getDate()} ${MONTHS[d.getMonth()]}${d.getFullYear() === now.getFullYear() ? '' : ` ${d.getFullYear()}`}`;
 }
-const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? '' : 's'}`;
+const plural = (n: number, w: string) => `${n.toLocaleString('en-US')} ${w}${n === 1 ? '' : 's'}`;
 
 function SourceSection({ src }: { src: ListSource }) {
   const all = src.useLists();
@@ -39,29 +40,79 @@ function SourceSection({ src }: { src: ListSource }) {
     setAdding(false);
     if (name) navigate(listPath(await createList(name)));
   };
+  // built-in sources have nothing to show until their lists are known (or when the data has none)
+  if (src.readOnly && !all.length) return null;
+  const current = (id: string): 'true' | undefined => (withoutTab(route.raw) === listPath(id) ? 'true' : undefined);
+  const groups: { name?: string; lists: ListSummary[] }[] = [];
+  for (const l of all.filter((x) => !x.parent)) {
+    const g = groups.find((x) => x.name === l.group);
+    if (g) g.lists.push(l); else groups.push({ name: l.group, lists: [l] });
+  }
+  const resume = src.lastOpened?.();
+  const last = resume ? all.find((l) => l.id === resume) : undefined;
   return (
-    <section aria-labelledby={`lists-${src.id}`}>
+    <section aria-labelledby={`lists-${src.id}`} data-source={src.id}>
       <div class="section-head">
         <h2 id={`lists-${src.id}`}>{src.title}</h2>
         {!src.readOnly && !adding && <div class="actions"><button type="button" class="link" onClick={() => setAdding(true)}>New list</button></div>}
       </div>
       {adding && <div class="pad"><NameForm label="New list name" submit="Create" onDone={onNew} /></div>}
       {!all.length && !adding && <Empty title="No lists yet">Tap the star on any entry to save it, or make a list with “New list”.</Empty>}
-      <ul class="plain list">
-        {all.map((l) => (
-          <li key={l.id}>
-            <a class="row compact list-row" href={href(listPath(l.id))} aria-current={withoutTab(route.raw) === listPath(l.id) ? 'true' : undefined}>
-              <span class="list-ico" aria-hidden="true"><Icon name="lists" size={20} /></span>
-              <div class="row-main">
-                <div class="row-head"><span class="list-name">{l.name}</span></div>
-                <div class="row-gloss muted small">{plural(l.count, 'item')}{l.updated ? ` · updated ${fmtWhen(l.updated)}` : ''}</div>
-              </div>
-              <Icon name="chev" size={18} />
-            </a>
-          </li>
-        ))}
-      </ul>
+      {last && (
+        <ul class="plain list resume">
+          <li><ListRow l={last} current={current(last.id)} lead="Continue" /></li>
+        </ul>
+      )}
+      {groups.map((g) => (
+        <div key={g.name ?? ''} class="list-group" role="group" aria-label={g.name}>
+          {g.name && <h3 class="group-head">{g.name}</h3>}
+          <ul class="plain list">
+            {g.lists.map((l) => (
+              <li key={l.id}>
+                <ListRow l={l} current={current(l.id)} subs={all.filter((s) => s.parent === l.id)} currentOf={current} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
+  );
+}
+
+/** One list on the overview. A list with sub-lists (a top-level topic) gets a button that unfolds them. */
+function ListRow({ l, current, lead, subs = [], currentOf }: { l: ListSummary; current?: 'true'; lead?: string; subs?: ListSummary[]; currentOf?: (id: string) => 'true' | undefined }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <div class={`list-row-wrap${subs.length ? ' has-subs' : ''}`}>
+        <a class="row compact list-row" href={href(listPath(l.id))} aria-current={current} title={l.hint} aria-label={l.hint ? `${l.name}. ${l.hint}. ${plural(l.count, l.unit ?? 'item')}` : undefined}>
+          <span class="list-ico" aria-hidden="true">{l.badge ? <span class="list-badge">{l.badge}</span> : <Icon name="lists" size={20} />}</span>
+          <div class="row-main">
+            <div class="row-head"><span class="list-name">{lead ? `${lead}: ${l.name}` : l.name}</span></div>
+            <div class="row-gloss muted small">{lead && l.eyebrow ? `${l.eyebrow} · ` : ''}{plural(l.count, l.unit ?? 'item')}{l.updated ? ` · updated ${fmtWhen(l.updated)}` : ''}</div>
+          </div>
+          {!subs.length && <Icon name="chev" size={18} />}
+        </a>
+        {subs.length > 0 && (
+          <button type="button" class="iconbtn sub-toggle" aria-expanded={open} aria-label={`${open ? 'Hide' : 'Show'} the ${subs.length} sub-categories of ${l.name}`} onClick={() => setOpen(!open)}>
+            <span class={`sub-chev${open ? ' open' : ''}`}><Icon name="down" size={20} /></span>
+          </button>
+        )}
+      </div>
+      {open && (
+        <ul class="plain list subs" aria-label={`${l.name}: sub-categories`}>
+          {subs.map((s) => (
+            <li key={s.id}>
+              <a class="row compact list-row" href={href(listPath(s.id))} aria-current={currentOf?.(s.id)}>
+                <div class="row-main"><div class="row-head"><span class="list-name sub-name">{s.name}</span></div></div>
+                <span class="count" aria-label={plural(s.count, s.unit ?? 'item')}>{s.count.toLocaleString('en-US')}</span>
+                <Icon name="chev" size={18} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
   );
 }
 
@@ -83,6 +134,7 @@ function ListDetail({ id }: { id: string }) {
   const [sort, setSort] = useState<Sort>(loadSort);
   const [edit, setEdit] = useState(false);
   const [renaming, setRenaming] = useState(false);
+  if (src?.paged && l) return <PagedDetail key={id} src={src} list={l} back={<BackLink />} />;
   if (!src || !l) {
     return <div class="page"><BackLink /><Empty title="List not found">It may have been deleted. <a href={href(listPath())}>All lists</a></Empty></div>;
   }
