@@ -1,0 +1,96 @@
+name: Corpus frequency (속담 / 성어)
+
+# One-off study: how often do the dictionary's proverbs (속담) and four-character idioms (성어) occur in
+# real Korean text?  The corpora (Wikimedia dumps, OPUS) are only reachable from Actions, so they are
+# streamed here (never stored whole) and the counts are published to the orphan branch
+# `frequency-data`: results/{sokdam,seongeo}_counts.tsv, results/summary.md, per-corpus counts/stats.
+# Candidates + matcher: pipeline/qa/frequency/ (see kdfreq.py for the matching rules).
+on:
+  workflow_dispatch:
+    inputs:
+      limit_mb:
+        description: "Smoke test: stop each corpus after this many compressed MB (0 = whole corpus)"
+        default: "0"
+        required: false
+
+permissions:
+  contents: write  # only to publish the results to the frequency-data branch
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340  # the hosted-runner limit is 360; expected total is well under 2 h
+    env:
+      FREQ: pipeline/qa/frequency
+      LIMIT_MB: ${{ inputs.limit_mb || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pyahocorasick
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --quiet pyahocorasick==2.1.0
+      - name: Unit tests
+        run: .venv/bin/python -I $FREQ/test_frequency.py
+      - name: Count Korean Wikipedia
+        id: kowiki
+        timeout-minutes: 200
+        continue-on-error: true
+        run: |
+          mkdir -p out
+          .venv/bin/python -I $FREQ/count_corpus.py --name kowiki --format wikixml \
+            --source https://dumps.wikimedia.org/kowiki/latest/kowiki-latest-pages-articles.xml.bz2 \
+            --source https://ftp.acc.umu.se/mirror/wikimedia.org/dumps/kowiki/latest/kowiki-latest-pages-articles.xml.bz2 \
+            --sokdam $FREQ/candidates_sokdam.tsv --seongeo $FREQ/candidates_seongeo.tsv \
+            --out out --limit-mb "$LIMIT_MB"
+      - name: Count OpenSubtitles (ko)
+        id: opensubtitles
+        timeout-minutes: 90
+        continue-on-error: true
+        run: |
+          # OPUS monolingual text, one subtitle line per line; --dedupe drops repeated long lines
+          # (the same film is often present in several subtitle versions)
+          .venv/bin/python -I $FREQ/count_corpus.py --name opensubtitles --format text --dedupe \
+            --source https://object.pouta.csc.fi/OPUS-OpenSubtitles/v2018/mono/ko.txt.gz \
+            --source "https://opus.nlpl.eu/download.php?f=OpenSubtitles/v2018/mono/ko.txt.gz" \
+            --sokdam $FREQ/candidates_sokdam.tsv --seongeo $FREQ/candidates_seongeo.tsv \
+            --out out --limit-mb "$LIMIT_MB"
+      - name: Count Korean Wikisource
+        id: kowikisource
+        timeout-minutes: 60
+        continue-on-error: true
+        run: |
+          .venv/bin/python -I $FREQ/count_corpus.py --name kowikisource --format wikixml \
+            --source https://dumps.wikimedia.org/kowikisource/latest/kowikisource-latest-pages-articles.xml.bz2 \
+            --sokdam $FREQ/candidates_sokdam.tsv --seongeo $FREQ/candidates_seongeo.tsv \
+            --out out --limit-mb "$LIMIT_MB"
+      - name: Build results and summary
+        run: |
+          ls -la out
+          test -n "$(ls out/*.stats.json 2>/dev/null)" || { echo "no corpus finished"; exit 1; }
+          .venv/bin/python -I $FREQ/report.py $FREQ out results > /dev/null
+          {
+            echo "kowiki=${{ steps.kowiki.outcome }} opensubtitles=${{ steps.opensubtitles.outcome }} kowikisource=${{ steps.kowikisource.outcome }}"
+            echo
+            cat results/summary.md
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "kowiki=${{ steps.kowiki.outcome }} opensubtitles=${{ steps.opensubtitles.outcome }} kowikisource=${{ steps.kowikisource.outcome }}" > results/status.txt
+      # artifact storage is not reachable from the dev sandbox: publish to an orphan branch instead
+      # (never touches main). Contains only counts: no corpus text.
+      - name: Publish results to the frequency-data branch
+        if: always()
+        run: |
+          set -e
+          test -d results || exit 0
+          mkdir -p /tmp/pub && cd /tmp/pub
+          git init -q -b frequency-data
+          mkdir -p results counts
+          cp "$GITHUB_WORKSPACE"/results/* results/
+          cp "$GITHUB_WORKSPACE"/out/*.tsv "$GITHUB_WORKSPACE"/out/*.json counts/ 2>/dev/null || true
+          cp "$GITHUB_WORKSPACE"/$FREQ/candidates_*.tsv .
+          ls -laR
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com add -A
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -q -m "Corpus frequency counts from run $GITHUB_RUN_ID"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" frequency-data
