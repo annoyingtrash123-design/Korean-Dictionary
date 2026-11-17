@@ -25,8 +25,10 @@ const THEMES: [ThemeName, string][] = [['light', 'Light'], ['dark', 'Dark'], ['s
 const COLORS: [ColorKey, string][] = [['accent', 'Accent'], ['bg', 'Background'], ['text', 'Text'], ['hangul', 'Hangul'], ['hanja', 'Hanja']];
 
 export function checkForUpdate(): Promise<Manifest | null> {
-  return fetchManifest().then((m) => {
-    const stale = stalePacks(packStatus$.get()?.packs, m);
+  return fetchManifest().then(async (m) => {
+    // the engine may still be busy at launch: wait for the installed versions rather than report "up to date" on no data
+    const st = packStatus$.get() ?? await db.packStatus().catch(() => undefined);
+    const stale = stalePacks(st?.packs, m);
     update.set({ manifest: m, available: stale.length > 0, stale });
     return m;
   }, () => null);
