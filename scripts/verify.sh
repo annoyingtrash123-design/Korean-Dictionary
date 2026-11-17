@@ -52,6 +52,8 @@ npx vitest run --reporter=dot
 if [[ $FAST == 0 ]]; then
   step "app: e2e (needs app/public/data)"
   [[ -f public/data/manifest.json ]] || { echo "no app/public/data — copy pipeline/out/site-data there first"; exit 1; }
+  # sample curriculum rows for the home carousel's e2e (no-op once the pack has the real table)
+  python3 ../scripts/e2e-curriculum.py public/data
   npx playwright test --reporter=line
 fi
 step "OK — shippable"

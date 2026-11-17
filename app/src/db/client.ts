@@ -1,7 +1,7 @@
 import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GameWord, GrammarRow, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, GameWord, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -123,7 +123,8 @@ let textList: Promise<TextSummary[]> | undefined;
 let grammarRows: Promise<GrammarRow[]> | undefined;
 const textDocs = new Map<string, Promise<TextDoc | null>>();
 /** Forget cached texts (after the texts pack is installed or removed). */
-export const resetTexts = () => { textList = undefined; grammarRows = undefined; textDocs.clear(); };
+let homeData: { day: number; p: Promise<HomeData> } | undefined;
+export const resetTexts = () => { textList = undefined; grammarRows = undefined; homeData = undefined; textDocs.clear(); };
 
 // Search coalescing: while one search runs, only the newest pending query is kept; superseded ones resolve empty.
 const EMPTY: SearchResult = { mode: 'english', rows: [] };
@@ -177,6 +178,15 @@ export const db = {
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
   /** The grammar reference table (cached until packs change). */
   grammarList: (): Promise<GrammarRow[]> => (grammarRows ??= call<GrammarRow[]>('grammarList').catch((e) => { grammarRows = undefined; throw e; })),
+  /** Home page picks for a day number (see `lib/home-day.ts`), cached for the day. */
+  home: (day: number): Promise<HomeData> => {
+    if (homeData?.day !== day) {
+      const p = call<HomeData>('home', day);
+      homeData = { day, p };
+      p.catch(() => { if (homeData?.p === p) homeData = undefined; });
+    }
+    return homeData.p;
+  },
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {
     let p = textDocs.get(id);

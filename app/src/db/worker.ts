@@ -84,6 +84,7 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async listTexts() { await ready; return engine.listTexts(); },
   async getText(id: string) { await ready; return engine.getText(id); },
   async diagnostics() { await ready; return engine.diagnostics(); },
+  async home(day: number) { await ready; return engine.home(day); },
   async wordOfDay(d: string) { await ready; return engine.wordOfDay(d); },
 };
 

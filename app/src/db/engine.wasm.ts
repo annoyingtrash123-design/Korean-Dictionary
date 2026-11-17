@@ -37,6 +37,7 @@ export function createEngine(): Engine {
     gameWordsFor: (hws) => e().gameWordsFor(hws),
     chainCandidates: (starts, used, limit) => e().chainCandidates(starts, used, limit),
     chainCheck: (word) => e().chainCheck(word),
+    home: (day) => e().home(day),
     wordOfDay: (date) => e().wordOfDay(date),
     lookupInText: (text, offset, opts) => e().lookupInText(text, offset, opts),
     listTexts: () => e().listTexts(),

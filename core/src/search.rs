@@ -47,6 +47,8 @@ pub struct Caps {
     pub en_ko_words: bool,
     /// `en_rel` (Korean words reached through WordNet synonyms) exists.
     pub en_rel: bool,
+    /// `curriculum` (official 표준 교육과정 word / grammar lists matched to entries) exists.
+    pub curriculum: bool,
 }
 
 /// An opened pack database.
@@ -87,6 +89,7 @@ impl PackDb {
             en_ko: names.contains("en_ko"),
             en_ko_words: names.contains("en_ko_words"),
             en_rel: names.contains("en_rel"),
+            curriculum: names.contains("curriculum"),
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
@@ -1488,7 +1491,7 @@ fn days_from_date(date: &str) -> Option<i64> {
     Some(era * 146097 + doe - 719468)
 }
 
-fn splitmix64(mut x: u64) -> u64 {
+pub(crate) fn splitmix64(mut x: u64) -> u64 {
     x = x.wrapping_add(0x9E37_79B9_7F4A_7C15);
     let mut z = x;
     z = (z ^ (z >> 30)).wrapping_mul(0xBF58_476D_1CE4_E5B9);
@@ -1544,6 +1547,8 @@ pub fn word_of_day(packs: &[&PackDb], date: &str) -> Result<Option<ResultRow>> {
 mod tests;
 
 mod enko;
+mod home;
+pub use home::{home, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeWord};
 pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;

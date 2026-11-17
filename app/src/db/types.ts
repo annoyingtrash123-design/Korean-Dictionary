@@ -120,6 +120,7 @@ export interface Engine {
   gameWordsFor(headwords: string[]): Promise<GameWord[]>;
   chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
   chainCheck(word: string): Promise<GameWord | null>;
+  home(day: number): Promise<HomeData>;
   wordOfDay(date: string): Promise<ResultRow | null>;
   listTexts(): Promise<TextSummary[]>;
   getText(id: string): Promise<TextDoc | null>;
@@ -144,6 +145,13 @@ export interface ManifestPack {
 export interface Manifest { version: string; packs: ManifestPack[] }
 
 export interface Progress { pack: string; phase: 'download' | 'install' | 'done'; done: number; total: number; chunk?: number; chunks?: number }
+
+/** Home page content (`home`): see core/src/search/home.rs. `words` / `grammar` are empty in packs without the `curriculum` table. */
+export interface HomeExample { ko: string; en: string | null; en_ai: boolean }
+export interface HomeWord { source: Source; id: number; headword: string; homonym: number | null; hanja: string | null; pos: string | null; level: number; gloss: string; examples: HomeExample[] }
+export interface HomeGrammar { id: number; pattern: string; level: number; summary_en: string | null; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null; examples: HomeExample[] }
+export interface HomeIdiom { source: Source; id: number; headword: string; homonym: number | null; kind: 'idiom' | 'proverb'; gloss: string; ko_def: string | null; example: HomeExample }
+export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idiom: HomeIdiom | null }
 
 /** A quiz word (Games tab). `examples`: Korean example sentences for Fill the gap. */
 export interface GameWord { source: string; id: number; headword: string; hanja?: string | null; pos?: string | null; level?: number | null; gloss: string; examples: string[] }

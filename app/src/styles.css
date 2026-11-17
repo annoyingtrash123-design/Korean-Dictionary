@@ -725,3 +725,42 @@ mark.hl { background: var(--rd-hl); color: inherit; border-radius: 4px; box-shad
 .fs-bubble { position: absolute; right: 30px; transform: translateY(-50%); padding: 6px 12px; border-radius: 16px; background: var(--text); color: var(--bg); font: 600 14px/1.3 var(--font-ui); white-space: nowrap; max-width: 70vw; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 2px 10px rgba(0,0,0,.25); pointer-events: none; }
 .rd-excerpt { margin: 10px 0 2px; padding: 8px 12px; border-radius: 10px; background: var(--accent-soft); color: var(--text); font: 400 14px/1.45 var(--font-ui); }
 .rd-excerpt strong { color: var(--accent); }
+
+/* ---- Home: Today carousel + idiom of the day ---- */
+.today .section-head, .idiom .section-head { padding-bottom: 8px; }
+.car-arrows { display: flex; gap: 2px; margin-right: -10px; }
+.car-arrow { width: 36px; height: 36px; }
+.car-arrow:disabled { opacity: .35; }
+.car-track { position: relative; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; padding: 2px 16px 6px; scrollbar-width: none; overscroll-behavior-x: contain; cursor: grab; }
+.car-track::-webkit-scrollbar { display: none; }
+.car-track.dragging { scroll-snap-type: none; cursor: grabbing; user-select: none; }
+.car-track.dragging * { pointer-events: none; }
+.car-track:focus-visible { outline-offset: -2px; }
+.car-slide { flex: 0 0 calc(100% - 44px); max-width: 420px; scroll-snap-align: center; display: flex; }
+.car-slide > * { flex: 1; min-width: 0; }
+.car-dots { display: flex; justify-content: center; gap: 2px; margin-top: 2px; }
+.car-dot { position: relative; width: 24px; height: 24px; border: 0; background: none; padding: 0; }
+.car-dot::after { content: ''; position: absolute; inset: 9px; border-radius: 50%; background: var(--border); transition: background .15s, transform .15s; }
+.car-dot[aria-current='true']::after { background: var(--accent); transform: scale(1.25); }
+.today-card { position: relative; display: flex; flex-direction: column; padding: 12px 14px 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); }
+.today-card .card-head { display: flex; align-items: center; gap: 8px; min-height: 30px; }
+.card-spacer { flex: 1; }
+.today-card .card-head .save-btn { position: relative; z-index: 2; width: 36px; height: 36px; margin: -3px -6px -3px auto; }
+.card-tag { font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.cur-lvl { display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 11px; font-size: 12px; font-weight: 600; font-family: var(--font-ko); white-space: nowrap; background: var(--accent-soft); color: var(--accent); }
+.card-hw { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 6px 0 2px; font-weight: 400; }
+.card-hw .hangul { font-size: 28px; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.card-hw .hanja { font-size: 18px; }
+.card-link { color: inherit; }
+.card-link::after { content: ''; position: absolute; inset: 0; border-radius: 16px; z-index: 1; }
+.card-link:focus-visible { outline: none; }
+.card-link:focus-visible::after { outline: 2px solid var(--accent); outline-offset: 2px; }
+.card-gloss { margin: 0 0 6px; font-size: 16px; line-height: 1.35; }
+.card-kodef { margin: 0 0 6px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
+.card-exs { margin: 4px 0 0; padding-top: 8px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; }
+.card-ex .ex-ko { font-size: 15px; }
+.idiom { padding-bottom: 4px; }
+.idiom .today-card { margin: 0 16px; }
+@media (min-width: 700px) { .car-slide { flex-basis: 340px; } }
+.pane-left .car-slide { flex-basis: calc(100% - 44px); }
+.pane-left .today-card:hover { background: var(--surface-2); }

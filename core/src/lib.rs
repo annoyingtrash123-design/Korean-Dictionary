@@ -258,6 +258,11 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::word_of_day(&s.all(), &date).map_err(js_err)?))
         }
 
+        /// Home page: today's curriculum words / grammar and idiom for day number `day`.
+        pub async fn home(&self, day: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::home(&s.all(), day).map_err(js_err)?))
+        }
+
         /// Version of the bundled SQLite (diagnostics).
         #[wasm_bindgen(js_name = sqliteVersion)]
         pub async fn sqlite_version(&self) -> Result<String, JsError> {

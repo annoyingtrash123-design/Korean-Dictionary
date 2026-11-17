@@ -1,14 +1,32 @@
+import { useEffect, useState } from 'preact/hooks';
+import { db } from '../db/client';
+import { useAsync } from '../lib/useAsync';
+import { dayNumber } from '../lib/home-day';
+import { IdiomCard, TodayCarousel } from '../components/TodayCarousel';
 import { history, clearHistory } from '../lib/history';
 import { useStore } from '../lib/store';
 import { href, useRoute, withoutTab } from '../lib/router';
 import { savedPath } from '../lib/entry-key';
 import { Hanja } from '../components/common';
 
+/** Start screen of the Search tab: today's cards (curriculum words + grammar when the pack has them), the idiom of the day, then recent lookups. */
 export function Home() {
   const hist = useStore(history);
   const route = useRoute();
+  const [day, setDay] = useState(() => dayNumber());
+  // the app can stay open past midnight: pick up the new day when it comes back to the foreground
+  useEffect(() => {
+    const f = () => setDay(dayNumber());
+    document.addEventListener('visibilitychange', f);
+    window.addEventListener('focus', f);
+    return () => { document.removeEventListener('visibilitychange', f); window.removeEventListener('focus', f); };
+  }, []);
+  const home = useAsync(() => db.home(day).catch(() => undefined), [day]);
+  const h = home.data;
   return (
     <div class="page">
+      {h && <TodayCarousel words={h.words} grammar={h.grammar} />}
+      {h?.idiom && <IdiomCard i={h.idiom} />}
       <div class="section-head">
         <h2>Recent</h2>
         {hist.length > 0 && <button type="button" class="link" onClick={() => clearHistory()}>Clear</button>}
