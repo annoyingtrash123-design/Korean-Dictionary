@@ -1,0 +1,765 @@
+# 속담 study lists: sokdam100 (Common proverbs, top 100) and sokdam_all (All learner proverbs)
+# Built by pipeline/qa/frequency/make_study_lists.py from corpus counts of the dictionary candidates
+# (pipeline/qa/frequency/candidates_*.tsv; count_corpus.py).  Corpora: Korean Wikipedia (kowiki dump),
+# OpenSubtitles 2018 Korean (OPUS), Korean Wikisource (kowikisource dump).
+# score = mean over the three corpora of (occurrences per million eojeol).  Proverbs are matched by their fixed stem (any ending) or, for long ones, by the quoted first half (partial). Review rules (sokdam_review.tsv): entries whose hits are mostly Wikipedia and look like film/drama/book titles are scored on the other two corpora only; entries that only matched a generic partial phrase are scored on full matches only (dropped from the top 100 when there is none); variants of one proverb count once.
+# Columns: list, rank, text (display), source (pack of the entry: krdict = core, stdict, opendict),
+#   ext_id + headword (the entry in that pack: the pack's own id and exact headword),
+#   score, kowiki / kowikisource / opensubtitles = raw hit counts, note.
+# sokdam100 = top 100 of all dictionaries (krdict, stdict, opendict); sokdam_all = krdict's proverbs, counted ones first, then zero-count ones in 가나다 order.
+list	rank	text	source	ext_id	headword	score	kowiki	kowikisource	opensubtitles	note
+sokdam100	1	누워서 떡 먹기	krdict	62063	누워서 떡 먹기	1.034	5	0	16	
+sokdam100	2	호랑이도 제 말 하면 온다	krdict	74128	호랑이도 제 말 하면 온다	0.660	3	2	10	
+sokdam100	3	밑져야 본전	krdict	56791	밑져야 본전	0.444	6	7	6	
+sokdam100	4	눈에는 눈을 이에는 이를	krdict	72704	눈에는 눈(을) 이에는 이(를)	0.421	53	0	5	
+sokdam100	5	누이 좋고 매부 좋다	krdict	45653	누이 좋고 매부 좋다	0.398	0	2	6	
+sokdam100	6	갈수록 태산	krdict	27500	갈수록 태산	0.338	2	2	5	
+sokdam100	7	등잔 밑이 어둡다	krdict	49114	등잔 밑이 어둡다	0.336	1	2	5	
+sokdam100	8	시작이 반이다	krdict	36687	시작이 반이다	0.326	4	9	4	
+sokdam100	9	따 놓은 당상	krdict	61395	따 놓은 당상	0.322	1	0	5	
+sokdam100	10	주사위는 던져졌다	krdict	76948	주사위는 던져졌다	0.282	10	1	4	
+sokdam100	11	우물 안 개구리	krdict	70763	우물 안 개구리[고기]	0.259	24	3	3	
+sokdam100	12	불난 집에 부채질한다	krdict	60595	불난 집에 부채질한다	0.258	1	0	4	
+sokdam100	13	무소식이 희소식	krdict	55648	무소식이 희소식	0.256	0	0	4	
+sokdam100	14	꿀 먹은 벙어리	krdict	36581	꿀 먹은 벙어리	0.251	2	8	3	
+sokdam100	15	수박 겉 핥기	krdict	29555	수박 겉 핥기	0.244	2	7	3	
+sokdam100	16	백문이 불여일견	stdict	528347	백문이 불여일견(不如一見)	0.236	5	5	3	
+sokdam100	17	상갓집 개	krdict	93441	상갓집 개 [노릇]	0.234	0	34	0	
+sokdam100	18	아닌 밤중에 홍두깨 내밀듯	krdict	26878	아닌 밤중에 홍두깨 (내밀듯)	0.228	1	5	3	
+sokdam100	19	은혜를 원수로 갚는다	stdict	531238	은혜를 원수로 갚는다	0.221	8	2	3	
+sokdam100	20	손이 발이 되도록 빌다	stdict	529753	손이 발이 되도록[되게] 빌다	0.218	2	31	0	
+sokdam100	21	귀신이 곡할 노릇이다	stdict	525727	귀신이 곡할 노릇[일](이다)	0.217	2	3	3	
+sokdam100	22	새 발의 피	krdict	30197	새 발의 피	0.205	3	1	3	
+sokdam100	23	김칫국부터 마신다	krdict	26402	김칫국부터 마신다	0.203	2	1	3	
+sokdam100	24	말이 씨가 된다	krdict	27260	말이 씨가 된다	0.196	2	0	3	
+sokdam100	25	꿩 먹고 알 먹는다	krdict	37906	꿩 먹고 알 먹는다[먹기]	0.191	4	8	2	
+sokdam100	26	겉과 속이 다르다	krdict	31329	겉과 속이 다르다	0.177	22	1	2	
+sokdam100	27	그 아버지에 그 아들	krdict	43883	그 아버지에 그 아들	0.165	12	2	2	
+sokdam100	28	산 넘어 산이다	krdict	20954	산 넘어 산이다	0.164	15	1	2	
+sokdam100	29	하늘이 무너져도 솟아날 구멍이 있다	krdict	20311	하늘이 무너져도 솟아날 구멍이 있다	0.163	0	5	2	
+sokdam100	30	속 빈 강정	krdict	71278	속 빈 강정	0.154	3	3	2	
+sokdam100	31	옷이 날개라	krdict	30159	옷이 날개라	0.150	8	1	2	
+sokdam100	32	밑 빠진 독에 물 붓기	krdict	66592	밑 빠진 독[가마/항아리]에 물 붓기	0.144	1	2	2	
+sokdam100	33	무른 메주 밟듯	opendict	603051	무른 메주 밟듯	0.142	0	2	2	
+sokdam100	34	사공이 많으면 배가 산으로 간다	stdict	522176	사공이 많으면 배가 산으로 간다[올라간다]	0.137	1	1	2	
+sokdam100	35	동에 번쩍 서에 번쩍	krdict	65504	동에 번쩍 서에 번쩍	0.136	5	9	1	
+sokdam100	36	한 귀로 듣고 한 귀로 흘린다	krdict	73278	한 귀로 듣고 한 귀로 흘린다	0.135	0	1	2	
+sokdam100	37	입이 열 개라도 할 말이 없다	krdict	62276	입이 열 개라도 할 말이 없다	0.135	0	1	2	
+sokdam100	38	계란으로 바위 치기	krdict	15355	계란으로 바위 치기	0.134	3	0	2	
+sokdam100	39	여자가 한을 품으면 오뉴월에도 서리가 내린다	krdict	27369	여자가 한을 품으면 오뉴월에도 서리가 내린다	0.128	0	0	2	
+sokdam100	40	눈 가리고 아웅	krdict	72704	눈 가리고 아웅	0.126	7	7	1	
+sokdam100	41	고양이 앞에 쥐	krdict	18779	고양이 앞에 쥐	0.126	0	9	1	
+sokdam100	42	긁어 부스럼	krdict	37194	긁어 부스럼	0.125	3	8	1	
+sokdam100	43	미주알고주알 캔다	stdict	521533	미주알고주알 캔다	0.117	0	17	0	
+sokdam100	44	순풍에 돛을 달다	krdict	65138	순풍에 돛을 달다	0.107	2	15	0	
+sokdam100	45	금강산도 식후경	krdict	68692	금강산도 식후경	0.106	4	5	1	
+sokdam100	46	집도 절도 없다	krdict	71358	집도 절도 없다	0.104	3	5	1	
+sokdam100	47	하늘의 별 따기	krdict	20311	하늘의 별 따기	0.102	9	3	1	
+sokdam100	48	병 주고 약 준다	krdict	62694	병 주고 약 준다	0.097	3	4	1	
+sokdam100	49	입에 재갈을 물리다	stdict	531055	입에 재갈을 물리다	0.096	6	3	1	
+sokdam100	50	개 눈에는 똥만 보인다	krdict	64115	개 눈에는 똥만 보인다	0.092	0	4	1	
+sokdam100	51	걱정도 팔자다	krdict	17232	걱정도 팔자(다)	0.092	0	4	1	
+sokdam100	52	제 코가 석 자	krdict	75826	제 코가 석 자	0.092	0	4	1	
+sokdam100	53	하나를 보고 열을 안다	krdict	20283	하나를 보고[보면] 열[백]을 안다	0.092	0	4	1	
+sokdam100	54	설마가 사람 죽인다	stdict	522498	설마가 사람 죽인다[잡는다]	0.092	11	1	1	
+sokdam100	55	한 입 건너 두 입	krdict	73278	한 입 건너 두 입	0.090	0	13	0	
+sokdam100	56	달면 삼키고 쓰면 뱉는다	krdict	62741	달면 삼키고 쓰면 뱉는다	0.090	3	3	1	
+sokdam100	57	지성이면 감천	krdict	77316	지성이면 감천	0.090	71	13	0	title
+sokdam100	58	꿩 대신 닭	krdict	37906	꿩 대신 닭	0.089	6	2	1	
+sokdam100	59	까마귀 밥이 되다	stdict	525687	까마귀 밥이 되다	0.089	2	3	1	
+sokdam100	60	죽어도 눈을 감겠다	opendict	614786	죽어도 눈을 감겠다	0.088	3	12	0	
+sokdam100	61	하룻강아지 범 무서운 줄 모른다	krdict	84353	하룻강아지 범 무서운 줄 모른다	0.087	1	3	1	
+sokdam100	62	쥐구멍에도 볕 들 날 있다	krdict	76680	쥐구멍에도 볕 들 날 있다	0.086	8	1	1	
+sokdam100	63	가물에 콩씨 나듯	stdict	519181	가물에 콩(씨) 나듯	0.085	0	3	1	
+sokdam100	64	가는 날이 장날	krdict	27500	가는 날이 장날	0.082	2	2	1	
+sokdam100	65	세월이 약	krdict	49225	세월이 약	0.082	2	2	1	
+sokdam100	66	가는 말이 고와야 오는 말이 곱다	krdict	27500	가는 말이 고와야 오는 말이 곱다	0.080	1	2	1	
+sokdam100	67	고생을 사서 하다	krdict	22629	고생을 사서 하다	0.080	1	2	1	
+sokdam100	68	도토리 키 재기	krdict	46660	도토리 키 재기	0.079	4	1	1	
+sokdam100	69	썩어도 준치	krdict	65171	썩어도 준치	0.079	4	1	1	
+sokdam100	70	구렁이 담 넘어가듯	krdict	34774	구렁이 담 넘어가듯	0.078	0	2	1	
+sokdam100	71	아니 땐 굴뚝에 연기 날까	krdict	65980	아니 땐 굴뚝에 연기 날까	0.078	0	2	1	
+sokdam100	72	과부 설움은 동무 과부가 안다	stdict	519772	과부 설움은[사정은] (동무) 과부가 안다	0.078	0	2	1	
+sokdam100	73	꿈자리가 사납더니	stdict	520096	꿈자리가 사납더니	0.078	0	2	1	
+sokdam100	74	주먹이 운다	krdict	79399	주먹이 운다[울다]	0.078	148	2	1	title
+sokdam100	75	찔러도 피 한 방울 안 나겠다	krdict	71364	찔러도 피 한 방울 안 나겠다	0.077	7	0	1	
+sokdam100	76	벙어리 냉가슴 앓듯	krdict	58515	벙어리 냉가슴 앓듯	0.076	0	11	0	
+sokdam100	77	울며 겨자 먹기	krdict	69523	울며 겨자 먹기	0.076	31	11	0	title
+sokdam100	78	마른하늘에 날벼락	krdict	90707	마른하늘에 날벼락[생벼락]	0.075	6	0	1	
+sokdam100	79	겉 다르고 속 다르다	krdict	31329	겉 다르고 속 다르다	0.075	2	1	1	
+sokdam100	80	돼지 목에 진주목걸이	krdict	62269	돼지 목에 진주(목걸이)	0.075	2	1	1	
+sokdam100	81	첫술에 배부르랴	krdict	77843	첫술에 배부르랴	0.075	2	1	1	
+sokdam100	82	뛰는 놈 위에 나는 놈 있다	krdict	74124	뛰는 놈 위에 나는 놈 있다	0.074	5	0	1	
+sokdam100	83	귀에 걸면 귀걸이 코에 걸면 코걸이	krdict	60201	귀에 걸면 귀걸이 코에 걸면 코걸이	0.073	1	1	1	
+sokdam100	84	될 성부른 나무는 떡잎부터 알아본다	krdict	89858	될 성부른 나무는 떡잎부터 알아본다	0.073	1	1	1	
+sokdam100	85	모난 돌이 정 맞는다	krdict	55996	모난 돌이 정 맞는다	0.073	1	1	1	
+sokdam100	86	선무당이 사람 잡는다	krdict	63128	선무당이 사람 잡는다[죽인다]	0.073	1	1	1	
+sokdam100	87	우는 아이 젖 준다	krdict	69523	우는 아이 젖 준다	0.073	1	1	1	
+sokdam100	88	천 리 길도 한 걸음부터	krdict	17169	천 리 길도 한 걸음부터	0.073	1	1	1	
+sokdam100	89	남의 떡이 더 커 보인다	krdict	28394	남의 떡이 더 커 보인다	0.072	4	0	1	
+sokdam100	90	검은 머리 파뿌리 되도록	krdict	62259	검은 머리 파뿌리 되도록[될 때까지]	0.071	0	1	1	
+sokdam100	91	사촌이 땅을 사면 배가 아프다	krdict	61316	사촌이 땅을 사면 배가 아프다	0.071	0	1	1	
+sokdam100	92	작은 고추가 더 맵다	krdict	69513	작은 고추가 더 맵다	0.071	0	1	1	
+sokdam100	93	찬물도 위아래가 있다	krdict	71464	찬물도 위아래가 있다	0.071	0	1	1	
+sokdam100	94	흥정은 붙이고 싸움은 말리랬다	krdict	88447	흥정은 붙이고 싸움은 말리랬다	0.071	0	1	1	
+sokdam100	95	그물코가 삼천이면 걸릴 날이 있다	stdict	519981	그물코가 삼천이면 걸릴 날이 있다	0.071	0	1	1	
+sokdam100	96	새우 싸움에 고래 등 터지랴	stdict	529285	새우 싸움에 고래 등 터지랴	0.071	0	1	1	
+sokdam100	97	어물전 망신은 꼴뚜기가 시킨다	stdict	523117	어물전 망신은 꼴뚜기가 시킨다	0.071	0	1	1	
+sokdam100	98	무자식 상팔자	krdict	55039	무자식 상팔자	0.071	58	1	1	title
+sokdam100	99	피는 물보다 진하다	stdict	532902	피는 물보다 진하다	0.071	22	1	1	title
+sokdam100	100	원숭이도 나무에서 떨어진다	krdict	69959	원숭이도 나무에서 떨어진다	0.070	3	0	1	
+sokdam_all	1	누워서 떡 먹기	krdict	62063	누워서 떡 먹기	1.034	5	0	16	
+sokdam_all	2	호랑이도 제 말 하면 온다	krdict	74128	호랑이도 제 말 하면 온다	0.660	3	2	10	
+sokdam_all	3	밑져야 본전	krdict	56791	밑져야 본전	0.444	6	7	6	
+sokdam_all	4	눈에는 눈을 이에는 이를	krdict	72704	눈에는 눈(을) 이에는 이(를)	0.421	53	0	5	
+sokdam_all	5	누이 좋고 매부 좋다	krdict	45653	누이 좋고 매부 좋다	0.398	0	2	6	
+sokdam_all	6	갈수록 태산	krdict	27500	갈수록 태산	0.338	2	2	5	
+sokdam_all	7	등잔 밑이 어둡다	krdict	49114	등잔 밑이 어둡다	0.336	1	2	5	
+sokdam_all	8	시작이 반이다	krdict	36687	시작이 반이다	0.326	4	9	4	
+sokdam_all	9	따 놓은 당상	krdict	61395	따 놓은 당상	0.322	1	0	5	
+sokdam_all	10	주사위는 던져졌다	krdict	76948	주사위는 던져졌다	0.282	10	1	4	
+sokdam_all	11	우물 안 개구리	krdict	70763	우물 안 개구리[고기]	0.259	24	3	3	
+sokdam_all	12	불난 집에 부채질한다	krdict	60595	불난 집에 부채질한다	0.258	1	0	4	
+sokdam_all	13	무소식이 희소식	krdict	55648	무소식이 희소식	0.256	0	0	4	
+sokdam_all	14	꿀 먹은 벙어리	krdict	36581	꿀 먹은 벙어리	0.251	2	8	3	
+sokdam_all	15	수박 겉 핥기	krdict	29555	수박 겉 핥기	0.244	2	7	3	
+sokdam_all	16	상갓집 개	krdict	93441	상갓집 개 [노릇]	0.234	0	34	0	
+sokdam_all	17	아닌 밤중에 홍두깨 내밀듯	krdict	26878	아닌 밤중에 홍두깨 (내밀듯)	0.228	1	5	3	
+sokdam_all	18	새 발의 피	krdict	30197	새 발의 피	0.205	3	1	3	
+sokdam_all	19	김칫국부터 마신다	krdict	26402	김칫국부터 마신다	0.203	2	1	3	
+sokdam_all	20	말이 씨가 된다	krdict	27260	말이 씨가 된다	0.196	2	0	3	
+sokdam_all	21	꿩 먹고 알 먹는다	krdict	37906	꿩 먹고 알 먹는다[먹기]	0.191	4	8	2	
+sokdam_all	22	겉과 속이 다르다	krdict	31329	겉과 속이 다르다	0.177	22	1	2	
+sokdam_all	23	그 아버지에 그 아들	krdict	43883	그 아버지에 그 아들	0.165	12	2	2	
+sokdam_all	24	산 넘어 산이다	krdict	20954	산 넘어 산이다	0.164	15	1	2	
+sokdam_all	25	하늘이 무너져도 솟아날 구멍이 있다	krdict	20311	하늘이 무너져도 솟아날 구멍이 있다	0.163	0	5	2	
+sokdam_all	26	속 빈 강정	krdict	71278	속 빈 강정	0.154	3	3	2	
+sokdam_all	27	옷이 날개라	krdict	30159	옷이 날개라	0.150	8	1	2	
+sokdam_all	28	밑 빠진 독에 물 붓기	krdict	66592	밑 빠진 독[가마/항아리]에 물 붓기	0.144	1	2	2	
+sokdam_all	29	동에 번쩍 서에 번쩍	krdict	65504	동에 번쩍 서에 번쩍	0.136	5	9	1	
+sokdam_all	30	입이 열 개라도 할 말이 없다	krdict	62276	입이 열 개라도 할 말이 없다	0.135	0	1	2	
+sokdam_all	31	한 귀로 듣고 한 귀로 흘린다	krdict	73278	한 귀로 듣고 한 귀로 흘린다	0.135	0	1	2	
+sokdam_all	32	계란으로 바위 치기	krdict	15355	계란으로 바위 치기	0.134	3	0	2	
+sokdam_all	33	여자가 한을 품으면 오뉴월에도 서리가 내린다	krdict	27369	여자가 한을 품으면 오뉴월에도 서리가 내린다	0.128	0	0	2	
+sokdam_all	34	고양이 앞에 쥐	krdict	18779	고양이 앞에 쥐	0.126	0	9	1	
+sokdam_all	35	눈 가리고 아웅	krdict	72704	눈 가리고 아웅	0.126	7	7	1	
+sokdam_all	36	긁어 부스럼	krdict	37194	긁어 부스럼	0.125	3	8	1	
+sokdam_all	37	순풍에 돛을 달다	krdict	65138	순풍에 돛을 달다	0.107	2	15	0	
+sokdam_all	38	금강산도 식후경	krdict	68692	금강산도 식후경	0.106	4	5	1	
+sokdam_all	39	집도 절도 없다	krdict	71358	집도 절도 없다	0.104	3	5	1	
+sokdam_all	40	하늘의 별 따기	krdict	20311	하늘의 별 따기	0.102	9	3	1	
+sokdam_all	41	병 주고 약 준다	krdict	62694	병 주고 약 준다	0.097	3	4	1	
+sokdam_all	42	개 눈에는 똥만 보인다	krdict	64115	개 눈에는 똥만 보인다	0.092	0	4	1	
+sokdam_all	43	걱정도 팔자다	krdict	17232	걱정도 팔자(다)	0.092	0	4	1	
+sokdam_all	44	제 코가 석 자	krdict	75826	제 코가 석 자	0.092	0	4	1	
+sokdam_all	45	하나를 보고 열을 안다	krdict	20283	하나를 보고[보면] 열[백]을 안다	0.092	0	4	1	
+sokdam_all	46	달면 삼키고 쓰면 뱉는다	krdict	62741	달면 삼키고 쓰면 뱉는다	0.090	3	3	1	
+sokdam_all	47	한 입 건너 두 입	krdict	73278	한 입 건너 두 입	0.090	0	13	0	
+sokdam_all	48	지성이면 감천	krdict	77316	지성이면 감천	0.090	71	13	0	title
+sokdam_all	49	꿩 대신 닭	krdict	37906	꿩 대신 닭	0.089	6	2	1	
+sokdam_all	50	하룻강아지 범 무서운 줄 모른다	krdict	84353	하룻강아지 범 무서운 줄 모른다	0.087	1	3	1	
+sokdam_all	51	쥐구멍에도 볕 들 날 있다	krdict	76680	쥐구멍에도 볕 들 날 있다	0.086	8	1	1	
+sokdam_all	52	가는 날이 장날	krdict	27500	가는 날이 장날	0.082	2	2	1	
+sokdam_all	53	세월이 약	krdict	49225	세월이 약	0.082	2	2	1	
+sokdam_all	54	가는 말이 고와야 오는 말이 곱다	krdict	27500	가는 말이 고와야 오는 말이 곱다	0.080	1	2	1	
+sokdam_all	55	고생을 사서 하다	krdict	22629	고생을 사서 하다	0.080	1	2	1	
+sokdam_all	56	도토리 키 재기	krdict	46660	도토리 키 재기	0.079	4	1	1	
+sokdam_all	57	썩어도 준치	krdict	65171	썩어도 준치	0.079	4	1	1	
+sokdam_all	58	구렁이 담 넘어가듯	krdict	34774	구렁이 담 넘어가듯	0.078	0	2	1	
+sokdam_all	59	아니 땐 굴뚝에 연기 날까	krdict	65980	아니 땐 굴뚝에 연기 날까	0.078	0	2	1	
+sokdam_all	60	주먹이 운다	krdict	79399	주먹이 운다[울다]	0.078	148	2	1	title
+sokdam_all	61	찔러도 피 한 방울 안 나겠다	krdict	71364	찔러도 피 한 방울 안 나겠다	0.077	7	0	1	
+sokdam_all	62	벙어리 냉가슴 앓듯	krdict	58515	벙어리 냉가슴 앓듯	0.076	0	11	0	
+sokdam_all	63	울며 겨자 먹기	krdict	69523	울며 겨자 먹기	0.076	31	11	0	title
+sokdam_all	64	겉 다르고 속 다르다	krdict	31329	겉 다르고 속 다르다	0.075	2	1	1	
+sokdam_all	65	돼지 목에 진주목걸이	krdict	62269	돼지 목에 진주(목걸이)	0.075	2	1	1	
+sokdam_all	66	마른하늘에 날벼락	krdict	90707	마른하늘에 날벼락[생벼락]	0.075	6	0	1	
+sokdam_all	67	첫술에 배부르랴	krdict	77843	첫술에 배부르랴	0.075	2	1	1	
+sokdam_all	68	뛰는 놈 위에 나는 놈 있다	krdict	74124	뛰는 놈 위에 나는 놈 있다	0.074	5	0	1	
+sokdam_all	69	귀에 걸면 귀걸이 코에 걸면 코걸이	krdict	60201	귀에 걸면 귀걸이 코에 걸면 코걸이	0.073	1	1	1	
+sokdam_all	70	될 성부른 나무는 떡잎부터 알아본다	krdict	89858	될 성부른 나무는 떡잎부터 알아본다	0.073	1	1	1	
+sokdam_all	71	모난 돌이 정 맞는다	krdict	55996	모난 돌이 정 맞는다	0.073	1	1	1	
+sokdam_all	72	선무당이 사람 잡는다	krdict	63128	선무당이 사람 잡는다[죽인다]	0.073	1	1	1	
+sokdam_all	73	우는 아이 젖 준다	krdict	69523	우는 아이 젖 준다	0.073	1	1	1	
+sokdam_all	74	천 리 길도 한 걸음부터	krdict	17169	천 리 길도 한 걸음부터	0.073	1	1	1	
+sokdam_all	75	남의 떡이 더 커 보인다	krdict	28394	남의 떡이 더 커 보인다	0.072	4	0	1	
+sokdam_all	76	검은 머리 파뿌리 되도록	krdict	62259	검은 머리 파뿌리 되도록[될 때까지]	0.071	0	1	1	
+sokdam_all	77	사촌이 땅을 사면 배가 아프다	krdict	61316	사촌이 땅을 사면 배가 아프다	0.071	0	1	1	
+sokdam_all	78	작은 고추가 더 맵다	krdict	69513	작은 고추가 더 맵다	0.071	0	1	1	
+sokdam_all	79	찬물도 위아래가 있다	krdict	71464	찬물도 위아래가 있다	0.071	0	1	1	
+sokdam_all	80	흥정은 붙이고 싸움은 말리랬다	krdict	88447	흥정은 붙이고 싸움은 말리랬다	0.071	0	1	1	
+sokdam_all	81	무자식 상팔자	krdict	55039	무자식 상팔자	0.071	58	1	1	title
+sokdam_all	82	원숭이도 나무에서 떨어진다	krdict	69959	원숭이도 나무에서 떨어진다	0.070	3	0	1	
+sokdam_all	83	내 손에 장을 지지겠다	krdict	84426	내 손에 장을 지지겠다	0.066	1	0	1	
+sokdam_all	84	도랑 치고 가재 잡는다	krdict	47870	도랑 치고 가재 잡는다	0.066	1	0	1	
+sokdam_all	85	엎드려 절 받기	krdict	15199	엎드려 절 받기	0.066	1	0	1	
+sokdam_all	86	윗물이 맑아야 아랫물이 맑다	krdict	69573	윗물이 맑아야 아랫물이 맑다	0.064	1	1	1	partial
+sokdam_all	87	간에 붙었다 쓸개에 붙었다 하다	krdict	16269	간에 붙었다 쓸개에 붙었다 하다	0.064	0	0	1	
+sokdam_all	88	공든 탑이 무너지랴	krdict	22763	공든 탑이 무너지랴	0.064	1	9	0	
+sokdam_all	89	둘이 먹다 하나가 죽어도 모르겠다	krdict	34869	둘이 먹다 하나(가) 죽어도 모르겠다	0.064	0	0	1	
+sokdam_all	90	뒤로 호박씨 깐다	krdict	67477	뒤로[뒤에서] 호박씨 깐다	0.064	0	0	1	
+sokdam_all	91	말은 청산유수다	krdict	27260	말은 청산유수다	0.064	0	0	1	
+sokdam_all	92	바람 부는 대로 살다	krdict	85627	바람 부는 대로 살다	0.064	0	0	1	
+sokdam_all	93	방귀 뀐 놈이 성낸다	krdict	57843	방귀 뀐 놈이 성낸다	0.064	0	0	1	
+sokdam_all	94	사람이 죽으란 법은 없다	krdict	58161	사람이 죽으란 법은 없다	0.064	0	0	1	
+sokdam_all	95	손 안 대고 코 풀기	krdict	17608	손 안 대고 코 풀기	0.064	0	0	1	
+sokdam_all	96	얌전한 고양이가 부뚜막에 먼저 올라간다	krdict	67158	얌전한 고양이[강아지/개](가) 부뚜막에 먼저 올라간다	0.064	0	0	1	
+sokdam_all	97	엎어지면 코 닿을 데	krdict	67522	엎어지면 코 닿을 데	0.064	0	0	1	
+sokdam_all	98	자다가 봉창 두드린다	krdict	69511	자다가 봉창 두드린다	0.064	0	0	1	
+sokdam_all	99	제 버릇 개 줄까	krdict	75826	제 버릇 개 줄까	0.064	0	0	1	
+sokdam_all	100	금이야 옥이야	krdict	36547	금이야 옥이야	0.062	34	9	0	title
+sokdam_all	101	개밥에 도토리	krdict	23464	개밥에 도토리	0.056	4	7	0	
+sokdam_all	102	차면 넘친다	krdict	37227	차면 넘친다[기운다]	0.054	3	7	0	
+sokdam_all	103	공자 왈 맹자 왈 하는 식	krdict	67958	공자 왈 맹자 왈 (하는 식)	0.052	2	7	0	
+sokdam_all	104	낮말은 새가 듣고 밤말은 쥐가 듣는다	krdict	41281	낮말은 새가 듣고 밤말은 쥐가 듣는다	0.050	1	7	0	
+sokdam_all	105	하늘은 스스로 돕는 자를 돕는다	krdict	20311	하늘은 스스로 돕는 자를 돕는다	0.049	11	4	0	
+sokdam_all	106	쏟아진 물	krdict	71284	쏟아진 물	0.048	7	5	0	
+sokdam_all	107	미운 정 고운 정	krdict	56669	미운 정 고운 정	0.047	10	4	0	
+sokdam_all	108	낫 놓고 기역 자도 모른다	krdict	38522	낫 놓고 기역 자도 모른다	0.045	2	6	0	
+sokdam_all	109	목구멍이 포도청	krdict	55850	목구멍이 포도청	0.043	1	6	0	
+sokdam_all	110	초록은 동색	krdict	80522	초록은 동색	0.043	1	6	0	
+sokdam_all	111	일각이 삼추 같다	krdict	72301	일각이 삼추(三秋) 같다	0.041	0	6	0	
+sokdam_all	112	콩 심은 데 콩 나고 팥 심은 데 팥 난다	krdict	72171	콩 심은 데 콩 나고 팥 심은 데 팥 난다	0.041	14	2	0	
+sokdam_all	113	소 닭 보듯	krdict	64289	소 닭 보듯	0.038	2	5	0	
+sokdam_all	114	개천에서 용 난다	krdict	18679	개천에서 용 난다	0.037	12	2	0	
+sokdam_all	115	내 코가 석 자	krdict	84426	내 코가 석 자	0.036	1	5	0	
+sokdam_all	116	꼬리가 길면 밟힌다	krdict	32577	꼬리가 길면 밟힌다	0.035	4	4	0	
+sokdam_all	117	떼어 놓은 당상	krdict	66563	떼어 놓은 당상	0.034	0	5	0	
+sokdam_all	118	법은 멀고 주먹은 가깝다	krdict	62406	법은 멀고 주먹은 가깝다	0.034	0	5	0	
+sokdam_all	119	암탉이 운다	krdict	66681	암탉이 운다	0.034	7	3	0	
+sokdam_all	120	제 꾀에 제가 넘어간다	krdict	75826	제 꾀에 (제가) 넘어간다	0.033	3	4	0	
+sokdam_all	121	소 잃고 외양간 고친다	krdict	64289	소 잃고 외양간 고친다	0.032	6	3	0	
+sokdam_all	122	인간은 만물의 척도	krdict	66582	인간은 만물의 척도	0.032	6	3	0	
+sokdam_all	123	달도 차면 기운다	krdict	62266	달도 차면 기운다	0.031	2	4	0	
+sokdam_all	124	원수는 외나무다리에서 만난다	krdict	69955	원수는 외나무다리에서 만난다	0.031	2	4	0	
+sokdam_all	125	가재는 게 편	krdict	25827	가재는 게 편	0.029	1	4	0	
+sokdam_all	126	개 발에 편자	krdict	64115	개 발에 편자	0.029	1	4	0	
+sokdam_all	127	이름도 성도 모른다	krdict	71692	이름도 성도 모른다	0.029	1	4	0	
+sokdam_all	128	고양이 쥐 생각	krdict	18779	고양이 쥐 생각	0.028	0	4	0	
+sokdam_all	129	나는 새도 떨어뜨린다	krdict	61530	나는 새도 떨어뜨린다	0.028	4	3	0	
+sokdam_all	130	쇠귀에 경 읽기	krdict	64233	쇠귀에 경 읽기	0.028	0	4	0	
+sokdam_all	131	중이 제 머리를 못 깎는다	krdict	77165	중이 제 머리(를) 못 깎는다	0.028	0	4	0	
+sokdam_all	132	열 길 물속은 알아도 한 길 사람의 속은 모른다	krdict	67806	열 길 물속은 알아도 한 길 사람의 속은 모른다	0.028	2	7	2	partial
+sokdam_all	133	고생 끝에 낙이 온다	krdict	22629	고생 끝에 낙이 온다	0.026	3	3	0	
+sokdam_all	134	배보다 배꼽이 더 크다	krdict	20211	배보다 배꼽이 더 크다	0.023	5	2	0	
+sokdam_all	135	십 년이면 강산도 변한다	krdict	89595	십 년이면 강산도 변한다	0.023	1	3	0	
+sokdam_all	136	빛 좋은 개살구	krdict	62079	빛 좋은 개살구	0.022	8	1	0	
+sokdam_all	137	까마귀 날자 배 떨어진다	krdict	38363	까마귀 날자 배 떨어진다	0.021	4	2	0	
+sokdam_all	138	매도 먼저 맞는 놈이 낫다	krdict	15944	매도 먼저 맞는 놈이 낫다	0.021	0	3	0	
+sokdam_all	139	약에 쓰려도 없다	krdict	72379	약에 쓰려도 없다	0.021	0	3	0	
+sokdam_all	140	입에 맞는 떡	krdict	62276	입에 맞는 떡	0.021	0	3	0	
+sokdam_all	141	짝 잃은 기러기	krdict	37141	짝 잃은 기러기	0.021	0	3	0	
+sokdam_all	142	티끌 모아 태산	krdict	82672	티끌 모아 태산	0.021	4	2	0	
+sokdam_all	143	같은 값이면 다홍치마	krdict	62076	같은 값이면 다홍치마	0.018	2	2	0	
+sokdam_all	144	고양이 목에 방울 달기	krdict	18779	고양이 목에 방울 달기	0.018	6	1	0	
+sokdam_all	145	암탉이 울면 집안이 망한다	krdict	66681	암탉이 울면 집안이 망한다	0.018	2	2	0	
+sokdam_all	146	입술이 없으면 이가 시리다	krdict	75753	입술이 없으면 이가 시리다	0.018	2	2	0	
+sokdam_all	147	굶기를 밥 먹듯 한다	krdict	36863	굶기를 밥 먹듯 한다	0.016	1	2	0	
+sokdam_all	148	달리는 말에 채찍질	krdict	66321	달리는 말에 채찍질	0.016	1	2	0	
+sokdam_all	149	닭 쫓던 개 지붕 쳐다보듯	krdict	30202	닭 쫓던 개 지붕[먼산] 쳐다보듯	0.016	1	2	0	
+sokdam_all	150	믿는 도끼에 발등 찍힌다	krdict	69478	믿는 도끼에 발등 찍힌다	0.016	1	2	0	
+sokdam_all	151	바늘 가는 데 실 간다	krdict	56388	바늘 가는 데 실 간다	0.016	1	2	0	
+sokdam_all	152	발 없는 말이 천 리 간다	krdict	67886	발 없는 말이 천 리 간다	0.016	1	2	0	
+sokdam_all	153	쓴맛 단맛 다 보다	krdict	16701	쓴맛 단맛 다 보다	0.016	1	2	0	
+sokdam_all	154	타고난 팔자	krdict	49265	타고난 팔자	0.016	1	2	0	
+sokdam_all	155	사후 약방문	krdict	62142	사후 약방문	0.015	4	1	0	
+sokdam_all	156	가난이 죄다	krdict	16391	가난이 죄다	0.014	0	2	0	
+sokdam_all	157	개똥도 약에 쓰려면 없다	krdict	23427	개똥도 약에 쓰려면 없다	0.014	0	2	0	
+sokdam_all	158	개똥도 약에 쓴다	krdict	23427	개똥도 약에 쓴다	0.014	0	2	0	
+sokdam_all	159	굴러온 호박	krdict	93614	굴러온 호박	0.014	0	2	0	
+sokdam_all	160	까마귀 고기를 먹었나	krdict	38363	까마귀 고기를 먹었나	0.014	0	2	0	
+sokdam_all	161	날 잡아 잡수 한다	krdict	60931	날 잡아 잡수 한다	0.014	0	2	0	
+sokdam_all	162	내 얼굴에 침 뱉기	krdict	84426	내 얼굴에 침 뱉기	0.014	0	2	0	
+sokdam_all	163	도마에 오른 고기	krdict	14389	도마에 오른 고기	0.014	0	2	0	
+sokdam_all	164	똥이 무서워 피하나 더러워 피하지	krdict	53094	똥이 무서워 피하나 더러워 피하지	0.014	0	2	0	
+sokdam_all	165	산 사람 입에 거미줄 치랴	krdict	69579	산 (사람) 입에 거미줄 치랴	0.014	0	2	0	
+sokdam_all	166	세 살 적 버릇이 여든까지 간다	krdict	17194	세 살 적 버릇[마음]이 여든까지 간다	0.014	0	2	0	
+sokdam_all	167	쌈짓돈이 주머닛돈	krdict	66352	쌈짓돈이 주머닛돈	0.014	0	2	0	
+sokdam_all	168	앞길이 구만 리 같다	krdict	72524	앞길이 구만 리 같다	0.014	0	2	0	
+sokdam_all	169	열 번 찍어 안 넘어가는 나무 없다	krdict	67805	열 번 찍어 안 넘어가는 나무 없다	0.014	0	2	0	
+sokdam_all	170	열흘 붉은 꽃이 없다	krdict	73258	열흘 붉은 꽃이 없다	0.014	0	2	0	
+sokdam_all	171	오라는 데는 없어도 갈 데는 많다	krdict	69514	오라는 데는 없어도 갈 데는 많다	0.014	0	2	0	
+sokdam_all	172	키 크고 싱겁지 않은 사람 없다	krdict	20269	키 크고 싱겁지 않은 사람 없다	0.014	0	2	0	
+sokdam_all	173	구슬이 서 말이라도 꿰어야 보배	krdict	36375	구슬이 서 말이라도 꿰어야 보배	0.013	3	1	0	
+sokdam_all	174	벽에도 귀가 있다	krdict	28231	벽에도 귀가 있다	0.013	3	1	0	
+sokdam_all	175	개구리 올챙이 적 생각 못 한다	krdict	64364	개구리 올챙이 적 생각 못 한다	0.011	2	1	0	
+sokdam_all	176	고래 싸움에 새우 등 터진다	krdict	23423	고래 싸움에 새우 등 터진다	0.011	2	1	0	
+sokdam_all	177	뜻이 있는 곳에 길이 있다	krdict	43785	뜻이 있는 곳에 길이 있다	0.011	2	1	0	
+sokdam_all	178	바람 앞의 등불	krdict	85627	바람 앞의 등불	0.011	6	0	0	
+sokdam_all	179	자라 보고 놀란 가슴 솥뚜껑 보고 놀란다	krdict	73954	자라 보고 놀란 가슴 솥뚜껑 보고 놀란다	0.011	2	1	0	
+sokdam_all	180	하나를 듣고 열을 안다	krdict	20283	하나를 듣고[들으면] 열을 안다	0.011	2	1	0	
+sokdam_all	181	가랑비에 옷 젖는 줄 모른다	krdict	14856	가랑비에 옷 젖는 줄 모른다	0.009	1	1	0	
+sokdam_all	182	도둑이 제 발 저리다	krdict	47813	도둑이 제 발 저리다	0.009	1	1	0	
+sokdam_all	183	돌다리도 두들겨 보고 건너라	krdict	48229	돌다리도 두들겨 보고 건너라	0.009	1	1	0	
+sokdam_all	184	땅 짚고 헤엄치기	krdict	30206	땅 짚고 헤엄치기	0.009	1	1	0	
+sokdam_all	185	백지장도 맞들면 낫다	krdict	58697	백지장도 맞들면 낫다	0.009	1	1	0	
+sokdam_all	186	부부 싸움은 칼로 물 베기	krdict	32206	부부 싸움은 칼로 물 베기	0.009	1	1	0	
+sokdam_all	187	빈 수레가 더 요란하다	krdict	15680	빈 수레가 더 요란하다	0.009	1	1	0	
+sokdam_all	188	서당 개 삼 년에 풍월을 읊는다	krdict	62672	서당 개 삼 년에 풍월을 읊는다	0.009	1	1	0	
+sokdam_all	189	싸움은 말리고 흥정은 붙이랬다	krdict	24286	싸움은 말리고 흥정은 붙이랬다	0.009	1	1	0	
+sokdam_all	190	아는 것이 병	krdict	89445	아는 것이 병[탈]	0.009	1	1	0	
+sokdam_all	191	제 논에 물 대기	krdict	75826	제 논에 물 대기	0.009	1	1	0	
+sokdam_all	192	호미로 막을 것을 가래로 막는다	krdict	86481	호미로 막을 것을 가래로 막는다	0.009	1	1	0	
+sokdam_all	193	폭풍 전의 고요	krdict	83709	폭풍 전의 고요	0.008	4	0	0	
+sokdam_all	194	가는 정이 있어야 오는 정이 있다	krdict	27500	가는 정이 있어야 오는 정이 있다	0.007	0	1	0	
+sokdam_all	195	가랑잎이 솔잎더러 바스락거린다고 한다	krdict	14861	가랑잎이 솔잎더러 바스락거린다고 한다	0.007	0	1	0	
+sokdam_all	196	개 팔자가 상팔자	krdict	64115	개 팔자가 상팔자	0.007	0	1	0	
+sokdam_all	197	고기도 저 놀던 물이 좋다	krdict	31685	고기도 저 놀던 물이 좋다	0.007	0	1	0	
+sokdam_all	198	광에서 인심 난다	krdict	31152	광에서 인심 난다	0.007	0	1	0	
+sokdam_all	199	구더기 무서워서 장 못 담글까	krdict	36969	구더기 무서워서 장 못 담글까	0.007	0	1	0	
+sokdam_all	200	그 나물에 그 밥	krdict	62250	그 나물에 그 밥	0.007	0	1	0	
+sokdam_all	201	기는 놈 위에 나는 놈이 있다	krdict	32493	기는 놈 위에 나는 놈이 있다	0.007	0	1	0	
+sokdam_all	202	길고 짧은 것은 대어 보아야 안다	krdict	26808	길고 짧은 것은 대어 보아야 안다	0.007	0	1	0	
+sokdam_all	203	꾸어다 놓은 보릿자루	krdict	14648	꾸어다[꿔다] 놓은 보릿자루	0.007	0	1	0	
+sokdam_all	204	꿩 구워 먹은 소식	krdict	37906	꿩 구워 먹은 소식	0.007	0	1	0	
+sokdam_all	205	남의 잔치에 감 놓아라 배 놓아라 한다	krdict	28394	남의 잔치[장/제사]에 감 놓아라 배 놓아라 한다	0.007	0	1	0	
+sokdam_all	206	누워서 침 뱉기	krdict	62063	누워서 침 뱉기	0.007	0	1	0	
+sokdam_all	207	늦게 배운 도둑이 날 새는 줄 모른다	krdict	64526	늦게 배운 도둑이 날 새는 줄 모른다	0.007	0	1	0	
+sokdam_all	208	닭 소 보듯, 소 닭 보듯	krdict	30202	닭 소 보듯, 소 닭 보듯	0.007	0	1	0	
+sokdam_all	209	되로 주고 말로 받다	krdict	48189	되로 주고 말로 받다	0.007	0	1	0	
+sokdam_all	210	둘러치나 메어치나	krdict	50853	둘러치나 메어치나	0.007	0	1	0	
+sokdam_all	211	들으면 병이요 안 들으면 약이다	krdict	74104	들으면 병이요 안 들으면 약이다	0.007	0	1	0	
+sokdam_all	212	떡 본 김에 제사 지낸다	krdict	20199	떡 본 김에 제사 지낸다	0.007	0	1	0	
+sokdam_all	213	똥 묻은 개가 겨 묻은 개 나무란다	krdict	53094	똥 묻은 개가 겨 묻은 개 나무란다	0.007	0	1	0	
+sokdam_all	214	마파람에 게 눈 감추듯	krdict	49918	마파람에 게 눈 감추듯	0.007	0	1	0	
+sokdam_all	215	말은 해야 맛이고 고기는 씹어야 맛이다	krdict	27260	말은 해야 맛이고 고기는 씹어야 맛이다	0.007	0	1	0	
+sokdam_all	216	먹을 가까이하면 검어진다	krdict	54804	먹을 가까이하면 검어진다	0.007	0	1	0	
+sokdam_all	217	먼저 먹는 놈이 임자	krdict	54840	먼저 먹는 놈이 임자	0.007	0	1	0	
+sokdam_all	218	모로 가도 서울만 가면 된다	krdict	55991	모로 가도 서울만 가면 된다	0.007	0	1	0	
+sokdam_all	219	목마른 놈이 우물 판다	krdict	55860	목마른 놈이 우물 판다	0.007	0	1	0	
+sokdam_all	220	못 먹는 감 찔러나 본다	krdict	17254	못 먹는 감 찔러나 본다	0.007	0	1	0	
+sokdam_all	221	물에 빠지면 지푸라기라도 잡는다	krdict	17596	물에 빠지면 지푸라기라도 잡는다[움켜쥔다]	0.007	0	1	0	
+sokdam_all	222	미꾸라지 용 됐다	krdict	57745	미꾸라지 용 됐다	0.007	0	1	0	
+sokdam_all	223	미운 아이 떡 하나 더 준다	krdict	56669	미운 아이[놈] 떡 하나 더 준다	0.007	0	1	0	
+sokdam_all	224	바늘 도둑이 소도둑 된다	krdict	56388	바늘 도둑이 소도둑 된다	0.007	0	1	0	
+sokdam_all	225	밥 안 먹어도 배부르다	krdict	62683	밥 안 먹어도 배부르다	0.007	0	1	0	
+sokdam_all	226	번갯불에 콩 구워 먹다	krdict	59067	번갯불에 콩 구워[볶아] 먹다	0.007	0	1	0	
+sokdam_all	227	불면 날아갈 듯 쥐면 꺼질 듯	krdict	74179	불면 날아갈 듯 쥐면 꺼질 듯	0.007	0	1	0	
+sokdam_all	228	비 온 뒤에 땅이 굳어진다	krdict	36681	비 온 뒤에 땅이 굳어진다	0.007	0	1	0	
+sokdam_all	229	사람 팔자 시간문제	krdict	58161	사람 팔자 시간문제	0.007	0	1	0	
+sokdam_all	230	사위는 백 년 손이라	krdict	61646	사위는 백 년 손이라	0.007	0	1	0	
+sokdam_all	231	소도 언덕이 있어야 비빈다	krdict	64289	소도 언덕이 있어야 비빈다	0.007	0	1	0	
+sokdam_all	232	쇠뿔도 단김에 빼랬다	krdict	63753	쇠뿔도 단김에 빼랬다[빼라]	0.007	0	1	0	
+sokdam_all	233	숭어가 뛰니까 망둥이도 뛴다	krdict	65183	숭어가 뛰니까 망둥이도 뛴다	0.007	0	1	0	
+sokdam_all	234	안되는 사람은 자빠져도 코가 깨진다	krdict	73915	안되는 사람은 자빠져도 [뒤로 넘어져도] 코가 깨진다	0.007	0	1	0	
+sokdam_all	235	안되면 조상 탓	krdict	73915	안되면 조상[산소] 탓	0.007	0	1	0	
+sokdam_all	236	앉은 자리에 풀도 안 나겠다	krdict	71463	앉은 자리에 풀도 안 나겠다	0.007	0	1	0	
+sokdam_all	237	엎어진 김에 쉬어 간다	krdict	67522	엎어진 김에 쉬어 간다	0.007	0	1	0	
+sokdam_all	238	오는 정이 있어야 가는 정이 있다	krdict	69514	오는 정이 있어야 가는 정이 있다	0.007	0	1	0	
+sokdam_all	239	오르지 못할 나무는 쳐다보지도 마라	krdict	69518	오르지 못할 나무는 쳐다보지도 마라	0.007	0	1	0	
+sokdam_all	240	우물에 가 숭늉 찾는다	krdict	70763	우물에 가 숭늉 찾는다	0.007	0	1	0	
+sokdam_all	241	우물을 파도 한 우물을 파라	krdict	70763	우물을 파도 한 우물을 파라	0.007	0	1	0	
+sokdam_all	242	웃는 낯에 침 못 뱉는다	krdict	71461	웃는 낯에 침 못 뱉는다	0.007	0	1	0	
+sokdam_all	243	이에 신물이 돈다	krdict	69529	이에 신물이 돈다[난다]	0.007	0	1	0	
+sokdam_all	244	임도 보고 뽕도 딴다	krdict	73104	임도 보고 뽕도 딴다	0.007	0	1	0	
+sokdam_all	245	입술에 침이나 바르지	krdict	75753	입술에 침이나 바르지	0.007	0	1	0	
+sokdam_all	246	입은 비뚤어져도 말은 바로 해라	krdict	62276	입은 비뚤어져도 말은 바로 해라[하랬다]	0.007	0	1	0	
+sokdam_all	247	자다가 벼락을 맞는다	krdict	69511	자다가 벼락을 맞는다	0.007	0	1	0	
+sokdam_all	248	장부가 칼을 빼었다가 도로 꽂나	krdict	73767	장부가 칼을 빼었다가 도로 꽂나	0.007	0	1	0	
+sokdam_all	249	재수가 옴 붙었다	krdict	24931	재수가 옴 붙었다[붙다]	0.007	0	1	0	
+sokdam_all	250	저 먹자니 싫고 남 주자니 아깝다	krdict	44508	저 먹자니 싫고 남[개] 주자니 아깝다	0.007	0	1	0	
+sokdam_all	251	종로에서 뺨 맞고 한강에서 눈 흘긴다	krdict	68906	종로에서 뺨 맞고 한강에서[한강에 가서] 눈 흘긴다	0.007	0	1	0	
+sokdam_all	252	지렁이도 밟으면 꿈틀한다	krdict	76939	지렁이도 밟으면 꿈틀한다	0.007	0	1	0	
+sokdam_all	253	짚신도 제짝이 있다	krdict	77752	짚신도 제짝이 있다	0.007	0	1	0	
+sokdam_all	254	천 냥 빚도 말로 갚는다	krdict	17169	천 냥 빚도 말로 갚는다	0.007	0	1	0	
+sokdam_all	255	팔이 안으로 굽는다	krdict	32794	팔이 안으로 굽는다	0.007	0	1	0	
+sokdam_all	256	팥으로 메주를 쑨대도 곧이듣는다	krdict	80742	팥으로 메주를 쑨대도 곧이듣는다	0.007	0	1	0	
+sokdam_all	257	하나만 알고 둘을 모른다	krdict	20283	하나만 알고 둘을 모른다	0.007	0	1	0	
+sokdam_all	258	한강에 돌 던지기	krdict	68717	한강에 돌 던지기	0.007	0	1	0	
+sokdam_all	259	한번 엎지른 물은 다시 주워 담지 못한다	krdict	57336	한번 엎지른 물은 다시 주워 담지 못한다	0.007	0	1	0	
+sokdam_all	260	호랑이 굴에 가야 호랑이 새끼를 잡는다	krdict	74128	호랑이 굴에 가야 호랑이 새끼를 잡는다	0.007	0	1	0	
+sokdam_all	261	호랑이 담배 먹을 적	krdict	74128	호랑이 담배 먹을[피울] 적	0.007	0	1	0	
+sokdam_all	262	호박이 넝쿨째로 굴러떨어졌다	krdict	86627	호박이 넝쿨째로 굴러떨어졌다	0.007	0	1	0	
+sokdam_all	263	개같이 벌어서 정승같이 쓴다	krdict	64115	개같이 벌어서 정승같이 쓴다	0.007	1	1	0	partial
+sokdam_all	264	사람 위에 사람 없고 사람 밑에 사람 없다	krdict	58161	사람 위에 사람 없고 사람 밑에 사람 없다	0.007	0	2	0	partial
+sokdam_all	265	여자 셋이 모이면 접시가 깨진다	krdict	27369	여자 셋이 모이면 접시가 깨진다	0.007	3	1	0	partial
+sokdam_all	266	하늘을 보아야 별을 따다	krdict	20311	하늘을 보아야 별을 따다	0.007	0	2	0	partial
+sokdam_all	267	가뭄에 콩 나듯 한다	krdict	15306	가뭄에 콩 나듯 (한다)	0.004	2	0	0	
+sokdam_all	268	고운 정 미운 정	krdict	24959	고운 정 미운 정	0.004	2	0	0	
+sokdam_all	269	구관이 명관이다	krdict	34901	구관이 명관이다	0.004	2	0	0	
+sokdam_all	270	미운 일곱 살	krdict	56669	미운 일곱 살	0.004	2	0	0	
+sokdam_all	271	언 발에 오줌 누기	krdict	66572	언 발에 오줌 누기	0.004	2	0	0	
+sokdam_all	272	품 안의 자식	krdict	83747	품 안의 자식	0.004	2	0	0	
+sokdam_all	273	빈대 잡으려고 초가삼간 태운다	krdict	60426	빈대 잡으려고 초가삼간 태운다	0.004	3	1	0	partial
+sokdam_all	274	고양이 개 보듯	krdict	18779	고양이 개 보듯	0.002	1	0	0	
+sokdam_all	275	고인 물이 썩는다	krdict	18843	고인[고여 있는] 물이 썩는다	0.002	1	0	0	
+sokdam_all	276	그 어머니에 그 아들	krdict	43883	그 어머니에 그 아들[딸]	0.002	1	0	0	
+sokdam_all	277	꿈보다 해몽이 좋다	krdict	57279	꿈보다 해몽이 좋다	0.002	1	0	0	
+sokdam_all	278	단맛 쓴맛 다 보다	krdict	42182	단맛 쓴맛 다 보다	0.002	1	0	0	
+sokdam_all	279	달걀로 바위 치기	krdict	60487	달걀로 바위 치기	0.002	1	0	0	
+sokdam_all	280	뚝배기보다 장맛이 좋다	krdict	53184	뚝배기보다 장맛이 좋다	0.002	1	0	0	
+sokdam_all	281	뛰어야 벼룩	krdict	74124	뛰어야 벼룩	0.002	1	0	0	
+sokdam_all	282	말이 말을 만든다	krdict	27260	말이 말을 만든다	0.002	1	0	0	
+sokdam_all	283	사랑은 내리사랑	krdict	66649	사랑은 내리사랑	0.002	1	0	0	
+sokdam_all	284	손바닥으로 하늘 가리기	krdict	63968	손바닥으로 하늘 가리기	0.002	1	0	0	
+sokdam_all	285	손바닥을 뒤집는 것처럼 쉽다	krdict	63968	손바닥을 뒤집는 것처럼 쉽다	0.002	1	0	0	
+sokdam_all	286	아 해 다르고 어 해 다르다	krdict	68776	아 해 다르고 어 해 다르다	0.002	1	0	0	
+sokdam_all	287	아는 길도 물어 가랬다	krdict	89445	아는 길도 물어 가랬다	0.002	1	0	0	
+sokdam_all	288	음지가 양지 되고 양지가 음지 된다	krdict	71255	음지가 양지 되고 양지가 음지 된다	0.002	1	0	0	
+sokdam_all	289	입에 쓴 약이 몸에 좋다	krdict	62276	입에 쓴 약이 몸에 좋다	0.002	1	0	0	
+sokdam_all	290	죄짓고 못 산다	krdict	90811	죄짓고 못 산다	0.002	1	0	0	
+sokdam_all	291	친구 따라 강남 간다	krdict	29742	친구 따라 강남 간다	0.002	1	0	0	
+sokdam_all	292	친구는 옛 친구가 좋고 옷은 새 옷이 좋다	krdict	29742	친구는 옛 친구가 좋고 옷은 새 옷이 좋다	0.002	1	0	0	
+sokdam_all	293	코에 걸면 코걸이 귀에 걸면 귀걸이	krdict	46814	코에 걸면 코걸이 귀에 걸면 귀걸이	0.002	1	0	0	
+sokdam_all	294	호랑이 없는 골에 토끼가 왕 노릇 한다	krdict	74128	호랑이 없는 골에 토끼가 왕 노릇 한다	0.002	1	0	0	
+sokdam_all	295	호랑이에게 물려 가도 정신만 차리면 산다	krdict	74128	호랑이에게 물려 가도 정신만 차리면 산다	0.002	1	0	0	
+sokdam_all	296	흐르는 물은 썩지 않는다	krdict	29757	흐르는 물은 썩지 않는다	0.002	1	0	0	
+sokdam_all	297	사람은 죽으면 이름을 남기고 범은 죽으면 가죽을 남긴다	krdict	58161	사람은 죽으면 이름을 남기고 범은 죽으면 가죽을 남긴다	0.002	6	4	0	partial
+sokdam_all	298	가난 구제는 나라님도 못한다	krdict	16391	가난 구제는 나라님[임금님]도 못한다	0.000	0	0	0	
+sokdam_all	299	가랑잎에 불붙듯	krdict	14861	가랑잎에 불붙듯	0.000	0	0	0	
+sokdam_all	300	가지 많은 나무에 바람 잘 날이 없다	krdict	59919	가지 많은 나무에 바람 잘 날이 없다	0.000	0	0	0	
+sokdam_all	301	강물도 쓰면 준다	krdict	62662	강물도 쓰면 준다	0.000	0	0	0	
+sokdam_all	302	강태공이 세월 낚듯 한다	krdict	67962	강태공이 세월 낚듯 한다	0.000	0	0	0	
+sokdam_all	303	개 고양이 보듯	krdict	64115	개 고양이 보듯	0.000	0	0	0	
+sokdam_all	304	개 닭 보듯	krdict	64115	개 닭 보듯	0.000	0	0	0	
+sokdam_all	305	개 머루약과 먹듯	krdict	64115	개 머루(약과) 먹듯	0.000	0	0	0	
+sokdam_all	306	개가 똥을 마다할까	krdict	64115	개가 똥을 마다할까	0.000	0	0	0	
+sokdam_all	307	개가 웃을 일이다	krdict	64115	개가 웃을 일이다	0.000	0	0	0	
+sokdam_all	308	개도 주인을 알아본다	krdict	64115	개도 주인을 알아본다	0.000	0	0	0	
+sokdam_all	309	거짓말하고 뺨 맞는 것보다 낫다	krdict	28444	거짓말하고 뺨 맞는 것보다 낫다	0.000	0	0	0	
+sokdam_all	310	걷기도 전에 뛰려고 한다	krdict	29667	걷기도 전에 뛰려고 한다	0.000	0	0	0	
+sokdam_all	311	검은 데 가면 검어지고 흰 데 가면 희어진다	krdict	62259	검은 데 가면 검어지고 흰 데 가면 희어진다	0.000	0	0	0	
+sokdam_all	312	검은 머리 가진 짐승은 구제 말란다	krdict	62259	검은 머리 가진 짐승은 구제 말란다	0.000	0	0	0	
+sokdam_all	313	겨 묻은 개가 똥 묻은 개를 나무란다	krdict	28454	겨 묻은 개가 똥 묻은 개를 나무란다[흉본다]	0.000	0	0	0	
+sokdam_all	314	경주 돌이면 다 옥석인가	krdict	68909	경주 돌이면 다 옥석인가	0.000	0	0	0	
+sokdam_all	315	고기는 씹어야 맛을 안다	krdict	31685	고기는 씹어야 맛을 안다	0.000	0	3	0	partial
+sokdam_all	316	고기는 씹어야 맛이요, 말은 해야 맛이라	krdict	31685	고기는 씹어야 맛이요, 말은 해야 맛이라	0.000	0	3	0	partial
+sokdam_all	317	고기도 먹어 본 사람이 많이 먹는다	krdict	31685	고기도 먹어 본 사람이 (많이/잘) 먹는다	0.000	0	0	0	
+sokdam_all	318	고생을 밥 먹듯 하다	krdict	22629	고생을 밥 먹듯 하다	0.000	0	0	0	
+sokdam_all	319	고양이 만난 쥐	krdict	18779	고양이 만난 쥐	0.000	0	0	0	
+sokdam_all	320	고양이 세수하듯	krdict	18779	고양이 세수하듯	0.000	0	0	0	
+sokdam_all	321	고양이 쥐 어르듯	krdict	18779	고양이 쥐 어르듯	0.000	0	0	0	
+sokdam_all	322	고양이한테 생선을 맡기다	krdict	18779	고양이한테 생선을 맡기다	0.000	0	0	0	
+sokdam_all	323	곡식 이삭은 익을수록 고개를 숙인다	krdict	27578	곡식 이삭은 익을수록[잘될수록] 고개를 숙인다	0.000	0	0	0	
+sokdam_all	324	곪으면 터지는 법	krdict	27876	곪으면 터지는 법	0.000	0	0	0	
+sokdam_all	325	공것 바라면 이마가 벗어진다	krdict	19505	공것 바라면 이마[대머리]가 벗어진다	0.000	0	0	0	
+sokdam_all	326	공것이라면 양잿물도 먹는다	krdict	19505	공것이라면 양잿물도 먹는다	0.000	0	0	0	
+sokdam_all	327	공은 공이고, 사는 사다	krdict	18676	공은 공이고, 사는 사다	0.000	0	0	0	
+sokdam_all	328	공자 앞에서 문자 쓴다	krdict	67958	공자 앞에서 문자 쓴다	0.000	0	0	0	
+sokdam_all	329	공짜라면 양잿물이라도 먹는다	krdict	24126	공짜라면 양잿물이라도 먹는다	0.000	0	0	0	
+sokdam_all	330	과부 설움은 홀아비가 안다	krdict	18838	과부 설움은 홀아비가 안다	0.000	0	0	0	
+sokdam_all	331	구르는 돌은 이끼가 안 낀다	krdict	34811	구르는 돌은 이끼가 안 낀다	0.000	0	0	0	
+sokdam_all	332	굴러 온 돌이 박힌 돌 뺀다	krdict	34811	굴러 온 돌이 박힌 돌 뺀다	0.000	0	0	0	
+sokdam_all	333	굴러온 돌한테 발등 다친다	krdict	93614	굴러온 돌한테 발등 다친다	0.000	0	0	0	
+sokdam_all	334	굼벵이도 구르는 재주가 있다	krdict	36216	굼벵이도 구르는[기는] 재주가 있다	0.000	0	0	0	
+sokdam_all	335	굿이나 보고 떡이나 먹다	krdict	36147	굿이나 보고 떡이나 먹다	0.000	0	0	0	
+sokdam_all	336	궁지에 빠진 쥐가 고양이를 문다	krdict	37292	궁지에 빠진 쥐가 고양이를 문다	0.000	0	0	0	
+sokdam_all	337	귀머거리 삼 년이요 벙어리 삼 년이라	krdict	38256	귀머거리 삼 년이요 벙어리 삼 년(이라)	0.000	0	0	0	
+sokdam_all	338	귀신 씻나락 까먹는 소리	krdict	36872	귀신 씻나락 까먹는 소리	0.000	0	0	0	
+sokdam_all	339	귀여운 자식 매로 키운다	krdict	38323	귀여운 자식 매로 키운다	0.000	0	0	0	
+sokdam_all	340	그물에 걸린 고기 신세	krdict	36405	그물에 걸린 고기[새/토끼] 신세	0.000	0	0	0	
+sokdam_all	341	그물을 벗어난 새	krdict	36405	그물을 벗어난 새	0.000	0	0	0	
+sokdam_all	342	길이 아니거든 가지 말고 말이 아니거든 듣지 말라	krdict	59251	길이 아니거든[아니면] 가지 말고 말이 아니거든[아니면] 듣지[탓하지] 말라	0.000	0	0	0	
+sokdam_all	343	깨물어서 아프지 않은 손가락 없다	krdict	41481	깨물어서 아프지 않은 손가락 없다	0.000	0	0	0	
+sokdam_all	344	꿈도 꾸기 전에 해몽	krdict	57279	꿈도 꾸기 전에 해몽	0.000	0	0	0	
+sokdam_all	345	나 먹기는 싫어도 남 주기는 아깝다	krdict	60931	나 먹기는 싫어도 남 주기는 아깝다	0.000	0	0	0	
+sokdam_all	346	나는 바담 풍 해도 너는 바람 풍 해라	krdict	60931	나는 바담 풍 해도 너는 바람 풍 해라	0.000	0	0	0	
+sokdam_all	347	나무만 보고 숲을 보지 못한다	krdict	32750	나무만 보고 숲을 보지 못한다	0.000	0	0	0	
+sokdam_all	348	나이는 못 속인다	krdict	60486	나이는 못 속인다	0.000	0	0	0	
+sokdam_all	349	날아가는 새도 떨어뜨린다	krdict	58275	날아가는 새도 떨어뜨린다	0.000	0	0	0	
+sokdam_all	350	남의 장단에 춤춘다	krdict	28394	남의 장단에 춤춘다	0.000	0	0	0	
+sokdam_all	351	남편 복 없는 여자는 자식 복도 없다	krdict	31919	남편 복 없는 여자는[년은] 자식 복도 없다	0.000	0	0	0	
+sokdam_all	352	낳은 정보다 기른 정이 더 크다	krdict	64391	낳은 정보다 기른 정이 더 크다	0.000	0	0	0	
+sokdam_all	353	내민 손이 무안하다	krdict	85915	내민 손이 무안하다	0.000	0	0	0	
+sokdam_all	354	냉수 먹고 속 차려라	krdict	20442	냉수 먹고 속 차려라	0.000	0	0	0	
+sokdam_all	355	너는 용빼는 재주가 있느냐	krdict	64390	너는 용빼는 재주가 있느냐	0.000	0	0	0	
+sokdam_all	356	너하고 말하느니 개하고 말하겠다	krdict	64390	너하고 말하느니 개하고 말하겠다	0.000	0	0	0	
+sokdam_all	357	넘어지면 코 닿을 데	krdict	62363	넘어지면 코 닿을 데	0.000	0	0	0	
+sokdam_all	358	넘어진 김에 쉬어 간다	krdict	62363	넘어진 김에 쉬어 간다	0.000	0	0	0	
+sokdam_all	359	놓친 고기가 더 크다	krdict	62824	놓친 고기가 더 크다[커 보인다]	0.000	0	0	0	
+sokdam_all	360	누울 자리 봐 가며 발을 뻗어라	krdict	62063	누울 자리 봐 가며 발을 뻗어라	0.000	0	0	0	
+sokdam_all	361	눈 감고 따라간다	krdict	72704	눈 감고 따라간다	0.000	0	0	0	
+sokdam_all	362	눈 감으면 코 베어 먹을 세상	krdict	72704	눈 감으면 코 베어 먹을 세상[인심]	0.000	0	0	0	
+sokdam_all	363	눈 뜨고 도둑맞는다	krdict	72704	눈 뜨고 도둑맞는다	0.000	0	0	0	
+sokdam_all	364	눈 뜨고 코 베어 갈 세상	krdict	72704	눈 뜨고 코 베어 갈 세상[인심]	0.000	0	0	0	
+sokdam_all	365	눈에 눈이 들어가니 눈물인가 눈물인가	krdict	72704	눈에 눈이 들어가니 눈물인가 눈물인가	0.000	0	0	0	
+sokdam_all	366	눈에 약하려도 없다	krdict	72704	눈에 약하려도 없다	0.000	0	0	0	
+sokdam_all	367	눈에 콩깍지가 씌었다	krdict	72704	눈에 콩깍지가 씌었다	0.000	0	0	0	
+sokdam_all	368	눈은 그 사람의 마음을 닮는다	krdict	72704	눈은 그 사람의 마음을 닮는다	0.000	0	0	0	
+sokdam_all	369	눈은 마음의 거울	krdict	72704	눈은 마음의 거울	0.000	0	0	0	
+sokdam_all	370	눈을 떠도 코 베어 간다	krdict	72704	눈을 떠도 코 베어 간다	0.000	0	0	0	
+sokdam_all	371	눈을 떠야 별을 보지	krdict	72704	눈을 떠야 별을 보지	0.000	0	0	0	
+sokdam_all	372	눈이 보배다	krdict	72704	눈이 보배다	0.000	0	0	0	
+sokdam_all	373	눈이 아무리 밝아도 제 코는 안 보인다	krdict	72704	눈이 아무리 밝아도 제 코는 안 보인다	0.000	0	0	0	
+sokdam_all	374	눈이 저울이라	krdict	72704	눈이 저울이라	0.000	0	0	0	
+sokdam_all	375	늙으면 눈물이 헤퍼진다	krdict	63500	늙으면 눈물이 헤퍼진다	0.000	0	0	0	
+sokdam_all	376	늙으면 설움이 많다	krdict	63500	늙으면 설움이 많다	0.000	0	0	0	
+sokdam_all	377	늙으면 아이 된다	krdict	63500	늙으면 아이 된다	0.000	0	0	0	
+sokdam_all	378	늙을수록 느는 건 잔소리뿐이다	krdict	63500	늙을수록 느는 건 잔소리뿐이다	0.000	0	0	0	
+sokdam_all	379	늦게 시작한 도둑이 새벽 다 가는 줄 모른다	krdict	64526	늦게 시작한 도둑이 새벽 다 가는 줄 모른다	0.000	0	0	0	
+sokdam_all	380	다 된 죽에 코 빠졌다	krdict	58176	다 된 죽에 코 빠졌다	0.000	0	0	0	
+sokdam_all	381	다 된 죽에 코 풀기	krdict	58176	다 된 죽에 코 풀기	0.000	0	0	0	
+sokdam_all	382	다섯 손가락 깨물어서 아프지 않은 손가락이 없다	krdict	58112	다섯 손가락 깨물어서 아프지 않은 손가락이 없다	0.000	0	0	0	
+sokdam_all	383	닭 잡아먹고 오리 발 내놓기	krdict	30202	닭 잡아먹고 오리 발 내놓기	0.000	0	0	0	
+sokdam_all	384	당장 먹기엔 곶감이 달다	krdict	61387	당장 먹기엔 곶감이 달다	0.000	0	0	0	
+sokdam_all	385	대낮에 마른벼락	krdict	14278	대낮에 마른벼락	0.000	0	0	0	
+sokdam_all	386	더도 말고 덜도 말고 늘 한가위만 같아라	krdict	26829	더도 말고 덜도 말고 늘 한가위만 같아라	0.000	14	1	2	partial
+sokdam_all	387	도둑을 맞으려면 개도 안 짖는다	krdict	47813	도둑을 맞으려면 개도 안 짖는다	0.000	0	0	0	
+sokdam_all	388	돈은 있다가도 없어지고 없다가도 생기는 법이라	krdict	17204	돈은 있다가도 없어지고 없다가도 생기는 법이라	0.000	0	0	0	
+sokdam_all	389	동냥은 못 줘도 쪽박은 깨지 마라	krdict	61405	동냥은 못 줘도 쪽박은 깨지 마라	0.000	0	0	0	
+sokdam_all	390	두 손뼉이 맞아야 소리가 난다	krdict	71458	두 손뼉이 맞아야 소리가 난다	0.000	0	0	0	
+sokdam_all	391	두었다가 국 끓여 먹겠다	krdict	67470	두었다가 국 끓여 먹겠다	0.000	0	0	0	
+sokdam_all	392	뒤에 보자는 사람 무섭지 않다	krdict	67477	뒤에 보자는 사람[양반] 무섭지 않다	0.000	0	0	0	
+sokdam_all	393	뒤웅박 팔자	krdict	58012	뒤웅박 팔자	0.000	0	0	0	
+sokdam_all	394	뒷간과 사돈집은 멀어야 한다	krdict	67084	뒷간과 사돈집은 멀어야 한다	0.000	0	0	0	
+sokdam_all	395	뒷간에 갈 적 마음 다르고 올 적 마음 다르다	krdict	67084	뒷간에 갈 적 마음 다르고 올 적 마음 다르다	0.000	0	0	0	
+sokdam_all	396	뒷구멍으로 호박씨 깐다	krdict	67147	뒷구멍으로 호박씨 깐다	0.000	0	0	0	
+sokdam_all	397	드는 정은 몰라도 나는 정은 안다	krdict	71686	드는 정은 몰라도 나는 정은 안다	0.000	0	0	0	
+sokdam_all	398	드는 줄은 몰라도 나는 줄은 안다	krdict	71686	드는 줄은 몰라도 나는 줄은 안다	0.000	0	0	0	
+sokdam_all	399	듣기 좋은 이야기도 늘 들으면 싫다	krdict	74104	듣기 좋은 이야기도 늘 들으면 싫다	0.000	0	0	0	
+sokdam_all	400	듣는 것이 보는 것만 못하다	krdict	74104	듣는 것이 보는 것만 못하다	0.000	0	0	0	
+sokdam_all	401	들어오는 복도 차 던진다	krdict	74105	들어오는 복도 차 던진다	0.000	0	0	0	
+sokdam_all	402	땅에서 솟았나 하늘에서 떨어졌나	krdict	30206	땅에서 솟았나 하늘에서 떨어졌나	0.000	0	0	0	
+sokdam_all	403	때리는 시어머니보다 말리는 시누이가 더 밉다	krdict	14433	때리는 시어머니보다 말리는 시누이가 더 밉다	0.000	0	0	0	
+sokdam_all	404	때린 놈은 다리 못 뻗고 자도 맞은 놈은 다리 뻗고 잔다	krdict	14433	때린 놈은 다리 못 뻗고 자도 맞은 놈은 다리 뻗고 잔다	0.000	0	0	0	
+sokdam_all	405	떡 본 김에 굿 한다	krdict	20199	떡 본 김에 굿 한다	0.000	0	0	0	
+sokdam_all	406	떡 줄 사람은 생각지도 않는데 김칫국부터 마신다	krdict	20199	떡 줄 사람은 생각지도 않는데 김칫국부터 마신다	0.000	0	0	0	
+sokdam_all	407	똥 누고 밑 아니 씻은 것 같다	krdict	53094	똥 누고 밑 아니 씻은 것 같다	0.000	0	0	0	
+sokdam_all	408	똥 누는 놈 주저앉히기	krdict	53094	똥 누는 놈 주저앉히기	0.000	0	0	0	
+sokdam_all	409	똥 누러 갈 적 마음 다르고 올 적 마음 다르다	krdict	53094	똥 누러 갈 적 마음 다르고 올 적 마음 다르다	0.000	0	0	0	
+sokdam_all	410	뛰어 보았자 부처님 손바닥	krdict	74124	뛰어 보았자 부처님 손바닥	0.000	0	0	0	
+sokdam_all	411	뜨고도 못 보는 당달봉사	krdict	62313	뜨고도 못 보는 당달봉사	0.000	0	0	0	
+sokdam_all	412	마른하늘에 벼락 맞는다	krdict	90707	마른하늘에 벼락 맞는다	0.000	0	0	0	
+sokdam_all	413	만 리 길도 한 걸음으로 시작된다	krdict	64646	만 리 길도 한 걸음으로 시작된다	0.000	0	0	0	
+sokdam_all	414	만나자 이별	krdict	66591	만나자 이별	0.000	0	0	0	
+sokdam_all	415	말 속에 뜻이 있고 뼈가 있다	krdict	27260	말 속에 뜻이 있고 뼈가 있다	0.000	0	0	0	
+sokdam_all	416	말 안 하면 귀신도 모른다	krdict	27260	말 안 하면 귀신도 모른다	0.000	0	0	0	
+sokdam_all	417	말 타면 경마 잡히고 싶다	krdict	53068	말 타면 경마 잡히고 싶다	0.000	0	0	0	
+sokdam_all	418	말 한마디에 천 냥 빚도 갚는다	krdict	27260	말 한마디에 천 냥 빚도 갚는다	0.000	0	0	0	
+sokdam_all	419	말로는 못할 말이 없다	krdict	27260	말로는 못할 말이 없다	0.000	0	0	0	
+sokdam_all	420	말은 적을수록 좋다	krdict	27260	말은 적을수록 좋다	0.000	0	0	0	
+sokdam_all	421	맑은 물에 고기 안 논다	krdict	66031	맑은 물에 고기 안 논다	0.000	0	0	0	
+sokdam_all	422	맛이 좋으면 넘기고 쓰면 뱉는다	krdict	66228	맛이 좋으면 넘기고 쓰면 뱉는다	0.000	0	0	0	
+sokdam_all	423	먹고 죽은 귀신이 때깔도 곱다	krdict	58272	먹고 죽은 귀신이 때깔도 곱다[좋다]	0.000	0	0	0	
+sokdam_all	424	먹는 개도 아니 때린다	krdict	58272	먹는 개도 아니 때린다	0.000	0	0	0	
+sokdam_all	425	먹을 때는 개도 때리지 않는다	krdict	58272	먹을 때는 개도 때리지 않는다	0.000	0	0	0	
+sokdam_all	426	모래 위에 선 누각	krdict	55780	모래 위에 선 누각[집]	0.000	0	0	0	
+sokdam_all	427	모르면 약이요 아는 게 병	krdict	29712	모르면 약이요 아는 게 병	0.000	0	0	0	
+sokdam_all	428	못 오를 나무는 쳐다보지도 마라	krdict	17254	못 오를 나무는 쳐다보지도 마라	0.000	0	0	0	
+sokdam_all	429	못되면 조상 탓 잘되면 제 탓	krdict	15308	못되면 조상 탓 (잘되면 제 탓)	0.000	0	0	0	
+sokdam_all	430	못된 송아지 엉덩이에 뿔이 난다	krdict	15308	못된 송아지 엉덩이에 뿔이 난다	0.000	0	0	0	
+sokdam_all	431	무는 개는 짖지 않는다	krdict	62322	무는 개는 짖지 않는다	0.000	0	0	0	
+sokdam_all	432	물독에 빠진 생쥐	krdict	56193	물독에 빠진 생쥐	0.000	0	0	0	
+sokdam_all	433	물에 물 탄 듯 술에 술 탄 듯	krdict	17596	물에 물 탄 듯 술에 술 탄 듯	0.000	0	0	0	
+sokdam_all	434	물에 빠진 놈 건져 놓으니까 내 봇짐 내라 한다	krdict	17596	물에 빠진 놈 건져 놓으니까 내 봇짐 내라 한다	0.000	0	0	0	
+sokdam_all	435	물에 빠진 놈 건져 놓으니까 망건 값 달라 한다	krdict	17596	물에 빠진 놈 건져 놓으니까 망건 값 달라 한다	0.000	0	0	0	
+sokdam_all	436	물이 너무 맑으면 고기가 아니 모인다	krdict	17596	물이 너무 맑으면 고기가 아니 모인다	0.000	1	1	0	partial
+sokdam_all	437	미꾸라지 한 마리가 온 웅덩이를 흐려 놓는다	krdict	57745	미꾸라지 한 마리가 온 웅덩이를 흐려 놓는다	0.000	0	0	0	
+sokdam_all	438	미끄러진 김에 쉬어 간다	krdict	15748	미끄러진 김에 쉬어 간다	0.000	0	0	0	
+sokdam_all	439	밑구멍으로 호박씨 깐다	krdict	56679	밑구멍으로 호박씨 깐다	0.000	0	0	0	
+sokdam_all	440	밑으로 호박씨 깐다	krdict	66592	밑으로 호박씨 깐다	0.000	0	0	0	
+sokdam_all	441	바늘로 찔러도 피 한 방울 안 난다	krdict	56388	바늘로 찔러도 피 한 방울 안 난다	0.000	0	0	0	
+sokdam_all	442	바닥 다 보았다	krdict	62696	바닥 다 보았다	0.000	0	0	0	
+sokdam_all	443	바람이 불어야 배가 가지	krdict	85627	바람이 불어야 배가 가지	0.000	3	0	0	partial
+sokdam_all	444	받아 놓은 당상	krdict	66636	받아 놓은 당상	0.000	0	0	0	
+sokdam_all	445	받아 놓은 밥상	krdict	66636	받아 놓은 밥상	0.000	0	0	0	
+sokdam_all	446	받은 밥상을 찬다	krdict	66636	받은 밥상을 찬다	0.000	0	0	0	
+sokdam_all	447	발보다 발가락이 더 크다	krdict	67886	발보다 발가락이 더 크다	0.000	0	0	0	
+sokdam_all	448	발을 뻗을 자리를 보고 누우랬다	krdict	67886	발(을) 뻗을 자리를 보고 누우랬다	0.000	0	0	0	
+sokdam_all	449	밤말은 쥐가 듣고 낮말은 새가 듣는다	krdict	57938	밤말은 쥐가 듣고 낮말은 새가 듣는다	0.000	0	0	0	
+sokdam_all	450	밥 먹을 때는 개도 안 때린다	krdict	62683	밥 먹을 때는 개도 안 때린다	0.000	0	0	0	
+sokdam_all	451	밥 빌어다가 죽을 쑤어 먹을 놈	krdict	62683	밥 빌어다가 죽을 쑤어 먹을 놈[자식]	0.000	0	0	0	
+sokdam_all	452	밥은 열 곳에 가 먹어도 잠은 한 곳에서 자랬다	krdict	62683	밥은 열 곳에 가 먹어도 잠은 한 곳에서 자랬다	0.000	0	0	0	
+sokdam_all	453	백 번 듣는 것이 한 번 보는 것만 못하다	krdict	36018	백 번 듣는 것이 한 번 보는 것만 못하다	0.000	0	0	0	
+sokdam_all	454	백지 한 장도 맞들면 낫다	krdict	58440	백지 한 장도 맞들면 낫다	0.000	0	0	0	
+sokdam_all	455	뱁새가 황새를 따라가면 다리가 찢어진다	krdict	58705	뱁새가 황새를 따라가면 다리가 찢어진다	0.000	0	0	0	
+sokdam_all	456	벗 따라 강남 간다	krdict	58490	벗 따라 강남 간다	0.000	0	0	0	
+sokdam_all	457	벼 이삭은 익을수록 고개를 숙인다	krdict	14469	벼 이삭은 익을수록 고개를 숙인다	0.000	0	0	0	
+sokdam_all	458	벼룩도 낯짝이 있다	krdict	58636	벼룩도 낯짝이 있다	0.000	0	0	0	
+sokdam_all	459	벼룩의 간을 내먹는다	krdict	58636	벼룩의 간을 내먹는다	0.000	0	0	0	
+sokdam_all	460	병에는 장사 없다	krdict	62694	병에는 장사 없다	0.000	0	0	0	
+sokdam_all	461	보기 좋은 떡이 먹기도 좋다	krdict	61190	보기 좋은 떡이 먹기도 좋다	0.000	0	0	0	
+sokdam_all	462	보채는 아이 밥 한 술 더 준다	krdict	59751	보채는 아이 밥 한 술 더 준다	0.000	0	0	0	
+sokdam_all	463	부모 말을 잘 들으면 자다가도 떡이 생긴다	krdict	29559	부모 말을 잘 들으면 자다가도 떡이 생긴다	0.000	0	0	0	
+sokdam_all	464	불 가져오라는데 물 가져온다	krdict	61154	불 가져오라는데 물 가져온다	0.000	0	0	0	
+sokdam_all	465	불면 꺼질까 쥐면 터질까	krdict	74179	불면 꺼질까 쥐면 터질까	0.000	0	0	0	
+sokdam_all	466	불알 두 쪽밖에는 없다	krdict	60398	불알 두 쪽밖에는 없다	0.000	0	0	0	
+sokdam_all	467	불알을 긁어 주다	krdict	60398	불알을 긁어 주다	0.000	0	0	0	
+sokdam_all	468	빈대도 낯짝이 있다	krdict	60426	빈대도 낯짝이 있다	0.000	0	0	0	
+sokdam_all	469	사람 나고 돈 났지 돈 나고 사람 났나	krdict	58161	사람 나고 돈 났지 돈 나고 사람 났나	0.000	0	1	0	partial
+sokdam_all	470	사람 속은 천 길 물속이라	krdict	58161	사람 속은 천 길 물속이라	0.000	0	0	0	
+sokdam_all	471	사람 죽여 놓고 초상 치러 준다	krdict	58161	사람 죽여 놓고 초상 치러 준다	0.000	0	0	0	
+sokdam_all	472	사람마다 저 잘난 맛에 산다	krdict	58161	사람마다 저 잘난 맛에 산다	0.000	0	0	0	
+sokdam_all	473	사람은 겪어 보아야 알고 물은 건너 보아야 안다	krdict	58161	사람은 겪어 보아야 알고 물은 건너 보아야 안다	0.000	0	0	0	
+sokdam_all	474	사람은 지내봐야 안다	krdict	58161	사람은 지내봐야 안다	0.000	0	0	0	
+sokdam_all	475	사람은 헌 사람이 좋고 옷은 새 옷이 좋다	krdict	58161	사람은 헌[때 묻은] 사람이 좋고 옷은 새 옷이 좋다	0.000	0	0	0	
+sokdam_all	476	사람의 마음은 하루에도 열두 번	krdict	58161	사람의 마음은 하루에도 열두 번	0.000	0	0	0	
+sokdam_all	477	사람의 새끼는 서울로 보내고 마소 새끼는 시골로 보내라	krdict	58161	사람의 새끼는 서울로 보내고 마소 새끼는 시골[제주]로 보내라	0.000	0	0	0	
+sokdam_all	478	사람이 굶어 죽으란 법은 없다	krdict	58161	사람이 굶어 죽으란 법은 없다	0.000	0	0	0	
+sokdam_all	479	사람이 세상에 나면 저 먹을 것은 가지고 나온다	krdict	58161	사람이 세상에 나면 저 먹을 것은 가지고 나온다	0.000	0	0	0	
+sokdam_all	480	사람이면 다 사람인가 사람이라야 사람이지	krdict	58161	사람이면 다 사람인가 사람이라야 사람이지	0.000	0	0	0	
+sokdam_all	481	사랑하는 자식일수록 매로 다스리라	krdict	66649	사랑하는 자식일수록 매로 다스리라	0.000	0	0	0	
+sokdam_all	482	사위 사랑은 장모 며느리 사랑은 시아버지	krdict	61646	사위 사랑은 장모 며느리 사랑은 시아버지	0.000	0	0	0	
+sokdam_all	483	사자 없는 산에 토끼가 왕 노릇 한다	krdict	61273	사자 없는 산에 토끼가 왕[대장] 노릇 한다	0.000	0	0	0	
+sokdam_all	484	산 좋고 물 좋고 정자 좋은 데 없다	krdict	20954	산 좋고 물 좋고 정자 좋은 데 없다	0.000	0	0	0	
+sokdam_all	485	산토끼를 잡으려다가 집토끼를 놓친다	krdict	61827	산토끼를 잡으려다가 집토끼를 놓친다	0.000	0	0	0	
+sokdam_all	486	삼수갑산에 가는 한이 있어도	krdict	61990	삼수갑산에 가는 한이 있어도	0.000	0	0	0	
+sokdam_all	487	삼십육계 줄행랑이 제일	krdict	61882	삼십육계 줄행랑이 제일[으뜸]	0.000	0	0	0	
+sokdam_all	488	새벽 봉창 두들긴다	krdict	62740	새벽 봉창 두들긴다	0.000	0	0	0	
+sokdam_all	489	색시가 고우면 처갓집 외양간 말뚝에도 절한다	krdict	63750	색시가 고우면 처갓집 외양간 말뚝에도 절한다	0.000	0	0	0	
+sokdam_all	490	서울 가 본 놈하고 안 가 본 놈하고 싸우면 서울 가 본 놈이 못 이긴다	krdict	69792	서울 가 본 놈하고 안 가 본 놈하고 싸우면 서울 가 본 놈이 못 이긴다	0.000	0	0	0	
+sokdam_all	491	서울 가서 김 서방 찾는다	krdict	69792	서울 (가서) 김 서방 찾는다[찾기]	0.000	0	0	0	
+sokdam_all	492	세치 혀가 사람 잡는다	krdict	17194	세치 혀가 사람 잡는다	0.000	0	0	0	
+sokdam_all	493	셋이 먹다가 둘이 죽어도 모른다	krdict	29602	셋이 먹다가 둘이 죽어도 모른다	0.000	0	0	0	
+sokdam_all	494	소 뒷걸음질 치다 쥐 잡다	krdict	64289	소 뒷걸음질 치다 쥐 잡다	0.000	0	0	0	
+sokdam_all	495	소똥도 약에 쓸 때가 있다	krdict	63438	소똥도 약에 쓸 때가 있다	0.000	0	0	0	
+sokdam_all	496	소문난 잔치에 먹을 것 없다	krdict	83168	소문난 잔치에 먹을 것 없다	0.000	0	0	0	
+sokdam_all	497	속에 뼈 있는 소리	krdict	71278	속에 뼈 있는 소리	0.000	0	0	0	
+sokdam_all	498	속이 빈 깡통이 소리만 요란하다	krdict	71278	속이 빈 깡통이 소리만 요란하다	0.000	0	0	0	
+sokdam_all	499	손바닥에 장을 지지겠다	krdict	63968	손바닥에 장을 지지겠다	0.000	0	0	0	
+sokdam_all	500	손이 많으면 일도 쉽다	krdict	17608	손이 많으면 일도 쉽다	0.000	0	0	0	
+sokdam_all	501	손이 차가운 사람은 심장이 뜨겁다	krdict	17608	손이 차가운 사람은 심장이 뜨겁다	0.000	0	0	0	
+sokdam_all	502	송충이가 갈잎을 먹으면 죽는다	krdict	63823	송충이가 갈잎을 먹으면 죽는다[떨어진다]	0.000	0	0	0	
+sokdam_all	503	송충이는 솔잎을 먹어야 한다	krdict	63823	송충이는 솔잎을 먹어야 한다	0.000	1	0	0	partial
+sokdam_all	504	숯이 검정 나무란다	krdict	65184	숯이 검정 나무란다	0.000	0	0	0	
+sokdam_all	505	쉬 더운 방이 쉬 식는다	krdict	65198	쉬 더운 방[구들]이 쉬 식는다	0.000	0	0	0	
+sokdam_all	506	쉽기가 손바닥 뒤집기다	krdict	66314	쉽기가 손바닥 뒤집기다	0.000	0	0	0	
+sokdam_all	507	시작한 일은 끝을 보라	krdict	66567	시작한 일은 끝을 보라	0.000	0	0	0	
+sokdam_all	508	실 가는 데 바늘도 간다	krdict	14079	실 가는 데 바늘도 간다	0.000	0	0	0	
+sokdam_all	509	실 한 오라기 안 걸치다	krdict	14079	실 한 오라기 안 걸치다	0.000	0	0	0	
+sokdam_all	510	십 년 묵은 체증이 내리다	krdict	89595	십 년 묵은 체증이 내리다	0.000	0	0	0	
+sokdam_all	511	십 년 세도 없고 열흘 붉은 꽃 없다	krdict	89595	십 년 세도 없고 열흘 붉은 꽃 없다	0.000	0	0	0	
+sokdam_all	512	싸움 끝에 정이 붙는다	krdict	24286	싸움 끝에 정이 붙는다	0.000	0	0	0	
+sokdam_all	513	싼 것이 비지떡	krdict	29718	싼 것이 비지떡	0.000	0	0	0	
+sokdam_all	514	쌀은 쏟고 주워도 말은 하고 못 줍는다	krdict	62094	쌀은 쏟고 주워도 말은 하고 못 줍는다	0.000	0	0	0	
+sokdam_all	515	썩은 동아줄 같다	krdict	65171	썩은 동아줄 같다	0.000	0	0	0	
+sokdam_all	516	쏘아 놓은 살이요 엎질러진 물이다	krdict	62596	쏘아 놓은 살이요 엎질러진 물이다	0.000	0	0	0	
+sokdam_all	517	쓰면 뱉고 달면 삼킨다	krdict	16488	쓰면 뱉고 달면 삼킨다	0.000	0	0	0	
+sokdam_all	518	쓴 약이 몸에도 좋다	krdict	16488	쓴 약이 몸에도 좋다	0.000	0	0	0	
+sokdam_all	519	씨 뿌린 자는 거두어야 한다	krdict	65937	씨 뿌린 자는 거두어야 한다	0.000	0	0	0	
+sokdam_all	520	씨는 속일 수 없다	krdict	65937	씨는 속일 수 없다	0.000	0	0	0	
+sokdam_all	521	씨를 뿌리면 거두게 마련이다	krdict	65937	씨를 뿌리면 거두게 마련이다	0.000	0	0	0	
+sokdam_all	522	아끼다 똥 된다	krdict	24445	아끼다 똥 된다	0.000	0	0	0	
+sokdam_all	523	아내가 귀여우면 처갓집 말뚝 보고도 절한다	krdict	30196	아내가 귀여우면 처갓집 말뚝 보고도 절한다	0.000	1	0	0	partial
+sokdam_all	524	아는 놈 당하지 못한다	krdict	89445	아는 놈 당하지 못한다	0.000	0	0	0	
+sokdam_all	525	아비만 한 자식 없다	krdict	66841	아비만 한 자식 없다	0.000	0	0	0	
+sokdam_all	526	아이 보는 데는 찬물도 못 먹는다	krdict	62843	아이 보는 데는 찬물도 못 먹는다	0.000	0	0	0	
+sokdam_all	527	아이 싸움이 어른 싸움 된다	krdict	62843	아이 싸움이 어른 싸움 된다	0.000	0	0	0	
+sokdam_all	528	아이는 작게 낳아서 크게 길러라	krdict	62843	아이는 작게 낳아서 크게 길러라	0.000	0	0	0	
+sokdam_all	529	아홉 가진 놈이 하나 가진 놈 부러워한다	krdict	29609	아홉 가진 놈(이) 하나 가진 놈 부러워한다	0.000	0	0	0	
+sokdam_all	530	앉을 자리 봐 가면서 앉으라	krdict	71463	앉을 자리 봐 가면서 앉으라	0.000	0	0	0	
+sokdam_all	531	앉을 자리 설 자리를 가리다	krdict	71463	앉을 자리 설 자리를 가리다[안다]	0.000	0	0	0	
+sokdam_all	532	앓느니 죽지	krdict	62325	앓느니 죽지	0.000	0	0	0	
+sokdam_all	533	앓던 이가 빠진 것 같다	krdict	62325	앓던 이가 빠진 것 같다	0.000	0	0	0	
+sokdam_all	534	야윈 말이 짐 탐한다	krdict	90062	야윈 말이 짐 탐한다	0.000	0	0	0	
+sokdam_all	535	약과를 먹기라	krdict	90072	약과(를) 먹기(라)	0.000	0	0	0	
+sokdam_all	536	약방에 감초	krdict	17430	약방에 감초	0.000	0	0	0	
+sokdam_all	537	약은 나누어 먹지 않는다	krdict	72379	약은 나누어 먹지 않는다	0.000	0	0	0	
+sokdam_all	538	약은 빚내어서라도 먹어라	krdict	72379	약은 빚내어서라도 먹어라	0.000	0	0	0	
+sokdam_all	539	약은 쥐가 밤눈 어둡다	krdict	66979	약은 쥐가 밤눈 어둡다	0.000	0	0	0	
+sokdam_all	540	양반은 물에 빠져도 개헤엄은 안 한다	krdict	90566	양반은 물에 빠져도 개헤엄은 안 한다	0.000	0	0	0	
+sokdam_all	541	어느 동네 아이 이름인 줄 아나	krdict	62822	어느 동네 아이 이름인 줄 아나	0.000	0	0	0	
+sokdam_all	542	어느 장단에 춤추랴	krdict	62822	어느 장단에 춤추랴	0.000	0	0	0	
+sokdam_all	543	어느 집 개가 짖느냐 한다	krdict	62822	어느 집 개가 짖느냐 한다	0.000	0	0	0	
+sokdam_all	544	어두운 밤의 등불	krdict	89860	어두운 밤의 등불	0.000	0	0	0	
+sokdam_all	545	어르고 뺨 치다	krdict	70492	어르고 뺨 치다	0.000	0	0	0	
+sokdam_all	546	어른 말을 들으면 자다가도 떡이 생긴다	krdict	72574	어른 말을 들으면 자다가도 떡이 생긴다	0.000	0	0	0	
+sokdam_all	547	어릴 적 버릇은 늙어서까지 간다	krdict	74176	어릴 적 버릇은 늙어서까지 간다	0.000	0	0	0	
+sokdam_all	548	어머니 배 속에서 배워 가지고 나오다	krdict	74361	어머니 배 속에서 배워 가지고 나오다	0.000	0	0	0	
+sokdam_all	549	어장이 안되려면 해파리만 끓는다	krdict	67117	어장이 안되려면 해파리만 끓는다	0.000	0	0	0	
+sokdam_all	550	억지로 절 받기	krdict	67198	억지로 절 받기	0.000	0	0	0	
+sokdam_all	551	없는 놈이 찬밥 더운 밥을 가리랴	krdict	89917	없는 놈이 찬밥 더운 밥을 가리랴	0.000	0	0	0	
+sokdam_all	552	여우를 피해서 호랑이를 만났다	krdict	73448	여우를 피해서 호랑이를 만났다	0.000	0	0	0	
+sokdam_all	553	열 번 듣는 것이 한 번 보는 것만 못하다	krdict	67806	열 번 듣는 것이 한 번 보는 것만 못하다	0.000	0	0	0	
+sokdam_all	554	열 번 쓰러지면 열 번 다시 일어난다	krdict	67806	열 번 쓰러지면 열 번 (다시) 일어난다	0.000	0	0	0	
+sokdam_all	555	열 번 찍어 아니 넘어가는 나무 없다	krdict	67806	열 번 찍어 아니 넘어가는 나무 없다	0.000	0	1	0	partial
+sokdam_all	556	열 손가락 깨물어 안 아픈 손가락이 없다	krdict	67806	열 손가락 깨물어 안 아픈 손가락이 없다	0.000	0	0	0	
+sokdam_all	557	열을 듣고 하나도 모른다	krdict	67805	열을 듣고 하나도 모른다	0.000	0	0	0	
+sokdam_all	558	오뉴월 감기는 개도 아니 걸린다	krdict	70156	오뉴월 감기는 개도 아니 걸린다[앓는다]	0.000	0	0	0	
+sokdam_all	559	오는 날이 장날	krdict	69514	오는 날이 장날	0.000	0	0	0	
+sokdam_all	560	오는 말이 고와야 가는 말이 곱다	krdict	69514	오는 말이 고와야 가는 말이 곱다	0.000	0	0	0	
+sokdam_all	561	오입쟁이 제 욕심 채우듯	krdict	68076	오입쟁이 제 욕심 채우듯	0.000	0	0	0	
+sokdam_all	562	옥에 티	krdict	68249	옥에 티	0.000	0	0	0	
+sokdam_all	563	옷은 새 옷이 좋고 사람은 옛 사람이 좋다	krdict	30159	옷은 새 옷이 좋고 사람은 옛 사람이 좋다	0.000	0	0	0	
+sokdam_all	564	우물가에 애 보낸 것 같다	krdict	71011	우물가에 애 보낸 것 같다	0.000	0	0	0	
+sokdam_all	565	우수 경칩에 대동강 물이 풀린다	krdict	69036	우수 경칩에 대동강 물이 풀린다	0.000	0	0	0	
+sokdam_all	566	울 수 없으니까 웃는다	krdict	69523	울 수 없으니까 웃는다	0.000	0	0	0	
+sokdam_all	567	웃고 사람 친다	krdict	71461	웃고 사람[뺨] 친다	0.000	0	0	0	
+sokdam_all	568	웃는 집에 복이 있다	krdict	71461	웃는 집에 복이 있다	0.000	0	0	0	
+sokdam_all	569	웃음 끝에 눈물	krdict	49095	웃음 끝에 눈물	0.000	0	0	0	
+sokdam_all	570	이 없으면 잇몸으로 살지	krdict	69529	이 없으면 잇몸으로 살지[산다]	0.000	0	0	0	
+sokdam_all	571	이기는 것이 지는 것	krdict	71688	이기는 것이 지는 것	0.000	0	0	0	
+sokdam_all	572	이날 저 날 한다	krdict	71133	이날 저 날 한다	0.000	0	0	0	
+sokdam_all	573	이래도 한세상 저래도 한세상	krdict	72095	이래도 한세상 저래도 한세상	0.000	0	0	0	
+sokdam_all	574	이름난 잔치 배고프다	krdict	72049	이름난 잔치 배고프다	0.000	0	0	0	
+sokdam_all	575	이부자리 보고 발을 펴라	krdict	71987	이부자리 보고 발을 펴라	0.000	0	0	0	
+sokdam_all	576	이웃이 사촌보다 낫다	krdict	31487	이웃이 사촌보다 낫다	0.000	0	0	0	
+sokdam_all	577	익은 밥 먹고 선소리한다	krdict	63510	익은 밥 먹고 선소리한다	0.000	0	0	0	
+sokdam_all	578	인간 만사는 새옹지마라	krdict	66582	인간 만사는 새옹지마라	0.000	0	0	0	
+sokdam_all	579	입맛이 반찬	krdict	24617	입맛이 반찬	0.000	0	0	0	
+sokdam_all	580	입에서 신물이 난다	krdict	62276	입에서 신물이 난다	0.000	0	0	0	
+sokdam_all	581	자기 얼굴에 침 뱉기	krdict	57311	자기 얼굴[낯]에 침 뱉기	0.000	0	0	0	
+sokdam_all	582	자식 둔 부모 근심 놓을 날 없다	krdict	49308	자식 둔 부모 근심 놓을 날 없다	0.000	0	0	0	
+sokdam_all	583	자식 없는 것이 상팔자	krdict	49308	자식 없는 것이 상팔자	0.000	0	0	0	
+sokdam_all	584	자식도 품 안에 들 때 내 자식이지	krdict	49308	자식도 품 안에 들 때 내 자식이지	0.000	0	0	0	
+sokdam_all	585	자식은 애물이라	krdict	49308	자식은 애물이라	0.000	0	0	0	
+sokdam_all	586	자식을 길러 봐야 부모 사랑을 안다	krdict	49308	자식을 길러 봐야 부모 사랑을 안다	0.000	0	0	0	
+sokdam_all	587	잘 나가다 삼천포로 빠지다	krdict	58939	잘 나가다[가다가] 삼천포로 빠지다	0.000	0	0	0	
+sokdam_all	588	잘 자랄 나무는 떡잎부터 안다	krdict	58939	잘 자랄 나무는 떡잎부터 안다[알아본다]	0.000	0	0	0	
+sokdam_all	589	잘되면 제 탓 못되면 조상 탓	krdict	58939	잘되면 제 탓[복] 못되면 조상[남] 탓	0.000	0	0	0	
+sokdam_all	590	잘되면 충신 못되면 역적이라	krdict	58939	잘되면 충신 못되면 역적이라	0.000	0	0	0	
+sokdam_all	591	장님 코끼리 만지는 격	krdict	75071	장님 코끼리 만지는 격	0.000	0	0	0	
+sokdam_all	592	재수 없는 놈은 뒤로 자빠져도 코가 깨진다	krdict	24931	재수 없는 놈은 (뒤로) 자빠져도 코가 깨진다	0.000	0	0	0	
+sokdam_all	593	재주는 곰이 넘고 돈은 주인이 받는다	krdict	24957	재주는 곰이 넘고 돈은 주인이 받는다	0.000	0	1	0	partial
+sokdam_all	594	저 잘난 멋에 산다	krdict	44508	저 잘난 멋에 산다	0.000	0	0	0	
+sokdam_all	595	저 하고 싶어서 하는 일은 힘든 줄 모른다	krdict	44508	저 하고 싶어서 하는 일은 힘든 줄 모른다	0.000	0	0	0	
+sokdam_all	596	저승길이 구만 리	krdict	74887	저승길이 구만 리	0.000	0	0	0	
+sokdam_all	597	적을 잘 알고 자신을 잘 아는 자는 백 번 싸워 백 번 이긴다	krdict	75763	적을 잘 알고 자신을 잘 아는 자는 백 번 싸워 백 번 이긴다	0.000	0	0	0	
+sokdam_all	598	정들자 이별	krdict	76062	정들자 이별	0.000	0	0	0	
+sokdam_all	599	젖 먹은 힘까지 다 낸다	krdict	31770	젖 먹은 힘까지 다 낸다	0.000	0	0	0	
+sokdam_all	600	제 살 깎아 먹기	krdict	75826	제 살 깎아 먹기	0.000	0	0	0	
+sokdam_all	601	제사보다 젯밥에 정신이 있다	krdict	31792	제사보다 젯밥에 정신이 있다	0.000	0	0	0	
+sokdam_all	602	조상 신주 모시듯	krdict	75792	조상 신주 모시듯	0.000	0	0	0	
+sokdam_all	603	종잇장도 맞들면 낫다	krdict	75448	종잇장도 맞들면 낫다	0.000	0	0	0	
+sokdam_all	604	좋은 노래도 세 번 들으면 귀가 싫어한다	krdict	79033	좋은 노래도 세 번 들으면 귀가 싫어한다	0.000	0	0	0	
+sokdam_all	605	좋은 일에는 남이요 궂은일에는 일가다	krdict	79033	좋은 일에는 남이요 궂은일에는 일가다	0.000	0	0	0	
+sokdam_all	606	좋은 일은 맞지 않아도 나쁜 일은 잘 맞는다	krdict	79033	좋은 일은 맞지 않아도 나쁜 일은 잘 맞는다	0.000	0	0	0	
+sokdam_all	607	주는 떡도 못 받아먹는다	krdict	82136	주는 떡도 못 받아먹는다	0.000	0	0	0	
+sokdam_all	608	주머니 털어 먼지 안 나오는 사람 없다	krdict	75803	주머니 털어 먼지 안 나오는 사람 없다	0.000	0	0	0	
+sokdam_all	609	죽 쑤어 개 준다	krdict	91773	죽 쑤어 개 준다	0.000	0	0	0	
+sokdam_all	610	죽은 뒤에 약방문	krdict	20851	죽은 뒤에 약방문	0.000	0	0	0	
+sokdam_all	611	죽은 자식 나이 세기	krdict	20851	죽은 자식 나이 세기	0.000	0	0	0	
+sokdam_all	612	중이 절 보기 싫으면 떠나야지	krdict	77165	중(이) 절 보기 싫으면 떠나야지	0.000	0	0	0	
+sokdam_all	613	지는 게 이기는 거다	krdict	63606	지는 게 이기는 거다	0.000	0	0	0	
+sokdam_all	614	집 떠나면 고생이다	krdict	71358	집 떠나면 고생이다	0.000	0	0	0	
+sokdam_all	615	집에서 새는 바가지는 들에 가도 샌다	krdict	71358	집에서 새는 바가지는 들에 가도 샌다	0.000	0	0	0	
+sokdam_all	616	짖는 개는 물지 않는다	krdict	77748	짖는 개는 물지 않는다	0.000	0	0	0	
+sokdam_all	617	참는 자에게 복이 있다	krdict	29772	참는 자에게 복이 있다	0.000	0	0	0	
+sokdam_all	618	참새가 방앗간을 그저 지나랴	krdict	24849	참새가 방앗간을 그저 지나랴	0.000	0	0	0	
+sokdam_all	619	참새가 황새걸음 하면 다리가 찢어진다	krdict	24849	참새가 황새걸음 하면 다리가 찢어진다	0.000	0	0	0	
+sokdam_all	620	참을 인 자 셋이면 살인도 피한다	krdict	29772	참을 인 자 셋이면 살인도 피한다	0.000	0	0	0	
+sokdam_all	621	처녀가 아이를 낳아도 할 말이 있다	krdict	24929	처녀가 아이를 낳아도 할 말이 있다	0.000	0	0	0	
+sokdam_all	622	천 길 물속은 알아도 한 길 사람의 속은 모른다	krdict	17169	천 길 물속은 알아도 한 길 사람의 속은 모른다	0.000	0	0	0	
+sokdam_all	623	천 리도 지척이라	krdict	17169	천 리도 지척이라	0.000	0	0	0	
+sokdam_all	624	취중에 진담이 나온다	krdict	78995	취중에 진담이 나온다	0.000	0	0	0	
+sokdam_all	625	치마 밑에 키운 자식	krdict	57331	치마 밑에 키운 자식	0.000	0	0	0	
+sokdam_all	626	치마가 열두 폭인가	krdict	57331	치마가 열두 폭인가	0.000	0	0	0	
+sokdam_all	627	친 사람은 다리 오그리고 자도 맞은 사람은 다리 펴고 잔다	krdict	57323	친 사람은 다리 오그리고 자도 맞은 사람은 다리 펴고 잔다	0.000	0	0	0	
+sokdam_all	628	코가 어디 붙은지 모른다	krdict	46814	코가 어디 붙은지 모른다	0.000	0	0	0	
+sokdam_all	629	코를 잡아도 모르겠다	krdict	46814	코를 잡아도 모르겠다	0.000	0	0	0	
+sokdam_all	630	콩으로 메주를 쑨다 하여도 곧이듣지 않는다	krdict	72171	콩으로 메주를 쑨다 하여도 곧이듣지 않는다	0.000	0	0	0	
+sokdam_all	631	큰물에 큰 고기 논다	krdict	81515	큰물에 큰 고기 논다	0.000	0	0	0	
+sokdam_all	632	토끼 둘을 잡으려다가 하나도 못 잡는다	krdict	89388	토끼 둘을 잡으려다가 하나도 못 잡는다	0.000	0	0	0	
+sokdam_all	633	팥을 심으면 팥이 나오고 콩을 심으면 콩이 나온다	krdict	80742	팥을 심으면 팥이 나오고 콩을 심으면 콩이 나온다	0.000	0	0	0	
+sokdam_all	634	팥을 콩이라 해도 곧이듣는다	krdict	80742	팥을 콩이라 해도 곧이듣는다	0.000	0	0	0	
+sokdam_all	635	평안 감사도 저 싫으면 그만이다	krdict	68907	평안 감사도 저 싫으면 그만이다	0.000	0	0	0	
+sokdam_all	636	핑계 없는 무덤이 없다	krdict	85210	핑계 없는 무덤이 없다	0.000	0	0	0	
+sokdam_all	637	하늘 보고 침 뱉기	krdict	20311	하늘 보고 침 뱉기	0.000	0	0	0	
+sokdam_all	638	하루 세 끼 밥 먹듯	krdict	49315	하루 세 끼 밥 먹듯	0.000	0	0	0	
+sokdam_all	639	하루가 여삼추라	krdict	49315	하루가 여삼추(라)	0.000	0	0	0	
+sokdam_all	640	한 계단씩 밟아 올라가다	krdict	73278	한 계단씩 밟아 올라가다	0.000	0	0	0	
+sokdam_all	641	한 번 속지 두 번 안 속는다	krdict	73278	한 번 속지 두 번 안 속는다	0.000	0	0	0	
+sokdam_all	642	한 손으로는 손뼉을 못 친다	krdict	73278	한 손으로는 손뼉을 못 친다	0.000	0	0	0	
+sokdam_all	643	한 입 건너고 두 입 건넌다	krdict	73278	한 입 건너고 두 입 건넌다	0.000	0	0	0	
+sokdam_all	644	한 입으로 두말하기	krdict	73278	한 입으로 두말하기	0.000	0	0	0	
+sokdam_all	645	한 치 앞이 어둠	krdict	73278	한 치 앞이 어둠	0.000	0	0	0	
+sokdam_all	646	허울 좋은 과부	krdict	87925	허울 좋은 과부	0.000	0	0	0	
+sokdam_all	647	허울 좋은 도둑놈	krdict	87925	허울 좋은 도둑놈	0.000	0	0	0	
+sokdam_all	648	형만 한 아우 없다	krdict	20286	형만 한 아우 없다	0.000	0	0	0	
+sokdam_all	649	호랑이를 그리려다가 강아지를 그린다	krdict	74128	호랑이를 그리려다가 강아지[고양이]를 그린다	0.000	0	0	0	
+sokdam_all	650	호랑이를 잡으려다가 토끼를 잡는다	krdict	74128	호랑이를 잡으려다가 토끼를 잡는다	0.000	0	0	0	
+sokdam_all	651	호박꽃도 꽃이냐	krdict	86662	호박꽃도 꽃이냐	0.000	0	0	0	
+sokdam_all	652	혹 떼러 갔다 혹 붙여 온다	krdict	88335	혹 떼러 갔다 혹 붙여 온다	0.000	0	0	0	
+sokdam_all	653	황소 뒷걸음치다가 쥐 잡는다	krdict	87414	황소 뒷걸음치다가 쥐 잡는다	0.000	0	0	0	
+sokdam_all	654	효부 없는 효자 없다	krdict	89085	효부 없는 효자 없다	0.000	0	0	0	
+sokdam_all	655	흉 없는 사람 없다	krdict	87835	흉 없는 사람 없다	0.000	0	0	0	

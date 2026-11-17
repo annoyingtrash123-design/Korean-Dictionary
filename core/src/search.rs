@@ -55,6 +55,8 @@ pub struct Caps {
     pub topic: bool,
     /// `grammar_lesson` (reviewed grammar mini-lessons by entry and curriculum level) exists.
     pub grammar_lesson: bool,
+    /// `study_item` (the Idioms & proverbs study lists) exists.
+    pub study_item: bool,
 }
 
 /// An opened pack database.
@@ -98,6 +100,7 @@ impl PackDb {
             curriculum: names.contains("curriculum"),
             topic: names.contains("topic"),
             grammar_lesson: names.contains("grammar_lesson"),
+            study_item: names.contains("study_item"),
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
@@ -1559,6 +1562,8 @@ mod enko;
 mod home;
 pub use home::{home, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeRel, HomeWord};
 mod study;
+mod study_idioms;
+pub use study_idioms::{study_idioms, StudyIdiom, StudyIdiomList};
 pub use study::{study_grammar, study_overview, study_topic_words, study_words, StudyCount, StudyGrammar, StudyOverview, StudyTopic, StudyWord};
 mod lesson;
 pub use lesson::{grammar_lessons, GrammarLesson};

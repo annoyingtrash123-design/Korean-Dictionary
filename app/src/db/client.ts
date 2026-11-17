@@ -1,7 +1,7 @@
 import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GameWord, GrammarLessonRow, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, StudyGrammar, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, GameWord, GrammarLessonRow, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, StudyGrammar, StudyIdiom, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -142,6 +142,7 @@ export const db = {
   studyOverview: () => call<StudyOverview>('studyOverview'),
   studyWords: (level: number, limit: number, offset: number) => call<StudyWord[]>('studyWords', level, limit, offset),
   studyGrammar: (level: number) => call<StudyGrammar[]>('studyGrammar', level),
+  studyIdioms: (list: string, limit: number, offset: number) => call<StudyIdiom[]>('studyIdioms', list, limit, offset),
   studyTopicWords: (category: string, byLevel: boolean, limit: number, offset: number) => call<StudyWord[]>('studyTopicWords', category, byLevel, limit, offset),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {

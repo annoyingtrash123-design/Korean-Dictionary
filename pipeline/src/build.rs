@@ -1475,6 +1475,10 @@ pub fn quality_gate(core: &Value, stdict: Option<&Value>) -> Vec<String> {
     if core.get("en_rel").is_some() && n(core, "en_rel") < MIN_EN_REL {
         bad.push(format!("core.en_rel = {} (< {MIN_EN_REL})", n(core, "en_rel")));
     }
+    // the idioms & proverbs lists are added once stdict is built: checked when they were
+    if core.get("study_item").is_some() && n(core, "study_item") < crate::study_idioms::MIN_ITEMS {
+        bad.push(format!("core.study_item = {} (< {})", n(core, "study_item"), crate::study_idioms::MIN_ITEMS));
+    }
     if let Some(st) = stdict {
         if n(st, "entries") < MIN_STDICT {
             bad.push(format!("stdict.entries = {} (< {MIN_STDICT})", n(st, "entries")));
@@ -1540,28 +1544,44 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     if o.sources.krdict.is_empty() && o.sources.kaikki.is_none() && o.sources.kengdic.is_none() {
         anyhow::bail!("no English dictionary source available (krdict / kaikki / kengdic): nothing to build for core");
     }
-    let core = build_core(&o.sources, &ranker, &o.out, &version, &built_at)?;
+    let mut core = build_core(&o.sources, &ranker, &o.out, &version, &built_at)?;
     log::info!("core.sqlite built: {}", core.counts);
-    packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);
 
     let mut dedupe: HashSet<String> = HashSet::new();
     let mut stdict_counts: Option<Value> = None;
+    let mut korean_packs: Vec<PackResult> = Vec::new();
     if o.sources.stdict.is_empty() {
         log::warn!("no stdict files: skipping the stdict pack");
         remove_stale(&site, "stdict.sqlite.gz.")?;
     } else {
         let st = build_stdict(&o.sources, &ranker, &o.out, &version, &built_at)?;
         log::info!("stdict.sqlite built: {}", st.counts);
-        packs.push(pack::compress_pack("stdict", false, &st.path, &site, &st.counts, o.chunk_bytes)?);
         stdict_counts = Some(st.counts.clone());
-        dedupe = st.keys;
+        dedupe = st.keys.clone();
+        korean_packs.push(st);
     }
     if o.sources.opendict.is_empty() {
         remove_stale(&site, "opendict.sqlite.gz.")?;
     } else {
         let od = build_opendict(&o.sources, &ranker, &o.out, &version, &built_at, &dedupe)?;
         log::info!("opendict.sqlite built: {}", od.counts);
-        packs.push(pack::compress_pack("opendict", false, &od.path, &site, &od.counts, o.chunk_bytes)?);
+        korean_packs.push(od);
+    }
+
+    // "Idioms & proverbs" study lists: their entries are spread over the three packs, so the core
+    // pack's `study_item` table is filled now and the packs are compressed afterwards.
+    if stdict_counts.is_some() {
+        let path_of = |name: &str| korean_packs.iter().find(|p| p.path.file_name().is_some_and(|f| f == format!("{name}.sqlite").as_str())).map(|p| p.path.as_path());
+        let stats = crate::study_idioms::add_table(&core.path, path_of("stdict"), path_of("opendict"))?;
+        log::info!("study lists (idioms & proverbs): {} items, {} unresolved", stats.items, stats.unresolved);
+        if let Some(m) = core.counts.as_object_mut() {
+            m.insert("study_item".into(), (stats.items as i64).into());
+        }
+    }
+    packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);
+    for p in &korean_packs {
+        let id = p.path.file_stem().and_then(|s| s.to_str()).unwrap_or("stdict").to_string();
+        packs.push(pack::compress_pack(&id, false, &p.path, &site, &p.counts, o.chunk_bytes)?);
     }
 
     // optional Chinese packs; a failing one only logs a warning

@@ -37,6 +37,8 @@ export interface ListRow {
   /** krdict level 1-3 (shows the 초/중/고 badge). */
   level: number | null;
   gloss: string;
+  /** Small label next to the title (Idioms & proverbs: 속담 / 성어). */
+  tag?: string;
   path: string;
   item: ItemInput;
   /** A reviewed mini-lesson exists (grammar rows: shows the Lesson badge). */

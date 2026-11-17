@@ -142,7 +142,21 @@ CREATE TABLE grammar_lesson (  -- AI-written grammar mini-lessons; only lessons 
                                --       pitfalls[{note,wrong,right,en}], topik_tip?  (no review block)
 );
 CREATE INDEX grammar_lesson_entry ON grammar_lesson(entry_id);
+CREATE TABLE study_item (   -- Lists tab "Idioms & proverbs": 속담 / 성어 ranked by corpus frequency (pipeline/data/study_*.tsv)
+  list TEXT NOT NULL,       -- 'sokdam100' | 'sokdam_all' | 'seongeo100' | 'seongeo300'
+  rank INTEGER NOT NULL,    -- 1..N within the list
+  kind TEXT NOT NULL,       -- 'sokdam' | 'seongeo'
+  title TEXT NOT NULL,      -- the text as shown (no [variant] brackets, no hanja gloss)
+  entry_id INTEGER,         -- core entry id when pack = 'core'; NULL otherwise (other packs' ids are not stable)
+  pack TEXT NOT NULL,       -- 'core' (krdict) | 'stdict' | 'opendict': where the entry lives
+  ext_id TEXT NOT NULL, headword TEXT NOT NULL, hw_norm TEXT NOT NULL,   -- find it again in that pack: hw_norm + ext_id
+  gloss TEXT NOT NULL,      -- krdict English gloss, else the Korean definition (80 chars)
+  PRIMARY KEY (list, rank)
+) WITHOUT ROWID;
 ```
+`study_item` is filled after all three packs are built (most 성어 exist only in stdict). The engine opens the
+entry when the user has that pack installed and otherwise searches for the title; a core pack without the
+table simply has no "Idioms & proverbs" group.
 
 Grammar lessons are written in `pipeline/data/grammar_lessons/<level>.json` (one file per 급, one object per
 curriculum grammar row, keyed by the official form + level; `pipeline/src/grammar_lessons.rs` documents the

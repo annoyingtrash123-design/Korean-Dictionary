@@ -1,0 +1,525 @@
+# 성어 review (AI draft, not yet checked by a human): is each of the top 520 candidates by score a real 성어?
+# keep = a set four-character expression (고사성어 / 사자성어, or a fixed parallel pattern such as 자급자족, 우유부단, 십중팔구);
+# drop = a transparent compound of two ordinary words, a technical/institutional term, a slogan or a variant spelling.
+# Decided from the Korean definitions in the packs.  make_study_lists.py takes the first 100 / 300 keepers by score.
+id	text	hanja	status	reason	by	rank	score
+sg00394	국가대표	國家代表	drop	ordinary compound noun (sports term), not an idiom	ai-draft	1	24.428
+sg00084	돌연변이	突然變異	drop	biology term (transparent compound)	ai-draft	2	17.671
+sg03000	의사소통	意思疏通	drop	transparent compound noun (의사+소통)	ai-draft	3	11.643
+sg02940	만장일치	滿場一致	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	4	8.266
+sg03253	과소평가	過小評價	drop	transparent compound (과소+평가)	ai-draft	5	5.765
+sg00306	공작부인	孔雀夫人	drop	compound noun, literal meaning	ai-draft	6	4.910
+sg03910	불가사의	不可思議	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	7	4.737
+sg04726	자급자족	自給自足	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	8	2.783
+sg03013	자유자재	自由自在	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	9	2.578
+sg02977	심사숙고	深思熟考	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	10	2.367
+sg02980	양성평등	兩性平等	drop	policy term (양성+평등)	ai-draft	11	2.366
+sg00249	고군분투	孤軍奮鬪	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	12	2.353
+sg02952	배은망덕	背恩忘德	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	13	2.243
+sg00087	사각지대	死角地帶	drop	technical compound noun	ai-draft	14	2.007
+sg02957	부정부패	不正腐敗	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	15	1.921
+sg02104	자살행위	自殺行爲	drop	transparent compound noun	ai-draft	16	1.846
+sg03023	통행금지	通行禁止	drop	institutional/legal term	ai-draft	17	1.735
+sg03039	근친상간	近親相姦	drop	legal term, transparent compound	ai-draft	18	1.671
+sg03043	기하급수	幾何級數	drop	math term (기하+급수)	ai-draft	19	1.647
+sg00501	남녀노소	男女老少	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	20	1.642
+sg03038	공동생활	共同生活	drop	transparent compound noun	ai-draft	21	1.575
+sg03031	횡설수설	橫說竪說	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	22	1.494
+sg00014	난공불락	難攻不落	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	23	1.490
+sg01290	설상가상	雪上加霜	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	24	1.428
+sg03014	자포자기	自暴自棄	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	25	1.425
+sg03054	승승장구	乘勝長驅	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	26	1.413
+sg03437	다재다능	多才多能	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	27	1.349
+sg02993	우유부단	優柔不斷	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	28	1.269
+sg00060	전전긍긍	戰戰兢兢	keep	classical 한자성어 with a cited source	ai-draft	29	1.216
+sg02997	유일무이	唯一無二	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	30	1.202
+sg02937	막무가내	莫無可奈	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	31	1.182
+sg03642	명실상부	名實相符	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	32	1.155
+sg02990	왈가왈부	曰可曰否	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	33	1.104
+sg04246	십중팔구	十中八九	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	34	1.076
+sg02071	일편단심	一片丹心	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	35	1.064
+sg00022	만신창이	滿身瘡痍	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	36	1.024
+sg00675	동서남북	東西南北	drop	plain list of directions, not idiomatic	ai-draft	37	1.021
+sg02942	무궁무진	無窮無盡	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	38	1.009
+sg02930	공명정대	公明正大	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	39	0.976
+sg00048	일방통행	一方通行	drop	traffic term	ai-draft	40	0.975
+sg04818	전대미문	前代未聞	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	41	0.949
+sg01518	약육강식	弱肉強食	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	42	0.948
+sg02926	개과천선	改過遷善	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	43	0.946
+sg03008	임시방편	臨時方便	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	44	0.930
+sg03044	기회균등	機會均等	drop	policy term	ai-draft	45	0.922
+sg05037	천진난만	天眞爛漫	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	46	0.916
+sg03010	자기중심	自己中心	drop	transparent compound	ai-draft	47	0.915
+sg02996	유명무실	有名無實	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	48	0.899
+sg03056	시종일관	始終一貫	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	49	0.898
+sg02972	속수무책	束手無策	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	50	0.883
+sg03015	전무후무	前無後無	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	51	0.866
+sg01298	성대모사	聲帶模寫	drop	compound noun (성대+모사)	ai-draft	52	0.850
+sg02994	위풍당당	威風堂堂	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	53	0.848
+sg03024	파란만장	波瀾萬丈	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	54	0.828
+sg00086	불협화음	不協和音	drop	music term	ai-draft	55	0.811
+sg02931	과잉보호	過剩保護	drop	transparent compound	ai-draft	56	0.801
+sg03042	기상천외	奇想天外	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	57	0.788
+sg04734	자기혐오	自己嫌惡	drop	transparent compound	ai-draft	58	0.775
+sg04735	자기희생	自己犧牲	drop	transparent compound	ai-draft	59	0.773
+sg02932	기진맥진	氣盡脈盡	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	60	0.755
+sg04457	용감무쌍	勇敢無雙	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	61	0.744
+sg03026	학술회의	學術會議	drop	compound noun (institution)	ai-draft	62	0.738
+sg03007	임기응변	臨機應變	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	63	0.712
+sg02218	조강지처	糟糠之妻	keep	classical 한자성어 with a cited source	ai-draft	64	0.700
+sg03336	극악무도	極惡無道	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	65	0.693
+sg03049	부국강병	富國強兵	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	66	0.692
+sg03055	시대착오	時代錯誤	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	67	0.663
+sg00025	백발백중	百發百中	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	68	0.652
+sg03012	자업자득	自業自得	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	69	0.637
+sg02951	반신반의	半信半疑	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	70	0.637
+sg03003	인신공격	人身攻擊	drop	transparent compound	ai-draft	71	0.624
+sg02950	박수갈채	拍手喝采	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	72	0.622
+sg00644	독불장군	獨不將軍	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	73	0.616
+sg02941	망연자실	茫然自失	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	74	0.609
+sg02933	남녀평등	男女平等	drop	transparent compound	ai-draft	75	0.606
+sg00047	일망타진	一網打盡	keep	classical 한자성어 with a cited source	ai-draft	76	0.606
+sg02938	막상막하	莫上莫下	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	77	0.604
+sg03937	불로불사	不老不死	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	78	0.595
+sg03020	천만다행	千萬多幸	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	79	0.570
+sg02979	야반도주	夜半逃走	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	80	0.553
+sg00018	동상이몽	同床異夢|同牀異夢	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	81	0.553
+sg00080	호시탐탐	虎視眈眈	keep	classical 한자성어 with a cited source	ai-draft	82	0.550
+sg00026	산전수전	山戰水戰	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	83	0.546
+sg00142	개인숭배	個人崇拜	drop	political term	ai-draft	84	0.543
+sg02967	사생결단	死生決斷	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	85	0.533
+sg03027	허심탄회	虛心坦懷	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	86	0.532
+sg03514	동시다발	同時多發	drop	newspaper compound (동시+다발)	ai-draft	87	0.532
+sg02992	우왕좌왕	右往左往	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	88	0.527
+sg02995	위험천만	危險千萬	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	89	0.522
+sg05277	흥망성쇠	興亡盛衰	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	90	0.514
+sg03440	다종다양	多種多樣	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	91	0.511
+sg04727	자기만족	自己滿足	drop	transparent compound	ai-draft	92	0.510
+sg00094	죽마고우	竹馬故友	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	93	0.508
+sg02964	불평불만	不平不滿	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	94	0.503
+sg04571	의기투합	意氣投合	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	95	0.493
+sg02681	팔도강산	八道江山	drop	compound noun for the country, not a set idiom	ai-draft	96	0.492
+sg05040	천차만별	千差萬別	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	97	0.490
+sg03324	권선징악	勸善懲惡	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	98	0.489
+sg03993	비기독교	非基督敎	drop	prefix + proper noun compound	ai-draft	99	0.486
+sg02934	동고동락	同苦同樂	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	100	0.475
+sg02970	생계유지	生計維持	drop	transparent compound	ai-draft	101	0.474
+sg02973	솔선수범	率先垂範	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	102	0.473
+sg05160	피차일반	彼此一般	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	103	0.464
+sg00051	일사천리	一瀉千里	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	104	0.463
+sg03063	자유방임	自由放任	drop	economics term	ai-draft	105	0.456
+sg03461	대동소이	大同小異	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	106	0.451
+sg00059	전광석화	電光石火	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	107	0.448
+sg02953	백년해로	百年偕老	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	108	0.442
+sg03029	홍익인간	弘益人間	keep	classical 한자성어 with a cited source	ai-draft	109	0.438
+sg02985	영원불멸	永遠不滅	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	110	0.434
+sg03016	전화위복	轉禍爲福	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	111	0.432
+sg02989	완전무결	完全無缺	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	112	0.429
+sg04733	자기표현	自己表現	drop	transparent compound	ai-draft	113	0.428
+sg02179	절체절명	絕體絕命	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	114	0.421
+sg03059	양자택일	兩者擇一	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	115	0.420
+sg04187	시기적절	時期適切	drop	ordinary modifier+predicate compound (cf. 시의적절, kept as the classic form)	ai-draft	116	0.419
+sg00089	사주팔자	四柱八字	drop	fortune-telling noun, not a 성어	ai-draft	117	0.418
+sg00049	일분일초	一分一秒	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	118	0.417
+sg00019	두문불출	杜門不出	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	119	0.409
+sg01654	오리무중	五里霧中	keep	classical 한자성어 with a cited source	ai-draft	120	0.409
+sg03065	태연자약	泰然自若	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	121	0.408
+sg02943	무력행사	武力行使	drop	transparent compound	ai-draft	122	0.401
+sg02999	의기소침	意氣銷沈	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	123	0.392
+sg00081	혼비백산	魂飛魄散	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	124	0.391
+sg02956	변화무쌍	變化無雙	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	125	0.389
+sg00373	구사일생	九死一生	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	126	0.385
+sg00056	자화자찬	自畫自讚	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	127	0.381
+sg00753	만경창파	萬頃蒼波	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	128	0.380
+sg03019	지리멸렬	支離滅裂	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	129	0.379
+sg04819	전도유망	前途有望	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	130	0.378
+sg00013	금지옥엽	金枝玉葉	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	131	0.370
+sg02966	비일비재	非一非再	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	132	0.364
+sg03760	반기독교	反基督敎	drop	prefix + noun compound	ai-draft	133	0.363
+sg04200	시의적절	時宜適切	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	134	0.362
+sg02029	일언반구	一言半句	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	135	0.361
+sg01871	이구동성	異口同聲	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	136	0.356
+sg03060	일맥상통	一脈相通	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	137	0.354
+sg04703	일취월장	日就月將	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	138	0.352
+sg03898	북북서진	北北西進	drop	compass-bearing term	ai-draft	139	0.351
+sg00046	인산인해	人山人海	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	140	0.348
+sg03050	분리수거	分離收去	drop	administrative term	ai-draft	141	0.345
+sg00810	명불허전	名不虛傳	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	142	0.344
+sg03064	진두지휘	陣頭指揮	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	143	0.338
+sg01673	오합지졸	烏合之卒	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	144	0.337
+sg02991	요지부동	搖之不動	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	145	0.336
+sg02954	백전백승	百戰百勝	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	146	0.334
+sg02983	연중무휴	年中無休	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	147	0.326
+sg00041	우후죽순	雨後竹筍	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	148	0.321
+sg04749	자원입대	自願入隊	drop	transparent compound	ai-draft	149	0.320
+sg00083	공통분모	共通分母	drop	maths term	ai-draft	150	0.318
+sg00011	금수강산	錦繡江山	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	151	0.316
+sg02054	일조일석	一朝一夕	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	152	0.311
+sg00072	청천벽력	靑天霹靂	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	153	0.310
+sg00074	추풍낙엽	秋風落葉	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	154	0.308
+sg00055	자기기만	自己欺瞞	drop	transparent compound	ai-draft	155	0.307
+sg03037	경거망동	輕擧妄動	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	156	0.303
+sg02678	파죽지세	破竹之勢	keep	classical 한자성어 with a cited source	ai-draft	157	0.299
+sg00067	천신만고	千辛萬苦	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	158	0.299
+sg00031	신출귀몰	神出鬼沒	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	159	0.298
+sg03434	다사다난	多事多難	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	160	0.297
+sg00855	무풍지대	無風地帶	drop	compound noun (무풍+지대)	ai-draft	161	0.297
+sg00090	아비규환	阿鼻叫喚	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	162	0.295
+sg02963	불철주야	不撤晝夜	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	163	0.295
+sg01253	새옹지마	塞翁之馬	keep	classical 한자성어 with a cited source	ai-draft	164	0.294
+sg03860	보국안민	輔國安民	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	165	0.292
+sg00004	결초보은	結草報恩	keep	classical 한자성어 with a cited source	ai-draft	166	0.289
+sg00030	수수방관	袖手傍觀	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	167	0.288
+sg00075	칠전팔기	七顚八起	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	168	0.285
+sg02939	만사형통	萬事亨通	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	169	0.284
+sg03030	확고부동	確固不動	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	170	0.283
+sg04598	이용후생	利用厚生	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	171	0.282
+sg02988	오매불망	寤寐不忘	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	172	0.282
+sg03002	이합집산	離合集散	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	173	0.278
+sg03051	사실무근	事實無根	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	174	0.275
+sg00029	속전속결	速戰速決	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	175	0.275
+sg00037	언감생심	焉敢生心	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	176	0.274
+sg03200	고문치사	拷問致死	drop	legal term	ai-draft	177	0.272
+sg05046	천하제일	天下第一	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	178	0.271
+sg00036	안하무인	眼下無人	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	179	0.271
+sg00670	동분서주	東奔西走	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	180	0.268
+sg04849	정리정돈	整理整頓	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	181	0.264
+sg04730	자기비판	自己批判	drop	transparent compound	ai-draft	182	0.263
+sg00990	복고주의	復古主義	drop	-ism term	ai-draft	183	0.260
+sg02601	출가외인	出嫁外人	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	184	0.258
+sg02025	일심동체	一心同體	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	185	0.257
+sg02947	무소불위	無所不爲	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	186	0.257
+sg03997	비밀회의	祕密會議	drop	transparent compound noun	ai-draft	187	0.255
+sg02976	심기일전	心機一轉	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	188	0.250
+sg02936	동족상잔	同族相殘	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	189	0.249
+sg02356	진검승부	眞劍勝負	drop	compound noun (진검+승부)	ai-draft	190	0.248
+sg04481	우측통행	右側通行	drop	traffic term	ai-draft	191	0.246
+sg04630	일거일동	一擧一動	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	192	0.246
+sg01068	불구대천	不俱戴天	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	193	0.243
+sg03438	다정다감	多情多感	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	194	0.241
+sg02982	연전연승	連戰連勝	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	195	0.238
+sg02959	분신자살	焚身自殺	drop	transparent compound	ai-draft	196	0.234
+sg03057	신신당부	申申當付	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	197	0.232
+sg00012	금의환향	錦衣還鄕	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	198	0.229
+sg03615	매점매석	買占賣惜	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	199	0.228
+sg04768	잔인무도	殘忍無道	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	200	0.228
+sg00033	십시일반	十匙一飯	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	201	0.228
+sg03062	자기모순	自己矛盾	drop	transparent compound	ai-draft	202	0.228
+sg05186	해괴망측	駭怪罔測	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	203	0.227
+sg02935	동성동본	同姓同本	drop	kinship/legal term	ai-draft	204	0.225
+sg02978	십년감수	十年減壽	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	205	0.223
+sg00931	백귀야행	百鬼夜行	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	206	0.223
+sg02948	묵묵부답	默默不答	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	207	0.219
+sg03471	대성통곡	大聲痛哭	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	208	0.218
+sg00005	고사성어	故事成語	drop	meta term (고사+성어), not itself a 성어	ai-draft	209	0.218
+sg03001	이실직고	以實直告	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	210	0.218
+sg00069	천지개벽	天地開闢	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	211	0.218
+sg03035	거두절미	去頭截尾	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	212	0.215
+sg03006	일진일퇴	一進一退	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	213	0.215
+sg03041	기고만장	氣高萬丈	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	214	0.214
+sg03734	문전박대	門前薄待	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	215	0.214
+sg00078	평지풍파	平地風波	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	216	0.210
+sg00052	일석이조	一石二鳥	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	217	0.209
+sg04837	절대복종	絕對服從	drop	modifier+verb compound	ai-draft	218	0.208
+sg02969	삼고초려	三顧草廬	keep	classical 한자성어 with a cited source	ai-draft	219	0.205
+sg02965	비명횡사	非命橫死	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	220	0.204
+sg04712	임시변통	臨時變通	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	221	0.202
+sg02961	불문곡직	不問曲直	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	222	0.202
+sg00088	사자성어	四字成語	drop	meta term (사자+성어), not itself a 성어	ai-draft	223	0.200
+sg04355	여학생회	女學生會	drop	organisation name compound	ai-draft	224	0.200
+sg03021	청렴결백	淸廉潔白	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	225	0.199
+sg02886	환골탈태	換骨奪胎	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	226	0.198
+sg03025	풍비박산	風飛雹散	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	227	0.196
+sg00002	견원지간	犬猿之間	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	228	0.195
+sg00023	무릉도원	武陵桃源	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	229	0.195
+sg04316	언문일치	言文一致	drop	linguistics term	ai-draft	230	0.194
+sg00016	도중하차	途中下車	drop	ordinary compound with a figurative use	ai-draft	231	0.193
+sg01930	인생극장	人生劇場	drop	compound noun, literal	ai-draft	232	0.192
+sg00050	일사불란	一絲不亂	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	233	0.191
+sg00077	팔방미인	八方美人	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	234	0.188
+sg00040	와신상담	臥薪嘗膽	keep	classical 한자성어 with a cited source	ai-draft	235	0.187
+sg00964	백척간두	百尺竿頭	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	236	0.185
+sg01968	일기당천	一騎當千	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	237	0.184
+sg00097	호의호식	好衣好食	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	238	0.181
+sg03028	혹세무민	惑世誣民	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	239	0.180
+sg02719	표리일체	表裏一體	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	240	0.177
+sg02958	부화뇌동	附和雷同	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	241	0.173
+sg03009	자가당착	自家撞着	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	242	0.173
+sg00079	풍전등화	風前燈火	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	243	0.171
+sg01071	불령선인	不逞鮮人	drop	historical slur term, not a 성어	ai-draft	244	0.167
+sg03018	좌측통행	左側通行	drop	traffic term	ai-draft	245	0.167
+sg02500	천태만상	千態萬象	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	246	0.165
+sg02481	천재일우	千載一遇	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	247	0.163
+sg03782	방약무인	傍若無人	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	248	0.163
+sg04984	지행합일	知行合一	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	249	0.163
+sg00027	살신성인	殺身成仁	keep	classical 한자성어 with a cited source	ai-draft	250	0.163
+sg01190	산천초목	山川草木	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	251	0.162
+sg02507	철권통치	鐵拳統治	drop	compound noun (철권+통치)	ai-draft	252	0.160
+sg04738	자력갱생	自力更生	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	253	0.159
+sg03611	망지소조	罔知所措	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	254	0.159
+sg01225	삼척동자	三尺童子	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	255	0.156
+sg03307	국태민안	國泰民安	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	256	0.155
+sg03267	광명정대	光明正大	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	257	0.154
+sg03045	대경실색	大驚失色	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	258	0.154
+sg00020	만물박사	萬物博士	drop	compound noun for a polymath, not a classical phrase	ai-draft	259	0.153
+sg03046	매관매직	賣官賣職	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	260	0.152
+sg04746	자아비판	自我批判	drop	transparent compound	ai-draft	261	0.151
+sg02454	천상천하	天上天下	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	262	0.151
+sg00066	천근만근	千斤萬斤	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	263	0.151
+sg02425	천라지망	天羅地網	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	264	0.149
+sg03005	일부일처	一夫一妻	drop	social-system term	ai-draft	265	0.147
+sg00504	남부여대	男負女戴	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	266	0.145
+sg04369	연락부절	連絡不絕	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	267	0.145
+sg03813	백의종군	白衣從軍	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	268	0.143
+sg04526	유야무야	有耶無耶	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	269	0.141
+sg00044	이심전심	以心傳心	keep	classical 한자성어 with a cited source	ai-draft	270	0.141
+sg01210	삼순구식	三旬九食	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	271	0.140
+sg00604	대서특필	大書特筆	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	272	0.139
+sg02925	갑론을박	甲論乙駁	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	273	0.139
+sg00171	격물치지	格物致知	keep	classical 한자성어 with a cited source	ai-draft	274	0.138
+sg02660	토사구팽	兔死狗烹	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	275	0.138
+sg00963	백중지세	伯仲之勢	keep	classical 한자성어 with a cited source	ai-draft	276	0.137
+sg02319	중구난방	衆口難防	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	277	0.135
+sg00740	마이동풍	馬耳東風	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	278	0.134
+sg05184	항우울증	抗憂鬱症	drop	medical term	ai-draft	279	0.134
+sg04192	시비곡직	是非曲直	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	280	0.134
+sg01137	사면초가	四面楚歌	keep	classical 한자성어 with a cited source	ai-draft	281	0.133
+sg05174	할복자살	割腹自殺	drop	transparent compound	ai-draft	282	0.133
+sg03389	낙심천만	落心千萬	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	283	0.131
+sg03658	무가내하	無可奈何	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	284	0.131
+sg04398	영생불멸	永生不滅	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	285	0.130
+sg03072	가렴주구	苛斂誅求	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	286	0.130
+sg03354	급전직하	急轉直下	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	287	0.129
+sg03513	동성동명	同姓同名	drop	kinship/legal term	ai-draft	288	0.128
+sg03552	만고불변	萬古不變	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	289	0.128
+sg03033	후회막급	後悔莫及	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	290	0.128
+sg03004	일문일답	一問一答	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	291	0.126
+sg03242	공존공영	共存共榮	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	292	0.126
+sg03459	대담무쌍	大膽無雙	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	293	0.126
+sg03034	희희낙락	喜喜樂樂	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	294	0.126
+sg04517	유만부동	類萬不同	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	295	0.126
+sg04307	어불성설	語不成說	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	296	0.124
+sg03539	륭성번영	隆盛繁榮	drop	North Korean spelling variant of 융성번영	ai-draft	297	0.124
+sg04242	십상팔구	十常八九	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	298	0.124
+sg02987	오만불손	傲慢不遜	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	299	0.124
+sg03270	광제창생	廣濟蒼生	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	300	0.123
+sg00096	함흥차사	咸興差使	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	301	0.121
+sg04383	연전연패	連戰連敗	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	302	0.120
+sg03017	절치부심	切齒腐心	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	303	0.120
+sg03048	무사안일	無事安逸	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	304	0.119
+sg01366	수원수구	誰怨誰咎	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	305	0.119
+sg02986	영원불변	永遠不變	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	306	0.118
+sg00091	일장춘몽	一場春夢	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	307	0.118
+sg00357	구곡간장	九曲肝腸	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	308	0.117
+sg01939	인육시장	人肉市場	drop	slang compound noun	ai-draft	309	0.117
+sg03978	불편부당	不偏不黨	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	310	0.116
+sg03947	불사이군	不事二君	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	311	0.115
+sg02743	필마단창	匹馬單槍	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	312	0.114
+sg02155	적반하장	賊反荷杖	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	313	0.113
+sg00015	다다익선	多多益善	keep	classical 한자성어 with a cited source	ai-draft	314	0.111
+sg00068	천정부지	天井不知	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	315	0.111
+sg00599	대기만성	大器晩成	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	316	0.111
+sg01999	일벌백계	一罰百戒	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	317	0.111
+sg02968	사필귀정	事必歸正	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	318	0.111
+sg00762	만분지일	萬分之一	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	319	0.110
+sg03066	호사다마	好事多魔	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	320	0.110
+sg04013	사고무친	四顧無親	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	321	0.110
+sg00028	상전벽해	桑田碧海	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	322	0.110
+sg05214	호령호령	號令號令	drop	reduplicated adverb, not a 성어	ai-draft	323	0.109
+sg01961	일구이언	一口二言	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	324	0.108
+sg03087	각자도생	各自圖生	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	325	0.108
+sg03011	자문자답	自問自答	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	326	0.108
+sg00551	녹음방초	綠陰芳草	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	327	0.107
+sg02420	천군만마	千軍萬馬	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	328	0.107
+sg02524	청출어람	靑出於藍	keep	classical 한자성어 with a cited source	ai-draft	329	0.106
+sg00140	개선장군	凱旋將軍	drop	compound noun	ai-draft	330	0.106
+sg02099	자동인형	自動人形	drop	compound noun	ai-draft	331	0.106
+sg04011	빙공영사	憑公營私	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	332	0.105
+sg04573	의리부동	義理不同	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	333	0.105
+sg00070	천편일률	千篇一律	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	334	0.105
+sg02709	포악무도	暴惡無道	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	335	0.105
+sg00042	유구무언	有口無言	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	336	0.104
+sg02157	적수공권	赤手空拳	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	337	0.104
+sg04779	장생불사	長生不死	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	338	0.104
+sg03896	부화수행	附和隨行	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	339	0.103
+sg04660	일부다처	一夫多妻	drop	social-system term	ai-draft	340	0.103
+sg02866	화룡점정	畫龍點睛	keep	classical 한자성어 with a cited source	ai-draft	341	0.100
+sg03865	보편타당	普遍妥當	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	342	0.099
+sg02786	해동공자	海東孔子	drop	epithet of one person	ai-draft	343	0.099
+sg04777	장기근속	長期勤續	drop	administrative compound	ai-draft	344	0.098
+sg00054	일파만파	一波萬波	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	345	0.097
+sg02975	신장개업	新裝開業	drop	business compound	ai-draft	346	0.097
+sg00032	신토불이	身土不二	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	347	0.097
+sg02474	천인공노	天人共怒	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	348	0.097
+sg02955	백해무익	百害無益	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	349	0.096
+sg03973	불충불효	不忠不孝	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	350	0.095
+sg03791	배산임수	背山臨水	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	351	0.095
+sg02944	무사태평	無事太平	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	352	0.094
+sg04405	영원무궁	永遠無窮	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	353	0.094
+sg02182	점입가경	漸入佳境	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	354	0.094
+sg00443	금상첨화	錦上添花	keep	classical 한자성어 with a cited source	ai-draft	355	0.093
+sg04606	인계인수	引繼引受	drop	administrative compound	ai-draft	356	0.092
+sg03047	무료입장	無料入場	drop	administrative compound	ai-draft	357	0.092
+sg00630	도원결의	桃園結義	keep	classical 한자성어 with a cited source	ai-draft	358	0.092
+sg03965	불원천리	不遠千里	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	359	0.092
+sg03694	무실역행	務實力行	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	360	0.091
+sg00085	부전자전	父傳子傳	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	361	0.091
+sg01773	운우지정	雲雨之情	keep	classical 한자성어 with a cited source	ai-draft	362	0.090
+sg01960	일구월심	日久月深	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	363	0.090
+sg05106	치지도외	置之度外	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	364	0.090
+sg03052	설왕설래	說往說來	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	365	0.089
+sg03202	고색창연	古色蒼然	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	366	0.087
+sg00967	백화제방	百花齊放	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	367	0.087
+sg01568	억하심정	抑何心情	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	368	0.087
+sg04729	자기변호	自己辯護	drop	transparent compound	ai-draft	369	0.086
+sg01000	복지부동	伏地不動	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	370	0.085
+sg00385	구중궁궐	九重宮闕	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	371	0.085
+sg00658	동귀어진	同歸於盡	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	372	0.085
+sg00017	동병상련	同病相憐	keep	classical 한자성어 with a cited source	ai-draft	373	0.084
+sg01074	불모지대	不毛地帶	drop	compound noun	ai-draft	374	0.083
+sg02429	천리만리	千里萬里	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	375	0.083
+sg03162	경이원지	敬而遠之	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	376	0.083
+sg05013	창황망조	蒼黃罔措	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	377	0.083
+sg02945	무사통과	無事通過	drop	transparent compound	ai-draft	378	0.082
+sg04263	안전제일	安全第一	drop	slogan	ai-draft	379	0.082
+sg00073	초가삼간	草家三間	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	380	0.082
+sg01054	분골쇄신	粉骨碎身	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	381	0.082
+sg04121	성토대회	聲討大會	drop	compound noun	ai-draft	382	0.081
+sg03822	백지위임	白紙委任	drop	administrative compound	ai-draft	383	0.080
+sg03260	관병일치	官兵一致	drop	administrative compound	ai-draft	384	0.080
+sg00275	고육지책	苦肉之策	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	385	0.079
+sg01466	쌍두마차	雙頭馬車	drop	compound noun	ai-draft	386	0.079
+sg02981	역지사지	易地思之	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	387	0.079
+sg03825	백화요란	百花燎亂	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	388	0.079
+sg02641	쾌도난마	快刀亂麻	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	389	0.078
+sg02998	은인자중	隱忍自重	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	390	0.078
+sg00532	노류장화	路柳牆花	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	391	0.078
+sg01100	비상지원	飛霜之怨	keep	classical 한자성어 with a cited source	ai-draft	392	0.078
+sg01867	이견대인	利見大人	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	393	0.078
+sg03745	민족자존	民族自存	drop	transparent compound	ai-draft	394	0.077
+sg04827	전인미답	前人未踏	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	395	0.077
+sg02561	촌철살인	寸鐵殺人	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	396	0.077
+sg03816	백전백패	百戰百敗	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	397	0.077
+sg01674	오합지중	烏合之衆	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	398	0.077
+sg01755	우주주의	宇宙主義	drop	-ism term	ai-draft	399	0.076
+sg00045	인면수심	人面獸心	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	400	0.076
+sg02732	풍찬노숙	風餐露宿	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	401	0.076
+sg00957	백의민족	白衣民族	drop	epithet noun (a people), not a set expression	ai-draft	402	0.076
+sg03210	고심참담	苦心慘憺	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	403	0.076
+sg04356	여합부절	如合符節	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	404	0.076
+sg04467	용혹무괴	容或無怪	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	405	0.076
+sg04628	인홀불견	因忽不見	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	406	0.076
+sg00158	건곤일척	乾坤一擲	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	407	0.076
+sg00006	고진감래	苦盡甘來	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	408	0.075
+sg03246	공평무사	公平無私	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	409	0.075
+sg02012	일석삼조	一石三鳥	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	410	0.075
+sg00844	무색투명	無色透明	drop	compound adjective, transparent	ai-draft	411	0.075
+sg00936	백년지객	百年之客	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	412	0.073
+sg02268	종두득두	種豆得豆	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	413	0.073
+sg02839	호연지기	浩然之氣	keep	classical 한자성어 with a cited source	ai-draft	414	0.073
+sg03818	백절불굴	百折不屈	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	415	0.072
+sg04066	삼분천하	三分天下	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	416	0.071
+sg04532	유유낙낙	唯唯諾諾	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	417	0.071
+sg01234	상명하복	上命下服	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	418	0.071
+sg03123	거국일치	擧國一致	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	419	0.071
+sg03159	경세제민	經世濟民	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	420	0.071
+sg00053	일자무식	一字無識	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	421	0.070
+sg02022	일시동인	一視同仁	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	422	0.070
+sg03909	불가분리	不可分離	drop	transparent compound	ai-draft	423	0.069
+sg01972	일도양단	一刀兩斷	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	424	0.069
+sg00465	금의옥식	錦衣玉食	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	425	0.069
+sg00838	무두무미	無頭無尾	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	426	0.069
+sg01326	소양지판	霄壤之判	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	427	0.069
+sg02704	폐포파립	敝袍破笠	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	428	0.069
+sg03679	무불통지	無不通知	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	429	0.069
+sg04926	준결승행	準決勝行	drop	sports-news compound	ai-draft	430	0.069
+sg00807	명견만리	明見萬里	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	431	0.068
+sg02468	천언만어	千言萬語	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	432	0.068
+sg03036	거수경례	擧手敬禮	drop	ordinary compound noun	ai-draft	433	0.068
+sg02069	일타쌍피	一打雙皮	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	434	0.068
+sg03478	대토론회	大討論會	drop	organisation/event compound	ai-draft	435	0.066
+sg03515	동시통역	同時通譯	drop	interpreting term	ai-draft	436	0.066
+sg00139	개봉박두	開封迫頭	drop	film-poster formula, a compound rather than a 성어	ai-draft	437	0.066
+sg03164	경적필패	輕敵必敗	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	438	0.066
+sg03531	득의만면	得意滿面	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	439	0.066
+sg04663	일부종사	一夫從事	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	440	0.066
+sg02974	송구영신	送舊迎新	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	441	0.065
+sg02473	천의무봉	天衣無縫	keep	classical 한자성어 with a cited source	ai-draft	442	0.065
+sg05062	초도순시	初度巡視	drop	administrative compound	ai-draft	443	0.065
+sg00749	막역지우	莫逆之友	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	444	0.064
+sg02387	창가소부	娼家笑婦	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	445	0.064
+sg02597	춘풍추우	春風秋雨	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	446	0.064
+sg02854	혼정신성	昏定晨省	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	447	0.064
+sg00248	고국산천	故國山川	drop	compound noun, literal	ai-draft	448	0.062
+sg01591	여광여취	如狂如醉	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	449	0.062
+sg04223	신지무의	信之無疑	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	450	0.062
+sg04830	전전반측	輾轉反側	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	451	0.062
+sg05179	함구불언	緘口不言	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	452	0.062
+sg05257	황황망조	遑遑罔措	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	453	0.062
+sg00071	청산유수	靑山流水	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	454	0.062
+sg01432	신상필벌	信賞必罰	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	455	0.062
+sg04504	유감천만	遺憾千萬	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	456	0.061
+sg04695	일정불변	一定不變	drop	ordinary compound	ai-draft	457	0.061
+sg03061	일언지하	一言之下	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	458	0.061
+sg04944	지고지순	至高至純	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	459	0.060
+sg00063	주경야독	晝耕夜讀	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	460	0.059
+sg02309	주지육림	酒池肉林	keep	classical 한자성어 with a cited source	ai-draft	461	0.059
+sg05256	황음무도	荒淫無道	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	462	0.059
+sg00116	간부학교	幹部學校	drop	school name compound	ai-draft	463	0.059
+sg00846	무아몽중	無我夢中	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	464	0.059
+sg02070	일패도지	一敗塗地	keep	classical 한자성어 with a cited source	ai-draft	465	0.059
+sg03266	광대무변	廣大無邊	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	466	0.059
+sg01184	산자수명	山紫水明	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	467	0.059
+sg01577	언어도단	言語道斷	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	468	0.059
+sg00950	백사청송	白沙靑松	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	469	0.058
+sg02202	정치생명	政治生命	drop	compound noun	ai-draft	470	0.058
+sg00309	공중누각	空中樓閣	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	471	0.058
+sg01725	용두사미	龍頭蛇尾	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	472	0.057
+sg04584	이민위천	以民爲天	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	473	0.057
+sg00157	건곤감리	乾坤坎離	drop	name for the four trigrams on the flag, a term	ai-draft	474	0.057
+sg05092	충군애국	忠君愛國	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	475	0.057
+sg02568	총천연색	總天然色	drop	compound noun	ai-draft	476	0.057
+sg01145	사상누각	沙上樓閣	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	477	0.055
+sg01438	신체발부	身體髮膚	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	478	0.055
+sg02367	질풍신뢰	疾風迅雷	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	479	0.055
+sg02441	천병만마	千兵萬馬	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	480	0.055
+sg02606	출장입상	出將入相	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	481	0.055
+sg02780	함포고복	含哺鼓腹	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	482	0.055
+sg03569	만만불가	萬萬不可	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	483	0.055
+sg03595	만심환희	滿心歡喜	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	484	0.055
+sg03597	만화방창	萬化方暢	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	485	0.055
+sg04124	세궁역진	勢窮力盡	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	486	0.055
+sg04399	영세불망	永世不忘	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	487	0.055
+sg04426	와석종신	臥席終身	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	488	0.055
+sg04528	유예미결	猶豫未決	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	489	0.055
+sg04831	전전불매	輾轉不寐	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	490	0.055
+sg05147	평온무사	平穩無事	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	491	0.055
+sg04416	오만무례	傲慢無禮	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	492	0.055
+sg00421	권토중래	捲土重來	keep	classical 한자성어 with a cited source	ai-draft	493	0.054
+sg03022	초지일관	初志一貫	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	494	0.053
+sg04519	유무상통	有無相通	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	495	0.053
+sg01220	삼종지도	三從之道	keep	classical 한자성어 with a cited source	ai-draft	496	0.052
+sg02750	하로동선	夏爐冬扇	keep	classical 한자성어 with a cited source	ai-draft	497	0.052
+sg05042	천하무쌍	天下無雙	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	498	0.052
+sg01664	오월동주	吳越同舟	keep	classical 한자성어 with a cited source	ai-draft	499	0.050
+sg00863	문일지십	聞一知十	keep	classical 한자성어 with a cited source	ai-draft	500	0.050
+sg03172	계계승승	繼繼承承	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	501	0.050
+sg03058	암중모색	暗中摸索	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	502	0.050
+sg03227	골육상잔	骨肉相殘	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	503	0.050
+sg05067	초저출산	超低出産	drop	demography term	ai-draft	504	0.050
+sg01905	이이제이	以夷制夷	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	505	0.049
+sg04023	사분오열	四分五裂	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	506	0.049
+sg01072	불면불휴	不眠不休	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	507	0.049
+sg02619	취생몽사	醉生夢死	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	508	0.049
+sg03439	다정다한	多情多恨	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	509	0.049
+sg00120	갈건야복	葛巾野服	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	510	0.048
+sg02701	폐의파립	敝衣破笠	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	511	0.048
+sg02851	혼불부신	魂不附身	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	512	0.048
+sg02921	흥진비래	興盡悲來	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	513	0.048
+sg03321	궁흉극악	窮凶極惡	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	514	0.048
+sg03643	명심불망	銘心不忘	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	515	0.048
+sg03954	불승분노	不勝憤怒	drop	transparent compound	ai-draft	516	0.048
+sg04966	지원극통	至冤極痛	keep	fixed four-character 한자성어 (parallel/predicate pattern)	ai-draft	517	0.048
+sg01734	용호상박	龍虎相搏	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	518	0.048
+sg05072	최우선시	最優先視	drop	transparent compound	ai-draft	519	0.048
+sg00034	십인십색	十人十色	keep	"figurative 한자성어 (defined as ""…라는 뜻으로"")"	ai-draft	520	0.048

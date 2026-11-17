@@ -1,0 +1,251 @@
+# 속담 review (AI draft, not yet checked by a human): decisions that change the ranking.
+# decision: title = scored on the non-Wikipedia corpora only; partial = scored on full matches only;
+#   drop = removed from the top-100 (junk); dup = variant of a better-ranked entry.  keep = unchanged (top 150 only).
+# old_rank/old_score = the corpus ranking before these rules (counts in sokdam_counts.tsv).
+id	text	decision	reason	by	kowiki	kowikisource	opensubtitles	old_rank	old_score	new_score
+sk00126	누워서 떡 먹기	keep	no sign of a work title; hits spread over the corpora	ai-draft	5	0	16	1	1.034	1.034
+sk00604	호랑이도 제 말 하면 온다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	2	10	2	0.660	0.660
+sk00255	밑져야 본전	keep	no sign of a work title; hits spread over the corpora	ai-draft	6	7	6	3	0.444	0.444
+sk00135	눈에는 눈을 이에는 이를	keep	kowiki-heavy (53 of 58) but the maxim itself (Code of Hammurabi, Bible), not a work title: kept	ai-draft	53	0	5	4	0.421	0.421
+sk00128	누이 좋고 매부 좋다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	2	6	5	0.398	0.398
+sk00526	주먹이 운다	title	film title (2005); 148 of 151 hits are kowiki, 1 subtitle line	ai-draft	148	2	1	6	0.360	0.078
+sk00011	갈수록 태산	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	2	5	7	0.338	0.338
+sk00188	등잔 밑이 어둡다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	2	5	8	0.336	0.336
+sk00366	시작이 반이다	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	9	4	9	0.326	0.326
+sk00189	따 놓은 당상	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	0	5	10	0.322	0.322
+sk04513	보자 보자 하니까 얻어 온 장 한 번 더 뜬다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	0	5	11	0.320	0.000
+sk03052	뒤를 돌아보고 울기보다는 앞을 바라보고 웃으랬다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	16	19	2	12	0.290	0.000
+sk00527	주사위는 던져졌다	keep	Caesar quote used in articles, 4 subtitle hits: kept	ai-draft	10	1	4	13	0.282	0.282
+sk09358	할 일이 없거든 오금이나 긁어라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	4	14	0.270	0.000
+sk00450	우물 안 개구리	keep	24 of 30 hits are kowiki; the idiom is used in articles, no work title known: kept	ai-draft	24	3	3	15	0.259	0.259
+sk00292	불난 집에 부채질한다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	0	4	16	0.258	0.258
+sk00238	무소식이 희소식	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	4	17	0.256	0.256
+sk00098	꿀 먹은 벙어리	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	8	3	18	0.251	0.251
+sk04978	사람이 많으면 길이 열린다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	8	6	3	19	0.249	0.000
+sk00360	수박 겉 핥기	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	7	3	20	0.244	0.244
+sk00660	백문이 불여일견不如一見	keep	no sign of a work title; hits spread over the corpora	ai-draft	5	5	3	21	0.236	0.236
+sk00330	상갓집 개	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	34	0	22	0.234	0.234
+sk00391	아닌 밤중에 홍두깨 내밀듯	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	5	3	23	0.228	0.228
+sk00536	지성이면 감천	title	drama/film titles; 71 of 84 hits are kowiki, none in subtitles	ai-draft	71	13	0	24	0.225	0.090
+sk07112	은혜를 원수로 갚는다	keep	no sign of a work title; hits spread over the corpora	ai-draft	8	2	3	25	0.221	0.221
+sk05724	손이 발이 되도록 빌다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	31	0	26	0.218	0.218
+sk01571	귀신이 곡할 노릇이다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	3	3	27	0.217	0.217
+sk00331	새 발의 피	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	1	3	28	0.205	0.205
+sk00092	김칫국부터 마신다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	1	3	29	0.203	0.203
+sk00218	말이 씨가 된다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	0	3	30	0.196	0.196
+sk00103	꿩 먹고 알 먹는다	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	8	2	31	0.191	0.191
+sk00239	무자식 상팔자	title	drama title (JTBC, 2012); 58 of 60 hits are kowiki	ai-draft	58	1	1	32	0.182	0.071
+sk00431	열 길 물속은 알아도 한 길 사람의 속은 모른다	partial	7 of 11 hits are partial matches of a generic first half	ai-draft	2	7	2	33	0.180	0.028
+sk00035	겉과 속이 다르다	keep	generic descriptive phrase used in articles, not a title: kept	ai-draft	22	1	2	34	0.177	0.177
+sk00084	그 아버지에 그 아들	keep	no sign of a work title; hits spread over the corpora	ai-draft	12	2	2	35	0.165	0.165
+sk00324	산 넘어 산이다	keep	no sign of a work title; hits spread over the corpora	ai-draft	15	1	2	36	0.164	0.164
+sk00585	하늘이 무너져도 솟아날 구멍이 있다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	5	2	37	0.163	0.163
+sk00629	더도 말고 덜도 말고 늘 한가위만 같아라	partial	17 of 17 hits are partial matches of a generic first half	ai-draft	14	1	2	38	0.162	0.000
+sk02700	더도 말고 덜도 말고 늘 가윗날만 같아라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	14	1	2	39	0.162	0.000
+sk00347	속 빈 강정	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	3	2	40	0.154	0.154
+sk00447	옷이 날개라	keep	no sign of a work title; hits spread over the corpora	ai-draft	8	1	2	41	0.150	0.150
+sk00253	밑 빠진 독에 물 붓기	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	2	2	42	0.144	0.144
+sk03735	무른 메주 밟듯	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	2	2	43	0.142	0.142
+sk04867	사공이 많으면 배가 산으로 간다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	2	44	0.137	0.137
+sk00171	동에 번쩍 서에 번쩍	keep	no sign of a work title; hits spread over the corpora	ai-draft	5	9	1	45	0.136	0.136
+sk00454	울며 겨자 먹기	title	possible work titles; 31 of 42 hits are kowiki, none in subtitles	ai-draft	31	11	0	46	0.135	0.076
+sk00484	입이 열 개라도 할 말이 없다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	2	47	0.135	0.135
+sk00591	한 귀로 듣고 한 귀로 흘린다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	2	48	0.135	0.135
+sk00039	계란으로 바위 치기	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	0	2	49	0.134	0.134
+sk06901	옳은 일을 하면 죽어도 옳은 귀신이 된다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	2	50	0.130	0.000
+sk00430	여자가 한을 품으면 오뉴월에도 서리가 내린다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	2	51	0.128	0.128
+sk00088	금이야 옥이야	title	drama title; 34 of 43 hits are kowiki, none in subtitles	ai-draft	34	9	0	52	0.127	0.062
+sk00050	고양이 앞에 쥐	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	9	1	53	0.126	0.126
+sk00129	눈 가리고 아웅	keep	no sign of a work title; hits spread over the corpora	ai-draft	7	7	1	54	0.126	0.126
+sk00086	긁어 부스럼	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	8	1	55	0.125	0.125
+sk04116	밤이 깊어 갈수록 새벽이 가까와 온다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	17	0	56	0.119	0.000
+sk03925	미주알고주알 캔다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	17	0	57	0.117	0.117
+sk09158	피는 물보다 진하다	title	drama/film titles; 22 of 24 hits are kowiki	ai-draft	22	1	1	58	0.113	0.071
+sk07846	정신을 차려야 염불을 하지	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	6	1	59	0.109	0.000
+sk00361	순풍에 돛을 달다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	15	0	60	0.107	0.107
+sk00087	금강산도 식후경	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	5	1	61	0.106	0.106
+sk00537	집도 절도 없다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	5	1	62	0.104	0.104
+sk00584	하늘의 별 따기	keep	no sign of a work title; hits spread over the corpora	ai-draft	9	3	1	63	0.102	0.102
+sk05646	소리 없는 총이 있으면 놓겠다	partial	4 of 6 hits are partial matches of a generic first half	ai-draft	0	5	1	64	0.099	0.014
+sk00287	병 주고 약 준다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	4	1	65	0.097	0.097
+sk07345	입에 재갈을 물리다	keep	no sign of a work title; hits spread over the corpora	ai-draft	6	3	1	66	0.096	0.096
+sk05864	순풍에 돛을 달고 뱃놀이한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	13	0	67	0.093	0.000
+sk05460	설마가 사람 죽인다	keep	no sign of a work title; hits spread over the corpora	ai-draft	11	1	1	68	0.092	0.092
+sk00019	개 눈에는 똥만 보인다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	4	1	69	0.092	0.092
+sk00030	걱정도 팔자다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	4	1	70	0.092	0.092
+sk00516	제 코가 석 자	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	4	1	71	0.092	0.092
+sk00581	하나를 보고 열을 안다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	4	1	72	0.092	0.092
+sk00157	달면 삼키고 쓰면 뱉는다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	3	1	73	0.090	0.090
+sk00596	한 입 건너 두 입	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	13	0	74	0.090	0.090
+sk00102	꿩 대신 닭	keep	no sign of a work title; hits spread over the corpora	ai-draft	6	2	1	75	0.089	0.089
+sk01760	까마귀 밥이 되다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	3	1	76	0.089	0.089
+sk08209	죽어도 눈을 감겠다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	12	0	77	0.088	0.088
+sk00588	하룻강아지 범 무서운 줄 모른다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	3	1	78	0.087	0.087
+sk00533	쥐구멍에도 볕 들 날 있다	keep	no sign of a work title; hits spread over the corpora	ai-draft	8	1	1	79	0.086	0.086
+sk00758	가물에 콩씨 나듯	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	3	1	80	0.085	0.085
+sk01868	꿩 먹고 알 먹고 둥지 털어 불 땐다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	3	2	1	81	0.084	0.000
+sk00003	가는 날이 장날	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	2	1	82	0.082	0.082
+sk00339	세월이 약	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	2	1	83	0.082	0.082
+sk00004	가는 말이 고와야 오는 말이 곱다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	2	1	84	0.080	0.080
+sk00622	고생을 사서 하다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	2	1	85	0.080	0.080
+sk01225	고생을 사서 한다	dup	variant of '고생을 사서 하다' (same counts, same stem)	ai-draft	1	2	1	86	0.080	0.080
+sk09109	평생을 살아도 임의 속은 모른다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	2	1	87	0.080	0.000
+sk00167	도토리 키 재기	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	1	1	88	0.079	0.079
+sk00377	썩어도 준치	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	1	1	89	0.079	0.079
+sk00068	구렁이 담 넘어가듯	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	2	1	90	0.078	0.078
+sk00390	아니 땐 굴뚝에 연기 날까	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	2	1	91	0.078	0.078
+sk01380	과부 설움은 동무 과부가 안다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	2	1	92	0.078	0.078
+sk01863	꿈자리가 사납더니	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	2	1	93	0.078	0.078
+sk00543	찔러도 피 한 방울 안 나겠다	keep	no sign of a work title; hits spread over the corpora	ai-draft	7	0	1	94	0.077	0.077
+sk00281	벙어리 냉가슴 앓듯	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	11	0	95	0.076	0.076
+sk00206	마른하늘에 날벼락	keep	no sign of a work title; hits spread over the corpora	ai-draft	6	0	1	96	0.075	0.075
+sk00036	겉 다르고 속 다르다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	1	1	97	0.075	0.075
+sk00555	첫술에 배부르랴	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	1	1	98	0.075	0.075
+sk00630	돼지 목에 진주목걸이	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	1	1	99	0.075	0.075
+sk00202	뛰는 놈 위에 나는 놈 있다	keep	no sign of a work title; hits spread over the corpora	ai-draft	5	0	1	100	0.074	0.074
+sk00079	귀에 걸면 귀걸이 코에 걸면 코걸이	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	1	101	0.073	0.073
+sk00172	될 성부른 나무는 떡잎부터 알아본다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	1	102	0.073	0.073
+sk00228	모난 돌이 정 맞는다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	1	103	0.073	0.073
+sk00337	선무당이 사람 잡는다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	1	104	0.073	0.073
+sk00448	우는 아이 젖 준다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	1	105	0.073	0.073
+sk00462	윗물이 맑아야 아랫물이 맑다	partial	2 of 3 hits are partial matches of a generic first half	ai-draft	1	1	1	106	0.073	0.064
+sk00553	천 리 길도 한 걸음부터	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	1	1	107	0.073	0.073
+sk00627	남의 떡이 더 커 보인다	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	0	1	108	0.072	0.072
+sk00034	검은 머리 파뿌리 되도록	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	109	0.071	0.071
+sk00322	사촌이 땅을 사면 배가 아프다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	110	0.071	0.071
+sk00494	작은 고추가 더 맵다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	111	0.071	0.071
+sk00545	찬물도 위아래가 있다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	112	0.071	0.071
+sk00617	흥정은 붙이고 싸움은 말리랬다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	113	0.071	0.071
+sk01603	그물코가 삼천이면 걸릴 날이 있다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	114	0.071	0.071
+sk05311	새우 싸움에 고래 등 터지랴	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	115	0.071	0.071
+sk05312	새우 싸움에 고래 등 터진다	dup	variant of '새우 싸움에 고래 등 터지랴' (same counts, same stem)	ai-draft	0	1	1	116	0.071	0.071
+sk06321	앉아서 먹으면 태산도 못 당한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	1	117	0.071	0.000
+sk06502	어물전 망신은 꼴뚜기가 시킨다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	1	1	118	0.071	0.071
+sk09081	팔도를 무른 메주 밟듯	dup	variant of '무른 메주 밟듯' (a longer form of the same proverb)	ai-draft	0	1	1	119	0.071	0.071
+sk00461	원숭이도 나무에서 떨어진다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	0	1	120	0.070	0.070
+sk05519	세 살 버릇 여든까지 간다	keep	no sign of a work title; hits spread over the corpora	ai-draft	2	0	1	121	0.068	0.068
+sk00116	내 손에 장을 지지겠다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	0	1	122	0.066	0.066
+sk00165	도랑 치고 가재 잡는다	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	0	1	123	0.066	0.066
+sk00426	엎드려 절 받기	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	0	1	124	0.066	0.066
+sk00175	둘이 먹다 하나가 죽어도 모르겠다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	125	0.064	0.064
+sk00176	뒤로 호박씨 깐다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	126	0.064	0.064
+sk00215	말은 청산유수다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	127	0.064	0.064
+sk00260	바람 부는 대로 살다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	128	0.064	0.064
+sk00273	방귀 뀐 놈이 성낸다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	129	0.064	0.064
+sk00314	사람이 죽으란 법은 없다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	130	0.064	0.064
+sk00353	손 안 대고 코 풀기	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	131	0.064	0.064
+sk00414	얌전한 고양이가 부뚜막에 먼저 올라간다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	132	0.064	0.064
+sk00427	엎어지면 코 닿을 데	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	133	0.064	0.064
+sk00487	자다가 봉창 두드린다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	134	0.064	0.064
+sk00513	제 버릇 개 줄까	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	135	0.064	0.064
+sk00619	간에 붙었다 쓸개에 붙었다 하다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	136	0.064	0.064
+sk00829	간에 붙었다 쓸개에 붙었다 한다	dup	variant of '간에 붙었다 쓸개에 붙었다 하다' (same counts, same stem)	ai-draft	0	0	1	137	0.064	0.064
+sk00975	개를 따라가면 측간으로 간다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	0	1	138	0.064	0.000
+sk01003	개살구도 맛 들일 탓	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	139	0.064	0.064
+sk01775	까마귀 학이 되랴	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	140	0.064	0.064
+sk01970	나쁜 소문은 빨리 퍼진다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	141	0.064	0.064
+sk02696	대한 칠 년 비 바라듯	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	142	0.064	0.064
+sk03958	믿는 나무에 곰이 핀다	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	143	0.064	0.064
+sk05616	소나기 삼 형제	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	144	0.064	0.064
+sk07777	절간이 망하려면 백하젓 장사가 성한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	0	1	145	0.064	0.000
+sk09357	할 일 없으면 낮잠이나 자라	keep	no sign of a work title; hits spread over the corpora	ai-draft	0	0	1	146	0.064	0.064
+sk00060	공든 탑이 무너지랴	keep	no sign of a work title; hits spread over the corpora	ai-draft	1	9	0	147	0.064	0.064
+sk03305	마음이 없으면 지게 지고 엉덩춤 춘다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	4	8	0	148	0.063	0.000
+sk00026	개밥에 도토리	keep	no sign of a work title; hits spread over the corpora	ai-draft	4	7	0	149	0.056	0.056
+sk00544	차면 넘친다	keep	no sign of a work title; hits spread over the corpora	ai-draft	3	7	0	150	0.054	0.054
+sk04404	베개를 높이 하고 자게 되였다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	6	0	162	0.041	0.000
+sk00306	사람은 죽으면 이름을 남기고 범은 죽으면 가죽을 남긴다	partial	9 of 10 hits are partial matches of a generic first half	ai-draft	6	4	0	164	0.039	0.002
+sk08499	집을 지어 놓고 삼 년	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	5	0	166	0.038	0.000
+sk05883	술이 들어가면 지혜는 달아난다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	5	0	169	0.036	0.000
+sk01920	나라가 망하면 충신이 욕을 본다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	7	3	0	174	0.034	0.000
+sk02936	동냥은 아니 주고 자루 찢는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	4	0	188	0.028	0.000
+sk05384	서울서 매 맞고 송도서 주먹질한다	partial	2 of 4 hits are partial matches of a generic first half	ai-draft	0	4	0	190	0.028	0.014
+sk09087	팔자가 사나우니까 의붓아들이 삼 년 맏이라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	4	0	195	0.028	0.000
+sk03351	많이 생각하고 적게 말하고 더 적게 써라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	6	2	0	197	0.025	0.000
+sk03511	머리를 감추고 꼬리를 숨긴다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	3	0	201	0.023	0.000
+sk00040	고기는 씹어야 맛을 안다	partial	3 of 3 hits are partial matches of a generic first half	ai-draft	0	3	0	205	0.021	0.000
+sk00041	고기는 씹어야 맛이요, 말은 해야 맛이라	partial	3 of 3 hits are partial matches of a generic first half	ai-draft	0	3	0	206	0.021	0.000
+sk06423	양반은 얼어 죽어도 겻불은 안 쬔다	partial	2 of 3 hits are partial matches of a generic first half	ai-draft	0	3	0	216	0.021	0.007
+sk07556	장가를 들어야 아이를 낳는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	3	0	217	0.021	0.000
+sk03304	마음이 바르고 고와야 옷깃이 바로 선다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	5	1	0	223	0.016	0.000
+sk06148	쓴맛 단맛 다 보았다	dup	variant of '쓴맛 단맛 다 보다' (same counts, same stem)	ai-draft	1	2	0	232	0.016	0.016
+sk00023	개똥도 약에 쓴다	dup	variant of '개똥도 약에 쓰려면 없다' (same counts, same stem)	ai-draft	0	2	0	237	0.014	0.014
+sk00304	사람 위에 사람 없고 사람 밑에 사람 없다	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	0	2	0	244	0.014	0.007
+sk00655	하늘을 보아야 별을 따다	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	0	2	0	253	0.014	0.007
+sk02027	날은 저물어 가고 갈 길은 멀다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	258	0.014	0.000
+sk02265	너무 고르다가 눈먼 사위 얻는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	259	0.014	0.000
+sk03298	마음에 없으면 보이지도 않는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	265	0.014	0.000
+sk03597	며느리가 미우면 발뒤축이 달걀 같다고 나무란다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	267	0.014	0.000
+sk03598	며느리가 미우면 손자까지 밉다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	268	0.014	0.000
+sk04473	병풍에 그린 닭이 홰를 치고 우는 한이 있더라도	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	270	0.014	0.000
+sk04976	사람이 돈이 없어서 못 사는 게 아니라 명이 모자라서 못 산다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	272	0.014	0.000
+sk06385	애매한 두꺼비 돌에 치였다	dup	variant of '두꺼비 돌에 치였다' (same counts, same stem)	ai-draft	0	2	0	277	0.014	0.014
+sk07845	정신을 가다듬으면 바위라도 뚫는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	285	0.014	0.000
+sk08564	차 치고 포 치고 룡의 알 뽑아서 볶아 먹는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	2	0	288	0.014	0.000
+sk08972	콩이야 팥이야 한다	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	0	2	0	289	0.014	0.007
+sk09200	하늘을 보아야 별을 따지	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	0	2	0	291	0.014	0.007
+sk00299	빈대 잡으려고 초가삼간 태운다	partial	2 of 4 hits are partial matches of a generic first half	ai-draft	3	1	0	297	0.013	0.004
+sk00650	여자 셋이 모이면 접시가 깨진다	partial	3 of 4 hits are partial matches of a generic first half	ai-draft	3	1	0	298	0.013	0.007
+sk03302	마음이 맞으면 삶은 도토리 한 알 가지고도 시장 멈춤을 한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	3	1	0	299	0.013	0.000
+sk06669	여자 셋이 모이면 새 접시를 뒤집어 놓는다	partial	3 of 4 hits are partial matches of a generic first half	ai-draft	3	1	0	300	0.013	0.002
+sk08847	춥지 않은 소한 없고 추운 대한 없다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	3	1	0	301	0.013	0.000
+sk07824	정성이 있으면 한식에도 세배 간다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	1	0	309	0.011	0.000
+sk00244	물이 너무 맑으면 고기가 아니 모인다	partial	2 of 2 hits are partial matches of a generic first half	ai-draft	1	1	0	315	0.009	0.000
+sk00620	개같이 벌어서 정승같이 쓴다	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	1	1	0	323	0.009	0.007
+sk00927	개같이 벌어서 정승같이 산다	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	1	1	0	325	0.009	0.002
+sk01294	고향을 떠나면 천하다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	1	0	326	0.009	0.000
+sk02076	남의 말이라면 량식 싸 지고 나선다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	1	0	327	0.009	0.000
+sk02077	남의 말이라면 쌍지팡이 짚고 나선다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	1	0	328	0.009	0.000
+sk06094	싸움은 말리고 불은 끄랬다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	1	0	332	0.009	0.000
+sk08500	집을 지으려면 물 자리부터 보라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	1	0	334	0.009	0.000
+sk09181	하늘 높은 줄은 모르고 땅 넓은 줄만 안다	partial	1 of 2 hits are partial matches of a generic first half	ai-draft	1	1	0	336	0.009	0.002
+sk08423	지위가 높을수록 뜻을 낮추랬다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	4	0	0	339	0.008	0.000
+sk08424	지위가 높을수록 마음은 낮추어 먹어야	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	4	0	0	340	0.008	0.000
+sk00301	사람 나고 돈 났지 돈 나고 사람 났나	partial	1 of 1 hits are partial matches of a generic first half	ai-draft	0	1	0	372	0.007	0.000
+sk00434	열 번 찍어 아니 넘어가는 나무 없다	partial	1 of 1 hits are partial matches of a generic first half	ai-draft	0	1	0	382	0.007	0.000
+sk00503	재주는 곰이 넘고 돈은 주인이 받는다	partial	1 of 1 hits are partial matches of a generic first half	ai-draft	0	1	0	395	0.007	0.000
+sk00714	가락꼬치 아니면 송곳	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	415	0.007	0.000
+sk01604	그믐달 보자고 초저녁부터 나선다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	431	0.007	0.000
+sk01933	나룻이 석 자라도 먹어야 샌님	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	439	0.007	0.000
+sk01939	나 먹자니 싫고 개 주자니 아깝다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	440	0.007	0.000
+sk02448	눈치가 있으면 떡이나 얻어먹지	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	449	0.007	0.000
+sk02452	눈치밥을 먹고 바늘방석에 앉다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	450	0.007	0.000
+sk02546	단단하기만 하면 벽에 물이 고이나	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	454	0.007	0.000
+sk03012	되로 주고 말로 받는다	dup	variant of '되로 주고 말로 받다' (same counts, same stem)	ai-draft	0	1	0	467	0.007	0.007
+sk03459	망나니짓을 하여도 금관자 서슬에 큰기침한다	dup	variant of '금관자 서슬에 큰기침한다' (same counts, same stem)	ai-draft	0	1	0	475	0.007	0.007
+sk03668	목마른 사람에게 물소리만 듣고 목을 축이라 한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	482	0.007	0.000
+sk04996	사모 바람에 거드럭거린다	dup	variant of '도둑질을 하더라도 사모 바람에 거드럭거린다' (same counts, same stem)	ai-draft	0	1	0	506	0.007	0.007
+sk05015	사위는 백년손이요 며느리는 종신 식구라	dup	variant of '사위는 백 년 손이라' (same counts, same stem)	ai-draft	0	1	0	507	0.007	0.007
+sk05058	사흘을 굶으면 포도청의 담도 뛰어넘는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	509	0.007	0.000
+sk06270	아저씨 아저씨 하고 길짐만 지운다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	531	0.007	0.000
+sk06664	여자가 셋이면 나무 접시가 들논다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	541	0.007	0.000
+sk07050	웃는 낯에 침 뱉으랴	dup	variant of '웃는 낯에 침 못 뱉는다' (same counts, same stem)	ai-draft	0	1	0	549	0.007	0.007
+sk07201	이마에 송곳을 박아도 진물 한 점 안 난다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	553	0.007	0.000
+sk07631	장모는 사위가 곰보라도 예뻐하고 시아버지는 며느리가 뻐드렁니에 애꾸라도 예뻐한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	559	0.007	0.000
+sk07825	정성이 지극하면 돌 위에도 풀이 난다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	561	0.007	0.000
+sk07826	정성이 지극하면 동지섣달에도 꽃이 핀다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	562	0.007	0.000
+sk07827	정성이 지극하면 바위에도 꽃이 핀다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	563	0.007	0.000
+sk07828	정성이 지극하면 하늘도 움직인다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	564	0.007	0.000
+sk08298	중매는 잘하면 술이 석 잔이고 못하면 뺨이 세 대라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	572	0.007	0.000
+sk09285	한 바리에 실으면 바가 터지겠다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	596	0.007	0.000
+sk09318	한식에 죽으나 청명에 죽으나	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	0	1	0	601	0.007	0.000
+sk06280	아침에 까치가 울면 좋은 일이 있고 밤에 까마귀가 울면 대변이 있다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	3	0	0	609	0.006	0.000
+sk01832	꽃이 먼저 피고 열매는 나중 맺는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	0	0	617	0.004	0.000
+sk03860	물이 너무 많으면 고기가 없다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	0	0	621	0.004	0.000
+sk04010	바다로 나가야 할 배가 산으로 올라간다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	2	0	0	622	0.004	0.000
+sk00817	가진 돈이 없으면 망건 꼴이 나쁘다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	650	0.002	0.000
+sk01078	걱정이 많으면 빨리 늙는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	652	0.002	0.000
+sk01486	굴에 들어가야 범을 잡는다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	657	0.002	0.000
+sk01800	꼬리가 있어야 흔든다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	661	0.002	0.000
+sk02058	남의 눈에 눈물 내면 제 눈에는 피눈물이 난다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	666	0.002	0.000
+sk02157	남이 장에 간다고 하니 무릎에 망건 씐다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	668	0.002	0.000
+sk03244	뛰는 놈이 있으면 나는 놈이 있다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	674	0.002	0.000
+sk03309	마음이 풀어지면 하는 일이 가볍다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	675	0.002	0.000
+sk03578	먼저 바꾸자고 할 때에는 도적고양이가 있기 때문이다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	679	0.002	0.000
+sk04167	방울 소리만 듣고 따라가는 눈먼 강아지	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	683	0.002	0.000
+sk04959	사람은 일을 해야 입맛이 난다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	688	0.002	0.000
+sk05619	소나무가 무성하면 잣나무도 기뻐한다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	695	0.002	0.000
+sk06178	아내가 귀여우면 처갓집 문설주도 귀엽다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	700	0.002	0.000
+sk06242	아이들은 많고 도래떡은 적다	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	702	0.002	0.000
+sk07605	장닭이 울어야 날이 새지	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	709	0.002	0.000
+sk07823	정성을 들였다고 마음을 놓지 마라	drop	only a generic partial phrase matched; the proverb itself never occurs	ai-draft	1	0	0	711	0.002	0.000

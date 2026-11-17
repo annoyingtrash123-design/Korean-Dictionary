@@ -42,6 +42,7 @@ export function createEngine(): Engine {
     studyOverview: () => e().studyOverview(),
     studyWords: (level, limit, offset) => e().studyWords(level, limit, offset),
     studyGrammar: (level) => e().studyGrammar(level),
+    studyIdioms: (list, limit, offset) => e().studyIdioms(list, limit, offset),
     studyTopicWords: (category, byLevel, limit, offset) => e().studyTopicWords(category, byLevel, limit, offset),
     wordOfDay: (date) => e().wordOfDay(date),
     lookupInText: (text, offset, opts) => e().lookupInText(text, offset, opts),
