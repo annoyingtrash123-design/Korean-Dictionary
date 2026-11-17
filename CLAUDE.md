@@ -30,6 +30,9 @@ Rust→WASM engine (`core/`) searches them in the browser, Preact UI (`app/`). S
 - Public domain in Korea: authors who died before 1963. Laws/court rulings are unprotected.
 - wasm-opt: `export PATH=/tmp/claude-0/binaryen/bin:$PATH` in this sandbox before `npm run build:core`.
 - Local data for e2e: `cp -r pipeline/out/site-data app/public/data` after a pipeline build.
+- **App only (owner's decision, 2026-11):** the website is obsolete — don't spend work on website-only
+  behaviour (PWA/service worker, browser quirks, website wording). GitHub Pages still matters only as the
+  app's data host: the app downloads packs from its `/data/`, so the data deploy must stay green.
 - Android app (the owner's main install): Capacitor 8 in `app/android/`, app-only behaviour behind
   `VITE_NATIVE=1` in `app/src/lib/native.ts`. `.github/workflows/android.yml` builds a signed APK on
   pushes touching app/ or core/ and publishes it to the `android-latest` release. The signing key lives
