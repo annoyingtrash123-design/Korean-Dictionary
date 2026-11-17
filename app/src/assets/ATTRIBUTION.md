@@ -16,6 +16,15 @@ licensed separately.
 * Obtained from the mirror https://github.com/spellcheck-ko/korean-dict-nikl
   (original: https://krdict.korean.go.kr).
 
+## NIKL standard curriculum levels (국제 통용 한국어 표준 교육과정 어휘·문법 등급 목록)
+* Publisher: National Institute of Korean Language (국립국어원, NIKL).
+* Content used: the 1급–6급 grade of each listed word and grammar item (`curriculum` table), with the
+  list's form, part of speech, guide phrase and grammar category, linked to krdict entries.
+* Source: 「2017년 국제 통용 한국어 표준 교육과정 적용 연구(4단계)」 어휘·문법 등급 목록 (2020-11-17 수정본),
+  https://www.korean.go.kr/front/reportData/reportDataView.do?mn_id=45&report_seq=932
+* Licence: 공공누리 제1유형 (Korea Open Government Licence, Type 1: attribution; commercial use and
+  modification allowed). 출처: 국립국어원.
+
 ## stdict — 표준국어대사전 (Standard Korean Language Dictionary)
 * Publisher: National Institute of Korean Language (국립국어원, NIKL)
 * Content used: headwords, hanja, pronunciation, conjugation, Korean definitions

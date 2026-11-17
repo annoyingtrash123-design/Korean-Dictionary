@@ -161,6 +161,13 @@ function SimilarWords({ primary }: { primary: Entry }) {
   );
 }
 
+const KO_DEF_SOURCE: Record<string, string> = { stdict: '표준국어대사전', opendict: '우리말샘' };
+
+/** AI-written text is always labelled (CLAUDE.md). */
+function AiChip({ what }: { what: string }) {
+  return <span class="chip-ai ex-ai" lang="en" title={`${what} written by AI`} aria-label={`${what} written by AI`}>AI</span>;
+}
+
 function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolean; isKo: boolean }) {
   const [all, setAll] = useState(false);
   // examples with English (a source translation or a reviewed AI one) first, so they are among the shown few
@@ -172,8 +179,13 @@ function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolea
         {s.pos && <Pos pos={s.pos} />}
         {s.gloss ? <><span class="gloss">{s.gloss}</span>{s.gloss_ai && <span class="chip-ai ex-ai" title="English corrected by AI (reviewed)" aria-label="English corrected by AI (reviewed)">AI</span>}</> : s.roman ? <span class="roman">{s.roman}</span> : null}
         {s.tags?.length ? <span class="tags">{s.tags.map((t) => <span key={t} class="tag">{t}</span>)}</span> : null}
-        {s.def && <div class="def">{s.def}</div>}
-        {s.ko_def && (showKo || isKo) && <div class={isKo ? 'def ko-main hangul' : 'def ko'} lang="ko" {...TAP}>{s.ko_def}</div>}
+        {s.def && <div class="def">{s.def_ai && <AiChip what="English definition" />}{s.def}</div>}
+        {s.ko_def && (showKo || isKo) && (
+          <div class={isKo ? 'def ko-main hangul' : 'def ko'} lang="ko" {...TAP}>
+            {s.ko_def_ai && <AiChip what="Korean definition" />}{s.ko_def}
+            {s.ko_def_source && s.ko_def_source !== 'ai' && <span class="muted small" lang="en"> — {KO_DEF_SOURCE[s.ko_def_source.split(':')[0]] ?? s.ko_def_source}</span>}
+          </div>
+        )}
         {s.note && <div class="note">{s.note}</div>}
         {s.pattern && <div class="pattern" lang="ko">{s.pattern}</div>}
         {shownEx.length > 0 && <ExampleList items={shownEx} />}

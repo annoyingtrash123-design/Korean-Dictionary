@@ -1,7 +1,8 @@
-export type Source = 'krdict' | 'wikt' | 'kengdic' | 'stdict' | 'opendict' | 'cedict' | 'zhwikt';
-export const SOURCE_ORDER: Source[] = ['krdict', 'wikt', 'kengdic', 'stdict', 'opendict', 'cedict', 'zhwikt'];
+export type Source = 'krdict' | 'hanppuri' | 'wikt' | 'kengdic' | 'stdict' | 'opendict' | 'cedict' | 'zhwikt';
+export const SOURCE_ORDER: Source[] = ['krdict', 'hanppuri', 'wikt', 'kengdic', 'stdict', 'opendict', 'cedict', 'zhwikt'];
 export const SOURCE_TITLE: Record<Source, string> = {
   krdict: 'krdict 한국어기초사전',
+  hanppuri: '한뿌리 grammar notes (AI-assisted)',
   wikt: 'Wiktionary',
   kengdic: 'kengdic',
   stdict: '표준국어대사전 (Korean)',
@@ -9,17 +10,27 @@ export const SOURCE_TITLE: Record<Source, string> = {
   cedict: 'CC-CEDICT',
   zhwikt: 'Wiktionary (Chinese)',
 };
-export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict', opendict: '우리말샘', cedict: 'CC-CEDICT', zhwikt: 'zh-wikt' };
+export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', hanppuri: '한뿌리', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict', opendict: '우리말샘', cedict: 'CC-CEDICT', zhwikt: 'zh-wikt' };
 /** Korean-only sources (lang 'ko'): never preferred over an English source. */
 export const isKoSource = (s: string) => s === 'stdict' || s === 'opendict';
 
-export interface Example { ko: string; en?: string; type?: 'phrase' | 'sentence' | 'dialogue'; /** English is an AI translation (pipeline example_en) */ en_ai?: boolean }
+export interface Example {
+  ko: string; en?: string; type?: 'phrase' | 'sentence' | 'dialogue';
+  /** English is an AI translation (pipeline example_en) */ en_ai?: boolean;
+  /** the Korean sentence itself was written by AI (grammar overlay, source hanppuri) */ ko_ai?: boolean;
+}
 export interface Rel { type: string; word: string }
 export interface Sense {
   pos?: string; gloss?: string; roman?: string; def?: string; ko_def?: string; note?: string; pattern?: string;
   tags?: string[]; examples?: Example[]; rel?: Rel[];
   /** gloss is an AI-reviewed correction of the source English (pipeline gloss_fixes) */
   gloss_ai?: boolean;
+  /** the English `def` was written by AI (grammar overlay, source hanppuri) */
+  def_ai?: boolean;
+  /** the Korean definition was written by AI; else it is copied from `ko_def_source` */
+  ko_def_ai?: boolean;
+  /** where the Korean definition comes from: "stdict:<id>" | "opendict:<id>" | "ai" */
+  ko_def_source?: string;
 }
 export interface EntryData {
   senses: Sense[]; related?: Rel[]; category?: string; etym?: string; origin_note?: string;
