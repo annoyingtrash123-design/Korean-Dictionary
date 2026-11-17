@@ -64,12 +64,9 @@ jobs:
 
       - run: npm ci
       - run: npm run build:core
-      # no data/ in the app: dictionary packs are downloaded from the website on first run
-      - name: Build web app for Android
+      # no data/ in the app: dictionary packs are downloaded from the data host (GitHub Pages) on first run
+      - name: Build app bundle
         run: npm run build
-        env:
-          BASE_PATH: /
-          VITE_NATIVE: "1"
       - name: Check dist has no data
         run: test ! -e dist/data
       - run: npx cap sync android

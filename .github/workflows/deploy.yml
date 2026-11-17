@@ -158,47 +158,35 @@ jobs:
           path: docs/screenshots
           retention-days: 14
 
-  app:
+  # The Pages site is only the Android app's data host: /data/manifest.json and the pack chunks the
+  # installed app downloads (app/src/lib/native.ts DATA_BASE), plus a stub index page. No app bundle.
+  site:
     needs: [data, verify]
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: app
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: app/package-lock.json
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: wasm32-unknown-unknown
-      - uses: Swatinem/rust-cache@v2
-      - name: Restore wasm-pack
-        id: wasmpack
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo/bin/wasm-pack
-          key: wasm-pack-0.15.0-${{ runner.os }}
-      - name: Install wasm-pack
-        if: steps.wasmpack.outputs.cache-hit != 'true'
-        run: cargo install wasm-pack --locked --version 0.15.0
-      - run: npm ci
-      - run: npm run build:core
       - uses: actions/download-artifact@v4
         with:
           name: site-data
-          path: app/public/data
-      - run: npm run build
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          path: site/data
+      - name: Stub index page
+        run: |
+          cat > site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>한뿌리 data host</title></head>
+          <body style="font-family:system-ui,sans-serif;max-width:32rem;margin:3rem auto;padding:0 1rem">
+          <h1 lang="ko">한뿌리</h1>
+          <p>This is the data host for the 한뿌리 (Hanppuri) Android app. There is no website: the app downloads its dictionary packs from <code>/data/</code> here.</p>
+          </body>
+          </html>
+          HTML
+      - run: test -s site/data/manifest.json
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: app/dist
+          path: site
 
   deploy:
-    needs: app
+    needs: site
     if: github.event_name == 'push' || inputs.deploy
     runs-on: ubuntu-latest
     environment:
