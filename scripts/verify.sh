@@ -19,6 +19,18 @@ step "guard: scripts find the git dir with rev-parse (in a worktree .git is a fi
 GITDIR_RE='(^|[^A-Za-z_-])\.git''/'
 if grep -nE "$GITDIR_RE" scripts/*.sh .githooks/* 2>/dev/null; then echo "use \$(git rev-parse --git-dir) instead"; exit 1; fi
 
+step "workflows parse as YAML + python tests (frequency study)"
+python3 -I - <<'PY'
+import glob, sys
+try:
+    import yaml
+except ImportError:
+    print("skipped yaml parse: PyYAML missing"); sys.exit(0)
+for p in sorted(glob.glob(".github/workflows/*.yml")):
+    yaml.safe_load(open(p, encoding="utf-8"))
+PY
+python3 -I pipeline/qa/frequency/test_frequency.py
+
 step "rust: tests"
 # one run: keep its output so a failure (even an intermittent one) names the test and its panic.
 # In a git worktree .git is a file, so logs go to the real git dir.
