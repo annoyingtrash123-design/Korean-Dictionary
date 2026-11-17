@@ -1,24 +1,23 @@
 # Korean Dictionary — app
 
-Offline Korean–English dictionary PWA (Vite + Preact + TypeScript). See `../docs/SCOPE.md` for the data contract.
+Offline Korean–English dictionary, the UI of the Android app (Vite + Preact + TypeScript, packaged with Capacitor). See `../docs/SCOPE.md` for the data contract.
 
 ## Develop
 
 ```bash
 npm install
 npm run fixture      # python3 scripts/make-fixture.py -> public/data/ (small contract-conformant test packs)
-npm run dev          # http://localhost:5173/Korean-Dictionary/
+npm run dev          # http://localhost:5173/  (VITE_DATA_BASE=/ to use the local public/data instead of the Pages data host)
 ```
 
 Real data: copy the pipeline output (`manifest.json`, `*.sqlite.gz.NNN`, `ATTRIBUTION.md`) into `public/data/`
-(git-ignored). The app fetches `data/manifest.json` relative to the base path.
-
-`BASE_PATH` overrides the Vite base (default `/Korean-Dictionary/` for GitHub Pages): `BASE_PATH=/ npm run build`.
+(git-ignored). The app fetches `data/manifest.json` from `DATA_BASE` (`src/lib/native.ts`): the GitHub Pages
+data host by default, or the local server when `VITE_DATA_BASE=/` is set (the e2e build).
 
 ## Build, test
 
 ```bash
-npm run build        # tsc --noEmit + vite build (+ service worker; /data/* is NOT precached)
+npm run build        # tsc --noEmit + vite build; then `npx cap sync android` copies dist/ into the app
 npm test             # vitest unit tests (search-mode, merge/grouping, theme, bookmarks)
 npm run e2e          # Playwright: builds, serves `vite preview` on :4173, runs e2e/app.spec.ts
 npm run icons        # regenerate PNG icons from scripts/make-icons.mjs (needs sharp)

@@ -1,15 +1,12 @@
 # 한뿌리 (Hanppuri) — Korean Dictionary
 
-An offline, Pleco-inspired Korean–English dictionary for iPhone and Android, installed from the
-browser as a web app (PWA). After a one-time download it works with no connection.
+An offline, Pleco-inspired Korean–English dictionary, an Android app. After a one-time download of the
+dictionary data it works with no connection. There is no website.
 
-**Open:** https://annoyingtrash123-design.github.io/Korean-Dictionary/
+## Install
 
-## Install on your phone
-
-- **iPhone (iOS 16.4+), Safari:** open the link → Share → **Add to Home Screen** → open it from the
-  home screen → **Download**. Keep it on the home screen: iOS keeps home-screen apps' data.
-- **Android, Chrome:** open the link → ⋮ → **Install app** (or *Add to Home screen*) → **Download**.
+Download `hanppuri.apk` from the [`android-latest` release](https://github.com/annoyingtrash123-design/Korean-Dictionary/releases/tag/android-latest),
+install it, open the app and tap **Download**. New versions: Settings → Check for updates.
 
 The core download is about 45 MB (≈ 165 MB on the device). The Korean–Korean dictionaries
 표준국어대사전 (~60 MB) and 우리말샘 (~100 MB) are optional and can be added or removed in Settings.
@@ -37,5 +34,6 @@ consonants (ㅎㄱ → 학교). Licences and attributions are in Settings → Ab
 - `app/`: Preact + TypeScript UI. See [app/README.md](app/README.md).
 - `docs/SCOPE.md`: architecture and data contract.
 
-Every push to `main` builds the data and the app in GitHub Actions and deploys to GitHub Pages
-(`.github/workflows/deploy.yml`).
+Every push to `main` builds the data in GitHub Actions and publishes it to GitHub Pages, which only
+hosts the packs the app downloads (`.github/workflows/deploy.yml`). `.github/workflows/android.yml`
+builds the signed APK.

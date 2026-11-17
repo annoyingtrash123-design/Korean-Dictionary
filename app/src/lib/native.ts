@@ -1,12 +1,10 @@
-/** Differences of the Android app build (Capacitor, `VITE_NATIVE=1`) from the website. Everything
- *  here is a no-op on the web, and the Capacitor plugins are only loaded in the app. */
+/** Android-app plumbing: where dictionary data comes from, and the Capacitor plugins (loaded on demand).
+ *  In a desktop browser (the e2e tests) the plugins fall back to their web implementations. */
 
-export const IS_NATIVE = import.meta.env.VITE_NATIVE === '1';
-
-/** Where dictionary data comes from: the website's /data/ in the app (its own files are bundled). */
-export const DATA_BASE: string = IS_NATIVE
-  ? (import.meta.env.VITE_DATA_BASE as string | undefined) ?? 'https://annoyingtrash123-design.github.io/Korean-Dictionary/'
-  : import.meta.env.BASE_URL;
+/** Where dictionary data comes from: the data host (GitHub Pages). The app's own files are bundled, and only
+ *  the e2e build points this at the local server (`VITE_DATA_BASE=/`). */
+export const DATA_BASE: string =
+  (import.meta.env.VITE_DATA_BASE as string | undefined) ?? 'https://annoyingtrash123-design.github.io/Korean-Dictionary/';
 
 /** Read Korean aloud with Android's text-to-speech (the WebView has no speechSynthesis). */
 export async function nativeSpeak(text: string): Promise<void> {
@@ -25,7 +23,6 @@ export async function nativeSaveFile(name: string, text: string): Promise<void> 
 
 /** Android back button: go back in the app; on the first screen, leave the app. */
 export async function installBackButton(): Promise<void> {
-  if (!IS_NATIVE) return;
   const { App } = await import('@capacitor/app');
   await App.addListener('backButton', ({ canGoBack }) => { if (canGoBack) history.back(); else void App.exitApp(); });
 }

@@ -7,7 +7,6 @@ import { useStore } from '../lib/store';
 import type { Manifest } from '../lib/types';
 
 import { packLabel } from '../lib/packs';
-import { requestPersist } from '../lib/persist';
 import { bytesNeeded, freeSpaceProblem, isFatalInstallMessage, isNotFoundError, isQuotaError, noSpaceMessage, STORAGE_GONE_MSG } from '../lib/storage';
 
 type WakeLockSentinelLike = { release(): Promise<void> };
@@ -49,7 +48,6 @@ export function PackInstaller({ manifest, packIds, label, onDone }: { manifest: 
       const est = await navigator.storage?.estimate?.().catch(() => undefined);
       const problem = freeSpaceProblem(est, bytesNeeded(packs));
       if (problem) throw new Error(problem);
-      await requestPersist();
       await takeLock();
       const go = () => installLive(manifest, packIds, fetchManifest, (p, v) => db.install(p, MANIFEST_URL(), v));
       try { await go(); } catch (e) {
