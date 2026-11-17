@@ -20,6 +20,57 @@ def chunk_name(ch):
     return ch if isinstance(ch, str) else ch.get('file') or ch.get('name')
 
 
+def unpack_core(data: str, man: dict):
+    """Unpack the core pack's chunks into a temp folder; returns (core manifest entry, work dir, sqlite path)."""
+    core = next(p for p in man['packs'] if p['id'] == 'core')
+    work = tempfile.mkdtemp(prefix='kd-e2e-pack-')
+    gz_in = os.path.join(work, 'in.gz')
+    with open(gz_in, 'wb') as out:   # the chunks are one gzip stream cut into pieces
+        for ch in core['chunks']:
+            with open(os.path.join(data, chunk_name(ch)), 'rb') as f:
+                shutil.copyfileobj(f, out)
+    db_path = os.path.join(work, 'core.sqlite')
+    with gzip.open(gz_in, 'rb') as src, open(db_path, 'wb') as dst:
+        shutil.copyfileobj(src, dst)
+    os.remove(gz_in)
+    return core, work, db_path
+
+
+def repack_core(data: str, man: dict, core: dict, work: str, db_path: str) -> None:
+    """Write the (changed) core database back as chunks and update its manifest entry (hash, sizes, version)."""
+    sha = hashlib.sha256()
+    size = 0
+    with open(db_path, 'rb') as f:
+        for blk in iter(lambda: f.read(1 << 20), b''):
+            sha.update(blk)
+            size += len(blk)
+    gz_path = db_path + '.gz'
+    with open(db_path, 'rb') as src, gzip.open(gz_path, 'wb', compresslevel=6) as dst:
+        shutil.copyfileobj(src, dst)
+    for ch in core['chunks']:
+        os.remove(os.path.join(data, chunk_name(ch)))
+    chunks = []
+    with open(gz_path, 'rb') as f:
+        n = 0
+        while True:
+            blk = f.read(CHUNK)
+            if not blk:
+                break
+            name = f'core.sqlite.gz.{n:03d}'
+            with open(os.path.join(data, name), 'wb') as o:
+                o.write(blk)
+            chunks.append({'file': name, 'bytes': len(blk)})
+            n += 1
+    core['chunks'] = chunks
+    core['bytes'] = size
+    core['gz_bytes'] = os.path.getsize(gz_path)
+    core['sha256'] = sha.hexdigest()
+    core['version'] = sha.hexdigest()[:16]
+    json.dump(man, open(os.path.join(data, 'manifest.json'), 'w'), ensure_ascii=False, indent=2)
+    shutil.rmtree(work, ignore_errors=True)
+    print('core pack rewritten:', core['version'], f'{len(chunks)} chunks')
+
+
 def add_curriculum(c) -> int:
     c.execute("""CREATE TABLE curriculum (kind TEXT NOT NULL, level INTEGER NOT NULL, entry_id INTEGER, grammar_id INTEGER,
                  form TEXT NOT NULL, rank INTEGER NOT NULL)""")
@@ -48,16 +99,7 @@ def main() -> None:
     if counts.get('curriculum') and counts.get('entries_kind'):
         print('core pack already has curriculum + entries_kind: nothing to do')
         return
-    work = tempfile.mkdtemp(prefix='kd-e2e-pack-')
-    gz_in = os.path.join(work, 'in.gz')
-    with open(gz_in, 'wb') as out:   # the chunks are one gzip stream cut into pieces
-        for ch in core['chunks']:
-            with open(os.path.join(DATA, chunk_name(ch)), 'rb') as f:
-                shutil.copyfileobj(f, out)
-    db_path = os.path.join(work, 'core.sqlite')
-    with gzip.open(gz_in, 'rb') as src, open(db_path, 'wb') as dst:
-        shutil.copyfileobj(src, dst)
-    os.remove(gz_in)
+    core, work, db_path = unpack_core(DATA, man)
 
     c = sqlite3.connect(db_path)
     has = lambda name: c.execute("SELECT 1 FROM sqlite_master WHERE name = ?", (name,)).fetchone()
@@ -79,37 +121,7 @@ def main() -> None:
         print('core pack already complete')
         return
 
-    sha = hashlib.sha256()
-    size = 0
-    with open(db_path, 'rb') as f:
-        for blk in iter(lambda: f.read(1 << 20), b''):
-            sha.update(blk)
-            size += len(blk)
-    gz_path = db_path + '.gz'
-    with open(db_path, 'rb') as src, gzip.open(gz_path, 'wb', compresslevel=6) as dst:
-        shutil.copyfileobj(src, dst)
-    for ch in core['chunks']:
-        os.remove(os.path.join(DATA, chunk_name(ch)))
-    chunks = []
-    with open(gz_path, 'rb') as f:
-        n = 0
-        while True:
-            blk = f.read(CHUNK)
-            if not blk:
-                break
-            name = f'core.sqlite.gz.{n:03d}'
-            with open(os.path.join(DATA, name), 'wb') as o:
-                o.write(blk)
-            chunks.append({'file': name, 'bytes': len(blk)})
-            n += 1
-    core['chunks'] = chunks
-    core['bytes'] = size
-    core['gz_bytes'] = os.path.getsize(gz_path)
-    core['sha256'] = sha.hexdigest()
-    core['version'] = sha.hexdigest()[:16]
-    json.dump(man, open(man_path, 'w'), ensure_ascii=False, indent=2)
-    shutil.rmtree(work, ignore_errors=True)
-    print('core pack rewritten:', core['version'], f'{len(chunks)} chunks')
+    repack_core(DATA, man, core, work, db_path)
 
 
 if __name__ == '__main__':

@@ -61,14 +61,17 @@ describe('rows', () => {
     expect(r.level).toBe(2);
   });
   it('a grammar row shows the official form but saves the grammar row\'s pattern, opening the linked entry', () => {
-    const g: StudyGrammar = { form: '-아서/어서', pattern: '-아서/어서2', summary_en: 'because', entry: { source: 'krdict', id: 7, homonym: null, pos: 'ending' } };
+    const g: StudyGrammar = { form: '-아서/어서', pattern: '-아서/어서2', summary_en: 'because', entry: { source: 'krdict', id: 7, homonym: null, pos: 'ending' }, has_lesson: false };
     const r = grammarRow(g, 3, 5);
     expect(r).toMatchObject({ title: '-아서/어서', gloss: 'because', path: '/entry/krdict/7?hw=%EA%B8%B0'.replace('%EA%B8%B0', encodeURIComponent('-아서/어서2')) });
     expect(r.item).toEqual({ kind: 'grammar', pattern: '-아서/어서2', summary: 'because', level: 3, ref: { source: 'krdict', homonym: null, pos: 'ending' } });
     // the official list's homonym numbers ("이라고1") are not part of the pattern shown
-    expect(grammarRow({ form: '이라고1', pattern: '이라고', summary_en: null, entry: null }, 3, 0).title).toBe('이라고');
+    expect(grammarRow({ form: '이라고1', pattern: '이라고', summary_en: null, entry: null, has_lesson: false }, 3, 0).title).toBe('이라고');
     // no linked entry: a search by the pattern
-    expect(grammarRow({ form: '-기', pattern: '-기', summary_en: null, entry: null }, 1, 0)).toMatchObject({ path: `/word/${encodeURIComponent('-기')}`, gloss: '', item: { ref: null } });
+    expect(grammarRow({ form: '-기', pattern: '-기', summary_en: null, entry: null, has_lesson: false }, 1, 0)).toMatchObject({ path: `/word/${encodeURIComponent('-기')}`, gloss: '', item: { ref: null } });
+    // the Lesson badge shows only for rows that have a reviewed lesson
+    expect(r.lesson).toBeUndefined();
+    expect(grammarRow({ ...g, has_lesson: true }, 6, 0).lesson).toBe(true);
   });
 });
 

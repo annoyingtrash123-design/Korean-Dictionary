@@ -53,6 +53,8 @@ pub struct StudyGrammar {
     pub pattern: String,
     pub summary_en: Option<String>,
     pub entry: Option<HomeEntryRef>,
+    /// A reviewed mini-lesson exists for this row (see `lesson.rs`).
+    pub has_lesson: bool,
 }
 
 const WORD_COLS: &str = "e.source, e.id, e.headword, e.homonym, e.hanja, e.pos, e.level, e.gloss";
@@ -118,11 +120,14 @@ pub fn study_words(packs: &[&PackDb], level: i64, limit: usize, offset: usize) -
 /// Grammar patterns of curriculum `level` in the official order (a level has at most about seventy).
 pub fn study_grammar(packs: &[&PackDb], level: i64) -> Result<Vec<StudyGrammar>> {
     let Some(p) = curriculum_pack(packs).filter(|p| p.caps.grammar) else { return Ok(vec![]) };
+    let lesson = if p.caps.grammar_lesson { "EXISTS (SELECT 1 FROM grammar_lesson l WHERE l.level = c.level AND l.form = c.form)" } else { "0" };
     let rows = p.conn.query(
-        "SELECT c.form, g.pattern, g.summary_en, e.source, e.id, e.homonym, e.pos \
-         FROM curriculum c LEFT JOIN grammar g ON g.id = c.grammar_id \
-         LEFT JOIN entries e ON e.id = COALESCE(c.entry_id, g.entry_id) \
-         WHERE c.kind = 'grammar' AND c.level = ?1 ORDER BY c.rank, c.rowid",
+        &format!(
+            "SELECT c.form, g.pattern, g.summary_en, e.source, e.id, e.homonym, e.pos, {lesson} \
+             FROM curriculum c LEFT JOIN grammar g ON g.id = c.grammar_id \
+             LEFT JOIN entries e ON e.id = COALESCE(c.entry_id, g.entry_id) \
+             WHERE c.kind = 'grammar' AND c.level = ?1 ORDER BY c.rank, c.rowid"
+        ),
         &[level.into()],
     )?;
     Ok(rows
@@ -134,6 +139,7 @@ pub fn study_grammar(packs: &[&PackDb], level: i64) -> Result<Vec<StudyGrammar>>
                 form,
                 summary_en: r.text(2).filter(|s| !s.trim().is_empty()),
                 entry: r.int(4).map(|id| HomeEntryRef { source: r.string(3), id, homonym: r.int(5), pos: r.text(6) }),
+                has_lesson: r.int(7).unwrap_or(0) != 0,
             }
         })
         .collect())

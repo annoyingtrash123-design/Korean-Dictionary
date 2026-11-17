@@ -39,6 +39,8 @@ export interface ListRow {
   gloss: string;
   path: string;
   item: ItemInput;
+  /** A reviewed mini-lesson exists (grammar rows: shows the Lesson badge). */
+  lesson?: boolean;
 }
 
 export interface PagedLists {

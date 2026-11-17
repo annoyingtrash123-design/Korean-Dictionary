@@ -11,6 +11,7 @@ import { sameWordRows } from '../lib/merge';
 import { hanChars } from '../lib/search-mode';
 import { TAP } from '../components/TapLookup';
 import { ExampleList } from '../components/Examples';
+import { GrammarLessons } from '../components/GrammarLesson';
 import { TabBar, WordsTab, CharsTab, SentsTab, useEntryTab } from './EntryTabs';
 import { SOURCE_ORDER, SOURCE_TITLE, type Entry, type Sense } from '../lib/types';
 import { Empty, LevelBadge, Pos } from '../components/common';
@@ -80,6 +81,7 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
             {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
           </details>
         ))}
+        {tab === 'dict' && <GrammarLessons source={primary.source} id={primary.id} />}
         {tab === 'dict' && <SimilarWords primary={primary} />}
         {tab === 'words' && <WordsTab primary={primary} />}
         {tab === 'chars' && <CharsTab primary={primary} />}

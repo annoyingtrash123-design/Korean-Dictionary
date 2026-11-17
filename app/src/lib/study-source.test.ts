@@ -7,7 +7,7 @@ vi.mock('../db/client', () => ({
   db: {
     studyOverview: vi.fn(),
     studyWords: vi.fn(async (level: number, limit: number, offset: number) => { calls.push(['words', level, limit, offset]); return Array.from({ length: Math.max(0, Math.min(limit, 1200 - offset)) }, (_, i) => word(offset + i)); }),
-    studyGrammar: vi.fn(async (level: number) => { calls.push(['grammar', level]); return Array.from({ length: 60 }, (_, i) => ({ form: `-f${i}`, pattern: `-p${i}`, summary_en: 's', entry: null })); }),
+    studyGrammar: vi.fn(async (level: number) => { calls.push(['grammar', level]); return Array.from({ length: 60 }, (_, i) => ({ form: `-f${i}`, pattern: `-p${i}`, summary_en: 's', entry: null, has_lesson: false })); }),
     studyTopicWords: vi.fn(async (category: string, byLevel: boolean, limit: number, offset: number) => { calls.push(['topic', category, byLevel, limit, offset]); return [word(offset)]; }),
   },
 }));
