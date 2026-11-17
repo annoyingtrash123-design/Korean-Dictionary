@@ -33,6 +33,8 @@ pub struct Caps {
     pub hanja_rank: bool,
     /// `entries_hanja` index exists.
     pub hanja_idx: bool,
+    /// Partial index `entries_kind` (idioms and proverbs) exists: the home page's idiom is found without a table scan.
+    pub idiom_idx: bool,
     /// `entries.cho` (initial consonants of `hw_norm`) with its `(cho, rank)` index exists.
     pub cho: bool,
     /// `entries.hist` (1 = 옛말 / old word) exists, with its partial `(hist, hw_norm)` index.
@@ -97,6 +99,7 @@ impl PackDb {
             wotd: names.contains("wotd"),
             hanja_rank,
             hanja_idx: has_index("entries_hanja"),
+            idiom_idx: has_index("entries_kind"),
             cho: has_index("entries_cho"),
             forms: names.contains("forms"),
             hanja_words: names.contains("hanja_words"),
@@ -1548,7 +1551,7 @@ mod tests;
 
 mod enko;
 mod home;
-pub use home::{home, idiom_slice, Home, IdiomSlice, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeWord};
+pub use home::{home, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeWord};
 pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;

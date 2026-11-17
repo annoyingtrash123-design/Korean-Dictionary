@@ -258,17 +258,9 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::word_of_day(&s.all(), &date).map_err(js_err)?))
         }
 
-        /// Home page: today's curriculum words / grammar and idiom for day number `day`;
-        /// `idiom_pool`: the ids collected with `homeIdiomSlice`.
-        pub async fn home(&self, day: u32, idiom_pool: Vec<f64>) -> Result<JsValue, JsError> {
-            let pool: Vec<i64> = idiom_pool.into_iter().map(|x| x as i64).collect();
-            self.with_store(|s| to_js(&search::home(&s.all(), day, &pool).map_err(js_err)?))
-        }
-
-        /// Home page: one slice (`lo..lo + span` of entry ids) of the idiom pool, as `{ids, next}`.
-        #[wasm_bindgen(js_name = homeIdiomSlice)]
-        pub async fn home_idiom_slice(&self, lo: f64, span: f64) -> Result<JsValue, JsError> {
-            self.with_store(|s| to_js(&search::idiom_slice(&s.all(), lo as i64, span as i64).map_err(js_err)?))
+        /// Home page: today's curriculum words / grammar and idiom for day number `day`.
+        pub async fn home(&self, day: u32) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::home(&s.all(), day).map_err(js_err)?))
         }
 
         /// Version of the bundled SQLite (diagnostics).

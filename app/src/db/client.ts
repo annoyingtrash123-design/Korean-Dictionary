@@ -6,7 +6,6 @@ import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
 import { installActive } from '../lib/sw-update';
-import { cachedPool, loadIdiomPool } from '../lib/home-pool';
 import { logError, recordEntry, sanitizeEntries } from '../lib/errlog';
 
 let worker: Worker | undefined;
@@ -124,8 +123,7 @@ let textList: Promise<TextSummary[]> | undefined;
 let grammarRows: Promise<GrammarRow[]> | undefined;
 const textDocs = new Map<string, Promise<TextDoc | null>>();
 /** Forget cached texts (after the texts pack is installed or removed). */
-let idiomPoolP: Promise<number[]> | undefined;
-export const resetTexts = () => { textList = undefined; grammarRows = undefined; idiomPoolP = undefined; textDocs.clear(); };
+export const resetTexts = () => { textList = undefined; grammarRows = undefined; textDocs.clear(); };
 
 // Search coalescing: while one search runs, only the newest pending query is kept; superseded ones resolve empty.
 const EMPTY: SearchResult = { mode: 'english', rows: [] };
@@ -179,15 +177,8 @@ export const db = {
   sentences: (text: string, limit: number) => call<Sentence[]>('sentences', text, limit),
   /** The grammar reference table (cached until packs change). */
   grammarList: (): Promise<GrammarRow[]> => (grammarRows ??= call<GrammarRow[]>('grammarList').catch((e) => { grammarRows = undefined; throw e; })),
-  /** Home page picks for a day number (see `lib/home-day.ts`); `idiomPool` from `idiomPool()` (empty: no idiom yet). */
-  home: (day: number, idiomPool: number[] = []) => call<HomeData>('home', day, idiomPool),
-  /** The idiom ids the home page picks from, if already known for the installed core pack. */
-  cachedIdiomPool: (): number[] | undefined => cachedPool(packStatus$.get()?.packs.core?.version ?? ''),
-  /** Find (in the background, a slice at a time) and keep the idiom ids for the installed core pack. */
-  idiomPool: (): Promise<number[]> => (idiomPoolP ??= (async () => {
-    const st = packStatus$.get() ?? await refreshStatus();
-    return loadIdiomPool(st.packs.core?.version ?? '', (lo, span) => call('homeIdiomSlice', lo, span));
-  })().catch((e) => { idiomPoolP = undefined; throw e; })),
+  /** Home page picks for a day number (see `lib/home-day.ts`). */
+  home: (day: number) => call<HomeData>('home', day),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {
     let p = textDocs.get(id);

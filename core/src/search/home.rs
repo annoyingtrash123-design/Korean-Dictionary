@@ -137,13 +137,14 @@ fn examples_of(data: &str, max: usize, allow_phrases: bool) -> Vec<HomeExample> 
     let mut found: Vec<(u8, bool, usize, HomeExample)> = Vec::new();
     for s in v.get("senses").and_then(|v| v.as_array()).into_iter().flatten() {
         for ex in s.get("examples").and_then(|v| v.as_array()).into_iter().flatten() {
-            let one_line = |t: &str| t.split('\n').map(str::trim).filter(|l| !l.is_empty()).collect::<Vec<_>>().join(" / ");
-            let ko = one_line(ex.get("ko").and_then(|v| v.as_str()).unwrap_or(""));
+            // a dialogue keeps one turn per line, exactly as krdict spells it
+            let lines = |t: &str| t.split('\n').map(str::trim).filter(|l| !l.is_empty()).collect::<Vec<_>>().join("\n");
+            let ko = lines(ex.get("ko").and_then(|v| v.as_str()).unwrap_or(""));
             let ty = ex.get("type").and_then(|v| v.as_str()).unwrap_or("sentence");
             if ko.is_empty() || ty == "phrase" && !allow_phrases {
                 continue;
             }
-            let en = ex.get("en").and_then(|v| v.as_str()).map(one_line).filter(|s| !s.is_empty());
+            let en = ex.get("en").and_then(|v| v.as_str()).map(lines).filter(|s| !s.is_empty());
             let en_ai = en.is_some() && ex.get("en_ai").and_then(|v| v.as_bool()).unwrap_or(false);
             let len = ko.chars().count();
             let class = match ty { "sentence" => 0, "dialogue" => 1, _ => 2 } + if len > LONG_EXAMPLE { 3 } else { 0 };
@@ -253,34 +254,20 @@ fn grammar(p: &PackDb, day: u32) -> Result<Vec<HomeGrammar>> {
     Ok(out)
 }
 
-/// One slice of the idiom pool: the krdict idioms and proverbs with entry id in `lo..lo + span` that have
-/// an English gloss and a usable example (a single line or a dialogue, not a bare phrase). The pool is
-/// found a slice at a time (the app calls this in the background and keeps the result per pack
-/// version): `entries` has no index on `kind`, so one query over the whole table would hold the engine
-/// for seconds on a cold phone. `next` is the `lo` of the following slice, `None` after the last.
-#[derive(Debug, Clone, Serialize, PartialEq, Default)]
-pub struct IdiomSlice {
-    pub ids: Vec<i64>,
-    pub next: Option<i64>,
-}
-
-pub fn idiom_slice(packs: &[&PackDb], lo: i64, span: i64) -> Result<IdiomSlice> {
-    let Some(p) = packs.iter().find(|p| !p.caps.texts && p.id == "core") else { return Ok(IdiomSlice::default()) };
-    let hi = lo + span.max(1);
-    let rows = p.conn.query(
-        "SELECT e.id, e.data FROM entries e WHERE e.id >= ?1 AND e.id < ?2 AND e.source = 'krdict' AND e.kind IN ('idiom', 'proverb') \
-         AND e.gloss IS NOT NULL AND e.gloss != '' AND e.data LIKE '%\"examples\":[{%' ORDER BY e.id",
-        &[lo.into(), hi.into()],
+/// The idiom of the day: krdict idioms and proverbs with an English gloss and a full example sentence
+/// (a dialogue does not count), in id order; day `day`'s pick. Needs the partial index `entries_kind`
+/// (older packs have none and a scan would hold the engine for seconds: no idiom card then).
+fn idiom(p: &PackDb, day: u32) -> Result<Option<HomeIdiom>> {
+    if !p.caps.idiom_idx {
+        return Ok(None);
+    }
+    let all = ids(
+        p,
+        "SELECT e.id FROM entries e WHERE e.kind IN ('idiom', 'proverb') AND e.source = 'krdict' \
+         AND e.gloss IS NOT NULL AND e.gloss != '' AND e.data LIKE '%\"type\":\"sentence\"%' ORDER BY e.id",
     )?;
-    let ids = rows.iter().filter(|r| !examples_of(&r.string(1), 1, false).is_empty()).filter_map(|r| r.int(0)).collect();
-    let max = p.conn.query("SELECT max(id) FROM entries", &[])?.first().and_then(|r| r.int(0)).unwrap_or(0);
-    Ok(IdiomSlice { ids, next: (hi <= max).then_some(hi) })
-}
-
-/// The idiom of the day: day `day`'s pick of the pool (ids from `idiom_slice`, in id order).
-fn idiom(p: &PackDb, day: u32, pool: &[i64]) -> Result<Option<HomeIdiom>> {
-    for i in day_indices(pool.len(), IDIOM_SALT, day, 1) {
-        let r = p.conn.query("SELECT e.source, e.id, e.headword, e.kind, e.gloss, e.data, e.homonym FROM entries e WHERE e.id = ?1", &[pool[i].into()])?;
+    for i in day_indices(all.len(), IDIOM_SALT, day, 1) {
+        let r = p.conn.query("SELECT e.source, e.id, e.headword, e.kind, e.gloss, e.data, e.homonym FROM entries e WHERE e.id = ?1", &[all[i].into()])?;
         let Some(r) = r.first() else { continue };
         let data = r.string(5);
         let Some(example) = examples_of(&data, 1, false).into_iter().next() else { continue };
@@ -305,9 +292,8 @@ fn idiom(p: &PackDb, day: u32, pool: &[i64]) -> Result<Option<HomeIdiom>> {
 }
 
 /// Home page content for day number `day` (days since 2026-01-01). Without a `curriculum` table
-/// (older packs) `words` and `grammar` are empty. `idiom_pool` is the idiom ids found by `idiom_slice`
-/// (sorted); while it is empty there is no idiom.
-pub fn home(packs: &[&PackDb], day: u32, idiom_pool: &[i64]) -> Result<Home> {
+/// (older packs) `words` and `grammar` are empty; without the `entries_kind` index there is no idiom.
+pub fn home(packs: &[&PackDb], day: u32) -> Result<Home> {
     let mut h = Home::default();
     for p in packs {
         // krdict lives in the core pack
@@ -319,7 +305,7 @@ pub fn home(packs: &[&PackDb], day: u32, idiom_pool: &[i64]) -> Result<Home> {
             h.grammar = grammar(p, day)?;
         }
         if h.idiom.is_none() && p.id == "core" {
-            h.idiom = idiom(p, day, idiom_pool)?;
+            h.idiom = idiom(p, day)?;
         }
     }
     Ok(h)
@@ -369,20 +355,6 @@ mod tests {
         assert_eq!(one.len(), 11);
     }
 
-    fn pool(p: &PackDb) -> Vec<i64> {
-        let mut out = vec![];
-        let mut lo = 0;
-        loop {
-            // small span: exercises the slicing
-            let sl = idiom_slice(&[p], lo, 7).unwrap();
-            out.extend(sl.ids);
-            match sl.next {
-                Some(n) => lo = n,
-                None => break out,
-            }
-        }
-    }
-
     fn pack() -> PackDb {
         let c = Conn::open_memory().unwrap();
         c.exec(
@@ -419,6 +391,7 @@ mod tests {
             )
             .unwrap();
         }
+        c.exec("CREATE INDEX entries_kind ON entries(kind) WHERE kind IN ('idiom', 'proverb')").unwrap();
         PackDb::new("core", c).unwrap()
     }
 
@@ -440,41 +413,53 @@ mod tests {
 
     #[test]
     fn no_curriculum_table_still_gives_idiom() {
-        let h = home(&[&pack()], 3, &pool(&pack())).unwrap();
-        assert!(h.words.is_empty() && h.grammar.is_empty());
-        assert!(h.idiom.is_some());
-        // eligible: 20 (sentence) and 23 (dialogue, shown on one line); 21 has no example, 22 no gloss.
-        // Every day shows one of them, and both appear within two days (one cycle).
         let pk = pack();
-        let ids: Vec<i64> = (0..2).map(|d| home(&[&pk], d, &pool(&pk)).unwrap().idiom.unwrap().id).collect();
-        assert!(ids.contains(&20) && ids.contains(&23), "{ids:?}");
-        let i = (0..2).map(|d| home(&[&pk], d, &pool(&pk)).unwrap().idiom.unwrap()).find(|i| i.id == 20).unwrap();
-        assert_eq!((i.kind.as_str(), i.gloss.as_str(), i.ko_def.as_deref()), ("idiom", "to be nosy", Some("참견하다.")));
-        let d = (0..2).map(|d| home(&[&pk], d, &pool(&pk)).unwrap().idiom.unwrap()).find(|i| i.id == 23).unwrap();
-        assert_eq!(d.example.ko, "A: 응 / B: 아");
+        let h = home(&[&pk], 3).unwrap();
+        assert!(h.words.is_empty() && h.grammar.is_empty());
+        // eligible: only 20 (a sentence example); 21 has no example, 22 no gloss, 23 only a dialogue
+        for d in 0..10 {
+            let i = home(&[&pk], d).unwrap().idiom.unwrap();
+            assert_eq!((i.id, i.kind.as_str(), i.gloss.as_str(), i.ko_def.as_deref()), (20, "idiom", "to be nosy", Some("참견하다.")), "day {d}");
+        }
+    }
+
+    #[test]
+    fn no_idiom_without_the_kind_index() {
+        let pk = pack();
+        pk.conn.exec("DROP INDEX entries_kind").unwrap();
+        let pk = PackDb::new("core", pk.conn).unwrap();
+        assert!(home(&[&pk], 3).unwrap().idiom.is_none());
+    }
+
+    #[test]
+    fn dialogue_examples_keep_one_turn_per_line() {
+        let ex = examples_of(r#"{"senses":[{"examples":[{"ko":"가: 안녕.\n나: 응.참새","en":"A: Hi.\nB: Yes.","type":"dialogue"},{"ko":"문장.","type":"sentence"}]}]}"#, 2, false);
+        assert_eq!(ex[0].ko, "문장.");
+        assert_eq!(ex[1].ko, "가: 안녕.\n나: 응.참새");
+        assert_eq!(ex[1].en.as_deref(), Some("A: Hi.\nB: Yes."));
     }
 
     #[test]
     fn picks_from_curriculum_levels_5_6_only() {
         let p = with_curriculum(pack());
-        let h = home(&[&p], 0, &pool(&p)).unwrap();
+        let h = home(&[&p], 0).unwrap();
         assert_eq!((h.words.len(), h.grammar.len()), (3, 2));
         for w in &h.words {
             assert!((1..=7).contains(&w.id), "entries 8-10 are not eligible");
             assert!(w.level == 5 || w.level == 6);
             // gloss capped at three items
             assert_eq!(w.gloss.split("; ").count(), 3);
-            // sentence first (translated, AI-labelled), then the phrase; dialogue dropped
+            // sentence first (translated, AI-labelled), then the dialogue (one turn per line), then phrases
             assert_eq!(w.examples.len(), 2);
             assert!(w.examples[0].en_ai && w.examples[0].en.is_some());
             assert!(w.examples[1].en.is_none());
-            assert!(w.examples.iter().all(|e| !e.ko.contains('\n')));
+            assert_eq!(w.examples[1].ko, "A: 안녕\nB: 응");
         }
         for g in &h.grammar {
             assert_eq!(g.level, 6);
             assert!(g.entry.is_some() && !g.examples.is_empty());
         }
-        assert_eq!(h, home(&[&p], 0, &pool(&p)).unwrap());
+        assert_eq!(h, home(&[&p], 0).unwrap());
     }
 
     #[test]
@@ -482,7 +467,7 @@ mod tests {
         let p = with_curriculum(pack());
         let mut seen = HashSet::new();
         for d in 0..3 {
-            for w in home(&[&p], d, &pool(&p)).unwrap().words {
+            for w in home(&[&p], d).unwrap().words {
                 seen.insert(w.id);
             }
         }

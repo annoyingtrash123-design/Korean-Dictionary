@@ -18,8 +18,8 @@ export function CardExamples({ items }: { items: HomeExample[] }) {
     <ul class="plain card-exs" aria-label="Examples">
       {items.map((x, i) => (
         <li key={i} class="card-ex">
-          <div class="ex-ko hangul" lang="ko">{x.ko}</div>
-          {x.en && <div class="ex-en">{x.en_ai && <span class="chip-ai ex-ai" title="AI translation, reviewed">AI</span>}{x.en}</div>}
+          {x.ko.split('\n').map((l, j) => <div key={j} class="ex-ko hangul" lang="ko">{l}</div>)}
+          {x.en && x.en.split('\n').map((l, j) => <div key={j} class="ex-en">{x.en_ai && j === 0 && <span class="chip-ai ex-ai" title="AI translation, reviewed">AI</span>}{l}</div>)}
         </li>
       ))}
     </ul>

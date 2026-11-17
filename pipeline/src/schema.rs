@@ -34,6 +34,7 @@ pub const COMMON_INDEXES: &str = r#"
 CREATE INDEX entries_hw_rank ON entries(hw_norm, rank);
 CREATE INDEX entries_hanja ON entries(hanja) WHERE hanja IS NOT NULL;
 CREATE INDEX entries_rank ON entries(rank);
+CREATE INDEX entries_kind ON entries(kind) WHERE kind IN ('idiom', 'proverb');
 CREATE INDEX forms_form ON forms(form);
 CREATE INDEX hanja_words_ch ON hanja_words(ch, rank, entry_id);
 "#;
