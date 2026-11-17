@@ -3,15 +3,17 @@ import type { ComponentChildren } from 'preact';
 import { Icon } from './Icons';
 import { Hanja, Pos } from './common';
 import { SaveButton } from './SaveButton';
-import { entryPath, href, wordPath } from '../lib/router';
+import { entryPath, href, searchPath, wordPath } from '../lib/router';
 import { curriculumHint, curriculumLabel } from '../lib/home-day';
-import type { HomeExample, HomeGrammar, HomeIdiom, HomeWord } from '../db/types';
+import { useWide } from '../lib/layout';
+import type { HomeData, HomeExample, HomeRel } from '../db/types';
+import type { ItemInput } from '../lib/lists';
 
 export function CurriculumLevel({ level }: { level: number }) {
   return <span class="cur-lvl" title={curriculumHint(level)} aria-label={curriculumHint(level)}>{curriculumLabel(level)}</span>;
 }
 
-/** Example sentences of a card: Korean, then English (with the AI chip when the English is an AI translation). */
+/** Example sentences: Korean, then English (with the AI chip when the English is an AI translation); a dialogue keeps one turn per line. */
 export function CardExamples({ items }: { items: HomeExample[] }) {
   if (!items.length) return null;
   return (
@@ -26,80 +28,120 @@ export function CardExamples({ items }: { items: HomeExample[] }) {
   );
 }
 
-function WordCard({ w }: { w: HomeWord }) {
-  const path = entryPath(w.source, w.id, w.headword);
+const RELTYPE: Record<string, string> = { synonym: 'syn', antonym: 'ant', honorific: 'hon', humble: 'hum', 'see also': 'see', reference: 'ref', derived: 'der', variant: 'var', abbreviation: 'abbr' };
+function Related({ rels }: { rels: HomeRel[] }) {
+  const wide = useWide();
+  if (!rels.length) return null;
   return (
-    <article class="today-card" data-kind="word">
-      <header class="card-head">
-        <CurriculumLevel level={w.level} />
-        <SaveButton item={{ kind: 'entry', source: w.source, headword: w.headword, homonym: w.homonym, pos: w.pos, hanja: w.hanja, gloss: w.gloss }} title={w.headword} size={22} />
-      </header>
-      <h3 class="card-hw">
-        <a class="card-link" href={href(path)}><span class="hangul" lang="ko">{w.headword}</span></a>
-        {w.hanja && <Hanja text={w.hanja} />}
-        <Pos pos={w.pos} />
-      </h3>
-      <p class="card-gloss">{w.gloss}</p>
-      <CardExamples items={w.examples} />
-    </article>
+    <section class="card-related" aria-label="Related words">
+      <h4>Related</h4>
+      <div class="chips">
+        {rels.map((r, i) => (
+          <a key={i} class="chip" href={href(wide ? wordPath(r.word) : searchPath(r.word))}><span class="chip-type">{RELTYPE[r.type] ?? r.type}</span> <span class="hangul" lang="ko">{r.word}</span></a>
+        ))}
+      </div>
+    </section>
   );
 }
 
-function GrammarCard({ g }: { g: HomeGrammar }) {
-  const path = g.entry ? entryPath(g.entry.source, g.entry.id, g.pattern) : wordPath(g.pattern);
+interface PageSpec {
+  key: string;
+  kind: 'idiom' | 'word' | 'grammar';
+  tag: ComponentChildren;       // top-left: the level badge, or the idiom / proverb label
+  save: ItemInput;
+  title: string;
+  hanja?: string | null;
+  pos?: string | null;
+  gloss?: string | null;
+  koDef?: string | null;
+  examples: HomeExample[];
+  related: HomeRel[];
+  path: string;                 // where "Open entry" goes
+}
+
+function pageSpecs(h: HomeData): PageSpec[] {
+  const out: PageSpec[] = [];
+  if (h.idiom) {
+    const i = h.idiom;
+    out.push({
+      key: `i${i.id}`, kind: 'idiom',
+      tag: <span class="card-tag" lang="ko" title={i.kind === 'proverb' ? 'Proverb' : 'Idiom'}>{i.kind === 'proverb' ? '속담' : '관용구'}</span>,
+      save: { kind: 'entry', source: i.source, headword: i.headword, homonym: i.homonym, pos: i.kind, gloss: i.gloss },
+      title: i.headword, gloss: i.gloss, koDef: i.ko_def, examples: i.examples, related: i.related, path: entryPath(i.source, i.id, i.headword),
+    });
+  }
+  for (const w of h.words) {
+    out.push({
+      key: `w${w.id}`, kind: 'word', tag: <CurriculumLevel level={w.level} />,
+      save: { kind: 'entry', source: w.source, headword: w.headword, homonym: w.homonym, pos: w.pos, hanja: w.hanja, gloss: w.gloss },
+      title: w.headword, hanja: w.hanja, pos: w.pos, gloss: w.gloss, koDef: w.ko_def, examples: w.examples, related: w.related, path: entryPath(w.source, w.id, w.headword),
+    });
+  }
+  for (const g of h.grammar) {
+    out.push({
+      key: `g${g.id}`, kind: 'grammar',
+      tag: <><span class="card-tag">Grammar</span><CurriculumLevel level={g.level} /></>,
+      save: { kind: 'grammar', pattern: g.pattern, summary: g.summary_en, level: g.level, ref: g.entry ? { source: g.entry.source, homonym: g.entry.homonym, pos: g.entry.pos } : null },
+      title: g.pattern, gloss: g.summary_en, koDef: g.ko_def, examples: g.examples, related: g.related,
+      path: g.entry ? entryPath(g.entry.source, g.entry.id, g.pattern) : wordPath(g.pattern),
+    });
+  }
+  return out;
+}
+
+/** One whole page: badge + star, the headword large, English, Korean definition, examples, related words, "Open entry". */
+function Page({ p, n, total }: { p: PageSpec; n: number; total: number }) {
   return (
-    <article class="today-card" data-kind="grammar">
-      <header class="card-head">
-        <span class="card-tag">Grammar</span>
-        <CurriculumLevel level={g.level} />
-        <span class="card-spacer" />
-        <SaveButton item={{ kind: 'grammar', pattern: g.pattern, summary: g.summary_en, level: g.level, ref: g.entry ? { source: g.entry.source, homonym: g.entry.homonym, pos: g.entry.pos } : null }} title={g.pattern} size={22} />
-      </header>
-      <h3 class="card-hw"><a class="card-link" href={href(path)}><span class="hangul" lang="ko">{g.pattern}</span></a></h3>
-      {g.summary_en && <p class="card-gloss">{g.summary_en}</p>}
-      <CardExamples items={g.examples} />
-    </article>
+    <div class="car-slide" role="group" aria-roledescription="slide" aria-label={`${n} of ${total}`}>
+      <article class="today-card" data-kind={p.kind}>
+        <header class="card-head">
+          {p.tag}
+          <span class="card-spacer" />
+          <SaveButton item={p.save} title={p.title} size={24} />
+        </header>
+        <h2 class="card-hw">
+          <a class="card-link" href={href(p.path)}><span class="hangul" lang="ko">{p.title}</span></a>
+          {p.hanja && <Hanja text={p.hanja} />}
+          <Pos pos={p.pos} />
+        </h2>
+        {p.gloss && <p class="card-gloss">{p.gloss}</p>}
+        {p.koDef && <p class="card-kodef hangul" lang="ko">{p.koDef}</p>}
+        <CardExamples items={p.examples} />
+        <Related rels={p.related} />
+        <a class="btn primary card-open" href={href(p.path)}>Open entry</a>
+      </article>
+    </div>
   );
 }
 
 const STEP_KEYS: Record<string, number> = { ArrowRight: 1, ArrowLeft: -1 };
 
-/** Today's five cards (3 words, 2 grammar patterns): CSS scroll-snap track, drag with a mouse, arrow buttons and keys, dots. */
-export function TodayCarousel({ words, grammar }: { words: HomeWord[]; grammar: HomeGrammar[] }) {
-  const cards: ComponentChildren[] = [
-    ...words.map((w) => <WordCard key={`w${w.id}`} w={w} />),
-    ...grammar.map((g) => <GrammarCard key={`g${g.id}`} g={g} />),
-  ];
-  const n = cards.length;
+/** Home: full-page items to swipe through (idiom of the day, 3 words, 2 grammar patterns): scroll-snap track, mouse drag,
+ *  arrow buttons and keys, page dots. Always opens on the first page. */
+export function HomePager({ data }: { data: HomeData }) {
+  const pages = pageSpecs(data);
+  const n = pages.length;
   const track = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; left: number; moved: boolean } | null>(null);
   const [cur, setCur] = useState(0);
   if (!n) return null;
 
-  const slide = (i: number) => track.current?.children[i] as HTMLElement | undefined;
-  const goTo = (i: number) => {
-    const t = track.current, s = slide(Math.max(0, Math.min(n - 1, i)));
-    if (!t || !s) return;
-    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-    t.scrollTo({ left: s.offsetLeft - (t.clientWidth - s.offsetWidth) / 2, behavior: smooth ? 'smooth' : 'auto' });
+  const nearest = () => {
+    const t = track.current;
+    return t && t.clientWidth ? Math.max(0, Math.min(n - 1, Math.round(t.scrollLeft / t.clientWidth))) : 0;
   };
-  // which card is centred (nearest to the middle of the viewport of the track)
-  const onScroll = () => {
+  const goTo = (i: number) => {
     const t = track.current;
     if (!t) return;
-    const mid = t.scrollLeft + t.clientWidth / 2;
-    let best = 0, bd = Infinity;
-    for (let i = 0; i < n; i++) {
-      const s = slide(i)!;
-      const d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid);
-      if (d < bd) { bd = d; best = i; }
-    }
-    setCur(best);
+    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    t.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * t.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
   };
-  useEffect(onScroll, [n]);
+  const onScroll = () => setCur(nearest());
+  useEffect(() => { track.current?.scrollTo({ left: 0 }); setCur(0); }, [n]);
 
   const onPointerDown = (e: PointerEvent) => {
     if (e.pointerType !== 'mouse' || e.button !== 0 || !track.current) return;
+    if ((e.target as HTMLElement).closest('a, button, .chip')) return;
     drag.current = { x: e.clientX, left: track.current.scrollLeft, moved: false };
   };
   const onPointerMove = (e: PointerEvent) => {
@@ -114,61 +156,33 @@ export function TodayCarousel({ words, grammar }: { words: HomeWord[]; grammar: 
     drag.current = null;
     if (!d?.moved || !t) return;
     t.classList.remove('dragging');
-    onScroll();
-    // let scroll-snap settle on the nearest card
-    const mid = t.scrollLeft + t.clientWidth / 2;
-    let best = 0, bd = Infinity;
-    for (let i = 0; i < n; i++) { const s = slide(i)!; const c = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid); if (c < bd) { bd = c; best = i; } }
-    goTo(best);
+    goTo(nearest());
   };
   const onKeyDown = (e: KeyboardEvent) => {
     const step = STEP_KEYS[e.key];
-    if (!step || (e.target as HTMLElement).closest('button, input')) return;
+    if (!step || (e.target as HTMLElement).closest('button, input, a')) return;
     e.preventDefault();
     goTo(cur + step);
   };
 
   return (
-    <section class="today" role="region" aria-roledescription="carousel" aria-label="Today: words and grammar">
-      <div class="section-head">
-        <h2>Today</h2>
-        <div class="car-arrows">
-          <button type="button" class="iconbtn car-arrow" aria-label="Previous card" disabled={cur <= 0} onClick={() => goTo(cur - 1)}><Icon name="back" size={22} /></button>
-          <button type="button" class="iconbtn car-arrow" aria-label="Next card" disabled={cur >= n - 1} onClick={() => goTo(cur + 1)}><Icon name="chev" size={22} /></button>
-        </div>
-      </div>
-      <div class="car-track" ref={track} tabIndex={0} aria-label="Cards, swipe or use the arrow keys" onScroll={onScroll} onKeyDown={onKeyDown}
+    <section class="today" role="region" aria-roledescription="carousel" aria-label="Today: idiom, words and grammar">
+      <div class="car-track" ref={track} tabIndex={0} aria-label="Pages, swipe or use the arrow keys" onScroll={onScroll} onKeyDown={onKeyDown}
         onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={endDrag} onPointerCancel={endDrag}
         onClickCapture={(e) => { if (drag.current?.moved) { e.preventDefault(); e.stopPropagation(); } }}>
-        {cards.map((c, i) => (
-          <div key={i} class="car-slide" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${n}`}>{c}</div>
-        ))}
+        {pages.map((p, i) => <Page key={p.key} p={p} n={i + 1} total={n} />)}
       </div>
-      <div class="car-dots" role="group" aria-label="Choose a card">
-        {cards.map((_, i) => (
-          <button key={i} type="button" class="car-dot" aria-label={`${i + 1} of ${n}`} aria-current={i === cur ? 'true' : undefined} onClick={() => goTo(i)} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export function IdiomCard({ i }: { i: HomeIdiom }) {
-  const label = i.kind === 'proverb' ? '속담' : '관용구';
-  return (
-    <section class="idiom" aria-label="Idiom of the day">
-      <div class="section-head"><h2>Idiom of the day</h2></div>
-      <article class="today-card idiom-card" data-kind={i.kind}>
-        <header class="card-head">
-          <span class="card-tag" lang="ko" title={i.kind === 'proverb' ? 'Proverb' : 'Idiom'}>{label}</span>
-          <span class="card-spacer" />
-          <SaveButton item={{ kind: 'entry', source: i.source, headword: i.headword, homonym: i.homonym, pos: i.kind, gloss: i.gloss }} title={i.headword} size={22} />
-        </header>
-        <h3 class="card-hw"><a class="card-link" href={href(entryPath(i.source, i.id, i.headword))}><span class="hangul" lang="ko">{i.headword}</span></a></h3>
-        <p class="card-gloss">{i.gloss}</p>
-        {i.ko_def && <p class="card-kodef hangul" lang="ko">{i.ko_def}</p>}
-        <CardExamples items={[i.example]} />
-      </article>
+      {n > 1 && (
+        <div class="car-nav">
+          <button type="button" class="iconbtn car-arrow" aria-label="Previous page" disabled={cur <= 0} onClick={() => goTo(cur - 1)}><Icon name="back" size={22} /></button>
+          <div class="car-dots" role="group" aria-label="Choose a page">
+            {pages.map((p, i) => (
+              <button key={p.key} type="button" class="car-dot" aria-label={`${i + 1} of ${n}`} aria-current={i === cur ? 'true' : undefined} onClick={() => goTo(i)} />
+            ))}
+          </div>
+          <button type="button" class="iconbtn car-arrow" aria-label="Next page" disabled={cur >= n - 1} onClick={() => goTo(cur + 1)}><Icon name="chev" size={22} /></button>
+        </div>
+      )}
     </section>
   );
 }

@@ -61,10 +61,13 @@ export const test = base.extend<{ failureDump: void; settingsOpen: void }>({
 
 export { expect, type Page };
 
-/** First-run Download, then wait until every selected pack has finished importing (the search
- *  box appears as soon as the core pack is usable; the optional packs keep importing after it). */
+/** First-run Download, then wait until every selected pack has finished importing (the app opens
+ *  as soon as the core pack is usable; the optional packs keep importing after it). The app opens on
+ *  the Home tab: most specs want the search box, so this goes on to the Search tab. */
 export async function downloadAll(page: Page) {
   await page.getByRole('button', { name: 'Download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await expect(page.getByRole('navigation', { name: 'Main' })).toBeVisible({ timeout: 240_000 });
+  await page.evaluate(() => { location.hash = '#/search'; });
+  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 30_000 });
   await page.waitForFunction(() => (globalThis as unknown as { __kdInstalling?: () => number }).__kdInstalling?.() === 0, null, { timeout: 600_000 });
 }

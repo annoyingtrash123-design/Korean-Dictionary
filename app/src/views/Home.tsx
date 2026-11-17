@@ -2,17 +2,27 @@ import { useEffect, useState } from 'preact/hooks';
 import { db } from '../db/client';
 import { useAsync } from '../lib/useAsync';
 import { dayNumber } from '../lib/home-day';
-import { IdiomCard, TodayCarousel } from '../components/TodayCarousel';
-import { history, clearHistory } from '../lib/history';
-import { useStore } from '../lib/store';
-import { href, useRoute, withoutTab } from '../lib/router';
-import { savedPath } from '../lib/entry-key';
-import { Hanja } from '../components/common';
+import { HomePager } from '../components/TodayCarousel';
 
-/** Start screen of the Search tab: today's cards (curriculum words + grammar when the pack has them), the idiom of the day, then recent lookups. */
+const dateLabel = () => new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+
+/** Header of the Home tab (in place of the search bar): "Today · 17 Nov", the local date. */
+export function HomeHeader() {
+  const [d, setD] = useState(dateLabel);
+  useEffect(() => {
+    const f = () => setD(dateLabel());
+    document.addEventListener('visibilitychange', f);
+    return () => document.removeEventListener('visibilitychange', f);
+  }, []);
+  return (
+    <header class="topbar home-head">
+      <h1 class="home-title"><span lang="en">Today</span><span class="home-date">· {d}</span></h1>
+    </header>
+  );
+}
+
+/** Home tab: the day's pages (idiom or proverb, three words and two grammar patterns of the curriculum), one per screen. */
 export function Home() {
-  const hist = useStore(history);
-  const route = useRoute();
   const [day, setDay] = useState(() => dayNumber());
   // the app can stay open past midnight: pick up the new day when it comes back to the foreground
   useEffect(() => {
@@ -22,33 +32,5 @@ export function Home() {
     return () => { document.removeEventListener('visibilitychange', f); window.removeEventListener('focus', f); };
   }, []);
   const home = useAsync(() => db.home(day).catch(() => undefined), [day]);
-  const h = home.data;
-  return (
-    <div class="page">
-      {h && <TodayCarousel words={h.words} grammar={h.grammar} />}
-      {h?.idiom && <IdiomCard i={h.idiom} />}
-      <div class="section-head">
-        <h2>Recent</h2>
-        {hist.length > 0 && <button type="button" class="link" onClick={() => clearHistory()}>Clear</button>}
-      </div>
-      {hist.length === 0 ? (
-        <p class="muted pad">Words you look up will appear here.</p>
-      ) : (
-        <ul class="plain list">
-          {hist.slice(0, 30).map((h) => (
-            <li key={h.key}>
-              <a class="row compact" href={href(savedPath(h))} aria-current={withoutTab(route.raw) === savedPath(h) ? 'true' : undefined}>
-                <div class="row-main">
-                  <div class="row-head">
-                    <span class="hangul hw" lang="ko">{h.headword}</span>{h.hanja && <Hanja text={h.hanja} />}
-                  </div>
-                  {h.gloss && <div class="row-gloss">{h.gloss}</div>}
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+  return <div class="page home">{home.data && <HomePager data={home.data} />}</div>;
 }

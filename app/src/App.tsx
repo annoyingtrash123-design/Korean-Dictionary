@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import { SearchBar } from './components/SearchBar';
 import { TabBar } from './components/TabBar';
-import { Home } from './views/Home';
+import { Home, HomeHeader } from './views/Home';
+import { Recent } from './views/Recent';
 import { Results } from './views/Results';
 import { EntryView } from './views/Entry';
 import { HanjaPage } from './views/HanjaPage';
@@ -50,17 +51,19 @@ export function App() {
     refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeLists(lookup); void upgradeHistory(lookup); } /* dictionary updates are manual: Settings → Check for update */ }).catch(() => undefined);
   }, []);
   const wide = useWide();
+  const kb = useKeyboardOpen();
   const list = useStore(listTab);
   const q = useStore(query);
   const entryRoute = ENTRY_ROUTES.includes(route.name);
   const readerRoute = route.name === 'reader';
   const listsRoute = route.name === 'lists';
   const openL = useStore(openList);
-  const leftKind: 'search' | 'lists' | 'reader' = readerRoute ? 'reader' : listsRoute ? 'lists' : entryRoute ? list : 'search';
+  const homeRoute = route.name === 'home';
+  const leftKind: 'home' | 'search' | 'lists' | 'reader' = readerRoute ? 'reader' : listsRoute ? 'lists' : homeRoute ? 'home' : entryRoute ? list : 'search';
   const leftQ = route.name === 'search' ? (route.params.get('q') ?? '') : q;
   const left = useRef<HTMLElement>(null);
   // Remember which list tab the open entry came from, so the left pane keeps showing it.
-  useEffect(() => { if (listsRoute) { listTab.set('lists'); openList.set(route.parts[0]); } else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings' && route.name !== 'games') listTab.set('search'); }, [route.name, route.parts[0]]);
+  useEffect(() => { if (listsRoute) { listTab.set('lists'); openList.set(route.parts[0]); } else if (readerRoute) listTab.set('reader'); else if (!entryRoute && route.name !== 'settings' && route.name !== 'games') listTab.set(homeRoute ? 'home' : 'search'); }, [route.name, route.parts[0]]);
   // The Bookmarks tab became Lists: old links and history entries land there.
   useEffect(() => { if (route.name === 'bookmarks') navigate('/lists', true); }, [route.name]);
   // Remember scroll per route so Back restores the list position (content is cached, so it paints at once).
@@ -96,15 +99,15 @@ export function App() {
       <div class="app wide">
         <TabBar />
         {!single && (
-          <section class="pane-left" aria-label={leftKind === 'lists' ? 'Lists' : leftKind === 'reader' ? 'Reader library' : 'Search'}>
-            {leftKind !== 'reader' && <header class="topbar"><SearchBar /></header>}
+          <section class="pane-left" aria-label={leftKind === 'lists' ? 'Lists' : leftKind === 'reader' ? 'Reader library' : leftKind === 'home' ? 'Home' : 'Search'}>
+            {leftKind === 'home' ? <HomeHeader /> : leftKind !== 'reader' && <header class="topbar"><SearchBar /></header>}
             <main ref={left} class="pane-scroll">
-              {leftKind === 'reader' ? <ReaderLibrary currentId={readerRoute ? route.parts[0] : undefined} /> : leftKind === 'lists' ? <ListsView listId={listsRoute ? route.parts[0] : openL} /> : leftQ.trim() ? <Results q={leftQ} /> : <Home />}
+              {leftKind === 'reader' ? <ReaderLibrary currentId={readerRoute ? route.parts[0] : undefined} /> : leftKind === 'lists' ? <ListsView listId={listsRoute ? route.parts[0] : openL} /> : leftKind === 'home' ? <Home /> : leftQ.trim() ? <Results q={leftQ} /> : <Recent />}
             </main>
           </section>
         )}
         <main ref={main} id="main" tabIndex={-1} class={single ? `pane-right single${route.name === 'games' ? ' flush' : ''}` : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
-          {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty lists={leftKind === 'lists'} />}
+          {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty kind={leftKind} />}
         </main>
         <UpdateToast />
         <Toast />
@@ -113,10 +116,13 @@ export function App() {
       </div>
     );
   }
+  // Phone: the search bar sits at the bottom (one-handed), just above the tab bar; Results and Recent scroll above it.
+  const dock = route.name !== 'home' && !readerRoute && route.name !== 'games';
   return (
-    <div class="app">
-      {!readerRoute && route.name !== 'games' && <header class="topbar"><SearchBar /></header>}
+    <div class={kb ? 'app kb' : 'app'}>
+      {route.name === 'home' && <HomeHeader />}
       <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
+      {dock && <footer class="topbar dock"><SearchBar /></footer>}
       <TabBar />
       <UpdateToast />
       <Toast />
@@ -126,14 +132,36 @@ export function App() {
   );
 }
 
+/** The on-screen keyboard is up (the viewport got much shorter than it has been): the tab bar then gets out of the way
+ *  so the search bar stays right above the keyboard. Also keeps the app above the keyboard when the WebView does not
+ *  resize its layout for it (`--kb` = the part of the layout viewport the keyboard covers). */
+function useKeyboardOpen(): boolean {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    let base = window.innerHeight, w = window.innerWidth;
+    const f = () => {
+      if (window.innerWidth !== w) { w = window.innerWidth; base = window.innerHeight; }
+      base = Math.max(base, window.innerHeight);
+      setOpen(window.innerHeight < base - 150);
+      const vv = window.visualViewport;
+      document.documentElement.style.setProperty('--kb', `${vv ? Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop)) : 0}px`);
+    };
+    window.addEventListener('resize', f);
+    window.visualViewport?.addEventListener('resize', f);
+    return () => { window.removeEventListener('resize', f); window.visualViewport?.removeEventListener('resize', f); };
+  }, []);
+  return open;
+}
+
 const ENTRY_ROUTES = ['entry', 'word', 'hanja'];
 
-function PaneEmpty({ lists }: { lists: boolean }) {
+function PaneEmpty({ kind }: { kind: string }) {
+  const lists = kind === 'lists', home = kind === 'home';
   return (
     <div class="pane-empty">
       <div class="pane-empty-mark" aria-hidden="true"><LogoMark size={64} /></div>
-      <div class="empty-title">{lists ? 'Pick a saved word' : 'Search or pick a word'}</div>
-      <div class="muted small">{lists ? 'Choose a list on the left, then a word in it, to read it here.' : 'Type in the search box, or choose a recent word. Press / to jump to search.'}</div>
+      <div class="empty-title">{lists ? 'Pick a saved word' : home ? 'Pick a card' : 'Search or pick a word'}</div>
+      <div class="muted small">{lists ? 'Choose a list on the left, then a word in it, to read it here.' : home ? 'Open a card on the left to read it here.' : 'Type in the search box, or choose a recent word. Press / to jump to search.'}</div>
     </div>
   );
 }
@@ -143,7 +171,7 @@ const entryKey = (r: Route) => { const p = new URLSearchParams(r.params); p.dele
 
 function view(r: Route) {
   switch (r.name) {
-    case 'search': { const q = r.params.get('q') ?? ''; return q.trim() ? <Results q={q} /> : <Home />; }
+    case 'search': { const q = r.params.get('q') ?? ''; return q.trim() ? <Results q={q} /> : <Recent />; }
     case 'entry': return <EntryView key={entryKey(r)} source={r.parts[0]} id={Number(r.parts[1])} hw={r.params.get('hw') ?? undefined} />;
     case 'word': return <EntryView key={entryKey(r)} word={r.parts[0]} pref={r.params.has('s') ? refFromParams(r.params) : undefined} />;
     case 'hanja': return <HanjaPage key={r.parts[0]} ch={r.parts[0]} />;
@@ -151,6 +179,6 @@ function view(r: Route) {
     case 'settings': return <SettingsView />;
     case 'games': return <GamesView />;
     case 'reader': return r.parts[0] ? <TextView key={r.parts[0]} id={r.parts[0]} /> : <ReaderLibrary />;
-    default: return <Home />;
+    case 'home': default: return <Home />;
   }
 }

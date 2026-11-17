@@ -62,11 +62,8 @@ async function tabs(page: Page, scope: string, shotPrefix: string, shotFn: (p: P
 }
 
 async function tour(page: Page, theme: 'light' | 'dark') {
-  await page.goto('/#/');
+  await page.goto('/#/search');   // the Search tab's start screen (the app opens on the Home tab: see home.spec.ts)
   await expect(page.getByRole('heading', { name: 'Recent' })).toBeVisible();
-  // the home content (Today carousel, idiom of the day) arrives after the engine query: shoot it, not the gap
-  await expect(page.getByRole('region', { name: 'Idiom of the day' })).toBeVisible({ timeout: 20_000 });
-  await page.waitForTimeout(300);
   await shot(page, `${theme}-home`);
   await search(page, '먹다');
   await expect(page.locator('.row .hw', { hasText: '먹다' }).first()).toBeVisible();

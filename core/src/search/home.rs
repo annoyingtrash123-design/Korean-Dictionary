@@ -17,7 +17,7 @@ const GRAMMAR_SALT: u64 = 0x2002;
 const IDIOM_SALT: u64 = 0x3003;
 /// Curriculum levels shown on the home page (5-6: the advanced learner's range).
 const LEVELS: &str = "(5, 6)";
-const MAX_EXAMPLES: usize = 2;
+const MAX_EXAMPLES: usize = 3;
 const MAX_GLOSS_ITEMS: usize = 3;
 /// Longer sentences are fine on a phone card only up to a point; shorter ones are preferred.
 const LONG_EXAMPLE: usize = 70;
@@ -28,6 +28,14 @@ pub struct HomeExample {
     pub en: Option<String>,
     /// `en` is an AI translation (pipeline `en_ai`).
     pub en_ai: bool,
+}
+
+/// A related word of an entry (synonym, antonym, see also...).
+#[derive(Debug, Clone, Serialize, PartialEq)]
+pub struct HomeRel {
+    #[serde(rename = "type")]
+    pub kind: String,
+    pub word: String,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -41,6 +49,9 @@ pub struct HomeWord {
     /// Official curriculum level (5 or 6).
     pub level: i64,
     pub gloss: String,
+    /// Korean definition of the first sense that has one.
+    pub ko_def: Option<String>,
+    pub related: Vec<HomeRel>,
     pub examples: Vec<HomeExample>,
 }
 
@@ -59,6 +70,8 @@ pub struct HomeGrammar {
     /// Official curriculum level (5 or 6).
     pub level: i64,
     pub summary_en: Option<String>,
+    pub ko_def: Option<String>,
+    pub related: Vec<HomeRel>,
     /// The dictionary entry of the pattern (for opening it), when linked.
     pub entry: Option<HomeEntryRef>,
     pub examples: Vec<HomeExample>,
@@ -74,7 +87,8 @@ pub struct HomeIdiom {
     pub kind: String,
     pub gloss: String,
     pub ko_def: Option<String>,
-    pub example: HomeExample,
+    pub related: Vec<HomeRel>,
+    pub examples: Vec<HomeExample>,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq, Default)]
@@ -162,6 +176,35 @@ fn examples_of(data: &str, max: usize, allow_phrases: bool) -> Vec<HomeExample> 
     out
 }
 
+/// The Korean definition of the first sense that has one.
+fn ko_def_of(data: &str) -> Option<String> {
+    let v: serde_json::Value = serde_json::from_str(data).unwrap_or_default();
+    v.get("senses")?.as_array()?.iter().find_map(|s| s.get("ko_def").and_then(|d| d.as_str())).map(String::from)
+}
+
+const MAX_RELATED: usize = 8;
+
+/// Related words of an entry (sense-level synonyms / antonyms / see also first, then its `related` list), no repeats.
+fn related_of(data: &str) -> Vec<HomeRel> {
+    let v: serde_json::Value = serde_json::from_str(data).unwrap_or_default();
+    let mut out: Vec<HomeRel> = Vec::new();
+    let mut add = |r: &serde_json::Value| {
+        let (Some(kind), Some(word)) = (r.get("type").and_then(|t| t.as_str()), r.get("word").and_then(|w| w.as_str())) else { return };
+        if !word.trim().is_empty() && out.len() < MAX_RELATED && !out.iter().any(|o| o.word == word) {
+            out.push(HomeRel { kind: kind.to_string(), word: word.trim().to_string() });
+        }
+    };
+    for s in v.get("senses").and_then(|s| s.as_array()).into_iter().flatten() {
+        for r in s.get("rel").and_then(|r| r.as_array()).into_iter().flatten() {
+            add(r);
+        }
+    }
+    for r in v.get("related").and_then(|r| r.as_array()).into_iter().flatten() {
+        add(r);
+    }
+    out
+}
+
 fn ids(p: &PackDb, sql: &str) -> Result<Vec<i64>> {
     Ok(p.conn.query(sql, &[])?.iter().filter_map(|r| r.int(0)).collect())
 }
@@ -202,6 +245,8 @@ fn words(p: &PackDb, day: u32) -> Result<Vec<HomeWord>> {
                 pos: r.text(5),
                 level: r.int(8).unwrap_or(5),
                 gloss: first_items(&r.string(6)),
+                ko_def: ko_def_of(&r.string(7)),
+                related: related_of(&r.string(7)),
                 examples: examples_of(&r.string(7), MAX_EXAMPLES, true),
             });
         }
@@ -236,6 +281,8 @@ fn grammar(p: &PackDb, day: u32) -> Result<Vec<HomeGrammar>> {
             pattern: r.string(1),
             level: r.int(3).unwrap_or(5),
             summary_en: r.text(2).filter(|s| !s.trim().is_empty()),
+            ko_def: None,
+            related: vec![],
             entry: None,
             examples: vec![],
         };
@@ -244,6 +291,8 @@ fn grammar(p: &PackDb, day: u32) -> Result<Vec<HomeGrammar>> {
             if let Some(e) = e.first() {
                 g.entry = Some(HomeEntryRef { source: e.string(0), id: e.int(1).unwrap_or(0), homonym: e.int(2), pos: e.text(3) });
                 g.examples = examples_of(&e.string(4), MAX_EXAMPLES, true);
+                g.ko_def = ko_def_of(&e.string(4));
+                g.related = related_of(&e.string(4));
                 if g.summary_en.is_none() {
                     g.summary_en = e.text(5).filter(|s| !s.trim().is_empty());
                 }
@@ -270,13 +319,11 @@ fn idiom(p: &PackDb, day: u32) -> Result<Option<HomeIdiom>> {
         let r = p.conn.query("SELECT e.source, e.id, e.headword, e.kind, e.gloss, e.data, e.homonym FROM entries e WHERE e.id = ?1", &[all[i].into()])?;
         let Some(r) = r.first() else { continue };
         let data = r.string(5);
-        let Some(example) = examples_of(&data, 1, false).into_iter().next() else { continue };
-        let v: serde_json::Value = serde_json::from_str(&data).unwrap_or_default();
-        let ko_def = v
-            .get("senses")
-            .and_then(|s| s.as_array())
-            .and_then(|s| s.iter().find_map(|s| s.get("ko_def").and_then(|d| d.as_str())))
-            .map(String::from);
+        let examples = examples_of(&data, MAX_EXAMPLES, false);
+        if examples.is_empty() {
+            continue;
+        }
+        let ko_def = ko_def_of(&data);
         return Ok(Some(HomeIdiom {
             source: r.string(0),
             id: r.int(1).unwrap_or(0),
@@ -285,7 +332,8 @@ fn idiom(p: &PackDb, day: u32) -> Result<Option<HomeIdiom>> {
             kind: r.string(3),
             gloss: first_items(&r.string(4)),
             ko_def,
-            example,
+            related: related_of(&data),
+            examples,
         }));
     }
     Ok(None)
@@ -432,6 +480,15 @@ mod tests {
     }
 
     #[test]
+    fn related_words_from_senses_and_related_list() {
+        let d = r#"{"senses":[{"rel":[{"type":"synonym","word":"가"},{"type":"antonym","word":"나"}]},{"rel":[{"type":"synonym","word":"가"}]}],"related":[{"type":"derived","word":"다"},{"type":"variant","word":" "}]}"#;
+        let r: Vec<(String, String)> = related_of(d).into_iter().map(|r| (r.kind, r.word)).collect();
+        assert_eq!(r, vec![("synonym".into(), "가".into()), ("antonym".into(), "나".into()), ("derived".into(), "다".into())]);
+        assert!(related_of("{}").is_empty());
+        assert_eq!(ko_def_of(r#"{"senses":[{},{"ko_def":"뜻."}]}"#).as_deref(), Some("뜻."));
+    }
+
+    #[test]
     fn dialogue_examples_keep_one_turn_per_line() {
         let ex = examples_of(r#"{"senses":[{"examples":[{"ko":"가: 안녕.\n나: 응.참새","en":"A: Hi.\nB: Yes.","type":"dialogue"},{"ko":"문장.","type":"sentence"}]}]}"#, 2, false);
         assert_eq!(ex[0].ko, "문장.");
@@ -450,7 +507,7 @@ mod tests {
             // gloss capped at three items
             assert_eq!(w.gloss.split("; ").count(), 3);
             // sentence first (translated, AI-labelled), then the dialogue (one turn per line), then phrases
-            assert_eq!(w.examples.len(), 2);
+            assert_eq!(w.examples.len(), 3, "sentence, dialogue, phrase");
             assert!(w.examples[0].en_ai && w.examples[0].en.is_some());
             assert!(w.examples[1].en.is_none());
             assert_eq!(w.examples[1].ko, "A: 안녕\nB: 응");

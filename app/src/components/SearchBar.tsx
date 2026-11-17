@@ -38,7 +38,7 @@ export function SearchBar() {
     // Two-pane: typing while an entry is open refreshes the left list and leaves the right pane alone.
     if (wide && ['entry', 'word', 'hanja'].includes(currentName())) return;
     const onSearch = currentName() === 'search';
-    if (!v.trim()) navigate('/', onSearch);
+    if (!v.trim()) navigate('/search', onSearch);
     else navigate(searchPath(v), onSearch);
   };
   return (
