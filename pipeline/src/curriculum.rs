@@ -181,6 +181,34 @@ pub fn match_word(w: &CurWord, cands: &[WordCand], claimed: &HashSet<i64>) -> Op
     (pos >= 30 || hint >= 3 || cands.len() == 1).then_some(id)
 }
 
+/// Suffixes tried when the list's bare noun has no krdict entry ("다양" -> 다양하다, "상반" -> 상반되다).
+const DERIVED_SUFFIXES: [&str; 2] = ["하다", "되다"];
+
+/// A list row whose bare headword matched nothing: the verb or adjective derived from it
+/// (X하다, X되다; krdict has no entry for the stem itself). The suffix the 길잡이말 hint uses
+/// ("주장이 상반되다") is tried first, else 하다 before 되다. Only noun / verb / adjective rows
+/// qualify, the candidate must be a verb or adjective, and among homonyms the claimed set, the
+/// krdict level and the hint decide as in [`match_word`].
+pub fn match_word_derived(w: &CurWord, by_hw: &HashMap<String, Vec<WordCand>>, claimed: &HashSet<i64>) -> Option<i64> {
+    if !w.pos.split(is_sep).any(|t| matches!(t, "명사" | "동사" | "형용사")) {
+        return None;
+    }
+    let mut sufs = DERIVED_SUFFIXES.to_vec();
+    sufs.sort_by_key(|s| !w.hint.contains(&format!("{}{s}", w.headword)));
+    for suf in sufs {
+        let hw = format!("{}{suf}", w.headword);
+        let Some(cands) = by_hw.get(&hw) else { continue };
+        let best = cands
+            .iter()
+            .filter(|c| matches!(c.pos.as_str(), "verb" | "adjective"))
+            .max_by_key(|c| (!claimed.contains(&c.id), level_fits(w.level, c.level), hint_score(&w.hint, &hw, &c.text), std::cmp::Reverse(c.id)));
+        if let Some(c) = best {
+            return Some(c.id);
+        }
+    }
+    None
+}
+
 // ---------------------------------------------------------------- grammar
 
 /// A row of the core `grammar` table.
@@ -230,15 +258,45 @@ fn category_fits(list_cat: &str, cat: &str) -> bool {
     )
 }
 
-/// Keys a form is looked up under: itself, and "...하여" as the dictionary form "...하다"
-/// (the list writes `으로 인하여` where krdict has `으로 인하다`).
-fn lookup_keys(form: &str) -> Vec<String> {
+/// Keys a form is looked up under: itself, "...하여" as the dictionary form "...하다" (the list
+/// writes `으로 인하여` where krdict has `으로 인하다`), and, for an expression, without its
+/// closing 에 (the list's `-기 때문에`, `-는 탓에` are krdict's `-기 때문`, `-는 탓`).
+fn lookup_keys(form: &str, category: &str) -> Vec<String> {
     let k = grammar_key(form);
     let mut v = vec![k.clone()];
     if let Some(stem) = k.strip_suffix("하여") {
         v.push(format!("{stem}하다"));
     }
+    if category == "표현" {
+        if let Some(stem) = k.strip_suffix('에').filter(|s| s.chars().count() >= 2) {
+            v.push(stem.to_string());
+        }
+    }
     v
+}
+
+/// Hand-checked spelling variants: (list category, list form key, krdict pattern key). Each target
+/// is a krdict row of the same pattern whose own text says so (`-으려야` "구어에서 -을래야로
+/// 발음하기도 한다"; krdict's `그려` is the particle that follows an ending, `-네그려`, which the
+/// list files under 종결어미). Tried only when the ordinary lookup finds nothing.
+pub const GRAMMAR_ALIASES: &[(&str, &str, &str)] = &[("연결어미", "을래야", "으려야"), ("연결어미", "ㄹ래야", "려야"), ("종결어미", "그려", "그려")];
+
+/// List rows that krdict describes as a sense of a word entry rather than as a grammar row:
+/// (list form key, krdict headword, homonym, pos). `에 따라` is the 8th sense of 따르다 (1이 2에
+/// 따르다, "주로 '따라(서)'로 쓴다"), `에 의하여` of 의하다 (1이 2에 의하다), `이 아니다` of 아니다
+/// (1이 2가 아니다), `-어 치우다` is the auxiliary verb 치우다 ("'-어 치우다'로 쓴다"). The
+/// curriculum row links to the entry only (`grammar_id` stays NULL: there is no grammar row).
+pub const GRAMMAR_WORD_LINKS: &[(&str, &str, Option<i64>, &str)] = &[
+    ("에따라", "따르다", Some(1), "verb"),
+    ("에의하여", "의하다", None, "verb"),
+    ("이아니다", "아니다", None, "adjective"),
+    ("어치우다", "치우다", None, "auxiliary verb"),
+];
+
+/// The word-entry link of a list row (see [`GRAMMAR_WORD_LINKS`]).
+pub fn grammar_word_link(g: &CurGrammar) -> Option<(&'static str, Option<i64>, &'static str)> {
+    let k = grammar_key(&g.form_raw);
+    GRAMMAR_WORD_LINKS.iter().find(|l| l.0 == k).map(|l| (l.1, l.2, l.3))
 }
 
 /// Key -> grammar rows. A pattern with alternatives (`와/과`, `으로/로`) is indexed under each one.
@@ -261,19 +319,32 @@ pub fn grammar_index(rows: &[GrammarCand]) -> HashMap<String, Vec<usize>> {
 /// within a form a row of the right category (and the same leading hyphen) wins. A form never
 /// lands on a particle unless the list row is one (`다가` the particle vs `-다가` the ending).
 pub fn match_grammar(g: &CurGrammar, rows: &[GrammarCand], by_key: &HashMap<String, Vec<usize>>) -> Option<usize> {
-    for form in grammar_forms(g) {
-        let Some(idx) = lookup_keys(&form).iter().find_map(|k| by_key.get(k)) else { continue };
+    let forms = grammar_forms(g);
+    for form in &forms {
         let hyphen = form.trim_start().starts_with('-');
-        let best = idx
-            .iter()
-            .copied()
-            .filter(|&i| g.category == "조사" || rows[i].category != "Particles")
-            .max_by_key(|&i| {
-                let r = &rows[i];
-                ((category_fits(&g.category, &r.category) as u8) * 2 + (r.pattern.starts_with('-') == hyphen) as u8, std::cmp::Reverse(i))
-            });
-        if best.is_some() {
-            return best;
+        for key in lookup_keys(form, &g.category) {
+            let Some(idx) = by_key.get(&key) else { continue };
+            let best = idx
+                .iter()
+                .copied()
+                .filter(|&i| g.category == "조사" || rows[i].category != "Particles")
+                .max_by_key(|&i| {
+                    let r = &rows[i];
+                    ((category_fits(&g.category, &r.category) as u8) * 2 + (r.pattern.starts_with('-') == hyphen) as u8, std::cmp::Reverse(i))
+                });
+            if best.is_some() {
+                return best;
+            }
+        }
+    }
+    for form in &forms {
+        let key = grammar_key(form);
+        for (cat, from, to) in GRAMMAR_ALIASES {
+            if *cat == g.category && *from == key {
+                if let Some(i) = by_key.get(*to).and_then(|v| v.iter().copied().min()) {
+                    return Some(i);
+                }
+            }
         }
     }
     None
@@ -318,7 +389,9 @@ pub fn build_table(conn: &Connection) -> Result<(usize, usize, usize, usize)> {
         "CREATE TABLE curriculum (kind TEXT NOT NULL, level INTEGER NOT NULL, entry_id INTEGER, grammar_id INTEGER, form TEXT NOT NULL, rank INTEGER NOT NULL);",
     )?;
 
-    let wanted: HashSet<String> = words.iter().flat_map(alternates).collect();
+    let mut wanted: HashSet<String> = words.iter().flat_map(alternates).collect();
+    wanted.extend(words.iter().flat_map(|w| DERIVED_SUFFIXES.iter().map(move |s| format!("{}{s}", w.headword))));
+    wanted.extend(GRAMMAR_WORD_LINKS.iter().map(|l| l.1.to_string()));
     let mut by_hw: HashMap<String, Vec<WordCand>> = HashMap::new();
     {
         let mut st = conn.prepare("SELECT id, headword, homonym, pos, level, data FROM entries WHERE source='krdict' AND kind='word' ORDER BY id")?;
@@ -342,7 +415,10 @@ pub fn build_table(conn: &Connection) -> Result<(usize, usize, usize, usize)> {
     let (mut nw, mut ng) = (0, 0);
     let mut ins = conn.prepare("INSERT INTO curriculum(kind,level,entry_id,grammar_id,form,rank) VALUES(?,?,?,?,?,?)")?;
     for w in &words {
-        let id = alternates(w).iter().find_map(|hw| by_hw.get(hw).and_then(|c| match_word(w, c, &claimed)));
+        let id = alternates(w)
+            .iter()
+            .find_map(|hw| by_hw.get(hw).and_then(|c| match_word(w, c, &claimed)))
+            .or_else(|| match_word_derived(w, &by_hw, &claimed));
         if let Some(i) = id {
             claimed.insert(i);
             nw += 1;
@@ -360,10 +436,19 @@ pub fn build_table(conn: &Connection) -> Result<(usize, usize, usize, usize)> {
     let by_key = grammar_index(&rows_g);
     for g in &grammar {
         let m = match_grammar(g, &rows_g, &by_key).map(|i| &rows_g[i]);
-        if m.is_some() {
-            ng += 1;
+        let mut entry_id = m.and_then(|r| r.entry_id);
+        if m.is_none() {
+            // a sense of a word entry (`에 따라` = 따르다), see GRAMMAR_WORD_LINKS
+            entry_id = grammar_word_link(g).and_then(|(hw, hom, pos)| {
+                by_hw.get(hw).and_then(|c| c.iter().filter(|c| c.pos == pos && (hom.is_none() || c.homonym == hom)).map(|c| c.id).min())
+            });
         }
-        ins.execute(params!["grammar", g.level, m.and_then(|r| r.entry_id), m.map(|r| r.id), g.form_raw, g.rank])?;
+        if m.is_some() || entry_id.is_some() {
+            ng += 1;
+        } else {
+            log::warn!("curriculum grammar without a match: {}급 {} {}", g.level, g.category, g.form_raw);
+        }
+        ins.execute(params!["grammar", g.level, entry_id, m.map(|r| r.id), g.form_raw, g.rank])?;
     }
     conn.execute_batch("CREATE INDEX curriculum_kind_level ON curriculum(kind, level);")?;
     Ok((nw, words.len(), ng, grammar.len()))

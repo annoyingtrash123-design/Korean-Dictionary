@@ -536,6 +536,7 @@ pub struct PackResult {
 
 fn source_info(name: &str, n: i64) -> Value {
     let (lic, url) = match name {
+        "hanppuri" => ("own work: AI-written parts labelled in the app; definitions and examples from stdict keep its CC BY-SA 2.0 KR", ""),
         "krdict" => ("CC BY-SA 2.0 KR", "https://krdict.korean.go.kr (via https://github.com/spellcheck-ko/korean-dict-nikl)"),
         "stdict" => ("CC BY-SA 2.0 KR", "https://stdict.korean.go.kr (via https://github.com/spellcheck-ko/korean-dict-nikl)"),
         "opendict" => ("CC BY-SA 2.0 KR", "https://opendict.korean.go.kr (via https://github.com/spellcheck-ko/korean-dict-nikl)"),
@@ -813,6 +814,25 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     log::info!("sentences: {n_tat} tatoeba, {n_wikt_s} wikt, {n_krdict_s} krdict");
     conn.execute_batch("INSERT INTO sentences_fts(sentences_fts) VALUES('rebuild')")?;
 
+    // grammar patterns krdict lacks (reviewed overlay, source 'hanppuri'); retired once krdict has the row
+    {
+        let (mut added, mut retired) = (0, 0);
+        for (i, p) in crate::grammar_extra::builtin().iter().enumerate() {
+            let key = hw_norm(&p.pattern);
+            if grammar.iter().any(|g| g.category == p.category && g.key == key) {
+                retired += 1;
+                continue;
+            }
+            let e = crate::grammar_extra::to_entry(p, i);
+            // ranked as a krdict grammar entry of the same level
+            let rank = ranker.rank(&Entry { source: "krdict", ..e.clone() });
+            let id = insert_entry(&conn, &e, rank, true, &mut c)?;
+            grammar.push(GrammarRow { entry_id: id, pattern: p.pattern.clone(), category: p.category, level: e.level, summary: Some(truncate(&p.en_summary, 200)), key, rank, jamo_last: false });
+            added += 1;
+        }
+        log::info!("grammar overlay (hanppuri, AI-assisted): {added} patterns added, {retired} retired (krdict has them)");
+    }
+
     // grammar table
     sort_grammar(&mut grammar);
     for (i, g) in grammar.iter().enumerate() {
@@ -948,7 +968,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     if let Some(er) = &en_rel {
         sources.insert("wordnet".into(), source_info("wordnet", er.terms));
     }
-    for s in ["krdict", "wikt", "kengdic"] {
+    for s in ["krdict", "wikt", "kengdic", crate::grammar_extra::SOURCE] {
         sources.insert(s.into(), source_info(s, c.by_source.get(s).copied().unwrap_or(0)));
     }
     sources.insert("tatoeba".into(), source_info("tatoeba", n_tat));
