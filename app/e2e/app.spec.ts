@@ -97,7 +97,7 @@ async function tour(page: Page, theme: 'light' | 'dark') {
   await shot(page, `${theme}-settings`);
 }
 
-test('first run, search, lists, themes, offline persistence', async ({ page, context }) => {
+test('first run, search, lists, themes, offline use', async ({ page, context }) => {
   test.setTimeout(600_000);
   page.on('console', (m) => { if (m.text().startsWith('KDPERF')) console.log(m.text()); });
   page.on('pageerror', (e) => console.log('PAGEERROR', e.message));
@@ -158,13 +158,12 @@ test('first run, search, lists, themes, offline persistence', async ({ page, con
   await expect(page.locator('.bm .hw', { hasText: '학교' })).toBeVisible();
   await shot(page, 'dark-lists');
 
-  // ---- reload offline: data, theme and lists persist ----
+  // ---- reload, then offline: data, theme and lists persist ----
   await page.goto('/');
-  await page.evaluate(() => navigator.serviceWorker?.ready);
-  await context.setOffline(true);
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 30_000 });
+  await context.setOffline(true);   // the dictionary is on the device: nothing below needs the network
   await search(page, '먹다');
   await expect(page.locator('.row .hw', { hasText: '먹다' }).first()).toBeVisible();
   await page.goto('/#/lists/saved');

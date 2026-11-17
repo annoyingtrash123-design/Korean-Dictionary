@@ -22,13 +22,11 @@ import { settings } from './lib/settings';
 import { applyTheme } from './lib/theme';
 import { loadLists, upgradeLists } from './lib/lists';
 import { loadHistory, upgradeHistory } from './lib/history';
-import { UpdateToast } from './components/UpdateToast';
 import { Toast } from './components/Toast';
 import { ListPicker } from './components/SaveButton';
 import { refFromParams } from './lib/entry-key';
 import { Empty } from './components/common';
 import { LogoMark } from './components/Logo';
-import { requestPersist } from './lib/persist';
 
 export function App() {
   const status = useStore(packStatus$);
@@ -46,8 +44,6 @@ export function App() {
   }, [s.theme]);
   useEffect(() => {
     void loadLists(); loadHistory();
-    // ask on every launch: browsers grant persistent storage once the app is installed, not before
-    void requestPersist();
     refreshStatus().then((st) => { if (st.packs.core?.installed) { const lookup = (src: string, id: number) => db.getEntry(src, id); void upgradeLists(lookup); void upgradeHistory(lookup); } /* dictionary updates are manual: Settings → Check for update */ }).catch(() => undefined);
   }, []);
   const wide = useWide();
@@ -109,7 +105,6 @@ export function App() {
         <main ref={main} id="main" tabIndex={-1} class={single ? `pane-right single${route.name === 'games' ? ' flush' : ''}` : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
           {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty kind={leftKind} />}
         </main>
-        <UpdateToast />
         <Toast />
         <ListPicker />
         <TapLookup />
@@ -124,7 +119,6 @@ export function App() {
       <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
       {dock && <footer class="topbar dock"><SearchBar /></footer>}
       <TabBar />
-      <UpdateToast />
       <Toast />
       <ListPicker />
       <TapLookup />

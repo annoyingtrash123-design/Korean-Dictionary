@@ -1,4 +1,4 @@
-import { IS_NATIVE, nativeSaveFile } from '../lib/native';
+import { nativeSaveFile } from '../lib/native';
 import { checkAppUpdate } from '../lib/app-update';
 import { clearErrors, errors$, formatErrors, loadErrors, logError } from '../lib/errlog';
 import { useEffect, useRef, useState } from 'preact/hooks';
@@ -19,7 +19,6 @@ import attribution from '../assets/ATTRIBUTION.md?raw';
 import { inlineParts, parseMarkdown } from '../lib/markdown';
 import { bytesNeeded, fmtMB } from '../lib/storage';
 import type { Manifest } from '../lib/types';
-import { persisted$ } from '../lib/persist';
 
 const THEMES: [ThemeName, string][] = [['light', 'Light'], ['dark', 'Dark'], ['system', 'System']];
 const COLORS: [ColorKey, string][] = [['accent', 'Accent'], ['bg', 'Background'], ['text', 'Text'], ['hangul', 'Hangul'], ['hanja', 'Hanja']];
@@ -38,7 +37,6 @@ export function SettingsView() {
   const s = useStore(settings);
   const st = useStore(packStatus$);
   const upd = useStore(update);
-  const persisted = useStore(persisted$);
   const ls = useStore(lists);
   const [msg, setMsg] = useState('');
   const [installing, setInstalling] = useState<string[] | null>(null);
@@ -57,22 +55,19 @@ export function SettingsView() {
   const setColor = (k: ColorKey, v: string) => updateSettings({ colors: { ...s.colors, [k]: v } });
 
   const [appUpd, setAppUpd] = useState<{ latest: string; url: string } | null>(null);
-  /** One button: the dictionaries, and in the Android app also the app itself (a new APK to install). */
+  /** One button: the dictionaries and the app itself (a new APK to install). */
   const doCheck = async () => {
     setMsg('Checking…'); setAppUpd(null);
-    const [m, app] = await Promise.all([checkForUpdate(), IS_NATIVE ? checkAppUpdate() : Promise.resolve(null)]);
+    const [m, app] = await Promise.all([checkForUpdate(), checkAppUpdate()]);
     setAppUpd(app);
     if (!m) { setMsg('Could not reach the server (offline?).'); return; }
     const dict = update.get().available ? 'Dictionaries: update available.' : 'Dictionaries: up to date.';
-    setMsg(IS_NATIVE ? `${dict} App: ${app ? `version ${app.latest} available.` : 'up to date.'}` : dict);
+    setMsg(`${dict} App: ${app ? `version ${app.latest} available.` : 'up to date.'}`);
   };
   const startInstall = async (ids: string[]) => { setMsg(''); const m = (await checkForUpdate()) ?? manifest; /* always the live manifest: chunk files of an older version are gone after a deploy */ if (!m) { setMsg('You need to be online to download.'); return; } update.set((u) => ({ ...u, manifest: m })); setInstalling(ids); };
 
   const exportFile = () => {
-    if (IS_NATIVE) { nativeSaveFile(`korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json`, exportBackup(undefined, errors$.get())).catch((e) => { logError('backup export', e); setMsg('Could not save the backup.'); }); return; }
-    const url = URL.createObjectURL(new Blob([exportBackup(undefined, errors$.get())], { type: 'application/json' }));
-    const a = Object.assign(document.createElement('a'), { href: url, download: `korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json` });
-    document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    nativeSaveFile(`korean-dictionary-backup-${new Date().toISOString().slice(0, 10)}.json`, exportBackup(undefined, errors$.get())).catch((e) => { logError('backup export', e); setMsg('Could not save the backup.'); });
   };
   const importFile = async (f: File | undefined) => {
     if (!f) return;
@@ -136,8 +131,7 @@ export function SettingsView() {
           <dt>Dictionaries</dt><dd>{!core ? '–' : upd.stale.length ? `${upd.stale.length} to update` : 'Up to date'}</dd>
           <dt>Latest online</dt><dd>{manifest?.version ?? '–'}</dd>
           <dt>Storage used</dt><dd>{fmtBytes(est.data?.usage)}{est.data?.quota ? ` of ${fmtBytes(est.data.quota)}` : ''}</dd>
-          {IS_NATIVE && <><dt>App version</dt><dd>{__APP_VERSION__}</dd></>}
-          <dt>Kept when space is low</dt><dd>{IS_NATIVE ? 'Yes — kept in the app’s own storage' : persisted === true ? 'Yes — protected' : persisted === false ? 'No — add the app to your Home Screen' : '…'}</dd>
+          <dt>App version</dt><dd>{__APP_VERSION__}</dd>
         </dl>
         <TechDetails />
         <div class="btn-row">
@@ -192,7 +186,7 @@ function TechDetails() {
   return (
     <details class="small diag" onToggle={(e) => { if ((e.currentTarget as HTMLDetailsElement).open) { makeReport().then(setR, () => setR(null)); void loadErrors(); } }}>
       <summary>Technical details</summary>
-      <pre>{r ? `storage in use: ${r.usageMB ?? '?'} MB · protected: ${r.persisted}\nlast working: ${r.lastOk ?? 'unknown'}\napp: ${r.build}\ninstalled:\n${packs || '  (none)'}\n${r.diag}` : 'Loading…'}</pre>
+      <pre>{r ? `storage in use: ${r.usageMB ?? '?'} MB\nlast working: ${r.lastOk ?? 'unknown'}\napp: ${r.build}\ninstalled:\n${packs || '  (none)'}\n${r.diag}` : 'Loading…'}</pre>
       <details class="errlog">
         <summary>Recent errors ({errs.length})</summary>
         <p class="muted">Kept only on this device; never sent anywhere.</p>

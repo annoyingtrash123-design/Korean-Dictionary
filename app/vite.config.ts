@@ -1,44 +1,14 @@
 import { defineConfig } from 'vitest/config';
 import preact from '@preact/preset-vite';
-import { VitePWA } from 'vite-plugin-pwa';
-
-const base = process.env.BASE_PATH ?? '/Korean-Dictionary/';
 
 export default defineConfig({
-  base,
+  base: '/',   // the Android WebView serves the bundle from https://localhost/
   define: {
     __BUILD__: JSON.stringify(new Date().toISOString().slice(0, 16)),   // shown in storage diagnostics
     __APP_VERSION__: JSON.stringify(process.env.ANDROID_VERSION_NAME ?? 'dev'),   // Android app's versionName
   },
   plugins: [
     preact(),
-    VitePWA({
-      registerType: 'prompt',
-      injectRegister: false,
-      manifest: {
-        name: '한뿌리 · Korean Dictionary',
-        short_name: '한뿌리',
-        description: 'Offline Korean–English dictionary',
-        start_url: base,
-        scope: base,
-        display: 'standalone',
-        background_color: '#294d38',
-        theme_color: '#294d38',
-        icons: [
-          { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-        ],
-      },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,wasm,svg,png,webmanifest,woff2}'],
-        globIgnores: ['data/**'],
-        navigateFallback: 'index.html',
-        navigateFallbackDenylist: [/\/data\//],
-        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
-        cleanupOutdatedCaches: true,
-      },
-    }),
   ],
   worker: { format: 'es' },
   

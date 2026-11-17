@@ -1,8 +1,6 @@
-import { IS_NATIVE } from '../lib/native';
 import { useEffect, useState } from 'preact/hooks';
-import { dismissHint, hintDismissed, isStandalone, needsHomeScreenHint, persisted$, requestPersist } from '../lib/persist';
 import { bytesNeeded, fmtMB } from '../lib/storage';
-import { cachedManifest, fetchManifest, refreshStatus, restartWorker, storageCleared$, storageReport$ } from '../db/client';
+import { cachedManifest, fetchManifest, refreshStatus } from '../db/client';
 import { fmtBytes } from '../lib/app-state';
 import { PackInstaller } from '../components/PackInstaller';
 import { optionalPacks, packDesc, packEnabled, packLabel } from '../lib/packs';
@@ -16,13 +14,6 @@ export function FirstRun() {
   const [manifest, setManifest] = useState<Manifest | null>(cachedManifest());
   const [err, setErr] = useState<string>();
   const [tick, setTick] = useState(0);
-  const persisted = useStore(persisted$);
-  const [dismissed, setDismissed] = useState(hintDismissed());
-  const cleared = useStore(storageCleared$);
-  const report = useStore(storageReport$);
-  // a full dictionary download uses well over 30 MB; if that much is still in use, the files are there
-  const stillThere = !!report && (report.usageMB ?? 0) > 30;
-  useEffect(() => { void requestPersist(); }, []);
   useEffect(() => {
     fetchManifest().then((m) => { setManifest(m); setErr(undefined); }, (e) => setErr(String(e?.message ?? e)));
   }, [tick]);
@@ -41,38 +32,6 @@ export function FirstRun() {
       <div class="logo" aria-hidden="true"><LogoMark size={62} /></div>
       <h1 lang="ko">한뿌리</h1>
       <p class="lead">Hanppuri, "one root": a fast, private Korean–English dictionary that works offline. It needs a one-time download of the dictionary data.</p>
-      {cleared && (
-        <div class="notice" role="alert">
-          {stillThere ? (
-            <>
-              <strong>The app could not open the dictionaries saved on this phone.</strong>
-              <p class="small">They still take up {report!.usageMB} MB, so they were not deleted. Try again first; download again only if that does not help.</p>
-              <button type="button" class="btn" onClick={() => { restartWorker(); refreshStatus().catch(() => undefined); }}>Try again</button>
-            </>
-          ) : (
-            <>
-              <strong>The downloaded dictionaries are no longer on this phone.</strong>
-              <p class="small">Your lists, history and game progress were kept. {persisted || IS_NATIVE ? 'Storage protection is on.' : 'Add the app to your Home Screen (below), then download again: installed apps get their storage protected.'}</p>
-            </>
-          )}
-          {report && (
-            <details class="small diag">
-              <summary>Technical details (please send a screenshot)</summary>
-              <pre>{`storage in use: ${report.usageMB ?? '?'} MB · protected: ${report.persisted}\nlast working: ${report.lastOk ?? 'unknown'}\napp now: ${report.build}\n${report.diag}`}</pre>
-            </details>
-          )}
-        </div>
-      )}
-      {needsHomeScreenHint(persisted, isStandalone(), dismissed) && (
-        <div class="notice a2hs" role="note">
-          <strong>Tip: Add to Home Screen so your phone keeps the dictionary data</strong>
-          <ul class="plain small">
-            <li><b>iPhone / iPad:</b> tap Share, then “Add to Home Screen”.</li>
-            <li><b>Android:</b> tap ⋮, then “Install app” (or “Add to Home screen”).</li>
-          </ul>
-          <button type="button" class="link" onClick={() => { dismissHint(); setDismissed(true); }}>Got it</button>
-        </div>
-      )}
       {err && !manifest && (
         <div class="card"><p class="error" role="alert">{err}</p><p class="muted small">The first download needs an internet connection.</p>
           <button type="button" class="btn" onClick={() => setTick(tick + 1)}>Try again</button></div>

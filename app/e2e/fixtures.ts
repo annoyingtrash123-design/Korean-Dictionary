@@ -13,10 +13,10 @@ export const test = base.extend<{ failureDump: void; settingsOpen: void }>({
    *  contexts keep site storage in memory inside one long-lived browser; after ~20 full downloads in CI
    *  the 500 MB opendict import failed with Chromium "no space" (write returned -8) although disk and
    *  quota were free (runs 117–119, 123, 125). A fresh disk-backed profile per test can't accumulate. */
-  context: async ({ playwright, launchOptions, viewport, deviceScaleFactor, isMobile, hasTouch, baseURL, serviceWorkers, colorScheme }, use) => {
+  context: async ({ playwright, launchOptions, viewport, deviceScaleFactor, isMobile, hasTouch, baseURL, colorScheme }, use) => {
     const dir = await mkdtemp(join(tmpdir(), 'kd-e2e-'));
     const ctx = await playwright.chromium.launchPersistentContext(dir, {
-      ...launchOptions, viewport, deviceScaleFactor, isMobile, hasTouch, baseURL, serviceWorkers, colorScheme,
+      ...launchOptions, viewport, deviceScaleFactor, isMobile, hasTouch, baseURL, colorScheme,
     });
     try {
       await use(ctx);

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
-  addToList, createList, deleteList, DEFAULT_LIST, emptyLists, exportBackup, findList, grammarKey, importBackup, inList, itemCount, lists, listsWith,
+  addManyToList, addToList, createList, deleteList, DEFAULT_LIST, emptyLists, exportBackup, findList, grammarKey, importBackup, inList, itemCount, lists, listsWith,
   MAX_IMPORT_BYTES, MAX_IMPORT_ITEMS, migrateBookmarks, removeFromList, renameList, restoreItem, sanitizeLists, setLastUsed, targetList, toggleSave,
   upgradeLists, type ItemInput,
 } from './lists';
@@ -34,6 +34,13 @@ describe('list store', () => {
     expect(saved().items.map((i) => i.kind === 'entry' && i.headword)).toEqual(['w2', 'w1']);
     await removeFromList('saved', stableKey(word(1)));
     expect(keys('saved')).toEqual([stableKey(word(2))]);
+  });
+  it('adds many at once: in order at the top, skipping what is already there', async () => {
+    await addToList('saved', word(2));
+    expect(await addManyToList('saved', [word(1), word(2), word(3), word(1)])).toBe(2);
+    expect(saved().items.map((i) => i.kind === 'entry' && i.headword)).toEqual(['w1', 'w3', 'w2']);
+    expect(await addManyToList('saved', [word(1)])).toBe(0);
+    expect(await addManyToList('missing', [word(9)])).toBe(0);
   });
   it('keeps one item in several lists', async () => {
     const verbs = await createList('  Verbs   to   learn ');

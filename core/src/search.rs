@@ -51,6 +51,8 @@ pub struct Caps {
     pub en_rel: bool,
     /// `curriculum` (official 표준 교육과정 word / grammar lists matched to entries) exists.
     pub curriculum: bool,
+    /// `topic(entry_id, category)` (krdict's semantic categories) exists.
+    pub topic: bool,
 }
 
 /// An opened pack database.
@@ -92,6 +94,7 @@ impl PackDb {
             en_ko_words: names.contains("en_ko_words"),
             en_rel: names.contains("en_rel"),
             curriculum: names.contains("curriculum"),
+            topic: names.contains("topic"),
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
@@ -1551,7 +1554,9 @@ mod tests;
 
 mod enko;
 mod home;
-pub use home::{home, Home, HomeEntryRef, HomeRel, HomeExample, HomeGrammar, HomeIdiom, HomeWord};
+pub use home::{home, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeRel, HomeWord};
+mod study;
+pub use study::{study_grammar, study_overview, study_topic_words, study_words, StudyCount, StudyGrammar, StudyOverview, StudyTopic, StudyWord};
 pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;

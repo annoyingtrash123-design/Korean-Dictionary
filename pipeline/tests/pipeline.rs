@@ -504,6 +504,14 @@ fn end_to_end_mini_build() {
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM (SELECT term, entry_id FROM gloss_terms GROUP BY term, entry_id HAVING COUNT(*) > 1)"), 0);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='krdict' AND level = 3 AND kind='word' AND gloss IS NOT NULL AND gloss != ''"));
     assert_eq!(q::<i64>(&c, "SELECT COALESCE(MAX(n) + 1, 0) FROM wotd"), q::<i64>(&c, "SELECT COUNT(*) FROM wotd"));
+    // topic: one row per krdict word with a semantic category (Lists tab "Topics"), indexed by category
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sqlite_master WHERE name IN ('topic', 'topic_category')"), 2);
+    assert_eq!(q::<String>(&c, "SELECT t.category FROM topic t JOIN entries e ON e.id = t.entry_id WHERE e.hw_norm = '학교' AND e.source = 'krdict'"), "교육 > 기관");
+    assert_eq!(
+        q::<i64>(&c, "SELECT COUNT(*) FROM topic"),
+        q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source = 'krdict' AND kind = 'word' AND json_extract(data, '$.category') IS NOT NULL")
+    );
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM topic t JOIN entries e ON e.id = t.entry_id WHERE e.source != 'krdict' OR e.kind != 'word'"), 0);
     // en_ko (English Wiktionary translation tables), only with the English extract
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM sqlite_master WHERE name='en_ko_term'"), 1);
     assert_eq!(q::<String>(&c, "SELECT group_concat(ko, ',') FROM (SELECT ko FROM en_ko WHERE term_norm='report' AND pos='noun' ORDER BY rank)"), "보고,보고서,폭음");

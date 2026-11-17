@@ -1,5 +1,3 @@
-import { IS_NATIVE } from './native';
-
 const RELEASE_API = 'https://api.github.com/repos/annoyingtrash123-design/Korean-Dictionary/releases/tags/android-latest';
 
 /** The `version: <versionName>` line of the release body the Android workflow writes. */
@@ -13,9 +11,8 @@ export function isNewerVersion(latest: string | null, current: string): boolean 
   return !!latest && current !== 'dev' && latest !== current;
 }
 
-/** Newer APK on the `android-latest` release, or null (web, up to date, offline, dev build). */
+/** Newer APK on the `android-latest` release, or null (up to date, offline, dev build). */
 export async function checkAppUpdate(): Promise<{ latest: string; url: string } | null> {
-  if (!IS_NATIVE) return null;
   try {
     const r = await fetch(RELEASE_API, { headers: { Accept: 'application/vnd.github+json' } });
     if (!r.ok) return null;

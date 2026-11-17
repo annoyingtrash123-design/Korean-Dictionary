@@ -1,14 +1,15 @@
 # Korean Dictionary — Scope & Architecture
 
-An offline, Pleco-inspired Korean–English dictionary for iPhone and Android,
-delivered as an installable Progressive Web App (PWA) hosted on GitHub Pages.
+An offline, Pleco-inspired Korean–English dictionary, delivered as an Android app
+(Capacitor WebView around the Preact UI). GitHub Pages is only the app's data host: it
+serves the dictionary packs the app downloads. There is no website and no PWA.
 
 ## Requirements (from interview)
 
 | Area | Decision |
 |---|---|
-| Platforms | iPhone + Android, one codebase |
-| Delivery | Offline PWA (Add to Home Screen), GitHub Pages, public repo |
+| Platforms | Android (Capacitor app, signed APK on the `android-latest` release) |
+| Delivery | Android APK from GitHub Actions; data packs served from GitHub Pages `/data/`, public repo |
 | Data size | As large as needed (~100–200 MB one-time download) |
 | Dictionaries | English: krdict (NIKL learner's dict), Wiktionary (kaikki), kengdic. Korean–Korean: 표준국어대사전 (stdict) as a secondary, toggleable dictionary |
 | Per entry | Headword, hanja, pronunciation, POS, level, English definitions, example sentences, related words / synonyms / antonyms, usage notes |
@@ -16,15 +17,15 @@ delivered as an installable Progressive Web App (PWA) hosted on GitHub Pages.
 | Extra features | Word lists (entries and grammar patterns), search history, hanja character breakdown, grammar reference, usage notes |
 | Home screen | Word of the day + recent history |
 | Theming | Light / dark / sepia presets + custom accent, background, text, hangul and hanja colours, font size |
-| Not included | OCR, flashcards, TTS, romanization input, text reader (can be added later) |
+| Not included | OCR, flashcards, romanization input |
 
 ## Architecture
 
 ```
-GitHub Actions (full internet)                     Phone (offline)
+GitHub Actions (full internet)                     Android phone (offline)
 ┌────────────────────────────────┐                 ┌───────────────────────────────┐
-│ pipeline/ (Rust CLI)            │                 │ PWA (Vite + Preact + TS)      │
-│  fetch → parse → merge → SQLite │──► Pages ──────►│  service worker: app shell    │
+│ pipeline/ (Rust CLI)            │                 │ App (Capacitor + Preact + TS) │
+│  fetch → parse → merge → SQLite │──► Pages ──────►│  UI bundled in the APK        │
 │  core.sqlite  (EN dicts, hanja, │   site/data/    │  worker: sqlite-wasm + OPFS   │
 │   grammar, sentences)           │   *.gz chunks   │  IndexedDB: bookmarks/history │
 │  stdict.sqlite (KO-KO)          │   manifest.json │  localStorage: settings/theme │
@@ -36,7 +37,7 @@ GitHub Actions (full internet)                     Phone (offline)
 * Each data **pack** is a standalone SQLite DB, gzip-compressed and split into
   ≤ 20 MB chunks. On first run the app streams the chunks, decompresses them
   with `DecompressionStream`, and writes the DB into OPFS (the `opfs-sahpool`
-  VFS works on iOS Safari 16.4+ without COOP/COEP headers).
+  VFS needs no COOP/COEP headers, so it works in the Android WebView).
 * Packs: `core` (required) and `stdict` (optional, can be enabled or disabled in settings).
 
 ## Data sources
@@ -129,6 +130,10 @@ CREATE TABLE curriculum (   -- NIKL standard curriculum 1-6급 (공공누리 제
   rank INTEGER NOT NULL     -- 전체 번호: the list's own order
 );
 CREATE INDEX curriculum_kind_level ON curriculum(kind, level);
+CREATE TABLE topic (        -- Lists tab "Topics": krdict's semantic category of each word entry
+  entry_id INTEGER NOT NULL, category TEXT NOT NULL   -- '인간 > 감각' (top level > sub-category)
+);
+CREATE INDEX topic_category ON topic(category, entry_id);
 ```
 
 ### Contract additions: older-text packs
@@ -223,7 +228,7 @@ Exact numeric formula lives in `pipeline/build.py`; only ordering matters to the
   (rusqlite + sqlite-wasm-rs, OPFS sahpool VFS), pack import, deconjugation and all
   search and query logic.
 * **TypeScript**: a thin UI layer only (Preact components, routing, theming, bookmarks,
-  the service worker, and the download manager that streams chunks into the engine).
+  and the download manager that streams chunks into the engine).
   The UI talks to the engine through `app/src/db/engine.ts` (the `Engine` interface).
 
 ## Repository layout
@@ -232,9 +237,9 @@ Exact numeric formula lives in `pipeline/build.py`; only ordering matters to the
 Cargo.toml           Rust workspace (pipeline, core)
 pipeline/            Rust data build CLI: `kdict-pipeline fetch|build`
 core/                Rust engine → WASM (search, deconjugate, hangul, db)
-app/                 Vite + Preact + TypeScript PWA UI
+app/                 Vite + Preact + TypeScript UI, packaged as the Android app (Capacitor)
   src/core-wasm/     wasm-pack output (generated, gitignored)
   src/db/            worker, engine.ts adapter, types.ts, download manager
-.github/workflows/   build-data + deploy to Pages
+.github/workflows/   build-data + publish data to Pages; android.yml builds the APK
 docs/                this scope document
 ```

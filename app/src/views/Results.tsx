@@ -2,7 +2,7 @@ import { packsKey } from '../lib/packs';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { Lru } from '../lib/cache';
 import { useDelayed } from '../lib/useAsync';
-import { db, otherWindowInstalling, packStatus$, refreshStatus, restartWorker } from '../db/client';
+import { db, packStatus$, refreshStatus, restartWorker } from '../db/client';
 import { groupResults } from '../lib/merge';
 import { settings } from '../lib/settings';
 import { useStore } from '../lib/store';
@@ -95,10 +95,10 @@ export function Results({ q }: { q: string }) {
     const locked = /not initialised|Worker restarted|NoModificationAllowed|access handle|locked/i.test(err);
     return (
       <div class="page">
-        <Empty title={locked ? 'Dictionary is busy in another window' : 'Search failed'}>
-          {locked ? (otherWindowInstalling.get() ? 'The dictionary is still being installed in another tab or app window. Wait for it to finish (or close it), then tap Retry.' : 'The dictionary is open in another tab or app window. Close that one, then tap Retry.') : err}
+        <Empty title={locked ? 'Dictionary is busy' : 'Search failed'}>
+          {locked ? 'The dictionary files are busy. Wait a moment, then tap Retry.' : err}
         </Empty>
-        <div class="center"><button type="button" class="btn primary" onClick={() => { otherWindowInstalling.set(false); cache.clear(); restartWorker(); refreshStatus().catch(() => undefined).finally(() => setStampBump((n) => n + 1)); }}>Retry</button></div>
+        <div class="center"><button type="button" class="btn primary" onClick={() => { cache.clear(); restartWorker(); refreshStatus().catch(() => undefined).finally(() => setStampBump((n) => n + 1)); }}>Retry</button></div>
       </div>
     );
   }

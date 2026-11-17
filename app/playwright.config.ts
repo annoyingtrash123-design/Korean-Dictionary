@@ -16,6 +16,8 @@ function findChromium(): string | undefined {
   return undefined;
 }
 
+const PORT = process.env.E2E_PORT ?? '4173';   // set when several checkouts run the suite on one machine
+
 export default defineConfig({
   testDir: 'e2e',
   // agent worktrees under .claude/ hold other checkouts of the same specs. Only ignore those below this
@@ -26,14 +28,15 @@ export default defineConfig({
   expect: { timeout: 60_000 },
   reporter: 'list',
   use: {
-    baseURL: 'http://localhost:4173',
+    baseURL: `http://localhost:${PORT}`,
     viewport: { width: 390, height: 844 },
     deviceScaleFactor: 2,
     launchOptions: { executablePath: process.env.CHROMIUM_PATH || findChromium() },
   },
   webServer: {
-    command: 'BASE_PATH=/ npm run build && BASE_PATH=/ npx vite preview --port 4173 --strictPort',
-    url: 'http://localhost:4173/',
+    // the app normally downloads its data from the GitHub Pages data host; the tests use the local copy in public/data
+    command: `VITE_DATA_BASE=/ npm run build && npx vite preview --port ${PORT} --strictPort`,
+    url: `http://localhost:${PORT}/`,
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
   },

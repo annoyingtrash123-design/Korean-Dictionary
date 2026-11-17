@@ -1,11 +1,10 @@
 import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GameWord, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, GameWord, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, StudyGrammar, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
-import { installActive } from '../lib/sw-update';
 import { logError, recordEntry, sanitizeEntries } from '../lib/errlog';
 
 let worker: Worker | undefined;
@@ -14,43 +13,13 @@ const pending = new Map<number, { ok: (v: any) => void; err: (e: Error) => void 
 export const progress = createStore<Record<string, Progress>>({});
 export const packStatus$ = createStore<PackStatus | null>(null);
 
-// Only one copy of the app can hold the dictionary files (OPFS access handles) at a time, but
-// an installed app and a browser tab of the same site are separate copies. Whoever starts an
-// engine announces it; every other copy hands its engine over by terminating its worker (it
-// starts a fresh one, and claims the files back, the next time it is used), so the copy in use wins.
-const instanceId = Math.random().toString(36).slice(2);
-const channel: BroadcastChannel | undefined = typeof BroadcastChannel === 'function' ? new BroadcastChannel('kdict-engine') : undefined;
-export const otherWindowInstalling = createStore(false);
-channel?.addEventListener('message', (ev: MessageEvent<{ t: string; from: string }>) => {
-  if (ev.data?.t === 'busy-installing' && ev.data.from !== instanceId) { otherWindowInstalling.set(true); return; }
-  if (ev.data?.t !== 'claim' || ev.data.from === instanceId || !worker) return;
-  if (installActive.get()) { channel?.postMessage({ t: 'busy-installing', from: instanceId }); return; } // never abort a download
-  releaseWorker(true);
-});
-// After handing over, this copy must not take the files back for background work (status
-// refreshes, history upgrades…) — that would knock out the copy in use. Calls wait until the user
-// actually comes back here: a tap, a key, focus, or the page becoming visible again.
-let handedOver = false;
-let waiters: (() => void)[] = [];
-function releaseWorker(handOver = false) {
+function releaseWorker() {
   worker?.terminate(); worker = undefined;
   for (const p of pending.values()) p.err(new Error('Worker restarted')); pending.clear();
-  if (handOver) handedOver = true;
 }
-function userIsBack() {
-  if (!handedOver) return;
-  handedOver = false;
-  const ws = waiters; waiters = [];
-  ws.forEach((f) => f());
-  if (packStatus$.get()) refreshStatus().catch(() => undefined);
-}
-for (const ev of ['pointerdown', 'keydown', 'input', 'focusin'] as const) window.addEventListener(ev, userIsBack, true);
-window.addEventListener('focus', userIsBack);
-document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') userIsBack(); });
 
 function w(): Worker {
   if (worker) return worker;
-  channel?.postMessage({ t: 'claim', from: instanceId });
   worker = new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' });
   worker.onmessage = (ev: MessageEvent<Res | Evt>) => {
     const m = ev.data as Res & Evt;
@@ -63,8 +32,7 @@ function w(): Worker {
   worker.onerror = (e) => { logError('worker', e.message || 'Worker error'); for (const p of pending.values()) p.err(new Error(e.message || 'Worker error')); pending.clear(); };
   return worker;
 }
-async function call<T>(method: string, ...args: unknown[]): Promise<T> {
-  if (handedOver) await new Promise<void>((r) => waiters.push(r));
+function call<T>(method: string, ...args: unknown[]): Promise<T> {
   return new Promise<T>((ok, err) => {
     const id = ++seq; pending.set(id, { ok, err });
     w().postMessage({ id, method, args } satisfies Req);
@@ -72,10 +40,10 @@ async function call<T>(method: string, ...args: unknown[]): Promise<T> {
 }
 
 /** A new worker with fresh storage handles, keeping the UI state (used to recover a download whose
- *  storage folders vanished under it, e.g. after the browser cleared site data while the app was open). */
+ *  storage folders vanished under it). */
 export function freshWorker() { releaseWorker(); }
 
-/** Drop the worker (and with it a failed engine init, e.g. storage locked by another tab) and start a fresh one. */
+/** Drop the worker (and with it a failed engine init) and start a fresh one. */
 export function restartWorker() {
   releaseWorker();
   packStatus$.set(null);
@@ -84,32 +52,21 @@ export function restartWorker() {
 export const PACKS_HINT = 'kd.packs';
 /** Installed pack ids remembered from the last run, so the UI can start before the engine is ready. */
 export const packsHint = (): string[] => { try { return JSON.parse(localStorage.getItem(PACKS_HINT) || '[]'); } catch { return []; /* storage unavailable or unparsable: no hint */ } };
-/** True when the dictionaries this device had are gone without the user deleting them: the
- *  browser cleared the site's storage to free space (it keeps localStorage, so we can tell). */
-export const storageCleared$ = createStore(false);
-/** What the device looked like when the dictionaries went missing, to tell "the browser deleted
- *  the files" (little storage in use) from "the app could not open files still on the device". */
-export interface StorageReport { usageMB: number | null; persisted: boolean | null; lastOk: string | null; build: string; diag: string }
-export const storageReport$ = createStore<StorageReport | null>(null);
+/** What the device looks like, for Settings → Technical details. */
+export interface StorageReport { usageMB: number | null; lastOk: string | null; build: string; diag: string }
 const LAST_OK = 'kd.lastOk';
 export async function makeReport(): Promise<StorageReport> {
   const est = await navigator.storage?.estimate?.().catch(() => undefined);
-  const persisted = await navigator.storage?.persisted?.().catch(() => null) ?? null;
   const diag = await call<string>('diagnostics').catch((e) => String(e?.message ?? e));
   let lastOk: string | null = null;
   try { lastOk = localStorage.getItem(LAST_OK); } catch { /* storage unavailable: the report just omits it */ }
-  return { usageMB: est?.usage != null ? Math.round(est.usage / 1048576) : null, persisted, lastOk, build: __BUILD__, diag };
+  return { usageMB: est?.usage != null ? Math.round(est.usage / 1048576) : null, lastOk, build: __BUILD__, diag };
 }
 const saveHint = (s: PackStatus) => { try { localStorage.setItem(PACKS_HINT, JSON.stringify(Object.keys(s.packs).filter((k) => s.packs[k].installed))); } catch { /* storage unavailable: the hint is only a startup optimisation */ } };
 export async function refreshStatus(): Promise<PackStatus> {
   const s = await call<PackStatus>('packStatus');
   try { performance.mark('kd-engine-ready'); } catch { /* performance API unavailable: timing marks are optional */ }
-  if (!s.error && packsHint().includes('core') && !s.packs.core?.installed) {
-    storageCleared$.set(true);
-    void makeReport().then((r) => storageReport$.set(r));
-  }
   if (s.packs.core?.installed) {
-    storageCleared$.set(false);
     try { localStorage.setItem(LAST_OK, `${new Date().toISOString().slice(0, 16)} · app ${__BUILD__} · ${Object.keys(s.packs).join(', ')}`); } catch { /* storage unavailable: this note is only a diagnostic aid */ }
   }
   saveHint(s);
@@ -179,6 +136,11 @@ export const db = {
   grammarList: (): Promise<GrammarRow[]> => (grammarRows ??= call<GrammarRow[]>('grammarList').catch((e) => { grammarRows = undefined; throw e; })),
   /** Home page picks for a day number (see `lib/home-day.ts`). */
   home: (day: number) => call<HomeData>('home', day),
+  /** Study lists (see `lib/study-lists.ts`): counts, then pages of words / the grammar of a level. */
+  studyOverview: () => call<StudyOverview>('studyOverview'),
+  studyWords: (level: number, limit: number, offset: number) => call<StudyWord[]>('studyWords', level, limit, offset),
+  studyGrammar: (level: number) => call<StudyGrammar[]>('studyGrammar', level),
+  studyTopicWords: (category: string, byLevel: boolean, limit: number, offset: number) => call<StudyWord[]>('studyTopicWords', category, byLevel, limit, offset),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {
     let p = textDocs.get(id);
@@ -197,11 +159,9 @@ export const db = {
   install: async (pack: ManifestPack, manifestUrl: string, version: string) => {
     // The engine keeps the old pack usable until the new import finishes, so status is refreshed after success AND failure.
     installsInFlight++;
-    installActive.set(true);
     try { const s = await call<PackStatus>('install', pack, manifestUrl, version); packStatus$.set(s); return s; }
     finally {
       installsInFlight--;
-      installActive.set(installsInFlight > 0);
       resetTexts(); await refreshStatus().catch(() => undefined);
     }
   },
