@@ -593,11 +593,18 @@ fn end_to_end_mini_build() {
     assert_eq!(q::<String>(&c, "SELECT en FROM sentences s JOIN sentences_fts f ON f.rowid=s.id WHERE sentences_fts MATCH '\"책을 읽\"'"), "I read a book.");
     // grammar table
     let cats: Vec<(String, i64)> = {
-        let mut st = c.prepare("SELECT category, COUNT(*) FROM grammar GROUP BY category ORDER BY category").unwrap();
+        let mut st = c.prepare("SELECT category, COUNT(*) FROM grammar WHERE entry_id IN (SELECT id FROM entries WHERE source='krdict') GROUP BY category ORDER BY category").unwrap();
         st.query_map([], |r| Ok((r.get(0)?, r.get(1)?))).unwrap().map(|r| r.unwrap()).collect()
     };
     assert_eq!(cats, vec![("Connective endings".to_string(), 1), ("Particles".to_string(), 1)]);
-    assert_eq!(q::<String>(&c, "SELECT pattern FROM grammar WHERE category='Connective endings'"), "-아서");
+    assert_eq!(q::<String>(&c, "SELECT pattern FROM grammar WHERE category='Connective endings' AND entry_id IN (SELECT id FROM entries WHERE source='krdict')"), "-아서");
+    // the reviewed overlay (data/grammar_extra.tsv): hanppuri entries, each with its grammar row, AI fields flagged
+    let n_extra = kdict_pipeline::grammar_extra::builtin().len() as i64;
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='hanppuri' AND kind='grammar'"), n_extra);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM grammar g JOIN entries e ON e.id=g.entry_id WHERE e.source='hanppuri'"), n_extra);
+    assert_eq!(counts["hanppuri"], n_extra);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='hanppuri' AND hw_norm='기에따라' AND json_extract(data,'$.senses[0].def_ai')=1 AND json_extract(data,'$.senses[0].ko_def_ai')=1"), 1);
+    assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='기에앞서서' AND e.source='hanppuri'"), 1);
     // entry data is valid JSON with senses
     let d: Value = serde_json::from_str(&q::<String>(&c, "SELECT data FROM entries WHERE hw_norm='먹다' AND source='krdict'")).unwrap();
     assert_eq!(d["senses"].as_array().unwrap().len(), 2);
