@@ -106,8 +106,9 @@ test('Dict tab: example sentences and Korean definitions are tappable', async ({
   await expect(turn).toBeVisible();
   await expect(turn.locator('.ex-who')).toHaveText(/^[가-힣A-Z]{1,3}$/);
   await page.locator('.ex', { has: turn }).getByRole('button', { name: 'Listen' }).click();
+  // the text-to-speech plugin loads on first use (its web build speaks through speechSynthesis)
+  await expect.poll(() => page.evaluate(() => (window as unknown as { __said: string[] }).__said.length)).toBe(1);
   const said = await page.evaluate(() => (window as unknown as { __said: string[] }).__said);
-  expect(said.length).toBe(1);
   expect(said[0]).not.toMatch(/(^|\s)[가나]\s*:/);   // speaker labels are not read out
   await turn.scrollIntoViewIfNeeded();
   await page.waitForTimeout(300);
