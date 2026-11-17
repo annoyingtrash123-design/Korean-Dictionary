@@ -127,6 +127,7 @@ export interface Engine {
   similarWords(source: string, id: number, limit: number): Promise<ResultRow[]>;
   sentences(text: string, limit: number): Promise<{ ko: string; en: string | null; source: string | null }[]>;
   grammarList(): Promise<GrammarRow[]>;
+  grammarLessons(source: string, id: number): Promise<GrammarLessonRow[]>;
   gameWords(level: number, limit: number): Promise<GameWord[]>;
   gameWordsFor(headwords: string[]): Promise<GameWord[]>;
   chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
@@ -172,7 +173,10 @@ export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idiom: Ho
 /** Built-in study lists (Lists tab): see core/src/search/study.rs. Empty arrays when the pack lacks `curriculum` / `topic`. */
 export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[] }
 export interface StudyWord { source: Source; id: number; headword: string; homonym: number | null; hanja: string | null; pos: string | null; level: number | null; gloss: string }
-export interface StudyGrammar { form: string; pattern: string; summary_en: string | null; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null }
+export interface StudyGrammar { form: string; pattern: string; summary_en: string | null; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null; has_lesson: boolean }
+
+/** A reviewed grammar mini-lesson as the engine returns it (`body` is JSON text: see `lib/lesson.ts`). */
+export interface GrammarLessonRow { level: number; form: string; body: string }
 
 /** A quiz word (Games tab). `examples`: Korean example sentences for Fill the gap. */
 export interface GameWord { source: string; id: number; headword: string; hanja?: string | null; pos?: string | null; level?: number | null; gloss: string; examples: string[] }

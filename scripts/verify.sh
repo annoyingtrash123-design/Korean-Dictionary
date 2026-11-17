@@ -66,6 +66,8 @@ if [[ $FAST == 0 ]]; then
   [[ -f public/data/manifest.json ]] || { echo "no app/public/data — copy pipeline/out/site-data there first"; exit 1; }
   # sample curriculum rows for the home carousel's e2e (no-op once the pack has the real table)
   python3 ../scripts/e2e-curriculum.py public/data
+  # a few grammar lessons "as if approved" (e2e data only; the real ones stay drafts until reviewed)
+  python3 ../scripts/e2e-lessons.py public/data
   npx playwright test --reporter=line
 fi
 step "OK — shippable"

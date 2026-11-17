@@ -33,6 +33,7 @@ export function createEngine(): Engine {
     similarWords: (source, id, limit) => e().similarWords(source, id, limit),
     sentences: (text, limit) => e().sentences(text, limit),
     grammarList: () => e().grammarList(),
+    grammarLessons: (source, id) => e().grammarLessons(source, id),
     gameWords: (level, limit) => e().gameWords(level, limit),
     gameWordsFor: (hws) => e().gameWordsFor(hws),
     chainCandidates: (starts, used, limit) => e().chainCandidates(starts, used, limit),

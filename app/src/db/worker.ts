@@ -76,6 +76,7 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async similarWords(s: string, id: number, l: number) { await ready; return engine.similarWords(s, id, l); },
   async sentences(t: string, l: number) { await ready; return engine.sentences(t, l); },
   async grammarList() { await ready; return engine.grammarList(); },
+  async grammarLessons(source: string, id: number) { await ready; return engine.grammarLessons(source, id); },
   async gameWords(l: number, n: number) { await ready; return engine.gameWords(l, n); },
   async gameWordsFor(h: string[]) { await ready; return engine.gameWordsFor(h); },
   async chainCandidates(s: string[], u: string[], n: number) { await ready; return engine.chainCandidates(s, u, n); },

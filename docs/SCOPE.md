@@ -134,7 +134,22 @@ CREATE TABLE topic (        -- Lists tab "Topics": krdict's semantic category of
   entry_id INTEGER NOT NULL, category TEXT NOT NULL   -- '인간 > 감각' (top level > sub-category)
 );
 CREATE INDEX topic_category ON topic(category, entry_id);
+CREATE TABLE grammar_lesson (  -- AI-written grammar mini-lessons; only lessons whose review.status is 'approved' are packed
+  level INTEGER NOT NULL,      -- curriculum level 1..6
+  form TEXT NOT NULL,          -- the curriculum row's own `form` ('-거들랑1': the digit tells homonym rows apart)
+  entry_id INTEGER, grammar_id INTEGER,   -- the row's links: the lesson shows on that entry's page
+  body TEXT NOT NULL           -- JSON: label, meaning_en, usage, examples[{ko,en,ctx}], compare[{pattern,difference,pair[2],entry?}],
+                               --       pitfalls[{note,wrong,right,en}], topik_tip?  (no review block)
+);
+CREATE INDEX grammar_lesson_entry ON grammar_lesson(entry_id);
 ```
+
+Grammar lessons are written in `pipeline/data/grammar_lessons/<level>.json` (one file per 급, one object per
+curriculum grammar row, keyed by the official form + level; `pipeline/src/grammar_lessons.rs` documents the
+schema and `pipeline/tests/grammar_lessons.rs` validates it). They start as `review: {status: "draft"}`; a
+separate `content-review` pass sets `approved` (with reviewer and date), and only then does the pipeline pack
+them (`grammar lessons: A approved of N drafted` in the build log). The entry page shows the lesson under the
+dictionary text, labelled AI-written; the grammar study lists mark rows that have one with a "Lesson" badge.
 
 ### Contract additions: older-text packs
 * `entries.hist INTEGER NOT NULL DEFAULT 0` (all packs): 1 = 옛말 / old word (stdict, opendict). Partial index `entries_hist(hist, hw_norm) WHERE hist = 1` in those packs.

@@ -68,6 +68,7 @@ export function grammarRow(g: StudyGrammar, level: number, i: number): ListRow {
     key: `g${level}:${i}`, title: g.form.replace(/(?<=[가-힣])\d+$/, ''), hanja: null, pos: null, level: null, gloss: g.summary_en ?? '',
     path: g.entry ? entryPath(g.entry.source, g.entry.id, g.pattern) : wordPath(g.pattern),
     item: { kind: 'grammar', pattern: g.pattern, summary: g.summary_en, level, ref: g.entry ? { source: g.entry.source, homonym: g.entry.homonym, pos: g.entry.pos } : null },
+    ...(g.has_lesson ? { lesson: true } : {}),
   };
 }
 

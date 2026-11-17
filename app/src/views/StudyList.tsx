@@ -72,6 +72,7 @@ function Row({ r, current }: { r: ListRow; current: boolean }) {
             {r.hanja && <Hanja text={r.hanja} />}
             <Pos pos={r.pos} />
             <LevelBadge level={r.level} />
+            {r.lesson && <span class="chip-lesson" title="Has a grammar mini-lesson">Lesson</span>}
           </div>
           <div class="row-gloss" title={r.gloss || undefined}>{r.gloss || <span class="muted">Korean definition only</span>}</div>
         </div>

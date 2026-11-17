@@ -253,6 +253,12 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::grammar_list(&s.all()).map_err(js_err)?))
         }
 
+        /// Reviewed grammar mini-lessons of a grammar entry (empty when it has none or the pack predates them).
+        #[wasm_bindgen(js_name = grammarLessons)]
+        pub async fn grammar_lessons(&self, source: String, id: f64) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::grammar_lessons(&s.all(), &source, id as i64).map_err(js_err)?))
+        }
+
         #[wasm_bindgen(js_name = wordOfDay)]
         pub async fn word_of_day(&self, date: String) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&search::word_of_day(&s.all(), &date).map_err(js_err)?))
