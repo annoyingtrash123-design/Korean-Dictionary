@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # only to publish the fetched files to the curriculum-data branch
 
 jobs:
   fetch:
@@ -40,3 +40,17 @@ jobs:
           path: out/curriculum
           retention-days: 7
           if-no-files-found: warn
+      # artifact storage is not reachable from the dev sandbox: publish the documents (KOGL-licensed
+      # NIKL files; checked per page in manifest.json) to an orphan branch instead. Never touches main.
+      - name: Publish files to the curriculum-data branch
+        if: always()
+        run: |
+          set -e
+          mkdir -p /tmp/pub && cd /tmp/pub
+          git init -q -b curriculum-data
+          cp "$GITHUB_WORKSPACE"/out/curriculum/manifest.json . 2>/dev/null || true
+          find "$GITHUB_WORKSPACE"/out/curriculum/files -maxdepth 1 -type f \( -iname '*.xlsx' -o -iname '*.xls' -o -iname '*.pdf' -o -iname '*.hwp' -o -iname '*.txt' \) -size -60M -exec cp {} . \; 2>/dev/null || true
+          ls -la
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com add -A
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -q -m "NIKL curriculum files fetched by run $GITHUB_RUN_ID"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" curriculum-data

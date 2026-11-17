@@ -218,6 +218,8 @@ def pick_filename(url, headers, body, index):
 
 # ---------------------------------------------------------------- network
 def fetch(url, limit):
+    # links on korean.go.kr carry raw Korean file names and spaces: percent-encode them (safe chars kept)
+    url = urllib.parse.quote(url, safe=":/?&=%#+;,@~!$'()*")
     """GET with retries. Returns dict(status, final_url, headers, body, error)."""
     res = {"status": None, "final_url": None, "headers": {}, "body": b"", "error": None}
     for attempt in range(RETRIES + 1):
