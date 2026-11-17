@@ -134,7 +134,21 @@ CREATE TABLE topic (        -- Lists tab "Topics": krdict's semantic category of
   entry_id INTEGER NOT NULL, category TEXT NOT NULL   -- '인간 > 감각' (top level > sub-category)
 );
 CREATE INDEX topic_category ON topic(category, entry_id);
+CREATE TABLE study_item (   -- Lists tab "Idioms & proverbs": 속담 / 성어 ranked by corpus frequency (pipeline/data/study_*.tsv)
+  list TEXT NOT NULL,       -- 'sokdam100' | 'sokdam_all' | 'seongeo100' | 'seongeo300'
+  rank INTEGER NOT NULL,    -- 1..N within the list
+  kind TEXT NOT NULL,       -- 'sokdam' | 'seongeo'
+  title TEXT NOT NULL,      -- the text as shown (no [variant] brackets, no hanja gloss)
+  entry_id INTEGER,         -- core entry id when pack = 'core'; NULL otherwise (other packs' ids are not stable)
+  pack TEXT NOT NULL,       -- 'core' (krdict) | 'stdict' | 'opendict': where the entry lives
+  ext_id TEXT NOT NULL, headword TEXT NOT NULL, hw_norm TEXT NOT NULL,   -- find it again in that pack: hw_norm + ext_id
+  gloss TEXT NOT NULL,      -- krdict English gloss, else the Korean definition (80 chars)
+  PRIMARY KEY (list, rank)
+) WITHOUT ROWID;
 ```
+`study_item` is filled after all three packs are built (most 성어 exist only in stdict). The engine opens the
+entry when the user has that pack installed and otherwise searches for the title; a core pack without the
+table simply has no "Idioms & proverbs" group.
 
 ### Contract additions: older-text packs
 * `entries.hist INTEGER NOT NULL DEFAULT 0` (all packs): 1 = 옛말 / old word (stdict, opendict). Partial index `entries_hist(hist, hw_norm) WHERE hist = 1` in those packs.

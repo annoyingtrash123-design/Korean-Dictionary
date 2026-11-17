@@ -112,6 +112,7 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .lvl { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; font-size: 11.5px; font-weight: 700; font-family: var(--font-ko); align-self: center; background: color-mix(in srgb, var(--accent) 9%, var(--bg)); color: var(--accent); }
 .lvl2 { background: color-mix(in srgb, var(--hanja) 9%, var(--bg)); color: var(--hanja); }
 .lvl3 { background: color-mix(in srgb, var(--hangul) 9%, var(--bg)); color: var(--hangul); }
+.kind-tag { align-self: center; padding: 1px 6px; border-radius: 4px; font: 600 11px/1.5 var(--font-ko); color: var(--muted); border: 1px solid var(--border); }
 
 .section-head { display: flex; align-items: center; justify-content: space-between; padding: 20px 16px 4px; }
 .section-head h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }

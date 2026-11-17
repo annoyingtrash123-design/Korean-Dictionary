@@ -4,6 +4,7 @@ import type { StudyGrammar, StudyOverview, StudyWord } from '../db/types';
 import type { ListRow, ListSummary } from './list-sources';
 import { entryPath, wordPath } from './router';
 import { curriculumHint, curriculumLabel } from './home-day';
+import { idiomId, idiomSummaries, parseIdiomId } from './study-idioms';
 
 export const STUDY_PREFIX = 'study:';
 export const LEVELS = [1, 2, 3, 4, 5, 6];
@@ -12,10 +13,12 @@ export const GROUP_VOCAB = 'Vocabulary by level';
 export const GROUP_GRAMMAR = 'Grammar by level';
 export const GROUP_TOPICS = 'Topics';
 
-export type StudyRef = { kind: 'vocab'; level: number } | { kind: 'grammar'; level: number } | { kind: 'topic'; category: string };
+export type StudyRef = { kind: 'vocab'; level: number } | { kind: 'grammar'; level: number } | { kind: 'topic'; category: string } | { kind: 'idiom'; list: string };
 
-export const studyId = (r: StudyRef): string => (r.kind === 'topic' ? `${STUDY_PREFIX}topic:${r.category}` : `${STUDY_PREFIX}${r.kind}:${r.level}`);
+export const studyId = (r: StudyRef): string => (r.kind === 'topic' ? `${STUDY_PREFIX}topic:${r.category}` : r.kind === 'idiom' ? idiomId(r.list) : `${STUDY_PREFIX}${r.kind}:${r.level}`);
 export function parseStudyId(id: string): StudyRef | undefined {
+  const list = parseIdiomId(id);
+  if (list) return { kind: 'idiom', list };
   const m = /^study:(vocab|grammar|topic):(.+)$/.exec(id);
   if (!m) return undefined;
   if (m[1] === 'topic') return { kind: 'topic', category: m[2] };
@@ -51,6 +54,7 @@ export function summariesOf(o: StudyOverview | null | undefined): ListSummary[] 
     out.push({ id, name: top, count: e.count, unit: 'word', group: GROUP_TOPICS, eyebrow: 'Topic' });
     for (const s of e.subs) out.push({ id: studyId({ kind: 'topic', category: s.category }), name: subOf(s.category), count: s.count, unit: 'word', group: GROUP_TOPICS, eyebrow: `Topic · ${top}`, parent: id, fullName: s.category });
   }
+  out.push(...idiomSummaries(o.idioms));
   return out;
 }
 

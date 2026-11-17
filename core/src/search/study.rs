@@ -30,6 +30,8 @@ pub struct StudyOverview {
     pub grammar: Vec<StudyCount>,
     /// Words per krdict category, sorted by category.
     pub topics: Vec<StudyTopic>,
+    /// Idioms & proverbs lists (`study_item`), in list order; see `study_idioms.rs`.
+    pub idioms: Vec<super::study_idioms::StudyIdiomList>,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -100,6 +102,7 @@ pub fn study_overview(packs: &[&PackDb]) -> Result<StudyOverview> {
             .map(|r| StudyTopic { category: r.string(0), count: r.int(1).unwrap_or(0) })
             .collect();
     }
+    o.idioms = super::study_idioms::idiom_lists(packs)?;
     Ok(o)
 }
 

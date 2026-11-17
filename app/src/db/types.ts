@@ -136,6 +136,7 @@ export interface Engine {
   studyWords(level: number, limit: number, offset: number): Promise<StudyWord[]>;
   studyGrammar(level: number): Promise<StudyGrammar[]>;
   studyTopicWords(category: string, byLevel: boolean, limit: number, offset: number): Promise<StudyWord[]>;
+  studyIdioms(list: string, limit: number, offset: number): Promise<StudyIdiom[]>;
   wordOfDay(date: string): Promise<ResultRow | null>;
   listTexts(): Promise<TextSummary[]>;
   getText(id: string): Promise<TextDoc | null>;
@@ -170,7 +171,10 @@ export interface HomeIdiom { source: Source; id: number; headword: string; homon
 export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idiom: HomeIdiom | null }
 
 /** Built-in study lists (Lists tab): see core/src/search/study.rs. Empty arrays when the pack lacks `curriculum` / `topic`. */
-export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[] }
+export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[]; idioms?: StudyIdiomList[] }
+/** Idioms & proverbs lists (`study_item`): absent on packs that predate them. */
+export interface StudyIdiomList { list: string; count: number }
+export interface StudyIdiom { rank: number; kind: 'sokdam' | 'seongeo'; title: string; headword: string; gloss: string; pack: string; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null }
 export interface StudyWord { source: Source; id: number; headword: string; homonym: number | null; hanja: string | null; pos: string | null; level: number | null; gloss: string }
 export interface StudyGrammar { form: string; pattern: string; summary_en: string | null; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null }
 

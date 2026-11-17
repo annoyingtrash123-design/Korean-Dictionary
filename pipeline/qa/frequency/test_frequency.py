@@ -12,6 +12,7 @@ sys.path.insert(0, HERE)
 import build_candidates as bc  # noqa: E402
 import count_corpus as cc  # noqa: E402
 import kdfreq as k  # noqa: E402
+import make_study_lists as ml  # noqa: E402
 
 
 def nfc(xs):
@@ -191,6 +192,48 @@ class Wiki(unittest.TestCase):
         xml = xml.encode("utf-8")
         pages = list(cc.wiki_pages(xml.splitlines(keepends=True)))
         self.assertEqual(pages, ["첫째 줄\n둘째 줄", "한줄"])
+
+
+class StudyLists(unittest.TestCase):
+    def rows(self, name):
+        return ml.read_tsv(os.path.join(HERE, name))
+
+    def test_display_drops_hanja_glosses(self):
+        self.assertEqual(ml.display("백문이 불여일견不如一見"), "백문이 불여일견")
+        self.assertEqual(ml.display("백문이 불여일견\uf967如一見"), "백문이 불여일견")
+        self.assertEqual(ml.display("누워서 떡 먹기"), "누워서 떡 먹기")
+
+    def test_near_duplicates_need_same_counts(self):
+        a = {"text": "고생을 사서 하다", "kowiki_full": "1", "kowiki_partial": "0"}
+        b = {"text": "고생을 사서 한다", "kowiki_full": "1", "kowiki_partial": "0"}
+        self.assertTrue(ml.near_duplicate(a, b))
+        b["kowiki_full"] = "2"
+        self.assertFalse(ml.near_duplicate(a, b))
+
+    def test_seongeo_review_is_complete_and_labelled(self):
+        rows = self.rows("seongeo_review.tsv")
+        self.assertGreaterEqual(len(rows), 500)
+        self.assertGreaterEqual(sum(r["status"] == "keep" for r in rows), 300)
+        for r in rows:
+            self.assertIn(r["status"], ("keep", "drop"))
+            self.assertEqual(r["by"], "ai-draft")
+            self.assertTrue(r["reason"].strip(), r)
+        status = {r["text"]: r["status"] for r in rows}
+        for t in ("국가대표", "돌연변이", "의사소통", "공작부인", "양성평등", "공동생활", "근친상간", "기회균등", "자기중심"):
+            self.assertEqual(status[t], "drop", t)
+        for t in ("우유부단", "설상가상", "십중팔구", "만장일치", "자급자족", "명실상부"):
+            self.assertEqual(status[t], "keep", t)
+
+    def test_sokdam_review_labels_every_changed_entry(self):
+        rows = self.rows("sokdam_review.tsv")
+        changed = [r for r in rows if r["decision"] != "keep"]
+        self.assertTrue(changed)
+        for r in rows:
+            self.assertEqual(r["by"], "ai-draft")
+            self.assertIn(r["decision"], ("keep", "title", "partial", "drop", "dup"))
+            self.assertTrue(r["reason"].strip(), r)
+        titles = {r["text"] for r in rows if r["decision"] == "title"}
+        self.assertTrue({"주먹이 운다", "지성이면 감천", "무자식 상팔자"} <= titles)
 
 
 if __name__ == "__main__":

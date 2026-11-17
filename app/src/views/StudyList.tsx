@@ -69,6 +69,7 @@ function Row({ r, current }: { r: ListRow; current: boolean }) {
         <div class="row-main">
           <div class="row-head">
             <span class="hangul hw" lang="ko">{r.title}</span>
+            {r.tag && <span class="kind-tag" lang="ko">{r.tag}</span>}
             {r.hanja && <Hanja text={r.hanja} />}
             <Pos pos={r.pos} />
             <LevelBadge level={r.level} />
