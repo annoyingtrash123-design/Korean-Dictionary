@@ -18,14 +18,14 @@
 # en            English translation. Always AI-written (en_ai).
 # Every AI-written field is listed in qa/curriculum/grammar_extra_review.md for an independent check;
 # nothing here counts as reviewed until that file says so.
-P	-노라면	connective ending	6	(예스러운 표현으로) ‘하다가 보면’의 뜻을 나타내는 연결 어미.	stdict:66723	A somewhat literary connective ending: "if you keep doing ..., (in time) ...". Attaches to a verb stem, to 있다/없다/계시다, or after -으시-.
-E	-노라면	열심히 사노라면 좋은 날도 있겠지.	stdict	If you keep living diligently, there will be good days too.
-E	-노라면	앞을 향해 계속 가노라면 오른쪽에 붉은 기와집이 나타날 것이다.	stdict	If you keep going straight ahead, a red-tiled house will appear on your right.
-P	-기에 따라	expression	5	앞에 오는 행위나 상태가 어떠한가에 따라 뒤에 오는 결과나 판단이 달라짐을 나타내는 표현.	ai	An expression meaning "depending on how (one) does something": the result after it changes with the way the verb before -기 is done. Often with 달라지다/다르다.	기에 따라서
-E	-기에 따라	이 옷은 입기에 따라 느낌이 많이 달라진다.	ai	How this outfit feels changes a lot depending on how you wear it.
-E	-기에 따라	공부는 마음먹기에 따라 얼마든지 즐거울 수 있다.	ai	Studying can be as enjoyable as you like, depending on how you set your mind.
+P	-노라면	connective ending	6	(예스러운 표현으로) ‘하다가 보면’의 뜻을 나타내는 연결 어미.	stdict:66723	An old-fashioned, literary-sounding connective ending meaning "if you keep doing ..., (in time) ..." (= -다가 보면). Attaches to a verb stem, to 있다/없다/계시다, or after -으시-.
+E	-노라면	열심히 사노라면 좋은 날도 있겠지.	stdict	If you keep living diligently, surely there will be good days too.
+E	-노라면	앞을 향해 계속 가노라면 오른쪽에 붉은 기와집이 나타날 것이다.	stdict	If you keep going straight ahead, a house with a red-tiled roof will come into view on your right.
+P	-기에 따라	expression	5	앞에 오는 말이 나타내는 행동을 어떻게 하는가에 따라 뒤에 오는 결과나 판단이 달라짐을 나타내는 표현.	ai	An expression meaning "depending on how (one) does something": what follows (a result or a judgement) changes with the way the action before -기 is done. Often with 달라지다/다르다, and in 보기에 따라서는 / 생각하기에 따라서는 "depending on how you look at it".	기에 따라서
+E	-기에 따라	이 옷은 입기에 따라 느낌이 많이 달라진다.	ai	The look of this outfit changes a lot depending on how you wear it.
+E	-기에 따라	공부는 마음먹기에 따라 얼마든지 즐거울 수 있다.	ai	Studying can be as enjoyable as you like, depending on your frame of mind.
 E	-기에 따라	같은 재료도 요리하기에 따라 전혀 다른 맛이 난다.	ai	Even the same ingredients taste completely different depending on how you cook them.
-P	-기에 앞서	expression	5	어떤 일을 하기 전에 먼저 다른 일을 함을 나타내는 표현.	ai	An expression meaning "before doing ...": what follows is done first, ahead of the action named before -기에. The 서 may be added (-기에 앞서서).	기에 앞서서
+P	-기에 앞서	expression	5	앞에 오는 말이 나타내는 행동을 하기 전에 뒤에 오는 말이 나타내는 행동을 먼저 함을 나타내는 표현.	ai	An expression meaning "before doing ...": what follows is done first, ahead of the action named before -기에. Formal: typical of announcements, speeches and writing. The 서 may be added (-기에 앞서서).	기에 앞서서
 E	-기에 앞서	회의를 시작하기에 앞서 자료를 나누어 드리겠습니다.	ai	Before we begin the meeting, I will hand out the materials.
 E	-기에 앞서	여행을 떠나기에 앞서 날씨부터 확인해 보세요.	ai	Before you set off on your trip, check the weather first.
 E	-기에 앞서	계약서에 서명하기에 앞서 내용을 꼼꼼히 읽어 보시기 바랍니다.	ai	Before signing the contract, please read its contents carefully.
