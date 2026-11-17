@@ -159,7 +159,7 @@ test('first run, search, lists, themes, offline use', async ({ page, context }) 
   await shot(page, 'dark-lists');
 
   // ---- reload, then offline: data, theme and lists persist ----
-  await page.goto('/');
+  await page.goto('/#/search');
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 30_000 });
@@ -179,7 +179,7 @@ test('interrupted download resumes per chunk', async ({ page }) => {
   await page.getByRole('button', { name: 'Download' }).click();
   await expect(page.getByRole('alert')).toBeVisible({ timeout: 120_000 });
   await page.getByRole('button', { name: 'Resume download' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 240_000 });
+  await expect(page.getByRole('navigation', { name: 'Main' })).toBeVisible({ timeout: 240_000 });
   expect(n).toBeGreaterThan(1);
 });
 

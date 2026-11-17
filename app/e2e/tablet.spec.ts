@@ -113,7 +113,7 @@ test('two-pane tablet layout', async ({ page }) => {
   await expect(sim.locator('a.chip').first()).toBeVisible();
   await page.waitForTimeout(300);
   await shot(page, 'light-entry-similar');
-  await page.goto('/#/');
+  await page.goto('/#/search');
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible();
 
   // results on the left

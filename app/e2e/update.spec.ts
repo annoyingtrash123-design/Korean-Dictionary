@@ -55,7 +55,7 @@ test('update keeps the old pack usable; corrupt download is rejected', async ({ 
   page.on('request', (r) => { if (r.url().includes('/data/manifest.json')) checks++; });
   await page.unroute('**/data/manifest.json*');
   await serveManifest(page, (m) => bump(m, '-z'));
-  await page.goto('/');
+  await page.goto('/#/search');
   await page.reload();
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible();
   await page.waitForTimeout(1500);

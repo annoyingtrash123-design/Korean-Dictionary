@@ -21,6 +21,6 @@ test('back closes the keyboard first, then goes back', async ({ page }) => {
   await expect(page.locator('a.row').first()).toBeVisible();
 
   await page.evaluate(() => history.back());           // keyboard closed: now Back navigates
-  await page.waitForURL((u) => !u.hash.includes('q='));
-  await expect(box).toHaveValue('');
+  await page.waitForURL((u) => !u.hash.includes('q='));   // back to where the search started (the Home tab)
+  await expect(box).toHaveCount(0);
 });

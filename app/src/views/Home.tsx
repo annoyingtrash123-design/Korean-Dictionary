@@ -16,7 +16,7 @@ export function HomeHeader() {
   }, []);
   return (
     <header class="topbar home-head">
-      <h1 class="home-title"><span lang="en">Today</span><span class="home-date">· {d}</span></h1>
+      <h1 class="home-title"><span lang="en">Today</span>{' '}<span class="home-date">· {d}</span></h1>
     </header>
   );
 }

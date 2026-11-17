@@ -15,7 +15,7 @@ test('games: tab order, six games, smart review, word chain', async ({ page }) =
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   await downloadAll(page);
-  await expect(page.locator('.tabbar .tab span')).toHaveText(['Search', 'Reader', 'Games', 'Lists', 'Settings']);
+  await expect(page.locator('.tabbar .tab span')).toHaveText(['Home', 'Search', 'Reader', 'Games', 'Lists', 'Settings']);
   await openGames(page);
   await expect(page.locator('.gm-card')).toHaveCount(6);
   await shot(page, 'games-home');
