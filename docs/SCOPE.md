@@ -120,6 +120,15 @@ CREATE TABLE grammar (
                             -- | 'Nominal/adnominal endings' | 'Expressions' | 'Affixes'
   level INTEGER, summary_en TEXT, sort INTEGER
 );
+CREATE TABLE curriculum (   -- NIKL standard curriculum 1-6급 (공공누리 제1유형), one row per list row
+  kind TEXT NOT NULL,       -- 'word' | 'grammar'
+  level INTEGER NOT NULL,   -- 1..6
+  entry_id INTEGER,         -- krdict entry (words) / the grammar row's entry (grammar); NULL = no confident match
+  grammar_id INTEGER,       -- grammar.id (kind 'grammar' only)
+  form TEXT NOT NULL,       -- as written in the list ('가격02', '-을 수 있다')
+  rank INTEGER NOT NULL     -- 전체 번호: the list's own order
+);
+CREATE INDEX curriculum_kind_level ON curriculum(kind, level);
 ```
 
 ### Contract additions: older-text packs
