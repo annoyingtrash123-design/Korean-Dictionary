@@ -120,7 +120,8 @@ export interface Engine {
   gameWordsFor(headwords: string[]): Promise<GameWord[]>;
   chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
   chainCheck(word: string): Promise<GameWord | null>;
-  home(day: number): Promise<HomeData>;
+  home(day: number, idiomPool: number[]): Promise<HomeData>;
+  homeIdiomSlice(lo: number, span: number): Promise<{ ids: number[]; next: number | null }>;
   wordOfDay(date: string): Promise<ResultRow | null>;
   listTexts(): Promise<TextSummary[]>;
   getText(id: string): Promise<TextDoc | null>;

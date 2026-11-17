@@ -1548,7 +1548,7 @@ mod tests;
 
 mod enko;
 mod home;
-pub use home::{home, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeWord};
+pub use home::{home, idiom_slice, Home, IdiomSlice, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeWord};
 pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;

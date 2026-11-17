@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { db } from '../db/client';
-import { useAsync } from '../lib/useAsync';
+import { logError } from '../lib/errlog';
+import type { HomeData } from '../db/types';
 import { dayNumber } from '../lib/home-day';
 import { IdiomCard, TodayCarousel } from '../components/TodayCarousel';
 import { history, clearHistory } from '../lib/history';
@@ -21,8 +22,21 @@ export function Home() {
     window.addEventListener('focus', f);
     return () => { document.removeEventListener('visibilitychange', f); window.removeEventListener('focus', f); };
   }, []);
-  const home = useAsync(() => db.home(day).catch(() => undefined), [day]);
-  const h = home.data;
+  const [h, setH] = useState<HomeData | undefined>();
+  useEffect(() => {
+    let live = true;
+    (async () => {
+      const cached = db.cachedIdiomPool();
+      const first = await db.home(day, cached ?? []);
+      if (!live) return;
+      setH(first);
+      if (cached) return;
+      // the idiom pool is found in the background (once per dictionary version): the cards show first
+      const pool = await db.idiomPool();
+      if (live) setH(await db.home(day, pool));
+    })().catch((e) => logError('home', e));
+    return () => { live = false; };
+  }, [day]);
   return (
     <div class="page">
       {h && <TodayCarousel words={h.words} grammar={h.grammar} />}
