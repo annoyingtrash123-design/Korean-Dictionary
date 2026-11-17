@@ -1,0 +1,11 @@
+{
+ "tokens": 48344284,
+ "syllables": 136389852,
+ "segments": 22846,
+ "name": "kowikisource",
+ "source": "https://dumps.wikimedia.org/kowikisource/latest/kowikisource-latest-pages-articles.xml.bz2",
+ "bytes_read": 149540223,
+ "seconds": 43,
+ "dedupe": false,
+ "workers": 4
+}

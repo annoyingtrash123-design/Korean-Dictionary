@@ -1,0 +1,11 @@
+{
+ "tokens": 5205855,
+ "syllables": 18856595,
+ "segments": 2170989,
+ "name": "opensubtitles",
+ "source": "https://object.pouta.csc.fi/OPUS-OpenSubtitles/v2018/mono/ko.txt.gz",
+ "bytes_read": 27388475,
+ "seconds": 7,
+ "dedupe": true,
+ "workers": 4
+}
