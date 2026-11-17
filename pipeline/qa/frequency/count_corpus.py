@@ -63,18 +63,23 @@ class SlowMatcher:
 class FastMatcher:
     def __init__(self):
         self.a = ahocorasick.Automaton()
+        self.n = 0  # pyahocorasick refuses to build or search an automaton with no keys
 
     def add(self, key, value):
         cur = self.a.get(key, None)
         if cur is None:
             self.a.add_word(key, (key, [value]))
+            self.n += 1
         else:
             cur[1].append(value)
 
     def finish(self):
-        self.a.make_automaton()
+        if self.n:
+            self.a.make_automaton()
 
     def iter(self, text):
+        if not self.n:
+            return
         for end, (key, vals) in self.a.iter(text):
             yield end, key, vals
 
