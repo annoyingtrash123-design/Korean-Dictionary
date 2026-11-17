@@ -85,6 +85,10 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async getText(id: string) { await ready; return engine.getText(id); },
   async diagnostics() { await ready; return engine.diagnostics(); },
   async home(day: number) { await ready; return engine.home(day); },
+  async studyOverview() { await ready; return engine.studyOverview(); },
+  async studyWords(level: number, limit: number, offset: number) { await ready; return engine.studyWords(level, limit, offset); },
+  async studyGrammar(level: number) { await ready; return engine.studyGrammar(level); },
+  async studyTopicWords(category: string, byLevel: boolean, limit: number, offset: number) { await ready; return engine.studyTopicWords(category, byLevel, limit, offset); },
   async wordOfDay(d: string) { await ready; return engine.wordOfDay(d); },
 };
 

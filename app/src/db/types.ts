@@ -132,6 +132,10 @@ export interface Engine {
   chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
   chainCheck(word: string): Promise<GameWord | null>;
   home(day: number): Promise<HomeData>;
+  studyOverview(): Promise<StudyOverview>;
+  studyWords(level: number, limit: number, offset: number): Promise<StudyWord[]>;
+  studyGrammar(level: number): Promise<StudyGrammar[]>;
+  studyTopicWords(category: string, byLevel: boolean, limit: number, offset: number): Promise<StudyWord[]>;
   wordOfDay(date: string): Promise<ResultRow | null>;
   listTexts(): Promise<TextSummary[]>;
   getText(id: string): Promise<TextDoc | null>;
@@ -163,6 +167,11 @@ export interface HomeWord { source: Source; id: number; headword: string; homony
 export interface HomeGrammar { id: number; pattern: string; level: number; summary_en: string | null; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null; examples: HomeExample[] }
 export interface HomeIdiom { source: Source; id: number; headword: string; homonym: number | null; kind: 'idiom' | 'proverb'; gloss: string; ko_def: string | null; example: HomeExample }
 export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idiom: HomeIdiom | null }
+
+/** Built-in study lists (Lists tab): see core/src/search/study.rs. Empty arrays when the pack lacks `curriculum` / `topic`. */
+export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[] }
+export interface StudyWord { source: Source; id: number; headword: string; homonym: number | null; hanja: string | null; pos: string | null; level: number | null; gloss: string }
+export interface StudyGrammar { form: string; pattern: string; summary_en: string | null; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null }
 
 /** A quiz word (Games tab). `examples`: Korean example sentences for Fill the gap. */
 export interface GameWord { source: string; id: number; headword: string; hanja?: string | null; pos?: string | null; level?: number | null; gloss: string; examples: string[] }

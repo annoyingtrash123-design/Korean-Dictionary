@@ -195,6 +195,23 @@ export const setLastUsed = (id: string) => mutate((d) => (d.lastUsed === id ? d 
 /** Add to a list (newest first); already there: unchanged. */
 export const addToList = (id: string, input: ItemInput) =>
   mutate((d) => ({ ...d, lists: d.lists.map((l) => (l.id !== id || inList(l, itemKey(input)) ? l : touch(l, [makeItem(input), ...l.items]))) }));
+/** Add many items at once (a built-in list's "Add all"): they go to the top in the order given; the ones already there stay where they are. Returns how many were new. */
+export async function addManyToList(id: string, inputs: ItemInput[]): Promise<number> {
+  let added = 0;
+  await mutate((d) => ({ ...d, lists: d.lists.map((l) => {
+    if (l.id !== id) return l;
+    const have = new Set(l.items.map((i) => i.key));
+    const fresh: ListItem[] = [];
+    const now = Date.now();
+    for (const i of inputs) {
+      const k = itemKey(i);
+      if (!have.has(k)) { have.add(k); fresh.push(makeItem(i, now)); }
+    }
+    added = fresh.length;
+    return fresh.length ? touch(l, [...fresh, ...l.items]) : l;
+  }) }));
+  return added;
+}
 export const removeFromList = (id: string, key: string) =>
   mutate((d) => ({ ...d, lists: d.lists.map((l) => (l.id === id && inList(l, key) ? touch(l, l.items.filter((i) => i.key !== key)) : l)) }));
 /** Put a removed item back where it was (Undo). */

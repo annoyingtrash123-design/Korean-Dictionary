@@ -130,6 +130,10 @@ CREATE TABLE curriculum (   -- NIKL standard curriculum 1-6급 (공공누리 제
   rank INTEGER NOT NULL     -- 전체 번호: the list's own order
 );
 CREATE INDEX curriculum_kind_level ON curriculum(kind, level);
+CREATE TABLE topic (        -- Lists tab "Topics": krdict's semantic category of each word entry
+  entry_id INTEGER NOT NULL, category TEXT NOT NULL   -- '인간 > 감각' (top level > sub-category)
+);
+CREATE INDEX topic_category ON topic(category, entry_id);
 ```
 
 ### Contract additions: older-text packs

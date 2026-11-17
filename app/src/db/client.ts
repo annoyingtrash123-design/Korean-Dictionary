@@ -1,7 +1,7 @@
 import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GameWord, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, GameWord, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, StudyGrammar, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -136,6 +136,11 @@ export const db = {
   grammarList: (): Promise<GrammarRow[]> => (grammarRows ??= call<GrammarRow[]>('grammarList').catch((e) => { grammarRows = undefined; throw e; })),
   /** Home page picks for a day number (see `lib/home-day.ts`). */
   home: (day: number) => call<HomeData>('home', day),
+  /** Study lists (see `lib/study-lists.ts`): counts, then pages of words / the grammar of a level. */
+  studyOverview: () => call<StudyOverview>('studyOverview'),
+  studyWords: (level: number, limit: number, offset: number) => call<StudyWord[]>('studyWords', level, limit, offset),
+  studyGrammar: (level: number) => call<StudyGrammar[]>('studyGrammar', level),
+  studyTopicWords: (category: string, byLevel: boolean, limit: number, offset: number) => call<StudyWord[]>('studyTopicWords', category, byLevel, limit, offset),
   listTexts: (): Promise<TextSummary[]> => (textList ??= call<TextSummary[]>('listTexts').catch((e) => { textList = undefined; throw e; })),
   getText: (id: string): Promise<TextDoc | null> => {
     let p = textDocs.get(id);
