@@ -90,6 +90,13 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await next.click();
     await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
     await expect(prev).toBeEnabled();
+    // the 성어 page: from "All learner 성어", four syllables, the whole entry inside
+    const sg = page.locator('.today-card[data-kind=seongeo]');
+    await expect(sg).toBeInViewport({ ratio: 0.9 });
+    expect([...(await sg.locator('.card-hw .hangul').innerText()).trim()]).toHaveLength(4);
+    await expect(sg.locator('.entry-inline .sense').first()).toBeVisible();
+    await page.waitForTimeout(400);
+    await shot(page, 'home-phone-seongeo');
     // a word page: badge, headword, gloss, then the whole entry (every dictionary, all senses)
     await dots.nth(2).click();
     await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
@@ -118,7 +125,17 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await dots.nth(5).click();
     await expect(dots.nth(5)).toHaveAttribute('aria-current', 'true');
     await expect(page.locator('.today-card[data-kind=grammar]').first()).toBeInViewport({ ratio: 0.9 });
-    await expect(page.locator('.today-card[data-kind=grammar]').first().locator('.card-gloss')).not.toBeEmpty();
+    const g = page.locator('.today-card[data-kind=grammar]').first();
+    await expect(g.locator('.card-gloss')).not.toBeEmpty();
+    // a grammar card carries the grammar lesson, as the entry page does; scrolled to it the header stays
+    const lesson = g.getByTestId('lesson').first();
+    await expect(lesson).toBeAttached();
+    await g.locator('.card-body').evaluate((b) => {
+      const l = b.querySelector('[data-testid=lesson]') as HTMLElement;
+      b.scrollTo(0, l.getBoundingClientRect().top - b.getBoundingClientRect().top + b.scrollTop - 12);
+    });
+    await expect(lesson).toBeInViewport();
+    await expect(g.locator('.card-head')).toBeInViewport();
     await page.waitForTimeout(600);
     await shot(page, 'home-phone-grammar');
     await dots.nth(6).click();
