@@ -766,5 +766,697 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-네2",
+  "level": 5,
+  "label": "noticing something, exclamation",
+  "meaning_en": "A sentence-final ending that voices something the speaker has just noticed or realised, often with a note of surprise or admiration: “oh, look, so it is…”. The polite form is “-네요”.",
+  "usage": "It attaches to verb and adjective stems, to “이다” (“-이네”), and after “-었-” and “-겠-”; the verb needs no “-는-”. The speaker must have just noticed the fact, so it is odd for things the speaker has long known, such as one's own name or job. It is informal; the polite form is “-네요”. A different “-네” is the old-fashioned plain statement of the “하게” style (“먼저 가네”).",
+  "examples": [
+   {
+    "ko": "와, 눈이 많이 왔네!",
+    "en": "Wow, it snowed a lot!",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "벌써 열 시네. 이제 자야겠다.",
+    "en": "It's already ten o'clock. I'd better get to bed.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "생각보다 훨씬 어렵네.",
+    "en": "It's harder than I thought.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어, 비가 그쳤네. 우산 안 써도 되겠다.",
+    "en": "Oh, the rain has stopped. I don't need the umbrella.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "글씨를 참 잘 쓰시네요.",
+    "en": "You write so beautifully.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-더라",
+    "difference": "“-네” voices what the speaker has just noticed; “-더라” relays something noticed earlier.",
+    "pair": [
+     {
+      "ko": "이 영화 재미있네.",
+      "en": "This movie is good (I'm finding)."
+     },
+     {
+      "ko": "이 영화 재미있더라.",
+      "en": "That movie was good (I found)."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A fact the speaker already knows well cannot be voiced as a fresh discovery.",
+    "wrong": "저는 학생이네요.",
+    "right": "저는 학생이에요.",
+    "en": "I am a student."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-다니1",
+  "level": 5,
+  "label": "surprise, how could it be",
+  "meaning_en": "A sentence-final ending for reacting to something unexpected, with surprise, disbelief or admiration: “to think that…, you mean…?!”. It often repeats back what was just said or seen.",
+  "usage": "It attaches to verb and adjective stems (“가다니”, “예쁘다니”), after “-었-” and “-겠-”, and to “이다” as “-이라니”. The imperative echo is “-으라니”. The ending alone is informal (“반말”); adding “요” gives the polite “-다니요”. The clause that follows (“믿을 수 없다”, “말도 안 돼”) often states the reaction. It can express admiration as well as shock.",
+  "examples": [
+   {
+    "ko": "벌써 가다니? 아직 해도 안 졌는데.",
+    "en": "You're leaving already? The sun hasn't even set.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이렇게 큰 선물을 주시다니 정말 감사합니다.",
+    "en": "To think you would give me such a big present—thank you so much.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람이 그런 말을 하다니 믿을 수가 없어.",
+    "en": "I can't believe that person would say such a thing.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 어려운 시험에 한 번에 붙다니 정말 대단하다.",
+    "en": "To pass such a hard exam on the first try is truly impressive.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일주일 만에 책을 열 권이나 읽었다니요?",
+    "en": "You read as many as ten books in one week?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-다고?",
+    "difference": "“-다고?” asks the listener to confirm what was said; “-다니” voices the speaker's own astonishment at the fact.",
+    "pair": [
+     {
+      "ko": "벌써 간다고?",
+      "en": "Did you say you're leaving already?"
+     },
+     {
+      "ko": "벌써 가다니?",
+      "en": "Leaving already?!"
+     }
+    ]
+   },
+   {
+    "pattern": "-네",
+    "difference": "“-네” just states a new discovery; “-다니” adds disbelief or shock.",
+    "pair": [
+     {
+      "ko": "벌써 가네.",
+      "en": "Oh, you're leaving already."
+     },
+     {
+      "ko": "벌써 가다니.",
+      "en": "To think you're leaving already."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The informal ending needs “요” when speaking to someone you address politely.",
+    "wrong": "교수님, 벌써 가시다니?",
+    "right": "교수님, 벌써 가시다니요?",
+    "en": "Professor, you're leaving already?"
+   },
+   {
+    "note": "After a noun, “이다” appears as “-이라니”, not “-이다니”.",
+    "wrong": "저분이 선생님이다니 믿기지 않아요.",
+    "right": "저분이 선생님이라니 믿기지 않아요.",
+    "en": "I can't believe that person is a teacher."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "으려고2",
+  "level": 5,
+  "label": "doubting question: going to...?",
+  "meaning_en": "A sentence-final ending that questions someone's plan or action with doubt or disapproval: “are you really going to…?”. It is a rhetorical, often critical question with rising intonation.",
+  "usage": "It attaches to verb stems as “-으려고”, or “-려고” after a vowel or ㄹ (“가려고”, “먹으려고”). It is informal (“반말”), and the polite form is “-려고요”. It usually reacts to what the listener is doing or about to do, and it can express surprise at an unreasonable plan. The same “-려고요” can also, in a reply, state a plan (“은행에 가려고요”), which is a different use.",
+  "examples": [
+   {
+    "ko": "벌써 집에 가려고? 아직 일곱 시밖에 안 됐는데.",
+    "en": "You're going home already? It's only seven o'clock.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이렇게 많은 걸 혼자 다 먹으려고?",
+    "en": "You're going to eat all of this by yourself?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그걸로 뭘 하려고?",
+    "en": "What are you going to do with that?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 옷을 입고 나가려고요? 밖이 영하인데요.",
+    "en": "You're going out in that? It's below zero outside.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험 전날에 놀러 가려고?",
+    "en": "You're going out to have fun the day before the exam?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "The connective “-으려고” gives a purpose inside a longer sentence; the sentence-final one doubts a plan.",
+    "pair": [
+     {
+      "ko": "일찍 가려고 서둘렀어요.",
+      "en": "I hurried in order to leave early."
+     },
+     {
+      "ko": "일찍 가려고?",
+      "en": "You're going to leave early?"
+     }
+    ]
+   },
+   {
+    "pattern": "-을 거야?",
+    "difference": "“-을 거야?” just asks about a plan; “-으려고?” also questions whether it is wise.",
+    "pair": [
+     {
+      "ko": "너 혼자 다 먹을 거야?",
+      "en": "Are you going to eat it all by yourself?"
+     },
+     {
+      "ko": "너 혼자 다 먹으려고?",
+      "en": "You're going to eat it all by yourself?!"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel or ㄹ the ending is “-려고”, with no “으”.",
+    "wrong": "벌써 가으려고?",
+    "right": "벌써 가려고?",
+    "en": "You're leaving already?"
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-거라",
+  "level": 5,
+  "label": "command to a younger person",
+  "meaning_en": "A command ending of the lowest speech level, used by an elder or someone in authority to a child or a younger person. It sounds affectionate, a little old-fashioned, and is common in fiction and in blessings.",
+  "usage": "It attaches to verb stems and gives the command that “-아라/-어라” also gives; it is especially common after “가다” and “자다”, “있다”, “먹다”. A verb in ㄹ drops it (“살거라”). “오다” takes “-너라” (“오너라”), and with “하다” the command is “해라” or “하여라”. It is used by someone senior to someone junior, and it cannot be used toward a superior.",
+  "examples": [
+   {
+    "ko": "날이 저물겠다. 어서 집에 가거라.",
+    "en": "It's getting dark. Hurry on home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 피곤할 테니 일찍 자거라.",
+    "en": "You must be tired today, so go to bed early.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다음에 또 보자. 잘 가거라.",
+    "en": "See you next time. Take care on your way.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어머니는 “밥 굶지 말고 꼭 챙겨 먹거라.” 하고 말씀하셨다.",
+    "en": "My mother said, “Don't skip meals; be sure to eat properly.”",
+    "ctx": "essay"
+   },
+   {
+    "ko": "할머니는 손주에게 “정직하게 살거라.” 하고 당부하셨다.",
+    "en": "Grandmother urged her grandchild, “Live honestly.”",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-아라/-어라",
+    "difference": "“-아라/-어라” is the ordinary plain command; “-거라” is warmer and older-sounding.",
+    "pair": [
+     {
+      "ko": "일찍 자거라.",
+      "en": "Go to bed early (said warmly by an elder)."
+     },
+     {
+      "ko": "일찍 자라.",
+      "en": "Go to bed early."
+     }
+    ]
+   },
+   {
+    "pattern": "-으렴",
+    "difference": "“-으렴” is a gentle, coaxing command; “-거라” is a firmer one.",
+    "pair": [
+     {
+      "ko": "많이 먹거라.",
+      "en": "Eat a lot."
+     },
+     {
+      "ko": "많이 먹으렴.",
+      "en": "Eat plenty, dear."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "For “오다” the standard command is “오너라”.",
+    "wrong": "이리 오거라.",
+    "right": "이리 오너라.",
+    "en": "Come here."
+   },
+   {
+    "note": "It is for speaking down; it cannot be used to a superior.",
+    "wrong": "선생님, 먼저 가거라.",
+    "right": "선생님, 먼저 가세요.",
+    "en": "Teacher, please go ahead."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고말고",
+  "level": 5,
+  "label": "of course! emphatic agreement",
+  "meaning_en": "A sentence-final ending for strong agreement or confirmation: “of course, certainly, definitely”. It answers a question or backs up what the other person said.",
+  "usage": "It attaches to verb and adjective stems, to “이다” (“-이고말고”), and after “-었-”; the polite form is “-고말고요”. It is written without a space. It answers a question with a firm yes, so the answer repeats the verb or adjective of the question (“가고말고”). It is warm and emphatic, a little old-fashioned, so it is not used for a refusal.",
+  "examples": [
+   {
+    "ko": "“내일 모임에 올 거지?” “가고말고. 내가 빠질 수 있나.”",
+    "en": "“You'll come to the meeting tomorrow, right?” “Of course I will. How could I miss it?”",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "힘들고말고. 하루 종일 서서 일했으니까.",
+    "en": "Of course it's hard. I worked standing up all day.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그분은 정말 훌륭한 선생님이고말고요.",
+    "en": "That person is absolutely a wonderful teacher.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "“도와줄 수 있어?” “도와주고말고. 걱정하지 마.”",
+    "en": "“Can you help me?” “Of course I can. Don't worry.”",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이해하고말고요. 얼마나 힘드셨겠어요.",
+    "en": "Of course I understand. How hard it must have been for you.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지요",
+    "difference": "“-지요” agrees mildly; “-고말고요” agrees with emphasis.",
+    "pair": [
+     {
+      "ko": "좋고말고요.",
+      "en": "Of course it's good!"
+     },
+     {
+      "ko": "좋지요.",
+      "en": "Yes, it's good."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 말다",
+    "difference": "“-고말고” is an emphatic yes; “-고 말다” says that something ends up happening.",
+    "pair": [
+     {
+      "ko": "나는 이기고말고.",
+      "en": "Of course I'll win."
+     },
+     {
+      "ko": "나는 결국 이기고 말았다.",
+      "en": "In the end I won."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It is written together, with no space.",
+    "wrong": "가고 말고요.",
+    "right": "가고말고요.",
+    "en": "Of course I will go."
+   },
+   {
+    "note": "After a noun it needs “이다”.",
+    "wrong": "그분은 선생님고말고요.",
+    "right": "그분은 선생님이고말고요.",
+    "en": "That person is certainly a teacher."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는가1",
+  "level": 5,
+  "label": "question: do/is...?",
+  "meaning_en": "A sentence-final ending for a plain question about a present fact, used in the old “하게” style and, above all, in writing for self-questions and rhetorical questions: “is it so? what is it?”.",
+  "usage": "It attaches to verb stems as “-는가”, to adjective stems as “-ㄴ가/-은가” (“큰가”, “좋은가”), to “이다” as “인가”, and “있다/없다” as “있는가”. Past is “-었는가” and future “-겠는가”. In speech it is the “하게” style of an elder to someone younger or equal, and in print it asks the reader an essay question (“…란 무엇인가?”). It is not polite to a superior.",
+  "examples": [
+   {
+    "ko": "자네 요즘 어떻게 지내는가?",
+    "en": "How have you been these days, my friend?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리는 무엇을 위해 일하는가?",
+    "en": "What do we work for?",
+    "ctx": "essay"
+   },
+   {
+    "ko": "진정한 행복이란 무엇인가?",
+    "en": "What is true happiness?",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 문제의 책임은 과연 누구에게 있는가?",
+    "en": "Who really bears the responsibility for this problem?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "자네 몸은 좀 괜찮은가?",
+    "en": "Are you feeling a bit better?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-나요",
+    "difference": "“-나요” is the polite question of everyday speech; “-는가” is plain or literary.",
+    "pair": [
+     {
+      "ko": "이 길이 맞는가?",
+      "en": "Is this the right way?"
+     },
+     {
+      "ko": "이 길이 맞나요?",
+      "en": "Is this the right way?"
+     }
+    ]
+   },
+   {
+    "pattern": "-니",
+    "difference": "“-니” is a friendly plain question to a child or a close friend; “-는가” is the “하게” style or a written question.",
+    "pair": [
+     {
+      "ko": "밥은 먹었는가?",
+      "en": "Have you eaten?"
+     },
+     {
+      "ko": "밥은 먹었니?",
+      "en": "Have you eaten?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-은가/-ㄴ가”, not “-는가”.",
+    "wrong": "날씨가 좋는가?",
+    "right": "날씨가 좋은가?",
+    "en": "Is the weather good?"
+   },
+   {
+    "note": "It is not a polite question to a teacher or a stranger.",
+    "wrong": "선생님, 식사하셨는가?",
+    "right": "선생님, 식사하셨어요?",
+    "en": "Teacher, have you eaten?"
+   }
+  ],
+  "topik_tip": "In 읽기 essays a title or opening such as “…란 무엇인가?” is a question the rest of the passage answers.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는걸",
+  "level": 5,
+  "label": "oh, I see; but actually",
+  "meaning_en": "A sentence-final ending with two uses. It voices a fact the speaker has just noticed, with admiration or surprise (“oh, it's quite…”), or it gives a soft objection or explanation, as in “but I actually…”. The polite form is “-는걸요”.",
+  "usage": "It attaches to verb stems as “-는걸”, to adjective stems as “-ㄴ걸/-은걸”, to “이다” as “-인걸”, and after “-었-” and “-겠-”. The polite form adds “요”. In the first use it is a discovery, much like “-네”; in the second it gently contradicts or explains (“나는 몰랐는걸”). Without “요” it is informal and not for elders.",
+  "examples": [
+   {
+    "ko": "와, 이 영화 정말 재미있는걸.",
+    "en": "Wow, this movie is really good.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "생각보다 길이 많이 막히는걸.",
+    "en": "The roads are more jammed than I thought.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "“왜 안 나왔어?” “나는 그 약속을 몰랐는걸.”",
+    "en": "“Why didn't you show up?” “But I didn't know about that appointment.”",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "벌써 열두 시인걸요. 이제 그만 가야겠어요.",
+    "en": "It's already twelve o'clock. I really should go now.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람 노래를 진짜 잘하는걸요.",
+    "en": "That person really sings well!",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을걸",
+    "difference": "“-는걸” reacts to a fact in front of you; “-을걸” is a guess about what is likely.",
+    "pair": [
+     {
+      "ko": "눈이 오는걸.",
+      "en": "Oh, it's snowing!"
+     },
+     {
+      "ko": "눈이 올걸.",
+      "en": "It will probably snow."
+     }
+    ]
+   },
+   {
+    "pattern": "-거든",
+    "difference": "“-거든” offers a reason as background; “-는걸” gently objects or explains with a hint of surprise.",
+    "pair": [
+     {
+      "ko": "나는 그 약속을 몰랐거든.",
+      "en": "I didn't know about that appointment, you see."
+     },
+     {
+      "ko": "나는 그 약속을 몰랐는걸.",
+      "en": "But I didn't know about that appointment."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ걸/-은걸”.",
+    "wrong": "날씨가 정말 좋는걸.",
+    "right": "날씨가 정말 좋은걸.",
+    "en": "The weather is really good."
+   },
+   {
+    "note": "Without “요” it is informal and does not suit an elder.",
+    "wrong": "선생님, 정말 멋있으신걸.",
+    "right": "선생님, 정말 멋있으신걸요.",
+    "en": "Teacher, you look really good."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-데",
+  "level": 5,
+  "label": "I saw, and it was...",
+  "meaning_en": "A sentence-final ending for telling what the speaker personally saw, heard or tried: “(when I saw it) it was…”. The polite form is “-데요”.",
+  "usage": "It attaches to verb and adjective stems and after “-었-”; the polite form is “-데요”. The speaker must have experienced the fact directly, and often it is told with a note of discovery. It is not the “-대” that reports what someone said: “비가 오데” is what I saw, “비가 온대” is what I heard. It is also used as a question, “-데?”, which asks what the listener experienced.",
+  "examples": [
+   {
+    "ko": "그 가수 노래를 직접 들어 보니 정말 잘하데.",
+    "en": "I heard that singer live, and they really sing well.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 집 음식은 먹어 보니 생각보다 짜데.",
+    "en": "I tried the food there, and it was saltier than I thought.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "거기 가 보니까 벌써 벚꽃이 피었데요.",
+    "en": "I went there, and the cherry blossoms were already out.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제 그 가게에 가 봤는데 사람이 정말 많데요.",
+    "en": "I went to that shop yesterday, and it was really crowded.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람 만나 보니 뭐라고 하데?",
+    "en": "You met that person; what did they say?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-대",
+    "difference": "“-데” is what I experienced myself; “-대” is what I heard from someone else.",
+    "pair": [
+     {
+      "ko": "거기 가 보니 비가 오데.",
+      "en": "I went there, and it was raining."
+     },
+     {
+      "ko": "거기는 비가 온대.",
+      "en": "They say it is raining there."
+     }
+    ]
+   },
+   {
+    "pattern": "-더라고",
+    "difference": "“-더라고” is the more common colloquial way to report a discovery; “-데(요)” is softer and less frequent.",
+    "pair": [
+     {
+      "ko": "그 집 음식이 짜데요.",
+      "en": "The food there was salty."
+     },
+     {
+      "ko": "그 집 음식이 짜더라고요.",
+      "en": "The food there was salty, I found."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Do not use “-데” for what someone merely told you; that is “-대”.",
+    "wrong": "친구 말로는 내일 비가 오데.",
+    "right": "친구 말로는 내일 비가 온대.",
+    "en": "According to a friend, it will rain tomorrow."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-더라고",
+  "level": 5,
+  "label": "I found that; telling what I saw",
+  "meaning_en": "A sentence-final expression for telling the listener something the speaker found out through an earlier experience: “I found that…, it turned out that…”. The polite form is “-더라고요”.",
+  "usage": "It attaches to verb and adjective stems, to “이다” (“이더라고”), and after “-었-”. It reports what the speaker saw, heard or felt in the past, mostly about someone else or a thing; for the speaker's own deliberate actions it is odd. It is conversational, and the polite form adds “요”. The adverbs “알고 보니” and “가 보니까” often go with it.",
+  "examples": [
+   {
+    "ko": "어제 가 보니까 그 가게 문을 닫았더라고.",
+    "en": "I went by yesterday, and that shop was closed.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아까 보니까 지수가 도서관에서 공부하고 있더라고요.",
+    "en": "I saw earlier that Jisu was studying in the library.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국 겨울이 생각보다 훨씬 춥더라고.",
+    "en": "Korean winters turned out to be much colder than I thought.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 책을 읽어 봤는데 내용이 어렵더라고요.",
+    "en": "I tried reading that book, and the content was hard.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "알고 보니 그 친구가 우리 학교 선배더라고.",
+    "en": "It turned out that friend was a senior at our school.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-더라",
+    "difference": "“-더라” is a flat report to oneself or a friend; “-더라고” sounds like telling the listener, and it can take “요”.",
+    "pair": [
+     {
+      "ko": "그 영화 정말 재미있더라.",
+      "en": "That movie was really good."
+     },
+     {
+      "ko": "그 영화 정말 재미있더라고.",
+      "en": "That movie was really good, I'm telling you."
+     }
+    ]
+   },
+   {
+    "pattern": "-던데",
+    "difference": "“-더라고” just reports; “-던데” adds background and invites a response.",
+    "pair": [
+     {
+      "ko": "그 영화 재미있더라고.",
+      "en": "That movie was good."
+     },
+     {
+      "ko": "그 영화 재미있던데.",
+      "en": "That movie was good, you know (so you might watch it)."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It reports something noticed, not something the speaker decided to do.",
+    "wrong": "어제 나는 영화를 보더라고.",
+    "right": "어제 나는 영화를 봤어.",
+    "en": "I watched a movie yesterday."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
  }
 ]
