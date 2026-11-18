@@ -2011,7 +2011,9 @@
   ],
   "topik_tip": "A reason followed by a command or “-ㅂ시다/-자” takes “-으니까”; a plain cause takes “-어서”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2093,7 +2095,9 @@
   ],
   "topik_tip": "The frame is “N을/를 V-러 가다/오다”: a purpose plus a motion verb.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2101,7 +2105,7 @@
   "level": 1,
   "label": "so, and then (cause, sequence)",
   "meaning_en": "A connective ending for a cause or reason (“비가 와서 못 갔어요”), for an action followed by another that depends on it (“서울에 가서 친구를 만났어요”), and for means (“걸어서 가다”).",
-  "usage": "It attaches to stems with “-아/어”: “오다 → 와서”, “먹다 → 먹어서”, “하다 → 해서”, “예쁘다 → 예뻐서”, “춥다 → 추워서”, “듣다 → 들어서”, “모르다 → 몰라서”, “학생이다 → 학생이어서”. It takes no tense of its own (“늦었어서” is wrong) and the main clause cannot be a command or a suggestion. For sequence it is typical with “가다, 오다, 앉다, 일어나다, 만들다” (“앉아서 이야기하다”). Fixed phrases: “늦어서 죄송합니다, 감사해서”.",
+  "usage": "It attaches to stems with “-아/어”: “오다 → 와서”, “먹다 → 먹어서”, “하다 → 해서”, “예쁘다 → 예뻐서”, “춥다 → 추워서”, “듣다 → 들어서”, “모르다 → 몰라서”, “학생이다 → 학생이어서”. It takes no tense of its own (“늦었어서” is wrong) and the main clause cannot be a command or a suggestion. For sequence it is typical with “가다, 오다, 앉다, 일어나다, 만들다” (“앉아서 이야기하다”). Fixed phrases: “늦어서 죄송합니다, 만나서 반갑습니다”.",
   "examples": [
    {
     "ko": "비가 많이 와서 집에 있었어요.",
@@ -2180,7 +2184,9 @@
   ],
   "topik_tip": "“-어서” for cause and sequence, “-으니까” when a command follows: a standard choice question.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2256,14 +2262,16 @@
   ],
   "topik_tip": "A contrast frame like “어렵지만 재미있다” is the pattern most often seen; check that the two halves oppose each other.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-으려고1",
   "level": 1,
   "label": "in order to, intending to",
-  "meaning_en": "A connective ending for the purpose or intention of the speaker: “in order to X, intending to X”. The main clause is what is done for that purpose (“한국어를 배우려고 한국에 왔어요”). With “하다” it means “intend to”: “-으려고 하다”.",
+  "meaning_en": "A connective ending for the purpose or intention of the subject: “in order to X, intending to X”. The main clause is what is done for that purpose (“한국어를 배우려고 한국에 왔어요”). With “하다” it means “intend to”: “-으려고 하다”.",
   "usage": "After a vowel or ㄹ it is “-려고”, after other consonants “-으려고”: “배우다 → 배우려고”, “먹다 → 먹으려고”, “살다 → 살려고” (ㄹ stays), “만들다 → 만들려고”, “듣다 → 들으려고” (ㄷ becomes ㄹ), “눕다 → 누우려고”. It attaches to verbs only, takes no tense, and the subject of both clauses is the same. The main clause is a statement or a question about what is done. The pattern for “to go/come in order to” is “-으러”.",
   "examples": [
    {
@@ -2338,7 +2346,9 @@
   ],
   "topik_tip": "The purpose frame with the same subject is “-으려고”; different subjects need “-게/-도록”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2360,7 +2370,7 @@
    },
    {
     "ko": "선생님 성함이 무엇입니까?",
-    "en": "What is your name, sir?",
+    "en": "May I ask your name?",
     "ctx": "formal"
    },
    {
@@ -2420,7 +2430,9 @@
   ],
   "topik_tip": "The formal question “-ㅂ니까/-습니까” is answered with “-ㅂ니다/-습니다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2473,7 +2485,7 @@
    },
    {
     "pattern": "-는다",
-    "difference": "“-습니다” speaks to a listener formally. “-는다” (“한다체”) is the plain written style with no listener.",
+    "difference": "“-습니다” speaks to a listener formally. “-는다” (“한다체”) is the plain style of writing (and of casual speech to juniors), addressed to no one in particular.",
     "pair": [
      {
       "ko": "저는 매일 운동합니다.",
@@ -2502,7 +2514,9 @@
   ],
   "topik_tip": "In listening and reading, the “합쇼체” (“-ㅂ니다”) marks formal, public speech.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2584,7 +2598,9 @@
   ],
   "topik_tip": "The exam often tests the choice between “-ㅂ시다” (vowel stem) and “-읍시다” (consonant stem).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2666,7 +2682,9 @@
   ],
   "topik_tip": "Meaning depends on the context and intonation: statement, question or request.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2748,7 +2766,9 @@
   ],
   "topik_tip": "Notices on signs often end in “-(으)십시오”; the negative is “-지 마십시오”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2817,14 +2837,16 @@
   "pitfalls": [
    {
     "note": "To a person you speak politely to, add “요”.",
-    "wrong": "선생님, 저는 학생이고.",
-    "right": "선생님, 저는 학생이고요.",
-    "en": "Teacher, I am a student, and so on."
+    "wrong": "선생님, 숙제도 다 했고.",
+    "right": "선생님, 숙제도 다 했고요.",
+    "en": "Teacher, and I have finished my homework, too."
    }
   ],
   "topik_tip": "The ending “-고요” is the polite version and appears in interview answers as a way to add information.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2856,7 +2878,7 @@
    },
    {
     "ko": "저녁에 뭐 먹을까?",
-    "en": "What shall we eat in the evening?",
+    "en": "What shall we have for dinner?",
     "ctx": "conversation"
    }
   ],
@@ -2900,7 +2922,9 @@
   ],
   "topik_tip": "The same ending can suggest, offer or wonder: check the subject (we, I, someone else).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2982,7 +3006,9 @@
   ],
   "topik_tip": "Without “요” it is casual (“해체”); with “요” it is polite (“해요체”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2990,7 +3016,7 @@
   "level": 1,
   "label": "is not (a noun)",
   "meaning_en": "The negation of “이다”: “N이/가 아니다” means “is not N”. It denies an identification, not an action (for that, “안” or “-지 않다”).",
-  "usage": "After a consonant it is “이 아니다”, after a vowel “가 아니다”: “학생이 아니에요”, “의사가 아니에요”. The noun before it takes “이/가” (not “은/는” or “을/를”) as complement: “저는 학생이 아니에요”. Endings: “아니에요, 아닙니다, 아니야, 아니었어요, 아니고”. “N이/가 아니라 M이다” means “not N but M”. The word “아니요” (no) is a separate reply word.",
+  "usage": "After a consonant it is “이 아니다”, after a vowel “가 아니다”: “학생이 아니에요”, “의사가 아니에요”. The noun before it normally takes “이/가” as complement (“저는 학생이 아니에요”), or “은/는” for contrast (“학생은 아니에요”, not a student, at any rate), but never “을/를”. Endings: “아니에요, 아닙니다, 아니야, 아니었어요, 아니고”. “N이/가 아니라 M이다” means “not N but M”. The word “아니요” (no) is a separate reply word.",
   "examples": [
    {
     "ko": "저는 학생이 아니에요. 회사원이에요.",
@@ -3035,7 +3061,7 @@
    },
    {
     "pattern": "아니요",
-    "difference": "“아니요” is a reply meaning “no”; “아니다” is the verb of the sentence.",
+    "difference": "“아니요” is a reply meaning “no”; “아니다” is the predicate of the sentence.",
     "pair": [
      {
       "ko": "아니요, 학생이 아니에요.",
@@ -3064,7 +3090,9 @@
   ],
   "topik_tip": "“N이/가 아니라 N이다” (not N but N) is a frequent frame.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3146,7 +3174,9 @@
   ],
   "topik_tip": "First person and questions to the listener take “-고 싶다”; third person takes “-고 싶어 하다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3228,15 +3258,17 @@
   ],
   "topik_tip": "“살고 있다, 알고 있다, 가지고 있다” are states: translate as simple present.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-어야 되다",
   "level": 1,
   "label": "have to, must",
-  "meaning_en": "An expression for necessity: “have to X, must X”. The spoken form is “-어야 돼요”; the equivalent written form is “-어야 하다/합니다”. It states an obligation or a requirement.",
-  "usage": "It attaches to verb, adjective and “이다” stems with “-아/어”: “가다 → 가야 되다”, “먹다 → 먹어야 되다”, “하다 → 해야 되다”, “듣다 → 들어야 되다”, “쉽다 → 쉬워야 되다”. “되다” takes the tense (“-어야 됐다”) and contracts to “돼” in speech (“돼요”, “되어요” is the same). The negative need is “-지 않아도 되다” (don't have to); the prohibition is “-으면 안 되다”. A frequent partner is “-어야 하다”, which is more formal.",
+  "meaning_en": "An expression for necessity: “have to X, must X”. It is very common in speech (“-어야 돼요”); the equivalent “-어야 하다/합니다” is the usual choice in writing and formal speech. It states an obligation or a requirement.",
+  "usage": "It attaches to verb, adjective and “이다” stems with “-아/어”: “가다 → 가야 되다”, “먹다 → 먹어야 되다”, “하다 → 해야 되다”, “듣다 → 들어야 되다”, “쉽다 → 쉬워야 되다”. “되다” takes the tense (“-어야 됐다”) and “되어요” normally contracts to “돼요”. The negative need is “-지 않아도 되다” (don't have to); the prohibition is “-으면 안 되다”. A frequent partner is “-어야 하다”, which is more formal.",
   "examples": [
    {
     "ko": "내일 일찍 일어나야 돼요.",
@@ -3296,7 +3328,7 @@
   ],
   "pitfalls": [
    {
-    "note": "The spoken form is “돼요”, not “되요”.",
+    "note": "The contraction of “되어요” is “돼요”; “되요” is a misspelling.",
     "wrong": "내일 가야 되요.",
     "right": "내일 가야 돼요.",
     "en": "I have to go tomorrow."
@@ -3310,7 +3342,9 @@
   ],
   "topik_tip": "“-어야 되다 / -어야 하다” (have to) and “-으면 안 되다” (must not) are the matching pair.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3392,7 +3426,9 @@
   ],
   "topik_tip": "“안 + verb” and “-지 않다” are the two ways to negate; “못” and “-지 못하다” mean cannot.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3436,7 +3472,7 @@
   "compare": [
    {
     "pattern": "-지 못하다",
-    "difference": "“-ㄹ 수 없다” and “-지 못하다” are near-synonyms for cannot. “-ㄹ 수 없다” is a little more formal.",
+    "difference": "“-ㄹ 수 없다” and “-지 못하다” are near-synonyms for cannot. “-ㄹ 수 없다” states that something is not possible; “-지 못하다” often reports that something did not happen for lack of ability or because of circumstances (“잠을 자지 못했다”).",
     "pair": [
      {
       "ko": "갈 수 없어요.",
@@ -3479,7 +3515,9 @@
   ],
   "topik_tip": "Ability is “-ㄹ 수 있다”; “-ㄹ 수밖에 없다” (no choice but) is a different pattern.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3561,7 +3599,9 @@
   ],
   "topik_tip": "Spacing contrast to know: “못 하다” (cannot) versus “못하다” (bad at).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3629,7 +3669,9 @@
   ],
   "topik_tip": "The verb before “전에” stays in the plain “-기” form whatever the tense of the sentence.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3711,7 +3753,9 @@
   ],
   "topik_tip": "“-은 후에 / -은 뒤에 / -고 나서” are interchangeable in most simple sentences.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  }
 ]
