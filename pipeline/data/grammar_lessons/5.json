@@ -1336,7 +1336,7 @@
   "level": 5,
   "label": "I saw, and it was...",
   "meaning_en": "A sentence-final ending for telling what the speaker personally saw, heard or tried: “(when I saw it) it was…”. The polite form is “-데요”.",
-  "usage": "It attaches to verb and adjective stems and after “-었-”. Without “요” it belongs to the “하게” speech level (krdict: 예사 낮춤), used among adult friends or to a junior; “-데요” is the polite form. The speaker must have experienced the fact directly, and often it is told with a note of discovery. It is not the “-대” that reports what someone said: “비가 오데” is what I saw, “비가 온대” is what I heard. It is also used as a question, “-데?”, which asks what the listener experienced.",
+  "usage": "It attaches to verb and adjective stems and after “-었-”. Without “요” it belongs to the “하게” speech level (krdict: “예사 낮춤”), used among adult friends or to a junior; “-데요” is the polite form. The speaker must have experienced the fact directly, and often it is told with a note of discovery. It is not the “-대” that reports what someone said: “비가 오데” is what I saw, “비가 온대” is what I heard. It is also used as a question, “-데?”, which asks what the listener experienced.",
   "examples": [
    {
     "ko": "그 가수 노래를 직접 들어 보니 정말 잘하데.",
@@ -3007,8 +3007,8 @@
   "form": "-는 척하다",
   "level": 5,
   "label": "pretend to",
-  "meaning_en": "An expression meaning to pretend: to put on an act or a state that is not real. “-는 척하다” is about doing, and the other forms are about being.",
-  "usage": "It attaches to verb stems as “-는 척하다” (“자는 척하다”), to adjective stems as “-ㄴ/은 척하다” (“아픈 척하다”), to “이다” as “인 척하다”, and to a completed action as “-ㄴ 척하다” (“먹은 척하다” means pretending to have eaten). “-는 체하다” is a synonym that sounds a bit more bookish. A negative is built on the stem (“모르는 척하다”, “아프지 않은 척하다”).",
+  "meaning_en": "An expression meaning to pretend: to put on an act or a state that is not real. “-는 척하다” is the form for an action in progress; adjectives and completed actions take “-ㄴ/은 척하다”.",
+  "usage": "It attaches to verb stems as “-는 척하다” (“자는 척하다”), to adjective stems as “-ㄴ/은 척하다” (“아픈 척하다”), to “이다” as “인 척하다”, and to a completed action as “-ㄴ 척하다” (“먹은 척하다” means pretending to have eaten). “-는 체하다” is a synonym used the same way. A negative is built on the stem (“모르는 척하다”, “아프지 않은 척하다”).",
   "examples": [
    {
     "ko": "민준이는 아내가 민망할까 봐 아내의 실수를 모르는 척해 주었다.",
@@ -3075,7 +3075,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3101,8 +3103,8 @@
     "ctx": "news"
    },
    {
-    "ko": "어려운 경제 상황인 가운데 이번 투자는 큰 의미가 있다.",
-    "en": "In a difficult economic situation, this investment carries great significance.",
+    "ko": "경제 상황이 어려운 가운데 이번 투자는 큰 의미가 있다.",
+    "en": "With the economy in difficulty, this investment carries great significance.",
     "ctx": "formal"
    },
    {
@@ -3135,8 +3137,8 @@
       "en": "A call came during the meeting."
      },
      {
-      "ko": "회의하는 가운데 전화가 왔다.",
-      "en": "A call came amid the meeting."
+      "ko": "회의가 진행되는 가운데 전화가 왔다.",
+      "en": "A call came while the meeting was under way."
      }
     ]
    }
@@ -3156,7 +3158,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3168,17 +3172,17 @@
   "examples": [
    {
     "ko": "이 코미디 영화는 재미는 말할 것도 없고 깊은 감동까지 준다.",
-    "en": "This comedy is funny, needless to say, and it gives deep emotion as well.",
+    "en": "This comedy is, needless to say, funny, and it is deeply moving too.",
     "ctx": "essay"
    },
    {
     "ko": "서울은 낮은 말할 것도 없고 밤에도 사람이 많다.",
-    "en": "Seoul is crowded in the daytime, not to mention at night.",
+    "en": "Seoul is crowded at night too, not to mention in the daytime.",
     "ctx": "conversation"
    },
    {
     "ko": "나는 요리는 말할 것도 없고 라면도 제대로 끓이지 못한다.",
-    "en": "I can't cook, to say nothing of boiling instant noodles properly.",
+    "en": "I can't even make instant noodles properly, let alone cook.",
     "ctx": "conversation"
    },
    {
@@ -3216,8 +3220,8 @@
       "en": "I can't speak Korean well, let alone English."
      },
      {
-      "ko": "나는 영어는 말할 것도 없고 한국어도 잘한다.",
-      "en": "I speak Korean well, not to mention English."
+      "ko": "나는 영어는 말할 것도 없고 중국어도 잘한다.",
+      "en": "I speak Chinese well too, not to mention English."
      }
     ]
    }
@@ -3231,7 +3235,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3306,7 +3312,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3374,7 +3382,7 @@
   ],
   "pitfalls": [
    {
-    "note": "It is “-ㄹ 법하다”; “-ㄹ 법이다” is a different expression.",
+    "note": "The ending is “-ㄹ 법하다”; “-ㄹ 법이다” does not exist (the “law of nature” expression is “-는 법이다”).",
     "wrong": "내일은 비가 올 법이다.",
     "right": "내일은 비가 올 법하다.",
     "en": "It might well rain tomorrow."
@@ -3382,7 +3390,9 @@
   ],
   "topik_tip": "A “-ㄹ 법한데도” clause usually sets up a contrast: what follows goes against what one would expect.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3457,7 +3467,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3518,7 +3530,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3549,8 +3563,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "지금은 비가 오지 않을 테지만 오후에는 올지도 모른다.",
-    "en": "It is probably not raining now, but it may rain in the afternoon.",
+    "ko": "오전에는 비가 오지 않을 테지만 오후에는 올지도 모른다.",
+    "en": "It probably won't rain in the morning, but it may in the afternoon.",
     "ctx": "conversation"
    }
   ],
@@ -3593,7 +3607,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3674,7 +3690,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3749,7 +3767,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3824,7 +3844,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3900,7 +3922,9 @@
   ],
   "topik_tip": "In 읽기 passages “에도 불구하고” marks a contrast; the clause that follows goes against what the noun leads you to expect.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3981,7 +4005,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3989,7 +4015,7 @@
   "level": 5,
   "label": "see it through, manage to",
   "meaning_en": "An expression meaning to carry something through to the end by one's own effort, usually despite difficulty: “manage to do, see through, pull off”.",
-  "usage": "It attaches to verb stems as “-아 내다/-어 내다” (“참아 내다”, “이겨 내다”, “만들어 내다”). The verb is one that needs effort, patience or endurance, and the sense is that the person finally achieves the result. It is not used for easy, routine acts. It is written in the same way in both speech and writing, and “내다” is separate from “-어 버리다”, which marks completion with relief or regret.",
+  "usage": "It attaches to verb stems as “-아 내다/-어 내다” (“참아 내다”, “이겨 내다”, “만들어 내다”). The verb is one that needs effort, patience or endurance, and the sense is that the person finally achieves the result. It is not used for easy, routine acts. It is used in speech and writing alike. Some combinations have become single verbs and are written solid (“찾아내다”, “해내다”).",
   "examples": [
    {
     "ko": "꾸준한 노력은 기적을 만들어 낸다.",
@@ -4027,7 +4053,7 @@
       "en": "I got all my homework done."
      },
      {
-      "ko": "힘든 숙제를 끝까지 해 냈다.",
+      "ko": "힘든 숙제를 끝까지 해냈다.",
       "en": "I saw the hard homework through to the end."
      }
     ]
@@ -4062,7 +4088,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4143,7 +4171,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4218,7 +4248,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4299,7 +4331,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  }
 ]
