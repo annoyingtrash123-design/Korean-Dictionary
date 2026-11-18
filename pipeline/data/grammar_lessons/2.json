@@ -3222,5 +3222,420 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-어 있다",
+  "level": 2,
+  "label": "be in the state of (result state)",
+  "meaning_en": "An expression for a state that results from a completed change: “be sitting, be left, be open”. The action is over and its result continues. It goes with intransitive or passive verbs.",
+  "usage": "It attaches to verb stems with “-아/어”: “앉다 → 앉아 있다”, “남다 → 남아 있다”, “들다 → 들어 있다”, “피다 → 피어 있다”, “살다 → 살아 있다”, “눕다 → 누워 있다” (ㅂ-irregular), “열리다 → 열려 있다”. The verb is one that changes the subject's own state or a passive (“앉다, 서다, 열리다, 쓰이다”); a verb with an object takes “-고 있다” for the action in progress. The honorific form is “-어 계시다”.",
+  "examples": [
+   {
+    "ko": "의자에 앉아 있는 사람이 제 동생이에요.",
+    "en": "The person sitting in the chair is my younger sibling.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "문이 열려 있어서 들어가 봤다.",
+    "en": "The door was open, so I went in.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "칠판에 글씨가 크게 쓰여 있다.",
+    "en": "The letters are written large on the board.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "냉장고에 우유가 남아 있어요?",
+    "en": "Is there any milk left in the refrigerator?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "가방 안에 지갑이 들어 있다.",
+    "en": "A wallet is in the bag.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "정원에 꽃이 활짝 피어 있다.",
+    "en": "Flowers are in full bloom in the garden.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” is the action in progress; “-어 있다” is the state that results.",
+    "pair": [
+     {
+      "ko": "아이가 의자에 앉고 있다.",
+      "en": "The child is sitting down onto the chair."
+     },
+     {
+      "ko": "아이가 의자에 앉아 있다.",
+      "en": "The child is seated on the chair."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 놓다",
+    "difference": "“-어 놓다” has someone who did it and left it; “-어 있다” only describes the resulting state.",
+    "pair": [
+     {
+      "ko": "창문을 열어 놓았다.",
+      "en": "I left the window open."
+     },
+     {
+      "ko": "창문이 열려 있다.",
+      "en": "The window is open."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A verb with an object is not used: the passive or intransitive verb is.",
+    "wrong": "문이 열어 있다.",
+    "right": "문이 열려 있다.",
+    "en": "The door is open."
+   },
+   {
+    "note": "A ㅂ-irregular stem becomes “우” + “-어”: “눕다” gives “누워 있다”.",
+    "wrong": "아이가 침대에 눕어 있다.",
+    "right": "아이가 침대에 누워 있다.",
+    "en": "The child is lying on the bed."
+   }
+  ],
+  "topik_tip": "Choose by the verb: a change of own state or a passive takes “-어 있다”; an action with an object takes “-고 있다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 주다",
+  "level": 2,
+  "label": "do something for someone",
+  "meaning_en": "An expression for doing an action for someone's benefit: “do X for you/me/them”. In requests it is the standard polite form: “-어 주세요”.",
+  "usage": "It attaches to verb stems with “-아/어”: “열다 → 열어 주다”, “읽다 → 읽어 주다”, “찾다 → 찾아 주다”, “돕다 → 도와 주다” (ㅂ-irregular), “가르치다 → 가르쳐 주다”, “사다 → 사 주다”. Frames: “-어 주세요” (please), “-어 줄까요?” (shall I), “-어 줘” (casual). The beneficiary is a friend, family or a junior person; for a person to be honoured the helper is “드리다”, and when the honoured person is the doer it is “-어 주시다”. The beneficiary often takes “에게/한테”.",
+  "examples": [
+   {
+    "ko": "창문 좀 열어 주세요.",
+    "en": "Please open the window.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "엄마가 어릴 때 동화책을 읽어 주셨다.",
+    "en": "When I was little, Mom read storybooks to me.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구가 제 숙제를 도와 주었어요.",
+    "en": "My friend helped me with my homework.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "제가 길을 찾아 줄까요?",
+    "en": "Shall I find the way for you?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 문장을 다시 설명해 줄래요?",
+    "en": "Could you explain this sentence again?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 드리다",
+    "difference": "“-어 주다” is for friends and juniors; “-어 드리다” is for a person you honour.",
+    "pair": [
+     {
+      "ko": "동생에게 책을 읽어 줬다.",
+      "en": "I read a book to my younger sibling."
+     },
+     {
+      "ko": "할머니께 책을 읽어 드렸다.",
+      "en": "I read a book to my grandmother."
+     }
+    ]
+   },
+   {
+    "pattern": "주다",
+    "difference": "“주다” gives an object; “-어 주다” does the action for someone.",
+    "pair": [
+     {
+      "ko": "친구에게 책을 줬다.",
+      "en": "I gave my friend a book."
+     },
+     {
+      "ko": "친구에게 책을 읽어 줬다.",
+      "en": "I read a book to my friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "For a person to be honoured, use “-어 드리다”.",
+    "wrong": "할머니께 사진을 찍어 줬어요.",
+    "right": "할머니께 사진을 찍어 드렸어요.",
+    "en": "I took a photo for my grandmother."
+   },
+   {
+    "note": "A ㅂ-irregular stem becomes “와” + “주다”.",
+    "wrong": "숙제 좀 돕아 주세요.",
+    "right": "숙제 좀 도와 주세요.",
+    "en": "Please help me with my homework."
+   }
+  ],
+  "topik_tip": "“-어 주세요” is the all-purpose polite request; the beneficiary, not the doer, decides the helper (“주다 / 드리다”).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어도 되다",
+  "level": 2,
+  "label": "may; it is all right to",
+  "meaning_en": "An expression for permission or acceptability: “may, is it OK to, it is fine if”. It is used to ask for permission (“앉아도 돼요?”), to give it, and to say that something is acceptable.",
+  "usage": "It attaches to verb, adjective and “이다” stems with “-아/어”: “앉다 → 앉아도 되다”, “가다 → 가도 되다”, “눕다 → 누워도 되다” (ㅂ-irregular), “듣다 → 들어도 되다” (ㄷ-irregular), “학생이다 → 학생이어도 되다”. The spoken form is “돼요” (“되어요” contracts). “-어도 괜찮다” is a near-synonym. The opposite is “-으면 안 되다” (not allowed). The same ending without “되다” is the concessive “-어도” (even if).",
+  "examples": [
+   {
+    "ko": "여기에 앉아도 되나요?",
+    "en": "May I sit here?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 책은 빌려 가도 되니까 필요하면 가져가세요.",
+    "en": "You may borrow this book, so take it if you need it.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "사진을 찍어도 되지만 플래시는 쓰지 마세요.",
+    "en": "You may take photos, but do not use the flash.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "배고프면 먼저 먹어도 돼.",
+    "en": "If you are hungry, you may eat first.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금 집에 가도 돼요?",
+    "en": "May I go home now?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면 안 되다",
+    "difference": "“-어도 되다” permits; “-으면 안 되다” forbids.",
+    "pair": [
+     {
+      "ko": "여기서 사진을 찍어도 돼요.",
+      "en": "You may take photos here."
+     },
+     {
+      "ko": "여기서 사진을 찍으면 안 돼요.",
+      "en": "You must not take photos here."
+     }
+    ]
+   },
+   {
+    "pattern": "-어도 괜찮다",
+    "difference": "“-어도 되다” and “-어도 괜찮다” are near-synonyms; “괜찮다” says that it is fine, “되다” that it is allowed.",
+    "pair": [
+     {
+      "ko": "먼저 가도 돼요.",
+      "en": "You may go first."
+     },
+     {
+      "ko": "먼저 가도 괜찮아요.",
+      "en": "It is fine to go first."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The spoken form is “돼요”, not “되요”.",
+    "wrong": "여기에 앉아도 되요?",
+    "right": "여기에 앉아도 돼요?",
+    "en": "May I sit here?"
+   },
+   {
+    "note": "A ㅂ-irregular verb turns ㅂ into “우”.",
+    "wrong": "침대에 눕어도 돼요?",
+    "right": "침대에 누워도 돼요?",
+    "en": "May I lie on the bed?"
+   }
+  ],
+  "topik_tip": "Permission is “-어도 되다/돼요?”; prohibition is “-으면 안 되다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-지 말다",
+  "level": 2,
+  "label": "don't (prohibition)",
+  "meaning_en": "An expression for a prohibition: “don't do X”. It forms commands (“-지 마세요”), suggestions (“-지 말자”), and “don't X, but Y” (“-지 말고 ...”).",
+  "usage": "It attaches to verb stems: “피우다 → 피우지 마세요”, “걱정하다 → 걱정하지 마”, “서두르다 → 서두르지 말고”, “포기하다 → 포기하지 말자”. The verb “말다” loses its ㄹ before “세요, 십시오, ㅂ시다, 라” (“마세요, 마십시오, 맙시다, 마라”) and keeps it elsewhere (“말고, 말자, 말아야 하다”). The sentence “-지 않다” is a statement or question (“I don't”), not an order.",
+  "examples": [
+   {
+    "ko": "여기서 담배를 피우지 마세요.",
+    "en": "Please do not smoke here.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너무 걱정하지 마.",
+    "en": "Don't worry too much.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서두르지 말고 천천히 하세요.",
+    "en": "Don't rush; take it slowly.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "시험 때문에 힘들어도 포기하지 말자.",
+    "en": "Even if the exam is hard, let's not give up.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "거짓말은 하지 말아야 한다.",
+    "en": "One must not lie.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지 않다",
+    "difference": "“-지 않다” negates (“I don't”); “-지 마세요” forbids (“don't”).",
+    "pair": [
+     {
+      "ko": "저는 담배를 피우지 않아요.",
+      "en": "I do not smoke."
+     },
+     {
+      "ko": "여기서 담배를 피우지 마세요.",
+      "en": "Please do not smoke here."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면 안 되다",
+    "difference": "“-지 말다” is a direct order or request. “-으면 안 되다” states the rule.",
+    "pair": [
+     {
+      "ko": "여기서 뛰지 마세요.",
+      "en": "Please do not run here."
+     },
+     {
+      "ko": "여기서 뛰면 안 돼요.",
+      "en": "You must not run here."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“-지 않으세요” asks or states; it does not forbid.",
+    "wrong": "여기서 담배를 피우지 않으세요.",
+    "right": "여기서 담배를 피우지 마세요.",
+    "en": "Please do not smoke here."
+   },
+   {
+    "note": "“말다” drops its ㄹ before “세요”: “마세요”.",
+    "wrong": "여기서 뛰지 말세요.",
+    "right": "여기서 뛰지 마세요.",
+    "en": "Please do not run here."
+   }
+  ],
+  "topik_tip": "The form to remember is “-지 마세요”; the ㄹ of “말다” falls before “세요/ㅂ시다/십시오”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 수밖에 없다",
+  "level": 2,
+  "label": "cannot help but; have no choice but",
+  "meaning_en": "An expression meaning there is no other possibility: “have no choice but to X, cannot help X-ing, is bound to X”. It also states a natural, unavoidable consequence (“값이 비쌀 수밖에 없다”).",
+  "usage": "After a vowel or ㄹ it is “-ㄹ 수밖에 없다”, after other consonants “-을 수밖에 없다”; it attaches to verb, adjective and “이다” stems. Real stems: “취소하다 → 취소할 수밖에 없다”, “살다 → 살 수밖에”, “걷다 → 걸을 수밖에” (ㄷ-irregular), “비싸다 → 비쌀 수밖에”, “학생이다 → 학생일 수밖에”. The tense goes on “없다” (“-ㄹ 수밖에 없었다”). “수밖에” is written together. A reason clause normally comes first.",
+  "examples": [
+   {
+    "ko": "비가 너무 많이 와서 소풍을 취소할 수밖에 없었다.",
+    "en": "It rained so much that we had no choice but to cancel the picnic.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아무도 안 도와주니까 혼자 할 수밖에 없다.",
+    "en": "No one helps, so I have no choice but to do it alone.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "재료가 좋으니까 값이 비쌀 수밖에 없다.",
+    "en": "The ingredients are good, so the price cannot help being high.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "길이 막혀서 약속에 늦을 수밖에 없었어요.",
+    "en": "The road was jammed, so I could not help being late for the appointment.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "매일 연습했으니 실력이 늘 수밖에 없다.",
+    "en": "I have practiced every day, so my skills are bound to improve.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 수 없다",
+    "difference": "“-ㄹ 수 없다” says it is impossible. “-ㄹ 수밖에 없다” says it is the only option.",
+    "pair": [
+     {
+      "ko": "갈 수 없어요.",
+      "en": "I cannot go."
+     },
+     {
+      "ko": "갈 수밖에 없어요.",
+      "en": "I have no choice but to go."
+     }
+    ]
+   },
+   {
+    "pattern": "-지 않을 수 없다",
+    "difference": "“-지 않을 수 없다” is the double negative with the same meaning, and it is more formal and written.",
+    "pair": [
+     {
+      "ko": "웃을 수밖에 없었다.",
+      "en": "I could not help laughing."
+     },
+     {
+      "ko": "웃지 않을 수 없었다.",
+      "en": "I could not help laughing."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“수밖에” is written together, without a space.",
+    "wrong": "혼자 할 수 밖에 없다.",
+    "right": "혼자 할 수밖에 없다.",
+    "en": "I have no choice but to do it alone."
+   },
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before “-을”.",
+    "wrong": "택시를 못 타서 걷을 수밖에 없다.",
+    "right": "택시를 못 타서 걸을 수밖에 없다.",
+    "en": "I cannot take a taxi, so I have no choice but to walk."
+   }
+  ],
+  "topik_tip": "“갈 수 없다” (cannot) and “갈 수밖에 없다” (must) are a standard contrast.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
