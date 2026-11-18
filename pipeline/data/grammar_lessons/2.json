@@ -1,1 +1,810 @@
-[]
+[
+ {
+  "form": "께",
+  "level": 2,
+  "label": "to/from (honorific “에게”)",
+  "meaning_en": "The honorific counterpart of “에게/한테”: it marks a person to be respected as the receiver of an action (“to”), and, with verbs of receiving, as its source (“from”): “할아버지께 드리다, 부모님께 받다”.",
+  "usage": "It attaches to a noun for a person who deserves respect (“선생님께, 부모님께, 사장님께, 할머니께”). The matching verbs are the honorific ones: “드리다” (give), “여쭙다/여쭈다” (ask), “말씀드리다” (tell), “전해 드리다”; with the plain “주다”, the sentence sounds off. The subject marker for the honoured person is “께서” (a different row). With verbs of receiving it names the source: “부모님께 용돈을 받다”.",
+  "examples": [
+   {
+    "ko": "어머니께 편지를 썼다.",
+    "en": "I wrote a letter to my mother.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님께 질문을 드렸다.",
+    "en": "I asked the teacher a question.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "할아버지께 생신 선물을 드렸다.",
+    "en": "I gave my grandfather a birthday present.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "부모님께 용돈을 받았다.",
+    "en": "I received an allowance from my parents.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사장님께 이 서류를 전해 주세요.",
+    "en": "Please pass this document on to the boss.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게",
+    "difference": "“에게” is the neutral particle for people; “께” is its honorific replacement for someone you respect.",
+    "pair": [
+     {
+      "ko": "동생에게 선물을 줬다.",
+      "en": "I gave my younger sibling a present."
+     },
+     {
+      "ko": "할머니께 선물을 드렸다.",
+      "en": "I gave my grandmother a present."
+     }
+    ]
+   },
+   {
+    "pattern": "께서",
+    "difference": "“께서” marks the honoured person as the subject of an action; “께” marks that person as the one the action goes to.",
+    "pair": [
+     {
+      "ko": "선생님께서 오셨다.",
+      "en": "The teacher came."
+     },
+     {
+      "ko": "선생님께 갔다.",
+      "en": "I went to the teacher."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "With “께”, the honorific verb “드리다” is used, not “주다”.",
+    "wrong": "할아버지께 선물을 줬다.",
+    "right": "할아버지께 선물을 드렸다.",
+    "en": "I gave my grandfather a present."
+   },
+   {
+    "note": "“께” is only for a person to be honoured; for a friend or younger person use “에게”.",
+    "wrong": "동생께 선물을 줬다.",
+    "right": "동생에게 선물을 줬다.",
+    "en": "I gave my younger sibling a present."
+   }
+  ],
+  "topik_tip": "The honorific set goes together: “께”, “드리다”, “께서”, “-시-”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "마다",
+  "level": 2,
+  "label": "every, each",
+  "meaning_en": "A particle meaning “every, each”: it says that something holds for each member of a set, without exception. It is used for times (“주말마다”), people (“사람마다”) and places (“집집마다”), and for intervals (“십 분마다”).",
+  "usage": "It attaches to a noun without a space. Time nouns give “every ...” (“날마다, 아침마다, 주말마다”), people and things give “each one differs / has” (“사람마다 생각이 다르다”), a duration gives the interval (“십 분마다 한 대씩”). The nouns can be doubled (“집집마다”). After a verb the structure is “-ㄹ 때마다” (each time ...), not “마다” alone.",
+  "examples": [
+   {
+    "ko": "나는 주말마다 도서관에 간다.",
+    "en": "I go to the library every weekend.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "사람마다 생각이 다르다.",
+    "en": "Each person thinks differently.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아침마다 공원에서 산책을 해요.",
+    "en": "I take a walk in the park every morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "학교 앞 가게마다 손님이 가득했다.",
+    "en": "Every shop in front of the school was full of customers.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "버스는 십 분마다 한 대씩 온다.",
+    "en": "A bus comes every ten minutes.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에",
+    "difference": "“주말에” says “on the weekend” (one time frame); “주말마다” says “every weekend”, each one of them.",
+    "pair": [
+     {
+      "ko": "주말에 도서관에 간다.",
+      "en": "I go to the library on the weekend."
+     },
+     {
+      "ko": "주말마다 도서관에 간다.",
+      "en": "I go to the library every weekend."
+     }
+    ]
+   },
+   {
+    "pattern": "매",
+    "difference": "“매일” and “날마다” are near-synonyms. “마다” combines with any noun, while “매” is limited to time words (“매일, 매주, 매번”).",
+    "pair": [
+     {
+      "ko": "날마다 운동한다.",
+      "en": "I exercise every day."
+     },
+     {
+      "ko": "매일 운동한다.",
+      "en": "I exercise every day."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It attaches to a noun, without a space.",
+    "wrong": "주말 마다 도서관에 간다.",
+    "right": "주말마다 도서관에 간다.",
+    "en": "I go to the library every weekend."
+   },
+   {
+    "note": "After a verb, “마다” does not work alone: use “-ㄹ 때마다”.",
+    "wrong": "만나마다 인사한다.",
+    "right": "만날 때마다 인사한다.",
+    "en": "Every time we meet, we say hello."
+   }
+  ],
+  "topik_tip": "“N마다” (each N) and “-ㄹ 때마다” (every time) are the two frames that exams use.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "밖에",
+  "level": 2,
+  "label": "only (with a negative)",
+  "meaning_en": "A particle meaning “nothing but, only N”, and it always works with a negative predicate: “N밖에 없다, N밖에 못 하다, N밖에 안 -다”. The sentence stresses that N is all there is, and often that this is too little.",
+  "usage": "It attaches to a noun or a counter phrase: “천 원밖에 없다”, “한 명밖에 안 왔다”, “영어밖에 못 한다”. The predicate has to be negative or say “없다/모르다/못 -다/안 -다”. For a positive sentence “만” is used. It often tells that the amount is small, which adds a feeling (“십 분밖에 안 남았다”). The phrase “하나밖에 없는” (the only one there is) is a frequent collocation.",
+  "examples": [
+   {
+    "ko": "지갑에 천 원밖에 없어요.",
+    "en": "I have only 1,000 won in my wallet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험 시간이 십 분밖에 안 남았다.",
+    "en": "Only ten minutes are left in the exam.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 일을 할 수 있는 사람은 지수밖에 없다.",
+    "en": "Jisu is the only one who can do this work.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나는 영어밖에 못 해요.",
+    "en": "I can speak only English.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이것은 세상에 하나밖에 없는 선물이에요.",
+    "en": "This is a present that exists only once in the world.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "만",
+    "difference": "“만” is also “only” but works with a positive predicate. “밖에 + negative” usually carries the feeling that it is too little.",
+    "pair": [
+     {
+      "ko": "한 명만 왔다.",
+      "en": "Only one person came."
+     },
+     {
+      "ko": "한 명밖에 안 왔다.",
+      "en": "Only one person came."
+     }
+    ]
+   },
+   {
+    "pattern": "뿐",
+    "difference": "“밖에 없다” and “뿐이다” are near-synonyms. “뿐” closes the sentence with “이다”, “밖에” needs a negative.",
+    "pair": [
+     {
+      "ko": "믿을 사람은 너밖에 없어.",
+      "en": "There is no one I can trust but you."
+     },
+     {
+      "ko": "믿을 사람은 너뿐이야.",
+      "en": "You are the only one I can trust."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The predicate must be negative.",
+    "wrong": "천 원밖에 있어요.",
+    "right": "천 원밖에 없어요.",
+    "en": "I have only 1,000 won."
+   },
+   {
+    "note": "With a verb of action, add “안/못”.",
+    "wrong": "한 명밖에 왔다.",
+    "right": "한 명밖에 안 왔다.",
+    "en": "Only one person came."
+   }
+  ],
+  "topik_tip": "“밖에” always needs a negative; if the predicate is positive, the particle is “만”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "처럼",
+  "level": 2,
+  "label": "like (manner, resemblance)",
+  "meaning_en": "A particle that attaches to a noun and means “like N, as N does”: it compares the manner, look or level of something to N. In “마치 N처럼” it makes the comparison explicit (“as if”).",
+  "usage": "It attaches to a noun with no space: “새처럼 날다, 아이처럼 웃다, 눈처럼 하얗다, 가수처럼 노래하다”. After a verb the shape is “-는 것처럼” (“아는 것처럼 말하다”). The set phrase “마치 ...처럼” strengthens it. “같이” is a near-synonym (see the level-3 lesson); “만큼” compares degree, not manner. It is also used with “너처럼, 나처럼” for comparisons with people.",
+  "examples": [
+   {
+    "ko": "지수는 가수처럼 노래를 잘한다.",
+    "en": "Jisu sings as well as a singer.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "눈처럼 하얀 구름이 하늘에 떠 있다.",
+    "en": "Clouds as white as snow float in the sky.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "어머니처럼 따뜻한 사람이 되고 싶다.",
+    "en": "I want to be a warm person like my mother.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이처럼 활짝 웃었다.",
+    "en": "I smiled broadly like a child.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "마치 꿈처럼 시간이 지나갔다.",
+    "en": "Time passed by just like a dream.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "같이",
+    "difference": "In similes “처럼” and “같이” are near-synonyms and swap freely; the time-noun phrases (“매일같이”) are only “같이”.",
+    "pair": [
+     {
+      "ko": "손이 얼음처럼 차갑다.",
+      "en": "The hands are as cold as ice."
+     },
+     {
+      "ko": "손이 얼음같이 차갑다.",
+      "en": "The hands are as cold as ice."
+     }
+    ]
+   },
+   {
+    "pattern": "만큼",
+    "difference": "“처럼” compares manner or look; “만큼” compares degree.",
+    "pair": [
+     {
+      "ko": "너처럼 노래하고 싶다.",
+      "en": "I want to sing like you."
+     },
+     {
+      "ko": "너만큼 노래하고 싶다.",
+      "en": "I want to sing as well as you."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb, use “-는 것처럼”, not “처럼” alone.",
+    "wrong": "그는 아는처럼 말했다.",
+    "right": "그는 아는 것처럼 말했다.",
+    "en": "They spoke as if they knew."
+   },
+   {
+    "note": "It attaches directly to the noun.",
+    "wrong": "새 처럼 날고 싶다.",
+    "right": "새처럼 날고 싶다.",
+    "en": "I want to fly like a bird."
+   }
+  ],
+  "topik_tip": "Do not confuse it with “만큼”: “처럼” is about how, “만큼” about how much.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에서부터(서부터)",
+  "level": 2,
+  "label": "starting from (place, point)",
+  "meaning_en": "A particle that marks a starting point and stresses it: “from N (onward), starting from N”. It is the emphatic form of “에서”, often paired with “까지” for a range, or used in “여기서부터” (from here on).",
+  "usage": "It attaches to a place or a point of origin: “집에서부터 학교까지”, “서울에서부터 부산까지”, “처음부터”. After “여기, 거기, 어디” the contracted form “서부터” is normal in speech (“여기서부터는, 어디서부터”). It marks only the beginning of a stretch or a process: unlike “에서”, it cannot mean “at (a place)”. It cannot mark a person as the source: use “에게서/한테서”.",
+  "examples": [
+   {
+    "ko": "집에서부터 학교까지 걸어서 삼십 분 걸린다.",
+    "en": "It takes thirty minutes on foot from home to school.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여기서부터는 걸어가야 합니다.",
+    "en": "From here on, we have to go on foot.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 문제는 어디서부터 시작해야 할지 모르겠다.",
+    "en": "I do not know where to begin with this problem.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울에서부터 부산까지 자전거로 여행했다.",
+    "en": "I traveled by bicycle all the way from Seoul to Busan.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이야기는 어린 시절에서부터 시작되었다.",
+    "en": "The story began from childhood.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에서",
+    "difference": "“에서” also marks the place where an action happens; “에서부터” only marks where something starts.",
+    "pair": [
+     {
+      "ko": "집에서부터 걸어왔다.",
+      "en": "I walked here starting from home."
+     },
+     {
+      "ko": "집에서 공부했다.",
+      "en": "I studied at home."
+     }
+    ]
+   },
+   {
+    "pattern": "부터",
+    "difference": "“부터” marks a starting point in time or order (“아침부터”); “에서부터” adds place and origin.",
+    "pair": [
+     {
+      "ko": "아침부터 비가 왔다.",
+      "en": "It rained from the morning."
+     },
+     {
+      "ko": "서울에서부터 비가 왔다.",
+      "en": "It rained starting from Seoul."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It does not mark a person as the source; use “에게서”.",
+    "wrong": "친구에서부터 선물을 받았다.",
+    "right": "친구에게서 선물을 받았다.",
+    "en": "I received a present from a friend."
+   }
+  ],
+  "topik_tip": "“여기서부터, 거기서부터, 어디서부터” are the contracted forms to know.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에다가",
+  "level": 2,
+  "label": "onto, into (placing); on top of that",
+  "meaning_en": "A particle for the place where something is put: “on, onto, into N”. It goes with verbs of placing, and it can also mean “in addition to N”.",
+  "usage": "It attaches to a place noun, with a placing verb: “놓다, 넣다, 두다, 붙이다, 쓰다, 적다, 담다, 버리다”. It is the colloquial, slightly stronger form of “에”, shortened to “에다”. In “N에다가 M까지/도” it means “on top of N, also M”. For a destination of motion (“가다, 오다”) the plain “에” is used.",
+  "examples": [
+   {
+    "ko": "책을 책상에다가 올려 놓았다.",
+    "en": "I put the book on the desk.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 이름을 여기에다가 적어 주세요.",
+    "en": "Please write this name here.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "쓰레기는 쓰레기통에다가 버려야 한다.",
+    "en": "Trash has to be thrown into the trash can.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밥에다가 김치까지 먹었더니 배가 부르다.",
+    "en": "I ate rice and kimchi on top of that, so I am full.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "냉장고에다가 음식을 넣어 두었다.",
+    "en": "I put the food in the refrigerator.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에",
+    "difference": "With a placing verb the two are near-synonyms. “에다가” is colloquial and works only with such verbs, while “에” also covers time and motion.",
+    "pair": [
+     {
+      "ko": "책상에 책을 놓았다.",
+      "en": "I put the book on the desk."
+     },
+     {
+      "ko": "책상에다가 책을 놓았다.",
+      "en": "I put the book on the desk."
+     }
+    ]
+   },
+   {
+    "pattern": "에서",
+    "difference": "“에다가” goes with the place something is put; “에서” goes with the place an action takes place.",
+    "pair": [
+     {
+      "ko": "가방에다가 책을 넣었다.",
+      "en": "I put the book in the bag."
+     },
+     {
+      "ko": "가방에서 책을 꺼냈다.",
+      "en": "I took the book out of the bag."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It does not go with a verb of motion toward a place.",
+    "wrong": "학교에다가 갔다.",
+    "right": "학교에 갔다.",
+    "en": "I went to school."
+   }
+  ],
+  "topik_tip": "“에다가” with placing verbs is the spoken way to say “on / into”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에게로",
+  "level": 2,
+  "label": "toward (a person)",
+  "meaning_en": "A particle meaning “toward, to (a person)”, with a sense of direction: movement, attention or feeling heading toward someone. It is “에게” plus the directional “로”.",
+  "usage": "It attaches to a person or animal: “엄마에게로, 지수에게로”. The verbs show direction: “달려가다, 다가가다, 돌아가다, 향하다, 쏠리다, 오다”. It is somewhat written and expressive. For giving, telling and sending, “에게” alone is used. The spoken variant is “한테로”. For a place destination, use “(으)로” or “에”.",
+  "examples": [
+   {
+    "ko": "아이는 엄마에게로 달려갔다.",
+    "en": "The child ran to the mother.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모든 사람의 관심이 지수에게로 쏠렸다.",
+    "en": "Everyone's attention turned to Jisu.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그의 시선이 나에게로 향했다.",
+    "en": "Their gaze turned toward me.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "강아지가 주인에게로 다가갔다.",
+    "en": "The puppy approached its owner.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지영이는 오랜 방황 끝에 가족에게로 돌아왔다.",
+    "en": "After long wandering, Jiyoung returned to the family.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게",
+    "difference": "“에게” marks the recipient; “에게로” adds the direction of movement toward the person.",
+    "pair": [
+     {
+      "ko": "친구에게 편지를 보냈다.",
+      "en": "I sent a letter to my friend."
+     },
+     {
+      "ko": "친구에게로 달려갔다.",
+      "en": "I ran toward my friend."
+     }
+    ]
+   },
+   {
+    "pattern": "한테로",
+    "difference": "“한테로” is the spoken counterpart; the meaning is the same.",
+    "pair": [
+     {
+      "ko": "엄마에게로 달려갔다.",
+      "en": "I ran to Mom."
+     },
+     {
+      "ko": "엄마한테로 달려갔다.",
+      "en": "I ran to Mom."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "For giving or telling, use “에게”, not “에게로”.",
+    "wrong": "친구에게로 선물을 줬다.",
+    "right": "친구에게 선물을 줬다.",
+    "en": "I gave my friend a present."
+   },
+   {
+    "note": "For a place, use “(으)로”.",
+    "wrong": "서울에게로 갔다.",
+    "right": "서울로 갔다.",
+    "en": "I went to Seoul."
+   }
+  ],
+  "topik_tip": "“에게로” follows verbs of movement or attention; “에게” follows verbs of giving.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에게서",
+  "level": 2,
+  "label": "from (a person)",
+  "meaning_en": "A particle that marks a person as the source from which something comes: “from N”. It goes with receiving, hearing, learning and borrowing verbs, and with “오다” for something that arrives from a person.",
+  "usage": "It attaches to a person or animal: “친구에게서, 부모님에게서”. Typical verbs: “받다, 듣다, 배우다, 빌리다, 얻다, 오다, 나오다”. It is the written or neutral form; the spoken form is “한테서”. For honorific sources the particle is “께”, for places “에서”, for formal writing “으로부터”. Note that “에게” alone with “받다” can also mark a giver, but with “오다” only “에게서” marks the sender.",
+  "examples": [
+   {
+    "ko": "친구에게서 생일 선물을 받았다.",
+    "en": "I received a birthday present from a friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나는 할머니에게서 옛날이야기를 들었다.",
+    "en": "I heard old tales from my grandmother.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 기술은 선배에게서 배웠다.",
+    "en": "I learned this technique from a senior.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생에게서 만 원을 빌렸다.",
+    "en": "I borrowed 10,000 won from my younger sibling.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "아이들은 부모에게서 많은 것을 배운다.",
+    "en": "Children learn a lot from their parents.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게",
+    "difference": "With “오다” the two differ: “에게서” marks who the letter comes from, “에게” who it comes to.",
+    "pair": [
+     {
+      "ko": "친구에게서 편지가 왔다.",
+      "en": "A letter came from my friend."
+     },
+     {
+      "ko": "친구에게 편지가 왔다.",
+      "en": "A letter came to my friend."
+     }
+    ]
+   },
+   {
+    "pattern": "한테서",
+    "difference": "“에게서” is the written and neutral one, “한테서” the spoken one. The meaning is the same.",
+    "pair": [
+     {
+      "ko": "친구에게서 연락이 왔다.",
+      "en": "I heard from my friend."
+     },
+     {
+      "ko": "친구한테서 연락이 왔다.",
+      "en": "I heard from my friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The giver takes “에게서”; the one who is given something takes “에게”.",
+    "wrong": "친구에게서 선물을 줬다.",
+    "right": "친구에게 선물을 줬다.",
+    "en": "I gave my friend a present."
+   },
+   {
+    "note": "A place or an institution takes “에서”, not “에게서”.",
+    "wrong": "도서관에게서 책을 빌렸다.",
+    "right": "도서관에서 책을 빌렸다.",
+    "en": "I borrowed a book from the library."
+   }
+  ],
+  "topik_tip": "Check the direction: from a person is “에게서”, to a person is “에게”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "한테서",
+  "level": 2,
+  "label": "from (a person), spoken",
+  "meaning_en": "The spoken form of “에게서”: it marks a person as the source of something received, heard, learned or borrowed: “친구한테서 전화가 왔다”.",
+  "usage": "It attaches to a person or animal: “친구한테서, 엄마한테서, 선배한테서”. Typical verbs: “받다, 듣다, 배우다, 빌리다, 얻다, 오다”. Often shortened in speech to “한테” (“친구한테 들었어”). It is colloquial: in writing and speeches “에게서” or “으로부터” is chosen. For places or institutions the particle is “에서”.",
+  "examples": [
+   {
+    "ko": "어제 친구한테서 전화가 왔어요.",
+    "en": "I got a call from a friend yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 이야기는 엄마한테서 들었어.",
+    "en": "I heard this story from Mom.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생한테서 빌린 책을 돌려줬다.",
+    "en": "I returned the book I had borrowed from my younger sibling.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선배한테서 좋은 정보를 얻었다.",
+    "en": "I got useful information from a senior.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "누구한테서 그 소식을 들었어요?",
+    "en": "Who did you hear that news from?",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게서",
+    "difference": "The meaning is the same; “에게서” fits writing, “한테서” fits speech.",
+    "pair": [
+     {
+      "ko": "친구한테서 선물을 받았다.",
+      "en": "I received a present from a friend."
+     },
+     {
+      "ko": "친구에게서 선물을 받았다.",
+      "en": "I received a present from a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "한테",
+    "difference": "“한테서” marks the source; “한테” marks the receiver.",
+    "pair": [
+     {
+      "ko": "친구한테서 전화가 왔다.",
+      "en": "A call came from my friend."
+     },
+     {
+      "ko": "친구한테 전화가 왔다.",
+      "en": "A call came to my friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A place or an institution takes “에서”.",
+    "wrong": "은행한테서 돈을 빌렸다.",
+    "right": "은행에서 돈을 빌렸다.",
+    "en": "I borrowed money from the bank."
+   },
+   {
+    "note": "The giver takes “한테서”; the receiver takes “한테”.",
+    "wrong": "친구한테서 책을 줬다.",
+    "right": "친구한테 책을 줬다.",
+    "en": "I gave my friend a book."
+   }
+  ],
+  "topik_tip": "In speech, “한테서” is often shortened to “한테”: the verb (“받다”, “듣다”) tells you the direction.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이나",
+  "level": 2,
+  "label": "or; as many as; or something",
+  "meaning_en": "A particle with three related jobs: “N이나 M” (N or M, a choice), a number or amount followed by “이나” (as many as, surprisingly much), and “N이나” for a so-so option (“let's just ... or something”).",
+  "usage": "After a consonant it is “이나”, after a vowel “나”. Choice: “커피나 차”. Amount: “한 시간이나 기다렸다” (waited a full hour). So-so option: “영화나 볼까?” (shall we watch a movie or something?). The three readings differ by context: two nouns give a choice, a counter gives surprise at the large amount, a single noun with a suggestion gives a casual option. The lexical partner for emphasis on a small amount is “만”.",
+  "examples": [
+   {
+    "ko": "커피나 차를 마시면서 이야기합시다.",
+    "en": "Let's talk over coffee or tea.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "버스를 한 시간이나 기다렸어요.",
+    "en": "I waited for the bus for a whole hour.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "심심한데 영화나 볼까?",
+    "en": "I'm bored; shall we watch a movie or something?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "주말에는 집에서 책이나 읽을 생각이에요.",
+    "en": "On the weekend I plan to read a book or something at home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 가게에서 옷을 열 벌이나 샀다.",
+    "en": "I bought as many as ten pieces of clothing at that shop.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이라도",
+    "difference": "“영화나 볼까?” offers a casual choice; “영화라도 볼까?” suggests the film as a minimum, at least something.",
+    "pair": [
+     {
+      "ko": "커피나 마실까?",
+      "en": "Shall we drink coffee or something?"
+     },
+     {
+      "ko": "커피라도 마실까?",
+      "en": "Shall we at least have some coffee?"
+     }
+    ]
+   },
+   {
+    "pattern": "만",
+    "difference": "After an amount, “이나” stresses that it is a lot; “만” limits it.",
+    "pair": [
+     {
+      "ko": "한 시간이나 기다렸다.",
+      "en": "I waited a whole hour."
+     },
+     {
+      "ko": "한 시간만 기다렸다.",
+      "en": "I waited only an hour."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel the particle is “나”.",
+    "wrong": "커피이나 차를 주세요.",
+    "right": "커피나 차를 주세요.",
+    "en": "Please give me coffee or tea."
+   },
+   {
+    "note": "After a consonant the particle is “이나”.",
+    "wrong": "책나 읽을까?",
+    "right": "책이나 읽을까?",
+    "en": "Shall we read a book or something?"
+   }
+  ],
+  "topik_tip": "Read the context: two nouns mean “or”, a counter means “as many as”, a lone noun in a suggestion means “or something”.",
+  "review": {
+   "status": "draft"
+  }
+ }
+]
