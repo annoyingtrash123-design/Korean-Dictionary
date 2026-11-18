@@ -4,7 +4,7 @@
   "level": 5,
   "label": "listing examples, any will do",
   "meaning_en": "A particle for naming examples of a kind, where any of them would do: “X or Y or the like, things such as X or Y”. It is the conversational sibling of “이라든지”.",
-  "usage": "It attaches to nouns: “이라든가” after a final consonant, “라든가” after a vowel (“커피라든가”). It is usually repeated after each item and then followed by “하는” plus the category noun. The items are examples, not a closed choice. It is colloquial and sounds casual in writing.",
+  "usage": "It attaches to nouns: “이라든가” after a final consonant, “라든가” after a vowel (“커피라든가”). It is usually repeated after each item and then followed by “하는” plus the category noun. The items are examples, not a closed choice. It is common in speech and is also used in writing.",
   "examples": [
    {
     "ko": "돈이라든가 학벌이라든가 하는 것은 별로 중요하지 않아.",
@@ -72,7 +72,9 @@
   ],
   "topik_tip": "In 읽기 passages the noun that follows “하는” after a “-라든가 … -라든가” list names the category the items illustrate.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -89,7 +91,7 @@
    },
    {
     "ko": "평소에는 잘 먹던 아이가 그날따라 밥을 한 숟가락도 먹지 않았다.",
-    "en": "The child, who normally eats well, did not eat a single spoonful that day.",
+    "en": "The child, who normally eats well, did not eat a single spoonful that day of all days.",
     "ctx": "essay"
    },
    {
@@ -147,7 +149,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -223,7 +227,9 @@
   ],
   "topik_tip": "A clause with “조차” most often ends in “없다”, “못” or a negative form, which helps when choosing among “도”, “조차” and “마저”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -298,7 +304,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -380,7 +388,9 @@
   ],
   "topik_tip": "It is a handy formal link in 쓰기 answers when you stack two reasons or merits; keep both on the same side, good with good or bad with bad.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -427,7 +437,7 @@
      },
      {
       "ko": "어릴 때 그 강에서 수영한 적이 있다.",
-      "en": "I have swum in that river when I was little."
+      "en": "I swam in that river once when I was little."
      }
     ]
    },
@@ -455,7 +465,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -536,7 +548,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -562,9 +576,9 @@
     "ctx": "essay"
    },
    {
-    "ko": "온실가스 배출이 계속 늘다가는 해수면이 크게 상승할 것으로 전망된다.",
-    "en": "If greenhouse gas emissions keep rising, sea levels are forecast to rise sharply.",
-    "ctx": "news"
+    "ko": "지금처럼 온실가스 배출이 계속 늘다가는 해수면 상승을 막기 어려울 것이다.",
+    "en": "If greenhouse gas emissions keep rising as they are now, it will be hard to stop sea levels from rising.",
+    "ctx": "essay"
    },
    {
     "ko": "민준이는 한참 창밖을 바라보다가는 갑자기 일어나 나가 버렸다.",
@@ -612,7 +626,9 @@
   ],
   "topik_tip": "A “-다가는 … -ㄹ 거예요/-게 된다” sentence warns of a bad result; look for a negative outcome in the clause that follows.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -688,7 +704,9 @@
   ],
   "topik_tip": "It is often found with “비록”, “아무리” or “설령”; the clause that follows usually states what stays true all the same.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -741,7 +759,7 @@
    },
    {
     "pattern": "-을 바에는",
-    "difference": "Both mean “if it comes to this, rather”. “-을 바에는” is built on a supposed situation; “-느니” sets two options side by side.",
+    "difference": "Near-synonyms: both reject the first option in favour of the second. “-을 바에는” (also “-을 바에야”) is the modifier “-을” plus the noun “바”; “-느니” attaches straight to the verb stem.",
     "pair": [
      {
       "ko": "이렇게 하느니 안 하겠다.",
@@ -764,7 +782,9 @@
   ],
   "topik_tip": "In 읽기 the second action after “-느니 (차라리)” is the one the speaker prefers.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -825,7 +845,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -906,7 +928,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -927,8 +951,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "그걸로 뭘 하려고?",
-    "en": "What are you going to do with that?",
+    "ko": "설마 내 방에서 자려고?",
+    "en": "You're not going to sleep in my room, are you?",
     "ctx": "collocation"
    },
    {
@@ -981,7 +1005,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -989,7 +1015,7 @@
   "level": 5,
   "label": "command to a younger person",
   "meaning_en": "A command ending of the lowest speech level, used by an elder or someone in authority to a child or a younger person. It is common in fiction and in blessings, and is spoken by someone older or senior.",
-  "usage": "It attaches to verb stems and gives the command that “-아라/-어라” also gives; it is especially common after “가다” and “자다”, “있다”, “먹다”. “오다” takes “-너라” (“오너라”), and with “하다” the command is “해라” or “하여라”. It is used by someone senior to someone junior, and it cannot be used toward a superior.",
+  "usage": "It attaches to verb stems and gives the command that “-아라/-어라” also gives; it is especially common after “가다” and “자다”, “있다”, “먹다”. Verbs ending in “오다” have their own command “-너라” (“오너라”, “가져오너라”). It is used by someone senior to someone junior, and it cannot be used toward a superior.",
   "examples": [
    {
     "ko": "날이 저물겠다. 어서 집에 가거라.",
@@ -1020,7 +1046,7 @@
   "compare": [
    {
     "pattern": "-아라/-어라",
-    "difference": "Both are commands at the “해라” level. “-아라/-어라” fits every verb, while “-거라” is limited to certain verbs and to speakers who are older or senior.",
+    "difference": "Both are commands at the “해라” level. “-아라/-어라” is the neutral one; “-거라” sounds like an elder speaking (a parent or grandparent) and is most common with a few verbs such as “가다” and “자다”.",
     "pair": [
      {
       "ko": "일찍 자거라.",
@@ -1049,14 +1075,16 @@
   ],
   "pitfalls": [
    {
-    "note": "For “오다” the standard command is “오너라”.",
-    "wrong": "이리 오거라.",
-    "right": "이리 오너라.",
-    "en": "Come here."
+    "note": "It is a command to someone junior; to a superior use the polite “-으세요”.",
+    "wrong": "사장님, 먼저 들어가거라.",
+    "right": "사장님, 먼저 들어가세요.",
+    "en": "Please go in first, sir."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1137,7 +1165,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1213,7 +1243,9 @@
   ],
   "topik_tip": "In 읽기 essays a title or opening such as “…란 무엇인가?” is a question the rest of the passage answers.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1294,7 +1326,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1444,83 +1478,105 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-는다니1",
   "level": 5,
-  "label": "hearing that, I feel or judge",
-  "meaning_en": "A connective expression, a contraction of “-는다고 하니”: it picks up what someone else has said and then states the speaker's reaction or judgement: “hearing that X, I am surprised, glad, or conclude that…”.",
-  "usage": "It attaches to verb stems as “-ㄴ다니/-는다니”, to adjective stems and past forms as “-다니” (“좋다니”, “갔다니”), and to “이다” as “-라니” (“학생이라니”). The same set quotes a command as “-으라니” and a suggestion as “-자니”. What follows is the speaker's feeling, evaluation or conclusion, not a plain report. It is conversational, with a sentence-final cousin that is a separate row.",
+  "label": "asking what someone said or ordered",
+  "meaning_en": "A sentence-final expression that asks the listener about what a third person said, above all an instruction or suggestion they gave: “did they say…?, what did they tell you to do?”. With “-으라니” it asks about the content of an order: “선생님께서 너더러 심부름을 가라니?” “Did the teacher tell you to run an errand?”",
+  "usage": "It is a contraction of “-는다고 하니?”. It attaches to verb stems as “-ㄴ다니/-는다니” (“온다니”, “읽는다니”), to adjective stems and after “-었-” as “-다니” (“좋다니”, “갔다니”), and to nouns as “-(이)라니” (“뭐라니”). A quoted command is “-으라니/-라니” (“가라니”, “읽으라니”) and a quoted suggestion “-자니” (“가자니”). The listener is the one who heard the words; the speaker of them is a third person, or the news or a forecast. It is informal speech to a friend or someone younger; to someone you speak to politely use “-는대요?” or “-ㄴ다고 하던가요?”. The same spelling also has an exclamatory use (level-5 “-다니1”) and a “how can …?” use (level-4 “-는다니2”); intonation and context tell them apart.",
   "examples": [
    {
-    "ko": "네가 집안일을 도와준다니 한결 마음이 놓이는구나.",
-    "en": "Now that you say you will help with the housework, I feel much more at ease.",
+    "ko": "선생님께서 너더러 심부름을 가라니?",
+    "en": "Did the teacher tell you to run an errand?",
     "ctx": "conversation"
    },
    {
-    "ko": "딸이 장학금을 받는다니 정말 기쁘시겠어요.",
-    "en": "Hearing that your daughter is getting a scholarship, you must be so happy.",
+    "ko": "승규는 요새 무슨 책을 읽는다니?",
+    "en": "What book did Seunggyu say he's reading these days?",
     "ctx": "conversation"
    },
    {
-    "ko": "이 날씨에 소풍을 간다니 말도 안 돼.",
-    "en": "Going on a picnic in this weather—that's absurd.",
-    "ctx": "conversation"
-   },
-   {
-    "ko": "그렇게 큰 회사가 문을 닫는다니 믿기지 않는다.",
-    "en": "It is hard to believe that such a big company is closing down.",
+    "ko": "그쪽에서 이 서류를 언제까지 내라니?",
+    "en": "By when did they say to hand in this document?",
     "ctx": "collocation"
    },
    {
-    "ko": "선생님이 내일 갑자기 시험을 보라니 다들 당황했다.",
-    "en": "When the teacher told us we would suddenly have an exam tomorrow, everyone was flustered.",
-    "ctx": "essay"
+    "ko": "지수가 주말에 같이 놀러 가자니?",
+    "en": "Did Jisu suggest going out together on the weekend?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일기 예보에서 내일도 춥다니?",
+    "en": "Did the weather forecast say it will be cold tomorrow too?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "엄마가 저녁은 언제 먹는다니?",
+    "en": "When did Mom say we're having dinner?",
+    "ctx": "conversation"
    }
   ],
   "compare": [
    {
-    "pattern": "-다니1",
-    "difference": "The sentence-final “-다니” is an exclamation of surprise; the mid-sentence “-는다니” goes on to say what that news makes the speaker feel or conclude.",
+    "pattern": "-는대?",
+    "difference": "Both ask what a third person said. “-는대?” (from “-는다고 해?”) is the everyday form and has a polite “-는대요?”; “-는다니?” has no polite form in this use.",
     "pair": [
      {
-      "ko": "소풍을 가다니!",
-      "en": "Going on a picnic?!"
+      "ko": "민수는 언제 온대?",
+      "en": "When did Minsu say he's coming?"
      },
      {
-      "ko": "소풍을 간다니 말도 안 돼.",
-      "en": "Going on a picnic—that is absurd."
+      "ko": "민수는 언제 온다니?",
+      "en": "When did Minsu say he's coming?"
      }
     ]
    },
    {
-    "pattern": "-는다기에",
-    "difference": "“-는다니” gives the speaker's reaction to what was heard; “-는다기에” gives what was heard as the reason for an action.",
+    "pattern": "-다니1",
+    "difference": "Same spelling, different act: the question asks the listener to pass on what was said; the exclamation reacts with surprise to news the speaker already has.",
     "pair": [
      {
-      "ko": "네가 도와준다니 마음이 놓인다.",
-      "en": "Now that you say you'll help, I feel at ease."
+      "ko": "선생님이 내일까지 다 하라니?",
+      "en": "Did the teacher tell you to finish it all by tomorrow?"
      },
      {
-      "ko": "네가 도와준다기에 부탁했다.",
-      "en": "You said you would help, so I asked."
+      "ko": "내일까지 다 하라니! 말도 안 돼.",
+      "en": "Finish it all by tomorrow?! That's ridiculous."
      }
     ]
    }
   ],
   "pitfalls": [
    {
-    "note": "After a noun the ending is “-라니”, not a verb ending.",
-    "wrong": "민수가 학생는다니 놀랐다.",
-    "right": "민수가 학생이라니 놀랐다.",
-    "en": "I was surprised that Minsu is a student."
+    "note": "After a noun, including “뭐”, the form is “-라니”, not “-다니”.",
+    "wrong": "그 사람 직업이 뭐다니?",
+    "right": "그 사람 직업이 뭐라니?",
+    "en": "What did they say that person's job is?"
+   },
+   {
+    "note": "A quoted command takes “-으라니”; “-는다니” would report a statement, not an order.",
+    "wrong": "선생님께서 너더러 책을 읽는다니?",
+    "right": "선생님께서 너더러 책을 읽으라니?",
+    "en": "Did the teacher tell you to read the book?"
+   },
+   {
+    "note": "It is informal; to someone you address politely use “-는대요?”.",
+    "wrong": "할머니, 삼촌이 언제 온다니?",
+    "right": "할머니, 삼촌이 언제 온대요?",
+    "en": "Grandma, when did Uncle say he's coming?"
    }
   ],
   "review": {
-   "status": "draft"
-  }
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
+  },
+  "topik_tip": "In 듣기 dialogues “뭐라니?” or “-으라니?” asks the listener to pass on a message or an instruction; the reply usually reports it with “-래” or “-대”."
  },
  {
   "form": "-었던",
@@ -1594,7 +1650,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1675,7 +1733,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1750,7 +1810,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1826,7 +1888,9 @@
   ],
   "topik_tip": "A “-기/-게 마련이다” sentence states a universal tendency, so a clause about one specific event does not fit it.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
