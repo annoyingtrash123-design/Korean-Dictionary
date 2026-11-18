@@ -61,6 +61,13 @@ export const test = base.extend<{ failureDump: void; settingsOpen: void }>({
 
 export { expect, type Page };
 
+/** Text of every match, whether or not it is on screen. Use this, not `allInnerTexts()`: list rows use
+ *  `content-visibility: auto`, and Chromium returns '' as innerText for rows it hasn't rendered yet
+ *  (an off-screen 성어 list name failed CI that way). verify.sh rejects allInnerTexts in specs. */
+export async function texts(loc: import('@playwright/test').Locator): Promise<string[]> {
+  return (await loc.allTextContents()).map((t) => t.replace(/\s+/g, ' ').trim());
+}
+
 /** First-run Download, then wait until every selected pack has finished importing (the app opens
  *  as soon as the core pack is usable; the optional packs keep importing after it). The app opens on
  *  the Home tab: most specs want the search box, so this goes on to the Search tab. */
