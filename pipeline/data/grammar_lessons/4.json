@@ -1,1 +1,763 @@
-[]
+[
+ {
+  "form": "커녕",
+  "level": 4,
+  "label": "far from, not even",
+  "meaning_en": "A particle meaning “far from X, not even X”: it dismisses the first item as out of the question and goes on to say that even something smaller or easier is not so either. It can also mean “on the contrary, far from X, the opposite”.",
+  "usage": "It attaches to nouns as “은커녕” after a final consonant and “는커녕” after a vowel (“점심은커녕”), and it is written without a space. The clause after it is negative (“못”, “안”, “없다”), usually with “도” or “조차” on the lesser item. In the second sense the following clause states the opposite of what the noun would suggest (“성공은커녕 빚만 졌다”).",
+  "examples": [
+   {
+    "ko": "너무 바빠서 점심은커녕 물 한 잔도 못 마셨어요.",
+    "en": "I was so busy that I couldn't drink even a glass of water, let alone have lunch.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "학생인 나는 자동차는커녕 자전거 한 대 살 돈도 없다.",
+    "en": "As a student I don't even have the money to buy a bicycle, let alone a car.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 된장찌개는커녕 라면도 제대로 못 끓인다.",
+    "en": "Jisu can't even boil instant noodles properly, let alone make doenjang stew.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "성공은커녕 빚만 잔뜩 지고 말았다.",
+    "en": "Far from succeeding, I ended up with nothing but a pile of debt.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 시간에는 버스는커녕 택시도 다니지 않았다.",
+    "en": "At that hour not even taxis ran, let alone buses.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "조차",
+    "difference": "“조차” picks out one extreme case; “은/는커녕” sets a big item against a smaller one, and both are negated.",
+    "pair": [
+     {
+      "ko": "물조차 마시지 못했다.",
+      "en": "I could not even drink water."
+     },
+     {
+      "ko": "점심은커녕 물도 마시지 못했다.",
+      "en": "I could not even drink water, let alone have lunch."
+     }
+    ]
+   },
+   {
+    "pattern": "은/는 고사하고",
+    "difference": "The two are close in meaning and are used in the same way.",
+    "pair": [
+     {
+      "ko": "점심은커녕 물도 못 마셨다.",
+      "en": "I couldn't even drink water, let alone have lunch."
+     },
+     {
+      "ko": "점심은 고사하고 물도 못 마셨다.",
+      "en": "I couldn't even drink water, let alone have lunch."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows has to be negative.",
+    "wrong": "밥은커녕 죽도 먹었다.",
+    "right": "밥은커녕 죽도 못 먹었다.",
+    "en": "I couldn't eat even porridge, let alone rice."
+   },
+   {
+    "note": "It is a particle, so it is written without a space.",
+    "wrong": "점심은 커녕 물도 못 마셨다.",
+    "right": "점심은커녕 물도 못 마셨다.",
+    "en": "I couldn't even drink water, let alone have lunch."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이나마",
+  "level": 4,
+  "label": "even if only a small thing",
+  "meaning_en": "A particle meaning “even if it is only X, though it is modest”: the speaker accepts something small or short of what was wanted, and is glad of it.",
+  "usage": "It attaches to nouns as “이나마” after a final consonant and “나마” after a vowel (“잠시나마”), and also to adverbs such as “늦게나마”. The noun names something modest (a short time, a small amount, a minor role), and the clause that follows is a positive result: thanks, relief or a modest achievement. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "짧은 시간이나마 가족과 함께 보낼 수 있어서 다행이다.",
+    "en": "I am glad I could spend even a short time with my family.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "단역이나마 그 영화에 출연할 수 있어서 기뻤다.",
+    "en": "I was happy to appear in that film, even if only in a bit part.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "늦게나마 진심으로 사과드립니다.",
+    "en": "I sincerely apologize, even if belatedly.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "작은 힘이나마 보태고 싶어서 기부를 했다.",
+    "en": "I made a donation because I wanted to add what little strength I could.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "잠시나마 걱정을 잊을 수 있었다.",
+    "en": "I was able to forget my worries, if only for a moment.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이라도",
+    "difference": "“이라도” offers something as the next best choice; “이나마” accepts something already in hand, though modest.",
+    "pair": [
+     {
+      "ko": "잠시나마 쉴 수 있어서 다행이다.",
+      "en": "I'm glad I could rest, if only briefly."
+     },
+     {
+      "ko": "잠시라도 쉬세요.",
+      "en": "Rest, even if only briefly."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It presents something as modest, so it does not go with a large amount.",
+    "wrong": "아주 많은 돈이나마 기부했다.",
+    "right": "적은 돈이나마 기부했다.",
+    "en": "I donated, even if it was only a small sum."
+   },
+   {
+    "note": "After a vowel the particle is “나마”.",
+    "wrong": "잠시이나마 쉴 수 있었다.",
+    "right": "잠시나마 쉴 수 있었다.",
+    "en": "I could rest, if only briefly."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이며",
+  "level": 4,
+  "label": "listing items: A and B and",
+  "meaning_en": "A particle that strings nouns together as examples that belong in the same group: “X and Y and (so on)”. It is usually repeated after each item and is followed by a summing-up clause.",
+  "usage": "It attaches to nouns as “이며” after a final consonant and “며” after a vowel (“채소며”). It is usually repeated (“A이며 B이며”), and the items are of the same kind. What follows sums them up: “모두”, “없는 게 없다”, “정리할 것이 많다”. It is used in speech and in prose.",
+  "examples": [
+   {
+    "ko": "며칠 동안 폭우가 쏟아져 논이며 밭이며 모두 물에 잠겼다.",
+    "en": "Heavy rain poured for days, and rice paddies and fields alike were submerged.",
+    "ctx": "news"
+   },
+   {
+    "ko": "시장에는 과일이며 채소며 없는 게 없었다.",
+    "en": "At the market there was nothing you couldn't find, fruit and vegetables and more.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "방 안에는 책이며 옷이며 온갖 물건이 어질러져 있었다.",
+    "en": "In the room, books and clothes and all sorts of things were strewn about.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이사를 하느라 가구며 짐이며 정리할 것이 산더미다.",
+    "en": "Because of the move, there's a mountain of furniture and luggage to sort out.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 가게는 값이며 품질이며 어느 하나 흠잡을 데가 없다.",
+    "en": "That shop has nothing to fault, neither the price nor the quality.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "하고",
+    "difference": "“하고” simply joins two items; “이며” repeats after each item to suggest a range of things of that kind.",
+    "pair": [
+     {
+      "ko": "책하고 옷을 샀다.",
+      "en": "I bought a book and clothes."
+     },
+     {
+      "ko": "책이며 옷이며 이것저것 샀다.",
+      "en": "I bought books and clothes and all sorts of things."
+     }
+    ]
+   },
+   {
+    "pattern": "이라든가",
+    "difference": "“이라든가” gives samples of a category; “이며” enumerates the items actually there.",
+    "pair": [
+     {
+      "ko": "방에는 책이며 옷이며 어질러져 있었다.",
+      "en": "In the room, books and clothes were strewn about."
+     },
+     {
+      "ko": "책이라든가 옷이라든가 하는 것은 가져오지 마세요.",
+      "en": "Please don't bring things like books or clothes."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel it is “며”, not “이며”.",
+    "wrong": "과일이며 채소이며 없는 게 없었다.",
+    "right": "과일이며 채소며 없는 게 없었다.",
+    "en": "There was nothing you couldn't find, fruit and vegetables and more."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이든",
+  "level": 4,
+  "label": "whichever, any one",
+  "meaning_en": "A particle meaning that whichever one is chosen makes no difference: “be it X or Y, any, whatever”. With a question word it gives “anything, anyone, anywhere”.",
+  "usage": "It attaches to nouns as “이든(지)” after a final consonant and “든(지)” after a vowel. Joined to a question word it gives “무엇이든”, “누구든”, “언제든지”, “어디든”. Used in pairs (“A든 B든”) it means “whether A or B”. The clause that follows says that the result is the same either way, often “괜찮다”, “좋다” or a general statement. “-든지” can be added with no change in meaning.",
+  "examples": [
+   {
+    "ko": "무엇이든 좋으니 먹을 것 좀 주세요.",
+    "en": "Anything is fine, so please give me something to eat.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "언제든지 연락 주세요.",
+    "en": "Please contact me any time.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "커피든 차든 아무거나 좋아요.",
+    "en": "Coffee or tea, either is fine.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "누구든 이 문제를 풀 수 있다.",
+    "en": "Anyone can solve this problem.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "한국어 책이든 영어 책이든 읽을 만한 책이면 다 좋아요.",
+    "en": "Whether it's a Korean book or an English book, any book worth reading is fine.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이나",
+    "difference": "“이나” offers a choice of one; “이든” says any choice is fine.",
+    "pair": [
+     {
+      "ko": "커피나 차를 드세요.",
+      "en": "Have coffee or tea."
+     },
+     {
+      "ko": "커피든 차든 아무거나 드세요.",
+      "en": "Have anything, coffee or tea."
+     }
+    ]
+   },
+   {
+    "pattern": "이라도",
+    "difference": "With a question word the two are close in meaning, though “이라도” can also mean “at least”.",
+    "pair": [
+     {
+      "ko": "무엇이든 좋아요.",
+      "en": "Anything is fine."
+     },
+     {
+      "ko": "무엇이라도 좋아요.",
+      "en": "Anything at all is fine."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel the particle is “든”.",
+    "wrong": "커피이든 차이든 아무거나 좋아요.",
+    "right": "커피든 차든 아무거나 좋아요.",
+    "en": "Coffee or tea, either is fine."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이란",
+  "level": 4,
+  "label": "as for X, definition topic",
+  "meaning_en": "A particle that picks out a noun as the topic to be defined or explained: “X is (by nature) Y, what we call X”. It is how one defines a term or states a general view.",
+  "usage": "It attaches to nouns as “이란” after a final consonant and “란” after a vowel (“친구란”). The sentence that follows is a definition or a general statement, usually ending in “-ㄴ/는 것이다”, “-이다” or “-ㄴ/은 법이다”. It speaks of a kind of thing in general, not of one particular thing. It is common in essays and explanations and is a contraction of “이라는 것은”.",
+  "examples": [
+   {
+    "ko": "사랑이란 서로를 이해하고 아끼는 마음이다.",
+    "en": "Love is the heart that understands and cherishes each other.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "인생이란 한 권의 책과 같다.",
+    "en": "Life is like a book.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "친구란 어려울 때 곁에 있어 주는 사람이다.",
+    "en": "A friend is someone who stays by you in hard times.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "말이란 하기에 따라 칭찬도 되고 비난도 된다.",
+    "en": "Words can become praise or criticism depending on how they are said.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "교육이란 단순히 지식을 전달하는 일이 아니다.",
+    "en": "Education is not simply passing on knowledge.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "은/는",
+    "difference": "“은/는” is the plain topic; “이란/란” sets the noun up as a thing to be defined.",
+    "pair": [
+     {
+      "ko": "사랑은 서로를 아끼는 마음이다.",
+      "en": "Love is a heart that cherishes each other."
+     },
+     {
+      "ko": "사랑이란 서로를 아끼는 마음이다.",
+      "en": "Love is, by definition, a heart that cherishes each other."
+     }
+    ]
+   },
+   {
+    "pattern": "이라는",
+    "difference": "“이라는” means “called, named” and goes before a noun; “이란” sets up a definition.",
+    "pair": [
+     {
+      "ko": "사랑이라는 감정은 복잡하다.",
+      "en": "The emotion called love is complicated."
+     },
+     {
+      "ko": "사랑이란 복잡한 감정이다.",
+      "en": "Love is a complicated emotion."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel the particle is “란”.",
+    "wrong": "친구이란 어려울 때 곁에 있어 주는 사람이다.",
+    "right": "친구란 어려울 때 곁에 있어 주는 사람이다.",
+    "en": "A friend is someone who stays by you in hard times."
+   },
+   {
+    "note": "It speaks of a kind of thing in general, not of one particular person.",
+    "wrong": "어제 만난 친구란 아주 친절했다.",
+    "right": "친구란 어려울 때 곁에 있어 주는 사람이다.",
+    "en": "A friend is someone who stays by you in hard times."
+   }
+  ],
+  "topik_tip": "In 읽기 passages “X란 Y이다” is the standard way to define a term, and the definition is usually the key point of the paragraph.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이면",
+  "level": 4,
+  "label": "in every field, X or Y",
+  "meaning_en": "A particle used in repeated pairs, “X이면 X, Y이면 Y”, to say that in every field or kind of thing named, the subject is outstanding or complete: “whether it's X or Y, nothing is lacking”.",
+  "usage": "It attaches to a noun as “이면” after a final consonant and “면” after a vowel, and the same noun is repeated after it (“운동이면 운동”). Two or three such items are strung together, and the clause that follows is a sweeping claim, often a double negative (“못하는 게 없다”) or a word like “팔방미인”. It is spoken and written.",
+  "examples": [
+   {
+    "ko": "승규는 운동이면 운동, 공부면 공부 못하는 게 없다.",
+    "en": "Seunggyu is good at everything, be it sports or studying.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 일이면 일, 살림이면 살림, 정말 팔방미인이다.",
+    "en": "Whether it is work or housekeeping, Jisu is truly a master of everything.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 가게는 맛이면 맛, 서비스면 서비스, 하나도 빠지는 게 없다.",
+    "en": "This shop lacks nothing, be it the taste or the service.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 팀장님은 영어면 영어, 중국어면 중국어 다 능숙하세요.",
+    "en": "Our team leader is fluent in everything, English or Chinese.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저 선수는 체력이면 체력, 기술이면 기술, 모든 면에서 뛰어나다.",
+    "en": "That player excels in every respect, be it stamina or skill.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이며",
+    "difference": "“이며” just strings items together; “이면” repeats each noun and says that the subject is good at every one.",
+    "pair": [
+     {
+      "ko": "운동이면 운동, 공부면 공부 다 잘한다.",
+      "en": "Be it sports or studies, they are good at all of it."
+     },
+     {
+      "ko": "운동이며 공부며 다 잘한다.",
+      "en": "Sports and studies and the rest, they are good at all of it."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면 (if)",
+    "difference": "The ordinary “이면” means “if it is”; the repeated “X이면 X” means “in the field of X”.",
+    "pair": [
+     {
+      "ko": "공부면 이 책을 읽어 보세요.",
+      "en": "If it is studying you want, read this book."
+     },
+     {
+      "ko": "공부면 공부, 운동이면 운동 다 잘한다.",
+      "en": "Be it studying or sports, they are good at all of it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The same noun is repeated, with each item kept together with its own “이면”.",
+    "wrong": "운동이면 공부, 노래면 춤 못하는 게 없다.",
+    "right": "운동이면 운동, 공부면 공부 못하는 게 없다.",
+    "en": "There is nothing they can't do, be it sports or studying."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이야",
+  "level": 4,
+  "label": "as for X, indeed (but)",
+  "meaning_en": "A particle that puts weight on the noun before it: “as for X, of course, X at least, certainly”. It grants that the point holds, and the sentence usually goes on to give a contrast or a reservation.",
+  "usage": "It attaches to nouns as “이야” after a final consonant and “야” after a vowel (“나야”, “지금이야”), and to some adverbs and endings. The main clause often has “-지만”, “-는데” or a similar concession. It is common in everyday speech. It is different from “이야말로”, which stresses “the very one”.",
+  "examples": [
+   {
+    "ko": "글이야 잘 쓰지만 말은 서툴러요.",
+    "en": "I'm good at writing, yes, but I'm clumsy at speaking.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "나야 괜찮지만 다른 사람들이 걱정이야.",
+    "en": "I'm fine, but I'm worried about the others.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금이야 웃으며 말하지만 그때는 정말 힘들었다.",
+    "en": "I can talk about it laughing now, but back then it was really hard.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "돈이야 벌면 되지만 건강은 한번 잃으면 되찾기 어렵다.",
+    "en": "Money you can earn again, but health is hard to regain once lost.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "시험이야 어렵겠지만 열심히 준비하면 괜찮을 거예요.",
+    "en": "The exam will no doubt be hard, but if you prepare well you'll be fine.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "은/는",
+    "difference": "“은/는” is the plain contrast topic; “이야” adds that the point is granted.",
+    "pair": [
+     {
+      "ko": "글은 잘 쓰지만 말은 서툴러요.",
+      "en": "I write well, but I'm clumsy at speaking."
+     },
+     {
+      "ko": "글이야 잘 쓰지만 말은 서툴러요.",
+      "en": "Writing I do well, I admit, but I'm clumsy at speaking."
+     }
+    ]
+   },
+   {
+    "pattern": "이야말로",
+    "difference": "“이야말로” singles out “the very one”; “이야” just grants the point.",
+    "pair": [
+     {
+      "ko": "나야 괜찮아요.",
+      "en": "I'm fine (at least)."
+     },
+     {
+      "ko": "나야말로 죄송합니다.",
+      "en": "I'm the one who should apologize."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows is normally a contrast.",
+    "wrong": "글이야 잘 쓰고 말도 잘해요.",
+    "right": "글이야 잘 쓰지만 말은 서툴러요.",
+    "en": "I write well, but I'm clumsy at speaking."
+   },
+   {
+    "note": "After a vowel the particle is “야”.",
+    "wrong": "저이야 괜찮지만 다른 사람들이 걱정이에요.",
+    "right": "저야 괜찮지만 다른 사람들이 걱정이에요.",
+    "en": "I'm fine, but I'm worried about the others."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "치고",
+  "level": 4,
+  "label": "as a rule; for a",
+  "meaning_en": "A particle with two uses. It says that without exception all X are so (“as a rule, there is no X that is not…”), or that something is exceptional for its kind (“for an X, it's surprisingly…”).",
+  "usage": "It attaches to nouns. In the first sense the clause that follows is almost always negative or a rhetorical question (“없다”, “아닌”), as in “한국 사람치고 김치를 모르는 사람은 없다”. In the second the noun names a category and the clause that follows is a surprising feature, and “치고는” is common (“겨울 날씨치고는 따뜻하다”). It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "한국 사람치고 김치를 모르는 사람은 없다.",
+    "en": "There is no Korean who doesn't know kimchi.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "아이들치고 놀이터를 싫어하는 아이는 없다.",
+    "en": "There is no child who dislikes a playground.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "겨울 날씨치고는 제법 따뜻한 편이다.",
+    "en": "For winter weather, it is rather warm.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 식당은 관광지에 있는 가게치고 가격이 착하다.",
+    "en": "For a shop in a tourist area, this restaurant has fair prices.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "초보치고 운전을 꽤 잘하시네요.",
+    "en": "You drive quite well for a beginner.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "은/는",
+    "difference": "“치고” says there is no exception to the whole group; a plain statement does not rule out an exception.",
+    "pair": [
+     {
+      "ko": "한국 사람치고 김치를 모르는 사람은 없다.",
+      "en": "There is no Korean who doesn't know kimchi."
+     },
+     {
+      "ko": "한국 사람은 대부분 김치를 안다.",
+      "en": "Most Koreans know kimchi."
+     }
+    ]
+   },
+   {
+    "pattern": "에 비하여",
+    "difference": "“치고” says it is surprising for that kind of thing; “에 비하여” states a comparison to something.",
+    "pair": [
+     {
+      "ko": "겨울 날씨치고 따뜻하다.",
+      "en": "It's warm for winter weather."
+     },
+     {
+      "ko": "작년에 비하여 따뜻하다.",
+      "en": "It's warm compared to last year."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "In the “no exception” sense the clause that follows is negative.",
+    "wrong": "한국 사람치고 김치를 아는 사람이 많다.",
+    "right": "한국 사람치고 김치를 모르는 사람은 없다.",
+    "en": "There is no Korean who doesn't know kimchi."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "까지2",
+  "level": 4,
+  "label": "even, on top of that",
+  "meaning_en": "A particle meaning “even, as well as, on top of that”: it adds one more thing to what is already so, or names a case that goes beyond the usual or expected extent.",
+  "usage": "It attaches to nouns and to nominalised verbs (“착하기까지 하다”), and to adverbs such as “그렇게까지”. In the additive use it goes with “-ㄴ/은 데다가” or a first item (“바람까지 불었다”), and in the extent use it marks the surprising limit (“거짓말까지 했다”). “까지도” is possible. It is different from the time or place limit “까지” of the level 1 list.",
+  "examples": [
+   {
+    "ko": "이 노트북은 가볍고 얇은 데다 성능까지 좋다.",
+    "en": "This laptop is light and thin, and its performance is good as well.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 예쁘고 착하기까지 해서 인기가 많다.",
+    "en": "Jisu is pretty and even kind, so is very popular.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 오는데 바람까지 불어서 우산이 뒤집어졌다.",
+    "en": "It was raining and the wind blew on top of that, so my umbrella turned inside out.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그렇게까지 말할 필요는 없었잖아.",
+    "en": "There was no need to go as far as saying that.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구에게 돈까지 빌려 줬는데 연락이 없다.",
+    "en": "I even lent money to my friend, and there is no word from them.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "마저",
+    "difference": "“마저” adds the last remaining thing and is mostly used for bad news; “까지” adds without that last-straw feeling.",
+    "pair": [
+     {
+      "ko": "비가 오는데 바람까지 불었다.",
+      "en": "It was raining and the wind blew too."
+     },
+     {
+      "ko": "비가 오는데 바람마저 불었다.",
+      "en": "It was raining and even the wind blew, the last straw."
+     }
+    ]
+   },
+   {
+    "pattern": "도",
+    "difference": "“도” just adds another; “까지” says the addition goes beyond what was expected.",
+    "pair": [
+     {
+      "ko": "친구에게 돈도 빌려 줬다.",
+      "en": "I lent money to the friend too."
+     },
+     {
+      "ko": "친구에게 돈까지 빌려 줬다.",
+      "en": "I even lent money to the friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A verb or adjective takes “-기” before “까지”.",
+    "wrong": "예쁘고 착하까지 해서 인기가 많다.",
+    "right": "예쁘고 착하기까지 해서 인기가 많다.",
+    "en": "They are pretty and even kind, so are very popular."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이라도",
+  "level": 4,
+  "label": "even, at least; second best",
+  "meaning_en": "A particle for the second-best choice or a minimal option: “even if only X, at least X, X will do”. It also marks “any at all” after a question word, and “even tomorrow, even one” after a time or number.",
+  "usage": "It attaches to nouns as “이라도” after a final consonant and “라도” after a vowel (“차라도”). In the main sense it offers or accepts an option that is not ideal (“커피라도 한잔하세요”, “지금이라도 시작하자”). It also follows time and quantity words to stress them (“내일이라도”, “한 번이라도”) and question words (“무엇이라도”). The clause that follows is often a request, a suggestion or a wish.",
+  "examples": [
+   {
+    "ko": "시간이 없으면 커피라도 한 잔 마시고 가세요.",
+    "en": "If you have no time, at least have a cup of coffee before you go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "배고픈데 오면서 라면이라도 사다 줄래?",
+    "en": "I'm hungry. Could you pick up some ramen, at least, on your way?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "늦었지만 지금이라도 시작해 보자.",
+    "en": "It is late, but let's start even now.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어떤 일이라도 해 보겠다는 각오로 면접을 봤다.",
+    "en": "I went to the interview with the resolve to do any job at all.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "마음만 먹으면 내일이라도 떠날 수 있다.",
+    "en": "If I make up my mind, I can leave even tomorrow.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이나마",
+    "difference": "“이라도” offers or asks for the next best thing; “이나마” accepts what is modest.",
+    "pair": [
+     {
+      "ko": "잠시라도 쉬세요.",
+      "en": "Rest, even if only briefly."
+     },
+     {
+      "ko": "잠시나마 쉴 수 있어서 다행이다.",
+      "en": "I'm glad I could rest, if only briefly."
+     }
+    ]
+   },
+   {
+    "pattern": "이든",
+    "difference": "With a question word the two are close in meaning, but “이라도” can also mean “at least”.",
+    "pair": [
+     {
+      "ko": "무엇이라도 좋아요.",
+      "en": "Anything at all will do."
+     },
+     {
+      "ko": "무엇이든 좋아요.",
+      "en": "Anything is fine."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel the particle is “라도”.",
+    "wrong": "차이라도 한잔하세요.",
+    "right": "차라도 한잔하세요.",
+    "en": "Have at least a cup of tea."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ }
+]
