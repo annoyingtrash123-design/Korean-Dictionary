@@ -3112,5 +3112,807 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-는 대신에",
+  "level": 3,
+  "label": "instead of; in return",
+  "meaning_en": "An expression with two linked meanings: “instead of doing X” (a replacement) and “X is so, but in return/on the other hand Y” (a trade-off between a disadvantage and a compensation).",
+  "usage": "Verbs take “-는 대신(에)” (“먹다 → 먹는 대신에”, “만들다 → 만드는 대신에”, the ㄹ drops); adjectives take “-ㄴ/은 대신(에)” (“비싸다 → 비싼 대신에”, “춥다 → 추운 대신에”); a noun takes “N 대신(에)” (“커피 대신에 차”). The “에” is optional. In the trade-off use the two clauses balance each other: a minus in one, a plus in the other (or an exchange of favours: “내가 하는 대신에 네가 해”). Spacing: “대신에” is a separate word.",
+  "examples": [
+   {
+    "ko": "오늘은 밥을 먹는 대신에 샐러드를 먹었다.",
+    "en": "Today I ate a salad instead of rice.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 집은 값이 비싼 대신에 음식이 아주 맛있다.",
+    "en": "This place is expensive, but in return the food is very good.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "설거지는 내가 하는 대신에 청소는 네가 해.",
+    "en": "I will do the dishes, and in exchange you do the cleaning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 동네는 교통이 불편한 대신에 공기가 맑다.",
+    "en": "Our neighborhood has inconvenient transport, but the air is clean.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "커피 대신에 차를 마셨다.",
+    "en": "I drank tea instead of coffee.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 반면",
+    "difference": "Both can contrast two sides of one thing. “-는 대신에” adds the idea of compensation or exchange; “-는 반면” simply sets two facts against each other.",
+    "pair": [
+     {
+      "ko": "값이 비싼 대신에 맛있다.",
+      "en": "It is expensive, but in return it is tasty."
+     },
+     {
+      "ko": "값이 비싼 반면 맛있다.",
+      "en": "It is expensive, whereas it is tasty."
+     }
+    ]
+   },
+   {
+    "pattern": "-지 않고",
+    "difference": "In the “instead of” use, “-는 대신에” and “-지 않고” are close. “-지 않고” just denies the first action.",
+    "pair": [
+     {
+      "ko": "밥을 먹는 대신에 빵을 먹었다.",
+      "en": "I ate bread instead of rice."
+     },
+     {
+      "ko": "밥을 먹지 않고 빵을 먹었다.",
+      "en": "I did not eat rice and ate bread."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은”, not “-는”.",
+    "wrong": "값이 비싸는 대신에 맛있다.",
+    "right": "값이 비싼 대신에 맛있다.",
+    "en": "It is expensive, but in return it is tasty."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "집에서 만들는 대신에 사 왔다.",
+    "right": "집에서 만드는 대신에 사 왔다.",
+    "en": "Instead of making it at home, I bought it."
+   }
+  ],
+  "topik_tip": "Both readings appear in tests: pick “instead of” when the two actions replace each other, and “in return” when a plus balances a minus.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 만큼",
+  "level": 3,
+  "label": "to the extent that; in proportion to",
+  "meaning_en": "A modifier plus the dependent noun “만큼” that means “as much as, to the extent that, in proportion to”. It also gives a reason that fits the main clause: “since it is X, (it is only right that) Y”.",
+  "usage": "Verbs take “-는 만큼” for the present, “-ㄴ/은 만큼” for the past and “-ㄹ/을 만큼” for an extent or the future (“노력하는 만큼, 노력한 만큼, 눈물이 날 만큼”). Adjectives take “-ㄴ/은 만큼” (“중요한 만큼”). Real stems: “만들다 → 만든 만큼”, “알다 → 아는 만큼”, “먹다 → 먹은 만큼”. “만큼” is a separate word. It is a different thing from the particle “N만큼”, which is attached to a noun. The saying “아는 만큼 보인다” (you see as much as you know) is a set phrase.",
+  "examples": [
+   {
+    "ko": "노력한 만큼 결과가 나온다.",
+    "en": "The results come in proportion to the effort.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아는 만큼 보인다.",
+    "en": "You see as much as you know.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "눈물이 날 만큼 아름다운 풍경이었다.",
+    "en": "It was a view so beautiful it could bring tears.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "중요한 일인 만큼 신중하게 결정해야 합니다.",
+    "en": "Since it is an important matter, we must decide carefully.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "먹고 싶은 만큼 먹어도 돼요.",
+    "en": "You may eat as much as you want.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을수록",
+    "difference": "“-ㄹ수록” says that as one thing increases, so does another. “-는 만큼” says that the extent of the second matches the first.",
+    "pair": [
+     {
+      "ko": "노력할수록 실력이 는다.",
+      "en": "The more you try, the more your skill grows."
+     },
+     {
+      "ko": "노력한 만큼 실력이 는다.",
+      "en": "Your skill grows as much as you try."
+     }
+    ]
+   },
+   {
+    "pattern": "-기 때문에",
+    "difference": "In the “reason” use, “-는 만큼” gives a reason that suits the main clause; “-기 때문에” is a plain cause.",
+    "pair": [
+     {
+      "ko": "바쁜 만큼 건강을 챙겨야 한다.",
+      "en": "Since you are busy, you have to look after your health."
+     },
+     {
+      "ko": "바쁘기 때문에 건강을 챙기지 못한다.",
+      "en": "Because I am busy, I cannot look after my health."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb, “만큼” is a separate word, so there is a space.",
+    "wrong": "노력한만큼 얻는다.",
+    "right": "노력한 만큼 얻는다.",
+    "en": "You get as much as you put in effort."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㄴ”.",
+    "wrong": "만들은 만큼 팔렸다.",
+    "right": "만든 만큼 팔렸다.",
+    "en": "It sold as much as I made."
+   }
+  ],
+  "topik_tip": "“-는 만큼” differs from the noun particle “N만큼”: the first follows a verb modifier and is spaced.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 반면",
+  "level": 3,
+  "label": "whereas, on the other hand",
+  "meaning_en": "An expression that sets two facts against each other: “X, whereas Y; X, but on the other hand Y”. It suits advantages versus disadvantages and differences between people or periods.",
+  "usage": "Verbs take “-는 반면(에)”, adjectives and “이다” take “-ㄴ/은 반면(에)” (“편리하다 → 편리한 반면”, “학생이다 → 학생인 반면”), past forms take “-었던 반면”. The “에” is optional. The two clauses must contrast, so the second often has an opposite quality or a downside. It is more written than “-지만”. “반면” is a separate word.",
+  "examples": [
+   {
+    "ko": "인터넷은 편리한 반면 부작용도 많다.",
+    "en": "The internet is convenient, but it also has many side effects.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 활발한 반면 승규는 조용하다.",
+    "en": "Jisu is lively, whereas Seunggyu is quiet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 일은 월급이 적은 반면에 보람이 크다.",
+    "en": "This job pays little, but it is very rewarding.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여름에는 비가 많이 오는 반면 겨울에는 건조하다.",
+    "en": "It rains a lot in summer, whereas winter is dry.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "낮에는 따뜻했던 반면 밤에는 몹시 추웠다.",
+    "en": "It was warm during the day, but very cold at night.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지만",
+    "difference": "“-지만” is the plain “but” and fits any contrast. “-는 반면” sets up a balanced, written contrast between two sides.",
+    "pair": [
+     {
+      "ko": "도시는 편리하지만 물가가 비싸다.",
+      "en": "The city is convenient, but prices are high."
+     },
+     {
+      "ko": "도시는 편리한 반면 물가가 비싸다.",
+      "en": "The city is convenient, whereas prices are high."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 대신에",
+    "difference": "“-는 대신에” adds compensation. “-는 반면” is neutral.",
+    "pair": [
+     {
+      "ko": "월급이 적은 반면 보람이 크다.",
+      "en": "The pay is low, whereas the reward is big."
+     },
+     {
+      "ko": "월급이 적은 대신에 보람이 크다.",
+      "en": "The pay is low, but in return the reward is big."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은”, not “-는”.",
+    "wrong": "도시는 편리하는 반면 물가가 비싸다.",
+    "right": "도시는 편리한 반면 물가가 비싸다.",
+    "en": "The city is convenient, whereas prices are high."
+   },
+   {
+    "note": "The two parts must contrast; a plain cause or a sequence does not fit.",
+    "wrong": "비가 오는 반면 길이 막혔다.",
+    "right": "낮에는 비가 오는 반면 밤에는 맑았다.",
+    "en": "It rained during the day, whereas the night was clear."
+   }
+  ],
+  "topik_tip": "Look for opposite qualities on either side of “반면”: that is the whole meaning.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-나 보다",
+  "level": 3,
+  "label": "it seems that (guess from evidence)",
+  "meaning_en": "An expression for a guess based on what the speaker sees or hears: “it seems that ..., I guess ..., apparently ...”. It is used about a fact the speaker has not confirmed.",
+  "usage": "Verbs, “있다/없다” and past stems take “-나 보다” (“오다 → 오나 보다”, “살다 → 사나 보다” with the ㄹ dropped, “듣다 → 듣나 보다”, “잤나 보다”); adjectives and “이다” normally take “-ㄴ가 보다” (“바쁜가 보다”, “학생인가 보다”). The speaker names a ground first or after (“불이 꺼져 있네. 아무도 없나 보다.”). It is for guesses about others or about a situation; a fact the speaker knows for certain does not take it. Polite: “-나 봐요”.",
+  "examples": [
+   {
+    "ko": "밖에 비가 오나 보다. 사람들이 우산을 쓰고 있네.",
+    "en": "It seems to be raining outside. People are using umbrellas.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 어제 잠을 못 잤나 보다. 눈이 빨개.",
+    "en": "Minjun seems not to have slept last night. Their eyes are red.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "불이 꺼져 있네. 아무도 없나 보다.",
+    "en": "The lights are off. Nobody seems to be there.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 집이 맛있나 보네요. 줄이 아주 길어요.",
+    "en": "This place must be good. The line is very long.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수가 요즘 바쁜가 보다. 연락이 없네.",
+    "en": "Jisu seems busy lately. There has been no word.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-나 보다” rests on visible evidence of the present or the past. “-ㄹ 것 같다” is a broader guess and can look to the future.",
+    "pair": [
+     {
+      "ko": "비가 오나 봐요.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 올 것 같아요.",
+      "en": "It looks like it will rain."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 모양이다",
+    "difference": "“-나 보다” and “-는 모양이다” are close in meaning; “-는 모양이다” is a little more formal and fits written reports.",
+    "pair": [
+     {
+      "ko": "민준이가 아픈가 봐요.",
+      "en": "Minjun seems to be sick."
+     },
+     {
+      "ko": "민준이가 아픈 모양이에요.",
+      "en": "Minjun seems to be sick."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It is a guess from evidence, so it does not fit what the speaker knows for certain.",
+    "wrong": "저는 한국 사람인가 봐요.",
+    "right": "민준이는 한국 사람인가 봐요.",
+    "en": "Minjun seems to be Korean."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-나”.",
+    "wrong": "요즘 서울에 살나 봐요.",
+    "right": "요즘 서울에 사나 봐요.",
+    "en": "They seem to be living in Seoul these days."
+   }
+  ],
+  "topik_tip": "The guess from evidence (“나 보다”) and the guess about the future (“ㄹ 것 같다”) are different: look for a clue that has been seen.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 텐데",
+  "level": 3,
+  "label": "should be ... (but); would have ...",
+  "meaning_en": "An expression for a strong supposition followed by something connected: “it should be that ..., and/but ...”. It is also used for what would have happened, with “-았으면 ... -았을 텐데”, and for sympathy or worry about someone.",
+  "usage": "It attaches to verb, adjective and “이다” stems: after a vowel or ㄹ it is “-ㄹ 텐데”, after other consonants “-을 텐데”. Real stems: “가다 → 갈 텐데”, “먹다 → 먹을 텐데”, “살다 → 살 텐데”, “만들다 → 만들 텐데”, “이다 → 일 텐데”, past “-았을/었을 텐데”. The speaker is fairly sure; the next clause gives advice, a question, a worry or a contrast. The polite ending is “-을 텐데요”. It is made of “-ㄹ 터이다” and “-ㄴ데”.",
+  "examples": [
+   {
+    "ko": "밖이 추울 텐데 따뜻하게 입고 가세요.",
+    "en": "It must be cold outside, so dress warmly when you go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금쯤 도착했을 텐데 왜 연락이 없지?",
+    "en": "They must have arrived by now, so why is there no word?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "미리 말해 줬으면 도와줬을 텐데.",
+    "en": "If you had told me beforehand, I would have helped.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "시험 때문에 많이 힘들 텐데 괜찮아요?",
+    "en": "You must be having a hard time because of the exam. Are you all right?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서두르지 않으면 늦을 텐데.",
+    "en": "If we do not hurry, we will be late.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 테니",
+    "difference": "“-을 텐데” gives a supposition and the speech continues with a contrast or concern. “-을 테니” makes the supposition the reason for the main clause, often a request.",
+    "pair": [
+     {
+      "ko": "추울 텐데 코트를 입으세요.",
+      "en": "It must be cold, so wear a coat."
+     },
+     {
+      "ko": "추울 테니 코트를 입으세요.",
+      "en": "It is going to be cold, so wear a coat."
+     }
+    ]
+   },
+   {
+    "pattern": "-겠",
+    "difference": "“-겠-” with “-지” is a flat guess. “-을 텐데” opens a second clause or leaves the sentence hanging for a contrast, a worry or a request.",
+    "pair": [
+     {
+      "ko": "지금쯤 도착했겠지.",
+      "en": "They must have arrived by now."
+     },
+     {
+      "ko": "지금쯤 도착했을 텐데.",
+      "en": "They should have arrived by now."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem merges the ㄹ with “-ㄹ”: “살다” becomes “살 텐데”.",
+    "wrong": "지금 서울에 살을 텐데 연락해 볼까?",
+    "right": "지금 서울에 살 텐데 연락해 볼까?",
+    "en": "They must be living in Seoul now, so shall I contact them?"
+   }
+  ],
+  "topik_tip": "It carries two moves: a firm supposition and a continuation (advice, worry or contrast).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-기 위해",
+  "level": 3,
+  "label": "in order to, for",
+  "meaning_en": "An expression for a goal: “in order to do X” with verbs, and “for the sake of N” as “N을/를 위해(서)”. It is formal and common in writing and in speeches.",
+  "usage": "It attaches to verb stems with no tense ending: “지키다 → 지키기 위해(서)”, “만들다 → 만들기 위해” (the ㄹ stays before “-기”). The forms “-기 위해서는” (to X, one must) and the modifier “-기 위한 N” (efforts for X) are frequent. The noun form is “N을/를 위해(서)” (“가족을 위해”). The main clause usually states an effort or a necessary condition.",
+  "examples": [
+   {
+    "ko": "건강을 지키기 위해 매일 운동한다.",
+    "en": "I exercise every day to stay healthy.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국어를 배우기 위해 한국에 왔다.",
+    "en": "I came to Korea in order to learn Korean.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "합격하기 위해서는 꾸준한 노력이 필요하다.",
+    "en": "To pass, steady effort is needed.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "가족을 위해 열심히 일한다.",
+    "en": "I work hard for my family.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "환경을 보호하기 위한 노력이 필요하다.",
+    "en": "Efforts to protect the environment are needed.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "“-으려고” is the everyday way to state a purpose; “-기 위해” is more formal and also forms the modifier “-기 위한”.",
+    "pair": [
+     {
+      "ko": "합격하려고 공부한다.",
+      "en": "I study in order to pass."
+     },
+     {
+      "ko": "합격하기 위해 공부한다.",
+      "en": "I study in order to pass."
+     }
+    ]
+   },
+   {
+    "pattern": "-으러",
+    "difference": "“-으러” only works with “가다/오다” type verbs of motion. “-기 위해” works with any main verb.",
+    "pair": [
+     {
+      "ko": "공부하러 왔다.",
+      "en": "I came to study."
+     },
+     {
+      "ko": "공부하기 위해 왔다.",
+      "en": "I came in order to study."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb has no tense ending.",
+    "wrong": "합격했기 위해 공부했다.",
+    "right": "합격하기 위해 공부했다.",
+    "en": "I studied in order to pass."
+   },
+   {
+    "note": "A ㄹ-stem keeps the ㄹ before “-기”.",
+    "wrong": "맛있는 음식을 만드기 위해 재료를 골랐다.",
+    "right": "맛있는 음식을 만들기 위해 재료를 골랐다.",
+    "en": "I chose the ingredients to make tasty food."
+   }
+  ],
+  "topik_tip": "The list's related forms “-기 위해서, -기 위한, N을 위해” are the same expression in different shapes.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "만 아니면",
+  "level": 3,
+  "label": "as long as it isn't N",
+  "meaning_en": "An expression meaning “if only it were not N” or “as long as it is not N”: N is the one obstacle or exception, and anything else is fine. It is also used for “if it were not for N, I would ...”.",
+  "usage": "It attaches to a noun: “N만 아니면”. The main clause says what would then follow: a counterfactual (“-ㄹ 텐데, -았을 텐데”) or a statement that all else is acceptable (“괜찮다, 돼요, 상관없다”). With a clause instead of a noun the shape is “-지만 않으면” (“비가 오지만 않으면”). The spaced “아니면” is the “-이/가 아니다” + “-면”.",
+  "examples": [
+   {
+    "ko": "비만 아니면 소풍을 갈 텐데.",
+    "en": "If it were not for the rain, we would go on the picnic.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험만 아니면 같이 여행 갈 수 있을 텐데.",
+    "en": "If it were not for the exam, I could go on a trip with you.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "매운 음식만 아니면 뭐든지 잘 먹어요.",
+    "en": "I eat anything well, as long as it is not spicy food.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "거짓말만 아니면 용서할 수 있다.",
+    "en": "I can forgive anything as long as it is not a lie.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "월요일만 아니면 다 괜찮아요.",
+    "en": "Any day is fine, as long as it is not Monday.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이 아니면",
+    "difference": "“N이 아니면” just says “if it is not N”. “N만 아니면” singles out N as the only obstacle.",
+    "pair": [
+     {
+      "ko": "월요일만 아니면 괜찮아요.",
+      "en": "Anything but Monday is fine."
+     },
+     {
+      "ko": "월요일이 아니면 괜찮아요.",
+      "en": "If it is not Monday, it is fine."
+     }
+    ]
+   },
+   {
+    "pattern": "-지 않으면",
+    "difference": "“비만 아니면” is a noun obstacle. With a clause, “-지만 않으면” does the same job.",
+    "pair": [
+     {
+      "ko": "비만 아니면 갈게요.",
+      "en": "I will go, rain permitting."
+     },
+     {
+      "ko": "비가 오지만 않으면 갈게요.",
+      "en": "I will go as long as it does not rain."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a clause, use “-지만 않으면”; “만 아니면” follows a noun.",
+    "wrong": "비가 오는 만 아니면 소풍을 갈 텐데.",
+    "right": "비가 오지만 않으면 소풍을 갈 텐데.",
+    "en": "As long as it does not rain, we would go on the picnic."
+   }
+  ],
+  "topik_tip": "Read it as “only X stands in the way”. The main clause often has “-ㄹ 텐데” or “괜찮다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으면 안 되다",
+  "level": 3,
+  "label": "must not",
+  "meaning_en": "An expression for a prohibition or a limit: “you must not X, X is not allowed”. It can also say that a state is not acceptable (“너무 비싸면 안 된다”).",
+  "usage": "After a vowel or ㄹ it is “-면 안 되다”, after other consonants “-으면 안 되다”; it attaches to verbs, adjectives and “이다”. Real stems: “피우다 → 피우면”, “놀다 → 놀면”, “먹다 → 먹으면”, “눕다 → 누우면” (ㅂ-irregular), “걷다 → 걸으면”. The spoken form is “안 돼요”; “되어” contracts to “돼”, so it is never “안 되요”. The opposite pattern is “-으면 되다” (it is enough to X), and the pattern for permission is “-어도 되다”.",
+  "examples": [
+   {
+    "ko": "도서관에서는 큰 소리로 말하면 안 돼요.",
+    "en": "You must not talk loudly in the library.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "수업 시간에 휴대전화를 보면 안 되니까 가방에 넣어 두세요.",
+    "en": "You must not look at your phone during class, so put it in your bag.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "이 약은 술과 함께 먹으면 안 되므로 주의하십시오.",
+    "en": "This medicine must not be taken together with alcohol, so please be careful.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "아무리 화가 나도 사람을 때리면 안 돼.",
+    "en": "No matter how angry you are, you must not hit people.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "거짓말을 하면 안 되지요.",
+    "en": "You must not lie, of course.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지 마세요",
+    "difference": "“-으면 안 되다” states a rule; “-지 마세요” is a direct request not to do it.",
+    "pair": [
+     {
+      "ko": "여기서 담배를 피우면 안 돼요.",
+      "en": "You must not smoke here."
+     },
+     {
+      "ko": "여기서 담배를 피우지 마세요.",
+      "en": "Please do not smoke here."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면 되다",
+    "difference": "“-으면 되다” says that X is enough; “-으면 안 되다” says that X is not allowed.",
+    "pair": [
+     {
+      "ko": "여기서 기다리면 돼요.",
+      "en": "It is fine to wait here."
+     },
+     {
+      "ko": "여기서 기다리면 안 돼요.",
+      "en": "You must not wait here."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“되어” contracts to “돼”: the spoken form is “안 돼요”.",
+    "wrong": "여기서 수영하면 안 되요.",
+    "right": "여기서 수영하면 안 돼요.",
+    "en": "You must not swim here."
+   },
+   {
+    "note": "A ㅂ-irregular verb turns ㅂ into “우”.",
+    "wrong": "수업 중에 눕으면 안 돼요.",
+    "right": "수업 중에 누우면 안 돼요.",
+    "en": "You must not lie down during class."
+   }
+  ],
+  "topik_tip": "Spelling “안 돼요” (not “안 되요”) and the ㅂ-irregular “누우면” are the points that exams like.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으면 좋겠다",
+  "level": 3,
+  "label": "I hope that; it would be nice if",
+  "meaning_en": "An expression for a hope or wish: “I hope (that) ..., I wish ..., it would be nice if ...”. It is also a polite way of asking someone for something (“조용히 해 주면 좋겠어요”).",
+  "usage": "After a vowel or ㄹ it is “-면 좋겠다”, after other consonants “-으면 좋겠다”; it attaches to verbs, adjectives and “이다”. The past-looking “-았/었으면 좋겠다” is just as common and adds a wishful, less certain tone (“날씨가 맑았으면 좋겠어요”). Real stems: “살다 → 살면”, “덥다 → 더우면”, “듣다 → 들으면”. The wished-for situation is in the first clause, and the subject may be the speaker, the listener or a third party. A request form: “-어 주면 좋겠다”.",
+  "examples": [
+   {
+    "ko": "내일은 날씨가 맑았으면 좋겠어요.",
+    "en": "I hope the weather is clear tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이번 시험에 합격하면 좋겠다.",
+    "en": "I hope I pass this exam.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "좀 조용히 해 주면 좋겠어요.",
+    "en": "I would appreciate it if you could be a bit quieter.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "방학에 가족과 함께 여행을 가면 좋겠다.",
+    "en": "It would be nice to go on a trip with the family during the vacation.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "키가 조금만 더 크면 좋겠다.",
+    "en": "I wish I were just a little taller.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 싶다",
+    "difference": "“-고 싶다” is the speaker wanting to do something. “-으면 좋겠다” wishes for a situation and can include others or things beyond one's control.",
+    "pair": [
+     {
+      "ko": "일찍 퇴근하고 싶다.",
+      "en": "I want to leave work early."
+     },
+     {
+      "ko": "일찍 퇴근하면 좋겠다.",
+      "en": "It would be nice to leave work early."
+     }
+    ]
+   },
+   {
+    "pattern": "-았으면 하다",
+    "difference": "“-았으면 하다” is a near-synonym that sounds more reserved or formal.",
+    "pair": [
+     {
+      "ko": "비가 그치면 좋겠어요.",
+      "en": "I hope the rain stops."
+     },
+     {
+      "ko": "비가 그쳤으면 해요.",
+      "en": "I hope the rain stops."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "덜 춥으면 좋겠어요.",
+    "right": "덜 추우면 좋겠어요.",
+    "en": "I hope it is a bit less cold."
+   },
+   {
+    "note": "“-고 싶다” is for one's own wish to do something; a hoped-for situation takes “-으면 좋겠다”.",
+    "wrong": "비가 그치고 싶어요.",
+    "right": "비가 그치면 좋겠어요.",
+    "en": "I hope the rain stops."
+   }
+  ],
+  "topik_tip": "A hope about a situation takes “-으면 좋겠다”; one's own desire to do something takes “-고 싶다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 가다",
+  "level": 3,
+  "label": "gradually keep on (toward the future)",
+  "meaning_en": "An expression for a change or an action that continues step by step from now on: “gradually ..., keep on ...-ing”. It looks forward from the present, often with “점점, 조금씩, 차츰”.",
+  "usage": "It attaches to verb stems with “-아/어” and the helper “가다”: “늘다 → 늘어 가다”, “깊다 → 깊어 가다”, “익다 → 익어 가다”, “밝다 → 밝아 가다”, “줄다 → 줄어 가다”. It goes with verbs of change or with an action that continues: “해결해 가다, 배워 가다, 만들어 가다”. The “-어 오다” counterpart looks back from now (“해 왔다”). The same words can also mean “do X and go” (“사 가다”, “입고 가다” with “-고”), so context matters.",
+  "examples": [
+   {
+    "ko": "가을이 깊어 간다.",
+    "en": "Autumn is deepening.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "공부를 하다 보니 한국어 실력이 조금씩 늘어 가요.",
+    "en": "As I keep studying, my Korean is gradually improving.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어느새 날이 밝아 가고 있었다.",
+    "en": "The day was gradually dawning.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "김치가 맛있게 익어 간다.",
+    "en": "The kimchi is ripening nicely.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어려운 일도 하나씩 풀어 가면 된다.",
+    "en": "Even a hard task is fine if you untangle it one piece at a time.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 오다",
+    "difference": "“-어 가다” looks forward from now (what will go on); “-어 오다” looks back (what has gone on up to now).",
+    "pair": [
+     {
+      "ko": "앞으로도 열심히 살아 가겠다.",
+      "en": "I will keep living hard from now on."
+     },
+     {
+      "ko": "지금까지 열심히 살아 왔다.",
+      "en": "I have lived hard up to now."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” says the action is in progress now; “-어 간다” adds that it keeps moving on gradually.",
+    "pair": [
+     {
+      "ko": "실력이 늘고 있어요.",
+      "en": "My skills are improving."
+     },
+     {
+      "ko": "실력이 늘어 가요.",
+      "en": "My skills are improving gradually."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The helper needs “-아/어”; with “-고” it means “do X and then go”.",
+    "wrong": "실력이 점점 늘고 간다.",
+    "right": "실력이 점점 늘어 간다.",
+    "en": "My skills are gradually improving."
+   }
+  ],
+  "topik_tip": "Pair the two: “-어 가다” moves toward the future, “-어 오다” comes from the past up to now.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
