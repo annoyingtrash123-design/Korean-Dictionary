@@ -7,8 +7,8 @@
   "usage": "It attaches directly, with no space, to a finished clause that ends in a plain or formal ending: “좋겠다마는”, “알겠지마는”, “알겠습니다마는”. It can follow past “-았/었-” and “-겠-”. It sounds reluctant or courteous, so it is common in formal speech, letters and fiction, and rare in casual talk, where “-지만” takes over.",
   "examples": [
    {
-    "ko": "도와드리고 싶다마는 제 힘으로는 어쩔 수가 없습니다.",
-    "en": "I would like to help, but there is nothing I can do on my own.",
+    "ko": "죄송합니다마는 이 자리는 예약된 자리입니다.",
+    "en": "I am sorry, but this seat is reserved.",
     "ctx": "formal"
    },
    {
@@ -78,7 +78,9 @@
   ],
   "topik_tip": "In 읽기 passages and formal letters, “마는” signals a turn: look for what the writer concedes first and what comes after the “but”. In 쓰기, use “-지만” or “-으나” instead.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -160,7 +162,9 @@
   ],
   "topik_tip": "Appears in 읽기 as part of fixed phrases such as “힘깨나 쓰다” and “돈깨나 있다”; the clue is a noun with “깨나” and a verb of having or doing.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -188,11 +192,11 @@
    {
     "ko": "월급이라고 받는 돈은 월세를 내고 나면 남는 게 없다.",
     "en": "The pay I get, such as it is, leaves nothing after the rent.",
-    "ctx": "news"
+    "ctx": "essay"
    },
    {
     "ko": "친구라고 있는 게 지수 하나뿐이야.",
-    "en": "The only friend I have is Jisu.",
+    "en": "Jisu is the only friend I’ve got.",
     "ctx": "conversation"
    }
   ],
@@ -237,12 +241,14 @@
     "note": "After a vowel the particle is “라고”, not “이라고”.",
     "wrong": "나무이라고 있는 것은 한 그루뿐이다.",
     "right": "나무라고 있는 것은 한 그루뿐이다.",
-    "en": "The only tree there is is a single one."
+    "en": "There is just one tree, such as it is."
    }
   ],
   "topik_tip": "When you read “X이라고 있는 것”, expect the sentence to end by saying that X is minimal; this helps with 읽기 questions about the writer’s attitude.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -299,7 +305,7 @@
     "pair": [
      {
       "ko": "집안일을랑 내게 맡겨라.",
-      "en": "Leave the housework to me (and see to the rest)."
+      "en": "Leave the housework to me, at least."
      },
      {
       "ko": "집안일을 내게 맡겨라.",
@@ -324,7 +330,9 @@
   ],
   "topik_tip": "Rare in the exam; recognise it in dialogue as a warm “as for X, ...” that comes before an instruction.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -341,7 +349,7 @@
    },
    {
     "ko": "민준이라면 그 일을 맡길 만하지.",
-    "en": "If it is Minjun, the job is worth entrusting to Minjun.",
+    "en": "If it is Minjun, the job can safely be left with them.",
     "ctx": "conversation"
    },
    {
@@ -406,7 +414,9 @@
   ],
   "topik_tip": "“N이라면 누구나 ...” is a typical generalising sentence in 읽기 and 쓰기 (51–54): use it to state what a group should know or do.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -414,7 +424,7 @@
   "level": 6,
   "label": "if (it turns out) ... then",
   "meaning_en": "A colloquial conditional ending meaning “if/when it turns out that ...”. The clause after it is almost always a request, order or promise to be carried out once the condition is met.",
-  "usage": "It attaches directly to a verb or adjective stem, “이다”, and after “-았/었-” (“도착하거들랑”, “바쁘거들랑”). The main clause is an instruction or promise: “-아/어라”, “-세요”, “-ㄹ게”, “-ㄹ 테니”. It sounds informal, slightly regional and emphatic, and fits talk with family or friends; to elders and in formal settings use “-면” or “-거든”.",
+  "usage": "It attaches directly to a verb or adjective stem, “이다”, and after “-았/었-” (“도착하거들랑”, “바쁘거들랑”). The main clause is an instruction or promise: “-아/어라”, “-세요”, “-ㄹ게”, “-ㄹ 테니”. It is an emphatic form of “-거든”, informal, and fits talk with family or friends; to elders and in formal settings use “-면” or “-거든”.",
   "examples": [
    {
     "ko": "서울에 도착하거들랑 바로 전화해라.",
@@ -438,22 +448,22 @@
    },
    {
     "ko": "민수가 오거들랑 나는 먼저 갔다고 전해 줘.",
-    "en": "If Minsu comes, tell Minsu I went ahead.",
+    "en": "If Minsu comes, tell them I went ahead.",
     "ctx": "conversation"
    }
   ],
   "compare": [
    {
     "pattern": "-거든",
-    "difference": "“-거든” is the standard form. “-거들랑” is the same condition made more emphatic and regional in tone.",
+    "difference": "“-거든” is the plain form. “-거들랑” is the same condition said more emphatically and colloquially.",
     "pair": [
      {
       "ko": "민수가 오거들랑 전해 줘.",
-      "en": "If Minsu comes, tell Minsu (emphatic, regional)."
+      "en": "If Minsu comes, pass it on (emphatic)."
      },
      {
       "ko": "민수가 오거든 전해 줘.",
-      "en": "If Minsu comes, tell Minsu."
+      "en": "If Minsu comes, pass it on."
      }
     ]
    },
@@ -488,7 +498,9 @@
   ],
   "topik_tip": "Do not confuse it with the sentence-final “-거들랑” (giving a reason), which is the next lesson in the list.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -589,7 +601,7 @@
    },
    {
     "ko": "제가 보건대 이 계획에는 무리가 있습니다.",
-    "en": "As I see it, this plan has some strain in it.",
+    "en": "As I see it, this plan is somewhat unrealistic.",
     "ctx": "formal"
    },
    {
@@ -605,7 +617,7 @@
    {
     "ko": "확신하건대 위원회의 판단은 틀리지 않았다.",
     "en": "I am confident that the committee’s judgement was not wrong.",
-    "ctx": "news"
+    "ctx": "formal"
    }
   ],
   "compare": [
@@ -615,11 +627,11 @@
     "pair": [
      {
       "ko": "제가 보건대 이 계획에는 무리가 있습니다.",
-      "en": "As I see it, this plan has some strain in it (formal)."
+      "en": "As I see it, this plan is somewhat unrealistic (formal)."
      },
      {
       "ko": "제가 보기에 이 계획에는 무리가 있습니다.",
-      "en": "It seems to me this plan has some strain in it."
+      "en": "It seems to me this plan is somewhat unrealistic."
      }
     ]
    },
@@ -654,7 +666,9 @@
   ],
   "topik_tip": "Learn it as a short set: “바라건대”, “생각하건대”, “보건대”, “듣건대”. In 쓰기 they make a formal opening for an opinion or request.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -662,12 +676,12 @@
   "level": 6,
   "label": "even though, regretfully",
   "meaning_en": "An ending meaning “although ..., (yet)”: the result is the opposite of what the first clause leads you to expect, usually with regret or disappointment.",
-  "usage": "It attaches to verb and adjective stems, to “이다” (“이건만”), and after “-았/었-” and “-겠-”. It also appears as “-건마는”. The second clause reports the unexpected result in the plain style. It is literary and used in writing and narration; the nuance is regret rather than neutral contrast.",
+  "usage": "It attaches to verb and adjective stems, to “이다” (“이건만”), and after “-았/었-” and “-겠-”. It also appears as “-건마는”. The second clause reports the unexpected result. It is literary and used in writing and narration; the nuance is regret rather than neutral contrast.",
   "examples": [
    {
     "ko": "몇 번이나 부탁했건만 아무 연락이 없다.",
     "en": "I asked more than once, yet there has been no word.",
-    "ctx": "conversation"
+    "ctx": "literary"
    },
    {
     "ko": "봄이 왔건만 마음은 여전히 겨울이다.",
@@ -715,7 +729,7 @@
      },
      {
       "ko": "나는 커피를 좋아하지만 동생은 차를 좋아한다.",
-      "en": "I like coffee, but my sibling likes tea."
+      "en": "I like coffee, but my younger sibling likes tea."
      }
     ]
    }
@@ -725,7 +739,7 @@
     "note": "Use it only when an expectation is disappointed, not for a plain contrast.",
     "wrong": "나는 커피를 좋아하건만 동생은 차를 좋아한다.",
     "right": "나는 커피를 좋아하지만 동생은 차를 좋아한다.",
-    "en": "I like coffee, but my sibling likes tea."
+    "en": "I like coffee, but my younger sibling likes tea."
    },
    {
     "note": "The second clause must report a result; it cannot be a suggestion or an order.",
@@ -736,7 +750,9 @@
   ],
   "topik_tip": "In 읽기, “-건만” signals disappointment: the following clause will contradict the first, and the writer feels regret about it.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -758,7 +774,7 @@
    },
    {
     "ko": "아무리 어리기로서니 그 정도 예의는 알아야 하지 않겠어요?",
-    "en": "However young a person is, shouldn’t they know that much manners?",
+    "en": "However young a person is, shouldn’t they know at least that much courtesy?",
     "ctx": "conversation"
    },
    {
@@ -768,7 +784,7 @@
    },
    {
     "ko": "돈이 없기로서니 친구에게 그렇게 매번 기대서야 되겠습니까?",
-    "en": "Even if you have no money, is it all right to lean on a friend every time?",
+    "en": "Short of money or not, is it right to lean on a friend like that every time?",
     "ctx": "essay"
    }
   ],
@@ -818,7 +834,9 @@
   ],
   "topik_tip": "It is recognisable by the pair “아무리 ... -기로서니 ... -겠는가?”; expect the sentence to end in criticism.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -900,7 +918,9 @@
   ],
   "topik_tip": "In 읽기 and 쓰기 (51–54), “-느니만큼” gives a formal reason for a request or recommendation; the second half usually has “-어야 한다” or “-기 바란다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -982,7 +1002,9 @@
   ],
   "topik_tip": "In 읽기, rules and notices use “-되” to add a limit (“허용하되 ...”): the part after “-되” is often the point of the question.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1064,7 +1086,9 @@
   ],
   "topik_tip": "You will meet it in poems and literary 읽기 passages. Learn the set “붉디붉다”, “달디달다”, “쓰디쓰다”, “높디높다”, “맑디맑다”, “크디크다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1097,7 +1121,7 @@
    {
     "ko": "진짜 친구라야 어려울 때 곁에 남는다.",
     "en": "Only a real friend stays by your side in hard times.",
-    "ctx": "proverb"
+    "ctx": "essay"
    }
   ],
   "compare": [
@@ -1146,7 +1170,9 @@
   ],
   "topik_tip": "Expect it in sentences about necessary conditions (“~이라야 ...할 수 있다”) in 읽기; the following clause tells you what the condition unlocks.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1215,9 +1241,9 @@
   "pitfalls": [
    {
     "note": "Consonant stems need the “으”.",
-    "wrong": "날씨가 좋련마는 비가 온다.",
-    "right": "날씨가 좋으련마는 비가 온다.",
-    "en": "It would be nice if the weather were good, but it rains."
+    "wrong": "비가 그치면 좋련마는 계속 내린다.",
+    "right": "비가 그치면 좋으련마는 계속 내린다.",
+    "en": "It would be nice if the rain stopped, but it keeps falling."
    },
    {
     "note": "The first clause must be a wish or an unreal condition, and the second must contradict it.",
@@ -1228,7 +1254,9 @@
   ],
   "topik_tip": "When you see “-으련마는/-으련만”, look for the contrast in the next clause: it tells you what the writer wishes had been different.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1310,7 +1338,9 @@
   ],
   "topik_tip": "In 듣기 dialogues, “-자니 ... -자니 ...” signals that the speaker cannot decide; the answer is often a compromise offered by the other person.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1392,7 +1422,9 @@
   ],
   "topik_tip": "The same form is also quotation (“공부한다고 했다”). In 읽기, decide by the main verb: a saying verb means quotation, an action verb means purpose.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1472,9 +1504,11 @@
     "en": "To go to Seoul, you have to take the KTX."
    }
   ],
-  "topik_tip": "“-자면” also exists as a quotation-based conditional (the next “-자면” in the list). Check the subject: a plan of the speaker means this lesson.",
+  "topik_tip": "“-자면” also exists as “if someone suggests ...” (“-자고 하면”, the “-자면2” lesson). If the clause is about what doing X requires, it is this lesson; if it reports someone’s suggestion, it is the other.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1548,7 +1582,7 @@
     "en": "However hard you try, can you succeed?"
    },
    {
-    "note": "Verbs take the plain past-modifier form, with no “는”.",
+    "note": "Verbs take “-ㄴ들/-은들” straight on the stem, with no “는”.",
     "wrong": "아무리 먹는들 배가 부르겠는가.",
     "right": "아무리 먹은들 배가 부르겠는가.",
     "en": "However much you eat, will you be full?"
@@ -1556,7 +1590,9 @@
   ],
   "topik_tip": "Often the answer to a 읽기 question is hidden in the rhetorical clause: “무슨 소용이 있겠는가” means “there is no point”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1630,7 +1666,7 @@
     "en": "Poor though we were, we were rich at heart."
    },
    {
-    "note": "The first clause should name something negative; a good thing does not fit.",
+    "note": "The two clauses must pull against each other: grant one (usually unwelcome) thing, then insist on a contrasting one.",
     "wrong": "부자일망정 행복하다.",
     "right": "가난할망정 행복하다.",
     "en": "Poor though I am, I am happy."
@@ -1638,7 +1674,9 @@
   ],
   "topik_tip": "The pair “-을망정” / “-을지언정” is a common 읽기 target: both mean “even if (bad), still (good)”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1720,7 +1758,9 @@
   ],
   "topik_tip": "Common in short colloquial 읽기 passages that complain about bad luck; it signals that the writer repeatedly meets an obstacle.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1800,9 +1840,11 @@
     "en": "The flowers are really pretty."
    }
   ],
-  "topik_tip": "Recognise it in literary and historical 읽기 passages. The related “-구려” (suggestion) comes later in this list: check whether it is on a past stem or an adjective for the exclamation use.",
+  "topik_tip": "Recognise it in literary and historical 읽기 passages. The request “-구려” (“어서 가구려”) comes later in this list: on an action verb, “-는구려” is the exclamation and the bare “-구려” is the request.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1871,9 +1913,9 @@
   "pitfalls": [
    {
     "note": "Adjectives take “-구먼”, not “-는구먼”.",
-    "wrong": "참 크는구먼.",
-    "right": "참 크구먼.",
-    "en": "It is really big."
+    "wrong": "꽃이 참 예쁘는구먼.",
+    "right": "꽃이 참 예쁘구먼.",
+    "en": "The flowers are really pretty."
    },
    {
     "note": "Do not use it to someone you must speak to politely; use “-군요”.",
@@ -1884,7 +1926,9 @@
   ],
   "topik_tip": "Often seen in dialogues set in the countryside; the nuance is a calm “well, how about that”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2050,7 +2094,9 @@
   ],
   "topik_tip": "In 읽기, “-으리라” from a narrator means “probably/surely”; from the main character it is a vow. Check the subject.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2224,7 +2270,7 @@
   "level": 6,
   "label": "you see, because ... (giving background)",
   "meaning_en": "A casual sentence-final ending that gives a reason or background: “..., you see”, “it’s that ...”. It is used after the main point has been made or to set the scene for what comes next.",
-  "usage": "It attaches to verb and adjective stems, “이다” and past “-았/었-” as the final ending of a sentence, in informal speech. The sentence before it is usually a statement the listener wonders about, and this one explains it. It is more emphatic than the common “-거든” and sounds colloquial or regional. It is not used to superiors.",
+  "usage": "It attaches to verb and adjective stems, “이다” and past “-았/었-” as the final ending of a sentence, in informal speech. The sentence before it is usually a statement the listener wonders about, and this one explains it. It is more emphatic than the common “-거든” and sounds colloquial and a little rustic. It is not used to superiors.",
   "examples": [
    {
     "ko": "오늘은 일찍 갈게. 내일이 시험이거들랑.",
@@ -2248,14 +2294,14 @@
    },
    {
     "ko": "민수한테는 말하지 마. 입이 좀 가볍거들랑.",
-    "en": "Don’t tell Minsu. Minsu can’t keep a secret, you see.",
+    "en": "Don’t tell Minsu. Minsu has a bit of a loose tongue, you see.",
     "ctx": "conversation"
    }
   ],
   "compare": [
    {
     "pattern": "-거든",
-    "difference": "“-거든” is the standard word for “you see, because”. “-거들랑” is the same, but more emphatic and regional.",
+    "difference": "“-거든” is the standard word for “you see, because”. “-거들랑” is the same, but more emphatic and colloquial.",
     "pair": [
      {
       "ko": "일찍 갈게. 내일이 시험이거들랑.",
@@ -2290,7 +2336,7 @@
     "en": "I will leave early. I have an exam tomorrow, you see."
    },
    {
-    "note": "It sounds too blunt to a teacher or elder.",
+    "note": "Even with “-요” it sounds too familiar to a teacher or elder.",
     "wrong": "선생님, 오늘은 못 가요. 일이 있거들랑요.",
     "right": "선생님, 오늘은 못 가요. 일이 있어서요.",
     "en": "Teacher, I can’t go today. I have something on."
@@ -2298,7 +2344,9 @@
   ],
   "topik_tip": "Pairs with “-거들랑1” in this list: if the clause comes before a request, it is the conditional; if it ends a sentence and explains, it is this one.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2474,7 +2522,7 @@
   "level": 6,
   "label": "gentle suggestion in the “하오” style",
   "meaning_en": "A sentence-final ending that offers a gentle suggestion or soft instruction: “why don’t you ...”, “please do ...”. It belongs to the dignified “하오” style.",
-  "usage": "It attaches to present verb stems and “-(으)시-” (“오구려”, “앉으시구려”). On a past stem or an adjective the same form is the exclamation “-구려” (the first lesson in this list). It is used by older speakers to a spouse, an equal or a guest, and in dramas, with a soft, caring tone. It is not used in modern casual talk.",
+  "usage": "It attaches to verb stems and “-(으)시-” (“오구려”, “앉으시구려”). On a past stem or an adjective the same form is the exclamation “-구려” (the earlier “-는구려” lesson). It is used by older speakers to a spouse, an equal or a guest, and in dramas, with a soft, caring tone. It is not used in modern casual talk.",
   "examples": [
    {
     "ko": "여보, 이제 그만 들어와 쉬구려.",
@@ -2548,7 +2596,9 @@
   ],
   "topik_tip": "Check the stem: a present verb or “-시-” before “-구려” is a suggestion; an adjective or past stem is an exclamation.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2630,7 +2680,9 @@
   ],
   "topik_tip": "“-네” appears in both meanings. In exam dialogue, notice who is talking to whom: a senior addressing “자네” means the “하게” statement.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2638,11 +2690,11 @@
   "level": 6,
   "label": "spoken variant of “-는구먼”",
   "meaning_en": "A casual sentence-final ending of realisation, the spoken spelling of “-는구먼”: “I see, so ...!”.",
-  "usage": "It is the same ending as “-는구먼”, spelled as it is often pronounced. Verbs take “-는구만” (“오는구만”); adjectives, “이다” and past or future markers take “-구만” (“좋구만”, “했구만”, “이구만”). It is informal and addressee-lowering, used by older speakers and in dialogue; add “-요” (“-구만요”) to soften it. In careful writing, “-는구먼” is the preferred spelling.",
+  "usage": "It is the same ending as “-는구먼”, spelled as it is often pronounced. Verbs take “-는구만” (“오는구만”); adjectives, “이다” and past or future markers take “-구만” (“좋구만”, “했구만”, “이구만”). It is informal and addressee-lowering, used by older speakers and in dialogue; add “-요” (“-구만요”) to soften it. Dictionaries treat “-구만” as non-standard: in careful writing use “-는구먼”.",
   "examples": [
    {
     "ko": "밥 먹을 시간이 벌써 지났구만.",
-    "en": "The time for a meal has already passed.",
+    "en": "So it is already past mealtime.",
     "ctx": "conversation"
    },
    {
@@ -2669,7 +2721,7 @@
   "compare": [
    {
     "pattern": "-는구먼",
-    "difference": "The two are the same ending: “-구먼” is the standard spelling, “-구만” the spoken one. Both are accepted.",
+    "difference": "The two are the same ending. “-구먼” is the standard spelling; “-구만” is how it is usually said and typed in casual text, but dictionaries list it as non-standard.",
     "pair": [
      {
       "ko": "눈이 오는구만.",
@@ -2712,7 +2764,9 @@
   ],
   "topik_tip": "The dictionary lists it as a variant of “-는구먼”, so in exam spelling items “-는구먼” is the form to write.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2794,7 +2848,9 @@
   ],
   "topik_tip": "In 쓰기 51–54 (essay frames), “-는가?” is how you open a discussion question: “무엇이 문제인가?”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2876,7 +2932,9 @@
   ],
   "topik_tip": "The question may also be the soliloquy “-나 보다/싶다/하다” (“오나 보다”): the ending is the same but the meaning is a guess.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2903,7 +2961,7 @@
    },
    {
     "ko": "새로 이사한 집은 살기 편하던?",
-    "en": "Is the house you moved into comfortable to live in?",
+    "en": "Did you find the house you moved into comfortable to live in?",
     "ctx": "conversation"
    },
    {
@@ -2958,7 +3016,9 @@
   ],
   "topik_tip": "Learn the “-던” family as one idea, “what I (or you) saw in the past”: “-던” (question), “-던가” (older question), “-더라” (report).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3040,7 +3100,9 @@
   ],
   "topik_tip": "Note the two homonym rows of “-던가”: this one asks the listener; the second one is the speaker asking themselves.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3093,15 +3155,15 @@
    },
    {
     "pattern": "-더라",
-    "difference": "“-더라” reports what you remember as fact. “-던가” says you are not sure you remember it right.",
+    "difference": "In everyday speech “-더라?” is the usual way to search your memory. “-던가?” does the same in a more reflective, bookish voice, and also combines with “싶다/하다/보다”.",
     "pair": [
      {
-      "ko": "그 책을 어디에 뒀던가?",
-      "en": "Where did I leave that book?"
+      "ko": "그 사람 이름이 뭐였던가?",
+      "en": "What was that person’s name, now?"
      },
      {
-      "ko": "그 책을 책상 위에 뒀더라.",
-      "en": "I recall leaving that book on the desk."
+      "ko": "그 사람 이름이 뭐였더라?",
+      "en": "What was that person’s name again?"
      }
     ]
    }
@@ -3122,7 +3184,9 @@
   ],
   "topik_tip": "“-던가” with “하다/싶다/보다” is a frequent spelling trap in 쓰기: “던가” is for recollection, “든가” for choices.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {

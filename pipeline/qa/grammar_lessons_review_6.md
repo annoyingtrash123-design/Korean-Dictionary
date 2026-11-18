@@ -21,3 +21,40 @@ Per lesson: form, outcome, what changed.
 | -으리오 | approved | Pitfall 2 said ㄹ-stems drop the ㄹ: wrong (살다 → 살리오, as the usage itself showed). Usage adds -었- and the ㄹ case; krdict notes it survives in speech as a bookish aside to oneself, so "never in conversation" softened. |
 | -그려 | approved | Usage adds the order/suggestion uses (들어가게그려, 하세그려; krdict). One translation ("I see" → "haven't I"). |
 | -노라면 (model) | approved | Compare pair said "this book" for 책을; "drop it" → "drop the ㄹ". |
+
+## The rest of the list, in order
+
+| Form | Outcome | Changes |
+|---|---|---|
+| 마는 | approved | Example 1 mixed “싶다마는” with -습니다 and 도와드리다; replaced with “죄송합니다마는 이 자리는 예약된 자리입니다.” |
+| 깨나 | approved | None. |
+| 이라고2 (보잘것없음) | approved | Example 4 tagged news (it is a personal complaint) → essay; two translations tightened (pitfall “The only tree there is is a single one”). |
+| 을랑 | approved | Compare translation “(and see to the rest)” added meaning → “at least”. |
+| 이라면 (강조) | approved | Example 2 English repeated the name awkwardly; now “left with them”. |
+| -거들랑1 | approved | Called “regional”: it is the emphatic form of -거든, not a dialect form; usage and compare reworded. One translation (“tell Minsu” → “tell them”). |
+| -건대 | approved | “has some strain in it” mistranslated 무리가 있다 → “is somewhat unrealistic” (example and compare). 확신하건대 example tagged news → formal. |
+| -건만 | approved | Usage claim that the second clause must be "in the plain style" removed; example 1 tag → literary; 동생 → "younger sibling". |
+| -기로서니 | approved | Two translations ("that much manners", "Even if you have no money" lost the rhetorical tone). |
+| -느니만큼 | approved | None. |
+| -되 | approved | None. |
+| -디1 (강조) | approved | None. |
+| -이라야 | approved | Example 5 tagged proverb but is not one → essay. |
+| -으련마는 | approved | Pitfall 1 right sentence “날씨가 좋으련마는 비가 온다” was semantically muddled; now “비가 그치면 좋으련마는 계속 내린다”. |
+| -자니3 (의도) | approved | None. |
+| -는다고1 (의도) | approved | None (the two pitfalls overlap but are both true). |
+| -자면1 (의도) | approved | TIP said "a plan of the speaker" decides; rewritten: requirement of doing X = this lesson, reported suggestion = -자면2. |
+| -은들 | approved | Pitfall 2 called -ㄴ들 a "past-modifier form"; reworded. |
+| -을망정 | approved | Pitfall 2 claimed a good thing never fits the first clause (overclaim); now "the two clauses must pull against each other". |
+| -을라치면 | approved | None. |
+| -는구려 (감탄) | approved | TIP told learners to look for "a past stem or an adjective"; now: on an action verb, -는구려 = exclamation, bare -구려 = request. |
+| -는구먼 | approved | Pitfall 1 “X 참 크는구먼” is actually fine with 크다 "grow" (애가 쑥쑥 크는구먼); replaced with 예쁘는구먼. |
+| -으리라 | approved | None. |
+| -거들랑2 (이유) | approved | "regional" → colloquial; translation "can't keep a secret" → "loose tongue"; pitfall 2 note: “-거들랑요” exists but is too familiar. |
+| -구려2 (명령) | approved | "present verb stems" (no such thing) → verb stems; wrong cross-reference "(the first lesson in this list)" → the -는구려 lesson. |
+| -네1 (서술) | approved | None. |
+| -는구만 | approved | Compare claimed both spellings "are accepted": krdict and stdict treat -구만 as non-standard (redirect to -구먼). Usage and compare corrected. One translation. |
+| -는가2 (문제 제기) | approved | None. |
+| -나2 (의문) | approved | None. |
+| -던2 (의문) | approved | Example 4 English was present tense ("Is the house ..."), -던 asks about the listener's past experience. |
+| -던가1 (의문·경험) | approved | None. |
+| -던가2 (의문·추측) | approved | The -더라 compare used “책상 위에 뒀더라” (first-person past action with -더라, odd) as a statement; now the everyday memory-search question “뭐였더라?” vs “뭐였던가?”. |
