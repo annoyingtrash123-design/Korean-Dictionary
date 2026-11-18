@@ -1535,5 +1535,829 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-었-",
+  "level": 1,
+  "label": "past tense",
+  "meaning_en": "The past tense ending: “-았-/-었-/-였-” before the final ending marks an event or state in the past (“갔다, 먹었다, 했다”). With some verbs and adjectives it also marks a state that holds now as a result of a completed change.",
+  "usage": "It follows the stem with vowel harmony: “-았-” after ㅏ/ㅗ (“가다 → 갔다, 오다 → 왔다, 살다 → 살았다”), “-었-” after other vowels (“먹다 → 먹었다, 마시다 → 마셨다, 있다 → 있었다”), and “하다 → 했다”. Irregulars: “듣다 → 들었다” (ㄷ), “춥다 → 추웠다” (ㅂ), “쓰다 → 썼다” (ㅡ), “모르다 → 몰랐다” (“르”), “이다 → 이었다/였다”. Some verbs describe a present state in the past form: “결혼했어요” (I am married), “알겠어요”, “닫혔어요”. For an earlier past cut off from now see “-었었-”.",
+  "examples": [
+   {
+    "ko": "어제 점심에 비빔밥을 먹었어요.",
+    "en": "I ate bibimbap for lunch yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제는 비가 와서 집에 있었어요.",
+    "en": "It rained yesterday, so I stayed at home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 작년에 한국에 왔어요.",
+    "en": "I came to Korea last year.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어렸을 때는 키가 작았어요.",
+    "en": "I was short when I was little.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아니요, 저는 이미 결혼했어요.",
+    "en": "No, I am already married.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "오늘 아침에 지하철이 너무 복잡했다.",
+    "en": "The subway was very crowded this morning.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-었었-",
+    "difference": "“-었-” reports a past event; “-었었-” adds that it is over and cut off from the present.",
+    "pair": [
+     {
+      "ko": "작년에 서울에 살았어요.",
+      "en": "I lived in Seoul last year."
+     },
+     {
+      "ko": "작년에 서울에 살았었어요.",
+      "en": "I used to live in Seoul last year."
+     }
+    ]
+   },
+   {
+    "pattern": "-겠-",
+    "difference": "“-었-” looks back, “-겠-” looks ahead or makes a guess.",
+    "pair": [
+     {
+      "ko": "내일 갔어요.",
+      "en": "I went tomorrow."
+     },
+     {
+      "ko": "내일 가겠어요.",
+      "en": "I will go tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before a vowel.",
+    "wrong": "어제 음악을 듣었어요.",
+    "right": "어제 음악을 들었어요.",
+    "en": "I listened to music yesterday."
+   },
+   {
+    "note": "A ㅂ-irregular adjective becomes “웠”.",
+    "wrong": "어제는 많이 춥었어요.",
+    "right": "어제는 많이 추웠어요.",
+    "en": "It was very cold yesterday."
+   }
+  ],
+  "topik_tip": "“결혼했어요” (I am married) and “알았어요” (I understand) use the past form for a present state.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으시-",
+  "level": 1,
+  "label": "honorific subject marker",
+  "meaning_en": "The honorific infix that shows respect for the subject of the sentence: “선생님이 오셨다”. It goes between the stem and the ending and is always about the person who does or has the action, never the listener unless they are the subject.",
+  "usage": "After a vowel it is “-시-”, after a consonant “-으시-”: “가다 → 가시다, 읽다 → 읽으시다”; a ㄹ-stem drops the ㄹ (“살다 → 사시다, 만들다 → 만드시다, 알다 → 아시다”). It combines with “-었-” as “-(으)셨-” and with endings (“-세요, -십니다”). Some verbs have honorific words: “먹다 → 드시다, 자다 → 주무시다, 있다 → 계시다, 말하다 → 말씀하시다”. “있으시다” is used for having (“시간이 있으세요?”). Do not use it for things: “커피 나오셨습니다” is an over-honorific.",
+  "examples": [
+   {
+    "ko": "선생님께서 교실에 들어오시자 학생들이 일어났다.",
+    "en": "When the teacher came into the classroom, the students stood up.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "할머니는 매일 아침 일찍 일어나시고 산책을 하세요.",
+    "en": "My grandmother gets up early every morning and takes a walk.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사장님은 지금 회의 중이십니다.",
+    "en": "The president is in a meeting now.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "어머니는 요리를 잘하시고 노래도 잘 부르세요.",
+    "en": "My mother cooks well and also sings well.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "맛있게 많이 드세요.",
+    "en": "Please eat plenty, and enjoy it.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "께서",
+    "difference": "The subject particle “께서” and the infix “-으시-” usually go together.",
+    "pair": [
+     {
+      "ko": "할아버지께서 책을 읽으신다.",
+      "en": "My grandfather reads a book."
+     },
+     {
+      "ko": "할아버지가 책을 읽으신다.",
+      "en": "My grandfather reads a book."
+     }
+    ]
+   },
+   {
+    "pattern": "먹다 / 드시다",
+    "difference": "Some verbs have a separate honorific word: “드시다” replaces “먹으시다”.",
+    "pair": [
+     {
+      "ko": "할머니는 밥을 드세요.",
+      "en": "My grandmother eats a meal."
+     },
+     {
+      "ko": "동생은 밥을 먹어요.",
+      "en": "My younger sibling eats a meal."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Use the honorific verb: “드시다”, not “먹으시다”.",
+    "wrong": "할머니가 먹으세요.",
+    "right": "할머니가 드세요.",
+    "en": "My grandmother is eating."
+   },
+   {
+    "note": "A thing is not honoured.",
+    "wrong": "커피 나오셨습니다.",
+    "right": "커피 나왔습니다.",
+    "en": "Your coffee is ready."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-시-”.",
+    "wrong": "어머니가 요리를 만들으세요.",
+    "right": "어머니가 요리를 만드세요.",
+    "en": "My mother makes a dish."
+   }
+  ],
+  "topik_tip": "The three honorific tools are the subject particle “께서”, the infix “-(으)시-” and special words like “드시다/계시다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고3",
+  "level": 1,
+  "label": "and, then (listing, sequence)",
+  "meaning_en": "A connective ending that lists equal facts (“키가 크고 잘생겼다”) or links actions in order (“밥을 먹고 학교에 갔다”). It says nothing about cause: the two parts are just joined.",
+  "usage": "It attaches to any stem without a change: “크다 → 크고”, “먹다 → 먹고”, “학생이다 → 학생이고”. Tense is shown once, on the final verb (“-었다”), and it applies to the whole sentence: “어제 영화를 보고 저녁을 먹었어요”. A tense inside the first clause (“-었고”) is possible for a finished state. The subject may be the same or different. For simultaneous actions “-으면서” is used; “-고 있다” is a different pattern (progressive).",
+  "examples": [
+   {
+    "ko": "지수는 키가 크고 노래도 잘해요.",
+    "en": "Jisu is tall and also sings well.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 아침에 운동을 하고 샤워를 해요.",
+    "en": "In the morning I exercise and then take a shower.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울은 사람이 많고 교통이 복잡해요.",
+    "en": "Seoul has many people and the traffic is complicated.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "어제는 영화를 보고 저녁을 먹었어요.",
+    "en": "Yesterday I watched a movie and had dinner.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 가게는 싸고 맛있어서 인기가 많아요.",
+    "en": "This shop is cheap and tasty, so it is popular.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면서",
+    "difference": "“-고” joins actions in order or lists facts; “-으면서” says that they happen at the same time.",
+    "pair": [
+     {
+      "ko": "밥을 먹고 이야기했다.",
+      "en": "We ate and then talked."
+     },
+     {
+      "ko": "밥을 먹으면서 이야기했다.",
+      "en": "We talked while eating."
+     }
+    ]
+   },
+   {
+    "pattern": "-어서",
+    "difference": "“-어서” makes the first action a step toward the second or its cause. “-고” just links them.",
+    "pair": [
+     {
+      "ko": "씻고 먹었다.",
+      "en": "I washed up and ate."
+     },
+     {
+      "ko": "씻어서 먹었다.",
+      "en": "I washed it and ate it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The tense goes on the last verb and covers the whole sentence.",
+    "wrong": "어제 영화를 보고 저녁을 먹어요.",
+    "right": "어제 영화를 보고 저녁을 먹었어요.",
+    "en": "Yesterday I watched a movie and had dinner."
+   }
+  ],
+  "topik_tip": "“-고” is the all-purpose “and”: it is a safe first choice, and “-고 나서” adds emphasis on completion.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으니까",
+  "level": 1,
+  "label": "because, since; when I did X, I found",
+  "meaning_en": "A connective ending for a reason that the speaker stresses, and it can be followed by a command or a suggestion. It also introduces something the speaker finds after doing something (“열어 보니까 비어 있었다”).",
+  "usage": "After a vowel or ㄹ it is “-니까”, after other consonants “-으니까”: “가다 → 가니까, 먹다 → 먹으니까, 살다 → 사니까 (ㄹ drops), 춥다 → 추우니까, 듣다 → 들으니까, 학생이다 → 학생이니까”; the past is “-었으니까”. The main clause may be a command, a request or a suggestion: “비가 오니까 우산을 가져가세요”, “바쁘니까 나중에 하자”. In the discovery use the main clause is a past observation. Sentence-final “-으니까요” gives a reason in speech.",
+  "examples": [
+   {
+    "ko": "비가 오니까 우산을 가져가세요.",
+    "en": "It is raining, so take an umbrella.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금 바쁘니까 나중에 전화할게요.",
+    "en": "I am busy now, so I will call later.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "날씨가 좋으니까 산책하러 갈까요?",
+    "en": "The weather is nice, so shall we go for a walk?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "집에 가 보니까 아무도 없었다.",
+    "en": "When I went home, nobody was there.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "저는 괜찮으니까 먼저 드세요.",
+    "en": "I am fine, so please eat first.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어서",
+    "difference": "“-으니까” can be followed by a command or suggestion; “-어서” cannot.",
+    "pair": [
+     {
+      "ko": "비가 오니까 우산을 가져가세요.",
+      "en": "It is raining, so take an umbrella."
+     },
+     {
+      "ko": "비가 와서 우산을 샀어요.",
+      "en": "It rained, so I bought an umbrella."
+     }
+    ]
+   },
+   {
+    "pattern": "-으니",
+    "difference": "“-으니” is the shorter, more written form of “-으니까” with the same range of main clauses.",
+    "pair": [
+     {
+      "ko": "추우니까 옷을 입으세요.",
+      "en": "It is cold, so put on clothes."
+     },
+     {
+      "ko": "추우니 옷을 입으세요.",
+      "en": "It is cold, so put on clothes."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A command or a suggestion follows “-으니까”, not “-어서”.",
+    "wrong": "비가 와서 우산을 가져가세요.",
+    "right": "비가 오니까 우산을 가져가세요.",
+    "en": "It is raining, so take an umbrella."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “니”.",
+    "wrong": "이 동네에 살으니까 편해요.",
+    "right": "이 동네에 사니까 편해요.",
+    "en": "Since I live in this neighborhood, it is convenient."
+   }
+  ],
+  "topik_tip": "A reason followed by a command or “-ㅂ시다/-자” takes “-으니까”; a plain cause takes “-어서”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으러",
+  "level": 1,
+  "label": "in order to (go or come)",
+  "meaning_en": "A connective ending for the purpose of going or coming somewhere: “to do X”. It is followed by a verb of motion such as “가다, 오다, 다니다, 나가다, 들어오다”.",
+  "usage": "After a vowel or ㄹ it is “-러”, after other consonants “-으러”: “사다 → 사러”, “놀다 → 놀러” (the ㄹ stays), “먹다 → 먹으러”, “듣다 → 들으러” (ㄷ becomes ㄹ), “걷다 → 걸으러”. The main verb must show movement: “밥을 먹으러 식당에 가요”. It cannot be followed by other verbs (“공부하러 일찍 일어났어요” is wrong). The common invitation is “놀러 오세요”. It takes no tense.",
+  "examples": [
+   {
+    "ko": "점심을 먹으러 식당에 가요.",
+    "en": "I am going to a restaurant to eat lunch.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구를 만나러 서울에 갔어요.",
+    "en": "I went to Seoul to meet a friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "책을 빌리러 도서관에 왔어요.",
+    "en": "I came to the library to borrow a book.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다음에 우리 집에 놀러 오세요.",
+    "en": "Please come over to my house some time.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "한국어를 배우러 한국에 왔습니다.",
+    "en": "I came to Korea to learn Korean.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "“-으러” needs a motion verb after it. “-으려고” takes any verb.",
+    "pair": [
+     {
+      "ko": "커피를 마시러 갔어요.",
+      "en": "I went to drink coffee."
+     },
+     {
+      "ko": "커피를 마시려고 일찍 일어났어요.",
+      "en": "I got up early to drink coffee."
+     }
+    ]
+   },
+   {
+    "pattern": "-기 위해",
+    "difference": "“-기 위해(서)” is the formal way and goes with any main verb.",
+    "pair": [
+     {
+      "ko": "공부하러 도서관에 갔어요.",
+      "en": "I went to the library to study."
+     },
+     {
+      "ko": "공부하기 위해 도서관에 갔습니다.",
+      "en": "I went to the library in order to study."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The main verb must be a motion verb; otherwise use “-으려고”.",
+    "wrong": "공부하러 일찍 일어났어요.",
+    "right": "공부하려고 일찍 일어났어요.",
+    "en": "I got up early to study."
+   },
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ.",
+    "wrong": "음악을 듣으러 가요.",
+    "right": "음악을 들으러 가요.",
+    "en": "I am going to listen to music."
+   }
+  ],
+  "topik_tip": "The frame is “N을/를 V-러 가다/오다”: a purpose plus a motion verb.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어서",
+  "level": 1,
+  "label": "so, and then (cause, sequence)",
+  "meaning_en": "A connective ending for a cause or reason (“비가 와서 못 갔어요”), for an action followed by another that depends on it (“서울에 가서 친구를 만났어요”), and for means (“걸어서 가다”).",
+  "usage": "It attaches to stems with “-아/어”: “오다 → 와서”, “먹다 → 먹어서”, “하다 → 해서”, “예쁘다 → 예뻐서”, “춥다 → 추워서”, “듣다 → 들어서”, “모르다 → 몰라서”, “학생이다 → 학생이어서”. It takes no tense of its own (“늦었어서” is wrong) and the main clause cannot be a command or a suggestion. For sequence it is typical with “가다, 오다, 앉다, 일어나다, 만들다” (“앉아서 이야기하다”). Fixed phrases: “늦어서 죄송합니다, 감사해서”.",
+  "examples": [
+   {
+    "ko": "비가 많이 와서 집에 있었어요.",
+    "en": "It rained a lot, so I stayed at home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "많이 늦어서 죄송합니다.",
+    "en": "I am sorry for being very late.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "서울에 가서 친구를 만났어요.",
+    "en": "I went to Seoul and met a friend there.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아침마다 걸어서 학교에 가요.",
+    "en": "I walk to school every morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 학생이어서 시간이 많아요.",
+    "en": "I am a student, so I have a lot of time.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "길이 막혀서 약속에 늦었다.",
+    "en": "The road was jammed, so I was late for the appointment.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으니까",
+    "difference": "“-으니까” may be followed by a command or suggestion; “-어서” may not.",
+    "pair": [
+     {
+      "ko": "피곤하니까 쉬세요.",
+      "en": "You are tired, so rest."
+     },
+     {
+      "ko": "피곤해서 쉬었어요.",
+      "en": "I was tired, so I rested."
+     }
+    ]
+   },
+   {
+    "pattern": "-고",
+    "difference": "“-어서” links an action to the next one that follows from it; “-고” only lists them in order.",
+    "pair": [
+     {
+      "ko": "씻어서 먹었다.",
+      "en": "I washed it and ate it."
+     },
+     {
+      "ko": "씻고 먹었다.",
+      "en": "I washed up and ate."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The tense goes on the last verb, not on “-어서”.",
+    "wrong": "늦었어서 죄송합니다.",
+    "right": "늦어서 죄송합니다.",
+    "en": "I am sorry for being late."
+   },
+   {
+    "note": "A command or suggestion does not follow “-어서”.",
+    "wrong": "피곤해서 쉬세요.",
+    "right": "피곤하니까 쉬세요.",
+    "en": "You are tired, so rest."
+   }
+  ],
+  "topik_tip": "“-어서” for cause and sequence, “-으니까” when a command follows: a standard choice question.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-지만",
+  "level": 1,
+  "label": "but, although",
+  "meaning_en": "A connective ending for contrast: “X, but Y”. It admits the first statement and adds something that does not follow from it. It is also a polite opener before a request: “죄송하지만, 실례지만”.",
+  "usage": "It attaches to any stem without a change (verbs, adjectives, “이다”), with tense if needed: “어렵다 → 어렵지만”, “좋아하다 → 좋아하지만”, “갔다 → 갔지만”, “학생이다 → 학생이지만”. The stem keeps its form: “춥다 → 춥지만”, “살다 → 살지만”. The two clauses must contrast. “죄송하지만 창문 좀 닫아 주세요” (sorry to trouble you, but...) is a frequent frame. A softer link is “-는데”, and a formal written one is “-으나”.",
+  "examples": [
+   {
+    "ko": "한국어는 어렵지만 재미있어요.",
+    "en": "Korean is hard, but fun.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 커피를 좋아하지만 하루에 한 잔만 마셔요.",
+    "en": "I like coffee, but I drink only one cup a day.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "죄송하지만 창문 좀 닫아 주세요.",
+    "en": "Sorry to trouble you, but please close the window.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비가 왔지만 우리는 소풍을 갔다.",
+    "en": "It rained, but we went on the picnic.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 옷은 예쁘지만 너무 비싸요.",
+    "en": "This outfit is pretty, but it is too expensive.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는데",
+    "difference": "“-지만” is a firm “but”. “-는데” is looser: it can only set the scene.",
+    "pair": [
+     {
+      "ko": "이 옷은 예쁘지만 비싸요.",
+      "en": "This outfit is pretty, but expensive."
+     },
+     {
+      "ko": "이 옷은 예쁜데 비싸요.",
+      "en": "This outfit is pretty, but expensive."
+     }
+    ]
+   },
+   {
+    "pattern": "-어도",
+    "difference": "“-지만” grants a fact (“it is raining, but”); “-어도” grants a supposition (“even if”).",
+    "pair": [
+     {
+      "ko": "비가 오지만 갈 거예요.",
+      "en": "It is raining, but I will go."
+     },
+     {
+      "ko": "비가 와도 갈 거예요.",
+      "en": "I will go even if it rains."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The two clauses must contrast; a plain reason does not fit.",
+    "wrong": "배가 고프지만 밥을 먹었어요.",
+    "right": "배가 고파서 밥을 먹었어요.",
+    "en": "I was hungry, so I ate."
+   }
+  ],
+  "topik_tip": "A contrast frame like “어렵지만 재미있다” is the pattern most often seen; check that the two halves oppose each other.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으려고1",
+  "level": 1,
+  "label": "in order to, intending to",
+  "meaning_en": "A connective ending for the purpose or intention of the speaker: “in order to X, intending to X”. The main clause is what is done for that purpose (“한국어를 배우려고 한국에 왔어요”). With “하다” it means “intend to”: “-으려고 하다”.",
+  "usage": "After a vowel or ㄹ it is “-려고”, after other consonants “-으려고”: “배우다 → 배우려고”, “먹다 → 먹으려고”, “살다 → 살려고” (ㄹ stays), “만들다 → 만들려고”, “듣다 → 들으려고” (ㄷ becomes ㄹ), “눕다 → 누우려고”. It attaches to verbs only, takes no tense, and the subject of both clauses is the same. The main clause is a statement or a question about what is done. The pattern for “to go/come in order to” is “-으러”.",
+  "examples": [
+   {
+    "ko": "한국어를 배우려고 한국에 왔어요.",
+    "en": "I came to Korea to learn Korean.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구에게 줄 선물을 사려고 백화점에 갔어요.",
+    "en": "I went to the department store to buy a present for a friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일찍 일어나려고 알람을 맞췄어요.",
+    "en": "I set an alarm in order to get up early.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "살을 빼려고 매일 운동해요.",
+    "en": "I exercise every day to lose weight.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "늦지 않으려고 택시를 탔다.",
+    "en": "I took a taxi so as not to be late.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으러",
+    "difference": "“-으러” goes only with “가다/오다”; “-으려고” goes with any verb.",
+    "pair": [
+     {
+      "ko": "공부하러 도서관에 갔어요.",
+      "en": "I went to the library to study."
+     },
+     {
+      "ko": "공부하려고 일찍 일어났어요.",
+      "en": "I got up early to study."
+     }
+    ]
+   },
+   {
+    "pattern": "-으려면",
+    "difference": "“-으려고” gives the purpose of an action; “-으려면” sets the purpose as a condition for what is needed.",
+    "pair": [
+     {
+      "ko": "합격하려고 공부해요.",
+      "en": "I study in order to pass."
+     },
+     {
+      "ko": "합격하려면 공부해야 해요.",
+      "en": "To pass, you have to study."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb takes no tense ending.",
+    "wrong": "한국어를 배웠으려고 한국에 왔어요.",
+    "right": "한국어를 배우려고 한국에 왔어요.",
+    "en": "I came to Korea to learn Korean."
+   },
+   {
+    "note": "A ㄹ-stem keeps its ㄹ before “-려고”.",
+    "wrong": "오래 살으려고 건강을 챙겨요.",
+    "right": "오래 살려고 건강을 챙겨요.",
+    "en": "I take care of my health in order to live long."
+   }
+  ],
+  "topik_tip": "The purpose frame with the same subject is “-으려고”; different subjects need “-게/-도록”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-습니까",
+  "level": 1,
+  "label": "formal polite question",
+  "meaning_en": "The question ending of the formal polite speech level (“합쇼체”): “-ㅂ니까?” after a vowel and “-습니까?” after a consonant. It is used in business, news, service and speeches to ask politely.",
+  "usage": "After a vowel or ㄹ it is “-ㅂ니까”, after a consonant “-습니까”: “가다 → 갑니까”, “먹다 → 먹습니까”, “살다 → 삽니까” and “만들다 → 만듭니까” (the ㄹ drops), “이다 → 입니까”. It goes with the honorific (“가십니까, 하셨습니까”), the past (“-었습니까”) and “-겠습니까”. The answer is “-ㅂ니다/-습니다”. Everyday politeness in speech uses “-어요?”. It is not used for questions to children or equals in casual talk.",
+  "examples": [
+   {
+    "ko": "지금 어디에 가십니까?",
+    "en": "Where are you going now?",
+    "ctx": "formal"
+   },
+   {
+    "ko": "점심 식사는 하셨습니까?",
+    "en": "Have you had your lunch?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "선생님 성함이 무엇입니까?",
+    "en": "What is your name, sir?",
+    "ctx": "formal"
+   },
+   {
+    "ko": "어제는 어디에서 일했습니까?",
+    "en": "Where did you work yesterday?",
+    "ctx": "formal"
+   },
+   {
+    "ko": "이 책을 읽으셨습니까?",
+    "en": "Have you read this book?",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어요",
+    "difference": "“-습니까” is formal. “-어요?” is the everyday polite question.",
+    "pair": [
+     {
+      "ko": "어디에 갑니까?",
+      "en": "Where are you going?"
+     },
+     {
+      "ko": "어디에 가요?",
+      "en": "Where are you going?"
+     }
+    ]
+   },
+   {
+    "pattern": "-으세요",
+    "difference": "Both are polite; “-으세요?” is the gentler everyday honorific question, “-으십니까?” is the formal one.",
+    "pair": [
+     {
+      "ko": "어디에 가십니까?",
+      "en": "Where are you going?"
+     },
+     {
+      "ko": "어디에 가세요?",
+      "en": "Where are you going?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A vowel stem takes “-ㅂ니까”, not “-습니까”.",
+    "wrong": "어디에 가습니까?",
+    "right": "어디에 갑니까?",
+    "en": "Where are you going?"
+   },
+   {
+    "note": "A ㄹ-stem drops its ㄹ.",
+    "wrong": "어디에 살습니까?",
+    "right": "어디에 삽니까?",
+    "en": "Where do you live?"
+   }
+  ],
+  "topik_tip": "The formal question “-ㅂ니까/-습니까” is answered with “-ㅂ니다/-습니다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-습니다",
+  "level": 1,
+  "label": "formal polite statement",
+  "meaning_en": "The statement ending of the formal polite speech level (“합쇼체”): “-ㅂ니다” after a vowel and “-습니다” after a consonant. It is used in speeches, news, announcements, presentations and with customers.",
+  "usage": "After a vowel or ㄹ it is “-ㅂ니다”, after a consonant “-습니다”: “가다 → 갑니다”, “먹다 → 먹습니다”, “살다 → 삽니다” and “만들다 → 만듭니다” (the ㄹ drops), “이다 → 입니다”. Past “-었습니다”, future and softening “-겠습니다”, honorific “-(으)십니다”. It is more formal than “-어요”, which is the everyday polite level. The question is “-ㅂ니까?/-습니까?”. Typical set expressions: “감사합니다, 죄송합니다, 알겠습니다”.",
+  "examples": [
+   {
+    "ko": "저는 한국어를 공부합니다.",
+    "en": "I study Korean.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "저는 서울에 삽니다.",
+    "en": "I live in Seoul.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "오늘 회의는 세 시에 시작합니다.",
+    "en": "Today's meeting starts at three.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "이 제품은 품질이 매우 우수합니다.",
+    "en": "This product is of very high quality.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "많이 도와주셔서 감사합니다.",
+    "en": "Thank you for helping so much.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어요",
+    "difference": "“-습니다” is the formal level for speeches and service. “-어요” is the soft everyday polite level.",
+    "pair": [
+     {
+      "ko": "저는 학교에 갑니다.",
+      "en": "I go to school."
+     },
+     {
+      "ko": "저는 학교에 가요.",
+      "en": "I go to school."
+     }
+    ]
+   },
+   {
+    "pattern": "-는다",
+    "difference": "“-습니다” speaks to a listener formally. “-는다” (“한다체”) is the plain written style with no listener.",
+    "pair": [
+     {
+      "ko": "저는 매일 운동합니다.",
+      "en": "I exercise every day."
+     },
+     {
+      "ko": "나는 매일 운동한다.",
+      "en": "I exercise every day."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A vowel stem takes “-ㅂ니다”.",
+    "wrong": "저는 학교에 가습니다.",
+    "right": "저는 학교에 갑니다.",
+    "en": "I go to school."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ.",
+    "wrong": "저는 서울에 살습니다.",
+    "right": "저는 서울에 삽니다.",
+    "en": "I live in Seoul."
+   }
+  ],
+  "topik_tip": "In listening and reading, the “합쇼체” (“-ㅂ니다”) marks formal, public speech.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
