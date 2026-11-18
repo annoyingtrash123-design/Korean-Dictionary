@@ -3880,5 +3880,629 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-는다거나2",
+  "level": 4,
+  "label": "giving examples, X or Y or the like",
+  "meaning_en": "An expression for naming actions or states as examples of a kind, or for choosing one of several: “X or Y or the like, doing things such as X or Y”. It usually comes in a repeated pair.",
+  "usage": "It attaches to verb stems as “-ㄴ다거나/-는다거나”, to adjective stems and past forms as “-다거나”, and to “이다” as “-라거나”. It is usually repeated (“A-ㄴ다거나 B-ㄴ다거나 하다”) and closed with “하다” or “하는”, giving a vague set of examples. The simple “-거나” gives plain alternatives, and the nouns of this kind take “이라든가”. It is conversational and also written.",
+  "examples": [
+   {
+    "ko": "주말에는 책을 읽는다거나 영화를 본다거나 하면서 시간을 보낸다.",
+    "en": "On weekends I spend time doing things like reading or watching movies.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "기숙사에서는 음악을 크게 듣는다거나 큰 소리를 내면 안 된다.",
+    "en": "In the dormitory you must not do things such as listening to loud music or making loud noises.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "몸이 아프다거나 피곤하다거나 하면 무리하지 말고 쉬세요.",
+    "en": "If you are sick or tired or the like, don't push yourself; rest.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 온다거나 눈이 온다거나 하는 날에는 일찍 퇴근하세요.",
+    "en": "On days when it rains or snows or the like, leave work early.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사고가 났다거나 길이 막힌다거나 하는 일이 생기면 바로 연락 주세요.",
+    "en": "If something happens, such as an accident or a traffic jam, contact me right away.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-거나",
+    "difference": "“-거나” gives plain alternatives; “-는다거나” gives examples and is vaguer, “X or Y or the like”.",
+    "pair": [
+     {
+      "ko": "주말에는 책을 읽거나 영화를 본다.",
+      "en": "On weekends I read or watch a movie."
+     },
+     {
+      "ko": "주말에는 책을 읽는다거나 영화를 본다거나 한다.",
+      "en": "On weekends I do things like reading or watching a movie."
+     }
+    ]
+   },
+   {
+    "pattern": "이라든가",
+    "difference": "“이라든가” gives noun examples; “-는다거나” gives examples of actions and states.",
+    "pair": [
+     {
+      "ko": "영화라든가 전시회라든가 하는 것을 좋아한다.",
+      "en": "I like things such as movies or exhibitions."
+     },
+     {
+      "ko": "영화를 본다거나 전시회에 간다거나 하는 것을 좋아한다.",
+      "en": "I like doing things such as watching movies or going to exhibitions."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a noun the form is “-라거나”, not “-이다거나”.",
+    "wrong": "학생이다거나 선생님이다거나 하는 사람들이 왔다.",
+    "right": "학생이라거나 선생님이라거나 하는 사람들이 왔다.",
+    "en": "People such as students or teachers came."
+   },
+   {
+    "note": "An adjective takes “-다거나”, with no “-는”.",
+    "wrong": "춥는다거나 덥다거나 하면 말씀하세요.",
+    "right": "춥다거나 덥다거나 하면 말씀하세요.",
+    "en": "If you are cold or hot or the like, please tell me."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-나 싶다",
+  "level": 4,
+  "label": "I wonder if; I think maybe",
+  "meaning_en": "An expression for a subjective, uncertain thought: “I wonder whether, I'm inclined to think that…”. It also expresses worry or regret over an act, as in “내가 왜 그랬나 싶다” (“why on earth did I do that?”).",
+  "usage": "It attaches to verb stems as “-나 싶다”, and after “-었-” and “-겠-”, and to adjectives and “이다” as “-ㄴ가 싶다” (“큰가 싶다”, “책인가 싶다”). The thought is the speaker's own, hesitant or doubtful. In the second use it follows a self-question about one's own act and expresses regret or worry. “-나 싶어서” gives that thought as the reason for an act. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "같은 내용이지만 영화보다는 소설이 더 재미있지 않았나 싶다.",
+    "en": "The content is the same, but I think the novel may have been more interesting than the movie.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아무래도 내가 선배니까 도와줘야 하지 않나 싶어서 전화를 걸었다.",
+    "en": "I thought that, being the senior, I probably ought to help, so I phoned.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "내가 왜 그랬나 싶어서 후회가 된다.",
+    "en": "I wonder why on earth I did that, and I regret it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이렇게 늦게까지 안 오니 무슨 일이 생겼나 싶어 걱정이 된다.",
+    "en": "They have not come this late, and I wonder whether something has happened, so I'm worried.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "혹시 내가 잘못 들었나 싶어서 다시 물어봤다.",
+    "en": "Wondering whether I might have heard wrong, I asked again.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을까 싶다",
+    "difference": "“-나 싶다” wonders about what is or was; “-을까 싶다” wonders about what may happen, often with worry.",
+    "pair": [
+     {
+      "ko": "비가 오나 싶어서 창밖을 봤다.",
+      "en": "I wondered whether it was raining, so I looked out the window."
+     },
+     {
+      "ko": "비가 올까 싶어서 우산을 챙겼다.",
+      "en": "I thought it might rain, so I took an umbrella."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 것 같다",
+    "difference": "The two are close in meaning; “-나 싶다” is more hesitant and more personal.",
+    "pair": [
+     {
+      "ko": "소설이 더 재미있었나 싶다.",
+      "en": "I wonder if the novel was more interesting."
+     },
+     {
+      "ko": "소설이 더 재미있었던 것 같다.",
+      "en": "I think the novel was more interesting."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective or “이다” takes “-ㄴ가 싶다”, not “-나 싶다”.",
+    "wrong": "방이 너무 크나 싶다.",
+    "right": "방이 너무 큰가 싶다.",
+    "en": "I wonder whether the room is too big."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 바람에",
+  "level": 4,
+  "label": "because of an unforeseen event",
+  "meaning_en": "An expression for an unforeseen event that caused an unwelcome result: “because X happened (unexpectedly), Y came about”.",
+  "usage": "It attaches to verb stems as “-는 바람에”, and the verb before it names an event rather than a stable state (adjectives are rarely used). The main clause is a past result that is unwanted or unplanned, and it cannot be a command or a suggestion. It also takes the honorific (“가시는 바람에”). It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "길이 너무 막히는 바람에 약속에 늦었어요.",
+    "en": "The road was so jammed that I was late for the appointment.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "갑자기 눈이 오는 바람에 비행기가 취소되었다.",
+    "en": "It suddenly snowed, so the flight was cancelled.",
+    "ctx": "news"
+   },
+   {
+    "ko": "동생이 큰 소리로 울어 대는 바람에 잠에서 깼다.",
+    "en": "My younger sibling kept crying loudly, so I woke up.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "컴퓨터가 꺼지는 바람에 작업하던 파일을 다 날렸다.",
+    "en": "The computer shut down, so I lost the file I was working on.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "휴대폰을 집에 두고 나오는 바람에 연락을 못 했다.",
+    "en": "I left my phone at home, so I couldn't get in touch.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-아서/어서",
+    "difference": "“-아서/어서” gives any reason; “-는 바람에” stresses an unforeseen event with an unwelcome result.",
+    "pair": [
+     {
+      "ko": "길이 막혀서 늦었어요.",
+      "en": "The road was jammed, so I was late."
+     },
+     {
+      "ko": "길이 막히는 바람에 늦었어요.",
+      "en": "The road got jammed, so I ended up late."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 탓에",
+    "difference": "“-는 바람에” is for an event that caused a past result; “-는 탓에” can blame a continuing cause.",
+    "pair": [
+     {
+      "ko": "비가 오는 바람에 길이 막혔다.",
+      "en": "It rained, so the roads got jammed."
+     },
+     {
+      "ko": "비가 오는 탓에 길이 막힌다.",
+      "en": "The roads are jammed because of the rain."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows cannot be a command.",
+    "wrong": "길이 막히는 바람에 일찍 출발하세요.",
+    "right": "길이 막히는 바람에 늦었어요.",
+    "en": "The road was jammed, so I was late."
+   },
+   {
+    "note": "The result must be unwelcome, not a good outcome.",
+    "wrong": "열심히 공부하는 바람에 합격했다.",
+    "right": "밤새 공부하는 바람에 시험 시간에 졸았다.",
+    "en": "I studied all night, so I dozed off during the exam."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 한",
+  "level": 4,
+  "label": "as long as; unless",
+  "meaning_en": "An expression meaning “as long as, so long as X holds”: the first clause is a premise or condition, and the main clause holds within that range. With a negative, “-지 않는 한” means “unless”.",
+  "usage": "It attaches to verb stems as “-는 한”, to adjective stems as “-ㄴ/은 한”, and to “이다” as “인 한”. “한” is a bound noun, so it is spaced from the verb (“허락하는 한”). The set phrases “내가 아는 한” (“as far as I know”) and “-지 않는 한” (“unless”) are common. The main clause states a general or continuing truth, not a single past event. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "가족이 함께 있는 한 어떤 어려움도 이겨 낼 수 있다.",
+    "en": "As long as the family is together, we can overcome any hardship.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "부모가 도와주지 않는 한 아이들이 모든 일을 스스로 하기는 어렵다.",
+    "en": "Unless the parents help, it is hard for children to do everything by themselves.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "내가 아는 한 그 사람은 거짓말을 하지 않는다.",
+    "en": "As far as I know, that person does not lie.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "건강이 허락하는 한 계속 일하고 싶다.",
+    "en": "I want to keep working as long as my health allows.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 오지 않는 한 행사는 예정대로 진행됩니다.",
+    "en": "Unless it rains, the event will proceed as scheduled.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 이상",
+    "difference": "“-는 이상” rests on a settled fact; “-는 한” sets a limit or condition.",
+    "pair": [
+     {
+      "ko": "내가 이 일을 맡은 이상 책임지겠다.",
+      "en": "Now that I've taken this job, I will take responsibility."
+     },
+     {
+      "ko": "내가 이 일을 맡는 한 책임지겠다.",
+      "en": "As long as I'm in charge of this job, I will take responsibility."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면",
+    "difference": "“-으면” is a plain condition; “-는 한” says that it holds only within that range.",
+    "pair": [
+     {
+      "ko": "비가 오지 않으면 갑니다.",
+      "en": "If it doesn't rain, I will go."
+     },
+     {
+      "ko": "비가 오지 않는 한 갑니다.",
+      "en": "Unless it rains, I will go."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“한” is a bound noun and is spaced.",
+    "wrong": "건강이 허락하는한 일하고 싶다.",
+    "right": "건강이 허락하는 한 일하고 싶다.",
+    "en": "I want to work as long as my health allows."
+   },
+   {
+    "note": "For “unless” the verb takes “-지 않는 한”.",
+    "wrong": "비가 오지 않은 한 갑니다.",
+    "right": "비가 오지 않는 한 갑니다.",
+    "en": "Unless it rains, I will go."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "으로 인하여",
+  "level": 4,
+  "label": "due to, caused by",
+  "meaning_en": "A formal expression meaning “due to, because of X”: a noun names the cause of what follows. Before a noun it appears as “(으)로 인한” (“caused by X”).",
+  "usage": "It attaches to nouns as “으로 인하여” after a final consonant, and “로 인하여” after a vowel or ㄹ (“폭설로 인하여”). The short forms are “(으)로 인해(서)”, and the modifier form is “(으)로 인한 + noun” (“지진으로 인한 피해”). It is neutral about whether the result is good or bad, and it is typical of news and reports. It does not lead into a command.",
+  "examples": [
+   {
+    "ko": "지진으로 인한 사망자가 백 명이 넘는다.",
+    "en": "The deaths caused by the earthquake exceed one hundred.",
+    "ctx": "news"
+   },
+   {
+    "ko": "회사 사정으로 인하여 당분간 휴업합니다.",
+    "en": "Due to company circumstances, we will be closed for the time being.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "폭설로 인해 많은 항공편이 취소되었다.",
+    "en": "Because of the heavy snow, many flights were cancelled.",
+    "ctx": "news"
+   },
+   {
+    "ko": "과로로 인한 질병이 늘고 있다.",
+    "en": "Illnesses caused by overwork are increasing.",
+    "ctx": "news"
+   },
+   {
+    "ko": "잦은 비로 인해 농작물 피해가 컸다.",
+    "en": "Because of the frequent rain, the damage to crops was great.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "때문에",
+    "difference": "The two are close in meaning; “(으)로 인하여” is the form for formal and written use.",
+    "pair": [
+     {
+      "ko": "폭설로 인해 항공편이 취소되었다.",
+      "en": "Flights were cancelled because of the heavy snow."
+     },
+     {
+      "ko": "폭설 때문에 항공편이 취소되었다.",
+      "en": "Flights were cancelled because of the heavy snow."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 탓에",
+    "difference": "“(으)로 인하여” is neutral about the result; “-는 탓에” blames a bad cause.",
+    "pair": [
+     {
+      "ko": "친구의 도움으로 인해 성공했다.",
+      "en": "I succeeded thanks to my friend's help."
+     },
+     {
+      "ko": "친구가 도와주지 않은 탓에 실패했다.",
+      "en": "I failed because my friend did not help."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a noun that ends in ㄹ the form is “로”, not “으로”.",
+    "wrong": "폭설으로 인해 항공편이 취소되었다.",
+    "right": "폭설로 인해 항공편이 취소되었다.",
+    "en": "Flights were cancelled because of the heavy snow."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "만 같아도",
+  "level": 4,
+  "label": "if it were just like",
+  "meaning_en": "An expression for a wistful comparison: “if only it were like X, even if just as X”. It sets one thing (a person, a time, a state) as the standard, and imagines how much better things would be if the present matched it.",
+  "usage": "It attaches to nouns, especially time words and standards (“평일만 같아도”, “작년만 같아도”, “너만 같아도”). The clause that follows is a supposition that did not or does not hold, normally ending in “-을 텐데”, “-았을 텐데”, “-ㄹ 것이다”. It expresses regret, longing or a complaint. It is conversational.",
+  "examples": [
+   {
+    "ko": "세상 모든 사람이 너만 같아도 살 만할 것 같아.",
+    "en": "If everyone in the world were just like you, I think life would be worth living.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "평일만 같아도 도로가 이렇게 막히지는 않을 텐데.",
+    "en": "If it were just a weekday, the roads wouldn't be this jammed.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "십 년 전만 같아도 이 정도 일은 거뜬히 했을 텐데.",
+    "en": "Even as of ten years ago, I would have done this much easily.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금만 같아도 더 바랄 게 없겠다.",
+    "en": "If it just stayed like now, there would be nothing more to wish for.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "작년만 같아도 이렇게 힘들지는 않았을 거야.",
+    "en": "If it were just like last year, it wouldn't have been this hard.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "만 해도",
+    "difference": "“만 해도” states a fact (“even as recently as X”); “만 같아도” imagines how things would be if they were like X.",
+    "pair": [
+     {
+      "ko": "십 년 전만 해도 이곳은 논이었다.",
+      "en": "As recently as ten years ago this place was a rice paddy."
+     },
+     {
+      "ko": "십 년 전만 같아도 이곳이 이렇게 붐비지는 않을 텐데.",
+      "en": "If it were just like ten years ago, this place wouldn't be this crowded."
+     }
+    ]
+   },
+   {
+    "pattern": "-라면",
+    "difference": "“-라면” is a plain condition; “만 같아도” also says the standard is a low bar.",
+    "pair": [
+     {
+      "ko": "평일이라면 이렇게 붐비지 않는다.",
+      "en": "If it is a weekday, it is not this crowded."
+     },
+     {
+      "ko": "평일만 같아도 이렇게 붐비지 않을 텐데.",
+      "en": "If only it were a weekday, it wouldn't be this crowded."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows is a supposition, usually ending in “-을 텐데”.",
+    "wrong": "평일만 같아도 도로가 막힌다.",
+    "right": "평일만 같아도 도로가 이렇게 막히지는 않을 텐데.",
+    "en": "If it were just a weekday, the roads wouldn't be this jammed."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 대다",
+  "level": 4,
+  "label": "keep doing, over and over",
+  "meaning_en": "An expression meaning to keep doing something repeatedly or to an excessive degree, often with annoyance: “keep on, go on and on”.",
+  "usage": "It attaches to verb stems as “-아 대다/-어 대다”, usually after verbs of noise and fuss such as “떠들다”, “울다”, “웃다”, “짖다”, “졸라 대다”, “먹다”. The vowel of the stem decides “-아” or “-어”, and irregular verbs change as usual (“조르다 → 졸라 대다”). The sense is that the act is repeated or overdone; the speaker often finds it excessive. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "오랜만에 만난 우리는 신이 나게 떠들어 댔다.",
+    "en": "Meeting after a long time, we chattered away happily.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 장난감을 사 달라고 졸라 대서 결국 사 주었다.",
+    "en": "The child kept pestering me to buy the toy, so I finally bought it.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "옆집 개가 밤새 짖어 대서 한숨도 못 잤다.",
+    "en": "The neighbor's dog barked all night, so I did not sleep a wink.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "하도 웃어 대서 배가 아팠다.",
+    "en": "I laughed so much that my stomach hurt.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이들이 뛰어 대는 소리에 윗집에 올라갔다.",
+    "en": "Because of the noise of the children running around, I went up to the apartment above.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” just says an act is going on; “-어 대다” says it goes on and on, usually excessively.",
+    "pair": [
+     {
+      "ko": "아이가 울고 있다.",
+      "en": "The child is crying."
+     },
+     {
+      "ko": "아이가 울어 댄다.",
+      "en": "The child keeps crying on and on."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 쌓다",
+    "difference": "The two are close in meaning; both say that the act is piled up repeatedly.",
+    "pair": [
+     {
+      "ko": "과자를 먹어 댄다.",
+      "en": "They keep eating snacks."
+     },
+     {
+      "ko": "과자를 먹어 쌓는다.",
+      "en": "They keep eating snacks."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An irregular verb changes as usual: “조르다” becomes “졸라”.",
+    "wrong": "아이가 장난감을 사 달라고 조르어 댔다.",
+    "right": "아이가 장난감을 사 달라고 졸라 댔다.",
+    "en": "The child kept pestering me to buy the toy."
+   },
+   {
+    "note": "A ㄹ-stem keeps its ㄹ before “-어”.",
+    "wrong": "아이들이 떠드어 댔다.",
+    "right": "아이들이 떠들어 댔다.",
+    "en": "The children kept making noise."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어서인지",
+  "level": 4,
+  "label": "perhaps because",
+  "meaning_en": "An expression for guessing at a reason: “perhaps because X, maybe it is that X”. The speaker is not sure that the reason is the true one.",
+  "usage": "It attaches to verb and adjective stems as “-아서인지/-어서인지”, and to “이다” as “이어서인지/여서인지”. Contracted forms are normal (“내려서인지”, “해서인지”). It is written as one word. The second clause states the observed result, and the guess concerns its cause. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "눈이 쌓여서인지 길이 많이 미끄러웠다.",
+    "en": "Perhaps because snow had piled up, the road was very slippery.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "어제 늦게까지 책을 읽어서인지 하루 종일 졸리다.",
+    "en": "Perhaps because I read late into the night yesterday, I am sleepy all day.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "날씨가 좋아서인지 공원에는 사람이 많았다.",
+    "en": "Perhaps because the weather was nice, there were many people in the park.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "막내여서인지 가끔 철없이 굴 때가 있다.",
+    "en": "Perhaps because they are the youngest, they sometimes act like a child.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너무 긴장이 되어서인지 아무 말도 생각나지 않았다.",
+    "en": "Perhaps because I was too nervous, I could not think of anything to say.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-아서/어서",
+    "difference": "“-아서/어서” states the reason as a fact; “-어서인지” guesses at it.",
+    "pair": [
+     {
+      "ko": "눈이 와서 바닥이 얼었다.",
+      "en": "It snowed, so the ground froze."
+     },
+     {
+      "ko": "눈이 와서인지 바닥이 얼었다.",
+      "en": "Perhaps because it snowed, the ground froze."
+     }
+    ]
+   },
+   {
+    "pattern": "-는지",
+    "difference": "The two are close in meaning; “-는지” gives a vague reason in the same way, built on the verb or adjective itself.",
+    "pair": [
+     {
+      "ko": "열심히 일했는지 얼굴이 야위었다.",
+      "en": "Perhaps from working hard, their face has grown thin."
+     },
+     {
+      "ko": "열심히 일해서인지 얼굴이 야위었다.",
+      "en": "Perhaps because they worked hard, their face has grown thin."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“인지” is attached to “서”, with no space.",
+    "wrong": "눈이 내려서 인지 바닥이 얼어 있었다.",
+    "right": "눈이 내려서인지 바닥이 얼어 있었다.",
+    "en": "Perhaps because it had snowed, the ground was frozen."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
  }
 ]
