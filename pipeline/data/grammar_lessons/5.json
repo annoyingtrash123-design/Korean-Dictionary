@@ -1336,7 +1336,7 @@
   "level": 5,
   "label": "I saw, and it was...",
   "meaning_en": "A sentence-final ending for telling what the speaker personally saw, heard or tried: “(when I saw it) it was…”. The polite form is “-데요”.",
-  "usage": "It attaches to verb and adjective stems and after “-었-”; the polite form is “-데요”. The speaker must have experienced the fact directly, and often it is told with a note of discovery. It is not the “-대” that reports what someone said: “비가 오데” is what I saw, “비가 온대” is what I heard. It is also used as a question, “-데?”, which asks what the listener experienced.",
+  "usage": "It attaches to verb and adjective stems and after “-었-”. Without “요” it belongs to the “하게” speech level (krdict: 예사 낮춤), used among adult friends or to a junior; “-데요” is the polite form. The speaker must have experienced the fact directly, and often it is told with a note of discovery. It is not the “-대” that reports what someone said: “비가 오데” is what I saw, “비가 온대” is what I heard. It is also used as a question, “-데?”, which asks what the listener experienced.",
   "examples": [
    {
     "ko": "그 가수 노래를 직접 들어 보니 정말 잘하데.",
@@ -1381,7 +1381,7 @@
    },
    {
     "pattern": "-더라고",
-    "difference": "Both report what the speaker found out in person, and they are close in meaning; “-더라고” is the form that is easier to build on (it combines with “요” and with other endings in the same way as “-더라”).",
+    "difference": "Both report what the speaker found out in person, and they are close in meaning; “-더라고(요)” is the more common of the two in everyday speech today.",
     "pair": [
      {
       "ko": "그 집 음식이 짜데요.",
@@ -1403,7 +1403,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1898,7 +1900,7 @@
   "level": 5,
   "label": "going to end up in trouble",
   "meaning_en": "A colloquial expression meaning that the speaker (or someone) is about to end up in an unwelcome situation: “looks like I'm going to have to…, I'm about to end up…”.",
-  "usage": "It attaches to verb stems and is always in the past form “생겼다” (“생겼네”, “생겼어요”), even though it points to the immediate future. The situation is nearly always bad or inconvenient, and it often follows a reason clause (“-아서”, “-는 바람에”). It has no positive uses. Do not confuse it with “-게 생겼다” in the sense of how someone looks (“착하게 생겼다”).",
+  "usage": "It attaches to verb stems and is always in the past form “생겼다” (“생겼네”, “생겼어요”), even though it points to the immediate future. The situation is nearly always bad or inconvenient, and it often follows a reason clause (“-아서”, “-는 바람에”). Positive outcomes are rare and sound jokey. Do not confuse it with “-게 생겼다” in the sense of how someone looks (“착하게 생겼다”).",
   "examples": [
    {
     "ko": "쌀이 없어서 저녁을 굶게 생겼다.",
@@ -1963,14 +1965,16 @@
   ],
   "pitfalls": [
    {
-    "note": "It is for unwelcome situations; good news takes another form.",
-    "wrong": "복권에 당첨되게 생겼다.",
-    "right": "복권에 당첨될 것 같다.",
-    "en": "I think I'll win the lottery."
+    "note": "It is fixed in the past form “생겼다” even though it looks ahead; the present “생긴다” does not give this meaning.",
+    "wrong": "이러다가는 저녁을 굶게 생긴다.",
+    "right": "이러다가는 저녁을 굶게 생겼다.",
+    "en": "At this rate I'm going to end up skipping dinner."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2051,7 +2055,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2126,7 +2132,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2134,7 +2142,7 @@
   "level": 5,
   "label": "is apt to, likely to",
   "meaning_en": "An expression meaning that something is likely to happen or that one is apt to do it: “it is easy to end up…, is apt to…”. It usually warns of an undesirable tendency.",
-  "usage": "It attaches to verb and adjective stems, with the “가” often dropped (“-기 쉽다”), and with no tense before “-기”. It describes a general tendency, often a risk (“걸리기 쉽다”, “깨지기 쉽다”). It is not a prediction about one specific event. The colloquial synonym “-기 십상이다” is another form, stronger and always negative.",
+  "usage": "It attaches to verb and adjective stems, with the “가” often dropped (“-기 쉽다”), and with no tense before “-기”. It describes a general tendency, often a risk (“걸리기 쉽다”, “깨지기 쉽다”). The colloquial synonym “-기 십상이다” is another form, stronger and almost always about a bad result.",
   "examples": [
    {
     "ko": "환절기에는 감기에 걸리기가 쉽다.",
@@ -2198,16 +2206,12 @@
     "wrong": "감기에 걸렸기가 쉽다.",
     "right": "감기에 걸리기가 쉽다.",
     "en": "You are apt to catch a cold."
-   },
-   {
-    "note": "It describes a general tendency, so it does not suit a forecast for one day.",
-    "wrong": "내일 비가 오기 쉽다.",
-    "right": "장마철에는 곰팡이가 생기기 쉽다.",
-    "en": "In the rainy season mold is apt to form."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2254,7 +2258,7 @@
      },
      {
       "ko": "아이는 울 뿐이었다.",
-      "en": "The child could do nothing but cry."
+      "en": "The child only cried."
      }
     ]
    },
@@ -2282,7 +2286,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2357,7 +2363,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2432,7 +2440,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2508,12 +2518,14 @@
    {
     "note": "It needs an excess of a feeling or an effort, not a plain cause.",
     "wrong": "시험이 끝난 나머지 집에 갔다.",
-    "right": "시험이 끝난 나머지 긴장이 풀려 주저앉고 말았다.",
-    "en": "The exam was over, and in my relief I slumped down."
+    "right": "시험이 끝나자 긴장이 풀린 나머지 그 자리에 주저앉고 말았다.",
+    "en": "When the exam ended, the tension drained out of me so completely that I slumped down on the spot."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2594,7 +2606,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2663,13 +2677,15 @@
   "pitfalls": [
    {
     "note": "After a noun use “인 동시에”.",
-    "wrong": "의사는 동시에 작가이다.",
-    "right": "의사인 동시에 작가이다.",
-    "en": "They are both a doctor and a writer."
+    "wrong": "그 사람은 의사 동시에 작가이다.",
+    "right": "그 사람은 의사인 동시에 작가이다.",
+    "en": "That person is both a doctor and a writer."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2722,7 +2738,7 @@
    },
    {
     "pattern": "-는 모양이다",
-    "difference": "“-는 모양이다” infers from a visible sign; “-는 듯하다” is a general impression.",
+    "difference": "Both guess from evidence. “-는 모양이다” is only a guess about something observed; “-는 듯하다” can also soften the speaker's own opinion (“제 생각에는 이쪽이 나은 듯합니다”), which “-는 모양이다” cannot.",
     "pair": [
      {
       "ko": "눈이 오는 듯하다.",
@@ -2745,7 +2761,9 @@
   ],
   "topik_tip": "“-는 듯하다” and “-는 것 같다” are interchangeable in most 읽기 passages; both mark a guess.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2820,7 +2838,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2828,7 +2848,7 @@
   "level": 5,
   "label": "now that, since it is so",
   "meaning_en": "An expression meaning “now that X is so, since it is settled that X”: because the first fact is already fixed, the speaker concludes that one must do something or that a situation is only natural.",
-  "usage": "It attaches to verb stems as “-는 이상”, to adjective stems as “-ㄴ/은 이상”, to “이다” as “인 이상”, and to a completed verb as “-ㄴ/은 이상” (“약속한 이상”). There is no “-었는”. The main clause is an obligation, a firm conclusion or a decision (“-어야 한다”, “-ㄹ 수밖에 없다”, “-겠다”), and it is not a plain narration of the past. It is written or formal.",
+  "usage": "It attaches to verb stems as “-는 이상”, to adjective stems as “-ㄴ/은 이상”, to “이다” as “인 이상”, and to a completed verb as “-ㄴ/은 이상” (“약속한 이상”). There is no “-었는”. The main clause is an obligation, a firm conclusion or a decision (“-어야 한다”, “-ㄹ 수밖에 없다”, “-겠다”), and it is not a plain narration of the past. It is common in speech as well as in writing (“이렇게 된 이상”).",
   "examples": [
    {
     "ko": "이렇게 계속 노는 이상 시험을 잘 볼 수가 없을 텐데.",
@@ -2895,7 +2915,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2976,7 +2998,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
