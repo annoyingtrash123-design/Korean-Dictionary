@@ -3485,7 +3485,7 @@
      },
      {
       "ko": "승규는 지각하곤 한다.",
-      "en": "Seunggyu is sometimes late."
+      "en": "Seunggyu tends to be late."
      }
     ]
    },
@@ -3520,7 +3520,9 @@
   ],
   "topik_tip": "In 읽기, “-기 일쑤이다” signals criticism or complaint about a habit. In 쓰기, use it to describe common problems (“잊어버리기 일쑤이다”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3602,7 +3604,9 @@
   ],
   "topik_tip": "Learn it with “한심하기 짝이 없다”, “답답하기 짝이 없다” and “무례하기 짝이 없다”: these are typical 읽기 collocations.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3641,7 +3645,7 @@
   "compare": [
    {
     "pattern": "-는 판에",
-    "difference": "“-는 판에” is nearly identical and just as colloquial. “-는 마당에” puts a little more weight on the turning point of the situation.",
+    "difference": "“-는 판에” is nearly identical and, if anything, a little more colloquial.",
     "pair": [
      {
       "ko": "다들 바쁜 마당에 혼자 놀 수는 없다.",
@@ -3684,7 +3688,9 @@
   ],
   "topik_tip": "The collocation “이렇게 된 마당에” means “now that it has come to this”, and often leads to a decision to continue.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3764,9 +3770,11 @@
     "en": "It is fine even if we are a little late."
    }
   ],
-  "topik_tip": "In 쓰기, use it to show determination in an opinion essay: “어려움이 있는 한이 있어도 ...”.",
+  "topik_tip": "In 쓰기, use it to show determination in an opinion essay: “손해를 보는 한이 있어도 원칙은 지켜야 한다”. Do not confuse it with “-는 한” (“as long as”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3889,7 +3897,7 @@
   "compare": [
    {
     "pattern": "-으려야",
-    "difference": "“-으려야” is the usual spoken form of the same expression. “-으려도” is a variant that sounds slightly more written.",
+    "difference": "“-으려야” is the more common form of the same expression. “-으려도” means the same and is the variant to recognise.",
     "pair": [
      {
       "ko": "잊으려도 잊을 수 없다.",
@@ -3920,8 +3928,8 @@
    {
     "note": "It needs a statement of inability after it.",
     "wrong": "먹으려도 먹었다.",
-    "right": "먹으려고 했다.",
-    "en": "I tried to eat."
+    "right": "먹으려도 먹을 수가 없었다.",
+    "en": "I could not eat it, however I tried."
    },
    {
     "note": "Consonant stems need the “으”.",
@@ -3932,7 +3940,9 @@
   ],
   "topik_tip": "Learn “V-으려야 V-을 수 없다” as the standard form for 쓰기; “-으려도” is the variant to recognise in reading.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3949,7 +3959,7 @@
    },
    {
     "ko": "돌아오리라는 믿음 하나로 지수는 십 년을 기다렸다.",
-    "en": "With nothing but the belief that the person would come back, Jisu waited ten years.",
+    "en": "With nothing but the belief that they would come back, Jisu waited ten years.",
     "ctx": "literary"
    },
    {
@@ -4006,7 +4016,7 @@
     "en": "I thought that I would succeed."
    },
    {
-    "note": "ㄹ-stems drop the ㄹ before “리라는”.",
+    "note": "ㄹ-stems take “-리라는” directly, with no “으”.",
     "wrong": "살으리라는 다짐을 했다.",
     "right": "살리라는 다짐을 했다.",
     "en": "I made a vow that I would live."
@@ -4014,7 +4024,9 @@
   ],
   "topik_tip": "The pair “-으리라는 + noun / -으리라고 + verb” is the pattern to remember: “다짐/결심” take the first, “다짐하다/결심하다” take the second.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4096,7 +4108,9 @@
   ],
   "topik_tip": "Often used with “남녀노소”, “동서고금”, “유무”, “이유”, “국적”. In 쓰기, it generalises a point formally.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4113,7 +4127,7 @@
    },
    {
     "ko": "밀린 설거지를 한꺼번에 해치우고 나니 속이 시원하다.",
-    "en": "Having got the backed-up dishes out of the way at once, I feel refreshed.",
+    "en": "Now that I have got the backed-up dishes out of the way in one go, what a relief.",
     "ctx": "conversation"
    },
    {
@@ -4153,11 +4167,11 @@
     "pair": [
      {
       "ko": "밀린 일을 해치우고 나니 속이 시원하다.",
-      "en": "Having cleared the backlog, I feel refreshed."
+      "en": "Having cleared the backlog, I feel relieved."
      },
      {
       "ko": "밀린 일을 하고 나니 속이 시원하다.",
-      "en": "After doing the backlog, I feel refreshed."
+      "en": "After doing the backlog, I feel relieved."
      }
     ]
    }
@@ -4165,9 +4179,9 @@
   "pitfalls": [
    {
     "note": "It does not attach to intransitive verbs.",
-    "wrong": "비가 와 치웠다.",
-    "right": "비가 다 와 버렸다.",
-    "en": "The rain has all come down."
+    "wrong": "아이가 잠들어 치웠다.",
+    "right": "아이가 잠들어 버렸다.",
+    "en": "The child has fallen asleep."
    },
    {
     "note": "“하다” makes the one-word “해치우다”.",
@@ -4178,7 +4192,9 @@
   ],
   "topik_tip": "“먹어 치우다, 해치우다” are the common ones. In 읽기, the nuance is speed and thoroughness, often with a casual or slightly critical tone.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4200,7 +4216,7 @@
    },
    {
     "ko": "회사를 그만둔다는 말은 한마디도 하지 않았다.",
-    "en": "There was not a word about quitting the company.",
+    "en": "They never said a word about quitting the company.",
     "ctx": "essay"
    },
    {
@@ -4225,7 +4241,7 @@
      },
      {
       "ko": "합격했다고 하는 소식을 들었다.",
-      "en": "I heard the news that they say they had passed."
+      "en": "I heard the news that they had passed (wordy)."
      }
     ]
    },
@@ -4260,7 +4276,9 @@
   ],
   "topik_tip": "In 읽기, “-ㄴ다는 N” signals reported information; the question often asks what the quoted claim was.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4337,12 +4355,14 @@
     "note": "After a vowel, use “라고는”.",
     "wrong": "친구이라고는 한 명도 없다.",
     "right": "친구라고는 한 명도 없다.",
-    "en": "There is not a single friend."
+    "en": "I do not have a single friend."
    }
   ],
   "topik_tip": "“N이라고는 ... 밖에 없다” is the typical pattern; in 읽기 it emphasises how scarce something is.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4508,7 +4528,9 @@
   ],
   "topik_tip": "In 읽기 dialogues, “-래서야” signals that the speaker finds an instruction unreasonable.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4565,11 +4587,11 @@
     "pair": [
      {
       "ko": "돌아오리라고 믿었다.",
-      "en": "I believed it would return (literary)."
+      "en": "I believed they would come back (literary)."
      },
      {
       "ko": "돌아올 것이라고 믿었다.",
-      "en": "I believed it would return."
+      "en": "I believed they would come back."
      }
     ]
    }
@@ -4582,7 +4604,7 @@
     "en": "I had the belief that I would succeed."
    },
    {
-    "note": "ㄹ-stems drop the ㄹ.",
+    "note": "ㄹ-stems take “-리라고” directly, with no “으”.",
     "wrong": "살으리라고 다짐했다.",
     "right": "살리라고 다짐했다.",
     "en": "I vowed that I would live."
@@ -4590,7 +4612,9 @@
   ],
   "topik_tip": "“-으리라고 생각/다짐/결심하다” is a very common 읽기 collocation in narration.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4643,7 +4667,7 @@
    },
    {
     "pattern": "-자면",
-    "difference": "The other “-자면” (intention) states what is required for the speaker’s own plan. This one reacts to someone’s suggestion.",
+    "difference": "The other “-자면” (intention) states what doing X requires. This one reacts to someone’s suggestion.",
     "pair": [
      {
       "ko": "병원에 가자면 울기부터 한다.",
@@ -4651,7 +4675,7 @@
      },
      {
       "ko": "병원에 가자면 한 시간은 걸린다.",
-      "en": "If you are to go to the hospital, it takes an hour (own plan)."
+      "en": "If you are to go to the hospital, it takes an hour (requirement)."
      }
     ]
    }
@@ -4670,9 +4694,11 @@
     "en": "If it rains tomorrow, we cancel."
    }
   ],
-  "topik_tip": "Context separates the two “-자면”: a proposal from someone else means this one, a goal of the speaker means the first.",
+  "topik_tip": "Context separates the two “-자면”: a proposal from someone else means this one; what it takes to do X means the first.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  }
 ]

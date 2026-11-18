@@ -58,3 +58,44 @@ Per lesson: form, outcome, what changed.
 | -던2 (의문) | approved | Example 4 English was present tense ("Is the house ..."), -던 asks about the listener's past experience. |
 | -던가1 (의문·경험) | approved | None. |
 | -던가2 (의문·추측) | approved | The -더라 compare used “책상 위에 뒀더라” (first-person past action with -더라, odd) as a statement; now the everyday memory-search question “뭐였더라?” vs “뭐였던가?”. |
+| -기 일쑤이다 | approved | -곤 하다 pair translated as "sometimes" → "tends to". |
+| -기 짝이 없다 | approved | None. |
+| 는 마당에 | approved | -는 판에 compare invented a difference ("weight on the turning point"); now "nearly identical, a little more colloquial". |
+| -는 한이 있어도 | approved | TIP example “어려움이 있는 한이 있어도” was awkward and invites confusion with -는 한 ("as long as"); replaced, and the confusion is named. |
+| -을 바에 | approved | (see top) |
+| -으려도 | approved | -으려야 compare claimed -으려도 "sounds more written" (unsupported); pitfall 1 "right" sentence did not use the pattern; now “먹으려도 먹을 수가 없었다”. |
+| -으리라는 | approved | Pitfall 2 said ㄹ-stems drop the ㄹ (살리라는 keeps it; the error is inserting 으). Example 2 English invented "the person". |
+| 를 막론하고 | approved | None. |
+| -어 치우다 | approved | 속이 시원하다 mistranslated "refreshed" → "relieved"; pitfall 1 "right" sentence “비가 다 와 버렸다” was unnatural; now 잠들어 치웠다 / 잠들어 버렸다. |
+| -는다는 | approved | Example 3 English dropped the subject; -다고 하는 pair translation garbled ("that they say they had passed"). |
+| 이라고는 | approved | One translation. |
+| -는다던가1 | approved | (see top) |
+| -으래서야 (의문 제기) | approved | None. |
+| -으리라고 | approved | Same ㄹ-stem pitfall error as -으리라는; compare English "it would return" → "they would come back". |
+| -자면2 (권유) | approved | Compare and TIP described -자면1 as the "speaker's own plan"; now "what doing X requires". |
+
+## Totals
+
+55 approved, 1 left as draft (-으니4: curriculum sense 비난 vs. the lesson's "statement of truth").
+
+## Also changed
+
+`pipeline/tests/grammar_lessons.rs` `only_approved_lessons_ship` assumed every shipped lesson was still a draft
+(it approved three and expected exactly three). It now resets all lessons to draft before approving three, so the
+test checks the mechanism and keeps passing as review approvals land.
+
+## Systematic issues for the level 1-5 drafters
+
+1. Irregular-stem claims in pitfalls: "ㄹ-stems drop the ㄹ" was written for -으리오, -으리라는 and -으리라고, where
+   the ㄹ stays (살리오, 살리라는). Check each stem claim against a real conjugation.
+2. "Wrong" sentences that are actually fine: 한 바에 (기왕 시작한 바에), 참 크는구먼 (크다 "grow"). Before calling a
+   form impossible, look for a second meaning or a common collocation that uses it.
+3. Invented contrasts in compare entries ("softer, older variant", "more written", "weight on the turning point").
+   If two forms are near-synonyms, say so; only claim a difference a dictionary or clear usage supports.
+4. Register words: say which speech level an ending belongs to (하게/하오/해라/해요) instead of "old-fashioned"; and do
+   not call standard forms "regional" (-거들랑) or non-standard ones "accepted" (-구만).
+5. Pitfall "right" sentences should use the pattern (or its direct fix), and be natural on their own.
+6. Translations: no added commentary ("mind you", "so beware", "Behold"), no dropped subjects, keep tense
+   (-던 asks about the past), and check idioms (무리가 있다, 속이 시원하다).
+7. Context tags: "proverb" and "news" were used for sentences that are neither.
+8. Hangul in English fields must be in quotes (“-자면2”), or the quality gate fails.
