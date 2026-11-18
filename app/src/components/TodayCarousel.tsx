@@ -16,7 +16,7 @@ export function CurriculumLevel({ level }: { level: number }) {
 interface PageSpec {
   key: string;
   kind: 'proverb' | 'seongeo' | 'idiom' | 'word' | 'grammar';
-  label: ComponentChildren;     // header strip, left: what this page is
+  label: ComponentChildren;     // card header, left: what this page is
   level?: number;               // curriculum level badge (words and grammar)
   save: ItemInput;
   title: string;
@@ -60,7 +60,7 @@ function pageSpecs(h: HomeData): PageSpec[] {
   return out;
 }
 
-/** One page: a framed card. The header strip (kind · level · save) stays put; below it the card scrolls
+/** One page: a framed card. The header (kind · level · save, part of the card, under a hairline rule) stays put; below it the card scrolls
  *  through the headword (hanja and part of speech under it), its English meaning and then the whole
  *  entry as the entry page's Dict tab shows it (every dictionary's senses, examples, related words,
  *  grammar lessons). The entry loads once the page is near the one on screen. */

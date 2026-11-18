@@ -771,24 +771,31 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 /* each page: one framed card, sized to its content (centred in the page), never taller than the page: the middle
    scrolls inside the card while the header strip and "Open entry" stay put. Spacing steps 4/8/12/16/24. */
 .car-slide { flex: 0 0 100%; min-width: 0; display: flex; flex-direction: column; padding: 16px 16px 12px; scroll-snap-align: start; scroll-snap-stop: always; }
-/* brand colour: the header strip is the forest-green bar (as the app's header and tab bar), rules and labels are
-   tinted with the accent green; the only thing that varies per kind is the small marker before the kind label. */
-.today-card { --card-x: 20px; --card-rule: color-mix(in srgb, var(--accent) 18%, var(--bg)); --kind-mark: var(--moss);
+/* one calm surface: the card is a sheet of paper a shade lighter than the parchment page (in dark, a shade lighter
+   than the page too), with a single green-tinted hairline border and a soft shadow. No coloured header block: the
+   header is part of the card, set apart only by a hairline rule; the forest green is the
+   accent (kind label, level badge, star, section labels, rules). The only thing that varies per kind is the small
+   marker before the kind label. */
+.today-card { --card-x: 20px; --card-bg: color-mix(in srgb, #fff 42%, var(--bg));
+  --card-rule: color-mix(in srgb, var(--accent) 16%, var(--card-bg)); --kind-mark: var(--moss);
   width: 100%; max-width: 600px; max-height: 100%; min-height: 0; margin: auto; display: flex; flex-direction: column;
-  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--bg)); border-radius: 18px; background: var(--surface); overflow: hidden;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 14%, transparent); }
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--card-bg)); border-radius: 20px; background: var(--card-bg); overflow: hidden;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--accent) 8%, transparent), 0 4px 14px -6px color-mix(in srgb, var(--accent) 22%, transparent); }
+:root[data-theme='dark'] .today-card { --card-bg: color-mix(in srgb, var(--text) 6%, var(--bg));
+  --card-rule: color-mix(in srgb, var(--accent) 20%, var(--card-bg)); box-shadow: 0 4px 14px -6px rgba(0, 0, 0, .55); }
 .today-card[data-kind='idiom'] { --kind-mark: var(--bud-2); }
 .today-card[data-kind='grammar'] { --kind-mark: var(--sepia); }
-.card-head { flex: none; display: flex; align-items: center; gap: 8px; height: 52px; padding: 0 8px 0 var(--card-x); background: var(--bar); color: var(--on-bar); }
-.card-kind { display: inline-flex; align-items: center; gap: 8px; font: 700 12px/1 var(--font-ui); letter-spacing: .09em; text-transform: uppercase; color: var(--on-bar); white-space: nowrap; }
+/* the header's rule is inset to the text margins, as the rules between the entry's sections are */
+.card-head { flex: none; display: flex; align-items: center; gap: 8px; height: 52px; padding: 0 8px 0 var(--card-x); color: var(--accent);
+  background: linear-gradient(var(--card-rule), var(--card-rule)) no-repeat var(--card-x) 100% / calc(100% - 2 * var(--card-x)) 1px; }
+.card-kind { display: inline-flex; align-items: center; gap: 8px; font: 700 12px/1 var(--font-ui); letter-spacing: .09em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
 .card-kind::before { content: ''; width: 8px; height: 8px; border-radius: 4px; background: var(--kind-mark); }
-.card-kind-ko { margin-left: -2px; font: 500 13px/1 var(--font-ko); letter-spacing: 0; color: color-mix(in srgb, var(--on-bar) 80%, var(--bar)); }
+.card-kind-ko { margin-left: -2px; font: 500 13px/1 var(--font-ko); letter-spacing: 0; color: var(--muted); }
 .card-spacer { flex: 1; }
-.today-card .card-head .save-btn { width: 44px; height: 44px; color: var(--on-bar); }
-.today-card .card-head .save-btn.on { color: var(--bud-2); }
-.today-card .card-head .save-btn:active { background: color-mix(in srgb, var(--on-bar) 14%, var(--bar)); }
-.today-card .card-head .save-btn:focus-visible { outline-color: var(--on-bar); }
-.today-card .card-head .cur-lvl { background: color-mix(in srgb, var(--on-bar) 16%, var(--bar)); color: var(--on-bar); }
+.today-card .card-head .save-btn { width: 44px; height: 44px; color: var(--accent); }
+.today-card .card-head .save-btn.on { color: var(--sepia); }
+.today-card .card-head .save-btn:active { background: color-mix(in srgb, var(--accent) 12%, var(--card-bg)); }
+.today-card .card-head .cur-lvl { background: transparent; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 38%, var(--card-bg)); color: var(--accent); }
 .cur-lvl { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 12px; font-size: 12.5px; font-weight: 600; font-family: var(--font-ko); white-space: nowrap; background: var(--accent-soft); color: var(--accent); }
 /* the body scrolls vertically only. Its horizontal overscroll must chain to the pager track: with
    `overscroll-behavior: contain` (both axes) a sideways finger swipe that starts on the card latched onto the body,
@@ -815,7 +822,7 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 .today-card .entry-inline .body + .body { border-top-color: var(--card-rule); padding-top: 12px; }
 .today-card .entry-inline .ex-n { background: var(--accent-soft); color: var(--accent); }
 .today-card .entry-inline .lessons { padding: 0 0 8px; }
-.today-card .entry-inline .lesson { background: var(--bg); }
+.today-card .entry-inline .lesson { background: var(--bg); border-color: var(--card-rule); }
 .today-card .entry-inline .similar { margin: 0; padding: 16px 0 8px; border-top: 1px solid var(--card-rule); }
 .today-card .entry-inline .similar-h { color: var(--accent); font-size: 11.5px; letter-spacing: .09em; }
 .today-card .entry-inline .skeleton { margin: 16px 0; }
