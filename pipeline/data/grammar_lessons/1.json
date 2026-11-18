@@ -2359,5 +2359,813 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-읍시다",
+  "level": 1,
+  "label": "formal let's",
+  "meaning_en": "A formal suggestion ending: “let's do X”. It is addressed to equals or juniors in formal or group settings: meetings, notices, slogans, teachers to a class. The polite “-어요” or “-을까요?” is used instead for people to be respected.",
+  "usage": "After a vowel or ㄹ it is “-ㅂ시다”, after other consonants “-읍시다”: “하다 → 합시다”, “가다 → 갑시다”, “먹다 → 먹읍시다”, “읽다 → 읽읍시다”, “살다 → 삽시다” and “만들다 → 만듭시다” (the ㄹ drops), “눕다 → 누웁시다” (ㅂ-irregular), “듣다 → 들읍시다” (ㄷ-irregular), “모으다 → 모읍시다”. The negative is “-지 맙시다”. It is used for a joint action that includes the speaker, with a firm tone that is not suitable when addressing someone senior.",
+  "examples": [
+   {
+    "ko": "오늘은 일찍 퇴근합시다.",
+    "en": "Let's leave work early today.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "우리 같이 점심을 먹읍시다.",
+    "en": "Let's have lunch together.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다 함께 힘을 모읍시다.",
+    "en": "Let's all pool our strength.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "서로 도우며 삽시다.",
+    "en": "Let's live helping each other.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "수업 시간에는 떠들지 맙시다.",
+    "en": "Let's not make noise during class.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-자",
+    "difference": "“-자” is the plain, casual “let's” for close friends and juniors. “-ㅂ시다” is formal and public.",
+    "pair": [
+     {
+      "ko": "같이 가자.",
+      "en": "Let's go together."
+     },
+     {
+      "ko": "같이 갑시다.",
+      "en": "Let's go together."
+     }
+    ]
+   },
+   {
+    "pattern": "-을까",
+    "difference": "“-ㅂ시다” proposes firmly; “-을까요?” asks whether the other agrees.",
+    "pair": [
+     {
+      "ko": "같이 갑시다.",
+      "en": "Let's go together."
+     },
+     {
+      "ko": "같이 갈까요?",
+      "en": "Shall we go together?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㅂ시다”.",
+    "wrong": "같이 케이크를 만들읍시다.",
+    "right": "같이 케이크를 만듭시다.",
+    "en": "Let's make a cake together."
+   },
+   {
+    "note": "A ㅂ-irregular verb turns ㅂ into “우”.",
+    "wrong": "잠깐 눕읍시다.",
+    "right": "잠깐 누웁시다.",
+    "en": "Let's lie down for a moment."
+   }
+  ],
+  "topik_tip": "The exam often tests the choice between “-ㅂ시다” (vowel stem) and “-읍시다” (consonant stem).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으세요",
+  "level": 1,
+  "label": "polite honorific ending",
+  "meaning_en": "The honorific form of the polite “해요체”: “-(으)세요” means “you/they do (honoured)”, or “please do ...”. By context it states, asks or requests: “어디 가세요?” (Where are you going?), “앉으세요” (Please sit).",
+  "usage": "After a vowel or ㄹ it is “-세요”, after other consonants “-으세요”: “가다 → 가세요”, “읽다 → 읽으세요”, “앉다 → 앉으세요”, “살다 → 사세요” and “만들다 → 만드세요” (the ㄹ drops), “듣다 → 들으세요”. Special verbs: “먹다 → 드세요, 자다 → 주무세요, 있다 → 계세요, 말하다 → 말씀하세요”. The negative request is “-지 마세요”. It is the common polite request and is gentler than the formal “-으십시오”.",
+  "examples": [
+   {
+    "ko": "우리 가게에 어서 오세요.",
+    "en": "Welcome to our shop.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이쪽 자리에 앉으세요.",
+    "en": "Please sit in this seat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님은 어디에 가세요?",
+    "en": "Where are you going, Teacher?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어머니는 지금 주방에서 요리를 하세요.",
+    "en": "My mother is cooking in the kitchen now.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 책을 한번 읽으세요.",
+    "en": "Please read this book.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으십시오",
+    "difference": "“-으세요” is the everyday polite request; “-으십시오” is formal and typical of notices.",
+    "pair": [
+     {
+      "ko": "여기에 앉으세요.",
+      "en": "Please sit here."
+     },
+     {
+      "ko": "여기에 앉으십시오.",
+      "en": "Please sit here."
+     }
+    ]
+   },
+   {
+    "pattern": "-어요",
+    "difference": "“-어요” is polite but neutral; “-으세요” adds respect for the person doing the action.",
+    "pair": [
+     {
+      "ko": "할머니가 가요?",
+      "en": "Is Grandmother going?"
+     },
+     {
+      "ko": "할머니가 가세요?",
+      "en": "Is Grandmother going?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "For a person to honour, “먹다” becomes “드시다”.",
+    "wrong": "할머니, 많이 먹으세요.",
+    "right": "할머니, 많이 드세요.",
+    "en": "Grandmother, please eat plenty."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ.",
+    "wrong": "어디에 살으세요?",
+    "right": "어디에 사세요?",
+    "en": "Where do you live?"
+   }
+  ],
+  "topik_tip": "Meaning depends on the context and intonation: statement, question or request.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으십시오",
+  "level": 1,
+  "label": "formal honorific command",
+  "meaning_en": "The formal honorific command of the “합쇼체”: “please do X”. It is used in notices, announcements, signs, speeches and service talk to a person or a group to be respected.",
+  "usage": "After a vowel or ㄹ it is “-십시오”, after other consonants “-으십시오”: “가다 → 가십시오”, “앉다 → 앉으십시오”, “읽다 → 읽으십시오”, “떠나다 → 떠나십시오”, “만들다 → 만드십시오” (the ㄹ drops). Special verbs: “먹다 → 드십시오, 자다 → 주무십시오”. The negative is “-지 마십시오”. It is stiffer than “-으세요” and does not suit casual talk. The request with “주다” is “-어 주십시오”. “안녕히 가십시오” (goodbye to someone leaving) is a set phrase.",
+  "examples": [
+   {
+    "ko": "승객 여러분은 자리에 앉으십시오.",
+    "en": "Passengers, please take your seats.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "지금 바로 이곳을 떠나십시오.",
+    "en": "Please leave this place right now.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "이 글을 끝까지 읽으십시오.",
+    "en": "Please read this passage to the end.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "그럼 안녕히 가십시오.",
+    "en": "Well then, goodbye.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "사용 후에는 반드시 손을 씻으십시오.",
+    "en": "After use, be sure to wash your hands.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으세요",
+    "difference": "“-으십시오” is the formal order of notices; “-으세요” is the milder everyday request.",
+    "pair": [
+     {
+      "ko": "앉으십시오.",
+      "en": "Please sit down."
+     },
+     {
+      "ko": "앉으세요.",
+      "en": "Please sit down."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 주십시오",
+    "difference": "“-어 주십시오” asks for a favour; the bare “-으십시오” is an order or an instruction.",
+    "pair": [
+     {
+      "ko": "문을 닫으십시오.",
+      "en": "Close the door."
+     },
+     {
+      "ko": "문을 닫아 주십시오.",
+      "en": "Please close the door for me."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A vowel stem takes “-십시오”.",
+    "wrong": "안녕히 가으십시오.",
+    "right": "안녕히 가십시오.",
+    "en": "Goodbye."
+   },
+   {
+    "note": "Use “드시다” for eating: “드십시오”.",
+    "wrong": "많이 먹으십시오.",
+    "right": "많이 드십시오.",
+    "en": "Please eat plenty."
+   }
+  ],
+  "topik_tip": "Notices on signs often end in “-(으)십시오”; the negative is “-지 마십시오”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고4",
+  "level": 1,
+  "label": "trailing “and ...” in speech",
+  "meaning_en": "A sentence-final “-고” in casual speech: the speaker adds a fact and leaves the sentence open, as if more follows (“and ...”). It often answers a question by listing: “친구 만났고, 영화도 봤고.”.",
+  "usage": "It attaches to any stem, with tense if needed (“만났고, 좋고, 선생님이고”), and the sentence stops there. The tone is casual (“해체”), and with a polite listener it is “-고요”: “저는 한국어 선생님이고요.”. It adds to what was said before: a list, an afterthought, or a second reason. It is a spoken version of the connective “-고”. It does not stand as the first and only remark.",
+  "examples": [
+   {
+    "ko": "어제는 친구 만났고, 영화도 봤고.",
+    "en": "Yesterday I met a friend, and watched a movie, too.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험도 끝났고. 이제 좀 쉬어야지.",
+    "en": "The exam is over, too. Now I should rest a bit.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 한국어 선생님이고요. 취미는 요리예요.",
+    "en": "I am a Korean teacher. And my hobby is cooking.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "날씨도 좋고. 기분도 좋고.",
+    "en": "The weather is nice. And my mood is good, too.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "집도 가깝고요. 월세도 싸요.",
+    "en": "The place is close, too. And the rent is cheap.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고3",
+    "difference": "In the middle of a sentence “-고” links two clauses. At the end it adds a fact and leaves the sentence open.",
+    "pair": [
+     {
+      "ko": "비가 오고 바람이 불어요.",
+      "en": "It rains and the wind blows."
+     },
+     {
+      "ko": "비가 와요. 바람도 불고요.",
+      "en": "It is raining. And the wind is blowing too."
+     }
+    ]
+   },
+   {
+    "pattern": "-거든",
+    "difference": "“-고” adds another fact; “-거든” gives a reason that explains.",
+    "pair": [
+     {
+      "ko": "추워. 눈도 오고.",
+      "en": "It is cold. And it is snowing too."
+     },
+     {
+      "ko": "추워. 눈이 오거든.",
+      "en": "It is cold. It is snowing, you see."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "To a person you speak politely to, add “요”.",
+    "wrong": "선생님, 저는 학생이고.",
+    "right": "선생님, 저는 학생이고요.",
+    "en": "Teacher, I am a student, and so on."
+   }
+  ],
+  "topik_tip": "The ending “-고요” is the polite version and appears in interview answers as a way to add information.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을까",
+  "level": 1,
+  "label": "shall we? I wonder",
+  "meaning_en": "A sentence-final ending with three jobs: a suggestion (“같이 갈까요?” shall we go together?), an offer (“제가 도와 드릴까요?” shall I help?), and a wondering (“비가 올까?” I wonder if it will rain).",
+  "usage": "After a vowel or ㄹ it is “-ㄹ까”, after other consonants “-을까”: “가다 → 갈까”, “먹다 → 먹을까”, “놀다 → 놀까” and “만들다 → 만들까” (the ㄹ stays), “듣다 → 들을까”, “눕다 → 누울까”. The polite form is “-ㄹ까요?”. With the subject “we” it suggests; with “I” it offers or asks for the listener's will; with others it wonders. A suggestion “-ㅂ시다” is more firm, and a question about the listener's own wish is “-을래?”.",
+  "examples": [
+   {
+    "ko": "우리 같이 점심 먹을까요?",
+    "en": "Shall we have lunch together?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "제가 문을 열어 드릴까요?",
+    "en": "Shall I open the door for you?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "내일 비가 올까요?",
+    "en": "Will it rain tomorrow?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 옷이 나한테 어울릴까?",
+    "en": "I wonder if this outfit will suit me.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저녁에 뭐 먹을까?",
+    "en": "What shall we eat in the evening?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-읍시다",
+    "difference": "“-을까요?” asks whether the other agrees; “-ㅂ시다” proposes firmly.",
+    "pair": [
+     {
+      "ko": "같이 갈까요?",
+      "en": "Shall we go together?"
+     },
+     {
+      "ko": "같이 갑시다.",
+      "en": "Let's go together."
+     }
+    ]
+   },
+   {
+    "pattern": "-을래",
+    "difference": "“-을까?” proposes something for both; “-을래?” asks what the listener wants to do.",
+    "pair": [
+     {
+      "ko": "같이 갈까?",
+      "en": "Shall we go together?"
+     },
+     {
+      "ko": "같이 갈래?",
+      "en": "Do you want to go together?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem keeps its ㄹ: “놀다” gives “놀까요”.",
+    "wrong": "우리 같이 놀을까요?",
+    "right": "우리 같이 놀까요?",
+    "en": "Shall we hang out together?"
+   }
+  ],
+  "topik_tip": "The same ending can suggest, offer or wonder: check the subject (we, I, someone else).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어2",
+  "level": 1,
+  "label": "casual or polite ending",
+  "meaning_en": "The basic spoken ending: “-어” is the casual “해체” and “-어요” is the polite “해요체”. It is used for statements, questions, requests and suggestions, and the meaning depends on the context and the intonation.",
+  "usage": "It attaches to the stem with vowel harmony: “가다 → 가(요)”, “오다 → 와(요)”, “보다 → 봐(요)”, “먹다 → 먹어(요)”, “마시다 → 마셔(요)”, “주다 → 줘(요)”, “하다 → 해(요)”, “쓰다 → 써(요)”, “춥다 → 추워(요)”, “듣다 → 들어(요)”, “모르다 → 몰라(요)”. After a noun the copula is “이야/야” and “이에요/예요”. A rising tone makes a question and a falling tone a statement. The honorific is “-세요”; a formal level is “-ㅂ니다”.",
+  "examples": [
+   {
+    "ko": "지금 뭐 해? 바빠?",
+    "en": "What are you doing now? Are you busy?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 매일 아침 커피를 마셔요.",
+    "en": "I drink coffee every morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 옷 예뻐요. 어디에서 샀어요?",
+    "en": "This outfit is pretty. Where did you buy it?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 와요. 우산을 가져가세요.",
+    "en": "It is raining. Take an umbrella.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 집 음식이 정말 맛있어요.",
+    "en": "The food at this restaurant is really delicious.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-습니다",
+    "difference": "“-어요” is everyday polite; “-습니다” is formal.",
+    "pair": [
+     {
+      "ko": "저는 학교에 가요.",
+      "en": "I go to school."
+     },
+     {
+      "ko": "저는 학교에 갑니다.",
+      "en": "I go to school."
+     }
+    ]
+   },
+   {
+    "pattern": "-으세요",
+    "difference": "“-어요” is neutral; “-으세요” honours the subject.",
+    "pair": [
+     {
+      "ko": "선생님이 와요.",
+      "en": "The teacher comes."
+     },
+     {
+      "ko": "선생님이 오세요.",
+      "en": "The teacher comes."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“하다” becomes “해”, never “하어”.",
+    "wrong": "저는 매일 운동하어요.",
+    "right": "저는 매일 운동해요.",
+    "en": "I exercise every day."
+   },
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "오늘은 날씨가 추어요.",
+    "right": "오늘은 날씨가 추워요.",
+    "en": "The weather is cold today."
+   }
+  ],
+  "topik_tip": "Without “요” it is casual (“해체”); with “요” it is polite (“해요체”).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이 아니다",
+  "level": 1,
+  "label": "is not (a noun)",
+  "meaning_en": "The negation of “이다”: “N이/가 아니다” means “is not N”. It denies an identification, not an action (for that, “안” or “-지 않다”).",
+  "usage": "After a consonant it is “이 아니다”, after a vowel “가 아니다”: “학생이 아니에요”, “의사가 아니에요”. The noun before it takes “이/가” (not “은/는” or “을/를”) as complement: “저는 학생이 아니에요”. Endings: “아니에요, 아닙니다, 아니야, 아니었어요, 아니고”. “N이/가 아니라 M이다” means “not N but M”. The word “아니요” (no) is a separate reply word.",
+  "examples": [
+   {
+    "ko": "저는 학생이 아니에요. 회사원이에요.",
+    "en": "I am not a student. I am an office worker.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이것은 제 가방이 아닙니다.",
+    "en": "This is not my bag.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "그 사람은 의사가 아니라 간호사예요.",
+    "en": "That person is not a doctor but a nurse.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "오늘은 월요일이 아니야. 화요일이야.",
+    "en": "Today is not Monday. It is Tuesday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 길은 우리 집으로 가는 길이 아니었다.",
+    "en": "This road was not the way to our house.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지 않다",
+    "difference": "“이/가 아니다” denies what something is; “-지 않다” denies an action or a quality.",
+    "pair": [
+     {
+      "ko": "저는 학생이 아니에요.",
+      "en": "I am not a student."
+     },
+     {
+      "ko": "저는 학교에 가지 않아요.",
+      "en": "I do not go to school."
+     }
+    ]
+   },
+   {
+    "pattern": "아니요",
+    "difference": "“아니요” is a reply meaning “no”; “아니다” is the verb of the sentence.",
+    "pair": [
+     {
+      "ko": "아니요, 학생이 아니에요.",
+      "en": "No, I am not a student."
+     },
+     {
+      "ko": "저는 학생이 아니에요.",
+      "en": "I am not a student."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The noun before “아니다” takes “이/가”, not “을/를”.",
+    "wrong": "저는 학생을 아니에요.",
+    "right": "저는 학생이 아니에요.",
+    "en": "I am not a student."
+   },
+   {
+    "note": "The verb is “아니다”, not “안이다”.",
+    "wrong": "저는 학생이 안이에요.",
+    "right": "저는 학생이 아니에요.",
+    "en": "I am not a student."
+   }
+  ],
+  "topik_tip": "“N이/가 아니라 N이다” (not N but N) is a frequent frame.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 싶다",
+  "level": 1,
+  "label": "want to",
+  "meaning_en": "An expression for the speaker's own wish: “want to X”. It is used in statements about oneself and in questions to the listener. For another person's wish, “-고 싶어 하다” is used.",
+  "usage": "It attaches to verb stems with no change: “가다 → 가고 싶다”, “먹다 → 먹고 싶다”, “되다 → 되고 싶다”. The past is “-고 싶었다”, the negative “-고 싶지 않다”. The object may take “을/를” or “이/가” (“커피를/커피가 마시고 싶어요”). It does not attach to adjectives: “예뻐지다” first (“예뻐지고 싶어요”). In speech “-고 싶은데” is often an opening (“커피 마시고 싶은데 같이 갈래요?”). For a third person in a plain statement it is “-고 싶어 하다”.",
+  "examples": [
+   {
+    "ko": "저는 한국에 가고 싶어요.",
+    "en": "I want to go to Korea.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 아무것도 하고 싶지 않아요.",
+    "en": "I do not want to do anything today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "뭐 먹고 싶어요?",
+    "en": "What do you want to eat?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어렸을 때는 가수가 되고 싶었어요.",
+    "en": "When I was little, I wanted to become a singer.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "커피가 마시고 싶은데 같이 갈래요?",
+    "en": "I feel like having coffee; do you want to come along?",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 싶어 하다",
+    "difference": "“-고 싶다” is the speaker's own wish; “-고 싶어 하다” reports someone else's.",
+    "pair": [
+     {
+      "ko": "나는 쉬고 싶다.",
+      "en": "I want to rest."
+     },
+     {
+      "ko": "민준이는 쉬고 싶어 한다.",
+      "en": "Minjun wants to rest."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면 좋겠다",
+    "difference": "“-고 싶다” is wanting to do something; “-으면 좋겠다” hopes for a situation.",
+    "pair": [
+     {
+      "ko": "일찍 퇴근하고 싶어요.",
+      "en": "I want to leave work early."
+     },
+     {
+      "ko": "일찍 퇴근하면 좋겠어요.",
+      "en": "I wish I could leave work early."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective does not take “-고 싶다”; use “-어지다” first.",
+    "wrong": "예쁘고 싶어요.",
+    "right": "예뻐지고 싶어요.",
+    "en": "I want to become pretty."
+   },
+   {
+    "note": "For a third person in a statement, “싶어 하다” is used.",
+    "wrong": "민준이는 가고 싶어요.",
+    "right": "민준이는 가고 싶어 해요.",
+    "en": "Minjun wants to go."
+   }
+  ],
+  "topik_tip": "First person and questions to the listener take “-고 싶다”; third person takes “-고 싶어 하다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 있다",
+  "level": 1,
+  "label": "be doing (progressive)",
+  "meaning_en": "An expression for an action in progress: “be -ing”. It also marks a continuing state with a few verbs: wearing (“입고 있다, 쓰고 있다, 들고 있다”), knowing and living (“알고 있다, 살고 있다”), and a habit over a period (“요즘 -고 있다”).",
+  "usage": "It attaches to verb stems with no change: “먹다 → 먹고 있다”, “기다리다 → 기다리고 있다”, “살다 → 살고 있다”. The tense is on “있다”: “-고 있었다” (was doing). The honorific is “-고 계시다”. With dressing verbs it is ambiguous between the act of putting on (“입고 있다” could mean the process) and the state of wearing. For a state that results from a change of the subject itself (“앉다, 열리다”), the pattern is “-어 있다”. It is not attached to adjectives.",
+  "examples": [
+   {
+    "ko": "지금 뭐 하고 있어요?",
+    "en": "What are you doing now?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 친구를 기다리고 있어요.",
+    "en": "I am waiting for a friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 파란 모자를 쓰고 있다.",
+    "en": "Jisu is wearing a blue hat.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "요즘 한국어를 공부하고 있어요.",
+    "en": "I am studying Korean these days.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 서울에 살고 있습니다.",
+    "en": "I live in Seoul.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 있다",
+    "difference": "“-고 있다” is an action in progress; “-어 있다” is the state after a change.",
+    "pair": [
+     {
+      "ko": "아이가 의자에 앉고 있다.",
+      "en": "The child is sitting down onto the chair."
+     },
+     {
+      "ko": "아이가 의자에 앉아 있다.",
+      "en": "The child is seated on the chair."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 중이다",
+    "difference": "“-고 있다” is the general progressive; “-는 중이다” is the precise “in the middle of”.",
+    "pair": [
+     {
+      "ko": "요즘 한국어를 공부하고 있어요.",
+      "en": "I am studying Korean these days."
+     },
+     {
+      "ko": "지금 한국어를 공부하는 중이에요.",
+      "en": "I am in the middle of studying Korean now."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The tense goes on “있다”, not on the first verb.",
+    "wrong": "밥을 먹었고 있어요.",
+    "right": "밥을 먹고 있어요.",
+    "en": "I am eating."
+   },
+   {
+    "note": "An adjective does not take “-고 있다”.",
+    "wrong": "하늘이 높고 있어요.",
+    "right": "하늘이 높아요.",
+    "en": "The sky is high."
+   }
+  ],
+  "topik_tip": "“살고 있다, 알고 있다, 가지고 있다” are states: translate as simple present.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어야 되다",
+  "level": 1,
+  "label": "have to, must",
+  "meaning_en": "An expression for necessity: “have to X, must X”. The spoken form is “-어야 돼요”; the equivalent written form is “-어야 하다/합니다”. It states an obligation or a requirement.",
+  "usage": "It attaches to verb, adjective and “이다” stems with “-아/어”: “가다 → 가야 되다”, “먹다 → 먹어야 되다”, “하다 → 해야 되다”, “듣다 → 들어야 되다”, “쉽다 → 쉬워야 되다”. “되다” takes the tense (“-어야 됐다”) and contracts to “돼” in speech (“돼요”, “되어요” is the same). The negative need is “-지 않아도 되다” (don't have to); the prohibition is “-으면 안 되다”. A frequent partner is “-어야 하다”, which is more formal.",
+  "examples": [
+   {
+    "ko": "내일 일찍 일어나야 돼요.",
+    "en": "I have to get up early tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "숙제를 다 해야 되니까 놀러 못 가요.",
+    "en": "I have to finish all my homework, so I cannot go out to play.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험을 보려면 신분증을 가져와야 돼요.",
+    "en": "To take the exam, you have to bring an ID.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "약은 식사 후에 먹어야 되는데 깜빡했어요.",
+    "en": "I had to take the medicine after the meal, but I forgot.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 서류는 내일까지 내야 되고 저 서류는 다음 주까지 내면 돼요.",
+    "en": "This document has to be handed in by tomorrow, and that one is fine by next week.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어야 하다",
+    "difference": "The two are near-synonyms. “-어야 되다” is more spoken and “-어야 하다” more formal.",
+    "pair": [
+     {
+      "ko": "내일 가야 돼요.",
+      "en": "I have to go tomorrow."
+     },
+     {
+      "ko": "내일 가야 합니다.",
+      "en": "I have to go tomorrow."
+     }
+    ]
+   },
+   {
+    "pattern": "-어야",
+    "difference": "“-어야” alone is a condition (“only if”); “-어야 되다” is the obligation.",
+    "pair": [
+     {
+      "ko": "공부해야 합격해요.",
+      "en": "You pass only if you study."
+     },
+     {
+      "ko": "공부해야 돼요.",
+      "en": "You have to study."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The spoken form is “돼요”, not “되요”.",
+    "wrong": "내일 가야 되요.",
+    "right": "내일 가야 돼요.",
+    "en": "I have to go tomorrow."
+   },
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "문제가 쉽어야 돼요.",
+    "right": "문제가 쉬워야 돼요.",
+    "en": "The problem has to be easy."
+   }
+  ],
+  "topik_tip": "“-어야 되다 / -어야 하다” (have to) and “-으면 안 되다” (must not) are the matching pair.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
