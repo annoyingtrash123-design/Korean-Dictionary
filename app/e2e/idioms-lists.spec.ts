@@ -1,4 +1,4 @@
-import { downloadAll, expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page, texts } from './fixtures';
 import { mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -52,7 +52,7 @@ for (const vp of [{ n: 'phone', w: 390, h: 844 }, { n: 'ipad', w: 1180, h: 820 }
 
     // ---- overview: the group with its four lists and counts ----
     await expect(group(page)).toBeVisible();
-    expect(await group(page).locator('.list-name').allInnerTexts()).toEqual(LISTS.map((l) => l.name));
+    expect(await texts(group(page).locator('.list-name'))).toEqual(LISTS.map((l) => l.name));
     for (const l of LISTS) await expect(link(page, l.name)).toContainText(`${l.count} ${l.tag === '속담' ? 'proverbs' : 'idioms'}`);
     await group(page).scrollIntoViewIfNeeded();
     await page.waitForTimeout(300);

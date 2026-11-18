@@ -1,4 +1,4 @@
-import { downloadAll, expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page, texts } from './fixtures';
 import { mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -16,7 +16,7 @@ const HAS_CURRICULUM = (() => {
 
 const pager = (page: Page) => page.getByRole('region', { name: /^Today/ });
 const slides = (page: Page) => pager(page).getByRole('group', { name: /^\d of \d$/ }).filter({ has: page.locator('.today-card') });
-const titles = (page: Page) => page.locator('.today-card .card-hw .hangul').allInnerTexts();
+const titles = (page: Page) => texts(page.locator('.today-card .card-hw .hangul'));
 const kinds = (page: Page) => page.locator('.today-card').evaluateAll((els) => els.map((e) => e.getAttribute('data-kind')));
 const dateRe = /^Today\s*·\s*\d{1,2} [A-Z][a-z]{2}$/;
 
@@ -68,7 +68,7 @@ test('home: full-page cards, six tabs, search bar docked at the bottom', async (
     // level labels name the curriculum, never plain "TOPIK n"
     const lv = page.locator('.today-card .cur-lvl');
     await expect(lv).toHaveCount(5);
-    for (const t of await lv.allInnerTexts()) expect(t).toMatch(/^[56]급 · 표준 교육과정$/);
+    for (const t of await texts(lv)) expect(t).toMatch(/^[56]급 · 표준 교육과정$/);
     await expect(lv.first()).toHaveAttribute('title', /^National standard Korean curriculum level [56] \(≈ TOPIK [56]\)$/);
     expect(await pager(page).innerText()).not.toMatch(/TOPIK/);
 

@@ -15,6 +15,8 @@ if git diff --cached --name-only | grep -E '\.(sqlite|sqlite3)$|app/public/data/
 # downloaded packages/archives must never land in the repo (tracked, staged or about to be added)
 if { git ls-files; git ls-files --others --exclude-standard; } | grep -E '\.(whl|tar\.gz|tgz|zip)$' ; then echo "package archives in the working tree: remove them"; exit 1; fi
 
+step "guard: e2e specs read row text with texts(), not allInnerTexts() (off-screen rows render no innerText)"
+if grep -n "allInnerTexts" app/e2e/*.spec.ts; then echo "use texts(locator) from e2e/fixtures.ts: list rows use content-visibility:auto"; exit 1; fi
 step "guard: scripts find the git dir with rev-parse (in a worktree .git is a file)"
 GITDIR_RE='(^|[^A-Za-z_-])\.git''/'
 if grep -nE "$GITDIR_RE" scripts/*.sh .githooks/* 2>/dev/null; then echo "use \$(git rev-parse --git-dir) instead"; exit 1; fi

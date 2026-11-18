@@ -1,4 +1,4 @@
-import { downloadAll, expect, test, type Page } from './fixtures';
+import { downloadAll, expect, test, type Page, texts } from './fixtures';
 import { mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -22,7 +22,7 @@ const rows = (page: Page) => page.locator('.vl-row:not(.vl-skel)');
 const rowAt = (page: Page, n: number) => page.locator(`.vl-row[aria-posinset="${n}"]`);
 const scroller = (page: Page) => page.locator('.vl-scroll');
 const toast = (page: Page) => page.locator('.app-toast');
-const titles = (page: Page) => rows(page).locator('.hw').allInnerTexts();
+const titles = (page: Page) => texts(rows(page).locator('.hw'));
 const countOf = async (page: Page) => Number(((await page.getByTestId('study-count').innerText()).match(/[\d,]+/) ?? ['0'])[0].replace(/,/g, ''));
 
 async function openLists(page: Page) {
@@ -58,14 +58,14 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   expect(sections).toEqual(['My lists', 'Study lists']);
   const vocab = study(page).getByRole('group', { name: 'Vocabulary by level' });
   await expect(vocab.locator('.list-row')).toHaveCount(6);
-  expect(await vocab.locator('.list-name').allInnerTexts()).toEqual([1, 2, 3, 4, 5, 6].map((n) => `${n}급 · 표준 교육과정`));
+  expect(await texts(vocab.locator('.list-name'))).toEqual([1, 2, 3, 4, 5, 6].map((n) => `${n}급 · 표준 교육과정`));
   const grammar = study(page).getByRole('group', { name: 'Grammar by level' });
   await expect(grammar.locator('.list-row')).toHaveCount(6);
   // the curriculum level is never plain "TOPIK N" (only the hint says how it relates)
   await expect(vocab.locator('.list-row').nth(5)).toHaveAttribute('title', 'National standard Korean curriculum level 6 (≈ TOPIK 6)');
   await expect(vocab.locator('.list-row').nth(5)).toHaveAccessibleName(/National standard Korean curriculum level 6 \(≈ TOPIK 6\)/);
-  expect(await study(page).locator('.list-name, .group-head').allInnerTexts()).not.toContain('TOPIK 6');
-  for (const t of await study(page).locator('.list-name').allInnerTexts()) expect(t).not.toMatch(/TOPIK/);
+  expect(await texts(study(page).locator('.list-name, .group-head'))).not.toContain('TOPIK 6');
+  for (const t of await texts(study(page).locator('.list-name'))) expect(t).not.toMatch(/TOPIK/);
   await expect(study(page).getByRole('group', { name: 'Topics' }).locator('.list-row').first()).toBeVisible();
   await expect(study(page).locator('.resume')).toHaveCount(0);   // nothing opened yet
   await page.waitForTimeout(300);
@@ -190,7 +190,7 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   expect(tCount).toBeGreaterThan(5);
   expect(await page.getByRole('heading', { level: 1 }).innerText()).toContain(subName);
   // by level: the 초/중/고 badges never go down
-  const badges = async () => (await rows(page).locator('.lvl').allInnerTexts()).map((b) => '초중고'.indexOf(b));
+  const badges = async () => (await texts(rows(page).locator('.lvl'))).map((b) => '초중고'.indexOf(b));
   const lv = await badges();
   expect(lv.length).toBeGreaterThan(0);
   expect(lv).toEqual([...lv].sort((a, b) => a - b));
