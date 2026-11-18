@@ -2805,7 +2805,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2880,7 +2882,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2888,7 +2892,7 @@
   "level": 4,
   "label": "probably so; I should have",
   "meaning_en": "A sentence-final ending with two uses: a soft guess (“it's probably so, I bet”), and a mild regret about something one did not do (“I should have, if only I had”). The polite form is “-을걸요”.",
-  "usage": "It attaches to verb and adjective stems as “-을걸”, or “-ㄹ걸” after a vowel or ㄹ (“좁을걸”, “갈걸”), to “이다” as “일걸”, and after “-었-” in the guess use. In the regret use the verb names what the speaker did not do and often has a “그랬다” after it (“더 일찍 올걸”). It is informal; the polite form adds “요”.",
+  "usage": "It attaches to verb and adjective stems as “-을걸”, or “-ㄹ걸” after a vowel or ㄹ (“좁을걸”, “갈걸”), to “이다” as “일걸”, and after “-었-” in the guess use. In the regret use the verb names what the speaker did not do and is often followed by “그랬다” (“더 일찍 올걸 그랬다”). It is informal; the polite form adds “요”.",
   "examples": [
    {
     "ko": "생각보다 집이 좁을걸.",
@@ -2933,7 +2937,7 @@
    },
    {
     "pattern": "-을 텐데",
-    "difference": "“-을걸” ends the sentence; “-을 텐데” is a connective that sets up a contrast or request.",
+    "difference": "Both guess. “-을걸” simply states the guess, often lightly correcting the listener; “-을 텐데” (here sentence-final) adds the speaker's concern and hints at what should be done.",
     "pair": [
      {
       "ko": "지금 가면 늦을걸.",
@@ -2955,7 +2959,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3030,7 +3036,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3105,7 +3113,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3113,7 +3123,7 @@
   "level": 4,
   "label": "you mean...?! (polite echo)",
   "meaning_en": "A sentence-final ending that echoes something just said, with surprise, disbelief or protest. This row stresses the polite forms “-다니요” and “-라니요” and the noun form “-라니”: “what do you mean, X?!”.",
-  "usage": "It attaches to verb and adjective stems as “-다니”, and after “-었-” and “-겠-”, and to “이다” as “-라니” (“-이라니”). A polite “요” is added to speak to an elder (“-다니요”, “-라니요”). It takes the reported content as its subject and reacts to it. “-으라니” echoes a command. It is spoken, with rising or sharply falling intonation.",
+  "usage": "It attaches to verb and adjective stems as “-다니”, and after “-었-” and “-겠-”, and to “이다” as “-라니” (“-이라니”). A polite “요” is added to speak to an elder (“-다니요”, “-라니요”). It reacts to what the listener has just said, often repeating it. Verbs also take the quoted form “-ㄴ다니요/-는다니요” (“가신다니요?”). “-으라니” echoes a command. It is spoken, with rising or sharply falling intonation.",
   "examples": [
    {
     "ko": "벌써 가신다니요? 아직 식사도 안 하셨는데요.",
@@ -3186,7 +3196,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3261,7 +3273,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3269,7 +3283,7 @@
   "level": 4,
   "label": "go at it, press on aggressively",
   "meaning_en": "An expression meaning to take the initiative in pressing a point, often aggressively: “to go at it, to insist on, to come right at someone by doing X”.",
-  "usage": "It attaches to verb stems as “-고 들다”, after verbs of arguing, opposing and criticizing (“따지다”, “말리다”, “비판하다”, “우기다”, “덤비다”). The subject goes at the other person or the matter, with force. With an elder the honorific is “-고 드시다”. It is not used with neutral verbs. It is common in narration and conversation.",
+  "usage": "It attaches to verb stems as “-고 들다”, after verbs of arguing, opposing and criticizing (“따지다”, “캐다”, “우기다”, “트집을 잡다”). The subject goes at the other person or the matter, with force. With an elder the honorific is “-고 드시다”. It is not used with neutral verbs. It is common in narration and conversation.",
   "examples": [
    {
     "ko": "손님이 점원에게 따지고 들었다.",
@@ -3277,18 +3291,18 @@
     "ctx": "collocation"
    },
    {
-    "ko": "부모님은 내가 유학을 간다고 하자 무조건 말리고 드셨다.",
-    "en": "When I said I would study abroad, my parents tried to stop me outright.",
+    "ko": "그렇게 하나하나 캐고 들면 걸리지 않을 사람이 없다.",
+    "en": "If you dig into every little thing like that, there is no one who won't be caught out.",
     "ctx": "essay"
    },
    {
-    "ko": "작은 실수 하나에도 비판하고 드는 상사 때문에 힘들다.",
-    "en": "I am having a hard time because of a boss who attacks every little mistake.",
+    "ko": "작은 실수 하나에도 트집을 잡고 드는 상사 때문에 힘들다.",
+    "en": "I am having a hard time because of a boss who picks on every little mistake.",
     "ctx": "conversation"
    },
    {
-    "ko": "동생이 갑자기 덤비고 들어서 싸움이 났다.",
-    "en": "My younger sibling suddenly came at me, and a fight broke out.",
+    "ko": "동생이 갑자기 따지고 들어서 싸움이 났다.",
+    "en": "My younger sibling suddenly started arguing with me, and a fight broke out.",
     "ctx": "conversation"
    },
    {
@@ -3336,7 +3350,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3411,7 +3427,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3419,7 +3437,7 @@
   "level": 4,
   "label": "partly because",
   "meaning_en": "An expression meaning that what comes before is one of several reasons for what follows: “since X and so on, I did Y”. It softens a reason by hinting that there are others.",
-  "usage": "It attaches to verb and adjective stems as “-고 해서”, to “이다” as “이고 해서”, and after “-었-”. It often follows another reason in a list (“A도 -고 B도 -고 해서”), but one reason is enough, with the sense “among other things”. The main clause states what the speaker did or decided, usually in the past or as a plan. It cannot be followed by a command or a suggestion. It is conversational.",
+  "usage": "It attaches to verb and adjective stems as “-고 해서”, to “이다” as “이고 해서”, and after “-었-”. It often follows another reason in a list (“A도 -고 B도 -고 해서”), but one reason is enough, with the sense “among other things”. The main clause states what the speaker did or decided, usually in the past or as a plan. A suggestion can follow (“시간도 늦었고 해서 이만 일어나죠”). It is conversational.",
   "examples": [
    {
     "ko": "모처럼 쉬는 날이고 해서 친구들과 쇼핑을 나갔다.",
@@ -3428,7 +3446,7 @@
    },
    {
     "ko": "날씨도 춥고 해서 두꺼운 옷을 입고 나왔다.",
-    "en": "The weather was cold and so on, so I came out in thick clothes.",
+    "en": "It was cold, among other things, so I came out in thick clothes.",
     "ctx": "conversation"
    },
    {
@@ -3438,7 +3456,7 @@
    },
    {
     "ko": "삼계탕은 영양가도 높고 맛도 있고 해서 인기가 많다.",
-    "en": "Samgyetang is nutritious and tasty among other things, so it is popular.",
+    "en": "Samgyetang is nutritious and tasty, among other things, so it is popular.",
     "ctx": "essay"
    },
    {
@@ -3461,32 +3479,20 @@
       "en": "I was tired among other things, so I went to bed early."
      }
     ]
-   },
-   {
-    "pattern": "-으니까",
-    "difference": "“-으니까” can lead into a command or a suggestion; “-고 해서” cannot.",
-    "pair": [
-     {
-      "ko": "늦었으니까 돌아갑시다.",
-      "en": "It is late, so let's go back."
-     },
-     {
-      "ko": "늦었고 해서 저는 돌아가겠습니다.",
-      "en": "It is late and so on, so I'll head back."
-     }
-    ]
    }
   ],
   "pitfalls": [
    {
-    "note": "The clause that follows cannot be a command.",
-    "wrong": "늦었고 해서 돌아가세요.",
-    "right": "늦었고 해서 저는 돌아가겠습니다.",
-    "en": "It's late, so I will head back."
+    "note": "After a noun it needs “이다”: “이고 해서”.",
+    "wrong": "모처럼 휴일고 해서 친구들과 쇼핑을 나갔다.",
+    "right": "모처럼 휴일이고 해서 친구들과 쇼핑을 나갔다.",
+    "en": "It was a rare holiday, among other things, so I went shopping with friends."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3561,7 +3567,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3642,7 +3650,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3689,7 +3699,7 @@
      },
      {
       "ko": "내가 자는 사이에 비가 왔다.",
-      "en": "It rained while I was sleeping, in the gap."
+      "en": "It rained while I was asleep (without my noticing)."
      }
     ]
    },
@@ -3717,7 +3727,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3734,7 +3746,7 @@
    },
    {
     "ko": "지수는 아무 일도 없는 듯 태연한 얼굴이었다.",
-    "en": "Jisu wore a calm face as though nothing had happened.",
+    "en": "Jisu wore a calm face as though nothing were wrong.",
     "ctx": "essay"
    },
    {
@@ -3759,18 +3771,18 @@
     "difference": "“-는 듯하다” makes a guess; “-는 듯” describes what something looks or feels like.",
     "pair": [
      {
-      "ko": "비가 오는 듯하다.",
-      "en": "It seems to be raining."
+      "ko": "비가 올 듯하다.",
+      "en": "It looks like it will rain."
      },
      {
-      "ko": "비가 오는 듯 하늘이 어둡다.",
-      "en": "The sky is dark as if it were raining."
+      "ko": "비가 올 듯 하늘이 어둡다.",
+      "en": "The sky is dark as if it were about to rain."
      }
     ]
    },
    {
     "pattern": "-듯이",
-    "difference": "“-듯” is the short form of “-듯이”, with the same meaning.",
+    "difference": "“-는 듯” (the bound noun “듯” after a modifier) and the ending “-듯이” (attached straight to the stem) give much the same picture.",
     "pair": [
      {
       "ko": "찌르는 듯 아팠다.",
@@ -3792,7 +3804,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
