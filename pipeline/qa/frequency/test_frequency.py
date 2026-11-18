@@ -216,12 +216,14 @@ class StudyLists(unittest.TestCase):
         self.assertGreaterEqual(sum(r["status"] == "keep" for r in rows), 300)
         for r in rows:
             self.assertIn(r["status"], ("keep", "drop"))
-            self.assertEqual(r["by"], "ai-draft")
+            self.assertIn(r["by"], ("ai-draft", "reviewer (coordinator)"))
             self.assertTrue(r["reason"].strip(), r)
         status = {r["text"]: r["status"] for r in rows}
         for t in ("국가대표", "돌연변이", "의사소통", "공작부인", "양성평등", "공동생활", "근친상간", "기회균등", "자기중심"):
             self.assertEqual(status[t], "drop", t)
-        for t in ("우유부단", "설상가상", "십중팔구", "만장일치", "자급자족", "명실상부"):
+        for t in ("교통지옥", "황금연휴", "결사반대"):
+            self.assertEqual(status[t], "drop", t)
+        for t in ("우유부단", "설상가상", "십중팔구", "만장일치", "자급자족", "명실상부", "작심삼일", "과유불급", "유비무환"):
             self.assertEqual(status[t], "keep", t)
 
     def test_sokdam_review_labels_every_changed_entry(self):
@@ -229,7 +231,7 @@ class StudyLists(unittest.TestCase):
         changed = [r for r in rows if r["decision"] != "keep"]
         self.assertTrue(changed)
         for r in rows:
-            self.assertEqual(r["by"], "ai-draft")
+            self.assertIn(r["by"], ("ai-draft", "reviewer (coordinator)"))
             self.assertIn(r["decision"], ("keep", "title", "partial", "drop", "dup"))
             self.assertTrue(r["reason"].strip(), r)
         titles = {r["text"] for r in rows if r["decision"] == "title"}
