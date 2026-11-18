@@ -2186,83 +2186,85 @@
  {
   "form": "-으니4",
   "level": 6,
-  "label": "stating a truth (proverb-like)",
-  "meaning_en": "A sentence-final ending that states a general truth or an obvious fact, in a lecturing, proverb-like tone and with the implication “so take note”.",
-  "usage": "It attaches mainly to adjectives and “있다/없다”: “-으니” after a consonant (“높으니”, “많으니”), “-니” after a vowel (“부지런하니”); ㅂ-adjectives take “-우니” (“쉽다 → 쉬우니”). It is the “하게” style (an older speaker to an adult listener). Verbs take “-느니” instead. The sentence has no question mark and falls in pitch. It is old-fashioned, found in adages, sermons and a teacher’s or elder’s lecture, and is not a casual statement.",
+  "label": "reproach: “N 같으니” (you ...!)",
+  "meaning_en": "A sentence-final ending used, almost always in the frame “N 같으니(라고)!”, to call someone no better than N and so scold or lightly reproach them: “you fool!”, “what a scoundrel!”. It is said to someone of equal or lower standing, or muttered to oneself.",
+  "usage": "It attaches to “같다”: “바보 같으니”, “날강도 같으니”, “이런 고지식한 사람 같으니”; the longer “-으니라고” (“바보 같으니라고”) is just as common and a little more emphatic. The noun names what the person is likened to, often after “이런, 저런, 천하에” and a critical modifier, and the reason often comes first in a “-다니” clause (“약속을 또 잊다니, 무심한 사람 같으니!”). It belongs to the “해라체” or to talking to oneself, so it has no polite form and is never used to someone you must be polite to. The tone runs from fond teasing (“요 녀석 같으니”) to real anger. Do not confuse it with the “하게체” “-으니” that states a truth (“입에 쓴 약이 몸에는 좋으니”) or with the connective “-으니” (because).",
   "examples": [
    {
-    "ko": "입에 쓴 약이 몸에는 좋으니.",
-    "en": "The medicine that tastes bitter is good for the body.",
-    "ctx": "proverb"
+    "ko": "이런 바보 같으니! 그걸 또 잊어버렸어?",
+    "en": "You fool! Did you forget that again?",
+    "ctx": "conversation"
    },
    {
-    "ko": "겨울 해는 짧으니.",
-    "en": "Winter days are short.",
-    "ctx": "proverb"
-   },
-   {
-    "ko": "남의 흠을 보기는 쉬우니.",
-    "en": "It is easy to see the faults of others.",
-    "ctx": "proverb"
-   },
-   {
-    "ko": "부지런한 사람에게는 기회가 많으니.",
-    "en": "Hard-working people have many chances.",
+    "ko": "남의 돈을 떼어먹고 도망가다니, 날강도 같으니라고!",
+    "en": "Cheating people out of their money and running off: what a robber!",
     "ctx": "collocation"
    },
    {
-    "ko": "여름철의 강은 물이 깊으니.",
-    "en": "In summer the river runs deep.",
+    "ko": "약속을 또 잊다니, 정말 무심한 사람 같으니.",
+    "en": "Forgetting our appointment again: how thoughtless can you be!",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "할머니는 손자의 머리를 쓰다듬으며 “요 녀석 같으니.” 하고 웃으셨다.",
+    "en": "Stroking her grandson's hair, the grandmother laughed: “Oh, you little rascal.”",
+    "ctx": "literary"
+   },
+   {
+    "ko": "“고집불통 같으니.” 부장은 혼잣말로 중얼거렸다.",
+    "en": "“What a stubborn mule,” the department head muttered.",
     "ctx": "literary"
    }
   ],
   "compare": [
    {
-    "pattern": "-으니라",
-    "difference": "Both state a truth in an old-fashioned way. “-으니라” is the “해라” style an elder uses to a child; “-으니” is the “하게” style, a shade more respectful to an adult listener.",
+    "pattern": "-다니",
+    "difference": "“-다니” reacts with surprise or indignation to a fact; “N 같으니” passes a verdict on the person. They often come together: the “-다니” clause gives the reason, “같으니” the verdict.",
     "pair": [
      {
-      "ko": "부지런한 사람에게는 기회가 많으니.",
-      "en": "Hard-working people have many chances (to an adult)."
+      "ko": "약속을 또 잊다니!",
+      "en": "You forgot our appointment again?!"
      },
      {
-      "ko": "부지런한 사람에게는 기회가 많으니라.",
-      "en": "Hard-working people have many chances (to a child)."
+      "ko": "약속을 또 잊다니, 무심한 사람 같으니!",
+      "en": "Forgetting our appointment again: how thoughtless!"
      }
     ]
    },
    {
-    "pattern": "-잖아",
-    "difference": "“-잖아” is the modern spoken way to remind someone of a known fact. “-으니” belongs to proverbs and old-style lectures.",
+    "pattern": "-으니3",
+    "difference": "The “하게체” “-으니” states a general truth to an adult listener and attaches to many predicates. The reproachful “-으니” is all but limited to “N 같다” and judges a person.",
     "pair": [
      {
-      "ko": "남의 흠을 보기는 쉬우니.",
-      "en": "It is easy to see the faults of others."
+      "ko": "입에 쓴 약이 몸에는 좋으니.",
+      "en": "Medicine that tastes bitter is good for the body."
      },
      {
-      "ko": "남의 흠을 보기는 쉽잖아.",
-      "en": "It’s easy to see other people’s faults, you know."
+      "ko": "이런 고지식한 사람 같으니.",
+      "en": "What a stiff, by-the-book person you are!"
      }
     ]
    }
   ],
   "pitfalls": [
    {
-    "note": "Vowel-final stems take “-니”, not “-으니”.",
-    "wrong": "그 사람은 부지런하으니.",
-    "right": "그 사람은 부지런하니.",
-    "en": "That person is diligent, so ..."
+    "note": "There is no polite form: adding “요” to someone you must be polite to is still an insult. Say what you mean politely instead.",
+    "wrong": "부장님, 정말 무심한 분 같으니요.",
+    "right": "부장님, 정말 너무하세요.",
+    "en": "Sir, you really are too much."
    },
    {
-    "note": "In modern conversation, it reads as a lecture. Use “-네” or “-아/어”.",
-    "wrong": "오늘은 날씨가 좋으니.",
-    "right": "오늘은 날씨 좋네.",
-    "en": "The weather is nice today."
+    "note": "The reproach comes from likening the person to N with “같다”; a bare noun with “-이니” is read as a question.",
+    "wrong": "이런 바보이니!",
+    "right": "이런 바보 같으니!",
+    "en": "You fool!"
    }
   ],
-  "topik_tip": "Appears in proverbs and aphorisms. Do not confuse it with the connective “-으니” (“because”), which has a main clause after it.",
+  "topik_tip": "In level-6 reading it turns up in fiction dialogue: “N 같으니(라고)” is a verdict on a person (“what a ...!”), not a reason (“because it is like N”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
