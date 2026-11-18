@@ -78,7 +78,9 @@
   ],
   "topik_tip": "The honorific set goes together: “께”, “드리다”, “께서”, “-시-”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -131,7 +133,7 @@
    },
    {
     "pattern": "매",
-    "difference": "“매일” and “날마다” are near-synonyms. “마다” combines with any noun, while “매” is limited to time words (“매일, 매주, 매번”).",
+    "difference": "“매일” and “날마다” are near-synonyms. “마다” attaches to almost any noun, while the prefix-like “매” goes only before nouns of recurring times or occasions (“매일, 매주, 매번, 매 경기”).",
     "pair": [
      {
       "ko": "날마다 운동한다.",
@@ -160,7 +162,9 @@
   ],
   "topik_tip": "“N마다” (each N) and “-ㄹ 때마다” (every time) are the two frames that exams use.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -192,7 +196,7 @@
    },
    {
     "ko": "이것은 세상에 하나밖에 없는 선물이에요.",
-    "en": "This is a present that exists only once in the world.",
+    "en": "This is a one-of-a-kind present; there is no other like it in the world.",
     "ctx": "collocation"
    }
   ],
@@ -242,7 +246,9 @@
   ],
   "topik_tip": "“밖에” always needs a negative; if the predicate is positive, the particle is “만”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -324,7 +330,9 @@
   ],
   "topik_tip": "Do not confuse it with “만큼”: “처럼” is about how, “만큼” about how much.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -332,7 +340,7 @@
   "level": 2,
   "label": "starting from (place, point)",
   "meaning_en": "A particle that marks a starting point and stresses it: “from N (onward), starting from N”. It is the emphatic form of “에서”, often paired with “까지” for a range, or used in “여기서부터” (from here on).",
-  "usage": "It attaches to a place or a point of origin: “집에서부터 학교까지”, “서울에서부터 부산까지”, “처음부터”. After “여기, 거기, 어디” the contracted form “서부터” is normal in speech (“여기서부터는, 어디서부터”). It marks only the beginning of a stretch or a process: unlike “에서”, it cannot mean “at (a place)”. It cannot mark a person as the source: use “에게서/한테서”.",
+  "usage": "It attaches to a place or a point of origin: “집에서부터 학교까지”, “서울에서부터 부산까지”. (For time and order, “부터” alone is the usual choice: “처음부터, 아침부터”.) After “여기, 거기, 어디” the contracted form “서부터” is normal in speech (“여기서부터는, 어디서부터”). It marks only the beginning of a stretch or a process: unlike “에서”, it cannot mean “at (a place)”. It cannot mark a person as the source: use “에게서/한테서”.",
   "examples": [
    {
     "ko": "집에서부터 학교까지 걸어서 삼십 분 걸린다.",
@@ -355,8 +363,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "이야기는 어린 시절에서부터 시작되었다.",
-    "en": "The story began from childhood.",
+    "ko": "이 강물은 저 산에서부터 흘러 내려온다.",
+    "en": "This river flows down all the way from that mountain.",
     "ctx": "essay"
    }
   ],
@@ -377,15 +385,15 @@
    },
    {
     "pattern": "부터",
-    "difference": "“부터” marks a starting point in time or order (“아침부터”); “에서부터” adds place and origin.",
+    "difference": "“부터” alone is the usual choice for a point in time or order (“아침부터, 처음부터”); for a place of origin “에서부터” is usual, though “부터” alone also appears with “여기, 거기” (“여기부터”).",
     "pair": [
      {
-      "ko": "아침부터 비가 왔다.",
-      "en": "It rained from the morning."
+      "ko": "아침부터 걸었다.",
+      "en": "I walked from the morning on."
      },
      {
-      "ko": "서울에서부터 비가 왔다.",
-      "en": "It rained starting from Seoul."
+      "ko": "집에서부터 걸었다.",
+      "en": "I walked all the way from home."
      }
     ]
    }
@@ -400,7 +408,9 @@
   ],
   "topik_tip": "“여기서부터, 거기서부터, 어디서부터” are the contracted forms to know.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -411,7 +421,7 @@
   "usage": "It attaches to a place noun, with a placing verb: “놓다, 넣다, 두다, 붙이다, 쓰다, 적다, 담다, 버리다”. It is the colloquial, slightly stronger form of “에”, shortened to “에다”. In “N에다가 M까지/도” it means “on top of N, also M”. For a destination of motion (“가다, 오다”) the plain “에” is used.",
   "examples": [
    {
-    "ko": "책을 책상에다가 올려 놓았다.",
+    "ko": "책을 책상에다가 올려놓았다.",
     "en": "I put the book on the desk.",
     "ctx": "conversation"
    },
@@ -426,8 +436,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "밥에다가 김치까지 먹었더니 배가 부르다.",
-    "en": "I ate rice and kimchi on top of that, so I am full.",
+    "ko": "밥에다가 라면까지 먹었더니 배가 너무 부르다.",
+    "en": "I had rice and ramyeon on top of it, so I'm stuffed.",
     "ctx": "collocation"
    },
    {
@@ -453,7 +463,7 @@
    },
    {
     "pattern": "에서",
-    "difference": "“에다가” goes with the place something is put; “에서” goes with the place an action takes place.",
+    "difference": "“에다가” goes with the place something is put; “에서” marks where an action happens or, as here, the place something is taken out of.",
     "pair": [
      {
       "ko": "가방에다가 책을 넣었다.",
@@ -476,7 +486,9 @@
   ],
   "topik_tip": "“에다가” with placing verbs is the spoken way to say “on / into”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -484,11 +496,11 @@
   "level": 2,
   "label": "toward (a person)",
   "meaning_en": "A particle meaning “toward, to (a person)”, with a sense of direction: movement, attention or feeling heading toward someone. It is “에게” plus the directional “로”.",
-  "usage": "It attaches to a person or animal: “엄마에게로, 지수에게로”. The verbs show direction: “달려가다, 다가가다, 돌아가다, 향하다, 쏠리다, 오다”. It is somewhat written and expressive. For giving, telling and sending, “에게” alone is used. The spoken variant is “한테로”. For a place destination, use “(으)로” or “에”.",
+  "usage": "It attaches to a person or animal: “엄마에게로, 지수에게로”. The verbs show direction: “달려가다, 다가가다, 돌아가다, 향하다, 쏠리다, 오다”. It is somewhat written and expressive. For giving and telling, “에게” alone is used; with “보내다” both occur, “에게로” stressing the direction (“친척들에게로 선물을 보냈다”). The spoken variant is “한테로”. For a place destination, use “(으)로” or “에”.",
   "examples": [
    {
     "ko": "아이는 엄마에게로 달려갔다.",
-    "en": "The child ran to the mother.",
+    "en": "The child ran to its mother.",
     "ctx": "conversation"
    },
    {
@@ -508,7 +520,7 @@
    },
    {
     "ko": "지영이는 오랜 방황 끝에 가족에게로 돌아왔다.",
-    "en": "After long wandering, Jiyoung returned to the family.",
+    "en": "After long years of wandering, Jiyoung came back to the family.",
     "ctx": "essay"
    }
   ],
@@ -558,7 +570,9 @@
   ],
   "topik_tip": "“에게로” follows verbs of movement or attention; “에게” follows verbs of giving.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -566,7 +580,7 @@
   "level": 2,
   "label": "from (a person)",
   "meaning_en": "A particle that marks a person as the source from which something comes: “from N”. It goes with receiving, hearing, learning and borrowing verbs, and with “오다” for something that arrives from a person.",
-  "usage": "It attaches to a person or animal: “친구에게서, 부모님에게서”. Typical verbs: “받다, 듣다, 배우다, 빌리다, 얻다, 오다, 나오다”. It is the written or neutral form; the spoken form is “한테서”. For honorific sources the particle is “께”, for places “에서”, for formal writing “으로부터”. Note that “에게” alone with “받다” can also mark a giver, but with “오다” only “에게서” marks the sender.",
+  "usage": "It attaches to a person or animal: “친구에게서, 부모님에게서”. Typical verbs: “받다, 듣다, 배우다, 빌리다, 얻다, 오다, 나오다”. It is the written or neutral form; the spoken form is “한테서”. For honorific sources the particle is “께”, for places “에서”, for formal writing “으로부터”. Note that “에게” alone with “받다” can also mark the giver (“친구에게 받았다”); with “오다”, careful writing keeps “에게서” for the sender, although speech often uses “한테” for it too (“엄마한테 전화 왔어”).",
   "examples": [
    {
     "ko": "친구에게서 생일 선물을 받았다.",
@@ -597,15 +611,15 @@
   "compare": [
    {
     "pattern": "에게",
-    "difference": "With “오다” the two differ: “에게서” marks who the letter comes from, “에게” who it comes to.",
+    "difference": "In writing, with “오다” the two differ: “에게서” marks who the letter comes from, “에게” who it comes to. (In speech this line blurs: “친구한테 편지 왔어” usually means it is from the friend.)",
     "pair": [
      {
       "ko": "친구에게서 편지가 왔다.",
       "en": "A letter came from my friend."
      },
      {
-      "ko": "친구에게 편지가 왔다.",
-      "en": "A letter came to my friend."
+      "ko": "동생에게 편지가 왔다.",
+      "en": "A letter came for my younger sibling."
      }
     ]
    },
@@ -626,7 +640,7 @@
   ],
   "pitfalls": [
    {
-    "note": "The giver takes “에게서”; the one who is given something takes “에게”.",
+    "note": "With “주다” the person marked is the receiver, so it takes “에게”; “에게서” marks the one something comes from.",
     "wrong": "친구에게서 선물을 줬다.",
     "right": "친구에게 선물을 줬다.",
     "en": "I gave my friend a present."
@@ -640,7 +654,9 @@
   ],
   "topik_tip": "Check the direction: from a person is “에게서”, to a person is “에게”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -693,15 +709,15 @@
    },
    {
     "pattern": "한테",
-    "difference": "“한테서” marks the source; “한테” marks the receiver.",
+    "difference": "“한테서” marks the source; “한테” usually marks the receiver. (With “받다, 듣다, 오다” speech often uses “한테” for the source as well; the verb settles it.)",
     "pair": [
      {
-      "ko": "친구한테서 전화가 왔다.",
-      "en": "A call came from my friend."
+      "ko": "친구한테서 책을 받았다.",
+      "en": "I got a book from a friend."
      },
      {
-      "ko": "친구한테 전화가 왔다.",
-      "en": "A call came to my friend."
+      "ko": "친구한테 책을 줬다.",
+      "en": "I gave a book to a friend."
      }
     ]
    }
@@ -714,7 +730,7 @@
     "en": "I borrowed money from the bank."
    },
    {
-    "note": "The giver takes “한테서”; the receiver takes “한테”.",
+    "note": "With “주다” the person marked is the receiver, so it takes “한테”; “한테서” marks the one something comes from.",
     "wrong": "친구한테서 책을 줬다.",
     "right": "친구한테 책을 줬다.",
     "en": "I gave my friend a book."
@@ -722,7 +738,9 @@
   ],
   "topik_tip": "In speech, “한테서” is often shortened to “한테”: the verb (“받다”, “듣다”) tells you the direction.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -730,7 +748,7 @@
   "level": 2,
   "label": "or; as many as; or something",
   "meaning_en": "A particle with three related jobs: “N이나 M” (N or M, a choice), a number or amount followed by “이나” (as many as, surprisingly much), and “N이나” for a so-so option (“let's just ... or something”).",
-  "usage": "After a consonant it is “이나”, after a vowel “나”. Choice: “커피나 차”. Amount: “한 시간이나 기다렸다” (waited a full hour). So-so option: “영화나 볼까?” (shall we watch a movie or something?). The three readings differ by context: two nouns give a choice, a counter gives surprise at the large amount, a single noun with a suggestion gives a casual option. The lexical partner for emphasis on a small amount is “만”.",
+  "usage": "After a consonant it is “이나”, after a vowel “나”. Choice: “커피나 차”. Amount: “한 시간이나 기다렸다” (waited a full hour). So-so option: “영화나 볼까?” (shall we watch a movie or something?). The three readings differ by context: two nouns give a choice, a counter gives surprise at the large amount, a single noun with a suggestion gives a casual option. In a question with “몇” or “얼마” it asks for a rough amount (“몇 시간이나 걸려요?” about how many hours?). To stress that an amount is small, use “밖에” with a negative or “만”.",
   "examples": [
    {
     "ko": "커피나 차를 마시면서 이야기합시다.",
@@ -804,7 +822,9 @@
   ],
   "topik_tip": "Read the context: two nouns mean “or”, a counter means “as many as”, a lone noun in a suggestion means “or something”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -843,11 +863,11 @@
   "compare": [
    {
     "pattern": "-든지",
-    "difference": "“-거나” and “-든지” are near-synonyms for “or”. “-든지” leans on the freedom to choose either.",
+    "difference": "“-거나” and “-든지” are near-synonyms for “or”. “-든지”, often doubled (“-든지 -든지 하다”), stresses that it does not matter which; “-거나” simply lists the options.",
     "pair": [
      {
-      "ko": "커피를 마시거나 차를 마셔요.",
-      "en": "I drink coffee or tea."
+      "ko": "커피를 마시거나 차를 마시세요.",
+      "en": "Have coffee or tea."
      },
      {
       "ko": "커피를 마시든지 차를 마시든지 하세요.",
@@ -880,7 +900,9 @@
   ],
   "topik_tip": "Look for two choices joined by “-거나”; the frame “-거나 -거나 하다” means doing things like these.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -907,7 +929,7 @@
    },
    {
     "ko": "집이 먼데 걸어서 갈 수 있을까요?",
-    "en": "My house is far; can I go on foot?",
+    "en": "The house is far; can we get there on foot?",
     "ctx": "conversation"
    },
    {
@@ -957,12 +979,14 @@
     "note": "A ㄹ-stem adjective drops the ㄹ: “멀다” becomes “먼데”.",
     "wrong": "집이 멀은데 걸어서 갈 수 있을까요?",
     "right": "집이 먼데 걸어서 갈 수 있을까요?",
-    "en": "My house is far; can I go on foot?"
+    "en": "The house is far; can we get there on foot?"
    }
   ],
   "topik_tip": "“-는데” links without committing to “but” or “so”: the context supplies the relation.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1015,7 +1039,7 @@
    },
    {
     "pattern": "-을 때",
-    "difference": "“-으면” sets a condition or the first time something happens; “-을 때” points to the time during which something is going on.",
+    "difference": "“-으면” makes X a condition: Y follows once X holds. “-을 때” points to the time at which, or during which, X happens.",
     "pair": [
      {
       "ko": "집에 가면 전화할게.",
@@ -1044,7 +1068,9 @@
   ],
   "topik_tip": "Choose the form by the final sound: vowel or ㄹ gives “-면”, other consonants give “-으면”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1052,7 +1078,7 @@
   "level": 2,
   "label": "while doing; at the same time",
   "meaning_en": "A connective ending for two actions or states at the same time: “while doing X, Y”, “X and also Y”. With “도” it makes a contrast: “-으면서도” (even though).",
-  "usage": "After a vowel or ㄹ it is “-면서”, after other consonants “-으면서”; it takes verbs and adjectives. The subject of both clauses is the same, and the first verb has no tense ending. Real stems: “걷다 → 걸으면서”, “듣다 → 들으면서”, “살다 → 살면서”, “가볍다 → 가벼우면서”, “알다 → 알면서도”. For different subjects the pattern is “-는 동안”. A written variant is “-(으)며”.",
+  "usage": "After a vowel or ㄹ it is “-면서”, after other consonants “-으면서”; it takes verbs and adjectives. The subject of both clauses is the same, and in the “while” sense the first verb has no tense ending (the contrast “-으면서도” can take “-었-”: “다 알았으면서도”). Real stems: “걷다 → 걸으면서”, “듣다 → 들으면서”, “살다 → 살면서”, “가볍다 → 가벼우면서”, “알다 → 알면서도”. For different subjects the pattern is “-는 동안”. A written variant is “-(으)며”.",
   "examples": [
    {
     "ko": "음악을 들으면서 공부해요.",
@@ -1126,7 +1152,9 @@
   ],
   "topik_tip": "Same subject, two simultaneous actions: that is “-으면서”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1186,7 +1214,7 @@
       "en": "I turned off the light so that the child could sleep."
      },
      {
-      "ko": "내가 자려고 불을 껐다.",
+      "ko": "자려고 불을 껐다.",
       "en": "I turned off the light to go to sleep."
      }
     ]
@@ -1202,7 +1230,9 @@
   ],
   "topik_tip": "The same “-게” turns adjectives into adverbs (“크게, 예쁘게”) and introduces a purpose clause.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1210,7 +1240,7 @@
   "level": 2,
   "label": "stop and switch to another action",
   "meaning_en": "A connective ending for an action or state that is interrupted and replaced by another: “X-ing, then (stopped and) Y”. With a past form it means “did X, then went back/reversed: X-었다가 Y”.",
-  "usage": "It attaches to verb and adjective stems: “먹다 → 먹다가”, “걷다 → 걷다가” (the ㄷ stays), “놀다 → 놀다가”. The subject is the same in both clauses. A past stem (“-었다가”) says that the first action was completed and then undone or followed by a reverse action (“갔다가 돌아오다”, “켰다가 끄다”). A short form “-다” also exists. The related “-다가1(2)” of the level-3 list covers events that break in during an activity.",
+  "usage": "It attaches to verb and adjective stems: “먹다 → 먹다가”, “걷다 → 걷다가” (the ㄷ stays), “놀다 → 놀다가”. The subject is the same in both clauses. A past stem (“-었다가”) says that the first action was completed before the next one: often its reverse (“갔다가 돌아오다”, “켰다가 끄다”), but also something that happened in that new situation (“시장에 갔다가 친구를 만났다”). A short form “-다” also exists. The related “-다가1(2)” of the level-3 list covers events that break in during an activity.",
   "examples": [
    {
     "ko": "밥을 먹다가 전화를 받으러 나갔다.",
@@ -1278,7 +1308,9 @@
   ],
   "topik_tip": "Compare “가다가” (on the way) and “갔다가” (went and came back): the past stem changes the meaning.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1346,7 +1378,9 @@
   ],
   "topik_tip": "The section names of TOPIK (“듣기, 읽기, 쓰기, 말하기”) are good examples of this “-기”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1403,7 +1437,7 @@
     "pair": [
      {
       "ko": "제가 읽는 책이에요.",
-      "en": "It is the book I read."
+      "en": "It is the book I am reading."
      },
      {
       "ko": "제가 읽을 책이에요.",
@@ -1428,7 +1462,9 @@
   ],
   "topik_tip": "The three modifiers: present “-는”, past “-은/-ㄴ”, future “-을/-ㄹ”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1510,7 +1546,9 @@
   ],
   "topik_tip": "A past modifier of a verb is “-ㄴ/은”; the same ending on an adjective is the present.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1553,7 +1591,7 @@
     "pair": [
      {
       "ko": "제가 읽는 책이에요.",
-      "en": "It is the book I read."
+      "en": "It is the book I am reading."
      },
      {
       "ko": "제가 읽을 책이에요.",
@@ -1584,7 +1622,7 @@
     "en": "I am looking for a house to live in from now on."
    },
    {
-    "note": "A prospective modifier does not take a past form.",
+    "note": "With a future time word such as “내일” the modifier is “-ㄹ/을”; the past “-ㄴ/은” does not fit.",
     "wrong": "내일 만난 사람은 어릴 때 친구예요.",
     "right": "내일 만날 사람은 어릴 때 친구예요.",
     "en": "The person I am meeting tomorrow is a friend from childhood."
@@ -1592,7 +1630,9 @@
   ],
   "topik_tip": "“할 일, 갈 곳, 쉴 시간”: frequent nouns after this modifier are worth learning as units.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1600,7 +1640,7 @@
   "level": 2,
   "label": "modifier of adjectives (present)",
   "meaning_en": "An adnominal ending that makes an adjective (or “이다”) a modifier of a noun: “small bag”, “high mountain”, “good person”. For adjectives it describes the present state; for verbs the same shape is a past modifier.",
-  "usage": "After a vowel it is “-ㄴ”, after a consonant “-은”. Real stems: “작다 → 작은”, “높다 → 높은”, “좋다 → 좋은”, “크다 → 큰”, “춥다 → 추운” (ㅂ-irregular), “길다 → 긴” and “멀다 → 먼” (the ㄹ drops), “학생이다 → 학생인”. Adjectives “있다/없다” compounds (“맛있다, 재미없다”) take “-는” instead (“맛있는, 재미없는”). Adjectives have no separate past modifier in the plain form: a past state is “-었던”.",
+  "usage": "After a vowel it is “-ㄴ”, after a consonant “-은”. Real stems: “작다 → 작은”, “높다 → 높은”, “좋다 → 좋은”, “크다 → 큰”, “춥다 → 추운” (ㅂ-irregular), “길다 → 긴” and “멀다 → 먼” (the ㄹ drops), “학생이다 → 학생인”. The compounds of “있다/없다” (“맛있다, 재미없다”) take “-는” instead (“맛있는, 재미없는”). Adjectives have no separate past modifier in the plain form: a past state is “-던” or “-었던”.",
   "examples": [
    {
     "ko": "작은 가방에 지갑을 넣었다.",
@@ -1624,7 +1664,7 @@
    },
    {
     "ko": "넓은 방으로 이사하고 싶어요.",
-    "en": "I want to move to a bigger room.",
+    "en": "I want to move to a spacious room.",
     "ctx": "conversation"
    }
   ],
@@ -1635,11 +1675,11 @@
     "pair": [
      {
       "ko": "제가 읽는 책이에요.",
-      "en": "It is the book I read."
+      "en": "It is the book I am reading."
      },
      {
-      "ko": "제가 좋아하는 책이에요.",
-      "en": "It is a book I like."
+      "ko": "아주 좋은 책이에요.",
+      "en": "It is a very good book."
      }
     ]
    },
@@ -1648,12 +1688,12 @@
     "difference": "“-ㄴ/은” describes what a thing is like now; “-던” recalls what it used to be like.",
     "pair": [
      {
-      "ko": "예쁜 아이가 웃고 있다.",
-      "en": "A pretty child is smiling."
+      "ko": "작은 아이가 웃고 있다.",
+      "en": "A small child is smiling."
      },
      {
-      "ko": "예쁘던 아이가 어른이 되었다.",
-      "en": "The child who used to be pretty has grown up."
+      "ko": "그렇게 작던 아이가 벌써 어른이 되었다.",
+      "en": "The child who was once so small is already grown up."
      }
     ]
    }
@@ -1674,7 +1714,9 @@
   ],
   "topik_tip": "The list has this “-은” separately from the past “-은2”; the stem type (adjective or verb) tells which one it is.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1682,7 +1724,7 @@
   "level": 2,
   "label": "turning a word into a noun (state, result)",
   "meaning_en": "An ending that makes a verb or adjective into a noun for a state, result or feeling (“기쁨, 믿음, 웃음”), and in notices, minutes and headlines ends a clause in note style (“내일은 휴관임”).",
-  "usage": "After a vowel it is “-ㅁ” written on the syllable (“기쁘다 → 기쁨”, “아프다 → 아픔”), after a consonant “-음” (“웃다 → 웃음”, “믿다 → 믿음”). A ㄹ-stem keeps its ㄹ and adds “ㅁ”: “살다 → 삶”, “알다 → 앎”, “만들다 → 만듦”. A ㅂ-irregular stem becomes “움”: “어렵다 → 어려움”. “이다” gives “임”. Many words are fixed nouns (“꿈, 걸음, 죽음, 삶”); for ordinary activities “-기” is used. The note-style ending is for written notices.",
+  "usage": "After a vowel it is “-ㅁ” written on the syllable (“기쁘다 → 기쁨”, “아프다 → 아픔”), after a consonant “-음” (“웃다 → 웃음”, “믿다 → 믿음”). A ㄹ-stem keeps its ㄹ and adds “ㅁ”: “살다 → 삶”, “알다 → 앎”, “만들다 → 만듦”. A ㅂ-irregular stem becomes “움”: “어렵다 → 어려움”. “이다” gives “임”. Many words are fixed nouns (“꿈, 걸음, 죽음, 삶”); for ordinary activities “-기” is used. The note-style ending is for written notices. In writing, “-음” also turns a whole clause into a noun for a fact, with verbs of knowing, showing and revealing (“그가 범인임이 밝혀졌다”, “최선을 다했음을 알 수 있다”).",
   "examples": [
    {
     "ko": "친구에 대한 믿음은 하루아침에 생기지 않는다.",
@@ -1713,7 +1755,7 @@
   "compare": [
    {
     "pattern": "-기",
-    "difference": "“-기” names an activity (“달리기”), “-음” a state or result (“기쁨”). Many verbs have only one of the two as a noun.",
+    "difference": "“-기” names an activity (“달리기”), “-음” a state or result (“기쁨”). Many verbs have only one of the two as an established noun.",
     "pair": [
      {
       "ko": "달리기는 건강에 좋다.",
@@ -1727,7 +1769,7 @@
    },
    {
     "pattern": "-는 것",
-    "difference": "“-는 것” is the free way to make a noun clause; “-음” gives a single noun or a note-style ending.",
+    "difference": "“-는 것” is the everyday way to make a noun clause; “-음” gives a single noun, a note-style ending, or, in writing, a clause stating a fact.",
     "pair": [
      {
       "ko": "웃는 것이 건강에 좋다.",
@@ -1756,7 +1798,9 @@
   ],
   "topik_tip": "In notices and exam passages, the final “-음/-ㅁ” on a clause (“휴관임”, “금지함”) is the written note style.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1838,7 +1882,9 @@
   ],
   "topik_tip": "Use the polite “-군요” to anyone you address politely: the bare “-군” sounds like talking down or to oneself.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1918,17 +1964,19 @@
     "en": "I will hang out with a friend today."
    }
   ],
-  "topik_tip": "It is a promise addressed to someone: for a bare decision, the pattern is “-겠-”.",
+  "topik_tip": "It is a promise made to someone. For a plan stated without that commitment to the listener, the pattern is “-을 거예요” (“주말에 집에서 쉴 거예요”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-지",
   "level": 2,
   "label": "confirming, “right?”, “you know”",
-  "meaning_en": "A sentence-final ending that checks something the speaker thinks the listener knows or shares: “..., right?”, “..., isn't it?”. It also states what is obvious (“물론이지”) and, with “그래”, gives a gentle suggestion (“-지 그래?”). The polite form is “-지요/-죠”.",
-  "usage": "It attaches to any stem, including “이다” and past stems (“좋지?”, “학생이지”, “갔지?”). The ㄹ of an ㄹ-stem stays (“알다 → 알지”, “살다 → 살지”). Rising intonation asks for confirmation; falling intonation states something that is clear. “-지 그래?” (“Why don't you ...?”) is a mild advice. For listeners you speak politely to, use “-지요/-죠”. “-죠” is the contraction used in speech.",
+  "meaning_en": "A sentence-final ending that checks something the speaker thinks the listener knows or shares: “..., right?”, “..., isn't it?”. It also states what is obvious (“물론이지”), and it gives soft commands and polite requests or proposals (“이제 그만 자지.”, “이쪽으로 앉으시지요.”), including the advice frame “-지 그래?”. The polite form is “-지요/-죠”.",
+  "usage": "It attaches to any stem, including “이다” and past stems (“좋지?”, “학생이지”, “갔지?”). The ㄹ of an ㄹ-stem stays (“알다 → 알지”, “살다 → 살지”). Rising intonation asks for confirmation; falling intonation states something that is clear. On a verb addressed to the listener it is a soft command (“이제 그만 자지.”); with “-시-” and “-요” it is a polite request or proposal (“이쪽으로 앉으시지요”, “같이 가시죠”). “-지 그래?” (“Why don't you ...?”) gives mild advice. For listeners you speak politely to, use “-지요/-죠”. “-죠” is the contraction used in speech.",
   "examples": [
    {
     "ko": "오늘 날씨 정말 좋지?",
@@ -1954,6 +2002,11 @@
     "ko": "배고프면 먼저 먹지 그래?",
     "en": "If you are hungry, why don't you eat first?",
     "ctx": "conversation"
+   },
+   {
+    "ko": "손님, 이쪽으로 앉으시지요.",
+    "en": "Please have a seat over here.",
+    "ctx": "formal"
    }
   ],
   "compare": [
@@ -1994,7 +2047,7 @@
     "en": "Teacher, the weather is nice today, isn't it?"
    },
    {
-    "note": "A ㄹ-stem keeps its ㄹ before “-지”: the ㄹ drops only before certain endings such as “-ㄴ” or “-ㅂ”.",
+    "note": "A ㄹ-stem keeps its ㄹ before “-지”: the ㄹ drops only before “ㄴ, ㅂ, ㅅ” (“아는, 압니다, 아세요”).",
     "wrong": "너도 이 노래 아지?",
     "right": "너도 이 노래 알지?",
     "en": "You know this song too, right?"
@@ -2002,7 +2055,9 @@
   ],
   "topik_tip": "The list's four labels (statement, question, command, request) are all “-지” in different intonation.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
