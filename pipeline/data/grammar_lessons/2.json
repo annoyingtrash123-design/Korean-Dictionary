@@ -2074,7 +2074,7 @@
    },
    {
     "ko": "이 사람 피아노를 정말 잘 치는데?",
-    "en": "This person really plays the piano well.",
+    "en": "Hey, this person plays the piano really well!",
     "ctx": "conversation"
    },
    {
@@ -2083,8 +2083,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "지금 가면 늦는데.",
-    "en": "If we go now, we will be late, you know.",
+    "ko": "생각보다 꽤 맛있는데?",
+    "en": "This is pretty tasty, more than I expected!",
     "ctx": "conversation"
    },
    {
@@ -2100,7 +2100,7 @@
     "pair": [
      {
       "ko": "눈이 많이 오는데.",
-      "en": "It is snowing a lot, isn't it."
+      "en": "Wow, it is really snowing a lot!"
      },
      {
       "ko": "눈이 많이 오네.",
@@ -2139,7 +2139,9 @@
   ],
   "topik_tip": "At the end of a sentence “-는데” never means “but” alone: it gives a hint that something follows or a reaction is expected.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2221,7 +2223,9 @@
   ],
   "topik_tip": "“-네요” is the polite noting form; many compliments in conversation use it.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2303,7 +2307,9 @@
   ],
   "topik_tip": "“-을래?” is a question about the listener's will; “-을까?” is a proposal for both.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2315,7 +2321,7 @@
   "examples": [
    {
     "ko": "올해 서울로 이사를 가게 되었어요.",
-    "en": "I have ended up moving to Seoul this year.",
+    "en": "It turns out I am moving to Seoul this year.",
     "ctx": "conversation"
    },
    {
@@ -2379,14 +2385,16 @@
   ],
   "topik_tip": "A fixed way to report news politely: “-게 되었습니다” (it has come to be that ...).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-기 때문에",
   "level": 2,
-  "label": "because (formal, written)",
-  "meaning_en": "An expression for a reason: “because X, Y”. It states a cause plainly and is common in writing and in formal speech. With a noun it is “N 때문에”, and at the end of a sentence “-기 때문이다” (it is because ...).",
+  "label": "because (stressing the reason)",
+  "meaning_en": "An expression for a reason: “because X, Y”. It states a cause plainly and firmly; it is frequent in writing and formal speech but also normal in conversation. With a noun it is “N 때문에”, and at the end of a sentence “-기 때문이다” (it is because ...).",
   "usage": "It attaches to verb, adjective and “이다” stems, after a tense ending if needed: “오다 → 오기 때문에”, “갔다 → 갔기 때문에”, “성실하다 → 성실하기 때문에”, “공휴일이다 → 공휴일이기 때문에”. The main clause is a statement, not a command or suggestion (“-으니까” is used then). A noun cause is “N 때문에” (“교통사고 때문에”). The closing form “그 이유는 -기 때문이다” gives the reason after the fact.",
   "examples": [
    {
@@ -2425,8 +2433,8 @@
       "en": "I was tired, so I went to bed early."
      },
      {
-      "ko": "피곤하기 때문에 일찍 잤다.",
-      "en": "I was tired, so I went to bed early."
+      "ko": "피곤했기 때문에 일찍 잤다.",
+      "en": "I went to bed early because I was tired."
      }
     ]
    },
@@ -2456,12 +2464,14 @@
     "note": "After a noun, “이다” is needed: “N이기 때문에”.",
     "wrong": "오늘은 공휴일기 때문에 문을 닫았다.",
     "right": "오늘은 공휴일이기 때문에 문을 닫았다.",
-    "en": "Because today is a public holiday, they are closed."
+    "en": "Because today is a public holiday, the place is closed."
    }
   ],
   "topik_tip": "Reason frames in TOPIK: “-기 때문에” (formal, written) versus “-어서” (everyday) versus “-으니까” (allows commands).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2514,7 +2524,7 @@
    },
    {
     "pattern": "-으려고 하다",
-    "difference": "“-으려고 하다” is an intention that is in progress or about to happen; “-기로 하다” is a settled decision or agreement.",
+    "difference": "“-으려고 하다” is an intention one has in mind (it can still change); “-기로 하다” is a settled decision or agreement.",
     "pair": [
      {
       "ko": "내일 일찍 일어나려고 해요.",
@@ -2529,10 +2539,10 @@
   ],
   "pitfalls": [
    {
-    "note": "A modifier does not go before “로”: the stem takes “-기” directly.",
-    "wrong": "내일 가는 기로 했다.",
-    "right": "내일 가기로 했다.",
-    "en": "I decided to go tomorrow."
+    "note": "A decision already made is reported with the past “-기로 했어요”; the present “-기로 해요” proposes an agreement (“let's ...”).",
+    "wrong": "저는 내일 고향에 가기로 해요.",
+    "right": "저는 내일 고향에 가기로 했어요.",
+    "en": "I have decided to go to my hometown tomorrow."
    },
    {
     "note": "A ㄹ-stem keeps its ㄹ before “-기”.",
@@ -2543,7 +2553,9 @@
   ],
   "topik_tip": "Choose “-기로 하다” for a decision or agreement, and “-게 되다” for an outcome that was not chosen.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2625,7 +2637,9 @@
   ],
   "topik_tip": "Modifier plus “것 같다”: present “-는”, past “-ㄴ”, future “-ㄹ”; adjectives “-ㄴ”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2633,7 +2647,7 @@
   "level": 2,
   "label": "since, it has been (time elapsed)",
   "meaning_en": "An expression for the time that has passed since an event: “it has been N since I X”. It is followed by a time word and “되다, 지나다, 넘다” or “오래되다”.",
-  "usage": "It attaches to verb stems with the past modifier: “오다 → 온 지”, “졸업하다 → 졸업한 지”, “먹다 → 먹은 지”, “만들다 → 만든 지” (the ㄹ drops). “지” is a separate word, written with a space. The frame is “-ㄴ 지 + time + 되다/지나다”; “-ㄴ 지 얼마 안 되다” means “it has not been long since”. It is not used with adjectives. Do not mix it up with the question ending “-는지” (whether).",
+  "usage": "It attaches to verb stems with the past modifier: “오다 → 온 지”, “졸업하다 → 졸업한 지”, “먹다 → 먹은 지”, “만들다 → 만든 지” (the ㄹ drops). “지” is a separate word, written with a space. The frame is “-ㄴ 지 + time + 되다/지나다”; “-ㄴ 지 얼마 안 되다” means “it has not been long since”. It is not used with adjectives. Do not mix it up with the attached ending “-는지” (whether).",
   "examples": [
    {
     "ko": "한국에 온 지 삼 년이 되었다.",
@@ -2707,7 +2721,9 @@
   ],
   "topik_tip": "The spacing contrast “온 지” (since) versus “왔는지” (whether) is a known writing-test point.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2789,7 +2805,9 @@
   ],
   "topik_tip": "The same modifier choice as the adnominal endings: present “-는”, past “-ㄴ”, future “-ㄹ”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2797,7 +2815,7 @@
   "level": 2,
   "label": "while, during",
   "meaning_en": "An expression for a stretch of time: “while X is going on, during X”. The main clause happens within or alongside that period. The “에” is optional: “-는 동안”.",
-  "usage": "Verbs take “-는 동안(에)” (“요리하다 → 요리하는 동안”, “살다 → 사는 동안”); adjectives take “-ㄴ/은 동안”; a noun of time takes “N 동안” (“방학 동안”, “두 시간 동안”). The subjects of the two clauses can be different. It stresses the whole duration, unlike “-을 때”, which points to the time when something happens. “동안” is a separate word.",
+  "usage": "Verbs and “있다/없다” take “-는 동안(에)” (“요리하다 → 요리하는 동안”, “살다 → 사는 동안”, “내가 없는 동안”); a verb whose result lasts can take “-ㄴ/은 동안” (“자리를 비운 동안”, “잠든 동안”); a noun of time takes “N 동안” (“방학 동안”, “두 시간 동안”). The subjects of the two clauses can be different. It stresses the whole duration, unlike “-을 때”, which points to the time when something happens. “동안” is a separate word.",
   "examples": [
    {
     "ko": "내가 요리하는 동안에 동생은 청소를 했다.",
@@ -2871,7 +2889,9 @@
   ],
   "topik_tip": "“N 동안” (a period) and “-는 동안” (while doing) are the two shapes; “-는 동안” with a verb is spaced.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2879,7 +2899,7 @@
   "level": 2,
   "label": "have done (experience)",
   "meaning_en": "An expression for experience: “have done X before, there was a time when I X-ed”. The negative “-ㄴ 적이 없다” says one has never done it.",
-  "usage": "It attaches to verb stems with the past modifier: “가다 → 간 적이 있다”, “먹다 → 먹은 적이 있다”, “하다 → 한 적이 있다”, “만들다 → 만든 적이 있다” (the ㄹ drops). It is common with “-어 보다”: “가 본 적이 있다” (have been to). It is for experiences at some unspecified time, not for an event at a given time. A past version is “-ㄴ 적이 있었다”. The question “-ㄴ 적이 있어요?” asks whether one has ever done it.",
+  "usage": "It attaches to verb stems with the past modifier: “가다 → 간 적이 있다”, “먹다 → 먹은 적이 있다”, “하다 → 한 적이 있다”, “만들다 → 만든 적이 있다” (the ㄹ drops). It is common with “-어 보다”: “가 본 적이 있다” (have been to). It is for experiences at some unspecified time, not for an event at a given time. A past version is “-ㄴ 적이 있었다”. The list's variant “-는 적이 있다/없다” is about something that happens now and then (“아침을 거르는 적은 없어요”, I never skip breakfast). The question “-ㄴ 적이 있어요?” asks whether one has ever done it.",
   "examples": [
    {
     "ko": "저는 제주도에 가 본 적이 있어요.",
@@ -2945,7 +2965,7 @@
     "en": "I have been to Seoul."
    },
    {
-    "note": "It is for experience at some time, not an event at a stated time.",
+    "note": "It is for experience at some time, not an event pinned to a specific recent time such as “어제”.",
     "wrong": "어제 서울에 간 적이 있어요.",
     "right": "서울에 간 적이 있어요.",
     "en": "I have been to Seoul."
@@ -2953,7 +2973,9 @@
   ],
   "topik_tip": "Experience frames: “-ㄴ 적이 있다/없다”, often with “-어 보다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2961,7 +2983,7 @@
   "level": 2,
   "label": "do (written order)",
   "meaning_en": "A sentence-final form that gives a firm instruction or order in notices, rules and memos: “Do X”. It is impersonal and brief and has no politeness marker.",
-  "usage": "It attaches to verb stems: after a vowel or ㄹ it is “-ㄹ 것”, after other consonants “-을 것”. “끄다 → 끌 것”, “놓다 → 놓을 것”, “제출하다 → 제출할 것”, “만들다 → 만들 것”. The negative instruction is “-지 말 것”. It appears in classroom rules, signs, forms and written notes,. The polite ways to ask are “-세요” or “-어 주세요”. Do not confuse it with “-을 것이다” (future).",
+  "usage": "It attaches to verb stems: after a vowel or ㄹ it is “-ㄹ 것”, after other consonants “-을 것”. “끄다 → 끌 것”, “놓다 → 놓을 것”, “제출하다 → 제출할 것”, “만들다 → 만들 것”. The negative instruction is “-지 말 것”. It appears in classroom rules, signs, forms and written notes. The polite ways to ask are “-세요” or “-어 주세요”. Do not confuse it with “-을 것이다” (future).",
   "examples": [
    {
     "ko": "수업 시간에는 휴대전화를 끌 것.",
@@ -3029,7 +3051,9 @@
   ],
   "topik_tip": "The order “-을 것” appears on signs and in rules; the negative is “-지 말 것”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3111,7 +3135,9 @@
   ],
   "topik_tip": "Pairs like “갈 때 / 갔을 때” (before arriving / after arriving) are a regular exam point.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3179,7 +3205,7 @@
   ],
   "pitfalls": [
    {
-    "note": "The worry pattern is “-ㄹ까 봐” (afraid that); do not use “보다”.",
+    "note": "The worry pattern is the connective “-ㄹ까 봐(서)” (afraid that); the sentence-final “-ㄹ까 보다” cannot link two clauses.",
     "wrong": "비가 올까 보다 우산을 가져왔다.",
     "right": "비가 올까 봐 우산을 가져왔다.",
     "en": "I brought an umbrella in case it rained."
@@ -3193,7 +3219,9 @@
   ],
   "topik_tip": "“-ㄹ까 보다” (maybe I will) and “-ㄹ까 봐” (worried that) differ in the last syllable and in meaning.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3201,7 +3229,7 @@
   "level": 2,
   "label": "try doing",
   "meaning_en": "An expression for trying something out or having a go: “try X-ing, give X a try”. With “-ㄴ 적이 있다” it is experience; as “-어 보세요” it is a friendly suggestion.",
-  "usage": "It attaches to verb stems with “-아/어”: “먹다 → 먹어 보다”, “입다 → 입어 보다”, “가다 → 가 보다”, “듣다 → 들어 보다” (ㄷ-irregular), “돕다 → 도와 보다”. In speech the polite shape is “-어 보세요, -어 봤어요”. “한번” strengthens the tentative feel (“한번 해 보세요”). It does not mean “see” here: the helper “보다” only marks a trial. Another pattern, “-어 보이다”, means “looks”.",
+  "usage": "It attaches to verb stems with “-아/어”: “먹다 → 먹어 보다”, “입다 → 입어 보다”, “가다 → 가 보다”, “듣다 → 들어 보다” (ㄷ-irregular), “돕다 → 도와 보다”. In speech the polite shape is “-어 보세요, -어 봤어요”. Some verb + “보다” combinations are dictionary words written solid (“물어보다, 찾아보다, 알아보다”); otherwise a space is the rule. “한번” strengthens the tentative feel (“한번 해 보세요”). It does not mean “see” here: the helper “보다” only marks a trial. Another pattern, “-어 보이다”, means “looks”.",
   "examples": [
    {
     "ko": "이 옷을 한번 입어 보세요.",
@@ -3214,7 +3242,7 @@
     "ctx": "conversation"
    },
    {
-    "ko": "모르면 선생님께 물어 보세요.",
+    "ko": "모르면 선생님께 물어보세요.",
     "en": "If you do not know, try asking the teacher.",
     "ctx": "conversation"
    },
@@ -3224,7 +3252,7 @@
     "ctx": "conversation"
    },
    {
-    "ko": "도서관에서 책을 찾아 보았지만 없었다.",
+    "ko": "도서관에서 책을 찾아보았지만 없었다.",
     "en": "I tried looking for the book in the library, but it was not there.",
     "ctx": "conversation"
    }
@@ -3275,7 +3303,9 @@
   ],
   "topik_tip": "The helper “보다” here only means “try”; “-어 보세요” is the standard invitation.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3283,7 +3313,7 @@
   "level": 2,
   "label": "be in the state of (result state)",
   "meaning_en": "An expression for a state that results from a completed change: “be sitting, be left, be open”. The action is over and its result continues. It goes with intransitive or passive verbs.",
-  "usage": "It attaches to verb stems with “-아/어”: “앉다 → 앉아 있다”, “남다 → 남아 있다”, “들다 → 들어 있다”, “피다 → 피어 있다”, “살다 → 살아 있다”, “눕다 → 누워 있다” (ㅂ-irregular), “열리다 → 열려 있다”. The verb is one that changes the subject's own state or a passive (“앉다, 서다, 열리다, 쓰이다”); a verb with an object takes “-고 있다” for the action in progress. The honorific form is “-어 계시다”.",
+  "usage": "It attaches to verb stems with “-아/어”: “앉다 → 앉아 있다”, “남다 → 남아 있다”, “들다 → 들어 있다”, “피다 → 피어 있다”, “살다 → 살아 있다”, “눕다 → 누워 있다” (ㅂ-irregular), “열리다 → 열려 있다”. The verb is one that changes the subject's own state or a passive (“앉다, 서다, 열리다, 쓰이다”); a verb with an object takes “-고 있다” for the action in progress. Verbs of wearing (“입다, 신다, 쓰다, 끼다”) use “-고 있다” for the resulting state as well (“안경을 쓰고 있다”, is wearing glasses). The honorific form is “-어 계시다”.",
   "examples": [
    {
     "ko": "의자에 앉아 있는 사람이 제 동생이에요.",
@@ -3362,7 +3392,9 @@
   ],
   "topik_tip": "Choose by the verb: a change of own state or a passive takes “-어 있다”; an action with an object takes “-고 있다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3370,7 +3402,7 @@
   "level": 2,
   "label": "do something for someone",
   "meaning_en": "An expression for doing an action for someone's benefit: “do X for you/me/them”. In requests it is the standard polite form: “-어 주세요”.",
-  "usage": "It attaches to verb stems with “-아/어”: “열다 → 열어 주다”, “읽다 → 읽어 주다”, “찾다 → 찾아 주다”, “돕다 → 도와 주다” (ㅂ-irregular), “가르치다 → 가르쳐 주다”, “사다 → 사 주다”. Frames: “-어 주세요” (please), “-어 줄까요?” (shall I), “-어 줘” (casual). The beneficiary is a friend, family or a junior person; for a person to be honoured the helper is “드리다”, and when the honoured person is the doer it is “-어 주시다”. The beneficiary often takes “에게/한테”.",
+  "usage": "It attaches to verb stems with “-아/어”: “열다 → 열어 주다”, “읽다 → 읽어 주다”, “찾다 → 찾아 주다”, “돕다 → 도와주다” (ㅂ-irregular; a dictionary word, written solid), “가르치다 → 가르쳐 주다”, “사다 → 사 주다”. Frames: “-어 주세요” (please), “-어 줄까요?” (shall I), “-어 줘” (casual). When the beneficiary is a person to be honoured the helper is “드리다”, and when the honoured person is the doer it is “-어 주시다”. The beneficiary often takes “에게/한테”.",
   "examples": [
    {
     "ko": "창문 좀 열어 주세요.",
@@ -3383,7 +3415,7 @@
     "ctx": "conversation"
    },
    {
-    "ko": "친구가 제 숙제를 도와 주었어요.",
+    "ko": "친구가 제 숙제를 도와주었어요.",
     "en": "My friend helped me with my homework.",
     "ctx": "conversation"
    },
@@ -3401,7 +3433,7 @@
   "compare": [
    {
     "pattern": "-어 드리다",
-    "difference": "“-어 주다” is for friends and juniors; “-어 드리다” is for a person you honour.",
+    "difference": "“-어 주다” serves anyone not specially honoured (including the speaker); “-어 드리다” serves a person you honour.",
     "pair": [
      {
       "ko": "동생에게 책을 읽어 줬다.",
@@ -3436,15 +3468,17 @@
     "en": "I took a photo for my grandmother."
    },
    {
-    "note": "A ㅂ-irregular stem becomes “와” + “주다”.",
+    "note": "A ㅂ-irregular stem becomes “와”: “돕다” gives “도와주다”.",
     "wrong": "숙제 좀 돕아 주세요.",
-    "right": "숙제 좀 도와 주세요.",
+    "right": "숙제 좀 도와주세요.",
     "en": "Please help me with my homework."
    }
   ],
   "topik_tip": "“-어 주세요” is the all-purpose polite request; the beneficiary, not the doer, decides the helper (“주다 / 드리다”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3452,7 +3486,7 @@
   "level": 2,
   "label": "may; it is all right to",
   "meaning_en": "An expression for permission or acceptability: “may, is it OK to, it is fine if”. It is used to ask for permission (“앉아도 돼요?”), to give it, and to say that something is acceptable.",
-  "usage": "It attaches to verb, adjective and “이다” stems with “-아/어”: “앉다 → 앉아도 되다”, “가다 → 가도 되다”, “눕다 → 누워도 되다” (ㅂ-irregular), “듣다 → 들어도 되다” (ㄷ-irregular), “학생이다 → 학생이어도 되다”. The spoken form is “돼요” (“되어요” contracts). “-어도 괜찮다” is a near-synonym. The opposite is “-으면 안 되다” (not allowed). The same ending without “되다” is the concessive “-어도” (even if).",
+  "usage": "It attaches to verb, adjective and “이다” stems with “-아/어”: “앉다 → 앉아도 되다”, “가다 → 가도 되다”, “눕다 → 누워도 되다” (ㅂ-irregular), “듣다 → 들어도 되다” (ㄷ-irregular), “학생이다 → 학생이어도 되다”. “되어요” normally contracts to “돼요”. “-어도 괜찮다” is a near-synonym. The opposite is “-으면 안 되다” (not allowed). The same ending without “되다” is the concessive “-어도” (even if).",
   "examples": [
    {
     "ko": "여기에 앉아도 되나요?",
@@ -3462,7 +3496,7 @@
    {
     "ko": "이 책은 빌려 가도 되니까 필요하면 가져가세요.",
     "en": "You may borrow this book, so take it if you need it.",
-    "ctx": "formal"
+    "ctx": "conversation"
    },
    {
     "ko": "사진을 찍어도 되지만 플래시는 쓰지 마세요.",
@@ -3512,7 +3546,7 @@
   ],
   "pitfalls": [
    {
-    "note": "The spoken form is “돼요”, not “되요”.",
+    "note": "The contraction of “되어요” is “돼요”; “되요” is a misspelling.",
     "wrong": "여기에 앉아도 되요?",
     "right": "여기에 앉아도 돼요?",
     "en": "May I sit here?"
@@ -3526,7 +3560,9 @@
   ],
   "topik_tip": "Permission is “-어도 되다/돼요?”; prohibition is “-으면 안 되다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3534,7 +3570,7 @@
   "level": 2,
   "label": "don't (prohibition)",
   "meaning_en": "An expression for a prohibition: “don't do X”. It forms commands (“-지 마세요”), suggestions (“-지 말자”), and “don't X, but Y” (“-지 말고 ...”).",
-  "usage": "It attaches to verb stems: “피우다 → 피우지 마세요”, “걱정하다 → 걱정하지 마”, “서두르다 → 서두르지 말고”, “포기하다 → 포기하지 말자”. The verb “말다” loses its ㄹ before “세요, 십시오, ㅂ시다, 라” (“마세요, 마십시오, 맙시다, 마라”) and keeps it elsewhere (“말고, 말자, 말아야 하다”). The sentence “-지 않다” is a statement or question (“I don't”), not an order.",
+  "usage": "It attaches to verb stems: “피우다 → 피우지 마세요”, “걱정하다 → 걱정하지 마”, “서두르다 → 서두르지 말고”, “포기하다 → 포기하지 말자”. The verb “말다” loses its ㄹ before “세요, 십시오, ㅂ시다, 라” (“마세요, 마십시오, 맙시다, 마라”, and the casual “마”) and keeps it elsewhere (“말고, 말자, 말아야 하다”). The sentence “-지 않다” is a statement or question (“I don't”), not an order.",
   "examples": [
    {
     "ko": "여기서 담배를 피우지 마세요.",
@@ -3608,7 +3644,9 @@
   ],
   "topik_tip": "The form to remember is “-지 마세요”; the ㄹ of “말다” falls before “세요/ㅂ시다/십시오”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3685,12 +3723,14 @@
     "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before “-을”.",
     "wrong": "택시를 못 타서 걷을 수밖에 없다.",
     "right": "택시를 못 타서 걸을 수밖에 없다.",
-    "en": "I cannot take a taxi, so I have no choice but to walk."
+    "en": "I couldn't get a taxi, so I have no choice but to walk."
    }
   ],
   "topik_tip": "“갈 수 없다” (cannot) and “갈 수밖에 없다” (must) are a standard contrast.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  }
 ]
