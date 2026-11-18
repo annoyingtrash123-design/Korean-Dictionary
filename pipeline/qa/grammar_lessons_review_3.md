@@ -37,3 +37,17 @@ Per lesson: form, outcome, what changed.
 | -으려면 | approved | None needed (checked 걷다 → 걸으려면, 눕다 → 누우려면, 살다 → 살려면). |
 | -던- | approved | Two English sentences (word order; “often sang” → “often used to sing”). |
 | -거든2 | approved | Example 5 English “They” for Jisu → Jisu. |
+| -는구나 | approved | Usage put “있다/없다” with the verbs and offered “있는구나”; the standard form is “있구나” (adjective pattern). Fixed. |
+| -는다 | approved | None needed. |
+| -던데2 | approved | Examples 2 and 4 (“맛있던데, 한번 가 봐”, “비가 많이 오던데 우산 가져가”) used the connective -던데1 (background clause + main clause), not the sentence-final 감탄 -던데2; replaced with sentence-final uses, and usage now names the connective as a different form. Two English lines (example 1 word order; compare “fun, though” added a contrast). |
+| -잖아 | approved | Compare English. |
+| -자3 | approved | Usage offered “-ㅂ시다” as the polite counterpart without saying it is still wrong to a superior; added “-으시지요”. |
+| -니2 | approved | The row's variant is -으니5 (question “작으니?”, “좋으니?”, krdict -으니4 / stdict -으니04), which the lesson never mentioned; usage and a sixth example added. |
+| -게 하다 | approved | Usage left out the 이/가 actor that the -이- compare itself uses (아이가 밥을 먹게 했다); added. |
+| -고 나다 | approved | None needed. |
+| -고 말다 | approved | “-어 버리다” compare misspelled 잃어버리다 as “잃어 버렸다” and was not a minimal pair; now 잠이 들고 말았다 / 잠이 들어 버렸다. |
+| -고 싶어 하다 | approved | None needed. |
+| -은 결과 | approved | Example 3 English invented “we”; pitfall English dangling participle; usage frames now carry their modifier (“-ㄴ 것으로 나타났다”). |
+| -은 다음에 | approved | Usage spelled “그 다음에”; the dictionary word is “그다음”. |
+| -는 대신에 | approved | Compare English (“whereas it is tasty”). |
+| -는 만큼 | approved | None needed. |
