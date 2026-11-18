@@ -1,5 +1,6 @@
 //! The Search tab's start screen: each day's picks from the official curriculum (words and
-//! grammar of levels 5-6, table `curriculum`) and one idiom or proverb.
+//! grammar of levels 5-6, table `curriculum`), a proverb and a four-character idiom (the frequency-ranked
+//! study lists in table `study_item`, most common first).
 //!
 //! Every pick is a pure function of the day number (days since 2026-01-01 in the user's local
 //! calendar, computed by the app): items are walked in a seeded permutation with a fresh
@@ -83,7 +84,9 @@ pub struct HomeIdiom {
     pub id: i64,
     pub headword: String,
     pub homonym: Option<i64>,
-    /// "idiom" | "proverb"
+    /// The entry's part of speech as the dictionary has it (what a saved item is keyed on).
+    pub pos: Option<String>,
+    /// "proverb" (속담) | "seongeo" (성어, four-character idiom) | "idiom" (관용구, old packs only)
     pub kind: String,
     pub gloss: String,
     pub ko_def: Option<String>,
@@ -95,7 +98,8 @@ pub struct HomeIdiom {
 pub struct Home {
     pub words: Vec<HomeWord>,
     pub grammar: Vec<HomeGrammar>,
-    pub idiom: Option<HomeIdiom>,
+    /// The proverb of the day, then the four-character idiom of the day (one card on old packs).
+    pub idioms: Vec<HomeIdiom>,
 }
 
 /// The seeded permutation of `0..n` for `cycle` (Fisher-Yates).
@@ -303,40 +307,99 @@ fn grammar(p: &PackDb, day: u32) -> Result<Vec<HomeGrammar>> {
     Ok(out)
 }
 
-/// The idiom of the day: krdict idioms and proverbs with an English gloss and a full example sentence
-/// (a dialogue does not count), in id order; day `day`'s pick. Needs the partial index `entries_kind`
-/// (older packs have none and a scan would hold the engine for seconds: no idiom card then).
-fn idiom(p: &PackDb, day: u32) -> Result<Option<HomeIdiom>> {
-    if !p.caps.idiom_idx {
-        return Ok(None);
-    }
-    let all = ids(
-        p,
-        "SELECT e.id FROM entries e WHERE e.kind IN ('idiom', 'proverb') AND e.source = 'krdict' \
-         AND e.gloss IS NOT NULL AND e.gloss != '' AND e.data LIKE '%\"type\":\"sentence\"%' ORDER BY e.id",
-    )?;
-    for i in day_indices(all.len(), IDIOM_SALT, day, 1) {
-        let r = p.conn.query("SELECT e.source, e.id, e.headword, e.kind, e.gloss, e.data, e.homonym FROM entries e WHERE e.id = ?1", &[all[i].into()])?;
-        let Some(r) = r.first() else { continue };
-        let data = r.string(5);
-        let examples = examples_of(&data, MAX_EXAMPLES, false);
-        if examples.is_empty() {
-            continue;
+/// A headword that is a frame with a slot (말이 ∼지, … 하다), not a fixed expression.
+fn has_placeholder(hw: &str) -> bool {
+    hw.contains(['∼', '~', '…', '～'])
+}
+
+/// The entry has a full example sentence (not only phrases or dialogues).
+fn has_sentence(data: &str) -> bool {
+    let v: serde_json::Value = serde_json::from_str(data).unwrap_or_default();
+    v.get("senses").and_then(|s| s.as_array()).into_iter().flatten().any(|s| {
+        s.get("examples").and_then(|e| e.as_array()).into_iter().flatten().any(|ex| {
+            ex.get("type").and_then(|t| t.as_str()) == Some("sentence") && ex.get("ko").and_then(|k| k.as_str()).is_some_and(|k| !k.trim().is_empty())
+        })
+    })
+}
+
+/// Entries fit for an idiom card:an English gloss, a full example sentence (a dialogue does not
+/// count) and a fixed expression (no ∼ slot). Rows are (id, headword, data, kind); ids stay in row order.
+fn eligible(rows: &[crate::sql::Row]) -> Vec<(i64, String)> {
+    let mut out: Vec<(i64, String)> = Vec::new();
+    for r in rows {
+        let Some(id) = r.int(0) else { continue };
+        if !has_placeholder(&r.string(1)) && has_sentence(&r.string(2)) && !out.iter().any(|(i, _)| *i == id) {
+            out.push((id, r.string(3)));
         }
-        let ko_def = ko_def_of(&data);
+    }
+    out
+}
+
+/// The study lists of the two idiom cards, in page order: (list, card kind).
+const IDIOM_LISTS: [(&str, &str); 2] = [("sokdam_all", "proverb"), ("seongeo300", "seongeo")];
+
+/// One study list's pool: its krdict (core) entries with an English gloss, in rank order.
+fn study_pool(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> {
+    let rows = p.conn.query(
+        "SELECT s.entry_id, e.headword, e.data, ?2 FROM study_item s JOIN entries e ON e.id = s.entry_id \
+         WHERE s.list = ?1 AND s.pack = 'core' AND e.source = 'krdict' AND e.gloss IS NOT NULL AND trim(e.gloss) != '' \
+         ORDER BY s.rank",
+        &[list.into(), kind.into()],
+    )?;
+    Ok(eligible(&rows))
+}
+
+/// The card for pool item `i` (an index into `pool`), when there is one.
+fn idiom_at(p: &PackDb, pool: &[(i64, String)], i: Option<usize>) -> Result<Option<HomeIdiom>> {
+    if let Some(i) = i {
+        let (id, kind) = &pool[i];
+        let r = p.conn.query("SELECT e.source, e.id, e.headword, e.pos, e.gloss, e.data, e.homonym FROM entries e WHERE e.id = ?1", &[(*id).into()])?;
+        let Some(r) = r.first() else { return Ok(None) };
+        let data = r.string(5);
         return Ok(Some(HomeIdiom {
             source: r.string(0),
             id: r.int(1).unwrap_or(0),
             headword: r.string(2),
             homonym: r.int(6),
-            kind: r.string(3),
+            pos: r.text(3),
+            kind: kind.clone(),
             gloss: first_items(&r.string(4)),
-            ko_def,
+            ko_def: ko_def_of(&data),
             related: related_of(&data),
-            examples,
+            examples: examples_of(&data, MAX_EXAMPLES, false),
         }));
     }
     Ok(None)
+}
+
+/// The day's idiom cards: a proverb (속담, list `sokdam_all`) then a four-character idiom (성어, list
+/// `seongeo300`). Each list is walked in rank order, most common first: day n shows the n-th eligible item,
+/// wrapping around after the last. Packs without `study_item` (or with nothing eligible in it) fall back
+/// to one card from krdict's idioms and proverbs on a seeded cycle, which needs the partial index
+/// `entries_kind` (a scan would hold the engine for seconds: no card then).
+fn idioms(p: &PackDb, day: u32) -> Result<Vec<HomeIdiom>> {
+    let mut out = Vec::new();
+    if p.caps.study_item {
+        for (list, kind) in IDIOM_LISTS {
+            let pool = study_pool(p, list, kind)?;
+            let i = (!pool.is_empty()).then(|| day as usize % pool.len());
+            out.extend(idiom_at(p, &pool, i)?);
+        }
+        if !out.is_empty() {
+            return Ok(out);
+        }
+    }
+    if !p.caps.idiom_idx {
+        return Ok(out);
+    }
+    let rows = p.conn.query(
+        "SELECT e.id, e.headword, e.data, e.kind FROM entries e WHERE e.kind IN ('idiom', 'proverb') AND e.source = 'krdict' \
+         AND e.gloss IS NOT NULL AND e.gloss != '' AND e.data LIKE '%\"type\":\"sentence\"%' ORDER BY e.id",
+        &[],
+    )?;
+    let pool = eligible(&rows);
+    out.extend(idiom_at(p, &pool, day_indices(pool.len(), IDIOM_SALT, day, 1).first().copied())?);
+    Ok(out)
 }
 
 /// Home page content for day number `day` (days since 2026-01-01). Without a `curriculum` table
@@ -352,8 +415,8 @@ pub fn home(packs: &[&PackDb], day: u32) -> Result<Home> {
             h.words = words(p, day)?;
             h.grammar = grammar(p, day)?;
         }
-        if h.idiom.is_none() && p.id == "core" {
-            h.idiom = idiom(p, day)?;
+        if h.idioms.is_empty() && p.id == "core" {
+            h.idioms = idioms(p, day)?;
         }
     }
     Ok(h)
@@ -432,10 +495,11 @@ mod tests {
             (21, "proverb", "a proverb", r#"{"senses":[{"examples":[]}]}"#),
             (22, "idiom", "", r#"{"senses":[{"examples":[{"ko":"x","type":"sentence"}]}]}"#),
             (23, "idiom", "dialogue only", r#"{"senses":[{"examples":[{"ko":"A: 응\nB: 아","type":"dialogue"}]}]}"#),
+            (24, "idiom", "although said", r#"{"senses":[{"examples":[{"ko":"말이 사장이지 겨우 번다.","type":"sentence"}]}]}"#),
         ] {
             c.query(
                 "INSERT INTO entries VALUES (?1, ?2, ?2, NULL, NULL, 'idiom', NULL, 'krdict', 'en', NULL, ?1, ?3, ?4, ?5)",
-                &[id.into(), format!("관용{id}").into(), kind.into(), gloss.into(), data.into()],
+                &[id.into(), if id == 24 { "말이 ∼지".to_string() } else { format!("관용{id}") }.into(), kind.into(), gloss.into(), data.into()],
             )
             .unwrap();
         }
@@ -464,9 +528,11 @@ mod tests {
         let pk = pack();
         let h = home(&[&pk], 3).unwrap();
         assert!(h.words.is_empty() && h.grammar.is_empty());
-        // eligible: only 20 (a sentence example); 21 has no example, 22 no gloss, 23 only a dialogue
+        // eligible: only 20 (a sentence example); 21 has no example, 22 no gloss, 23 only a dialogue, 24 is a frame (말이 ∼지)
         for d in 0..10 {
-            let i = home(&[&pk], d).unwrap().idiom.unwrap();
+            let v = home(&[&pk], d).unwrap().idioms;
+            assert_eq!(v.len(), 1, "day {d}: one card from the old pool");
+            let i = &v[0];
             assert_eq!((i.id, i.kind.as_str(), i.gloss.as_str(), i.ko_def.as_deref()), (20, "idiom", "to be nosy", Some("참견하다.")), "day {d}");
         }
     }
@@ -476,7 +542,7 @@ mod tests {
         let pk = pack();
         pk.conn.exec("DROP INDEX entries_kind").unwrap();
         let pk = PackDb::new("core", pk.conn).unwrap();
-        assert!(home(&[&pk], 3).unwrap().idiom.is_none());
+        assert!(home(&[&pk], 3).unwrap().idioms.is_empty());
     }
 
     #[test]
@@ -530,5 +596,91 @@ mod tests {
         }
         // 7 words, 3 a day: 9 slots cover all seven
         assert_eq!(seen.len(), 7);
+    }
+
+    /// Adds the study lists: (list, rank, kind, entry id, pack).
+    fn with_study_items(p: PackDb, rows: &[(&str, i64, &str, i64, &str)]) -> PackDb {
+        let c = p.conn;
+        c.exec("CREATE TABLE study_item (list TEXT NOT NULL, rank INTEGER NOT NULL, kind TEXT NOT NULL, title TEXT NOT NULL, entry_id INTEGER, pack TEXT NOT NULL, ext_id TEXT NOT NULL, headword TEXT NOT NULL, hw_norm TEXT NOT NULL, gloss TEXT NOT NULL, PRIMARY KEY (list, rank))").unwrap();
+        for (list, rank, kind, eid, pack) in rows {
+            c.query(
+                "INSERT INTO study_item VALUES (?1, ?2, ?3, 't', ?4, ?5, '1', 'h', 'h', 'g')",
+                &[(*list).into(), (*rank).into(), (*kind).into(), (*eid).into(), (*pack).into()],
+            )
+            .unwrap();
+        }
+        PackDb::new("core", c).unwrap()
+    }
+
+    fn study_pack() -> PackDb {
+        let pk = pack();
+        let ok = r#"{"senses":[{"ko_def":"뜻.","examples":[{"ko":"아주 쉬운 일이었다.","en":"It was easy.","type":"sentence"}]}]}"#;
+        for (id, hw, kind, pos, gloss, data) in [
+            (30i64, "누워서 떡 먹기", "proverb", "proverb", "a piece of cake", ok),
+            (31, "설상가상", "word", "noun", "adding insult to injury", ok),
+            (32, "말이 ∼지", "idiom", "idiom", "although said", ok),
+            (33, "금상첨화", "word", "noun", "", ok),
+            (34, "자포자기", "word", "noun", "desperation", r#"{"senses":[{"examples":[{"ko":"A: 응\nB: 아","type":"dialogue"}]}]}"#),
+            (35, "다른목록", "word", "noun", "other list", ok),
+            (36, "가는 날이 장날", "proverb", "proverb", "bad timing", ok),
+            (37, "우유부단", "word", "noun", "indecisiveness", ok),
+        ] {
+            pk.conn
+                .query(
+                    "INSERT INTO entries VALUES (?1, ?2, ?2, NULL, NULL, ?4, NULL, 'krdict', 'en', NULL, ?1, ?3, ?5, ?6)",
+                    &[id.into(), hw.into(), kind.into(), pos.into(), gloss.into(), data.into()],
+                )
+                .unwrap();
+        }
+        with_study_items(
+            pk,
+            &[
+                ("sokdam_all", 1, "sokdam", 30, "core"),
+                ("sokdam_all", 2, "sokdam", 32, "core"),     // a frame with a ∼ slot
+                ("sokdam_all", 3, "sokdam", 36, "core"),
+                ("seongeo300", 1, "seongeo", 31, "core"),
+                ("seongeo300", 2, "seongeo", 33, "core"),    // no English gloss
+                ("seongeo300", 3, "seongeo", 34, "core"),    // only a dialogue
+                ("seongeo300", 4, "seongeo", 20, "stdict"),  // entry in another pack
+                ("seongeo300", 5, "seongeo", 37, "core"),
+                ("seongeo100", 1, "seongeo", 35, "core"),    // not one of the two lists
+            ],
+        )
+    }
+
+    #[test]
+    fn idiom_cards_walk_the_study_lists_in_rank_order() {
+        let pk = study_pack();
+        let day = |d: u32| home(&[&pk], d).unwrap().idioms.iter().map(|i| (i.id, i.kind.clone())).collect::<Vec<_>>();
+        let (p, s) = ("proverb".to_string(), "seongeo".to_string());
+        // a proverb then a 성어; day n is the n-th eligible item of each list, wrapping around after the last
+        assert_eq!(day(0), vec![(30, p.clone()), (31, s.clone())]);
+        assert_eq!(day(1), vec![(36, p.clone()), (37, s.clone())]);
+        assert_eq!(day(2), vec![(30, p.clone()), (31, s.clone())]);
+        assert_eq!(day(5), vec![(36, p), (37, s)]);
+        let h = home(&[&pk], 0).unwrap();
+        let (a, b) = (&h.idioms[0], &h.idioms[1]);
+        assert_eq!((a.headword.as_str(), a.pos.as_deref(), a.gloss.as_str()), ("누워서 떡 먹기", Some("proverb"), "a piece of cake"));
+        assert_eq!((b.headword.as_str(), b.pos.as_deref(), b.ko_def.as_deref()), ("설상가상", Some("noun"), Some("뜻.")));
+        assert_eq!(a.examples.len(), 1);
+        assert_eq!(h, home(&[&pk], 0).unwrap(), "the same picks for the same day");
+    }
+
+    #[test]
+    fn empty_study_pool_falls_back_to_krdict_idioms() {
+        // the table is there but nothing in it is eligible: the old pool (with the frame filter) still gives a card
+        let pk = with_study_items(pack(), &[("sokdam_all", 1, "sokdam", 21, "core")]);
+        for d in 0..5 {
+            let v = home(&[&pk], d).unwrap().idioms;
+            assert_eq!(v.iter().map(|i| i.id).collect::<Vec<_>>(), vec![20], "day {d}");
+        }
+    }
+
+    #[test]
+    fn placeholder_headwords() {
+        for hw in ["말이 ∼지", "~ 하다", "… 노릇", "～기"] {
+            assert!(has_placeholder(hw), "{hw}");
+        }
+        assert!(!has_placeholder("누워서 떡 먹기"));
     }
 }
