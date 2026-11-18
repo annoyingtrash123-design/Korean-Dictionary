@@ -202,8 +202,9 @@ function TechDetails() {
 }
 
 const OPEN_KEY = 'kd.settings.open';
-/** Sections left open, remembered; all closed on first visit. */
-function loadOpenGroups(): string[] { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; /* storage unavailable or unparsable: all sections closed */ } }
+/** Sections left open, remembered; on a first visit only Appearance is open. */
+const DEFAULT_OPEN = ['appearance'];
+function loadOpenGroups(): string[] { try { const raw = localStorage.getItem(OPEN_KEY); if (raw == null) return DEFAULT_OPEN; const v = JSON.parse(raw); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return DEFAULT_OPEN; /* storage unavailable or unparsable: the default sections */ } }
 function saveOpenGroups(v: string[]) { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* storage unavailable */ } }
 
 /** A collapsible settings section. Closed sections stay mounted (hidden), so a download keeps running. */

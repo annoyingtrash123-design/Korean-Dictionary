@@ -18,6 +18,12 @@ const HAS_STUDY = (() => {
 const study = (page: Page) => page.locator('section[data-source=study]');
 const listLink = (page: Page, group: string, name: string) =>
   study(page).getByRole('group', { name: group }).locator('.list-row', { has: page.locator('.list-name', { hasText: new RegExp(`^${name}$`) }) }).first();
+const fold = (page: Page, group: string) => study(page).getByRole('button', { name: new RegExp(`^${group}`) });
+/** Expand a group of the overview (idempotent: the choice is remembered on the device). */
+async function expand(page: Page, group: string) {
+  if ((await fold(page, group).getAttribute('aria-expanded')) !== 'true') await fold(page, group).click();
+  await expect(fold(page, group)).toHaveAttribute('aria-expanded', 'true');
+}
 const rows = (page: Page) => page.locator('.vl-row:not(.vl-skel)');
 const rowAt = (page: Page, n: number) => page.locator(`.vl-row[aria-posinset="${n}"]`);
 const scroller = (page: Page) => page.locator('.vl-scroll');
@@ -57,6 +63,36 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   const sections = await page.locator('.lists > section h2').allTextContents();
   expect(sections).toEqual(['My lists', 'Study lists']);
   const vocab = study(page).getByRole('group', { name: 'Vocabulary by level' });
+  // collapsed by default, each heading summarising what is inside
+  const GROUPS = { 'Vocabulary by level': '6 levels', 'Grammar by level': '6 levels', 'Topics': /^\d+ topics$/ };
+  for (const [g, sum] of Object.entries(GROUPS)) {
+    await expect(fold(page, g)).toHaveAttribute('aria-expanded', 'false');
+    await expect(fold(page, g)).toHaveAttribute('aria-controls', /.+/);
+    await expect(fold(page, g).locator('.group-sum')).toHaveText(sum);
+    expect((await fold(page, g).boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  }
+  await expect(study(page).locator('.list-row:visible')).toHaveCount(0);
+  await page.waitForTimeout(300);
+  await shot(page, 'study-lists-overview-phone');
+  // keyboard: Enter on the focused heading toggles, the summary goes away when open
+  await fold(page, 'Vocabulary by level').focus();
+  await page.keyboard.press('Enter');
+  await expect(fold(page, 'Vocabulary by level')).toHaveAttribute('aria-expanded', 'true');
+  await expect(fold(page, 'Vocabulary by level').locator('.group-sum')).toHaveCount(0);
+  await page.keyboard.press('Enter');
+  await expect(fold(page, 'Vocabulary by level')).toHaveAttribute('aria-expanded', 'false');
+  // open state survives a reload; the others stay closed
+  await expand(page, 'Vocabulary by level');
+  await expand(page, 'Grammar by level');
+  await expand(page, 'Topics');
+  await page.reload();
+  await expect(study(page).getByRole('heading', { name: 'Study lists' })).toBeVisible();
+  for (const g of Object.keys(GROUPS)) await expect(fold(page, g)).toHaveAttribute('aria-expanded', 'true');
+  await fold(page, 'Grammar by level').click();
+  await page.reload();
+  await expect(fold(page, 'Grammar by level')).toHaveAttribute('aria-expanded', 'false');
+  await expect(fold(page, 'Vocabulary by level')).toHaveAttribute('aria-expanded', 'true');
+  await expand(page, 'Grammar by level');
   await expect(vocab.locator('.list-row')).toHaveCount(6);
   expect(await texts(vocab.locator('.list-name'))).toEqual([1, 2, 3, 4, 5, 6].map((n) => `${n}급 · 표준 교육과정`));
   const grammar = study(page).getByRole('group', { name: 'Grammar by level' });
@@ -69,7 +105,7 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   await expect(study(page).getByRole('group', { name: 'Topics' }).locator('.list-row').first()).toBeVisible();
   await expect(study(page).locator('.resume')).toHaveCount(0);   // nothing opened yet
   await page.waitForTimeout(300);
-  await shot(page, 'study-lists-overview-phone');
+  await shot(page, 'study-lists-expanded-phone');
 
   // ---- 6급 vocabulary: thousands of rows, only the visible ones in the page ----
   const t0 = Date.now();
@@ -145,7 +181,13 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   await expect(study(page).locator('.resume')).toContainText('Continue: 6급 · 표준 교육과정');
   await expect(study(page).locator('.resume')).toContainText('Vocabulary');
 
+  // the Continue row sits above the groups, outside any collapsed one
+  await fold(page, 'Vocabulary by level').click();
+  await expect(study(page).locator('.resume .list-row')).toBeVisible();
+  await expand(page, 'Vocabulary by level');
+
   // ---- grammar by level: the official forms, summaries; a tap opens the pattern's entry ----
+  await expand(page, 'Grammar by level');
   await listLink(page, 'Grammar by level', '1급 · 표준 교육과정').click();
   await expect(page.locator('.eyebrow')).toHaveText('Grammar');
   await expect(rows(page).first()).toBeVisible();
@@ -173,6 +215,7 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
 
   // ---- topics: top level, then sub-categories; sorted by level then 가나다, or 가나다 only ----
   await overview(page);
+  await expand(page, 'Topics');
   const topics = study(page).getByRole('group', { name: 'Topics' });
   const top = topics.locator('.list-row-wrap').first();
   await expect(top.locator('.list-row')).toContainText(/\d/);
@@ -221,6 +264,8 @@ test('study lists on an iPad: the list on the left, the entry on the right', asy
   await expect(study(page).getByRole('heading', { name: 'Study lists' })).toBeVisible();
   await page.waitForTimeout(300);
   await shot(page, 'tablet-study-lists-overview');
+  await expand(page, 'Vocabulary by level');
+  await expand(page, 'Grammar by level');
   await listLink(page, 'Vocabulary by level', '5급 · 표준 교육과정').click();
   await expect(rows(page).first()).toBeVisible();
   await rowAt(page, 3).locator('a.row').click();
@@ -230,6 +275,7 @@ test('study lists on an iPad: the list on the left, the entry on the right', asy
   await page.waitForTimeout(500);
   await shot(page, 'tablet-study-lists-vocab');
   await page.getByRole('link', { name: 'All lists' }).click();
+  await expand(page, 'Grammar by level');
   await listLink(page, 'Grammar by level', '3급 · 표준 교육과정').click();
   await expect(rows(page).first()).toBeVisible();
   await page.waitForTimeout(300);

@@ -38,6 +38,8 @@ async function lessonShots(page: Page, name: string) {
 async function openGrammar6(page: Page) {
   await page.getByRole('link', { name: 'Lists', exact: true }).click();
   await expect(study(page).getByRole('heading', { name: 'Study lists' })).toBeVisible();
+  const fold = study(page).getByRole('button', { name: /^Grammar by level/ });
+  if ((await fold.getAttribute('aria-expanded')) !== 'true') await fold.click();
   await study(page).getByRole('group', { name: 'Grammar by level' })
     .locator('.list-row', { has: page.locator('.list-name', { hasText: /^6급 · 표준 교육과정$/ }) }).first().click();
   await expect(page.locator('.eyebrow')).toHaveText('Grammar');

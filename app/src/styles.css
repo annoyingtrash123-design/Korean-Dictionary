@@ -335,7 +335,14 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .list-edit { display: flex; gap: 8px; padding: 2px 16px 10px; }
 .list-edit .btn { flex: 1; }
 /* built-in study lists */
-.group-head { margin: 0; font-size: 15px; font-weight: 600; color: var(--text); padding: 14px 16px 2px; }
+.group-head { margin: 0; font-size: 15px; font-weight: 600; color: var(--text); padding: 0 16px; }
+.group-fold { all: unset; box-sizing: border-box; width: 100%; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.group-fold:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.group-fold .rd-chev { transform: rotate(-45deg); }
+.group-fold[aria-expanded='true'] .rd-chev { transform: translateY(-2px) rotate(45deg); }
+.group-title { flex: 1; min-width: 0; }
+.group-sum { flex: none; font-weight: 400; }
+.list-group > ul[hidden] { display: none; }
 .list-group + .list-group { margin-top: 2px; }
 .resume { margin-top: 2px; }
 .list-badge { font: 700 15px/1 var(--font-ko); }
