@@ -183,6 +183,10 @@ fn only_approved_lessons_ship() {
     }
     let mut lessons = builtin();
     assert!(lessons.len() >= 4);
+    // start from all drafts, whatever the shipped files have already approved
+    for l in lessons.iter_mut() {
+        l.review = Review { status: "draft".into(), reviewer: None, date: None };
+    }
     for l in lessons.iter_mut().take(3) {
         l.review = Review { status: "approved".into(), reviewer: Some("test".into()), date: Some("2026-11-17".into()) };
     }
