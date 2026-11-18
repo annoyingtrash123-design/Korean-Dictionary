@@ -1,1 +1,821 @@
-[]
+[
+ {
+  "form": "이",
+  "level": 1,
+  "label": "subject marker",
+  "meaning_en": "The subject particle “이/가”: it marks the subject of a sentence, and in particular puts the focus on the subject itself: new information, the answer to “who/what”, or a described state. It also marks the complement of “되다” and “아니다”.",
+  "usage": "After a consonant it is “이”, after a vowel “가”: “책이, 지수가”. Some pronouns change: “나 → 내가, 저 → 제가, 너 → 네가, 누구 → 누가”. It introduces new information (“옛날 옛적에 호랑이가 살았어요”), answers a question word (“누가 왔어요?”), and marks the subject of descriptions (“비가 와요”). With “좋다”, “싫다”, “필요하다” and “있다/없다” of possession, the thing wanted or had also takes “이/가” (“저는 한국어가 재미있어요”). Double subjects are common: “코끼리는 코가 길다”. Honorific subjects take “께서”.",
+  "examples": [
+   {
+    "ko": "지수가 학교에 갔어요.",
+    "en": "Jisu went to school.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "누가 이 창문을 열었어요?",
+    "en": "Who opened this window?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비가 오고 있어요.",
+    "en": "It is raining.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 한국어가 재미있어요.",
+    "en": "I find Korean interesting.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이번에는 제가 할게요.",
+    "en": "This time I will do it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "코끼리는 코가 길다.",
+    "en": "An elephant's trunk is long.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "은",
+    "difference": "“이/가” focuses on the subject: new information or an answer to “who”. “은/는” makes it the topic, with the known or contrasted thing.",
+    "pair": [
+     {
+      "ko": "지수가 왔어요.",
+      "en": "It was Jisu who came."
+     },
+     {
+      "ko": "지수는 왔어요.",
+      "en": "As for Jisu, they came."
+     }
+    ]
+   },
+   {
+    "pattern": "께서",
+    "difference": "“께서” is the honorific “이/가”: with the verb in “-시-”.",
+    "pair": [
+     {
+      "ko": "선생님이 오셨어요.",
+      "en": "The teacher came."
+     },
+     {
+      "ko": "선생님께서 오셨어요.",
+      "en": "The teacher came."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“나, 저, 너” change before “가”: “내가, 제가, 네가”.",
+    "wrong": "나가 갔어요.",
+    "right": "내가 갔어요.",
+    "en": "I went."
+   },
+   {
+    "note": "New information (a new character) takes “이/가”, not “은/는”.",
+    "wrong": "옛날 옛적에 호랑이는 살았어요.",
+    "right": "옛날 옛적에 호랑이가 살았어요.",
+    "en": "Once upon a time, a tiger lived."
+   }
+  ],
+  "topik_tip": "Questions with “누가/무엇이” are answered with “이/가”: the answer is the subject in focus.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "과",
+  "level": 1,
+  "label": "and; with",
+  "meaning_en": "A particle that joins nouns (“A and B”) and marks a partner or comparison (“with, as”): “친구와 함께, 한국과 일본, 이것과 같다”. It is the written, neutral form of “하고” and “이랑”.",
+  "usage": "After a consonant it is “과”, after a vowel “와”: “책과 연필, 사과와 배”. Listing: “N과 N”. Partner: with reciprocal verbs (“만나다, 싸우다, 결혼하다, 이야기하다, 헤어지다”) the partner takes “와/과” (“친구와 싸우다”). Comparison: “N과 같다/다르다/비슷하다”. “N과 함께” means “together with N”. It sounds written or formal, while speech prefers “하고/이랑”.",
+  "examples": [
+   {
+    "ko": "저는 한국어와 영어를 공부해요.",
+    "en": "I study Korean and English.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구와 함께 영화를 봤어요.",
+    "en": "I watched a movie with a friend.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 옷은 저것과 색깔이 달라요.",
+    "en": "This outfit is different in color from that one.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 어제 민준이와 싸웠다.",
+    "en": "Jisu quarreled with Minjun yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국과 일본은 가까운 이웃이다.",
+    "en": "Korea and Japan are close neighbors.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "하고",
+    "difference": "“과/와” and “하고” are near-synonyms; “하고” is the neutral spoken form and attaches to any noun.",
+    "pair": [
+     {
+      "ko": "사과와 배를 좋아해요.",
+      "en": "I like apples and pears."
+     },
+     {
+      "ko": "사과하고 배를 좋아해요.",
+      "en": "I like apples and pears."
+     }
+    ]
+   },
+   {
+    "pattern": "에게",
+    "difference": "With verbs of talking, “와/과” means “with” (a conversation), “에게” means “to” (telling).",
+    "pair": [
+     {
+      "ko": "친구와 이야기했다.",
+      "en": "I talked with a friend."
+     },
+     {
+      "ko": "친구에게 이야기했다.",
+      "en": "I told a friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a consonant the form is “과”.",
+    "wrong": "한국와 일본은 가까운 이웃이다.",
+    "right": "한국과 일본은 가까운 이웃이다.",
+    "en": "Korea and Japan are close neighbors."
+   },
+   {
+    "note": "The partner of a reciprocal verb takes “와/과”, not “을/를”.",
+    "wrong": "친구를 싸웠다.",
+    "right": "친구와 싸웠다.",
+    "en": "I quarreled with a friend."
+   }
+  ],
+  "topik_tip": "The partner of “만나다, 싸우다, 결혼하다” takes “와/과” (or “하고/이랑”), not “을/를”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "까지",
+  "level": 1,
+  "label": "until, up to, even",
+  "meaning_en": "A particle for the endpoint of a time or place range: “until, up to, as far as”. With a deadline verb it means “by”, and after a noun that is the last in a series it means “even”.",
+  "usage": "It attaches to nouns of time and place: “열 시까지, 내일까지, 부산까지”. The pair “N부터 N까지” gives a range (“아홉 시부터 열 시까지”). With a continuing action it is “until” (“여섯 시까지 일해요”); with a one-time action such as “내다, 오다, 끝내다” it is a deadline, “by” (“내일까지 내세요”). In “너까지” it means “even you”. After a verb the ending form is “-ㄹ 때까지” (until the time when ...). It can be followed by other particles (“까지는, 까지도”).",
+  "examples": [
+   {
+    "ko": "오늘은 저녁 여섯 시까지 일해요.",
+    "en": "Today I work until six in the evening.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일까지 숙제를 제출하세요.",
+    "en": "Submit your homework by tomorrow.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "집에서 학교까지 걸어서 이십 분 걸려요.",
+    "en": "It takes twenty minutes on foot from home to school.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "부산까지 기차로 세 시간쯤 걸린다.",
+    "en": "It takes about three hours by train to Busan.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너까지 나를 믿지 않으면 어떡해?",
+    "en": "What am I supposed to do if even you do not believe me?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에",
+    "difference": "“에” marks a point in time; “까지” marks the end of a stretch.",
+    "pair": [
+     {
+      "ko": "열 시에 잡니다.",
+      "en": "I go to bed at ten."
+     },
+     {
+      "ko": "열 시까지 잡니다.",
+      "en": "I sleep until ten."
+     }
+    ]
+   },
+   {
+    "pattern": "부터",
+    "difference": "“부터” gives the start, “까지” the end; they often come in a pair.",
+    "pair": [
+     {
+      "ko": "아홉 시부터 일해요.",
+      "en": "I work from nine."
+     },
+     {
+      "ko": "열 시까지 일해요.",
+      "en": "I work until ten."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb, use “-ㄹ 때까지”, not “까지” alone.",
+    "wrong": "친구가 오는까지 기다렸다.",
+    "right": "친구가 올 때까지 기다렸다.",
+    "en": "I waited until my friend came."
+   }
+  ],
+  "topik_tip": "“N까지” is “until” for a continuing action and “by” for a one-time deadline; both appear in TOPIK.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "께서",
+  "level": 1,
+  "label": "honorific subject",
+  "meaning_en": "The honorific subject particle: it replaces “이/가” for a person to be respected (“선생님께서, 할아버지께서”). The verb takes the honorific “-시-”.",
+  "usage": "It attaches to a person noun of higher status: “선생님께서, 부모님께서, 사장님께서”. The verb is in the “-(으)시-” form (“오셨다, 하신다, 계신다”), and some words change (“계시다, 드시다, 주무시다, 말씀하시다”). It can be followed by “는/도”: “께서는, 께서도”. The honoured person as a receiver takes “께” (a different particle); as subject, “께서”. It is used in speech and writing; in casual speech “이/가” is also common with “-시-”.",
+  "examples": [
+   {
+    "ko": "선생님께서 칠판에 글씨를 쓰셨다.",
+    "en": "The teacher wrote on the board.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "할아버지께서 아침마다 산책을 하신다.",
+    "en": "My grandfather takes a walk every morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사장님께서는 지금 회의 중이십니다.",
+    "en": "The president is in a meeting now.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "부모님께서 저를 믿어 주셨어요.",
+    "en": "My parents trusted me.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어머니께서 보내 주신 김치가 도착했다.",
+    "en": "The kimchi that my mother sent has arrived.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이",
+    "difference": "“이/가” is neutral; “께서” adds respect. Both go with the honorific verb.",
+    "pair": [
+     {
+      "ko": "할머니가 오셨어요.",
+      "en": "Grandmother came."
+     },
+     {
+      "ko": "할머니께서 오셨어요.",
+      "en": "Grandmother came."
+     }
+    ]
+   },
+   {
+    "pattern": "께",
+    "difference": "“께서” marks who does it; “께” marks who receives it.",
+    "pair": [
+     {
+      "ko": "선생님께서 주셨다.",
+      "en": "The teacher gave it."
+     },
+     {
+      "ko": "선생님께 드렸다.",
+      "en": "I gave it to the teacher."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The verb also needs the honorific “-시-”.",
+    "wrong": "선생님께서 왔어요.",
+    "right": "선생님께서 오셨어요.",
+    "en": "The teacher came."
+   },
+   {
+    "note": "“께서” is only for a person to honour.",
+    "wrong": "동생께서 왔다.",
+    "right": "동생이 왔다.",
+    "en": "My younger sibling came."
+   }
+  ],
+  "topik_tip": "Honorific subjects bring a set: “께서”, “-시-”, and the special verbs (“계시다, 드시다, 주무시다”).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "은1",
+  "level": 1,
+  "label": "topic or contrast",
+  "meaning_en": "The topic particle “은/는”: it presents the thing the sentence is about (“as for X”), marks what is already known or generic, and sets a thing against others (contrast). In the curriculum list this row is the contrast use.",
+  "usage": "After a consonant it is “은”, after a vowel “는”: “책은, 저는”. Topic: “서울은 한국의 수도입니다”. Known information: a thing mentioned before takes “은/는” (“영화를 봤어요. 영화는 재미있었어요”). Contrast: “커피는 마시지만 차는 안 마셔요”. Negatives and “에는/에서는/까지는” often carry it (“주말에는”). Compare the focus of “이/가”. In questions the topic is the item being asked about (“이름은 뭐예요?”).",
+  "examples": [
+   {
+    "ko": "저는 커피는 마시지만 차는 안 마셔요.",
+    "en": "I drink coffee, but I do not drink tea.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울은 한국의 수도입니다.",
+    "en": "Seoul is the capital of Korea.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "어제 영화를 봤어요. 영화는 아주 재미있었어요.",
+    "en": "I watched a movie yesterday. The movie was very fun.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국어는 어렵지만 재미있어요.",
+    "en": "Korean is hard, but fun.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "주말에는 보통 집에서 쉬어요.",
+    "en": "On weekends I usually rest at home.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이",
+    "difference": "“은/는” is the topic or contrast; “이/가” is the focused subject.",
+    "pair": [
+     {
+      "ko": "지수는 왔어요.",
+      "en": "As for Jisu, they came."
+     },
+     {
+      "ko": "지수가 왔어요.",
+      "en": "It was Jisu who came."
+     }
+    ]
+   },
+   {
+    "pattern": "도",
+    "difference": "“은/는” singles one thing out; “도” adds another to what was already named.",
+    "pair": [
+     {
+      "ko": "커피는 마셔요.",
+      "en": "As for coffee, I drink it."
+     },
+     {
+      "ko": "커피도 마셔요.",
+      "en": "I drink coffee as well."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A question word asking for identity takes “이/가”, not “은/는”.",
+    "wrong": "누구는 왔어요?",
+    "right": "누가 왔어요?",
+    "en": "Who came?"
+   },
+   {
+    "note": "“나” becomes “내/제” only before “가”; before “는” it stays “나/저”.",
+    "wrong": "내는 학생이에요.",
+    "right": "나는 학생이에요.",
+    "en": "I am a student."
+   }
+  ],
+  "topik_tip": "The contrast reading (“A, but B”) is shown by the repeated “은/는” in the two halves.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "도",
+  "level": 1,
+  "label": "also, even, either",
+  "meaning_en": "A particle meaning “too, also”, “even”, and, with a negative, “not even ... / not any ...”. It adds one more item to something already named.",
+  "usage": "It attaches to a noun and replaces “이/가/을/를” (“저도 갔어요”), or follows other particles (“에도, 에서도, 한테도, 까지도”). Repeated, “N도 N도” means “both ... and ...”. With a question word and a negative it means “none” (“아무도, 아무것도, 어디에도, 하나도”). With a counter it stresses a small amount: “한 명도 안 왔다”. “도” can also mean “even” (“점심도 못 먹었어요”).",
+  "examples": [
+   {
+    "ko": "저도 같이 갈게요.",
+    "en": "I will come along too.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 바빠서 점심도 못 먹었어요.",
+    "en": "I was so busy today that I could not even eat lunch.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 가게는 가격도 싸고 맛도 좋아요.",
+    "en": "This shop's prices are low, and the food is good too.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "집에 아무도 없어요.",
+    "en": "There is no one at home.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 영어도 잘하고 일본어도 잘한다.",
+    "en": "Jisu is good at English and at Japanese.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "만",
+    "difference": "“도” adds (“too”); “만” limits (“only”).",
+    "pair": [
+     {
+      "ko": "저도 갔어요.",
+      "en": "I went too."
+     },
+     {
+      "ko": "저만 갔어요.",
+      "en": "Only I went."
+     }
+    ]
+   },
+   {
+    "pattern": "은",
+    "difference": "“은/는” sets one thing against others; “도” says it is included as well.",
+    "pair": [
+     {
+      "ko": "커피는 마셔요.",
+      "en": "As for coffee, I drink it."
+     },
+     {
+      "ko": "커피도 마셔요.",
+      "en": "I drink coffee as well."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It replaces “이/가/을/를”; it does not stack on them.",
+    "wrong": "저도가 갔어요.",
+    "right": "저도 갔어요.",
+    "en": "I went too."
+   },
+   {
+    "note": "“아무도” needs a negative predicate.",
+    "wrong": "집에 아무도 있어요.",
+    "right": "집에 아무도 없어요.",
+    "en": "There is no one at home."
+   }
+  ],
+  "topik_tip": "“도” plus a negative verb (“아무도 안/못 ...”) is the “nobody/nothing” frame.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "을1",
+  "level": 1,
+  "label": "object marker",
+  "meaning_en": "The object particle “을/를”: it marks what the action is done to: “책을 읽다, 커피를 마시다”. It also marks the place passed through or left (“길을 건너다, 학교를 졸업하다”) and verbal nouns before “하다” (“공부를 하다”).",
+  "usage": "After a consonant it is “을”, after a vowel “를”: “밥을, 커피를”. In speech it is often dropped (“밥 먹었어?”) or contracted (“나를 → 날”, “저를 → 절”). With “좋아하다, 싫어하다, 사랑하다” the object takes “을/를”, while with the adjectives “좋다, 싫다, 필요하다” the thing takes “이/가”. For “되다” and “아니다” the complement takes “이/가”. After motion verbs, “을/를” marks a path or a place left (“길을 건너다”, “집을 나서다”) and sometimes the destination in speech (“학교를 가다”), though “에” is the standard marker for a destination.",
+  "examples": [
+   {
+    "ko": "저는 매일 아침 커피를 마셔요.",
+    "en": "I drink coffee every morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수가 노래를 불렀어요.",
+    "en": "Jisu sang a song.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "횡단보도를 건널 때는 조심하세요.",
+    "en": "Be careful when you cross the crosswalk.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "한국어를 공부하고 있어요.",
+    "en": "I am studying Korean.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제 친구를 만났어요.",
+    "en": "I met a friend yesterday.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이",
+    "difference": "“을/를” marks the object of an action; “이/가” marks the subject or the thing described by an adjective.",
+    "pair": [
+     {
+      "ko": "사과를 먹었어요.",
+      "en": "I ate an apple."
+     },
+     {
+      "ko": "사과가 맛있어요.",
+      "en": "The apple is delicious."
+     }
+    ]
+   },
+   {
+    "pattern": "은",
+    "difference": "“책을 읽었어요” is a plain statement; “책은 읽었어요” sets the book against other things.",
+    "pair": [
+     {
+      "ko": "책을 읽었어요.",
+      "en": "I read a book."
+     },
+     {
+      "ko": "책은 읽었어요.",
+      "en": "As for the book, I read it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The thing wanted or liked as an adjective takes “이/가”; with the verb “좋아하다” it takes “을/를”.",
+    "wrong": "저는 커피를 좋아요.",
+    "right": "저는 커피를 좋아해요.",
+    "en": "I like coffee."
+   },
+   {
+    "note": "The complement of “되다” takes “이/가”.",
+    "wrong": "저는 의사를 되었어요.",
+    "right": "저는 의사가 되었어요.",
+    "en": "I became a doctor."
+   }
+  ],
+  "topik_tip": "“좋아하다” takes “을/를” and “좋다” takes “이/가”: this pair is a classic.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이랑",
+  "level": 1,
+  "label": "with, and (spoken)",
+  "meaning_en": "A spoken particle for “with” and “and”: “친구랑 영화를 봤어요” (with a friend), “사과랑 배” (apples and pears). It is the casual counterpart of “과/와” and “하고”.",
+  "usage": "After a consonant it is “이랑”, after a vowel “랑”: “동생이랑, 친구랑, 나랑”. It marks a partner (“나랑 같이 갈래?”), a list (“김밥이랑 라면을 먹었어요”), and a comparison (“이것이랑 같아요”). It is casual speech; in writing or in a formal talk “과/와” or “하고” is used. For listing, the last noun may carry “랑” too (“사과랑 배랑 포도랑”).",
+  "examples": [
+   {
+    "ko": "어제 친구랑 영화 봤어.",
+    "en": "I watched a movie with a friend yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나는 사과랑 배를 좋아해.",
+    "en": "I like apples and pears.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생이랑 같이 학교에 가요.",
+    "en": "I go to school with my younger sibling.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "점심에 김밥이랑 라면을 먹었어요.",
+    "en": "For lunch I ate gimbap and ramen.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나랑 같이 갈래?",
+    "en": "Do you want to go with me?",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "하고",
+    "difference": "“이랑” and “하고” are close in speech. “하고” is the more neutral of the two and does not change after a vowel or consonant.",
+    "pair": [
+     {
+      "ko": "친구랑 갔어요.",
+      "en": "I went with a friend."
+     },
+     {
+      "ko": "친구하고 갔어요.",
+      "en": "I went with a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "과",
+    "difference": "“과/와” is the written form. It sounds stiff in casual talk.",
+    "pair": [
+     {
+      "ko": "친구와 함께 갔습니다.",
+      "en": "I went together with a friend."
+     },
+     {
+      "ko": "친구랑 같이 갔어요.",
+      "en": "I went together with a friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel it is “랑”, not “이랑”.",
+    "wrong": "친구이랑 갔어요.",
+    "right": "친구랑 갔어요.",
+    "en": "I went with a friend."
+   },
+   {
+    "note": "It is a spoken form; a formal report uses “과/와”.",
+    "wrong": "오늘은 한국이랑 일본의 경제를 발표하겠습니다.",
+    "right": "오늘은 한국과 일본의 경제를 발표하겠습니다.",
+    "en": "Today I will present on the economies of Korea and Japan."
+   }
+  ],
+  "topik_tip": "The three “with/and” particles: “과/와” (written), “하고” (neutral), “이랑/랑” (casual).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "으로",
+  "level": 1,
+  "label": "direction, means, role",
+  "meaning_en": "A particle with several related jobs: direction (“학교로 가다”), means or tool (“지하철로 가다, 펜으로 쓰다, 한국어로 말하다”), material (“나무로 만들다”), role or status (“의사로 일하다”), and cause (“병으로 쉬다”).",
+  "usage": "After a consonant it is “으로”, after a vowel or ㄹ it is “로”: “집으로, 손으로, 학교로, 서울로, 연필로, 지하철로”. Direction: movement toward, not necessarily arriving. Means: a vehicle, tool or language. Material: what something is made from. Role: “으로 일하다, 으로 지내다”. In “으로 정하다/결정하다” it marks the thing chosen.",
+  "examples": [
+   {
+    "ko": "저는 매일 지하철로 출근해요.",
+    "en": "I commute by subway every day.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 케이크는 쌀가루로 만들었어요.",
+    "en": "This cake is made with rice flour.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "수업은 한국어로 진행됩니다.",
+    "en": "The class is conducted in Korean.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "지금 집으로 가는 길이에요.",
+    "en": "I am on my way home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 의사로 일하고 있다.",
+    "en": "Jisu works as a doctor.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에",
+    "difference": "“에” names the goal where one arrives; “(으)로” names the direction one heads in.",
+    "pair": [
+     {
+      "ko": "학교에 가요.",
+      "en": "I go to school."
+     },
+     {
+      "ko": "학교로 가요.",
+      "en": "I am heading toward school."
+     }
+    ]
+   },
+   {
+    "pattern": "에서",
+    "difference": "“에서” marks where one comes from (or where an action takes place); “로” marks where one goes.",
+    "pair": [
+     {
+      "ko": "서울에서 왔어요.",
+      "en": "I came from Seoul."
+     },
+     {
+      "ko": "서울로 왔어요.",
+      "en": "I came to Seoul."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A noun ending in ㄹ takes “로”.",
+    "wrong": "연필으로 쓰세요.",
+    "right": "연필로 쓰세요.",
+    "en": "Please write with a pencil."
+   },
+   {
+    "note": "After a consonant other than ㄹ it is “으로”.",
+    "wrong": "집로 가요.",
+    "right": "집으로 가요.",
+    "en": "I am going home."
+   }
+  ],
+  "topik_tip": "Pick “으로” or “로” by the last sound of the noun: ㄹ and vowels give “로”, other consonants give “으로”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "부터",
+  "level": 1,
+  "label": "from (start of time or order)",
+  "meaning_en": "A particle for a starting point: “from, starting at”, in time (“아홉 시부터”), in order (“밥부터 먹다”), and in a range with “까지”. It also marks what comes first: “먼저 ... 부터”.",
+  "usage": "It attaches to nouns of time, number or order: “아침부터, 월요일부터, 처음부터, 어디부터”. “N부터 N까지” expresses a range. With the verb “시작하다” it names when something starts. For a place of origin the standard particle is “에서” (“서울에서 왔어요”). In “밥부터 먹자” it means “let's start with eating”, and “부터” can be followed by “는” (“오늘부터는”).",
+  "examples": [
+   {
+    "ko": "수업은 아홉 시부터 시작해요.",
+    "en": "Class starts at nine.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일부터 매일 운동할 거예요.",
+    "en": "From tomorrow I will exercise every day.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "월요일부터 금요일까지 학교에 가요.",
+    "en": "I go to school from Monday to Friday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일단 밥부터 먹고 이야기합시다.",
+    "en": "Let's eat first and then talk.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어디부터 같이 읽을까요?",
+    "en": "Where shall we start reading together?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에서",
+    "difference": "“부터” is a start in time or order; “에서” is a start in place.",
+    "pair": [
+     {
+      "ko": "아침부터 걸었다.",
+      "en": "I have been walking since morning."
+     },
+     {
+      "ko": "집에서 걸어왔다.",
+      "en": "I walked here from home."
+     }
+    ]
+   },
+   {
+    "pattern": "에",
+    "difference": "“에” puts something at one point in time; “부터” gives the point from which it continues.",
+    "pair": [
+     {
+      "ko": "아홉 시에 시작해요.",
+      "en": "It starts at nine."
+     },
+     {
+      "ko": "아홉 시부터 시작해요.",
+      "en": "It starts from nine on."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A place of origin takes “에서”.",
+    "wrong": "서울부터 왔어요.",
+    "right": "서울에서 왔어요.",
+    "en": "I came from Seoul."
+   },
+   {
+    "note": "It is attached directly, with no “에” in front.",
+    "wrong": "오늘에부터 운동할 거예요.",
+    "right": "오늘부터 운동할 거예요.",
+    "en": "From today I will exercise."
+   }
+  ],
+  "topik_tip": "The frame “N부터 N까지” (from ... to ...) is among the first patterns tested.",
+  "review": {
+   "status": "draft"
+  }
+ }
+]
