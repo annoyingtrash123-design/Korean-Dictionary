@@ -2408,5 +2408,819 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-기로 하다",
+  "level": 2,
+  "label": "decide to, agree to",
+  "meaning_en": "An expression for a decision or an agreement about a future action: “decide to X, resolve to X, agree to X”. It is used both for one's own resolution and for what two or more people have settled on.",
+  "usage": "It attaches to verb stems and is followed by a verb of deciding, mostly “하다” in the past (“-기로 했다”); “-기로 약속했다/결심했다/마음먹었다” are variations. The plan can be about oneself (“운동하기로 했다”) or a joint arrangement (“내일 만나기로 했다”). A ㄹ-stem keeps its ㄹ (“만들다 → 만들기로”). The negative is “-지 않기로 하다”.",
+  "examples": [
+   {
+    "ko": "올해부터는 매일 운동하기로 했어요.",
+    "en": "I decided to exercise every day from this year.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리는 내일 아침 아홉 시에 만나기로 하고 헤어졌다.",
+    "en": "We agreed to meet at nine tomorrow morning and parted.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구와 같이 제주도로 여행을 가기로 약속했다.",
+    "en": "I promised my friend that we would go on a trip to Jeju Island together.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "앞으로는 늦지 않기로 결심했다.",
+    "en": "I resolved not to be late from now on.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이번 주말에는 가족과 함께 시간을 보내기로 하였다.",
+    "en": "I decided to spend this weekend with my family.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-게 되다",
+    "difference": "“-기로 하다” is a decision someone made; “-게 되다” is how things came out.",
+    "pair": [
+     {
+      "ko": "한국에 가기로 했다.",
+      "en": "I decided to go to Korea."
+     },
+     {
+      "ko": "한국에 가게 됐다.",
+      "en": "I ended up going to Korea."
+     }
+    ]
+   },
+   {
+    "pattern": "-으려고 하다",
+    "difference": "“-으려고 하다” is an intention that is in progress or about to happen; “-기로 하다” is a settled decision or agreement.",
+    "pair": [
+     {
+      "ko": "내일 일찍 일어나려고 해요.",
+      "en": "I plan to get up early tomorrow."
+     },
+     {
+      "ko": "내일 일찍 일어나기로 했어요.",
+      "en": "I have decided to get up early tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A modifier does not go before “로”: the stem takes “-기” directly.",
+    "wrong": "내일 가는 기로 했다.",
+    "right": "내일 가기로 했다.",
+    "en": "I decided to go tomorrow."
+   },
+   {
+    "note": "A ㄹ-stem keeps its ㄹ before “-기”.",
+    "wrong": "내가 음식을 만드기로 했다.",
+    "right": "내가 음식을 만들기로 했다.",
+    "en": "I decided to make the food."
+   }
+  ],
+  "topik_tip": "Choose “-기로 하다” for a decision or agreement, and “-게 되다” for an outcome that was not chosen.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 것 같다",
+  "level": 2,
+  "label": "it seems; I think",
+  "meaning_en": "An expression for a guess or a softened opinion: “it seems that, it looks like, I think”. It is based on what the speaker sees, hears or feels, and it also makes an opinion or a feeling less direct (“이게 더 좋은 것 같아요”).",
+  "usage": "The modifier shows the time: present verb “-는 것 같다” (“오는”), past verb “-ㄴ/은 것 같다” (“온”), future or supposition “-ㄹ/을 것 같다” (“올”), adjective “-ㄴ/은 것 같다” (“피곤한”), “이다” “-ㄴ 것 같다”, and the recalled past “-었던 것 같다”. A ㄹ-stem drops the ㄹ before “-는/-ㄴ”: “살다 → 사는, 산”. It can be about oneself (“배가 고픈 것 같아요”) or others. The polite form is “-는 것 같아요”.",
+  "examples": [
+   {
+    "ko": "밖에 비가 오는 것 같아요.",
+    "en": "It seems to be raining outside.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 어제 잠을 못 잔 것 같아요.",
+    "en": "Minjun seems not to have slept well yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일은 날씨가 추울 것 같아요.",
+    "en": "It looks like it will be cold tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 이 색깔이 더 좋은 것 같아요.",
+    "en": "I think I like this color better.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "열이 나는 것 같아서 병원에 갔다.",
+    "en": "It seemed that I had a fever, so I went to the hospital.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것이다",
+    "difference": "“-을 것 같다” is a hedge: it looks like. “-을 것이다” states a firmer prediction or intention.",
+    "pair": [
+     {
+      "ko": "비가 올 것 같아요.",
+      "en": "It looks like it will rain."
+     },
+     {
+      "ko": "비가 올 거예요.",
+      "en": "It will rain."
+     }
+    ]
+   },
+   {
+    "pattern": "-나 보다",
+    "difference": "Both guess from evidence. “-는 것 같다” also fits the speaker's own feelings and opinions.",
+    "pair": [
+     {
+      "ko": "민준이는 피곤한 것 같아요.",
+      "en": "Minjun seems to be tired."
+     },
+     {
+      "ko": "민준이는 피곤한가 봐요.",
+      "en": "Minjun seems to be tired."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The past modifier after a vowel is “-ㄴ”: “오다” becomes “온”.",
+    "wrong": "비가 오은 것 같아요.",
+    "right": "비가 온 것 같아요.",
+    "en": "It seems to have rained."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "서울에 살는 것 같아요.",
+    "right": "서울에 사는 것 같아요.",
+    "en": "They seem to live in Seoul."
+   }
+  ],
+  "topik_tip": "Modifier plus “것 같다”: present “-는”, past “-ㄴ”, future “-ㄹ”; adjectives “-ㄴ”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-은 지2",
+  "level": 2,
+  "label": "since, it has been (time elapsed)",
+  "meaning_en": "An expression for the time that has passed since an event: “it has been N since I X”. It is followed by a time word and “되다, 지나다, 넘다” or “오래되다”.",
+  "usage": "It attaches to verb stems with the past modifier: “오다 → 온 지”, “졸업하다 → 졸업한 지”, “먹다 → 먹은 지”, “만들다 → 만든 지” (the ㄹ drops). “지” is a separate word, written with a space. The frame is “-ㄴ 지 + time + 되다/지나다”; “-ㄴ 지 얼마 안 되다” means “it has not been long since”. It is not used with adjectives. Do not mix it up with the question ending “-는지” (whether).",
+  "examples": [
+   {
+    "ko": "한국에 온 지 삼 년이 되었다.",
+    "en": "It has been three years since I came to Korea.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "대학교를 졸업한 지 얼마 안 됐어요.",
+    "en": "It has not been long since I graduated from university.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 친구와 연락한 지 오래되었다.",
+    "en": "It has been a long time since I was in touch with that friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 집에 이사 온 지 벌써 십 년이 넘었다.",
+    "en": "It has already been over ten years since we moved into this house.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밥을 먹은 지 한 시간밖에 안 지났는데 배가 고파요.",
+    "en": "Only an hour has passed since I ate, but I am hungry.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 후에",
+    "difference": "“-은 후에” says what comes after in order. “-은 지” counts the time that has gone by since.",
+    "pair": [
+     {
+      "ko": "한국에 온 후에 한국어를 배웠다.",
+      "en": "After coming to Korea, I learned Korean."
+     },
+     {
+      "ko": "한국에 온 지 삼 년이 되었다.",
+      "en": "It has been three years since I came to Korea."
+     }
+    ]
+   },
+   {
+    "pattern": "-는지",
+    "difference": "“-ㄴ 지” (with a space) counts time; “-는지” (attached) is “whether”.",
+    "pair": [
+     {
+      "ko": "그가 왔는지 모르겠다.",
+      "en": "I do not know whether they came."
+     },
+     {
+      "ko": "그가 온 지 오래되었다.",
+      "en": "It has been a long time since they came."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The modifier is the past one: “온 지”.",
+    "wrong": "한국에 오는 지 삼 년이 되었다.",
+    "right": "한국에 온 지 삼 년이 되었다.",
+    "en": "It has been three years since I came to Korea."
+   },
+   {
+    "note": "“지” is a separate word: write a space.",
+    "wrong": "한국에 온지 삼 년이 되었다.",
+    "right": "한국에 온 지 삼 년이 되었다.",
+    "en": "It has been three years since I came to Korea."
+   }
+  ],
+  "topik_tip": "The spacing contrast “온 지” (since) versus “왔는지” (whether) is a known writing-test point.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 것",
+  "level": 2,
+  "label": "making a noun clause with “것”",
+  "meaning_en": "An expression that turns a verb or adjective phrase into a noun clause: “doing X, X-ing, that which is X”. It lets a whole action stand as a subject, an object or a complement.",
+  "usage": "Verbs take “-는 것” (present), “-ㄴ/은 것” (past), “-ㄹ/을 것” (future); adjectives take “-ㄴ/은 것”: “읽다 → 읽는 것”, “예쁘다 → 예쁜 것”, “만들다 → 만드는 것”, “살다 → 사는 것”. The noun clause takes particles (“듣는 것을 좋아하다”, “운동하는 것이 좋다”). It also forms the explaining frame “-는 것이다” (“중요한 것은 ...-는 것이다”). In speech “것” becomes “거” (“먹는 거”). The related “-기” is the shorter form used in fixed frames.",
+  "examples": [
+   {
+    "ko": "나는 한국 노래를 듣는 것을 좋아한다.",
+    "en": "I like listening to Korean songs.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "매일 운동하는 것이 건강에 좋다.",
+    "en": "Exercising every day is good for health.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아는 것이 힘이다.",
+    "en": "Knowledge is power.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "어려운 것은 선생님께 질문하세요.",
+    "en": "Ask the teacher about what is difficult.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "중요한 것은 포기하지 않는 것이다.",
+    "en": "What matters is not giving up.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-기",
+    "difference": "“-는 것” is the free noun clause. “-기” is shorter and fixed in frames like “-기 쉽다”.",
+    "pair": [
+     {
+      "ko": "달리는 것을 좋아한다.",
+      "en": "I like running."
+     },
+     {
+      "ko": "달리기를 좋아한다.",
+      "en": "I like running."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 거",
+    "difference": "“거” is the spoken contraction of “것”; the meaning is the same.",
+    "pair": [
+     {
+      "ko": "먹는 것을 좋아해요.",
+      "en": "I like eating."
+     },
+     {
+      "ko": "먹는 거 좋아해요.",
+      "en": "I like eating."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은 것”, not “-는 것”.",
+    "wrong": "예쁘는 것을 샀다.",
+    "right": "예쁜 것을 샀다.",
+    "en": "I bought a pretty one."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "음식을 만들는 것이 재미있다.",
+    "right": "음식을 만드는 것이 재미있다.",
+    "en": "Making food is fun."
+   }
+  ],
+  "topik_tip": "The same modifier choice as the adnominal endings: present “-는”, past “-ㄴ”, future “-ㄹ”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 동안에",
+  "level": 2,
+  "label": "while, during",
+  "meaning_en": "An expression for a stretch of time: “while X is going on, during X”. The main clause happens within or alongside that period. The “에” is optional: “-는 동안”.",
+  "usage": "Verbs take “-는 동안(에)” (“요리하다 → 요리하는 동안”, “살다 → 사는 동안”); adjectives take “-ㄴ/은 동안”; a noun of time takes “N 동안” (“방학 동안”, “두 시간 동안”). The subjects of the two clauses can be different. It stresses the whole duration, unlike “-을 때”, which points to the time when something happens. “동안” is a separate word.",
+  "examples": [
+   {
+    "ko": "내가 요리하는 동안에 동생은 청소를 했다.",
+    "en": "While I cooked, my younger sibling cleaned.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국에 사는 동안 많은 친구를 사귀었다.",
+    "en": "While living in Korea, I made many friends.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 오는 동안에는 밖에 나갈 수 없었다.",
+    "en": "While it was raining, we could not go outside.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "방학 동안 아르바이트를 했다.",
+    "en": "During the vacation I did a part-time job.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어머니가 잠깐 자리를 비우는 동안에 아이가 울기 시작했다.",
+    "en": "While the mother was away for a moment, the child began to cry.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면서",
+    "difference": "“-으면서” joins two actions of the same subject. “-는 동안” also allows different subjects.",
+    "pair": [
+     {
+      "ko": "요리하면서 텔레비전을 봤다.",
+      "en": "I watched television while cooking."
+     },
+     {
+      "ko": "내가 요리하는 동안 동생은 청소했다.",
+      "en": "While I cooked, my younger sibling cleaned."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 때",
+    "difference": "“-을 때” points to a time when something happens; “-는 동안” covers the whole stretch.",
+    "pair": [
+     {
+      "ko": "집에 있을 때 전화가 왔다.",
+      "en": "A call came when I was at home."
+     },
+     {
+      "ko": "집에 있는 동안 전화가 세 번 왔다.",
+      "en": "Three calls came while I was at home."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "한국에 살는 동안 친구를 많이 사귀었다.",
+    "right": "한국에 사는 동안 친구를 많이 사귀었다.",
+    "en": "While living in Korea, I made many friends."
+   },
+   {
+    "note": "“동안” is a separate word, written with a space.",
+    "wrong": "방학동안 아르바이트를 했다.",
+    "right": "방학 동안 아르바이트를 했다.",
+    "en": "During the vacation I did a part-time job."
+   }
+  ],
+  "topik_tip": "“N 동안” (a period) and “-는 동안” (while doing) are the two shapes; “-는 동안” with a verb is spaced.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-은 적이 있다",
+  "level": 2,
+  "label": "have done (experience)",
+  "meaning_en": "An expression for experience: “have done X before, there was a time when I X-ed”. The negative “-ㄴ 적이 없다” says one has never done it.",
+  "usage": "It attaches to verb stems with the past modifier: “가다 → 간 적이 있다”, “먹다 → 먹은 적이 있다”, “하다 → 한 적이 있다”, “만들다 → 만든 적이 있다” (the ㄹ drops). It is common with “-어 보다”: “가 본 적이 있다” (have been to). It is for experiences at some unspecified time, not for an event at a given time. A past version is “-ㄴ 적이 있었다”. The question “-ㄴ 적이 있어요?” asks whether one has ever done it.",
+  "examples": [
+   {
+    "ko": "저는 제주도에 가 본 적이 있어요.",
+    "en": "I have been to Jeju Island.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "한국 음식을 먹은 적이 있어요?",
+    "en": "Have you ever eaten Korean food?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 영화를 본 적이 없어서 내용을 몰라요.",
+    "en": "I have never seen that movie, so I do not know the story.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어렸을 때 병원에 입원한 적이 있다.",
+    "en": "When I was little, I was hospitalized once.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람과 이야기해 본 적은 없지만 이름은 알아요.",
+    "en": "I have never talked with that person, but I know the name.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-었었-",
+    "difference": "“-었었-” marks a past situation that is over. “-은 적이 있다” says that one has experienced it, at some time.",
+    "pair": [
+     {
+      "ko": "제주도에 갔었어요.",
+      "en": "I went to Jeju Island."
+     },
+     {
+      "ko": "제주도에 간 적이 있어요.",
+      "en": "I have been to Jeju Island."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 보다",
+    "difference": "“가 봤어요” says one tried or went; “가 본 적이 있어요” stresses having the experience.",
+    "pair": [
+     {
+      "ko": "제주도에 가 봤어요.",
+      "en": "I have been to Jeju Island."
+     },
+     {
+      "ko": "제주도에 가 본 적이 있어요.",
+      "en": "I have had the experience of going to Jeju Island."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The modifier is past: “간 적”.",
+    "wrong": "서울에 가는 적이 있어요.",
+    "right": "서울에 간 적이 있어요.",
+    "en": "I have been to Seoul."
+   },
+   {
+    "note": "It is for experience at some time, not an event at a stated time.",
+    "wrong": "어제 서울에 간 적이 있어요.",
+    "right": "서울에 간 적이 있어요.",
+    "en": "I have been to Seoul."
+   }
+  ],
+  "topik_tip": "Experience frames: “-ㄴ 적이 있다/없다”, often with “-어 보다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 것1",
+  "level": 2,
+  "label": "do (written order)",
+  "meaning_en": "A sentence-final form that gives a firm instruction or order in notices, rules and memos: “Do X”. It is impersonal and brief and has no politeness marker.",
+  "usage": "It attaches to verb stems: after a vowel or ㄹ it is “-ㄹ 것”, after other consonants “-을 것”. “끄다 → 끌 것”, “놓다 → 놓을 것”, “제출하다 → 제출할 것”, “만들다 → 만들 것”. The negative instruction is “-지 말 것”. It appears in classroom rules, signs, forms and written notes,. The polite ways to ask are “-세요” or “-어 주세요”. Do not confuse it with “-을 것이다” (future).",
+  "examples": [
+   {
+    "ko": "수업 시간에는 휴대전화를 끌 것.",
+    "en": "Turn off mobile phones during class.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "사용한 물건은 제자리에 놓을 것.",
+    "en": "Put used items back in place.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "내일까지 보고서를 제출할 것.",
+    "en": "Submit the report by tomorrow.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "복도에서는 뛰지 말 것.",
+    "en": "Do not run in the corridor.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "시험 중에는 책을 보지 말고 조용히 할 것.",
+    "en": "During the exam, do not look at books and keep quiet.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으세요",
+    "difference": "“-으세요” is the polite spoken request. “-을 것” is a terse written order with no politeness.",
+    "pair": [
+     {
+      "ko": "내일까지 제출하세요.",
+      "en": "Please submit it by tomorrow."
+     },
+     {
+      "ko": "내일까지 제출할 것.",
+      "en": "Submit it by tomorrow."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 것이다",
+    "difference": "The same shape with “이다” is a statement about the future; the bare “-을 것” is an order.",
+    "pair": [
+     {
+      "ko": "내일까지 제출할 것이다.",
+      "en": "I will submit it by tomorrow."
+     },
+     {
+      "ko": "내일까지 제출할 것.",
+      "en": "Submit it by tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem merges with “-ㄹ”.",
+    "wrong": "깃발을 만들을 것.",
+    "right": "깃발을 만들 것.",
+    "en": "Make a flag."
+   }
+  ],
+  "topik_tip": "The order “-을 것” appears on signs and in rules; the negative is “-지 말 것”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 때",
+  "level": 2,
+  "label": "when, at the time of",
+  "meaning_en": "An expression for the time at which something happens: “when X, at the time of X”. It covers a moment, a period and a habit.",
+  "usage": "After a vowel or ㄹ it is “-ㄹ 때”, after other consonants “-을 때”; it attaches to verbs, adjectives and “이다”: “가다 → 갈 때”, “먹다 → 먹을 때”, “살다 → 살 때”, “어리다 → 어릴 때”, “학생이다 → 학생일 때”. A past stem makes the earlier event complete: “-었을 때”. The tense of “-ㄹ 때” is relative: “갈 때” means on the way or about to go, “갔을 때” means after getting there. “때” is a separate word; “N 때” is also used (“방학 때, 학생 때”).",
+  "examples": [
+   {
+    "ko": "어릴 때 시골에서 살았어요.",
+    "en": "I lived in the countryside when I was little.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밥을 먹을 때 텔레비전을 보지 마세요.",
+    "en": "Do not watch television when you eat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국에 갔을 때 친구를 만났어요.",
+    "en": "When I went to Korea, I met a friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시간이 있을 때 전화해 주세요.",
+    "en": "Please call when you have time.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "피곤할 때는 일찍 자는 게 좋다.",
+    "en": "When you are tired, it is good to sleep early.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-었을 때",
+    "difference": "“-ㄹ 때” is the time during or before the action; “-었을 때” is the time after it has been done.",
+    "pair": [
+     {
+      "ko": "서울에 갈 때 가방을 샀다.",
+      "en": "I bought a bag when I was going to Seoul."
+     },
+     {
+      "ko": "서울에 갔을 때 가방을 샀다.",
+      "en": "I bought a bag when I was in Seoul."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면",
+    "difference": "“-을 때” points to a time; “-으면” sets a condition (“once, if”).",
+    "pair": [
+     {
+      "ko": "집에 갈 때 전화할게.",
+      "en": "I will call when I am going home."
+     },
+     {
+      "ko": "집에 가면 전화할게.",
+      "en": "I will call once I get home."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem merges with “-ㄹ”.",
+    "wrong": "친구와 놀을 때 즐겁다.",
+    "right": "친구와 놀 때 즐겁다.",
+    "en": "It is fun when I hang out with friends."
+   },
+   {
+    "note": "The future-type modifier is used for a time that has not finished: “먹을 때”.",
+    "wrong": "먹은 때 전화하지 마세요.",
+    "right": "먹을 때 전화하지 마세요.",
+    "en": "Do not call while I eat."
+   }
+  ],
+  "topik_tip": "Pairs like “갈 때 / 갔을 때” (before arriving / after arriving) are a regular exam point.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을까 보다",
+  "level": 2,
+  "label": "I might (thinking of doing)",
+  "meaning_en": "An expression for a tentative thought of doing something: “I am thinking I might X, maybe I will X”. It is the speaker's half-formed intention, said to themselves or to a listener.",
+  "usage": "It attaches to verb stems: after a vowel or ㄹ it is “-ㄹ까 보다”, after other consonants “-을까 보다”; the polite form is “-ㄹ까 봐요”. The subject is the speaker, and the idea is often a casual or spur-of-the-moment plan (“영화나 볼까 봐요”). Do not mix it up with “-ㄹ까 봐” (afraid that) which is a worry: “비가 올까 봐 우산을 가져왔다”. The stem is a verb of intended action.",
+  "examples": [
+   {
+    "ko": "오늘은 일찍 집에 갈까 보다.",
+    "en": "I am thinking I might go home early today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "날씨도 좋은데 산책이나 할까 봐요.",
+    "en": "The weather is nice, so I might take a walk or something.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너무 피곤해서 회사를 그만둘까 보다.",
+    "en": "I am so tired that I am thinking of quitting my job.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다음 달에는 이사를 갈까 보다.",
+    "en": "I am thinking I might move next month.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "주말에 영화나 한 편 볼까 보다.",
+    "en": "I might watch a movie or so this weekend.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을까 하다",
+    "difference": "“-ㄹ까 하다” (“갈까 해요”) is a near-synonym: a tentative plan. “-ㄹ까 보다” sounds more like thinking aloud.",
+    "pair": [
+     {
+      "ko": "오늘은 일찍 갈까 해요.",
+      "en": "I am thinking of going early today."
+     },
+     {
+      "ko": "오늘은 일찍 갈까 봐요.",
+      "en": "I might go early today."
+     }
+    ]
+   },
+   {
+    "pattern": "-으려고 하다",
+    "difference": "“-으려고 하다” is a plan that is firmer; “-ㄹ까 보다” is still open.",
+    "pair": [
+     {
+      "ko": "이사를 가려고 해요.",
+      "en": "I intend to move."
+     },
+     {
+      "ko": "이사를 갈까 봐요.",
+      "en": "I might move."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The worry pattern is “-ㄹ까 봐” (afraid that); do not use “보다”.",
+    "wrong": "비가 올까 보다 우산을 가져왔다.",
+    "right": "비가 올까 봐 우산을 가져왔다.",
+    "en": "I brought an umbrella in case it rained."
+   },
+   {
+    "note": "The subject is the speaker: it is not a plan of a third person.",
+    "wrong": "너는 일찍 갈까 보다.",
+    "right": "나는 일찍 갈까 보다.",
+    "en": "I am thinking I might go early."
+   }
+  ],
+  "topik_tip": "“-ㄹ까 보다” (maybe I will) and “-ㄹ까 봐” (worried that) differ in the last syllable and in meaning.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 보다",
+  "level": 2,
+  "label": "try doing",
+  "meaning_en": "An expression for trying something out or having a go: “try X-ing, give X a try”. With “-ㄴ 적이 있다” it is experience; as “-어 보세요” it is a friendly suggestion.",
+  "usage": "It attaches to verb stems with “-아/어”: “먹다 → 먹어 보다”, “입다 → 입어 보다”, “가다 → 가 보다”, “듣다 → 들어 보다” (ㄷ-irregular), “돕다 → 도와 보다”. In speech the polite shape is “-어 보세요, -어 봤어요”. “한번” strengthens the tentative feel (“한번 해 보세요”). It does not mean “see” here: the helper “보다” only marks a trial. Another pattern, “-어 보이다”, means “looks”.",
+  "examples": [
+   {
+    "ko": "이 옷을 한번 입어 보세요.",
+    "en": "Please try this on.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "김치를 먹어 봤는데 생각보다 맵지 않았어요.",
+    "en": "I tried kimchi, and it was not as spicy as I thought.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모르면 선생님께 물어 보세요.",
+    "en": "If you do not know, try asking the teacher.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이번 주말에 한번 만나 보자.",
+    "en": "Let's try meeting up this weekend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "도서관에서 책을 찾아 보았지만 없었다.",
+    "en": "I tried looking for the book in the library, but it was not there.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 보이다",
+    "difference": "“-어 보다” is to try; “-어 보이다” is to look. The two sentences differ by one sound.",
+    "pair": [
+     {
+      "ko": "이 음식을 먹어 봐요.",
+      "en": "Try this food."
+     },
+     {
+      "ko": "이 음식은 맛있어 보여요.",
+      "en": "This food looks tasty."
+     }
+    ]
+   },
+   {
+    "pattern": "-은 적이 있다",
+    "difference": "“-어 봤다” says that one tried; “-어 본 적이 있다” says that one has had the experience.",
+    "pair": [
+     {
+      "ko": "김치를 먹어 봤어요.",
+      "en": "I tried kimchi."
+     },
+     {
+      "ko": "김치를 먹어 본 적이 있어요.",
+      "en": "I have eaten kimchi before."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before “-어”.",
+    "wrong": "이 노래를 한번 듣어 보세요.",
+    "right": "이 노래를 한번 들어 보세요.",
+    "en": "Please try listening to this song."
+   },
+   {
+    "note": "“-고 보다” has a different meaning (find out after doing).",
+    "wrong": "이 옷을 한번 입고 보세요.",
+    "right": "이 옷을 한번 입어 보세요.",
+    "en": "Please try this on."
+   }
+  ],
+  "topik_tip": "The helper “보다” here only means “try”; “-어 보세요” is the standard invitation.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
