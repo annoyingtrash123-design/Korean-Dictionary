@@ -1,1 +1,5254 @@
-[]
+[
+ {
+  "form": "같이",
+  "level": 3,
+  "label": "like, as (similarity)",
+  "meaning_en": "A particle that attaches to a noun and means “like N, as N is”. It makes a comparison of quality or manner, and in a few time-noun collocations it adds the sense of “without fail” or “very early”.",
+  "usage": "It attaches directly to a noun, without a space: “얼음같이 차갑다”. The predicate is usually an adjective or a verb that describes what the noun is like. Do not mix it up with the adverb “같이” (together), which follows “N와/과” and takes a space. Fixed collocations: “매일같이” (every single day), “새벽같이” (at the crack of dawn), “철석같이 믿다” (to trust unshakably).",
+  "examples": [
+   {
+    "ko": "그 사람은 천사같이 마음이 착하다.",
+    "en": "That person is as kind-hearted as an angel.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "네 손이 얼음같이 차가워서 깜짝 놀랐어.",
+    "en": "Your hands are as cold as ice, so I was startled.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 매일같이 도서관에 간다.",
+    "en": "Minjun goes to the library every single day.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 새벽같이 일어나 출근 준비를 했다.",
+    "en": "Jisu got up at the crack of dawn and got ready for work.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "꿈같이 지나간 여행이었다.",
+    "en": "The trip passed by like a dream.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "처럼",
+    "difference": "In similes “같이” and “처럼” are near-synonyms and can usually replace each other. The time-noun collocations (“매일같이”, “새벽같이”) are the set phrases of “같이”.",
+    "pair": [
+     {
+      "ko": "그 사람은 천사같이 착하다.",
+      "en": "That person is as kind as an angel."
+     },
+     {
+      "ko": "그 사람은 천사처럼 착하다.",
+      "en": "That person is as kind as an angel."
+     }
+    ]
+   },
+   {
+    "pattern": "함께",
+    "difference": "The adverb “같이” (together) is a different word from the particle: it follows “N와/과” and means “in company with”. The particle only compares.",
+    "pair": [
+     {
+      "ko": "친구같이 편한 선생님이에요.",
+      "en": "The teacher is as easy to be around as a friend."
+     },
+     {
+      "ko": "친구와 함께 영화를 봤어요.",
+      "en": "I watched a movie together with my friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Attached to a noun, it means “like”, not “together with”. For “together”, use “N와/과 같이”.",
+    "wrong": "친구같이 영화를 봤다.",
+    "right": "친구와 같이 영화를 봤다.",
+    "en": "I watched a movie together with my friend."
+   }
+  ],
+  "topik_tip": "The time-noun phrases “매일같이” and “새벽같이” are worth knowing as units: they are adverbs meaning “every single day” and “at the crack of dawn”, not similes.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이고",
+  "level": 3,
+  "label": "listing every item, “X and Y and all”",
+  "meaning_en": "A particle that is repeated on each noun in a list, “N이고 N이고 (다)”, and says that all of them are included: “be it A or B, all of it”. The sentence usually ends with a summing-up word such as “다” or “모두”.",
+  "usage": "After a noun ending in a consonant it is “이고” (“밥이고”, “서울이고”); after a vowel the “이” drops (“커피고”, “차고”). It goes on every item, including the last, and the main clause normally sums up with “다/모두/전부” or makes a sweeping statement. Typical collocations: “낮이고 밤이고” (day and night), “이고 저고” (this and that). It is a spoken, slightly emphatic way of listing.",
+  "examples": [
+   {
+    "ko": "밥이고 빵이고 다 맛있어 보인다.",
+    "en": "The rice, the bread, everything looks delicious.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 낮이고 밤이고 일만 했다.",
+    "en": "Minjun did nothing but work, day and night.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "서울이고 부산이고 주말에는 어디나 사람이 많다.",
+    "en": "Be it Seoul or Busan, there are crowds everywhere on weekends.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "요즘은 영화고 드라마고 볼 시간이 없어요.",
+    "en": "These days I have no time to watch movies, dramas, or anything.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국어는 문법이고 어휘고 하나도 쉬운 게 없다.",
+    "en": "In Korean, neither grammar nor vocabulary is easy at all.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이든",
+    "difference": "“N이고 N이고” lists the items and covers all of them. “N이든 N이든” says it makes no difference which one: any of them will do.",
+    "pair": [
+     {
+      "ko": "과일이고 채소고 다 잘 먹어요.",
+      "en": "I eat fruit, vegetables, everything well."
+     },
+     {
+      "ko": "과일이든 채소든 아무거나 주세요.",
+      "en": "Fruit or vegetables, give me whichever."
+     }
+    ]
+   },
+   {
+    "pattern": "하고",
+    "difference": "“하고” and “와/과” are the plain “and”. “이고” is not a plain “and”: it needs the repeated pattern and a sweeping main clause.",
+    "pair": [
+     {
+      "ko": "사과고 배고 다 샀어요.",
+      "en": "I bought apples, pears, the lot."
+     },
+     {
+      "ko": "사과하고 배를 샀어요.",
+      "en": "I bought apples and pears."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The particle goes on every item, including the last. With only the first item marked, the list breaks off.",
+    "wrong": "밥이고 빵 다 먹었어요.",
+    "right": "밥이고 빵이고 다 먹었어요.",
+    "en": "I ate the rice, the bread, all of it."
+   },
+   {
+    "note": "It is not a plain “and”. A simple list of two things takes “하고” or “와/과”.",
+    "wrong": "사과고 배를 샀어요.",
+    "right": "사과고 배고 다 샀어요.",
+    "en": "I bought apples, pears, the lot."
+   }
+  ],
+  "topik_tip": "Look for the pair “N이고 N이고” followed by “다/모두”. It reads as “all of them, no matter which”, similar in effect to “N이든 N이든 다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "대로",
+  "level": 3,
+  "label": "as, according to",
+  "meaning_en": "A particle meaning “as N, in line with N”: the action or state follows the noun exactly. It is also used with a noun to say that each thing goes its own way (“제멋대로”, “각자 마음대로”).",
+  "usage": "It attaches to a noun without a space: “계획대로”, “예상대로”, “약속대로”, “법대로”, “말씀대로”. After a verb or adjective modifier the same word is a dependent noun and is written with a space (“말한 대로”, “본 대로”). Common collocations: “예상대로” (as expected), “마음대로” (as one pleases), “순서대로” (in order).",
+  "examples": [
+   {
+    "ko": "모든 일이 계획대로 진행되었다.",
+    "en": "Everything went as planned.",
+    "ctx": "news"
+   },
+   {
+    "ko": "예상대로 결과가 좋지 않았다.",
+    "en": "As expected, the result was not good.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "약속대로 오늘 점심은 내가 살게.",
+    "en": "As promised, lunch is on me today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님 말씀대로 했더니 문제가 풀렸어요.",
+    "en": "I did as the teacher said, and the problem got solved.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "법대로 처리해 주십시오.",
+    "en": "Please handle it according to the law.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 대로",
+    "difference": "“말씀대로” (noun) and “말씀하신 대로” (verb form) mean the same. The first attaches to the noun, the second is a modifier plus a spaced word.",
+    "pair": [
+     {
+      "ko": "말씀대로 하겠습니다.",
+      "en": "I will do as you say."
+     },
+     {
+      "ko": "말씀하신 대로 하겠습니다.",
+      "en": "I will do as you said."
+     }
+    ]
+   },
+   {
+    "pattern": "에 따라",
+    "difference": "“법대로” is plain and direct. “법에 따라” is the more formal, document-like way of saying “in accordance with the law”.",
+    "pair": [
+     {
+      "ko": "법대로 처리하겠습니다.",
+      "en": "We will handle it according to the law."
+     },
+     {
+      "ko": "법에 따라 처리하겠습니다.",
+      "en": "We will handle it in accordance with the law."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb it is a separate word: write a space. Only after a noun is it attached.",
+    "wrong": "내가 말한대로 했다.",
+    "right": "내가 말한 대로 했다.",
+    "en": "I did as I said."
+   }
+  ],
+  "topik_tip": "Spacing is the usual test item: “N대로” is attached, but “-은/는 대로” after a verb or adjective is spaced.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "으로부터",
+  "level": 3,
+  "label": "from (a source or starting point)",
+  "meaning_en": "A formal particle marking the source or origin of something: the person or place something comes from, the one who sends, gives or causes it. It translates as “from”.",
+  "usage": "After a vowel or ㄹ it is “로부터” (“친구로부터”, “서울로부터”); after any other consonant it is “으로부터” (“집으로부터”, “사람으로부터”). It marks givers and senders (“받다, 듣다, 배우다”), sources (“들어오다”), and what one is freed or protected from (“벗어나다, 보호하다, 자유롭다”). It is written and formal; speech prefers “한테서/에게서” for people and “에서” for places.",
+  "examples": [
+   {
+    "ko": "어제 오랜 친구로부터 편지를 받았다.",
+    "en": "Yesterday I received a letter from an old friend.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 제도는 일본으로부터 들어온 것이다.",
+    "en": "This system was brought in from Japan.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "우리는 정부로부터 지원금을 받게 되었다.",
+    "en": "We came to receive subsidy money from the government.",
+    "ctx": "news"
+   },
+   {
+    "ko": "아이들을 위험으로부터 보호해야 한다.",
+    "en": "We must protect children from danger.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "학교는 역으로부터 걸어서 오 분 거리에 있다.",
+    "en": "The school is a five-minute walk from the station.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게서",
+    "difference": "For a person as the source, “에게서” is the everyday choice and “으로부터” the written, formal one. The meaning is the same.",
+    "pair": [
+     {
+      "ko": "친구로부터 선물을 받았다.",
+      "en": "I received a present from a friend."
+     },
+     {
+      "ko": "친구에게서 선물을 받았다.",
+      "en": "I received a present from a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "에서",
+    "difference": "For a place as a starting point, “에서” is the everyday particle; “으로부터” sounds more formal and is also used for time and distance.",
+    "pair": [
+     {
+      "ko": "역으로부터 오 분 거리에 있다.",
+      "en": "It is five minutes from the station."
+     },
+     {
+      "ko": "역에서 오 분 거리에 있다.",
+      "en": "It is five minutes from the station."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A noun ending in ㄹ takes “로부터”, never “으로부터”.",
+    "wrong": "서울으로부터 편지가 왔다.",
+    "right": "서울로부터 편지가 왔다.",
+    "en": "A letter came from Seoul."
+   },
+   {
+    "note": "It marks the source or giver, not the one who receives. The recipient takes “에게”.",
+    "wrong": "친구로부터 선물을 주었다.",
+    "right": "친구에게 선물을 주었다.",
+    "en": "I gave a present to a friend."
+   }
+  ],
+  "topik_tip": "In 읽기 passages “으로부터” is found with verbs of receiving and release: “받다, 듣다, 벗어나다, 보호하다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "만큼",
+  "level": 3,
+  "label": "as much as (degree)",
+  "meaning_en": "A particle that attaches to a noun and means “to the same degree as N”: it compares extent, amount or level. In a negative sentence it means “not as ... as N”.",
+  "usage": "It attaches to a noun or pronoun without a space: “너만큼”, “작년만큼”, “기대만큼”. The predicate expresses a degree (an adjective such as “크다” or a verb like “좋아하다”). With a negative it says that N is the higher standard (“작년만큼 덥지 않다”). “만큼은” singles out one thing for emphasis: “이번만큼은” (this time, at least), “이것만큼은”. The dependent noun “-ㄴ/는 만큼” after a verb is spaced and is a different row.",
+  "examples": [
+   {
+    "ko": "민준이도 지수만큼 키가 크다.",
+    "en": "Minjun is as tall as Jisu.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "올해는 작년만큼 덥지 않다.",
+    "en": "This year is not as hot as last year.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나만큼 너를 아끼는 사람은 없을 거야.",
+    "en": "No one cares for you as much as I do.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험 결과는 기대만큼 좋지 않았다.",
+    "en": "The exam result was not as good as expected.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이번만큼은 약속을 꼭 지킬게요.",
+    "en": "This time, I will keep my promise for sure.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "처럼",
+    "difference": "“만큼” compares degree, “처럼” compares manner or likeness. The minimal pair differs in what is being matched.",
+    "pair": [
+     {
+      "ko": "너만큼 노래하고 싶다.",
+      "en": "I want to sing as well as you do."
+     },
+     {
+      "ko": "너처럼 노래하고 싶다.",
+      "en": "I want to sing like you."
+     }
+    ]
+   },
+   {
+    "pattern": "보다",
+    "difference": "“만큼” says two things are equal; “보다” says one is more than the other.",
+    "pair": [
+     {
+      "ko": "지수만큼 빨리 달린다.",
+      "en": "They run as fast as Jisu."
+     },
+     {
+      "ko": "지수보다 빨리 달린다.",
+      "en": "They run faster than Jisu."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“만큼” matches degree. For manner or resemblance, use “처럼”.",
+    "wrong": "새만큼 날고 싶다.",
+    "right": "새처럼 날고 싶다.",
+    "en": "I want to fly like a bird."
+   },
+   {
+    "note": "After a verb form it is a separate word with a space; only a noun takes it attached.",
+    "wrong": "노력한만큼 얻는다.",
+    "right": "노력한 만큼 얻는다.",
+    "en": "You get as much as you put in effort."
+   }
+  ],
+  "topik_tip": "“N만큼 + negative” (“not as ... as N”) and “이번만큼은” (this time, at least) are the two shapes to recognise in exams.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "보고",
+  "level": 3,
+  "label": "to/at a person (speech, reaction)",
+  "meaning_en": "A colloquial particle that marks the person a speech act or a reaction is aimed at, like “에게/한테” but limited to verbs such as “말하다, 시키다, 웃다, 화내다, 욕하다”. Typical shape: “나보고 ...(으)라고 하다” (they told me to ...).",
+  "usage": "It attaches to person nouns and pronouns (“나보고, 너보고, 민준이보고”) and is heard in speech and informal writing. It is almost always followed by a verb of saying, commanding or reacting, often with a quoted clause: “나보고 가라고 했다”. It is not used with verbs of giving or receiving: those need “에게/한테”. The set phrase “나보고 어쩌라고?” means “What do you want me to do?”. Do not confuse it with “보고” from the verb “보다”.",
+  "examples": [
+   {
+    "ko": "엄마가 나보고 방 좀 치우라고 했다.",
+    "en": "Mom told me to clean my room.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님이 민준이보고 일어나라고 하셨다.",
+    "en": "The teacher told Minjun to stand up.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사람들이 나보고 부지런하다고 한다.",
+    "en": "People say I am diligent.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규는 아무 이유 없이 나보고 화를 냈다.",
+    "en": "Seunggyu got angry at me for no reason.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다들 나보고 어쩌라는 거야?",
+    "en": "What is everyone expecting me to do?",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "한테",
+    "difference": "With speech verbs “보고” and “한테” mean the same, and “한테” is the neutral, safer form. “보고” is only spoken-style and only with some verbs.",
+    "pair": [
+     {
+      "ko": "민준이가 나보고 가라고 했다.",
+      "en": "Minjun told me to go."
+     },
+     {
+      "ko": "민준이가 나한테 가라고 했다.",
+      "en": "Minjun told me to go."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“보고” does not go with verbs of giving or receiving; those take “한테/에게”.",
+    "wrong": "친구보고 책을 줬다.",
+    "right": "친구한테 책을 줬다.",
+    "en": "I gave my friend a book."
+   }
+  ],
+  "topik_tip": "In reading dialogues the shape “N보고 ...라고 하다” is the same as “N한테 ...라고 하다”: read it as “told N to ...”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "뿐",
+  "level": 3,
+  "label": "only, nothing but",
+  "meaning_en": "A particle meaning “only N, nothing other than N”. It typically closes the sentence with “이다” (“너뿐이야”) or appears in “N뿐만 아니라” (not only N but also).",
+  "usage": "It attaches to a noun without a space and then needs “이다” (“너뿐이다”), “뿐이 아니다” or “뿐(만) 아니라”. It does not combine freely with an ordinary verb: for “only eat bread” use “만” (“빵만 먹었다”). After a verb modifier “뿐” is a dependent noun and is spaced (“웃을 뿐이다”, I can only laugh). Common phrases: “하나뿐” (the only one), “뿐만 아니라” (not only ... but also).",
+  "examples": [
+   {
+    "ko": "내가 믿을 사람은 너뿐이야.",
+    "en": "You are the only one I can trust.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "방 안에는 낡은 의자 하나뿐이었다.",
+    "en": "There was nothing in the room but one old chair.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 가수는 노래뿐만 아니라 춤도 잘 춘다.",
+    "en": "Besides singing, that singer also dances well.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 일을 할 수 있는 사람은 지수뿐입니다.",
+    "en": "Jisu is the only person who can do this job.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "남은 것은 후회뿐이다.",
+    "en": "All that remains is regret.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "만",
+    "difference": "“만” attaches to any word and works with any predicate. “뿐” closes the sentence with “이다” and sounds more final.",
+    "pair": [
+     {
+      "ko": "나는 너만 믿는다.",
+      "en": "I trust only you."
+     },
+     {
+      "ko": "내가 믿는 사람은 너뿐이다.",
+      "en": "The only person I trust is you."
+     }
+    ]
+   },
+   {
+    "pattern": "밖에",
+    "difference": "“뿐이다” and “밖에 없다” are near-synonyms for “nothing but”. “뿐” ends in “이다”, “밖에” always needs a negative.",
+    "pair": [
+     {
+      "ko": "믿을 사람은 너뿐이야.",
+      "en": "You are the only one I can trust."
+     },
+     {
+      "ko": "믿을 사람은 너밖에 없어.",
+      "en": "There is no one I can trust but you."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "With an ordinary verb the particle for “only” is “만”; “뿐” needs “이다” or “뿐 아니라”.",
+    "wrong": "나는 빵뿐 먹었다.",
+    "right": "나는 빵만 먹었다.",
+    "en": "I ate only bread."
+   },
+   {
+    "note": "After a verb form it is spaced as a dependent noun.",
+    "wrong": "그저 웃을뿐이었다.",
+    "right": "그저 웃을 뿐이었다.",
+    "en": "All I could do was laugh."
+   }
+  ],
+  "topik_tip": "“뿐만 아니라 ... 도” is the standard “not only ... but also” frame in 읽기.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "아1",
+  "level": 3,
+  "label": "calling a person (vocative)",
+  "meaning_en": "The vocative particle “아/야” attached to a name or a noun when calling or addressing someone close or younger: “민준아, 이리 와.”",
+  "usage": "After a consonant-final name it is “아” (“민준아, 유민아, 지영아”), after a vowel-final name “야” (“지수야, 승규야, 영수야”). It is used to friends, younger people, children and also to animals and things in poems and songs (“달아”). It is intimate speech (“해체” or “해라체” sentences follow it) and is not used to someone you must show respect to: with elders you use the title alone (“선생님, ...”) and with polite adults “씨”. Common: “얘들아” (hey, kids).",
+  "examples": [
+   {
+    "ko": "민준아, 밥 먹었니?",
+    "en": "Minjun, have you eaten?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수야, 이리 좀 와 봐.",
+    "en": "Jisu, come over here for a moment.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "유민아, 내일 시험 몇 시야?",
+    "en": "Yumin, what time is the exam tomorrow?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규야, 오랜만이다. 잘 지냈어?",
+    "en": "Seunggyu, it has been a while. Have you been well?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "얘들아, 조용히 해라.",
+    "en": "Kids, be quiet.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "달아, 너는 오늘도 밝구나.",
+    "en": "Moon, you are shining bright again today.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "씨",
+    "difference": "“아/야” is for close friends and juniors; “씨” is the neutral, polite way to address an adult you are not close to.",
+    "pair": [
+     {
+      "ko": "지수야, 어디 가?",
+      "en": "Jisu, where are you going?"
+     },
+     {
+      "ko": "지수 씨, 어디 가세요?",
+      "en": "Jisu, where are you going?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a consonant-final name the particle is “아”, not “야”.",
+    "wrong": "민준야, 이리 와.",
+    "right": "민준아, 이리 와.",
+    "en": "Minjun, come here."
+   },
+   {
+    "note": "After a vowel-final name it is “야”, not “아”.",
+    "wrong": "지수아, 뭐 해?",
+    "right": "지수야, 뭐 해?",
+    "en": "Jisu, what are you doing?"
+   }
+  ],
+  "topik_tip": "Pick the form from the last sound of the name: consonant gives “아”, vowel gives “야”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "요1",
+  "level": 3,
+  "label": "polite “요” on words and phrases",
+  "meaning_en": "A particle that adds politeness to a word, phrase or clause ending, turning intimate speech (“해체”) into the soft polite “해요체”: “저기요”, “빨리요”, “그래서요?”.",
+  "usage": "It attaches to nouns, adverbs and the ends of clauses, whether or not a full ending follows (“물 좀요”, “지금 바로요?”, “그런데요”, “그래서요?”). That is why it appears on fragments and in the middle of sentences: “저는요, 어제요, ...”. In conversation “여기요” and “저기요” are the standard ways to call a waiter or stranger. It does not stack onto “합쇼체” endings (“-습니다”).",
+  "examples": [
+   {
+    "ko": "저기요, 여기 물 좀 주세요.",
+    "en": "Excuse me, could we get some water here?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "저는요, 도서관에 가요.",
+    "en": "As for me, I am going to the library.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그래서요? 그다음엔 어떻게 됐어요?",
+    "en": "And then? What happened next?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금 바로요? 아직 준비가 안 됐는데요.",
+    "en": "Right now? I am not ready yet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여기 커피 두 잔요.",
+    "en": "Two coffees here, please.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-습니다",
+    "difference": "The particle “요” gives soft, conversational politeness (“해요체”); “-습니다” is the formal “합쇼체” used in speeches, announcements and business.",
+    "pair": [
+     {
+      "ko": "지금 가요?",
+      "en": "Are you going now?"
+     },
+     {
+      "ko": "지금 갑니까?",
+      "en": "Are you going now?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Do not add “요” to a “합쇼체” ending. Choose the “해요체” ending instead.",
+    "wrong": "감사합니다요.",
+    "right": "감사해요.",
+    "en": "Thank you."
+   },
+   {
+    "note": "A bare noun with “요” works as an answer fragment, but a full statement needs the copula “이에요”.",
+    "wrong": "저는 학생요.",
+    "right": "저는 학생이에요.",
+    "en": "I am a student."
+   }
+  ],
+  "topik_tip": "In listening items, “요” on a fragment or after a pause marks “해요체” speech: it is polite, not a different meaning.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이라고1",
+  "level": 3,
+  "label": "quoting directly, “called ...”",
+  "meaning_en": "A quotation particle: “라고” follows a directly quoted word or sentence, and “이라고” follows a consonant-final noun being named or quoted. “N(이)라고 하다” means “to be called N”.",
+  "usage": "In a direct quote it attaches to the quoted words (“‘가자’라고 말했다”). With a noun it is “이라고” after a consonant (“한글이라고”) and “라고” after a vowel (“김치라고”). It combines with “하다, 말하다, 부르다, 외치다, 소리치다, 쓰다”. The collocation “(이)라고 해서” means “just because it is ...”. For indirect quotes the endings “-다고/-라고” are used instead.",
+  "examples": [
+   {
+    "ko": "이 음식은 한국어로 비빔밥이라고 해요.",
+    "en": "In Korean this food is called “비빔밥”.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님은 “내일까지 숙제를 내세요”라고 말씀하셨다.",
+    "en": "The teacher said, “Hand in your homework by tomorrow.”",
+    "ctx": "essay"
+   },
+   {
+    "ko": "친구는 나를 “천재”라고 부른다.",
+    "en": "My friend calls me a “genius”.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이는 “엄마!”라고 소리치며 달려왔다.",
+    "en": "The child came running, shouting “Mom!”",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "부자라고 해서 다 행복한 것은 아니다.",
+    "en": "Just because people are rich does not mean they are all happy.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-다고",
+    "difference": "“라고” repeats the words as spoken (direct quote). “-다고” reports them from the speaker’s own point of view (indirect quote), so the sentence form changes.",
+    "pair": [
+     {
+      "ko": "나는 “배고파”라고 말했다.",
+      "en": "I said, “I'm hungry.”"
+     },
+     {
+      "ko": "나는 배고프다고 말했다.",
+      "en": "I said that I was hungry."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel-final noun there is no “이”: it is “라고”.",
+    "wrong": "이것을 김치이라고 한다.",
+    "right": "이것을 김치라고 한다.",
+    "en": "This is called kimchi."
+   },
+   {
+    "note": "After a consonant-final noun “이” is needed.",
+    "wrong": "이 글자를 한글라고 부른다.",
+    "right": "이 글자를 한글이라고 부른다.",
+    "en": "This letter system is called “한글”."
+   }
+  ],
+  "topik_tip": "Telling direct (“라고”) from indirect (“-다고”) quotation is a typical grammar question; in direct quotes the quoted words stay unchanged.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-었었-",
+  "level": 3,
+  "label": "past cut off from the present",
+  "meaning_en": "A doubled past marker that presents an event or state as finished and no longer connected to the present: “I used to ...”, “there was a time when ...”. It often hints that the situation has since changed.",
+  "usage": "It attaches to verb and adjective stems and to “이다”: “가다 → 갔었다”, “먹다 → 먹었었다”, “살다 → 살았었다”, “하다 → 했었다”. It sets the situation apart from now, so it pairs with time words such as “예전에, 전에, 어릴 때, 한때, 그때”, and it is often followed by a contrast with the present (“-었었는데 지금은 ...”). If a result still holds, or the event is recent, plain “-었-” is used. In speech it is common with “-었었어요” in the “해요체”.",
+  "examples": [
+   {
+    "ko": "어릴 때는 시골에서 살았었어요.",
+    "en": "I used to live in the countryside when I was little.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "예전에는 담배를 피웠었는데 지금은 끊었어요.",
+    "en": "I used to smoke, but I have quit now.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 가게는 전에 여기에 있었었는데 이사 갔나 봐요.",
+    "en": "That shop used to be here, but it seems to have moved.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한때는 나도 기타를 쳤었다.",
+    "en": "I, too, played the guitar for a while once.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 길은 전에는 아주 좁았었다.",
+    "en": "This road used to be very narrow.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-었-",
+    "difference": "Plain “-었-” just reports a past event. “-었었-” adds that it is over and no longer true now.",
+    "pair": [
+     {
+      "ko": "작년에 서울에 살았어요.",
+      "en": "I lived in Seoul last year."
+     },
+     {
+      "ko": "작년에 서울에 살았었어요.",
+      "en": "I used to live in Seoul last year."
+     }
+    ]
+   },
+   {
+    "pattern": "-은 적이 있다",
+    "difference": "“-은 적이 있다” says one has had the experience. “-었었-” says the event happened in the past and is over, without focusing on experience.",
+    "pair": [
+     {
+      "ko": "제주도에 간 적이 있어요.",
+      "en": "I have been to Jeju Island."
+     },
+     {
+      "ko": "제주도에 갔었어요.",
+      "en": "I went to Jeju Island."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It marks a situation that is no longer true, so it does not fit a state that continues now.",
+    "wrong": "저는 지금 이 동네에 살았었어요.",
+    "right": "저는 어릴 때 이 동네에 살았었어요.",
+    "en": "I used to live in this neighborhood when I was little."
+   }
+  ],
+  "topik_tip": "In reading passages, “-었었-” plus “지금은” signals a contrast between a past situation and the present.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-거든1",
+  "level": 3,
+  "label": "if, once (condition)",
+  "meaning_en": "A connective ending meaning “if it is the case that ...” or “once it turns out that ...”. It sets a condition that may come true, and the main clause is normally a command, request, suggestion or promise.",
+  "usage": "It attaches to verb, adjective and “이다” stems: “도착하다 → 도착하거든”, “좋다 → 좋거든”, “학생이다 → 학생이거든”; it can follow “-었-” (“끝났거든”). The main clause is an order, request or invitation (“-아라/-세요/-자”) or a promise, rarely a plain statement of fact: for “비가 오면 길이 막힌다” use “-으면”. The sentence-final “-거든(요)” (giving a reason) is a different row, “-거든2”.",
+  "examples": [
+   {
+    "ko": "집에 도착하거든 전화해라.",
+    "en": "Call me when you get home.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "시험 날짜가 정해지거든 같이 공부하자.",
+    "en": "Once the exam date is set, let's study together.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모르는 단어가 나오거든 사전을 찾아보세요.",
+    "en": "If a word you do not know comes up, look it up in a dictionary.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "마음에 들거든 가져가세요.",
+    "en": "If you like it, take it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "힘들거든 언제든 말해.",
+    "en": "If it is hard, tell me at any time.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면",
+    "difference": "With a command or a proposal as the main clause the two are near-synonyms. “-으면” also handles plain statements, habits and general truths; “-거든” does not.",
+    "pair": [
+     {
+      "ko": "비가 그치거든 출발하자.",
+      "en": "Once the rain stops, let's set off."
+     },
+     {
+      "ko": "비가 그치면 길이 막힌다.",
+      "en": "When the rain stops, the roads get jammed."
+     }
+    ]
+   },
+   {
+    "pattern": "-거든2",
+    "difference": "“-거든2” closes a sentence and gives a reason (“I'm hungry, I skipped breakfast, see”). “-거든1” is a conditional that continues into a main clause.",
+    "pair": [
+     {
+      "ko": "배고프거든 먼저 먹어.",
+      "en": "If you are hungry, eat first."
+     },
+     {
+      "ko": "배고파. 아침을 안 먹었거든.",
+      "en": "I'm hungry. I did not eat breakfast, you see."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The main clause needs to be a command, request, suggestion or promise, not a statement of fact.",
+    "wrong": "비가 오거든 길이 막힌다.",
+    "right": "비가 오거든 우산을 쓰세요.",
+    "en": "If it rains, use an umbrella."
+   }
+  ],
+  "topik_tip": "“-거든” followed by an imperative (“-아라/-세요”) or “-자” is the condition ending; when the clause closes the sentence, it is “-거든2”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다거나1",
+  "level": 3,
+  "label": "listing examples, “things like X or Y”",
+  "meaning_en": "A connective ending that lists actions or states as examples, usually followed by “하다”: “X도 한다거나 Y도 한다거나 하다” means “do things like X or Y”. It is a contraction of “-는다고 하거나”.",
+  "usage": "Verbs take “-ㄴ다거나/-는다거나” (“가다 → 간다거나”, “먹다 → 먹는다거나”, “놀다 → 논다거나”, “보다 → 본다거나”); adjectives take “-다거나” (“피곤하다거나”); nouns take “-(이)라거나” (“학생이라거나”); commands and suggestions take “-(으)라거나, -자거나”. It is normally repeated at least twice, and the example list ends with “하다” or a sweeping noun such as “일”. It is conversational and a little vague on purpose.",
+  "examples": [
+   {
+    "ko": "주말에는 영화를 본다거나 산책을 한다거나 해요.",
+    "en": "On weekends I do things like watching a movie or going for a walk.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 피곤하다거나 힘들다거나 하는 말을 절대 하지 않는다.",
+    "en": "Minjun never says things like being tired or finding things hard.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 온다거나 눈이 온다거나 해도 약속은 지켜야 한다.",
+    "en": "Even if it rains or snows or something, a promise has to be kept.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "스트레스를 받을 때는 음악을 듣는다거나 운동을 한다거나 하면 도움이 된다.",
+    "en": "When you are stressed, things like listening to music or exercising help.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 사람이 학생이라거나 직장인이라거나 하는 정보는 없었다.",
+    "en": "There was no information such as whether that person was a student or an office worker.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-거나",
+    "difference": "“-거나” offers two alternatives (“A or B”). “-는다거나 ... 하다” gives examples among others, so the list is open.",
+    "pair": [
+     {
+      "ko": "책을 읽거나 영화를 봐요.",
+      "en": "I read a book or watch a movie."
+     },
+     {
+      "ko": "책을 읽는다거나 영화를 본다거나 해요.",
+      "en": "I do things like reading or watching movies."
+     }
+    ]
+   },
+   {
+    "pattern": "-기도 하고",
+    "difference": "“-기도 하고 ... -기도 하다” is a close alternative that says the speaker does each of these things as well. The two are near-synonyms.",
+    "pair": [
+     {
+      "ko": "책을 읽기도 하고 영화를 보기도 해요.",
+      "en": "I read books and also watch movies."
+     },
+     {
+      "ko": "책을 읽는다거나 영화를 본다거나 해요.",
+      "en": "I do things like reading or watching movies."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The present of an action verb ending in a vowel takes “-ㄴ다거나”, not “-는다거나”.",
+    "wrong": "영화를 보는다거나 책을 읽는다거나 해요.",
+    "right": "영화를 본다거나 책을 읽는다거나 해요.",
+    "en": "I do things like watching a movie or reading a book."
+   },
+   {
+    "note": "A stem ending in ㄹ drops it before “-ㄴ다거나”.",
+    "wrong": "친구와 놀는다거나 영화를 본다거나 해요.",
+    "right": "친구와 논다거나 영화를 본다거나 해요.",
+    "en": "I do things like hanging out with friends or watching movies."
+   }
+  ],
+  "topik_tip": "Pick the form from the stem: vowel gives “-ㄴ다거나”, consonant gives “-는다거나”, ㄹ drops (“논다거나”); adjectives are “-다거나”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다고1",
+  "level": 3,
+  "label": "doing X, with a side result (reason)",
+  "meaning_en": "A connective ending for a reason or cause that is an action someone is doing or a state someone claims: “because they were doing X, (an unwelcome or surprising) Y”. It often has the feel of “in the course of trying to X” or “on the pretext of X”.",
+  "usage": "Verbs take “-ㄴ다고/-는다고” (“잡다 → 잡는다고”, “하다 → 한다고”, “빼다 → 뺀다고”, “만들다 → 만든다고”), adjectives “-다고” (“바쁘다고”), nouns “-(이)라고”. The subjects of the two clauses can differ. The main clause is often something undesirable or unexpected. In everyday speech the collocation “-ㄴ다고 난리다” (making a fuss about doing X) is common. It differs from the quoting “-는다고3”.",
+  "examples": [
+   {
+    "ko": "바퀴벌레를 잡는다고 살충제를 뿌렸어요.",
+    "en": "I sprayed insecticide in an attempt to catch the cockroach.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이가 책을 읽는다고 밤새 불을 켜 놓았어요.",
+    "en": "Minjun kept the light on all night on account of reading a book.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생이 요리를 한다고 부엌을 엉망으로 만들었다.",
+    "en": "My younger sibling made a mess of the kitchen trying to cook.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 바쁘다고 연락도 안 한다.",
+    "en": "Jisu does not even get in touch, claiming to be busy.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "요즘 다들 살을 뺀다고 난리예요.",
+    "en": "These days everyone is making a fuss about losing weight.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-느라고",
+    "difference": "“-느라고” takes verbs only and needs the same subject in both clauses. “-는다고” also allows adjectives and a different subject, and often hints that the effort did not pay off.",
+    "pair": [
+     {
+      "ko": "동생이 요리를 한다고 부엌을 어지럽혔다.",
+      "en": "My younger sibling made the kitchen messy trying to cook."
+     },
+     {
+      "ko": "동생이 요리를 하느라고 부엌을 어지럽혔다.",
+      "en": "My younger sibling made the kitchen messy because of cooking."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-다고”, never “-ㄴ다고”.",
+    "wrong": "민준이는 바쁜다고 연락도 안 한다.",
+    "right": "민준이는 바쁘다고 연락도 안 한다.",
+    "en": "Minjun does not even get in touch, claiming to be busy."
+   }
+  ],
+  "topik_tip": "Do not translate it as a plain “because”: it describes someone doing or claiming something, and the result is usually a pity or a surprise.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으나",
+  "level": 3,
+  "label": "but, although (formal)",
+  "meaning_en": "A formal, mostly written connective ending meaning “but, although”: the second clause contrasts with the first. In the repeated pattern “-으나 -으나” it means “whether ... or ...”.",
+  "usage": "After a stem ending in a vowel or ㄹ it is “-나”, after other consonants “-으나”. Real stems: “가다 → 가나”, “작다 → 작으나”, “살다 → 사나” (the ㄹ drops), “어렵다 → 어려우나” (ㅂ-irregular), “덥다 → 더우나”, “노력했다 → 노력했으나”; with “이다” it is “이나”. It belongs to news, essays and formal speeches; everyday speech uses “-지만”. The pattern “비가 오나 눈이 오나” means “rain or snow, regardless”.",
+  "examples": [
+   {
+    "ko": "민준이는 열심히 노력했으나 결과는 좋지 않았다.",
+    "en": "Minjun worked hard, but the result was not good.",
+    "ctx": "news"
+   },
+   {
+    "ko": "이 문제는 어려우나 풀 수 없는 것은 아니다.",
+    "en": "This problem is difficult, but it is not unsolvable.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "값은 비싸나 품질은 믿을 만하다.",
+    "en": "The price is high, but the quality is reliable.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "겉으로는 평온해 보이나 속은 불안하다.",
+    "en": "On the outside it looks calm, but inside it is uneasy.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "비가 오나 눈이 오나 민준이는 매일 아침 달린다.",
+    "en": "Rain or snow, Minjun runs every morning.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지만",
+    "difference": "“-지만” is the everyday form and also fine in writing; “-으나” is formal and mostly written. The meaning is the same.",
+    "pair": [
+     {
+      "ko": "열심히 노력했으나 실패했다.",
+      "en": "I worked hard, but I failed."
+     },
+     {
+      "ko": "열심히 노력했지만 실패했다.",
+      "en": "I worked hard, but I failed."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A stem ending in ㄹ drops the ㄹ before “-나”.",
+    "wrong": "비록 가난하게 살으나 마음은 풍요롭다.",
+    "right": "비록 가난하게 사나 마음은 풍요롭다.",
+    "en": "They live in poverty, but their hearts are rich."
+   },
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우” before the vowel.",
+    "wrong": "이 문제는 어렵으나 풀 수 있다.",
+    "right": "이 문제는 어려우나 풀 수 있다.",
+    "en": "This problem is hard, but it can be solved."
+   }
+  ],
+  "topik_tip": "“-으나” and “-지만” share a meaning; the register is what tells them apart.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-느라고",
+  "level": 3,
+  "label": "because I was busy doing (same subject)",
+  "meaning_en": "A connective ending for a cause that is the speaker's (or subject's) own activity: “because I was busy doing X, Y (usually a bad result)”. The first action takes up time and energy and that is why the second could not happen.",
+  "usage": "It attaches to verb stems only, never after “-었-” or “-겠-”. The subject of both clauses must be the same, and the main clause is a statement or question, not a command or suggestion (“공부하느라고 가지 마세요” is wrong). Real stems: “하다 → 하느라고”, “놀다 → 노느라고” (the ㄹ drops), “만들다 → 만드느라고”, “걷다 → 걷느라고”. The main clause is typically negative or about hardship: “못 했다, 늦었다, 바쁘다, 고생하다, 정신이 없다”. A short form “-느라” exists.",
+  "examples": [
+   {
+    "ko": "어젯밤에 숙제하느라고 잠을 못 잤어요.",
+    "en": "I could not sleep last night because I was doing homework.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이를 돌보느라고 정신이 없었다.",
+    "en": "I was in a frenzy looking after the child.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험 준비를 하느라고 친구도 못 만났어.",
+    "en": "I was so busy preparing for the exam that I could not even meet friends.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "영화를 보느라고 전화 온 줄도 몰랐어요.",
+    "en": "I was watching a movie, so I did not even know a call had come.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밤새 보고서를 쓰느라고 고생했다.",
+    "en": "I had a hard time writing the report all night.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 바람에",
+    "difference": "“-느라고” describes an activity the subject chose to do; “-는 바람에” fits an event that was not planned. Both can be used with a verb, and the translation can look the same.",
+    "pair": [
+     {
+      "ko": "친구와 이야기하느라고 버스를 놓쳤어요.",
+      "en": "I missed the bus because I was talking with a friend."
+     },
+     {
+      "ko": "친구와 이야기하는 바람에 버스를 놓쳤어요.",
+      "en": "I missed the bus because I got to talking with a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "-어서",
+    "difference": "“-어서” works for any cause and any subject. “-느라고” is limited to one's own busy activity.",
+    "pair": [
+     {
+      "ko": "숙제하느라고 못 잤어요.",
+      "en": "I could not sleep because I was doing homework."
+     },
+     {
+      "ko": "숙제가 많아서 못 잤어요.",
+      "en": "I could not sleep because I had a lot of homework."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It cannot take a tense ending.",
+    "wrong": "숙제했느라고 못 잤어요.",
+    "right": "숙제하느라고 못 잤어요.",
+    "en": "I could not sleep because I was doing homework."
+   },
+   {
+    "note": "Both clauses need the same subject; with a different subject use “-는 바람에”.",
+    "wrong": "민준이가 노래하느라고 내가 잠을 못 잤다.",
+    "right": "민준이가 노래하는 바람에 내가 잠을 못 잤다.",
+    "en": "Minjun sang, and so I could not sleep."
+   }
+  ],
+  "topik_tip": "Same subject, verb stem, no tense ending, negative result: that checklist covers most “-느라고” questions.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-도록",
+  "level": 3,
+  "label": "so that, until, to the point that",
+  "meaning_en": "A connective ending with three overlapping uses: a purpose (“so that, in order that”), a limit (“until, to the point that”) and a degree. In “-도록 하다” it means “make sure to, see to it that”.",
+  "usage": "It attaches directly to verb or adjective stems and does not take a tense ending: “크게 말하도록”. The ㄹ stays before ㄷ: “살다 → 살도록”, “만들다 → 만들도록”. As a purpose it is formal and close to “-게”: “들을 수 있도록”, “늦지 않도록”. As a limit it points to the extent: “목이 쉬도록” (until hoarse), “밤새도록” (all night long), “해가 지도록”. Also: “되도록 빨리” (as soon as possible).",
+  "examples": [
+   {
+    "ko": "모두가 들을 수 있도록 크게 말해 주세요.",
+    "en": "Please speak loudly so that everyone can hear.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 목이 쉬도록 노래를 불렀다.",
+    "en": "Minjun sang until hoarse.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "밤새도록 눈이 내렸다.",
+    "en": "It snowed all through the night.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "약속 시간에 늦지 않도록 일찍 출발했다.",
+    "en": "I set off early so that I would not be late for the appointment.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "회의 시간에는 휴대전화를 꺼 두도록 하세요.",
+    "en": "Please make sure to turn off your phones during the meeting.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-게",
+    "difference": "In the purpose use “-도록” and “-게” are near-synonyms; “-도록” is a little more formal. Only “-도록” has the “until / to the point that” use.",
+    "pair": [
+     {
+      "ko": "잘 들리도록 크게 말했다.",
+      "en": "I spoke loudly so that it could be heard well."
+     },
+     {
+      "ko": "잘 들리게 크게 말했다.",
+      "en": "I spoke loudly so that it could be heard well."
+     }
+    ]
+   },
+   {
+    "pattern": "-게 하다",
+    "difference": "“-도록 하다” and “-게 하다” overlap when someone is made to do something. “-도록 하세요” is the polite “please make sure to ...”.",
+    "pair": [
+     {
+      "ko": "아이가 일찍 자도록 하세요.",
+      "en": "Please make sure the child goes to bed early."
+     },
+     {
+      "ko": "아이가 일찍 자게 하세요.",
+      "en": "Please have the child go to bed early."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The “until” use does not take a past tense ending.",
+    "wrong": "목이 쉬었도록 노래했다.",
+    "right": "목이 쉬도록 노래했다.",
+    "en": "I sang until my voice went hoarse."
+   },
+   {
+    "note": "A ㄹ-stem keeps its ㄹ before “-도록”.",
+    "wrong": "누구나 쉽게 만드도록 레시피를 단순하게 했다.",
+    "right": "누구나 쉽게 만들도록 레시피를 단순하게 했다.",
+    "en": "I kept the recipe simple so that anyone could make it easily."
+   }
+  ],
+  "topik_tip": "In 읽기 answers, “-도록” is “so that” when a goal follows and “until/to the point that” when a result or extreme follows; the two choices are usually clear from the main clause.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어다가",
+  "level": 3,
+  "label": "doing X and taking it along (then Y)",
+  "meaning_en": "A connective ending for “do X to an object and carry it somewhere, then do Y with it”: the object of the first action is brought to another place. “빵을 사다가 먹다” is “buy bread and bring it to eat it (elsewhere)”.",
+  "usage": "It attaches to transitive verb stems with the usual “-아/어” vowel (“사다가”, “가져다가”, “빌려다가”, “데려다가”), and the verb after it takes the same object and often a destination. Stems ending in ㅡ drop it (“담그다 → 담가다가”). It contracts to “-어다”: “사다 주다”, “데려다 주다”. Typical: “사다가 주다, 가져다가 놓다, 빌려다가 읽다”. The ending “-다가” alone (interruption) is a different pattern.",
+  "examples": [
+   {
+    "ko": "마트에서 우유를 사다가 냉장고에 넣어 두었다.",
+    "en": "I picked up milk at the supermarket and put it in the fridge.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구가 우리 집에 선물을 가져다가 놓고 갔다.",
+    "en": "My friend brought a present to our house, left it there and went off.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규는 나를 집 앞까지 데려다 줬다.",
+    "en": "Seunggyu took me as far as my doorstep.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이웃집에서 김치를 얻어다가 먹었다.",
+    "en": "I got some kimchi from the neighbors and brought it home to eat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "바닥의 휴지를 집어다가 쓰레기통에 버렸다.",
+    "en": "I picked up the tissue on the floor and threw it in the trash can.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "반찬을 담아다가 이웃에게 나눠 주었다.",
+    "en": "I packed up some side dishes and took them over to share with the neighbors.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어서",
+    "difference": "“-어서” only says one action follows the other. “-어다가” adds that the object is carried to another place.",
+    "pair": [
+     {
+      "ko": "빵을 사다가 먹었다.",
+      "en": "I bought bread and brought it over to eat."
+     },
+     {
+      "ko": "빵을 사서 먹었다.",
+      "en": "I bought bread and ate it."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 가지고",
+    "difference": "“사다가 주다” and “사 가지고 와서 주다” are near-synonyms. “-어 가지고” is the more spoken form.",
+    "pair": [
+     {
+      "ko": "빵을 사다가 줬다.",
+      "en": "I bought bread and brought it to give."
+     },
+     {
+      "ko": "빵을 사 가지고 와서 줬다.",
+      "en": "I bought bread, came with it and gave it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A stem ending in ㅡ drops it before the vowel: “담그다” becomes “담가”.",
+    "wrong": "김치를 담궈다가 나눠 줬다.",
+    "right": "김치를 담가다가 나눠 줬다.",
+    "en": "I made kimchi and took it over to share."
+   }
+  ],
+  "topik_tip": "Moving the object is the key: “-어다가” needs an object that travels, as in “사다가, 가져다가, 데려다가”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어도",
+  "level": 3,
+  "label": "even if, even though",
+  "meaning_en": "A concessive connective ending: “even if X, ... / no matter how X, ...”. The first clause does not stop the second from being true, and X may be hypothetical or a fact.",
+  "usage": "It attaches to verb, adjective and “이다” stems with the “-아/어” vowel: “오다 → 와도”, “먹다 → 먹어도”, “하다 → 해도”, “쓰다 → 써도”, “듣다 → 들어도” (ㄷ becomes ㄹ), “어렵다 → 어려워도”, “빠르다 → 빨라도”; “학생이다 → 학생이어도”. Often with “아무리” (however much), “-어도 -어도” (no matter how much), and negative or contrasting main clauses. It is not the permission pattern “-어도 되다”.",
+  "examples": [
+   {
+    "ko": "비가 와도 우리는 예정대로 출발합니다.",
+    "en": "Even if it rains, we will set off as planned.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "아무리 바빠도 밥은 챙겨 먹어야 해요.",
+    "en": "However busy you are, you have to make sure to eat.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어려워도 포기하지 말고 끝까지 해 보자.",
+    "en": "Even if it is hard, let's not give up and try to the end.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "열 번을 들어도 무슨 뜻인지 모르겠어요.",
+    "en": "Even after hearing it ten times, I do not understand what it means.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "먹어도 먹어도 배가 고프다.",
+    "en": "No matter how much I eat, I am still hungry.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지만",
+    "difference": "“-어도” grants a hypothetical or general case (“even if”); “-지만” states a factual contrast (“but”).",
+    "pair": [
+     {
+      "ko": "비가 와도 간다.",
+      "en": "I will go even if it rains."
+     },
+     {
+      "ko": "비가 오지만 간다.",
+      "en": "It is raining, but I am going."
+     }
+    ]
+   },
+   {
+    "pattern": "-더라도",
+    "difference": "“-더라도” is a near-synonym that stresses a hypothetical assumption and is a little more formal. Most sentences with “-어도” can use it.",
+    "pair": [
+     {
+      "ko": "실패해도 괜찮아요.",
+      "en": "It is fine even if you fail."
+     },
+     {
+      "ko": "실패하더라도 괜찮아요.",
+      "en": "It is fine even if you fail."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄷ-irregular stem changes ㄷ to ㄹ before a vowel.",
+    "wrong": "아무리 듣어도 모르겠어요.",
+    "right": "아무리 들어도 모르겠어요.",
+    "en": "No matter how much I listen, I do not understand."
+   },
+   {
+    "note": "After a noun the copula is “이어도” (“여도” after a vowel), not “이도”.",
+    "wrong": "학생이도 예의는 지켜야 한다.",
+    "right": "학생이어도 예의는 지켜야 한다.",
+    "en": "Even a student has to keep good manners."
+   }
+  ],
+  "topik_tip": "Do not mix it up with the permission pattern “-어도 되다”; when no “되다” follows, “-어도” is “even if”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어야",
+  "level": 3,
+  "label": "only if, must (necessary condition)",
+  "meaning_en": "A connective ending that makes the first clause an essential condition: “only if X can Y”, “Y is possible only when X”. In “-어야 소용없다/-어 봐야” it also means “even if, however much”.",
+  "usage": "It attaches to verb, adjective and “이다” stems with the “-아/어” vowel: “공부하다 → 공부해야”, “오다 → 와야”, “듣다 → 들어야”, “쉽다 → 쉬워야”, “싸다 → 싸야”; “학생이다 → 학생이어야”. The main clause is usually a present or future judgment (“-ㄹ 수 있다, 되다, 하다”). The emphatic form “-어야만” is a near-synonym. “후회해야 소용없다” means “regretting is useless”.",
+  "examples": [
+   {
+    "ko": "열심히 공부해야 시험에 합격할 수 있어요.",
+    "en": "Only if you study hard can you pass the exam.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "직접 먹어 봐야 맛을 알 수 있다.",
+    "en": "You can only know the taste by trying it yourself.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "날씨가 좋아야 소풍을 갈 수 있어요.",
+    "en": "We can go on a picnic only if the weather is good.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이제 와서 후회해야 소용없어요.",
+    "en": "Regretting at this point is no use.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비용이 싸야 많은 사람이 이용한다.",
+    "en": "Only if the cost is low will many people use it.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면",
+    "difference": "“-으면” says X is enough for Y; “-어야” says X is required for Y.",
+    "pair": [
+     {
+      "ko": "공부하면 합격한다.",
+      "en": "If you study, you pass."
+     },
+     {
+      "ko": "공부해야 합격한다.",
+      "en": "Only if you study do you pass."
+     }
+    ]
+   },
+   {
+    "pattern": "-어야만",
+    "difference": "“-어야만” is the same pattern with “만” added for emphasis; the meaning is the same and the tone firmer.",
+    "pair": [
+     {
+      "ko": "연습해야 늘어요.",
+      "en": "It improves only with practice."
+     },
+     {
+      "ko": "연습해야만 늘어요.",
+      "en": "It improves only with practice."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우” and adds “-어”: “쉽다” becomes “쉬워”.",
+    "wrong": "문제가 쉽어야 풀 수 있죠.",
+    "right": "문제가 쉬워야 풀 수 있죠.",
+    "en": "Only if the problem is easy can they solve it."
+   }
+  ],
+  "topik_tip": "Contrast “-으면” (sufficient) and “-어야” (necessary): the second says “only if”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어야지1",
+  "level": 3,
+  "label": "only if (emphatic condition)",
+  "meaning_en": "A connective ending that makes the first clause an essential condition for the second: “only if you X, Y”. It is the emphatic, spoken partner of “-어야”, and the main clause often ends in “-지”.",
+  "usage": "It attaches to verb, adjective and “이다” stems with the “-아/어” vowel: “노력하다 → 노력해야지”, “쉽다 → 쉬워야지” (ㅂ-irregular), “깨끗하다 → 깨끗해야지”, “학생이다 → 학생이어야지”. The main clause states a possibility or result and typically ends in “-지(요)”, which adds the speaker's firm tone: “노력해야지 성공하지”. The same ending also closes sentences (“이제 공부해야지”) as a self-reminder or resolution; that is a separate use of the form.",
+  "examples": [
+   {
+    "ko": "책을 많이 읽어야지 글을 잘 쓰지.",
+    "en": "You write well only if you read a lot.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일찍 일어나야지 지각하지 않아요.",
+    "en": "You will not be late only if you get up early.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밥을 먹어야지 힘이 나지.",
+    "en": "You get energy only if you eat.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "물이 맑아야지 물고기가 살지요.",
+    "en": "Fish can live only when the water is clear.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이제부터는 책을 읽어야지.",
+    "en": "From now on, I should read books.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어야",
+    "difference": "“-어야” and “-어야지” both make the first clause a necessary condition. “-어야지” is more spoken and more insistent, usually with “-지” in the main clause.",
+    "pair": [
+     {
+      "ko": "공부해야 합격해요.",
+      "en": "You pass only if you study."
+     },
+     {
+      "ko": "공부해야지 합격하지.",
+      "en": "You pass only if you study, you know."
+     }
+    ]
+   },
+   {
+    "pattern": "-어야지 (종결)",
+    "difference": "At the end of a sentence “-어야지” is the speaker's resolution or reminder (“I should ...”), not a condition.",
+    "pair": [
+     {
+      "ko": "이제 공부해야지.",
+      "en": "Now I should study."
+     },
+     {
+      "ko": "공부해야지 합격하지.",
+      "en": "You pass only if you study, you know."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우” before the vowel: “쉽다” becomes “쉬워”.",
+    "wrong": "문제가 쉽어야지 풀지.",
+    "right": "문제가 쉬워야지 풀지.",
+    "en": "They can solve the problem only if it is easy."
+   }
+  ],
+  "topik_tip": "The connective reading needs a second clause; when “-어야지” ends the sentence, the meaning shifts to “I should/will”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-었더니",
+  "level": 3,
+  "label": "when I did X, (I found) Y",
+  "meaning_en": "A connective ending for a result the speaker observed after their own action or state: “when/after I did X, Y happened”. The first clause is the speaker's own past action, and the second is what followed, seen first-hand.",
+  "usage": "It attaches to verb and adjective stems: “먹다 → 먹었더니”, “가다 → 갔더니”, “하다 → 했더니”, “듣다 → 들었더니”, “눕다 → 누웠더니” (ㅂ-irregular). The agent of the first clause is normally the speaker (“I”, or “we”), and the second clause reports what happened, in the past or as a present state (“열이 내렸다, 피곤하다”). The result is something observed, so it does not become a command or a future plan. Typical frame: “갔더니 ...(이)/가 있었다/없었다”.",
+  "examples": [
+   {
+    "ko": "약을 먹었더니 열이 내렸어요.",
+    "en": "After I took the medicine, my fever went down.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "집에 갔더니 아무도 없었다.",
+    "en": "When I went home, nobody was there.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어제 밤늦게까지 책을 읽었더니 오늘 너무 피곤해요.",
+    "en": "I read until late last night, so I am very tired today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이에게 말을 걸었더니 민준이가 활짝 웃었다.",
+    "en": "When I spoke to Minjun, Minjun smiled broadly.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "침대에 누웠더니 바로 잠이 들었다.",
+    "en": "I lay down in bed and fell asleep right away.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-더니",
+    "difference": "“-었더니” is for what happened after the speaker's own action. “-더니” reports what the speaker saw of someone else, and then the change that followed.",
+    "pair": [
+     {
+      "ko": "내가 열심히 공부했더니 성적이 올랐다.",
+      "en": "I studied hard, and my grades went up."
+     },
+     {
+      "ko": "민준이가 열심히 공부하더니 성적이 올랐다.",
+      "en": "Minjun studied hard, and then their grades went up."
+     }
+    ]
+   },
+   {
+    "pattern": "-으니까",
+    "difference": "For discovery the two are near-synonyms (“문을 열었더니” / “문을 여니까”). “-으니까” can also give a reason for a command; “-었더니” cannot.",
+    "pair": [
+     {
+      "ko": "문을 열었더니 바람이 불어 들어왔다.",
+      "en": "When I opened the door, wind blew in."
+     },
+     {
+      "ko": "문을 여니까 바람이 불어 들어왔다.",
+      "en": "When I opened the door, wind blew in."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The result clause is something observed, so it is not a command.",
+    "wrong": "집에 갔더니 쉬어라.",
+    "right": "집에 갔더니 아무도 없었다.",
+    "en": "When I went home, nobody was there."
+   },
+   {
+    "note": "A ㅂ-irregular stem becomes “우” plus “-었-”: “눕다” gives “누웠더니”.",
+    "wrong": "침대에 눕었더니 잠이 들었다.",
+    "right": "침대에 누웠더니 잠이 들었다.",
+    "en": "I lay down in bed and fell asleep."
+   }
+  ],
+  "topik_tip": "Look for the speaker as agent in the first clause and an observed result in the second.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-자마자",
+  "level": 3,
+  "label": "as soon as",
+  "meaning_en": "A connective ending meaning “as soon as, the moment X”: the second event follows the first immediately. The subjects of the two clauses may be the same or different.",
+  "usage": "It attaches to verb stems with no tense ending: “하다 → 하자마자”, “눕다 → 눕자마자”, “듣다 → 듣자마자”; the ㄹ of a ㄹ-stem stays (“놀다 → 놀자마자”, “만들다 → 만들자마자”). The tense is on the main verb. It needs an action verb, so a plain state such as “따뜻하다” takes “-아/어지다” first (“따뜻해지자마자”). Frequent collocations: “눈을 뜨자마자” (the moment I open my eyes), “도착하자마자”, “집에 오자마자”.",
+  "examples": [
+   {
+    "ko": "집에 도착하자마자 샤워를 했다.",
+    "en": "I took a shower as soon as I got home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "눕자마자 잠이 들었다.",
+    "en": "I fell asleep the moment I lay down.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 수업이 끝나자마자 교실을 나갔다.",
+    "en": "Minjun left the classroom as soon as class ended.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "소식을 듣자마자 지수는 병원으로 달려갔다.",
+    "en": "Jisu heard the news and ran to the hospital right away.",
+    "ctx": "news"
+   },
+   {
+    "ko": "눈을 뜨자마자 휴대전화부터 확인한다.",
+    "en": "The moment I open my eyes, I check my phone first.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 나서",
+    "difference": "“-자마자” stresses that there is no gap; “-고 나서” only says that the second event comes after the first is finished.",
+    "pair": [
+     {
+      "ko": "씻자마자 나갔다.",
+      "en": "I went out the moment I had washed."
+     },
+     {
+      "ko": "씻고 나서 나갔다.",
+      "en": "I washed and then went out."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 대로",
+    "difference": "“-는 대로” (as soon as) is a near-synonym that is often heard with requests and plans (“도착하는 대로 전화해 주세요”). “-자마자” is the usual choice for narrating what happened right after something.",
+    "pair": [
+     {
+      "ko": "도착하자마자 전화했어요.",
+      "en": "I called as soon as I arrived."
+     },
+     {
+      "ko": "도착하는 대로 전화할게요.",
+      "en": "I will call as soon as I arrive."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It takes no tense ending; the tense goes on the final verb.",
+    "wrong": "도착했자마자 전화했다.",
+    "right": "도착하자마자 전화했다.",
+    "en": "I called as soon as I arrived."
+   },
+   {
+    "note": "A plain state does not take it; a change of state does.",
+    "wrong": "날씨가 따뜻하자마자 꽃이 폈다.",
+    "right": "날씨가 따뜻해지자마자 꽃이 폈다.",
+    "en": "As soon as the weather turned warm, the flowers bloomed."
+   }
+  ],
+  "topik_tip": "“-자마자” never takes “-었-”: “도착하자마자”, not “도착했자마자”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-다가1(2)",
+  "level": 3,
+  "label": "while doing X, Y happened; because of X",
+  "meaning_en": "A connective ending with three uses besides plain interruption: something happens while an action is in progress (“while doing X, Y came up”), the first action causes the second (“doing too much X, so Y”), and two things alternate (“-다가 -다가”).",
+  "usage": "It attaches to verb and adjective stems (“보다 → 보다가”, “듣다 → 듣다가”, “걷다 → 걷다가”, “살다 → 살다가”, “춥다 → 춥다가”); the ㄷ of “걷다” does not change before “-다가”. The main clause is usually a past event that breaks into the activity: “영화를 보다가 ...을 떠올렸다”. For the cause use the main clause often says something bad: “과식을 하다가 배탈이 났다”. The repeated shape “울다가 웃다가 하다” is about alternation. Compare the level-2 lesson, which covers switching from one action to another.",
+  "examples": [
+   {
+    "ko": "영화를 보다가 갑자기 그 사람이 생각났다.",
+    "en": "While watching a movie, I suddenly thought of that person.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "길을 걷다가 옛 친구를 만났다.",
+    "en": "While walking down the street, I ran into an old friend.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "과식을 하다가 배탈이 났다.",
+    "en": "I overate and got an upset stomach.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "운전하다가 졸음이 와서 잠깐 쉬었다.",
+    "en": "I got sleepy while driving, so I rested for a bit.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 울다가 웃다가 하면서 금방 기분이 바뀐다.",
+    "en": "The child's mood changes quickly, crying, then laughing, then crying again.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 동안",
+    "difference": "“-는 동안” covers the whole stretch of time. “-다가” picks a moment inside the activity, and that activity is cut into.",
+    "pair": [
+     {
+      "ko": "운전하는 동안 졸지 마세요.",
+      "en": "Do not doze off while you are driving."
+     },
+     {
+      "ko": "운전하다가 졸았어요.",
+      "en": "I dozed off while driving."
+     }
+    ]
+   },
+   {
+    "pattern": "-다 보니",
+    "difference": "“-다 보니” reports what one realised after carrying on with an activity for a while. “-다가” is an event that breaks in.",
+    "pair": [
+     {
+      "ko": "책을 읽다가 졸았다.",
+      "en": "I dozed off while reading."
+     },
+     {
+      "ko": "책을 읽다 보니 어느새 새벽이었다.",
+      "en": "As I kept reading, it had become dawn before I knew it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The ㄷ of “걷다” stays before “-다가”; it becomes ㄹ only before a vowel.",
+    "wrong": "길을 걸다가 친구를 만났다.",
+    "right": "길을 걷다가 친구를 만났다.",
+    "en": "While walking down the street, I ran into a friend."
+   }
+  ],
+  "topik_tip": "Both “-다가1(1)” and “-다가1(2)” are the same ending in the list; this row stands for “while doing X, Y occurred / because of X”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으니2",
+  "level": 3,
+  "label": "since, as (reason or premise)",
+  "meaning_en": "A connective ending that gives the reason, cause or premise for the main clause: “since X, Y”. Because it sets a premise, the main clause can be a command, suggestion or judgment. It also introduces what one finds after doing something: “열어 보니 ...”.",
+  "usage": "After a vowel or ㄹ it is “-니”, after other consonants “-으니”. Real stems: “있다 → 있으니”, “살다 → 사니” (the ㄹ drops), “만들다 → 만드니”, “춥다 → 추우니” (ㅂ-irregular), “듣다 → 들으니” (ㄷ-irregular), “낫다 → 나으니”, “이다 → (이)니”; with “-었-”: “끝났으니”. It is shorter and more written than “-으니까” but takes the same kinds of main clauses, including “-세요, -자, -ㄹ까”.",
+  "examples": [
+   {
+    "ko": "날씨가 이렇게 추우니 옷을 따뜻하게 입고 가세요.",
+    "en": "It is this cold, so wear warm clothes when you go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오래 서 있으니 다리가 아프다.",
+    "en": "I have been standing for a long time, so my legs hurt.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이제 수업이 끝났으니 돌아가셔도 좋습니다.",
+    "en": "Class is over now, so you may go home.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "식구가 많으니 집 안이 늘 북적거린다.",
+    "en": "There are many people in the family, so the house is always bustling.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "길이 이렇게 막히니 약속 시간에 늦을 수밖에 없다.",
+    "en": "With traffic this heavy, being late for the appointment is unavoidable.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으니까",
+    "difference": "“-으니까” is the everyday form and can close a sentence (“-으니까요”); “-으니” is shorter and more written. With a command both work.",
+    "pair": [
+     {
+      "ko": "추우니 옷을 입고 가세요.",
+      "en": "It is cold, so wear a coat when you go."
+     },
+     {
+      "ko": "추우니까 옷을 입고 가세요.",
+      "en": "It is cold, so wear a coat when you go."
+     }
+    ]
+   },
+   {
+    "pattern": "-어서",
+    "difference": "“-어서” cannot be followed by a command or a suggestion. “-으니” can.",
+    "pair": [
+     {
+      "ko": "추우니 옷을 입고 가세요.",
+      "en": "It is cold, so wear a coat when you go."
+     },
+     {
+      "ko": "추워서 옷을 입었다.",
+      "en": "It was cold, so I put on a coat."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "날씨가 춥으니 따뜻하게 입으세요.",
+    "right": "날씨가 추우니 따뜻하게 입으세요.",
+    "en": "It is cold, so dress warmly."
+   },
+   {
+    "note": "A stem ending in ㄹ drops it before “-니”.",
+    "wrong": "이 도시에 오래 살으니 정이 들었다.",
+    "right": "이 도시에 오래 사니 정이 들었다.",
+    "en": "Having lived in this city a long time, I have grown fond of it."
+   }
+  ],
+  "topik_tip": "“-으니” can introduce a reason or a discovery; “-어서” is the one that refuses a command in the main clause.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으려면",
+  "level": 3,
+  "label": "if you want to, in order to",
+  "meaning_en": "A connective ending for the condition of having an intention: “if you want to X, then (you need) Y”. The main clause names what is needed or advisable. It is a contraction of “-으려고 하면”.",
+  "usage": "After a vowel or ㄹ it is “-려면”, after other consonants “-으려면”; it attaches to verb stems only. The ㄹ of a ㄹ-stem stays: “살다 → 살려면”, “만들다 → 만들려면”. Irregular verbs: “걷다 → 걸으려면” (ㄷ becomes ㄹ), “눕다 → 누우려면”, “낫다 → 나으려면”. The main clause is a requirement or advice (“-어야 하다, -는 게 좋다, -ㄹ 수 없다”), rarely a past event.",
+  "examples": [
+   {
+    "ko": "한국어를 잘하려면 매일 연습해야 해요.",
+    "en": "To be good at Korean, you have to practise every day.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울역에 가려면 어느 쪽으로 가야 해요?",
+    "en": "Which way do I have to go to get to Seoul Station?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "건강하게 오래 살려면 규칙적으로 운동하는 게 좋다.",
+    "en": "To live long and healthy, it is good to exercise regularly.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 일을 끝내려면 밤을 새울 수밖에 없다.",
+    "en": "To finish this job, there is no choice but to stay up all night.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "표를 사려면 신분증이 있어야 합니다.",
+    "en": "To buy a ticket, you need an ID.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "“-으려고” states the goal of an action that is done (“I study in order to pass”). “-으려면” sets the goal as a condition for what is needed.",
+    "pair": [
+     {
+      "ko": "합격하려고 공부한다.",
+      "en": "I study in order to pass."
+     },
+     {
+      "ko": "합격하려면 공부해야 한다.",
+      "en": "To pass, you have to study."
+     }
+    ]
+   },
+   {
+    "pattern": "-기 위해",
+    "difference": "“-기 위해(서)” and “-으려면” are close when the main clause says what is needed. “-으려면” makes the goal a condition.",
+    "pair": [
+     {
+      "ko": "합격하기 위해서는 공부해야 한다.",
+      "en": "In order to pass, one has to study."
+     },
+     {
+      "ko": "합격하려면 공부해야 한다.",
+      "en": "To pass, you have to study."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem keeps its ㄹ: “사려면” would be “to buy” from “사다”.",
+    "wrong": "오래 사려면 건강해야 한다.",
+    "right": "오래 살려면 건강해야 한다.",
+    "en": "To live long, you have to be healthy."
+   },
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before “-으”.",
+    "wrong": "빨리 걷으려면 운동화가 필요하다.",
+    "right": "빨리 걸으려면 운동화가 필요하다.",
+    "en": "To walk fast, you need sneakers."
+   }
+  ],
+  "topik_tip": "Do not mix the ㄹ-stem “살려면” (to live) with “사려면” (to buy).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-던-",
+  "level": 3,
+  "label": "recalled, unfinished or habitual past modifier",
+  "meaning_en": "An adnominal ending that modifies a noun with a past action that was habitual, ongoing or left unfinished (“the house I used to live in”, “the book I was reading”), or a past state (“the winter that was cold”).",
+  "usage": "It attaches to verb and adjective stems and to “이다”: “살다 → 살던”, “읽다 → 읽던”, “춥다 → 춥던” (ㅂ stays, since “-던” begins with a consonant), “만들다 → 만들던” (ㄹ stays), “학생이던”. With a verb it means “used to do” or “was doing, and did not finish”; for a completed event the ending is “-었던” or “-은”. Typical: “자주 가던 식당”, “쓰던 연필”, “살던 곳”. It cannot take “다” (all) or a clearly finished result.",
+  "examples": [
+   {
+    "ko": "어릴 때 살던 집에 다시 가 보았다.",
+    "en": "I went to see again the house where I lived as a child.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "읽던 책을 책상 위에 두고 나갔다.",
+    "en": "I left the book I was reading on the desk and went out.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리가 자주 가던 식당이 문을 닫았다.",
+    "en": "The restaurant we used to go to often has closed.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 노래는 어머니가 자주 부르시던 노래예요.",
+    "en": "This song is one my mother often sang.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "늘 웃던 지수가 오늘은 표정이 어두웠다.",
+    "en": "Jisu, who always used to smile, looked gloomy today.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은",
+    "difference": "“-은” (verbs) points to a completed event. “-던” points to an action that was in progress or repeated, or was left unfinished.",
+    "pair": [
+     {
+      "ko": "먹던 빵을 남겼다.",
+      "en": "I left the bread I was eating."
+     },
+     {
+      "ko": "먹은 빵이 맛있었다.",
+      "en": "The bread I ate was tasty."
+     }
+    ]
+   },
+   {
+    "pattern": "-었던",
+    "difference": "“살던 집” and “살았던 집” are near-synonyms for a past home. “-었던” presents the period as over; only “-던” also covers an action that stopped midway.",
+    "pair": [
+     {
+      "ko": "살던 집이 그립다.",
+      "en": "I miss the house I used to live in."
+     },
+     {
+      "ko": "살았던 집이 그립다.",
+      "en": "I miss the house I lived in."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective keeps its ㅂ before “-던”: the change to “우” happens only before a vowel.",
+    "wrong": "추우던 겨울이 지나고 봄이 왔다.",
+    "right": "춥던 겨울이 지나고 봄이 왔다.",
+    "en": "The cold winter passed and spring came."
+   },
+   {
+    "note": "“-던” leaves an action unfinished, so it does not go with “다” (all, completely).",
+    "wrong": "다 읽던 책을 도서관에 돌려줬다.",
+    "right": "다 읽은 책을 도서관에 돌려줬다.",
+    "en": "I returned the book I had finished reading to the library."
+   }
+  ],
+  "topik_tip": "Unfinished or repeated gives “-던”; finished gives “-은/-었던”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-거든2",
+  "level": 3,
+  "label": "explaining the reason (“you see”)",
+  "meaning_en": "A sentence-final ending with which the speaker gives a reason or background that the listener may not know yet: “...because, you see”, often followed by more of the story. It is the “해체” form; the polite version is “-거든요”.",
+  "usage": "It attaches to verb, adjective and “이다” stems, and also after “-었-/-겠-”: “있다 → 있거든”, “가다 → 가거든”, “생일이다 → 생일이거든”, “받았다 → 받았거든”. The sentence it ends is the reason, placed after the thing it explains (“배고파. 아침을 안 먹었거든.”). It presents new information, not something both people know. To a person you speak politely to, add “요”. It does not form questions or commands.",
+  "examples": [
+   {
+    "ko": "저는 먼저 갈게요. 내일 일찍 일어나야 하거든요.",
+    "en": "I will head out first. I have to get up early tomorrow, you see.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "요즘 한국어를 배우고 있어요. 한국 드라마를 좋아하거든요.",
+    "en": "I am learning Korean these days. I like Korean dramas, you see.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 내가 살게. 월급 받았거든.",
+    "en": "Today is on me. I got paid, you see.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일 내 생일이거든. 부모님이 무슨 선물을 주실까?",
+    "en": "Tomorrow is my birthday, you see. I wonder what gift my parents will give me.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 지금 못 와요. 아직 회의 중이거든요.",
+    "en": "Jisu cannot come now. They are still in a meeting, you see.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-잖아",
+    "difference": "“-거든” gives the listener new information as a reason. “-잖아” reminds the listener of something they already know.",
+    "pair": [
+     {
+      "ko": "나 배고파. 아침을 안 먹었거든.",
+      "en": "I am hungry. I did not eat breakfast, you see."
+     },
+     {
+      "ko": "나 배고파. 아침을 안 먹었잖아.",
+      "en": "I am hungry. I did not eat breakfast, remember."
+     }
+    ]
+   },
+   {
+    "pattern": "-어서",
+    "difference": "“-어서” joins the reason before the result in one sentence. “-거든” puts the reason after the result as its own sentence.",
+    "pair": [
+     {
+      "ko": "아침을 안 먹어서 배고파.",
+      "en": "I am hungry because I did not eat breakfast."
+     },
+     {
+      "ko": "배고파. 아침을 안 먹었거든.",
+      "en": "I am hungry. I did not eat breakfast, you see."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "With someone you speak politely to, add “요”: the bare “-거든” is the “해체” form.",
+    "wrong": "선생님, 저 먼저 갈게요. 약속이 있거든.",
+    "right": "선생님, 저 먼저 갈게요. 약속이 있거든요.",
+    "en": "Teacher, I will be going first. I have an appointment, you see."
+   },
+   {
+    "note": "The sentence with “-거든” is the reason itself, not the result.",
+    "wrong": "배고파서 아침을 안 먹었거든.",
+    "right": "배고파. 아침을 안 먹었거든.",
+    "en": "I am hungry. I did not eat breakfast, you see."
+   }
+  ],
+  "topik_tip": "The curriculum tags this row as “이유” (reason); the sentence it ends is the explanation, and it can leave the story open.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는구나",
+  "level": 3,
+  "label": "noticing something new (exclamation)",
+  "meaning_en": "A sentence-final ending that voices the speaker's realisation of a fact they have just noticed or learned: “I see, so ...”, “oh, it ...”. It is the “해라체” form of this exclamation, so it is spoken to friends and younger people, or to oneself.",
+  "usage": "Verbs and “있다/없다” take “-는구나” (“오다 → 오는구나”, “있다 → 있구나/있는구나”, “살다 → 사는구나” with the ㄹ dropped); adjectives and “이다” take “-구나” (“춥다 → 춥구나”, “학생이다 → 학생이구나”); past forms take “-었구나” (“갔구나”). Polite counterparts are “-는군요” or “-네요”. It reports the speaker's own fresh discovery, so it is not used for something one has long known. “아, 그렇구나” is the set phrase meaning “oh, I see”.",
+  "examples": [
+   {
+    "ko": "벌써 밤이 깊었구나.",
+    "en": "The night has already grown deep.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "너 생각보다 키가 크구나.",
+    "en": "You are taller than I thought.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밖에 눈이 오는구나.",
+    "en": "Oh, it is snowing outside.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아, 네가 지수의 동생이구나.",
+    "en": "Oh, so you are Jisu's younger sibling.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아, 그렇구나. 몰랐어.",
+    "en": "Oh, I see. I did not know.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-네",
+    "difference": "“-네” is a light, spoken exclamation of noticing and also has the polite “-네요”. “-는구나” is the “해라체” form.",
+    "pair": [
+     {
+      "ko": "눈이 오는구나.",
+      "en": "Oh, it is snowing."
+     },
+     {
+      "ko": "눈이 오네.",
+      "en": "Oh, it is snowing."
+     }
+    ]
+   },
+   {
+    "pattern": "-더라",
+    "difference": "“-는구나” reacts to something noticed now. “-더라” reports what the speaker saw or experienced earlier.",
+    "pair": [
+     {
+      "ko": "눈이 오는구나.",
+      "en": "Oh, it is snowing."
+     },
+     {
+      "ko": "눈이 오더라.",
+      "en": "I saw that it was snowing."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-구나”, not “-는구나”.",
+    "wrong": "날씨가 춥는구나.",
+    "right": "날씨가 춥구나.",
+    "en": "It is cold, I see."
+   },
+   {
+    "note": "A past stem takes “-구나”, not “-는구나”.",
+    "wrong": "어제 비가 왔는구나.",
+    "right": "어제 비가 왔구나.",
+    "en": "It rained yesterday, I see."
+   }
+  ],
+  "topik_tip": "Check the stem: action verb gives “-는구나”, adjective or past stem gives “-구나”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다",
+  "level": 3,
+  "label": "plain present statement (“한다체”)",
+  "meaning_en": "The plain declarative ending of written Korean: verbs take “-ㄴ다/-는다”, adjectives and “이다” take “-다”. It is the “한다체”, used in news, essays, diaries and fiction narration, and in speech to children or close friends.",
+  "usage": "Verbs ending in a vowel take “-ㄴ다” (“가다 → 간다”, “하다 → 한다”), verbs ending in a consonant “-는다” (“먹다 → 먹는다”, “읽다 → 읽는다”), ㄹ-stems drop the ㄹ (“살다 → 산다”, “만들다 → 만든다”). Adjectives and “이다” take bare “-다” (“높다”, “학생이다”); “있다/없다” also take “-다”. The past is “-었다”, the future “-ㄹ 것이다”. It is the style that longer 쓰기 answers expect, not the polite “해요체”.",
+  "examples": [
+   {
+    "ko": "나는 매일 아침 일곱 시에 일어난다.",
+    "en": "I get up at seven every morning.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아이들이 공원에서 공을 차며 논다.",
+    "en": "The children play in the park, kicking a ball.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "정부는 다음 달부터 새로운 제도를 시행한다.",
+    "en": "The government will put a new system into effect from next month.",
+    "ctx": "news"
+   },
+   {
+    "ko": "지수는 아침마다 빵을 먹는다.",
+    "en": "Jisu eats bread every morning.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "민준이는 매일 운동을 한다.",
+    "en": "Minjun exercises every day.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어",
+    "difference": "“-어” is the spoken “해체” ending; “-는다” is the written “한다체”. The meaning is the same.",
+    "pair": [
+     {
+      "ko": "민준이는 학교에 간다.",
+      "en": "Minjun goes to school."
+     },
+     {
+      "ko": "민준이는 학교에 가.",
+      "en": "Minjun goes to school."
+     }
+    ]
+   },
+   {
+    "pattern": "-습니다",
+    "difference": "“-습니다” is the formal polite “합쇼체” (speeches, announcements). “-는다” is plain and used where no listener is addressed.",
+    "pair": [
+     {
+      "ko": "저는 매일 운동합니다.",
+      "en": "I exercise every day."
+     },
+     {
+      "ko": "나는 매일 운동한다.",
+      "en": "I exercise every day."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes bare “-다”.",
+    "wrong": "하늘이 높는다.",
+    "right": "하늘이 높다.",
+    "en": "The sky is high."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㄴ다”.",
+    "wrong": "우리는 서울에 살는다.",
+    "right": "우리는 서울에 산다.",
+    "en": "We live in Seoul."
+   }
+  ],
+  "topik_tip": "In 쓰기 writing tasks, pick the plain “-ㄴ다/-는다” style and stay with it to the end.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-던데2",
+  "level": 3,
+  "label": "I saw that ... (recalled observation)",
+  "meaning_en": "A sentence-final ending with which the speaker reports something they saw, heard or experienced in the past, often with a note of surprise or admiration, and leaves room for the listener to react. The polite form is “-던데요”.",
+  "usage": "It attaches to verb, adjective and “이다” stems: “하다 → 하던데”, “맛있다 → 맛있던데”, “학생이다 → 학생이던데”; with “-었-” it refers to a finished event (“안 왔던데”). It reports what the speaker has observed first-hand, usually about someone or something else, not the speaker's own plain action. It often introduces a point that contrasts with what the listener thinks, or is followed by a suggestion. It is the “해체” form; add “요” when speaking politely.",
+  "examples": [
+   {
+    "ko": "어제 보니까 민준이가 노래를 정말 잘하던데.",
+    "en": "I saw it yesterday, and Minjun really sings well.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 식당 음식이 아주 맛있던데, 한번 가 봐.",
+    "en": "The food at that restaurant was really good, so give it a try.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 어제 회사에 안 왔던데요?",
+    "en": "Jisu did not come to the office yesterday, I noticed.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밖에 비가 많이 오던데 우산 가져가.",
+    "en": "It was raining a lot outside, so take an umbrella.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘따라 길이 많이 막히던데.",
+    "en": "The roads were especially jammed today.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-더라",
+    "difference": "“-더라” and “-던데” both report an observation. “-더라” just states it; “-던데” sounds more open-ended and often leads into a contrast or suggestion.",
+    "pair": [
+     {
+      "ko": "그 영화 재미있더라.",
+      "en": "That movie was fun."
+     },
+     {
+      "ko": "그 영화 재미있던데.",
+      "en": "That movie was fun, though."
+     }
+    ]
+   },
+   {
+    "pattern": "-는데",
+    "difference": "“-는데” is about what the speaker sees now; “-던데” about what the speaker saw earlier.",
+    "pair": [
+     {
+      "ko": "밖에 눈이 오는데.",
+      "en": "It is snowing outside."
+     },
+     {
+      "ko": "밖에 눈이 오던데.",
+      "en": "It was snowing outside."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It reports what the speaker observed, not their own plain action.",
+    "wrong": "나는 어제 영화를 보던데.",
+    "right": "어제 본 영화가 정말 재미있던데.",
+    "en": "The movie I saw yesterday was really fun."
+   },
+   {
+    "note": "With someone you speak politely to, add “요”.",
+    "wrong": "선생님, 그 식당이 맛있던데.",
+    "right": "선생님, 그 식당이 맛있던데요.",
+    "en": "Teacher, that restaurant was good, you know."
+   }
+  ],
+  "topik_tip": "Read it as “I noticed that ...”: it signals the speaker's own recalled observation.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-잖아",
+  "level": 3,
+  "label": "reminding, “you know”, “remember”",
+  "meaning_en": "A sentence-final ending (from “-지 않아”) with which the speaker reminds the listener of something both of them know or should know, often to give a reason, or to correct or complain. The polite form is “-잖아요”.",
+  "usage": "It attaches to verb, adjective and “이다” stems and to “-었-”: “오늘은 일요일이잖아”, “맛있잖아”, “어제 말했잖아”. The content is treated as shared knowledge, so it is the opposite of “-거든”, which gives new information. It can have a scolding tone, so with a person you must be polite to, use “-잖아요” carefully. Spelling: “그렇잖아”, not “그렇찮아”. The discourse marker “있잖아” (you know what; listen) opens a new topic.",
+  "examples": [
+   {
+    "ko": "오늘은 일요일이잖아. 회사 안 가도 돼.",
+    "en": "It is Sunday, remember? You do not have to go to work.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너도 알잖아. 나는 매운 음식을 못 먹어.",
+    "en": "You know that, don't you? I cannot eat spicy food.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제 말했잖아. 오늘은 약속이 있다고.",
+    "en": "I told you yesterday. That I have an appointment today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아까 비가 왔잖아. 그래서 길이 아직 젖어 있어.",
+    "en": "It rained a while ago, remember? So the road is still wet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "있잖아, 나 할 말이 있어.",
+    "en": "You know what, I have something to say.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-거든",
+    "difference": "“-잖아” points to something the listener already knows. “-거든” offers a reason the listener does not know yet.",
+    "pair": [
+     {
+      "ko": "오늘 월요일이잖아.",
+      "en": "It is Monday, remember."
+     },
+     {
+      "ko": "오늘 월요일이거든.",
+      "en": "It is Monday, you see."
+     }
+    ]
+   },
+   {
+    "pattern": "-지",
+    "difference": "“-지” asks for gentle confirmation. “-잖아” says the thing is obvious and often carries a hint of reproach.",
+    "pair": [
+     {
+      "ko": "이게 제일 맛있지?",
+      "en": "This one is the tastiest, isn't it?"
+     },
+     {
+      "ko": "이게 제일 맛있잖아.",
+      "en": "This one is the tastiest, remember."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "To a person you owe politeness, add “요”.",
+    "wrong": "선배님, 이 책 이미 읽으셨잖아.",
+    "right": "선배님, 이 책 이미 읽으셨잖아요.",
+    "en": "Senior, you have already read this book, remember?"
+   },
+   {
+    "note": "The spelling is “잖”: it comes from “지 않아”.",
+    "wrong": "너도 그렇찮아.",
+    "right": "너도 그렇잖아.",
+    "en": "You are like that too."
+   }
+  ],
+  "topik_tip": "In listening items, “-잖아” signals that the speaker treats the content as already known to the listener.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-자3",
+  "level": 3,
+  "label": "let's (suggestion)",
+  "meaning_en": "A sentence-final ending that proposes doing something together: “let's ...”. It is the “해라체” suggestion and belongs to speech between friends, to younger people, and to slogans.",
+  "usage": "It attaches to verb stems only; the ㄹ of a ㄹ-stem stays (“놀다 → 놀자”, “만들다 → 만들자”). The negative is “-지 말자”. It is not used to a person you owe respect: the polite counterparts are “-어요” and “-ㅂ시다/-으시지요”. Slogans and posters use it too (“에너지를 아끼자”). Common combinations: “같이 -자”, “-어 보자”, “-러 가자”.",
+  "examples": [
+   {
+    "ko": "오늘 저녁에 같이 밥 먹자.",
+    "en": "Let's eat together this evening.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "주말에 영화 보러 가자.",
+    "en": "Let's go see a movie this weekend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "늦었으니까 이제 그만 가자.",
+    "en": "It is late, so let's go now.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 같이 열심히 해 보자.",
+    "en": "Let's give it a try together.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "우리 모두 에너지를 아끼자.",
+    "en": "Let's all save energy.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을까",
+    "difference": "“-자” is a direct proposal. “-을까” makes it a question and leaves the decision open.",
+    "pair": [
+     {
+      "ko": "점심 먹자.",
+      "en": "Let's have lunch."
+     },
+     {
+      "ko": "점심 먹을까?",
+      "en": "Shall we have lunch?"
+     }
+    ]
+   },
+   {
+    "pattern": "-어요",
+    "difference": "“-자” is for equals and juniors. “-어요” can also suggest, in the polite “해요체”.",
+    "pair": [
+     {
+      "ko": "같이 가자.",
+      "en": "Let's go together."
+     },
+     {
+      "ko": "같이 가요.",
+      "en": "Let's go together."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem keeps its ㄹ before “-자”.",
+    "wrong": "같이 케이크를 만드자.",
+    "right": "같이 케이크를 만들자.",
+    "en": "Let's make a cake together."
+   },
+   {
+    "note": "The negative suggestion is “-지 말자”.",
+    "wrong": "싸우지 마자.",
+    "right": "싸우지 말자.",
+    "en": "Let's not fight."
+   }
+  ],
+  "topik_tip": "The “-자” suggestion is limited to verbs; for adjectives and a polite tone, other endings are used.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-니2",
+  "level": 3,
+  "label": "asking a friendly question",
+  "meaning_en": "A sentence-final question ending: “-니?” asks a question in the “해라체”. The tone is gentle and caring, as in an adult speaking to a child, a sibling, or a friend.",
+  "usage": "It attaches to verb, adjective and “이다” stems and to “-었-/-겠-”: “가다 → 가니”, “먹다 → 먹었니”, “예쁘다 → 예쁘니”, “학생이다 → 학생이니”. A stem ending in ㄹ drops it before “니”: “살다 → 사니”, “놀다 → 노니”, “만들다 → 만드니”. A ㅂ-irregular stem keeps ㅂ, as “니” starts with a consonant: “춥다 → 춥니”. It is used to people you can speak down to; with a person you owe politeness it is “-어요” or “-ㅂ니까”. The dictionary also lists a rare statement use of “-니”; the question is the form in everyday speech.",
+  "examples": [
+   {
+    "ko": "아침밥은 잘 먹었니?",
+    "en": "Did you eat breakfast properly?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "요즘 어떻게 지내니?",
+    "en": "How have you been lately?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어디 아프니? 얼굴이 안 좋아 보여.",
+    "en": "Are you sick? You do not look well.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 책 재미있니?",
+    "en": "Is this book fun?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너는 어디에 사니?",
+    "en": "Where do you live?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어",
+    "difference": "“-니?” is the “해라체” question and sounds gentle. “-어?” is the casual “해체” question that fits people on equal terms.",
+    "pair": [
+     {
+      "ko": "뭐 하니?",
+      "en": "What are you doing?"
+     },
+     {
+      "ko": "뭐 해?",
+      "en": "What are you doing?"
+     }
+    ]
+   },
+   {
+    "pattern": "-습니까",
+    "difference": "“-습니까” is the formal polite question of the “합쇼체”; “-니” is for those you speak down to.",
+    "pair": [
+     {
+      "ko": "어디에 가니?",
+      "en": "Where are you going?"
+     },
+     {
+      "ko": "어디에 가십니까?",
+      "en": "Where are you going?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “니”.",
+    "wrong": "어디 살니?",
+    "right": "어디 사니?",
+    "en": "Where do you live?"
+   },
+   {
+    "note": "It is not for someone you owe politeness.",
+    "wrong": "할머니, 식사하셨니?",
+    "right": "할머니, 식사하셨어요?",
+    "en": "Grandmother, have you eaten?"
+   }
+  ],
+  "topik_tip": "It is a question ending only; the statement “-니” of the dictionary entry is a different, rare use.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-게 하다",
+  "level": 3,
+  "label": "make or let someone do",
+  "meaning_en": "A causative expression: “make someone do, let someone do, have someone do”, and with an adjective “make it ...”: “행복하게 하다” (make happy). The subject causes or allows another person or thing to act.",
+  "usage": "It attaches to verb and adjective stems: “먹다 → 먹게 하다”, “가다 → 가게 하다”, “행복하다 → 행복하게 하다”. The one who acts takes “을/를” or “에게” (“아이를 가게 했다”, “아이에게 가게 했다”); if that verb has an object of its own, the actor takes “에게/한테” so that “을” is not doubled (“아이에게 채소를 먹게 했다”). It covers both “force” and “permit”, depending on context.",
+  "examples": [
+   {
+    "ko": "엄마는 아이에게 채소를 먹게 했다.",
+    "en": "Mom made the child eat vegetables.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님이 학생들을 일찍 집에 가게 하셨다.",
+    "en": "The teacher let the students go home early.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 음악은 나를 행복하게 한다.",
+    "en": "This music makes me happy.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "부모님이 동생을 유학 가게 하셨다.",
+    "en": "My parents let my younger sibling go study abroad.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 영화는 관객을 울게 했다.",
+    "en": "That movie made the audience cry.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-게 만들다",
+    "difference": "“-게 만들다” stresses causing a result, and cannot mean “let”. “-게 하다” also covers permission.",
+    "pair": [
+     {
+      "ko": "아이를 일찍 자게 했다.",
+      "en": "I had the child go to bed early."
+     },
+     {
+      "ko": "아이를 일찍 자게 만들었다.",
+      "en": "I made the child go to bed early."
+     }
+    ]
+   },
+   {
+    "pattern": "-이-",
+    "difference": "A lexical causative like “먹이다” means to feed; “-게 하다” has the other person eat.",
+    "pair": [
+     {
+      "ko": "엄마는 아이에게 밥을 먹였다.",
+      "en": "Mom fed the child."
+     },
+     {
+      "ko": "엄마는 아이가 밥을 먹게 했다.",
+      "en": "Mom had the child eat."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A second “를” in the same clause is avoided: the one who acts takes “에게”.",
+    "wrong": "엄마는 아이를 채소를 먹게 했다.",
+    "right": "엄마는 아이에게 채소를 먹게 했다.",
+    "en": "Mom made the child eat vegetables."
+   }
+  ],
+  "topik_tip": "The list also notes “-게 만들다” and “-도록 하다” as related expressions.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 나다",
+  "level": 3,
+  "label": "after finishing X",
+  "meaning_en": "An expression for “after having finished X”: the first action is complete, and what follows depends on that. Mostly seen as “-고 나서”, “-고 나니(까)” (after doing, I found ...) and “-고 나면” (once X is done).",
+  "usage": "It attaches to verb stems; “나다” itself takes the endings: “-고 나서” (then), “-고 나니” (and then I found), “-고 나면” (once ... is done), “-고 나자” (right after). The first verb has no tense ending (“먹었고 나서” is wrong). The “나서” form is the plain sequence marker and the others add the speaker's finding or a condition. Frequent collocation: “울고 나니”, “먹고 나서”, “하고 나면”.",
+  "examples": [
+   {
+    "ko": "밥을 먹고 나서 약을 드세요.",
+    "en": "Please take the medicine after you eat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "숙제를 끝내고 나니 마음이 가벼워졌다.",
+    "en": "After I finished my homework, I felt lighter.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "운동하고 나면 기분이 좋아진다.",
+    "en": "Once I have exercised, I feel better.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "영화를 보고 나서 친구와 이야기를 나눴다.",
+    "en": "After watching the movie, I talked with my friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한바탕 울고 나니 속이 시원하다.",
+    "en": "After a good cry, I feel relieved.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 후에",
+    "difference": "“-고 나서” and “-은 후에” are near-synonyms for “after”. “-고 나서” puts the stress on the first action being done.",
+    "pair": [
+     {
+      "ko": "밥을 먹고 나서 약을 먹었다.",
+      "en": "After I finished eating, I took the medicine."
+     },
+     {
+      "ko": "밥을 먹은 후에 약을 먹었다.",
+      "en": "After I ate, I took the medicine."
+     }
+    ]
+   },
+   {
+    "pattern": "-고",
+    "difference": "“-고” simply links actions in order; “-고 나서” adds that the first is completed before the second.",
+    "pair": [
+     {
+      "ko": "밥을 먹고 학교에 갔다.",
+      "en": "I ate and went to school."
+     },
+     {
+      "ko": "밥을 먹고 나서 학교에 갔다.",
+      "en": "After I finished eating, I went to school."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb takes no past ending.",
+    "wrong": "밥을 먹었고 나서 약을 먹었다.",
+    "right": "밥을 먹고 나서 약을 먹었다.",
+    "en": "After I finished eating, I took the medicine."
+   }
+  ],
+  "topik_tip": "Tell the forms apart: “-고 나서” (then), “-고 나니” (and I found), “-고 나면” (once X is done).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 말다",
+  "level": 3,
+  "label": "end up doing, or resolve to",
+  "meaning_en": "An expression for an outcome that happened in the end, often against the speaker's wish: “end up doing, go and do”. With “-겠-” or “-ㄹ 것이다” it is resolve: “I will do it, no matter what”.",
+  "usage": "It attaches to verb stems: “넘어지다 → 넘어지고 말았다”. The past “-고 말았다” expresses regret, finality or an unintended result (often with “결국, 그만, 끝내”). “-고 말겠다/-고 말 것이다” shows determination (“합격하고 말겠다”). It is not used with adjectives. It is close to “-어 버리다”, but “-고 말다” stresses that the event could not be avoided.",
+  "examples": [
+   {
+    "ko": "급하게 뛰다가 그만 넘어지고 말았다.",
+    "en": "I was running in a rush and ended up falling over.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아껴 둔 과자를 동생이 먹고 말았다.",
+    "en": "My younger sibling went and ate the snacks I had saved.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "참으려고 했지만 결국 눈물을 터뜨리고 말았다.",
+    "en": "I tried to hold back, but in the end I burst into tears.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "나는 이번에는 꼭 합격하고 말겠다.",
+    "en": "I will pass this time, no matter what.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "민준이는 중요한 약속을 잊고 말았다.",
+    "en": "Minjun ended up forgetting an important appointment.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 버리다",
+    "difference": "Both can mean something is done and over. “-어 버리다” can be relief or neutral; “-고 말다” leans toward regret or resolve.",
+    "pair": [
+     {
+      "ko": "휴대전화를 잃어버리고 말았다.",
+      "en": "I ended up losing my phone."
+     },
+     {
+      "ko": "휴대전화를 잃어 버렸다.",
+      "en": "I lost my phone."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It attaches to verbs, not adjectives.",
+    "wrong": "오늘은 날씨가 맑고 말았다.",
+    "right": "결국 비가 오고 말았다.",
+    "en": "In the end, it rained."
+   }
+  ],
+  "topik_tip": "“-고 말았다” is regret or unavoidability; “-고 말겠다” is determination. The tense and the subject's attitude tell which.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 싶어 하다",
+  "level": 3,
+  "label": "wants to (someone else)",
+  "meaning_en": "An expression for what a third person wants to do: “wants to, would like to”. It is the “-고 싶다” of the speaker turned into something observed about someone else: verb stem + “-고 싶어 하다”.",
+  "usage": "It attaches to verb stems: “가다 → 가고 싶어 하다”, “되다 → 되고 싶어 하다”. “-고 싶다” expresses the speaker's own wish (or the listener's, in a question). For a third person in plain statements, “싶어 하다” is normally used: the desire is described from outside. The object takes “을/를”, not “이/가” (“물을 마시고 싶어 한다”). In the modifier form it is “-고 싶어 하는” (“민준이가 먹고 싶어 하는 음식”). The “하다” is conjugated: “싶어 한다, 싶어 했다, 싶어 해요”.",
+  "examples": [
+   {
+    "ko": "해외여행을 가고 싶어 하는 동생에게 여행 책을 사 주었다.",
+    "en": "I bought a travel book for my younger sibling, who wants to travel abroad.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "놀이공원에 가고 싶어 하는 아이들이 줄을 서 있다.",
+    "en": "Children who want to go to the amusement park are lined up.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 한국어 선생님이 되고 싶어 해요.",
+    "en": "Jisu wants to become a Korean teacher.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 강아지는 산책하러 나가고 싶어 한다.",
+    "en": "Our dog wants to go out for a walk.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이가 먹고 싶어 하는 음식을 시켰어요.",
+    "en": "I ordered the food that Minjun wants to eat.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 싶다",
+    "difference": "“-고 싶다” is the speaker's own wish. “-고 싶어 하다” describes someone else's wish.",
+    "pair": [
+     {
+      "ko": "나는 쉬고 싶다.",
+      "en": "I want to rest."
+     },
+     {
+      "ko": "민준이는 쉬고 싶어 한다.",
+      "en": "Minjun wants to rest."
+     }
+    ]
+   },
+   {
+    "pattern": "-는가 보다",
+    "difference": "“-고 싶어 하다” reports the wish as seen. “-고 싶은가 보다” is the speaker's guess about it.",
+    "pair": [
+     {
+      "ko": "민준이는 쉬고 싶어 해요.",
+      "en": "Minjun wants to rest."
+     },
+     {
+      "ko": "민준이는 쉬고 싶은가 봐요.",
+      "en": "Minjun seems to want to rest."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "In a plain statement about a third person, “-고 싶다” is normally not used.",
+    "wrong": "민준이는 여행을 가고 싶다.",
+    "right": "민준이는 여행을 가고 싶어 한다.",
+    "en": "Minjun wants to travel."
+   },
+   {
+    "note": "The object of “싶어 하다” takes “을/를”.",
+    "wrong": "민준이는 물이 마시고 싶어 한다.",
+    "right": "민준이는 물을 마시고 싶어 한다.",
+    "en": "Minjun wants to drink water."
+   }
+  ],
+  "topik_tip": "Third person with “싶어 하다”, first person with “싶다”: the choice is a standard grammar item.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-은 결과",
+  "level": 3,
+  "label": "as a result of doing X",
+  "meaning_en": "A written expression meaning “as a result of doing X”: it introduces what a process of investigation, discussion or analysis turned up.",
+  "usage": "It attaches to verb stems with the past modifier “-ㄴ/-은”: “조사하다 → 조사한 결과”, “분석하다 → 분석한 결과”, “토론하다 → 토론한 결과”, “만들다 → 만든 결과” (the ㄹ drops). The main clause states the finding or the decision that followed: “-것으로 나타났다, -것으로 밝혀졌다, -기로 했다”. It belongs to news, reports and academic prose. The noun “결과” stays spaced: “조사 결과” is also common without the verb.",
+  "examples": [
+   {
+    "ko": "설문 조사를 한 결과 응답자의 70퍼센트가 찬성했다.",
+    "en": "As a result of the survey, 70 percent of the respondents were in favor.",
+    "ctx": "news"
+   },
+   {
+    "ko": "여러 번 실험한 결과 같은 값이 나왔다.",
+    "en": "As a result of experimenting many times, the same value came out.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "의사와 상담한 결과 수술을 하기로 결정했다.",
+    "en": "After consulting the doctor, we decided to have the operation.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "오랜 시간 토론한 결과 계획을 바꾸기로 했다.",
+    "en": "After discussing it for a long time, we decided to change the plan.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "원인을 분석한 결과 소프트웨어 오류로 밝혀졌다.",
+    "en": "Analysis of the cause revealed a software error.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 후에",
+    "difference": "“-은 후에” only says what came later. “-은 결과” says the second clause is the outcome of the first.",
+    "pair": [
+     {
+      "ko": "조사한 결과 문제를 발견했다.",
+      "en": "As a result of the investigation, a problem was found."
+     },
+     {
+      "ko": "조사한 후에 보고서를 썼다.",
+      "en": "After the investigation, I wrote a report."
+     }
+    ]
+   },
+   {
+    "pattern": "-은 끝에",
+    "difference": "“-은 끝에” stresses a long effort or process before the result. “-은 결과” reports the findings of a process in a neutral way.",
+    "pair": [
+     {
+      "ko": "오래 고민한 결과 이직하기로 했다.",
+      "en": "As a result of long thought, I decided to change jobs."
+     },
+     {
+      "ko": "오래 고민한 끝에 이직하기로 했다.",
+      "en": "After long deliberation, I decided to change jobs."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It takes the past modifier of a verb.",
+    "wrong": "조사하는 결과 문제를 발견했다.",
+    "right": "조사한 결과 문제를 발견했다.",
+    "en": "As a result of the investigation, a problem was found."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㄴ”.",
+    "wrong": "여러 번 만들은 결과 맛이 좋아졌다.",
+    "right": "여러 번 만든 결과 맛이 좋아졌다.",
+    "en": "After making it many times, the taste improved."
+   }
+  ],
+  "topik_tip": "News and report passages use “-은 결과” to introduce a finding; the finding comes in the main clause.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-은 다음에",
+  "level": 3,
+  "label": "after X is done",
+  "meaning_en": "An expression meaning “after X is done”: it puts the second action in the step following the first. It is natural in instructions, plans and step-by-step explanations.",
+  "usage": "It attaches to verb stems with the past modifier “-ㄴ/-은”: “씻다 → 씻은 다음에”, “끓다 → 끓은 다음에”, “끝나다 → 끝난 다음에”, “만들다 → 만든 다음에” (the ㄹ drops). “다음에” is written with a space. The meaning is the same as “-은 후에” and “-은 뒤에”. The main clause may be a command, a plan or a past event. Common: “졸업한 다음에”, “끝난 다음에”, and “그 다음에” (and then).",
+  "examples": [
+   {
+    "ko": "손을 씻은 다음에 밥을 먹어라.",
+    "en": "Eat after you wash your hands.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "물이 끓은 다음에 라면을 넣으세요.",
+    "en": "Put in the ramen after the water boils.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "숙제를 다 한 다음에 놀러 나갈게요.",
+    "en": "I will go out to play after I finish all my homework.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "졸업한 다음에 무엇을 할지 아직 정하지 못했다.",
+    "en": "I have not yet decided what to do after graduating.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "회의가 끝난 다음에 이야기합시다.",
+    "en": "Let's talk after the meeting is over.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 후에",
+    "difference": "“-은 다음에” and “-은 후에” are near-synonyms. “다음에” fits step-by-step order.",
+    "pair": [
+     {
+      "ko": "먹은 다음에 약을 드세요.",
+      "en": "Take the medicine after you eat."
+     },
+     {
+      "ko": "먹은 후에 약을 드세요.",
+      "en": "Take the medicine after you eat."
+     }
+    ]
+   },
+   {
+    "pattern": "-기 전에",
+    "difference": "“-기 전에” is the opposite: it names the later step first (“before”), with the verb in the base form.",
+    "pair": [
+     {
+      "ko": "씻은 다음에 먹어라.",
+      "en": "Eat after you wash."
+     },
+     {
+      "ko": "먹기 전에 씻어라.",
+      "en": "Wash before you eat."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The modifier is past; a present modifier does not fit “after”.",
+    "wrong": "밥을 먹는 다음에 약을 드세요.",
+    "right": "밥을 먹은 다음에 약을 드세요.",
+    "en": "Take the medicine after you eat."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㄴ”.",
+    "wrong": "케이크를 만들은 다음에 포장했다.",
+    "right": "케이크를 만든 다음에 포장했다.",
+    "en": "After making the cake, I packaged it."
+   }
+  ],
+  "topik_tip": "“-은 다음에” and “-은 후에/뒤에” are interchangeable in nearly all test sentences.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 대신에",
+  "level": 3,
+  "label": "instead of; in return",
+  "meaning_en": "An expression with two linked meanings: “instead of doing X” (a replacement) and “X is so, but in return/on the other hand Y” (a trade-off between a disadvantage and a compensation).",
+  "usage": "Verbs take “-는 대신(에)” (“먹다 → 먹는 대신에”, “만들다 → 만드는 대신에”, the ㄹ drops); adjectives take “-ㄴ/은 대신(에)” (“비싸다 → 비싼 대신에”, “춥다 → 추운 대신에”); a noun takes “N 대신(에)” (“커피 대신에 차”). The “에” is optional. In the trade-off use the two clauses balance each other: a minus in one, a plus in the other (or an exchange of favours: “내가 하는 대신에 네가 해”). Spacing: “대신에” is a separate word.",
+  "examples": [
+   {
+    "ko": "오늘은 밥을 먹는 대신에 샐러드를 먹었다.",
+    "en": "Today I ate a salad instead of rice.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 집은 값이 비싼 대신에 음식이 아주 맛있다.",
+    "en": "This place is expensive, but in return the food is very good.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "설거지는 내가 하는 대신에 청소는 네가 해.",
+    "en": "I will do the dishes, and in exchange you do the cleaning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 동네는 교통이 불편한 대신에 공기가 맑다.",
+    "en": "Our neighborhood has inconvenient transport, but the air is clean.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "커피 대신에 차를 마셨다.",
+    "en": "I drank tea instead of coffee.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 반면",
+    "difference": "Both can contrast two sides of one thing. “-는 대신에” adds the idea of compensation or exchange; “-는 반면” simply sets two facts against each other.",
+    "pair": [
+     {
+      "ko": "값이 비싼 대신에 맛있다.",
+      "en": "It is expensive, but in return it is tasty."
+     },
+     {
+      "ko": "값이 비싼 반면 맛있다.",
+      "en": "It is expensive, whereas it is tasty."
+     }
+    ]
+   },
+   {
+    "pattern": "-지 않고",
+    "difference": "In the “instead of” use, “-는 대신에” and “-지 않고” are close. “-지 않고” just denies the first action.",
+    "pair": [
+     {
+      "ko": "밥을 먹는 대신에 빵을 먹었다.",
+      "en": "I ate bread instead of rice."
+     },
+     {
+      "ko": "밥을 먹지 않고 빵을 먹었다.",
+      "en": "I did not eat rice and ate bread."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은”, not “-는”.",
+    "wrong": "값이 비싸는 대신에 맛있다.",
+    "right": "값이 비싼 대신에 맛있다.",
+    "en": "It is expensive, but in return it is tasty."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "집에서 만들는 대신에 사 왔다.",
+    "right": "집에서 만드는 대신에 사 왔다.",
+    "en": "Instead of making it at home, I bought it."
+   }
+  ],
+  "topik_tip": "Both readings appear in tests: pick “instead of” when the two actions replace each other, and “in return” when a plus balances a minus.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 만큼",
+  "level": 3,
+  "label": "to the extent that; in proportion to",
+  "meaning_en": "A modifier plus the dependent noun “만큼” that means “as much as, to the extent that, in proportion to”. It also gives a reason that fits the main clause: “since it is X, (it is only right that) Y”.",
+  "usage": "Verbs take “-는 만큼” for the present, “-ㄴ/은 만큼” for the past and “-ㄹ/을 만큼” for an extent or the future (“노력하는 만큼, 노력한 만큼, 눈물이 날 만큼”). Adjectives take “-ㄴ/은 만큼” (“중요한 만큼”). Real stems: “만들다 → 만든 만큼”, “알다 → 아는 만큼”, “먹다 → 먹은 만큼”. “만큼” is a separate word. It is a different thing from the particle “N만큼”, which is attached to a noun. The saying “아는 만큼 보인다” (you see as much as you know) is a set phrase.",
+  "examples": [
+   {
+    "ko": "노력한 만큼 결과가 나온다.",
+    "en": "The results come in proportion to the effort.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아는 만큼 보인다.",
+    "en": "You see as much as you know.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "눈물이 날 만큼 아름다운 풍경이었다.",
+    "en": "It was a view so beautiful it could bring tears.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "중요한 일인 만큼 신중하게 결정해야 합니다.",
+    "en": "Since it is an important matter, we must decide carefully.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "먹고 싶은 만큼 먹어도 돼요.",
+    "en": "You may eat as much as you want.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을수록",
+    "difference": "“-ㄹ수록” says that as one thing increases, so does another. “-는 만큼” says that the extent of the second matches the first.",
+    "pair": [
+     {
+      "ko": "노력할수록 실력이 는다.",
+      "en": "The more you try, the more your skill grows."
+     },
+     {
+      "ko": "노력한 만큼 실력이 는다.",
+      "en": "Your skill grows as much as you try."
+     }
+    ]
+   },
+   {
+    "pattern": "-기 때문에",
+    "difference": "In the “reason” use, “-는 만큼” gives a reason that suits the main clause; “-기 때문에” is a plain cause.",
+    "pair": [
+     {
+      "ko": "바쁜 만큼 건강을 챙겨야 한다.",
+      "en": "Since you are busy, you have to look after your health."
+     },
+     {
+      "ko": "바쁘기 때문에 건강을 챙기지 못한다.",
+      "en": "Because I am busy, I cannot look after my health."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb, “만큼” is a separate word, so there is a space.",
+    "wrong": "노력한만큼 얻는다.",
+    "right": "노력한 만큼 얻는다.",
+    "en": "You get as much as you put in effort."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㄴ”.",
+    "wrong": "만들은 만큼 팔렸다.",
+    "right": "만든 만큼 팔렸다.",
+    "en": "It sold as much as I made."
+   }
+  ],
+  "topik_tip": "“-는 만큼” differs from the noun particle “N만큼”: the first follows a verb modifier and is spaced.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 반면",
+  "level": 3,
+  "label": "whereas, on the other hand",
+  "meaning_en": "An expression that sets two facts against each other: “X, whereas Y; X, but on the other hand Y”. It suits advantages versus disadvantages and differences between people or periods.",
+  "usage": "Verbs take “-는 반면(에)”, adjectives and “이다” take “-ㄴ/은 반면(에)” (“편리하다 → 편리한 반면”, “학생이다 → 학생인 반면”), past forms take “-었던 반면”. The “에” is optional. The two clauses must contrast, so the second often has an opposite quality or a downside. It is more written than “-지만”. “반면” is a separate word.",
+  "examples": [
+   {
+    "ko": "인터넷은 편리한 반면 부작용도 많다.",
+    "en": "The internet is convenient, but it also has many side effects.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 활발한 반면 승규는 조용하다.",
+    "en": "Jisu is lively, whereas Seunggyu is quiet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 일은 월급이 적은 반면에 보람이 크다.",
+    "en": "This job pays little, but it is very rewarding.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여름에는 비가 많이 오는 반면 겨울에는 건조하다.",
+    "en": "It rains a lot in summer, whereas winter is dry.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "낮에는 따뜻했던 반면 밤에는 몹시 추웠다.",
+    "en": "It was warm during the day, but very cold at night.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지만",
+    "difference": "“-지만” is the plain “but” and fits any contrast. “-는 반면” sets up a balanced, written contrast between two sides.",
+    "pair": [
+     {
+      "ko": "도시는 편리하지만 물가가 비싸다.",
+      "en": "The city is convenient, but prices are high."
+     },
+     {
+      "ko": "도시는 편리한 반면 물가가 비싸다.",
+      "en": "The city is convenient, whereas prices are high."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 대신에",
+    "difference": "“-는 대신에” adds compensation. “-는 반면” is neutral.",
+    "pair": [
+     {
+      "ko": "월급이 적은 반면 보람이 크다.",
+      "en": "The pay is low, whereas the reward is big."
+     },
+     {
+      "ko": "월급이 적은 대신에 보람이 크다.",
+      "en": "The pay is low, but in return the reward is big."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은”, not “-는”.",
+    "wrong": "도시는 편리하는 반면 물가가 비싸다.",
+    "right": "도시는 편리한 반면 물가가 비싸다.",
+    "en": "The city is convenient, whereas prices are high."
+   },
+   {
+    "note": "The two parts must contrast; a plain cause or a sequence does not fit.",
+    "wrong": "비가 오는 반면 길이 막혔다.",
+    "right": "낮에는 비가 오는 반면 밤에는 맑았다.",
+    "en": "It rained during the day, whereas the night was clear."
+   }
+  ],
+  "topik_tip": "Look for opposite qualities on either side of “반면”: that is the whole meaning.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-나 보다",
+  "level": 3,
+  "label": "it seems that (guess from evidence)",
+  "meaning_en": "An expression for a guess based on what the speaker sees or hears: “it seems that ..., I guess ..., apparently ...”. It is used about a fact the speaker has not confirmed.",
+  "usage": "Verbs, “있다/없다” and past stems take “-나 보다” (“오다 → 오나 보다”, “살다 → 사나 보다” with the ㄹ dropped, “듣다 → 듣나 보다”, “잤나 보다”); adjectives and “이다” normally take “-ㄴ가 보다” (“바쁜가 보다”, “학생인가 보다”). The speaker names a ground first or after (“불이 꺼져 있네. 아무도 없나 보다.”). It is for guesses about others or about a situation; a fact the speaker knows for certain does not take it. Polite: “-나 봐요”.",
+  "examples": [
+   {
+    "ko": "밖에 비가 오나 보다. 사람들이 우산을 쓰고 있네.",
+    "en": "It seems to be raining outside. People are using umbrellas.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 어제 잠을 못 잤나 보다. 눈이 빨개.",
+    "en": "Minjun seems not to have slept last night. Their eyes are red.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "불이 꺼져 있네. 아무도 없나 보다.",
+    "en": "The lights are off. Nobody seems to be there.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 집이 맛있나 보네요. 줄이 아주 길어요.",
+    "en": "This place must be good. The line is very long.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수가 요즘 바쁜가 보다. 연락이 없네.",
+    "en": "Jisu seems busy lately. There has been no word.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-나 보다” rests on visible evidence of the present or the past. “-ㄹ 것 같다” is a broader guess and can look to the future.",
+    "pair": [
+     {
+      "ko": "비가 오나 봐요.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 올 것 같아요.",
+      "en": "It looks like it will rain."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 모양이다",
+    "difference": "“-나 보다” and “-는 모양이다” are close in meaning; “-는 모양이다” is a little more formal and fits written reports.",
+    "pair": [
+     {
+      "ko": "민준이가 아픈가 봐요.",
+      "en": "Minjun seems to be sick."
+     },
+     {
+      "ko": "민준이가 아픈 모양이에요.",
+      "en": "Minjun seems to be sick."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It is a guess from evidence, so it does not fit what the speaker knows for certain.",
+    "wrong": "저는 한국 사람인가 봐요.",
+    "right": "민준이는 한국 사람인가 봐요.",
+    "en": "Minjun seems to be Korean."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-나”.",
+    "wrong": "요즘 서울에 살나 봐요.",
+    "right": "요즘 서울에 사나 봐요.",
+    "en": "They seem to be living in Seoul these days."
+   }
+  ],
+  "topik_tip": "The guess from evidence (“나 보다”) and the guess about the future (“ㄹ 것 같다”) are different: look for a clue that has been seen.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 텐데",
+  "level": 3,
+  "label": "should be ... (but); would have ...",
+  "meaning_en": "An expression for a strong supposition followed by something connected: “it should be that ..., and/but ...”. It is also used for what would have happened, with “-았으면 ... -았을 텐데”, and for sympathy or worry about someone.",
+  "usage": "It attaches to verb, adjective and “이다” stems: after a vowel or ㄹ it is “-ㄹ 텐데”, after other consonants “-을 텐데”. Real stems: “가다 → 갈 텐데”, “먹다 → 먹을 텐데”, “살다 → 살 텐데”, “만들다 → 만들 텐데”, “이다 → 일 텐데”, past “-았을/었을 텐데”. The speaker is fairly sure; the next clause gives advice, a question, a worry or a contrast. The polite ending is “-을 텐데요”. It is made of “-ㄹ 터이다” and “-ㄴ데”.",
+  "examples": [
+   {
+    "ko": "밖이 추울 텐데 따뜻하게 입고 가세요.",
+    "en": "It must be cold outside, so dress warmly when you go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금쯤 도착했을 텐데 왜 연락이 없지?",
+    "en": "They must have arrived by now, so why is there no word?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "미리 말해 줬으면 도와줬을 텐데.",
+    "en": "If you had told me beforehand, I would have helped.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "시험 때문에 많이 힘들 텐데 괜찮아요?",
+    "en": "You must be having a hard time because of the exam. Are you all right?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서두르지 않으면 늦을 텐데.",
+    "en": "If we do not hurry, we will be late.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 테니",
+    "difference": "“-을 텐데” gives a supposition and the speech continues with a contrast or concern. “-을 테니” makes the supposition the reason for the main clause, often a request.",
+    "pair": [
+     {
+      "ko": "추울 텐데 코트를 입으세요.",
+      "en": "It must be cold, so wear a coat."
+     },
+     {
+      "ko": "추울 테니 코트를 입으세요.",
+      "en": "It is going to be cold, so wear a coat."
+     }
+    ]
+   },
+   {
+    "pattern": "-겠",
+    "difference": "“-겠-” with “-지” is a flat guess. “-을 텐데” opens a second clause or leaves the sentence hanging for a contrast, a worry or a request.",
+    "pair": [
+     {
+      "ko": "지금쯤 도착했겠지.",
+      "en": "They must have arrived by now."
+     },
+     {
+      "ko": "지금쯤 도착했을 텐데.",
+      "en": "They should have arrived by now."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem merges the ㄹ with “-ㄹ”: “살다” becomes “살 텐데”.",
+    "wrong": "지금 서울에 살을 텐데 연락해 볼까?",
+    "right": "지금 서울에 살 텐데 연락해 볼까?",
+    "en": "They must be living in Seoul now, so shall I contact them?"
+   }
+  ],
+  "topik_tip": "It carries two moves: a firm supposition and a continuation (advice, worry or contrast).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-기 위해",
+  "level": 3,
+  "label": "in order to, for",
+  "meaning_en": "An expression for a goal: “in order to do X” with verbs, and “for the sake of N” as “N을/를 위해(서)”. It is formal and common in writing and in speeches.",
+  "usage": "It attaches to verb stems with no tense ending: “지키다 → 지키기 위해(서)”, “만들다 → 만들기 위해” (the ㄹ stays before “-기”). The forms “-기 위해서는” (to X, one must) and the modifier “-기 위한 N” (efforts for X) are frequent. The noun form is “N을/를 위해(서)” (“가족을 위해”). The main clause usually states an effort or a necessary condition.",
+  "examples": [
+   {
+    "ko": "건강을 지키기 위해 매일 운동한다.",
+    "en": "I exercise every day to stay healthy.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국어를 배우기 위해 한국에 왔다.",
+    "en": "I came to Korea in order to learn Korean.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "합격하기 위해서는 꾸준한 노력이 필요하다.",
+    "en": "To pass, steady effort is needed.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "가족을 위해 열심히 일한다.",
+    "en": "I work hard for my family.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "환경을 보호하기 위한 노력이 필요하다.",
+    "en": "Efforts to protect the environment are needed.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "“-으려고” is the everyday way to state a purpose; “-기 위해” is more formal and also forms the modifier “-기 위한”.",
+    "pair": [
+     {
+      "ko": "합격하려고 공부한다.",
+      "en": "I study in order to pass."
+     },
+     {
+      "ko": "합격하기 위해 공부한다.",
+      "en": "I study in order to pass."
+     }
+    ]
+   },
+   {
+    "pattern": "-으러",
+    "difference": "“-으러” only works with “가다/오다” type verbs of motion. “-기 위해” works with any main verb.",
+    "pair": [
+     {
+      "ko": "공부하러 왔다.",
+      "en": "I came to study."
+     },
+     {
+      "ko": "공부하기 위해 왔다.",
+      "en": "I came in order to study."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb has no tense ending.",
+    "wrong": "합격했기 위해 공부했다.",
+    "right": "합격하기 위해 공부했다.",
+    "en": "I studied in order to pass."
+   },
+   {
+    "note": "A ㄹ-stem keeps the ㄹ before “-기”.",
+    "wrong": "맛있는 음식을 만드기 위해 재료를 골랐다.",
+    "right": "맛있는 음식을 만들기 위해 재료를 골랐다.",
+    "en": "I chose the ingredients to make tasty food."
+   }
+  ],
+  "topik_tip": "The list's related forms “-기 위해서, -기 위한, N을 위해” are the same expression in different shapes.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "만 아니면",
+  "level": 3,
+  "label": "as long as it isn't N",
+  "meaning_en": "An expression meaning “if only it were not N” or “as long as it is not N”: N is the one obstacle or exception, and anything else is fine. It is also used for “if it were not for N, I would ...”.",
+  "usage": "It attaches to a noun: “N만 아니면”. The main clause says what would then follow: a counterfactual (“-ㄹ 텐데, -았을 텐데”) or a statement that all else is acceptable (“괜찮다, 돼요, 상관없다”). With a clause instead of a noun the shape is “-지만 않으면” (“비가 오지만 않으면”). The spaced “아니면” is the “-이/가 아니다” + “-면”.",
+  "examples": [
+   {
+    "ko": "비만 아니면 소풍을 갈 텐데.",
+    "en": "If it were not for the rain, we would go on the picnic.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험만 아니면 같이 여행 갈 수 있을 텐데.",
+    "en": "If it were not for the exam, I could go on a trip with you.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "매운 음식만 아니면 뭐든지 잘 먹어요.",
+    "en": "I eat anything well, as long as it is not spicy food.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "거짓말만 아니면 용서할 수 있다.",
+    "en": "I can forgive anything as long as it is not a lie.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "월요일만 아니면 다 괜찮아요.",
+    "en": "Any day is fine, as long as it is not Monday.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이 아니면",
+    "difference": "“N이 아니면” just says “if it is not N”. “N만 아니면” singles out N as the only obstacle.",
+    "pair": [
+     {
+      "ko": "월요일만 아니면 괜찮아요.",
+      "en": "Anything but Monday is fine."
+     },
+     {
+      "ko": "월요일이 아니면 괜찮아요.",
+      "en": "If it is not Monday, it is fine."
+     }
+    ]
+   },
+   {
+    "pattern": "-지 않으면",
+    "difference": "“비만 아니면” is a noun obstacle. With a clause, “-지만 않으면” does the same job.",
+    "pair": [
+     {
+      "ko": "비만 아니면 갈게요.",
+      "en": "I will go, rain permitting."
+     },
+     {
+      "ko": "비가 오지만 않으면 갈게요.",
+      "en": "I will go as long as it does not rain."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a clause, use “-지만 않으면”; “만 아니면” follows a noun.",
+    "wrong": "비가 오는 만 아니면 소풍을 갈 텐데.",
+    "right": "비가 오지만 않으면 소풍을 갈 텐데.",
+    "en": "As long as it does not rain, we would go on the picnic."
+   }
+  ],
+  "topik_tip": "Read it as “only X stands in the way”. The main clause often has “-ㄹ 텐데” or “괜찮다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으면 안 되다",
+  "level": 3,
+  "label": "must not",
+  "meaning_en": "An expression for a prohibition or a limit: “you must not X, X is not allowed”. It can also say that a state is not acceptable (“너무 비싸면 안 된다”).",
+  "usage": "After a vowel or ㄹ it is “-면 안 되다”, after other consonants “-으면 안 되다”; it attaches to verbs, adjectives and “이다”. Real stems: “피우다 → 피우면”, “놀다 → 놀면”, “먹다 → 먹으면”, “눕다 → 누우면” (ㅂ-irregular), “걷다 → 걸으면”. The spoken form is “안 돼요”; “되어” contracts to “돼”, so it is never “안 되요”. The opposite pattern is “-으면 되다” (it is enough to X), and the pattern for permission is “-어도 되다”.",
+  "examples": [
+   {
+    "ko": "도서관에서는 큰 소리로 말하면 안 돼요.",
+    "en": "You must not talk loudly in the library.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "수업 시간에 휴대전화를 보면 안 되니까 가방에 넣어 두세요.",
+    "en": "You must not look at your phone during class, so put it in your bag.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "이 약은 술과 함께 먹으면 안 되므로 주의하십시오.",
+    "en": "This medicine must not be taken together with alcohol, so please be careful.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "아무리 화가 나도 사람을 때리면 안 돼.",
+    "en": "No matter how angry you are, you must not hit people.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "거짓말을 하면 안 되지요.",
+    "en": "You must not lie, of course.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지 마세요",
+    "difference": "“-으면 안 되다” states a rule; “-지 마세요” is a direct request not to do it.",
+    "pair": [
+     {
+      "ko": "여기서 담배를 피우면 안 돼요.",
+      "en": "You must not smoke here."
+     },
+     {
+      "ko": "여기서 담배를 피우지 마세요.",
+      "en": "Please do not smoke here."
+     }
+    ]
+   },
+   {
+    "pattern": "-으면 되다",
+    "difference": "“-으면 되다” says that X is enough; “-으면 안 되다” says that X is not allowed.",
+    "pair": [
+     {
+      "ko": "여기서 기다리면 돼요.",
+      "en": "It is fine to wait here."
+     },
+     {
+      "ko": "여기서 기다리면 안 돼요.",
+      "en": "You must not wait here."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“되어” contracts to “돼”: the spoken form is “안 돼요”.",
+    "wrong": "여기서 수영하면 안 되요.",
+    "right": "여기서 수영하면 안 돼요.",
+    "en": "You must not swim here."
+   },
+   {
+    "note": "A ㅂ-irregular verb turns ㅂ into “우”.",
+    "wrong": "수업 중에 눕으면 안 돼요.",
+    "right": "수업 중에 누우면 안 돼요.",
+    "en": "You must not lie down during class."
+   }
+  ],
+  "topik_tip": "Spelling “안 돼요” (not “안 되요”) and the ㅂ-irregular “누우면” are the points that exams like.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으면 좋겠다",
+  "level": 3,
+  "label": "I hope that; it would be nice if",
+  "meaning_en": "An expression for a hope or wish: “I hope (that) ..., I wish ..., it would be nice if ...”. It is also a polite way of asking someone for something (“조용히 해 주면 좋겠어요”).",
+  "usage": "After a vowel or ㄹ it is “-면 좋겠다”, after other consonants “-으면 좋겠다”; it attaches to verbs, adjectives and “이다”. The past-looking “-았/었으면 좋겠다” is just as common and adds a wishful, less certain tone (“날씨가 맑았으면 좋겠어요”). Real stems: “살다 → 살면”, “덥다 → 더우면”, “듣다 → 들으면”. The wished-for situation is in the first clause, and the subject may be the speaker, the listener or a third party. A request form: “-어 주면 좋겠다”.",
+  "examples": [
+   {
+    "ko": "내일은 날씨가 맑았으면 좋겠어요.",
+    "en": "I hope the weather is clear tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이번 시험에 합격하면 좋겠다.",
+    "en": "I hope I pass this exam.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "좀 조용히 해 주면 좋겠어요.",
+    "en": "I would appreciate it if you could be a bit quieter.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "방학에 가족과 함께 여행을 가면 좋겠다.",
+    "en": "It would be nice to go on a trip with the family during the vacation.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "키가 조금만 더 크면 좋겠다.",
+    "en": "I wish I were just a little taller.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 싶다",
+    "difference": "“-고 싶다” is the speaker wanting to do something. “-으면 좋겠다” wishes for a situation and can include others or things beyond one's control.",
+    "pair": [
+     {
+      "ko": "일찍 퇴근하고 싶다.",
+      "en": "I want to leave work early."
+     },
+     {
+      "ko": "일찍 퇴근하면 좋겠다.",
+      "en": "It would be nice to leave work early."
+     }
+    ]
+   },
+   {
+    "pattern": "-았으면 하다",
+    "difference": "“-았으면 하다” is a near-synonym that sounds more reserved or formal.",
+    "pair": [
+     {
+      "ko": "비가 그치면 좋겠어요.",
+      "en": "I hope the rain stops."
+     },
+     {
+      "ko": "비가 그쳤으면 해요.",
+      "en": "I hope the rain stops."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "덜 춥으면 좋겠어요.",
+    "right": "덜 추우면 좋겠어요.",
+    "en": "I hope it is a bit less cold."
+   },
+   {
+    "note": "“-고 싶다” is for one's own wish to do something; a hoped-for situation takes “-으면 좋겠다”.",
+    "wrong": "비가 그치고 싶어요.",
+    "right": "비가 그치면 좋겠어요.",
+    "en": "I hope the rain stops."
+   }
+  ],
+  "topik_tip": "A hope about a situation takes “-으면 좋겠다”; one's own desire to do something takes “-고 싶다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 가다",
+  "level": 3,
+  "label": "gradually keep on (toward the future)",
+  "meaning_en": "An expression for a change or an action that continues step by step from now on: “gradually ..., keep on ...-ing”. It looks forward from the present, often with “점점, 조금씩, 차츰”.",
+  "usage": "It attaches to verb stems with “-아/어” and the helper “가다”: “늘다 → 늘어 가다”, “깊다 → 깊어 가다”, “익다 → 익어 가다”, “밝다 → 밝아 가다”, “줄다 → 줄어 가다”. It goes with verbs of change or with an action that continues: “해결해 가다, 배워 가다, 만들어 가다”. The “-어 오다” counterpart looks back from now (“해 왔다”). The same words can also mean “do X and go” (“사 가다”, “입고 가다” with “-고”), so context matters.",
+  "examples": [
+   {
+    "ko": "가을이 깊어 간다.",
+    "en": "Autumn is deepening.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "공부를 하다 보니 한국어 실력이 조금씩 늘어 가요.",
+    "en": "As I keep studying, my Korean is gradually improving.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어느새 날이 밝아 가고 있었다.",
+    "en": "The day was gradually dawning.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "김치가 맛있게 익어 간다.",
+    "en": "The kimchi is ripening nicely.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어려운 일도 하나씩 풀어 가면 된다.",
+    "en": "Even a hard task is fine if you untangle it one piece at a time.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 오다",
+    "difference": "“-어 가다” looks forward from now (what will go on); “-어 오다” looks back (what has gone on up to now).",
+    "pair": [
+     {
+      "ko": "앞으로도 열심히 살아 가겠다.",
+      "en": "I will keep living hard from now on."
+     },
+     {
+      "ko": "지금까지 열심히 살아 왔다.",
+      "en": "I have lived hard up to now."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” says the action is in progress now; “-어 간다” adds that it keeps moving on gradually.",
+    "pair": [
+     {
+      "ko": "실력이 늘고 있어요.",
+      "en": "My skills are improving."
+     },
+     {
+      "ko": "실력이 늘어 가요.",
+      "en": "My skills are improving gradually."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The helper needs “-아/어”; with “-고” it means “do X and then go”.",
+    "wrong": "실력이 점점 늘고 간다.",
+    "right": "실력이 점점 늘어 간다.",
+    "en": "My skills are gradually improving."
+   }
+  ],
+  "topik_tip": "Pair the two: “-어 가다” moves toward the future, “-어 오다” comes from the past up to now.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 가지고",
+  "level": 3,
+  "label": "spoken “and then / so” (result continues)",
+  "meaning_en": "A spoken connective that links an action to what follows with its result still in effect: “did X, and (with that) ...”. It also gives a cause in casual talk (“because ...”) and means “holding/keeping” with “있다”. It is close to “-어서”.",
+  "usage": "It attaches to verb and adjective stems with “-아/어”: “먹다 → 먹어 가지고”, “잡다 → 잡아 가지고”, “얻다 → 얻어 가지고”, “사다 → 사 가지고”; often shortened to “-어 갖고”. The first verb takes no tense ending (“먹었어 가지고” is wrong). Three uses: a sequence with carried result (“사 가지고 오다”), a cause (“너무 많이 먹어 가지고 배가 아프다”) and a continuing state (“자리를 잡아 가지고 있다”). It is for conversation, not for formal writing.",
+  "examples": [
+   {
+    "ko": "너무 많이 먹어 가지고 배가 아파요.",
+    "en": "I ate too much, so my stomach hurts.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "생선을 잡아 가지고 바로 구워 먹었다.",
+    "en": "We caught fish and grilled and ate them right away.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구한테 돈을 얻어 가지고 학원비를 냈다.",
+    "en": "I got some money from a friend and paid the tuition.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내가 먼저 가서 자리를 잡아 가지고 있을게.",
+    "en": "I will go first and keep the seats.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "빵을 사 가지고 갈게요.",
+    "en": "I will buy some bread and bring it along.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어서",
+    "difference": "In a cause or a sequence “-어 가지고” and “-어서” can swap. “-어 가지고” is colloquial; “-어서” is neutral and also used in writing.",
+    "pair": [
+     {
+      "ko": "너무 많이 먹어 가지고 배가 아파요.",
+      "en": "I ate too much, so my stomach hurts."
+     },
+     {
+      "ko": "너무 많이 먹어서 배가 아파요.",
+      "en": "I ate too much, so my stomach hurts."
+     }
+    ]
+   },
+   {
+    "pattern": "-어다가",
+    "difference": "“-어다가” says the object is carried from one place to another. “-어 가지고” can do the same with “오다/가다” and is more spoken.",
+    "pair": [
+     {
+      "ko": "빵을 사다가 줬다.",
+      "en": "I bought bread and brought it to give."
+     },
+     {
+      "ko": "빵을 사 가지고 와서 줬다.",
+      "en": "I bought bread, came with it and gave it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb takes no tense ending.",
+    "wrong": "너무 많이 먹었어 가지고 배가 아파요.",
+    "right": "너무 많이 먹어 가지고 배가 아파요.",
+    "en": "I ate too much, so my stomach hurts."
+   }
+  ],
+  "topik_tip": "It is a spoken pattern; the formal written equivalent is “-어서” or “-고”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 놓다",
+  "level": 3,
+  "label": "do X and leave it done",
+  "meaning_en": "An expression for doing something and leaving the result in place, often as preparation: “leave ... open”, “have ... ready”, “write down”. The finished state stays as it is.",
+  "usage": "It attaches to transitive verb stems with “-아/어”: “열다 → 열어 놓다”, “닫다 → 닫아 놓다”, “적다 → 적어 놓다”, “만들다 → 만들어 놓다”, “넣다 → 넣어 놓다”; with “하다” it is “해 놓다”. The object of the first verb carries on the stated state (“창문을 열어 놓았다”). It is close to “-어 두다”, and the two swap in many sentences. The result-state counterpart without an agent is “-어 있다” (“창문이 열려 있다”).",
+  "examples": [
+   {
+    "ko": "더워서 창문을 열어 놓고 잤어요.",
+    "en": "It was hot, so I slept with the window left open.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "손님이 오기 전에 음식을 미리 만들어 놓았다.",
+    "en": "I made the food in advance, before the guests came.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일 입을 옷을 침대 위에 꺼내 놓았다.",
+    "en": "I took out the clothes to wear tomorrow and laid them on the bed.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "중요한 내용은 공책에 적어 놓으면 잊어버리지 않는다.",
+    "en": "If you write down the important content in a notebook, you will not forget it.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "숙제를 다 해 놓고 놀러 갔다.",
+    "en": "I finished all my homework and went out to play.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 두다",
+    "difference": "The two are near-synonyms, and in many sentences either works (“적어 놓다 / 적어 두다”). “-어 두다” leans toward keeping something for later, “-어 놓다” toward leaving it done.",
+    "pair": [
+     {
+      "ko": "공책에 적어 놓았다.",
+      "en": "I wrote it down in a notebook."
+     },
+     {
+      "ko": "공책에 적어 두었다.",
+      "en": "I wrote it down in a notebook."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 있다",
+    "difference": "“-어 놓다” has an agent who did the action; “-어 있다” describes only the resulting state.",
+    "pair": [
+     {
+      "ko": "창문을 열어 놓았다.",
+      "en": "I left the window open."
+     },
+     {
+      "ko": "창문이 열려 있다.",
+      "en": "The window is open."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“-어 놓다” needs a transitive verb with an object; the object takes “을/를”.",
+    "wrong": "창문이 열어 놓았다.",
+    "right": "창문을 열어 놓았다.",
+    "en": "I left the window open."
+   },
+   {
+    "note": "The first verb takes no tense ending.",
+    "wrong": "숙제를 했어 놓고 놀러 갔다.",
+    "right": "숙제를 해 놓고 놀러 갔다.",
+    "en": "I did my homework and went out to play."
+   }
+  ],
+  "topik_tip": "Contrast the agent version “-어 놓다” with the state version “-어 있다”: “열어 놓았다” and “열려 있다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 두다",
+  "level": 3,
+  "label": "do X and keep it for later",
+  "meaning_en": "An expression for doing something and keeping the result for later use, or preparing in advance: “write down, put away, keep in mind”. It is common with “알아 두다” (to keep in mind).",
+  "usage": "It attaches to transitive verb stems with “-아/어”: “적다 → 적어 두다”, “넣다 → 넣어 두다”, “닫다 → 닫아 두다”, “알다 → 알아 두다”, “맡다 → 맡아 두다”, “사다 → 사 두다”. With “알다” the idiom is “알아 두세요” (keep this in mind), where “알아 놓다” is not the usual form. In most other cases “-어 놓다” and “-어 두다” can be exchanged. A habit is “미리 -어 두다” (do it beforehand).",
+  "examples": [
+   {
+    "ko": "약속 시간을 달력에 적어 두었다.",
+    "en": "I wrote the appointment time on the calendar.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 단어는 시험에 자주 나오니까 잘 알아 두세요.",
+    "en": "This word comes up often in exams, so keep it in mind.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비가 올지 몰라서 우산을 가방에 넣어 두었다.",
+    "en": "It might rain, so I put an umbrella in my bag.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여행 가기 전에 표를 미리 사 두는 게 좋다.",
+    "en": "It is good to buy the tickets in advance before traveling.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 깰까 봐 방문을 닫아 두었다.",
+    "en": "I closed the room door so as not to wake the child.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 놓다",
+    "difference": "The two are interchangeable in many sentences, but “알아 두다” (keep in mind) is the normal idiom, and “-어 놓다” also suits finishing something so that it is done.",
+    "pair": [
+     {
+      "ko": "이 내용을 잘 알아 두세요.",
+      "en": "Keep this in mind."
+     },
+     {
+      "ko": "숙제를 다 해 놓았다.",
+      "en": "I finished all my homework."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb takes no tense ending.",
+    "wrong": "공책에 적었어 두었다.",
+    "right": "공책에 적어 두었다.",
+    "en": "I wrote it down in a notebook."
+   }
+  ],
+  "topik_tip": "“알아 두세요” (keep this in mind) is a set formula in notices and listening items.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 드리다",
+  "level": 3,
+  "label": "do for someone senior (honorific “-어 주다”)",
+  "meaning_en": "An honorific helper meaning “do (something) for a person one respects”. It is the humble counterpart of “-어 주다”, with the beneficiary elevated: “I do it for you/for the elder”.",
+  "usage": "It attaches to verb stems with “-아/어”: “읽다 → 읽어 드리다”, “닦다 → 닦아 드리다”, “찾다 → 찾아 드리다”, “돕다 → 도와 드리다” (ㅂ-irregular), “끓이다 → 끓여 드리다”. The one who does is the speaker (or someone on the speaker's side), and the one who benefits is the person to be honoured. Typical frames: “-어 드릴게요, -어 드릴까요?, -어 드리겠습니다”. If the honoured person is the doer, the verb is “-어 주시다”. For equals and juniors the pattern is “-어 주다”.",
+  "examples": [
+   {
+    "ko": "할머니께 동화책을 읽어 드렸다.",
+    "en": "I read a storybook to my grandmother.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "무거워 보이시는데 제가 들어 드릴게요.",
+    "en": "That looks heavy; let me carry it for you.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "필요하시면 사진을 찍어 드릴까요?",
+    "en": "Shall I take a photo for you, if you would like?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "손님께 따뜻한 차를 끓여 드렸다.",
+    "en": "I made some warm tea for the guest.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "무엇을 도와 드릴까요?",
+    "en": "How may I help you?",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 주다",
+    "difference": "“-어 드리다” is for the one you honour; “-어 주다” is for friends, children and juniors.",
+    "pair": [
+     {
+      "ko": "할머니께 책을 읽어 드렸다.",
+      "en": "I read a book to my grandmother."
+     },
+     {
+      "ko": "동생에게 책을 읽어 줬다.",
+      "en": "I read a book to my younger sibling."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 주시다",
+    "difference": "The direction flips: with “-어 드리다” you serve the elder; with “-어 주시다” the elder does something for you.",
+    "pair": [
+     {
+      "ko": "제가 선생님께 책을 읽어 드렸어요.",
+      "en": "I read a book to my teacher."
+     },
+     {
+      "ko": "선생님께서 저에게 책을 읽어 주셨어요.",
+      "en": "My teacher read a book to me."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The beneficiary has to be someone to honour; for a friend or younger person use “-어 주다”.",
+    "wrong": "제가 동생에게 사진을 찍어 드렸어요.",
+    "right": "제가 할머니께 사진을 찍어 드렸어요.",
+    "en": "I took a photo for my grandmother."
+   },
+   {
+    "note": "When the honoured person does the action, “-어 주시다” is used instead.",
+    "wrong": "선생님이 책을 읽어 드리셨다.",
+    "right": "선생님이 책을 읽어 주셨다.",
+    "en": "My teacher read the book for me."
+   }
+  ],
+  "topik_tip": "Check the direction: speaker to honoured person is “-어 드리다”; honoured person to speaker is “-어 주시다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어야겠-",
+  "level": 3,
+  "label": "I'd better; I have to (decision)",
+  "meaning_en": "An ending of resolve or conclusion: “I will have to, I had better, I should (from now)”. The speaker reaches the decision from a situation they have just noticed. It also marks a guess that something looks necessary.",
+  "usage": "It attaches to verb and adjective stems with “-아/어” plus “-야겠-” and then a sentence ending: “먹다 → 먹어야겠다”, “찾다 → 찾아야겠다”, “듣다 → 들어야겠다” (ㄷ-irregular), “돕다 → 도와야겠다” (ㅂ-irregular), “하다 → 해야겠다”. It is mainly a first-person decision (statement) or a question to the listener (“-어야겠어요?”). For someone else it gives an opinion (“너도 가야겠다”). Related: “-어야지” as a resolution, “-어야 하다” as a general duty.",
+  "examples": [
+   {
+    "ko": "배가 너무 고프다. 뭐라도 먹어야겠다.",
+    "en": "I am so hungry. I had better eat something.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모르는 단어가 너무 많네. 사전을 찾아야겠다.",
+    "en": "There are so many words I do not know. I had better look in the dictionary.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람에게 직접 사과를 받아야겠어요.",
+    "en": "I have to get an apology from that person in person.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이대로는 안 되겠다. 정신을 차려야겠다.",
+    "en": "I cannot go on like this. I have to pull myself together.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비가 올 것 같으니까 우산을 가져가야겠어요.",
+    "en": "It looks like rain, so I will take an umbrella.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어야 하다",
+    "difference": "“-어야 하다” states an obligation in general. “-어야겠-” is the speaker's own conclusion or decision at this moment.",
+    "pair": [
+     {
+      "ko": "나는 지금 가야 해요.",
+      "en": "I have to go now."
+     },
+     {
+      "ko": "나는 지금 가야겠어요.",
+      "en": "I will have to go now."
+     }
+    ]
+   },
+   {
+    "pattern": "-어야지",
+    "difference": "As a resolution to oneself the two are near-synonyms. “-어야겠-” has a more deliberate sound as a conclusion.",
+    "pair": [
+     {
+      "ko": "이제 먹어야지.",
+      "en": "I should eat now."
+     },
+     {
+      "ko": "이제 먹어야겠다.",
+      "en": "I had better eat now."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄷ-irregular stem turns ㄷ into ㄹ before “-어”.",
+    "wrong": "이 강의는 꼭 듣어야겠다.",
+    "right": "이 강의는 꼭 들어야겠다.",
+    "en": "I have to take this lecture."
+   },
+   {
+    "note": "A ㅂ-irregular stem becomes “와/워” plus the ending.",
+    "wrong": "친구를 돕아야겠다.",
+    "right": "친구를 도와야겠다.",
+    "en": "I have to help my friend."
+   }
+  ],
+  "topik_tip": "It is a decision made now; a duty stated in general is “-어야 하다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어지다",
+  "level": 3,
+  "label": "become; be done (by itself)",
+  "meaning_en": "An expression with two uses: with an adjective it means “become, get ...” (a change of state), and with a transitive verb it means “be done, come to be done”, often by someone or something unspecified.",
+  "usage": "It attaches to stems with “-아/어”: “좋다 → 좋아지다”, “높다 → 높아지다”, “예쁘다 → 예뻐지다” (ㅡ drops), “춥다 → 추워지다” (ㅂ-irregular), “깨끗하다 → 깨끗해지다”; with verbs “만들다 → 만들어지다”, “이루다 → 이루어지다”, “믿다 → 믿어지다”. Action verbs in “-하다” form the passive with “-되다” (“실행되다”), not “-해지다”. The form “믿어지지 않는다” (hard to believe) is a set expression. Do not double a passive: “열리다” already means “be opened”.",
+  "examples": [
+   {
+    "ko": "운동을 시작한 뒤로 건강이 많이 좋아졌어요.",
+    "en": "Since I started exercising, my health has improved a lot.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 가구는 나무로 만들어졌다.",
+    "en": "This furniture is made of wood.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "해가 지자 하늘이 점점 어두워졌다.",
+    "en": "When the sun set, the sky gradually grew dark.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 소식은 도저히 믿어지지 않는다.",
+    "en": "I cannot bring myself to believe that news.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "오랜 노력 끝에 꿈이 이루어졌다.",
+    "en": "After long effort, the dream came true.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-게 되다",
+    "difference": "“-어지다” is a gradual change of a state. “-게 되다” is a change in circumstance or a result that comes about.",
+    "pair": [
+     {
+      "ko": "한국어가 쉬워졌다.",
+      "en": "Korean has become easier."
+     },
+     {
+      "ko": "한국어를 공부하게 되었다.",
+      "en": "I have come to study Korean."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”: “춥다” becomes “추워지다”.",
+    "wrong": "날씨가 점점 춥어졌다.",
+    "right": "날씨가 점점 추워졌다.",
+    "en": "The weather gradually got colder."
+   },
+   {
+    "note": "The ending attaches to the stem; it is not a separate “게”.",
+    "wrong": "방이 깨끗하게졌다.",
+    "right": "방이 깨끗해졌다.",
+    "en": "The room became clean."
+   }
+  ],
+  "topik_tip": "With an adjective it is “become”; with a verb it is “be done”: the stem type tells you which.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에 대하여",
+  "level": 3,
+  "label": "about, regarding",
+  "meaning_en": "A formal expression marking a topic: “about, concerning”. The topics of thinking, saying, learning and researching take it. In speech it is “에 대해(서)”, and before a noun “에 대한 N”.",
+  "usage": "It attaches to a noun: “환경에 대하여 / 환경에 대해(서)”. The modifier form is “N에 대한 + noun” (“환경에 대한 관심”). The predicate is a verb of thought or communication: “이야기하다, 생각하다, 말하다, 조사하다, 배우다, 질문하다, 설명하다”. With a verb, “에 대한” cannot be used; it is “에 대해”. “에 대해서는” singles out the topic (“그 일에 대해서는 말할 수 없다”).",
+  "examples": [
+   {
+    "ko": "오늘은 한국의 전통 문화에 대하여 이야기하겠습니다.",
+    "en": "Today I will talk about Korea's traditional culture.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "이 문제에 대해 어떻게 생각하세요?",
+    "en": "What do you think about this problem?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "환경 보호에 대한 관심이 높아지고 있다.",
+    "en": "Interest in protecting the environment is growing.",
+    "ctx": "news"
+   },
+   {
+    "ko": "지수는 한국 역사에 대해서 공부하고 있다.",
+    "en": "Jisu is studying Korean history.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사건에 대해서는 말씀드릴 수 없습니다.",
+    "en": "I cannot say anything about that incident.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게",
+    "difference": "“친구에 대해” makes the friend the topic; “친구에게” makes the friend the one spoken to.",
+    "pair": [
+     {
+      "ko": "친구에 대해 이야기했다.",
+      "en": "I talked about my friend."
+     },
+     {
+      "ko": "친구에게 이야기했다.",
+      "en": "I told my friend."
+     }
+    ]
+   },
+   {
+    "pattern": "에 관하여",
+    "difference": "“에 대하여” and “에 관하여” are near-synonyms; both mean “about, concerning”.",
+    "pair": [
+     {
+      "ko": "환경에 대하여 토론했다.",
+      "en": "We discussed the environment."
+     },
+     {
+      "ko": "환경에 관하여 토론했다.",
+      "en": "We discussed the environment."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“에 대한” modifies a noun; with a verb, use “에 대해”.",
+    "wrong": "한국 문화에 대한 이야기했다.",
+    "right": "한국 문화에 대해 이야기했다.",
+    "en": "I talked about Korean culture."
+   }
+  ],
+  "topik_tip": "The three shapes “에 대하여 / 에 대해서 / 에 대한” are one expression; “에 대한” goes before a noun.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 테니",
+  "level": 3,
+  "label": "I will ..., so; it will ..., so",
+  "meaning_en": "A connective expression for the speaker's intention or supposition as the ground of what follows: “I will do X, so (you) ...” or “it will be X, so ...”. The main clause is normally a request, command or suggestion.",
+  "usage": "After a vowel or ㄹ it is “-ㄹ 테니”, after other consonants “-을 테니”: “가다 → 갈 테니”, “먹다 → 먹을 테니”, “놀다 → 놀 테니”, “만들다 → 만들 테니”, past “-았을 테니”. With a first-person subject it expresses a promise or an intention (“내가 갈 테니 기다려”); otherwise it is a prediction (“추울 테니 코트를 입어”). “-을 테니까” is the same with more stress, and the sentence-ending counterpart of the promise is “-을게”.",
+  "examples": [
+   {
+    "ko": "내가 먼저 갈 테니 천천히 와.",
+    "en": "I will go first, so come slowly.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "설거지는 제가 할 테니 쉬고 계세요.",
+    "en": "I will do the dishes, so please take a rest.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밖이 추울 테니 두꺼운 옷을 입으세요.",
+    "en": "It will be cold outside, so wear thick clothes.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "곧 비가 올 테니 우산을 가져가세요.",
+    "en": "It will rain soon, so take an umbrella.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "피곤했을 테니 오늘은 일찍 쉬어요.",
+    "en": "You must have been tired, so rest early today.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을게",
+    "difference": "“-을게” closes the sentence as a promise. “-을 테니” connects the promise to the next clause.",
+    "pair": [
+     {
+      "ko": "내가 설거지할게. 너는 쉬어.",
+      "en": "I will do the dishes. You rest."
+     },
+     {
+      "ko": "내가 설거지할 테니 너는 쉬어.",
+      "en": "I will do the dishes, so you rest."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 텐데",
+    "difference": "“-을 테니” makes the supposition the ground of a request; “-을 텐데” leaves the sentence open for a contrast or worry.",
+    "pair": [
+     {
+      "ko": "추울 테니 코트를 입으세요.",
+      "en": "It will be cold, so wear a coat."
+     },
+     {
+      "ko": "추울 텐데 코트를 입으세요.",
+      "en": "It must be cold; wear a coat."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem merges the ㄹ with “-ㄹ”: “놀다” becomes “놀 테니”.",
+    "wrong": "내가 아이와 놀을 테니 쉬세요.",
+    "right": "내가 아이와 놀 테니 쉬세요.",
+    "en": "I will play with the child, so please rest."
+   },
+   {
+    "note": "The main clause is a request, command or suggestion, not a plain past statement.",
+    "wrong": "내가 할 테니 쉬었다.",
+    "right": "내가 할 테니 쉬세요.",
+    "en": "I will do it, so please rest."
+   }
+  ],
+  "topik_tip": "The promise sense (“내가 -ㄹ 테니”) and the supposition sense are both tested: see who the subject is.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 오다",
+  "level": 3,
+  "label": "have been doing up to now",
+  "meaning_en": "An expression for an action or state that has continued from the past up to the present: “have been X-ing all along, have kept X-ing”. It looks back from now, often with “지금까지, 오랫동안, 예전부터”.",
+  "usage": "It attaches to verb stems with “-아/어”: “믿다 → 믿어 오다”, “살다 → 살아 오다”, “이어지다 → 이어져 오다”, “쌓다 → 쌓아 오다”, “하다 → 해 오다”. It is usually in the past (“-어 왔다”) or in a modifier (“-어 온”). The same form can mean “do X and come” (“사 오다”). Its counterpart “-어 가다” goes forward into the future.",
+  "examples": [
+   {
+    "ko": "이 가게는 삼십 년 동안 같은 맛을 이어 오고 있다.",
+    "en": "This shop has kept the same taste for thirty years.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리는 오랫동안 서로를 믿어 왔다.",
+    "en": "We have trusted each other for a long time.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "할아버지는 평생 가난하게 살아 오셨다.",
+    "en": "My grandfather has lived in poverty all his life.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "지금까지 열심히 노력해 왔으니 이번에는 꼭 될 거야.",
+    "en": "You have been trying hard until now, so it will surely work this time.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "대대로 같은 방식으로 농사를 지어 오는 마을이다.",
+    "en": "It is a village that has farmed in the same way for generations.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 가다",
+    "difference": "“-어 오다” looks back from the present; “-어 가다” goes on toward the future.",
+    "pair": [
+     {
+      "ko": "지금까지 열심히 해 왔다.",
+      "en": "I have been doing it hard until now."
+     },
+     {
+      "ko": "앞으로도 열심히 해 가겠다.",
+      "en": "I will keep doing it hard from now on."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” is in progress now; “-어 오다” covers the whole stretch up to now.",
+    "pair": [
+     {
+      "ko": "이 일을 하고 있다.",
+      "en": "I am doing this work."
+     },
+     {
+      "ko": "이 일을 해 왔다.",
+      "en": "I have been doing this work."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It looks back from now; for the future, use “-어 가다”.",
+    "wrong": "앞으로도 열심히 해 오겠다.",
+    "right": "앞으로도 열심히 해 가겠다.",
+    "en": "I will keep doing it hard from now on."
+   }
+  ],
+  "topik_tip": "“지금까지” in a sentence points to “-어 오다”, and “앞으로” to “-어 가다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-기는",
+  "level": 3,
+  "label": "“oh, not really” (modest denial); X, yes, but",
+  "meaning_en": "An ending (often “-기는요/-긴요”) used to gently deny or push back a compliment or a statement by repeating its stem: “잘하기는요” (do well? not really). Inside a sentence, “-기는 하다” grants a point and then adds a “but”.",
+  "usage": "It attaches to verb, adjective and “이다” stems (“잘하다 → 잘하기는요”, “예쁘다 → 예쁘기는요”, “고맙다 → 고맙기는요”, “예술가이다 → 예술가이기는요”). Shortened to “-긴(요)”. The stem repeats the word of the other person. The reply is modest and often followed by a reason. In the “-기는 하다” frame (“재미있기는 한데 길어요”) the speaker admits something and then adds a reservation. The two uses share the same form.",
+  "examples": [
+   {
+    "ko": "잘하기는요. 아직 멀었어요.",
+    "en": "Not really. I still have a long way to go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "고맙기는요. 당연히 해야 할 일인걸요.",
+    "en": "No need to thank me. It is only what I should do.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "예쁘기는요. 너무 좁아서 불편해요.",
+    "en": "Pretty? Not really. It is so cramped that it is inconvenient.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 영화는 재미있기는 한데 너무 길어요.",
+    "en": "That movie is interesting, to be sure, but it is too long.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "먹기는 먹었는데 맛은 잘 모르겠어요.",
+    "en": "I did eat it, but I could not tell the taste.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지만",
+    "difference": "“-기는 하지만” first concedes the point; “-지만” alone is a plain contrast.",
+    "pair": [
+     {
+      "ko": "재미있기는 한데 길어요.",
+      "en": "It is interesting, all right, but long."
+     },
+     {
+      "ko": "재미있지만 길어요.",
+      "en": "It is interesting but long."
+     }
+    ]
+   },
+   {
+    "pattern": "아니에요",
+    "difference": "“-기는요” echoes the other person's word; “아니에요” is a plain “no”.",
+    "pair": [
+     {
+      "ko": "잘하시네요. → 잘하기는요.",
+      "en": "You do well. — Not really."
+     },
+     {
+      "ko": "잘하시네요. → 아니에요.",
+      "en": "You do well. — No."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It attaches to the bare stem, not to a full sentence ending.",
+    "wrong": "잘해요기는요.",
+    "right": "잘하기는요.",
+    "en": "Not really, I don't do well."
+   }
+  ],
+  "topik_tip": "“-기는요” (modest denial) and “-기는 하다” (concession) are the two shapes of this form.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 모양이다",
+  "level": 3,
+  "label": "it looks like (judging by signs)",
+  "meaning_en": "An expression for a guess based on signs the speaker has seen or heard: “it looks as if, it seems that”. The guess is about a state of affairs or about another person, not about oneself.",
+  "usage": "Verbs take “-는 모양이다” (present), “-ㄴ/은 모양이다” (past); adjectives and “이다” take “-ㄴ/은 모양이다” (“바쁘다 → 바쁜 모양이다”, “학생이다 → 학생인 모양이다”); a prediction takes “-ㄹ 모양이다”. Real stems: “오다 → 오는 모양이다 / 온 모양이다”, “살다 → 사는 모양이다” (ㄹ drops), “춥다 → 추운 모양이다”, “듣다 → 듣는 모양이다 / 들은 모양이다”. The ground often comes in front: “길이 젖은 걸 보니 ... 모양이다”. The polite form is “-ㄴ 모양이에요”.",
+  "examples": [
+   {
+    "ko": "밖에 눈이 오는 모양이에요. 창문이 하얗게 변했어요.",
+    "en": "It seems to be snowing outside. The window has turned white.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 요즘 많이 바쁜 모양이다.",
+    "en": "Jisu seems to be very busy these days.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "길이 젖은 걸 보니 어젯밤에 비가 온 모양이다.",
+    "en": "Judging from the wet road, it seems to have rained last night.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "민준이는 그 소식을 아직 모르는 모양이에요.",
+    "en": "Minjun does not seem to know the news yet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "불이 다 꺼진 걸 보니 모두 퇴근한 모양이다.",
+    "en": "The lights are all off, so everyone seems to have left work.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-나 보다",
+    "difference": "“-는 모양이다” and “-나 보다” are near-synonyms for a guess from evidence. “-나 보다” is the more spoken one.",
+    "pair": [
+     {
+      "ko": "민준이가 아픈 모양이에요.",
+      "en": "Minjun seems to be sick."
+     },
+     {
+      "ko": "민준이가 아픈가 봐요.",
+      "en": "Minjun seems to be sick."
+     }
+    ]
+   },
+   {
+    "pattern": "-은 것 같다",
+    "difference": "“-은 것 같다” is a broader guess that also fits the speaker's own feelings and opinions. “-는 모양이다” judges a situation by what is visible.",
+    "pair": [
+     {
+      "ko": "민준이는 피곤한 모양이에요.",
+      "en": "Minjun seems to be tired."
+     },
+     {
+      "ko": "민준이는 피곤한 것 같아요.",
+      "en": "Minjun seems to be tired."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A verb's past modifier after a vowel is “-ㄴ”: “오다” becomes “온”.",
+    "wrong": "비가 오은 모양이다.",
+    "right": "비가 온 모양이다.",
+    "en": "It seems to have rained."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "서울에 살는 모양이다.",
+    "right": "서울에 사는 모양이다.",
+    "en": "They seem to live in Seoul."
+   }
+  ],
+  "topik_tip": "The tense is on the modifier: present “-는”, past “-ㄴ”, adjectives “-ㄴ”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 편이다",
+  "level": 3,
+  "label": "tends to; is on the side of",
+  "meaning_en": "An expression for a rough classification: “tends to X, is the X type, is rather X”. It says a thing falls more on one side without claiming it is absolutely so.",
+  "usage": "Verbs take “-는 편이다” (“일찍 일어나는 편이다”), adjectives and “이다” take “-ㄴ/은 편이다” (“키가 큰 편이다”, “춥다 → 추운 편이다”). The negative is “-는 편이 아니다” (“많은 편은 아니다”). Adverbs like “비교적, 꽤, 보통, 대체로” often go with it. “편” is spaced from the modifier. ㄹ-stems drop the ㄹ: “사는 편이다”, “긴 편이다”.",
+  "examples": [
+   {
+    "ko": "저는 아침에 일찍 일어나는 편이에요.",
+    "en": "I tend to get up early in the morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 동네는 교통이 편한 편이다.",
+    "en": "Our neighborhood has relatively convenient transport.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 말이 많은 편은 아니다.",
+    "en": "Minjun is not the talkative type.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "올해 겨울은 작년보다 추운 편이다.",
+    "en": "This winter is on the cold side compared with last year.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "한국어 발음은 비교적 쉬운 편이다.",
+    "en": "Korean pronunciation is comparatively on the easy side.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는다",
+    "difference": "A plain predicate states a fact. “-는 편이다” softens it into a tendency.",
+    "pair": [
+     {
+      "ko": "민준이는 키가 커요.",
+      "en": "Minjun is tall."
+     },
+     {
+      "ko": "민준이는 키가 큰 편이에요.",
+      "en": "Minjun is on the tall side."
+     }
+    ]
+   },
+   {
+    "pattern": "-곤 하다",
+    "difference": "“-는 편이다” describes the type of person or thing. “-곤 하다” describes something that is repeated from time to time.",
+    "pair": [
+     {
+      "ko": "저는 일찍 일어나는 편이에요.",
+      "en": "I am an early riser."
+     },
+     {
+      "ko": "저는 일찍 일어나곤 해요.",
+      "en": "I often get up early."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective takes “추운”.",
+    "wrong": "올겨울은 작년보다 춥은 편이다.",
+    "right": "올겨울은 작년보다 추운 편이다.",
+    "en": "This winter is on the cold side compared with last year."
+   },
+   {
+    "note": "“편” is a separate word, spaced from the modifier.",
+    "wrong": "민준이는 키가 큰편이다.",
+    "right": "민준이는 키가 큰 편이다.",
+    "en": "Minjun is on the tall side."
+   }
+  ],
+  "topik_tip": "Look for the hedge: “편이다” never says “very” or “always”; it says “more to this side”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는가 보다",
+  "level": 3,
+  "label": "seems that (guess from what one sees)",
+  "meaning_en": "An expression for a guess based on what the speaker sees or hears: “it seems that ...”. It is the same job as “-나 보다”, with the form “-는가 보다” for verbs and “-ㄴ가 보다” for adjectives.",
+  "usage": "Verbs and “있다/없다” take “-는가 보다” (“오다 → 오는가 보다”, “살다 → 사는가 보다” with the ㄹ dropped), past stems “-었는가 보다”, adjectives and “이다” take “-ㄴ/은가 보다” (“아프다 → 아픈가 보다”, “학생이다 → 학생인가 보다”). The ground of the guess usually comes before or after. The guess is about others or a situation. The polite form is “-는가 봐요”.",
+  "examples": [
+   {
+    "ko": "지수가 아직 안 오는가 보다. 전화도 안 받네.",
+    "en": "Jisu does not seem to have come yet. They are not even answering the phone.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저 가게는 장사가 잘되는가 보다. 손님이 많네.",
+    "en": "That shop seems to be doing well. There are many customers.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 많이 아픈가 보다. 계속 울어요.",
+    "en": "The child seems to be quite sick. They keep crying.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘 시험이 어려웠는가 보다. 다들 표정이 어둡네.",
+    "en": "Today's exam seems to have been hard. Everyone looks gloomy.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 집에 없는가 보다. 불이 꺼져 있어.",
+    "en": "Minjun seems not to be home. The lights are off.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-나 보다",
+    "difference": "The two are near-synonyms in a guess from evidence. “-나 보다” is the shorter, spoken form.",
+    "pair": [
+     {
+      "ko": "비가 오는가 보다.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 오나 보다.",
+      "en": "It seems to be raining."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 모양이다",
+    "difference": "Close in meaning. “-는 모양이다” is a little more formal and fits written reports.",
+    "pair": [
+     {
+      "ko": "비가 오는가 보다.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 오는 모양이다.",
+      "en": "It seems to be raining."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ가”, not “-는가”.",
+    "wrong": "아이가 아프는가 보다.",
+    "right": "아이가 아픈가 보다.",
+    "en": "The child seems to be sick."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는가”.",
+    "wrong": "그 사람은 서울에 살는가 보다.",
+    "right": "그 사람은 서울에 사는가 보다.",
+    "en": "They seem to live in Seoul."
+   }
+  ],
+  "topik_tip": "Same meaning as “-나 보다”: the form splits by word class, verb “-는가”, adjective “-ㄴ가”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 중이다",
+  "level": 3,
+  "label": "in the middle of doing",
+  "meaning_en": "An expression for an action in progress at this moment: “is in the middle of doing, is -ing”. It also appears with action nouns as “N 중이다” (“회의 중이다”, “공사 중이다”).",
+  "usage": "Verbs take “-는 중이다” with no tense ending on the verb: “먹다 → 먹는 중이다”, “준비하다 → 준비하는 중이다”, “가다 → 가는 중이다” (on the way); tense is on “이다” (“-는 중이었다”). Nouns formed with “하다” take “N 중이다” (“식사 중”, “통화 중”). It does not attach to adjectives (“추워지는 중이다” with a change verb is fine). It is more precise and more formal than “-고 있다”, which can also describe a longer period. “중” is spaced from a verb modifier.",
+  "examples": [
+   {
+    "ko": "지금 회의 중이라서 전화를 못 받아요.",
+    "en": "I am in a meeting now, so I cannot answer the phone.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 지금 밥을 먹는 중이에요.",
+    "en": "I am in the middle of eating right now.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 시험 준비를 하는 중이다.",
+    "en": "Minjun is in the middle of preparing for the exam.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 도로는 공사 중이라서 지나갈 수 없다.",
+    "en": "This road is under construction, so it cannot be used.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지금 가는 중이니까 조금만 기다려 줘.",
+    "en": "I am on my way now, so wait a little.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” is the general progressive and can cover a longer period. “-는 중이다” is “right now, in the middle of it”.",
+    "pair": [
+     {
+      "ko": "요즘 한국어를 공부하고 있어요.",
+      "en": "I am studying Korean these days."
+     },
+     {
+      "ko": "지금 한국어를 공부하는 중이에요.",
+      "en": "I am in the middle of studying Korean right now."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 중에",
+    "difference": "“중이다” closes the sentence with the state; “-는 중에” is “during, in the course of” and opens an event.",
+    "pair": [
+     {
+      "ko": "지금 회의 중이에요.",
+      "en": "I am in a meeting now."
+     },
+     {
+      "ko": "회의 중에 전화가 왔어요.",
+      "en": "A call came during the meeting."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The verb takes no past ending; the tense goes on “이다”.",
+    "wrong": "밥을 먹었는 중이에요.",
+    "right": "밥을 먹는 중이에요.",
+    "en": "I am in the middle of eating."
+   },
+   {
+    "note": "It does not attach to an adjective; use a verb of change.",
+    "wrong": "날씨가 추운 중이다.",
+    "right": "날씨가 추워지는 중이다.",
+    "en": "The weather is getting cold."
+   }
+  ],
+  "topik_tip": "“N 중이다” and “-는 중이다” are the same pattern: an ongoing state at the time of speaking.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으려다가",
+  "level": 3,
+  "label": "was about to X but ...",
+  "meaning_en": "An expression for an intended action that did not happen, or turned into something else: “was about to / tried to X, but (stopped / did Y instead)”. It is a contraction of “-으려고 하다가”.",
+  "usage": "After a vowel or ㄹ it is “-려다가”, after other consonants “-으려다가”; it attaches to verbs only: “가다 → 가려다가”, “먹다 → 먹으려다가”, “만들다 → 만들려다가”, “걷다 → 걸으려다가” (ㄷ becomes ㄹ), “눕다 → 누우려다가”. The main clause says what happened instead (“말았다, 그만두었다, 포기했다”) or what interrupted it (“넘어질 뻔했다”). The short form “-려다” is also found. “말하려다가 말았다” is a frequent collocation.",
+  "examples": [
+   {
+    "ko": "전화를 하려다가 시간이 늦어서 문자로 보냈다.",
+    "en": "I was going to call, but since it was late I sent a text.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나가려다가 비가 와서 그냥 집에 있기로 했다.",
+    "en": "I was about to go out, but because it rained I decided to just stay home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일어나려다가 다리에 쥐가 나서 넘어질 뻔했다.",
+    "en": "I was about to get up when my leg cramped and I nearly fell.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "하고 싶은 말이 있었는데 말하려다가 말았다.",
+    "en": "There was something I wanted to say, but I was about to say it and held back.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "과자를 먹으려다가 살이 찔까 봐 내려놓았다.",
+    "en": "I was about to eat the snack but put it down for fear of gaining weight.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "“-으려고” states the intention. “-으려다가” adds that the intention was dropped or changed.",
+    "pair": [
+     {
+      "ko": "먹으려고 했다.",
+      "en": "I intended to eat."
+     },
+     {
+      "ko": "먹으려다가 그만뒀다.",
+      "en": "I was about to eat but stopped."
+     }
+    ]
+   },
+   {
+    "pattern": "-다가 말다",
+    "difference": "“-다가 말다” means the action was begun and then dropped halfway. “-으려다가 말다” means it was never begun.",
+    "pair": [
+     {
+      "ko": "먹다가 말았다.",
+      "en": "I started eating and stopped halfway."
+     },
+     {
+      "ko": "먹으려다가 말았다.",
+      "en": "I was about to eat, but did not."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before “-으려다가”.",
+    "wrong": "길을 걷으려다가 비가 와서 택시를 탔다.",
+    "right": "길을 걸으려다가 비가 와서 택시를 탔다.",
+    "en": "I was going to walk along the road, but since it rained I took a taxi."
+   },
+   {
+    "note": "The first verb takes no tense ending.",
+    "wrong": "먹었으려다가 말았다.",
+    "right": "먹으려다가 말았다.",
+    "en": "I was about to eat, but did not."
+   }
+  ],
+  "topik_tip": "The fixed combination “-으려다가 말다” (was about to, but did not) is the one to remember.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 보이다",
+  "level": 3,
+  "label": "looks (adjective), appears",
+  "meaning_en": "An expression for an impression taken from appearance: “looks X, seems X (by sight)”. It judges the outward look of a person or thing and does not claim to know the inside.",
+  "usage": "It attaches to adjective stems with “-아/어”: “좋다 → 좋아 보이다”, “맛있다 → 맛있어 보이다”, “젊다 → 젊어 보이다”, “작다 → 작아 보이다”, “예쁘다 → 예뻐 보이다” (ㅡ drops), “춥다 → 추워 보이다” (ㅂ-irregular), “피곤하다 → 피곤해 보이다”. It does not attach to action verbs (“가 보이다” is not used): for verbs there is “-는 것 같다”. With nouns the pattern is “N처럼 보이다”. Do not mix it up with “-어 보다” (try doing).",
+  "examples": [
+   {
+    "ko": "오늘 기분이 좋아 보이네요. 무슨 좋은 일 있어요?",
+    "en": "You look cheerful today. Did something good happen?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 음식은 정말 맛있어 보인다.",
+    "en": "This food really looks delicious.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "민준이는 나이보다 젊어 보인다.",
+    "en": "Minjun looks young for their age.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "얼굴이 많이 피곤해 보여요. 좀 쉬세요.",
+    "en": "You look very tired. Please rest.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 문제는 쉬워 보이지만 사실은 아주 어렵다.",
+    "en": "That problem looks easy, but it is actually very hard.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-어 보이다” rests on how something looks. “-을 것 같다” is a broader guess that also covers taste, feeling and the future.",
+    "pair": [
+     {
+      "ko": "이 케이크는 맛있어 보여요.",
+      "en": "This cake looks delicious."
+     },
+     {
+      "ko": "이 케이크는 맛있을 것 같아요.",
+      "en": "This cake seems like it will be delicious."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 보다",
+    "difference": "“-어 보이다” (looks) and “-어 보다” (try) look alike and mean different things.",
+    "pair": [
+     {
+      "ko": "이 음식은 맛있어 보여요.",
+      "en": "This food looks delicious."
+     },
+     {
+      "ko": "이 음식을 먹어 봐요.",
+      "en": "Try this food."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "오늘은 날씨가 춥어 보인다.",
+    "right": "오늘은 날씨가 추워 보인다.",
+    "en": "The weather looks cold today."
+   },
+   {
+    "note": "A ㅡ-stem drops the ㅡ before “-어”.",
+    "wrong": "그 옷을 입으면 예쁘어 보여요.",
+    "right": "그 옷을 입으면 예뻐 보여요.",
+    "en": "You look pretty in that outfit."
+   }
+  ],
+  "topik_tip": "Adjective plus “-어 보이다” is “looks X”; verb plus “-어 보다” is “try X-ing”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다고3",
+  "level": 3,
+  "label": "reporting what someone said (indirect quote)",
+  "meaning_en": "The pattern of indirect quotation: “someone says/said that ...”. It rebuilds what was said as a clause of the speaker, with an ending by sentence type: statement “-ㄴ다고/-는다고/-다고”, question “-냐고”, suggestion “-자고”, command “-(으)라고”, followed by “하다/말하다/묻다”.",
+  "usage": "Statements: verbs “-ㄴ다고/-는다고” (“가다 → 간다고”, “먹다 → 먹는다고”, “살다 → 산다고”), adjectives “-다고” (“춥다 → 춥다고”), nouns “-(이)라고” (“학생이라고”), past “-었다고”. Questions: “-냐고, -느냐고”. Suggestions: “-자고”. Commands: “-(으)라고”. Pronouns and polite endings shift to the reporter's point of view. In casual speech “-다고 해요” contracts to “-대요”, “-냐고 해요” to “-냬요”, “-자고 해요” to “-재요”, “-라고 해요” to “-래요”.",
+  "examples": [
+   {
+    "ko": "민준이는 내일 일찍 출발한다고 했어요.",
+    "en": "Minjun said that they would set off early tomorrow.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수가 요즘 너무 바쁘다고 해요.",
+    "en": "Jisu says that they are very busy these days.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님이 내일까지 숙제를 내라고 하셨다.",
+    "en": "The teacher told us to hand in the homework by tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구가 같이 영화를 보자고 했다.",
+    "en": "My friend suggested that we watch a movie together.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "엄마가 밥은 먹었냐고 물으셨다.",
+    "en": "Mom asked whether I had eaten.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-이라고",
+    "difference": "A direct quote with “라고” keeps the words as spoken; “-다고” reports them from the speaker's own point of view.",
+    "pair": [
+     {
+      "ko": "민준이는 “내일 갈게”라고 했다.",
+      "en": "Minjun said, “I'll go tomorrow.”"
+     },
+     {
+      "ko": "민준이는 내일 간다고 했다.",
+      "en": "Minjun said that they would go tomorrow."
+     }
+    ]
+   },
+   {
+    "pattern": "-대요",
+    "difference": "“-다고 해요” is the full form of the report. The contracted spoken form is “-대요”.",
+    "pair": [
+     {
+      "ko": "민준이가 내일 간다고 해요.",
+      "en": "Minjun says that they will go tomorrow."
+     },
+     {
+      "ko": "민준이가 내일 간대요.",
+      "en": "Minjun says they will go tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-다고”, not “-ㄴ다고/-는다고”.",
+    "wrong": "날씨가 춥는다고 했다.",
+    "right": "날씨가 춥다고 했다.",
+    "en": "They said that the weather was cold."
+   },
+   {
+    "note": "After a noun the quote ending is “-(이)라고”, not “-다고”.",
+    "wrong": "그 사람이 학생이다고 했다.",
+    "right": "그 사람이 학생이라고 했다.",
+    "en": "They said that person is a student."
+   }
+  ],
+  "topik_tip": "Sentence type decides the ending: statement “-다고”, question “-냐고”, suggestion “-자고”, command “-라고”.",
+  "review": {
+   "status": "draft"
+  }
+ }
+]
