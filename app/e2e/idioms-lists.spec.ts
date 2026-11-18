@@ -27,9 +27,16 @@ const LISTS = [
   { name: 'All learner 성어', count: 202, tag: '성어', first: '만장일치' },
 ];
 
+const fold = (page: Page) => study(page).getByRole('button', { name: /^Idioms & proverbs/ });
+/** Expand the group (idempotent: the choice is remembered on the device). */
+async function expand(page: Page) {
+  if ((await fold(page).getAttribute('aria-expanded')) !== 'true') await fold(page).click();
+  await expect(fold(page)).toHaveAttribute('aria-expanded', 'true');
+}
 async function overview(page: Page) {
   await page.goto('/#/lists');
   await expect(study(page).getByRole('heading', { name: 'Study lists' })).toBeVisible();
+  await expand(page);
 }
 const link = (page: Page, name: string) => group(page).locator('.list-row', { has: page.locator('.list-name', { hasText: new RegExp(`^${name}$`) }) });
 
@@ -51,8 +58,15 @@ for (const vp of [{ n: 'phone', w: 390, h: 844 }, { n: 'ipad', w: 1180, h: 820 }
       return;
     }
 
-    // ---- overview: the group with its five lists and counts ----
+    // ---- overview: collapsed with a summary; expanding (remembered across a reload) shows five lists and counts ----
     await expect(group(page)).toBeVisible();
+    await expect(fold(page)).toHaveAttribute('aria-expanded', 'false');
+    await expect(fold(page).locator('.group-sum')).toHaveText('5 lists');
+    await expect(group(page).locator('.list-row:visible')).toHaveCount(0);
+    await expand(page);
+    await page.reload();
+    await expect(fold(page)).toHaveAttribute('aria-expanded', 'true');
+    await expect(group(page).locator('.list-row:visible')).toHaveCount(5);
     expect(await texts(group(page).locator('.list-name'))).toEqual(LISTS.map((l) => l.name));
     for (const l of LISTS) await expect(link(page, l.name)).toContainText(`${l.count} ${l.tag === '속담' ? 'proverbs' : 'idioms'}`);
     await group(page).scrollIntoViewIfNeeded();

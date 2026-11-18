@@ -1,3 +1,4 @@
+import type { ComponentChildren } from 'preact';
 import { useState } from 'preact/hooks';
 import { Empty, Hanja, IconButton, LevelBadge } from '../components/common';
 import { Icon } from '../components/Icons';
@@ -48,6 +49,11 @@ function SourceSection({ src }: { src: ListSource }) {
     const g = groups.find((x) => x.name === l.group);
     if (g) g.lists.push(l); else groups.push({ name: l.group, lists: [l] });
   }
+  const listItems = (ls: ListSummary[]) => ls.map((l) => (
+    <li key={l.id}>
+      <ListRow l={l} current={current(l.id)} subs={all.filter((s) => s.parent === l.id)} currentOf={current} />
+    </li>
+  ));
   const resume = src.lastOpened?.();
   const last = resume ? all.find((l) => l.id === resume) : undefined;
   return (
@@ -63,19 +69,37 @@ function SourceSection({ src }: { src: ListSource }) {
           <li><ListRow l={last} current={current(last.id)} lead="Continue" /></li>
         </ul>
       )}
-      {groups.map((g) => (
-        <div key={g.name ?? ''} class="list-group" role="group" aria-label={g.name}>
-          {g.name && <h3 class="group-head">{g.name}</h3>}
-          <ul class="plain list">
-            {g.lists.map((l) => (
-              <li key={l.id}>
-                <ListRow l={l} current={current(l.id)} subs={all.filter((s) => s.parent === l.id)} currentOf={current} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      {groups.map((g) => (g.name
+        ? <FoldGroup key={g.name} id={`${src.id}:${g.name}`} name={g.name} lists={g.lists}>{listItems(g.lists)}</FoldGroup>
+        : <div key="" class="list-group"><ul class="plain list">{listItems(g.lists)}</ul></div>))}
     </section>
+  );
+}
+
+const OPEN_KEY = 'kd.lists.open';
+/** Groups left open on the overview, remembered on this device; all collapsed by default. */
+function loadOpen(): string[] { try { const v = JSON.parse(localStorage.getItem(OPEN_KEY) || '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; /* storage unavailable or unparsable: all collapsed */ } }
+function saveOpen(v: string[]) { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* storage unavailable: the choice lasts for this visit */ } }
+const unitOf = (name: string) => (/level/i.test(name) ? 'level' : /topic/i.test(name) ? 'topic' : 'list');
+
+/** A collapsible group of lists: the heading is the toggle; collapsed it summarises the count. Closed groups stay mounted (hidden). */
+function FoldGroup({ id, name, lists: ls, children }: { id: string; name: string; lists: ListSummary[]; children: ComponentChildren }) {
+  const [open, setOpen] = useState(() => loadOpen().includes(id));
+  const toggle = () => {
+    const next = !open;
+    setOpen(next);
+    const cur = loadOpen().filter((x) => x !== id);
+    saveOpen(next ? [...cur, id] : cur);
+  };
+  const body = `lg-${id.replace(/[^\w-]+/g, '-')}`;
+  return (
+    <div class="list-group" role="group" aria-label={name}>
+      <h3 class="group-head"><button type="button" class="group-fold" aria-expanded={open} aria-controls={body} onClick={toggle}>
+        <span class="rd-chev" aria-hidden="true" /><span class="group-title">{name}</span>
+        {!open && <span class="group-sum muted small">{plural(ls.length, unitOf(name))}</span>}
+      </button></h3>
+      <ul id={body} class="plain list" hidden={!open}>{children}</ul>
+    </div>
   );
 }
 
