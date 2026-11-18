@@ -3,112 +3,87 @@ import type { ComponentChildren } from 'preact';
 import { Icon } from './Icons';
 import { Hanja, Pos } from './common';
 import { SaveButton } from './SaveButton';
-import { entryPath, href, searchPath, wordPath } from '../lib/router';
+import { entryPath, href, wordPath } from '../lib/router';
 import { curriculumHint, curriculumLabel } from '../lib/home-day';
-import { useWide } from '../lib/layout';
-import type { HomeData, HomeExample, HomeRel } from '../db/types';
+import type { HomeData, HomeIdiom } from '../db/types';
+import { EntryInline } from '../views/Entry';
 import type { ItemInput } from '../lib/lists';
 
 export function CurriculumLevel({ level }: { level: number }) {
   return <span class="cur-lvl" title={curriculumHint(level)} aria-label={curriculumHint(level)}>{curriculumLabel(level)}</span>;
 }
 
-/** Example sentences: Korean, then English (with the AI chip when the English is an AI translation); a dialogue keeps one turn per line. */
-export function CardExamples({ items }: { items: HomeExample[] }) {
-  if (!items.length) return null;
-  return (
-    <ul class="plain card-exs" aria-label="Examples">
-      {items.map((x, i) => (
-        <li key={i} class="card-ex">
-          {x.ko.split('\n').map((l, j) => <div key={j} class="ex-ko hangul" lang="ko">{l}</div>)}
-          {x.en && x.en.split('\n').map((l, j) => <div key={j} class="ex-en">{x.en_ai && j === 0 && <span class="chip-ai ex-ai" title="AI translation, reviewed">AI</span>}{l}</div>)}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-const RELTYPE: Record<string, string> = { synonym: 'syn', antonym: 'ant', honorific: 'hon', humble: 'hum', 'see also': 'see', reference: 'ref', derived: 'der', variant: 'var', abbreviation: 'abbr' };
-function Related({ rels }: { rels: HomeRel[] }) {
-  const wide = useWide();
-  if (!rels.length) return null;
-  return (
-    <section class="card-related" aria-label="Related words">
-      <h4>Related</h4>
-      <div class="chips">
-        {rels.map((r, i) => (
-          <a key={i} class="chip" href={href(wide ? wordPath(r.word) : searchPath(r.word))}><span class="chip-type">{RELTYPE[r.type] ?? r.type}</span> <span class="hangul" lang="ko">{r.word}</span></a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 interface PageSpec {
   key: string;
-  kind: 'idiom' | 'word' | 'grammar';
-  tag: ComponentChildren;       // top-left: the level badge, or the idiom / proverb label
+  kind: 'proverb' | 'seongeo' | 'idiom' | 'word' | 'grammar';
+  label: ComponentChildren;     // header strip, left: what this page is
+  level?: number;               // curriculum level badge (words and grammar)
   save: ItemInput;
   title: string;
   hanja?: string | null;
   pos?: string | null;
   gloss?: string | null;
-  koDef?: string | null;
-  examples: HomeExample[];
-  related: HomeRel[];
-  path: string;                 // where "Open entry" goes
+  entry: { source?: string; id?: number; hw?: string; word?: string };   // the entry shown in the card
+  path: string;                 // the entry page (the headword links there)
 }
+
+const IDIOM_LABEL: Record<HomeIdiom['kind'], [string, string]> = { proverb: ['Proverb', '속담'], seongeo: ['Four-character idiom', '성어'], idiom: ['Idiom', '관용구'] };
 
 function pageSpecs(h: HomeData): PageSpec[] {
   const out: PageSpec[] = [];
-  if (h.idiom) {
-    const i = h.idiom;
+  for (const i of h.idioms ?? []) {
+    const [en, ko] = IDIOM_LABEL[i.kind] ?? IDIOM_LABEL.idiom;
     out.push({
-      key: `i${i.id}`, kind: 'idiom',
-      tag: <span class="card-tag" lang="ko" title={i.kind === 'proverb' ? 'Proverb' : 'Idiom'}>{i.kind === 'proverb' ? '속담' : '관용구'}</span>,
-      save: { kind: 'entry', source: i.source, headword: i.headword, homonym: i.homonym, pos: i.kind, gloss: i.gloss },
-      title: i.headword, gloss: i.gloss, koDef: i.ko_def, examples: i.examples, related: i.related, path: entryPath(i.source, i.id, i.headword),
+      key: `i${i.id}`, kind: i.kind,
+      label: <>{en} <span class="card-kind-ko" lang="ko">{ko}</span></>,
+      save: { kind: 'entry', source: i.source, headword: i.headword, homonym: i.homonym, pos: i.pos ?? i.kind, gloss: i.gloss },
+      title: i.headword, gloss: i.gloss, entry: { source: i.source, id: i.id, hw: i.headword }, path: entryPath(i.source, i.id, i.headword),
     });
   }
   for (const w of h.words) {
     out.push({
-      key: `w${w.id}`, kind: 'word', tag: <CurriculumLevel level={w.level} />,
+      key: `w${w.id}`, kind: 'word', label: 'Word', level: w.level,
       save: { kind: 'entry', source: w.source, headword: w.headword, homonym: w.homonym, pos: w.pos, hanja: w.hanja, gloss: w.gloss },
-      title: w.headword, hanja: w.hanja, pos: w.pos, gloss: w.gloss, koDef: w.ko_def, examples: w.examples, related: w.related, path: entryPath(w.source, w.id, w.headword),
+      title: w.headword, hanja: w.hanja, pos: w.pos, gloss: w.gloss, entry: { source: w.source, id: w.id, hw: w.headword }, path: entryPath(w.source, w.id, w.headword),
     });
   }
   for (const g of h.grammar) {
     out.push({
       key: `g${g.id}`, kind: 'grammar',
-      tag: <><span class="card-tag">Grammar</span><CurriculumLevel level={g.level} /></>,
+      label: 'Grammar', level: g.level,
       save: { kind: 'grammar', pattern: g.pattern, summary: g.summary_en, level: g.level, ref: g.entry ? { source: g.entry.source, homonym: g.entry.homonym, pos: g.entry.pos } : null },
-      title: g.pattern, gloss: g.summary_en, koDef: g.ko_def, examples: g.examples, related: g.related,
+      title: g.pattern, gloss: g.summary_en,
+      entry: g.entry ? { source: g.entry.source, id: g.entry.id, hw: g.pattern } : { word: g.pattern },
       path: g.entry ? entryPath(g.entry.source, g.entry.id, g.pattern) : wordPath(g.pattern),
     });
   }
   return out;
 }
 
-/** One whole page: badge + star, the headword large, English, Korean definition, examples, related words, "Open entry". */
-function Page({ p, n, total }: { p: PageSpec; n: number; total: number }) {
+/** One page: a framed card. The header strip (kind · level · save) stays put; below it the card scrolls
+ *  through the headword (hanja and part of speech under it), its English meaning and then the whole
+ *  entry as the entry page's Dict tab shows it (every dictionary's senses, examples, related words,
+ *  grammar lessons). The entry loads once the page is near the one on screen. */
+function Page({ p, n, total, near }: { p: PageSpec; n: number; total: number; near: boolean }) {
   return (
     <div class="car-slide" role="group" aria-roledescription="slide" aria-label={`${n} of ${total}`}>
       <article class="today-card" data-kind={p.kind}>
         <header class="card-head">
-          {p.tag}
+          <span class="card-kind">{p.label}</span>
+          {p.level != null && <CurriculumLevel level={p.level} />}
           <span class="card-spacer" />
-          <SaveButton item={p.save} title={p.title} size={24} />
+          <SaveButton item={p.save} title={p.title} size={22} />
         </header>
-        <h2 class="card-hw">
-          <a class="card-link" href={href(p.path)}><span class="hangul" lang="ko">{p.title}</span></a>
-          {p.hanja && <Hanja text={p.hanja} />}
-          <Pos pos={p.pos} />
-        </h2>
-        {p.gloss && <p class="card-gloss">{p.gloss}</p>}
-        {p.koDef && <p class="card-kodef hangul" lang="ko">{p.koDef}</p>}
-        <CardExamples items={p.examples} />
-        <Related rels={p.related} />
-        <a class="btn primary card-open" href={href(p.path)}>Open entry</a>
+        <div class="card-body" tabIndex={-1}>
+          <div class="card-top">
+            <h2 class="card-hw">
+              <a class="card-link" href={href(p.path)}><span class="hangul" lang="ko">{p.title}</span></a>
+            </h2>
+            {(p.hanja || p.pos) && <div class="card-sub">{p.hanja && <Hanja text={p.hanja} />}<Pos pos={p.pos} /></div>}
+            {p.gloss && <p class="card-gloss">{p.gloss}</p>}
+          </div>
+          {near && <EntryInline {...p.entry} />}
+        </div>
       </article>
     </div>
   );
@@ -124,6 +99,9 @@ export function HomePager({ data }: { data: HomeData }) {
   const track = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; left: number; moved: boolean } | null>(null);
   const [cur, setCur] = useState(0);
+  // pages whose entry has loaded stay loaded (swiping back does not reload them)
+  const [seen] = useState(() => new Set<number>());
+  for (let i = cur - 1; i <= cur + 1; i++) seen.add(i);
   if (!n) return null;
 
   const nearest = () => {
@@ -170,7 +148,7 @@ export function HomePager({ data }: { data: HomeData }) {
       <div class="car-track" ref={track} tabIndex={0} aria-label="Pages, swipe or use the arrow keys" onScroll={onScroll} onKeyDown={onKeyDown}
         onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={endDrag} onPointerCancel={endDrag}
         onClickCapture={(e) => { if (drag.current?.moved) { e.preventDefault(); e.stopPropagation(); } }}>
-        {pages.map((p, i) => <Page key={p.key} p={p} n={i + 1} total={n} />)}
+        {pages.map((p, i) => <Page key={p.key} p={p} n={i + 1} total={n} near={Math.abs(i - cur) <= 1 || seen.has(i)} />)}
       </div>
       {n > 1 && (
         <div class="car-nav">

@@ -168,8 +168,9 @@ export interface HomeExample { ko: string; en: string | null; en_ai: boolean }
 export interface HomeRel { type: string; word: string }
 export interface HomeWord { source: Source; id: number; headword: string; homonym: number | null; hanja: string | null; pos: string | null; level: number; gloss: string; ko_def: string | null; related: HomeRel[]; examples: HomeExample[] }
 export interface HomeGrammar { id: number; pattern: string; level: number; summary_en: string | null; ko_def: string | null; related: HomeRel[]; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null; examples: HomeExample[] }
-export interface HomeIdiom { source: Source; id: number; headword: string; homonym: number | null; kind: 'idiom' | 'proverb'; gloss: string; ko_def: string | null; related: HomeRel[]; examples: HomeExample[] }
-export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idiom: HomeIdiom | null }
+/** kind: 'proverb' (속담) and 'seongeo' (성어) come from the study lists; 'idiom' only from old packs. */
+export interface HomeIdiom { source: Source; id: number; headword: string; homonym: number | null; pos: string | null; kind: 'idiom' | 'proverb' | 'seongeo'; gloss: string; ko_def: string | null; related: HomeRel[]; examples: HomeExample[] }
+export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idioms: HomeIdiom[] }
 
 /** Built-in study lists (Lists tab): see core/src/search/study.rs. Empty arrays when the pack lacks `curriculum` / `topic`. */
 export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[]; idioms?: StudyIdiomList[] }

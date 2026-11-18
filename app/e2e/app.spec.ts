@@ -260,6 +260,7 @@ test('performance budgets (loose: <100ms headless)', async ({ page }) => {
   expect(Math.max(...tabs)).toBeLessThan(150);
 
   // cold start with installed packs: time until the engine answers (search box is usable immediately)
+  await page.goto('/#/search');   // the search box lives on the Search tab only
   await page.reload();
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible();
   await page.waitForFunction(() => performance.getEntriesByName('kd-engine-ready').length > 0, null, { timeout: 120_000 });

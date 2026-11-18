@@ -33,7 +33,10 @@ async function seedOldBookmarks(page: Page) {
 }
 
 const search = async (page: Page, q: string) => {
-  await page.getByRole('searchbox', { name: 'Search' }).fill(q);
+  // the search box lives on the Search tab only: from an entry or the Lists tab, go there first (as a user would)
+  const box = page.getByRole('searchbox', { name: 'Search' });
+  if (!(await box.count())) await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Search' }).click();
+  await box.fill(q);
   await page.waitForURL((u) => u.hash.includes('q=') && decodeURIComponent(u.hash).includes(q));
 };
 const openEntry = async (page: Page, q: string) => {
