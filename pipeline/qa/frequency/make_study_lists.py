@@ -201,6 +201,13 @@ def seongeo(results, cands, ents, review_path):
         for i, r in enumerate(keep[:n], 1):
             src, ext, hw = best_ref(ents, cand[r["id"]])
             out.append([name, i, r["text"], src, ext, hw, r["score"], r["kowiki_count"], r["kowikisource_count"], r["opensubtitles_count"], ""])
+    # every krdict 성어 the review keeps (also those reviewed beyond the first cut): counted ones by score,
+    # then the ones that never occur in the corpora, in 가나다 order
+    learner = [r for r in keep if cand[r["id"]]["krdict"] == "1"]
+    learner.sort(key=lambda r: (float(r["score"]) <= 0, -float(r["score"]), int(r["rank"]) if float(r["score"]) > 0 else 0, nfc(r["text"])))
+    for i, r in enumerate(learner, 1):
+        src, ext, hw = best_ref(ents, cand[r["id"]])
+        out.append(["seongeo_learner", i, r["text"], src, ext, hw, r["score"], r["kowiki_count"], r["kowikisource_count"], r["opensubtitles_count"], ""])
     return out
 
 
@@ -244,14 +251,15 @@ def main(argv):
                 "full matches only (dropped from the top 100 when there is none); variants of one proverb count once."),
         lists="sokdam100 = top 100 of all dictionaries (krdict, stdict, opendict); sokdam_all = krdict's proverbs, counted ones first, then zero-count ones in 가나다 order."),
         sokdam_out(top, learner, ents))
+    seo = seongeo(results, seo_c, ents, os.path.join(review_dir, "seongeo_review.tsv"))
     write(os.path.join(out_dir, "study_seongeo.tsv"), HEADER.format(
-        title="성어 study lists: seongeo100 (Essential 성어, top 100) and seongeo300 (Common 성어, top 300)",
+        title="성어 study lists: seongeo100 (Essential 성어, top 100), seongeo300 (Common 성어, top 300), seongeo_learner (All learner 성어)",
         method=("The candidates are four-syllable dictionary entries with a 성어-style definition. seongeo_review.tsv records the AI-drafted "
                 "keep/drop decision for each of the top ~500 by score: ordinary compound nouns (국가대표, 돌연변이 ...) are dropped; "
                 "the lists are the first 100 / 300 keepers by score."),
-        lists="seongeo100 is the first 100 rows of seongeo300."),
-        seongeo(results, seo_c, ents, os.path.join(review_dir, "seongeo_review.tsv")))
-    print("top100", len(top), "learner", len(learner))
+        lists="seongeo100 is the first 100 rows of seongeo300; seongeo_learner = every krdict 성어 the review keeps, by score, then zero-count ones in 가나다 order."),
+        seo)
+    print("top100", len(top), "learner", len(learner), "seongeo_learner", sum(1 for r in seo if r[0] == "seongeo_learner"))
 
 
 if __name__ == "__main__":

@@ -293,7 +293,7 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::study_topic_words(&s.all(), &category, by_level, limit as usize, offset as usize).map_err(js_err)?))
         }
 
-        /// Study lists: a page of an Idioms & proverbs list (`sokdam100`, `sokdam_all`, `seongeo100`, `seongeo300`).
+        /// Study lists: a page of an Idioms & proverbs list (`sokdam100`, `sokdam_all`, `seongeo100`, `seongeo300`, `seongeo_learner`).
         #[wasm_bindgen(js_name = studyIdioms)]
         pub async fn study_idioms(&self, list: String, limit: u32, offset: u32) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&search::study_idioms(&s.all(), &list, limit as usize, offset as usize).map_err(js_err)?))

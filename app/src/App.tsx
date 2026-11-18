@@ -102,7 +102,7 @@ export function App() {
             </main>
           </section>
         )}
-        <main ref={main} id="main" tabIndex={-1} class={single ? `pane-right single${route.name === 'games' ? ' flush' : ''}` : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
+        <main key="main" ref={main} id="main" tabIndex={-1} class={single ? `pane-right single${route.name === 'games' ? ' flush' : ''}` : readerRoute && route.parts[0] ? 'pane-right reader-host' : 'pane-right'}>
           {readerRoute ? (route.parts[0] ? <TextView key={route.parts[0]} id={route.parts[0]} /> : <ReaderEmpty />) : entryRoute || single ? view(route) : <PaneEmpty kind={leftKind} />}
         </main>
         <Toast />
@@ -111,13 +111,15 @@ export function App() {
       </div>
     );
   }
-  // Phone: the search bar sits at the bottom (one-handed), just above the tab bar; Results and Recent scroll above it.
-  const dock = route.name !== 'home' && !readerRoute && route.name !== 'games';
+  // key="main" on both layouts: turning or resizing between phone and two-pane keeps the open page (and its state).
+  // Phone: the search bar belongs to the Search tab only (Recent and the results list), low on the screen for one
+  // hand, a little above the tab bar; Results and Recent scroll above it. Entries, Lists, Settings… have none.
+  const dock = route.name === 'search';
   return (
     <div class={kb ? 'app kb' : 'app'}>
       {route.name === 'home' && <HomeHeader />}
-      <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
-      {dock && <footer class="topbar dock"><SearchBar /></footer>}
+      <main key="main" ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
+      {dock && <footer class="dock"><SearchBar /></footer>}
       <TabBar />
       <Toast />
       <ListPicker />

@@ -24,6 +24,7 @@ test('Korean font options', async ({ page }) => {
   await page.screenshot({ path: '../docs/screenshots/fonts-settings-phone.png' });
 
   // applies to entries and survives a reload
+  await page.goto('/#/search');   // the search box lives on the Search tab only
   await page.reload();
   await page.getByRole('searchbox', { name: 'Search' }).fill('학교');
   await page.locator('.row', { hasText: '학교' }).first().click();

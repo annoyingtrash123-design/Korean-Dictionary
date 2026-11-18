@@ -10,7 +10,7 @@ use crate::sql::{Result, Val};
 use serde::Serialize;
 
 /// The lists in the order the app shows them.
-const LISTS: [&str; 4] = ["sokdam100", "sokdam_all", "seongeo100", "seongeo300"];
+const LISTS: [&str; 5] = ["sokdam100", "sokdam_all", "seongeo100", "seongeo300", "seongeo_learner"];
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
 pub struct StudyIdiomList {
