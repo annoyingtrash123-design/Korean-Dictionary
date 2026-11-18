@@ -3118,5 +3118,767 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-을 따름이다",
+  "level": 4,
+  "label": "nothing but, all I can do",
+  "meaning_en": "A formal expression meaning “only, nothing but, all one can do is…”: the speaker says that there is nothing beyond the stated state or act, and it often voices modest feeling such as gratitude or surprise.",
+  "usage": "It attaches to verb and adjective stems as “-을 따름이다”, or “-ㄹ 따름이다” after a vowel or ㄹ (“감사할 따름입니다”), to “이다” as “일 따름이다”, and after “-었-”. It is used in polite or formal speech and writing, and the polite ending “-입니다” is common. It is typical of humble statements such as “I only did my duty” and of feelings.",
+  "examples": [
+   {
+    "ko": "도와주셔서 그저 감사할 따름입니다.",
+    "en": "I am simply grateful for your help.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "저는 맡은 일을 묵묵히 할 따름입니다.",
+    "en": "I am only doing my assigned work quietly.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "나는 그냥 얼굴만 보러 왔을 따름이야.",
+    "en": "I only came to see your face.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다친 사람이 없어서 다행일 따름이다.",
+    "en": "I am simply relieved that no one was hurt.",
+    "ctx": "news"
+   },
+   {
+    "ko": "저는 당연한 일을 했을 따름입니다.",
+    "en": "I only did what was natural.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 뿐이다",
+    "difference": "The two are close in meaning; “-을 따름이다” is more common in humble, formal statements of feeling.",
+    "pair": [
+     {
+      "ko": "그저 감사할 따름입니다.",
+      "en": "I am simply grateful."
+     },
+     {
+      "ko": "그저 감사할 뿐입니다.",
+      "en": "I am simply grateful."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 수밖에 없다",
+    "difference": "“-을 따름이다” says that this is all there is; “-을 수밖에 없다” says there is no other choice.",
+    "pair": [
+     {
+      "ko": "저는 감사할 따름입니다.",
+      "en": "I can only be grateful."
+     },
+     {
+      "ko": "저는 감사할 수밖에 없습니다.",
+      "en": "I have no choice but to be grateful."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It takes the adnominal “-ㄹ”, not “-는”.",
+    "wrong": "도와주셔서 감사하는 따름입니다.",
+    "right": "도와주셔서 감사할 따름입니다.",
+    "en": "I am simply grateful for your help."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 들다",
+  "level": 4,
+  "label": "go at it, press on aggressively",
+  "meaning_en": "An expression meaning to take the initiative in pressing a point, often aggressively: “to go at it, to insist on, to come right at someone by doing X”.",
+  "usage": "It attaches to verb stems as “-고 들다”, after verbs of arguing, opposing and criticizing (“따지다”, “말리다”, “비판하다”, “우기다”, “덤비다”). The subject goes at the other person or the matter, with force. With an elder the honorific is “-고 드시다”. It is not used with neutral verbs. It is common in narration and conversation.",
+  "examples": [
+   {
+    "ko": "손님이 점원에게 따지고 들었다.",
+    "en": "The customer went at the clerk, demanding an explanation.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "부모님은 내가 유학을 간다고 하자 무조건 말리고 드셨다.",
+    "en": "When I said I would study abroad, my parents tried to stop me outright.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "작은 실수 하나에도 비판하고 드는 상사 때문에 힘들다.",
+    "en": "I am having a hard time because of a boss who attacks every little mistake.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생이 갑자기 덤비고 들어서 싸움이 났다.",
+    "en": "My younger sibling suddenly came at me, and a fight broke out.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모두가 자기 의견만 옳다고 우기고 들었다.",
+    "en": "Everyone insisted that only their own opinion was right.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” just says the act is going on; “-고 들다” says the subject came at it with force.",
+    "pair": [
+     {
+      "ko": "그 사람이 따지고 있다.",
+      "en": "That person is arguing."
+     },
+     {
+      "ko": "그 사람이 따지고 들었다.",
+      "en": "That person went at it, arguing hard."
+     }
+    ]
+   },
+   {
+    "pattern": "-으려고 들다",
+    "difference": "“-으려고 들다” says the subject tries to do it; “-고 들다” says the subject presses on with it.",
+    "pair": [
+     {
+      "ko": "동생이 따지려고 들었다.",
+      "en": "My younger sibling set out to argue."
+     },
+     {
+      "ko": "동생이 따지고 들었다.",
+      "en": "My younger sibling pressed the argument."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It needs a verb of pressing or confronting, not a neutral one.",
+    "wrong": "아이가 책을 읽고 들었다.",
+    "right": "아이가 억지를 부리며 우기고 들었다.",
+    "en": "The child insisted, being unreasonable."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 보다",
+  "level": 4,
+  "label": "do first and see; having done, find",
+  "meaning_en": "An expression with two uses: doing something first and dealing with the rest later (“do it first, then see”), and discovering something new after having done the act (“after doing X, I found…”).",
+  "usage": "It attaches to verb stems as “-고 보다”, and has no tense inside. In the first use it appears in “일단 -고 보자/봅시다” or “-고 본다” and shows an approach or a habit. In the second it appears as “-고 보니(까)” and is followed by a discovery or a changed state. The verb before “-고” is complete when the discovery is made. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "일단 밥부터 먹고 봅시다.",
+    "en": "Let's eat first and see.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "일단 저지르고 보는 성격이라 후회할 때도 많다.",
+    "en": "I tend to act first and see later, so I often regret it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "차가 막혀 도착하고 보니 벌써 약속 시간이 지난 뒤였다.",
+    "en": "The traffic was heavy, and when I arrived I found the appointed time had already passed.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "음식점에서 밥을 먹고 보니 지갑이 없었다.",
+    "en": "After I finished eating at the restaurant, I found I had no wallet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "직접 만나고 보니 생각했던 것과 전혀 다른 사람이었다.",
+    "en": "Once I met them in person, they were nothing like what I had thought.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 보니",
+    "difference": "“-어 보니” says one tried it and found; “-고 보니” says that after the act was complete one found.",
+    "pair": [
+     {
+      "ko": "먹어 보니 맛있었다.",
+      "en": "I tried it and it was good."
+     },
+     {
+      "ko": "먹고 보니 내 것이 아니었다.",
+      "en": "After I ate it, I found it wasn't mine."
+     }
+    ]
+   },
+   {
+    "pattern": "-다 보니",
+    "difference": "“-다 보니” says that something came about gradually while doing; “-고 보니” says that it came out after the act was done.",
+    "pair": [
+     {
+      "ko": "일하다 보니 익숙해졌다.",
+      "en": "As I kept working, I got used to it."
+     },
+     {
+      "ko": "일하고 보니 보람이 있었다.",
+      "en": "After doing the work, I found it rewarding."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "No tense goes inside it.",
+    "wrong": "밥을 먹었고 보니 지갑이 없었다.",
+    "right": "밥을 먹고 보니 지갑이 없었다.",
+    "en": "After I ate, I found I had no wallet."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고 해서",
+  "level": 4,
+  "label": "partly because",
+  "meaning_en": "An expression meaning that what comes before is one of several reasons for what follows: “since X and so on, I did Y”. It softens a reason by hinting that there are others.",
+  "usage": "It attaches to verb and adjective stems as “-고 해서”, to “이다” as “이고 해서”, and after “-었-”. It often follows another reason in a list (“A도 -고 B도 -고 해서”), but one reason is enough, with the sense “among other things”. The main clause states what the speaker did or decided, usually in the past or as a plan. It cannot be followed by a command or a suggestion. It is conversational.",
+  "examples": [
+   {
+    "ko": "모처럼 쉬는 날이고 해서 친구들과 쇼핑을 나갔다.",
+    "en": "It was a rare day off, among other things, so I went shopping with friends.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "날씨도 춥고 해서 두꺼운 옷을 입고 나왔다.",
+    "en": "The weather was cold and so on, so I came out in thick clothes.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "피곤하기도 하고 날씨도 좋지 않고 해서 오늘은 외출하지 않기로 했다.",
+    "en": "I was tired and the weather was bad too, so I decided not to go out today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "삼계탕은 영양가도 높고 맛도 있고 해서 인기가 많다.",
+    "en": "Samgyetang is nutritious and tasty among other things, so it is popular.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "마침 근처에 왔고 해서 잠깐 들렀어요.",
+    "en": "I happened to be nearby, so I stopped by for a moment.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-아서/어서",
+    "difference": "“-아서/어서” gives the reason; “-고 해서” softens it and hints at other reasons.",
+    "pair": [
+     {
+      "ko": "피곤해서 일찍 잤다.",
+      "en": "I was tired, so I went to bed early."
+     },
+     {
+      "ko": "피곤하고 해서 일찍 잤다.",
+      "en": "I was tired among other things, so I went to bed early."
+     }
+    ]
+   },
+   {
+    "pattern": "-으니까",
+    "difference": "“-으니까” can lead into a command or a suggestion; “-고 해서” cannot.",
+    "pair": [
+     {
+      "ko": "늦었으니까 돌아갑시다.",
+      "en": "It is late, so let's go back."
+     },
+     {
+      "ko": "늦었고 해서 저는 돌아가겠습니다.",
+      "en": "It is late and so on, so I'll head back."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows cannot be a command.",
+    "wrong": "늦었고 해서 돌아가세요.",
+    "right": "늦었고 해서 저는 돌아가겠습니다.",
+    "en": "It's late, so I will head back."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 김에",
+  "level": 4,
+  "label": "while at it, taking the chance",
+  "meaning_en": "An expression meaning “while doing X, taking that occasion”: one does a second, related thing along with, or on the occasion of, the first.",
+  "usage": "It attaches to verb stems as “-는 김에” for an action in progress or planned, and as “-ㄴ/은 김에” after a completed action (“간 김에”). The second action is related and is usually done by the same person, and it is often a favor or a small extra task. It is common in speech. “이왕 -ㄴ 김에” and “말이 나온 김에” are set phrases.",
+  "examples": [
+   {
+    "ko": "한국어를 공부하는 김에 한국 문화도 공부하고 싶어요.",
+    "en": "While I'm studying Korean, I want to study Korean culture too.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "마트에 가는 김에 우유도 좀 사다 줘.",
+    "en": "Since you're going to the mart anyway, pick up some milk too.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "서울에 간 김에 친구도 만나고 왔다.",
+    "en": "Since I was in Seoul anyway, I met a friend as well.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "청소하는 김에 창문도 닦아야겠다.",
+    "en": "While I'm cleaning, I should wipe the windows too.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이왕 온 김에 구경도 하고 가자.",
+    "en": "Since we've come anyway, let's look around before we go.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 길에",
+    "difference": "“-는 길에” means on the way somewhere; “-는 김에” means taking the occasion of an act.",
+    "pair": [
+     {
+      "ko": "마트에 가는 길에 우유를 샀다.",
+      "en": "On the way to the mart, I bought milk."
+     },
+     {
+      "ko": "마트에 가는 김에 우유를 샀다.",
+      "en": "Since I was going to the mart anyway, I bought milk."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 겸",
+    "difference": "“-을 겸” gives two purposes for one outing; “-는 김에” adds a second act on the occasion of the first.",
+    "pair": [
+     {
+      "ko": "산책도 할 겸 나왔다.",
+      "en": "I came out partly to take a walk."
+     },
+     {
+      "ko": "나온 김에 산책도 했다.",
+      "en": "Since I was out anyway, I took a walk too."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a completed action the form is “-ㄴ/은 김에”, not “-었는 김에”.",
+    "wrong": "서울에 갔는 김에 친구도 만났다.",
+    "right": "서울에 간 김에 친구도 만났다.",
+    "en": "Since I was in Seoul, I met a friend too."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 대로",
+  "level": 4,
+  "label": "as is; as soon as; whenever",
+  "meaning_en": "An expression with several uses: doing it just the way something is or was (“just as I do, as you saw”), immediately upon something (“as soon as”), each time something occurs (“whenever, every time”), and to the fullest (“as much as possible”).",
+  "usage": "It attaches to verb stems as “-는 대로”, and after a completed act as “-ㄴ/은 대로” (“본 대로”). “대로” is a bound noun that is spaced after a verb form but attached to a noun (“법대로”). “As soon as” looks to the future or a command. “될 수 있는 대로” is a set phrase meaning “as far as possible”. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "제가 발음하는 대로 따라 해 보세요.",
+    "en": "Please repeat just as I pronounce it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "도착하는 대로 연락드리겠습니다.",
+    "en": "I will contact you as soon as I arrive.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "시간이 나는 대로 고향에 계신 부모님을 찾아뵙는다.",
+    "en": "Whenever I have time, I visit my parents back in my hometown.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "될 수 있는 대로 쉽게 설명해 주세요.",
+    "en": "Please explain it as simply as possible.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "본 대로 느낀 대로 솔직하게 말해 보세요.",
+    "en": "Tell it honestly, just as you saw it and felt it.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-자마자",
+    "difference": "“-는 대로” can look ahead; “-자마자” reports what followed immediately.",
+    "pair": [
+     {
+      "ko": "도착하는 대로 전화할게요.",
+      "en": "I'll call as soon as I arrive."
+     },
+     {
+      "ko": "도착하자마자 전화했어요.",
+      "en": "I called the moment I arrived."
+     }
+    ]
+   },
+   {
+    "pattern": "-듯이",
+    "difference": "Both can mean “just as”; “-는 대로” stresses doing it exactly the way something is.",
+    "pair": [
+     {
+      "ko": "내가 하는 대로 해 보세요.",
+      "en": "Do just as I do."
+     },
+     {
+      "ko": "내가 하듯이 해 보세요.",
+      "en": "Do it as I do."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb form “대로” is spaced.",
+    "wrong": "생각나는대로 적어 보세요.",
+    "right": "생각나는 대로 적어 보세요.",
+    "en": "Write down whatever comes to mind."
+   },
+   {
+    "note": "After a noun “대로” is attached.",
+    "wrong": "법 대로 처리하겠습니다.",
+    "right": "법대로 처리하겠습니다.",
+    "en": "I will handle it according to the law."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 사이에",
+  "level": 4,
+  "label": "in the interval, while",
+  "meaning_en": "An expression meaning “in the (short) interval while X goes on or X happens”: something else happens in that gap, often unnoticed.",
+  "usage": "It attaches to verb stems as “-는 사이에” (“-는 사이” too), and after a completed act as “-ㄴ/은 사이에” (“자리를 비운 사이에”). The main clause names something that took place in that gap, and it often happens without the speaker's notice or control. It covers a short time rather than the whole duration. It is common in speech and writing.",
+  "examples": [
+   {
+    "ko": "잠깐 방심하는 사이에 사고가 생길 수 있다.",
+    "en": "An accident can happen in a moment of carelessness.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "눈 깜짝하는 사이에 기회가 지나간다.",
+    "en": "In the blink of an eye the chance passes.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "내가 자리를 비운 사이에 누가 다녀갔나 보다.",
+    "en": "Someone seems to have come by while I was away from my seat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "엄마가 시장에 간 사이에 동생이 방을 어질렀다.",
+    "en": "While Mom was at the market, my younger sibling made a mess of the room.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모르는 사이에 시간이 훌쩍 지나갔다.",
+    "en": "Before I knew it, a lot of time had passed.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 동안",
+    "difference": "“-는 동안” covers the whole stretch of time; “-는 사이에” points to something that happens within it.",
+    "pair": [
+     {
+      "ko": "내가 자는 동안 비가 왔다.",
+      "en": "It rained during the time I slept."
+     },
+     {
+      "ko": "내가 자는 사이에 비가 왔다.",
+      "en": "It rained while I was sleeping, in the gap."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 틈에",
+    "difference": "The two are close in meaning; “-는 틈에” stresses an opening or chance.",
+    "pair": [
+     {
+      "ko": "엄마가 안 보는 사이에 과자를 먹었다.",
+      "en": "I ate the snack while Mom wasn't looking."
+     },
+     {
+      "ko": "엄마가 안 보는 틈에 과자를 먹었다.",
+      "en": "I ate the snack in a moment when Mom wasn't looking."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It follows a verb form, not a bare noun.",
+    "wrong": "방심 사이에 사고가 생길 수 있다.",
+    "right": "방심하는 사이에 사고가 생길 수 있다.",
+    "en": "An accident can happen in a moment of carelessness."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 듯",
+  "level": 4,
+  "label": "as if, as though",
+  "meaning_en": "An expression meaning “as if, as though X”: what follows looks or feels like the picture the first clause gives. It is the short form of “-는 듯이”. Repeated, “-는 듯 마는 듯” means “half-heartedly, barely”.",
+  "usage": "It attaches to verb stems as “-는 듯”, to adjective stems as “-ㄴ/은 듯”, to “이다” as “인 듯”, and to a completed act as “-ㄴ/은 듯” or a future as “-ㄹ 듯”. It also joins a quoted thought (“알겠다는 듯”). It is an adverbial that describes how something is done or felt. It is different from “-는 듯하다”, which is a guess.",
+  "examples": [
+   {
+    "ko": "갑자기 배가 찌르는 듯 아팠다.",
+    "en": "Suddenly my stomach hurt as if it were being stabbed.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 아무 일도 없는 듯 태연한 얼굴이었다.",
+    "en": "Jisu wore a calm face as though nothing had happened.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "승규는 인사를 하는 듯 마는 듯 그냥 지나가 버렸다.",
+    "en": "Seunggyu half greeted me and just walked past.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "아이는 알겠다는 듯 고개를 끄덕였다.",
+    "en": "The child nodded as if to say they understood.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "하늘이 무너질 듯 천둥이 쳤다.",
+    "en": "Thunder rolled as if the sky would collapse.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 듯하다",
+    "difference": "“-는 듯하다” makes a guess; “-는 듯” describes what something looks or feels like.",
+    "pair": [
+     {
+      "ko": "비가 오는 듯하다.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 오는 듯 하늘이 어둡다.",
+      "en": "The sky is dark as if it were raining."
+     }
+    ]
+   },
+   {
+    "pattern": "-듯이",
+    "difference": "“-듯” is the short form of “-듯이”, with the same meaning.",
+    "pair": [
+     {
+      "ko": "찌르는 듯 아팠다.",
+      "en": "It hurt as if stabbed."
+     },
+     {
+      "ko": "찌르듯이 아팠다.",
+      "en": "It hurt as if stabbed."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "There is no “-었는” form; a past image uses “-ㄴ/은”.",
+    "wrong": "칼로 찔렀는 듯 아팠다.",
+    "right": "칼로 찌르는 듯 아팠다.",
+    "en": "It hurt as if I were being stabbed with a knife."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 줄",
+  "level": 4,
+  "label": "that, thinking that; know how to",
+  "meaning_en": "An expression used with “알다” and “모르다” for a belief or its lack: “-는 줄 알았다” means “I thought that (it turned out otherwise)”, “-는 줄 몰랐다” means “I didn't realize that”, and “-ㄹ 줄 알다” means “know how to”.",
+  "usage": "It attaches to verb stems as “-는 줄”, to adjective stems as “-ㄴ/은 줄”, to “이다” as “인 줄”, to a completed act as “-ㄴ/은 줄”, and to a supposed future or an ability as “-ㄹ 줄”. “줄” is a bound noun, so it is spaced from the verb. The speaker's thought is usually mistaken or unforeseen, and for ability it is “-ㄹ 줄 알다”. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "아침마다 운동하는 게 이렇게 힘든 줄 몰랐어.",
+    "en": "I didn't realize that exercising every morning was this hard.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "책을 읽다가 날이 새는 줄도 몰랐다.",
+    "en": "I was reading and didn't even realize that day was breaking.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "나는 네가 벌써 집에 간 줄 알았어.",
+    "en": "I thought you had already gone home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람이 선생님인 줄 알고 인사를 했는데 학생이었다.",
+    "en": "I thought that person was a teacher and greeted them, but they were a student.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "너 운전할 줄 알아?",
+    "en": "Do you know how to drive?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는지",
+    "difference": "“-는지 몰랐다” means not knowing whether or how; “-는 줄 몰랐다” means not realizing that it was so.",
+    "pair": [
+     {
+      "ko": "그 사람이 왔는지 몰랐다.",
+      "en": "I didn't know whether that person had come."
+     },
+     {
+      "ko": "그 사람이 온 줄 몰랐다.",
+      "en": "I didn't realize that person had come."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 수 있다",
+    "difference": "“-ㄹ 줄 알다” says one has the knack or know-how; “-ㄹ 수 있다” says it is possible.",
+    "pair": [
+     {
+      "ko": "운전할 줄 알아요?",
+      "en": "Do you know how to drive?"
+     },
+     {
+      "ko": "운전할 수 있어요?",
+      "en": "Can you drive?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“줄” is a bound noun, so it is spaced from the verb.",
+    "wrong": "힘든줄 몰랐다.",
+    "right": "힘든 줄 몰랐다.",
+    "en": "I didn't realize it was hard."
+   },
+   {
+    "note": "For know-how it takes “-ㄹ 줄”, not “-는 줄”.",
+    "wrong": "운전하는 줄 알아요?",
+    "right": "운전할 줄 알아요?",
+    "en": "Do you know how to drive?"
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 탓에",
+  "level": 4,
+  "label": "because of, blamed on",
+  "meaning_en": "An expression meaning “because of, due to X”, for a cause that leads to an undesirable result: it blames the first clause for the second.",
+  "usage": "It attaches to verb stems as “-는 탓에”, to adjective stems as “-ㄴ/은 탓에”, to “이다” as “인 탓에”, and to a completed act as “-ㄴ/은 탓에” or “-었던 탓에”. The result is something bad or unwelcome. “-ㄴ/은 탓에” also appears with the speaker's own fault (“내가 서두른 탓에”). The opposite, a good cause, is “-는 덕분에”. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "간식을 많이 먹는 탓에 살이 계속 찐다.",
+    "en": "Because I eat so many snacks, I keep putting on weight.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "갑자기 비가 많이 오는 탓에 소풍이 연기되었다.",
+    "en": "Because of the sudden heavy rain, the picnic was postponed.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "준비가 부족했던 탓에 발표를 망쳤다.",
+    "en": "Because I was not prepared enough, I ruined the presentation.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "경기가 어려운 탓에 취업이 쉽지 않다.",
+    "en": "Because the economy is hard, finding a job is not easy.",
+    "ctx": "news"
+   },
+   {
+    "ko": "내가 서두른 탓에 일이 더 꼬여 버렸다.",
+    "en": "Because I rushed, things got more tangled.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 덕분에",
+    "difference": "“-는 덕분에” credits a good cause; “-는 탓에” blames a bad one.",
+    "pair": [
+     {
+      "ko": "도와주신 덕분에 끝냈다.",
+      "en": "Thanks to your help, I finished."
+     },
+     {
+      "ko": "도와주지 않은 탓에 끝내지 못했다.",
+      "en": "Because you didn't help, I couldn't finish."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 바람에",
+    "difference": "“-는 바람에” is for an incident that caused a result, usually in the past; “-는 탓에” can describe a continuing cause.",
+    "pair": [
+     {
+      "ko": "비가 오는 탓에 길이 막힌다.",
+      "en": "The roads are jammed because of the rain."
+     },
+     {
+      "ko": "비가 오는 바람에 길이 막혔다.",
+      "en": "It rained, so the roads got jammed."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It names a cause of something bad; a good result takes “덕분에”.",
+    "wrong": "열심히 공부한 탓에 합격했다.",
+    "right": "공부를 안 한 탓에 떨어졌다.",
+    "en": "I failed because I didn't study."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
  }
 ]
