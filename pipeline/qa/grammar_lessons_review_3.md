@@ -58,3 +58,23 @@ Per lesson: form, outcome, what changed.
 | 만 아니면 | approved | Pitfall English (“As long as it does not rain, we would go”) mixed a real condition with a counterfactual; now “If only it were not raining, we would …”. |
 | -으면 안 되다 | approved | None needed. |
 | -으면 좋겠다 | approved | None needed. |
+| -어 가다 | approved | The “-어 오다” compare spelled the compound verb 살아가다/살아오다 with a space; now 계속해 가겠습니다 / 계속해 왔습니다. Example 5 English. |
+| -어 가지고 | approved | Example 2 English invented “we”. |
+| -어 놓다 | approved | Garbled usage sentence (“The object … carries on the stated state”) reworded. |
+| -어 두다 | approved | The “-어 놓다” compare paired two unrelated sentences; now 넣어 두었다 / 넣어 놓았다. Usage called “미리 -어 두다” “a habit”. |
+| -어 드리다 | approved | None needed. |
+| -어야겠- | approved | None needed. |
+| -어지다 | approved | Usage said “-하다” action verbs never take “-해지다”; common counter-examples 정해지다, 전해지다, now noted. The “-게 되다” compare claimed “-어지다” is a gradual change and used a non-minimal pair; now passive 알려졌다 vs 알게 되었다. |
+| 에 대하여 | approved | Compare English invented “we”; Korean now has 우리는. |
+| -을 테니 | approved | Example 1 English (“come slowly”). |
+| -어 오다 | approved | 살아오다 is one dictionary word; usage and example 3 (“살아 오셨다”) respaced. |
+| -기는 | approved | None needed. |
+| -는 모양이다 | approved | Pitfall 2 had no subject and English invented “they”; now 민준이는. |
+| -는 편이다 | approved | None needed. |
+| -는가 보다 | approved | Examples 1 and 3 English (“They” for Jisu / the child), pitfall 2 English. |
+| -는 중이다 | approved | Usage called it “more formal” than -고 있다 (it is narrower, not more formal). Example 4 English. |
+| -으려다가 | approved | Example 4 English. |
+| -어 보이다 | approved | Usage said it never attaches to verbs; resultative verbs take it (지쳐 보이다, 늙어 보이다, 화나 보이다). Example 3 English “their age”. |
+| -는다고3 | approved | Five English lines turned the unspecified subject of the reported clause into “they” for Minjun/Jisu; the examples, compares and pitfalls now use subjects that need no pronoun (news, weather, 민준이가 …). |
+
+**Summary:** 67 approved, 0 left as draft.
