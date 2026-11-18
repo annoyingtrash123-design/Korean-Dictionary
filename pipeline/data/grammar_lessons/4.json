@@ -4889,7 +4889,7 @@
       "en": "I got all my homework done."
      },
      {
-      "ko": "힘든 숙제를 끝까지 해 냈다.",
+      "ko": "힘든 숙제를 끝까지 해냈다.",
       "en": "I saw the hard homework through to the end."
      }
     ]
@@ -4918,7 +4918,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4971,7 +4973,7 @@
    },
    {
     "pattern": "-는 듯하다",
-    "difference": "The two are close in meaning; “-는 모양이다” leans on something observed.",
+    "difference": "Both are guesses from what one observes; “-는 듯하다” can also soften the speaker's own opinion, which “-는 모양이다” cannot.",
     "pair": [
      {
       "ko": "눈이 오는 모양이다.",
@@ -4993,7 +4995,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -5010,7 +5014,7 @@
    },
    {
     "ko": "지하철을 타지 않았으면 약속 시간에 늦을 뻔했다.",
-    "en": "If I hadn't taken the subway, I would have almost been late for the appointment.",
+    "en": "If I hadn't taken the subway, I would have been late for the appointment.",
     "ctx": "conversation"
    },
    {
@@ -5074,7 +5078,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -5086,7 +5092,7 @@
   "examples": [
    {
     "ko": "오늘 저녁에 뷔페를 먹는대.",
-    "en": "I hear we are having a buffet this evening.",
+    "en": "I hear it's a buffet for dinner this evening.",
     "ctx": "conversation"
    },
    {
@@ -5106,7 +5112,7 @@
    },
    {
     "ko": "그 식당 음식이 정말 맛있대?",
-    "en": "Is it true that the food at that restaurant is really good?",
+    "en": "Did they say the food at that restaurant is really good?",
     "ctx": "conversation"
    }
   ],
@@ -5155,7 +5161,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -5236,7 +5244,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  }
 ]
