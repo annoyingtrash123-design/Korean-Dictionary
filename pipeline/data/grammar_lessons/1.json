@@ -817,5 +817,723 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "에",
+  "level": 1,
+  "label": "at, to, on (time, place, target)",
+  "meaning_en": "A particle with several basic jobs: a point in time (“세 시에”), the place where something exists or one is going (“책상 위에, 학교에”), a target of an action on a thing (“꽃에 물을 주다”), a cause (“바람에 쓰러지다”) and a rate (“하루에 세 번”).",
+  "usage": "It attaches to nouns. Time: clock times, days, months and seasons (“일곱 시에, 월요일에, 겨울에”); the words “오늘, 어제, 내일, 지금, 언제, 그때” do not take “에”. Existence and destination: “집에 있다, 학교에 가다, 서울에 살다”. Target: for a thing or place that receives (“꽃에 물을 주다, 벽에 그림을 걸다”); a person receives “에게/한테”. Rate: “하루에 세 번, 한 개에 천 원”. For a place where an action happens, “에서” is used.",
+  "examples": [
+   {
+    "ko": "저는 아침 일곱 시에 일어나요.",
+    "en": "I get up at seven in the morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "주말에 친구를 만나요.",
+    "en": "I meet a friend on the weekend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "책상 위에 책이 있어요.",
+    "en": "There is a book on the desk.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일 학교에 가요.",
+    "en": "I am going to school tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "하루에 세 번 약을 드세요.",
+    "en": "Take the medicine three times a day.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "꽃에 물을 주었다.",
+    "en": "I watered the flowers.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에서",
+    "difference": "“에” names where something is or where one goes; “에서” names where an action happens.",
+    "pair": [
+     {
+      "ko": "집에 있어요.",
+      "en": "I am at home."
+     },
+     {
+      "ko": "집에서 공부해요.",
+      "en": "I study at home."
+     }
+    ]
+   },
+   {
+    "pattern": "에게",
+    "difference": "“에” marks a thing or place that receives; “에게” marks a person or animal.",
+    "pair": [
+     {
+      "ko": "꽃에 물을 주었다.",
+      "en": "I gave water to the flowers."
+     },
+     {
+      "ko": "친구에게 선물을 주었다.",
+      "en": "I gave a present to my friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“어제, 오늘, 내일, 지금” take no “에”.",
+    "wrong": "어제에 친구를 만났어요.",
+    "right": "어제 친구를 만났어요.",
+    "en": "I met a friend yesterday."
+   },
+   {
+    "note": "A verb of existence takes “에”, not “에서”.",
+    "wrong": "도서관에서 있어요.",
+    "right": "도서관에 있어요.",
+    "en": "I am in the library."
+   }
+  ],
+  "topik_tip": "“에” (point in time, place of existence, destination) versus “에서” (place of action) is the most tested particle contrast at this level.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에게",
+  "level": 1,
+  "label": "to (a person or animal)",
+  "meaning_en": "A particle for the person or animal that receives an action or is its target: “친구에게 선물을 주다, 동생에게 전화하다”. It is the written and neutral form of the spoken “한테”.",
+  "usage": "It attaches to a person or animal noun: “친구에게, 어머니에게, 강아지에게”. Verbs: “주다, 보내다, 말하다, 묻다, 가르치다, 전화하다, 쓰다”. It also marks the source with “받다, 듣다, 배우다” (“선생님에게 칭찬을 듣다”), and the doer in a passive (“개에게 물리다”). A person to be honoured takes “께”; a thing or place takes “에”. After it, “는/도/만” can follow (“친구에게는”).",
+  "examples": [
+   {
+    "ko": "친구에게 선물을 주었어요.",
+    "en": "I gave a present to my friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어머니에게 전화를 걸었다.",
+    "en": "I made a phone call to my mother.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수에게 편지를 보냈다.",
+    "en": "I sent a letter to Jisu.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생에게 책을 읽어 주었다.",
+    "en": "I read a book to my younger sibling.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님에게 칭찬을 들었다.",
+    "en": "I was praised by the teacher.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "한테",
+    "difference": "“에게” and “한테” mean the same. “한테” is spoken; “에게” is neutral and also fits writing.",
+    "pair": [
+     {
+      "ko": "친구에게 말했다.",
+      "en": "I told a friend."
+     },
+     {
+      "ko": "친구한테 말했다.",
+      "en": "I told a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "에",
+    "difference": "“에게” is for a person or animal; “에” is for a thing or place.",
+    "pair": [
+     {
+      "ko": "동생에게 물을 주었다.",
+      "en": "I gave my younger sibling some water."
+     },
+     {
+      "ko": "꽃에 물을 주었다.",
+      "en": "I watered the flowers."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A place takes “에”, not “에게”.",
+    "wrong": "서울에게 갔다.",
+    "right": "서울에 갔다.",
+    "en": "I went to Seoul."
+   },
+   {
+    "note": "A plant or a thing takes “에”.",
+    "wrong": "꽃에게 물을 주었다.",
+    "right": "꽃에 물을 주었다.",
+    "en": "I watered the flowers."
+   }
+  ],
+  "topik_tip": "The honorific partner is “께”; the spoken partner is “한테”; the source version is “에게서”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에서",
+  "level": 1,
+  "label": "at (action), from (origin)",
+  "meaning_en": "A particle with two main jobs: the place where an action happens (“도서관에서 공부하다”) and the place something comes from or starts (“한국에서 왔다, 부산에서 서울까지”). With a group as the subject it works like “이/가” (“회사에서 발표했다”).",
+  "usage": "It attaches to place nouns: “집에서, 학교에서, 서울에서”. Action: “공부하다, 만나다, 일하다, 먹다”. Origin and range: “오다, 출발하다, 나오다” and “N에서 N까지”. A group or institution as subject: “정부에서, 학교에서, 회사에서”. For a place of existence the particle is “에” (“집에 있다”); for a person as the source it is “에게서/한테서”. “서울에 살다” and “서울에서 살다” are both used with “살다”.",
+  "examples": [
+   {
+    "ko": "저는 도서관에서 공부해요.",
+    "en": "I study in the library.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리는 학교에서 만났어요.",
+    "en": "We met at school.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "부산에서 서울까지 기차로 갔어요.",
+    "en": "I went from Busan to Seoul by train.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 베트남에서 왔어요.",
+    "en": "I came from Vietnam.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "회사에서 새로운 제품을 발표했다.",
+    "en": "The company announced a new product.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에",
+    "difference": "“에서” is where an action happens; “에” is where something is or where one goes.",
+    "pair": [
+     {
+      "ko": "도서관에서 공부해요.",
+      "en": "I study in the library."
+     },
+     {
+      "ko": "도서관에 가요.",
+      "en": "I go to the library."
+     }
+    ]
+   },
+   {
+    "pattern": "에게서",
+    "difference": "“에서” marks a place as the source; “에게서” marks a person.",
+    "pair": [
+     {
+      "ko": "한국에서 왔어요.",
+      "en": "I came from Korea."
+     },
+     {
+      "ko": "친구에게서 편지가 왔어요.",
+      "en": "A letter came from a friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The place of an action takes “에서”.",
+    "wrong": "도서관에 공부해요.",
+    "right": "도서관에서 공부해요.",
+    "en": "I study in the library."
+   },
+   {
+    "note": "A person as the source takes “에게서”, not “에서”.",
+    "wrong": "친구에서 선물을 받았다.",
+    "right": "친구에게서 선물을 받았다.",
+    "en": "I received a present from a friend."
+   }
+  ],
+  "topik_tip": "Remember the pair “에 있다” (be at) and “에서 -하다” (do at).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "의",
+  "level": 1,
+  "label": "possessive “of, 's”",
+  "meaning_en": "A particle linking two nouns: possession (“친구의 가방”), part of (“책의 제목”), relation or origin (“한국의 수도, 어머니의 사랑”). It is pronounced like “에” in speech, and often left out.",
+  "usage": "It attaches to the first noun: “N의 N”. With pronouns it contracts: “나의 → 내, 저의 → 제, 너의 → 네” (“제 가방, 내 친구”); “우리의” becomes “우리” without it. In compounds a noun used as a classifier takes no “의” (“한국 음식, 학교 친구”). The particle is written “의” though in ordinary speech it is pronounced like “에”. It is not attached to verbs or adjectives; those use modifier endings.",
+  "examples": [
+   {
+    "ko": "이것은 친구의 가방이에요.",
+    "en": "This is my friend's bag.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울은 한국의 수도입니다.",
+    "en": "Seoul is the capital of Korea.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "오늘 서울의 날씨는 맑습니다.",
+    "en": "Today's weather in Seoul is clear.",
+    "ctx": "news"
+   },
+   {
+    "ko": "부모님의 사랑은 끝이 없다.",
+    "en": "A parent's love has no end.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "저의 취미는 사진 찍기입니다.",
+    "en": "My hobby is taking photos.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "제",
+    "difference": "“저의” and “제” are the same; “제” is the contracted form that is usual in speech.",
+    "pair": [
+     {
+      "ko": "저의 가방이에요.",
+      "en": "It is my bag."
+     },
+     {
+      "ko": "제 가방이에요.",
+      "en": "It is my bag."
+     }
+    ]
+   },
+   {
+    "pattern": "한국 음식",
+    "difference": "A noun that describes the type needs no “의”. “의” expresses belonging or relation.",
+    "pair": [
+     {
+      "ko": "한국 음식을 좋아해요.",
+      "en": "I like Korean food."
+     },
+     {
+      "ko": "한국의 음식을 소개합니다.",
+      "en": "We introduce the food of Korea."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The particle is spelled “의”, even though it is pronounced like “에”.",
+    "wrong": "친구에 가방이에요.",
+    "right": "친구의 가방이에요.",
+    "en": "It is my friend's bag."
+   },
+   {
+    "note": "“내, 제, 네” already contain the possessive: do not add “의”.",
+    "wrong": "이것은 내의 가방이에요.",
+    "right": "이것은 내 가방이에요.",
+    "en": "This is my bag."
+   }
+  ],
+  "topik_tip": "Possessive pronouns contract (“제, 내, 네”) and then take no “의”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "하고",
+  "level": 1,
+  "label": "and; with (neutral spoken)",
+  "meaning_en": "A particle that joins nouns (“A and B”) and marks a partner or a standard of comparison (“with”). It is the neutral spoken form, between the casual “이랑” and the written “과/와”.",
+  "usage": "It attaches to any noun, with no change after a vowel or a consonant: “사과하고 배, 친구하고 같이, 이것하고 저것”. Listing: “N하고 N”. Partner: “친구하고 만나다, 선생님하고 이야기하다”. Comparison: “N하고 같다/다르다”. The speaker can also place it after the last noun (“사과하고 배하고”). It does not mark the receiver of a gift or message: that is “에게/한테”.",
+  "examples": [
+   {
+    "ko": "저는 사과하고 배를 좋아해요.",
+    "en": "I like apples and pears.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구하고 같이 점심을 먹었어요.",
+    "en": "I had lunch together with a friend.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이것하고 저것은 많이 다릅니다.",
+    "en": "This and that are very different.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "오늘은 엄마하고 시장에 갔어요.",
+    "en": "Today I went to the market with Mom.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님하고 이야기한 다음에 결정했어요.",
+    "en": "I decided after talking with the teacher.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이랑",
+    "difference": "“하고” and “이랑” are near-synonyms in speech; “이랑” is more casual.",
+    "pair": [
+     {
+      "ko": "친구하고 갔어요.",
+      "en": "I went with a friend."
+     },
+     {
+      "ko": "친구랑 갔어요.",
+      "en": "I went with a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "과",
+    "difference": "“과/와” is the written form and sounds stiff in casual speech.",
+    "pair": [
+     {
+      "ko": "저는 책하고 공책을 샀어요.",
+      "en": "I bought a book and a notebook."
+     },
+     {
+      "ko": "저는 책과 공책을 샀습니다.",
+      "en": "I bought a book and a notebook."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It means “with” or “and”, not “to”: the receiver of a gift takes “에게/한테”.",
+    "wrong": "친구하고 선물을 줬다.",
+    "right": "친구한테 선물을 줬다.",
+    "en": "I gave my friend a present."
+   }
+  ],
+  "topik_tip": "Do not confuse the particle “하고” with the verb “하다” + “-고”: it joins nouns.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "만",
+  "level": 1,
+  "label": "only, just that one",
+  "meaning_en": "A particle meaning “only, just”: it limits something to one thing and excludes the rest. It can also stress a minimum (“한 번만”).",
+  "usage": "It attaches to a noun, a counter phrase, an adverb or another particle: “커피만, 두 명만, 집에서만, 너에게만”. It replaces “이/가/을/를” (“저만 갔어요”, “커피만 마셔요”) and sits after others (“에서만, 에게만”). It goes with positive and negative predicates alike. For “only + a negative verb” the particle “밖에” is used; for “only” at the end of a sentence “뿐이다”. “이번만” means “just this once”.",
+  "examples": [
+   {
+    "ko": "저는 커피만 마셔요.",
+    "en": "I only drink coffee.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "교실에는 학생 두 명만 있었다.",
+    "en": "Only two students were in the classroom.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 집에서만 쉬었어요.",
+    "en": "Today I rested only at home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 일은 지수만 할 수 있어요.",
+    "en": "Only Jisu can do this job.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "제발 이번만 도와주세요.",
+    "en": "Please help me, just this once.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "도",
+    "difference": "“만” limits (“only”); “도” adds (“too”).",
+    "pair": [
+     {
+      "ko": "저만 갔어요.",
+      "en": "Only I went."
+     },
+     {
+      "ko": "저도 갔어요.",
+      "en": "I went too."
+     }
+    ]
+   },
+   {
+    "pattern": "밖에",
+    "difference": "“만” goes with a positive or negative verb. “밖에” needs a negative and suggests the amount is small.",
+    "pair": [
+     {
+      "ko": "물만 마셨어요.",
+      "en": "I drank only water."
+     },
+     {
+      "ko": "물밖에 안 마셨어요.",
+      "en": "I drank nothing but water."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“만” replaces “을/를”; it does not stand next to it.",
+    "wrong": "커피만를 마셔요.",
+    "right": "커피만 마셔요.",
+    "en": "I only drink coffee."
+   }
+  ],
+  "topik_tip": "“만” (any predicate), “밖에” (negative predicate) and “뿐” (with “이다”) are three ways to say only.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "한테",
+  "level": 1,
+  "label": "to (a person), spoken",
+  "meaning_en": "The spoken form of “에게”: it marks the person or animal that receives an action: “친구한테 전화하다”. It also marks the source with “받다/듣다” and the doer in a passive (“선생님한테 혼나다”).",
+  "usage": "It attaches to a person or animal: “친구한테, 엄마한테, 강아지한테”. Verbs: “주다, 말하다, 묻다, 보내다, 전화하다, 가르치다”; “받다, 듣다, 배우다” for a source (“친구한테 선물을 받았어요”); a passive doer (“혼나다, 잡히다, 물리다”). A source can also take “한테서”. It is colloquial; in writing “에게” is used. A thing or a place takes “에”, and an honoured person “께”.",
+  "examples": [
+   {
+    "ko": "어제 엄마한테 전화했어요.",
+    "en": "I called Mom yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구한테 선물을 받았어요.",
+    "en": "I received a present from a friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "강아지한테 밥을 줬어요.",
+    "en": "I fed the puppy.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제 선생님한테 혼났어요.",
+    "en": "I got scolded by the teacher yesterday.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 얘기 누구한테 들었어요?",
+    "en": "Who did you hear that story from?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게",
+    "difference": "The two have the same meaning; “에게” is neutral and also used in writing.",
+    "pair": [
+     {
+      "ko": "친구한테 말했어요.",
+      "en": "I told a friend."
+     },
+     {
+      "ko": "친구에게 말했습니다.",
+      "en": "I told a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "께",
+    "difference": "“께” replaces “한테/에게” for a person to be honoured.",
+    "pair": [
+     {
+      "ko": "동생한테 줬어요.",
+      "en": "I gave it to my younger sibling."
+     },
+     {
+      "ko": "할머니께 드렸어요.",
+      "en": "I gave it to my grandmother."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A plant or a thing takes “에”.",
+    "wrong": "꽃한테 물을 줬어요.",
+    "right": "꽃에 물을 줬어요.",
+    "en": "I watered the flowers."
+   }
+  ],
+  "topik_tip": "In listening items “한테” and “에게” are interchangeable; “께” signals an honoured person.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "보다",
+  "level": 1,
+  "label": "than (comparison)",
+  "meaning_en": "A particle for the standard of a comparison: “A는 B보다 ...” means “A is more ... than B”. It is often combined with “더” (“more”) or “훨씬” (“much”).",
+  "usage": "It attaches to the thing that is compared against: “부산보다, 어제보다, 생각보다, 저보다”. The predicate is a comparable adjective or adverb: “크다, 많다, 빠르다, 좋아하다”. Frames: “A가 B보다 더 ...”, “B보다 A를 더 좋아하다”. “생각보다” (than I thought) and “기대보다” (than expected) are frequent set phrases. Equal comparisons use “만큼” or “처럼”. “보다” can also be an adverb meaning “more” (“보다 좋은 방법”).",
+  "examples": [
+   {
+    "ko": "서울은 부산보다 인구가 많아요.",
+    "en": "Seoul has a larger population than Busan.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제보다 오늘이 더 추워요.",
+    "en": "Today is colder than yesterday.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "저는 커피보다 차를 더 좋아해요.",
+    "en": "I like tea more than coffee.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 가방은 생각보다 훨씬 가벼워요.",
+    "en": "This bag is much lighter than I thought.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "동생은 저보다 키가 커요.",
+    "en": "My younger sibling is taller than I am.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "만큼",
+    "difference": "“보다” says one is more; “만큼” says they are equal.",
+    "pair": [
+     {
+      "ko": "지수보다 빨리 달려요.",
+      "en": "They run faster than Jisu."
+     },
+     {
+      "ko": "지수만큼 빨리 달려요.",
+      "en": "They run as fast as Jisu."
+     }
+    ]
+   },
+   {
+    "pattern": "보다 좋은",
+    "difference": "As a bare adverb, “보다” means “more” and compares nothing.",
+    "pair": [
+     {
+      "ko": "서울은 부산보다 커요.",
+      "en": "Seoul is bigger than Busan."
+     },
+     {
+      "ko": "보다 좋은 방법을 찾았어요.",
+      "en": "I found a better method."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It is a particle, so it is attached to the noun without a space.",
+    "wrong": "서울이 부산 보다 커요.",
+    "right": "서울이 부산보다 커요.",
+    "en": "Seoul is bigger than Busan."
+   }
+  ],
+  "topik_tip": "The set phrase “생각보다” (more ... than I thought) is the most frequent form.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-겠-",
+  "level": 1,
+  "label": "will; must be; polite softener",
+  "meaning_en": "A pre-final ending with three jobs: the speaker's will (“제가 하겠습니다”), a guess about the present or the future (“비가 오겠어요, 힘들겠어요”), and a polite softening in set phrases (“처음 뵙겠습니다, 알겠습니다, 모르겠습니다”).",
+  "usage": "It attaches to verb, adjective and “이다” stems and sits before the final ending: “하다 → 하겠다”, “맛있다 → 맛있겠다”. With the speaker as subject it is a decision made now (“제가 가겠습니다”). With others it is a guess (“그 사람은 지금 바쁘겠어요”). It does not point to the past: a past guess is “-었겠-” (“어제 힘들었겠어요”). Questions “-겠어요?” ask about the listener's will or about a guess. It is typical in “합쇼체” (“-겠습니다”).",
+  "examples": [
+   {
+    "ko": "오늘은 제가 설거지를 하겠습니다.",
+    "en": "I will do the dishes today.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "하늘을 보니 곧 비가 오겠어요.",
+    "en": "Looking at the sky, it will rain soon.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험이 내일이라서 많이 긴장되겠어요.",
+    "en": "The exam is tomorrow, so you must be very nervous.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "처음 뵙겠습니다. 잘 부탁드립니다.",
+    "en": "Nice to meet you. I look forward to your help.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "잘 모르겠어요. 다시 설명해 주세요.",
+    "en": "I do not quite know. Please explain it again.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 음식은 정말 맛있겠다.",
+    "en": "This food looks really delicious.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 거예요",
+    "difference": "“-겠-” voices a decision at the moment of speaking; “-을 거예요” states a plan or a prediction.",
+    "pair": [
+     {
+      "ko": "제가 하겠어요.",
+      "en": "I will do it."
+     },
+     {
+      "ko": "제가 할 거예요.",
+      "en": "I am going to do it."
+     }
+    ]
+   },
+   {
+    "pattern": "-을게요",
+    "difference": "“-겠습니다” is the formal declaration; “-을게요” is the everyday promise.",
+    "pair": [
+     {
+      "ko": "제가 하겠습니다.",
+      "en": "I will do it."
+     },
+     {
+      "ko": "제가 할게요.",
+      "en": "I will do it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“-겠-” does not mark the past: use “-었겠-” for a guess about the past.",
+    "wrong": "어제 많이 힘들겠어요.",
+    "right": "어제 많이 힘들었겠어요.",
+    "en": "It must have been very hard yesterday."
+   }
+  ],
+  "topik_tip": "“알겠습니다 / 모르겠습니다 / 처음 뵙겠습니다” are polite formulas, not predictions.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
