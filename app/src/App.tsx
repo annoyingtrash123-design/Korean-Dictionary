@@ -111,13 +111,14 @@ export function App() {
       </div>
     );
   }
-  // Phone: the search bar sits at the bottom (one-handed), just above the tab bar; Results and Recent scroll above it.
-  const dock = route.name !== 'home' && !readerRoute && route.name !== 'games';
+  // Phone: the search bar belongs to the Search tab only (Recent and the results list), low on the screen for one
+  // hand, a little above the tab bar; Results and Recent scroll above it. Entries, Lists, Settings… have none.
+  const dock = route.name === 'search';
   return (
     <div class={kb ? 'app kb' : 'app'}>
       {route.name === 'home' && <HomeHeader />}
       <main ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
-      {dock && <footer class="topbar dock"><SearchBar /></footer>}
+      {dock && <footer class="dock"><SearchBar /></footer>}
       <TabBar />
       <Toast />
       <ListPicker />

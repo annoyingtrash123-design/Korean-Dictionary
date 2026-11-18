@@ -20,7 +20,7 @@ const titles = (page: Page) => texts(page.locator('.today-card .card-hw .hangul'
 const kinds = (page: Page) => page.locator('.today-card').evaluateAll((els) => els.map((e) => e.getAttribute('data-kind')));
 const dateRe = /^Today\s*·\s*\d{1,2} [A-Z][a-z]{2}$/;
 
-test('home: full-page cards, six tabs, search bar docked at the bottom', async ({ page }) => {
+test('home: one framed card per page, six tabs, search bar only on the Search tab', async ({ page }) => {
   test.setTimeout(600_000);
   await page.goto('/');
   await downloadAll(page);
@@ -47,10 +47,20 @@ test('home: full-page cards, six tabs, search bar docked at the bottom', async (
   await expect(slides(page)).toHaveCount(n);
   expect(await kinds(page)).toEqual(HAS_CURRICULUM ? ['idiom', 'word', 'word', 'word', 'grammar', 'grammar'] : ['idiom']);
   const idiom = page.locator('.today-card[data-kind=idiom]');
-  await expect(idiom.locator('.card-tag')).toHaveText(/관용구|속담/);
+  await expect(idiom.locator('.card-kind')).toHaveText(/^(Idiom 관용구|Proverb 속담)$/);
+  await expect(idiom.locator('.cur-lvl')).toHaveCount(0);           // idioms have no curriculum level
   await expect(idiom.locator('.card-gloss')).not.toBeEmpty();
-  await expect(idiom.locator('.card-ex .ex-ko').first()).toBeVisible();
+  await expect(idiom.locator('.card-exs .ex-ko').first()).toBeVisible();
   await expect(idiom.getByRole('link', { name: 'Open entry' })).toBeVisible();
+  // fixed sections in a fixed order; an empty block is left out, never shown empty
+  const order = (card: import('@playwright/test').Locator) => card.locator('.card-label').evaluateAll((els) => els.map((e) => e.textContent));
+  const SECTIONS = ['Definition', 'Examples', 'Related'];
+  const isOrdered = (got: (string | null)[]) => got.every((x, i) => SECTIONS.indexOf(x!) >= 0 && (i === 0 || SECTIONS.indexOf(x!) > SECTIONS.indexOf(got[i - 1]!)));
+  expect(isOrdered(await order(idiom))).toBe(true);
+  // the card sits inside the page with margins, and the button belongs to it
+  const cb = (await idiom.boundingBox())!, ob = (await idiom.getByRole('link', { name: 'Open entry' }).boundingBox())!;
+  expect(cb.x).toBeGreaterThanOrEqual(12);
+  expect(ob.y + ob.height).toBeLessThanOrEqual(cb.y + cb.height);
   // the first page fills the space between header and tab bar
   const track = pager(page).locator('.car-track');
   const tb = (await track.boundingBox())!, hb = (await page.locator('.topbar').first().boundingBox())!, nb = (await nav.boundingBox())!;
@@ -85,8 +95,12 @@ test('home: full-page cards, six tabs, search bar docked at the bottom', async (
     // a word page: badge, headword, gloss, Korean definition, examples, Open entry
     const w = page.locator('.today-card[data-kind=word]').first();
     await expect(w.locator('.card-gloss')).not.toBeEmpty();
-    await expect(w.locator('.card-ex .ex-ko').first()).toBeVisible();
-    expect(await w.locator('.card-ex').count()).toBeLessThanOrEqual(3);
+    await expect(w.locator('.card-kind')).toHaveText('Word');
+    await expect(w.locator('.card-exs .ex-ko').first()).toBeVisible();
+    expect(await w.locator('.card-exs .ex').count()).toBeLessThanOrEqual(3);
+    for (const c of await page.locator('.today-card').all()) expect(isOrdered(await order(c))).toBe(true);
+    // every card's header strip is one line: kind, level, star
+    for (const c of await page.locator('.today-card .card-head').all()) expect((await c.boundingBox())!.height).toBeLessThan(60);
     await expect(w.getByRole('link', { name: 'Open entry' })).toBeVisible();
     await page.waitForTimeout(400);
     await shot(page, 'home-phone');
@@ -152,19 +166,25 @@ test('home: full-page cards, six tabs, search bar docked at the bottom', async (
     await page.clock.resume();
   }
 
-  // ---- the Search tab: Recent only, search bar docked above the tab bar ----
+  // ---- the Search tab: Recent only, search bar low on the screen with a gap above the tab bar ----
   await nav.getByRole('link', { name: 'Search' }).click();
   await expect(page.getByRole('heading', { name: 'Recent' })).toBeVisible();
   await expect(pager(page)).toHaveCount(0);
   const bar = page.getByRole('searchbox', { name: 'Search' });
   const vh = page.viewportSize()!.height;
-  const bb = (await bar.boundingBox())!, nb2 = (await nav.boundingBox())!;
-  expect(bb.y).toBeGreaterThan(vh * 0.7);              // lower part of the screen
-  expect(bb.y + bb.height).toBeLessThanOrEqual(nb2.y); // above the tab bar, not under it
+  const barGap = async () => {
+    const bb = (await page.locator('form.searchbar').boundingBox())!, nb2 = (await nav.boundingBox())!;
+    expect(bb.y).toBeGreaterThan(vh * 0.7);              // lower part of the screen
+    const gap = nb2.y - (bb.y + bb.height);              // above the tab bar, not under it or flush on it
+    expect(gap).toBeGreaterThanOrEqual(12);
+    expect(gap).toBeLessThanOrEqual(20);
+  };
+  await barGap();
   await page.waitForTimeout(300);
   await shot(page, 'search-phone');
   await bar.fill('학교');
   await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
+  await barGap();                                        // the results list keeps it
   await page.waitForTimeout(300);
   await shot(page, 'search-phone-results');
   // a keyboard shrinks the viewport: the bar stays whole, right above it, and the tab bar gets out of the way
@@ -179,9 +199,23 @@ test('home: full-page cards, six tabs, search bar docked at the bottom', async (
   await shot(page, 'search-phone-keyboard');
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(nav).toBeVisible();
+  // ---- no search bar anywhere else: an entry (even one opened from the results), Lists, Settings, Home ----
+  await bar.blur();
+  await page.locator('a.row', { has: page.locator('.hw', { hasText: '학교' }) }).first().click();
+  await expect(page).toHaveURL(/#\/(entry|word)\//);
+  await expect(page.locator('h1')).toContainText('학교');
+  await expect(bar).toHaveCount(0);
+  await expect(nav.getByRole('link', { name: 'Search' })).toHaveAttribute('aria-current', 'page');
+  await nav.getByRole('link', { name: 'Search' }).click();     // the Search tab brings the results (and the bar) back
+  await expect(page).toHaveURL(/q=/);
+  await expect(bar).toHaveValue('학교');
   await bar.fill('');
   await expect(page.getByRole('heading', { name: 'Recent' })).toBeVisible();
-  await nav.getByRole('link', { name: 'Home' }).click();
+  for (const tab of ['Lists', 'Settings', 'Reader', 'Games', 'Home']) {
+    await nav.getByRole('link', { name: tab }).click();
+    await expect(nav.getByRole('link', { name: tab })).toHaveAttribute('aria-current', 'page');
+    await expect(bar).toHaveCount(0);
+  }
   await expect(pager(page)).toBeVisible();
 });
 
