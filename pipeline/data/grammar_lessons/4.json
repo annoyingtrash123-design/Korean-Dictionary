@@ -3823,7 +3823,7 @@
    },
    {
     "ko": "책을 읽다가 날이 새는 줄도 몰랐다.",
-    "en": "I was reading and didn't even realize that day was breaking.",
+    "en": "I was reading and didn't even notice the day breaking.",
     "ctx": "collocation"
    },
    {
@@ -3887,7 +3887,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3962,7 +3964,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3978,7 +3982,7 @@
     "ctx": "collocation"
    },
    {
-    "ko": "기숙사에서는 음악을 크게 듣는다거나 큰 소리를 내면 안 된다.",
+    "ko": "기숙사에서는 음악을 크게 듣는다거나 큰 소리를 낸다거나 하면 안 된다.",
     "en": "In the dormitory you must not do things such as listening to loud music or making loud noises.",
     "ctx": "formal"
    },
@@ -4043,7 +4047,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4051,7 +4057,7 @@
   "level": 4,
   "label": "I wonder if; I think maybe",
   "meaning_en": "An expression for a subjective, uncertain thought: “I wonder whether, I'm inclined to think that…”. It also expresses worry or regret over an act, as in “내가 왜 그랬나 싶다” (“why on earth did I do that?”).",
-  "usage": "It attaches to verb stems as “-나 싶다”, and after “-었-” and “-겠-”, and to adjectives and “이다” as “-ㄴ가 싶다” (“큰가 싶다”, “책인가 싶다”). The thought is the speaker's own, hesitant or doubtful. In the second use it follows a self-question about one's own act and expresses regret or worry. “-나 싶어서” gives that thought as the reason for an act. It is used in speech and writing.",
+  "usage": "It attaches to verb stems as “-나 싶다”, and after “-었-” and “-겠-”, and to adjectives and “이다” as “-ㄴ가 싶다” (“큰가 싶다”, “꿈인가 싶다”); after an adjective “-나 싶다” is also heard in casual speech (“너무 많나 싶다”), but “이다” always takes “-ㄴ가”. The thought is the speaker's own, hesitant or doubtful. In the second use it follows a self-question about one's own act and expresses regret or worry. “-나 싶어서” gives that thought as the reason for an act. It is used in speech and writing.",
   "examples": [
    {
     "ko": "같은 내용이지만 영화보다는 소설이 더 재미있지 않았나 싶다.",
@@ -4111,14 +4117,16 @@
   ],
   "pitfalls": [
    {
-    "note": "An adjective or “이다” takes “-ㄴ가 싶다”, not “-나 싶다”.",
-    "wrong": "방이 너무 크나 싶다.",
-    "right": "방이 너무 큰가 싶다.",
-    "en": "I wonder whether the room is too big."
+    "note": "After “이다” the form is “-ㄴ가 싶다”, not “-나 싶다”.",
+    "wrong": "너무 기뻐서 이게 꿈이나 싶었다.",
+    "right": "너무 기뻐서 이게 꿈인가 싶었다.",
+    "en": "I was so happy that I wondered whether this was a dream."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4199,7 +4207,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4280,7 +4290,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4355,7 +4367,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4377,7 +4391,7 @@
    },
    {
     "ko": "십 년 전만 같아도 이 정도 일은 거뜬히 했을 텐데.",
-    "en": "Even as of ten years ago, I would have done this much easily.",
+    "en": "If it were ten years ago, I would have handled this much easily.",
     "ctx": "conversation"
    },
    {
@@ -4411,8 +4425,8 @@
     "difference": "“-라면” is a plain condition; “만 같아도” also says the standard is a low bar.",
     "pair": [
      {
-      "ko": "평일이라면 이렇게 붐비지 않는다.",
-      "en": "If it is a weekday, it is not this crowded."
+      "ko": "평일이라면 이렇게 붐비지 않을 텐데.",
+      "en": "If it were a weekday, it wouldn't be this crowded."
      },
      {
       "ko": "평일만 같아도 이렇게 붐비지 않을 텐데.",
@@ -4430,7 +4444,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4482,16 +4498,16 @@
     ]
    },
    {
-    "pattern": "-어 쌓다",
-    "difference": "The two are close in meaning; both say that the act is piled up repeatedly.",
+    "pattern": "-곤 하다",
+    "difference": "“-곤 하다” says an act recurs from time to time; “-어 대다” says it goes on and on, to excess, often to the speaker's annoyance.",
     "pair": [
      {
-      "ko": "과자를 먹어 댄다.",
-      "en": "They keep eating snacks."
+      "ko": "그 개는 밤마다 짖곤 한다.",
+      "en": "That dog often barks at night."
      },
      {
-      "ko": "과자를 먹어 쌓는다.",
-      "en": "They keep eating snacks."
+      "ko": "그 개가 밤새 짖어 댔다.",
+      "en": "That dog kept barking all night."
      }
     ]
    }
@@ -4511,7 +4527,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4586,7 +4604,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4667,7 +4687,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4714,7 +4736,7 @@
      },
      {
       "ko": "물가가 작년보다 올랐다.",
-      "en": "Prices have risen more than last year."
+      "en": "Prices are higher than last year."
      }
     ]
    },
@@ -4735,14 +4757,16 @@
   ],
   "pitfalls": [
    {
-    "note": "The verb is “비하다”, not “비교하다”.",
-    "wrong": "작년에 비교해 물가가 많이 올랐다.",
+    "note": "“비하다” takes “에”; “와/과” goes with “비교하다” (“작년과 비교해”).",
+    "wrong": "작년과 비해 물가가 많이 올랐다.",
     "right": "작년에 비해 물가가 많이 올랐다.",
     "en": "Prices rose a lot compared to last year."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -4817,7 +4841,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
