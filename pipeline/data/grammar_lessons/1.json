@@ -1304,6 +1304,99 @@
   }
  },
  {
+  "form": "이다",
+  "level": 1,
+  "label": "to be: “X is Y” copula",
+  "meaning_en": "The copula “to be”: it joins two nouns (“A is B”), names what something is, and in the negative is replaced by the adjective “아니다”. It is the one word that attaches to a noun and works like a verb or adjective, so it takes every ending and politeness level.",
+  "usage": "It is written attached to the noun, with no space (“학생이다”, “친구예요”). Plain: “이다” (written, essay and news style); polite: “이에요” after a final consonant and “예요” after a vowel (“학생이에요, 친구예요”); formal: “입니다” (“학생입니다, 친구입니다”). After a vowel the “이” may drop in speech and informal writing (“친구다”, “친구고”, “친구라서”), but never after a consonant (“학생이다, 학생이고, 학생이라서”). Past: “이었다/였다” (“학생이었어요, 친구였어요”). The negative is “N이/가 아니다” (“학생이 아니에요”), never “안 이다”. The syllable “이” here is not the subject particle “이/가”, though the two look alike.",
+  "examples": [
+   {
+    "ko": "저는 한국 대학생이에요.",
+    "en": "I am a Korean university student.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이분은 제 친구예요.",
+    "en": "This is my friend.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울은 한국의 수도이다.",
+    "en": "Seoul is the capital of Korea.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 제품은 올해 가장 많이 팔린 노트북입니다.",
+    "en": "This product is the best-selling laptop of the year.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "그곳은 예전에 작은 서점이었다.",
+    "en": "That place used to be a small bookshop.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "가장 큰 문제는 시간이다.",
+    "en": "The biggest problem is time.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "아니다",
+    "difference": "“이다” states that A is B; “아니다” denies it. The noun takes the particle “이/가” before “아니다”, but “이다” attaches to the noun directly. Both inflect like ordinary predicates, so “학생이 아니에요” is a complete polite sentence.",
+    "pair": [
+     {
+      "ko": "이건 제 우산이에요.",
+      "en": "This is my umbrella."
+     },
+     {
+      "ko": "이건 제 우산이 아니에요.",
+      "en": "This is not my umbrella."
+     }
+    ]
+   },
+   {
+    "pattern": "이",
+    "difference": "The subject particle “이/가” marks who or what does or is something and comes before another word; the copula “이다” is itself the predicate and ends the sentence. “선생님이” is a subject, “선생님이에요” is a statement.",
+    "pair": [
+     {
+      "ko": "저는 선생님이에요.",
+      "en": "I am a teacher."
+     },
+     {
+      "ko": "선생님이 오셨어요.",
+      "en": "The teacher has come."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Negate with “아니다”, not with “안” before “이다”.",
+    "wrong": "저는 학생 안이에요.",
+    "right": "저는 학생이 아니에요.",
+    "en": "I am not a student."
+   },
+   {
+    "note": "“예요” belongs only after a vowel. After a final consonant use “이에요”.",
+    "wrong": "저는 학생예요.",
+    "right": "저는 학생이에요.",
+    "en": "I am a student."
+   },
+   {
+    "note": "“이다” is attached to the noun; do not leave a space before it.",
+    "wrong": "이분은 제 친구 예요.",
+    "right": "이분은 제 친구예요.",
+    "en": "This is my friend."
+   }
+  ],
+  "topik_tip": "Tell the copula from the subject particle by what follows: “책이다, 책이에요, 책이고” end or continue a predicate, while “책이 있다” has a verb after it. In 쓰기, the plain “-이다” (“서울은 수도이다”) is the written-register form; do not mix it with “-이에요” in one text.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
   "form": "한테",
   "level": 1,
   "label": "to (a person), spoken",
