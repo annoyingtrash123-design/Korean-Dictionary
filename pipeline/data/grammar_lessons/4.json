@@ -77,7 +77,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -144,7 +146,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -197,7 +201,7 @@
    },
    {
     "pattern": "이라든가",
-    "difference": "“이라든가” gives samples of a category; “이며” enumerates the items actually there.",
+    "difference": "Both list examples of a kind. “이라든가” usually closes the list with “하는” plus a noun naming the category; “이며” is typically followed by a summing-up word such as “모두” or “온갖”.",
     "pair": [
      {
       "ko": "방에는 책이며 옷이며 어질러져 있었다.",
@@ -219,7 +223,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -294,7 +300,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -306,7 +314,7 @@
   "examples": [
    {
     "ko": "사랑이란 서로를 이해하고 아끼는 마음이다.",
-    "en": "Love is the heart that understands and cherishes each other.",
+    "en": "Love is understanding and cherishing each other.",
     "ctx": "essay"
    },
    {
@@ -376,7 +384,9 @@
   ],
   "topik_tip": "In 읽기 passages “X란 Y이다” is the standard way to define a term, and the definition is usually the key point of the paragraph.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -432,8 +442,8 @@
     "difference": "The ordinary “이면” means “if it is”; the repeated “X이면 X” means “in the field of X”.",
     "pair": [
      {
-      "ko": "공부면 이 책을 읽어 보세요.",
-      "en": "If it is studying you want, read this book."
+      "ko": "내일이 휴일이면 같이 등산 가요.",
+      "en": "If tomorrow is a holiday, let's go hiking together."
      },
      {
       "ko": "공부면 공부, 운동이면 운동 다 잘한다.",
@@ -451,7 +461,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -532,7 +544,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -607,7 +621,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -624,7 +640,7 @@
    },
    {
     "ko": "지수는 예쁘고 착하기까지 해서 인기가 많다.",
-    "en": "Jisu is pretty and even kind, so is very popular.",
+    "en": "Jisu is pretty and even kind, so Jisu is very popular.",
     "ctx": "conversation"
    },
    {
@@ -678,11 +694,13 @@
     "note": "A verb or adjective takes “-기” before “까지”.",
     "wrong": "예쁘고 착하까지 해서 인기가 많다.",
     "right": "예쁘고 착하기까지 해서 인기가 많다.",
-    "en": "They are pretty and even kind, so are very popular."
+    "en": "They are pretty and even kind, so they are very popular."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -757,7 +775,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -783,8 +803,8 @@
     "ctx": "essay"
    },
    {
-    "ko": "한 사람의 시민으로서 투표는 중요한 권리이자 의무다.",
-    "en": "For a citizen, voting is both an important right and a duty.",
+    "ko": "한 사람의 시민으로서 투표에 꼭 참여해야 한다.",
+    "en": "As a citizen, one must take part in voting.",
     "ctx": "formal"
    },
    {
@@ -838,7 +858,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -919,7 +941,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -946,7 +970,7 @@
    },
    {
     "ko": "시력마저 나빠져서 책을 읽기가 힘들어졌다.",
-    "en": "My eyesight got worse too, so it became hard to read.",
+    "en": "Even my eyesight got worse, so it became hard to read.",
     "ctx": "conversation"
    },
    {
@@ -994,7 +1018,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1002,7 +1028,7 @@
   "level": 4,
   "label": "not only, and also",
   "meaning_en": "A literary connective ending that acknowledges the first fact and adds a related one: “X is so, and moreover Y; not only X but also Y”. It sometimes introduces a fact that everyone knows.",
-  "usage": "It attaches to verb and adjective stems as “-거니와” (“좋거니와”, “있거니와”), to “이다” as “이거니와”, and after “-었-”. It has no tense of its own before it, so “-ㄹ거니와” is not used. Both clauses point the same way, and the first often carries “도” (“맛도 좋거니와 값도 싸다”). The dictionary labels it as old-fashioned speech, and it is used in formal writing rather than in conversation.",
+  "usage": "It attaches to verb and adjective stems as “-거니와” (“좋거니와”, “있거니와”), to “이다” as “이거니와”, and after “-었-” and “-겠-” (“앞서 말했거니와”, “다시 말하겠거니와”), but not after the modifier “-을/-ㄹ”. Both clauses point the same way, and the first often carries “도” (“맛도 좋거니와 값도 싸다”). The dictionary labels it as old-fashioned speech, and it is used in formal writing rather than in conversation.",
   "examples": [
    {
     "ko": "이 책은 내용도 훌륭하거니와 디자인도 아름답다.",
@@ -1069,7 +1095,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1126,7 +1154,7 @@
     "pair": [
      {
       "ko": "알지만 말하지 않았다.",
-      "en": "I know, but I did not say."
+      "en": "I knew, but I didn't say."
      },
      {
       "ko": "알고도 말하지 않았다.",
@@ -1144,7 +1172,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1219,7 +1249,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1241,12 +1273,12 @@
    },
    {
     "ko": "그만큼 노력했기에 좋은 결과를 얻을 수 있었다.",
-    "en": "Because they made that much effort, they could get a good result.",
+    "en": "It was because of that much effort that a good result was possible.",
     "ctx": "collocation"
    },
    {
-    "ko": "모두가 반대하기에 그 계획은 취소되었다.",
-    "en": "Since everyone was against it, the plan was cancelled.",
+    "ko": "주민들이 모두 반대했기에 그 계획은 취소되었다.",
+    "en": "Since the residents all opposed it, the plan was cancelled.",
     "ctx": "news"
    },
    {
@@ -1288,13 +1320,15 @@
   "pitfalls": [
    {
     "note": "The clause that follows cannot be a command.",
-    "wrong": "추우기에 외투를 입으세요.",
+    "wrong": "춥기에 외투를 입으세요.",
     "right": "추웠기에 외투를 입고 나왔다.",
     "en": "It was cold, so I wore a coat out."
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1321,7 +1355,7 @@
    },
    {
     "ko": "얼마나 열심히 일했는지 얼굴이 많이 야위었다.",
-    "en": "Perhaps from working so hard, their face has grown thin.",
+    "en": "They have worked so hard that their face has grown quite thin.",
     "ctx": "essay"
    },
    {
@@ -1369,7 +1403,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1444,7 +1480,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1456,7 +1494,7 @@
   "examples": [
    {
     "ko": "힘들더라도 끝까지 포기하지 마세요.",
-    "en": "Even if it is hard, please don't give up to the end.",
+    "en": "Even if it is hard, please don't give up; see it through.",
     "ctx": "collocation"
    },
    {
@@ -1519,7 +1557,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1594,7 +1634,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
