@@ -6,6 +6,10 @@ Kept in the repo so it survives sessions. Move an item out when it starts.
   Chinese chengyu it comes from or matches (e.g. 과유불급 ↔ 过犹不及; CC-CEDICT / kaikki zh are fetchable in CI, see
   the cedict/zhwikt packs) and an established English equivalent where one exists (e.g. 타산지석 ↔ "learn from
   others' mistakes"). Mark AI-proposed ones as AI and review them independently before shipping.
+- **English + example sentences for idioms without them (paused by the owner):** 18 sokdam100 proverbs and 246 kept 성어
+  that exist only in stdict/opendict (English meaning, verbatim Korean definition, 2–3 examples — dictionary examples
+  first), plus English for the 1,256 untranslated example sentences of krdict 속담/성어 (example_en.tsv overlay).
+  AI-written → independent review → AI label.
 - **Grammar lessons 3급 / 2급 / 1급:** independent content review, then ship (drafts on `save/lessons-3-2-1-drafts`).
 - **-으니4 (6급 grammar lesson):** confirm which sense the curriculum's "비난" means (check 표준국어대사전 -으니04), then
   review and ship.
