@@ -3167,5 +3167,406 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-지 않다",
+  "level": 1,
+  "label": "not (negation)",
+  "meaning_en": "The long negation of verbs and adjectives: “-지 않다” means “do not, is not”. It is neutral and fits both speech and writing, and it is the counterpart of the short “안 + verb”.",
+  "usage": "It attaches to verb and adjective stems with no change (“가다 → 가지 않다”, “예쁘다 → 예쁘지 않다”, “춥다 → 춥지 않다”), and the tense goes on “않다” (“가지 않았다, 가지 않을 거예요”). For a noun with “이다” the negation is “이/가 아니다”. With a “하다” verb the short form is “공부 안 해요”, not “안 공부해요”. It does not form commands or suggestions: those are “-지 마세요” and “-지 맙시다”. “-지 않아도 되다” means “do not have to”, and “-지 않으면 안 되다” means “must”.",
+  "examples": [
+   {
+    "ko": "저는 고기를 먹지 않아요.",
+    "en": "I do not eat meat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 날씨가 춥지 않아요.",
+    "en": "The weather is not cold today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제는 학교에 가지 않았어요.",
+    "en": "I did not go to school yesterday.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 음식은 맵지 않으니까 드셔 보세요.",
+    "en": "This food is not spicy, so please try it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서두르지 않아도 돼요.",
+    "en": "You do not have to hurry.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "안",
+    "difference": "“안” and “-지 않다” are near-synonyms. “안” is shorter and more spoken; “-지 않다” suits writing too.",
+    "pair": [
+     {
+      "ko": "저는 고기를 안 먹어요.",
+      "en": "I do not eat meat."
+     },
+     {
+      "ko": "저는 고기를 먹지 않아요.",
+      "en": "I do not eat meat."
+     }
+    ]
+   },
+   {
+    "pattern": "-지 못하다",
+    "difference": "“-지 않다” says one does not (by choice or fact); “-지 못하다” says one cannot.",
+    "pair": [
+     {
+      "ko": "저는 학교에 가지 않아요.",
+      "en": "I do not go to school."
+     },
+     {
+      "ko": "저는 학교에 가지 못해요.",
+      "en": "I cannot go to school."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A noun with “이다” is negated with “이/가 아니다”.",
+    "wrong": "저는 학생이지 않아요.",
+    "right": "저는 학생이 아니에요.",
+    "en": "I am not a student."
+   },
+   {
+    "note": "The tense goes on “않다”, not on the first verb.",
+    "wrong": "학교에 갔지 않아요.",
+    "right": "학교에 가지 않았어요.",
+    "en": "I did not go to school."
+   }
+  ],
+  "topik_tip": "“안 + verb” and “-지 않다” are the two ways to negate; “못” and “-지 못하다” mean cannot.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 수 있다",
+  "level": 1,
+  "label": "can, be able to",
+  "meaning_en": "An expression for ability, possibility and, in some contexts, permission: “can X, be able to X, it is possible that X”. The negative “-ㄹ 수 없다” means “cannot”.",
+  "usage": "After a vowel or ㄹ it is “-ㄹ 수 있다”, after other consonants “-을 수 있다”: “읽다 → 읽을 수 있다”, “가다 → 갈 수 있다”, “놀다 → 놀 수 있다” and “만들다 → 만들 수 있다” (the ㄹ stays), “듣다 → 들을 수 있다”, “눕다 → 누울 수 있다”. With “이다” and adjectives it is a possibility (“학생일 수 있다”, “어려울 수 있다”). “-ㄹ 수도 있다” means “might”. “수” is a separate word, written with a space. Permission can be asked and given with it in formal signs (“사진을 찍을 수 있습니다”). The opposite is “-ㄹ 수 없다”.",
+  "examples": [
+   {
+    "ko": "저는 한국어를 읽을 수 있어요.",
+    "en": "I can read Korean.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 노래를 부를 수 있어요?",
+    "en": "Can you sing this song?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일은 시간이 없어서 갈 수 없어요.",
+    "en": "I have no time tomorrow, so I cannot go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 매운 음식을 먹을 수 없어요.",
+    "en": "I cannot eat spicy food.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 사람이 거짓말을 할 수도 있어요.",
+    "en": "It is possible that person is lying.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "여기에서 사진을 찍을 수 있습니다.",
+    "en": "You can take photos here.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지 못하다",
+    "difference": "“-ㄹ 수 없다” and “-지 못하다” are near-synonyms for cannot. “-ㄹ 수 없다” is a little more formal.",
+    "pair": [
+     {
+      "ko": "갈 수 없어요.",
+      "en": "I cannot go."
+     },
+     {
+      "ko": "가지 못해요.",
+      "en": "I cannot go."
+     }
+    ]
+   },
+   {
+    "pattern": "-어도 되다",
+    "difference": "“-ㄹ 수 있다” says something is possible or doable; “-어도 되다” says it is allowed.",
+    "pair": [
+     {
+      "ko": "여기에서 사진을 찍을 수 있어요.",
+      "en": "You can take photos here."
+     },
+     {
+      "ko": "여기에서 사진을 찍어도 돼요.",
+      "en": "You may take photos here."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“수” is a separate word, spaced from the modifier and from “있다”.",
+    "wrong": "저는 한국어를 읽을수있어요.",
+    "right": "저는 한국어를 읽을 수 있어요.",
+    "en": "I can read Korean."
+   },
+   {
+    "note": "A ㄹ-stem merges the ㄹ with “-ㄹ”.",
+    "wrong": "저는 케이크를 만들을 수 있어요.",
+    "right": "저는 케이크를 만들 수 있어요.",
+    "en": "I can make a cake."
+   }
+  ],
+  "topik_tip": "Ability is “-ㄹ 수 있다”; “-ㄹ 수밖에 없다” (no choice but) is a different pattern.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-지 못하다",
+  "level": 1,
+  "label": "cannot (circumstances)",
+  "meaning_en": "An expression for inability: “cannot X, was unable to X”. It says that the action does not happen because of a lack of ability or because of circumstances, not by choice.",
+  "usage": "It attaches to verb stems with no change: “먹다 → 먹지 못하다”, “가다 → 가지 못하다”, “쓰다 → 쓰지 못하다”; the tense goes on “못하다” (“못했다, 못해요”). The short form is “못 + verb” (“못 가요”), written with a space. “못하다” without a space (“노래를 못하다”) means “be bad at”. It is a little more formal than “못”. In writing “-지 못하고” (unable to ... and) and “-지 못한 채” are frequent. The matching expression of choice is “-지 않다”.",
+  "examples": [
+   {
+    "ko": "어제는 너무 바빠서 점심도 먹지 못하고 일만 했어요.",
+    "en": "I was so busy yesterday that I worked without even eating lunch.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "감기에 걸려서 학교에 가지 못한다고 전화했어요.",
+    "en": "I called to say that I could not go to school because of a cold.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아직 한국어로 편지를 쓰지 못하는 학생도 있어요.",
+    "en": "There are students who still cannot write letters in Korean.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 소식을 듣고 기쁨을 감추지 못하였다.",
+    "en": "On hearing the news, they could not hide their joy.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "시끄러워서 잠을 자지 못했다.",
+    "en": "It was noisy, so I could not sleep.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-지 않다",
+    "difference": "“-지 않다” is a denial of fact or a choice; “-지 못하다” is inability.",
+    "pair": [
+     {
+      "ko": "저는 술을 마시지 않아요.",
+      "en": "I do not drink alcohol."
+     },
+     {
+      "ko": "저는 술을 마시지 못해요.",
+      "en": "I cannot drink alcohol."
+     }
+    ]
+   },
+   {
+    "pattern": "못하다",
+    "difference": "“못 하다” (spaced) is “cannot do it now”; “못하다” (together) is “be bad at it”.",
+    "pair": [
+     {
+      "ko": "오늘은 목이 아파서 노래를 못 해요.",
+      "en": "Today my throat hurts, so I cannot sing."
+     },
+     {
+      "ko": "저는 노래를 못해요.",
+      "en": "I am bad at singing."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The tense goes on “못하다”.",
+    "wrong": "점심을 먹었지 못했어요.",
+    "right": "점심을 먹지 못했어요.",
+    "en": "I could not eat lunch."
+   },
+   {
+    "note": "In the short form, “못” is a separate word.",
+    "wrong": "점심을 못먹었어요.",
+    "right": "점심을 못 먹었어요.",
+    "en": "I could not eat lunch."
+   }
+  ],
+  "topik_tip": "Spacing contrast to know: “못 하다” (cannot) versus “못하다” (bad at).",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-기 전에",
+  "level": 1,
+  "label": "before doing",
+  "meaning_en": "An expression for “before X happens”: “먹기 전에” (before eating), “자기 전에” (before going to bed). It places the main clause earlier than the clause with “-기”. With a noun it is “N 전에” (“식사 전에, 일주일 전에”).",
+  "usage": "It attaches to verb stems with no tense ending, even when the main clause is in the past: “먹다 → 먹기 전에”, “자다 → 자기 전에”, “오다 → 오기 전에”, “만들다 → 만들기 전에” (the ㄹ stays). The main clause may be a command, a plan or a past event. A noun of duration plus “전에” means “ago” (“일 년 전에”). Without a clause “전에” alone means “before, previously” (“전에 만난 적이 있다”). The opposite is “-은 후에”.",
+  "examples": [
+   {
+    "ko": "자기 전에 이를 닦으세요.",
+    "en": "Brush your teeth before you go to bed.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "한국에 오기 전에 한국어를 배웠어요.",
+    "en": "I learned Korean before coming to Korea.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밥을 먹기 전에 손을 씻어요.",
+    "en": "I wash my hands before eating.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "수업이 시작하기 전에 교실에 도착해야 합니다.",
+    "en": "You have to arrive in the classroom before class starts.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "일 년 전에 이 집으로 이사했어요.",
+    "en": "I moved to this house a year ago.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 후에",
+    "difference": "The two are opposites: “-기 전에” is before, “-은 후에” is after.",
+    "pair": [
+     {
+      "ko": "먹기 전에 씻어요.",
+      "en": "I wash before I eat."
+     },
+     {
+      "ko": "먹은 후에 씻어요.",
+      "en": "I wash after I eat."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb never takes the past tense.",
+    "wrong": "밥을 먹었기 전에 손을 씻었어요.",
+    "right": "밥을 먹기 전에 손을 씻었어요.",
+    "en": "I washed my hands before eating."
+   },
+   {
+    "note": "A ㄹ-stem keeps its ㄹ before “-기”.",
+    "wrong": "케이크를 만드기 전에 재료를 샀다.",
+    "right": "케이크를 만들기 전에 재료를 샀다.",
+    "en": "I bought the ingredients before making the cake."
+   }
+  ],
+  "topik_tip": "The verb before “전에” stays in the plain “-기” form whatever the tense of the sentence.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-은 후에",
+  "level": 1,
+  "label": "after doing",
+  "meaning_en": "An expression for “after X is done”: “먹은 후에” (after eating), “졸업한 후에” (after graduating). It places the main clause later than the clause with “-은 후에”. With a noun it is “N 후에” (“식사 후에, 삼 일 후에”).",
+  "usage": "It attaches to verb stems with the past modifier: after a vowel “-ㄴ”, after a consonant “-은”: “가다 → 간 후에”, “먹다 → 먹은 후에”, “끝나다 → 끝난 후에”, “만들다 → 만든 후에” (the ㄹ drops). “후” is a separate word. “-은 뒤에” is a near-synonym and so is “-고 나서”. The noun form is “N 후에”: “삼 일 후에” (in three days), “식사 후에”. A short form “-ㄴ 후” (without “에”) is used in writing.",
+  "examples": [
+   {
+    "ko": "밥을 먹은 후에 약을 드세요.",
+    "en": "Take the medicine after you eat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "대학교를 졸업한 후에 회사에 들어갔다.",
+    "en": "After graduating from university, I joined a company.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "수업이 끝난 후에 같이 점심 먹을까요?",
+    "en": "Shall we have lunch together after class ends?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "삼 일 후에 다시 오세요.",
+    "en": "Please come again in three days.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "운동한 후에는 물을 많이 마셔야 해요.",
+    "en": "After exercising, you should drink plenty of water.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-기 전에",
+    "difference": "The two are opposites: “-은 후에” is after, “-기 전에” is before.",
+    "pair": [
+     {
+      "ko": "먹은 후에 씻어요.",
+      "en": "I wash after I eat."
+     },
+     {
+      "ko": "먹기 전에 씻어요.",
+      "en": "I wash before I eat."
+     }
+    ]
+   },
+   {
+    "pattern": "-은 뒤에",
+    "difference": "“-은 후에” and “-은 뒤에” are near-synonyms.",
+    "pair": [
+     {
+      "ko": "졸업한 후에 일을 시작했다.",
+      "en": "After graduating, I started working."
+     },
+     {
+      "ko": "졸업한 뒤에 일을 시작했다.",
+      "en": "After graduating, I started working."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first verb takes the past modifier, not the present.",
+    "wrong": "밥을 먹는 후에 약을 드세요.",
+    "right": "밥을 먹은 후에 약을 드세요.",
+    "en": "Take the medicine after you eat."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-ㄴ”.",
+    "wrong": "케이크를 만들은 후에 포장했다.",
+    "right": "케이크를 만든 후에 포장했다.",
+    "en": "After making the cake, I packaged it."
+   }
+  ],
+  "topik_tip": "“-은 후에 / -은 뒤에 / -고 나서” are interchangeable in most simple sentences.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
