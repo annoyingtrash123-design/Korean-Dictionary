@@ -12,7 +12,7 @@ Per lesson: form, outcome, what changed.
 |---|---|---|
 | -게3 (명령) | approved | None needed: 하게-style order, attachment and pitfalls correct. |
 | -게4 (환기) | approved | Kept the "guess what?" sense (the 해-style quiz question; -게5 at level 4 already covers the intention question). Usage no longer claims it is never used politely: “-게요?” exists (“제가 몇 살이게요?”); pitfall 2 now says it is too playful for a superior, not ungrammatical. The -을까 pair asked "I wonder who I met yesterday", odd for the speaker's own action; it now asks about Minjun. |
-| -으니4 (비난) | **draft** | The lesson teaches krdict's 하게-style "statement of truth" (입에 쓴 약이 몸에는 좋으니). The curriculum row's meaning is 비난 (reproach), which that sense does not express; I could not confirm which dictionary sense the list means, so it stays draft. Fixed meanwhile: the -느니라 compare used “많느니라” (adjective + -느니, wrong); now -으니라 vs -으니 as 해라 vs 하게 style. Usage now names the 하게 register and says verbs take -느니. Removed "mind you" / "so beware" added to two translations. |
+| -으니4 (비난) | draft, then rewritten and approved (see the decision at the end) | First pass: The lesson teaches krdict's 하게-style "statement of truth" (입에 쓴 약이 몸에는 좋으니). The curriculum row's meaning is 비난 (reproach), which that sense does not express; I could not confirm which dictionary sense the list means, so it stays draft. Fixed meanwhile: the -느니라 compare used “많느니라” (adjective + -느니, wrong); now -으니라 vs -으니 as 해라 vs 하게 style. Usage now names the 하게 register and says verbs take -느니. Removed "mind you" / "so beware" added to two translations. |
 | -는다던가1 (명령 확인 질문) | approved | Meaning was "confirming what you heard / what both have heard": wrong, the speaker asks the listener to confirm what the listener was told. Label changed to “did they say ...?” check. Usage now gives the register (krdict: 예사 낮춤, i.e. 하게 style; “-다던가요?” is the polite form). -다면서 compare rewritten on the same point. TIP explains the list's 명령 label via -(으)라던가. |
 | -을 바에 | approved | Pitfall 2 claimed a past modifier is impossible (“X 한 바에”). False: “기왕 시작한 바에”, “이왕 이렇게 된 바에” are standard and mean "since ... already". The pitfall now says the "rather than" reading needs -ㄹ and that -ㄴ 바에 means "since already" and does not take 차라리. Pitfall 1 note reworded. |
 | -으오 | approved | The -소 compare called -으오 "a softer, older variant": unsupported. Now: after consonants -소 is usual in statements/questions and the only form after -았/었-, -겠-; -으오 is heard mostly in orders/requests (krdict examples: 받으오, 먹으오). New pair 받으오 / 받았소. -습니다 compare said 하오 is for "someone you do not outrank": wrong (equals or juniors treated with respect). TIP fixed the same way. |
@@ -76,7 +76,7 @@ Per lesson: form, outcome, what changed.
 
 ## Totals
 
-55 approved, 1 left as draft (-으니4: curriculum sense 비난 vs. the lesson's "statement of truth").
+56 approved, 0 left as draft (-으니4 was rewritten for the 비난 sense and approved on 2026-11-18; see the decision below).
 
 ## Also changed
 
@@ -99,3 +99,27 @@ test checks the mechanism and keeps passing as review approvals land.
    (-던 asks about the past), and check idioms (무리가 있다, 속이 시원하다).
 7. Context tags: "proverb" and "news" were used for sentences that are neither.
 8. Hangul in English fields must be in quotes (“-자면2”), or the quality gate fails.
+
+## -으니4 (비난): decision of the second independent review (2026-11-18)
+
+**Outcome: rewritten for the reproach sense and approved.** The draft taught the 하게체 "statement of a truth"
+(입에 쓴 약이 몸에는 좋으니); the curriculum row means the reproachful “N 같으니(라고)!”.
+
+Evidence:
+- The row's meaning column is 비난, and its variants column is empty. The question “-니?” is a separate row (3급
+  “-니2”, 의문) whose variants column names **-으니5**: the list numbers its -으니 homonyms itself, with the question
+  as 5 and the reproach as 4. A truth-stating 하게체 ending is not 비난 under any reading.
+- 표준국어대사전 (`pipeline/out/stdict.sqlite`), **-으니03**, sense 2: “해라할 자리나 혼잣말에 쓰여, 앞말과 다름없다는
+  뜻을 나타내는 종결 어미. 어떤 대상을 가볍게 비난하거나 꾸짖는 뜻이 있다.” (사기꾼 같으니 / 불효자식 같으니 / 이런
+  고지식한 사람 같으니). Sense 1 of the same headword is the 하게체 truth statement the draft used, which is why the
+  drafter could take the wrong one. stdict also has the longer **-으니라고** with the identical definition (바보
+  같으니라고, 날강도 같으니라고).
+- krdict (`core.sqlite`) has -으니1 (reason), -으니2 (listing: 많으니 적으니), -으니3 (예사 낮춤 truth) and -으니4
+  (아주낮춤 question), but no reproach sense, so krdict's numbering cannot be the list's: its -으니4 is the question,
+  which the list files under -니2 / -으니5. The corpus sentences in core.sqlite confirm the live use (이런 날강도
+  같으니라고 / 이런 죽일 놈 같으니).
+
+What changed: label, meaning, usage (attaches to “같다”; “-으니라고” variant; 해라체 or self-talk, no polite form;
+tone from teasing to anger; often after a “-다니” reason clause), all five examples, both compares (-다니;
+-으니3 as the homonym it is not), both pitfalls (no polite form; a bare noun + “-이니” reads as a question) and the
+TOPIK tip. The quality gate rejected “6급” in the tip as unquoted Hangul; it says “level-6”.
