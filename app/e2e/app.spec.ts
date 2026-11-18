@@ -163,6 +163,10 @@ test('first run, search, lists, themes, offline use', async ({ page, context }) 
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.getByRole('searchbox', { name: 'Search' })).toBeVisible({ timeout: 30_000 });
+  // let the engine finish starting first: in the APK its code ships with the app, but here (no service worker since
+  // the PWA was removed) the preview server serves it, and going offline mid-start failed CI with "Failed to fetch"
+  await search(page, '학교');
+  await expect(page.locator('.row .hw', { hasText: '학교' }).first()).toBeVisible();
   await context.setOffline(true);   // the dictionary is on the device: nothing below needs the network
   await search(page, '먹다');
   await expect(page.locator('.row .hw', { hasText: '먹다' }).first()).toBeVisible();
