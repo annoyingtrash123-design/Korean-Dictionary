@@ -51,3 +51,10 @@ Per lesson: form, outcome, what changed.
 | -은 다음에 | approved | Usage spelled “그 다음에”; the dictionary word is “그다음”. |
 | -는 대신에 | approved | Compare English (“whereas it is tasty”). |
 | -는 만큼 | approved | None needed. |
+| -는 반면 | approved | “-는 대신에” compare English (“the reward is big”). |
+| -나 보다 | approved | Example 2 English “Their eyes” for Minjun; pitfall 2 had no subject and English invented “they”; now 민준이는 …. |
+| -을 텐데 | approved | Example 2, the “-겠-” compare and the pitfall had no subject and English invented “they”; Korean now names Jisu / Minjun. |
+| -기 위해 | approved | None needed. |
+| 만 아니면 | approved | Pitfall English (“As long as it does not rain, we would go”) mixed a real condition with a counterfactual; now “If only it were not raining, we would …”. |
+| -으면 안 되다 | approved | None needed. |
+| -으면 좋겠다 | approved | None needed. |

@@ -3425,11 +3425,11 @@
     "pair": [
      {
       "ko": "월급이 적은 반면 보람이 크다.",
-      "en": "The pay is low, whereas the reward is big."
+      "en": "The pay is low, whereas the work is very rewarding."
      },
      {
       "ko": "월급이 적은 대신에 보람이 크다.",
-      "en": "The pay is low, but in return the reward is big."
+      "en": "The pay is low, but in return the work is very rewarding."
      }
     ]
    }
@@ -3450,7 +3450,9 @@
   ],
   "topik_tip": "Look for opposite qualities on either side of “반면”: that is the whole meaning.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3467,7 +3469,7 @@
    },
    {
     "ko": "민준이는 어제 잠을 못 잤나 보다. 눈이 빨개.",
-    "en": "Minjun seems not to have slept last night. Their eyes are red.",
+    "en": "Minjun seems not to have slept last night. Minjun’s eyes are red.",
     "ctx": "conversation"
    },
    {
@@ -3525,14 +3527,16 @@
    },
    {
     "note": "A ㄹ-stem drops the ㄹ before “-나”.",
-    "wrong": "요즘 서울에 살나 봐요.",
-    "right": "요즘 서울에 사나 봐요.",
-    "en": "They seem to be living in Seoul these days."
+    "wrong": "민준이는 요즘 서울에 살나 봐요.",
+    "right": "민준이는 요즘 서울에 사나 봐요.",
+    "en": "Minjun seems to be living in Seoul these days."
    }
   ],
   "topik_tip": "The guess from evidence (“나 보다”) and the guess about the future (“ㄹ 것 같다”) are different: look for a clue that has been seen.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3548,8 +3552,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "지금쯤 도착했을 텐데 왜 연락이 없지?",
-    "en": "They must have arrived by now, so why is there no word?",
+    "ko": "지수가 지금쯤 도착했을 텐데 왜 연락이 없지?",
+    "en": "Jisu should have arrived by now, so why is there no word?",
     "ctx": "conversation"
    },
    {
@@ -3588,12 +3592,12 @@
     "difference": "“-겠-” with “-지” is a flat guess. “-을 텐데” opens a second clause or leaves the sentence hanging for a contrast, a worry or a request.",
     "pair": [
      {
-      "ko": "지금쯤 도착했겠지.",
-      "en": "They must have arrived by now."
+      "ko": "지수는 지금쯤 도착했겠지.",
+      "en": "Jisu must have arrived by now."
      },
      {
-      "ko": "지금쯤 도착했을 텐데.",
-      "en": "They should have arrived by now."
+      "ko": "지수는 지금쯤 도착했을 텐데.",
+      "en": "Jisu should have arrived by now (but ...)."
      }
     ]
    }
@@ -3601,14 +3605,16 @@
   "pitfalls": [
    {
     "note": "A ㄹ-stem merges the ㄹ with “-ㄹ”: “살다” becomes “살 텐데”.",
-    "wrong": "지금 서울에 살을 텐데 연락해 볼까?",
-    "right": "지금 서울에 살 텐데 연락해 볼까?",
-    "en": "They must be living in Seoul now, so shall I contact them?"
+    "wrong": "민준이가 지금 서울에 살을 텐데 연락해 볼까?",
+    "right": "민준이가 지금 서울에 살 텐데 연락해 볼까?",
+    "en": "Minjun should be living in Seoul now; shall I get in touch?"
    }
   ],
   "topik_tip": "It carries two moves: a firm supposition and a continuation (advice, worry or contrast).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3690,7 +3696,9 @@
   ],
   "topik_tip": "The list's related forms “-기 위해서, -기 위한, N을 위해” are the same expression in different shapes.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3761,12 +3769,14 @@
     "note": "After a clause, use “-지만 않으면”; “만 아니면” follows a noun.",
     "wrong": "비가 오는 만 아니면 소풍을 갈 텐데.",
     "right": "비가 오지만 않으면 소풍을 갈 텐데.",
-    "en": "As long as it does not rain, we would go on the picnic."
+    "en": "If only it were not raining, we would go on the picnic."
    }
   ],
   "topik_tip": "Read it as “only X stands in the way”. The main clause often has “-ㄹ 텐데” or “괜찮다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3848,7 +3858,9 @@
   ],
   "topik_tip": "Spelling “안 돼요” (not “안 되요”) and the ㅂ-irregular “누우면” are the points that exams like.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -3930,7 +3942,9 @@
   ],
   "topik_tip": "A hope about a situation takes “-으면 좋겠다”; one's own desire to do something takes “-고 싶다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
