@@ -2989,5 +2989,1229 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-는 가운데",
+  "level": 5,
+  "label": "amid, while it is going on",
+  "meaning_en": "An expression for the background situation in which something happens: “amid, while X is going on, with X as the backdrop”. It sets a continuing circumstance against an event.",
+  "usage": "It attaches to verb stems as “-는 가운데”, to adjective stems as “-ㄴ/은 가운데”, and to “이다” as “인 가운데”. It does not take “-었는”. The first clause is a state or situation that goes on while the main event happens, and “가운데에도” adds a sense of “even in”. It is formal and is at home in news reports.",
+  "examples": [
+   {
+    "ko": "많은 사람이 지켜보는 가운데 선수들이 입장했다.",
+    "en": "The players entered with many people watching.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비가 내리는 가운데에도 행사는 예정대로 진행되었다.",
+    "en": "Even with the rain falling, the event went ahead as planned.",
+    "ctx": "news"
+   },
+   {
+    "ko": "모두가 반대하는 가운데 그 계획이 통과되었다.",
+    "en": "The plan was passed with everyone opposed.",
+    "ctx": "news"
+   },
+   {
+    "ko": "어려운 경제 상황인 가운데 이번 투자는 큰 의미가 있다.",
+    "en": "In a difficult economic situation, this investment carries great significance.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "다들 공연을 준비하는 가운데 영수만 다른 일을 하고 있었다.",
+    "en": "While everyone was preparing for the show, only Yeongsu was doing something else.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 동안",
+    "difference": "“-는 동안” measures a stretch of time; “-는 가운데” sets the surrounding situation.",
+    "pair": [
+     {
+      "ko": "아이들이 자는 동안 청소를 했다.",
+      "en": "I cleaned while the children slept."
+     },
+     {
+      "ko": "많은 사람이 지켜보는 가운데 발표를 했다.",
+      "en": "I gave the presentation with many people watching."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 중에",
+    "difference": "Both mean “during”. “-는 중에” points to an activity being in progress; “-는 가운데” points to the circumstances around the event.",
+    "pair": [
+     {
+      "ko": "회의하는 중에 전화가 왔다.",
+      "en": "A call came during the meeting."
+     },
+     {
+      "ko": "회의하는 가운데 전화가 왔다.",
+      "en": "A call came amid the meeting."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "There is no “-었는” form; a verb here is in the present “-는”.",
+    "wrong": "많은 사람이 지켜봤는 가운데 발표를 했다.",
+    "right": "많은 사람이 지켜보는 가운데 발표를 했다.",
+    "en": "I gave the presentation with many people watching."
+   },
+   {
+    "note": "An adjective takes “-ㄴ/은”, not “-는”.",
+    "wrong": "어렵는 가운데 이번 투자는 큰 의미가 있다.",
+    "right": "어려운 가운데 이번 투자는 큰 의미가 있다.",
+    "en": "Even in these difficult circumstances, this investment carries great significance."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "는 말할 것도 없고",
+  "level": 5,
+  "label": "not to mention",
+  "meaning_en": "An expression meaning “needless to say, not to mention X”: the first item is so obvious that it need not be said, and the second item is added as equally true.",
+  "usage": "It attaches to nouns as “은/는 말할 것도 없고” (“은” after a final consonant, “는” after a vowel), and to nominalised verbs (“먹기는”). The two items are of the same kind and lean the same way, and the second usually carries “도”. The first is the more obvious one. It suits both speech and writing.",
+  "examples": [
+   {
+    "ko": "이 코미디 영화는 재미는 말할 것도 없고 깊은 감동까지 준다.",
+    "en": "This comedy is funny, needless to say, and it gives deep emotion as well.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "서울은 낮은 말할 것도 없고 밤에도 사람이 많다.",
+    "en": "Seoul is crowded in the daytime, not to mention at night.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나는 요리는 말할 것도 없고 라면도 제대로 끓이지 못한다.",
+    "en": "I can't cook, to say nothing of boiling instant noodles properly.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여름은 말할 것도 없고 겨울에도 땀이 많이 난다.",
+    "en": "I sweat a lot in winter, not to mention in summer.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 가수는 한국은 말할 것도 없고 해외에서도 인기가 많다.",
+    "en": "That singer is popular abroad, not to mention in Korea.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "뿐만 아니라",
+    "difference": "“뿐만 아니라” adds the second item as a plain extra; “은/는 말할 것도 없고” says the first item goes without saying.",
+    "pair": [
+     {
+      "ko": "그 가수는 한국은 말할 것도 없고 해외에서도 인기가 많다.",
+      "en": "That singer is popular abroad, not to mention in Korea."
+     },
+     {
+      "ko": "그 가수는 한국뿐만 아니라 해외에서도 인기가 많다.",
+      "en": "That singer is popular not only in Korea but abroad."
+     }
+    ]
+   },
+   {
+    "pattern": "은/는 고사하고",
+    "difference": "“은/는 고사하고” introduces the first item as out of the question and is followed by a negative; “은/는 말할 것도 없고” adds a second item of the same kind.",
+    "pair": [
+     {
+      "ko": "나는 영어는 고사하고 한국어도 잘 못한다.",
+      "en": "I can't speak Korean well, let alone English."
+     },
+     {
+      "ko": "나는 영어는 말할 것도 없고 한국어도 잘한다.",
+      "en": "I speak Korean well, not to mention English."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The first item takes the topic particle “은/는”, not “이/가”.",
+    "wrong": "여름이 말할 것도 없고 겨울에도 땀이 많이 난다.",
+    "right": "여름은 말할 것도 없고 겨울에도 땀이 많이 난다.",
+    "en": "I sweat a lot in winter, not to mention in summer."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 만하다",
+  "level": 5,
+  "label": "worth doing, can well be",
+  "meaning_en": "An expression with two uses: something is worth doing, or is good enough to do (“worth reading, decent to eat”), and something is reasonable or quite possible (“it is no wonder that…”).",
+  "usage": "It attaches to verb stems as “-ㄹ/을 만하다” (a ㄹ-stem takes plain “-ㄹ”: “만들 만하다”). It modifies a noun as “-ㄹ/을 만한” (“믿을 만한 사람”). In the second sense the subject is often in a situation where a reaction is natural, and the form “-ㄹ 만도 하다” stresses that. It is used in speech and in writing.",
+  "examples": [
+   {
+    "ko": "이 책은 한번 읽을 만하다.",
+    "en": "This book is worth reading once.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 식당은 가격이 비싸지만 먹을 만해요.",
+    "en": "This restaurant is pricey, but the food is decent.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 영화는 볼 만하더라고요.",
+    "en": "That movie was worth watching.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "믿을 만한 사람에게 부탁하는 것이 좋다.",
+    "en": "It is better to ask someone trustworthy.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 상황이라면 누구라도 화를 낼 만하다.",
+    "en": "In that situation anyone would have reason to be angry.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 가치가 있다",
+    "difference": "“-을 가치가 있다” states plainly that something has value; “-을 만하다” is a lighter, more everyday judgement.",
+    "pair": [
+     {
+      "ko": "이 영화는 볼 만하다.",
+      "en": "This movie is worth watching."
+     },
+     {
+      "ko": "이 영화는 볼 가치가 있다.",
+      "en": "This movie deserves to be watched."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 법하다",
+    "difference": "“-을 만하다” says a reaction is reasonable; “-을 법하다” says something is likely and would be expected.",
+    "pair": [
+     {
+      "ko": "그 소식을 들으면 놀랄 만하다.",
+      "en": "Hearing that news, one has reason to be surprised."
+     },
+     {
+      "ko": "그 소식을 들으면 놀랄 법하다.",
+      "en": "Hearing that news, one is likely to be surprised."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem takes plain “-ㄹ”; the “을” form is wrong.",
+    "wrong": "이 재료로 만들을 만한 음식이 있나요?",
+    "right": "이 재료로 만들 만한 음식이 있나요?",
+    "en": "Is there a dish worth making with these ingredients?"
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 법하다",
+  "level": 5,
+  "label": "would be expected, quite likely",
+  "meaning_en": "An expression for a judgement that something is plausible or would be natural: “it would be only natural that…, it is quite likely that…”. It often leads into a contrast.",
+  "usage": "It attaches to verb and adjective stems as “-ㄹ/을 법하다”, to “이다” as “일 법하다”, and after “-었-” (“했을 법하다”). It modifies a noun as “-ㄹ 법한”. The pattern “-ㄹ 법한데도”, “-ㄹ 법도 한데” sets what one would expect against what actually happened. It is used in writing and in speech.",
+  "examples": [
+   {
+    "ko": "이것저것 물어 대는 아이가 귀찮을 법한데도 어머니는 항상 친절하게 대답해 주신다.",
+    "en": "Though the child's endless questions could well be annoying, the mother always answers kindly.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "어려운 문제라서 틀릴 법도 한데 지수는 전부 맞혔다.",
+    "en": "It was a hard problem and getting it wrong would have been understandable, but Jisu got every answer right.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 정도 노력했으면 합격했을 법한데 결과는 불합격이었다.",
+    "en": "With that much effort, passing would have been likely, but the result was a failure.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 울 법한 상황인데도 의젓하게 참았다.",
+    "en": "It was a situation in which the child might well have cried, but they held back like a grown-up.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "누구라도 한 번쯤은 해 봤을 법한 생각이다.",
+    "en": "It is a thought that anyone might well have had at least once.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 만하다",
+    "difference": "“-을 법하다” says something is likely or would be expected; “-을 만하다” says something is worth doing or a reaction is reasonable.",
+    "pair": [
+     {
+      "ko": "그 소식을 들으면 놀랄 법하다.",
+      "en": "Hearing that news, one is likely to be surprised."
+     },
+     {
+      "ko": "그 소식을 들으면 놀랄 만하다.",
+      "en": "Hearing that news, one has reason to be surprised."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-을 것 같다” is a plain guess; “-을 법하다” says that the outcome would be natural and often points to a contrast.",
+    "pair": [
+     {
+      "ko": "아이가 울 것 같다.",
+      "en": "The child looks like they will cry."
+     },
+     {
+      "ko": "아이가 울 법하다.",
+      "en": "It would be natural for the child to cry."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It is “-ㄹ 법하다”; “-ㄹ 법이다” is a different expression.",
+    "wrong": "내일은 비가 올 법이다.",
+    "right": "내일은 비가 올 법하다.",
+    "en": "It might well rain tomorrow."
+   }
+  ],
+  "topik_tip": "A “-ㄹ 법한데도” clause usually sets up a contrast: what follows goes against what one would expect.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 테다",
+  "level": 5,
+  "label": "I will, strong resolve",
+  "meaning_en": "A sentence-final expression of the speaker's strong will or plan: “I will (certainly) do it, I'm going to”. It is spoken at the “해라” level, often in a defiant or resolute tone.",
+  "usage": "It attaches to verb stems as “-ㄹ/을 테다” (ㄹ-stem: “살 테다”), and its subject is the speaker alone. It is not used for questions or for someone else's intention, and it is not polite. It often goes with “꼭”, “반드시” and “-고 말 테다”. It is heard in monologues, in vows and in dialogue in fiction.",
+  "examples": [
+   {
+    "ko": "이번에는 반드시 합격하고 말 테다.",
+    "en": "This time I will pass, no matter what.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "두고 봐라, 언젠가는 꼭 성공하고 말 테다.",
+    "en": "Just watch; some day I will make it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘은 끝까지 가 볼 테다.",
+    "en": "Today I will see it through to the end.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 모욕을 절대 잊지 않을 테다.",
+    "en": "I will never forget this insult.",
+    "ctx": "literary"
+   },
+   {
+    "ko": "남들이 뭐라고 하든 내 길을 갈 테다.",
+    "en": "No matter what others say, I will go my own way.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 거야",
+    "difference": "“-을 거야” is a plain statement of intention or prediction; “-을 테다” is a resolute vow.",
+    "pair": [
+     {
+      "ko": "나는 꼭 이길 거야.",
+      "en": "I will definitely win."
+     },
+     {
+      "ko": "나는 꼭 이길 테다.",
+      "en": "I will win, whatever it takes."
+     }
+    ]
+   },
+   {
+    "pattern": "-겠다",
+    "difference": "Both state the speaker's will. “-겠다” works at every speech level (“-겠습니다”, “-겠어요”), while “-을 테다” exists only at the “해라” level.",
+    "pair": [
+     {
+      "ko": "나는 끝까지 하겠다.",
+      "en": "I will do it to the end."
+     },
+     {
+      "ko": "나는 끝까지 할 테다.",
+      "en": "I will do it to the end."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The subject is the speaker; it cannot state someone else's will.",
+    "wrong": "민준이는 내일 갈 테다.",
+    "right": "나는 내일 갈 테다.",
+    "en": "I will go tomorrow."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 테면",
+  "level": 5,
+  "label": "if you want to, go ahead",
+  "meaning_en": "An expression meaning “if you mean to, if you want to (then go ahead)”: the first clause names an act the listener wants or intends to do, and the main clause answers with a challenge, a permission or a command.",
+  "usage": "It attaches to verb stems as “-ㄹ/을 테면”. The main clause is nearly always a command or a challenge, often repeating the same verb (“올 테면 와 봐”, “갈 테면 가라”). It treats the listener's wish as a condition and is blunt in tone. It is not used for neutral conditions, for which “-으면” is used.",
+  "examples": [
+   {
+    "ko": "비웃을 테면 맘껏 비웃어.",
+    "en": "If you want to laugh at me, laugh all you like.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "잡을 테면 잡아 보세요.",
+    "en": "Catch me if you can.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "올 테면 와 봐. 나는 하나도 무섭지 않아.",
+    "en": "Come at me if you dare. I'm not scared at all.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "갈 테면 가라. 붙잡지 않을 테니까.",
+    "en": "If you're going, go. I won't stop you.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이길 수 있을 테면 이겨 보세요.",
+    "en": "Beat me if you can.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려면",
+    "difference": "“-으려면” gives a plain condition for a goal; “-을 테면” invites or dares the listener to go ahead.",
+    "pair": [
+     {
+      "ko": "이기려면 연습해야 한다.",
+      "en": "To win, you have to practice."
+     },
+     {
+      "ko": "이길 테면 이겨 봐라.",
+      "en": "Win if you can."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The main clause is a command or a challenge, not a neutral statement.",
+    "wrong": "비웃을 테면 나는 기분이 나빴다.",
+    "right": "비웃을 테면 맘껏 비웃어.",
+    "en": "If you want to laugh at me, laugh all you like."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 테지만",
+  "level": 5,
+  "label": "probably so, but",
+  "meaning_en": "An expression meaning “I am sure (or I assume) that X, but…”: the speaker supposes something with confidence, then goes on to say what may differ from it.",
+  "usage": "It attaches to verb and adjective stems as “-ㄹ/을 테지만”, to “이다” as “일 테지만”, and after “-었-” (“힘들었을 테지만”). The first clause is a supposition about someone or something other than the speaker's own known state. It is often used when sympathizing, encouraging or warning. It is close to “-겠지만”.",
+  "examples": [
+   {
+    "ko": "지금 당장은 놀면 재미있을 테지만 얼마 지나지 않아 후회하게 될 거야.",
+    "en": "Playing around is probably fun right now, but before long you will regret it.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "모든 일이 처음에는 익숙하지 않을 테지만 하다 보면 적응이 된다.",
+    "en": "Everything is probably unfamiliar at first, but you get used to it as you go on.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "많이 힘드셨을 테지만 조금만 더 힘내 주세요.",
+    "en": "It must have been very hard for you, but please hold on a little longer.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어려운 시험일 테지만 포기하지 말고 도전해 보자.",
+    "en": "It is probably a hard exam, but let's not give up and try.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금은 비가 오지 않을 테지만 오후에는 올지도 모른다.",
+    "en": "It is probably not raining now, but it may rain in the afternoon.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-겠지만",
+    "difference": "The two are interchangeable in most sentences.",
+    "pair": [
+     {
+      "ko": "힘들었을 테지만 끝까지 해냈다.",
+      "en": "It must have been hard, but they saw it through."
+     },
+     {
+      "ko": "힘들었겠지만 끝까지 해냈다.",
+      "en": "It must have been hard, but they saw it through."
+     }
+    ]
+   },
+   {
+    "pattern": "-기는 하지만",
+    "difference": "“-기는 하지만” grants a fact; “-을 테지만” grants a supposition.",
+    "pair": [
+     {
+      "ko": "힘들기는 하지만 재미있다.",
+      "en": "It is hard, but fun."
+     },
+     {
+      "ko": "힘들 테지만 재미있을 거야.",
+      "en": "It will probably be hard, but it will be fun."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It supposes; it does not suit the speaker's own state, which the speaker knows.",
+    "wrong": "저는 지금 피곤할 테지만 괜찮습니다.",
+    "right": "지금은 모두가 피곤할 테지만 조금만 더 힘내 주세요.",
+    "en": "Everyone is probably tired right now, but please hold on a little longer."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으려나 보다",
+  "level": 5,
+  "label": "looks like it's going to",
+  "meaning_en": "An expression for a guess that something is about to happen, drawn from what the speaker sees: “it looks as if it is going to, it seems that it will”.",
+  "usage": "It attaches to verb stems as “-으려나 보다”, or “-려나 보다” after a vowel or ㄹ (“오려나 보다”, “끓이려나 보다”). A visible sign (“-는 걸 보니”) usually comes first. The guess is about someone or something else and about the near future. The polite form is “-려나 봐요”. It is not used for the speaker's own plans.",
+  "examples": [
+   {
+    "ko": "하늘이 맑은 걸 보니 오늘은 비가 오지 않으려나 보다.",
+    "en": "The sky is clear, so it looks like it won't rain today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "먹구름이 몰려오는 걸 보니 곧 비가 오려나 보다.",
+    "en": "Dark clouds are gathering, so it looks like rain is coming soon.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "아이가 눈을 비비는 걸 보니 곧 잠이 들려나 봐요.",
+    "en": "The child is rubbing their eyes, so it looks like they will fall asleep soon.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규가 부엌에서 냄비를 꺼내는 걸 보니 라면을 끓이려나 봐요.",
+    "en": "Seunggyu is taking a pot out in the kitchen, so it looks like they will cook ramen.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저쪽에서 사람들이 모이는 걸 보니 곧 행사가 시작되려나 보다.",
+    "en": "People are gathering over there, so it looks like the event is about to begin.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-나 보다",
+    "difference": "“-나 보다” guesses at what is the case now or was; “-으려나 보다” guesses at what is about to happen.",
+    "pair": [
+     {
+      "ko": "비가 오나 보다.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 오려나 보다.",
+      "en": "It seems it is going to rain."
+     }
+    ]
+   },
+   {
+    "pattern": "-으려나",
+    "difference": "“-으려나?” is a question to oneself (“I wonder if…”); “-으려나 보다” is a guess from evidence.",
+    "pair": [
+     {
+      "ko": "비가 오려나?",
+      "en": "I wonder if it will rain."
+     },
+     {
+      "ko": "비가 오려나 보다.",
+      "en": "It looks like it will rain."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It needs a sign the speaker has seen, and it is about someone or something else, not the speaker's plans.",
+    "wrong": "나는 내일 가려나 보다.",
+    "right": "민준이가 가방을 싸는 걸 보니 내일 떠나려나 보다.",
+    "en": "Minjun is packing a bag, so it looks like they will leave tomorrow."
+   },
+   {
+    "note": "After a vowel the ending is “-려나”.",
+    "wrong": "곧 비가 오으려나 보다.",
+    "right": "곧 비가 오려나 보다.",
+    "en": "It looks like it will rain soon."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "를 가지고",
+  "level": 5,
+  "label": "with, over; using something",
+  "meaning_en": "An expression with two uses: a tool, a means or a material (“with, using X”), and the object or occasion of an action, often a quarrel (“over, about X”).",
+  "usage": "It attaches to nouns as “을 가지고” after a final consonant and “를 가지고” after a vowel. In the first sense it is followed by a verb of making or doing (“만들다”, “고치다”). In the second it is followed by a verb of reacting (“화내다”, “싸우다”, “비난하다”), and the noun is typically a small matter. It is a different thing from the verb phrase “가지고 가다/오다” (“take, bring”).",
+  "examples": [
+   {
+    "ko": "승규는 폐휴지를 가지고 멋진 장식품을 만들어 냈다.",
+    "en": "Seunggyu made a fine ornament out of waste paper.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 집은 직접 키운 포도를 가지고 와인을 만들었다.",
+    "en": "My family made wine with grapes we grew ourselves.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "저는 이 작은 도구 하나를 가지고 모든 수리를 합니다.",
+    "en": "I do all the repairs with this one small tool.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "별것 아닌 일을 가지고 싸우지 말자.",
+    "en": "Let's not fight over something trivial.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 사람은 사소한 실수를 가지고 계속 나를 비난했다.",
+    "en": "That person kept criticizing me over a minor mistake.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "(으)로",
+    "difference": "In the sense of a tool the two are close in meaning; “(으)로” is shorter and “를 가지고” stresses the thing in hand.",
+    "pair": [
+     {
+      "ko": "나무를 가지고 의자를 만들었다.",
+      "en": "I made a chair with wood."
+     },
+     {
+      "ko": "나무로 의자를 만들었다.",
+      "en": "I made a chair out of wood."
+     }
+    ]
+   },
+   {
+    "pattern": "때문에",
+    "difference": "“를 가지고” names the thing quarreled over; “때문에” names the cause.",
+    "pair": [
+     {
+      "ko": "작은 일을 가지고 싸웠다.",
+      "en": "We fought over a small matter."
+     },
+     {
+      "ko": "작은 일 때문에 싸웠다.",
+      "en": "We fought because of a small matter."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel the particle is “를”, not “을”.",
+    "wrong": "포도을 가지고 와인을 만들었다.",
+    "right": "포도를 가지고 와인을 만들었다.",
+    "en": "I made wine with grapes."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으면 몰라도",
+  "level": 5,
+  "label": "maybe if, but otherwise not",
+  "meaning_en": "An expression meaning “if X were so, it might be a different story, but as things are…”: it grants that the main point would hold only under the stated condition, and says it does not hold in the actual case.",
+  "usage": "It attaches to verb and adjective stems as “-으면 몰라도”, or “-면 몰라도” after a vowel or ㄹ, and to a noun as “이면 몰라도” or “(이)라면 몰라도”. The condition is the exceptional case, and the main clause denies or rejects the usual case (often with “-는데”, “-면 안 되다”, “-기 힘들다”). It is conversational.",
+  "examples": [
+   {
+    "ko": "차가 멈추어 있으면 몰라도 운전 중에는 통화하시면 안 돼요.",
+    "en": "It might be fine if the car were stopped, but you must not take calls while driving.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "가족이 많으면 몰라도 부부 단둘이서 사는데 이 집은 너무 넓다.",
+    "en": "It might do for a large family, but for a couple living alone this house is too big.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "초보면 몰라도 경력 십 년의 전문가가 그런 실수를 하다니 이해가 안 돼요.",
+    "en": "A beginner might, but I can't understand an expert with ten years' experience making that mistake.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어린아이면 몰라도 다 큰 어른이 그렇게 떼를 쓰면 안 되지.",
+    "en": "A small child maybe, but a grown adult shouldn't throw a tantrum like that.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "돈이 많으면 몰라도 우리 형편에 그렇게 비싼 차는 무리야.",
+    "en": "If we had lots of money, maybe, but a car that expensive is out of reach for our means.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-더라도",
+    "difference": "“-더라도” says that something holds even under a condition; “-으면 몰라도” says it might hold only under that condition.",
+    "pair": [
+     {
+      "ko": "돈이 많으면 몰라도 우리에겐 무리다.",
+      "en": "If we had lots of money, maybe, but it is too much for us."
+     },
+     {
+      "ko": "돈이 많더라도 그건 무리다.",
+      "en": "Even if we had lots of money, that is too much."
+     }
+    ]
+   },
+   {
+    "pattern": "-을지 몰라도",
+    "difference": "“-을지 몰라도” means “it may be so, but…”; “-으면 몰라도” means “only if it were so”.",
+    "pair": [
+     {
+      "ko": "부자일지 몰라도 인색하다.",
+      "en": "They may be rich, but they are stingy."
+     },
+     {
+      "ko": "부자면 몰라도 이 정도는 무리다.",
+      "en": "For a rich person maybe, but this much is too much."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a noun that ends in a consonant the “이” of “이다” is needed.",
+    "wrong": "학생면 몰라도 어른이 그러면 안 된다.",
+    "right": "학생이면 몰라도 어른이 그러면 안 된다.",
+    "en": "A student maybe, but an adult shouldn't do that."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에도 불구하고",
+  "level": 5,
+  "label": "despite, in spite of",
+  "meaning_en": "A formal expression meaning “despite, in spite of X”: what follows is different from, or the opposite of, what X would lead one to expect.",
+  "usage": "It attaches to nouns as “에도 불구하고”, and often to nouns that name a condition, an effort or an obstacle (“날씨”, “노력”, “반대”). The clause after it states the unexpected outcome. For a clause use “-는데도 불구하고”, and for a noun made with “이다” use “임에도 불구하고”. It is formal and common in news and essays.",
+  "examples": [
+   {
+    "ko": "추운 날씨에도 불구하고 공원은 나들이객으로 붐볐다.",
+    "en": "Despite the cold weather, the park was crowded with people out for a stroll.",
+    "ctx": "news"
+   },
+   {
+    "ko": "선수의 뛰어난 활약에도 불구하고 팀은 패배하고 말았다.",
+    "en": "Despite the player's outstanding performance, the team ended up losing.",
+    "ctx": "news"
+   },
+   {
+    "ko": "여러 번의 실패에도 불구하고 지수는 포기하지 않았다.",
+    "en": "Despite repeated failures, Jisu did not give up.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "부모님의 만류에도 불구하고 나는 유학을 떠나기로 했다.",
+    "en": "Despite my parents' attempts to stop me, I decided to go abroad to study.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "높은 가격에도 불구하고 그 제품은 불티나게 팔렸다.",
+    "en": "Despite the high price, the product sold like hot cakes.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는데도 불구하고",
+    "difference": "“에도 불구하고” follows a noun; “-는데도 불구하고” follows a clause.",
+    "pair": [
+     {
+      "ko": "추위에도 불구하고 나갔다.",
+      "en": "Despite the cold, I went out."
+     },
+     {
+      "ko": "추운데도 불구하고 나갔다.",
+      "en": "Although it was cold, I went out."
+     }
+    ]
+   },
+   {
+    "pattern": "에 상관없이",
+    "difference": "“에도 불구하고” says the result is the opposite of what X suggests; “에 상관없이” says X does not matter.",
+    "pair": [
+     {
+      "ko": "날씨에도 불구하고 행사가 열렸다.",
+      "en": "The event was held despite the weather."
+     },
+     {
+      "ko": "날씨에 상관없이 행사가 열린다.",
+      "en": "The event is held regardless of the weather."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows must go against what the noun suggests.",
+    "wrong": "추운 날씨에도 불구하고 우리는 두꺼운 옷을 입고 나갔다.",
+    "right": "추운 날씨에도 불구하고 우리는 가벼운 옷차림으로 나갔다.",
+    "en": "Despite the cold weather, we went out in light clothes."
+   }
+  ],
+  "topik_tip": "In 읽기 passages “에도 불구하고” marks a contrast; the clause that follows goes against what the noun leads you to expect.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는데도",
+  "level": 5,
+  "label": "even though",
+  "meaning_en": "A connective expression meaning “even though X, still Y”: the main clause happens in spite of the situation in the first clause, which is an actual fact.",
+  "usage": "It attaches to verb stems as “-는데도”, to adjective stems as “-ㄴ/은데도”, to “이다” as “인데도”, and after “-었-” (“했는데도”). The first clause is something that has really happened or is true, and the main clause is the surprising result. For a hypothetical, use “-아도/어도”.",
+  "examples": [
+   {
+    "ko": "조금 전에 밥을 먹었는데도 또 배가 고파요.",
+    "en": "I ate a little while ago, but I'm hungry again.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밖에 눈이 많이 오는데도 거리에 사람이 많다.",
+    "en": "Even though it is snowing hard outside, there are many people on the street.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "열심히 공부했는데도 성적이 오르지 않았다.",
+    "en": "Even though I studied hard, my grades did not go up.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "몸이 아픈데도 지수는 약속을 지키려고 나왔다.",
+    "en": "Even though they were sick, Jisu came out to keep the appointment.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "주말인데도 사무실에는 불이 켜져 있었다.",
+    "en": "Even though it was the weekend, the lights were on in the office.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-아도/어도",
+    "difference": "“-아도/어도” can concede a hypothetical; “-는데도” takes an actual fact.",
+    "pair": [
+     {
+      "ko": "비가 와도 갈 거예요.",
+      "en": "I will go even if it rains."
+     },
+     {
+      "ko": "비가 오는데도 갔어요.",
+      "en": "I went even though it was raining."
+     }
+    ]
+   },
+   {
+    "pattern": "-는데",
+    "difference": "“-는데” just gives background and can lead anywhere; “-는데도” says the result goes against it.",
+    "pair": [
+     {
+      "ko": "열심히 공부했는데 성적이 올랐다.",
+      "en": "I studied hard, and my grades went up."
+     },
+     {
+      "ko": "열심히 공부했는데도 성적이 오르지 않았다.",
+      "en": "Even though I studied hard, my grades did not go up."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은데도”.",
+    "wrong": "몸이 아프는데도 약속을 지키려고 나왔다.",
+    "right": "몸이 아픈데도 약속을 지키려고 나왔다.",
+    "en": "Even though I was sick, I came out to keep the appointment."
+   },
+   {
+    "note": "After a noun it is “인데도”.",
+    "wrong": "주말이는데도 사무실에는 불이 켜져 있었다.",
+    "right": "주말인데도 사무실에는 불이 켜져 있었다.",
+    "en": "Even though it was the weekend, the lights were on in the office."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 내다",
+  "level": 5,
+  "label": "see it through, manage to",
+  "meaning_en": "An expression meaning to carry something through to the end by one's own effort, usually despite difficulty: “manage to do, see through, pull off”.",
+  "usage": "It attaches to verb stems as “-아 내다/-어 내다” (“참아 내다”, “이겨 내다”, “만들어 내다”). The verb is one that needs effort, patience or endurance, and the sense is that the person finally achieves the result. It is not used for easy, routine acts. It is written in the same way in both speech and writing, and “내다” is separate from “-어 버리다”, which marks completion with relief or regret.",
+  "examples": [
+   {
+    "ko": "꾸준한 노력은 기적을 만들어 낸다.",
+    "en": "Steady effort produces miracles.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아이는 아파도 울지 않고 끝까지 참아 내는 모습이 대견했다.",
+    "en": "It was admirable how the child held out to the end without crying, even though it hurt.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 포기하고 싶은 순간들을 이겨 내고 결국 마라톤을 완주했다.",
+    "en": "Jisu overcame the moments of wanting to give up and finally finished the marathon.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "연구팀은 십 년 만에 새로운 치료법을 찾아냈다.",
+    "en": "The research team found a new treatment after ten years.",
+    "ctx": "news"
+   },
+   {
+    "ko": "어려운 환경에서도 끝까지 버텨 내는 사람들이 결국 성공한다.",
+    "en": "In the end, people who endure to the very end even in a harsh environment succeed.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 버리다",
+    "difference": "“-어 버리다” marks something as done and over, often with relief or regret; “-어 내다” marks something achieved through effort.",
+    "pair": [
+     {
+      "ko": "숙제를 다 해 버렸다.",
+      "en": "I got all my homework done."
+     },
+     {
+      "ko": "힘든 숙제를 끝까지 해 냈다.",
+      "en": "I saw the hard homework through to the end."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 말다",
+    "difference": "“-고 말다” says something ends up happening, often against one's wish; “-어 내다” says the result was won by effort.",
+    "pair": [
+     {
+      "ko": "끝내 이기고 말았다.",
+      "en": "In the end I won (it ended that way)."
+     },
+     {
+      "ko": "끝내 이겨 냈다.",
+      "en": "In the end I overcame it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The vowel of the stem decides “-아” or “-어”.",
+    "wrong": "아파도 끝까지 참어 냈다.",
+    "right": "아파도 끝까지 참아 냈다.",
+    "en": "Even though it hurt, I held out to the end."
+   },
+   {
+    "note": "It suits an act that took effort, not a simple one.",
+    "wrong": "점심을 먹어 냈다.",
+    "right": "많은 양의 점심을 억지로 다 먹어 냈다.",
+    "en": "I forced myself to eat all of the huge lunch."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다기에",
+  "level": 5,
+  "label": "since I heard that",
+  "meaning_en": "An expression for a reason based on what someone said: “since (someone) said that X, I did Y”. It is a contraction of “-는다고 하기에”.",
+  "usage": "It attaches to verb stems as “-ㄴ다기에/-는다기에”, to adjective stems and past forms as “-다기에” (“바쁘다기에”, “갔다기에”), and to “이다” as “-라기에”. The quoted fact is the basis for what the speaker or someone else then did, and the main clause is normally in the past. It cannot be followed by a command or a suggestion. It is conversational.",
+  "examples": [
+   {
+    "ko": "승규가 요즘 스트레스를 많이 받는다기에 같이 노래방에 갔다.",
+    "en": "Seunggyu said they were under a lot of stress lately, so we went to a karaoke room together.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "조카가 고기를 잘 먹는다기에 불고기를 구워 줬다.",
+    "en": "My niece or nephew said they liked meat, so I grilled bulgogi for them.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일기예보에서 내일 비가 온다기에 우산을 챙겨 두었다.",
+    "en": "The forecast said it would rain tomorrow, so I set an umbrella aside.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수가 요즘 많이 바쁘다기에 연락을 하지 않았다.",
+    "en": "Jisu said they were very busy lately, so I did not get in touch.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구가 내일 시험이라기에 같이 도서관에 갔다.",
+    "en": "A friend said they had an exam tomorrow, so I went to the library together with them.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는다고 해서",
+    "difference": "“-는다고 해서” is the full form; “-는다기에” is its contraction, and the two mean the same.",
+    "pair": [
+     {
+      "ko": "비가 온다기에 우산을 챙겼다.",
+      "en": "I was told it would rain, so I took an umbrella."
+     },
+     {
+      "ko": "비가 온다고 해서 우산을 챙겼다.",
+      "en": "I was told it would rain, so I took an umbrella."
+     }
+    ]
+   },
+   {
+    "pattern": "-길래",
+    "difference": "“-는다기에” rests on what the speaker heard; “-길래” rests on what the speaker saw.",
+    "pair": [
+     {
+      "ko": "비가 온다기에 우산을 챙겼다.",
+      "en": "I was told it would rain, so I took an umbrella."
+     },
+     {
+      "ko": "비가 오길래 우산을 챙겼다.",
+      "en": "It was raining, so I took an umbrella."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The clause that follows reports an action; it cannot be a command.",
+    "wrong": "비가 온다기에 우산을 챙기세요.",
+    "right": "비가 온다기에 우산을 챙겼어요.",
+    "en": "I was told it would rain, so I took an umbrella."
+   },
+   {
+    "note": "After a noun it is “-이라기에”, not “-이다기에”.",
+    "wrong": "내일이 시험이다기에 같이 공부했다.",
+    "right": "내일이 시험이라기에 같이 공부했다.",
+    "en": "I was told the exam is tomorrow, so we studied together."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다는 것이",
+  "level": 5,
+  "label": "meant to, but ended up",
+  "meaning_en": "An expression for a slip: “I meant to do X, but (instead) did Y”. What is said to have been intended is followed by a different result.",
+  "usage": "It attaches to verb stems as “-ㄴ다는/는다는 것이”, and the colloquial contraction is “-ㄴ다는 게”. The following clause states what actually happened, often with “그만” or “-고 말다”, and the result is mismatched with the intention. The subject is typically the speaker. It is used in conversation. It is not used when intention and result agree.",
+  "examples": [
+   {
+    "ko": "국수를 삶는다는 것이 라면을 끓였어요.",
+    "en": "I meant to boil noodles, but I made ramen.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "소금을 넣는다는 것이 설탕을 넣고 말았다.",
+    "en": "I meant to add salt, but I added sugar.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "물을 마신다는 게 그만 컵을 떨어뜨리고 말았다.",
+    "en": "I meant to drink some water, but I dropped the cup.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수에게 보낸다는 것이 잘못해서 민준이에게 메시지를 보냈다.",
+    "en": "I meant to send the message to Jisu, but by mistake I sent it to Minjun.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "버스를 탄다는 것이 지하철 입구로 들어와 버렸다.",
+    "en": "I meant to take the bus, but I walked in at the subway entrance.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려다가",
+    "difference": "“-으려다가” says one was about to do something and did another; “-는다는 것이” says the act itself was mistaken.",
+    "pair": [
+     {
+      "ko": "소금을 넣으려다가 설탕을 넣었다.",
+      "en": "I was about to add salt, but I added sugar."
+     },
+     {
+      "ko": "소금을 넣는다는 것이 설탕을 넣었다.",
+      "en": "I meant to add salt, but I added sugar."
+     }
+    ]
+   },
+   {
+    "pattern": "-으려고 했는데",
+    "difference": "“-으려고 했는데” simply states the plan before a different outcome; “-는다는 것이” makes the mix-up itself the point.",
+    "pair": [
+     {
+      "ko": "전화하려고 했는데 잊어버렸다.",
+      "en": "I meant to call, but forgot."
+     },
+     {
+      "ko": "전화한다는 것이 잊어버렸다.",
+      "en": "I meant to call, but it slipped my mind."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The result has to differ from the intention, so the same act cannot follow.",
+    "wrong": "숙제를 한다는 것이 숙제를 했다.",
+    "right": "숙제를 한다는 것이 게임을 하고 말았다.",
+    "en": "I meant to do my homework, but I ended up playing a game."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는데도 불구하고",
+  "level": 5,
+  "label": "even though, despite the fact",
+  "meaning_en": "A formal expression meaning “even though, despite the fact that X”: it states a fact and then something that goes against what the fact would lead one to expect.",
+  "usage": "It attaches to verb stems as “-는데도 불구하고”, to adjective stems as “-ㄴ/은데도 불구하고”, to “이다” as “인데도 불구하고”, and after “-었-”. It is the clause form of “에도 불구하고”. It carries the same meaning as the shorter “-는데도” and sounds more formal. It is common in news and essays.",
+  "examples": [
+   {
+    "ko": "지수는 아침부터 서둘렀는데도 불구하고 학교에 늦고 말았다.",
+    "en": "Even though Jisu hurried from the morning, they ended up late for school.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "소나기가 쏟아지는데도 불구하고 공연장에는 많은 관중이 모였다.",
+    "en": "Despite the downpour, a large crowd gathered at the concert hall.",
+    "ctx": "news"
+   },
+   {
+    "ko": "여러 번 실패했는데도 불구하고 포기하지 않았다.",
+    "en": "Even though I failed many times, I did not give up.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "주말인데도 불구하고 많은 직원이 출근했다.",
+    "en": "Even though it was the weekend, many employees came to work.",
+    "ctx": "news"
+   },
+   {
+    "ko": "충분히 설명했는데도 불구하고 학생들은 이해하지 못했다.",
+    "en": "Even though I explained it thoroughly, the students did not understand.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에도 불구하고",
+    "difference": "“-는데도 불구하고” follows a clause; “에도 불구하고” follows a noun.",
+    "pair": [
+     {
+      "ko": "추운데도 불구하고 나갔다.",
+      "en": "Although it was cold, I went out."
+     },
+     {
+      "ko": "추위에도 불구하고 나갔다.",
+      "en": "Despite the cold, I went out."
+     }
+    ]
+   },
+   {
+    "pattern": "-지만",
+    "difference": "“-지만” is the plain “but”; “-는데도 불구하고” stresses that the result is unexpected.",
+    "pair": [
+     {
+      "ko": "서둘렀지만 늦었다.",
+      "en": "I hurried but was late."
+     },
+     {
+      "ko": "서둘렀는데도 불구하고 늦었다.",
+      "en": "Despite having hurried, I was late."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The “도” of “-는데도” cannot be left out.",
+    "wrong": "서둘렀는데 불구하고 학교에 늦었다.",
+    "right": "서둘렀는데도 불구하고 학교에 늦었다.",
+    "en": "Despite having hurried, I was late for school."
+   },
+   {
+    "note": "After a noun it is “인데도 불구하고”.",
+    "wrong": "주말이는데도 불구하고 출근했다.",
+    "right": "주말인데도 불구하고 출근했다.",
+    "en": "Even though it was the weekend, I went to work."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
  }
 ]
