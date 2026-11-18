@@ -1521,5 +1521,753 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-든지2",
+  "level": 4,
+  "label": "either one, whichever",
+  "meaning_en": "A connective ending for choosing between alternatives or for saying that any of them will do: “whether X or Y, either X or Y, whichever”. With a question word it means “whatever, whoever”.",
+  "usage": "It attaches to verb and adjective stems and to “이다” (“이든지”), usually repeated in pairs (“가든지 말든지”, “오든지 가든지”). The shortened “-든” is the same. Joined to a question word it gives “무엇을 하든지”, “누가 오든지”. The clause that follows is the decision, a command or a statement that does not depend on the choice. It is not the “-던” of recalled experience.",
+  "examples": [
+   {
+    "ko": "가든지 말든지 네 마음대로 해.",
+    "en": "Go or don't go, do as you like.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "비가 오든지 눈이 오든지 약속은 지켜야 한다.",
+    "en": "Rain or snow, a promise has to be kept.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "책을 읽든지 영화를 보든지 편한 대로 하세요.",
+    "en": "Read a book or watch a movie, whichever you like.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "무엇을 하든지 최선을 다해라.",
+    "en": "Whatever you do, do your best.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "누가 오든지 상관없으니 문은 열어 두세요.",
+    "en": "It doesn't matter who comes, so leave the door open.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-거나",
+    "difference": "“-거나” lists alternatives that really occur or are chosen; “-든지” says it is up to you, any will do.",
+    "pair": [
+     {
+      "ko": "주말에는 책을 읽거나 영화를 본다.",
+      "en": "On weekends I read a book or watch a movie."
+     },
+     {
+      "ko": "책을 읽든지 영화를 보든지 하세요.",
+      "en": "Read a book or watch a movie, as you like."
+     }
+    ]
+   },
+   {
+    "pattern": "-든가",
+    "difference": "The two are close in meaning and are used in the same way.",
+    "pair": [
+     {
+      "ko": "가든지 말든지 네 마음대로 해.",
+      "en": "Go or don't, do as you like."
+     },
+     {
+      "ko": "가든가 말든가 네 마음대로 해.",
+      "en": "Go or don't, do as you like."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Do not confuse “-든지” (choice) with “-던지” (recalled experience).",
+    "wrong": "책을 읽던지 영화를 보던지 하세요.",
+    "right": "책을 읽든지 영화를 보든지 하세요.",
+    "en": "Read a book or watch a movie, as you like."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으므로",
+  "level": 4,
+  "label": "since, therefore (formal)",
+  "meaning_en": "A formal connective ending giving a reason or cause: “since, because, therefore”. It is the written counterpart of “-으니까” and “-아서” and is common in announcements, rules, reports and arguments.",
+  "usage": "It attaches to verb and adjective stems as “-으므로”, or “-므로” after a vowel or ㄹ (“살므로”, “바쁘므로”), to “이다” as “이므로”, and after “-었-” (“내렸으므로”). The main clause states the conclusion or measure that follows. It is formal and written, so in conversation “-으니까” or “-아서” is used. The spoken-style “-기 때문에” is a close equivalent.",
+  "examples": [
+   {
+    "ko": "내일은 휴일이므로 도서관이 문을 닫습니다.",
+    "en": "Tomorrow is a holiday, so the library will be closed.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "비가 많이 내렸으므로 오늘 경기는 취소되었습니다.",
+    "en": "It rained heavily, so today's game has been cancelled.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "사람은 사회적 동물이므로 혼자서는 살 수 없다.",
+    "en": "Humans are social animals, so they cannot live alone.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 방법이 가장 효율적이므로 우리는 이를 채택하기로 했다.",
+    "en": "This method is the most efficient, so we decided to adopt it.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "피해가 심각하므로 정부는 긴급 지원을 결정했다.",
+    "en": "The damage is serious, so the government decided on emergency aid.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-기 때문에",
+    "difference": "The two are close in meaning; “-으므로” is the form for written and formal language.",
+    "pair": [
+     {
+      "ko": "피해가 심각하므로 지원이 필요하다.",
+      "en": "The damage is serious, so aid is needed."
+     },
+     {
+      "ko": "피해가 심각하기 때문에 지원이 필요하다.",
+      "en": "The damage is serious, so aid is needed."
+     }
+    ]
+   },
+   {
+    "pattern": "-으니까",
+    "difference": "“-으니까” can lead into a command or a suggestion; “-으므로” leads into a conclusion.",
+    "pair": [
+     {
+      "ko": "휴일이므로 문을 닫습니다.",
+      "en": "It is a holiday, so we are closed."
+     },
+     {
+      "ko": "휴일이니까 쉬세요.",
+      "en": "It is a holiday, so take a rest."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After “이다” the ending is “이므로”.",
+    "wrong": "내일은 휴일므로 문을 닫습니다.",
+    "right": "내일은 휴일이므로 문을 닫습니다.",
+    "en": "Tomorrow is a holiday, so we are closed."
+   },
+   {
+    "note": "A stem ending in ㄹ takes “-므로”, with no “으”.",
+    "wrong": "사람은 사회 속에서 살으므로 서로 도와야 한다.",
+    "right": "사람은 사회 속에서 살므로 서로 도와야 한다.",
+    "en": "People live within society, so they must help one another."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을래야",
+  "level": 4,
+  "label": "even if I want to, I can't",
+  "meaning_en": "A colloquial connective ending that says one has the wish to do something, yet cannot: “even if I wanted to X, I can't”. The verb is repeated in the main clause.",
+  "usage": "It attaches to verb stems as “-을래야”, or “-ㄹ래야” after a vowel or ㄹ (“갈래야”, “잊을래야”), and the same verb is repeated with “-ㄹ 수 없다”, “-ㄹ 수가 없다”, “못 -” or “-ㄹ 방법이 없다”. The main clause is always a denial of ability or possibility. It is the spoken form of “-으려야”. It is used in conversation and informal writing.",
+  "examples": [
+   {
+    "ko": "그 장면은 잊을래야 잊을 수가 없다.",
+    "en": "I couldn't forget that scene even if I wanted to.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "너무 바빠서 쉴래야 쉴 시간이 없다.",
+    "en": "I'm so busy that I have no time to rest even if I wanted to.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "돈이 없어서 살래야 살 수 없었다.",
+    "en": "I had no money, so I couldn't have bought it even if I wanted to.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "연락처를 몰라서 연락할래야 할 방법이 없었다.",
+    "en": "I didn't know their contact details, so I had no way to get in touch even if I wanted to.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "길이 막혀서 갈래야 갈 수가 없어요.",
+    "en": "The roads are jammed, so I can't go even if I want to.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려야",
+    "difference": "The two are the same expression, “-을래야” being the spoken pronunciation.",
+    "pair": [
+     {
+      "ko": "잊으려야 잊을 수 없다.",
+      "en": "I can't forget even if I try."
+     },
+     {
+      "ko": "잊을래야 잊을 수 없다.",
+      "en": "I can't forget even if I try."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 싶어도",
+    "difference": "“-고 싶어도” says one wants to but is blocked; “-을래야” repeats the verb to stress that there is no way.",
+    "pair": [
+     {
+      "ko": "가고 싶어도 갈 수 없다.",
+      "en": "Even if I want to go, I can't."
+     },
+     {
+      "ko": "갈래야 갈 수 없다.",
+      "en": "I can't go even if I try."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The main clause has to deny possibility.",
+    "wrong": "갈래야 갈 수 있다.",
+    "right": "갈래야 갈 수 없다.",
+    "en": "I can't go even if I want to."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-고서",
+  "level": 4,
+  "label": "after doing; unless; yet",
+  "meaning_en": "A connective ending with three uses: an action done and finished before the next one (“after doing X”), a condition in “-고서는 … 없다” (“not without X”), and a contrast between what one did and what followed (“having done X, yet Y”). “-고서야” means “only after”.",
+  "usage": "It attaches to verb stems as “-고서”, and it can add “는” or “야”. In the sequence use, the first action is complete and often the cause or precondition of the next. “-고서는” is followed by a negative or impossible statement (“노력하지 않고서는 해낼 수 없다”). “-고서야” says that only after X could Y happen (“해 보고서야 알았다”). It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "지수는 문을 열고서 한참 동안 밖을 바라보았다.",
+    "en": "Jisu opened the door and looked outside for a long while.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "밥을 먹고서 약을 드세요.",
+    "en": "Take the medicine after you eat.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 일은 노력하지 않고서는 해낼 수 없다.",
+    "en": "This job cannot be done without effort.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "직접 해 보고서야 그 어려움을 알게 되었다.",
+    "en": "Only after trying it myself did I come to know how hard it was.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "사실을 알고서 모르는 척하는 것은 옳지 않다.",
+    "en": "It is not right to pretend not to know after you have learned the truth.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고",
+    "difference": "“-고” simply links; “-고서” stresses that the first action is finished before the second.",
+    "pair": [
+     {
+      "ko": "손을 씻고 밥을 먹었다.",
+      "en": "I washed my hands and ate."
+     },
+     {
+      "ko": "손을 씻고서 밥을 먹었다.",
+      "en": "I washed my hands first, and then ate."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 나서",
+    "difference": "The two are close in meaning; “-고 나서” makes the completion explicit.",
+    "pair": [
+     {
+      "ko": "밥을 먹고서 약을 먹었다.",
+      "en": "I took the medicine after eating."
+     },
+     {
+      "ko": "밥을 먹고 나서 약을 먹었다.",
+      "en": "I took the medicine after I finished eating."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“-고서는” goes with a negative or impossible main clause.",
+    "wrong": "노력하고서는 성공할 수 있다.",
+    "right": "노력하지 않고서는 성공할 수 없다.",
+    "en": "Without effort you cannot succeed."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다면1",
+  "level": 4,
+  "label": "if (supposing that)",
+  "meaning_en": "A connective ending for a supposition: “if, supposing that, in case X”. It is a contraction of “-는다고 하면” and sets up an imagined or reported situation.",
+  "usage": "It attaches to verb stems as “-ㄴ다면/-는다면”, to adjective stems and past forms as “-다면” (“좋다면”, “갔다면”), and to “이다” as “-라면” (“학생이라면”). It suits supposed, hypothetical or reported situations, and the main clause can state a wish, a plan or a judgement. The “-었다면” form speaks of a past that did not happen or an assumed past. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "내가 새가 된다면 너에게 가장 먼저 날아갈 거야.",
+    "en": "If I became a bird, I would fly to you first.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "만약 내일 비가 온다면 소풍은 취소하겠습니다.",
+    "en": "If it should rain tomorrow, I will cancel the picnic.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "복권에 당첨된다면 무엇을 하고 싶어요?",
+    "en": "If you won the lottery, what would you want to do?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "네가 그렇게 원한다면 한번 해 보자.",
+    "en": "If you want it that badly, let's give it a try.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "그 말이 사실이라면 큰 문제가 된다.",
+    "en": "If that is true, it becomes a big problem.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면",
+    "difference": "“-으면” is the plain, general condition; “-는다면” supposes a situation, often an imagined one.",
+    "pair": [
+     {
+      "ko": "비가 오면 취소합니다.",
+      "en": "If it rains, we cancel."
+     },
+     {
+      "ko": "비가 온다면 취소하겠습니다.",
+      "en": "If it should rain, I will cancel."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After “이다” the form is “-라면”, not “-ㄴ다면”.",
+    "wrong": "저분이 학생이다면 놀랄 거예요.",
+    "right": "저분이 학생이라면 놀랄 거예요.",
+    "en": "If that person is a student, I'll be surprised."
+   },
+   {
+    "note": "An adjective takes “-다면”, with no “-ㄴ”.",
+    "wrong": "날씨가 좋는다면 소풍을 갈 거예요.",
+    "right": "날씨가 좋다면 소풍을 갈 거예요.",
+    "en": "If the weather is good, we will go on a picnic."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-더니",
+  "level": 4,
+  "label": "I observed, and then",
+  "meaning_en": "A connective ending that links something the speaker observed in the past with what followed or with a new situation: “X did/was, and then Y”. It can state a result of the observed action, a change from before, or a contrast with before.",
+  "usage": "It attaches to verb and adjective stems as “-더니”, and to “이다” as “이더니”. The observer is the speaker, and the subject of the first clause is normally someone else, or the speaker's own state that is felt as observed. The second clause tells what followed, usually in the past. It cannot be followed by a command or a suggestion. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "아침에는 맑더니 오후부터 흐려지기 시작했다.",
+    "en": "It was clear in the morning, but it began to cloud over from the afternoon.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 열심히 공부하더니 결국 합격했다.",
+    "en": "Jisu studied hard and in the end passed.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어제는 그렇게 춥더니 오늘은 따뜻하네요.",
+    "en": "It was so cold yesterday, but it is warm today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 너무 많이 먹더니 배탈이 났다.",
+    "en": "The child ate too much and got a stomachache.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 방에 들어가더니 한참 동안 나오지 않았다.",
+    "en": "Minjun went into the room and did not come out for a long while.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-았더니/었더니",
+    "difference": "“-았더니” reports the speaker's own act and the result; “-더니” reports what someone else did and what followed.",
+    "pair": [
+     {
+      "ko": "지수가 약을 먹더니 나았다.",
+      "en": "Jisu took the medicine and got better."
+     },
+     {
+      "ko": "내가 약을 먹었더니 나았다.",
+      "en": "I took the medicine and got better."
+     }
+    ]
+   },
+   {
+    "pattern": "-다가",
+    "difference": "“-다가” says an action was interrupted or switched; “-더니” links an observed action with its result or change.",
+    "pair": [
+     {
+      "ko": "자다가 일어났다.",
+      "en": "I was sleeping and got up."
+     },
+     {
+      "ko": "자더니 일어났다.",
+      "en": "They slept and then got up."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The subject is not the speaker; for one's own act use “-았더니/었더니”.",
+    "wrong": "나는 열심히 공부하더니 합격했다.",
+    "right": "지수는 열심히 공부하더니 합격했다.",
+    "en": "Jisu studied hard and passed."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-던데1",
+  "level": 4,
+  "label": "I saw that, and so",
+  "meaning_en": "A connective ending that gives something the speaker saw or experienced in the past as background for what comes next: a suggestion, a question, or a contrast. As a final ending, “-던데(요)” voices the speaker's impression and invites a response.",
+  "usage": "It attaches to verb and adjective stems as “-던데”, to “이다” as “이던데”, and after “-었-” (“왔던데”). The speaker has experienced the fact directly, so a fact that was only heard is not given this way. The clause that follows is a suggestion, a question, a conclusion or a contrast (“어제는 잘 먹던데 오늘은 왜 안 먹어?”). It is spoken and written in a casual way.",
+  "examples": [
+   {
+    "ko": "그 영화 재미있던데 같이 볼래요?",
+    "en": "That movie was good; do you want to watch it together?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어제 보니 지수가 일찍 가던데 오늘은 회사에 있네요.",
+    "en": "I saw Jisu leave early yesterday, but today they are at the office.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "날씨가 좋던데 산책이나 할까요?",
+    "en": "The weather was nice, so shall we go for a walk?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 가게에는 사람이 많던데 줄을 서야 할 거예요.",
+    "en": "There were a lot of people at that shop, so you'll probably have to wait in line.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "어제는 잘 먹던데 오늘은 왜 안 먹어?",
+    "en": "You ate well yesterday; why aren't you eating today?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는데",
+    "difference": "“-는데” gives present background; “-던데” gives something the speaker experienced earlier.",
+    "pair": [
+     {
+      "ko": "그 영화 재미있는데 같이 볼래요?",
+      "en": "That movie is good; do you want to watch it together?"
+     },
+     {
+      "ko": "그 영화 재미있던데 같이 볼래요?",
+      "en": "That movie was good (I saw it); do you want to watch it together?"
+     }
+    ]
+   },
+   {
+    "pattern": "-더라고",
+    "difference": "“-더라고” just reports what was found; “-던데” gives it as background to what comes next.",
+    "pair": [
+     {
+      "ko": "그 영화 재미있더라고.",
+      "en": "That movie was good."
+     },
+     {
+      "ko": "그 영화 재미있던데 같이 볼래?",
+      "en": "That movie was good; do you want to watch it together?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It is “-던데”, not “-든데”.",
+    "wrong": "그 영화 재미있든데 같이 볼래요?",
+    "right": "그 영화 재미있던데 같이 볼래요?",
+    "en": "That movie was good; do you want to watch it together?"
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-듯이",
+  "level": 4,
+  "label": "just as, as if",
+  "meaning_en": "A connective ending meaning “just as, like, as if”: the main clause is nearly the same as what the first clause describes, either as a comparison or as a manner (“as if X”).",
+  "usage": "It attaches to verb and adjective stems as “-듯이”, to “이다” as “이듯이”, and the adnominal forms “-ㄴ/는 듯이” and “-었듯이” also occur. The first clause gives a familiar picture (“물 흐르듯이”, “비 오듯이”), or says that something is done as if X (“아무 일도 없었다는 듯이”). “-듯” is the shortened form. It is common in essays and narration.",
+  "examples": [
+   {
+    "ko": "물이 흐르듯이 자연스럽게 말해야 한다.",
+    "en": "You should speak as naturally as water flows.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "더운 날씨에 땀이 비 오듯이 흘렀다.",
+    "en": "In the hot weather, sweat poured down like rain.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "밥 먹듯이 거짓말을 하는 사람은 믿을 수 없다.",
+    "en": "A person who lies as easily as eating a meal cannot be trusted.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "봄이 오면 꽃이 피듯이 노력하면 결실을 얻는다.",
+    "en": "Just as flowers bloom when spring comes, effort bears fruit.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아무 일도 없었다는 듯이 지수는 웃으며 들어왔다.",
+    "en": "As if nothing had happened, Jisu came in smiling.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 것처럼",
+    "difference": "The two are close in meaning; “-듯이” is the one you see in set images and in prose.",
+    "pair": [
+     {
+      "ko": "아는 듯이 말한다.",
+      "en": "They talk as if they know."
+     },
+     {
+      "ko": "아는 것처럼 말한다.",
+      "en": "They talk as if they know."
+     }
+    ]
+   },
+   {
+    "pattern": "-듯",
+    "difference": "“-듯” is the shortened form of “-듯이”, with the same meaning.",
+    "pair": [
+     {
+      "ko": "물 흐르듯이 말했다.",
+      "en": "I spoke as smoothly as water flows."
+     },
+     {
+      "ko": "물 흐르듯 말했다.",
+      "en": "I spoke as smoothly as water flows."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It needs a verb, not a bare noun: “밥 먹듯이”, not “밥듯이”.",
+    "wrong": "밥듯이 거짓말을 한다.",
+    "right": "밥 먹듯이 거짓말을 한다.",
+    "en": "They lie as easily as eating a meal."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을수록",
+  "level": 4,
+  "label": "the more, the more",
+  "meaning_en": "A connective ending meaning “the more X, the more Y”: as the degree of the first clause increases, the second changes along with it.",
+  "usage": "It attaches to verb and adjective stems as “-을수록”, or “-ㄹ수록” after a vowel or ㄹ (“알수록”, “바쁠수록”, “들수록”), and to “이다” as “일수록”. It has no tense before it. The main clause tells what changes, often with “더”, “더욱” or “-아/어지다”. The first clause is usually repeated in the main clause as the same word or its contrast (“알면 알수록”). It is common in essays and sayings.",
+  "examples": [
+   {
+    "ko": "알면 알수록 더 알고 싶어진다.",
+    "en": "The more I know, the more I want to know.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "날씨가 추울수록 따뜻한 국물이 생각난다.",
+    "en": "The colder the weather, the more I think of a warm broth.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나이가 들수록 시간이 빨리 가는 것 같다.",
+    "en": "The older I get, the faster time seems to go.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사람은 가까울수록 예의를 지켜야 한다.",
+    "en": "The closer people are, the more they should keep up good manners.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "급할수록 천천히 돌아가라는 말이 있다.",
+    "en": "There is a saying that the more pressed you are, the more you should take the long way round.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 만큼",
+    "difference": "“-을 만큼” makes the second clause equal to the first; “-을수록” makes it grow along with the first.",
+    "pair": [
+     {
+      "ko": "먹은 만큼 살이 찐다.",
+      "en": "I gain weight in proportion to what I eat."
+     },
+     {
+      "ko": "먹을수록 살이 찐다.",
+      "en": "The more I eat, the more weight I gain."
+     }
+    ]
+   },
+   {
+    "pattern": "-을 때마다",
+    "difference": "“-을 때마다” says it happens each time; “-을수록” says it grows as the degree rises.",
+    "pair": [
+     {
+      "ko": "바쁠 때마다 실수가 생긴다.",
+      "en": "Mistakes occur every time I'm busy."
+     },
+     {
+      "ko": "바쁠수록 실수가 늘어난다.",
+      "en": "The busier I am, the more mistakes increase."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem takes “-ㄹ수록”, not “-을수록”.",
+    "wrong": "알을수록 더 알고 싶어진다.",
+    "right": "알수록 더 알고 싶어진다.",
+    "en": "The more I know, the more I want to know."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으며",
+  "level": 4,
+  "label": "while doing; and",
+  "meaning_en": "A written connective ending with two uses: two actions or states at the same time (“while doing X, Y”), and a plain listing of facts or qualities (“X, and also Y”).",
+  "usage": "It attaches to verb and adjective stems as “-으며”, or “-며” after a vowel or ㄹ (“웃으며”, “노래하며”, “살며”), and to “이다” as “이며”. In the simultaneous use the two actions belong to one subject. In the listing use it joins two or more facts of the same kind. It does not mark a sequence. It is formal or written, and “-으면서” is the spoken equivalent.",
+  "examples": [
+   {
+    "ko": "지수는 노래를 부르며 길을 걸었다.",
+    "en": "Jisu walked along the road singing.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 도시는 역사가 깊으며 문화유산이 풍부하다.",
+    "en": "This city has a long history and rich cultural heritage.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "아이들은 웃으며 뛰어놀았다.",
+    "en": "The children played, laughing.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "나는 커피를 마시며 신문을 읽었다.",
+    "en": "I read the newspaper while drinking coffee.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이분은 의사이며 작가이다.",
+    "en": "This person is a doctor and a writer.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으면서",
+    "difference": "The two are close in meaning; “-으며” is the form for written language.",
+    "pair": [
+     {
+      "ko": "음악을 들으며 걸었다.",
+      "en": "I walked listening to music."
+     },
+     {
+      "ko": "음악을 들으면서 걸었다.",
+      "en": "I walked listening to music."
+     }
+    ]
+   },
+   {
+    "pattern": "-고",
+    "difference": "“-고” can mark a sequence; “-으며” marks things happening together or things listed.",
+    "pair": [
+     {
+      "ko": "손을 씻고 밥을 먹었다.",
+      "en": "I washed my hands and then ate."
+     },
+     {
+      "ko": "웃으며 이야기했다.",
+      "en": "I talked, smiling."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄹ-stem takes “-며”, with no “으”.",
+    "wrong": "그들은 행복하게 살으며 늙어 갔다.",
+    "right": "그들은 행복하게 살며 늙어 갔다.",
+    "en": "They grew old living happily."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
  }
 ]
