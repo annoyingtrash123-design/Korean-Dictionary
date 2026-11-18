@@ -4504,5 +4504,629 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "에 따라",
+  "level": 4,
+  "label": "depending on; according to",
+  "meaning_en": "An expression with two uses: “depending on X” (the result varies with X), and “in accordance with X” (following a rule, a plan or an instruction). The form “에 따르면” means “according to X” and introduces a source.",
+  "usage": "It attaches to nouns as “에 따라(서)” and “에 따르면”, and the modifier form is “에 따른” (“계절에 따른 차이”). In the first use the main clause says that something differs or varies (“다르다”, “달라지다”). In the second it says what is done by the rule. “에 따르면” is followed by what the source says, usually in the quoting form (“-다고 한다”). The verb “따르다” in “길을 따라” (“along the road”) is a different construction.",
+  "examples": [
+   {
+    "ko": "사람에 따라 좋아하는 음식이 다르다.",
+    "en": "Favorite foods differ depending on the person.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "회사의 규정에 따라 처리하겠습니다.",
+    "en": "I will handle it in accordance with company regulations.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "계절에 따라 입는 옷이 달라진다.",
+    "en": "The clothes one wears change depending on the season.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "일기예보에 따르면 내일은 비가 온다고 한다.",
+    "en": "According to the weather forecast, it will rain tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "경찰 발표에 따르면 사고 원인은 과속이었다.",
+    "en": "According to the police announcement, the cause of the accident was speeding.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-기에 따라",
+    "difference": "“에 따라” follows a noun; “-기에 따라” follows a verb and means “depending on how it is done”.",
+    "pair": [
+     {
+      "ko": "사람에 따라 맛이 다르다.",
+      "en": "The taste differs depending on the person."
+     },
+     {
+      "ko": "만들기에 따라 맛이 다르다.",
+      "en": "The taste differs depending on how you make it."
+     }
+    ]
+   },
+   {
+    "pattern": "에 의하면",
+    "difference": "“에 따르면” and “에 의하면” both mean “according to”; the two are close in meaning.",
+    "pair": [
+     {
+      "ko": "일기예보에 따르면 내일은 비가 온다.",
+      "en": "According to the forecast, it will rain tomorrow."
+     },
+     {
+      "ko": "일기예보에 의하면 내일은 비가 온다.",
+      "en": "According to the forecast, it will rain tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“along a path” takes “을/를 따라”, not “에 따라”.",
+    "wrong": "길에 따라 걸었다.",
+    "right": "길을 따라 걸었다.",
+    "en": "I walked along the road."
+   },
+   {
+    "note": "“에 따르면” reports a source, so the clause that follows reports it.",
+    "wrong": "일기예보에 따르면 저는 내일 비가 올 것 같아요.",
+    "right": "일기예보에 따르면 내일 비가 온다고 해요.",
+    "en": "According to the forecast, they say it will rain tomorrow."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에 비하여",
+  "level": 4,
+  "label": "compared to",
+  "meaning_en": "An expression meaning “compared to, in comparison with X”: the first noun is the standard, and what follows is the result of that comparison. “에 비하면” means “if compared to X”.",
+  "usage": "It attaches to nouns as “에 비하여”, with the shortened “에 비해(서)” and the conditional “에 비하면”. The main clause states how the subject differs from the standard, such as “많이 올랐다”, “어려 보인다”, “적다”. It is not the verb “비교하다”, which takes “와/과”. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "물가가 작년에 비하여 많이 오른 것 같다.",
+    "en": "Prices seem to have risen a lot compared to last year.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "서울은 다른 도시에 비하면 교통이 편리한 편이다.",
+    "en": "Compared with other cities, Seoul's transport is rather convenient.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "지수는 나이에 비하여 훨씬 어려 보인다.",
+    "en": "Jisu looks much younger than their age.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "노력에 비하여 결과가 좋지 않았다.",
+    "en": "The result was poor compared to the effort.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "예상에 비해 참가자가 적었다.",
+    "en": "The number of participants was low compared to what had been expected.",
+    "ctx": "news"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "보다",
+    "difference": "The two are close in meaning; “에 비해” sets the first noun as a standard of comparison, and “보다” is shorter.",
+    "pair": [
+     {
+      "ko": "물가가 작년에 비해 올랐다.",
+      "en": "Prices have risen compared with last year."
+     },
+     {
+      "ko": "물가가 작년보다 올랐다.",
+      "en": "Prices have risen more than last year."
+     }
+    ]
+   },
+   {
+    "pattern": "치고",
+    "difference": "“치고” says it is surprising for that kind of thing; “에 비해” compares with a standard.",
+    "pair": [
+     {
+      "ko": "겨울 날씨치고 따뜻하다.",
+      "en": "It is warm for winter weather."
+     },
+     {
+      "ko": "겨울 날씨에 비해 따뜻하다.",
+      "en": "It is warm compared with winter weather."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The verb is “비하다”, not “비교하다”.",
+    "wrong": "작년에 비교해 물가가 많이 올랐다.",
+    "right": "작년에 비해 물가가 많이 올랐다.",
+    "en": "Prices rose a lot compared to last year."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "에 의하여",
+  "level": 4,
+  "label": "by, according to",
+  "meaning_en": "A formal expression with several uses: the agent or cause of an event (“by X”), the basis or means (“by, through X”), and, as “에 의하면”, a source (“according to X”). The modifier is “에 의한”.",
+  "usage": "It attaches to nouns as “에 의하여”, “에 의해(서)”, “에 의하면” and the modifier “에 의한”. After a passive verb it marks the agent (“경찰에 의해 체포되었다”), the active verb does not take it. As a basis it is followed by a decision or result (“투표에 의하여 결정되었다”), and as a source it leads into reported content. It is formal and common in news, laws and reports.",
+  "examples": [
+   {
+    "ko": "범인은 경찰에 의하여 체포되었다.",
+    "en": "The culprit was arrested by the police.",
+    "ctx": "news"
+   },
+   {
+    "ko": "이 건물은 유명한 건축가에 의하여 설계되었다.",
+    "en": "This building was designed by a famous architect.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "조사에 의하면 청소년의 절반이 수면이 부족하다고 한다.",
+    "en": "According to the survey, half of teenagers do not get enough sleep.",
+    "ctx": "news"
+   },
+   {
+    "ko": "폭우에 의한 피해가 컸다.",
+    "en": "The damage caused by the heavy rain was great.",
+    "ctx": "news"
+   },
+   {
+    "ko": "이 문제는 투표에 의하여 결정하기로 했다.",
+    "en": "It was decided to settle this issue by vote.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게",
+    "difference": "“에게” marks the agent with a verb such as “잡히다”; “에 의해” marks the agent with a formal “-되다” passive.",
+    "pair": [
+     {
+      "ko": "도둑이 경찰에게 잡혔다.",
+      "en": "The thief was caught by the police."
+     },
+     {
+      "ko": "범인이 경찰에 의해 체포되었다.",
+      "en": "The culprit was arrested by the police."
+     }
+    ]
+   },
+   {
+    "pattern": "에 따르면",
+    "difference": "“에 의하면” and “에 따르면” both introduce a source and are close in meaning.",
+    "pair": [
+     {
+      "ko": "조사에 의하면 절반이 부족하다고 한다.",
+      "en": "According to the survey, half are short of it."
+     },
+     {
+      "ko": "조사에 따르면 절반이 부족하다고 한다.",
+      "en": "According to the survey, half are short of it."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "It marks the agent of a passive verb; the active verb does not take it.",
+    "wrong": "경찰에 의해 범인을 체포했다.",
+    "right": "경찰에 의해 범인이 체포되었다.",
+    "en": "The culprit was arrested by the police."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 버리다",
+  "level": 4,
+  "label": "finish off; end up",
+  "meaning_en": "An expression meaning that an act is completely done or ended, often with relief (it is off my chest) or with regret (it can't be undone): “do away with, finish, up and do”.",
+  "usage": "It attaches to verb stems as “-아 버리다/-어 버리다”, and the vowel of the stem decides which (“먹어 버리다”). A vowel-final stem contracts (“가 버리다”, “해 버리다”). It stresses completeness and cannot be undone, and so it often goes with things that are lost, used up or said (“다 먹어 버렸다”, “말해 버렸다”). It is common in speech and writing.",
+  "examples": [
+   {
+    "ko": "지하철에서 졸다가 그만 내릴 역을 지나쳐 버렸다.",
+    "en": "I dozed off on the subway and ended up passing my station.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "배가 고파서 동생 몫까지 다 먹어 버렸다.",
+    "en": "I was hungry and ended up eating even my younger sibling's share.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "고민하던 일을 말해 버리니 속이 시원하다.",
+    "en": "Now that I have said what I was agonizing over, I feel relieved.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규는 피곤해서 옷을 입은 채로 잠들어 버렸다.",
+    "en": "Tired, Seunggyu fell asleep with clothes still on.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "큰 소리로 다 말해 버리고 나니 후련했다.",
+    "en": "After I said it all out loud, I felt relieved.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-어 내다",
+    "difference": "“-어 버리다” marks something as done and over; “-어 내다” marks something achieved by effort.",
+    "pair": [
+     {
+      "ko": "숙제를 다 해 버렸다.",
+      "en": "I got all my homework done."
+     },
+     {
+      "ko": "힘든 숙제를 끝까지 해 냈다.",
+      "en": "I saw the hard homework through to the end."
+     }
+    ]
+   },
+   {
+    "pattern": "-고 말다",
+    "difference": "The two are close in meaning; both say that something is finally done or happens, often with regret.",
+    "pair": [
+     {
+      "ko": "다 먹어 버렸다.",
+      "en": "I ate it all up."
+     },
+     {
+      "ko": "다 먹고 말았다.",
+      "en": "I ended up eating it all."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A vowel-final stem contracts with “-아/-어”.",
+    "wrong": "친구가 먼저 가어 버렸다.",
+    "right": "친구가 먼저 가 버렸다.",
+    "en": "My friend went off ahead."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 모양이다",
+  "level": 4,
+  "label": "it looks like, I gather",
+  "meaning_en": "An expression for a guess drawn from a sign or circumstance: “it appears that, it looks as though”. It is about what is going on or is about to happen.",
+  "usage": "It attaches to verb stems as “-ㄹ/을 모양이다” for what will happen, “-는 모양이다” for what is happening and “-ㄴ/은 모양이다” for what has happened, and to adjectives as “-ㄴ/은 모양이다” (“유명한 모양이다”). It needs a sign the speaker has noticed (“-는 걸 보니”). The guess is about someone or something other than the speaker. It is used in speech and writing.",
+  "examples": [
+   {
+    "ko": "영수는 배탈이 난 이후로 죽만 먹더니 오늘부터는 밥을 먹을 모양이다.",
+    "en": "Yeongsu has eaten only porridge since the upset stomach, but it looks like they will eat rice from today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "하늘이 저렇게 어두운 걸 보니 곧 비가 올 모양이다.",
+    "en": "The sky is that dark, so it looks like rain is coming soon.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "유민이가 짐을 싸는 걸 보니 내일 떠날 모양이에요.",
+    "en": "Yumin is packing bags, so it looks like they will leave tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사람들이 줄을 서 있는 걸 보니 그 가게가 유명한 모양이다.",
+    "en": "People are standing in line, so that shop seems to be famous.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "불이 꺼져 있는 걸 보니 모두 퇴근한 모양입니다.",
+    "en": "The lights are off, so it looks like everyone has left work.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-을 것 같다” is a general impression; “-을 모양이다” draws on a sign that has been seen.",
+    "pair": [
+     {
+      "ko": "비가 올 것 같다.",
+      "en": "I think it may rain."
+     },
+     {
+      "ko": "비가 올 모양이다.",
+      "en": "It looks like rain, judging from what I see."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 듯하다",
+    "difference": "The two are close in meaning; “-는 모양이다” leans on something observed.",
+    "pair": [
+     {
+      "ko": "눈이 오는 모양이다.",
+      "en": "It must be snowing, judging from signs."
+     },
+     {
+      "ko": "눈이 오는 듯하다.",
+      "en": "It seems to be snowing."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ/은 모양이다”.",
+    "wrong": "그 가게가 유명하는 모양이다.",
+    "right": "그 가게가 유명한 모양이다.",
+    "en": "That shop seems to be famous."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-을 뻔하다",
+  "level": 4,
+  "label": "nearly, almost did",
+  "meaning_en": "An expression meaning that something almost happened but did not: “almost, nearly, came close to X”. It is also used to exaggerate a bad state (“I thought I would die”).",
+  "usage": "It attaches to verb stems as “-ㄹ/을 뻔하다”, almost always as “-ㄹ 뻔했다”. What it names did not actually happen. It is frequent with “하마터면” (“by a hair”), and with exaggerations such as “죽을 뻔했다”, “웃겨서 쓰러질 뻔했다”. It is conversational and common in narration.",
+  "examples": [
+   {
+    "ko": "지수는 부모님의 사고 소식을 듣고 정신을 잃을 뻔했다.",
+    "en": "Hearing the news of their parents' accident, Jisu almost lost consciousness.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "지하철을 타지 않았으면 약속 시간에 늦을 뻔했다.",
+    "en": "If I hadn't taken the subway, I would have almost been late for the appointment.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "길에서 넘어질 뻔했는데 다행히 잡아 주는 사람이 있었다.",
+    "en": "I nearly fell on the street, but luckily someone caught me.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "너무 웃겨서 배꼽이 빠질 뻔했다.",
+    "en": "It was so funny that I nearly split my sides.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아침을 못 먹었더니 배가 고파 죽을 뻔했어.",
+    "en": "I couldn't eat breakfast and was so hungry I thought I would die.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-을 것 같다” says it seems it will happen; “-을 뻔하다” says it came close but did not.",
+    "pair": [
+     {
+      "ko": "넘어질 것 같았다.",
+      "en": "It seemed I would fall."
+     },
+     {
+      "ko": "넘어질 뻔했다.",
+      "en": "I nearly fell."
+     }
+    ]
+   },
+   {
+    "pattern": "-았다",
+    "difference": "“-았다” says that it did happen; “-을 뻔했다” says that it nearly did.",
+    "pair": [
+     {
+      "ko": "길에서 넘어졌다.",
+      "en": "I fell on the street."
+     },
+     {
+      "ko": "길에서 넘어질 뻔했다.",
+      "en": "I nearly fell on the street."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "What it names did not happen, so it cannot be followed by a result of the event.",
+    "wrong": "넘어질 뻔해서 무릎을 다쳤다.",
+    "right": "넘어질 뻔했지만 다치지 않았다.",
+    "en": "I nearly fell, but I wasn't hurt."
+   },
+   {
+    "note": "It is used as a past form, “-ㄹ 뻔했다”.",
+    "wrong": "넘어질 뻔한다.",
+    "right": "넘어질 뻔했다.",
+    "en": "I nearly fell."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는대2",
+  "level": 4,
+  "label": "I hear that; they say",
+  "meaning_en": "A contracted expression for passing on what someone else said: “they say that, I hear that”. It is the contraction of “-는다고 해”. As a question it asks about something the listener has heard.",
+  "usage": "It attaches to verb stems as “-ㄴ대/-는대” (“온대”, “먹는대”), to adjective stems and past forms as “-대” (“좋대”, “갔대”), and to “이다” as “-래”. A reported command is “-(으)래” and a reported suggestion is “-재”. The polite form adds “요”. The speaker did not see it, but heard it. It is used in conversation.",
+  "examples": [
+   {
+    "ko": "오늘 저녁에 뷔페를 먹는대.",
+    "en": "I hear we are having a buffet this evening.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "내일부터 장마가 시작된대요.",
+    "en": "They say the rainy season starts tomorrow.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "승규가 이번에 장학금을 받았대.",
+    "en": "I hear Seunggyu received a scholarship this time.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님이 내일까지 숙제를 내래.",
+    "en": "The teacher says to hand in the homework by tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 식당 음식이 정말 맛있대?",
+    "en": "Is it true that the food at that restaurant is really good?",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-데",
+    "difference": "“-대” is what the speaker heard; “-데” is what the speaker experienced.",
+    "pair": [
+     {
+      "ko": "그 식당 음식이 맛있대.",
+      "en": "I hear the food at that restaurant is good."
+     },
+     {
+      "ko": "그 식당 음식이 맛있데.",
+      "en": "The food at that restaurant was good (I found)."
+     }
+    ]
+   },
+   {
+    "pattern": "-다고 하다",
+    "difference": "“-는대” is the contraction of “-는다고 해”; the two mean the same.",
+    "pair": [
+     {
+      "ko": "내일 비가 온대.",
+      "en": "They say it will rain tomorrow."
+     },
+     {
+      "ko": "내일 비가 온다고 해.",
+      "en": "They say it will rain tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a noun the form is “-래”.",
+    "wrong": "내일이 시험이대.",
+    "right": "내일이 시험이래.",
+    "en": "I hear the exam is tomorrow."
+   },
+   {
+    "note": "Do not mix up “-대” (heard) with “-데” (experienced).",
+    "wrong": "친구가 내일 온데.",
+    "right": "친구가 내일 온대.",
+    "en": "I hear my friend is coming tomorrow."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 통에",
+  "level": 4,
+  "label": "amid the chaos, because of",
+  "meaning_en": "An expression meaning “because of the commotion or turmoil of X”: while a noisy, confused or pressing situation goes on, an unwelcome result follows.",
+  "usage": "It attaches to verb stems as “-는 통에”, and to “없다” and “있다” as in “정신없는 통에”. The first clause names a disturbance that is in progress, and the main clause gives a bad or unintended result. It is usually past, and it cannot be followed by a command. It is spoken and written, and similar in meaning to “-는 바람에”.",
+  "examples": [
+   {
+    "ko": "시험지를 빨리 내라고 재촉하는 통에 이름 쓰는 걸 잊고 말았다.",
+    "en": "Amid the urging to hand in the paper quickly, I forgot to write my name.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이들이 떠드는 통에 전화 소리를 못 들었다.",
+    "en": "With the children making noise, I couldn't hear the phone.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "옆집에서 공사를 하는 통에 잠을 설쳤다.",
+    "en": "With the construction next door, I slept badly.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사람들이 한꺼번에 몰리는 통에 줄이 엉망이 되었다.",
+    "en": "Because people crowded in all at once, the line fell into a mess.",
+    "ctx": "news"
+   },
+   {
+    "ko": "이사하느라 정신없는 통에 중요한 서류를 잃어버렸다.",
+    "en": "Amid the chaos of moving, I lost an important document.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는 바람에",
+    "difference": "The two are close in meaning; “-는 통에” stresses a noisy, confused situation that is going on.",
+    "pair": [
+     {
+      "ko": "아이가 우는 통에 일을 못 했다.",
+      "en": "With the child crying, I couldn't work."
+     },
+     {
+      "ko": "아이가 우는 바람에 일을 못 했다.",
+      "en": "The child cried, so I couldn't work."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 탓에",
+    "difference": "“-는 통에” points to a turmoil in progress; “-는 탓에” blames a cause in general.",
+    "pair": [
+     {
+      "ko": "공사하는 통에 잠을 설쳤다.",
+      "en": "With the construction going on, I slept badly."
+     },
+     {
+      "ko": "공사하는 탓에 잠을 설쳤다.",
+      "en": "Because of the construction, I slept badly."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The result must be something unwelcome.",
+    "wrong": "손님이 몰리는 통에 매출이 올랐다.",
+    "right": "손님이 몰리는 통에 정신이 하나도 없었다.",
+    "en": "With customers crowding in, I was completely frazzled."
+   },
+   {
+    "note": "There is no “-었는” form; the verb is in the present “-는”.",
+    "wrong": "아이들이 떠들었는 통에 못 들었다.",
+    "right": "아이들이 떠드는 통에 못 들었다.",
+    "en": "With the children making noise, I couldn't hear."
+   }
+  ],
+  "review": {
+   "status": "draft"
+  }
  }
 ]
