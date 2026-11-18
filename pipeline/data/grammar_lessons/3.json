@@ -1,1 +1,753 @@
-[]
+[
+ {
+  "form": "같이",
+  "level": 3,
+  "label": "like, as (similarity)",
+  "meaning_en": "A particle that attaches to a noun and means “like N, as N is”. It makes a comparison of quality or manner, and in a few time-noun collocations it adds the sense of “without fail” or “very early”.",
+  "usage": "It attaches directly to a noun, without a space: “얼음같이 차갑다”. The predicate is usually an adjective or a verb that describes what the noun is like. Do not mix it up with the adverb “같이” (together), which follows “N와/과” and takes a space. Fixed collocations: “매일같이” (every single day), “새벽같이” (at the crack of dawn), “철석같이 믿다” (to trust unshakably).",
+  "examples": [
+   {
+    "ko": "그 사람은 천사같이 마음이 착하다.",
+    "en": "That person is as kind-hearted as an angel.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "네 손이 얼음같이 차가워서 깜짝 놀랐어.",
+    "en": "Your hands are as cold as ice, so I was startled.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 매일같이 도서관에 간다.",
+    "en": "Minjun goes to the library every single day.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수는 새벽같이 일어나 출근 준비를 했다.",
+    "en": "Jisu got up at the crack of dawn and got ready for work.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "꿈같이 지나간 여행이었다.",
+    "en": "The trip passed by like a dream.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "처럼",
+    "difference": "In similes “같이” and “처럼” are near-synonyms and can usually replace each other. The time-noun collocations (“매일같이”, “새벽같이”) are the set phrases of “같이”.",
+    "pair": [
+     {
+      "ko": "그 사람은 천사같이 착하다.",
+      "en": "That person is as kind as an angel."
+     },
+     {
+      "ko": "그 사람은 천사처럼 착하다.",
+      "en": "That person is as kind as an angel."
+     }
+    ]
+   },
+   {
+    "pattern": "함께",
+    "difference": "The adverb “같이” (together) is a different word from the particle: it follows “N와/과” and means “in company with”. The particle only compares.",
+    "pair": [
+     {
+      "ko": "친구같이 편한 선생님이에요.",
+      "en": "The teacher is as easy to be around as a friend."
+     },
+     {
+      "ko": "친구와 함께 영화를 봤어요.",
+      "en": "I watched a movie together with my friend."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Attached to a noun, it means “like”, not “together with”. For “together”, use “N와/과 같이”.",
+    "wrong": "친구같이 영화를 봤다.",
+    "right": "친구와 같이 영화를 봤다.",
+    "en": "I watched a movie together with my friend."
+   }
+  ],
+  "topik_tip": "The time-noun phrases “매일같이” and “새벽같이” are worth knowing as units: they are adverbs meaning “every single day” and “at the crack of dawn”, not similes.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이고",
+  "level": 3,
+  "label": "listing every item, “X and Y and all”",
+  "meaning_en": "A particle that is repeated on each noun in a list, “N이고 N이고 (다)”, and says that all of them are included: “be it A or B, all of it”. The sentence usually ends with a summing-up word such as “다” or “모두”.",
+  "usage": "After a noun ending in a consonant it is “이고” (“밥이고”, “서울이고”); after a vowel the “이” drops (“커피고”, “차고”). It goes on every item, including the last, and the main clause normally sums up with “다/모두/전부” or makes a sweeping statement. Typical collocations: “낮이고 밤이고” (day and night), “이고 저고” (this and that). It is a spoken, slightly emphatic way of listing.",
+  "examples": [
+   {
+    "ko": "밥이고 빵이고 다 맛있어 보인다.",
+    "en": "The rice, the bread, everything looks delicious.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 낮이고 밤이고 일만 했다.",
+    "en": "Minjun did nothing but work, day and night.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "서울이고 부산이고 주말에는 어디나 사람이 많다.",
+    "en": "Be it Seoul or Busan, there are crowds everywhere on weekends.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "요즘은 영화고 드라마고 볼 시간이 없어요.",
+    "en": "These days I have no time to watch movies, dramas, or anything.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "한국어는 문법이고 어휘고 하나도 쉬운 게 없다.",
+    "en": "In Korean, neither grammar nor vocabulary is easy at all.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "이든",
+    "difference": "“N이고 N이고” lists the items and covers all of them. “N이든 N이든” says it makes no difference which one: any of them will do.",
+    "pair": [
+     {
+      "ko": "과일이고 채소고 다 잘 먹어요.",
+      "en": "I eat fruit, vegetables, everything well."
+     },
+     {
+      "ko": "과일이든 채소든 아무거나 주세요.",
+      "en": "Fruit or vegetables, give me whichever."
+     }
+    ]
+   },
+   {
+    "pattern": "하고",
+    "difference": "“하고” and “와/과” are the plain “and”. “이고” is not a plain “and”: it needs the repeated pattern and a sweeping main clause.",
+    "pair": [
+     {
+      "ko": "사과고 배고 다 샀어요.",
+      "en": "I bought apples, pears, the lot."
+     },
+     {
+      "ko": "사과하고 배를 샀어요.",
+      "en": "I bought apples and pears."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The particle goes on every item, including the last. With only the first item marked, the list breaks off.",
+    "wrong": "밥이고 빵 다 먹었어요.",
+    "right": "밥이고 빵이고 다 먹었어요.",
+    "en": "I ate the rice, the bread, all of it."
+   },
+   {
+    "note": "It is not a plain “and”. A simple list of two things takes “하고” or “와/과”.",
+    "wrong": "사과고 배를 샀어요.",
+    "right": "사과고 배고 다 샀어요.",
+    "en": "I bought apples, pears, the lot."
+   }
+  ],
+  "topik_tip": "Look for the pair “N이고 N이고” followed by “다/모두”. It reads as “all of them, no matter which”, similar in effect to “N이든 N이든 다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "대로",
+  "level": 3,
+  "label": "as, according to",
+  "meaning_en": "A particle meaning “as N, in line with N”: the action or state follows the noun exactly. It is also used with a noun to say that each thing goes its own way (“제멋대로”, “각자 마음대로”).",
+  "usage": "It attaches to a noun without a space: “계획대로”, “예상대로”, “약속대로”, “법대로”, “말씀대로”. After a verb or adjective modifier the same word is a dependent noun and is written with a space (“말한 대로”, “본 대로”). Common collocations: “예상대로” (as expected), “마음대로” (as one pleases), “순서대로” (in order).",
+  "examples": [
+   {
+    "ko": "모든 일이 계획대로 진행되었다.",
+    "en": "Everything went as planned.",
+    "ctx": "news"
+   },
+   {
+    "ko": "예상대로 결과가 좋지 않았다.",
+    "en": "As expected, the result was not good.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "약속대로 오늘 점심은 내가 살게.",
+    "en": "As promised, lunch is on me today.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님 말씀대로 했더니 문제가 풀렸어요.",
+    "en": "I did as the teacher said, and the problem got solved.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "법대로 처리해 주십시오.",
+    "en": "Please handle it according to the law.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-은 대로",
+    "difference": "“말씀대로” (noun) and “말씀하신 대로” (verb form) mean the same. The first attaches to the noun, the second is a modifier plus a spaced word.",
+    "pair": [
+     {
+      "ko": "말씀대로 하겠습니다.",
+      "en": "I will do as you say."
+     },
+     {
+      "ko": "말씀하신 대로 하겠습니다.",
+      "en": "I will do as you said."
+     }
+    ]
+   },
+   {
+    "pattern": "에 따라",
+    "difference": "“법대로” is plain and direct. “법에 따라” is the more formal, document-like way of saying “in accordance with the law”.",
+    "pair": [
+     {
+      "ko": "법대로 처리하겠습니다.",
+      "en": "We will handle it according to the law."
+     },
+     {
+      "ko": "법에 따라 처리하겠습니다.",
+      "en": "We will handle it in accordance with the law."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a verb it is a separate word: write a space. Only after a noun is it attached.",
+    "wrong": "내가 말한대로 했다.",
+    "right": "내가 말한 대로 했다.",
+    "en": "I did as I said."
+   }
+  ],
+  "topik_tip": "Spacing is the usual test item: “N대로” is attached, but “-은/는 대로” after a verb or adjective is spaced.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "으로부터",
+  "level": 3,
+  "label": "from (a source or starting point)",
+  "meaning_en": "A formal particle marking the source or origin of something: the person or place something comes from, the one who sends, gives or causes it. It translates as “from”.",
+  "usage": "After a vowel or ㄹ it is “로부터” (“친구로부터”, “서울로부터”); after any other consonant it is “으로부터” (“집으로부터”, “사람으로부터”). It marks givers and senders (“받다, 듣다, 배우다”), sources (“들어오다”), and what one is freed or protected from (“벗어나다, 보호하다, 자유롭다”). It is written and formal; speech prefers “한테서/에게서” for people and “에서” for places.",
+  "examples": [
+   {
+    "ko": "어제 오랜 친구로부터 편지를 받았다.",
+    "en": "Yesterday I received a letter from an old friend.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 제도는 일본으로부터 들어온 것이다.",
+    "en": "This system was brought in from Japan.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "우리는 정부로부터 지원금을 받게 되었다.",
+    "en": "We came to receive subsidy money from the government.",
+    "ctx": "news"
+   },
+   {
+    "ko": "아이들을 위험으로부터 보호해야 한다.",
+    "en": "We must protect children from danger.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "학교는 역으로부터 걸어서 오 분 거리에 있다.",
+    "en": "The school is a five-minute walk from the station.",
+    "ctx": "formal"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "에게서",
+    "difference": "For a person as the source, “에게서” is the everyday choice and “으로부터” the written, formal one. The meaning is the same.",
+    "pair": [
+     {
+      "ko": "친구로부터 선물을 받았다.",
+      "en": "I received a present from a friend."
+     },
+     {
+      "ko": "친구에게서 선물을 받았다.",
+      "en": "I received a present from a friend."
+     }
+    ]
+   },
+   {
+    "pattern": "에서",
+    "difference": "For a place as a starting point, “에서” is the everyday particle; “으로부터” sounds more formal and is also used for time and distance.",
+    "pair": [
+     {
+      "ko": "역으로부터 오 분 거리에 있다.",
+      "en": "It is five minutes from the station."
+     },
+     {
+      "ko": "역에서 오 분 거리에 있다.",
+      "en": "It is five minutes from the station."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A noun ending in ㄹ takes “로부터”, never “으로부터”.",
+    "wrong": "서울으로부터 편지가 왔다.",
+    "right": "서울로부터 편지가 왔다.",
+    "en": "A letter came from Seoul."
+   },
+   {
+    "note": "It marks the source or giver, not the one who receives. The recipient takes “에게”.",
+    "wrong": "친구로부터 선물을 주었다.",
+    "right": "친구에게 선물을 주었다.",
+    "en": "I gave a present to a friend."
+   }
+  ],
+  "topik_tip": "In 읽기 passages “으로부터” is found with verbs of receiving and release: “받다, 듣다, 벗어나다, 보호하다”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "만큼",
+  "level": 3,
+  "label": "as much as (degree)",
+  "meaning_en": "A particle that attaches to a noun and means “to the same degree as N”: it compares extent, amount or level. In a negative sentence it means “not as ... as N”.",
+  "usage": "It attaches to a noun or pronoun without a space: “너만큼”, “작년만큼”, “기대만큼”. The predicate expresses a degree (an adjective such as “크다” or a verb like “좋아하다”). With a negative it says that N is the higher standard (“작년만큼 덥지 않다”). “만큼은” singles out one thing for emphasis: “이번만큼은” (this time, at least), “이것만큼은”. The dependent noun “-ㄴ/는 만큼” after a verb is spaced and is a different row.",
+  "examples": [
+   {
+    "ko": "민준이도 지수만큼 키가 크다.",
+    "en": "Minjun is as tall as Jisu.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "올해는 작년만큼 덥지 않다.",
+    "en": "This year is not as hot as last year.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나만큼 너를 아끼는 사람은 없을 거야.",
+    "en": "No one cares for you as much as I do.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "시험 결과는 기대만큼 좋지 않았다.",
+    "en": "The exam result was not as good as expected.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이번만큼은 약속을 꼭 지킬게요.",
+    "en": "This time, I will keep my promise for sure.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "처럼",
+    "difference": "“만큼” compares degree, “처럼” compares manner or likeness. The minimal pair differs in what is being matched.",
+    "pair": [
+     {
+      "ko": "너만큼 노래하고 싶다.",
+      "en": "I want to sing as well as you do."
+     },
+     {
+      "ko": "너처럼 노래하고 싶다.",
+      "en": "I want to sing like you."
+     }
+    ]
+   },
+   {
+    "pattern": "보다",
+    "difference": "“만큼” says two things are equal; “보다” says one is more than the other.",
+    "pair": [
+     {
+      "ko": "지수만큼 빨리 달린다.",
+      "en": "They run as fast as Jisu."
+     },
+     {
+      "ko": "지수보다 빨리 달린다.",
+      "en": "They run faster than Jisu."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“만큼” matches degree. For manner or resemblance, use “처럼”.",
+    "wrong": "새만큼 날고 싶다.",
+    "right": "새처럼 날고 싶다.",
+    "en": "I want to fly like a bird."
+   },
+   {
+    "note": "After a verb form it is a separate word with a space; only a noun takes it attached.",
+    "wrong": "노력한만큼 얻는다.",
+    "right": "노력한 만큼 얻는다.",
+    "en": "You get as much as you put in effort."
+   }
+  ],
+  "topik_tip": "“N만큼 + negative” (“not as ... as N”) and “이번만큼은” (this time, at least) are the two shapes to recognise in exams.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "보고",
+  "level": 3,
+  "label": "to/at a person (speech, reaction)",
+  "meaning_en": "A colloquial particle that marks the person a speech act or a reaction is aimed at, like “에게/한테” but limited to verbs such as “말하다, 시키다, 웃다, 화내다, 욕하다”. Typical shape: “나보고 ...(으)라고 하다” (they told me to ...).",
+  "usage": "It attaches to person nouns and pronouns (“나보고, 너보고, 민준이보고”) and is heard in speech and informal writing. It is almost always followed by a verb of saying, commanding or reacting, often with a quoted clause: “나보고 가라고 했다”. It is not used with verbs of giving or receiving: those need “에게/한테”. The set phrase “나보고 어쩌라고?” means “What do you want me to do?”. Do not confuse it with “보고” from the verb “보다”.",
+  "examples": [
+   {
+    "ko": "엄마가 나보고 방 좀 치우라고 했다.",
+    "en": "Mom told me to clean my room.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님이 민준이보고 일어나라고 하셨다.",
+    "en": "The teacher told Minjun to stand up.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "사람들이 나보고 부지런하다고 한다.",
+    "en": "People say I am diligent.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규는 아무 이유 없이 나보고 화를 냈다.",
+    "en": "Seunggyu got angry at me for no reason.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "다들 나보고 어쩌라는 거야?",
+    "en": "What is everyone expecting me to do?",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "한테",
+    "difference": "With speech verbs “보고” and “한테” mean the same, and “한테” is the neutral, safer form. “보고” is only spoken-style and only with some verbs.",
+    "pair": [
+     {
+      "ko": "민준이가 나보고 가라고 했다.",
+      "en": "Minjun told me to go."
+     },
+     {
+      "ko": "민준이가 나한테 가라고 했다.",
+      "en": "Minjun told me to go."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "“보고” does not go with verbs of giving or receiving; those take “한테/에게”.",
+    "wrong": "친구보고 책을 줬다.",
+    "right": "친구한테 책을 줬다.",
+    "en": "I gave my friend a book."
+   }
+  ],
+  "topik_tip": "In reading dialogues the shape “N보고 ...라고 하다” is the same as “N한테 ...라고 하다”: read it as “told N to ...”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "뿐",
+  "level": 3,
+  "label": "only, nothing but",
+  "meaning_en": "A particle meaning “only N, nothing other than N”. It typically closes the sentence with “이다” (“너뿐이야”) or appears in “N뿐만 아니라” (not only N but also).",
+  "usage": "It attaches to a noun without a space and then needs “이다” (“너뿐이다”), “뿐이 아니다” or “뿐(만) 아니라”. It does not combine freely with an ordinary verb: for “only eat bread” use “만” (“빵만 먹었다”). After a verb modifier “뿐” is a dependent noun and is spaced (“웃을 뿐이다”, I can only laugh). Common phrases: “하나뿐” (the only one), “뿐만 아니라” (not only ... but also).",
+  "examples": [
+   {
+    "ko": "내가 믿을 사람은 너뿐이야.",
+    "en": "You are the only one I can trust.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "방 안에는 낡은 의자 하나뿐이었다.",
+    "en": "There was nothing in the room but one old chair.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "그 가수는 노래뿐만 아니라 춤도 잘 춘다.",
+    "en": "Besides singing, that singer also dances well.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "이 일을 할 수 있는 사람은 지수뿐입니다.",
+    "en": "Jisu is the only person who can do this job.",
+    "ctx": "formal"
+   },
+   {
+    "ko": "남은 것은 후회뿐이다.",
+    "en": "All that remains is regret.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "만",
+    "difference": "“만” attaches to any word and works with any predicate. “뿐” closes the sentence with “이다” and sounds more final.",
+    "pair": [
+     {
+      "ko": "나는 너만 믿는다.",
+      "en": "I trust only you."
+     },
+     {
+      "ko": "내가 믿는 사람은 너뿐이다.",
+      "en": "The only person I trust is you."
+     }
+    ]
+   },
+   {
+    "pattern": "밖에",
+    "difference": "“뿐이다” and “밖에 없다” are near-synonyms for “nothing but”. “뿐” ends in “이다”, “밖에” always needs a negative.",
+    "pair": [
+     {
+      "ko": "믿을 사람은 너뿐이야.",
+      "en": "You are the only one I can trust."
+     },
+     {
+      "ko": "믿을 사람은 너밖에 없어.",
+      "en": "There is no one I can trust but you."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "With an ordinary verb the particle for “only” is “만”; “뿐” needs “이다” or “뿐 아니라”.",
+    "wrong": "나는 빵뿐 먹었다.",
+    "right": "나는 빵만 먹었다.",
+    "en": "I ate only bread."
+   },
+   {
+    "note": "After a verb form it is spaced as a dependent noun.",
+    "wrong": "그저 웃을뿐이었다.",
+    "right": "그저 웃을 뿐이었다.",
+    "en": "All I could do was laugh."
+   }
+  ],
+  "topik_tip": "“뿐만 아니라 ... 도” is the standard “not only ... but also” frame in 읽기.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "아1",
+  "level": 3,
+  "label": "calling a person (vocative)",
+  "meaning_en": "The vocative particle “아/야” attached to a name or a noun when calling or addressing someone close or younger: “민준아, 이리 와.”",
+  "usage": "After a consonant-final name it is “아” (“민준아, 유민아, 지영아”), after a vowel-final name “야” (“지수야, 승규야, 영수야”). It is used to friends, younger people, children and also to animals and things in poems and songs (“달아”). It is intimate speech (“해체” or “해라체” sentences follow it) and is not used to someone you must show respect to: with elders you use the title alone (“선생님, ...”) and with polite adults “씨”. Common: “얘들아” (hey, kids).",
+  "examples": [
+   {
+    "ko": "민준아, 밥 먹었니?",
+    "en": "Minjun, have you eaten?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수야, 이리 좀 와 봐.",
+    "en": "Jisu, come over here for a moment.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "유민아, 내일 시험 몇 시야?",
+    "en": "Yumin, what time is the exam tomorrow?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "승규야, 오랜만이다. 잘 지냈어?",
+    "en": "Seunggyu, it has been a while. Have you been well?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "얘들아, 조용히 해라.",
+    "en": "Kids, be quiet.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "달아, 너는 오늘도 밝구나.",
+    "en": "Moon, you are shining bright again today.",
+    "ctx": "literary"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "씨",
+    "difference": "“아/야” is for close friends and juniors; “씨” is the neutral, polite way to address an adult you are not close to.",
+    "pair": [
+     {
+      "ko": "지수야, 어디 가?",
+      "en": "Jisu, where are you going?"
+     },
+     {
+      "ko": "지수 씨, 어디 가세요?",
+      "en": "Jisu, where are you going?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a consonant-final name the particle is “아”, not “야”.",
+    "wrong": "민준야, 이리 와.",
+    "right": "민준아, 이리 와.",
+    "en": "Minjun, come here."
+   },
+   {
+    "note": "After a vowel-final name it is “야”, not “아”.",
+    "wrong": "지수아, 뭐 해?",
+    "right": "지수야, 뭐 해?",
+    "en": "Jisu, what are you doing?"
+   }
+  ],
+  "topik_tip": "Pick the form from the last sound of the name: consonant gives “아”, vowel gives “야”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "요1",
+  "level": 3,
+  "label": "polite “요” on words and phrases",
+  "meaning_en": "A particle that adds politeness to a word, phrase or clause ending, turning intimate speech (“해체”) into the soft polite “해요체”: “저기요”, “빨리요”, “그래서요?”.",
+  "usage": "It attaches to nouns, adverbs and the ends of clauses, whether or not a full ending follows (“물 좀요”, “지금 바로요?”, “그런데요”, “그래서요?”). That is why it appears on fragments and in the middle of sentences: “저는요, 어제요, ...”. In conversation “여기요” and “저기요” are the standard ways to call a waiter or stranger. It does not stack onto “합쇼체” endings (“-습니다”).",
+  "examples": [
+   {
+    "ko": "저기요, 여기 물 좀 주세요.",
+    "en": "Excuse me, could we get some water here?",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "저는요, 도서관에 가요.",
+    "en": "As for me, I am going to the library.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그래서요? 그다음엔 어떻게 됐어요?",
+    "en": "And then? What happened next?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지금 바로요? 아직 준비가 안 됐는데요.",
+    "en": "Right now? I am not ready yet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "여기 커피 두 잔요.",
+    "en": "Two coffees here, please.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-습니다",
+    "difference": "The particle “요” gives soft, conversational politeness (“해요체”); “-습니다” is the formal “합쇼체” used in speeches, announcements and business.",
+    "pair": [
+     {
+      "ko": "지금 가요?",
+      "en": "Are you going now?"
+     },
+     {
+      "ko": "지금 갑니까?",
+      "en": "Are you going now?"
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "Do not add “요” to a “합쇼체” ending. Choose the “해요체” ending instead.",
+    "wrong": "감사합니다요.",
+    "right": "감사해요.",
+    "en": "Thank you."
+   },
+   {
+    "note": "A bare noun with “요” works as an answer fragment, but a full statement needs the copula “이에요”.",
+    "wrong": "저는 학생요.",
+    "right": "저는 학생이에요.",
+    "en": "I am a student."
+   }
+  ],
+  "topik_tip": "In listening items, “요” on a fragment or after a pause marks “해요체” speech: it is polite, not a different meaning.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "이라고1",
+  "level": 3,
+  "label": "quoting directly, “called ...”",
+  "meaning_en": "A quotation particle: “라고” follows a directly quoted word or sentence, and “이라고” follows a consonant-final noun being named or quoted. “N(이)라고 하다” means “to be called N”.",
+  "usage": "In a direct quote it attaches to the quoted words (“‘가자’라고 말했다”). With a noun it is “이라고” after a consonant (“한글이라고”) and “라고” after a vowel (“김치라고”). It combines with “하다, 말하다, 부르다, 외치다, 소리치다, 쓰다”. The collocation “(이)라고 해서” means “just because it is ...”. For indirect quotes the endings “-다고/-라고” are used instead.",
+  "examples": [
+   {
+    "ko": "이 음식은 한국어로 비빔밥이라고 해요.",
+    "en": "In Korean this food is called “비빔밥”.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님은 “내일까지 숙제를 내세요”라고 말씀하셨다.",
+    "en": "The teacher said, “Hand in your homework by tomorrow.”",
+    "ctx": "essay"
+   },
+   {
+    "ko": "친구는 나를 “천재”라고 부른다.",
+    "en": "My friend calls me a “genius”.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이는 “엄마!”라고 소리치며 달려왔다.",
+    "en": "The child came running, shouting “Mom!”",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "부자라고 해서 다 행복한 것은 아니다.",
+    "en": "Just because people are rich does not mean they are all happy.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-다고",
+    "difference": "“라고” repeats the words as spoken (direct quote). “-다고” reports them from the speaker’s own point of view (indirect quote), so the sentence form changes.",
+    "pair": [
+     {
+      "ko": "나는 “배고파”라고 말했다.",
+      "en": "I said, “I'm hungry.”"
+     },
+     {
+      "ko": "나는 배고프다고 말했다.",
+      "en": "I said that I was hungry."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "After a vowel-final noun there is no “이”: it is “라고”.",
+    "wrong": "이것을 김치이라고 한다.",
+    "right": "이것을 김치라고 한다.",
+    "en": "This is called kimchi."
+   },
+   {
+    "note": "After a consonant-final noun “이” is needed.",
+    "wrong": "이 글자를 한글라고 부른다.",
+    "right": "이 글자를 한글이라고 부른다.",
+    "en": "This letter system is called “한글”."
+   }
+  ],
+  "topik_tip": "Telling direct (“라고”) from indirect (“-다고”) quotation is a typical grammar question; in direct quotes the quoted words stay unchanged.",
+  "review": {
+   "status": "draft"
+  }
+ }
+]
