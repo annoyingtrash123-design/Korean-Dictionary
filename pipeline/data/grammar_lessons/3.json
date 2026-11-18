@@ -4676,5 +4676,579 @@
   "review": {
    "status": "draft"
   }
+ },
+ {
+  "form": "-는 모양이다",
+  "level": 3,
+  "label": "it looks like (judging by signs)",
+  "meaning_en": "An expression for a guess based on signs the speaker has seen or heard: “it looks as if, it seems that”. The guess is about a state of affairs or about another person, not about oneself.",
+  "usage": "Verbs take “-는 모양이다” (present), “-ㄴ/은 모양이다” (past); adjectives and “이다” take “-ㄴ/은 모양이다” (“바쁘다 → 바쁜 모양이다”, “학생이다 → 학생인 모양이다”); a prediction takes “-ㄹ 모양이다”. Real stems: “오다 → 오는 모양이다 / 온 모양이다”, “살다 → 사는 모양이다” (ㄹ drops), “춥다 → 추운 모양이다”, “듣다 → 듣는 모양이다 / 들은 모양이다”. The ground often comes in front: “길이 젖은 걸 보니 ... 모양이다”. The polite form is “-ㄴ 모양이에요”.",
+  "examples": [
+   {
+    "ko": "밖에 눈이 오는 모양이에요. 창문이 하얗게 변했어요.",
+    "en": "It seems to be snowing outside. The window has turned white.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "지수는 요즘 많이 바쁜 모양이다.",
+    "en": "Jisu seems to be very busy these days.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "길이 젖은 걸 보니 어젯밤에 비가 온 모양이다.",
+    "en": "Judging from the wet road, it seems to have rained last night.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "민준이는 그 소식을 아직 모르는 모양이에요.",
+    "en": "Minjun does not seem to know the news yet.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "불이 다 꺼진 걸 보니 모두 퇴근한 모양이다.",
+    "en": "The lights are all off, so everyone seems to have left work.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-나 보다",
+    "difference": "“-는 모양이다” and “-나 보다” are near-synonyms for a guess from evidence. “-나 보다” is the more spoken one.",
+    "pair": [
+     {
+      "ko": "민준이가 아픈 모양이에요.",
+      "en": "Minjun seems to be sick."
+     },
+     {
+      "ko": "민준이가 아픈가 봐요.",
+      "en": "Minjun seems to be sick."
+     }
+    ]
+   },
+   {
+    "pattern": "-은 것 같다",
+    "difference": "“-은 것 같다” is a broader guess that also fits the speaker's own feelings and opinions. “-는 모양이다” judges a situation by what is visible.",
+    "pair": [
+     {
+      "ko": "민준이는 피곤한 모양이에요.",
+      "en": "Minjun seems to be tired."
+     },
+     {
+      "ko": "민준이는 피곤한 것 같아요.",
+      "en": "Minjun seems to be tired."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A verb's past modifier after a vowel is “-ㄴ”: “오다” becomes “온”.",
+    "wrong": "비가 오은 모양이다.",
+    "right": "비가 온 모양이다.",
+    "en": "It seems to have rained."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는”.",
+    "wrong": "서울에 살는 모양이다.",
+    "right": "서울에 사는 모양이다.",
+    "en": "They seem to live in Seoul."
+   }
+  ],
+  "topik_tip": "The tense is on the modifier: present “-는”, past “-ㄴ”, adjectives “-ㄴ”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 편이다",
+  "level": 3,
+  "label": "tends to; is on the side of",
+  "meaning_en": "An expression for a rough classification: “tends to X, is the X type, is rather X”. It says a thing falls more on one side without claiming it is absolutely so.",
+  "usage": "Verbs take “-는 편이다” (“일찍 일어나는 편이다”), adjectives and “이다” take “-ㄴ/은 편이다” (“키가 큰 편이다”, “춥다 → 추운 편이다”). The negative is “-는 편이 아니다” (“많은 편은 아니다”). Adverbs like “비교적, 꽤, 보통, 대체로” often go with it. “편” is spaced from the modifier. ㄹ-stems drop the ㄹ: “사는 편이다”, “긴 편이다”.",
+  "examples": [
+   {
+    "ko": "저는 아침에 일찍 일어나는 편이에요.",
+    "en": "I tend to get up early in the morning.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "우리 동네는 교통이 편한 편이다.",
+    "en": "Our neighborhood has relatively convenient transport.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 말이 많은 편은 아니다.",
+    "en": "Minjun is not the talkative type.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "올해 겨울은 작년보다 추운 편이다.",
+    "en": "This winter is on the cold side compared with last year.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "한국어 발음은 비교적 쉬운 편이다.",
+    "en": "Korean pronunciation is comparatively on the easy side.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-는다",
+    "difference": "A plain predicate states a fact. “-는 편이다” softens it into a tendency.",
+    "pair": [
+     {
+      "ko": "민준이는 키가 커요.",
+      "en": "Minjun is tall."
+     },
+     {
+      "ko": "민준이는 키가 큰 편이에요.",
+      "en": "Minjun is on the tall side."
+     }
+    ]
+   },
+   {
+    "pattern": "-곤 하다",
+    "difference": "“-는 편이다” describes the type of person or thing. “-곤 하다” describes something that is repeated from time to time.",
+    "pair": [
+     {
+      "ko": "저는 일찍 일어나는 편이에요.",
+      "en": "I am an early riser."
+     },
+     {
+      "ko": "저는 일찍 일어나곤 해요.",
+      "en": "I often get up early."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective takes “추운”.",
+    "wrong": "올겨울은 작년보다 춥은 편이다.",
+    "right": "올겨울은 작년보다 추운 편이다.",
+    "en": "This winter is on the cold side compared with last year."
+   },
+   {
+    "note": "“편” is a separate word, spaced from the modifier.",
+    "wrong": "민준이는 키가 큰편이다.",
+    "right": "민준이는 키가 큰 편이다.",
+    "en": "Minjun is on the tall side."
+   }
+  ],
+  "topik_tip": "Look for the hedge: “편이다” never says “very” or “always”; it says “more to this side”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는가 보다",
+  "level": 3,
+  "label": "seems that (guess from what one sees)",
+  "meaning_en": "An expression for a guess based on what the speaker sees or hears: “it seems that ...”. It is the same job as “-나 보다”, with the form “-는가 보다” for verbs and “-ㄴ가 보다” for adjectives.",
+  "usage": "Verbs and “있다/없다” take “-는가 보다” (“오다 → 오는가 보다”, “살다 → 사는가 보다” with the ㄹ dropped), past stems “-었는가 보다”, adjectives and “이다” take “-ㄴ/은가 보다” (“아프다 → 아픈가 보다”, “학생이다 → 학생인가 보다”). The ground of the guess usually comes before or after. The guess is about others or a situation. The polite form is “-는가 봐요”.",
+  "examples": [
+   {
+    "ko": "지수가 아직 안 오는가 보다. 전화도 안 받네.",
+    "en": "Jisu does not seem to have come yet. They are not even answering the phone.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저 가게는 장사가 잘되는가 보다. 손님이 많네.",
+    "en": "That shop seems to be doing well. There are many customers.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "아이가 많이 아픈가 보다. 계속 울어요.",
+    "en": "The child seems to be quite sick. They keep crying.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "오늘 시험이 어려웠는가 보다. 다들 표정이 어둡네.",
+    "en": "Today's exam seems to have been hard. Everyone looks gloomy.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 집에 없는가 보다. 불이 꺼져 있어.",
+    "en": "Minjun seems not to be home. The lights are off.",
+    "ctx": "collocation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-나 보다",
+    "difference": "The two are near-synonyms in a guess from evidence. “-나 보다” is the shorter, spoken form.",
+    "pair": [
+     {
+      "ko": "비가 오는가 보다.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 오나 보다.",
+      "en": "It seems to be raining."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 모양이다",
+    "difference": "Close in meaning. “-는 모양이다” is a little more formal and fits written reports.",
+    "pair": [
+     {
+      "ko": "비가 오는가 보다.",
+      "en": "It seems to be raining."
+     },
+     {
+      "ko": "비가 오는 모양이다.",
+      "en": "It seems to be raining."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-ㄴ가”, not “-는가”.",
+    "wrong": "아이가 아프는가 보다.",
+    "right": "아이가 아픈가 보다.",
+    "en": "The child seems to be sick."
+   },
+   {
+    "note": "A ㄹ-stem drops the ㄹ before “-는가”.",
+    "wrong": "그 사람은 서울에 살는가 보다.",
+    "right": "그 사람은 서울에 사는가 보다.",
+    "en": "They seem to live in Seoul."
+   }
+  ],
+  "topik_tip": "Same meaning as “-나 보다”: the form splits by word class, verb “-는가”, adjective “-ㄴ가”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는 중이다",
+  "level": 3,
+  "label": "in the middle of doing",
+  "meaning_en": "An expression for an action in progress at this moment: “is in the middle of doing, is -ing”. It also appears with action nouns as “N 중이다” (“회의 중이다”, “공사 중이다”).",
+  "usage": "Verbs take “-는 중이다” with no tense ending on the verb: “먹다 → 먹는 중이다”, “준비하다 → 준비하는 중이다”, “가다 → 가는 중이다” (on the way); tense is on “이다” (“-는 중이었다”). Nouns formed with “하다” take “N 중이다” (“식사 중”, “통화 중”). It does not attach to adjectives (“추워지는 중이다” with a change verb is fine). It is more precise and more formal than “-고 있다”, which can also describe a longer period. “중” is spaced from a verb modifier.",
+  "examples": [
+   {
+    "ko": "지금 회의 중이라서 전화를 못 받아요.",
+    "en": "I am in a meeting now, so I cannot answer the phone.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "저는 지금 밥을 먹는 중이에요.",
+    "en": "I am in the middle of eating right now.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "민준이는 시험 준비를 하는 중이다.",
+    "en": "Minjun is in the middle of preparing for the exam.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 도로는 공사 중이라서 지나갈 수 없다.",
+    "en": "This road is under construction, so it cannot be used.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지금 가는 중이니까 조금만 기다려 줘.",
+    "en": "I am on my way now, so wait a little.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-고 있다",
+    "difference": "“-고 있다” is the general progressive and can cover a longer period. “-는 중이다” is “right now, in the middle of it”.",
+    "pair": [
+     {
+      "ko": "요즘 한국어를 공부하고 있어요.",
+      "en": "I am studying Korean these days."
+     },
+     {
+      "ko": "지금 한국어를 공부하는 중이에요.",
+      "en": "I am in the middle of studying Korean right now."
+     }
+    ]
+   },
+   {
+    "pattern": "-는 중에",
+    "difference": "“중이다” closes the sentence with the state; “-는 중에” is “during, in the course of” and opens an event.",
+    "pair": [
+     {
+      "ko": "지금 회의 중이에요.",
+      "en": "I am in a meeting now."
+     },
+     {
+      "ko": "회의 중에 전화가 왔어요.",
+      "en": "A call came during the meeting."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The verb takes no past ending; the tense goes on “이다”.",
+    "wrong": "밥을 먹었는 중이에요.",
+    "right": "밥을 먹는 중이에요.",
+    "en": "I am in the middle of eating."
+   },
+   {
+    "note": "It does not attach to an adjective; use a verb of change.",
+    "wrong": "날씨가 추운 중이다.",
+    "right": "날씨가 추워지는 중이다.",
+    "en": "The weather is getting cold."
+   }
+  ],
+  "topik_tip": "“N 중이다” and “-는 중이다” are the same pattern: an ongoing state at the time of speaking.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-으려다가",
+  "level": 3,
+  "label": "was about to X but ...",
+  "meaning_en": "An expression for an intended action that did not happen, or turned into something else: “was about to / tried to X, but (stopped / did Y instead)”. It is a contraction of “-으려고 하다가”.",
+  "usage": "After a vowel or ㄹ it is “-려다가”, after other consonants “-으려다가”; it attaches to verbs only: “가다 → 가려다가”, “먹다 → 먹으려다가”, “만들다 → 만들려다가”, “걷다 → 걸으려다가” (ㄷ becomes ㄹ), “눕다 → 누우려다가”. The main clause says what happened instead (“말았다, 그만두었다, 포기했다”) or what interrupted it (“넘어질 뻔했다”). The short form “-려다” is also found. “말하려다가 말았다” is a frequent collocation.",
+  "examples": [
+   {
+    "ko": "전화를 하려다가 시간이 늦어서 문자로 보냈다.",
+    "en": "I was going to call, but since it was late I sent a text.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "나가려다가 비가 와서 그냥 집에 있기로 했다.",
+    "en": "I was about to go out, but because it rained I decided to just stay home.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "일어나려다가 다리에 쥐가 나서 넘어질 뻔했다.",
+    "en": "I was about to get up when my leg cramped and I nearly fell.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "하고 싶은 말이 있었는데 말하려다가 말았다.",
+    "en": "There was something I wanted to say, but I was about to say it and held back.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "과자를 먹으려다가 살이 찔까 봐 내려놓았다.",
+    "en": "I was about to eat the snack but put it down for fear of gaining weight.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-으려고",
+    "difference": "“-으려고” states the intention. “-으려다가” adds that the intention was dropped or changed.",
+    "pair": [
+     {
+      "ko": "먹으려고 했다.",
+      "en": "I intended to eat."
+     },
+     {
+      "ko": "먹으려다가 그만뒀다.",
+      "en": "I was about to eat but stopped."
+     }
+    ]
+   },
+   {
+    "pattern": "-다가 말다",
+    "difference": "“-다가 말다” means the action was begun and then dropped halfway. “-으려다가 말다” means it was never begun.",
+    "pair": [
+     {
+      "ko": "먹다가 말았다.",
+      "en": "I started eating and stopped halfway."
+     },
+     {
+      "ko": "먹으려다가 말았다.",
+      "en": "I was about to eat, but did not."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㄷ-irregular verb turns ㄷ into ㄹ before “-으려다가”.",
+    "wrong": "길을 걷으려다가 비가 와서 택시를 탔다.",
+    "right": "길을 걸으려다가 비가 와서 택시를 탔다.",
+    "en": "I was going to walk along the road, but since it rained I took a taxi."
+   },
+   {
+    "note": "The first verb takes no tense ending.",
+    "wrong": "먹었으려다가 말았다.",
+    "right": "먹으려다가 말았다.",
+    "en": "I was about to eat, but did not."
+   }
+  ],
+  "topik_tip": "The fixed combination “-으려다가 말다” (was about to, but did not) is the one to remember.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-어 보이다",
+  "level": 3,
+  "label": "looks (adjective), appears",
+  "meaning_en": "An expression for an impression taken from appearance: “looks X, seems X (by sight)”. It judges the outward look of a person or thing and does not claim to know the inside.",
+  "usage": "It attaches to adjective stems with “-아/어”: “좋다 → 좋아 보이다”, “맛있다 → 맛있어 보이다”, “젊다 → 젊어 보이다”, “작다 → 작아 보이다”, “예쁘다 → 예뻐 보이다” (ㅡ drops), “춥다 → 추워 보이다” (ㅂ-irregular), “피곤하다 → 피곤해 보이다”. It does not attach to action verbs (“가 보이다” is not used): for verbs there is “-는 것 같다”. With nouns the pattern is “N처럼 보이다”. Do not mix it up with “-어 보다” (try doing).",
+  "examples": [
+   {
+    "ko": "오늘 기분이 좋아 보이네요. 무슨 좋은 일 있어요?",
+    "en": "You look cheerful today. Did something good happen?",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "이 음식은 정말 맛있어 보인다.",
+    "en": "This food really looks delicious.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "민준이는 나이보다 젊어 보인다.",
+    "en": "Minjun looks young for their age.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "얼굴이 많이 피곤해 보여요. 좀 쉬세요.",
+    "en": "You look very tired. Please rest.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "그 문제는 쉬워 보이지만 사실은 아주 어렵다.",
+    "en": "That problem looks easy, but it is actually very hard.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-을 것 같다",
+    "difference": "“-어 보이다” rests on how something looks. “-을 것 같다” is a broader guess that also covers taste, feeling and the future.",
+    "pair": [
+     {
+      "ko": "이 케이크는 맛있어 보여요.",
+      "en": "This cake looks delicious."
+     },
+     {
+      "ko": "이 케이크는 맛있을 것 같아요.",
+      "en": "This cake seems like it will be delicious."
+     }
+    ]
+   },
+   {
+    "pattern": "-어 보다",
+    "difference": "“-어 보이다” (looks) and “-어 보다” (try) look alike and mean different things.",
+    "pair": [
+     {
+      "ko": "이 음식은 맛있어 보여요.",
+      "en": "This food looks delicious."
+     },
+     {
+      "ko": "이 음식을 먹어 봐요.",
+      "en": "Try this food."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "A ㅂ-irregular adjective turns ㅂ into “우”.",
+    "wrong": "오늘은 날씨가 춥어 보인다.",
+    "right": "오늘은 날씨가 추워 보인다.",
+    "en": "The weather looks cold today."
+   },
+   {
+    "note": "A ㅡ-stem drops the ㅡ before “-어”.",
+    "wrong": "그 옷을 입으면 예쁘어 보여요.",
+    "right": "그 옷을 입으면 예뻐 보여요.",
+    "en": "You look pretty in that outfit."
+   }
+  ],
+  "topik_tip": "Adjective plus “-어 보이다” is “looks X”; verb plus “-어 보다” is “try X-ing”.",
+  "review": {
+   "status": "draft"
+  }
+ },
+ {
+  "form": "-는다고3",
+  "level": 3,
+  "label": "reporting what someone said (indirect quote)",
+  "meaning_en": "The pattern of indirect quotation: “someone says/said that ...”. It rebuilds what was said as a clause of the speaker, with an ending by sentence type: statement “-ㄴ다고/-는다고/-다고”, question “-냐고”, suggestion “-자고”, command “-(으)라고”, followed by “하다/말하다/묻다”.",
+  "usage": "Statements: verbs “-ㄴ다고/-는다고” (“가다 → 간다고”, “먹다 → 먹는다고”, “살다 → 산다고”), adjectives “-다고” (“춥다 → 춥다고”), nouns “-(이)라고” (“학생이라고”), past “-었다고”. Questions: “-냐고, -느냐고”. Suggestions: “-자고”. Commands: “-(으)라고”. Pronouns and polite endings shift to the reporter's point of view. In casual speech “-다고 해요” contracts to “-대요”, “-냐고 해요” to “-냬요”, “-자고 해요” to “-재요”, “-라고 해요” to “-래요”.",
+  "examples": [
+   {
+    "ko": "민준이는 내일 일찍 출발한다고 했어요.",
+    "en": "Minjun said that they would set off early tomorrow.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "지수가 요즘 너무 바쁘다고 해요.",
+    "en": "Jisu says that they are very busy these days.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "선생님이 내일까지 숙제를 내라고 하셨다.",
+    "en": "The teacher told us to hand in the homework by tomorrow.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "친구가 같이 영화를 보자고 했다.",
+    "en": "My friend suggested that we watch a movie together.",
+    "ctx": "conversation"
+   },
+   {
+    "ko": "엄마가 밥은 먹었냐고 물으셨다.",
+    "en": "Mom asked whether I had eaten.",
+    "ctx": "conversation"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-이라고",
+    "difference": "A direct quote with “라고” keeps the words as spoken; “-다고” reports them from the speaker's own point of view.",
+    "pair": [
+     {
+      "ko": "민준이는 “내일 갈게”라고 했다.",
+      "en": "Minjun said, “I'll go tomorrow.”"
+     },
+     {
+      "ko": "민준이는 내일 간다고 했다.",
+      "en": "Minjun said that they would go tomorrow."
+     }
+    ]
+   },
+   {
+    "pattern": "-대요",
+    "difference": "“-다고 해요” is the full form of the report. The contracted spoken form is “-대요”.",
+    "pair": [
+     {
+      "ko": "민준이가 내일 간다고 해요.",
+      "en": "Minjun says that they will go tomorrow."
+     },
+     {
+      "ko": "민준이가 내일 간대요.",
+      "en": "Minjun says they will go tomorrow."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "An adjective takes “-다고”, not “-ㄴ다고/-는다고”.",
+    "wrong": "날씨가 춥는다고 했다.",
+    "right": "날씨가 춥다고 했다.",
+    "en": "They said that the weather was cold."
+   },
+   {
+    "note": "After a noun the quote ending is “-(이)라고”, not “-다고”.",
+    "wrong": "그 사람이 학생이다고 했다.",
+    "right": "그 사람이 학생이라고 했다.",
+    "en": "They said that person is a student."
+   }
+  ],
+  "topik_tip": "Sentence type decides the ending: statement “-다고”, question “-냐고”, suggestion “-자고”, command “-라고”.",
+  "review": {
+   "status": "draft"
+  }
  }
 ]
