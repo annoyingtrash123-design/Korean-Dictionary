@@ -2,7 +2,10 @@ import { downloadAll, expect, test, type Page } from './fixtures';
 
 const firstRow = (page: Page) => page.locator('.row .hw').first();
 async function search(page: Page, q: string) {
-  await page.getByRole('searchbox', { name: 'Search' }).fill(q);
+  // the search box lives on the Search tab only (this is called from Settings)
+  const box = page.getByRole('searchbox', { name: 'Search' });
+  if (!(await box.count())) await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Search' }).click();
+  await box.fill(q);
   await expect(page.locator(`.page[data-q="${q}"][data-busy="0"]`)).toBeVisible({ timeout: 30_000 });
 }
 const serveManifest = (page: Page, edit: (m: any) => void) =>
