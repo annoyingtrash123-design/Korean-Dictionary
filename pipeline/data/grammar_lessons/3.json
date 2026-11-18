@@ -1133,7 +1133,7 @@
     "note": "A stem ending in ㄹ drops the ㄹ before “-나”.",
     "wrong": "비록 가난하게 살으나 마음은 풍요롭다.",
     "right": "비록 가난하게 사나 마음은 풍요롭다.",
-    "en": "They live in poverty, but their hearts are rich."
+    "en": "Though one lives in poverty, one’s heart is rich."
    },
    {
     "note": "A ㅂ-irregular adjective turns ㅂ into “우” before the vowel.",
@@ -1144,7 +1144,9 @@
   ],
   "topik_tip": "“-으나” and “-지만” share a meaning; the register is what tells them apart.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1161,7 +1163,7 @@
    },
    {
     "ko": "아이를 돌보느라고 정신이 없었다.",
-    "en": "I was in a frenzy looking after the child.",
+    "en": "I was frantically busy looking after the child.",
     "ctx": "conversation"
    },
    {
@@ -1221,12 +1223,14 @@
     "note": "Both clauses need the same subject; with a different subject use “-는 바람에”.",
     "wrong": "민준이가 노래하느라고 내가 잠을 못 잤다.",
     "right": "민준이가 노래하는 바람에 내가 잠을 못 잤다.",
-    "en": "Minjun sang, and so I could not sleep."
+    "en": "Because Minjun was singing, I could not sleep."
    }
   ],
   "topik_tip": "Same subject, verb stem, no tense ending, negative result: that checklist covers most “-느라고” questions.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1308,7 +1312,9 @@
   ],
   "topik_tip": "In 읽기 answers, “-도록” is “so that” when a goal follows and “until/to the point that” when a result or extreme follows; the two choices are usually clear from the main clause.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1389,7 +1395,9 @@
   ],
   "topik_tip": "Moving the object is the key: “-어다가” needs an object that travels, as in “사다가, 가져다가, 데려다가”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1397,7 +1405,7 @@
   "level": 3,
   "label": "even if, even though",
   "meaning_en": "A concessive connective ending: “even if X, ... / no matter how X, ...”. The first clause does not stop the second from being true, and X may be hypothetical or a fact.",
-  "usage": "It attaches to verb, adjective and “이다” stems with the “-아/어” vowel: “오다 → 와도”, “먹다 → 먹어도”, “하다 → 해도”, “쓰다 → 써도”, “듣다 → 들어도” (ㄷ becomes ㄹ), “어렵다 → 어려워도”, “빠르다 → 빨라도”; “학생이다 → 학생이어도”. Often with “아무리” (however much), “-어도 -어도” (no matter how much), and negative or contrasting main clauses. It is not the permission pattern “-어도 되다”.",
+  "usage": "It attaches to verb, adjective and “이다” stems with the “-아/어” vowel: “오다 → 와도”, “먹다 → 먹어도”, “하다 → 해도”, “쓰다 → 써도”, “듣다 → 들어도” (ㄷ becomes ㄹ), “어렵다 → 어려워도”, “빠르다 → 빨라도”; “학생이다 → 학생이어도”, also “학생이라도”. Often with “아무리” (however much), “-어도 -어도” (no matter how much), and negative or contrasting main clauses. It is not the permission pattern “-어도 되다”.",
   "examples": [
    {
     "ko": "비가 와도 우리는 예정대로 출발합니다.",
@@ -1471,7 +1479,9 @@
   ],
   "topik_tip": "Do not mix it up with the permission pattern “-어도 되다”; when no “되다” follows, “-어도” is “even if”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1542,12 +1552,14 @@
     "note": "A ㅂ-irregular adjective turns ㅂ into “우” and adds “-어”: “쉽다” becomes “쉬워”.",
     "wrong": "문제가 쉽어야 풀 수 있죠.",
     "right": "문제가 쉬워야 풀 수 있죠.",
-    "en": "Only if the problem is easy can they solve it."
+    "en": "You can solve the problem only if it is easy."
    }
   ],
   "topik_tip": "Contrast “-으면” (sufficient) and “-어야” (necessary): the second says “only if”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1564,7 +1576,7 @@
    },
    {
     "ko": "일찍 일어나야지 지각하지 않아요.",
-    "en": "You will not be late only if you get up early.",
+    "en": "Only by getting up early will you avoid being late.",
     "ctx": "conversation"
    },
    {
@@ -1578,8 +1590,8 @@
     "ctx": "conversation"
    },
    {
-    "ko": "이제부터는 책을 읽어야지.",
-    "en": "From now on, I should read books.",
+    "ko": "돈이 있어야지 여행을 가지.",
+    "en": "You can only travel if you have money.",
     "ctx": "conversation"
    }
   ],
@@ -1618,12 +1630,14 @@
     "note": "A ㅂ-irregular adjective turns ㅂ into “우” before the vowel: “쉽다” becomes “쉬워”.",
     "wrong": "문제가 쉽어야지 풀지.",
     "right": "문제가 쉬워야지 풀지.",
-    "en": "They can solve the problem only if it is easy."
+    "en": "You can solve the problem only if it is easy."
    }
   ],
   "topik_tip": "The connective reading needs a second clause; when “-어야지” ends the sentence, the meaning shifts to “I should/will”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1670,7 +1684,7 @@
      },
      {
       "ko": "민준이가 열심히 공부하더니 성적이 올랐다.",
-      "en": "Minjun studied hard, and then their grades went up."
+      "en": "Minjun studied hard, and then Minjun’s grades went up."
      }
     ]
    },
@@ -1705,7 +1719,9 @@
   ],
   "topik_tip": "Look for the speaker as agent in the first clause and an observed result in the second.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1787,7 +1803,9 @@
   ],
   "topik_tip": "“-자마자” never takes “-었-”: “도착하자마자”, not “도착했자마자”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1819,7 +1837,7 @@
    },
    {
     "ko": "아이가 울다가 웃다가 하면서 금방 기분이 바뀐다.",
-    "en": "The child's mood changes quickly, crying, then laughing, then crying again.",
+    "en": "The child cries one moment and laughs the next; the mood changes in a flash.",
     "ctx": "essay"
    }
   ],
@@ -1848,7 +1866,7 @@
      },
      {
       "ko": "책을 읽다 보니 어느새 새벽이었다.",
-      "en": "As I kept reading, it had become dawn before I knew it."
+      "en": "I kept reading, and before I knew it, it was dawn."
      }
     ]
    }
@@ -1863,7 +1881,9 @@
   ],
   "topik_tip": "Both “-다가1(1)” and “-다가1(2)” are the same ending in the list; this row stands for “while doing X, Y occurred / because of X”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1945,7 +1965,9 @@
   ],
   "topik_tip": "“-으니” can introduce a reason or a discovery; “-어서” is the one that refuses a command in the main clause.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2027,7 +2049,9 @@
   ],
   "topik_tip": "Do not mix the ㄹ-stem “살려면” (to live) with “사려면” (to buy).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2039,7 +2063,7 @@
   "examples": [
    {
     "ko": "어릴 때 살던 집에 다시 가 보았다.",
-    "en": "I went to see again the house where I lived as a child.",
+    "en": "I went back to see the house I lived in as a child.",
     "ctx": "essay"
    },
    {
@@ -2054,7 +2078,7 @@
    },
    {
     "ko": "이 노래는 어머니가 자주 부르시던 노래예요.",
-    "en": "This song is one my mother often sang.",
+    "en": "This is a song my mother often used to sing.",
     "ctx": "conversation"
    },
    {
@@ -2109,7 +2133,9 @@
   ],
   "topik_tip": "Unfinished or repeated gives “-던”; finished gives “-은/-었던”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2141,7 +2167,7 @@
    },
    {
     "ko": "지수는 지금 못 와요. 아직 회의 중이거든요.",
-    "en": "Jisu cannot come now. They are still in a meeting, you see.",
+    "en": "Jisu cannot come now. Jisu is still in a meeting, you see.",
     "ctx": "conversation"
    }
   ],
@@ -2191,7 +2217,9 @@
   ],
   "topik_tip": "The curriculum tags this row as “이유” (reason); the sentence it ends is the explanation, and it can leave the story open.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {

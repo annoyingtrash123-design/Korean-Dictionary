@@ -23,3 +23,17 @@ Per lesson: form, outcome, what changed.
 | -거든1 | approved | Usage restricted the main clause to commands/requests/promises; krdict has an intention (맛있거든 … 사 먹어야겠어요): added. The “-으면” pair had an illogical sentence (비가 그치면 길이 막힌다); now -거든/-으면 with the same proposal, the statement case left to the pitfall. |
 | -는다거나1 | approved | Meaning called it a contraction; krdict lists it as one expression (now “comes from … but works as one unit”). Usage said it is always repeated; krdict has single uses (뛴다거나 소리를 지르면 안 된다). The “-기도 하고” compare called them near-synonyms while describing a real difference; reworded. |
 | -는다고1 | approved | None needed (krdict -는다고1 purpose/reason; the -느라고 contrast on subjects is right). |
+| -으나 | approved | Pitfall English invented “they”; now generic “one”. |
+| -느라고 | approved | Pitfall 2 English (“Minjun sang, and so …”) now gives the cause; example 2 English (“in a frenzy”). |
+| -도록 | approved | None needed (checked 만들다 → 만들도록, the ㄹ stays). |
+| -어다가 | approved | None needed (checked 담그다 → 담가다가). |
+| -어도 | approved | Usage adds the variant “학생이라도” that the curriculum row lists. |
+| -어야 | approved | Pitfall English invented “they”. |
+| -어야지1 | approved | Example 5 “이제부터는 책을 읽어야지” is the sentence-final -어야지 (resolution; the 4급 -어야지2 lesson), not the 필수 조건 connective; replaced by “돈이 있어야지 여행을 가지”. Example 2 English (“You will not be late only if you get up early”, logic garbled) and pitfall English (“they”) fixed. |
+| -었더니 | approved | “-더니” compare English used “their” for Minjun; reworded. |
+| -자마자 | approved | None needed. |
+| -다가1(2) | approved | The row is 중단 like 2급 -다가1(1); this lesson takes krdict senses 2–4 (in progress / cause / alternation) and leaves the switch to 2급, which matches the split. Example 5 English added a second “crying again”; compare English tense. |
+| -으니2 | approved | None needed. |
+| -으려면 | approved | None needed (checked 걷다 → 걸으려면, 눕다 → 누우려면, 살다 → 살려면). |
+| -던- | approved | Two English sentences (word order; “often sang” → “often used to sing”). |
+| -거든2 | approved | Example 5 English “They” for Jisu → Jisu. |
