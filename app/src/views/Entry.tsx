@@ -25,7 +25,10 @@ import { altReadings, hanjaParts, usualForm, usualReading } from '../lib/hanja-m
 type Loaded = { primary: Entry | null; entries: Entry[] };
 const viewCache = new Lru<Loaded>(40);
 
-export function EntryView({ source, id, hw, word, pref }: { source?: string; id?: number; hw?: string; word?: string; pref?: Partial<EntryRef> }) {
+type EntryProps = { source?: string; id?: number; hw?: string; word?: string; pref?: Partial<EntryRef> };
+
+/** An entry and the other dictionaries' entries of the same word (cached per pack set). */
+function useEntryLoad({ source, id, hw, word, pref }: EntryProps) {
   const s = useStore(settings);
   const status = useStore(packStatus$);
   const stamp = JSON.stringify(Object.values(status?.packs ?? {}).map((p) => p.version));
@@ -53,7 +56,12 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
     viewCache.set(ck, out);
     return out;
   }, [source, id, word, pref?.source, pref?.homonym, pref?.pos, packsKey(s), stamp], () => viewCache.get(ck));
+  return r;
+}
 
+export function EntryView(props: EntryProps) {
+  const { hw, word } = props;
+  const r = useEntryLoad(props);
   const primary = r.data?.primary;
   const hasHanja = !!primary?.hanja && hanChars(primary.hanja).length > 0;
   const [tab, setTab] = useEntryTab(hasHanja);
@@ -69,26 +77,47 @@ export function EntryView({ source, id, hw, word, pref }: { source?: string; id?
     return <div class="page"><Empty title="Entry not found">{t ? <a href={href(searchPath(t))}>Search for “{t}”</a> : 'It may have been removed in a dictionary update.'}</Empty></div>;
   }
   const entries = r.data!.entries;
-  const bySource = SOURCE_ORDER.map((src) => ({ src, list: entries.filter((e) => e.source === src) })).filter((x) => x.list.length);
   return (
     <article class="page entry" style={{ fontSize: 'var(--entry-font-size)' }}>
       <Header primary={primary} entries={entries} />
       <TabBar tab={tab} onTab={setTab} hasHanja={hasHanja} />
       <div class="etab-panel" role="tabpanel" id="etab-panel" aria-labelledby={`etab-${tab}`}>
-        {tab === 'dict' && bySource.map(({ src, list }) => (
-          <details key={src} class="dict" open>
-            <summary><span>{SOURCE_TITLE[src]}</span><Icon name="down" size={18} /></summary>
-            {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
-          </details>
-        ))}
-        {tab === 'dict' && <GrammarLessons source={primary.source} id={primary.id} />}
-        {tab === 'dict' && <SimilarWords primary={primary} />}
+        {tab === 'dict' && <DictPanel primary={primary} entries={entries} />}
         {tab === 'words' && <WordsTab primary={primary} />}
         {tab === 'chars' && <CharsTab primary={primary} />}
         {tab === 'sents' && <SentsTab headword={primary.headword} />}
       </div>
     </article>
   );
+}
+
+/** The Dict tab: every dictionary's senses of the word, its grammar lessons, similar words. */
+function DictPanel({ primary, entries }: { primary: Entry; entries: Entry[] }) {
+  const s = useStore(settings);
+  const bySource = SOURCE_ORDER.map((src) => ({ src, list: entries.filter((e) => e.source === src) })).filter((x) => x.list.length);
+  return (
+    <>
+      {bySource.map(({ src, list }) => (
+        <details key={src} class="dict" open>
+          <summary><span>{SOURCE_TITLE[src]}</span><Icon name="down" size={18} /></summary>
+          {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
+        </details>
+      ))}
+      <GrammarLessons source={primary.source} id={primary.id} />
+      <SimilarWords primary={primary} />
+    </>
+  );
+}
+
+/** The whole entry (the Dict tab's content) inside another page, e.g. a Home card: no header, no tabs,
+ *  and opening it here does not count as a visit (history). */
+export function EntryInline(props: EntryProps) {
+  const r = useEntryLoad(props);
+  const primary = r.data?.primary;
+  const showSkel = useDelayed(r.loading && !r.data, 150);
+  if (r.loading && !r.data) return showSkel ? <div class="skeleton" /> : null;
+  if (r.error || !primary) return null;
+  return <div class="entry entry-inline"><DictPanel primary={primary} entries={r.data!.entries} /></div>;
 }
 
 function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
