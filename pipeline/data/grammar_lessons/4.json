@@ -1644,7 +1644,7 @@
   "level": 4,
   "label": "since, therefore (formal)",
   "meaning_en": "A formal connective ending giving a reason or cause: “since, because, therefore”. It is the written counterpart of “-으니까” and “-아서” and is common in announcements, rules, reports and arguments.",
-  "usage": "It attaches to verb and adjective stems as “-으므로”, or “-므로” after a vowel or ㄹ (“살므로”, “바쁘므로”), to “이다” as “이므로”, and after “-었-” (“내렸으므로”). The main clause states the conclusion or measure that follows. It is formal and written, so in conversation “-으니까” or “-아서” is used. The spoken-style “-기 때문에” is a close equivalent.",
+  "usage": "It attaches to verb and adjective stems as “-으므로”, or “-므로” after a vowel or ㄹ (“살므로”, “바쁘므로”), to “이다” as “이므로”, and after “-었-” (“내렸으므로”). The main clause states the conclusion or measure that follows. It is formal and written, so in conversation “-으니까” or “-아서” is used. The neutral “-기 때문에” is a close equivalent.",
   "examples": [
    {
     "ko": "내일은 휴일이므로 도서관이 문을 닫습니다.",
@@ -1668,7 +1668,7 @@
    },
    {
     "ko": "피해가 심각하므로 정부는 긴급 지원을 결정했다.",
-    "en": "The damage is serious, so the government decided on emergency aid.",
+    "en": "The damage was serious, so the government decided on emergency aid.",
     "ctx": "news"
    }
   ],
@@ -1717,7 +1717,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1725,11 +1727,11 @@
   "level": 4,
   "label": "even if I want to, I can't",
   "meaning_en": "A colloquial connective ending that says one has the wish to do something, yet cannot: “even if I wanted to X, I can't”. The verb is repeated in the main clause.",
-  "usage": "It attaches to verb stems as “-을래야”, or “-ㄹ래야” after a vowel or ㄹ (“갈래야”, “잊을래야”), and the same verb is repeated with “-ㄹ 수 없다”, “-ㄹ 수가 없다”, “못 -” or “-ㄹ 방법이 없다”. The main clause is always a denial of ability or possibility. It is the spoken form of “-으려야”. It is used in conversation and informal writing.",
+  "usage": "It attaches to verb stems as “-을래야”, or “-ㄹ래야” after a vowel or ㄹ (“갈래야”, “잊을래야”), and the same verb is repeated with “-ㄹ 수 없다”, “-ㄹ 수가 없다”, “못 -” or “-ㄹ 방법이 없다”. The main clause is always a denial of ability or possibility. It is the everyday spoken form of “-으려야”; the standard dictionaries accept only “-으려야” (“잊으려야 잊을 수 없다”), so that is the spelling for formal writing.",
   "examples": [
    {
     "ko": "그 장면은 잊을래야 잊을 수가 없다.",
-    "en": "I couldn't forget that scene even if I wanted to.",
+    "en": "I can't forget that scene even if I try.",
     "ctx": "collocation"
    },
    {
@@ -1756,7 +1758,7 @@
   "compare": [
    {
     "pattern": "-으려야",
-    "difference": "The two are the same expression, “-을래야” being the spoken pronunciation.",
+    "difference": "The same expression: “-으려야” is the standard spelling, and “-을래야” is how most people say it.",
     "pair": [
      {
       "ko": "잊으려야 잊을 수 없다.",
@@ -1792,7 +1794,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1867,14 +1871,16 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-는다면1",
   "level": 4,
   "label": "if (supposing that)",
-  "meaning_en": "A connective ending for a supposition: “if, supposing that, in case X”. It is a contraction of “-는다고 하면” and sets up an imagined or reported situation.",
+  "meaning_en": "A connective ending for a supposition: “if, supposing that, in case X”. It sets up a supposed situation, often an imagined or unlikely one.",
   "usage": "It attaches to verb stems as “-ㄴ다면/-는다면”, to adjective stems and past forms as “-다면” (“좋다면”, “갔다면”), and to “이다” as “-라면” (“학생이라면”). It suits supposed, hypothetical or reported situations, and the main clause can state a wish, a plan or a judgement. The “-었다면” form speaks of a past that did not happen or an assumed past. It is used in speech and writing.",
   "examples": [
    {
@@ -1934,7 +1940,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1990,12 +1998,12 @@
     "difference": "“-다가” says an action was interrupted or switched; “-더니” links an observed action with its result or change.",
     "pair": [
      {
-      "ko": "자다가 일어났다.",
-      "en": "I was sleeping and got up."
+      "ko": "책을 읽다가 잠이 들었다.",
+      "en": "I fell asleep while reading."
      },
      {
-      "ko": "자더니 일어났다.",
-      "en": "They slept and then got up."
+      "ko": "동생은 책을 읽더니 갑자기 웃기 시작했다.",
+      "en": "My younger sibling read the book and then suddenly started laughing."
      }
     ]
    }
@@ -2009,7 +2017,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2084,7 +2094,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2159,7 +2171,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2234,7 +2248,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2262,7 +2278,7 @@
    {
     "ko": "나는 커피를 마시며 신문을 읽었다.",
     "en": "I read the newspaper while drinking coffee.",
-    "ctx": "conversation"
+    "ctx": "essay"
    },
    {
     "ko": "이분은 의사이며 작가이다.",
@@ -2287,15 +2303,15 @@
    },
    {
     "pattern": "-고",
-    "difference": "“-고” can mark a sequence; “-으며” marks things happening together or things listed.",
+    "difference": "“-고” can mark a sequence (one action, then the next); “-으며” marks things happening together or things listed.",
     "pair": [
      {
-      "ko": "손을 씻고 밥을 먹었다.",
-      "en": "I washed my hands and then ate."
+      "ko": "음악을 듣고 밥을 먹었다.",
+      "en": "I listened to music and then ate."
      },
      {
-      "ko": "웃으며 이야기했다.",
-      "en": "I talked, smiling."
+      "ko": "음악을 들으며 밥을 먹었다.",
+      "en": "I ate while listening to music."
      }
     ]
    }
@@ -2309,15 +2325,17 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-는다니2",
   "level": 4,
-  "label": "how can it be? echo question",
-  "meaning_en": "A sentence-final ending that throws a reported or just-noticed fact back as a question of disbelief or indignation, often with a question word: “how can you…?, when on earth…?”. It is informal.",
-  "usage": "It attaches to verb stems as “-ㄴ다니/-는다니”, to adjective stems and past forms as “-다니” (“춥다니”, “잤다니”), and to “이다” as “-라니”. It is often combined with a question word (“어떻게”, “언제”, “누가”, “왜”) in a rhetorical question, and it is spoken with rising intonation. It is informal (“반말”); the polite form adds “요” (“-ㄴ다니요”).",
+  "label": "how on earth…? puzzled question",
+  "meaning_en": "A sentence-final ending that takes a fact as given and questions it, usually with a question word and a note of puzzlement or complaint: “how on earth…?, why is it that…?, when are we ever going to…?”. It is less a request for information than the speaker wondering aloud.",
+  "usage": "It attaches to verb stems as “-ㄴ다니/-는다니” (“읽는다니”, “간다니”), to adjective stems and past forms as “-다니” (“춥다니”, “잤다니”), and to “이다” as “-라니”. It usually goes with a question word (“어떻게”, “언제”, “왜”, “누가”) and rising intonation. It is plain speech (krdict: “아주낮춤”), heard mostly from an older speaker to a younger listener or when talking to oneself, and it has no polite form. Do not confuse it with the surprised echo “-다니요?” (level-4 “-다니1”), which repeats what was just said.",
   "examples": [
    {
     "ko": "밥을 먹고 어떻게 바로 눕는다니?",
@@ -2335,62 +2353,64 @@
     "ctx": "collocation"
    },
    {
-    "ko": "그렇게 일찍 출발한다니? 그럼 아침은 언제 먹어?",
-    "en": "You're leaving that early? Then when do you eat breakfast?",
+    "ko": "너희 반은 왜 그렇게 시끄럽다니?",
+    "en": "Why on earth is your class so noisy?",
     "ctx": "conversation"
    },
    {
-    "ko": "벌써 열 시인데 아직도 안 일어났다니?",
-    "en": "It's already ten o'clock, and you still haven't gotten up?",
+    "ko": "추석이 지난 지가 언제인데 아직도 이렇게 덥다니?",
+    "en": "Chuseok is long past; how can it still be this hot?",
     "ctx": "conversation"
    }
   ],
   "compare": [
    {
-    "pattern": "-는다고?",
-    "difference": "“-는다고?” checks what was said; “-는다니?” reacts to it with disbelief.",
+    "pattern": "-을까",
+    "difference": "“-을까?” wonders neutrally; “-는다니?” takes the fact as given and questions it, often with a hint of complaint.",
     "pair": [
      {
-      "ko": "벌써 간다고?",
-      "en": "Did you say you're going already?"
+      "ko": "이건 어떻게 읽을까?",
+      "en": "How should this be read, I wonder?"
      },
      {
-      "ko": "벌써 간다니?",
-      "en": "You're going already?!"
+      "ko": "이건 어떻게 읽는다니?",
+      "en": "How on earth do you read this?"
      }
     ]
    },
    {
-    "pattern": "-는다면서",
-    "difference": "“-는다면서?” asks to confirm what the speaker heard; “-는다니?” protests or marvels at it.",
+    "pattern": "-다니요",
+    "difference": "The echo “-다니요?” repeats what was just said, in surprise, and can be polite; “-는다니?” questions a fact taken as given, usually with a question word, and has no polite form.",
     "pair": [
      {
-      "ko": "내일 떠난다면서?",
-      "en": "I heard you are leaving tomorrow, is that right?"
+      "ko": "길이 막힌다니요? 아까는 괜찮았는데요.",
+      "en": "The traffic is bad? It was fine a while ago."
      },
      {
-      "ko": "내일 떠난다니?",
-      "en": "You're leaving tomorrow?!"
+      "ko": "왜 이렇게 길이 막힌다니?",
+      "en": "Why on earth is the traffic so bad?"
      }
     ]
    }
   ],
   "pitfalls": [
    {
-    "note": "The informal ending needs “요” when speaking to someone to whom you speak politely.",
-    "wrong": "교수님, 오늘 수업이 없다니?",
-    "right": "교수님, 오늘 수업이 없다니요?",
-    "en": "Professor, there is no class today?"
+    "note": "It is plain speech with no polite form; to someone you address politely ask with “-어요?” or “-나요?”.",
+    "wrong": "교수님, 이건 어떻게 읽는다니?",
+    "right": "교수님, 이건 어떻게 읽어요?",
+    "en": "Professor, how do you read this?"
    },
    {
     "note": "An adjective takes “-다니”, with no “-는”.",
-    "wrong": "벌써 이렇게 춥는다니?",
-    "right": "벌써 이렇게 춥다니?",
-    "en": "It is already this cold?"
+    "wrong": "왜 벌써 이렇게 춥는다니?",
+    "right": "왜 벌써 이렇게 춥다니?",
+    "en": "Why on earth is it already this cold?"
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2465,15 +2485,17 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "-더라",
   "level": 4,
   "label": "I found it was; what was it?",
-  "meaning_en": "A sentence-final ending with two uses. It reports something the speaker found out firsthand (“it turned out to be…”), and, with the speaker as subject, it voices a half-remembered thing as a question to oneself (“what was it again?”).",
-  "usage": "It attaches to verb and adjective stems, to “이다” (“이더라”), and after “-었-”. In the report use the speaker saw or felt the fact and the subject is not the speaker's own decision. In the recall use it is a question to oneself, often with a question word (“어디에 뒀더라?”). It is the plain “해라” level, and the polite form of the report is “-더라고요”.",
+  "meaning_en": "A sentence-final ending with two uses. It reports something the speaker found out firsthand (“it turned out to be…”), and, as a question, it calls up something half-remembered, asking oneself or someone who shared the experience (“what was it again?”).",
+  "usage": "It attaches to verb and adjective stems, to “이다” (“이더라”), and after “-었-”. In the report use the speaker saw or felt the fact and the subject is not the speaker's own decision. In the recall use it is a question to oneself or to someone who was there, usually with a question word (“어디에 뒀더라?”, “우리가 어디서 만났더라?”). It is the plain “해라” level, and the polite form of the report is “-더라고요”.",
   "examples": [
    {
     "ko": "오랜만에 가 보니 그 식당 손님이 많이 줄었더라.",
@@ -2487,7 +2509,7 @@
    },
    {
     "ko": "그 아이가 벌써 중학생이더라.",
-    "en": "That child is already a middle-schooler.",
+    "en": "It turned out that child is already in middle school.",
     "ctx": "conversation"
    },
    {
@@ -2540,7 +2562,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2593,7 +2617,7 @@
    },
    {
     "pattern": "-거라",
-    "difference": "Both are commands at the “해라” level; “-거라” is limited to certain verbs and to someone older speaking down.",
+    "difference": "Both are commands at the “해라” level; “-거라” sounds like an elder speaking and is most common with a few verbs such as “가다” and “자다”.",
     "pair": [
      {
       "ko": "어서 가라.",
@@ -2621,7 +2645,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -2629,7 +2655,7 @@
   "level": 4,
   "label": "guess! rhetorical -ge?",
   "meaning_en": "A sentence-final ending that asks a question to which the speaker has a point to make: a guessing quiz (“guess what…!”), a rhetorical question that denies something (“would I really…?”), or a question about the listener's intention. The polite form is “-게요?”.",
-  "usage": "It attaches to verb and adjective stems, to “이다” (“-이게”), and after “-었-”. In the quiz use it follows a question word and a past tense (“누구를 만났게?”). In the rhetorical use the “-면” clause supposes something absurd and “-게?” rejects it (“공부 안 하고 합격하면 누가 공부하게?”). In the intention use the speaker is surprised at a plan (“그만 드시게요?”). It is spoken with rising intonation and is informal.",
+  "usage": "It attaches to verb and adjective stems, to “이다” (“-이게”), and after “-었-”. In the quiz use it follows a question word (“이게 뭐게?”, “누구를 만났게?”). In the rhetorical use the “-면” clause supposes something absurd and “-게?” rejects it (“공부 안 하고 합격하면 누가 공부하게?”). In the intention use the speaker is surprised at a plan (“그만 드시게요?”). It is spoken with rising intonation and is informal.",
   "examples": [
    {
     "ko": "연습도 안 하고 합격하면 누가 공부하게?",
@@ -2663,8 +2689,8 @@
     "difference": "“-을까?” wonders; “-게?” in the quiz use asks the listener to guess and often hints that the answer is surprising.",
     "pair": [
      {
-      "ko": "내가 누구를 만났을까?",
-      "en": "I wonder whom I met."
+      "ko": "민준이가 누구를 만났을까?",
+      "en": "I wonder whom Minjun met."
      },
      {
       "ko": "내가 누구를 만났게?",
@@ -2689,7 +2715,7 @@
   ],
   "pitfalls": [
    {
-    "note": "In the quiz use the verb is in the past, and it is not the “-ㄹ게” of a promise.",
+    "note": "In the quiz use it is “-게”, not the “-ㄹ게” of a promise.",
     "wrong": "내가 누구를 만날게?",
     "right": "내가 누구를 만났게?",
     "en": "Guess whom I met."
@@ -2702,7 +2728,9 @@
    }
   ],
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
