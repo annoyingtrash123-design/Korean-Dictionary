@@ -48,7 +48,7 @@
      },
      {
       "ko": "지수는 왔어요.",
-      "en": "As for Jisu, they came."
+      "en": "Jisu, at least, came (others may not have)."
      }
     ]
    },
@@ -83,7 +83,9 @@
   ],
   "topik_tip": "Questions with “누가/무엇이” are answered with “이/가”: the answer is the subject in focus.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -165,14 +167,16 @@
   ],
   "topik_tip": "The partner of “만나다, 싸우다, 결혼하다” takes “와/과” (or “하고/이랑”), not “을/를”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
   "form": "까지",
   "level": 1,
   "label": "until, up to, even",
-  "meaning_en": "A particle for the endpoint of a time or place range: “until, up to, as far as”. With a deadline verb it means “by”, and after a noun that is the last in a series it means “even”.",
+  "meaning_en": "A particle for the endpoint of a time or place range: “until, up to, as far as”. With a deadline verb it means “by”, and after a noun that tops a list of things it can mean “even, on top of everything”.",
   "usage": "It attaches to nouns of time and place: “열 시까지, 내일까지, 부산까지”. The pair “N부터 N까지” gives a range (“아홉 시부터 열 시까지”). With a continuing action it is “until” (“여섯 시까지 일해요”); with a one-time action such as “내다, 오다, 끝내다” it is a deadline, “by” (“내일까지 내세요”). In “너까지” it means “even you”. After a verb the ending form is “-ㄹ 때까지” (until the time when ...). It can be followed by other particles (“까지는, 까지도”).",
   "examples": [
    {
@@ -241,7 +245,9 @@
   ],
   "topik_tip": "“N까지” is “until” for a continuing action and “by” for a one-time deadline; both appear in TOPIK.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -323,7 +329,9 @@
   ],
   "topik_tip": "Honorific subjects bring a set: “께서”, “-시-”, and the special verbs (“계시다, 드시다, 주무시다”).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -331,7 +339,7 @@
   "level": 1,
   "label": "topic or contrast",
   "meaning_en": "The topic particle “은/는”: it presents the thing the sentence is about (“as for X”), marks what is already known or generic, and sets a thing against others (contrast). In the curriculum list this row is the contrast use.",
-  "usage": "After a consonant it is “은”, after a vowel “는”: “책은, 저는”. Topic: “서울은 한국의 수도입니다”. Known information: a thing mentioned before takes “은/는” (“영화를 봤어요. 영화는 재미있었어요”). Contrast: “커피는 마시지만 차는 안 마셔요”. Negatives and “에는/에서는/까지는” often carry it (“주말에는”). Compare the focus of “이/가”. In questions the topic is the item being asked about (“이름은 뭐예요?”).",
+  "usage": "After a consonant it is “은”, after a vowel “는”: “책은, 저는”. Topic: “서울은 한국의 수도입니다”. Known information: a thing mentioned before takes “은/는” (“영화를 봤어요. 영화는 재미있었어요”). Contrast: “커피는 마시지만 차는 안 마셔요”. Negative sentences often put it on the object for contrast (“고기는 안 먹어요”, meat is the one thing I don't eat), and it follows other particles (“에는, 에서는, 까지는”: “주말에는”). Compare the focus of “이/가”. In questions the topic is the item being asked about (“이름은 뭐예요?”).",
   "examples": [
    {
     "ko": "저는 커피는 마시지만 차는 안 마셔요.",
@@ -366,7 +374,7 @@
     "pair": [
      {
       "ko": "지수는 왔어요.",
-      "en": "As for Jisu, they came."
+      "en": "Jisu, at least, came (others may not have)."
      },
      {
       "ko": "지수가 왔어요.",
@@ -401,11 +409,19 @@
     "wrong": "내는 학생이에요.",
     "right": "나는 학생이에요.",
     "en": "I am a student."
+   },
+   {
+    "note": "Inside a modifier clause the subject takes “이/가”, not the topic “은/는”: the topic belongs to the whole sentence.",
+    "wrong": "이것은 저는 어제 산 책이에요.",
+    "right": "이것은 제가 어제 산 책이에요.",
+    "en": "This is the book I bought yesterday."
    }
   ],
   "topik_tip": "The contrast reading (“A, but B”) is shown by the repeated “은/는” in the two halves.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -413,7 +429,7 @@
   "level": 1,
   "label": "also, even, either",
   "meaning_en": "A particle meaning “too, also”, “even”, and, with a negative, “not even ... / not any ...”. It adds one more item to something already named.",
-  "usage": "It attaches to a noun and replaces “이/가/을/를” (“저도 갔어요”), or follows other particles (“에도, 에서도, 한테도, 까지도”). Repeated, “N도 N도” means “both ... and ...”. With a question word and a negative it means “none” (“아무도, 아무것도, 어디에도, 하나도”). With a counter it stresses a small amount: “한 명도 안 왔다”. “도” can also mean “even” (“점심도 못 먹었어요”).",
+  "usage": "It attaches to a noun and replaces “이/가/을/를” (“저도 갔어요”), or follows other particles (“에도, 에서도, 한테도, 까지도”). Repeated, “N도 N도” means “both ... and ...”. With “아무” or a question word and a negative it means “none” (“아무도, 아무것도, 어디에도, 하나도”). With a counter it stresses a small amount: “한 명도 안 왔다”. “도” can also mean “even” (“점심도 못 먹었어요”).",
   "examples": [
    {
     "ko": "저도 같이 갈게요.",
@@ -487,7 +503,9 @@
   ],
   "topik_tip": "“도” plus a negative verb (“아무도 안/못 ...”) is the “nobody/nothing” frame.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -569,7 +587,9 @@
   ],
   "topik_tip": "“좋아하다” takes “을/를” and “좋다” takes “이/가”: this pair is a classic.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -577,7 +597,7 @@
   "level": 1,
   "label": "with, and (spoken)",
   "meaning_en": "A spoken particle for “with” and “and”: “친구랑 영화를 봤어요” (with a friend), “사과랑 배” (apples and pears). It is the casual counterpart of “과/와” and “하고”.",
-  "usage": "After a consonant it is “이랑”, after a vowel “랑”: “동생이랑, 친구랑, 나랑”. It marks a partner (“나랑 같이 갈래?”), a list (“김밥이랑 라면을 먹었어요”), and a comparison (“이것이랑 같아요”). It is casual speech; in writing or in a formal talk “과/와” or “하고” is used. For listing, the last noun may carry “랑” too (“사과랑 배랑 포도랑”).",
+  "usage": "After a consonant it is “이랑”, after a vowel “랑”: “동생이랑, 친구랑, 나랑”. It marks a partner (“나랑 같이 갈래?”), a list (“김밥이랑 라면을 먹었어요”), and a comparison (“이것이랑 같아요”). It is casual speech; in writing or in a formal talk “과/와” is used, and “하고” is the neutral spoken choice. For listing, the last noun may carry “랑” too (“사과랑 배랑 포도랑”).",
   "examples": [
    {
     "ko": "어제 친구랑 영화 봤어.",
@@ -651,7 +671,9 @@
   ],
   "topik_tip": "The three “with/and” particles: “과/와” (written), “하고” (neutral), “이랑/랑” (casual).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -733,7 +755,9 @@
   ],
   "topik_tip": "Pick “으로” or “로” by the last sound of the noun: ㄹ and vowels give “로”, other consonants give “으로”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -772,11 +796,11 @@
   "compare": [
    {
     "pattern": "에서",
-    "difference": "“부터” is a start in time or order; “에서” is a start in place.",
+    "difference": "“부터” is the usual start in time or order; for a place of origin “에서” is used (“부터” alone appears with places only in phrases like “여기부터”, from here on).",
     "pair": [
      {
       "ko": "아침부터 걸었다.",
-      "en": "I have been walking since morning."
+      "en": "I walked from early morning on."
      },
      {
       "ko": "집에서 걸어왔다.",
@@ -815,7 +839,9 @@
   ],
   "topik_tip": "The frame “N부터 N까지” (from ... to ...) is among the first patterns tested.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -823,7 +849,7 @@
   "level": 1,
   "label": "at, to, on (time, place, target)",
   "meaning_en": "A particle with several basic jobs: a point in time (“세 시에”), the place where something exists or one is going (“책상 위에, 학교에”), a target of an action on a thing (“꽃에 물을 주다”), a cause (“바람에 쓰러지다”) and a rate (“하루에 세 번”).",
-  "usage": "It attaches to nouns. Time: clock times, days, months and seasons (“일곱 시에, 월요일에, 겨울에”); the words “오늘, 어제, 내일, 지금, 언제, 그때” do not take “에”. Existence and destination: “집에 있다, 학교에 가다, 서울에 살다”. Target: for a thing or place that receives (“꽃에 물을 주다, 벽에 그림을 걸다”); a person receives “에게/한테”. Rate: “하루에 세 번, 한 개에 천 원”. For a place where an action happens, “에서” is used.",
+  "usage": "It attaches to nouns. Time: clock times, days, months and seasons (“일곱 시에, 월요일에, 겨울에”); the words “오늘, 어제, 내일, 지금, 언제” do not take “에”. Existence and destination: “집에 있다, 학교에 가다, 서울에 살다”. Target: for a thing or place that receives (“꽃에 물을 주다, 벽에 그림을 걸다”); a person receives “에게/한테”. Rate: “하루에 세 번, 한 개에 천 원”. For a place where an action happens, “에서” is used.",
   "examples": [
    {
     "ko": "저는 아침 일곱 시에 일어나요.",
@@ -902,7 +928,9 @@
   ],
   "topik_tip": "“에” (point in time, place of existence, destination) versus “에서” (place of action) is the most tested particle contrast at this level.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -984,7 +1012,9 @@
   ],
   "topik_tip": "The honorific partner is “께”; the spoken partner is “한테”; the source version is “에게서”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1066,7 +1096,9 @@
   ],
   "topik_tip": "Remember the pair “에 있다” (be at) and “에서 -하다” (do at).",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1074,7 +1106,7 @@
   "level": 1,
   "label": "possessive “of, 's”",
   "meaning_en": "A particle linking two nouns: possession (“친구의 가방”), part of (“책의 제목”), relation or origin (“한국의 수도, 어머니의 사랑”). It is pronounced like “에” in speech, and often left out.",
-  "usage": "It attaches to the first noun: “N의 N”. With pronouns it contracts: “나의 → 내, 저의 → 제, 너의 → 네” (“제 가방, 내 친구”); “우리의” becomes “우리” without it. In compounds a noun used as a classifier takes no “의” (“한국 음식, 학교 친구”). The particle is written “의” though in ordinary speech it is pronounced like “에”. It is not attached to verbs or adjectives; those use modifier endings.",
+  "usage": "It attaches to the first noun: “N의 N”. With pronouns it contracts: “나의 → 내, 저의 → 제, 너의 → 네” (“제 가방, 내 친구”); “우리의” becomes “우리” without it. A noun that only says what type something is takes no “의” (“한국 음식, 학교 친구”). The particle is written “의” though in ordinary speech it is pronounced like “에”. It is not attached to verbs or adjectives; those use modifier endings.",
   "examples": [
    {
     "ko": "이것은 친구의 가방이에요.",
@@ -1093,7 +1125,7 @@
    },
    {
     "ko": "부모님의 사랑은 끝이 없다.",
-    "en": "A parent's love has no end.",
+    "en": "Parents' love has no end.",
     "ctx": "essay"
    },
    {
@@ -1148,7 +1180,9 @@
   ],
   "topik_tip": "Possessive pronouns contract (“제, 내, 네”) and then take no “의”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1224,7 +1258,9 @@
   ],
   "topik_tip": "Do not confuse the particle “하고” with the verb “하다” + “-고”: it joins nouns.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1232,7 +1268,7 @@
   "level": 1,
   "label": "only, just that one",
   "meaning_en": "A particle meaning “only, just”: it limits something to one thing and excludes the rest. It can also stress a minimum (“한 번만”).",
-  "usage": "It attaches to a noun, a counter phrase, an adverb or another particle: “커피만, 두 명만, 집에서만, 너에게만”. It replaces “이/가/을/를” (“저만 갔어요”, “커피만 마셔요”) and sits after others (“에서만, 에게만”). It goes with positive and negative predicates alike. For “only + a negative verb” the particle “밖에” is used; for “only” at the end of a sentence “뿐이다”. “이번만” means “just this once”.",
+  "usage": "It attaches to a noun, a counter phrase, an adverb or another particle: “커피만, 두 명만, 집에서만, 너에게만”. It replaces “이/가/을/를” (“저만 갔어요”, “커피만 마셔요”) and sits after others (“에서만, 에게만”). It goes with positive and negative predicates alike. To stress that something is all there is, and too little, the pattern is “밖에” + a negative (“물밖에 안 마셨다”); for “only” at the end of a sentence it is “뿐이다”. “이번만” means “just this once”.",
   "examples": [
    {
     "ko": "저는 커피만 마셔요.",
@@ -1300,7 +1336,9 @@
   ],
   "topik_tip": "“만” (any predicate), “밖에” (negative predicate) and “뿐” (with “이다”) are three ways to say only.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1308,7 +1346,7 @@
   "level": 1,
   "label": "to be: “X is Y” copula",
   "meaning_en": "The copula “to be”: it joins two nouns (“A is B”), names what something is, and in the negative is replaced by the adjective “아니다”. It is the one word that attaches to a noun and works like a verb or adjective, so it takes every ending and politeness level.",
-  "usage": "It is written attached to the noun, with no space (“학생이다”, “친구예요”). Plain: “이다” (written, essay and news style); polite: “이에요” after a final consonant and “예요” after a vowel (“학생이에요, 친구예요”); formal: “입니다” (“학생입니다, 친구입니다”). After a vowel the “이” may drop in speech and informal writing (“친구다”, “친구고”, “친구라서”), but never after a consonant (“학생이다, 학생이고, 학생이라서”). Past: “이었다/였다” (“학생이었어요, 친구였어요”). The negative is “N이/가 아니다” (“학생이 아니에요”), never “안 이다”. The syllable “이” here is not the subject particle “이/가”, though the two look alike.",
+  "usage": "It is written attached to the noun, with no space (“학생이다”, “친구예요”). Plain: “이다” (written, essay and news style); polite: “이에요” after a final consonant and “예요” after a vowel (“학생이에요, 친구예요”); formal: “입니다” (“학생입니다, 친구입니다”). After a vowel the “이” is usually dropped, in writing as well as speech (“의사다”, “친구고”, “친구라서”; past “친구였다”), but never after a consonant (“학생이다, 학생이고, 학생이라서”). Past: “이었다/였다” (“학생이었어요, 친구였어요”). The negative is “N이/가 아니다” (“학생이 아니에요”), never “안 이다”; its polite form is spelled “아니에요” (not “아니예요”). The syllable “이” here is not the subject particle “이/가”, though the two look alike.",
   "examples": [
    {
     "ko": "저는 한국 대학생이에요.",
@@ -1391,9 +1429,11 @@
     "en": "This is my friend."
    }
   ],
-  "topik_tip": "Tell the copula from the subject particle by what follows: “책이다, 책이에요, 책이고” end or continue a predicate, while “책이 있다” has a verb after it. In 쓰기, the plain “-이다” (“서울은 수도이다”) is the written-register form; do not mix it with “-이에요” in one text.",
+  "topik_tip": "Tell the copula from the subject particle by what follows: “책이다, 책이에요, 책이고” end or continue a predicate, while “책이 있다” has a verb after it. In the 쓰기 essay answers write the plain form “-이다” (“서울은 수도이다”) throughout; do not mix it with the polite “-이에요” in one text.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1469,7 +1509,9 @@
   ],
   "topik_tip": "In listening items “한테” and “에게” are interchangeable; “께” signals an honoured person.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1477,7 +1519,7 @@
   "level": 1,
   "label": "than (comparison)",
   "meaning_en": "A particle for the standard of a comparison: “A는 B보다 ...” means “A is more ... than B”. It is often combined with “더” (“more”) or “훨씬” (“much”).",
-  "usage": "It attaches to the thing that is compared against: “부산보다, 어제보다, 생각보다, 저보다”. The predicate is a comparable adjective or adverb: “크다, 많다, 빠르다, 좋아하다”. Frames: “A가 B보다 더 ...”, “B보다 A를 더 좋아하다”. “생각보다” (than I thought) and “기대보다” (than expected) are frequent set phrases. Equal comparisons use “만큼” or “처럼”. “보다” can also be an adverb meaning “more” (“보다 좋은 방법”).",
+  "usage": "It attaches to the thing that is compared against: “부산보다, 어제보다, 생각보다, 저보다”. The predicate is an adjective of degree (“크다, 많다, 빠르다”) or a verb with “더” or an adverb (“더 좋아하다, 빨리 달리다”). Frames: “A가 B보다 더 ...”, “B보다 A를 더 좋아하다”. “생각보다” (than I thought) and “기대보다” (than expected) are frequent set phrases. Equal comparisons use “만큼” or “처럼”. “보다” can also be an adverb meaning “more” (“보다 좋은 방법”).",
   "examples": [
    {
     "ko": "서울은 부산보다 인구가 많아요.",
@@ -1545,7 +1587,9 @@
   ],
   "topik_tip": "The set phrase “생각보다” (more ... than I thought) is the most frequent form.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1626,7 +1670,9 @@
   ],
   "topik_tip": "“알겠습니다 / 모르겠습니다 / 처음 뵙겠습니다” are polite formulas, not predictions.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1634,7 +1680,7 @@
   "level": 1,
   "label": "past tense",
   "meaning_en": "The past tense ending: “-았-/-었-/-였-” before the final ending marks an event or state in the past (“갔다, 먹었다, 했다”). With some verbs and adjectives it also marks a state that holds now as a result of a completed change.",
-  "usage": "It follows the stem with vowel harmony: “-았-” after ㅏ/ㅗ (“가다 → 갔다, 오다 → 왔다, 살다 → 살았다”), “-었-” after other vowels (“먹다 → 먹었다, 마시다 → 마셨다, 있다 → 있었다”), and “하다 → 했다”. Irregulars: “듣다 → 들었다” (ㄷ), “춥다 → 추웠다” (ㅂ), “쓰다 → 썼다” (ㅡ), “모르다 → 몰랐다” (“르”), “이다 → 이었다/였다”. Some verbs describe a present state in the past form: “결혼했어요” (I am married), “알겠어요”, “닫혔어요”. For an earlier past cut off from now see “-었었-”.",
+  "usage": "It follows the stem with vowel harmony: “-았-” after ㅏ/ㅗ (“가다 → 갔다, 오다 → 왔다, 살다 → 살았다”), “-었-” after other vowels (“먹다 → 먹었다, 마시다 → 마셨다, 있다 → 있었다”), and “하다 → 했다”. Irregulars: “듣다 → 들었다” (ㄷ), “춥다 → 추웠다” (ㅂ), “쓰다 → 썼다” (ㅡ), “모르다 → 몰랐다” (“르”), “이다 → 이었다/였다”. Some verbs describe a present state in the past form: “결혼했어요” (I am married), “알았어요” (got it), “닫혔어요” (it is closed). For an earlier past cut off from now see “-었었-”.",
   "examples": [
    {
     "ko": "어제 점심에 비빔밥을 먹었어요.",
@@ -1678,7 +1724,7 @@
      },
      {
       "ko": "작년에 서울에 살았었어요.",
-      "en": "I used to live in Seoul last year."
+      "en": "I lived in Seoul last year (but no longer do)."
      }
     ]
    },
@@ -1687,8 +1733,8 @@
     "difference": "“-었-” looks back, “-겠-” looks ahead or makes a guess.",
     "pair": [
      {
-      "ko": "내일 갔어요.",
-      "en": "I went tomorrow."
+      "ko": "어제 갔어요.",
+      "en": "I went yesterday."
      },
      {
       "ko": "내일 가겠어요.",
@@ -1713,7 +1759,9 @@
   ],
   "topik_tip": "“결혼했어요” (I am married) and “알았어요” (I understand) use the past form for a present state.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1801,7 +1849,9 @@
   ],
   "topik_tip": "The three honorific tools are the subject particle “께서”, the infix “-(으)시-” and special words like “드시다/계시다”.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
@@ -1809,7 +1859,7 @@
   "level": 1,
   "label": "and, then (listing, sequence)",
   "meaning_en": "A connective ending that lists equal facts (“키가 크고 잘생겼다”) or links actions in order (“밥을 먹고 학교에 갔다”). It says nothing about cause: the two parts are just joined.",
-  "usage": "It attaches to any stem without a change: “크다 → 크고”, “먹다 → 먹고”, “학생이다 → 학생이고”. Tense is shown once, on the final verb (“-었다”), and it applies to the whole sentence: “어제 영화를 보고 저녁을 먹었어요”. A tense inside the first clause (“-었고”) is possible for a finished state. The subject may be the same or different. For simultaneous actions “-으면서” is used; “-고 있다” is a different pattern (progressive).",
+  "usage": "It attaches to any stem without a change: “크다 → 크고”, “먹다 → 먹고”, “학생이다 → 학생이고”. Tense is shown once, on the final verb (“-었다”), and it applies to the whole sentence: “어제 영화를 보고 저녁을 먹었어요”. When two separate facts are listed rather than actions in sequence, each clause can carry its own tense (“어제는 비가 왔고 오늘은 맑아요”). The subject may be the same or different. For simultaneous actions “-으면서” is used; “-고 있다” is a different pattern (progressive).",
   "examples": [
    {
     "ko": "지수는 키가 크고 노래도 잘해요.",
@@ -1877,7 +1927,9 @@
   ],
   "topik_tip": "“-고” is the all-purpose “and”: it is a safe first choice, and “-고 나서” adds emphasis on completion.",
   "review": {
-   "status": "draft"
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
   }
  },
  {
