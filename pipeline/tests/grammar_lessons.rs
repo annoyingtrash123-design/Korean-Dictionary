@@ -19,17 +19,22 @@ fn lesson_files_pass_the_quality_gate() {
     }
 }
 
-/// The pilot batch: every 6급 pattern of the curriculum list has a lesson.
+/// Every level that has lessons covers every pattern of that level in the curriculum list (5급 once shipped
+/// without -다4 because only 6급 was checked). A level still being drafted has an empty file and is skipped.
 #[test]
-fn level_6_pilot_covers_every_pattern() {
-    let rows: Vec<_> = builtin_grammar().into_iter().filter(|g| g.level == 6).collect();
-    assert_eq!(rows.len(), 56);
+fn every_started_level_covers_every_pattern() {
     let lessons = builtin();
-    let have: HashSet<&str> = lessons.iter().filter(|l| l.level == 6).map(|l| l.form.as_str()).collect();
-    for g in &rows {
-        assert!(have.contains(lesson_key(&g.form_raw)), "no lesson for {}", g.form_raw);
+    assert!(lessons.iter().any(|l| l.level == 6), "the 6급 lessons are missing");
+    for level in 1..=6 {
+        let have: HashSet<&str> = lessons.iter().filter(|l| l.level == level).map(|l| l.form.as_str()).collect();
+        if have.is_empty() {
+            continue;
+        }
+        let rows: Vec<_> = builtin_grammar().into_iter().filter(|g| g.level == level).collect();
+        let missing: Vec<&str> = rows.iter().map(|g| lesson_key(&g.form_raw)).filter(|k| !have.contains(k)).collect();
+        assert!(missing.is_empty(), "{level}급: no lesson for {missing:?}");
+        assert_eq!(have.len(), rows.len(), "{level}급: lessons for forms that are not curriculum rows");
     }
-    assert_eq!(have.len(), 56);
 }
 
 /// Keys are unique per level: `-게3` / `-게4` are told apart by their homonym digit.

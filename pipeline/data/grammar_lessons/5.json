@@ -851,6 +851,90 @@
   }
  },
  {
+  "form": "-다4",
+  "level": 5,
+  "label": "newspaper-style plain statement",
+  "meaning_en": "The plain written sentence ending “-다”, the usual close of news reports, essays and diaries; in headlines the bare dictionary form of a verb also reports an event that has happened.",
+  "usage": "In running text a verb takes “-ㄴ다/-는다” in the present, “-었다” in the past, and an adjective or “이다” takes plain “-다”. This is the written plain style, not spoken: it is the tone of articles, essays, diaries and academic prose. In a headline the dictionary form of a verb stands for a completed event, which a running sentence would not do.",
+  "examples": [
+   {
+    "ko": "정부는 내년부터 최저임금을 인상한다고 밝혔다.",
+    "en": "The government said that it would raise the minimum wage from next year.",
+    "ctx": "collocation"
+   },
+   {
+    "ko": "어제 서울에는 첫눈이 내렸다.",
+    "en": "The first snow of the year fell in Seoul yesterday.",
+    "ctx": "news"
+   },
+   {
+    "ko": "“한국 대표팀, 결승에서 일본을 꺾고 우승하다”",
+    "en": "“Korean team beats Japan in the final to win the title”",
+    "ctx": "news"
+   },
+   {
+    "ko": "나는 오늘 아침 일찍 일어나 공원을 산책했다.",
+    "en": "I got up early this morning and took a walk in the park.",
+    "ctx": "essay"
+   },
+   {
+    "ko": "이 책은 한국 현대사를 이해하는 데 큰 도움이 된다.",
+    "en": "This book is a great help in understanding modern Korean history.",
+    "ctx": "essay"
+   }
+  ],
+  "compare": [
+   {
+    "pattern": "-습니다/-ㅂ니다",
+    "difference": "“-습니다” is the formal style addressed to a listener or reader (announcements, speeches, notices, letters); “-다” addresses no one in particular: it is the impersonal style of articles, essays and diaries.",
+    "pair": [
+     {
+      "ko": "정부는 대책을 발표했다.",
+      "en": "The government announced measures."
+     },
+     {
+      "ko": "정부는 대책을 발표했습니다.",
+      "en": "The government announced measures (formal, addressed to an audience)."
+     }
+    ]
+   },
+   {
+    "pattern": "-어요",
+    "difference": "“-어요” is the polite style of everyday conversation; “-다” is the style of written prose.",
+    "pair": [
+     {
+      "ko": "밖에는 비가 내린다.",
+      "en": "Rain is falling outside."
+     },
+     {
+      "ko": "밖에는 비가 내려요.",
+      "en": "Rain is falling outside (polite, spoken)."
+     }
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "note": "The bare dictionary form of a verb is not a complete present sentence; only headlines use it, and a running sentence needs “-ㄴ다/-는다”.",
+    "wrong": "나는 매일 밥을 먹다.",
+    "right": "나는 매일 밥을 먹는다.",
+    "en": "I have a meal every day."
+   },
+   {
+    "note": "This plain style is not for speaking politely to a teacher or a stranger.",
+    "wrong": "선생님, 저는 내일 학교에 간다.",
+    "right": "선생님, 저는 내일 학교에 가요.",
+    "en": "Teacher, I will go to school tomorrow."
+   }
+  ],
+  "topik_tip": "A headline that ends in a bare dictionary form usually reports something that has already happened; a headline ending in “-ㄹ 듯” is a conjecture.",
+  "review": {
+   "status": "approved",
+   "reviewer": "content-review (independent)",
+   "date": "2026-11-18"
+  }
+ },
+ {
   "form": "-다니1",
   "level": 5,
   "label": "surprise, how could it be",

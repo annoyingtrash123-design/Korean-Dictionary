@@ -182,8 +182,10 @@ fn korean_problem(field: &str, s: &str, v: &mut Vec<String>) {
 fn pattern_cores(g: &CurGrammar) -> Vec<String> {
     let mut v = Vec::new();
     for f in grammar_forms(g) {
-        let k = grammar_key(f.rsplit(' ').next().unwrap_or(&f));
-        let k = k.trim_end_matches('다').trim_end_matches('이').to_string();
+        let full = grammar_key(f.rsplit(' ').next().unwrap_or(&f));
+        let k = full.trim_end_matches('다').trim_end_matches('이').to_string();
+        // the plain ending -다 (and 이다) is all "다": trimming leaves nothing, so match the ending itself
+        let k = if k.is_empty() { full.to_string() } else { k };
         if k.is_empty() {
             continue;
         }

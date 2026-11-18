@@ -99,3 +99,6 @@ file; the gate test only checks 6급 coverage, so this went unnoticed. It needs 
    경제 상황인 가운데): check -고 들다 / -어 내다 / -는 가운데 examples against krdict or a corpus.
 7. Register labels: name the level (-데 하게체, -는다니2 아주낮춤 with no 요 form) rather than "informal"; and say when a
    colloquial form is not the standard spelling (-을래야 vs. -으려야).
+
+## -다4 (added after the review) — 2026-11-18 — content-review (independent)
+- approved. Changed: the -습니다 compare (formal style addressed to a listener or reader, also in notices and letters; -다 is impersonal), its pair translation, and a pitfall translation that dropped 밥 ("I have a meal every day").
