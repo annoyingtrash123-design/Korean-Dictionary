@@ -790,7 +790,11 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 .today-card .card-head .save-btn:focus-visible { outline-color: var(--on-bar); }
 .today-card .card-head .cur-lvl { background: color-mix(in srgb, var(--on-bar) 16%, var(--bar)); color: var(--on-bar); }
 .cur-lvl { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 12px; font-size: 12.5px; font-weight: 600; font-family: var(--font-ko); white-space: nowrap; background: var(--accent-soft); color: var(--accent); }
-.card-body { flex: 0 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 var(--card-x); }
+/* the body scrolls vertically only. Its horizontal overscroll must chain to the pager track: with
+   `overscroll-behavior: contain` (both axes) a sideways finger swipe that starts on the card latched onto the body,
+   which cannot scroll sideways, and went nowhere (only the arrows paged on the phone). e2e/home-swipe.spec.ts swipes
+   with real touch events. No touch-action here: pan-y would forbid the horizontal pan for the whole card. */
+.card-body { flex: 0 1 auto; min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior-x: auto; overscroll-behavior-y: contain; padding: 0 var(--card-x); }
 .card-top { padding: 24px 0 20px; }
 .card-hw { margin: 0; font-size: 34px; font-weight: 650; line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }
 .card-link { color: inherit; }
