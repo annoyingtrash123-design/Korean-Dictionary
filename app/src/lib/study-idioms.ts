@@ -14,6 +14,7 @@ export const IDIOM_LISTS: Record<string, IdiomListInfo> = {
   sokdam_all: { name: 'All learner proverbs', unit: 'proverb', eyebrow: 'Proverbs 속담', badge: '속', hint: 'The proverbs in krdict (the Korean Learners’ Dictionary), most common first' },
   seongeo100: { name: 'Essential 성어 — top 100', unit: 'idiom', eyebrow: 'Four-character idioms 성어', badge: '성', hint: 'The 100 four-character idioms that occur most often in Korean text' },
   seongeo300: { name: 'Common 성어 — top 300', unit: 'idiom', eyebrow: 'Four-character idioms 성어', badge: '성', hint: 'The 300 four-character idioms that occur most often in Korean text' },
+  seongeo_learner: { name: 'All learner 성어', unit: 'idiom', eyebrow: 'Four-character idioms 성어', badge: '성', hint: 'The four-character idioms in krdict (the Korean Learners’ Dictionary), most common first' },
 };
 
 export const KIND_LABEL: Record<StudyIdiom['kind'], string> = { sokdam: '속담', seongeo: '성어' };

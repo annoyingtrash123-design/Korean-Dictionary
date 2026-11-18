@@ -143,7 +143,7 @@ CREATE TABLE grammar_lesson (  -- AI-written grammar mini-lessons; only lessons 
 );
 CREATE INDEX grammar_lesson_entry ON grammar_lesson(entry_id);
 CREATE TABLE study_item (   -- Lists tab "Idioms & proverbs": 속담 / 성어 ranked by corpus frequency (pipeline/data/study_*.tsv)
-  list TEXT NOT NULL,       -- 'sokdam100' | 'sokdam_all' | 'seongeo100' | 'seongeo300'
+  list TEXT NOT NULL,       -- 'sokdam100' | 'sokdam_all' | 'seongeo100' | 'seongeo300' | 'seongeo_learner'
   rank INTEGER NOT NULL,    -- 1..N within the list
   kind TEXT NOT NULL,       -- 'sokdam' | 'seongeo'
   title TEXT NOT NULL,      -- the text as shown (no [variant] brackets, no hanja gloss)

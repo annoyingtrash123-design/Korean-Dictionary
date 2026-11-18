@@ -335,8 +335,9 @@ fn eligible(rows: &[crate::sql::Row]) -> Vec<(i64, String)> {
     out
 }
 
-/// The study lists of the two idiom cards, in page order: (list, card kind).
-const IDIOM_LISTS: [(&str, &str); 2] = [("sokdam_all", "proverb"), ("seongeo300", "seongeo")];
+/// The study lists of the two idiom cards, in page order: (lists, card kind). The first list with an
+/// eligible item is used (`seongeo300` only for packs built before `seongeo_learner` existed).
+const IDIOM_LISTS: [(&[&str], &str); 2] = [(&["sokdam_all"], "proverb"), (&["seongeo_learner", "seongeo300"], "seongeo")];
 
 /// One study list's pool: its krdict (core) entries with an English gloss, in rank order.
 fn study_pool(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> {
@@ -373,15 +374,21 @@ fn idiom_at(p: &PackDb, pool: &[(i64, String)], i: Option<usize>) -> Result<Opti
 }
 
 /// The day's idiom cards: a proverb (속담, list `sokdam_all`) then a four-character idiom (성어, list
-/// `seongeo300`). Each list is walked in rank order, most common first: day n shows the n-th eligible item,
+/// `seongeo_learner`). Each list is walked in rank order, most common first: day n shows the n-th eligible item,
 /// wrapping around after the last. Packs without `study_item` (or with nothing eligible in it) fall back
 /// to one card from krdict's idioms and proverbs on a seeded cycle, which needs the partial index
 /// `entries_kind` (a scan would hold the engine for seconds: no card then).
 fn idioms(p: &PackDb, day: u32) -> Result<Vec<HomeIdiom>> {
     let mut out = Vec::new();
     if p.caps.study_item {
-        for (list, kind) in IDIOM_LISTS {
-            let pool = study_pool(p, list, kind)?;
+        for (lists, kind) in IDIOM_LISTS {
+            let mut pool = Vec::new();
+            for list in lists {
+                pool = study_pool(p, list, kind)?;
+                if !pool.is_empty() {
+                    break;
+                }
+            }
             let i = (!pool.is_empty()).then(|| day as usize % pool.len());
             out.extend(idiom_at(p, &pool, i)?);
         }
@@ -638,12 +645,13 @@ mod tests {
                 ("sokdam_all", 1, "sokdam", 30, "core"),
                 ("sokdam_all", 2, "sokdam", 32, "core"),     // a frame with a ∼ slot
                 ("sokdam_all", 3, "sokdam", 36, "core"),
-                ("seongeo300", 1, "seongeo", 31, "core"),
-                ("seongeo300", 2, "seongeo", 33, "core"),    // no English gloss
-                ("seongeo300", 3, "seongeo", 34, "core"),    // only a dialogue
-                ("seongeo300", 4, "seongeo", 20, "stdict"),  // entry in another pack
-                ("seongeo300", 5, "seongeo", 37, "core"),
+                ("seongeo_learner", 1, "seongeo", 31, "core"),
+                ("seongeo_learner", 2, "seongeo", 33, "core"),    // no English gloss
+                ("seongeo_learner", 3, "seongeo", 34, "core"),    // only a dialogue
+                ("seongeo_learner", 4, "seongeo", 20, "stdict"),  // entry in another pack
+                ("seongeo_learner", 5, "seongeo", 37, "core"),
                 ("seongeo100", 1, "seongeo", 35, "core"),    // not one of the two lists
+                ("seongeo300", 1, "seongeo", 35, "core"),    // only for packs without seongeo_learner
             ],
         )
     }
@@ -664,6 +672,14 @@ mod tests {
         assert_eq!((b.headword.as_str(), b.pos.as_deref(), b.ko_def.as_deref()), ("설상가상", Some("noun"), Some("뜻.")));
         assert_eq!(a.examples.len(), 1);
         assert_eq!(h, home(&[&pk], 0).unwrap(), "the same picks for the same day");
+    }
+
+    #[test]
+    fn older_packs_take_the_seongeo_card_from_seongeo300() {
+        let pk = study_pack();
+        pk.conn.query("DELETE FROM study_item WHERE list = 'seongeo_learner'", &[]).unwrap();
+        let v = home(&[&pk], 0).unwrap().idioms;
+        assert_eq!(v.iter().map(|i| i.id).collect::<Vec<_>>(), vec![30, 35]);
     }
 
     #[test]

@@ -24,6 +24,7 @@ const LISTS = [
   { name: 'All learner proverbs', count: 655, tag: '속담', first: '누워서 떡 먹기' },
   { name: 'Essential 성어 — top 100', count: 100, tag: '성어', first: '만장일치' },
   { name: 'Common 성어 — top 300', count: 300, tag: '성어', first: '만장일치' },
+  { name: 'All learner 성어', count: 202, tag: '성어', first: '만장일치' },
 ];
 
 async function overview(page: Page) {
@@ -33,7 +34,7 @@ async function overview(page: Page) {
 const link = (page: Page, name: string) => group(page).locator('.list-row', { has: page.locator('.list-name', { hasText: new RegExp(`^${name}$`) }) });
 
 for (const vp of [{ n: 'phone', w: 390, h: 844 }, { n: 'ipad', w: 1180, h: 820 }]) {
-  test(`idioms & proverbs lists: four lists, rows, a stdict-only 성어 opens (${vp.n})`, async ({ page }) => {
+  test(`idioms & proverbs lists: five lists, rows, a stdict-only 성어 opens (${vp.n})`, async ({ page }) => {
     test.setTimeout(900_000);
     page.on('pageerror', (e) => console.log('PAGEERROR', e.message));
     await page.setViewportSize({ width: vp.w, height: vp.h });
@@ -50,7 +51,7 @@ for (const vp of [{ n: 'phone', w: 390, h: 844 }, { n: 'ipad', w: 1180, h: 820 }
       return;
     }
 
-    // ---- overview: the group with its four lists and counts ----
+    // ---- overview: the group with its five lists and counts ----
     await expect(group(page)).toBeVisible();
     expect(await texts(group(page).locator('.list-name'))).toEqual(LISTS.map((l) => l.name));
     for (const l of LISTS) await expect(link(page, l.name)).toContainText(`${l.count} ${l.tag === '속담' ? 'proverbs' : 'idioms'}`);

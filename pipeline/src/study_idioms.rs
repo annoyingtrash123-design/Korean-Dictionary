@@ -16,12 +16,17 @@ use rusqlite::{params, Connection, OpenFlags};
 use std::collections::HashMap;
 use std::path::Path;
 
-/// (list id, kind, number of rows): the four lists and their sizes (the build fails when a list is short).
-pub const LISTS: [(&str, &str, usize); 4] =
-    [("sokdam100", "sokdam", 100), ("sokdam_all", "sokdam", 655), ("seongeo100", "seongeo", 100), ("seongeo300", "seongeo", 300)];
+/// (list id, kind, number of rows): the five lists and their sizes (the build fails when a list is short).
+pub const LISTS: [(&str, &str, usize); 5] = [
+    ("sokdam100", "sokdam", 100),
+    ("sokdam_all", "sokdam", 655),
+    ("seongeo100", "seongeo", 100),
+    ("seongeo300", "seongeo", 300),
+    ("seongeo_learner", "seongeo", 202),
+];
 
 /// Shortest healthy `study_item`: the lists minus a few unresolved rows.
-pub const MIN_ITEMS: i64 = 1_100;
+pub const MIN_ITEMS: i64 = 1_300;
 
 const GLOSS_CHARS: usize = 80;
 

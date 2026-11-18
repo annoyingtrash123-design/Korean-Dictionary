@@ -28,7 +28,7 @@ fn lists_are_ordered_by_score_and_nest() {
     let items = builtin();
     let of = |l: &str| items.iter().filter(|i| i.list == l).collect::<Vec<_>>();
     // the top lists are sorted by score; "All learner proverbs" has the zero-count proverbs last
-    for l in ["sokdam100", "sokdam_all", "seongeo100", "seongeo300"] {
+    for l in ["sokdam100", "sokdam_all", "seongeo100", "seongeo300", "seongeo_learner"] {
         let v = of(l);
         assert!(v.windows(2).all(|w| w[0].score >= w[1].score), "{l} is not in score order");
     }
@@ -48,6 +48,15 @@ fn lists_are_ordered_by_score_and_nest() {
     for kept in ["우유부단", "설상가상", "십중팔구", "만장일치", "자급자족", "명실상부"] {
         assert!(texts.contains(kept), "{kept} is missing");
     }
+    // "All learner 성어": krdict entries only, four syllables, no dropped compounds, and it reaches beyond
+    // the top 300 (krdict 성어 the first review cut did not cover)
+    let learner = of("seongeo_learner");
+    assert!(learner.iter().all(|i| i.source == "krdict" && i.text.chars().count() == 4), "seongeo_learner has a non-krdict row");
+    let lt: HashSet<&str> = learner.iter().map(|i| i.text.as_str()).collect();
+    assert_eq!(lt.len(), learner.len(), "seongeo_learner has duplicates");
+    assert!(!lt.contains("돌연변이") && !lt.contains("의사소통"));
+    assert!(lt.contains("만장일치") && lt.contains("각골난망"));
+    assert!(lt.iter().any(|t| !texts.contains(t)), "seongeo_learner adds nothing to seongeo300");
 }
 
 fn pack(path: &std::path::Path, rows: &[(i64, &str, &str, &str, &str, Option<&str>)]) {
