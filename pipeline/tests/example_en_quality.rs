@@ -1,8 +1,10 @@
-//! Guards for `pipeline/data/example_en.tsv` (AI English for krdict example sentences).
+//! Guards for `pipeline/data/example_en.tsv` (AI English for krdict example sentences) and for its staging
+//! file `example_en_idioms.tsv` (the 속담/성어 examples; a sixth `review` column, draft until approved).
 //! Each check here is a mistake that actually happened in review and was fixed in bulk; the test
 //! keeps it from coming back with the next batch (CLAUDE.md: every recurring mistake becomes a check).
 
 const TSV: &str = include_str!("../data/example_en.tsv");
+const STAGING: &str = include_str!("../data/example_en_idioms.tsv");
 
 /// Recurring krdict character names -> accepted English romanisations (lower-case, no hyphen).
 const NAMES: &[(&str, &[&str])] = &[
@@ -56,16 +58,24 @@ struct Row<'a> {
     en: &'a str,
 }
 
-fn rows() -> Vec<Row<'static>> {
-    TSV.lines()
+/// Rows of one file (`cols` tab-separated fields each). A dialogue's turns are joined by a literal `\n`.
+fn rows_of(tsv: &'static str, cols: usize) -> Vec<Row<'static>> {
+    tsv.lines()
         .enumerate()
         .filter(|(_, l)| !l.is_empty() && !l.starts_with('#'))
         .map(|(n, l)| {
             let f: Vec<&str> = l.split('\t').collect();
-            assert_eq!(f.len(), 5, "line {}: expected 5 tab-separated fields", n + 1);
+            assert_eq!(f.len(), cols, "line {}: expected {cols} tab-separated fields", n + 1);
             Row { line: n + 1, key: (f[0], f[1], f[2]), ko: f[3], en: f[4] }
         })
         .collect()
+}
+
+/// The reviewed file and the staging file: the checks below apply to both.
+fn rows() -> Vec<Row<'static>> {
+    let mut v = rows_of(TSV, 5);
+    v.extend(rows_of(STAGING, 6));
+    v
 }
 
 /// Every problem in one message (at most 40 shown), so a bad batch is fixed in one pass.
@@ -75,8 +85,8 @@ fn report(what: &str, bad: Vec<String>) {
 
 #[test]
 fn rows_are_well_formed_and_unique() {
+    assert!(rows_of(TSV, 5).len() > 40_000, "example_en.tsv has only {} rows", rows_of(TSV, 5).len());
     let rs = rows();
-    assert!(rs.len() > 40_000, "example_en.tsv has only {} rows", rs.len());
     let mut seen = std::collections::HashSet::new();
     let mut bad = Vec::new();
     for r in &rs {
@@ -140,4 +150,28 @@ fn the_checks_catch_known_mistakes() {
     assert!(!ws.iter().any(|w| HE.contains(&w.as_str())));
     assert!(ko_word("그는 지갑 속에 있는 돈을 헤아려 보았다.", "그"));
     assert!(!ko_word("그때 비가 왔다.", "그"));
+}
+
+/// The staging file: a review column that is `draft` or `approved...`, keys that do not collide with the reviewed
+/// file, and a dialogue whose English has the same turns (the same number of `\n`) as the Korean.
+#[test]
+fn staging_rows_are_drafts_or_approved_and_keep_dialogue_turns() {
+    let main: std::collections::HashSet<_> = rows_of(TSV, 5).iter().map(|r| r.key).collect();
+    let mut bad = Vec::new();
+    for (n, l) in STAGING.lines().enumerate().filter(|(_, l)| !l.is_empty() && !l.starts_with('#')) {
+        let f: Vec<&str> = l.split('\t').collect();
+        if !(f[5] == "draft" || f[5].starts_with("approved")) {
+            bad.push(format!("line {}: review {:?} (draft | approved...)", n + 1, f[5]));
+        }
+        if main.contains(&(f[0], f[1], f[2])) {
+            bad.push(format!("line {}: key {:?} is in example_en.tsv already", n + 1, (f[0], f[1], f[2])));
+        }
+        if f[3].matches("\\n").count() != f[4].matches("\\n").count() {
+            bad.push(format!("line {}: the English has other turns than the Korean: {} | {}", n + 1, f[3], f[4]));
+        }
+        if f[4].contains(['\r']) || f[4].trim() != f[4] {
+            bad.push(format!("line {}: stray whitespace in the English", n + 1));
+        }
+    }
+    report("staging file", bad);
 }

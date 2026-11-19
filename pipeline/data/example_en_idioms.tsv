@@ -1,0 +1,219 @@
+# Staging file: AI English for the example sentences and dialogues of krdict 속담 / 성어 (study lists sokdam_all and seongeo_learner).
+# Same columns as example_en.tsv plus review. Only rows whose review column starts with "approved" are loaded (example_en.rs);
+# "draft" rows wait for the independent review (qa/idiom_english_review.md). A dialogue is one line, its turns joined by a literal \n.
+# ext_id	sense	example	ko	en	review
+52971	0	8	요즘처럼 사람들의 생각이 다양한 사회에서는 만장일치를 보기가 어렵다.	In a society like today's, where people's ideas are so varied, it is hard to see unanimity.	draft
+52971	0	9	유민이도 저녁으로 중화요리를 먹고 싶대요.\n그럼 오늘 외식은 만장일치로 중국집에서 하기로 한 거지?	Yumin wants Chinese food for dinner too, apparently.\nSo it's unanimously settled that we eat out today at a Chinese restaurant, right?	draft
+73579	0	7	프랑스에서 십 년 동안 살다 온 지수는 불어를 자유자재로 구사했다.	Jisu, who had lived in France for ten years, spoke French fluently.	draft
+73579	0	8	민준이는 커서 무엇이 되고 싶니?\n저는 어떤 목소리도 자유자재로 낼 수 있는 특기를 살려 성우가 되고 싶습니다.	Minjun, what do you want to be when you grow up?\nI want to be a voice actor, making use of my special talent for being able to make any voice at will.	draft
+66025	0	6	사장은 두 회사의 조건을 꼼꼼하게 따지는 심사숙고의 과정을 거쳐 한 회사와 계약을 맺었다.	After a careful process of deliberation, weighing the terms of the two companies closely, the company president signed a contract with one of them.	draft
+66025	0	7	이번 일은 이대로 진행할까 합니다.\n중요한 문제이니 너무 빨리 결정하지 말고 심사숙고를 해 보시는 게 어떨까요?	I'm thinking of going ahead with this matter as it is.\nIt's an important issue, so rather than deciding too quickly, why not think it over carefully?	draft
+91828	0	3	내가 사람을 잘못 보고 잘해 주었다가 배신을 당했으니 그 친구의 배은망덕만 탓할 것이 아니다.	I misjudged someone, was good to them, and got betrayed, so it is not only that friend's ingratitude that I should blame.	draft
+91828	0	4	민준이가 아내를 두고 다른 여자를 만났다면서?\n응. 자기 출세를 위해 뒷바라지해 준 아내에게 배은망덕이지 뭐야.	I heard Minjun left his wife for another woman?\nYes. It's sheer ingratitude toward the wife who supported him in his rise in the world.	draft
+59809	0	3	제가 대통령에 당선되면 정치권의 부정부패를 모두 척결하겠습니다.	If I am elected president, I will root out all the corruption in the political world.	draft
+89100	0	7	그 용의자는 범인이 아니라며 횡설수설 변명해서 경찰이 그를 더 의심하게 만들었다.	The suspect rambled on with excuses, saying he was not the culprit, which only made the police suspect him more.	draft
+89100	0	8	아니. 저는 속이려고 한건 아니지만...\n횡설수설 지껄이지 말고 똑바로 말해.	No, I wasn't trying to deceive you, but...\nStop babbling and tell me straight.	draft
+18254	0	4	내가 자주 이용하는 인터넷 사이트는 난공불락의 방화벽을 갖추고 있어 어떤 바이러스도 침투하지 못한다.	The internet site I often use has an impregnable firewall, so no virus can get in.	draft
+18254	0	5	그분처럼 전략적인 장수가 왜 제대로 싸워 보지도 못하고 패배했나요?\n자신이 지키는 성이 난공불락의 요새라는 걸 믿고 아무런 작전도 세우지 않았거든.	Why did such a strategic general lose without even putting up a proper fight?\nBecause the general trusted that the fortress being defended was an impregnable stronghold and drew up no plan at all.	draft
+18254	1	2	아내에게 휴가를 내고 여행을 다녀오자고 아무리 설득해 보아도 난공불락이었다.	However hard I tried to persuade my wife to take time off and go on a trip, she would not budge.	draft
+18254	1	3	우리 회사의 경쟁 업체에서 먼저 신제품을 내놓고 시장을 선점하고 있어 난공불락일 듯하다.	A competitor of our company brought out a new product first and has captured the market, so it looks like a fortress we cannot break into.	draft
+18254	1	4	감독님께서는 유럽 영화계에 진출하고자 여러 번 시도를 하셨는데요.\n네, 그런데 제 작품이 유럽 영화의 흐름에 맞지 않는지 난공불락이더군요.	You tried many times to break into the European film world, Director.\nYes, but maybe my work doesn't fit the currents of European cinema; it has been a fortress I couldn't crack.	draft
+73658	0	6	그 사람은 연이은 사업 실패에 깊은 절망과 자포자기에 사로잡힌 듯했다.	That person seemed to be gripped by deep despair and resignation after a string of business failures.	draft
+73658	0	7	어려운 상황에서도 자포자기를 하지 않고 계속 도전하는 자세가 중요하다.	Even in difficult situations, it is important to keep taking on challenges without giving up in despair.	draft
+73658	0	8	요즘 좀 우울해 보이는데 무슨 일 있어?\n계속 면접에 떨어져서 자포자기에 빠진 기분이야.	You've looked a bit down lately. Is something wrong?\nI keep failing interviews, so I feel like giving up on everything.	draft
+65609	0	11	모든 전투에서 승승장구의 기세를 이어 가던 장수가 적군의 강렬한 저항에 밀려 잠시 후퇴했다.	The general, who had kept up a string of victories in every battle, fell back for a time under the enemy's fierce resistance.	draft
+65609	0	12	내일 경기만 이기면 이제 준결승전이야.\n좋아, 승승장구로 결승전까지 가자!	If we win tomorrow's game, we're in the semifinals.\nGreat, let's keep winning all the way to the final!	draft
+69370	0	6	지수는 무엇 하나 결정을 제대로 하지 못하는 우유부단 그 자체였다.	Jisu was indecision itself, unable to make any decision properly.	draft
+69370	0	7	우리 어머니는 자꾸 고민만 하는 동생의 우유부단에 결국 화를 내셨다.	My mother finally lost her temper at the indecision of my younger sibling, who kept on agonizing.	draft
+69370	0	8	이것으로 할지 저것으로 할지 아직도 결정을 못 하겠어.\n아이고, 네 우유부단이 정말 지긋지긋하다.	I still can't decide whether to take this one or that one.\nOh my, I'm so sick of your indecisiveness.	draft
+74525	0	6	어머니는 혹여 내가 잘못될까 봐 전전긍긍 밤이 새도록 나를 간호해 주셨다.	Mother nursed me all through the night, fretting anxiously in case something happened to me.	draft
+74525	0	7	뭐가 그렇게 겁나서 전전긍긍이니?\n성적표 숨겨 둔 게 없어졌어. 아무래도 엄마가 보신 것 같아.	What are you so scared of that you're fretting like this?\nThe report card I had hidden is gone. I think Mom must have seen it.	draft
+70085	0	6	이 작품은 그가 살아 있을 때 남긴 유일무이의 작품이기 때문에 더욱 의미가 깊다.	This work is all the more meaningful because it is the only one he left behind in his lifetime.	draft
+70085	0	7	병에 걸려 아파서 누워 있는 지금, 내 유일무이의 소원은 다시 건강해지는 것이다.	Lying here ill with a disease, my one and only wish is to be well again.	draft
+49999	0	7	아이는 장난감 가게 앞에서 장난감을 사 달라며 막무가내로 떼를 쓰고 울어 댔다.	In front of the toy store, the child threw a tantrum and cried, stubbornly demanding to be bought a toy.	draft
+49999	0	8	내가 이 방에는 아무도 들이지 말라고 하지 않았나!\n아무리 안 된다고 해도 이분이 막무가내여서 저희도 어쩔 수 없었습니다.	Didn't I tell you not to let anyone into this room!\nNo matter how many times we said no, this person was so insistent that there was nothing we could do.	draft
+67902	0	6	사람들은 적당한 의견을 내지 못한 채 왈가왈부로 아까운 시간만 보내고 있었다.	People, unable to come up with a suitable opinion, were just wasting precious time arguing back and forth.	draft
+67902	0	7	십 년 연속 일 등을 한 우승자의 진위 여부에 대해 왈가왈부를 하는 사람들이 많다.	Many people are arguing over whether the winner, who has come first ten years in a row, is genuine.	draft
+67902	0	8	요즘 대학 입시에 대한 왈가왈부가 끊이지 않고 있어.\n응. 인터넷 게시판에 지금의 대학 입시 제도가 좋은가에 관한 토론이 한창이더라.	There's no end to the debate about college admissions these days.\nYes. On internet message boards, a heated discussion is going on about whether the current admissions system is any good.	draft
+52925	0	6	권투 경기가 끝나면 두 선수 모두 상처로 만신창이가 되고 만다.	After a boxing match, both fighters end up battered and bruised.	draft
+52925	0	7	오늘 운동을 하면서 특별 훈련을 받다가 좀 다쳤어.\n아무리 훈련도 좋지만 사람을 이렇게 만신창이를 만들어 놓다니!	I got a bit hurt while receiving special training during exercise today.\nTraining is all well and good, but to leave a person in such a battered state!	draft
+52925	1	5	이 사업은 예산 부족으로 시작하기도 전에 만신창이가 되었다.	This project was in tatters before it had even started, because of a lack of budget.	draft
+52925	1	6	우리 모임은 최근 내분이 일어나고 만신창이가 되어서 해체 직전의 상태이다.	Our group has recently been hit by infighting and is in tatters, on the verge of breaking up.	draft
+52925	1	7	요즘 쓰는 보고서는 잘돼 가고 있어?\n초고를 써 놓고 하도 뜯어 고쳐서 글이 만신창이나 마찬가지야.	How is the report you've been writing coming along?\nI wrote a first draft and then revised it so much that the text is practically a wreck.	draft
+52925	2	5	침대 위에서 뛰면 물건이 금방 만신창이가 된다.	If you jump on the bed, things get wrecked in no time.	draft
+52925	2	6	이 건물은 벌써 내부 공사를 다섯 번이나 해서 만신창이나 다름없었다.	This building has already had interior work done five times, so it was practically in ruins.	draft
+52925	2	7	네 전화기는 새것인데 왜 벌써 만신창이가 됐어?\n내가 물건을 험하게 쓰는 편이라서 그래.	Your phone is new, so why is it already beaten up?\nIt's because I tend to treat things roughly.	draft
+52925	3	5	하루 종일 김장을 했더니 저녁이 될 때쯤엔 이미 만신창이였다.	After making kimchi all day, I was already worn to a frazzle by evening.	draft
+52925	3	6	며칠 동안 회사에서 야근을 했더니 몸이 만신창이가 되어서 쿡쿡 쑤신다.	After working overtime at the office for several days, my body is wrecked and aches all over.	draft
+52925	3	7	주말에 뭐 했어?\n놀이공원에 가서 신나게 놀고 만신창이가 되었어.	What did you do over the weekend?\nI went to an amusement park, had a great time, and came home completely worn out.	draft
+55918	0	6	민준이는 재주가 무궁무진으로 다양해서 친구들에게 인기가 많다.	Minjun is popular with friends thanks to an endless variety of talents.	draft
+55918	0	7	발명이 취미인 내 친구는 새로운 아이디어를 무궁무진으로 쏟아 낸다.	My friend, whose hobby is inventing, pours out new ideas endlessly.	draft
+55918	0	8	바닷속에는 얼마나 많은 물고기가 있을까요?\n그 종류만 해도 무궁무진으로 많아서 사람들은 정확한 수를 알 수 없을 거야.	How many fish are there in the sea?\nThere are so many kinds, endlessly many, that people probably can't know the exact number.	draft
+88299	0	6	정치권은 이번 선거를 부정행위 없는 공명정대로 이끌 것이라고 밝혔다.	The political world said it would lead this election fairly and squarely, without any misconduct.	draft
+88299	0	7	사장님께서 본인 자녀들한테도 입사에 전혀 특혜를 안 주셨다지요?\n정말 공명정대를 몸소 실천하는 분이시지 뭡니까.	I hear the company president gave no preferential treatment in hiring even to their own children?\nIndeed, that is someone who personally practices fairness and impartiality.	draft
+23726	0	6	남을 괴롭히며 살던 승규는 어머니의 눈물을 보고는 개과천선을 하게 되었다.	Seung-gyu, who had lived by tormenting others, turned over a new leaf at the sight of Mother's tears.	draft
+23726	0	7	들었어? 민준이가 요즘 봉사 활동을 다닌대.\n웬일이래? 툭하면 말썽만 부리더니 개과천선이라도 한 모양이구나.	Did you hear? Minjun has been doing volunteer work lately.\nWhat? After always causing trouble, Minjun has actually reformed?	draft
+72640	0	6	산사태 피해를 입은 주민을 위해 정부는 임시방편으로 가건물을 지었다.	For the residents hit by the landslide, the government built temporary buildings as a stopgap.	draft
+72640	0	7	날씨도 더운데 외투를 왜 걸치고 있어?\n셔츠가 찢어지는 바람에 임시방편으로 입었어.	It's hot, so why are you wearing a coat?\nMy shirt got torn, so I'm wearing it as a stopgap.	draft
+70386	0	6	유명하다는 식당은 막상 가 보면 가격도 비싸고 유명무실인 경우가 많았다.	Restaurants said to be famous often turn out, when you actually go, to be expensive and not live up to their name.	draft
+70386	0	7	학교에서 주는 장학금이 조건이 까다로워서 받는 사람이 거의 없다며?\n응, 제도가 있어도 혜택받는 사람이 거의 없으니 유명무실이지.	I heard the scholarship from the school has such tricky conditions that hardly anyone gets it?\nYes, even with the system in place almost no one benefits, so it exists in name only.	draft
+66067	0	5	감독은 시종일관 따뜻한 시선으로 승규의 가족을 바라보았다.	The director gazed at Seung-gyu's family with a warm eye throughout.	draft
+66067	0	6	막냇동생은 계속 재롱을 피워서 우리 가족에게 시종일관으로 웃음을 주었다.	The youngest sibling kept being cute and gave our family laughter from start to finish.	draft
+66067	0	7	나는 아버지께 콘서트에 가게 해 달라고 졸랐으나 아버지의 대꾸는 시종일관으로 침묵이었다.	I begged Father to let me go to the concert, but Father's answer was silence from start to finish.	draft
+64278	0	5	예방 주사를 맞지 않은 가축들은 전염병에 속수무책일 수밖에 없었다.	Livestock that had not had preventive shots were bound to be helpless against the epidemic.	draft
+64278	0	6	정부는 방사능 오염에 어떠한 대책도 마련하지 못하고 있어.\n이렇게 속수무책으로 바라볼 수밖에 없는 것인지, 걱정돼.	The government hasn't prepared any measures against radioactive contamination.\nI'm worried that we can do nothing but look on helplessly like this.	draft
+90220	0	7	김 선수는 삼 회 연속 올림픽에서 금메달을 따는 전무후무의 기록을 세웠다.	Player Kim set an unprecedented record, one never to be repeated, by winning gold medals at three Olympics in a row.	draft
+90220	0	8	어젯밤에 옆집에 강도가 들었다면서요?\n네, 우리 마을처럼 조용한 곳에서는 전무후무의 사건이죠.	I heard there was a burglary next door last night?\nYes, in a quiet place like our village it is an unprecedented incident.	draft
+69925	0	1	우리 팀은 상대편의 위풍당당 기세에 밀려 자기 실력을 제대로 발휘하지 못했다.	Our team was overpowered by the opponent's imposing, majestic momentum and could not show its true ability.	draft
+82238	0	6	김 대통령은 생전에 죽을 뻔한 고비를 여러 번 넘기며 파란만장의 정치 인생을 살았다.	President Kim lived a political life full of twists and turns, having survived several close brushes with death over a lifetime.	draft
+23667	0	7	경찰은 생선 배 속에 마약을 숨기는 기상천외의 수법으로 마약을 들여온 일당을 적발했다.	The police uncovered a gang that brought in drugs by an extraordinary method: hiding the drugs inside the bellies of fish.	draft
+23667	0	8	민준이의 행동은 정말 예측할 수가 없어.\n맞아. 가끔씩 기상천외의 행동을 보여서 깜짝 놀라곤 해.	Minjun's behavior is really unpredictable.\nTrue. Sometimes Minjun does such outlandish things that I'm startled.	draft
+23829	0	6	산행을 마치고 내려온 지수는 숙소에 도착하자마자 기진맥진이 되어 잠이 들었다.	Coming down from the hike, Jisu fell asleep completely exhausted the moment Jisu reached the lodging.	draft
+23829	0	7	미안한데 오늘 약속을 미룰 수 있을까? 내가 일주일 동안 야근을 했더니 기진맥진이야.\n그래. 오늘은 푹 쉬고 다음에 보자.	Sorry, could we postpone today's plans? I worked overtime for a week and I'm completely exhausted.\nSure. Get a good rest today and let's meet another time.	draft
+73108	0	5	나는 면접에서 어려운 질문을 받았지만 임기응변으로 재치 있게 대답해서 합격할 수 있었다.	I got a difficult question at the interview, but I answered wittily on the spur of the moment and was able to pass.	draft
+73108	0	6	배를 운전하다가 바다 한복판에서 문제가 생기면 어떻게 하나요?\n그럴 땐 상황에 따라 임기응변으로 대처하는 수밖에 없어요.	What do you do if a problem arises in the middle of the sea while you're steering a boat?\nIn that case you have no choice but to improvise according to the situation.	draft
+60112	0	6	당시의 집권층은 부국강병과 민생 안정을 위하여 과학 기술이 중요하다고 생각했다.	The ruling class of the time thought that science and technology were important for a rich country with a strong army and for stable livelihoods.	draft
+60112	0	7	백제의 근초고왕은 탁월한 리더십으로 정복 활동을 전개하며 백제의 부국강병을 이끌었다.	King Geunchogo of Baekje, with outstanding leadership, carried out campaigns of conquest and led Baekje to wealth and military strength.	draft
+66300	0	4	대다수의 평론가들은 이 영화가 시대착오의 주제를 담고 있다고 평했다.	Most critics remarked that this film carries an anachronistic theme.	draft
+66300	0	5	넌 무조건 공부를 잘해서 좋은 대학에 가거라. 그래야 성공할 수 있지.\n삼촌, 꼭 좋은 대학을 나와야만 성공할 수 있다는 시대착오를 좀 버리세요.	You must do well in your studies and go to a good university. Only then can you succeed.\nUncle, please drop that outdated notion that you can only succeed if you graduate from a good university.	draft
+58687	0	4	그 양궁선수는 활을 쏘면 쏘는 대로 백발백중이었다.	That archer hit the bull's-eye with every single shot.	draft
+58687	0	5	민준이가 왜 전설의 사격 선수야?\n쏘는 총알마다 백발백중 과녁에 맞았거든.	Why is Minjun a legendary marksman?\nBecause every bullet fired hit the target dead on.	draft
+58687	1	2	그 점쟁이는 무슨 일이든지 백발백중으로 알아맞혔다.	That fortune-teller guessed right on everything, without fail.	draft
+58687	1	3	그 의사의 진단은 백발백중이라고 소문날 만큼 정확했다.	That doctor's diagnoses were so accurate that it was rumored they never missed.	draft
+58687	1	4	네 말대로 승규가 지수랑 헤어졌대.\n역시 내 예상이 백발백중이라니까.	Just as you said, I hear Seung-gyu and Jisu broke up.\nSee, my predictions always hit the mark.	draft
+73479	0	4	유민이는 공부를 게을리해 성적이 떨어진 것은 자업자득이라고 생각했다.	Yumin thought that the drop in grades from neglecting study was self-inflicted.	draft
+73479	0	5	청소도 안 하고 그냥 집에 가서 선생님께 혼이 났어.\n자업자득이네.	I went home without cleaning up and got scolded by the teacher.\nYou brought it on yourself.	draft
+57152	0	1	새로 개발된 암 치료제에 의사와 환자들은 반신반의의 의견을 나타냈다.	Doctors and patients expressed half-believing, half-doubting opinions about the newly developed cancer drug.	draft
+57152	0	2	그들은 아직도 내 말을 받아들이려고 하지 않고 반신반의를 하고 있으니 답답했다.	They still won't accept what I say and are only half-believing, which was frustrating.	draft
+57326	0	5	부상을 당했음에도 끝까지 경기를 뛴 선수에게 박수갈채가 쏟아졌다.	Applause and cheers poured out for the athlete who played the game to the end despite being injured.	draft
+51656	0	1	아버지가 돌아가셨다는 소식을 들은 그녀는 망연자실 넋이 나가 눈물만 흘렸다.	Hearing that her father had passed away, she was stunned and dazed, and could only weep.	draft
+51656	0	2	승규의 헤어지자는 말에 지수는 아무 말도 없이 그의 얼굴만 망연자실 바라보았다.	At Seung-gyu's words that they should break up, Jisu said nothing and just stared blankly at his face in stunned silence.	draft
+51656	0	3	경기 종료를 알리는 소리가 울리자 경기에 진 우리 선수들은 망연자실 운동장에 주저앉았다.	When the sound signaling the end of the game rang out, our players, having lost, slumped onto the field in a daze.	draft
+72791	0	6	검찰 총장은 지하 조직 일망타진이 쉽지 않을 것이라고 보았다.	The Prosecutor General thought that rounding up the underground organization in one sweep would not be easy.	draft
+72791	0	7	대규모의 마약 거래단 일망타진에 전국의 수사력이 총동원되었다.	Investigative forces from across the country were fully mobilized for the sweeping roundup of the large-scale drug-dealing ring.	draft
+50010	0	5	두 권투 선수의 실력은 막상막하여서 경기에서 누가 이길지 예측이 불가했다.	The two boxers were so evenly matched that it was impossible to predict who would win the match.	draft
+50010	0	6	이번 연기 대상 시상식에서 과연 누가 대상을 받을까?\n아, 대상 후보들이 모두 뛰어나서 정말 막상막하의 경쟁이 될 것 같네.	Who on earth will win the grand prize at this year's acting awards?\nAh, the nominees are all so outstanding that it looks like a really neck-and-neck race.	draft
+77556	0	6	아이가 산에서 넘어졌는데 더 크게 다치지 않은 게 천만다행이었다.	The child fell on the mountain, and it was a great relief that the child wasn't hurt any worse.	draft
+77556	0	7	천만다행으로 인명 피해는 없었지만 생각만 해도 아찔해지는 가스 누출 사고였다.	Fortunately there were no casualties, but it was a gas leak that made you dizzy just to think about.	draft
+77556	0	8	건강 검진을 받았는데 위에서 초기의 종양이 발견되었대.\n조기에 발견돼서 그나마 천만다행이야.	I had a health checkup, and they found an early-stage tumor in my stomach.\nThank goodness it was caught early, at least.	draft
+17411	0	4	강도들은 낮에 산에 숨어 있다가 해가 진 후에 야반도주를 했다.	The robbers hid in the mountains during the day and fled in the dead of night after sunset.	draft
+17411	0	5	음주 운전을 하던 운전자는 경찰의 단속이 있자 차를 버려 두고 야반도주를 했다.	The drunk driver abandoned the car and fled in the night when the police began a crackdown.	draft
+47207	0	3	월드컵 예선 두 번째 조에 속한 나라들은 서로 자기가 본선 티켓을 쉽게 거머쥘 것이라는 동상이몽을 꾸고 있다.	The countries in the second group of the World Cup qualifiers each cherish their own dream of easily grabbing a ticket to the finals, all dreaming different dreams.	draft
+47207	0	4	친구랑 같이 협동 과제를 하는데 서로 중요하다고 생각하는 우선순위가 달라서 자주 의견이 부딪치더라.\n동상이몽이네. 의견을 조율하는 게 쉽지는 않겠다.	I'm doing a group project with my friend, but we have different priorities about what is important, so our opinions often clash.\nYou two are dreaming different dreams. Coordinating your opinions won't be easy.	draft
+86634	0	4	유민이는 시험 답안을 훔쳐보려고 호시탐탐 기회를 엿보았다.	Yumin kept watching for a chance, like a hawk, to sneak a look at the exam answers.	draft
+86634	0	5	지수야, 생선 말리려고 내놓은 거 못 봤니?\n고양이가 물고 도망갔어요. 호시탐탐 노리고 있었나 봐요.	Jisu, didn't you see the fish I put out to dry?\nA cat took it in its mouth and ran off. It must have been eyeing it all along.	draft
+61800	0	3	그는 어릴 적부터 안 해 본 일이 없을 정도로 산전수전을 다 경험했다고 했다.	He said that since childhood there was hardly a job he hadn't done; he had been through the mill.	draft
+61800	0	4	산전수전을 겪은 그 노인은 어떻게 하면 돈을 벌 수 있는지 본능적으로 알고 있었다.	That old man, who had been through the mill, instinctively knew how to make money.	draft
+61269	0	6	소비자들은 유통 기한이 지난 식품을 속여 판 회사에게 사생결단을 낼 듯이 항의했다.	Consumers protested to the company that had deceitfully sold food past its expiration date, as if they were ready for a fight to the finish.	draft
+61269	0	7	백화점 직원이 매우 불친절했다며?\n응. 그 직원하고 사생결단으로 싸우려다가 그냥 소비자 상담실에 전화했어.	I heard the department store employee was very rude?\nYes. I was about to have it out with that employee, but I just called the consumer counseling office instead.	draft
+86802	0	6	오늘 솔직하게 나누었던 대화는 우리 사이의 허심탄회를 보여 주었다.	The frank conversation we had today showed the openness between us.	draft
+86802	0	7	내가 그동안 승규를 오해했나 봐.\n그래, 선입견을 버리고 허심탄회로 대해 봐.	I think I've been misunderstanding Seung-gyu all this time.\nYes, set aside your prejudice and try dealing with Seung-gyu openly.	draft
+69357	0	7	강물이 불어 사람들이 강을 건너가지 못하고 우왕좌왕만 하고 있었다.	The river had swollen, so people couldn't cross it and were just milling about in confusion.	draft
+69357	0	8	왜 이렇게 늦었어? 한참 기다렸잖아.\n어떤 사람이 길을 몰라서 우왕좌왕을 하고 있기에 길을 가르쳐 주고 오느라 늦었어.	Why are you so late? I waited a long time.\nSomeone didn't know the way and was flustered, so I was late because I went to show them the way.	draft
+69357	1	6	우리는 두 친구의 싸움을 말리지도 못하고 우왕좌왕만 하고 있었다.	We couldn't even stop the fight between the two friends and just stood there flustered.	draft
+69357	1	7	지수는 실험을 어떻게 진행해야 할지 정하기 어려워서 우왕좌왕을 계속했다.	Jisu found it hard to decide how to proceed with the experiment and kept dithering.	draft
+69357	1	8	난 아직도 뭘 사야 할지 확실히 정하지 못했어.\n우왕좌왕은 그만하고 얼른 결정하지 않으면 다른 사람들이 다 사 버릴 거야.	I still haven't decided for sure what to buy.\nStop dithering and decide quickly, or everyone else will buy it all up.	draft
+69913	0	3	공연장에서는 높은 곳에서 외줄을 타는 위험천만인 곡예가 이루어지고 있다.	At the venue, a perilous acrobatic act of walking a tightrope high above the ground is being performed.	draft
+69913	0	4	승규는 전쟁과 같은 위험천만인 일이 벌어질지도 모른다는 불안감을 느꼈다.	Seung-gyu felt anxious that something extremely dangerous, like a war, might break out.	draft
+69913	0	5	번지점프 해 봤어? 나는 다음에 꼭 한번 해 보고 싶어.\n정말? 나는 무서워서 못 하겠어. 나한테는 위험천만인 일처럼 느껴지거든.	Have you ever bungee jumped? I really want to try it sometime.\nReally? I'm too scared to do it. It feels terribly dangerous to me.	draft
+76700	0	6	민준이의 어려운 처지를 알고 기꺼이 도와주는 사람은 죽마고우인 승규뿐이었다.	The only one who knew of Minjun's difficult situation and gladly helped was Seung-gyu, a childhood friend.	draft
+76700	0	7	유민 씨는 지수 씨와 무척 친한 모양이에요.\n그럼요. 어려서부터 서로 모르는 것 없는 죽마고우인 걸요.	Yumin seems to be very close to Jisu.\nOf course. They're childhood friends who have known everything about each other since they were little.	draft
+60969	0	6	지수는 자신의 상황에 만족하지 못하고 늘 불평불만을 일삼았다.	Jisu, dissatisfied with the situation, was always grumbling.	draft
+60969	0	7	오늘도 이 과장 때문에 정말 짜증이 났어. 하루 종일 일은 안 하고 나만 괴롭히더라.\n너는 입만 열면 상사에 대한 불평불만뿐이구나?	Section Chief Lee got on my nerves again today. All day they did no work and just bothered me.\nEvery time you open your mouth, it's nothing but complaints about your boss, isn't it?	draft
+61390	0	2	그들은 초등학교 시절부터 모든 것을 함께 하며 동고동락을 한 사이이다.	They have been together since elementary school, doing everything together and sharing joys and sorrows.	draft
+61390	0	3	이 일을 마지막으로 우리 팀은 해체됩니다.\n한동안 모두가 힘을 합쳐 동고동락을 했는데 정말 아쉬워요.	After this job, our team is being disbanded.\nWe all pulled together through thick and thin for a while, so it's a real shame.	draft
+84987	0	6	기업은 솔선수범 차원에서 다양한 인재를 출신 학교에 상관없이 선발했다.	As a matter of leading by example, the company selected a variety of talented people regardless of the school they came from.	draft
+84987	0	7	정부는 자가용 운전자들이 솔선수범으로 대중교통을 이용할 것을 당부했다.	The government urged private-car drivers to take the lead by using public transportation.	draft
+72746	0	7	막혀 있던 문제를 해결하자 그 뒤로는 일사천리로 문제를 풀 수 있었다.	Once the blocked problem was resolved, I was able to solve the rest of the problems without a hitch.	draft
+72746	0	8	이제 다른 해야 할 일은 다 끝냈고 마무리만 하면 돼.\n벌써? 정말 일이 일사천리로 이뤄지는구나.	I've finished everything else I had to do; all that's left is the wrap-up.\nAlready? Things really are going smoothly.	draft
+74224	0	6	재빠르게 달아나는 범인은 마치 전광석화와 같았다.	The fleeing culprit was swift as lightning.	draft
+74224	0	7	목장에서 탈출한 말은 잡았나?\n전광석화처럼 빨라서 아직 못 잡았어.	Have you caught the horse that escaped from the ranch?\nIt's as quick as lightning, so we haven't caught it yet.	draft
+58617	0	7	한국의 전통 혼례에서 기러기는 백년해로를 약속하는 사랑의 상징물이다.	In traditional Korean weddings, the wild goose is a symbol of love, pledging a lifelong union.	draft
+58617	0	8	당신과 영원히 백년해로를 하고 싶어요.\n저도 그래요, 여보.	I want to grow old with you together, forever.\nMe too, darling.	draft
+87657	0	5	정부는 홍익인간의 이념에 따라 국민의 생활 환경 개선에 힘썼다.	The government worked to improve people's living environment in accordance with the ideal of Hongik Ingan, to benefit all humanity.	draft
+87657	0	6	시민단체는 심한 빈부 격차는 홍익인간의 사상에 맞지 않는다고 주장했다.	A civic group argued that the severe gap between rich and poor does not fit the ideal of Hongik Ingan, benefiting all humanity.	draft
+87657	0	7	대한민국의 건국 이념은 무엇입니까?\n널리 사람을 이롭게 한다는 홍익인간입니다.	What is the founding ideal of the Republic of Korea?\nIt's Hongik Ingan, to benefit humanity widely.	draft
+68424	0	7	독실한 기독교 신자인 친구는 우리 영혼의 영원불멸을 기도했다.	A friend who is a devout Christian prayed for the eternal immortality of our souls.	draft
+68424	0	8	위대한 스승님께서는 지금은 비록 돌아가셨지만 영원불멸의 가르침을 남기셨다.	Though the great teacher has now passed away, the teacher left behind everlasting teachings.	draft
+68424	0	9	역사의 많은 왕들은 영원불멸의 생명을 꿈꾸었어.\n하지만 결국 그들의 권력도 죽음과 함께 사라졌지.	Many kings in history dreamed of life everlasting.\nBut in the end, even their power vanished with death.	draft
+75123	0	5	직장에서 해고되는 바람에 사업을 시작한 것이 오히려 승규에게는 전화위복이 되었다.	Being fired from a job turned out, in the end, to be a blessing in disguise for Seung-gyu, who started a business as a result.	draft
+75123	0	6	수술을 받고 나서 건강이 회복되셨나요?\n네. 한동안 푹 쉬었더니 아프기 전보다 몸이 더 좋아져 전화위복이 됐어요.	Have you recovered after the surgery?\nYes. After a good rest for a while I'm in better shape than before I got sick, so it turned out to be a blessing in disguise.	draft
+68543	0	6	이 결과는 완전무결이라고 할 수는 없지만 기대한 것 이상임은 분명하다.	This result cannot be called flawless, but it clearly exceeds expectations.	draft
+68543	0	7	우리는 고객들에게 완전무결의 서비스를 제공하는 것을 목표로 해야 합니다.	We should aim to provide customers with flawless service.	draft
+17456	0	5	교수는 학생에게 시험을 볼 것인지 보고서를 제출할 것인지에 대한 양자택일을 요구했다.	The professor required the student to choose one of two options: take the exam or submit a paper.	draft
+17456	0	6	아직 일이 많이 남았는데 피곤해서 집에 갈지 계속 일할지 고민이야.\n그래도 양자택일을 해야 하지 않을까?	There's still a lot of work left, but I'm tired and can't decide whether to go home or keep working.\nStill, shouldn't you pick one or the other?	draft
+92093	0	4	시험을 눈앞에 둔 승규는 일분일초를 아껴 공부에 매진하고 있다.	With an exam just ahead, Seung-gyu is making the most of every minute and throwing everything into studying.	draft
+92093	0	5	여보, 우리 여행 일정이 너무 빡빡한 것 아니에요?\n생애 한 번뿐인 신혼여행인데 일분일초를 아껴서 즐겨야지요.	Honey, isn't our travel itinerary too tight?\nIt's our honeymoon, which only comes once in a lifetime, so we should make the most of every minute and enjoy it.	draft
+48367	0	2	그는 화가 나면 제 방에만 틀어박혀 며칠이고 두문불출을 하곤 했다.	When he got angry, he would shut himself up in his own room and not come out for days on end.	draft
+48367	0	3	할아버지께서는 아무 데도 안 가시고 저렇게 며칠 동안 두문불출이시다.	Grandfather isn't going anywhere; he has been shut away at home like that for days.	draft
+48367	0	4	날씨가 추울 때에는 뭐니 뭐니 해도 따뜻한 집 안에서 두문불출을 하는 것이 최고이다.	When the weather is cold, staying inside the warm house and not going out is the best, whatever anyone says.	draft
+48367	0	5	민준이가 사법 시험에 합격했대.\n한동안 민준이가 두문불출을 하고 공부만 하더니 어려운 시험에 합격했구나.	I heard Minjun passed the bar exam.\nSo after staying shut indoors for a while with nothing but studying, Minjun passed that difficult exam.	draft
+80610	0	4	지수는 건반을 잘못 누르는 실수를 하였지만 태연자약을 유지하여 끝까지 연주하였다.	Jisu made the mistake of hitting a wrong key, but stayed calm and composed and played to the end.	draft
+80610	0	5	그 선배가 고백했을 때 어땠니?\n태연자약을 가장하긴 했지만 사실 깜짝 놀랐어.	How was it when that senior confessed to you?\nI pretended to be calm and composed, but actually I was startled.	draft
+71649	0	5	그 선수는 타지에서 의기소침을 떨치지 못하고 부진한 성적을 보였다.	That athlete could not shake off a sense of dejection in a strange place and turned in a poor performance.	draft
+71649	0	6	너 왜 이렇게 힘이 없니? 내일 있을 면접이 걱정되는 모양이구나.\n응, 사실 나보다 잘하는 사람들이 너무 많아서 의기소침이 돼.	Why do you have no energy? You must be worried about tomorrow's interview.\nYes, actually there are too many people better than me, so I feel disheartened.	draft
+89023	0	5	무서운 할아버지가 혼내자 아이들은 혼비백산으로 달아났다.	When the stern grandfather scolded them, the children fled in a panic.	draft
+58552	0	6	올 가을은 변화무쌍의 날씨 때문에 과일 농사가 잘되지 않았다.	This autumn the fruit harvest did poorly because of the ever-changing weather.	draft
+58552	0	7	그때 한라산 근처에는 비가 왔는데 시내에는 해가 쨍쨍하더라고요.\n섬 날씨는 그야말로 변화무쌍이잖아요.	At that time it was raining near Hallasan, but in the city the sun was shining brightly.\nThe weather on an island is truly changeable, isn't it?	draft
+73690	0	7	김 팀장은 매번 회의에서 자신의 성과를 자화자찬하며 모두의 주목을 받으려고 했다.	At every meeting Team Leader Kim sang their own praises about their achievements, trying to draw everyone's attention.	draft
+73690	0	8	자식들이 잘돼서 뿌듯하시겠어요.\n자화자찬 같지만 다 제가 복이 많은 덕분이죠.	You must be proud that your children are doing well.\nIt may sound like self-praise, but it's all thanks to my good fortune.	draft
+77415	0	8	김 교수는 토론회에서 혼란에 빠진 지리멸렬의 정치에 대해 비판했다.	At the debate, Professor Kim criticized the confused, disjointed state of politics.	draft
+77415	0	9	여당은 이 문제에 대해 여러 가지 의견이 분분해서 지리멸렬 상태이다.	The ruling party is in a state of disarray because of the many conflicting opinions on this issue.	draft
+41254	0	7	식구들의 사랑을 독차지하며 금지옥엽으로 자란 민준이는 버릇이 없었다.	Minjun, who grew up as the apple of the family's eye, doted on by everyone, was ill-mannered.	draft
+41254	0	8	지수는 어렸을 때부터 사랑을 많이 받고 자랐나 봐.\n지수 부모님께서 지수를 금지옥엽으로 귀하게 키우셨대.	Jisu seems to have grown up with a lot of love since childhood.\nI heard Jisu's parents raised Jisu like a precious jewel.	draft
+60701	0	6	이곳은 교통사고가 비일비재로 일어나기 때문에 운전할 때 각별히 주의해야 한다.	Traffic accidents happen all the time here, so you have to be especially careful when driving.	draft
+60701	0	7	승규가 오늘 또 늦네.\n승규 기다리다가 시간을 놓치는 일이 비일비재라 이젠 화도 안 나.	Seung-gyu is late again today.\nI've lost time waiting for Seung-gyu so often that I don't even get angry anymore.	draft
+72796	0	4	김 교수의 연구 결과는 내 주장과 일맥상통인 것 같았다.	Professor Kim's research results seemed to be in line with my argument.	draft
+72796	0	5	최 박사는 어깨 통증이 턱의 통증과도 일맥상통이 된다고 하였다.	Dr. Choi said that the shoulder pain is connected with the pain in the jaw too.	draft
+72906	0	4	우리나라 축구 대표 팀을 응원하는 사람들로 경기장 안팎은 인산인해를 이루었다.	Inside and outside the stadium was a sea of people cheering on our national football team.	draft
+72906	0	5	남녀노소를 불문하고 독립운동을 위해 광장을 가득 메운 인파가 인산인해를 이루었다.	A crowd of people, men and women, young and old alike, filled the plaza for the independence movement, making a sea of humanity.	draft
+76530	0	6	부장님의 부재로 대리님이 프로젝트의 진두지휘를 맡았다.	With the department head absent, the assistant manager took command of the project.	draft
+76530	0	7	진두지휘에 나서는 노장의 모습에서 군의 사기는 높아졌다.	At the sight of the veteran stepping forward to lead, the army's morale rose.	draft
+76530	0	8	경기를 앞두고 감독이 진두지휘에 나서 선수들을 훈련시켰다.	Ahead of the match, the manager personally took charge and trained the players.	draft
+68894	0	6	민준이는 움직이기가 귀찮아서 친구가 불러도 요지부동으로 버텼다.	Minjun was too lazy to move and held out without budging even when a friend called.	draft
+68894	1	4	학생들의 항의에도 불구하고 교수는 이미 결정된 사항을 바꿀 수는 없다며 요지부동이었다.	Despite the students' protests, the professor would not budge, saying that what had already been decided could not be changed.	draft
+68894	1	5	오토바이를 타고 여행을 하는 것은 위험하다고 주변 사람들이 동생을 말렸지만 동생은 요지부동이었다.	The people around my younger sibling advised against traveling by motorcycle because it was dangerous, but my sibling would not budge.	draft
+68894	1	6	졸업 여행을 같이 가자고 네가 한번 유민이를 설득해 봐.\n안 될 거야. 유민이는 한 번 결심하면 요지부동이거든.	Why don't you try persuading Yumin to come on the graduation trip with us?\nIt won't work. Once Yumin makes a decision, Yumin never budges.	draft
+600610	0	1	옛말에 '적을 알고 나를 알면 백전백승'이라는 말이 있다.	As the old saying goes, "If you know the enemy and know yourself, you will win a hundred battles."	draft
+600610	0	2	지수는 테니스를 정말 잘 치는 것 같아. 경기하기만 하면 백전백승이야.\n그래? 지수가 그렇게 잘해?	Jisu seems to be really good at tennis. Jisu wins every match.\nReally? Jisu is that good?	draft
+20732	0	4	장사가 잘되는 그 음식점은 명절에도 하루도 문을 닫지 않고 연중무휴로 영업한다.	That restaurant, where business is booming, never closes even for the holidays and operates all year round.	draft
+20732	0	5	그 집 자장면을 먹고 싶어. 오늘 추석인데 문을 열었을까?\n응. 거기는 연중무휴라고 알고 있어. 문 열었을 거야.	I want to eat that place's jajangmyeon. It's Chuseok today; I wonder if it's open.\nYes, I know that place is open all year round. It should be open.	draft
+69016	0	6	어린이들을 상대로 하는 영어 학원이 우후죽순으로 생겨났다.	English cram schools aimed at children have sprung up like bamboo shoots after rain.	draft
+69016	0	7	우와, 여기 언제 이렇게 카페가 많아졌어?\n예전엔 한 곳밖에 없었는데 갑자기 우후죽순으로 늘어났어.	Wow, when did this place get so many cafés?\nThere used to be only one, but suddenly they've sprung up like mushrooms.	draft
+39867	0	5	산 정상에서 아름다운 경치를 내려다보니 왜 우리나라를 금수강산이라고 하는지 알 것 같았다.	Looking down at the beautiful scenery from the mountaintop, I understood why our country is called the "land of embroidered rivers and mountains."	draft
+39867	0	6	우리나라 자연은 정말 아름다운 것 같아.\n금수강산이라는 말처럼 정말 비단에 수를 놓은 것처럼 아름답구나.	Our country's nature is really beautiful.\nJust as the phrase "embroidered rivers and mountains" says, it's as beautiful as if embroidered on silk.	draft
+79338	0	6	어머니가 갑자기 쓰러지셨다는 청천벽력 같은 소식이 전해졌다.	News came, like a bolt from the blue, that Mother had suddenly collapsed.	draft
+79338	0	7	아버지, 저 학교를 그만두겠습니다.\n그게 무슨 청천벽력 같은 소리냐?	Father, I'm going to quit school.\nWhat kind of bolt-from-the-blue thing is that to say?	draft
+82151	0	5	거센 바람에 추풍낙엽이 장관을 이루었다.	Autumn leaves falling in the strong wind made a magnificent sight.	draft
+82151	0	6	거리에 쌓인 추풍낙엽이 가을의 정취를 한껏 자아냈다.	The fallen autumn leaves piled up in the street fully conjured the mood of autumn.	draft
+82151	0	7	추풍낙엽이 쌓인 길을 걸으니 참 운치 있고 좋다.\n그러게. 정말 완연한 가을을 느낄 수 있어.	Walking along a path piled with fallen autumn leaves is really tasteful and nice.\nYes, you can really feel that it's full autumn.	draft
+82151	1	4	아무리 활을 잘 쏘는 부대가 있어도 총 앞에서는 추풍낙엽이다.	No matter how good at archery a unit may be, they fall like leaves before guns.	draft
+82151	1	5	갑작스러운 정리 해고로 우리는 졸지에 추풍낙엽의 신세가 되었다.	With the sudden layoffs, we suddenly found ourselves cast down like fallen leaves.	draft
+82151	1	6	갖가지 비리가 불거지면서 이 당의 위상이 추풍낙엽으로 떨어지고 있다.	As all kinds of corruption come to light, this party's standing is dropping like autumn leaves.	draft
+82151	1	7	나도 회사에서 해고를 당해 추풍낙엽 신세가 돼 버렸어.\n괜찮아. 금방 다시 취직할 수 있을 거야.	I got laid off at my company too, and now I'm like a fallen leaf.\nIt's okay. You'll be able to find a job again soon.	draft
+30471	0	6	할아버지는 나에게 경거망동을 피하고 늘 조신하게 행동하라고 당부하셨다.	Grandfather cautioned me to avoid rash behavior and always act with restraint.	draft
+30471	0	7	저 아이는 산만하고 조심성이 없는 데다가 말썽도 어찌나 부리는지.\n경거망동을 삼가고 조심히 행동하면 좋을 텐데.	That child is distracted and careless, and what trouble they cause.\nIf only they would refrain from rash behavior and act carefully.	draft
+77593	0	6	연구원은 수천 번의 시도 끝에 천신만고로 실험에 성공했다.	After thousands of attempts, the researcher succeeded in the experiment only through extreme hardship.	draft
+77593	0	7	승규는 낮에는 직장을 다니고 밤에는 공부해서 천신만고로 시험에 합격했다.	Seung-gyu worked at a job during the day and studied at night, and passed the exam only after enormous struggle.	draft
+77593	0	8	우리 팀이 이겼어?\n초반에 큰 점수 차로 뒤졌지만 천신만고 끝에 승리했어.	Did our team win?\nWe were far behind early on, but we won after a great struggle.	draft
+65598	0	4	민준이는 워낙 신출귀몰을 잘해서 이젠 어디에 나타나도 놀랍지 않다.	Minjun pops up and vanishes so elusively that it no longer surprises me wherever Minjun shows up.	draft
+65598	0	5	지난주에는 일본에 다녀왔어.\n뭐? 지난달에는 중국에 있더니 정말 신출귀몰이 따로 없네.	I went to Japan last week.\nWhat? Last month you were in China; you're really everywhere at once.	draft
+23105	0	5	건물에서 불이 나자, 사람들이 먼저 대피하기 위해 한꺼번에 비상구로 몰려 아비규환을 이루었다.	When a fire broke out in the building, people all rushed to the emergency exits at once to evacuate first, creating a scene of hellish chaos.	draft
+23105	0	6	어제 학교 앞에 교통사고가 크게 났던데, 봤어?\n응. 현장의 모습이 한마디로 아비규환이었어.	I heard there was a big traffic accident in front of the school yesterday. Did you see it?\nYes. The scene was, in a word, pandemonium.	draft
+60954	0	9	최 박사는 그의 논거를 뒷받침할 과학적 증거를 찾기 위해 불철주야 실험에 몰두했다.	Dr. Choi devoted himself to experiments day and night to find scientific evidence supporting his argument.	draft
+60954	0	10	김 과장이 반년 만에 차장으로 승진했더군.\n김 과장은 회사를 위해 불철주야로 일했으니 승진하는 것은 당연한 결과 아니겠나?	I heard Section Chief Kim was promoted to deputy department head after only half a year.\nSection Chief Kim worked day and night for the company, so isn't promotion only natural?	draft
+32144	0	6	민준이는 자신을 구해 줘서 고맙다며 남은 생애 동안 결초보은을 하겠다고 했다.	Minjun, grateful for being rescued, vowed to repay that kindness for as long as Minjun lived.	draft
+32144	0	7	저를 도와주시면 결초보은의 마음으로 꼭 보답하겠습니다.\n그럼 이번 한 번은 도와드리죠.	If you help me, I will surely repay you, never forgetting this debt of gratitude.\nThen I'll help you, just this once.	draft
+65016	0	5	학급 아이들은 교실 내에서 일어나는 왕따 문제를 수수방관만 하고 있었다.	The children in the class were merely standing by and watching the bullying going on in the classroom.	draft
+65016	0	6	학교 생활에 고민이 있으면 선생님께 상담을 하지 그랬니?\n선생님께 말씀드려 봤지만 수수방관으로 일관하셨어요.	If you were worried about school life, why didn't you talk to your teacher?\nI tried telling the teacher, but they just stood by and did nothing.	draft
+80709	0	8	나는 칠전팔기라는 말을 가슴에 새기고 도전을 멈추지 않았다.	I took the saying "fall seven times, get up eight" to heart and never stopped taking on challenges.	draft
+80709	0	9	또 시험에 떨어지다니 이번에는 정말 포기해야 하나 봐.\n칠전팔기라고 하잖아. 한 번만 더 도전해 보자.	Failing the exam again; I guess this time I really should give up.\nThey say "fall seven times, get up eight." Let's try just one more time.	draft
+50369	0	1	사업가들 중에는 돈만 많이 벌면 만사형통이라고 여기는 사람들도 있다.	Among businesspeople there are some who think that if you just make a lot of money, everything will go well.	draft
+50369	0	2	새해 복 많이 받으세요.\n네. 김 사장님도 새해엔 만사형통이 되시길 기원합니다.	Happy New Year.\nThank you. And I wish President Kim, too, success in everything in the new year.	draft
+87314	0	4	그들은 국제 사회의 우려에도 전쟁을 계속하겠다는 확고부동의 의지를 표명했다.	Despite concern from the international community, they declared a firm, unshakable resolve to continue the war.	draft
+87314	0	5	이 대리가 정말로 회사를 그만두겠대요?\n네. 여러 번 만류해 보았지만 결심이 확고부동이에요.	Is Assistant Manager Lee really going to quit the company?\nYes. We tried to talk them out of it several times, but their decision is firm.	draft
+68173	0	4	아이스크림을 사 온다는 아버지의 말에 아이는 아버지만을 오매불망을 하며 기다렸다.	At Father's words that he would bring home ice cream, the child waited, longing for Father day and night.	draft
+68173	0	5	대학 합격 소식을 어찌나 오매불망을 했던지 꿈도 꿀 정도야.\n간절히 바라고 있으니 좋은 소식이 있을 거야.	I longed so much for news of getting into college that I even dream of it.\nYou want it so badly, so good news will surely come.	draft
+72927	0	3	정치적 이합집산이 되풀이되어 당의 권력이 균형을 잃자 불안정한 정국이 계속되었다.	As political alignments and splits kept repeating and the party's power lost its balance, an unstable political situation continued.	draft
+61378	0	6	열애설에 휩싸인 여배우는 소문이 사실무근이라는 입장을 유지했다.	The actress, caught up in dating rumors, maintained her position that the rumor was groundless.	draft
+61378	0	7	도박으로 재산을 모두 잃었다는 소문이 사실입니까?\n전혀 사실무근의 얘기니 믿지 마십시오.	Is the rumor true that you lost all your property gambling?\nIt's completely groundless, so please don't believe it.	draft

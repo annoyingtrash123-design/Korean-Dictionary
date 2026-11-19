@@ -2,29 +2,46 @@
 //! 초급/중급 word, keyed by the krdict entry id, sense and example index. Merged into the entry
 //! at build time (`en`, plus `en_ai: true` so the app labels it); a row whose Korean no longer
 //! matches the source example is ignored.
+//!
+//! `data/example_en_idioms.tsv` is the staging file of the same overlay for the examples of krdict 속담 and 성어
+//! (same columns plus a sixth, `review`): `draft` rows are not loaded, only rows whose review column starts
+//! with `approved` ship. A dialogue's turns are one line in the file, joined by a literal `\n` (backslash, n)
+//! that is read back as the newline the source example has (in the Korean and in the English).
 
 use crate::common::Entry;
 use serde_json::Value;
 use std::collections::HashMap;
 
+/// A turn break written `\n` (two characters) in the files is the newline of the source example.
+pub fn unescape(s: &str) -> String {
+    s.replace("\\n", "\n")
+}
+
 pub struct ExampleEn(HashMap<(String, usize, usize), (String, String)>);
 
 impl ExampleEn {
+    /// Rows of five columns (reviewed), or six with a review column that must start with `approved`.
     pub fn parse(tsv: &str) -> ExampleEn {
         let mut m = HashMap::new();
         for line in tsv.lines().filter(|l| !l.starts_with('#') && !l.trim().is_empty()) {
             let f: Vec<&str> = line.split('\t').collect();
-            if let [id, sense, ex, ko, en] = f[..] {
-                if let (Ok(s), Ok(x)) = (sense.parse(), ex.parse()) {
-                    m.insert((id.to_string(), s, x), (ko.to_string(), en.to_string()));
-                }
+            let (id, sense, ex, ko, en) = match f[..] {
+                [id, sense, ex, ko, en] => (id, sense, ex, ko, en),
+                [id, sense, ex, ko, en, review] if review.starts_with("approved") => (id, sense, ex, ko, en),
+                _ => continue,
+            };
+            if let (Ok(s), Ok(x)) = (sense.parse(), ex.parse()) {
+                m.insert((id.to_string(), s, x), (unescape(ko), unescape(en)));
             }
         }
         ExampleEn(m)
     }
 
+    /// The reviewed overlay plus the approved rows of the idiom staging file.
     pub fn builtin() -> ExampleEn {
-        Self::parse(include_str!("../data/example_en.tsv"))
+        let mut t = Self::parse(include_str!("../data/example_en.tsv"));
+        t.0.extend(Self::parse(include_str!("../data/example_en_idioms.tsv")).0);
+        t
     }
 
     pub fn len(&self) -> usize {
@@ -61,6 +78,19 @@ impl ExampleEn {
 mod tests {
     use super::*;
     use serde_json::json;
+
+    #[test]
+    fn staging_rows_ship_only_when_approved_and_dialogues_keep_their_turns() {
+        let t = ExampleEn::parse("1\t0\t0\t가: 응.\\n나: 아.\tA: Yes.\\nB: Oh.\tdraft\n1\t0\t1\t좋아요.\tGood.\tapproved:x\n1\t0\t2\t아니요.\tNo.\n");
+        assert_eq!(t.len(), 2, "the draft row is not loaded");
+        let mut e = Entry { source: "krdict", ext_id: "1".into(), data: json!({"senses": [{"examples": [{"ko": "가: 응.\n나: 아."}, {"ko": "좋아요."}, {"ko": "아니요."}]}]}), ..Entry::default() };
+        assert_eq!(t.apply(&mut e), 2);
+        assert!(e.data["senses"][0]["examples"][0].get("en").is_none());
+        let d = ExampleEn::parse("1\t0\t0\t가: 응.\\n나: 아.\tA: Yes.\\nB: Oh.\tapproved\n");
+        let mut e = Entry { source: "krdict", ext_id: "1".into(), data: json!({"senses": [{"examples": [{"ko": "가: 응.\n나: 아."}]}]}), ..Entry::default() };
+        assert_eq!(d.apply(&mut e), 1);
+        assert_eq!(e.data["senses"][0]["examples"][0]["en"], "A: Yes.\nB: Oh.");
+    }
 
     #[test]
     fn merges_only_matching_examples() {
