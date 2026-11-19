@@ -42,14 +42,14 @@ pub fn mark_curriculum(conn: &Connection) -> Result<(usize, usize)> {
     Ok((rows.len(), ng))
 }
 
-/// Add and fill `study_item.home_ok` (needs `entries` in the same file): a krdict entry of the core pack with an
+/// Add and fill `study_item.home_ok` (needs `entries` in the same file): a krdict (or reviewed hanppuri idiom) entry of the core pack with an
 /// English gloss that passes `idiom_home_ok`. Returns the number flagged.
 pub fn mark_study(conn: &Connection) -> Result<usize> {
     conn.execute_batch("ALTER TABLE study_item ADD COLUMN home_ok INTEGER NOT NULL DEFAULT 0")?;
     let rows: Vec<(String, i64)> = {
         let mut st = conn.prepare(
             "SELECT s.list, s.rank, e.headword, e.data FROM study_item s JOIN entries e ON e.id = s.entry_id \
-             WHERE s.pack = 'core' AND e.source = 'krdict' AND e.gloss IS NOT NULL AND trim(e.gloss) != ''",
+             WHERE s.pack = 'core' AND e.source IN ('krdict', 'hanppuri') AND e.gloss IS NOT NULL AND trim(e.gloss) != ''",
         )?;
         let v = st
             .query_map([], |r| {

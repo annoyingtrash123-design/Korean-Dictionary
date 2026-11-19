@@ -161,3 +161,50 @@ fn gate_rejects_bad_rows() {
     assert!(has_unquoted_hangul("He said 말."));
     assert!(!has_unquoted_hangul("He said \"말\" twice."));
 }
+
+mod study_rows {
+    use super::*;
+    use kdict_pipeline::study_idioms::{add_items_with, Item};
+    use rusqlite::{params, Connection};
+
+    fn pack(path: &std::path::Path, rows: &[(i64, &str, &str, &str, &str, &str, &str)]) {
+        let c = Connection::open(path).unwrap();
+        c.execute_batch("CREATE TABLE entries (id INTEGER PRIMARY KEY, headword TEXT NOT NULL, hw_norm TEXT NOT NULL, source TEXT NOT NULL, ext_id TEXT, gloss TEXT, data TEXT NOT NULL);").unwrap();
+        for (id, hw, norm, source, ext, gloss, data) in rows {
+            c.execute("INSERT INTO entries VALUES (?1,?2,?3,?4,?5,?6,?7)", params![id, hw, norm, source, ext, gloss, data]).unwrap();
+        }
+    }
+
+    #[test]
+    fn an_approved_row_points_the_study_item_at_the_core_entry() {
+        let mut x = builtin().into_iter().find(|p| p.headword == "백문이 불여일견").unwrap();
+        x.review = "approved:test".into();
+        let entry = to_entry(&x);
+        let dir = tempfile::tempdir().unwrap();
+        let (core, st) = (dir.path().join("core.sqlite"), dir.path().join("stdict.sqlite"));
+        let core_data = serde_json::to_string(&entry.data).unwrap();
+        pack(&core, &[(70, "백문이 불여일견", "백문이불여일견", "hanppuri", &entry.ext_id, &x.en_gloss, &core_data)]);
+        let st_data = serde_json::json!({"senses": [{"ko_def": x.ko_def}]}).to_string();
+        pack(&st, &[(900, "백문이 불여일견(不如一見)", "백문이불여일견", "stdict", &x.src_id, "", &st_data)]);
+        let it = Item { list: "sokdam100".into(), rank: 1, text: x.headword.clone(), source: "stdict".into(), ext_id: x.src_id.clone(), headword: "백문이 불여일견".into(), score: 1.0 };
+        let stats = add_items_with(&core, Some(&st), None, std::slice::from_ref(&it), std::slice::from_ref(&x)).unwrap();
+        assert_eq!(stats.items, 1);
+        let c = Connection::open(&core).unwrap();
+        let (eid, pk, ext, gloss, ok): (Option<i64>, String, String, String, i64) =
+            c.query_row("SELECT entry_id, pack, ext_id, gloss, home_ok FROM study_item", [], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?))).unwrap();
+        assert_eq!((eid, pk.as_str(), ext.as_str()), (Some(70), "core", entry.ext_id.as_str()));
+        assert_eq!(gloss, x.en_gloss);
+        assert_eq!(ok, 1, "an approved idiom with full example sentences is a Home card");
+        // without the overlay row the item stays a Korean-only stdict row
+        let core2 = dir.path().join("core2.sqlite");
+        pack(&core2, &[]);
+        let stats = add_items_with(&core2, Some(&st), None, std::slice::from_ref(&it), &[]).unwrap();
+        assert_eq!(stats.items, 1);
+        let pk: String = Connection::open(&core2).unwrap().query_row("SELECT pack FROM study_item", [], |r| r.get(0)).unwrap();
+        assert_eq!(pk, "stdict");
+        // a Korean definition that is not the pack's text fails the build
+        let mut bad = x.clone();
+        bad.ko_def = "바뀐 정의입니다.".into();
+        assert!(add_items_with(&core, Some(&st), None, std::slice::from_ref(&it), std::slice::from_ref(&bad)).is_err());
+    }
+}

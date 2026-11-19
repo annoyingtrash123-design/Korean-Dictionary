@@ -373,13 +373,18 @@ fn eligible(rows: &[crate::sql::Row]) -> Vec<(i64, String)> {
 
 /// The study lists of the two idiom cards, in page order: (lists, card kind). The first list with an
 /// eligible item is used (`seongeo300` only for packs built before `seongeo_learner` existed).
-const IDIOM_LISTS: [(&[&str], &str); 2] = [(&["sokdam_all"], "proverb"), (&["seongeo_learner", "seongeo300"], "seongeo")];
+const IDIOM_LISTS: [(&[&str], &str, &str); 2] = [(&["sokdam_all"], "sokdam100", "proverb"), (&["seongeo_learner", "seongeo300"], "seongeo300", "seongeo")];
 
-/// One study list's pool: its krdict (core) entries with an English gloss, in rank order.
-fn study_pool(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> {
+/// One study list's pool: its krdict (core) entries with an English gloss, in rank order. `home_ok` rows of
+/// `also` that point at a reviewed `hanppuri` idiom entry (`ext_id` `idiom-...`: the 속담/성어 krdict lacks, which are
+/// not in the pool's own list) follow, so those items can be the day's card too.
+fn study_pool(p: &PackDb, list: &str, also: &str, kind: &str) -> Result<Vec<(i64, String)>> {
     if p.caps.study_home_ok {
         // eligibility is precomputed (`study_item.home_ok`): no entry is read
-        let rows = p.conn.query("SELECT entry_id FROM study_item WHERE list = ?1 AND pack = 'core' AND home_ok = 1 ORDER BY rank", &[list.into()])?;
+        let rows = p.conn.query(
+            "SELECT entry_id FROM study_item WHERE pack = 'core' AND home_ok = 1 AND (list = ?1 OR (list = ?2 AND ext_id LIKE 'idiom-%')) ORDER BY (list = ?1) DESC, rank",
+            &[list.into(), also.into()],
+        )?;
         let mut out: Vec<(i64, String)> = Vec::new();
         for id in rows.iter().filter_map(|r| r.int(0)) {
             if !out.iter().any(|(i, _)| *i == id) {
@@ -394,7 +399,7 @@ fn study_pool(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> 
 fn study_pool_runtime(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> {
     let rows = p.conn.query(
         "SELECT s.entry_id, e.headword, e.data, ?2 FROM study_item s JOIN entries e ON e.id = s.entry_id \
-         WHERE s.list = ?1 AND s.pack = 'core' AND e.source = 'krdict' AND e.gloss IS NOT NULL AND trim(e.gloss) != '' \
+         WHERE s.list = ?1 AND s.pack = 'core' AND e.source IN ('krdict', 'hanppuri') AND e.gloss IS NOT NULL AND trim(e.gloss) != '' \
          ORDER BY s.rank",
         &[list.into(), kind.into()],
     )?;
@@ -432,10 +437,10 @@ fn idiom_at(p: &PackDb, pool: &[(i64, String)], i: Option<usize>) -> Result<Opti
 fn idioms(p: &PackDb, day: u32) -> Result<Vec<HomeIdiom>> {
     let mut out = Vec::new();
     if p.caps.study_item {
-        for (lists, kind) in IDIOM_LISTS {
+        for (lists, also, kind) in IDIOM_LISTS {
             let mut pool = Vec::new();
             for list in lists {
-                pool = study_pool(p, list, kind)?;
+                pool = study_pool(p, list, also, kind)?;
                 if !pool.is_empty() {
                     break;
                 }
@@ -770,7 +775,7 @@ mod tests {
         let rows = c
             .query(
                 "SELECT s.list, s.rank, e.headword, e.data FROM study_item s JOIN entries e ON e.id = s.entry_id \
-                 WHERE s.pack = 'core' AND e.source = 'krdict' AND e.gloss IS NOT NULL AND trim(e.gloss) != ''",
+                 WHERE s.pack = 'core' AND e.source IN ('krdict', 'hanppuri') AND e.gloss IS NOT NULL AND trim(e.gloss) != ''",
                 &[],
             )
             .unwrap();
@@ -806,6 +811,30 @@ mod tests {
         }
     }
 
+    #[test]
+    fn reviewed_idioms_of_other_lists_join_the_pool() {
+        // 속담/성어 that krdict lacks have a reviewed `hanppuri` core entry; the study rows of sokdam100 / seongeo300
+        // that point at it (ext_id `idiom-...`) follow the lists the cards walk
+        let p = study_pack();
+        let ok = r#"{"senses":[{"ko_def":"뜻.","examples":[{"ko":"백문이 불여일견이다.","en":"Seeing is believing.","type":"sentence"}]}]}"#;
+        for (id, hw, kind) in [(40i64, "백문이 불여일견", "proverb"), (41, "만장일치", "word")] {
+            p.conn
+                .query(
+                    "INSERT INTO entries VALUES (?1, ?2, ?2, NULL, NULL, 'noun', NULL, 'hanppuri', 'en', NULL, ?1, ?3, 'g', ?4)",
+                    &[id.into(), hw.into(), kind.into(), ok.into()],
+                )
+                .unwrap();
+        }
+        p.conn.exec("INSERT INTO study_item VALUES ('sokdam100', 7, 'sokdam', 't', 40, 'core', 'idiom-stdict-1', 'h', 'h', 'g'), ('seongeo300', 7, 'seongeo', 't', 41, 'core', 'idiom-stdict-2', 'h', 'h', 'g')").unwrap();
+        let p = flag(with_curriculum(PackDb::new("core", p.conn).unwrap()));
+        assert_eq!(study_pool(&p, "sokdam_all", "sokdam100", "proverb").unwrap().iter().map(|x| x.0).collect::<Vec<_>>(), vec![30, 36, 40]);
+        assert_eq!(study_pool(&p, "seongeo_learner", "seongeo300", "seongeo").unwrap().iter().map(|x| x.0).collect::<Vec<_>>(), vec![31, 37, 41]);
+        // the krdict rows of the other lists (35, ext_id '1') stay out
+        let h = home(&[&p], 2).unwrap();
+        assert_eq!(h.idioms.iter().map(|i| i.id).collect::<Vec<_>>(), vec![40, 41]);
+        assert_eq!(h.idioms[0].source, "hanppuri");
+    }
+
     /// Real packs (`$KDICT_PACKS`, else `pipeline/out`): the flagged pools equal the runtime ones, and both timings.
     /// `KDICT_PACKS=pipeline/out cargo test --release -p kdict-core --lib home_flags_match_runtime -- --ignored --nocapture`
     #[test]
@@ -827,9 +856,9 @@ mod tests {
         let new = word_pool_flagged(&p).unwrap();
         eprintln!("word pool: {} ids; runtime {t_old:?}, flagged {:?}", new.len(), t.elapsed());
         assert_eq!(old, new);
-        for (lists, kind) in IDIOM_LISTS {
+        for (lists, _, kind) in IDIOM_LISTS {
             for l in lists {
-                assert_eq!(study_pool_runtime(&p, l, kind).unwrap(), study_pool(&p, l, kind).unwrap(), "{l}");
+                assert_eq!(study_pool_runtime(&p, l, kind).unwrap(), study_pool(&p, l, "none", kind).unwrap(), "{l}");
             }
         }
         let mut q = open();

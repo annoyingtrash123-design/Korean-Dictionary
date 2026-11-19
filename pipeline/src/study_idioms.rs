@@ -103,10 +103,17 @@ pub struct Stats {
 /// Create and fill `study_item` in the (finished) core pack. `stdict` / `opendict` are the built
 /// packs next to it; rows pointing at a missing pack are left out (a full build fails the quality gate then).
 pub fn add_table(core: &Path, stdict: Option<&Path>, opendict: Option<&Path>) -> Result<Stats> {
-    add_items(core, stdict, opendict, &builtin())
+    add_items_with(core, stdict, opendict, &builtin(), &crate::idiom_extra::approved())
 }
 
 pub fn add_items(core: &Path, stdict: Option<&Path>, opendict: Option<&Path>, items: &[Item]) -> Result<Stats> {
+    add_items_with(core, stdict, opendict, items, &[])
+}
+
+/// `extras`: the approved English overlay rows (`idiom_extra.rs`). An item that only a Korean pack had now points at
+/// the overlay's core entry (`source = 'hanppuri'`, `ext_id = idiom-<pack>-<id>`), with its English gloss, and the
+/// overlay's Korean text is checked against the pack entry it was copied from (a mismatch fails the build).
+pub fn add_items_with(core: &Path, stdict: Option<&Path>, opendict: Option<&Path>, items: &[Item], extras: &[crate::idiom_extra::IdiomItem]) -> Result<Stats> {
     let conn = Connection::open(core)?;
     conn.execute_batch(
         "CREATE TABLE study_item (
@@ -135,6 +142,22 @@ pub fn add_items(core: &Path, stdict: Option<&Path>, opendict: Option<&Path>, it
                 None => None,
             })
         };
+        if let Some(x) = extras.iter().find(|x| x.src_pack == it.source && x.src_id == it.ext_id) {
+            let pack_conn = if it.source == "stdict" { st.as_ref() } else { od.as_ref() };
+            if let Some(c) = pack_conn {
+                crate::idiom_extra::check_against_pack(c, x)?;
+            }
+            let ext = crate::idiom_extra::ext_id(x);
+            let id: Option<i64> = conn
+                .query_row("SELECT id FROM entries WHERE source = 'hanppuri' AND ext_id = ?1", params![ext], |r| r.get(0))
+                .ok();
+            if let Some(id) = id {
+                conn.prepare_cached("INSERT INTO study_item VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10)")?
+                    .execute(params![it.list, it.rank, kind, it.text, id, "core", ext, it.headword, norm, truncate(&x.en_gloss, GLOSS_CHARS)])?;
+                stats.items += 1;
+                continue;
+            }
+        }
         let found = match it.source.as_str() {
             "krdict" => row(&conn)?,
             "stdict" => st.as_ref().map(row).transpose()?.flatten(),

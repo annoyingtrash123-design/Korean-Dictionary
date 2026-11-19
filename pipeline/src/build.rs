@@ -833,6 +833,22 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         log::info!("grammar overlay (hanppuri, AI-assisted): {added} patterns added, {retired} retired (krdict has them)");
     }
 
+    // 속담 / 성어 that krdict lacks: AI-written English, shipped only once an independent review approved the row
+    {
+        let (mut added, mut drafts) = (0, 0);
+        for it in crate::idiom_extra::builtin() {
+            if !crate::idiom_extra::is_approved(&it) {
+                drafts += 1;
+                continue;
+            }
+            let e = crate::idiom_extra::to_entry(&it);
+            let rank = ranker.rank(&Entry { source: "krdict", ..e.clone() });
+            insert_entry(&conn, &e, rank, true, &mut c)?;
+            added += 1;
+        }
+        log::info!("idiom overlay (hanppuri, AI-assisted, reviewed): {added} entries added, {drafts} drafts left out");
+    }
+
     // grammar table
     sort_grammar(&mut grammar);
     for (i, g) in grammar.iter().enumerate() {
