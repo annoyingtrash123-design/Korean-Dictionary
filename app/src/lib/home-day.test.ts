@@ -28,6 +28,7 @@ describe('dayNumber', () => {
 
 describe('level labels', () => {
   it('name the curriculum, not TOPIK, in the label', () => {
+    expect(curriculumLabel(4)).toBe('4급 · 표준 교육과정');
     expect(curriculumLabel(5)).toBe('5급 · 표준 교육과정');
     expect(curriculumLabel(6)).not.toMatch(/TOPIK/);
     expect(curriculumHint(5)).toBe('National standard Korean curriculum level 5 (≈ TOPIK 5)');

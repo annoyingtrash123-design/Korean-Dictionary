@@ -76,8 +76,8 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     // level labels name the curriculum, never plain "TOPIK n"
     const lv = page.locator('.today-card .cur-lvl');
     await expect(lv).toHaveCount(5);
-    for (const t of await texts(lv)) expect(t).toMatch(/^[56]급 · 표준 교육과정$/);
-    await expect(lv.first()).toHaveAttribute('title', /^National standard Korean curriculum level [56] \(≈ TOPIK [56]\)$/);
+    for (const t of await texts(lv)) expect(t).toMatch(/^[456]급 · 표준 교육과정$/);
+    await expect(lv.first()).toHaveAttribute('title', /^National standard Korean curriculum level [456] \(≈ TOPIK [456]\)$/);
     expect(await pager(page).innerText()).not.toMatch(/TOPIK/);
 
     const first = await titles(page);

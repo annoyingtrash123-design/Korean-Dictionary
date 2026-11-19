@@ -1,5 +1,5 @@
 //! The Search tab's start screen: each day's picks from the official curriculum (words and
-//! grammar of levels 5-6, table `curriculum`), a proverb and a four-character idiom (the frequency-ranked
+//! grammar of levels 4-6, table `curriculum`), a proverb and a four-character idiom (the frequency-ranked
 //! study lists in table `study_item`, most common first).
 //!
 //! Every pick is a pure function of the day number (days since 2026-01-01 in the user's local
@@ -18,6 +18,8 @@ const GRAMMAR_SALT: u64 = 0x2002;
 const IDIOM_SALT: u64 = 0x3003;
 /// Curriculum levels shown on the home page (5-6: the advanced learner's range).
 const LEVELS: &str = "(5, 6)";
+/// Grammar cards also cover upper-intermediate 4급 (4-6: upper-intermediate to advanced).
+const GRAMMAR_LEVELS: &str = "(4, 5, 6)";
 const MAX_EXAMPLES: usize = 3;
 const MAX_GLOSS_ITEMS: usize = 3;
 /// Longer sentences are fine on a phone card only up to a point; shorter ones are preferred.
@@ -277,13 +279,13 @@ fn words(p: &PackDb, day: u32) -> Result<Vec<HomeWord>> {
 fn grammar_pool(p: &PackDb) -> Result<Vec<i64>> {
     let sql = if p.caps.curriculum_home_ok {
         format!(
-            "SELECT grammar_id FROM curriculum WHERE kind = 'grammar' AND level IN {LEVELS} AND grammar_id IS NOT NULL AND home_ok = 1 \
+            "SELECT grammar_id FROM curriculum WHERE kind = 'grammar' AND level IN {GRAMMAR_LEVELS} AND grammar_id IS NOT NULL AND home_ok = 1 \
              GROUP BY grammar_id ORDER BY MIN(level), MIN(rank), grammar_id"
         )
     } else {
         format!(
             "SELECT c.grammar_id FROM curriculum c JOIN grammar g ON g.id = c.grammar_id \
-             WHERE c.kind = 'grammar' AND c.level IN {LEVELS} AND c.grammar_id IS NOT NULL AND g.summary_en IS NOT NULL AND trim(g.summary_en) != '' \
+             WHERE c.kind = 'grammar' AND c.level IN {GRAMMAR_LEVELS} AND c.grammar_id IS NOT NULL AND g.summary_en IS NOT NULL AND trim(g.summary_en) != '' \
              GROUP BY c.grammar_id ORDER BY MIN(c.level), MIN(c.rank), c.grammar_id"
         )
     };
@@ -300,7 +302,7 @@ fn grammar(p: &PackDb, day: u32) -> Result<Vec<HomeGrammar>> {
         let r = p.conn.query(
             &format!(
                 "SELECT g.id, g.pattern, g.summary_en, \
-                 (SELECT MIN(level) FROM curriculum WHERE kind = 'grammar' AND grammar_id = g.id AND level IN {LEVELS}), \
+                 (SELECT MIN(level) FROM curriculum WHERE kind = 'grammar' AND grammar_id = g.id AND level IN {GRAMMAR_LEVELS}), \
                  COALESCE((SELECT entry_id FROM curriculum WHERE kind = 'grammar' AND grammar_id = g.id AND entry_id IS NOT NULL ORDER BY level, rank LIMIT 1), g.entry_id) \
                  FROM grammar g WHERE g.id = ?1"
             ),
@@ -576,6 +578,11 @@ mod tests {
             c.query("INSERT INTO grammar VALUES (?1, ?1, ?2, 'Expressions', 5, ?3, ?1)", &[g.into(), format!("-패턴{g}").into(), format!("summary {g}").into()]).unwrap();
             c.query("INSERT INTO curriculum VALUES ('grammar', 6, ?1, ?1, 'g', ?1)", &[g.into()]).unwrap();
         }
+        // grammar also takes 4급 (id 4); a 3급 pattern (id 5) is skipped
+        for (g, lvl) in [(4i64, 4i64), (5, 3)] {
+            c.query("INSERT INTO grammar VALUES (?1, ?1, ?2, 'Expressions', ?3, ?4, ?1)", &[g.into(), format!("-패턴{g}").into(), lvl.into(), format!("summary {g}").into()]).unwrap();
+            c.query("INSERT INTO curriculum VALUES ('grammar', ?2, ?1, ?1, 'g', ?1)", &[g.into(), lvl.into()]).unwrap();
+        }
         PackDb::new("core", c).unwrap()
     }
 
@@ -619,7 +626,7 @@ mod tests {
     }
 
     #[test]
-    fn picks_from_curriculum_levels_5_6_only() {
+    fn picks_words_from_levels_5_6_and_grammar_from_4_6() {
         let p = with_curriculum(pack());
         let h = home(&[&p], 0).unwrap();
         assert_eq!((h.words.len(), h.grammar.len()), (3, 2));
@@ -635,10 +642,18 @@ mod tests {
             assert_eq!(w.examples[1].ko, "A: 안녕\nB: 응");
         }
         for g in &h.grammar {
-            assert_eq!(g.level, 6);
+            assert!(g.level == 4 || g.level == 6, "grammar covers 4-6급, not 3급");
             assert!(g.entry.is_some() && !g.examples.is_empty());
         }
         assert_eq!(h, home(&[&p], 0).unwrap());
+        // 4급 grammar comes up; 3급 never does
+        let mut lv = HashSet::new();
+        for d in 0..60 {
+            for g in home(&[&p], d).unwrap().grammar {
+                lv.insert(g.level);
+            }
+        }
+        assert_eq!(lv, HashSet::from([4, 6]));
     }
 
     #[test]
@@ -783,7 +798,7 @@ mod tests {
         assert_eq!(word_pool_runtime(&old).unwrap(), word_pool_flagged(&new).unwrap());
         assert_eq!(word_pool_flagged(&new).unwrap().len(), 7);
         assert_eq!(grammar_pool(&old).unwrap(), grammar_pool(&new).unwrap());
-        assert_eq!(grammar_pool(&new).unwrap().len(), 3);
+        assert_eq!(grammar_pool(&new).unwrap().len(), 4);
         let h = home(&[&new], 0).unwrap();
         assert_eq!((h.words.len(), h.grammar.len(), h.idioms.len()), (3, 2, 2));
         for d in 0..400 {
