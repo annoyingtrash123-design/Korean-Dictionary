@@ -57,6 +57,10 @@ pub struct Caps {
     pub grammar_lesson: bool,
     /// `study_item` (the Idioms & proverbs study lists) exists.
     pub study_item: bool,
+    /// `curriculum.home_ok` (precomputed Home-card eligibility) exists.
+    pub curriculum_home_ok: bool,
+    /// `study_item.home_ok` (precomputed idiom-card eligibility) exists.
+    pub study_home_ok: bool,
 }
 
 /// An opened pack database.
@@ -101,6 +105,8 @@ impl PackDb {
             topic: names.contains("topic"),
             grammar_lesson: names.contains("grammar_lesson"),
             study_item: names.contains("study_item"),
+            curriculum_home_ok: names.contains("curriculum") && table_has("curriculum", "home_ok"),
+            study_home_ok: names.contains("study_item") && table_has("study_item", "home_ok"),
             hist: table_has("entries", "hist"),
             hanja_hun: names.contains("hanja_chars") && table_has("hanja_chars", "eumhun"),
             gloss_terms: names.contains("gloss_terms"),
@@ -1560,7 +1566,7 @@ mod tests;
 
 mod enko;
 mod home;
-pub use home::{home, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeRel, HomeWord};
+pub use home::{home, idiom_home_ok, word_home_ok, Home, HomeEntryRef, HomeExample, HomeGrammar, HomeIdiom, HomeRel, HomeWord};
 mod study;
 mod study_idioms;
 pub use study_idioms::{study_idioms, StudyIdiom, StudyIdiomList};

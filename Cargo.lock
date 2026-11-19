@@ -590,6 +590,7 @@ dependencies = [
  "bzip2",
  "clap",
  "flate2",
+ "kdict-core",
  "log",
  "quick-xml",
  "rusqlite",

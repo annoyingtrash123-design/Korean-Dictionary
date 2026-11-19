@@ -3,6 +3,7 @@ pub mod build;
 pub mod cedict;
 pub mod common;
 pub mod curriculum;
+pub mod home_ok;
 pub mod enwikt;
 pub mod example_en;
 pub mod gloss_fixes;

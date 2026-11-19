@@ -150,5 +150,6 @@ pub fn add_items(core: &Path, stdict: Option<&Path>, opendict: Option<&Path>, it
         stats.items += 1;
     }
     conn.execute_batch("COMMIT")?;
+    crate::home_ok::mark_study(&conn)?;
     Ok(stats)
 }
