@@ -40,7 +40,7 @@ fn words(en: &str) -> Vec<String> {
 /// `word` used as a word of its own in Korean: at the start or after a space, followed by a particle.
 fn ko_word(ko: &str, word: &str) -> bool {
     ko.match_indices(word).any(|(i, _)| {
-        let before_ok = i == 0 || ko[..i].ends_with([' ', '‘', '“', '"', '(']);
+        let before_ok = i == 0 || ko[..i].ends_with([' ', '\n', '‘', '“', '"', '(']);
         let rest = &ko[i + word.len()..];
         before_ok && PARTICLES.iter().any(|p| rest.starts_with(p))
     })
@@ -66,7 +66,9 @@ fn rows_of(tsv: &'static str, cols: usize) -> Vec<Row<'static>> {
         .map(|(n, l)| {
             let f: Vec<&str> = l.split('\t').collect();
             assert_eq!(f.len(), cols, "line {}: expected {cols} tab-separated fields", n + 1);
-            Row { line: n + 1, key: (f[0], f[1], f[2]), ko: f[3], en: f[4] }
+            // a dialogue's turns are joined by a literal `\n` in the files: check them as the real newline
+            let leak = |s: &str| -> &'static str { Box::leak(s.replace("\\n", "\n").into_boxed_str()) };
+            Row { line: n + 1, key: (f[0], f[1], f[2]), ko: leak(f[3]), en: leak(f[4]) }
         })
         .collect()
 }
