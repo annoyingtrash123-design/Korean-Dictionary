@@ -127,7 +127,9 @@ CREATE TABLE curriculum (   -- NIKL standard curriculum 1-6급 (공공누리 제
   entry_id INTEGER,         -- krdict entry (words) / the grammar row's entry (grammar); NULL = no confident match
   grammar_id INTEGER,       -- grammar.id (kind 'grammar' only)
   form TEXT NOT NULL,       -- as written in the list ('가격02', '-을 수 있다')
-  rank INTEGER NOT NULL     -- 전체 번호: the list's own order
+  rank INTEGER NOT NULL,    -- 전체 번호: the list's own order
+  home_ok INTEGER NOT NULL DEFAULT 0  -- precomputed Home-card eligibility (pipeline/src/home_ok.rs): word = krdict level + English gloss
+                            -- + a full example sentence; grammar = non-blank summary_en. Packs without it: the engine checks at runtime
 );
 CREATE INDEX curriculum_kind_level ON curriculum(kind, level);
 CREATE TABLE topic (        -- Lists tab "Topics": krdict's semantic category of each word entry
@@ -151,6 +153,7 @@ CREATE TABLE study_item (   -- Lists tab "Idioms & proverbs": 속담 / 성어 ra
   pack TEXT NOT NULL,       -- 'core' (krdict) | 'stdict' | 'opendict': where the entry lives
   ext_id TEXT NOT NULL, headword TEXT NOT NULL, hw_norm TEXT NOT NULL,   -- find it again in that pack: hw_norm + ext_id
   gloss TEXT NOT NULL,      -- krdict English gloss, else the Korean definition (80 chars)
+  home_ok INTEGER NOT NULL DEFAULT 0,  -- precomputed Home idiom-card eligibility (core krdict entry with gloss, a full example sentence, no ∼ slot)
   PRIMARY KEY (list, rank)
 ) WITHOUT ROWID;
 ```
