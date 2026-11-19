@@ -843,6 +843,9 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     // NIKL curriculum levels (needs entries and grammar)
     let (cw, cwt, cg, cgt) = crate::curriculum::build_table(&conn)?;
     log::info!("curriculum levels (NIKL standard curriculum): words {cw}/{cwt} matched, grammar {cg}/{cgt} matched");
+    // Home-card eligibility, precomputed so the Home tab never reads entries to pick its cards
+    let (hw, hg) = crate::home_ok::mark_curriculum(&conn)?;
+    log::info!("home_ok: {hw} word rows, {hg} grammar rows eligible as Home cards");
     // grammar mini-lessons: only the approved ones ship
     crate::grammar_lessons::build_table(&conn)?;
 

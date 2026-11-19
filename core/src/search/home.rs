@@ -1,5 +1,5 @@
 //! The Search tab's start screen: each day's picks from the official curriculum (words and
-//! grammar of levels 5-6, table `curriculum`), a proverb and a four-character idiom (the frequency-ranked
+//! grammar of levels 4-6, table `curriculum`), a proverb and a four-character idiom (the frequency-ranked
 //! study lists in table `study_item`, most common first).
 //!
 //! Every pick is a pure function of the day number (days since 2026-01-01 in the user's local
@@ -18,6 +18,8 @@ const GRAMMAR_SALT: u64 = 0x2002;
 const IDIOM_SALT: u64 = 0x3003;
 /// Curriculum levels shown on the home page (5-6: the advanced learner's range).
 const LEVELS: &str = "(5, 6)";
+/// Grammar cards also cover upper-intermediate 4급 (4-6: upper-intermediate to advanced).
+const GRAMMAR_LEVELS: &str = "(4, 5, 6)";
 const MAX_EXAMPLES: usize = 3;
 const MAX_GLOSS_ITEMS: usize = 3;
 /// Longer sentences are fine on a phone card only up to a point; shorter ones are preferred.
@@ -213,22 +215,37 @@ fn ids(p: &PackDb, sql: &str) -> Result<Vec<i64>> {
     Ok(p.conn.query(sql, &[])?.iter().filter_map(|r| r.int(0)).collect())
 }
 
-fn words(p: &PackDb, day: u32) -> Result<Vec<HomeWord>> {
-    // ordered by level, then the official list's order: a stable index per item. Only entries krdict
-    // levels (not names such as 신라 / 조선, which have none) with a glossed full example sentence.
+/// The word-card rule, shared with the pipeline (which stores it as `curriculum.home_ok`): a krdict
+/// level (names such as 신라 / 조선 have none), an English gloss and a full example sentence.
+pub fn word_home_ok(level: Option<i64>, gloss: Option<&str>, data: &str) -> bool {
+    level.is_some() && gloss.is_some_and(|g| !g.is_empty()) && data.contains("\"examples\":[{") && !examples_of(data, 1, false).is_empty()
+}
+
+/// Candidate word ids of the Home page, in stable order (by level, then the official list's order),
+/// checked at runtime: reads every candidate entry's JSON (about 2 s on the real pack; packs
+/// without `curriculum.home_ok` only).
+fn word_pool_runtime(p: &PackDb) -> Result<Vec<i64>> {
     let sql = format!(
-        "SELECT c.entry_id, e.data FROM curriculum c JOIN entries e ON e.id = c.entry_id \
-         WHERE c.kind = 'word' AND c.level IN {LEVELS} AND c.entry_id IS NOT NULL AND e.level IS NOT NULL \
-         AND e.gloss IS NOT NULL AND e.gloss != '' AND e.data LIKE '%\"examples\":[{{%' \
+        "SELECT c.entry_id, e.data, e.level, e.gloss FROM curriculum c JOIN entries e ON e.id = c.entry_id \
+         WHERE c.kind = 'word' AND c.level IN {LEVELS} AND c.entry_id IS NOT NULL \
          GROUP BY c.entry_id ORDER BY MIN(c.level), MIN(c.rank), c.entry_id"
     );
-    let all: Vec<i64> = p
-        .conn
-        .query(&sql, &[])?
-        .iter()
-        .filter(|r| !examples_of(&r.string(1), 1, false).is_empty())
-        .filter_map(|r| r.int(0))
-        .collect();
+    Ok(p.conn.query(&sql, &[])?.iter().filter(|r| word_home_ok(r.int(2), r.text(3).as_deref(), &r.string(1))).filter_map(|r| r.int(0)).collect())
+}
+
+/// The same pool from the precomputed flag: no entry is read.
+fn word_pool_flagged(p: &PackDb) -> Result<Vec<i64>> {
+    ids(
+        p,
+        &format!(
+            "SELECT entry_id FROM curriculum WHERE kind = 'word' AND level IN {LEVELS} AND entry_id IS NOT NULL AND home_ok = 1 \
+             GROUP BY entry_id ORDER BY MIN(level), MIN(rank), entry_id"
+        ),
+    )
+}
+
+fn words(p: &PackDb, day: u32) -> Result<Vec<HomeWord>> {
+    let all = if p.caps.curriculum_home_ok { word_pool_flagged(p)? } else { word_pool_runtime(p)? };
     let mut out = Vec::new();
     for i in day_indices(all.len(), WORD_SALT, day, WORDS_PER_DAY) {
         let r = p.conn.query(
@@ -258,22 +275,34 @@ fn words(p: &PackDb, day: u32) -> Result<Vec<HomeWord>> {
     Ok(out)
 }
 
+/// Grammar patterns of the Home page in stable order: those with an English summary.
+fn grammar_pool(p: &PackDb) -> Result<Vec<i64>> {
+    let sql = if p.caps.curriculum_home_ok {
+        format!(
+            "SELECT grammar_id FROM curriculum WHERE kind = 'grammar' AND level IN {GRAMMAR_LEVELS} AND grammar_id IS NOT NULL AND home_ok = 1 \
+             GROUP BY grammar_id ORDER BY MIN(level), MIN(rank), grammar_id"
+        )
+    } else {
+        format!(
+            "SELECT c.grammar_id FROM curriculum c JOIN grammar g ON g.id = c.grammar_id \
+             WHERE c.kind = 'grammar' AND c.level IN {GRAMMAR_LEVELS} AND c.grammar_id IS NOT NULL AND g.summary_en IS NOT NULL AND trim(g.summary_en) != '' \
+             GROUP BY c.grammar_id ORDER BY MIN(c.level), MIN(c.rank), c.grammar_id"
+        )
+    };
+    ids(p, &sql)
+}
+
 fn grammar(p: &PackDb, day: u32) -> Result<Vec<HomeGrammar>> {
     if !p.caps.grammar {
         return Ok(vec![]);
     }
-    let sql = format!(
-        "SELECT c.grammar_id FROM curriculum c JOIN grammar g ON g.id = c.grammar_id \
-         WHERE c.kind = 'grammar' AND c.level IN {LEVELS} AND c.grammar_id IS NOT NULL AND g.summary_en IS NOT NULL AND trim(g.summary_en) != '' \
-         GROUP BY c.grammar_id ORDER BY MIN(c.level), MIN(c.rank), c.grammar_id"
-    );
-    let all = ids(p, &sql)?;
+    let all = grammar_pool(p)?;
     let mut out = Vec::new();
     for i in day_indices(all.len(), GRAMMAR_SALT, day, GRAMMAR_PER_DAY) {
         let r = p.conn.query(
             &format!(
                 "SELECT g.id, g.pattern, g.summary_en, \
-                 (SELECT MIN(level) FROM curriculum WHERE kind = 'grammar' AND grammar_id = g.id AND level IN {LEVELS}), \
+                 (SELECT MIN(level) FROM curriculum WHERE kind = 'grammar' AND grammar_id = g.id AND level IN {GRAMMAR_LEVELS}), \
                  COALESCE((SELECT entry_id FROM curriculum WHERE kind = 'grammar' AND grammar_id = g.id AND entry_id IS NOT NULL ORDER BY level, rank LIMIT 1), g.entry_id) \
                  FROM grammar g WHERE g.id = ?1"
             ),
@@ -322,13 +351,20 @@ fn has_sentence(data: &str) -> bool {
     })
 }
 
-/// Entries fit for an idiom card:an English gloss, a full example sentence (a dialogue does not
+/// The idiom-card rule on an entry's headword and data, shared with the pipeline (`study_item.home_ok`, which
+/// also requires a krdict entry of the core pack with an English gloss): a full example sentence and a fixed
+/// expression (no slot).
+pub fn idiom_home_ok(headword: &str, data: &str) -> bool {
+    !has_placeholder(headword) && has_sentence(data)
+}
+
+/// Entries fit for an idiom card: an English gloss, a full example sentence (a dialogue does not
 /// count) and a fixed expression (no ∼ slot). Rows are (id, headword, data, kind); ids stay in row order.
 fn eligible(rows: &[crate::sql::Row]) -> Vec<(i64, String)> {
     let mut out: Vec<(i64, String)> = Vec::new();
     for r in rows {
         let Some(id) = r.int(0) else { continue };
-        if !has_placeholder(&r.string(1)) && has_sentence(&r.string(2)) && !out.iter().any(|(i, _)| *i == id) {
+        if idiom_home_ok(&r.string(1), &r.string(2)) && !out.iter().any(|(i, _)| *i == id) {
             out.push((id, r.string(3)));
         }
     }
@@ -341,6 +377,21 @@ const IDIOM_LISTS: [(&[&str], &str); 2] = [(&["sokdam_all"], "proverb"), (&["seo
 
 /// One study list's pool: its krdict (core) entries with an English gloss, in rank order.
 fn study_pool(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> {
+    if p.caps.study_home_ok {
+        // eligibility is precomputed (`study_item.home_ok`): no entry is read
+        let rows = p.conn.query("SELECT entry_id FROM study_item WHERE list = ?1 AND pack = 'core' AND home_ok = 1 ORDER BY rank", &[list.into()])?;
+        let mut out: Vec<(i64, String)> = Vec::new();
+        for id in rows.iter().filter_map(|r| r.int(0)) {
+            if !out.iter().any(|(i, _)| *i == id) {
+                out.push((id, kind.to_string()));
+            }
+        }
+        return Ok(out);
+    }
+    study_pool_runtime(p, list, kind)
+}
+
+fn study_pool_runtime(p: &PackDb, list: &str, kind: &str) -> Result<Vec<(i64, String)>> {
     let rows = p.conn.query(
         "SELECT s.entry_id, e.headword, e.data, ?2 FROM study_item s JOIN entries e ON e.id = s.entry_id \
          WHERE s.list = ?1 AND s.pack = 'core' AND e.source = 'krdict' AND e.gloss IS NOT NULL AND trim(e.gloss) != '' \
@@ -527,6 +578,11 @@ mod tests {
             c.query("INSERT INTO grammar VALUES (?1, ?1, ?2, 'Expressions', 5, ?3, ?1)", &[g.into(), format!("-패턴{g}").into(), format!("summary {g}").into()]).unwrap();
             c.query("INSERT INTO curriculum VALUES ('grammar', 6, ?1, ?1, 'g', ?1)", &[g.into()]).unwrap();
         }
+        // grammar also takes 4급 (id 4); a 3급 pattern (id 5) is skipped
+        for (g, lvl) in [(4i64, 4i64), (5, 3)] {
+            c.query("INSERT INTO grammar VALUES (?1, ?1, ?2, 'Expressions', ?3, ?4, ?1)", &[g.into(), format!("-패턴{g}").into(), lvl.into(), format!("summary {g}").into()]).unwrap();
+            c.query("INSERT INTO curriculum VALUES ('grammar', ?2, ?1, ?1, 'g', ?1)", &[g.into(), lvl.into()]).unwrap();
+        }
         PackDb::new("core", c).unwrap()
     }
 
@@ -570,7 +626,7 @@ mod tests {
     }
 
     #[test]
-    fn picks_from_curriculum_levels_5_6_only() {
+    fn picks_words_from_levels_5_6_and_grammar_from_4_6() {
         let p = with_curriculum(pack());
         let h = home(&[&p], 0).unwrap();
         assert_eq!((h.words.len(), h.grammar.len()), (3, 2));
@@ -586,10 +642,18 @@ mod tests {
             assert_eq!(w.examples[1].ko, "A: 안녕\nB: 응");
         }
         for g in &h.grammar {
-            assert_eq!(g.level, 6);
+            assert!(g.level == 4 || g.level == 6, "grammar covers 4-6급, not 3급");
             assert!(g.entry.is_some() && !g.examples.is_empty());
         }
         assert_eq!(h, home(&[&p], 0).unwrap());
+        // 4급 grammar comes up; 3급 never does
+        let mut lv = HashSet::new();
+        for d in 0..60 {
+            for g in home(&[&p], d).unwrap().grammar {
+                lv.insert(g.level);
+            }
+        }
+        assert_eq!(lv, HashSet::from([4, 6]));
     }
 
     #[test]
@@ -690,6 +754,97 @@ mod tests {
             let v = home(&[&pk], d).unwrap().idioms;
             assert_eq!(v.iter().map(|i| i.id).collect::<Vec<_>>(), vec![20], "day {d}");
         }
+    }
+
+    /// Adds the precomputed flags exactly as the pipeline does (`pipeline/src/home_ok.rs`), through the shared predicates.
+    fn flag(p: PackDb) -> PackDb {
+        let c = p.conn;
+        c.exec("ALTER TABLE curriculum ADD COLUMN home_ok INTEGER NOT NULL DEFAULT 0").unwrap();
+        for r in c.query("SELECT c.rowid, e.level, e.gloss, e.data FROM curriculum c JOIN entries e ON e.id = c.entry_id WHERE c.kind = 'word'", &[]).unwrap() {
+            if word_home_ok(r.int(1), r.text(2).as_deref(), &r.string(3)) {
+                c.query("UPDATE curriculum SET home_ok = 1 WHERE rowid = ?1", &[r.int(0).unwrap().into()]).unwrap();
+            }
+        }
+        c.exec("UPDATE curriculum SET home_ok = 1 WHERE kind = 'grammar' AND grammar_id IN (SELECT id FROM grammar WHERE summary_en IS NOT NULL AND trim(summary_en) != '')").unwrap();
+        c.exec("ALTER TABLE study_item ADD COLUMN home_ok INTEGER NOT NULL DEFAULT 0").unwrap();
+        let rows = c
+            .query(
+                "SELECT s.list, s.rank, e.headword, e.data FROM study_item s JOIN entries e ON e.id = s.entry_id \
+                 WHERE s.pack = 'core' AND e.source = 'krdict' AND e.gloss IS NOT NULL AND trim(e.gloss) != ''",
+                &[],
+            )
+            .unwrap();
+        for r in rows {
+            if idiom_home_ok(&r.string(2), &r.string(3)) {
+                c.query("UPDATE study_item SET home_ok = 1 WHERE list = ?1 AND rank = ?2", &[r.string(0).into(), r.int(1).unwrap().into()]).unwrap();
+            }
+        }
+        PackDb::new("core", c).unwrap()
+    }
+
+    #[test]
+    fn flagged_selection_is_identical_to_the_runtime_rules() {
+        // curriculum + study lists in one pack; the flagged copy must pick exactly what the runtime rules pick, day after day
+        let build = || {
+            let p = with_curriculum(study_pack());
+            // a grammar row whose summary is blank (never eligible), and a duplicate list row
+            p.conn.exec("INSERT INTO grammar VALUES (9, 1, '-빈칸', 'Expressions', 5, '  ', 9); INSERT INTO curriculum VALUES ('grammar', 5, 1, 9, 'g', 20)").unwrap();
+            p.conn.exec("INSERT INTO study_item VALUES ('sokdam_all', 4, 'sokdam', 't', 30, 'core', '1', 'h', 'h', 'g')").unwrap();
+            PackDb::new("core", p.conn).unwrap()
+        };
+        let (old, new) = (build(), flag(build()));
+        assert!(!old.caps.curriculum_home_ok && !old.caps.study_home_ok);
+        assert!(new.caps.curriculum_home_ok && new.caps.study_home_ok);
+        assert_eq!(word_pool_runtime(&old).unwrap(), word_pool_flagged(&new).unwrap());
+        assert_eq!(word_pool_flagged(&new).unwrap().len(), 7);
+        assert_eq!(grammar_pool(&old).unwrap(), grammar_pool(&new).unwrap());
+        assert_eq!(grammar_pool(&new).unwrap().len(), 4);
+        let h = home(&[&new], 0).unwrap();
+        assert_eq!((h.words.len(), h.grammar.len(), h.idioms.len()), (3, 2, 2));
+        for d in 0..400 {
+            assert_eq!(home(&[&old], d).unwrap(), home(&[&new], d).unwrap(), "day {d}");
+        }
+    }
+
+    /// Real packs (`$KDICT_PACKS`, else `pipeline/out`): the flagged pools equal the runtime ones, and both timings.
+    /// `KDICT_PACKS=pipeline/out cargo test --release -p kdict-core --lib home_flags_match_runtime -- --ignored --nocapture`
+    #[test]
+    #[ignore]
+    fn home_flags_match_runtime() {
+        let dir = std::env::var_os("KDICT_PACKS").map(std::path::PathBuf::from).unwrap_or_else(|| std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../pipeline/out"));
+        let path = dir.join("core.sqlite");
+        if !path.exists() {
+            eprintln!("skipping: no {}", path.display());
+            return;
+        }
+        let open = || PackDb::new("core", Conn::open_path(path.to_str().unwrap(), true).unwrap()).unwrap();
+        let p = open();
+        assert!(p.caps.curriculum_home_ok && p.caps.study_home_ok, "pack lacks the home_ok columns");
+        let t = std::time::Instant::now();
+        let old = word_pool_runtime(&p).unwrap();
+        let t_old = t.elapsed();
+        let t = std::time::Instant::now();
+        let new = word_pool_flagged(&p).unwrap();
+        eprintln!("word pool: {} ids; runtime {t_old:?}, flagged {:?}", new.len(), t.elapsed());
+        assert_eq!(old, new);
+        for (lists, kind) in IDIOM_LISTS {
+            for l in lists {
+                assert_eq!(study_pool_runtime(&p, l, kind).unwrap(), study_pool(&p, l, kind).unwrap(), "{l}");
+            }
+        }
+        let mut q = open();
+        q.caps.curriculum_home_ok = false;
+        q.caps.study_home_ok = false;
+        assert_eq!(grammar_pool(&p).unwrap(), grammar_pool(&q).unwrap());
+        for d in (0..3000).step_by(7) {
+            assert_eq!(home(&[&p], d).unwrap().idioms, home(&[&q], d).unwrap().idioms, "day {d}");
+        }
+        let t = std::time::Instant::now();
+        let h = home(&[&open()], 100).unwrap();
+        eprintln!("home (cold, flagged): {:?}; {} words {} grammar {} idioms", t.elapsed(), h.words.len(), h.grammar.len(), h.idioms.len());
+        let t = std::time::Instant::now();
+        let _ = home(&[&q], 100).unwrap();
+        eprintln!("home (warm, runtime): {:?}", t.elapsed());
     }
 
     #[test]
