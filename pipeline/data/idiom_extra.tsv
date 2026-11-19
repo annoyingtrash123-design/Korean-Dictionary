@@ -151,3 +151,289 @@ E	새옹지마	인생은 새옹지마이니 지금의 실패에 너무 낙심하
 P	seongeo	보국안민	輔國安民	stdict:436046	serving the nation and bringing peace to the people	Helping the affairs of state and keeping the people at peace (lit. assist the country, settle the people).	나랏일을 돕고 백성을 편안하게 함.	draft
 E	보국안민	동학 농민군은 보국안민을 내걸고 일어섰다.	ai	The Donghak peasant army rose up under the banner of serving the nation and giving peace to the people.
 E	보국안민	그 장군은 보국안민의 뜻을 품고 평생 나라를 지켰다.	ai	With the aim of serving the nation and keeping its people safe, the general defended the country all his life.
+P	seongeo	이용후생	利用厚生	stdict:261493	making practical use of things to improve people's lives	Using tools and resources conveniently and making food and clothing plentiful, so as to improve the people's livelihood (lit. use things well, make life abundant).	기구를 편리하게 쓰고 먹을 것과 입을 것을 넉넉하게 하여, 국민의 생활을 나아지게 함.	draft
+E	이용후생	실학자들은 이용후생을 위한 기술의 발전을 강조했다.	ai	The Silhak scholars stressed technological progress for the sake of improving people's livelihood.
+E	이용후생	새로운 농기구는 이용후생의 정신으로 만들어졌다.	ai	The new farm tool was made in the spirit of putting things to practical use for people's well-being.
+P	seongeo	천하제일	天下第一	stdict:320843	second to none; the best in the world	Without any rival in the world; the very best (lit. first under heaven).	세상에 견줄 만한 것이 없이 최고임.	draft
+E	천하제일	누가 뭐래도 그의 솜씨는 천하제일이다.	stdict	Whatever anyone says, his skill is second to none.
+E	천하제일	이 집의 김치찌개 맛은 천하제일이라고 소문이 났다.	ai	The kimchi stew at this restaurant is rumored to be the best there is.
+P	seongeo	동분서주	東奔西走	stdict:89859	rushing about busily	Running around in every direction in a great hurry (lit. dash east, run west).	동쪽으로 뛰고 서쪽으로 뛴다는 뜻으로, 사방으로 이리저리 몹시 바쁘게 돌아다님을 이르는 말.	draft
+E	동분서주	그는 아들의 병원비를 마련하려고 동분서주했다.	ai	He rushed about in every direction to raise money for his son's hospital bills.
+E	동분서주	행사 준비로 직원들이 하루 종일 동분서주하고 있다.	ai	The staff have been running around busily all day preparing for the event.
+P	seongeo	정리정돈	整理整頓	stdict:535298	tidying up; putting things in order	Gathering up what is scattered or in disarray and arranging it neatly so that everything is orderly (lit. arrange and put in order).	흐트러지거나 혼란스러운 상태에 있는 것을 한데 모으거나 가지런히 바로잡아 질서 있는 상태가 되게 함.	draft
+E	정리정돈	정리정돈을 하면 좁은 장소를 넓게 쓸 수 있다.	stdict	If you tidy up, you can make a small space feel bigger.
+E	정리정돈	방학 동안 아이들에게 정리정돈하는 습관을 길러 주고 싶다.	ai	I want to help my children build the habit of keeping things tidy during the vacation.
+P	seongeo	출가외인	出嫁外人	stdict:490302	a married daughter belongs to her husband's family	The old view that a married daughter is no longer a member of her birth family but is like an outsider (lit. a person outside, having gone out to marry).	시집간 딸은 친정 사람이 아니고 남이나 마찬가지라는 뜻으로 이르는 말.	draft
+E	출가외인	옛날에는 출가외인이라고 해서 딸에게 재산을 물려주지 않았다.	ai	In the past, daughters were not left any property, on the grounds that a married daughter belongs to another family.
+E	출가외인	출가외인이라는 말은 요즘 시대에는 맞지 않는다.	ai	The saying that a married daughter is an outsider no longer suits the present age.
+P	seongeo	일심동체	一心同體	stdict:273554	one in heart and body; completely united	Being so firmly bound together that two or more people act as one (lit. one heart, one body).	한마음 한 몸이라는 뜻으로, 서로 굳게 결합함을 이르는 말.	draft
+E	일심동체	노사가 일심동체가 되어 쓰러져 가던 회사를 일으켰다.	stdict	Labor and management became united as one and revived the company that had been collapsing.
+E	일심동체	자고로 부부는 일심동체라 하였다.	stdict	Since ancient times it has been said that a married couple are one in heart and body.
+P	seongeo	일거일동	一擧一動	stdict:467868	every move; each and every action	Each single movement or action (lit. one lifting, one moving).	하나하나의 동작이나 움직임.	draft
+E	일거일동	나와 사이가 안 좋은 그는 나의 일거일동에 시비를 걸었다.	stdict	He, who was on bad terms with me, found fault with my every move.
+E	일거일동	감시 카메라가 직원들의 일거일동을 기록하고 있다.	ai	Surveillance cameras are recording the staff's every movement.
+P	seongeo	불구대천	不俱戴天	stdict:157108	sworn enemy; undying hatred	A grudge so deep that one cannot live in the same world as the other (lit. not bearing the same sky).	하늘을 함께 이지 못한다는 뜻으로, 이 세상에서 같이 살 수 없을 만큼 큰 원한을 가짐을 비유적으로 이르는 말.	draft
+E	불구대천	그는 아버지를 해친 사람을 불구대천의 원수로 여겼다.	ai	He regarded the man who had harmed his father as his sworn enemy.
+E	불구대천	두 집안은 불구대천의 사이가 되어 서로 말도 섞지 않았다.	ai	The two families became mortal enemies and would not even speak to each other.
+P	seongeo	다정다감	多情多感	stdict:73426	warm-hearted and sensitive	Full of affection and rich in feeling (lit. much affection, much feeling).	정이 많고 감정이 풍부함.	draft
+E	다정다감	그는 다정다감한 성격이라 주변에 친구가 많다.	ai	He has a warm, sensitive nature, so he has many friends around him.
+E	다정다감	다정다감한 선생님은 아이들의 고민을 잘 들어 주셨다.	ai	The warm-hearted teacher listened well to the children's worries.
+P	seongeo	매점매석	買占賣惜	stdict:518781	hoarding goods to profit from a price rise	Buying up goods all at once in expectation of higher prices and holding them back from sale (lit. buy up and corner, be reluctant to sell).	물건값이 오를 것을 예상하여 한꺼번에 샀다가 팔기를 꺼려 쌓아 둠.	draft
+E	매점매석	매점매석은 불공정 거래의 대표적인 예이다.	stdict	Hoarding goods to profit from a price rise is a typical example of unfair trade.
+E	매점매석	태풍 소식에 일부 상인들이 매점매석에 나서 물가가 폭등했다.	ai	With news of the typhoon, some merchants started hoarding goods and prices shot up.
+P	seongeo	잔인무도	殘忍無道	stdict:278275	cruel and brutal	As cruel as can be, and without any humanity (lit. cruel and ruthless, lacking the proper way).	더할 수 없이 잔인함.	draft
+E	잔인무도	그 독재자는 잔인무도한 방법으로 반대 세력을 제거했다.	ai	The dictator eliminated his opponents by cruel and brutal means.
+E	잔인무도	어린아이를 괴롭히다니 정말 잔인무도한 사람이다.	ai	To torment a little child, he is truly a vicious person.
+P	seongeo	해괴망측	駭怪罔測	stdict:363441	outrageous; shockingly bizarre	Strange and uncanny beyond words (lit. shocking, strange, beyond all conjecture).	말할 수 없이 괴상하고 야릇함.	draft
+E	해괴망측	길거리에서 벌어진 해괴망측한 광경에 모두 눈을 의심했다.	ai	Everyone could hardly believe their eyes at the bizarre scene on the street.
+E	해괴망측	그런 해괴망측한 소문은 들어 본 적이 없다.	ai	I have never heard such an outlandish rumor.
+P	seongeo	백귀야행	百鬼夜行	stdict:137072	a procession of demons at night; a bizarre rabble	A crowd of strangely dressed people making a weird commotion, like all kinds of ghosts roaming at night (lit. a hundred demons walking at night).	온갖 잡귀가 밤에 나다닌다는 뜻으로, 괴상한 꼴을 하고 해괴한 짓을 하는 무리가 웅성거리며 돌아다님을 이르는 말.	draft
+E	백귀야행	핼러윈 밤의 거리는 백귀야행을 방불케 했다.	ai	The streets on Halloween night looked like a parade of demons.
+E	백귀야행	괴상한 분장을 한 사람들이 백귀야행처럼 몰려다녔다.	ai	People in weird costumes roamed about in a crowd like a night procession of demons.
+P	seongeo	대성통곡	大聲痛哭	stdict:408385	wailing loudly; weeping bitterly	Weeping aloud in deep sorrow (lit. loud voice, bitter weeping).	큰 소리로 몹시 슬프게 곡을 함.	draft
+E	대성통곡	그는 부친의 부음을 듣자마자 대성통곡을 터뜨렸다.	stdict	As soon as he heard the news of his father's death, he burst into loud wailing.
+E	대성통곡	그녀는 합격 소식을 듣고 기쁨에 겨워 대성통곡을 했다.	ai	On hearing she had passed, she wept loudly, overcome with joy.
+P	seongeo	문전박대	門前薄待	stdict:534037	turning someone away at the door; a cold reception	Treating someone so coldly that one drives them away at the door instead of letting them in (lit. meager treatment in front of the gate).	집으로 들이지 않고 문 앞에서 내쫓을 정도로 야박하게 대함.	draft
+E	문전박대	그는 돈을 빌리러 갔다가 친척에게 문전박대를 당했다.	ai	He went to borrow money and was turned away at the door by a relative.
+E	문전박대	사정을 들어 보지도 않고 문전박대하다니 너무하는군요.	ai	Turning me away at the door without even hearing my situation is too much.
+P	seongeo	임시변통	臨時變通	stdict:271515	a makeshift fix; stopgap	Handling a sudden problem in a simple way just to get by for the moment (lit. adapting to the occasion).	갑자기 터진 일을 우선 간단하게 둘러맞추어 처리함.	draft
+E	임시변통	임시변통으로 의자 위에 상자를 올려 책상으로 썼다.	ai	As a makeshift arrangement, we put a box on a chair and used it as a desk.
+E	임시변통	문제를 임시변통으로 넘기면 나중에 더 커질 수 있다.	ai	If you just patch a problem up for now, it may grow bigger later.
+P	seongeo	환골탈태	換骨奪胎	stdict:505070	a complete transformation	Changing so completely for the better that one becomes a different person; originally, reworking an older poem's form so that it surpasses the original (lit. exchange the bones, take over the womb).	뼈대를 바꾸어 끼고 태를 바꾸어 쓴다는 뜻으로, 고인의 시문의 형식을 바꾸어서 그 짜임새와 수법이 먼저 것보다 잘되게 함을 이르는 말. 중국 남송의 승려 혜홍(惠洪)의 <냉재야화(冷齋夜話)>에 나오는 말이다.	draft
+E	환골탈태	그 가수는 데뷔 십 년 만에 환골탈태하여 완전히 다른 음악을 선보였다.	ai	Ten years after her debut, the singer underwent a complete transformation and presented music entirely unlike her earlier work.
+E	환골탈태	낡은 건물이 리모델링을 거쳐 환골탈태했다.	ai	The old building was completely transformed through a renovation.
+P	seongeo	백척간두	百尺竿頭	stdict:430805	on the brink of disaster; in extreme peril	A very difficult and dangerous situation (lit. on top of a hundred-foot pole).	백 자나 되는 높은 장대 위에 올라섰다는 뜻으로, 몹시 어렵고 위태로운 지경을 이르는 말.	draft
+E	백척간두	회사는 부도 위기에 몰려 백척간두에 서 있었다.	ai	Driven to the verge of bankruptcy, the company stood on the brink.
+E	백척간두	나라가 백척간두의 위기에 놓였을 때 의병들이 일어났다.	ai	When the nation was in extreme peril, the volunteer armies rose up.
+P	seongeo	일기당천	一騎當千	stdict:473401	worth a thousand men; a fearsome fighter	Extremely outstanding in fighting ability (lit. one horseman a match for a thousand).	한 사람의 기병이 천 사람을 당한다는 뜻으로, 싸우는 능력이 아주 뛰어남을 이르는 말.	draft
+E	일기당천	그 장수는 일기당천의 용사로 이름을 떨쳤다.	ai	That general became famous as a warrior worth a thousand men.
+E	일기당천	일기당천의 실력을 갖춘 선수가 팀에 합류했다.	ai	A player with the skills of a one-man army joined the team.
+P	seongeo	표리일체	表裏一體	stdict:359418	inseparable; two sides of one coin	Two things so closely connected that they are one (lit. outside and inside as one body).	안팎이 한 덩어리가 된다는 뜻으로, 두 가지 사물의 관계가 밀접하게 됨을 이르는 말.	draft
+E	표리일체	이론과 실천은 표리일체의 관계에 있다.	ai	Theory and practice are inseparably bound to each other.
+E	표리일체	말과 행동이 표리일체인 사람이 진정한 지도자이다.	ai	A person whose words and actions are one is a true leader.
+P	seongeo	천태만상	千態萬象	stdict:490722	myriad forms; endless variety	Things in the world are not uniform, and each has its own appearance (lit. a thousand appearances, ten thousand forms).	천 가지 모습과 만 가지 형상이라는 뜻으로, 세상 사물이 한결같지 아니하고 각각 모습·모양이 다름을 이르는 말.	draft
+E	천태만상	시장에는 천태만상의 사람들이 오고 간다.	ai	All sorts of people come and go at the market.
+E	천태만상	세상 사람들의 살아가는 모습은 천태만상이다.	ai	The ways people live in the world are endlessly varied.
+P	seongeo	천재일우	千載一遇	stdict:326645	chance of a lifetime	A rare, wonderful opportunity that comes hardly once in a very long time (lit. meeting it once in a thousand years).	천 년 동안 단 한 번 만난다는 뜻으로, 좀처럼 만나기 어려운 좋은 기회를 이르는 말.	draft
+E	천재일우	이번 기회는 천재일우이니 절대 놓치지 마라.	ai	This is a chance of a lifetime, so don't miss it for anything.
+E	천재일우	그는 천재일우의 기회를 잡아 세계 무대에 올랐다.	ai	He seized a once-in-a-lifetime opportunity and made it onto the world stage.
+P	seongeo	방약무인	傍若無人	stdict:136470	acting as if no one else were present	Speaking and acting recklessly, without restraint, as if there were nobody around (lit. as if there were no one at one's side).	곁에 사람이 없는 것처럼 아무 거리낌이 없이 함부로 말하고 행동하는 태도가 있음.	draft
+E	방약무인	남이 싫어하는 줄도 모르고 방약무인으로 떠들어 댄다.	stdict	Not noticing that others dislike it, he chatters away as if no one else were around.
+E	방약무인	방약무인한 태도로 어른들 앞에서 소리를 질렀다.	ai	With an arrogant disregard for others, he shouted in front of his elders.
+P	seongeo	지행합일	知行合一	stdict:313932	unity of knowledge and action	Knowledge and action agreeing with each other (lit. knowing and doing joined as one).	지식과 행동이 서로 맞음.	draft
+E	지행합일	지행합일은 아는 것을 실제로 행하라는 가르침이다.	ai	Unity of knowledge and action is the teaching that you should actually do what you know.
+E	지행합일	그는 지행합일의 삶을 살기 위해 늘 노력했다.	ai	He always strove to live a life in which what he knew and what he did were one.
+P	seongeo	산천초목	山川草木	stdict:444739	mountains, rivers, plants and trees; nature	Nature as a whole (lit. mountains, streams, grasses and trees).	산과 내와 풀과 나무라는 뜻으로, ‘자연01’을 이르는 말.	draft
+E	산천초목	봄이 오자 산천초목이 푸른 옷으로 갈아입었다.	ai	When spring came, all of nature changed into green clothes.
+E	산천초목	그 시인은 산천초목을 벗 삼아 평생을 보냈다.	ai	The poet spent his whole life with the mountains, streams and trees as his companions.
+P	seongeo	자력갱생	自力更生	stdict:474644	self-reliance; getting back on one's feet by one's own efforts	Escaping from a hard situation and starting a new life by one's own strength, without depending on others (lit. one's own power, a new life).	남에게 의지하지 아니하고 자신의 힘만으로 어려운 처지에서 벗어나 새로운 삶을 살아감.	draft
+E	자력갱생	사업에 실패한 그는 자력갱생의 정신으로 재기에 노력하고 있다.	stdict	Having failed in business, he is striving to get back on his feet in a spirit of self-reliance.
+E	자력갱생	마을 사람들은 자력갱생으로 황폐해진 땅을 되살렸다.	ai	The villagers revived the ruined land by their own efforts.
+P	seongeo	망지소조	罔知所措	stdict:110923	at a loss; not knowing what to do	So flustered or pressed that one does not know what to do and dithers (lit. not knowing what to do about it).	너무 당황하거나 급하여 어찌할 줄을 모르고 갈팡질팡함.	draft
+E	망지소조	갑작스러운 사고에 그는 망지소조하여 서 있기만 했다.	ai	At the sudden accident, he just stood there, at a complete loss.
+E	망지소조	아이가 사라지자 부모는 망지소조했다.	ai	When the child disappeared, the parents didn't know what to do.
+P	seongeo	삼척동자	三尺童子	stdict:168586	a mere child	A small child who knows nothing of the world (lit. a boy of three "cheok", i.e. under a meter tall).	키가 석 자 정도밖에 되지 않는 어린아이. 철없는 어린아이를 이른다.	draft
+E	삼척동자	그 정도는 삼척동자도 아는 사실이다.	ai	Even a small child knows that much.
+E	삼척동자	삼척동자도 웃을 만큼 어이없는 변명이었다.	ai	It was such an absurd excuse that even a small child would laugh.
+P	seongeo	국태민안	國泰民安	stdict:39985	a peaceful nation and contented people	The country is at peace and the people are at ease (lit. the nation secure, the people safe).	나라가 태평하고 백성이 편안함.	draft
+E	국태민안	새해를 맞아 국태민안을 기원하는 제사를 올렸다.	ai	For the new year, they held a rite praying for peace in the country and well-being for the people.
+E	국태민안	임금은 국태민안을 이루려고 밤낮으로 애썼다.	ai	The king worked day and night to bring about a peaceful nation and contented people.
+P	seongeo	광명정대	光明正大	stdict:31848	honest and aboveboard	Open and upright in one's words and conduct (lit. bright, clear, upright, grand).	말이나 행실이 떳떳하고 정당함.	draft
+E	광명정대	그는 어떤 일이든 광명정대하게 처리하기로 유명하다.	ai	He is known for handling every matter honestly and aboveboard.
+E	광명정대	광명정대한 승부를 펼친 두 선수에게 박수가 쏟아졌다.	ai	Applause poured out for the two players who had played a fair and honest match.
+P	seongeo	천상천하	天上天下	stdict:322744	in heaven and on earth; the whole world	Everything under the sky (lit. above heaven, below heaven).	하늘 위와 하늘 아래라는 뜻으로, 온 세상을 이르는 말.	draft
+E	천상천하	천상천하에 나만큼 그를 아끼는 사람은 없을 것이다.	ai	There can be no one in the whole world who cares for him as much as I do.
+E	천상천하	이 세상 천상천하에 둘도 없는 보물을 얻었다.	ai	I have obtained a treasure that has no equal anywhere under heaven.
+P	seongeo	천라지망	天羅地網	stdict:486485	an inescapable net; a tight dragnet	A net of surveillance that is impossible to slip through, or a disaster that cannot be avoided (lit. a net in heaven, a snare on earth).	하늘에 새 그물, 땅에 고기 그물이라는 뜻으로, 아무리 하여도 벗어나기 어려운 경계망이나 피할 수 없는 재액을 이르는 말.	draft
+E	천라지망	경찰은 천라지망을 펼쳐 범인을 추적했다.	ai	The police spread a tight dragnet and pursued the culprit.
+E	천라지망	천라지망 같은 감시를 피해 달아나기는 불가능했다.	ai	It was impossible to escape the dragnet-like surveillance.
+P	seongeo	남부여대	男負女戴	stdict:60980	poor families wandering with their belongings on their backs	The poor wandering about in search of a place to live, the man carrying loads on his back and the woman on her head (lit. men carry on the back, women carry on the head).	남자는 지고 여자는 인다는 뜻으로, 가난한 사람들이 살 곳을 찾아 이리저리 떠돌아다님을 비유적으로 이르는 말.	draft
+E	남부여대	흉년이 들자 사람들은 남부여대하여 고향을 떠났다.	ai	When the harvest failed, people left their hometown with their belongings on their backs and heads.
+E	남부여대	전쟁을 피해 남부여대하는 피난민 행렬이 이어졌다.	ai	A line of refugees, carrying what they had on their backs and heads, kept streaming out to flee the war.
+P	seongeo	연락부절	連絡不絕	stdict:229649	a ceaseless stream of contact	Visits or messages that are so frequent that word never stops coming (lit. contact without a break).	왕래가 잦아 소식이 끊이지 아니함.	draft
+E	연락부절	소문이 퍼진 뒤로 가게에는 문의 전화가 연락부절이었다.	ai	Since the rumor spread, inquiry calls to the shop have come in without a break.
+E	연락부절	두 사람은 멀리 떨어져 살았지만 편지로 연락부절이었다.	ai	Although the two lived far apart, they kept in unbroken contact by letter.
+P	seongeo	백의종군	白衣從軍	stdict:142653	serving in the army without rank	Following the army to the battlefield without holding any official post (lit. in white clothes, joining the army).	벼슬 없이 군대를 따라 싸움터로 감.	draft
+E	백의종군	이순신 장군은 백의종군하며 나라를 지켰다.	ai	General Yi Sun-sin defended the country while serving in the army as a commoner without rank.
+E	백의종군	억울한 누명을 쓰고도 그는 백의종군을 마다하지 않았다.	ai	Even though he had been falsely accused, he did not refuse to serve as a commoner soldier.
+P	seongeo	유야무야	有耶無耶	stdict:251602	fizzling out; left vague and unresolved	Being left in a muddle, as though it both exists and does not (lit. there it is? there it isn't?).	있는 듯 없는 듯 흐지부지함.	draft
+E	유야무야	그 사건의 수사는 유야무야로 끝났다.	stdict	The investigation of that case ended up fizzling out.
+E	유야무야	사건이 유야무야 처리되었다.	stdict	The case was dealt with in a vague, inconclusive way.
+E	유야무야	문제를 유야무야 덮어 버렸다.	stdict	They covered the problem up and left it unresolved.
+P	seongeo	삼순구식	三旬九食	stdict:177276	extreme poverty	Being so poor that one gets only nine meals in thirty days (lit. three ten-day periods, nine meals).	삼십 일 동안 아홉 끼니밖에 먹지 못한다는 뜻으로, 몹시 가난함을 이르는 말.	draft
+E	삼순구식	그 집안은 삼순구식을 면하지 못할 만큼 가난했다.	ai	The family was so poor that they could hardly escape going hungry for days on end.
+E	삼순구식	삼순구식의 어려움 속에서도 그는 공부를 포기하지 않았다.	ai	Even in the hardship of living on scraps, he did not give up studying.
+P	seongeo	대서특필	大書特筆	stdict:81061	splashing across the headlines	Giving a news item big, prominent treatment in a newspaper or other publication (lit. write large, write especially).	특별히 두드러지게 보이도록 글자를 크게 쓴다는 뜻으로, 신문 따위의 출판물에서 어떤 기사에 큰 비중을 두어 다룸을 이르는 말.	draft
+E	대서특필	기자는 그 사건을 신문에 대서특필로 보도하였다.	stdict	The reporter covered the incident in the newspaper under big headlines.
+E	대서특필	신문마다 그의 우승 소식을 대서특필했다.	ai	Every newspaper splashed the news of his victory across its pages.
+P	seongeo	격물치지	格物致知	stdict:18676	investigating things to attain knowledge	Studying the principles of actual things to make one's knowledge complete (lit. investigate things, reach knowledge).	실제 사물의 이치를 연구하여 지식을 완전하게 함. ≪대학≫에 나오는 말이다.	draft
+E	격물치지	격물치지는 사물의 이치를 탐구해 앎에 이르는 것이다.	ai	"Gyeongmul chiji" is to reach understanding by examining the principles of things.
+E	격물치지	성리학자들은 격물치지를 학문의 출발점으로 삼았다.	ai	The Neo-Confucian scholars took the investigation of things as the starting point of learning.
+P	seongeo	토사구팽	兔死狗烹	stdict:349104	casting someone aside once they have served their purpose	Using someone while they are needed and heartlessly discarding them when they are not (lit. when the hare dies, the hunting dog is boiled).	토끼가 죽으면 토끼를 잡던 사냥개도 필요 없게 되어 주인에게 삶아 먹히게 된다는 뜻으로, 필요할 때는 쓰고 필요 없을 때는 야박하게 버리는 경우를 이르는 말.	draft
+E	토사구팽	전쟁이 끝나자 공을 세운 장수들은 토사구팽을 당했다.	ai	When the war ended, the generals who had rendered great service were cast aside.
+E	토사구팽	필요할 때만 쓰고 버리는 토사구팽을 당하고 싶지 않다.	ai	I don't want to be used when I'm needed and then thrown away.
+P	seongeo	백중지세	伯仲之勢	stdict:138869	neck and neck; evenly matched	A situation in which it is hard to say which side is better (lit. the standing of elder and younger brother).	서로 우열을 가리기 힘든 형세. 위나라 문제(文帝)의 ≪전론(典論)≫에서 나온 말이다.	draft
+E	백중지세	두 팀의 실력은 백중지세라서 결과를 예측하기 어렵다.	ai	The two teams are evenly matched, so it's hard to predict the result.
+E	백중지세	경기는 마지막까지 백중지세로 이어졌다.	ai	The game stayed neck and neck right to the end.
+P	seongeo	중구난방	衆口難防	stdict:485919	everyone talking at once	So many people babbling at random that they cannot be stopped (lit. the mouths of the many are hard to guard against).	뭇사람의 말을 막기가 어렵다는 뜻으로, 막기 어려울 정도로 여럿이 마구 지껄임을 이르는 말.	draft
+E	중구난방	회의에서 모두가 중구난방으로 떠들어 결론이 나지 않았다.	ai	At the meeting, everyone talked at once and no conclusion was reached.
+E	중구난방	중구난방 쏟아지는 의견을 정리하기가 쉽지 않았다.	ai	It wasn't easy to sort out the opinions pouring in from all directions.
+P	seongeo	마이동풍	馬耳東風	stdict:422770	falling on deaf ears	Not listening to what others say and letting it pass by (lit. an east wind in a horse's ear).	동풍이 말의 귀를 스쳐 간다는 뜻으로, 남의 말을 귀담아듣지 아니하고 지나쳐 흘려버림을 이르는 말.	draft
+E	마이동풍	그에게는 나의 충고가 마이동풍이었다.	stdict	My advice fell on deaf ears with him.
+E	마이동풍	아무리 말려도 마이동풍이니 더 이상 말하지 않겠다.	ai	No matter how much I try to stop him he doesn't listen, so I won't say any more.
+P	seongeo	시비곡직	是非曲直	stdict:206164	right and wrong; the rights and wrongs	What is right and wrong, crooked and straight (lit. right, wrong, crooked, straight).	옳고 그르고 굽고 곧음.	draft
+E	시비곡직	재판관은 시비곡직을 가려 판결을 내렸다.	ai	The judge sorted out the rights and wrongs and handed down a verdict.
+E	시비곡직	이 일의 시비곡직은 시간이 지나면 밝혀질 것이다.	ai	The rights and wrongs of this matter will become clear with time.
+P	seongeo	사면초가	四面楚歌	stdict:440307	surrounded on all sides; completely isolated	Being in a lonely, awkward position with help from nowhere (lit. songs of Chu on all four sides).	아무에게도 도움을 받지 못하는, 외롭고 곤란한 지경에 빠진 형편을 이르는 말. 초나라 항우가 사면을 둘러싼 한나라 군사 쪽에서 들려오는 초나라의 노랫소리를 듣고 초나라 군사가 이미 항복한 줄 알고 놀랐다는 데서 유래한다. ≪사기≫의 <항우본기(項羽本紀)>에 나오는 말이다.	draft
+E	사면초가	시험은 어렵고 돈도 없고, 그야말로 사면초가였다.	ai	The exam was hard and I had no money, so I really was surrounded on all sides.
+E	사면초가	사면초가의 상황에서도 그는 포기하지 않았다.	ai	Even when everything was against him, he did not give up.
+P	seongeo	낙심천만	落心千萬	stdict:59194	utterly disheartened	Being deeply upset because something one hoped for has not come about (lit. heart fallen, a thousand ten-thousand-fold).	바라던 일을 이루지 못하여 마음이 몹시 상함.	draft
+E	낙심천만	계획이 실패로 돌아가 낙심천만이다.	stdict	The plan fell through, and I am utterly disheartened.
+E	낙심천만	시험에 또 떨어지자 그는 낙심천만하여 말을 잇지 못했다.	ai	When he failed the exam again, he was utterly disheartened and could not speak.
+P	seongeo	무가내하	無可奈何	stdict:426063	nothing can be done about it	There is no other way, and nothing that anyone can do (lit. nothing possible to do about it).	달리 어찌할 수 없음.	draft
+E	무가내하	동생은 집에 가겠다며 무가내하로 울어 댄다.	stdict	My younger sibling keeps crying that they want to go home, and there is nothing anyone can do about it.
+E	무가내하	그 일은 이미 끝난 일이니 이제는 무가내하이다.	ai	That matter is already over and done with, so now there is nothing to be done.
+P	seongeo	영생불멸	永生不滅	stdict:236756	eternal life; immortality	Living forever and never dying (lit. live forever, never perish).	영원히 살고 죽지 아니함.	draft
+E	영생불멸	인간이면 누구나 영생불멸을 원한다.	stdict	Every human being wants to live forever and never die.
+E	영생불멸	진시황은 영생불멸을 얻으려고 불로초를 찾았다.	ai	The First Emperor of Qin looked for the herb of eternal youth in order to gain immortality.
+P	seongeo	가렴주구	苛斂誅求	stdict:388368	harsh taxation and extortion	Collecting taxes ruthlessly and seizing people's wealth by force (lit. harsh levies, extorting demands).	세금을 가혹하게 거두어들이고, 무리하게 재물을 빼앗음.	draft
+E	가렴주구	탐관오리의 가렴주구에 백성들의 삶은 날로 피폐해졌다.	ai	Under the harsh taxation and extortion of corrupt officials, the people's lives grew more wretched by the day.
+E	가렴주구	농민들은 지나친 가렴주구를 견디다 못해 봉기하였다.	ai	Unable to bear the excessive extortion, the peasants rose in revolt.
+P	seongeo	급전직하	急轉直下	stdict:401321	a sudden, steep turn; plunging	A situation developing so abruptly that it cannot be held in check (lit. turning sharply, going straight down).	사정이나 형세가 걷잡을 수 없을 만큼 급작스럽게 전개됨.	draft
+E	급전직하	주가가 급전직하로 폭락했다.	stdict	Stock prices plunged sharply.
+E	급전직하	사건이 급전직하로 해결되면서 모두가 놀랐다.	ai	Everyone was surprised as the case was suddenly resolved in a rush.
+P	seongeo	만고불변	萬古不變	stdict:423349	everlasting; never changing	Not changing for a very long time (lit. ten thousand ages, unchanging).	아주 오랜 세월 동안 변하지 아니함.	draft
+E	만고불변	새벽녘의 바다는 만고불변의 아름다움을 빛내며 출렁이고 있었다.	stdict	The sea at dawn was rolling, shining with an everlasting beauty that never changes.
+E	만고불변	부모의 사랑은 만고불변이라고 한다.	ai	They say a parent's love never changes, in any age.
+P	seongeo	공존공영	共存共榮	stdict:31535	coexistence and mutual prosperity	Living together and flourishing together (lit. exist together, prosper together).	함께 존재하고 함께 번영함.	draft
+E	공존공영	인간과 자연이 공존공영하는 길을 찾아야 한다.	ai	We must find a way for humans and nature to coexist and flourish together.
+E	공존공영	두 나라는 공존공영의 원칙에 따라 협력하기로 했다.	ai	The two countries agreed to cooperate on the principle of coexistence and mutual prosperity.
+P	seongeo	대담무쌍	大膽無雙	stdict:78825	fearless; extremely bold	Boldness beyond comparison (lit. great gall, without peer).	대담하기가 어디에 비할 데가 없음.	draft
+E	대담무쌍	그는 대담무쌍하게 적진으로 뛰어들었다.	ai	He leapt boldly into the enemy camp, without fear.
+E	대담무쌍	대담무쌍한 도전 끝에 그는 정상에 올랐다.	ai	After a daring challenge, he reached the summit.
+P	seongeo	유만부동	類萬不同	stdict:254751	alike yet each different; beyond all bounds	Many things resemble one another but are not the same; in use also, going beyond the proper limit (lit. ten thousand kinds, none the same).	비슷한 것이 많으나 서로 같지는 아니함.	draft
+E	유만부동	형제간이라도 유만부동이라 그는 막내를 유달리 사랑한다.	stdict	Even among siblings people differ, so he is especially fond of the youngest.
+E	유만부동	농담도 유만부동이지 사람들 앞에서 그렇게 놀리면 어떡해?	ai	Even jokes have their limits; how could you tease someone like that in front of everybody?
+P	seongeo	어불성설	語不成說	stdict:461110	utter nonsense; absurd	Words that make no sense at all (lit. words that do not form an argument).	말이 조금도 사리에 맞지 아니함.	draft
+E	어불성설	일하는 것은 가정을 위해서인데 가정이 파괴될 정도로 열심히 일한다면 이는 어불성설이 아닌가.	stdict	Work is for the sake of the family, so if you work so hard that the family falls apart, isn't that absurd?
+E	어불성설	공부를 하겠다며 책 한 권 펴지 않다니 어불성설이다.	ai	Saying you'll study and yet not opening a single book is nonsense.
+P	seongeo	십상팔구	十常八九	stdict:454946	nine times out of ten; almost certainly	In eight or nine cases out of ten, with almost no exception (lit. ten times, usually eight or nine).	열에 여덟이나 아홉 정도로 거의 예외가 없음.	draft
+E	십상팔구	전화를 해도 그가 자리에 없을 것이 십상팔구이다.	stdict	Even if I call, he is almost certainly not going to be at his desk.
+E	십상팔구	늦게 일어났으니 지각은 십상팔구이다.	stdict	Having woken up late, I'll almost certainly be late.
+P	seongeo	광제창생	廣濟蒼生	stdict:33244	saving the common people	Rescuing the people widely from their hardships (lit. widely relieve the common people).	널리 백성을 구제함.	draft
+E	광제창생	동학은 광제창생의 뜻을 내세워 민중의 지지를 얻었다.	ai	Donghak put forward the aim of saving the common people and won popular support.
+E	광제창생	그 한의사는 광제창생을 평생의 사명으로 삼았다.	ai	That doctor of traditional medicine took saving the common people as their life's mission.
+P	seongeo	연전연패	連戰連敗	stdict:238788	defeat after defeat	Losing every time one fights (lit. fight in a row, lose in a row).	싸울 때마다 계속하여 짐.	draft
+E	연전연패	그 팀은 시즌 내내 연전연패하며 최하위로 떨어졌다.	ai	The team lost game after game all season and fell to last place.
+E	연전연패	연전연패에도 감독은 선수들을 믿었다.	ai	Despite the string of defeats, the coach had faith in his players.
+P	seongeo	수원수구	誰怨誰咎	stdict:452514	no one to resent or blame	With nobody to resent and nobody to blame (lit. whom to resent, whom to blame).	누구를 원망하고 누구를 탓하겠냐는 뜻으로, 남을 원망하거나 탓할 것이 없음을 이르는 말.	draft
+E	수원수구	스스로 선택한 길이니 수원수구할 일도 없다.	ai	It is a road I chose myself, so there is no one to resent or blame.
+E	수원수구	모든 것이 내 잘못인데 수원수구하겠는가.	ai	Everything is my own fault, so whom could I resent or blame?
+P	seongeo	구곡간장	九曲肝腸	stdict:35679	the depths of one's heart	Deep inside one's heart, or a heart weighed down with accumulated grief (lit. liver and bowels in nine twists).	굽이굽이 서린 창자라는 뜻으로, 깊은 마음속 또는 시름이 쌓인 마음속을 비유적으로 이르는 말.	draft
+E	구곡간장	자식을 먼저 보낸 어머니의 구곡간장이 녹아내렸다.	ai	The heart of the mother who had outlived her child melted with grief.
+E	구곡간장	그는 구곡간장에 쌓인 사연을 털어놓았다.	ai	He poured out the story that had piled up deep in his heart.
+P	seongeo	불편부당	不偏不黨	stdict:157460	impartial; non-partisan	Perfectly fair and leaning to neither side (lit. not biased, not partisan).	아주 공평하여 어느 쪽으로도 치우침이 없음.	draft
+E	불편부당	심판은 불편부당하게 경기를 진행해야 한다.	ai	A referee must run the game impartially.
+E	불편부당	언론은 불편부당한 태도로 사실을 전달해야 한다.	ai	The press should report the facts in a non-partisan manner.
+P	seongeo	불사이군	不事二君	stdict:158560	serving only one lord; undivided loyalty	Not serving two rulers (lit. not serve two lords).	두 임금을 섬기지 아니함.	draft
+E	불사이군	그는 불사이군의 신념으로 끝까지 옛 왕조를 지켰다.	ai	With a belief in never serving two lords, he stayed loyal to the old dynasty to the end.
+E	불사이군	충신은 불사이군이라고 하여 나라가 망해도 절개를 지켰다.	ai	A loyal subject, the saying goes, does not serve two lords, and he kept faith even when the country fell.
+P	seongeo	필마단창	匹馬單槍	stdict:363243	a lone rider with a spear	Setting off alone on one horse with only simple weapons; also, a person who does so (lit. one horse, one spear).	한 필의 말과 한 자루의 창이란 뜻으로, 혼자 간단한 무장을 하고 한 필의 말을 타고 감을 이르는 말. 또는 그렇게 하는 사람.	draft
+E	필마단창	그는 필마단창으로 적진에 뛰어들었다.	ai	He charged into the enemy's camp alone, on a single horse with just a spear.
+E	필마단창	필마단창의 장수가 홀로 성문 앞에 나타났다.	ai	A general with a single horse and a spear appeared alone before the castle gate.
+P	seongeo	적반하장	賊反荷杖	stdict:473798	the guilty party blaming the innocent	A wrongdoer scolding someone who has done nothing wrong (lit. the thief turns round and takes up the stick).	도둑이 도리어 매를 든다는 뜻으로, 잘못한 사람이 아무 잘못도 없는 사람을 나무람을 이르는 말.	draft
+E	적반하장	잘못은 자기가 해 놓고 화를 내다니 적반하장도 유분수다.	ai	He makes the mistake himself and then gets angry; the guilty blaming the innocent has its limits.
+E	적반하장	도둑이 오히려 집주인을 나무라는 적반하장의 상황이 벌어졌다.	ai	A situation arose in which the thief scolded the householder instead, the guilty turning on the innocent.
+P	seongeo	대기만성	大器晩成	stdict:79752	a late bloomer	Great people take a long time to be formed (lit. a great vessel is completed late).	큰 그릇을 만드는 데는 시간이 오래 걸린다는 뜻으로, 크게 될 사람은 늦게 이루어짐을 이르는 말.	draft
+E	대기만성	대기만성이라더니 그는 마흔이 넘어서야 크게 성공했다.	ai	They say great talents mature late, and he did not find great success until after forty.
+E	대기만성	지금 성적이 낮다고 낙담하지 마라, 대기만성이라는 말도 있잖니.	ai	Don't be discouraged by low grades now; there is a saying that great talents mature late.
+P	seongeo	일벌백계	一罰百戒	stdict:473395	making an example of someone	Punishing one person severely as a warning to many others (lit. one punishment, a hundred warnings).	한 사람을 벌주어 백 사람을 경계한다는 뜻으로, 다른 사람들에게 경각심을 불러일으키기 위하여 본보기로 한 사람에게 엄한 처벌을 하는 일을 이르는 말.	draft
+E	일벌백계	회장은 예전엔 용인해 줄 만한 사안도 일벌백계 차원에서 엄중 문책하겠다고 밝혔다.	stdict	The chairman stated that even matters that used to be tolerated would be severely dealt with, as an example to others.
+E	일벌백계	검찰은 일벌백계의 원칙에 따라 주범을 엄하게 처벌했다.	ai	Following the principle of making an example of one, the prosecution punished the ringleader severely.
+P	seongeo	만분지일	萬分之一	stdict:109500	a tiny fraction	A very small share, one part in ten thousand (lit. one of ten thousand parts).	만으로 나눈 것의 하나라는 뜻으로, 아주 적은 경우를 이르는 말.	draft
+E	만분지일	부모의 마음을 만분지일이라도 헤아린다면, 네가 그런 나쁜 짓을 할 수 있겠는가.	stdict	If you understood even a fraction of your parents' feelings, could you do such a bad thing?
+E	만분지일	그의 노력은 성공의 만분지일에도 미치지 못했다.	ai	His efforts did not amount to even a tiny fraction of the success.
+P	seongeo	사고무친	四顧無親	stdict:167902	with no one to turn to	Having no relatives or anyone at all to depend on (lit. look all around, no kin).	의지할 만한 사람이 아무도 없음.	draft
+E	사고무친	전쟁으로 가족을 잃은 아이는 사고무친의 처지가 되었다.	ai	The child who lost their family in the war was left with no one to turn to.
+E	사고무친	낯선 도시에서 사고무친으로 살아가기란 쉽지 않았다.	ai	It was not easy to live in an unfamiliar city with nobody to turn to.
+P	seongeo	일구이언	一口二言	stdict:270299	saying two different things; going back on one's word	Saying one thing and then another about the same matter (lit. one mouth, two words).	한 입으로 두말을 한다는 뜻으로, 한 가지 일에 대하여 말을 이랬다저랬다 함을 이르는 말.	draft
+E	일구이언	일구이언은 사내대장부가 할 바가 아니다.	stdict	Going back on your word is not what a real man does.
+E	일구이언	그는 일구이언을 밥 먹듯 하여 아무도 그를 믿지 않게 되었다.	stdict	He went back on his word as casually as he ate his meals, so nobody trusted him any longer.
+P	seongeo	각자도생	各自圖生	stdict:4599	every man for himself	Each person seeking their own way to survive (lit. each plans their own survival).	제각기 살아 나갈 방법을 꾀함.	draft
+E	각자도생	위기가 닥치자 사람들은 각자도생을 외치며 흩어졌다.	ai	When the crisis hit, people scattered, each crying every man for himself.
+E	각자도생	복지가 부족한 사회에서는 각자도생의 분위기가 퍼지기 쉽다.	ai	In a society with weak welfare, an every-man-for-himself mood can easily spread.
+P	seongeo	녹음방초	綠陰芳草	stdict:68166	lush greenery and fragrant grass	The scenery of summer, with thick green trees and sweet-smelling grass (lit. green shade, fragrant grass).	푸르게 우거진 나무와 향기로운 풀이라는 뜻으로, 여름철의 자연 경관을 이르는 말.	draft
+E	녹음방초	봄이 가고 여름이 돌아와 녹음방초의 계절을 맞게 되었다.	stdict	Spring has gone and summer has returned, bringing the season of lush green trees and fragrant grass.
+E	녹음방초	녹음방초가 우거진 산길을 걸으니 마음이 시원해졌다.	ai	Walking a mountain path thick with green leaves and fragrant grass refreshed my mind.
+P	seongeo	천군만마	千軍萬馬	stdict:326905	a mighty host; like having an army behind you	A great number of soldiers and war horses, used for strong backing (lit. a thousand soldiers, ten thousand horses).	천 명의 군사와 만 마리의 군마라는 뜻으로, 아주 많은 수의 군사와 군마를 이르는 말.	draft
+E	천군만마	자네가 나를 밀어준다니 천군만마를 얻은 것 같군.	stdict	If you're backing me, I feel as though I've gained a whole army.
+E	천군만마	친구가 곁에 있어 주니 천군만마를 얻은 기분이다.	ai	With my friend by my side, it feels as if I've got a mighty army behind me.
+P	seongeo	청출어람	靑出於藍	stdict:488401	the pupil surpassing the master	A student or junior who outdoes the teacher or senior (lit. blue comes out of the indigo and is bluer than the indigo).	쪽에서 뽑아낸 푸른 물감이 쪽보다 더 푸르다는 뜻으로, 제자나 후배가 스승이나 선배보다 나음을 비유적으로 이르는 말. ≪순자(荀子)≫의 <권학편(勸學篇)>에 나오는 말이다.	draft
+E	청출어람	제자의 실력이 스승을 넘어섰으니 청출어람이라 할 만하다.	ai	The pupil's skill has gone beyond his teacher's, so it deserves to be called the pupil surpassing the master.
+E	청출어람	청출어람이라는 말처럼 후배가 선배의 기록을 깼다.	ai	Just as the saying goes, the junior has broken the senior's record and outdone the master.
+P	seongeo	빙공영사	憑公營私	stdict:167389	using public office for private gain	Seeking private profit under cover of public duty (lit. relying on the public, running a private business).	공적인 것을 빙자하여 사적인 이득을 꾀함.	draft
+E	빙공영사	그 공무원은 빙공영사로 재산을 불렸다가 처벌받았다.	ai	The official built up his wealth by using his public post for private gain and was punished.
+E	빙공영사	공적인 일을 빙자한 빙공영사는 근절되어야 한다.	ai	Using public affairs as a pretext for private gain must be eradicated.
+P	seongeo	의리부동	義理不同	stdict:265685	contrary to righteousness	Not in keeping with what is right or with one's duty of loyalty (lit. duty, not the same).	의리에 맞지 아니함.	draft
+E	의리부동	친구를 배신하는 것은 의리부동한 짓이다.	ai	Betraying a friend is an act contrary to righteousness.
+E	의리부동	은혜를 입고도 모르는 척하는 것은 의리부동이다.	ai	To pretend not to know someone after receiving their kindness is to go against what is right.
+P	seongeo	포악무도	暴惡無道	stdict:500382	savage and lawless	Fierce and brutal, without any law or decency (lit. violent and evil, without the way).	법도 도리도 없이 포악하다는 뜻으로, 사납고 악착하기가 이를 데 없음을 이르는 말.	draft
+E	포악무도	포악무도한 폭군은 백성들의 원성을 샀다.	ai	The savage, lawless tyrant earned the people's resentment.
+E	포악무도	그 도적 떼는 포악무도하여 마을 사람들이 두려워했다.	ai	The band of robbers was so brutal and lawless that the villagers feared them.
+P	seongeo	적수공권	赤手空拳	stdict:475111	empty-handed	Having nothing at all, as if with only bare hands and empty fists (lit. red hands, empty fists).	맨손과 맨주먹이라는 뜻으로, 아무것도 가진 것이 없음을 이르는 말.	draft
+E	적수공권	그는 적수공권으로 외국에 나가 큰돈을 모았다.	stdict	He went abroad empty-handed and amassed a fortune.
+E	적수공권	그는 적수공권으로 시작해 지금의 회사를 세웠다.	ai	He started with nothing and built the company he has today.
+P	seongeo	장생불사	長生不死	stdict:278706	eternal life; immortality	Living for a long time and never dying (lit. long life, no death).	오래도록 살고 죽지 아니함.	draft
+E	장생불사	도교에서는 장생불사의 신선이 되기를 꿈꾸었다.	ai	In Daoism, people dreamed of becoming immortal sages who live forever.
+E	장생불사	장생불사의 약을 구하려고 사신이 바다를 건넜다.	ai	An envoy crossed the sea to obtain an elixir of immortality.
+P	seongeo	부화수행	附和隨行	stdict:153287	blindly following others	Going along with other people's opinions and acting as they do, without any mind of one's own (lit. chime in and follow along).	줏대 없이 다른 사람의 주장에만 따라서 그가 하는 짓을 따라 행동함.	draft
+E	부화수행	그는 소신 없이 부화수행하기만 한다.	ai	He has no convictions of his own and just goes along with whatever others do.
+E	부화수행	부화수행하는 태도로는 좋은 결정을 내릴 수 없다.	ai	You cannot make good decisions with an attitude of simply following the crowd.
+P	seongeo	화룡점정	畫龍點睛	stdict:374772	the finishing touch	Completing the most important part of a task (lit. paint the dragon, dot its eyes).	무슨 일을 하는 데에 가장 중요한 부분을 완성함을 비유적으로 이르는 말. 용을 그리고 난 후에 마지막으로 눈동자를 그려 넣었더니 그 용이 실제 용이 되어 홀연히 구름을 타고 하늘로 날아 올라갔다는 고사에서 유래한다.	draft
+E	화룡점정	깔끔한 반찬과 갓 지은 밥도 만족스러웠지만 화룡점정은 마지막에 나온 직접 담근 식혜였다.	stdict	The neat side dishes and freshly cooked rice were satisfying, but the finishing touch was the homemade sikhye that came out last.
+E	화룡점정	이어달리기야말로 운동회의 화룡점정이다.	stdict	The relay race is the crowning touch of the sports day.
+P	seongeo	보편타당	普遍妥當	stdict:144522	universally valid	Being sound and proper in a way that is not special to any one case, so that it holds everywhere (lit. universal and fitting).	특별하지 않고 사리에 맞아 타당함.	draft
+E	보편타당	인권은 보편타당한 가치로 인정받고 있다.	ai	Human rights are recognized as a universally valid value.
+E	보편타당	그의 주장은 보편타당해서 반박하기 어렵다.	ai	His argument is universally sound, so it is hard to refute.
+P	seongeo	천인공노	天人共怒	stdict:327726	an outrage to heaven and man	Something so hateful or unforgivable that everyone is enraged (lit. heaven and humans are angry together).	하늘과 사람이 함께 노한다는 뜻으로, 누구나 분노할 만큼 증오스럽거나 도저히 용납할 수 없음을 이르는 말.	draft
+E	천인공노	천인공노할 범죄에 온 국민이 분노했다.	ai	The whole nation was angered by a crime that outraged heaven and humanity.
+E	천인공노	어린아이를 학대하다니 천인공노할 일이다.	ai	Abusing a young child is an outrage that no one can forgive.
+P	seongeo	불충불효	不忠不孝	stdict:159556	disloyal and unfilial	Failing both in loyalty and in filial devotion (lit. not loyal, not filial).	충성스럽지 못하고 효성스럽지 못함.	draft
+E	불충불효	제후국 임금으로 천자를 치는 것과 아직 아버지의 상중에 전쟁을 일으키는 것은 불충불효이다.	stdict	For a king of a vassal state to attack the emperor, and to start a war while still in mourning for his father, is to be disloyal and unfilial.
+E	불충불효	부모를 버리고 나라를 등지는 것을 불충불효라 하였다.	ai	Abandoning one's parents and turning one's back on the country was called being disloyal and unfilial.
+P	seongeo	배산임수	背山臨水	stdict:138275	with mountains behind and water in front	A site that has a mountain at its back and faces water (lit. back to the mountain, facing the water).	지세(地勢)가 뒤로는 산을 등지고 앞으로는 물에 면하여 있음.	draft
+E	배산임수	한국 사람들은 전통적으로 배산임수의 남향집을 선호하였다.	stdict	Koreans traditionally preferred south-facing houses with a mountain behind and water in front.
+E	배산임수	이 마을은 배산임수의 명당에 자리 잡고 있다.	ai	This village sits on an auspicious site with a mountain behind it and water before it.
+P	seongeo	영원무궁	永遠無窮	stdict:237834	eternal; everlasting	Lasting forever, without end (lit. forever, without limit).	영원하여 끝이 없음.	draft
+E	영원무궁	우리의 우정이 영원무궁하기를 바란다.	ai	I hope our friendship will last forever.
+E	영원무궁	신 앞에서 영원무궁한 사랑을 맹세했다.	ai	They swore an everlasting love before God.
+P	seongeo	점입가경	漸入佳境	stdict:479148	getting better and better as one goes on	Becoming more and more interesting the further in one goes; sometimes used ironically for things getting worse (lit. gradually entering a fine place).	들어갈수록 점점 재미가 있음.	draft
+E	점입가경	설악산은 안으로 깊이 들어갈수록 그 멋이 점입가경이다.	stdict	The deeper into Seoraksan you go, the more splendid it becomes.
+E	점입가경	이야기는 뒤로 갈수록 점입가경이어서 책을 놓을 수 없었다.	ai	The story got better and better as it went on, so I could not put the book down.
+P	seongeo	금상첨화	錦上添花	stdict:401345	icing on the cake	A good thing added on top of another good thing (lit. adding flowers on brocade).	비단 위에 꽃을 더한다는 뜻으로, 좋은 일 위에 또 좋은 일이 더하여짐을 비유적으로 이르는 말. 왕안석의 글에서 유래한다.	draft
+E	금상첨화	맛도 좋은데 값까지 싸다니 금상첨화이다.	ai	The food is tasty, and it's cheap on top of that: icing on the cake.
+E	금상첨화	능력에 인성까지 갖춘 직원이라면 금상첨화다.	ai	An employee who has good character as well as ability is icing on the cake.
+P	seongeo	도원결의	桃園結義	stdict:415851	sworn brotherhood	Becoming sworn brothers, from the oath that Liu Bei, Guan Yu and Zhang Fei made in the peach garden (lit. oath of righteousness in the peach garden).	의형제를 맺음을 이르는 말. ≪삼국지연의≫에 나오는 말로 유비, 관우, 장비가 도원에서 의형제를 맺은 데에서 유래한다.	draft
+E	도원결의	두 사람은 도원결의를 맺은 것처럼 서로를 형제처럼 아꼈다.	ai	The two treasured each other like brothers, as though they had sworn an oath of brotherhood.
+E	도원결의	어릴 적 친구들과 도원결의를 하고 평생 우정을 지키기로 했다.	ai	We swore brotherhood in the peach garden, as it were, with our childhood friends and promised to keep our friendship for life.
+P	seongeo	불원천리	不遠千里	stdict:436300	traveling any distance	Not thinking even a thousand li too far to go (lit. not consider a thousand li far).	천 리 길도 멀다고 여기지 않음.	draft
+E	불원천리	그는 스승을 만나려고 불원천리하고 찾아왔다.	ai	He came all the way, thinking no distance too great, to meet his teacher.
+E	불원천리	불원천리 달려온 손님들 덕분에 잔치가 빛났다.	ai	The feast was brightened by the guests who had come from far away.
+P	seongeo	무실역행	務實力行	stdict:423579	striving to put truth into practice	Working hard to carry out what is genuine and substantial (lit. devote oneself to what is real, practice with effort).	참되고 실속 있도록 힘써 실행함.	draft
+E	무실역행	무실역행은 도산 안창호가 강조한 실천 정신이다.	ai	"Musil yeokhaeng" is the spirit of practice that Dosan Ahn Changho stressed.
+E	무실역행	그는 무실역행의 자세로 맡은 일을 해냈다.	ai	He carried out his duties with an attitude of earnest, practical effort.
+P	seongeo	운우지정	雲雨之情	stdict:465314	sexual love; lovemaking	A euphemism for sexual union between a man and a woman (lit. feelings of clouds and rain, from the dream of King Huai of Chu).	구름 또는 비와 나누는 정이라는 뜻으로, 남녀의 정교(情交)를 이르는 말. 중국 초나라의 회왕(懷王)이 꿈속에서 어떤 부인과 잠자리를 같이했는데, 그 부인이 떠나면서 자기는 아침에는 구름이 되고 저녁에는 비가 되어 양대(陽臺) 아래에 있겠다고 했다는 고사에서 유래한다.	draft
+E	운우지정	고전 문학에서는 운우지정을 구름과 비에 빗대어 표현했다.	ai	In classical literature, sexual love was expressed through the metaphor of clouds and rain.
+E	운우지정	시인은 운우지정을 은근히 암시하는 시를 남겼다.	ai	The poet left a poem that subtly hints at sexual love.
+P	seongeo	일구월심	日久月深	stdict:270290	growing stronger with each passing day	Increasing as days and months go by (lit. days grow long, months grow deep).	날이 오래고 달이 깊어 간다는 뜻으로, 세월이 흐를수록 더함을 이르는 말.	draft
+E	일구월심	고향에 대한 그리움이 일구월심으로 깊어 갔다.	ai	The longing for home deepened with each passing day.
+E	일구월심	그녀를 향한 마음은 일구월심 더해만 갔다.	ai	The feelings toward her only grew stronger as time went on.
+P	seongeo	치지도외	置之度外	stdict:489927	disregarding; leaving out of consideration	Not taking something to heart, as if setting it beyond the limits of concern (lit. place it outside the bounds).	마음에 두지 아니함.	draft
+E	치지도외	그는 주변의 비난을 치지도외하고 자기 길을 갔다.	ai	He disregarded the criticism around him and went his own way.
+E	치지도외	사소한 일은 치지도외해도 좋다.	ai	Trivial matters can be safely left out of consideration.
+P	seongeo	고색창연	古色蒼然	stdict:24076	venerable and time-worn	Looking old and having the quiet charm of antiquity (lit. ancient color, deep green).	오래되어 예스러운 풍치나 모습이 그윽함.	draft
+E	고색창연	고색창연한 사찰이 산자락에 자리 잡고 있었다.	ai	A venerable old temple stood at the foot of the mountain.
+E	고색창연	이 도시에는 고색창연한 건물이 많이 남아 있다.	ai	Many buildings of antique charm remain in this city.
+P	seongeo	백화제방	百花齊放	stdict:139997	letting a hundred flowers bloom	Many flowers blooming at once; also, all kinds of learning, art and ideas flourishing together (lit. a hundred flowers bloom together).	많은 꽃이 일제히 핌.	draft
+E	백화제방	봄이 되니 들판에 백화제방의 풍경이 펼쳐졌다.	ai	With spring, a scene of a hundred flowers blooming at once spread across the fields.
+E	백화제방	이 시기에는 학문과 예술이 백화제방하며 크게 발전했다.	ai	In this period learning and the arts flourished side by side and developed greatly.
