@@ -7,7 +7,7 @@ export function Toast() {
   return (
     <div class="toast-host" role="status" aria-live="polite">
       {t && (
-        <div key={t.id} class="toast app-toast" onPointerEnter={holdToast} onPointerLeave={() => releaseToast()} onFocusIn={holdToast} onFocusOut={() => releaseToast()}>
+        <div key={t.id} class="toast app-toast" onPointerEnter={(e) => { if (e.pointerType === 'mouse') holdToast(); }} onPointerLeave={(e) => { if (e.pointerType === 'mouse') releaseToast(); }} onFocusIn={holdToast} onFocusOut={() => releaseToast()}>
           <span class="toast-text">{t.text}</span>
           {t.actions.map((a) => <button key={a.label} type="button" class="link" onClick={() => { hideToast(); a.run(); }}>{a.label}</button>)}
           <button type="button" class="link dim" aria-label="Dismiss" onClick={hideToast}>×</button>

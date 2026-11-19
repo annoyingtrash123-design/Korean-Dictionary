@@ -121,6 +121,10 @@ test('home: a finger swipe on a card changes page; a vertical one scrolls the ca
   await expect(card(1).getByRole('button', { name: /^Remove from / })).toBeVisible();
   await card(1).getByRole('button', { name: /^Remove from / }).tap();
   await expect(card(1).getByRole('button', { name: /^Save to / })).toBeVisible();
+  // the "Removed · Undo" toast sits over the pager on a phone: dismiss it as a user would (it also times out)
+  const dismiss = page.locator('.toast-host').getByRole('button', { name: 'Dismiss' });
+  if (await dismiss.count()) await dismiss.first().tap();
+  await expect(page.locator('.toast-host .app-toast')).toHaveCount(0);
   await pager.getByRole('button', { name: 'Next page' }).tap();
   await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
   await pager.getByRole('button', { name: 'Previous page' }).tap();
