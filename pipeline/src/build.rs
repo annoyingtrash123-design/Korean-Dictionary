@@ -1600,6 +1600,14 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
             m.insert("study_item".into(), (stats.items as i64).into());
         }
     }
+    // "Chinese & English" block of the 성어 pages: CC-CEDICT chengyu (when the source is present) + approved English equivalents
+    {
+        let stats = crate::seongeo_zh::add_table(&core.path, o.sources.cedict.as_deref())?;
+        log::info!("seongeo_zh: {} rows ({} CC-CEDICT chengyu, {} English equivalents)", stats.rows, stats.zh, stats.en);
+        if let Some(m) = core.counts.as_object_mut() {
+            m.insert("seongeo_zh".into(), (stats.rows as i64).into());
+        }
+    }
     packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);
     for p in &korean_packs {
         let id = p.path.file_stem().and_then(|s| s.to_str()).unwrap_or("stdict").to_string();

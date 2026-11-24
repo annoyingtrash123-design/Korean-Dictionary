@@ -196,23 +196,27 @@ pub fn to_entry(l: &Line, sino: &HashMap<char, String>) -> Entry {
     }
 }
 
-/// Parse CEDICT text from a reader, calling `cb` per entry in file order.
-pub fn parse_reader<R: BufRead>(rd: R, sino: &HashMap<char, String>, mut cb: impl FnMut(Entry) -> Result<()>) -> Result<()> {
+/// Parse CEDICT text from a reader, calling `cb` per line in file order.
+pub fn read_lines_from<R: BufRead>(rd: R, mut cb: impl FnMut(Line) -> Result<()>) -> Result<()> {
     for line in rd.split(b'\n') {
         let line = line?;
-        let line = String::from_utf8_lossy(&line);
-        if let Some(l) = parse_line(&line) {
-            cb(to_entry(&l, sino))?;
+        if let Some(l) = parse_line(&String::from_utf8_lossy(&line)) {
+            cb(l)?;
         }
     }
     Ok(())
 }
 
-/// Parse `cedict_1_0_ts_utf-8_mdbg.zip` (any member ending `.u8` / `.txt`) or a plain text file.
-pub fn parse_file(path: &Path, sino: &HashMap<char, String>, cb: impl FnMut(Entry) -> Result<()>) -> Result<()> {
+/// Parse CEDICT text from a reader, calling `cb` per entry in file order.
+pub fn parse_reader<R: BufRead>(rd: R, sino: &HashMap<char, String>, mut cb: impl FnMut(Entry) -> Result<()>) -> Result<()> {
+    read_lines_from(rd, |l| cb(to_entry(&l, sino)))
+}
+
+/// Every line of `cedict_1_0_ts_utf-8_mdbg.zip` (any member ending `.u8` / `.txt`) or of a plain text file.
+pub fn read_lines(path: &Path, cb: impl FnMut(Line) -> Result<()>) -> Result<()> {
     let is_zip = path.extension().is_some_and(|e| e == "zip");
     if !is_zip {
-        return parse_reader(BufReader::new(std::fs::File::open(path)?), sino, cb);
+        return read_lines_from(BufReader::new(std::fs::File::open(path)?), cb);
     }
     let mut zf = zip::ZipArchive::new(std::fs::File::open(path)?)?;
     for i in 0..zf.len() {
@@ -220,10 +224,15 @@ pub fn parse_file(path: &Path, sino: &HashMap<char, String>, cb: impl FnMut(Entr
         let name = f.name().to_string();
         if name.ends_with(".u8") || name.ends_with(".txt") {
             let rd: Box<dyn Read> = Box::new(f);
-            return parse_reader(BufReader::new(rd), sino, cb);
+            return read_lines_from(BufReader::new(rd), cb);
         }
     }
     Err(anyhow!("no .u8 member in {}", path.display()))
+}
+
+/// Parse `cedict_1_0_ts_utf-8_mdbg.zip` (any member ending `.u8` / `.txt`) or a plain text file.
+pub fn parse_file(path: &Path, sino: &HashMap<char, String>, mut cb: impl FnMut(Entry) -> Result<()>) -> Result<()> {
+    read_lines(path, |l| cb(to_entry(&l, sino)))
 }
 
 /// Sort key: shorter headwords first, then file order.

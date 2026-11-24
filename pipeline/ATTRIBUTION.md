@@ -100,6 +100,9 @@ licensed separately.
 ## CC-CEDICT (optional `cedict` pack)
 * Content used: Chinese (traditional / simplified) headwords, pinyin and English glosses.
   The Sino-Korean reading shown with each entry is computed from the hanja readings of this app.
+  The same data feeds the "Chinese & English" block of 성어 pages (`seongeo_zh` table of `core.sqlite`): the CC-CEDICT
+  entry whose traditional headword equals the 성어's four hanja exactly, shown with source "CC-CEDICT".
+  (The English idiom equivalents in that block are AI-written, reviewed and labelled; they are not from CC-CEDICT.)
 * Source: https://www.mdbg.net/chinese/dictionary?page=cc-cedict — CC-CEDICT, community maintained.
 * Licence: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) —
   https://creativecommons.org/licenses/by-sa/4.0/

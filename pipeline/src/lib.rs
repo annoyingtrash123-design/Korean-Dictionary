@@ -19,6 +19,7 @@ pub mod opendict;
 pub mod pack;
 pub mod provenance;
 pub mod schema;
+pub mod seongeo_zh;
 pub mod study_idioms;
 pub mod stdict;
 pub mod tatoeba;
