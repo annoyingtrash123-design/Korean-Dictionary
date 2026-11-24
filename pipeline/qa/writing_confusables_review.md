@@ -2033,3 +2033,136 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - -기 때문에: 비가 오기 때문에 행사가 취소되었다. / The event was cancelled because of the rain.
 - common mistake: Using “-니까” in an essay; essay reasons are “-기 때문에 / -(으)므로”. “-아서” cannot be followed by a request (“비가 와서 우산을 가져가세요” is wrong).
 - review: draft
+
+
+## Independent review (content-review, 2026-11-24)
+
+Reviewer: a separate agent from the writer. Every row of both files was read in full (expression/words, meaning, register note
+or explanation, both sentences and their English, common-mistake line, link). Claims about spelling and meaning were checked
+against 표준국어대사전 (`pipeline/out/stdict.sqlite`); the text above this section is the writer's draft and is now superseded
+by the TSV files wherever the change log below lists a change.
+
+**Outcome**
+
+| list | rows | approved | rejected | rows changed |
+|---|---|---|---|---|
+| 쓰기 expressions (`writing_expressions.tsv`) | 162 | 162 | 0 | 50 |
+| confusable groups (`confusables.tsv`) | 100 | 100 | 0 | 20 |
+
+No row was rejected: every wrong claim could be fixed in place. Rows were approved only after the fixes below.
+
+**Findings on the "least certain" list**
+
+- C003 개발/계발: the draft said using “개발” for talents is a mistake. False: 표준국어대사전 gives “개발” the sense
+  “지식이나 재능 따위를 발달하게 함” (example “자신의 능력 개발”) and lists 계발 as its synonym. Rewritten: both are correct
+  for abilities; only “개발” for products, land and technology.
+- C014 금세/금새: correct (금새 = 물건의 값, rare); sentence kept.
+- C034 쫓다/좇다: “standard Korean prefers 좇다” was too weak: for goals and ideals 좇다 is the standard form (sense
+  “목표, 이상, 행복 따위를 추구하다”); 쫓다 has no such sense. Reworded as non-standard.
+- C031 부딪치다/부딪히다: the draft called “어려움에 부딪쳤다” a mistake. Not quite: 부딪치다 is listed as the emphatic
+  form of 부딪다 in both its senses, including “예상치 못한 일이나 상황 따위에 직면하다”. The mistake line now uses a clear
+  passive case (a boat hit by waves) and says that 부딪히다 is the usual choice for difficulties.
+- C049 너무: the draft said “너무 좋다” is wrong in standard Korean. False since the 2015 dictionary revision (the current
+  entry has the examples “너무 좋다 / 너무 예쁘다”). Now: correct but conversational; prefer 매우 in an essay.
+- C085 임대/임차: correct (임대 = 돈을 받고 빌려줌, 임차 = 돈을 내고 빌려 씀).
+- C010 갱신/경신, C006 일체/일절, C032 걷잡다/겉잡다, C033 띄다/띠다, C054 썩이다/썩히다: checked against the dictionary; correct.
+
+**Change log (old → new)**
+
+
+*쓰기 expressions*
+
+- W004 `ex1_en`: “How widely artificial intelligence may be used has recently become a topic of public debate.” → “The use of artificial intelligence has recently become a hot topic in society.”
+- W009 `ex2_ko`: “사형 제도를 유지해야 한다는 주장과 폐지해야 한다는 주장이 팽팽하게 맞서고 있다.” → “사형 제도를 유지해야 하는지를 두고 의견이 엇갈리고 있다.”
+- W009 `ex2_en`: “The argument for keeping the death penalty and the argument for abolishing it stand evenly matched.” → “Opinions are divided over whether the death penalty should be kept.”
+- W010 `ex2_en`: “Opinions are sharply divided over whether euthanasia should be allowed.” → “Opinions differ widely over whether euthanasia should be allowed.”
+- W011 `expression`: “-을/를 둘러싸고 논란이 되고 있다” → “-을/를 둘러싸고 논란이 일고 있다”
+- W011 `meaning_en`: “… has become the subject of controversy” → “controversy has arisen over …”
+- W011 `ex1_ko`: “동물 실험의 윤리성을 둘러싸고 논란이 되고 있다.” → “동물 실험의 윤리성을 둘러싸고 논란이 일고 있다.”
+- W011 `ex1_en`: “The ethics of animal testing have become the subject of controversy.” → “Controversy has arisen over the ethics of animal testing.”
+- W012 `expression`: “-이/가 필수적이 되었다” → “-이/가 필수가 되었다 / 필수적인 요소가 되었다”
+- W012 `meaning_en`: “… has become essential” → “… has become essential / an essential element”
+- W012 `ex1_ko`: “정보화 시대에는 정보를 올바르게 판단하는 능력이 필수적이 되었다.” → “정보화 시대에는 정보를 올바르게 판단하는 능력이 필수가 되었다.”
+- W012 `ex2_en`: “A foreign language is now an essential element of social life.” → “Foreign-language ability has now become an essential element of working life.”
+- W029 `ex2_en`: “This method is effective because it costs little.” → “The reason this method is effective is that it costs little.”
+- W034 `register_note`: “Written, formal; a stiff connective of reason that does not exist in speech (use “-니까 / -아서” there).” → “Written, formal; a stiff connective of reason that is almost never heard in conversation (use “-니까 / -아서” there).”
+- W035 `expression`: “-는 만큼” → “-(으)ㄴ/는 만큼”
+- W038 `register_note`: “Written, formal. “어쩔 수 없다” is the spoken form; the writing form states the inevitable result.” → “Written, formal. States an inevitable result. In conversation people say “-(으)ㄹ 수밖에 없어요” or “어쩔 수 없어요”; in an essay keep the “-다” ending.”
+- W039 `register_note`: “Written, formal. Always followed by a report verb in the “-다고 한다 / -(으)ㄴ/는 것으로 나타났다” family. Spoken “-(ㄴ/는)대요 / -더라고요” for hearsay is too casual.” → “Written, formal. Usually closed by a report ending such as “-다고 한다” or “-(으)ㄴ/는 것으로 나타났다”. Spoken “-(ㄴ/는)대요 / -더라고요” for hearsay is too casual.”
+- W039 `ex2_ko`: “한 연구 결과에 따르면 운동은 스트레스를 줄이는 데 효과가 있다.” → “한 연구 결과에 따르면 운동은 스트레스를 줄이는 데 효과가 있다고 한다.”
+- W041 `expression`: “-(으)로 알려져 있다” → “-(으)ㄴ/는 것으로 알려져 있다”
+- W044 `ex1_en`: “The results showed that 60% of respondents are not satisfied with their current job.” → “The survey showed that 60% of respondents are not satisfied with their current job.”
+- W047 `expression`: “-(이)라는 연구 결과가 있다” → “-(ㄴ/는)다는 연구 결과가 있다”
+- W048 `expression`: “-고 지적한다 / -고 주장한다” → “-다고 지적한다 / -다고 주장한다”
+- W052 `expression`: “-뿐만 아니라” → “-뿐만 아니라 / -(으)ㄹ 뿐만 아니라”
+- W052 `register_note`: “Written, formal. “뿐만 아니라” can follow a noun or “-(으)ㄹ”; the spoken equivalent is “-(으)ㄹ 뿐 아니라” or “거기다”.” → “Written, formal. Follows a noun (“-뿐만 아니라”) or a verb in “-(으)ㄹ 뿐만 아니라”. In conversation people more often say “-고 또 …” or “게다가”; the polite “-요” ending never belongs in the essay.”
+- W054 `register_note`: “Written, neutral. Adds a stronger point; also used in speech, so keep it for the second, stronger reason.” → “Written, neutral. Common in speech as well, so a little less formal than “또한 / 더욱이”; use it to add a further, often stronger point.”
+- W055 `register_note`: “Written, formal. Intensifies a case already made; “심지어” goes further to an extreme. Spoken “거기다 / 더구나요” are too casual.” → “Written, formal. Intensifies a case already made; “심지어” goes further to an extreme. The spoken “거기다(가)” is too casual.”
+- W056 `register_note`: “Written, formal. Moves to the next, wider level (individual → society). Spoken “그리고 나서” is too casual.” → “Written, formal. Moves to the next, wider level (individual → society); “더 나아가” works the same. Do not write “그리고 나서” here: it means “after that” (and the standard spelling is “그러고 나서”).”
+- W059 `register_note`: “Written, formal. Same meaning as “뿐만 아니라”; the variant “뿐 아니라” is common when no noun precedes. No spoken difference in the form itself; keep the “한다체” ending and avoid the polite “-요”.” → “Written, formal. Same meaning as “뿐만 아니라”, just without “만”; both work after a noun and after “-(으)ㄹ”. Keep the “한다체” ending and avoid the polite “-요”.”
+- W061 `ex2_en`: “Schools should strengthen environmental education. Together with this, practice at home should also go on.” → “Schools should strengthen environmental education. Together with this, it should be practised at home as well.”
+- W064 `register_note`: “Written, neutral. Less formal than “그러나” but fully acceptable in 54; avoid the spoken “근데 / 그렇지만 요”.” → “Written, neutral. Less formal than “그러나” but fully acceptable in 54; avoid the spoken “근데”.”
+- W070 `expression`: “-는 데 반해” → “-(으)ㄴ/는 데 반해”
+- W070 `register_note`: “Written, formal. Sharper opposition than “비해”: the two facts point in opposite directions. Spoken “-는데 / -는 반면에요” are too casual.” → “Written, formal. Sharper opposition than “비해”: the two facts point in opposite directions. The spoken “-는데” is too casual.”
+- W071 `register_note`: “Written, neutral. Used when the result is the opposite of what was expected. Spoken “되레 / 도리어” are rarer; “오히려” is the standard written choice.” → “Written, neutral. Used when the result is the opposite of what was expected. “도리어” means the same; the colloquial “되레” is best kept out of an essay.”
+- W072 `register_note`: “Written, neutral to formal. Strong denial and reversal; the spoken form is “-기는커녕” too, so keep to a formal context.” → “Written, neutral to formal. Strong denial and reversal, often followed by “오히려”. Speech uses the same form (often shortened to “-긴커녕”); in an essay write it in full with the “한다체” ending.”
+- W076 `register_note`: “Written, neutral. Concedes a hypothetical; a very common essay concession. Spoken “-어도 / -아도” are plainer; “-더라도” is the standard in essays.” → “Written, neutral. Concedes a hypothetical; a very common essay concession. The plainer “-아도/어도” is also acceptable in an essay; only the polite “-요” endings are out.”
+- W077 `register_note`: “Written, formal; slightly literary. For stronger "even if the worst happens". Spoken “-어도 / -더라도” are plainer; use “-ㄹ지라도” for a stronger written concession.” → “Written, formal; slightly literary. For a stronger "even if the worst happens". “-아도/어도 / -더라도” are plainer; use “-(으)ㄹ지라도” for a stronger written concession.”
+- W080 `register_note`: “Written, formal. “비록” signals the concession in advance and goes with “-지만 / -ㄹ지라도 / -더라도”. “비록” is used only in writing; in speech people say “아무리” or just “-지만”.” → “Written, formal. “비록” signals the concession in advance and goes with “-지만 / -(으)ㄹ지라도 / -더라도”. It is mainly a written word; in speech people more often say just “-지만”.”
+- W081 `expression`: “-(이)라고 해서 -는 것은 아니다” → “-다고 해서 -는 것은 아니다”
+- W081 `ex2_en`: “Technological progress does not automatically raise the quality of life.” → “Just because technology has advanced does not mean the quality of life automatically rises.”
+- W083 `register_note`: “Written, formal. Draws a logical consequence; “그래서” is spoken, and “그러니까 / 그러니” is conversational; neither belongs in an argument.” → “Written, formal. Draws a logical consequence. “그래서” is more conversational and “그러니까 / 그러니” are spoken; in an argument prefer “따라서”.”
+- W085 `register_note`: “Written, formal. Links a result to a preceding cause; common in 53 to describe consequences. Spoken “그래서 / 그 때문에” are too casual.” → “Written, formal. Links a result to a preceding cause; common in 53 to describe consequences. The spoken “그래서” is too casual.”
+- W086 `register_note`: “Written, formal. “이로 인해” is more formal than “이 때문에”; spoken “그래서 / 그 때문에” is weaker.” → “Written, formal. “이로 인해” is more formal than “이 때문에”; the spoken “그래서” is too casual.”
+- W089 `ex1_ko`: “무분별한 개발은 자연 환경의 파괴를 초래할 수 있다.” → “무분별한 개발은 자연환경의 파괴를 초래할 수 있다.”
+- W097 `ex2_en`: “As members of society, we must fulfil our responsibility to the community.” → “As long as we are members of society, we must fulfil our responsibility to the community.”
+- W101 `register_note`: “Written, formal. Alternative opening; “나타낸 것이다” is the written equivalent of "shows". Spoken “설문 조사 한 거예요” is too casual.” → “Written, formal. Alternative opening; “나타낸 것이다” is the written equivalent of "shows". Spoken “설문 조사한 거예요” is too casual.”
+- W102 `expression`: “-(으)ㄴ 것으로 나타났다” → “-(으)ㄴ/는 것으로 나타났다”
+- W112 `ex1_ko`: “2023년에는 전체 인구의 20%에 이를 것으로 예상된다.” → “1인 가구의 비율은 2030년에 전체 가구의 35%에 이를 것으로 예상된다.”
+- W112 `ex1_en`: “By 2023 it is expected to reach 20% of the whole population.” → “The share of one-person households is expected to reach 35% of all households by 2030.”
+- W113 `ex2_ko`: “실업률은 지난해 가장 낮은 수준을 기록하였다.” → “실업률은 지난해 사상 최저치를 기록하였다.”
+- W113 `ex2_en`: “The unemployment rate hit its lowest level last year.” → “The unemployment rate hit a record low last year.”
+- W117 `register_note`: “Written, neutral. Time adverbs for repeated change. Spoken “계속 / 점점” are too casual.” → “Written, neutral. Time adverbs for repeated or continuing change; “지속적으로” is the most formal. “계속” is plainer but acceptable; avoid the spoken “맨날”.”
+- W118 `register_note`: “Written, formal. Share of a total: “전체의 -%를 차지하다”. The most common verb in a pie-chart description. Spoken “차지해요” / -% “정도예요” is too casual.” → “Written, formal. Share of a total: “전체의 -%를 차지하다”. The most common verb in a pie-chart description. Spoken “-% 정도예요” is too casual.”
+- W120 `ex2_ko`: “전기차의 비율은 아직 전체의 3%에 그쳤다.” → “전기차의 비율은 아직 전체의 3%에 그치고 있다.”
+- W120 `ex2_en`: “Electric cars still made up only 3% of the total.” → “Electric cars still make up only 3% of the total.”
+- W122 `ex1_ko`: “응답자의 절반 가량이 주 1회 이상 운동을 한다고 답하였다.” → “응답자의 절반가량이 주 1회 이상 운동을 한다고 답하였다.”
+- W123 `register_note`: “Written, formal. “약” goes before the figure; “가량” follows it. Spoken “-쯤 / -정도” is too casual; “쯤” is spoken.” → “Written, formal. “약” goes before the figure; “가량” follows it. The conversational “-쯤” is best avoided; “정도” is acceptable, but “약 / 가량” sound more formal in a 53 answer.”
+- W131 `register_note`: “Written, neutral. Introduces a concrete example; “예를 들어” is neutral and fine in an essay. The spoken “가령 / 이를테면” are acceptable too.” → “Written, neutral. Introduces a concrete example; “예를 들어” is neutral and fine in an essay. “가령 / 이를테면” are acceptable alternatives; avoid the spoken “예를 들면요”.”
+- W135 `expression`: “-는 바와 같이 / -(으)ㄹ 수 있듯이” → “-(으)ㄴ 바와 같이 / -에서 볼 수 있듯이”
+- W136 `register_note`: “Written, neutral. Picks out the strongest case. Spoken “특별히 / 그중에서도” is too casual.” → “Written, neutral. Picks out the strongest case; “그중에서도” is a stronger alternative. Do not confuse it with “특별히” (specially, on purpose).”
+- W140 `expression`: “-는 방안을 모색해야 한다” → “-(으)ㄹ 수 있는 방안을 모색해야 한다”
+- W150 `register_note`: “Written, formal. Summarising several points. Spoken “정리하면 / 한마디로” is too casual.” → “Written, formal. Summarising several points. Spoken “그러니까 / 결론은요” are too casual.”
+- W154 `meaning_en`: “it is hoped that …” → “it is expected (and hoped) that …”
+- W160 `ex2_ko`: “갑작스러운 사정으로 행사가 연기된 점 양해해 주시기 바랍니다.” → “갑작스러운 사정으로 행사를 연기하게 되어 죄송합니다. 너그럽게 양해해 주시기 바랍니다.”
+- W160 `ex2_en`: “Please understand that the event has been postponed for unforeseen reasons.” → “We are sorry that the event has had to be postponed for unforeseen reasons. We kindly ask for your understanding.”
+- W162 `ex2_ko`: “시간이 부족할수록 중요한 일을 미루는 경향이 있다.” → “사람들은 시간이 부족할수록 중요한 일을 미루는 경향이 있다.”
+
+*Confusable groups*
+
+- C003 `explanation_en`: ““개발” (開發) is to develop something new or to open up land, resources and technology. “계발” (啓發) is to develop what is already inside a person: talent, potential, intelligence.” → ““개발” (開發) is the broad word: to develop land, resources, industry, technology and new products, and also abilities (“능력 개발”). “계발” (啓發) is narrower: to awaken and develop what is already inside a person, such as talent, wisdom or creativity. For abilities the standard dictionary accepts both (it lists them as synonyms in that sense); for products, land and technology only “개발” is right.”
+- C003 `mistake_en`: “Using “개발” for talents and “계발” for products. “자기 계발” (self-improvement) is the set phrase; many people also write “자기 개발”, which dictionaries now accept too, but in a test stay with “계발” for abilities.” → “Writing “신제품 계발” or “기술 계발”: for products, land and technology it is always “개발”. For abilities both “자기 계발” and “자기 개발” are correct; “계발” is the more traditional choice for talents.”
+- C005 `mistake_en`: “Writing “혼돈하다” for “to confuse (one thing for another)”; the verb is “혼동하다”. “혼돈” is a noun for chaos.” → “Writing “혼돈하다” for “to confuse (one thing for another)”; the verb is “혼동하다”. “혼돈” is a noun for chaos (“혼돈하다” exists only as an adjective, “chaotic”).”
+- C008 `mistake_en`: “Writing “실재로” for “in fact”; the adverb is “실제로”. “실재” is the verb root “실재하다” (to exist).” → “Writing “실재로” for “in fact”; the adverb is “실제로”. “실재” is the noun behind “실재하다” (to exist).”
+- C021 `explanation_en`: “Adverb endings follow a rule. After a stem with a “ㅅ” final consonant (“깨끗하다”) or a reduplicated noun (“틈틈”, “곳곳”, “집집”) the ending is “-이”. After other stems that end in “-하다” (“꼼꼼하다”, “조용하다”) it is “-히”.” → “Adverb endings follow a rule. After a stem with a “ㅅ” final consonant (“깨끗하다”) or a reduplicated noun (“틈틈”, “곳곳”, “집집”) the ending is “-이”. After most other stems that end in “-하다” (“꼼꼼하다”, “조용하다”) it is “-히”; but a “-하다” stem ending in “ㄱ” also takes “-이” (“깊숙이”, “큼직이”).”
+- C024 `ex_ko`: “이게 웬 일이니? | 오늘은 왠지 기분이 좋다.” → “이게 웬일이니? | 오늘은 왠지 기분이 좋다.”
+- C025 `mistake_en`: “Writing “않 먹었다” or “먹지 안 았다”. “않-” only appears in “-지 않다”; the short “안” goes before the verb.” → “Writing “않 먹었다” or “먹지 안는다”. “않-” only appears in “-지 않다”; the short “안” goes before the verb.”
+- C027 `explanation_en`: ““안되다” (one word) is an adjective: to feel sorry for, or to go badly (“일이 안되다”, “안됐다”). “안 되다” (spaced) is the negation of “되다”: not become, not be allowed.” → ““안되다” (one word) is a verb meaning to go badly or fail (“올해는 농사가 안되었다”) and an adjective meaning to be pitiable, to feel sorry for (“안됐다”). “안 되다” (spaced) is the negation of “되다”: not become, not be allowed.”
+- C028 `explanation_en`: ““못하다” (one word) means “to be bad at” (“노래를 못하다”) or “cannot at all”. “못 하다” (spaced) means that someone cannot do it because of circumstances.” → ““못하다” (one word) means “to be bad at” (“노래를 못하다”) or “to be worse than” (“예전보다 못하다”). “못 하다” (spaced) means that someone cannot do it because of circumstances.”
+- C031 `explanation_en`: ““부딪치다” is active: to strike something, or two things strike each other. “부딪히다” is passive: to be struck, or to run into something such as an obstacle (“차에 부딪히다”, “난관에 부딪히다”).” → ““부딪치다” is the active, emphatic form of “부딪다”: to strike something, or two things strike each other; it also means to clash with someone (“부모님과 부딪치다”). “부딪히다” is the passive: to be struck by something (“파도에 부딪히다”), or to run up against a situation (“현실에 부딪히다”, “난관에 부딪히다”).”
+- C031 `mistake_en`: “Writing “어려움에 부딪쳤다” where you mean you ran into difficulty. The thing that stops you hits you: “부딪히다”.” → “Writing “배가 파도에 부딪쳤다” when the boat is the one being hit: a subject struck by something else takes the passive “부딪혔다”. For running into difficulties “부딪히다” is the usual choice, although the dictionary also allows “부딪치다” when you face a problem head-on.”
+- C034 `mistake_en`: “Writing “꿈을 쫓다”. For goals, ideals and opinions, standard Korean prefers “좇다”, but “쫓다” is widely used.” → “Writing “꿈을 쫓다”. For goals, ideals and other people's advice the standard form is “좇다”; “쫓다” there is common but non-standard.”
+- C037 `ex_en`: “We arrived to fit in with the appointed time. | He got all the answers in the quiz right.” → “We arrived in time for the appointment. | He got all the answers in the quiz right.”
+- C041 `mistake_en`: “Writing “있다가 연락할게” for “later”. If you can say “나중에”, it is “이따가”; if “있다 + 가다 / 오다 …” follows, it is “있다가”.” → “Writing “있다가 연락할게” for “later”. If you can say “나중에”, it is “이따가”; if it means “stay somewhere and then …”, it is “있다가”.”
+- C048 `explanation_en`: ““보전” is to keep something safe and intact so that it is not damaged: “환경 보전”, “재산 보전”. “보존” is to keep something as it is, in its original state: “문화재 보존”, “음식 보존”. “보관” is to keep something in a safe place: “귀중품 보관”.” → ““보전” is to keep something safe and intact so that it is not damaged: “환경 보전”, “생태계 보전”. “보존” is to keep something as it is, in its original state, so that it is handed down: “문화재 보존”, “유물 보존”. “보관” is to keep something in a safe place: “귀중품 보관”.”
+- C048 `mistake_en`: “Writing “환경 보존” for protecting the environment against damage. “보전” protects, “보존” keeps unchanged.” → “Writing “유물 보전” or “음식 보전” for something kept unchanged (“보존”). For the environment, “환경 보전” is the term of the dictionary and of the law; the common “환경 보존” is not wrong, but less precise.”
+- C049 `explanation_en`: ““너무” means “too much, excessively” and traditionally carries a negative sense. “매우” means “very” and is neutral. In an essay use “매우 / 아주 / 상당히” for a high degree.” → ““너무” means “excessively, too much”; since 2015 the standard dictionary also accepts it for a plain high degree (“너무 좋다”). “매우” means “very” and is neutral. In an essay use “매우 / 아주 / 상당히” for a high degree and keep “너무” for real excess.”
+- C049 `mistake_en`: “Writing “너무 좋다” in a formal essay. The standard meaning of “너무” is excess, so use “매우” instead.” → “Writing “너무 좋다” in a formal essay. It is correct Korean, but it sounds conversational; write “매우 좋다” there.”
+- C067 `mistake_en`: “Writing “못 예쁘다”. “못” goes with action verbs; adjectives are negated with “안”.” → “Writing “못 예쁘다”. The short “못” goes with action verbs; adjectives take “안” (the long “-지 못하다” after an adjective means “falls short of”: “넉넉하지 못하다”).”
+- C068 `ex_ko`: “이 방은 크기가 작다. | 시험에 참석한 사람의 수가 적다.” → “이 방은 크기가 작다. | 시험에 응시한 사람의 수가 적다.”
+- C068 `ex_en`: “This room is small in size. | The number of people who attended the exam is small.” → “This room is small in size. | The number of people who sat the exam is small.”
+- C084 `explanation_en`: ““제공” is to give or offer something, often information, service or a meal, without asking for a price. “공급” is to supply goods or services in quantity, as in supply and demand.” → ““제공” is to provide or offer something to someone, often information, a service, a meal or an opportunity. “공급” is to supply goods, energy or services in quantity, as in supply and demand.”
+- C088 `ex_en`: “Household consumption is falling. | This work wastes a lot of time and strength.” → “Household consumption is falling. | This work uses up a lot of time and strength.”
+- C090 `explanation_en`: ““주의” is attention and caution; it often stands in notices (“주의하십시오”). “조심” is being careful in one's behaviour, with a more everyday tone.” → ““주의” is attention and caution; it stands in notices (“주의하십시오”) and in set phrases such as “주의 사항”, “주의를 기울이다” (pay attention). “조심” is being careful in one's behaviour, with a more everyday tone, although “조심하십시오” is also common on signs.”
+- C090 `mistake_en`: “Using “조심하십시오” in a formal notice; “주의하십시오” is the standard sign-board wording.” → “Using “조심” in the set phrases of “주의”: “×조심을 기울이다” and “×조심 사항” are wrong; it is “주의를 기울이다”, “주의 사항”.”
+- C096 `explanation_en`: ““-(으)러” is used only before “가다 / 오다 / 다니다” and says the purpose of the movement. “-(으)려고” says an intention and works with any verb, and can also be used with a past tense in the main clause.” → ““-(으)러” is used only before verbs of movement (“가다 / 오다 / 다니다 / 나가다” …) and gives the purpose of going or coming. “-(으)려고” gives an intention and works with any verb, but it cannot be followed by a command or a suggestion (“×먹으려고 가자”; say “먹으러 가자”).”
