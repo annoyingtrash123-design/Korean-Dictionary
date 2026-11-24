@@ -604,6 +604,9 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
     push_new(&mut out, &mut seen, rows_for(&prefix_packs, &cands, Some("prefix"))?);
 
     out.truncate(limit);
+    if out.is_empty() && q_raw.trim().contains(' ') {
+        out = multiword_fallback(packs, q_raw, limit)?;
+    }
     let hints = grammar_hints(&q);
     Ok(SearchResult {
         mode: "hangul",
@@ -613,6 +616,81 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
         grammar_hints: if hints.is_empty() { None } else { Some(hints) },
         ..Default::default()
     })
+}
+
+/// Headword prefix matches (best rank first) as full rows.
+fn prefix_rows(packs: &[&PackDb], prefix: &str, n: usize, via: &'static str) -> Result<Vec<ResultRow>> {
+    let upper = format!("{prefix}{}", char::MAX);
+    let sql = |p: &PackDb| {
+        format!(
+            "SELECT id, rank FROM entries {} WHERE hw_norm >= ?1 AND hw_norm < ?2 ORDER BY rank LIMIT {PREFIX_LIMIT}",
+            hw_hint(p)
+        )
+    };
+    let cands = top_ids(packs, &sql, &[prefix.into(), upper.as_str().into()], n)?;
+    rows_for(packs, &cands, Some(via))
+}
+
+/// Particles a dictionary writes as optional inside an idiom: 미역국(을) 먹다, 시치미(를) 떼다.
+const OPTIONAL_PARTICLES: &[&str] = &["을", "를", "이", "가", "은", "는", "의", "에"];
+
+/// A spaced query that matched no headword: idioms and phrases written with an optional particle
+/// (미역국을 먹다 = 미역국(을) 먹다), then headwords that start with the leading words (눈코 뜰 새
+/// 없다 → 눈코 뜰 사이 없다), then the words of the query one by one, best match of each first.
+fn multiword_fallback(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<Vec<ResultRow>> {
+    let tokens: Vec<&str> = q_raw.split_whitespace().collect();
+    let mut out: Vec<ResultRow> = Vec::new();
+    let mut seen: HashSet<(String, i64)> = HashSet::new();
+    // 1. optional-particle spellings (every combination over the first few tokens that end in one)
+    let mut variants: Vec<Vec<String>> = vec![Vec::new()];
+    for t in &tokens {
+        let mut next = Vec::new();
+        for v in &variants {
+            let mut plain = v.clone();
+            plain.push((*t).to_string());
+            next.push(plain);
+            if variants.len() < 8 {
+                if let Some(p) = OPTIONAL_PARTICLES.iter().find(|p| t.ends_with(**p) && t.chars().count() > 1) {
+                    let mut opt = v.clone();
+                    opt.push(format!("{}({p})", t.strip_suffix(*p).unwrap_or(t)));
+                    next.push(opt);
+                }
+            }
+        }
+        variants = next;
+    }
+    for v in variants.iter().skip(1) {
+        let joined = norm_headword(&v.concat());
+        push_new(&mut out, &mut seen, prefix_rows(packs, &joined, limit, "prefix")?);
+    }
+    // 2. headwords that start with the leading words
+    if out.is_empty() {
+        for k in (2..tokens.len()).rev() {
+            let rows = prefix_rows(packs, &norm_headword(&tokens[..k].concat()), limit, "prefix")?;
+            if !rows.is_empty() {
+                push_new(&mut out, &mut seen, rows);
+                break;
+            }
+        }
+    }
+    // 3. each word on its own, interleaved
+    if out.is_empty() {
+        let per: Vec<Vec<ResultRow>> = tokens
+            .iter()
+            .map(|t| hangul_strict(packs, &norm_headword(t), limit).map(|(r, _)| r))
+            .collect::<Result<_>>()?;
+        let mut i = 0;
+        while per.iter().any(|v| i < v.len()) {
+            for v in &per {
+                if let Some(r) = v.get(i) {
+                    push_new(&mut out, &mut seen, vec![r.clone()]);
+                }
+            }
+            i += 1;
+        }
+    }
+    out.truncate(limit);
+    Ok(out)
 }
 
 /// FTS5 MATCH expression: every token quoted, the last one a prefix token.

@@ -107,7 +107,7 @@
 나한테	first	나
 # == spacing variants
 선물가게	top3	선물 가게
-한국 사람	top3	한국 사람|한국인	known	spaced words that are not one headword find nothing (should fall back to 한국 + 사람)
+한국 사람	top3	한국 사람|한국인|한국|사람	ok	no such headword: falls back to the words one by one (한국, 사람)
 공부 하다	top3	공부하다
 아이스 크림	top3	아이스크림
 대한 민국	top3	대한민국
@@ -220,18 +220,18 @@ stomach	nothanja30	배가 부르다=倍加
 막론하고	top3	막론하다	ok	막론하고 is a headword too
 부각되었다	first	부각되다
 # == phrases, idioms, proverbs
-눈이 높다	top3	눈이 높다	known	idioms are inside entries, not headwords: nothing found
-발이 넓다	top3	발이 넓다	known	idioms are inside entries, not headwords: nothing found
+눈이 높다	top3	눈(이) 높다	ok	headword is written with an optional particle / variant spelling
+발이 넓다	top3	발(이) 넓다[너르다]	ok	headword is written with an optional particle / variant spelling
 손이 크다	top3	손이 크다
-미역국을 먹다	top3	미역국을 먹다	known	idioms are inside entries, not headwords: nothing found
+미역국을 먹다	top3	미역국(을) 먹다	ok	headword is written with an optional particle / variant spelling
 그림의 떡	top3	그림의 떡
 식은 죽 먹기	top3	식은 죽 먹기
 하늘의 별 따기	top3	하늘의 별 따기
 티끌 모아 태산	top3	티끌 모아 태산
 우물 안 개구리	top3	우물 안 개구리|우물 안 개구리[고기]
 가는 날이 장날	top3	가는 날이 장날
-시치미를 떼다	top3	시치미를 떼다	known	idioms are inside entries, not headwords: nothing found
-눈코 뜰 새 없다	top3	눈코 뜰 새 없다	known	idioms are inside entries, not headwords: nothing found
+시치미를 떼다	top3	시치미(를) 떼다[따다]	ok	headword is written with an optional particle / variant spelling
+눈코 뜰 새 없다	top3	눈코 뜰 사이 없다	ok	headword is written with an optional particle / variant spelling
 고생 끝에 낙이 온다	top3	고생 끝에 낙이 온다
 수고하셨습니다	top3	수고하다
 안녕하세요	top3	안녕하다|안녕하세요
