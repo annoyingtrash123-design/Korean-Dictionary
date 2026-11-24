@@ -28,6 +28,9 @@ the app's WebView, Preact UI (`app/`). Specs:
   day, which words get extra content first) start from 고급; ask before assuming a "typical" user.
 - Sandbox network: GitHub, crates.io, npm, PyPI only. Wikisource, kaikki, Tatoeba, Unicode,
   korea.kr are reachable from GitHub Actions only — fetch there, test parsers with fixtures here.
+- **Hanja: if in doubt, none (owner's rule).** Show hanja only when a Korean dictionary (krdict, 표준국어대사전,
+  우리말샘) confirms it for that word and meaning. Never guess hanja from Chinese-only evidence, definition
+  similarity or a homograph; a native word or an uncertain case gets no hanja.
 - Public domain in Korea: authors who died before 1963. Laws/court rulings are unprotected.
 - wasm-opt: `export PATH=/tmp/claude-0/binaryen/bin:$PATH` in this sandbox before `npm run build:core`.
 - Local data for e2e: `cp -r pipeline/out/site-data app/public/data` after a pipeline build.
