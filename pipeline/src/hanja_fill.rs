@@ -81,6 +81,8 @@ pub struct Target {
     pub pos: String,
     /// krdict: its Korean definitions.
     pub defs: Vec<String>,
+    /// English glosses (krdict, kengdic).
+    pub en: Vec<String>,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
@@ -282,6 +284,10 @@ pub struct Stem {
     pub hanja: HashSet<String>,
     /// An entry of this spelling without hanja (a native homograph), or hanja with alternatives.
     pub unclear: bool,
+    /// Korean definitions and English glosses of the entries that carry the hanja (the evidence that
+    /// a derived word is built on this stem).
+    pub defs: Vec<String>,
+    pub en: Vec<String>,
 }
 
 /// Split `hw_norm` into (stem, suffix, allowed POS classes).
@@ -309,19 +315,47 @@ pub fn decide_derived(t: &Target, stem: &Stem, own: &[Std]) -> Option<Fill> {
     }
     let suffix_out = if suf == "적" { "的" } else { suf };
     let hanja = format!("{sh}{suffix_out}");
-    // a stdict entry of the derived word itself must not say otherwise: its hanja (marks removed) is the same,
-    // or it is a native word / has none we can compare
-    let mut confirm = String::new();
+    // What stdict says about the derived word itself: the same mixed hanja confirms, other hanja vetoes, a
+    // native entry vetoes unless a confirming entry exists (a homograph) and the glosses then decide.
+    let (mut confirm, mut native) = (String::new(), false);
     for c in own {
-        if let Some(h) = &c.hanja {
-            if *h == hanja {
-                confirm = first_def(&c.defs);
-            } else if all_cjk(h) || h.chars().any(is_cjk) {
-                return None;
-            }
+        match &c.hanja {
+            Some(h) if *h == hanja => confirm = first_def(&c.defs),
+            Some(h) if h.chars().any(is_cjk) => return None,
+            _ => native |= pos_compatible(&t.pos, &c.pos) && pos_class(&c.pos) != 'X',
+        }
+    }
+    if confirm.is_empty() && own.iter().any(|c| c.hanja.is_none()) && native {
+        return None;
+    }
+    if confirm.is_empty() || native {
+        // the derived word must mean something built on the stem: Korean definitions alike, or shared English words
+        let ko = defs_score(&t.defs, &stem.defs);
+        let en = shared_words(&t.en, &stem.en);
+        if ko < MIN_STEM_DEFS && en == 0 {
+            return None;
         }
     }
     Some(Fill { hanja, rule: Rule::Derived, stdict_def: confirm, score: 1.0 })
+}
+
+/// Minimum definition similarity between a derived word and its stem when stdict does not confirm the derivation.
+pub const MIN_STEM_DEFS: f64 = 0.25;
+
+const STOP: [&str; 14] = ["that", "with", "from", "have", "this", "something", "someone", "being", "state", "person", "thing", "make", "made", "does"];
+
+fn word_keys(v: &[String]) -> HashSet<String> {
+    v.iter()
+        .flat_map(|g| g.split(|c: char| !c.is_ascii_alphabetic()))
+        .map(str::to_ascii_lowercase)
+        .filter(|w| w.len() >= 4 && !STOP.contains(&w.as_str()))
+        .map(|w| w.chars().take(5).collect::<String>())
+        .collect()
+}
+
+/// English words (4+ letters, cut to 5) the two gloss lists share.
+pub fn shared_words(a: &[String], b: &[String]) -> usize {
+    word_keys(a).intersection(&word_keys(b)).count()
 }
 
 fn pos_class_allowed(pos: &str, classes: &str) -> bool {
@@ -376,9 +410,9 @@ impl StdLookup {
     }
 }
 
-fn en_gloss(data: &str) -> String {
+fn en_glosses(data: &str) -> Vec<String> {
     let v: Value = serde_json::from_str(data).unwrap_or(Value::Null);
-    v.get("senses").and_then(|s| s.as_array()).map(|a| a.iter().filter_map(|s| s.get("gloss").and_then(|g| g.as_str())).take(3).collect::<Vec<_>>().join("; ")).unwrap_or_default()
+    v.get("senses").and_then(|s| s.as_array()).map(|a| a.iter().filter_map(|s| s.get("gloss").and_then(|g| g.as_str())).take(4).map(String::from).collect()).unwrap_or_default()
 }
 
 fn write_fill(conn: &Connection, id: i64, f: &Fill) -> Result<()> {
@@ -421,8 +455,8 @@ pub fn apply(core: &Connection, stdict: &Path) -> Result<(Stats, Vec<Record>)> {
                 }
                 None => {
                     if (source == "krdict" || source == "kengdic") && !headword.starts_with('-') && !headword.ends_with('-') && !data.contains("\"origin_note\"") {
-                        let defs = if source == "krdict" { load_defs(&data) } else { vec![en_gloss(&data)] };
-                        targets.push(Target { id, source, headword, pos: pos.unwrap_or_default(), defs });
+                        let defs = if source == "krdict" { load_defs(&data) } else { Vec::new() };
+                        targets.push(Target { id, source, headword, pos: pos.unwrap_or_default(), defs, en: en_glosses(&data) });
                     }
                 }
             }
@@ -447,7 +481,7 @@ pub fn apply(core: &Connection, stdict: &Path) -> Result<(Stats, Vec<Record>)> {
             (_, Rule::Derived) => stats.kengdic_derived += 1,
             _ => stats.kengdic += 1,
         }
-        records.push(Record { id: t.id, source: t.source.clone(), headword: t.headword.clone(), pos: t.pos.clone(), hanja: f.hanja, rule: f.rule, score: f.score, own_def: first_def(&t.defs), stdict_def: f.stdict_def });
+        records.push(Record { id: t.id, source: t.source.clone(), headword: t.headword.clone(), pos: t.pos.clone(), hanja: f.hanja, rule: f.rule, score: f.score, own_def: if t.defs.is_empty() { t.en.join("; ") } else { first_def(&t.defs) }, stdict_def: f.stdict_def });
         Ok(())
     };
 
@@ -471,15 +505,17 @@ pub fn apply(core: &Connection, stdict: &Path) -> Result<(Stats, Vec<Record>)> {
     // 2. derived words: stem hanja + native suffix
     let mut stems: HashMap<String, Stem> = HashMap::new();
     {
-        let mut st = core.prepare("SELECT hw_norm, hanja FROM entries WHERE kind = 'word' AND source IN ('krdict','wikt','kengdic','hanppuri')")?;
-        for r in st.query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, Option<String>>(1)?)))? {
-            let (n, h) = r?;
+        let mut st = core.prepare("SELECT hw_norm, hanja, data FROM entries WHERE kind = 'word' AND source IN ('krdict','wikt','kengdic','hanppuri')")?;
+        for r in st.query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, Option<String>>(1)?, r.get::<_, String>(2)?)))? {
+            let (n, h, data) = r?;
             let s = stems.entry(n).or_default();
             match h {
                 None => s.unclear = true,
                 Some(h) if h.contains('/') => s.unclear = true,
                 Some(h) => {
                     s.hanja.insert(strip_marks(&h));
+                    s.defs.extend(load_defs(&data));
+                    s.en.extend(en_glosses(&data));
                 }
             }
         }
@@ -555,7 +591,7 @@ mod tests {
         Std { hanja: h.map(String::from), pos: pos.into(), defs: vec![def.into()] }
     }
     fn tgt(hw: &str, pos: &str, def: &str) -> Target {
-        Target { id: 1, source: "krdict".into(), headword: hw.into(), pos: pos.into(), defs: vec![def.into()] }
+        Target { id: 1, source: "krdict".into(), headword: hw.into(), pos: pos.into(), defs: vec![def.into()], en: Vec::new() }
     }
 
     #[test]
@@ -608,7 +644,7 @@ mod tests {
 
     #[test]
     fn kengdic_needs_exactly_one_hanja_entry_and_no_native_homograph() {
-        let k = Target { id: 2, source: "kengdic".into(), headword: "환초".into(), pos: "other".into(), defs: vec!["atoll".into()] };
+        let k = Target { id: 2, source: "kengdic".into(), headword: "환초".into(), pos: "other".into(), defs: Vec::new(), en: vec!["atoll".into()] };
         assert_eq!(decide_kengdic(&k, &[std(Some("環礁"), "noun", "고리 모양으로 배열된 산호초.")], false).unwrap().hanja, "環礁");
         // two hanja readings: ambiguous
         assert!(decide_kengdic(&k, &[std(Some("環礁"), "noun", "a"), std(Some("還草"), "noun", "b")], false).is_none());
@@ -627,23 +663,35 @@ mod tests {
     }
 
     fn stem(h: &[&str], unclear: bool) -> Stem {
-        Stem { hanja: h.iter().map(|s| s.to_string()).collect(), unclear }
+        Stem { hanja: h.iter().map(|s| s.to_string()).collect(), unclear, defs: vec!["학문이나 기술을 배우고 익힘.".into()], en: vec!["study".into()] }
     }
 
     #[test]
     fn derived_words_take_the_stem_hanja_and_the_native_suffix() {
-        let t = tgt("공부하다", "verb", "학문을 배우다.");
+        let mut t = tgt("공부하다", "verb", "학문이나 기술을 배우고 익히다.");
+        t.en = vec!["to study".into()];
         let f = decide_derived(&t, &stem(&["工夫"], false), &[]).unwrap();
         assert_eq!((f.hanja.as_str(), f.rule), ("工夫하다", Rule::Derived));
-        assert_eq!(decide_derived(&tgt("불편스럽다", "adjective", ""), &stem(&["不便"], false), &[]).unwrap().hanja, "不便스럽다");
-        assert_eq!(decide_derived(&tgt("객관적", "noun", ""), &stem(&["客觀"], false), &[]).unwrap().hanja, "客觀的");
+        let sc = |hw: &str, pos: &str, h: &str| {
+            let mut t = tgt(hw, pos, "학문이나 기술을 배우고 익힘.");
+            t.en = vec!["study".into()];
+            decide_derived(&t, &stem(&[h], false), &[]).map(|f| f.hanja)
+        };
+        assert_eq!(sc("불편스럽다", "adjective", "不便").as_deref(), Some("不便스럽다"));
+        assert_eq!(sc("객관적", "noun", "客觀").as_deref(), Some("客觀的"));
         // several hanja for the stem (사기하다), a native homograph, or the wrong POS: nothing
-        assert!(decide_derived(&tgt("사기하다", "verb", ""), &stem(&["士氣", "詐欺"], false), &[]).is_none());
+        assert!(decide_derived(&t, &stem(&["士氣", "詐欺"], false), &[]).is_none());
         assert!(decide_derived(&t, &stem(&["工夫"], true), &[]).is_none());
-        assert!(decide_derived(&tgt("공부하다", "noun", ""), &stem(&["工夫"], false), &[]).is_none());
-        // a stdict entry of the derived word with other hanja vetoes; the same hanja confirms
+        assert!(sc("공부하다", "noun", "工夫").is_none());
+        // 시원하다 is not built on 시원 (始原 "origin"): no shared meaning, no fill
+        let mut cool = tgt("시원하다", "adjective", "덥지도 춥지도 않고 적당하게 서늘하다.");
+        cool.en = vec!["cool; refreshing".into()];
+        let origin = Stem { hanja: HashSet::from(["始原".to_string()]), unclear: false, defs: vec!["사물이나 현상이 시작되는 처음.".into()], en: vec!["origin; beginning".into()] };
+        assert!(decide_derived(&cool, &origin, &[]).is_none());
+        // a stdict entry of the derived word with other hanja vetoes, a native one too; the same hanja confirms
         assert!(decide_derived(&t, &stem(&["工夫"], false), &[std(Some("功夫하다"), "verb", "x")]).is_none());
-        assert_eq!(decide_derived(&t, &stem(&["工夫"], false), &[std(Some("工夫하다"), "verb", "학문을 배우다.")]).unwrap().stdict_def, "학문을 배우다.");
+        assert!(decide_derived(&t, &stem(&["工夫"], false), &[std(None, "verb", "x")]).is_none());
+        assert_eq!(decide_derived(&cool, &origin, &[std(Some("始原하다"), "adjective", "처음이다.")]).unwrap().stdict_def, "처음이다.");
     }
 
     #[test]
