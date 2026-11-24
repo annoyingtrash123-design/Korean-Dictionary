@@ -70,6 +70,8 @@ if [[ $FAST == 0 ]]; then
   python3 ../scripts/e2e-curriculum.py public/data
   # a few grammar lessons "as if approved" (e2e data only; the real ones stay drafts until reviewed)
   python3 ../scripts/e2e-lessons.py public/data
+  # sample "Chinese & English" rows for 성어 pages (CC-CEDICT is fetched in CI only; no-op once the pack has rows)
+  python3 ../scripts/e2e-seongeo-zh.py public/data
   npx playwright test --reporter=line
 fi
 step "OK — shippable"
