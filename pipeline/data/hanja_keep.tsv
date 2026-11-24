@@ -1,0 +1,4 @@
+# krdict core hanja reviewed and kept although the suspect scan (hanja_fill::suspect_core_hanja) flags them;
+# the scan skips these rows. Review: pipeline/qa/suspect_core_hanja_review.md.
+# ext_id	headword	hanja	reason
+70748	동생	同生	genuine etymology: 동생 < 同生 '같은 부모에게서 남' (sibling); NIKL files the kinship sense as 고유어 because the meaning drifted

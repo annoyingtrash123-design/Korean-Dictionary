@@ -1,0 +1,18 @@
+# Reviewed corrections to the hanja of krdict (한국어기초사전) core entries; review: pipeline/qa/suspect_core_hanja_review.md.
+# A row applies only while the entry's hanja still equals old_hanja (an upstream fix retires it silently).
+# Applied entries get data "hanja_fixed": true and their hanja_words rows follow; the stdict fill never re-fills them.
+# new_hanja empty = remove (the word is native in this sense).
+# ext_id	headword	old_hanja	new_hanja	reason
+79627	타박	打撲		native 타박 (stdict/opendict 고유어 '허물이나 결함을 나무라거나 핀잔함'); 打撲 = 때리고 침
+64484	구경	究竟		native 구경 (고유어 '흥미나 관심을 가지고 봄'); 究竟 = 마지막에 이르는 것
+55736	매질	媒質		native 매+-질 (고유어 '매로 때리는 일'); 媒質 = 파동의 매개물
+76084	종지	宗旨		native 종지 (고유어 '간장·고추장 따위를 담아서 상에 놓는… 그릇'); 宗旨 = 요지
+58132	방정	方正		native 방정 (고유어 '가볍고 점잖지 못하게 하는 말이나 행동'); 方正 = 바름
+92365	위통	胃痛		krdict sense is '→ 웃통' (고유어 위+통); 胃痛 = 위의 통증
+93735	제철	製鐵		native 제+철 (고유어 '알맞은 시절'); 製鐵 = 철을 뽑아내는 일
+67051	어음	語音		native 어음 (고유어 유가 증권); 語音 = 말의 소리
+60764	비지	鼻紙		native 비지 (고유어 '두부를 만들고 남은 찌꺼기'); 鼻紙 = 코 닦는 종이
+60545	불길	不吉		native 불+길 (고유어 '세차게 타오르는 불꽃'); 不吉 = 운수가 나쁨
+55554	멱	蓂		native 멱 (고유어 '목의 앞쪽'); 蓂 (명협) is unrelated
+21807	곽	矡		native 곽 (고유어 '물건을 담는 작은 상자', 규범 표기 갑 匣); 矡 is unrelated
+87835	흉	匈		native 흉 (고유어 '상처가 아물고 남은 자국'); 匈 is unrelated
