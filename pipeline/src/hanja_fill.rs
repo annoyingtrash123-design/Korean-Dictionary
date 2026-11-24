@@ -57,6 +57,48 @@ pub const MIN_UNIQUE: f64 = 0.30;
 /// Minimum definition score of the best entry of a homograph group, and its lead over the runner-up.
 pub const MIN_HOMOGRAPH: f64 = 0.40;
 pub const MIN_MARGIN: f64 = 0.15;
+/// A krdict fill with a definition score at or above this is `high` certainty, below it `low`.
+pub const HIGH_SCORE: f64 = 0.5;
+
+/// Owner rule "if in doubt, no hanja": when `false`, every `low` certainty fill (this module and the
+/// kengdic fallback in `build.rs`) is dropped instead of written. Default `true` keeps the shipped data
+/// unchanged until the owner has reviewed the samples (`hanja-report` workflow).
+pub const HANJA_KEEP_LOW: bool = true;
+
+/// How sure we are that a pipeline-added hanja is what a KOREAN dictionary (stdict, opendict, krdict) says.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub enum Certainty {
+    High,
+    Low,
+}
+
+impl Certainty {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Certainty::High => "high",
+            Certainty::Low => "low",
+        }
+    }
+}
+
+/// Certainty of a krdict `unique` / `homograph` fill from its definition score.
+pub fn krdict_certainty(score: f64) -> (Certainty, &'static str) {
+    if score >= HIGH_SCORE {
+        (Certainty::High, "def_score>=0.5")
+    } else {
+        (Certainty::Low, "def_score<0.5")
+    }
+}
+
+/// Certainty of a kengdic-rule fill from the English evidence that agreed: 우리말샘 (a Korean dictionary)
+/// makes it high, CC-CEDICT alone (a Chinese dictionary) only low.
+pub fn kengdic_certainty(evidence: &str) -> Certainty {
+    if evidence.starts_with("opendict") {
+        Certainty::High
+    } else {
+        Certainty::Low
+    }
+}
 
 /// Native endings krdict writes after hanja (一任하다), with the parts of speech they form.
 const SUFFIXES: [(&str, &str); 8] = [
@@ -120,6 +162,7 @@ pub struct Fill {
     pub score: f64,
     /// kengdic rule: which English source agreed (`opendict`, `cedict` or `opendict+cedict`); empty otherwise.
     pub evidence: &'static str,
+    pub certainty: Certainty,
 }
 
 /// One written fill, for the reports and the QA sample.
@@ -136,6 +179,9 @@ pub struct Record {
     pub own_def: String,
     pub stdict_def: String,
     pub evidence: &'static str,
+    pub certainty: Certainty,
+    /// `false`: low certainty and `keep_low` is off, so it is reported but not written.
+    pub kept: bool,
 }
 
 #[derive(Debug, Default, Clone, PartialEq)]
@@ -149,6 +195,11 @@ pub struct Stats {
     pub kengdic_opendict: usize,
     pub kengdic_cedict: usize,
     pub kengdic_both: usize,
+    /// Fills by certainty (counted whether or not they were kept).
+    pub high: usize,
+    pub low: usize,
+    /// Low fills not written because `keep_low` was off.
+    pub dropped_low: usize,
 }
 
 impl Stats {
@@ -262,6 +313,9 @@ pub struct Evidence {
     pub opendict: HashMap<String, Vec<(String, Vec<String>)>>,
     /// CC-CEDICT: traditional and simplified spelling -> English glosses.
     pub cedict: HashMap<String, Vec<String>>,
+    /// 우리말샘: hw_norm -> every 원어 string with marks removed, mixed hanja + native suffix included
+    /// (工夫하다); lets a derived fill be confirmed by 우리말샘 listing the derived word itself.
+    pub opendict_spellings: HashMap<String, HashSet<String>>,
 }
 
 impl Evidence {
@@ -270,6 +324,9 @@ impl Evidence {
         let mut ev = Evidence::default();
         for p in opendict {
             crate::opendict::parse_file(p, |e| {
+                if let Some(h) = e.hanja.as_deref().map(strip_marks).filter(|h| h.chars().any(is_cjk)) {
+                    ev.opendict_spellings.entry(hw_norm(&e.headword)).or_default().insert(h);
+                }
                 let Some(h) = e.hanja.as_deref().map(strip_marks).filter(|h| all_cjk(h)) else { return Ok(()) };
                 let gl = all_glosses(&e.data);
                 if !gl.is_empty() {
@@ -287,6 +344,11 @@ impl Evidence {
             })?;
         }
         Ok(ev)
+    }
+
+    /// 우리말샘 lists the headword `n` with exactly this hanja string.
+    pub fn opendict_lists(&self, n: &str, hanja: &str) -> bool {
+        self.opendict_spellings.get(n).is_some_and(|s| s.contains(hanja))
     }
 
     /// Which sources have an English gloss for `hanja` (the word `n`) that shares a content word with `en`.
@@ -350,7 +412,8 @@ pub fn decide_krdict(t: &Target, cands: &[Std], taken: &HashSet<String>) -> Opti
     }
     let second = scored.get(1).map_or(0.0, |s| s.0);
     let (rule, ok) = if cands.len() == 1 { (Rule::Unique, best >= MIN_UNIQUE) } else { (Rule::Homograph, best >= MIN_HOMOGRAPH && best - second >= MIN_MARGIN) };
-    ok.then(|| Fill { hanja: h.to_string(), rule, stdict_def: best_def(&t.defs, &c.defs), score: best, evidence: "" })
+    let (certainty, evidence) = krdict_certainty(best);
+    ok.then(|| Fill { hanja: h.to_string(), rule, stdict_def: best_def(&t.defs, &c.defs), score: best, evidence, certainty })
 }
 
 /// kengdic-only entry (English glosses only, see the module docs).
@@ -378,7 +441,7 @@ pub fn decide_kengdic(t: &Target, cands: &[Std], other_core_hanja: bool, ev: &Ev
     if evidence.is_empty() {
         return None;
     }
-    Some(Fill { hanja, rule: Rule::Kengdic, stdict_def: first_def(&with[0].defs), score: 1.0, evidence })
+    Some(Fill { hanja, rule: Rule::Kengdic, stdict_def: first_def(&with[0].defs), score: 1.0, evidence, certainty: kengdic_certainty(evidence) })
 }
 
 /// The headword ends in 자, the stdict hanja ends in 子 or 字, and the English gloss names a person
@@ -407,6 +470,8 @@ pub struct Stem {
     /// a derived word is built on this stem).
     pub defs: Vec<String>,
     pub en: Vec<String>,
+    /// The stem's own hanja was a `low` certainty fill: whatever is built on it is doubtful too.
+    pub low: bool,
 }
 
 /// Minimum score for a stdict entry to count as "the stem's own meaning".
@@ -434,7 +499,8 @@ pub fn split_suffix(n: &str) -> Option<(String, &'static str, &'static str)> {
 }
 
 /// Derived word: stem hanja + native suffix. `stem`: the core's view of the stem; `own`: stdict entries of the derived word itself.
-pub fn decide_derived(t: &Target, stem: &Stem, own: &[Std]) -> Option<Fill> {
+/// `od_lists`: 우리말샘 itself lists the derived word with this hanja (see [`Evidence::opendict_lists`]).
+pub fn decide_derived(t: &Target, stem: &Stem, own: &[Std], od_lists: bool) -> Option<Fill> {
     let n = hw_norm(&t.headword);
     let (stem_hw, suf, poses) = split_suffix(&n)?;
     if stem.unclear || stem.hanja.len() != 1 || !pos_class_allowed(&t.pos, poses) {
@@ -458,6 +524,8 @@ pub fn decide_derived(t: &Target, stem: &Stem, own: &[Std]) -> Option<Fill> {
             _ => {}
         }
     }
+    let mut certainty = Certainty::High;
+    let mut evidence = "stdict_derived";
     if confirm.is_empty() {
         // the derived word must mean something built on the stem: Korean definitions alike, or shared English words
         let ko = defs_score(&t.defs, &stem.defs);
@@ -465,8 +533,21 @@ pub fn decide_derived(t: &Target, stem: &Stem, own: &[Std]) -> Option<Fill> {
         if ko < MIN_STEM_DEFS && en == 0 {
             return None;
         }
+        (certainty, evidence) = if od_lists {
+            (Certainty::High, "opendict_derived")
+        } else {
+            let e = match (ko >= MIN_STEM_DEFS, en > 0) {
+                (true, true) => "def_similarity+english_overlap",
+                (true, false) => "def_similarity",
+                _ => "english_overlap",
+            };
+            (Certainty::Low, e)
+        };
     }
-    Some(Fill { hanja, rule: Rule::Derived, stdict_def: confirm, score: 1.0, evidence: "" })
+    if stem.low {
+        (certainty, evidence) = (Certainty::Low, "stem_low");
+    }
+    Some(Fill { hanja, rule: Rule::Derived, stdict_def: confirm, score: 1.0, evidence, certainty })
 }
 
 /// Minimum definition similarity between a derived word and its stem when stdict does not confirm the derivation.
@@ -551,6 +632,8 @@ fn write_fill(conn: &Connection, id: i64, f: &Fill) -> Result<()> {
     if let Some(o) = v.as_object_mut() {
         o.insert("hanja_src".into(), SRC.into());
         o.insert("hanja_rule".into(), f.rule.as_str().into());
+        o.insert("hanja_certainty".into(), f.certainty.as_str().into());
+        o.insert("hanja_evidence".into(), f.evidence.into());
     }
     let n = conn.execute("UPDATE entries SET hanja = ?1, data = ?2 WHERE id = ?3 AND hanja IS NULL", params![f.hanja, serde_json::to_string(&v)?, id])?;
     if n == 1 {
@@ -579,6 +662,11 @@ pub fn replace_hanja(conn: &Connection, id: i64, hanja: Option<&str>, flag: &str
 
 /// Fill the hanja of the (finished, not yet indexed) core pack's krdict / kengdic entries from `stdict`.
 pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, Vec<Record>)> {
+    apply_with(core, stdict, ev, HANJA_KEEP_LOW)
+}
+
+/// [`apply`] with an explicit `keep_low`: `false` reports low certainty fills but does not write them.
+pub fn apply_with(core: &Connection, stdict: &Path, ev: &Evidence, keep_low: bool) -> Result<(Stats, Vec<Record>)> {
     let mut sd = StdLookup::open(stdict)?;
     let mut stats = Stats::default();
     let mut records: Vec<Record> = Vec::new();
@@ -618,6 +706,16 @@ pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, 
 
     let mut done: HashSet<i64> = HashSet::new();
     let push = |conn: &Connection, t: &Target, f: Fill, stats: &mut Stats, records: &mut Vec<Record>, done: &mut HashSet<i64>| -> Result<()> {
+        let kept = keep_low || f.certainty == Certainty::High;
+        match f.certainty {
+            Certainty::High => stats.high += 1,
+            Certainty::Low => stats.low += 1,
+        }
+        if !kept {
+            stats.dropped_low += 1;
+            records.push(Record { id: t.id, source: t.source.clone(), headword: t.headword.clone(), pos: t.pos.clone(), hanja: f.hanja, rule: f.rule, score: f.score, evidence: f.evidence, certainty: f.certainty, kept, own_def: if t.defs.is_empty() { t.en.join("; ") } else { first_def(&t.defs) }, stdict_def: f.stdict_def });
+            return Ok(());
+        }
         write_fill(conn, t.id, &f)?;
         done.insert(t.id);
         match (t.source.as_str(), f.rule) {
@@ -634,7 +732,7 @@ pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, 
                 }
             }
         }
-        records.push(Record { id: t.id, source: t.source.clone(), headword: t.headword.clone(), pos: t.pos.clone(), hanja: f.hanja, rule: f.rule, score: f.score, evidence: f.evidence, own_def: if t.defs.is_empty() { t.en.join("; ") } else { first_def(&t.defs) }, stdict_def: f.stdict_def });
+        records.push(Record { id: t.id, source: t.source.clone(), headword: t.headword.clone(), pos: t.pos.clone(), hanja: f.hanja, rule: f.rule, score: f.score, evidence: f.evidence, certainty: f.certainty, kept, own_def: if t.defs.is_empty() { t.en.join("; ") } else { first_def(&t.defs) }, stdict_def: f.stdict_def });
         Ok(())
     };
 
@@ -650,8 +748,10 @@ pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, 
             decide_kengdic(t, &cands, other, ev)
         };
         if let Some(f) = fill {
-            taken.entry(n).or_default().insert(f.hanja.clone());
-            push(core, t, f, &mut stats, &mut records, &mut done)?;
+            push(core, t, f.clone(), &mut stats, &mut records, &mut done)?;
+            if done.contains(&t.id) {
+                taken.entry(n).or_default().insert(f.hanja);
+            }
         }
     }
 
@@ -668,6 +768,7 @@ pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, 
                 Some(_) if data.contains("\"hanja_rule\":\"kengdic\"") => s.unclear = true,
                 Some(h) if h.contains('/') => s.unclear = true,
                 Some(h) => {
+                    s.low |= data.contains("\"hanja_certainty\":\"low\"");
                     s.hanja.insert(strip_marks(&h));
                     s.defs.extend(load_defs(&data));
                     s.en.extend(en_glosses(&data));
@@ -686,7 +787,8 @@ pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, 
             continue;
         }
         let own = sd.get(&n)?.to_vec();
-        if let Some(f) = decide_derived(t, stem, &own) {
+        let od_lists = ev.opendict_lists(&n, &format!("{}{}", stem.hanja.iter().next().map(String::as_str).unwrap_or(""), if n.ends_with('적') { "的" } else { split_suffix(&n).map_or("", |x| x.1) }));
+        if let Some(f) = decide_derived(t, stem, &own, od_lists) {
             // a one-syllable stem is too ambiguous unless stdict itself spells the derived word that way
             if stem_hw.chars().count() < 2 && f.stdict_def.is_empty() {
                 continue;
@@ -790,24 +892,30 @@ pub fn same_hanja(a: &str, b: &str) -> bool {
 /// of the entry's definitions (score >= [`SUSPECT_HANJA_MAX`], no native or other-hanja entry better).
 /// Without definitions it must exist and no POS-compatible native entry may. Stdict silent: allowed.
 pub fn fallback_backed(defs: &[String], pos: &str, hanja: &str, cands: &[Std]) -> bool {
+    fallback_evidence(defs, pos, hanja, cands).is_some()
+}
+
+/// [`fallback_backed`] with the evidence: `None` = not backed (dropped). `stdict_silent` (stdict has no
+/// entry of the headword, so only kengdic vouches for the hanja) is `low`; the other two are `high`.
+pub fn fallback_evidence(defs: &[String], pos: &str, hanja: &str, cands: &[Std]) -> Option<(Certainty, &'static str)> {
     if cands.is_empty() {
-        return true;
+        return Some((Certainty::Low, "stdict_silent"));
     }
     let h = strip_marks(hanja);
     let compat: Vec<&Std> = cands.iter().filter(|c| pos_compatible(pos, &c.pos)).collect();
     let with: Vec<&Std> = compat.iter().copied().filter(|c| c.hanja.as_deref().is_some_and(|ch| same_hanja(ch, &h))).collect();
     if with.is_empty() {
-        return false;
+        return None;
     }
     let native = compat.iter().any(|c| c.hanja.is_none());
     if defs.is_empty() {
-        return !native;
+        return (!native).then_some((Certainty::High, "stdict_hanja_no_native"));
     }
     let best = |v: &[&Std]| v.iter().map(|c| defs_score(defs, &c.defs)).fold(0.0, f64::max);
     let ws = best(&with);
     // with a native homograph the hanja entry must match clearly; without one (대칭 對稱 vs 大秤, 대란 大亂
     // alone) kengdic and stdict agree on a Sino-Korean word, and the hanja entry need only be the best of them
-    ws >= best(&compat) && (!native || ws >= SUSPECT_HANJA_MAX)
+    (ws >= best(&compat) && (!native || ws >= SUSPECT_HANJA_MAX)).then_some((Certainty::High, "stdict_best_match"))
 }
 
 /// [`fallback_backed`] against the stdict pack.
@@ -819,9 +927,9 @@ impl FallbackGuard {
     }
 
     /// `data`: the core entry's JSON (its `ko_def`s are the definitions).
-    pub fn backed(&mut self, hw_norm: &str, pos: &str, data: &str, hanja: &str) -> Result<bool> {
+    pub fn backed(&mut self, hw_norm: &str, pos: &str, data: &str, hanja: &str) -> Result<Option<(Certainty, &'static str)>> {
         let defs = load_defs(data);
-        Ok(fallback_backed(&defs, pos, hanja, self.0.get(hw_norm)?))
+        Ok(fallback_evidence(&defs, pos, hanja, self.0.get(hw_norm)?))
     }
 }
 
@@ -833,9 +941,9 @@ fn tsv(s: &str) -> String {
 
 /// All fills as a TSV (`headword, hanja, source, pos, rule, score, own definition, stdict definition`).
 pub fn report_tsv(records: &[Record]) -> String {
-    let mut out = String::from("headword\thanja\tsource\tpos\trule\tscore\tcore_def\tstdict_def\tevidence\n");
+    let mut out = String::from("headword\thanja\tsource\tpos\trule\tscore\tcore_def\tstdict_def\tevidence\tcertainty\tkept\n");
     for r in records {
-        out.push_str(&format!("{}\t{}\t{}\t{}\t{}\t{:.2}\t{}\t{}\t{}\n", r.headword, r.hanja, r.source, r.pos, r.rule.as_str(), r.score, tsv(&crate::common::truncate(&r.own_def, 160)), tsv(&crate::common::truncate(&r.stdict_def, 160)), r.evidence));
+        out.push_str(&format!("{}\t{}\t{}\t{}\t{}\t{:.2}\t{}\t{}\t{}\t{}\t{}\n", r.headword, r.hanja, r.source, r.pos, r.rule.as_str(), r.score, tsv(&crate::common::truncate(&r.own_def, 160)), tsv(&crate::common::truncate(&r.stdict_def, 160)), r.evidence, r.certainty.as_str(), r.kept));
     }
     out
 }
@@ -855,13 +963,13 @@ pub fn sample_tsv(records: &[Record], total: usize, homograph: usize, derived: u
         v.truncate(n);
         v
     };
-    let mut out = String::from("headword\thanja\tsource\tcore_definition\tstdict_definition_used\trule\tevidence\n");
+    let mut out = String::from("headword\thanja\tsource\tcore_definition\tstdict_definition_used\trule\tevidence\tcertainty\n");
     let mut rows: Vec<&Record> = pick(&|r| r.rule == Rule::Homograph, homograph);
     let derived_rows = pick(&|r| r.rule == Rule::Derived, derived);
     rows.extend(pick(&|r| matches!(r.rule, Rule::Unique | Rule::Kengdic), total.saturating_sub(rows.len() + derived_rows.len())));
     rows.extend(derived_rows);
     for r in rows {
-        out.push_str(&format!("{}\t{}\t{}\t{}\t{}\t{}\t{}\n", r.headword, r.hanja, r.source, tsv(&crate::common::truncate(&r.own_def, 160)), tsv(&crate::common::truncate(&r.stdict_def, 160)), r.rule.as_str(), r.evidence));
+        out.push_str(&format!("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n", r.headword, r.hanja, r.source, tsv(&crate::common::truncate(&r.own_def, 160)), tsv(&crate::common::truncate(&r.stdict_def, 160)), r.rule.as_str(), r.evidence, r.certainty.as_str()));
     }
     out
 }
@@ -994,51 +1102,51 @@ mod tests {
     }
 
     fn stem(h: &[&str], unclear: bool) -> Stem {
-        Stem { hanja: h.iter().map(|s| s.to_string()).collect(), unclear, defs: vec!["학문이나 기술을 배우고 익힘.".into()], en: vec!["study".into()] }
+        Stem { hanja: h.iter().map(|s| s.to_string()).collect(), unclear, defs: vec!["학문이나 기술을 배우고 익힘.".into()], en: vec!["study".into()], low: false }
     }
 
     #[test]
     fn derived_words_take_the_stem_hanja_and_the_native_suffix() {
         let mut t = tgt("공부하다", "verb", "학문이나 기술을 배우고 익히다.");
         t.en = vec!["to study".into()];
-        let f = decide_derived(&t, &stem(&["工夫"], false), &[]).unwrap();
+        let f = decide_derived(&t, &stem(&["工夫"], false), &[], false).unwrap();
         assert_eq!((f.hanja.as_str(), f.rule), ("工夫하다", Rule::Derived));
         let sc = |hw: &str, pos: &str, h: &str| {
             let mut t = tgt(hw, pos, "학문이나 기술을 배우고 익힘.");
             t.en = vec!["study".into()];
-            decide_derived(&t, &stem(&[h], false), &[]).map(|f| f.hanja)
+            decide_derived(&t, &stem(&[h], false), &[], false).map(|f| f.hanja)
         };
         assert_eq!(sc("불편스럽다", "adjective", "不便").as_deref(), Some("不便스럽다"));
         assert_eq!(sc("객관적", "noun", "客觀").as_deref(), Some("客觀的"));
         // several hanja for the stem (사기하다), a native homograph, or the wrong POS: nothing
-        assert!(decide_derived(&t, &stem(&["士氣", "詐欺"], false), &[]).is_none());
-        assert!(decide_derived(&t, &stem(&["工夫"], true), &[]).is_none());
+        assert!(decide_derived(&t, &stem(&["士氣", "詐欺"], false), &[], false).is_none());
+        assert!(decide_derived(&t, &stem(&["工夫"], true), &[], false).is_none());
         assert!(sc("공부하다", "noun", "工夫").is_none());
         // 시원하다 is not built on 시원 (始原 "origin"): no shared meaning, no fill
         let mut cool = tgt("시원하다", "adjective", "덥지도 춥지도 않고 적당하게 서늘하다.");
         cool.en = vec!["cool; refreshing".into()];
-        let origin = Stem { hanja: HashSet::from(["始原".to_string()]), unclear: false, defs: vec!["사물이나 현상이 시작되는 처음.".into()], en: vec!["origin; beginning".into()] };
-        assert!(decide_derived(&cool, &origin, &[]).is_none());
+        let origin = Stem { hanja: HashSet::from(["始原".to_string()]), unclear: false, defs: vec!["사물이나 현상이 시작되는 처음.".into()], en: vec!["origin; beginning".into()], low: false };
+        assert!(decide_derived(&cool, &origin, &[], false).is_none());
         // a stdict entry of the derived word with other hanja vetoes, a native one too; the same hanja confirms
-        assert!(decide_derived(&t, &stem(&["工夫"], false), &[std(Some("功夫하다"), "verb", "x")]).is_none());
-        assert!(decide_derived(&t, &stem(&["工夫"], false), &[std(None, "verb", "x")]).is_none());
-        assert_eq!(decide_derived(&cool, &origin, &[std(Some("始原하다"), "adjective", "처음이다.")]).unwrap().stdict_def, "처음이다.");
+        assert!(decide_derived(&t, &stem(&["工夫"], false), &[std(Some("功夫하다"), "verb", "x")], false).is_none());
+        assert!(decide_derived(&t, &stem(&["工夫"], false), &[std(None, "verb", "x")], false).is_none());
+        assert_eq!(decide_derived(&cool, &origin, &[std(Some("始原하다"), "adjective", "처음이다.")], false).unwrap().stdict_def, "처음이다.");
         // 타박하다: stdict has the hanja word 打撲하다 AND a native 타박하다 of the same POS -> no fill
         let mut scold = tgt("타박하다", "verb", "다른 사람의 실수나 결함을 나무라거나 핀잔하다.");
         scold.en = vec!["to find fault".into()];
-        let hit = Stem { hanja: HashSet::from(["打撲".to_string()]), unclear: false, defs: vec!["다른 사람의 실수나 결함을 나무라거나 핀잔함.".into()], en: vec!["finding fault".into()] };
+        let hit = Stem { hanja: HashSet::from(["打撲".to_string()]), unclear: false, defs: vec!["다른 사람의 실수나 결함을 나무라거나 핀잔함.".into()], en: vec!["finding fault".into()], low: false };
         let own = [std(Some("打撲하다"), "verb", "때리고 치다."), std(None, "verb", "남의 실수나 결함을 나무라거나 핀잔하다.")];
-        assert!(decide_derived(&scold, &hit, &own).is_none());
+        assert!(decide_derived(&scold, &hit, &own, false).is_none());
     }
 
     #[test]
     fn a_stem_whose_hanja_stdict_does_not_back_is_contradicted() {
         // 구경 (sightseeing): krdict has 究竟 but stdict's best match for the definition is the native 구경
-        let gu = Stem { hanja: HashSet::from(["究竟".to_string()]), unclear: false, defs: vec!["흥미나 관심을 가지고 봄.".into()], en: vec!["sightseeing".into()] };
+        let gu = Stem { hanja: HashSet::from(["究竟".to_string()]), unclear: false, defs: vec!["흥미나 관심을 가지고 봄.".into()], en: vec!["sightseeing".into()], low: false };
         let cands = [std(None, "noun", "흥미나 관심을 가지고 봄."), std(Some("究竟"), "noun", "일의 마지막. 또는 마지막에 이르는 상태.")];
         assert!(stem_contradicted(&gu, &cands));
         // the entry that carries the stem's hanja matches best: fine
-        let ok = Stem { hanja: HashSet::from(["工夫".to_string()]), unclear: false, defs: vec!["학문이나 기술을 배우고 익힘.".into()], en: vec![] };
+        let ok = Stem { hanja: HashSet::from(["工夫".to_string()]), unclear: false, defs: vec!["학문이나 기술을 배우고 익힘.".into()], en: vec![], low: false };
         assert!(!stem_contradicted(&ok, &[std(Some("工夫"), "noun", "학문이나 기술을 배우고 익힘."), std(None, "noun", "부엌에서 쓰는 도구.")]));
         // nothing in stdict matches well: no verdict
         assert!(!stem_contradicted(&ok, &[std(None, "noun", "전혀 다른 뜻의 낱말입니다.")]));
@@ -1095,5 +1203,78 @@ mod tests {
         for bad in ["工夫foo", "ㄱ字쇠", "場터", "", "하다"] {
             assert!(!is_valid_fill(bad), "{bad}");
         }
+    }
+
+    #[test]
+    fn krdict_certainty_follows_the_definition_score() {
+        assert_eq!(krdict_certainty(0.5).0, Certainty::High);
+        assert_eq!(krdict_certainty(0.49).0, Certainty::Low);
+        // 사기: the homograph pick agrees with the definition strongly -> high, with its evidence recorded
+        let c = [std(Some("沙器"), "noun", "진흙이나 광물 따위의 가루로 빚어서 구운 희고 매끄러운 그릇."), std(Some("詐欺"), "noun", "나쁜 꾀로 남을 속임.")];
+        let t = tgt("사기", "noun", "진흙이나 광물 등의 가루로 빚어서 구운 희고 매끄러운 그릇.");
+        let f = decide_krdict(&t, &c, &HashSet::new()).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::High, "def_score>=0.5"));
+        // a unique candidate that passes the 0.30 floor but not 0.5 is low
+        let weak = tgt("범죄율", "noun", "한 나라나 지역에서 일정 기간 동안 범죄가 일어난 비율을 나타내는 수치.");
+        let f = decide_krdict(&weak, &[std(Some("犯罪率"), "noun", "범죄가 일어나는 비율.")], &HashSet::new()).unwrap();
+        assert!(f.score < HIGH_SCORE && f.certainty == Certainty::Low && f.evidence == "def_score<0.5", "{f:?}");
+    }
+
+    #[test]
+    fn kengdic_certainty_is_high_only_with_opendict() {
+        assert_eq!(kengdic_certainty("opendict"), Certainty::High);
+        assert_eq!(kengdic_certainty("opendict+cedict"), Certainty::High);
+        assert_eq!(kengdic_certainty("cedict"), Certainty::Low);
+        let ev = evid(&[], &[("徵兵", "conscription")]);
+        let f = decide_kengdic(&kt("징병", "conscription"), &[std(Some("徵兵"), "noun", "x")], false, &ev).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::Low, "cedict"));
+        let ev = evid(&[("징병", "徵兵", "conscription")], &[("徵兵", "conscription")]);
+        let f = decide_kengdic(&kt("징병", "conscription"), &[std(Some("徵兵"), "noun", "x")], false, &ev).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::High, "opendict+cedict"));
+    }
+
+    #[test]
+    fn derived_certainty_needs_a_korean_dictionary_listing_the_derived_word() {
+        let mut t = tgt("공부하다", "verb", "학문이나 기술을 배우고 익히다.");
+        t.en = vec!["to study".into()];
+        let s = stem(&["工夫"], false);
+        // stdict lists 工夫하다 itself: high
+        let f = decide_derived(&t, &s, &[std(Some("工夫하다"), "verb", "배우다.")], false).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::High, "stdict_derived"));
+        // only opendict lists it: high
+        let f = decide_derived(&t, &s, &[], true).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::High, "opendict_derived"));
+        // only similarity of meaning with the stem: low, and which kind is recorded
+        let f = decide_derived(&t, &s, &[], false).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::Low, "def_similarity+english_overlap"));
+        let mut en_only = t.clone();
+        en_only.defs = vec!["전혀 다른 뜻의 낱말입니다.".into()];
+        assert_eq!(decide_derived(&en_only, &s, &[], false).unwrap().evidence, "english_overlap");
+        let mut ko_only = t.clone();
+        ko_only.en = vec!["x".into()];
+        assert_eq!(decide_derived(&ko_only, &s, &[], false).unwrap().evidence, "def_similarity");
+        // a stem that was itself a low fill taints everything built on it, even with a stdict listing
+        let mut low = s.clone();
+        low.low = true;
+        let f = decide_derived(&t, &low, &[std(Some("工夫하다"), "verb", "배우다.")], false).unwrap();
+        assert_eq!((f.certainty, f.evidence), (Certainty::Low, "stem_low"));
+    }
+
+    #[test]
+    fn fallback_evidence_tiers() {
+        let defs = vec!["진흙으로 빚은 그릇.".to_string()];
+        assert_eq!(fallback_evidence(&defs, "noun", "沙器", &[]), Some((Certainty::Low, "stdict_silent")));
+        let c = [std(Some("沙器"), "noun", "진흙으로 빚어 구운 그릇.")];
+        assert_eq!(fallback_evidence(&defs, "noun", "沙器", &c), Some((Certainty::High, "stdict_best_match")));
+        assert_eq!(fallback_evidence(&[], "noun", "沙器", &c), Some((Certainty::High, "stdict_hanja_no_native")));
+        assert_eq!(fallback_evidence(&defs, "noun", "詐欺", &c), None);
+    }
+
+    #[test]
+    fn opendict_spellings_keep_mixed_hanja() {
+        let mut ev = Evidence::default();
+        ev.opendict_spellings.entry("공부하다".into()).or_default().insert("工夫하다".into());
+        assert!(ev.opendict_lists("공부하다", "工夫하다"));
+        assert!(!ev.opendict_lists("공부하다", "功夫하다"));
     }
 }

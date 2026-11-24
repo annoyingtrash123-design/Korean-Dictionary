@@ -1,0 +1,71 @@
+name: Hanja certainty report
+
+# Owner review of pipeline-added hanja ("if in doubt, no hanja"): builds the packs exactly like the deploy
+# workflow's data job (same source fetch + cache, CC-CEDICT must be present) and publishes the fill reports
+# plus a summary (counts per certainty/rule/evidence, 40 random LOW + 40 random HIGH rows) to the orphan
+# branch `hanja-report`. Never touches main and never deploys.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read  # the publish step pushes with the token's write access only via the step below
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write  # only to publish the reports to the hanja-report branch
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache key
+        id: key
+        run: |
+          echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Restore downloaded sources
+        uses: actions/cache@v4
+        with:
+          path: pipeline/.work
+          key: sources-v2-${{ steps.key.outputs.month }}
+
+      - name: Fetch sources
+        run: |
+          cargo build --release -p kdict-pipeline
+          ./target/release/kdict-pipeline fetch --work pipeline/.work
+
+      - name: CC-CEDICT must be present
+        run: |
+          ls -la pipeline/.work
+          test -s pipeline/.work/cedict.zip || { echo "cedict.zip missing: the kengdic cedict evidence would be silently absent"; exit 1; }
+
+      - name: Build dictionary packs
+        run: |
+          # no --allow-partial: the build fails when a source silently degraded (same as the deploy data job)
+          ./target/release/kdict-pipeline build --work pipeline/.work --out pipeline/out
+          ls -la pipeline/out
+          wc -l pipeline/out/hanja_fill_report.tsv pipeline/out/hanja_kengdic_fallback.tsv
+
+      - name: Summary
+        run: |
+          mkdir -p report
+          cp pipeline/out/hanja_fill_report.tsv pipeline/out/hanja_kengdic_fallback.tsv report/
+          python3 -I pipeline/qa/hanja_report.py pipeline/out report
+          head -c 60000 report/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      # artifact storage is not reachable from the dev sandbox: publish to an orphan branch instead
+      - name: Publish to the hanja-report branch
+        run: |
+          set -e
+          mkdir -p /tmp/pub && cd /tmp/pub
+          git init -q -b hanja-report
+          cp "$GITHUB_WORKSPACE"/report/* .
+          ls -la
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com add -A
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -q -m "Hanja certainty report from run $GITHUB_RUN_ID"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" hanja-report

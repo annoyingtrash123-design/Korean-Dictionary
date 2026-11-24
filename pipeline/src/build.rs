@@ -746,7 +746,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         let mut guard = stdict.map(crate::hanja_fill::FallbackGuard::open).transpose()?;
         let reviewed = crate::hanja_fixes::HanjaFixes::builtin();
         let (mut filled, mut dropped) = (0, 0);
-        let mut report = String::from("headword\tsource\thanja\tverdict\n");
+        let mut report = String::from("headword\tsource\thanja\tverdict\tcertainty\tevidence\tgloss\n");
+        let (mut n_high, mut n_low) = (0, 0);
         for (id, source, hwn, data, ext_id) in cands {
             if cnt.get(&(source.clone(), hwn.clone())) != Some(&1) {
                 continue;
@@ -756,19 +757,32 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 continue;
             }
             let h = set.iter().next().unwrap();
-            let ok = match guard.as_mut() {
-                Some(_) if source == "krdict" && reviewed.is_kept(&ext_id, h) => true,
+            use crate::hanja_fill::Certainty;
+            // (certainty, evidence) when the hanja survives; `None` = dropped by the stdict guard
+            let verdict: Option<(Certainty, &'static str)> = match guard.as_mut() {
+                Some(_) if source == "krdict" && reviewed.is_kept(&ext_id, h) => Some((Certainty::High, "reviewed_keep")),
                 Some(g) => g.backed(&hwn, "noun", &data, h)?,
-                None => true,
+                None => Some((Certainty::Low, "no_stdict")),
             };
-            report.push_str(&format!("{hwn}\t{source}\t{h}\t{}\n", if ok { "kept" } else { "dropped" }));
-            if !ok {
+            let gloss = {
+                let v: Value = serde_json::from_str(&data).unwrap_or(Value::Null);
+                let g = v.get("senses").and_then(|s| s.as_array()).and_then(|a| a.iter().find_map(|s| s.get("gloss").or_else(|| s.get("ko_def")).and_then(|g| g.as_str()))).unwrap_or("");
+                truncate(g, 120).replace(['\t', '\n', '\r'], " ")
+            };
+            let (cert, evid) = verdict.map_or(("", ""), |(c, e)| (c.as_str(), e));
+            let keep = verdict.is_some_and(|(c, _)| c == Certainty::High || crate::hanja_fill::HANJA_KEEP_LOW);
+            let label = if verdict.is_none() { "dropped" } else if keep { "kept" } else { "dropped_low" };
+            report.push_str(&format!("{hwn}\t{source}\t{h}\t{label}\t{cert}\t{evid}\t{gloss}\n"));
+            let Some((certainty, evidence)) = verdict.filter(|_| keep) else {
                 dropped += 1;
                 continue;
-            }
+            };
+            if certainty == Certainty::High { n_high += 1 } else { n_low += 1 }
             let mut v: Value = serde_json::from_str(&data)?;
             if let Some(o) = v.as_object_mut() {
                 o.insert("hanja_src".into(), "kengdic".into());
+                o.insert("hanja_certainty".into(), certainty.as_str().into());
+                o.insert("hanja_evidence".into(), evidence.into());
             }
             conn.execute("UPDATE entries SET hanja=?, data=? WHERE id=?", params![h, serde_json::to_string(&v)?, id])?;
             for ch in cjk_chars(h) {
@@ -777,7 +791,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             filled += 1;
         }
         fs::write(out.join("hanja_kengdic_fallback.tsv"), report)?;
-        log::info!("kengdic hanja fallback filled {filled} entries ({dropped} dropped: stdict does not back the hanja for this meaning)");
+        log::info!("kengdic hanja fallback filled {filled} entries [{n_high} high, {n_low} low] ({dropped} dropped: stdict does not back the hanja for this meaning, or low certainty with HANJA_KEEP_LOW off)");
     }
 
     // sentences: Tatoeba + wikt
@@ -938,8 +952,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         log::info!("hanja fill evidence: opendict {} headwords, cedict {} spellings", ev.opendict.len(), ev.cedict.len());
         let (stats, records) = crate::hanja_fill::apply(&conn, sp, &ev)?;
         log::info!(
-            "hanja fill from stdict: {} entries (krdict {} unique + {} homograph + {} derived; kengdic {} [opendict {}, cedict {}, both {}] + {} derived; {} suspect core hanja) in {:.1}s",
-            stats.total(), stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_opendict, stats.kengdic_cedict, stats.kengdic_both, stats.kengdic_derived, suspects.len(), t.elapsed().as_secs_f32()
+            "hanja fill from stdict: {} entries [{} high, {} low, {} low dropped] (krdict {} unique + {} homograph + {} derived; kengdic {} [opendict {}, cedict {}, both {}] + {} derived; {} suspect core hanja) in {:.1}s",
+            stats.total(), stats.high, stats.low, stats.dropped_low, stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_opendict, stats.kengdic_cedict, stats.kengdic_both, stats.kengdic_derived, suspects.len(), t.elapsed().as_secs_f32()
         );
         fs::write(out.join("hanja_fill_report.tsv"), crate::hanja_fill::report_tsv(&records))?;
         fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 150, 60, 60, "2"))?;

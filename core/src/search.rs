@@ -954,6 +954,10 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
 /// native word or loanword (물, 사랑, 생각), never a Sino word that lost its hanja.
 const HANJA_SOURCES: &[&str] = &["krdict", "stdict", "opendict"];
 
+/// Owner rule "if in doubt, no hanja": `false` switches off [`fill_hanja`] (the run-time guess that
+/// attaches hanja to English-search rows of kengdic/wikt entries that carry none). Default unchanged.
+pub const SEARCH_FILL_HANJA: bool = true;
+
 /// Candidates of a part read as an inflected form (가진 → 가지다, 극의 → 극) checked against the packs.
 const SUSPECT_LEMMAS: usize = 6;
 
@@ -1063,6 +1067,9 @@ fn known_spellings(packs: &[&PackDb], keys: &[String]) -> Result<HashSet<String>
 /// * every part must be a dictionary word (선물로 leaves the row as it is), and rows of
 ///   dictionaries that record hanja ([`HANJA_SOURCES`]) are never filled: they are native words.
 fn fill_hanja(packs: &[&PackDb], rows: &mut [ResultRow]) -> Result<()> {
+    if !SEARCH_FILL_HANJA {
+        return Ok(());
+    }
     let wants = |r: &ResultRow| !r.hanja.as_deref().is_some_and(|h| !h.is_empty()) && !HANJA_SOURCES.contains(&r.source.as_str());
     let split = |r: &ResultRow| -> Vec<String> { r.headword.split_whitespace().map(norm_headword).collect() };
     let mut keys: Vec<String> = rows
