@@ -514,19 +514,63 @@ fn hangul_strict(packs: &[&PackDb], q: &str, limit: usize) -> Result<(Vec<Result
                 }
             }
         }
-        found.sort_by_key(|(i, r)| (*i, r.rank));
-        let mut matched: HashSet<usize> = HashSet::new();
-        for (i, _) in &found {
-            matched.insert(*i);
+        // The analysis knows nothing about the dictionary; now that the lemmas that exist are
+        // known, reorder them: frequent words beat rare homographs (지어요: 짓다 over 지다), and a
+        // lexicalised compound beats the split of its parts (들어가세요: 들어가다 over 들다).
+        let mut best_rank: HashMap<usize, i64> = HashMap::new();
+        for (i, r) in &found {
+            let e = best_rank.entry(*i).or_insert(r.rank);
+            *e = (*e).min(r.rank);
         }
-        let mut idxs: Vec<usize> = matched.into_iter().collect();
-        idxs.sort();
+        let stem = |i: usize| cands[i].lemma.strip_suffix('다').map(str::to_string);
+        let mut score: HashMap<usize, f64> = HashMap::new();
+        // frequency only separates verbs / adjectives (a noun's rank is not comparable), and only
+        // relative to the most frequent one
+        let log_rank = |i: usize| (best_rank[&i].max(1) as f64).log2();
+        let best_cost = best_rank.keys().map(|&i| cands[i].cost).min().unwrap_or(0);
+        let min_log = best_rank
+            .keys()
+            .filter(|&&i| stem(i).is_some() && cands[i].cost <= best_cost + 6)
+            .map(|&i| log_rank(i))
+            .fold(f64::MAX, f64::min);
+        for &i in best_rank.keys() {
+            let freq = if stem(i).is_some() { (log_rank(i) - min_log).max(0.0) } else { 0.0 };
+            let mut s = f64::from(cands[i].cost) + 1.1 * freq;
+            if let Some(si) = stem(i) {
+                let compound = best_rank.keys().any(|&j| {
+                    j != i && stem(j).is_some_and(|sj| si.chars().count() > sj.chars().count() && si.starts_with(&sj))
+                });
+                if compound {
+                    s -= 40.0;
+                }
+            }
+            score.insert(i, s);
+        }
+        let mut idxs: Vec<usize> = best_rank.keys().copied().collect();
+        idxs.sort_by(|a, b| score[a].partial_cmp(&score[b]).unwrap().then(a.cmp(b)));
+        let pos: HashMap<usize, usize> = idxs.iter().enumerate().map(|(p, &i)| (i, p)).collect();
+        found.sort_by_key(|(i, r)| (pos[i], r.rank));
         for i in idxs {
             if let Some(c) = cands.get(i) {
                 deconj_out.push(DeconjOut { lemma: c.lemma.clone(), rule: c.rule.clone() });
             }
         }
+        // A rare headword that is also a clean inflection of a much more frequent word (와요 "kiln"
+        // vs 오다 "to come"; only for the very common -아요/어요 form) must not push the inflected word down.
+        let exact_best = out.iter().filter(|r| r.via == Some("exact")).map(|r| r.rank).min();
+        let lead = found.first().filter(|(i, _)| cands[*i].rule.ends_with("polite -아요/어요")).map(|(i, r)| (cands[*i].cost, r.rank));
+        let before = out.len();
         push_new(&mut out, &mut seen, found.into_iter().map(|(_, r)| r).collect());
+        if let (Some(eb), Some((cost, rank))) = (exact_best, lead) {
+            if cost <= 5 && rank < eb {
+                let k = out.iter().take(before).filter(|r| r.via == Some("exact")).count();
+                let mut tail = out.split_off(before);
+                let exact: Vec<ResultRow> = out.drain(..k).collect();
+                tail.extend(exact);
+                tail.extend(std::mem::take(&mut out));
+                out = tail;
+            }
+        }
     }
     Ok((out, deconj_out))
 }

@@ -74,12 +74,12 @@
 몰라요	first	모르다
 예뻐요	first	예쁘다
 걸어서	top3	걷다	ok	also 걸다 + -어서
-지어요	first	짓다	known	deconjugation ranks 지다 above ㅅ-irregular 짓다
+지어요	first	짓다	ok
 나았다	first	낫다
 불러요	first	부르다
 빨개요	first	빨갛다
 봤어요	first	보다
-와요	first	오다	known	rare exact headword 와요 瓦窯 outranks 오다
+와요	first	오다	ok
 갈게요	first	가다
 읽으면	first	읽다
 만들었어요	first	만들다
@@ -92,7 +92,7 @@
 잡혔다	first	잡히다
 먹고 싶어요	top3	먹다
 가르쳐	first	가르치다
-들어가세요	first	들어가다	known	들다 ranked above 들어가다
+들어가세요	first	들어가다	ok
 흘렀다	first	흐르다
 # == particles attached: the noun first
 학교에	first	학교
