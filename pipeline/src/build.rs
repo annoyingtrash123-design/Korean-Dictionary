@@ -1639,6 +1639,21 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
             m.insert("seongeo_zh_chinese".into(), (stats.zh as i64).into());
         }
     }
+    // "Writing & usage" study lists: 쓰기 expressions + confusable words (approved rows only; AI-written, flagged `ai`)
+    {
+        let st = crate::usage_lists::add_tables(&core.path)?;
+        log::info!(
+            "usage lists: {} 쓰기 expressions ({} linked), {} confusable groups ({} of {} words linked)",
+            st.writing, st.writing_linked, st.confusables, st.words_linked, st.words
+        );
+        for u in st.writing_unresolved.iter().chain(&st.words_unresolved) {
+            log::warn!("usage lists: no dictionary entry for {u}");
+        }
+        if let Some(m) = core.counts.as_object_mut() {
+            m.insert("writing_expr".into(), (st.writing as i64).into());
+            m.insert("confusable".into(), (st.confusables as i64).into());
+        }
+    }
     packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);
     for p in &korean_packs {
         let id = p.path.file_stem().and_then(|s| s.to_str()).unwrap_or("stdict").to_string();

@@ -1,7 +1,7 @@
 import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GameWord, GrammarLessonRow, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, SeongeoZh, Sentence, StudyGrammar, StudyIdiom, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
+import type { Confusable, Entry, GameWord, GrammarLessonRow, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, SeongeoZh, Sentence, StudyGrammar, StudyIdiom, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary, WritingExpr } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -137,6 +137,9 @@ export const db = {
   /** Reviewed mini-lessons of a grammar entry (empty: none, or a pack from before lessons). */
   grammarLessons: (source: string, id: number) => call<GrammarLessonRow[]>('grammarLessons', source, id),
   seongeoZh: (hanja: string) => call<SeongeoZh | null>('seongeoZh', hanja),
+  /** "Writing & usage" study lists: every row, in list order (small; empty for a pack from before the tables). */
+  writingExpressions: () => call<WritingExpr[]>('writingExpressions'),
+  confusables: () => call<Confusable[]>('confusables'),
   /** Home page picks for a day number (see `lib/home-day.ts`). */
   home: (day: number) => call<HomeData>('home', day),
   /** Study lists (see `lib/study-lists.ts`): counts, then pages of words / the grammar of a level. */

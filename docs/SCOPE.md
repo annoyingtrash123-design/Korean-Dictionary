@@ -168,6 +168,22 @@ separate `content-review` pass sets `approved` (with reviewer and date), and onl
 them (`grammar lessons: A approved of N drafted` in the build log). The entry page shows the lesson under the
 dictionary text, labelled AI-written; the grammar study lists mark rows that have one with a "Lesson" badge.
 
+"Writing & usage" study lists (Lists > Study lists) are two small AI-written tables of the core pack, built by
+`pipeline/src/usage_lists.rs` from `pipeline/data/writing_expressions.tsv` (쓰기 expressions for TOPIK writing 51-54,
+grouped by function) and `pipeline/data/confusables.tsv` (confusable words). Only rows whose `review` column starts with
+`approved` are packed; the rows start as `draft` and a `content-review` pass (sheet: `pipeline/qa/writing_confusables_review.md`)
+approves them. The app labels everything AI-written and reviewed; a core pack without the tables has no "Writing & usage" group.
+```sql
+CREATE TABLE writing_expr (rank INTEGER PRIMARY KEY, id TEXT NOT NULL, grp TEXT NOT NULL, expr TEXT NOT NULL, meaning TEXT NOT NULL,
+  register TEXT NOT NULL,          -- written / formal, and the spoken forms to avoid in an essay
+  ex TEXT NOT NULL,                -- JSON [{ko, en}, ...]: model sentences in essay style
+  entry_id INTEGER,                -- the grammar or word entry the row links to (resolved at build time), else NULL
+  ai INTEGER NOT NULL DEFAULT 1);
+CREATE TABLE confusable (rank INTEGER PRIMARY KEY, id TEXT NOT NULL, kind TEXT NOT NULL,   -- 'spelling' | 'meaning' | 'grammar'
+  words TEXT NOT NULL,             -- JSON [{w, wrong, ko, en, entry}]: per word one contrasting sentence; wrong = a spelling people write but that is invalid
+  explanation TEXT NOT NULL, mistake TEXT NOT NULL, ai INTEGER NOT NULL DEFAULT 1);
+```
+
 ### Contract additions: older-text packs
 * `entries.hist INTEGER NOT NULL DEFAULT 0` (all packs): 1 = 옛말 / old word (stdict, opendict). Partial index `entries_hist(hist, hw_norm) WHERE hist = 1` in those packs.
 * Core `entries.hanja` filled from 표준국어대사전 (`pipeline/src/hanja_fill.rs`, rules in its module docs): krdict / kengdic entries that

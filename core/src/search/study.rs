@@ -32,6 +32,8 @@ pub struct StudyOverview {
     pub topics: Vec<StudyTopic>,
     /// Idioms & proverbs lists (`study_item`), in list order; see `study_idioms.rs`.
     pub idioms: Vec<super::study_idioms::StudyIdiomList>,
+    /// Writing & usage lists (`writing_expr`, `confusable`): rows per list; see `usage.rs`.
+    pub usage: super::usage::UsageCounts,
 }
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -105,6 +107,7 @@ pub fn study_overview(packs: &[&PackDb]) -> Result<StudyOverview> {
             .collect();
     }
     o.idioms = super::study_idioms::idiom_lists(packs)?;
+    o.usage = super::usage::usage_counts(packs)?;
     Ok(o)
 }
 

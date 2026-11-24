@@ -6,6 +6,7 @@ import type { StudyOverview } from '../db/types';
 import { createStore, useStore } from './store';
 import { curriculumLabel } from './home-day';
 import { IDIOM_LISTS, idiomRow } from './study-idioms';
+import { USAGE_LISTS } from './study-usage';
 import type { ListRow, ListSource, ListSummary } from './list-sources';
 import { grammarRow, loadTopicSort, parseStudyId, saveTopicSort, STUDY_PREFIX, studyMemory, summariesOf, TOPIC_SORTS, wordRow } from './study-lists';
 
@@ -37,6 +38,7 @@ export async function fetchRows(listId: string, sort: string, offset: number, li
   if (ref.kind === 'vocab') return (await db.studyWords(ref.level, limit, offset)).map(wordRow);
   if (ref.kind === 'grammar') return (await db.studyGrammar(ref.level)).slice(offset, offset + limit).map((g, i) => grammarRow(g, ref.level, offset + i));
   if (ref.kind === 'idiom') return (await db.studyIdioms(ref.list, limit, offset)).map(idiomRow);
+  if (ref.kind === 'usage') return [];   // not a row list: the usage lists have their own views (views/UsageLists.tsx)
   return (await db.studyTopicWords(ref.category, sort !== 'az', limit, offset)).map(wordRow);
 }
 
@@ -66,7 +68,7 @@ export const studySource: ListSource = {
     if (found) return { ...found, items: [] };
     if (o !== undefined) return undefined;
     // the counts are still loading: the page can already show its title
-    const name = ref.kind === 'topic' ? ref.category : ref.kind === 'idiom' ? IDIOM_LISTS[ref.list].name : curriculumLabel(ref.level);
+    const name = ref.kind === 'topic' ? ref.category : ref.kind === 'idiom' ? IDIOM_LISTS[ref.list].name : ref.kind === 'usage' ? USAGE_LISTS[ref.list].name : curriculumLabel(ref.level);
     const s: ListSummary = { id, name, count: 0, loading: true };
     return { ...s, items: [] };
   },

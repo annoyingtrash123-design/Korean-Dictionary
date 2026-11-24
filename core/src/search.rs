@@ -57,6 +57,9 @@ pub struct Caps {
     pub grammar_lesson: bool,
     /// `seongeo_zh` (Chinese chengyu + English equivalents of 성어, by hanja) exists.
     pub seongeo_zh: bool,
+    /// `writing_expr` (쓰기 expressions) and `confusable` (confusable-word groups) exist.
+    pub writing_expr: bool,
+    pub confusable: bool,
     /// `study_item` (the Idioms & proverbs study lists) exists.
     pub study_item: bool,
     /// `curriculum.home_ok` (precomputed Home-card eligibility) exists.
@@ -107,6 +110,8 @@ impl PackDb {
             topic: names.contains("topic"),
             grammar_lesson: names.contains("grammar_lesson"),
             seongeo_zh: names.contains("seongeo_zh"),
+            writing_expr: names.contains("writing_expr"),
+            confusable: names.contains("confusable"),
             study_item: names.contains("study_item"),
             curriculum_home_ok: names.contains("curriculum") && table_has("curriculum", "home_ok"),
             study_home_ok: names.contains("study_item") && table_has("study_item", "home_ok"),
@@ -1578,6 +1583,8 @@ mod lesson;
 pub use lesson::{grammar_lessons, GrammarLesson};
 mod seongeo;
 pub use seongeo::{seongeo_zh, SeongeoZh};
+mod usage;
+pub use usage::{confusables, usage_counts, writing_expressions, Confusable, ConfusableWord, UsageCounts, WritingExpr};
 pub use enko::{EnKoPhrase, EnKoSense, EnKoWord, EnRelSense, EnRelWord};
 
 mod lookup;

@@ -101,7 +101,8 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   await expect(vocab.locator('.list-row').nth(5)).toHaveAttribute('title', 'National standard Korean curriculum level 6 (≈ TOPIK 6)');
   await expect(vocab.locator('.list-row').nth(5)).toHaveAccessibleName(/National standard Korean curriculum level 6 \(≈ TOPIK 6\)/);
   expect(await texts(study(page).locator('.list-name, .group-head'))).not.toContain('TOPIK 6');
-  for (const t of await texts(study(page).locator('.list-name'))) expect(t).not.toMatch(/TOPIK/);
+  // (the Writing & usage list "쓰기 expressions (TOPIK writing)" names the exam on purpose: it is not a curriculum level)
+  for (const t of await texts(study(page).locator('.list-name'))) if (!/writing/.test(t)) expect(t).not.toMatch(/TOPIK/);
   await expect(study(page).getByRole('group', { name: 'Topics' }).locator('.list-row').first()).toBeVisible();
   await expect(study(page).locator('.resume')).toHaveCount(0);   // nothing opened yet
   await page.waitForTimeout(300);

@@ -78,6 +78,8 @@ const methods: Record<string, (...a: any[]) => Promise<unknown>> = {
   async grammarList() { await ready; return engine.grammarList(); },
   async grammarLessons(source: string, id: number) { await ready; return engine.grammarLessons(source, id); },
   async seongeoZh(hanja: string) { await ready; return engine.seongeoZh(hanja); },
+  async writingExpressions() { await ready; return engine.writingExpressions(); },
+  async confusables() { await ready; return engine.confusables(); },
   async gameWords(l: number, n: number) { await ready; return engine.gameWords(l, n); },
   async gameWordsFor(h: string[]) { await ready; return engine.gameWordsFor(h); },
   async chainCandidates(s: string[], u: string[], n: number) { await ready; return engine.chainCandidates(s, u, n); },

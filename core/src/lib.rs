@@ -305,6 +305,17 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::study_idioms(&s.all(), &list, limit as usize, offset as usize).map_err(js_err)?))
         }
 
+        /// Writing & usage lists: every 쓰기 expression, in list order (empty for a pack without the table).
+        #[wasm_bindgen(js_name = writingExpressions)]
+        pub async fn writing_expressions(&self) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::writing_expressions(&s.all()).map_err(js_err)?))
+        }
+
+        /// Writing & usage lists: every confusable-word group, in list order.
+        pub async fn confusables(&self) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::confusables(&s.all()).map_err(js_err)?))
+        }
+
         /// Version of the bundled SQLite (diagnostics).
         #[wasm_bindgen(js_name = sqliteVersion)]
         pub async fn sqlite_version(&self) -> Result<String, JsError> {

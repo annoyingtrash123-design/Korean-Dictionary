@@ -72,6 +72,8 @@ if [[ $FAST == 0 ]]; then
   python3 ../scripts/e2e-lessons.py public/data
   # sample "Chinese & English" rows for 성어 pages (CC-CEDICT is fetched in CI only; no-op once the pack has rows)
   python3 ../scripts/e2e-seongeo-zh.py public/data
+  # sample rows for the "Writing & usage" study lists (every data row is a draft until reviewed; no-op once the pack has rows)
+  python3 ../scripts/e2e-usage.py public/data
   npx playwright test --reporter=line
 fi
 step "OK — shippable"
