@@ -121,15 +121,15 @@ love	top3	사랑|사랑하다
 thank	top5	감사하다|고맙다
 beautiful	top3	아름답다
 gift	top3	선물
-present	top5	선물	known	선물 not in the top 5 (제시하다, 등장시키다 first)
+present	top5	선물	ok
 friend	first	친구
 teacher	top3	선생님|교사
 hospital	first	병원
 doctor	top3	의사
 weather	first	날씨
-book	first	책	known	책 only 6th, after 도서, 단행본, 저작
+book	first	책	ok
 time	top3	시간|때
-rain	first	비	known	치다 (to rain) above the noun 비
+rain	first	비	ok
 car	top3	차|자동차
 tea	top3	차
 bridge	top3	다리
@@ -145,7 +145,7 @@ sleep	top3	자다|잠
 run	top5	달리다|뛰다
 happy	top3	행복하다|기쁘다
 cold	top5	춥다|차갑다|감기
-to study	first	공부하다	known	"to" asks for the verb, 공부 (noun) comes first
+to study	first	공부하다	ok
 write	top3	쓰다
 learn	top3	배우다
 language	top3	언어|말
@@ -153,7 +153,7 @@ ice cream	top3	아이스크림
 credit card	top3	신용 카드|신용카드
 gift shop	top3	선물 가게
 forward contract	top5	선물 계약|선물환
-futures	top10	선물	known	선물 先物 not reached from "futures"
+futures	top10	선물	known	data gap: stdict 선물 (先物) has no English gloss; only 선물 거래 "futures transaction" mentions futures
 took	top10	가지다|잡다|타다|걸리다
 went	top10	가다
 children	top5	아이|어린이|아이들
