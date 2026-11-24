@@ -93,7 +93,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Fits both the introduction and a graph description. The spoken “-는 추세예요 / -는 편이에요” does not suit an essay.
 - 1: 결혼 연령이 점점 높아지는 추세이다. / There is a trend toward later marriage.
 - 2: 도시로 인구가 집중되는 추세이다. / The population is tending to concentrate in cities.
-- link: g:-는 추세이다 · review: draft
+- link: w:추세 · review: draft
 
 **W009** `이에 대해 의견이 엇갈린다` · opinions are divided on this
 
@@ -138,14 +138,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written “(한다체)”. The basic way to state an opinion; spoken “-(ㄴ/는)다고 생각해요 / -것 같아요” are not used in an essay.
 - 1: 나는 학교 교육에서 예절 교육이 강화되어야 한다고 생각한다. / I think moral education should be strengthened in school education.
 - 2: 나는 이 제도가 장기적으로 사회에 도움이 될 것이라고 생각한다. / I think that in the long run this system will benefit society.
-- link: g:-다고 생각하다 · review: draft
+- link: w:생각하다 · review: draft
 
 **W015** `-다고 본다` · I take the view that …
 
 - register: Written, a little firmer and more detached than “-다고 생각한다”. Spoken “-다고 봐요 / -것 같아요” do not belong in an essay.
 - 1: 그러나 필자는 이러한 주장이 설득력이 부족하다고 본다. / However, I see this argument as lacking persuasive force.
 - 2: 나는 개인의 노력만으로는 문제를 해결하기 어렵다고 본다. / I believe it is hard to solve the problem through individual effort alone.
-- link: g:-다고 보다 · review: draft
+- link: w:보다 · review: draft
 
 **W016** `필자는 -다고 생각한다` · the writer thinks that …
 
@@ -159,7 +159,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. A measured way to make a claim; the spoken “-라고 할 수 있죠” is not for essays.
 - 1: 독서는 인간의 사고력을 키우는 가장 기본적인 방법이라고 할 수 있다. / Reading can be called the most basic way to develop human thinking.
 - 2: 이러한 변화는 사회 발전의 긍정적인 신호라고 할 수 있다. / This change can be called a positive sign of social progress.
-- link: g:-라고 할 수 있다 · review: draft
+- link: (none) · review: draft
 
 **W018** `-(으)ㄴ/는 것으로 보인다` · it appears that …
 
@@ -173,7 +173,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Recommendation without sounding like an order. Spoken “-는 게 좋아요 / -는 게 나아요” is too casual.
 - 1: 학생들이 다양한 분야의 책을 읽는 것이 바람직하다. / It is desirable for students to read books from various fields.
 - 2: 정부가 에너지 정책의 방향을 장기적인 관점에서 정하는 것이 바람직하다. / It is desirable for the government to set the direction of its energy policy from a long-term perspective.
-- link: g:-는 것이 바람직하다 · review: draft
+- link: w:바람직하다 · review: draft
 
 **W020** `-는 입장이다` · I take the position that …
 
@@ -253,14 +253,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Takes a noun; in speech people say “-때문에 / -(으)로”.
 - 1: 기후 변화로 인해 해마다 자연재해가 늘고 있다. / Because of climate change, natural disasters are increasing every year.
 - 2: 과도한 업무로 인해 직장인의 스트레스가 커지고 있다. / Stress among office workers is growing because of excessive workloads.
-- link: g:-으로 인해 · review: draft
+- link: w:인하다 · review: draft
 
 **W031** `-(으)로 말미암아` · owing to … (stronger, literary)
 
 - register: Written, formal and a bit literary; use sparingly. Spoken “-아서 / -니까” are the everyday reason forms; this is a literary alternative for writing.
 - 1: 산업화로 말미암아 도시의 인구가 빠르게 늘었다. / Owing to industrialisation, the urban population grew rapidly.
 - 2: 잘못된 정보의 확산으로 말미암아 사회적 혼란이 생길 수 있다. / The spread of false information can cause social confusion.
-- link: g:-으로 말미암아 · review: draft
+- link: w:말미암다 · review: draft
 
 **W032** `-(으)ㄴ/는 탓에` · because of … (unwelcome result)
 
@@ -274,7 +274,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, neutral. The mirror of “탓에”: only for a favourable result. Spoken “-덕에 / -아서” are conversational.
 - 1: 과학 기술이 발달한 덕분에 사람들의 수명이 늘어났다. / Thanks to advances in science and technology, human life expectancy has grown.
 - 2: 교통이 편리해진 덕분에 지방에서도 도시의 문화를 즐길 수 있게 되었다. / Thanks to better transport, people can enjoy city culture even in the provinces.
-- link: g:-는 덕분에 · review: draft
+- link: w:덕분 · review: draft
 
 **W034** `-(으)므로` · since …, therefore …
 
@@ -295,7 +295,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Gives the aspect that supports a claim. Spoken “-어서 / -라서” are too casual.
 - 1: 이 제도는 비용을 줄일 수 있다는 점에서 의미가 있다. / This system is meaningful in that it can reduce costs.
 - 2: 독서는 상상력을 키워 준다는 점에서 매우 유익하다. / Reading is very beneficial in that it nurtures the imagination.
-- link: g:-는 점에서 · review: draft
+- link: w:점 · review: draft
 
 **W037** `-(으)ㄴ/는 데다가` · on top of that …
 
@@ -333,7 +333,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. General knowledge or research; gives your claim backing without a named source. Spoken “-(ㄴ/는)대요 / -잖아요” are too casual.
 - 1: 규칙적인 운동은 건강에 도움이 되는 것으로 알려져 있다. / Regular exercise is known to be good for health.
 - 2: 이 방법은 학습 효과를 높이는 것으로 알려져 있다. / This method is known to improve learning effects.
-- link: g:-는 것으로 알려지다 · review: draft
+- link: w:알려지다 · review: draft
 
 **W042** `-(으)ㄴ/는 것으로 조사되었다` · it was found (in a survey) that …
 
@@ -368,7 +368,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. “통해” is more formal than “-(으)로” and common in all writing. Spoken “-(으)로 / -해서” are plainer; “통해” is the written choice.
 - 1: 사람들은 인터넷을 통해 다양한 정보를 쉽게 얻을 수 있다. / People can easily get various kinds of information through the internet.
 - 2: 이러한 경험을 통해 학생들은 협동심을 기를 수 있다. / Through such experiences students can develop a spirit of cooperation.
-- link: g:-을 통해 · review: draft
+- link: w:통하다 · review: draft
 
 **W047** `-(이)라는 연구 결과가 있다` · there are studies showing that …
 
@@ -389,7 +389,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Reports a past fact or action; the spoken counterpart is “-(으)ㄴ 적이 있어요”.
 - 1: 정부는 이미 이 문제에 대한 대책을 발표한 바 있다. / The government has already announced measures for this problem.
 - 2: 여러 연구에서 비슷한 결과가 보고된 바 있다. / Similar results have been reported in several studies.
-- link: g:-ㄴ 바 있다 · review: draft
+- link: (none) · review: draft
 
 **W050** `실제로` · in fact, actually
 
@@ -448,7 +448,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Both "accompanied by" and "in parallel with". Spoken “같이 / 함께” are too plain here.
 - 1: 경제 성장과 더불어 환경 문제도 심각해지고 있다. / Along with economic growth, environmental problems are becoming serious.
 - 2: 인구 고령화와 더불어 의료비 부담이 커지고 있다. / Along with population ageing, the burden of medical costs is growing.
-- link: g:-과 더불어 · review: draft
+- link: w:더불다 · review: draft
 
 **W058** `-는 동시에` · at the same time as …, while also …
 
@@ -462,14 +462,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Same meaning as “뿐만 아니라”; the variant “뿐 아니라” is common when no noun precedes. No spoken difference in the form itself; keep the “한다체” ending and avoid the polite “-요”.
 - 1: 그 지역은 교통이 편리할 뿐 아니라 자연환경도 뛰어나다. / That area is not only convenient to reach but also has an outstanding natural environment.
 - 2: 운동은 몸을 건강하게 할 뿐 아니라 마음에도 안정을 준다. / Exercise not only keeps the body healthy but also gives peace of mind.
-- link: g:-을 뿐 아니라 · review: draft
+- link: g:-을 뿐만 아니라 · review: draft
 
 **W060** `-기도 하다` · also …, … as well
 
 - register: Written, neutral. Mentions a second function or fact with the same subject, often right after another verb. The form is the same in speech (“-기도 해요”); in an essay keep the “한다체” ending.
 - 1: 스마트폰은 연락 수단이기도 하고 정보를 찾는 도구이기도 하다. / A smartphone is a means of contact and also a tool for finding information.
 - 2: 휴식은 일의 능률을 높이기도 한다. / Rest also raises the efficiency of work.
-- link: g:-기도 하다 · review: draft
+- link: (none) · review: draft
 
 **W061** `이와 함께` · along with this, in tandem
 
@@ -507,21 +507,21 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. A noun-based way to set up a contrast; compare “이와 달리”. Spoken “-이랑 다르게 / -랑 달리” is too casual (“랑 / 이랑”).
 - 1: 과거와 달리 오늘날에는 누구나 정보를 쉽게 얻을 수 있다. / Unlike in the past, anyone today can get information easily.
 - 2: 종이책과 달리 전자책은 휴대하기가 편리하다. / Unlike paper books, e-books are easy to carry.
-- link: g:-과 달리 · review: draft
+- link: w:달리 · review: draft
 
 **W066** `-에 비해` · compared with …
 
 - register: Written, formal. Comparison base: “A는 B에 비해 -다”. In speech people say “-보다”.
 - 1: 도시는 농촌에 비해 문화 시설이 풍부하다. / Cities have richer cultural facilities than rural areas.
 - 2: 지난해에 비해 온라인 수업을 선택한 학생이 크게 늘었다. / Compared with last year, many more students chose online classes.
-- link: g:-에 비해 · review: draft
+- link: w:비하다 · review: draft
 
 **W067** `-(으)ㄴ/는 데 비해` · whereas, compared with the fact that …
 
 - register: Written, formal. Clause-level comparison; slightly weaker contrast than “-는 반면”. Spoken “-보다 / -는데” is too casual.
 - 1: 선진국은 출산율이 낮아지고 있는 데 비해 일부 국가는 인구가 빠르게 늘고 있다. / While birth rates are falling in developed countries, the population is rising fast in some others.
 - 2: 대도시는 일자리가 풍부한 데 비해 농촌은 일자리가 부족하다. / Big cities have plenty of jobs, whereas rural areas have too few.
-- link: g:-는 데 비해 · review: draft
+- link: w:비하다 · review: draft
 
 **W068** `이에 비해 / 이와 달리` · in comparison / by contrast
 
@@ -542,7 +542,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Sharper opposition than “비해”: the two facts point in opposite directions. Spoken “-는데 / -는 반면에요” are too casual.
 - 1: 수출은 증가하는 데 반해 내수는 오히려 감소하고 있다. / While exports are rising, domestic demand is falling.
 - 2: 젊은 층은 변화를 환영하는 데 반해 노년층은 변화를 부담스러워하는 경향이 있다. / Younger people welcome change, whereas older people tend to find it a burden.
-- link: g:-는 데 반해 · review: draft
+- link: w:반하다 · review: draft
 
 **W071** `오히려` · rather, on the contrary
 
@@ -556,7 +556,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, neutral to formal. Strong denial and reversal; the spoken form is “-기는커녕” too, so keep to a formal context.
 - 1: 이 정책은 문제를 해결하기는커녕 오히려 새로운 갈등을 낳았다. / Far from solving the problem, this policy gave rise to new conflicts.
 - 2: 물가가 내리기는커녕 계속 오르고 있다. / Far from falling, prices keep rising.
-- link: g:-기는커녕 · review: draft
+- link: g:는커녕 · review: draft
 
 **W073** `한편` · meanwhile, on the other hand
 
@@ -573,14 +573,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Concedes a point and then goes on in the opposite direction. The shorter spoken “그래도 / 그런데도” is too casual here.
 - 1: 이 제도는 많은 비판을 받았다. 그럼에도 불구하고 여전히 필요하다고 생각한다. / This system has been widely criticised. Nevertheless, I think it is still necessary.
 - 2: 기술이 발달했다. 그럼에도 불구하고 환경 문제는 오히려 심각해지고 있다. / Technology has advanced. Nevertheless, environmental problems are in fact becoming more serious.
-- link: g:-음에도 불구하고 · review: draft
+- link: g:에도 불구하고 · review: draft
 
 **W075** `-음에도 불구하고` · despite …, in spite of …
 
 - register: Written, formal. Attaches to a clause “(-ㅁ/음에도)” or a noun (“-에도 불구하고”). Spoken “그런데도 / -는데도” are too casual.
 - 1: 정부가 여러 대책을 내놓았음에도 불구하고 집값은 계속 오르고 있다. / Despite the various measures the government introduced, house prices keep rising.
 - 2: 높은 비용에도 불구하고 해외 유학을 선택하는 학생이 늘고 있다. / Despite the high cost, more students are choosing to study abroad.
-- link: g:-음에도 불구하고 · review: draft
+- link: g:에도 불구하고 · review: draft
 
 **W076** `-더라도` · even if …
 
@@ -601,7 +601,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, neutral. Admit a point (“-기는 하다”), then give the opposite “(-지만)”: the standard "yes, but". Spoken “-기는 한데” is too casual.
 - 1: 인터넷이 편리하기는 하지만 지나친 의존은 문제가 될 수 있다. / The internet is certainly convenient, but excessive reliance on it can become a problem.
 - 2: 이 방법이 효과가 있기는 하지만 모든 경우에 적용할 수는 없다. / This method is effective, but it cannot be applied in every case.
-- link: g:-기는 하지만 · review: draft
+- link: g:-기는 · review: draft
 
 **W079** `물론 -지만` · of course …, but …
 
@@ -622,7 +622,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Rejects an assumption: a favourite 54 move before giving your view. Spoken “-다고 -는 건 아니에요” (“건” = “것은”) is too casual.
 - 1: 경제가 성장했다고 해서 모든 국민이 행복해지는 것은 아니다. / Just because the economy has grown does not mean that every citizen becomes happy.
 - 2: 기술이 발달했다고 해서 삶의 질이 저절로 높아지는 것은 아니다. / Technological progress does not automatically raise the quality of life.
-- link: g:-다고 해서 · review: draft
+- link: (none) · review: draft
 
 **W082** `아무리 -어도` · no matter how …
 
@@ -674,7 +674,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. A change that accompanies another change (as X rises, Y rises). Spoken “-(으)면 / -(으)니까” do not show that two things change together.
 - 1: 소득이 증가함에 따라 소비 패턴도 변화하고 있다. / As incomes rise, consumption patterns are also changing.
 - 2: 기술이 발달함에 따라 일자리의 종류도 달라지고 있다. / As technology advances, the kinds of jobs are also changing.
-- link: g:-음에 따라 · review: draft
+- link: w:따르다 · review: draft
 
 **W089** `-을/를 초래하다` · bring about …, cause …
 
@@ -723,7 +723,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Cautions about a possible bad outcome; the spoken “-(으)ㄹ까 봐 걱정이에요” is not used in essays.
 - 1: 이대로 방치하면 문제가 더 심각해질 우려가 있다. / If it is left as it is, there is a risk that the problem will get worse.
 - 2: 지나친 규제는 산업의 발전을 가로막을 우려가 있다. / Excessive regulation risks hindering the development of industry.
-- link: g:-ㄹ 우려가 있다 · review: draft
+- link: w:우려 · review: draft
 
 **W096** `-게 되다` · come to …, end up …
 
@@ -744,7 +744,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Conditions: “-(으)ㄹ 경우” for a case, “-(으)ㄴ다면” for a supposition. The spoken “-(으)면” is fine in writing too.
 - 1: 이러한 상황이 계속될 경우 사회적 비용이 크게 늘어날 것이다. / If this situation continues, social costs will rise greatly.
 - 2: 모든 사람이 조금씩 노력한다면 환경 문제를 해결할 수 있을 것이다. / If everyone makes a small effort, we will be able to solve the environmental problem.
-- link: g:-ㄹ 경우 · review: draft
+- link: w:경우 · review: draft
 
 **W099** `-지 않으면 -(으)ㄹ 것이다` · if we do not …, … will …
 
@@ -775,7 +775,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. THE 53 verb: use it for every result; the spoken “-더라고요 / -인 것 같아요” must not appear.
 - 1: 조사 결과 응답자의 45%가 영화 감상을 가장 선호하는 것으로 나타났다. / The survey showed that 45% of respondents prefer watching films most.
 - 2: 2010년에 비해 2020년에는 재택근무를 하는 직장인이 세 배로 늘어난 것으로 나타났다. / Compared with 2010, the number of office workers working from home tripled by 2020.
-- link: g:-는 것으로 나타나다 · review: draft
+- link: w:나타나다 · review: draft
 
 
 ### Graphs: changes and trends (53)
@@ -1015,7 +1015,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Points the reader back to an example or figure; spoken “-처럼” is too casual.
 - 1: 앞서 살펴본 바와 같이 이러한 현상은 여러 원인이 겹쳐서 나타난다. / As we saw earlier, this phenomenon arises from several causes overlapping.
 - 2: 위의 예에서 볼 수 있듯이 작은 습관이 큰 차이를 만든다. / As can be seen from the example above, small habits make a big difference.
-- link: g:-는 바와 같이 · review: draft
+- link: g:같이 · review: draft
 
 **W136** `특히` · especially, in particular
 
@@ -1039,14 +1039,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Softer than “-어야 한다”; typical in recommendations. Spoken “-어야 돼요 / -어야 해요” is too casual.
 - 1: 이를 해결하기 위해서는 사회적 합의를 이끌어 낼 필요가 있다. / To solve this, there is a need to draw out a social consensus.
 - 2: 학생들이 스스로 생각하는 힘을 기를 수 있도록 교육 방식을 바꿀 필요가 있다. / The way of teaching needs to change so that students can develop the ability to think for themselves.
-- link: g:-ㄹ 필요가 있다 · review: draft
+- link: w:필요 · review: draft
 
 **W139** `-(으)ㄹ 필요가 없다` · there is no need to …
 
 - register: Written, formal. Rejects an unnecessary measure. Spoken “-(으)ㄹ 필요 없어요” is too casual.
 - 1: 이미 충분히 갖춰진 제도를 새로 만들 필요는 없다. / There is no need to create anew a system that is already adequately in place.
 - 2: 이러한 변화를 지나치게 걱정할 필요는 없다. / There is no need to worry too much about this change.
-- link: g:-ㄹ 필요가 없다 · review: draft
+- link: w:필요 · review: draft
 
 **W140** `-는 방안을 모색해야 한다` · we should look for ways to …
 
@@ -1112,14 +1112,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal. Sums up the preceding paragraph before the conclusion. Spoken “이렇게 / 이래서” are too casual.
 - 1: 이처럼 독서는 개인의 성장과 사회의 발전에 모두 도움이 된다. / In this way, reading helps both the growth of the individual and the development of society.
 - 2: 이와 같이 환경 문제는 우리 모두의 노력이 필요한 과제이다. / Thus, the environmental problem is a task that needs the effort of all of us.
-- link: w:이처럼 · review: draft
+- link: (none) · review: draft
 
 **W149** `이상에서 살펴본 바와 같이` · as examined above
 
 - register: Written, formal. A longer, essay-like closing signpost. Spoken “지금까지 말한 대로” is too casual.
 - 1: 이상에서 살펴본 바와 같이 청소년의 스마트폰 과의존은 사회적 대책이 필요한 문제이다. / As examined above, teenagers' over-dependence on smartphones is a problem that needs social measures.
 - 2: 이상에서 살펴본 바와 같이 이 정책은 단기적으로는 어려움이 있으나 장기적으로는 도움이 된다. / As examined above, this policy has difficulties in the short term but is helpful in the long term.
-- link: g:-는 바와 같이 · review: draft
+- link: g:같이 · review: draft
 
 **W150** `종합해 보면 / 요약하면` · to sum up, taken together
 
@@ -1161,7 +1161,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal “(한다체)”. A closing wish. Spoken “-기를 바라요 / -면 좋겠어요” is too casual.
 - 1: 이 글을 통해 많은 사람이 환경 문제에 관심을 가지게 되기를 바란다. / I hope that through this piece many people will come to take an interest in environmental problems.
 - 2: 앞으로 더 많은 사람이 독서의 즐거움을 알게 되기를 바란다. / I hope that more people will come to know the joy of reading.
-- link: g:-기를 바라다 · review: draft
+- link: w:바라다 · review: draft
 
 
 ### Notices and e-mails (51–52)
@@ -1178,14 +1178,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Formal polite “(합쇼체)”. Polite request in a notice; “부탁드립니다” is also acceptable. Spoken “-세요 / -해 주세요” is too plain for a formal notice.
 - 1: 참석하실 분은 이번 주 금요일까지 신청해 주시기 바랍니다. / Those who will attend are asked to apply by this Friday.
 - 2: 문의 사항이 있으시면 아래 번호로 연락해 주시기 바랍니다. / If you have any questions, please contact the number below.
-- link: g:-기 바라다 · review: draft
+- link: w:바라다 · review: draft
 
 **W158** `-(으)ㄹ 예정입니다` · is scheduled to …
 
 - register: Formal polite “(합쇼체)”. Announces a plan or schedule: “일시와 장소는 -입니다”. Spoken “-(으)ㄹ 거예요 / -(으)ㄹ게요” is too casual in a notice.
 - 1: 도서관은 다음 달 1일부터 새롭게 문을 열 예정입니다. / The library is scheduled to reopen from the 1st of next month.
 - 2: 행사는 이번 주 토요일 오후 두 시에 시작될 예정입니다. / The event is scheduled to start at two o'clock this Saturday afternoon.
-- link: g:-ㄹ 예정이다 · review: draft
+- link: w:예정 · review: draft
 
 **W159** `-(으)ㄹ 수 있도록 해 주시면 감사하겠습니다` · I would be grateful if you could …
 
@@ -1206,14 +1206,14 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - register: Written, formal “(한다체)”. Typical for the closing line of a 52 passage that explains something; it turns the sentence into an explanation. Not spoken “-거든요”.
 - 1: 따라서 잘 쉬는 것도 성공적인 일의 중요한 부분인 것이다. / So resting well is also an important part of work that succeeds.
 - 2: 결국 습관이 사람을 만드는 것이다. / In the end, it is habit that makes the person.
-- link: g:-는 것이다 · review: draft
+- link: (none) · review: draft
 
 **W162** `-(으)ㄴ/는 경향이 있다` · there is a tendency to …
 
 - register: Written, formal “(한다체)”. General tendency, common in 52 text completion. Spoken “-는 경향이에요 / -는 편이에요” is too casual.
 - 1: 사람들은 자신이 이미 가진 생각과 일치하는 정보를 더 쉽게 받아들이는 경향이 있다. / People tend to accept information that matches their existing ideas more readily.
 - 2: 시간이 부족할수록 중요한 일을 미루는 경향이 있다. / The less time we have, the more we tend to put off important things.
-- link: g:-는 경향이 있다 · review: draft
+- link: w:경향 · review: draft
 
 
 ## Confusable groups
