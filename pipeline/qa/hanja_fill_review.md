@@ -201,3 +201,60 @@ Counting the doubtful 조보 as wrong: kengdic 4/114 = 3.5%, overall 7/150 = 4.7
 | 148 | 오보하다 | 誤報하다 | kengdic | derived | misinform | ok |
 | 149 | 호색하다 | 好色하다 | kengdic | derived | lech | ok |
 | 150 | 중립시키다 | 中立시키다 | kengdic | derived | neutralize | ok |
+
+## Re-review (tightened rules) — 2026-11-24
+
+Reviewer: independent pass over the fresh sample `pipeline/qa/hanja_fill_sample.tsv` (seed 2, 150 rows), produced by the
+tightened rules (kengdic fills need 우리말샘/CC-CEDICT English corroboration; derived fills are vetoed by a stdict native
+entry of the same POS and by `stem_contradicted`). Same question per row: is the hanja right for this word in the meaning
+the entry gives? Doubtful rows were checked against `pipeline/out/{stdict,opendict,core}.sqlite` (read-only).
+
+### Totals
+
+| rule | rows | wrong | rate | doubtful |
+|---|---|---|---|---|
+| homograph | 4 | 0 | 0.0% | 0 |
+| unique | 2 | 0 | 0.0% | 0 |
+| kengdic | 84 | 1 | 1.2% | 0 |
+| derived | 60 | 0 | 0.0% | 0 |
+| **all** | 150 | **1** | **0.7%** | 0 |
+
+Previous sample: 6 wrong + 1 doubtful / 150 (4.0%). All three failure classes named above are gone from this sample
+(no wrong derived row; the stem-contradiction guard and the native-veto would have stopped 타박하다/구경시키다/재분하다).
+
+### Wrong / noted rows
+
+| # | headword | filled | rule | gloss | verdict |
+|---|---|---|---|---|---|
+| 53 | 추적자 | 追跡子 | kengdic (opendict) | a pursuer, a tracker | **WRONG**: the gloss is the person 追跡者 (追跡+者). stdict only lists 追跡子 'tracer' (a substance used to follow a reaction, 화학). The corroboration passed on the shared English root *track-* (tracker vs tracer/tracking), which does not tell the person from the substance. Same class as 회의자 (懷疑者 vs stdict 會意字) in the previous review: a productive X+者 agent noun whose stdict homograph ends in 子/字. |
+| 74 | 야경증 | 夜警症 | kengdic (opendict) | night terror | ok (note): copied faithfully from stdict, which writes 夜警症. The etymologically expected form is 夜驚症 ('startle'); not a fill error, a stdict quirk. Not counted. |
+| 68 | 공액 | 共軶 | kengdic (opendict) | conjugate | ok: stdict's own form (軶 = variant of 軛). |
+| 83 | 견인기 | 牽引機 | kengdic (opendict) | a retractor | ok: stdict 牽引機 '어떤 물체를 끌어당기는 기구'; a surgical retractor is that kind of instrument. |
+
+All other rows (4 homograph, 2 unique, 82 kengdic, 60 derived) are correct for their meaning. The kengdic glosses remain
+noisy (조건문 'condition', 숙영하다 'lie', 퇴장시키다 'bench', 패소-type one-word glosses), but in every such row the
+hanja is still the right word.
+
+### Residual pattern: 者 vs 子/字
+
+Not frequent in the sample (1/84), but it is the second time it shows up, and a scan of core shows where it can recur:
+kengdic `…자` headwords with an agent-noun gloss whose only stdict entry ends in 子/字, e.g. 명령자 螟蛉子 'dictator',
+반박자 半拍子 'gainsayer', 부정자 副正字 'naysayer', 수양자 收養子 'cultivator', 신입자 新粒子 'entrant', 운반자 運搬子
+'conveyancer', 정리자 整理字 'regulator', 회의자 會意字 'unbeliever', 추적자 追跡子 'tracker' (about 20 such headwords in all
+kengdic, most of which corroboration already rejects because the English does not overlap). A cheap guard closes it:
+in `decide_kengdic`, skip when the headword ends in 자, the stdict hanja ends in 子 or 字, and the gloss is an agent noun
+(-er/-or/-ist/-ant/-ent, 'one who'); add 추적자 to `pipeline/tests/hanja_fill.rs` as the regression case.
+
+### 불만하다
+
+stdict has 불만하다 不滿하다 (adjective, '마음에 흡족하지 아니하다', synonym 불만족하다), and the derived rule fills it
+from stem 불만 不滿 with stdict confirmation. The hanja **should be filled**: 不滿하다 is right for the word whatever its
+frequency. What is wrong is the kengdic gloss 'not a word. see 불평하다 (to complain)': stdict lists the word (it is rare;
+불만스럽다 / 불만이다 are the usual forms), and 불평하다 'complain' is a different verb. That gloss is a gloss-fix item,
+not a hanja problem.
+
+### Recommendation
+
+**Ship.** 1 wrong in 150 (0.7%) meets the bar (≤ 1/150). The one error belongs to a narrow, identifiable class (者 vs
+子/字 agent nouns, about 20 candidate headwords in the whole set) rather than a broad failure of a rule; add the guard above
+(small, before or right after shipping) so the class cannot recur, in line with "every recurring mistake becomes a check".
