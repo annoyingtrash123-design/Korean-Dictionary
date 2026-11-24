@@ -259,6 +259,12 @@ mod wasm_api {
             self.with_store(|s| to_js(&search::grammar_lessons(&s.all(), &source, id as i64).map_err(js_err)?))
         }
 
+        /// The "Chinese & English" block of a 성어 (CC-CEDICT chengyu + reviewed English equivalent) by its hanja; null when none.
+        #[wasm_bindgen(js_name = seongeoZh)]
+        pub async fn seongeo_zh(&self, hanja: String) -> Result<JsValue, JsError> {
+            self.with_store(|s| to_js(&search::seongeo_zh(&s.all(), &hanja).map_err(js_err)?))
+        }
+
         #[wasm_bindgen(js_name = wordOfDay)]
         pub async fn word_of_day(&self, date: String) -> Result<JsValue, JsError> {
             self.with_store(|s| to_js(&search::word_of_day(&s.all(), &date).map_err(js_err)?))

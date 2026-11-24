@@ -1,7 +1,7 @@
 import { DATA_BASE } from '../lib/native';
 // Main-thread proxy for the DB worker.
 import type { Evt, Req, Res } from './rpc';
-import type { Entry, GameWord, GrammarLessonRow, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, Sentence, StudyGrammar, StudyIdiom, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
+import type { Entry, GameWord, GrammarLessonRow, GrammarRow, HomeData, HanjaChar, Manifest, ManifestPack, PackStatus, Progress, ResultRow, SearchResult, SeongeoZh, Sentence, StudyGrammar, StudyIdiom, StudyOverview, StudyWord, TextDoc, TextMatch, TextSummary } from './types';
 import { createStore } from '../lib/store';
 import { settings } from '../lib/settings';
 import { activePacks } from '../lib/packs';
@@ -136,6 +136,7 @@ export const db = {
   grammarList: (): Promise<GrammarRow[]> => (grammarRows ??= call<GrammarRow[]>('grammarList').catch((e) => { grammarRows = undefined; throw e; })),
   /** Reviewed mini-lessons of a grammar entry (empty: none, or a pack from before lessons). */
   grammarLessons: (source: string, id: number) => call<GrammarLessonRow[]>('grammarLessons', source, id),
+  seongeoZh: (hanja: string) => call<SeongeoZh | null>('seongeoZh', hanja),
   /** Home page picks for a day number (see `lib/home-day.ts`). */
   home: (day: number) => call<HomeData>('home', day),
   /** Study lists (see `lib/study-lists.ts`): counts, then pages of words / the grammar of a level. */

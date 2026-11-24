@@ -132,6 +132,7 @@ export interface Engine {
   sentences(text: string, limit: number): Promise<{ ko: string; en: string | null; source: string | null }[]>;
   grammarList(): Promise<GrammarRow[]>;
   grammarLessons(source: string, id: number): Promise<GrammarLessonRow[]>;
+  seongeoZh(hanja: string): Promise<SeongeoZh | null>;
   gameWords(level: number, limit: number): Promise<GameWord[]>;
   gameWordsFor(headwords: string[]): Promise<GameWord[]>;
   chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
@@ -186,6 +187,14 @@ export interface StudyGrammar { form: string; pattern: string; summary_en: strin
 
 /** A reviewed grammar mini-lesson as the engine returns it (`body` is JSON text: see `lib/lesson.ts`). */
 export interface GrammarLessonRow { level: number; form: string; body: string }
+
+/** "Chinese & English" block of a 성어 (core pack `seongeo_zh`): the CC-CEDICT chengyu (exact hanja match) and, once
+ *  reviewed, an English idiom with the same meaning (AI-written: `en_ai`). */
+export interface SeongeoZh {
+  hanja: string;
+  zh_trad: string | null; zh_simp: string | null; zh_pinyin: string | null; zh_en: string[];
+  en_equiv: string | null; en_note: string | null; en_ai: boolean;
+}
 
 /** A quiz word (Games tab). `examples`: Korean example sentences for Fill the gap. */
 export interface GameWord { source: string; id: number; headword: string; hanja?: string | null; pos?: string | null; level?: number | null; gloss: string; examples: string[] }

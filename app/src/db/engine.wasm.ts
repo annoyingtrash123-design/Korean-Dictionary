@@ -34,6 +34,7 @@ export function createEngine(): Engine {
     sentences: (text, limit) => e().sentences(text, limit),
     grammarList: () => e().grammarList(),
     grammarLessons: (source, id) => e().grammarLessons(source, id),
+    seongeoZh: (hanja) => e().seongeoZh(hanja),
     gameWords: (level, limit) => e().gameWords(level, limit),
     gameWordsFor: (hws) => e().gameWordsFor(hws),
     chainCandidates: (starts, used, limit) => e().chainCandidates(starts, used, limit),

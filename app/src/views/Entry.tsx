@@ -12,6 +12,7 @@ import { hanChars } from '../lib/search-mode';
 import { TAP } from '../components/TapLookup';
 import { ExampleList } from '../components/Examples';
 import { GrammarLessons } from '../components/GrammarLesson';
+import { SeongeoZhBlock } from '../components/SeongeoZh';
 import { TabBar, WordsTab, CharsTab, SentsTab, useEntryTab } from './EntryTabs';
 import { SOURCE_ORDER, entrySourceTitle, type Entry, type Sense } from '../lib/types';
 import { Empty, LevelBadge, Pos } from '../components/common';
@@ -107,6 +108,7 @@ function DictPanel({ primary, entries }: { primary: Entry; entries: Entry[] }) {
           {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
         </details>
       ))}
+      <SeongeoZhBlock hanja={primary.hanja} />
       <GrammarLessons source={primary.source} id={primary.id} />
       <SimilarWords primary={primary} />
     </>

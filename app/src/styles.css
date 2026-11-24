@@ -857,6 +857,18 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 /* grammar mini-lessons (components/GrammarLesson.tsx): AI-written, reviewed; collapsible, open by default */
 .chip-lesson { display: inline-flex; align-items: center; height: 18px; padding: 0 7px; border-radius: 9px; font-size: 11px; font-weight: 650; letter-spacing: .02em;
   background: color-mix(in srgb, var(--hanja) 11%, var(--bg)); color: var(--hanja); align-self: center; }
+/* "Chinese & English" block of a 성어 page (components/SeongeoZh.tsx): compact rows under a .dict heading */
+.zh-body { padding-bottom: 10px; }
+.zh-row + .zh-row { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--border); }
+.zh-lbl { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.zh-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 10px; }
+.zh-han { font-size: 1.25em; font-weight: 600; }
+.zh-trad { font-size: 1.05em; opacity: .85; }
+.zh-pin { font-size: .92em; color: var(--muted); }
+.zh-def { font-size: .92em; }
+.zh-src { margin-top: 3px; font-size: 11.5px; }
+.zh-note { margin-top: 2px; }
+.pane-right .zh-body { padding-left: 0; padding-right: 0; }
 .lessons { padding: 8px 16px 4px; }
 .pane-right .lessons { padding-left: 0; padding-right: 0; }
 .lesson { margin: 10px 0 8px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
