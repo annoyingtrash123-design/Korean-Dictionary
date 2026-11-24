@@ -198,3 +198,16 @@ fn committed_suspect_list_is_well_formed() {
         assert!(f[5].parse::<f64>().unwrap() >= 0.6 && f[7].parse::<f64>().unwrap() < 0.3, "{l}");
     }
 }
+
+/// Review regression: a person noun in -자 must not take a 子/字 homograph's hanja (추적자 "pursuer" ≠ 追跡子 "tracer").
+#[test]
+fn person_ja_nouns_do_not_take_zi_homographs() {
+    use kdict_pipeline::hanja_fill::person_ja_mismatch;
+    assert!(person_ja_mismatch("추적자", "追跡子", "a pursuer, a tracker"));
+    assert!(person_ja_mismatch("회의자", "會意字", "unbeliever"));
+    assert!(!person_ja_mismatch("추적자", "追跡者", "a pursuer"));     // 者 is fine
+    assert!(!person_ja_mismatch("원자", "原子", "atom"));               // not a person
+    // conservative by design: any -er/-or noun counts as a person, so a non-person "tracer" is skipped too
+    // (skipping only loses a fill; it never adds a wrong one)
+    assert!(person_ja_mismatch("추적자", "追跡子", "a tracer substance"));
+}

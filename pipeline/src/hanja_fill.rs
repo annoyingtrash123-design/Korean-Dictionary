@@ -369,11 +369,31 @@ pub fn decide_kengdic(t: &Target, cands: &[Std], other_core_hanja: bool, ev: &Ev
         return None;
     }
     let hanja = with[0].hanja.clone()?;
+    // a person noun in -자 (者) whose only stdict homograph ends in 子/字 is another word: 추적자 "pursuer" is
+    // 追跡者, stdict only has 追跡子 "tracer"; 회의자 "unbeliever" vs 會意字 (both caught in review)
+    if person_ja_mismatch(&n, &hanja, &t.en.join("; ")) {
+        return None;
+    }
     let evidence = ev.corroboration(&n, &hanja, &t.en);
     if evidence.is_empty() {
         return None;
     }
     Some(Fill { hanja, rule: Rule::Kengdic, stdict_def: first_def(&with[0].defs), score: 1.0, evidence })
+}
+
+/// The headword ends in 자, the stdict hanja ends in 子 or 字, and the English gloss names a person
+/// (one who …, -er/-or/-ist/-ant/-ent/-ee, person/man/woman): the gloss means 者, not the stdict word.
+pub fn person_ja_mismatch(headword: &str, hanja: &str, en: &str) -> bool {
+    if !headword.ends_with('자') || !(hanja.ends_with('子') || hanja.ends_with('字')) {
+        return false;
+    }
+    let en = en.to_lowercase();
+    if en.contains("one who") || en.contains("person") || en.contains(" man") || en.contains("woman") {
+        return true;
+    }
+    en.split(|c: char| !c.is_ascii_alphabetic())
+        .filter(|w| w.len() >= 5)
+        .any(|w| ["er", "or", "ist", "ant", "ent", "ee"].iter().any(|s| w.ends_with(s)))
 }
 
 /// What the core pack says about one stem spelling.
