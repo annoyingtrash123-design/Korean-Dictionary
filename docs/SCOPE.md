@@ -170,6 +170,11 @@ dictionary text, labelled AI-written; the grammar study lists mark rows that hav
 
 ### Contract additions: older-text packs
 * `entries.hist INTEGER NOT NULL DEFAULT 0` (all packs): 1 = 옛말 / old word (stdict, opendict). Partial index `entries_hist(hist, hw_norm) WHERE hist = 1` in those packs.
+* Core `entries.hanja` filled from 표준국어대사전 (`pipeline/src/hanja_fill.rs`, rules in its module docs): krdict / kengdic entries that
+  had no hanja get the stdict 원어 hanja when headword, part of speech and meaning agree (never invented: native words stay empty, an
+  existing hanja is never overwritten). Such entries carry `data.hanja_src = "stdict"` and `data.hanja_rule` (`unique` | `homograph` |
+  `kengdic` | `derived`); the entry page shows a small 표준 marker, `hanja_words` and `hanja_chars.word_count` include them, and the
+  build writes `hanja_fill_report.tsv` / `hanja_fill_sample.tsv` next to the packs (QA sample: `pipeline/qa/hanja_fill_sample.tsv`).
 * `hanja_chars.hun TEXT` (Korean gloss word, '배울') and `eumhun TEXT` ('배울 학'; several joined '; ') in core.
 * Optional packs `cedict` and `zhwikt` (`required: false` in the manifest) keep only Korean-relevant
   entries: a headword (traditional or simplified form) is kept when it equals a run of hanja in some

@@ -569,7 +569,8 @@ fn mix(s: &str) -> u64 {
 pub fn sample_tsv(records: &[Record], total: usize, homograph: usize, derived: usize) -> String {
     let pick = |pred: &dyn Fn(&Record) -> bool, n: usize| -> Vec<&Record> {
         let mut v: Vec<&Record> = records.iter().filter(|r| pred(r)).collect();
-        v.sort_by_key(|r| mix(&format!("{}{}", r.headword, r.hanja)));
+        // krdict fills first (there are few), then a stable pseudo-random order
+        v.sort_by_key(|r| (r.source != "krdict", mix(&format!("{}{}", r.headword, r.hanja))));
         v.truncate(n);
         v
     };
