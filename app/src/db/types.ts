@@ -38,6 +38,8 @@ export interface Sense {
 }
 export interface EntryData {
   senses: Sense[]; related?: Rel[]; category?: string; etym?: string; origin_note?: string;
+  /** Hanja filled in from 표준국어대사전 ('stdict'; never set for hanja the source dictionary itself gives) and the rule that matched. */
+  hanja_src?: string; hanja_rule?: string;
 }
 export interface EntryRow {
   id: number; source: Source; headword: string; hw_norm: string; homonym?: number;

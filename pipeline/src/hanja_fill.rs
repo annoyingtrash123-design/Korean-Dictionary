@@ -564,9 +564,9 @@ fn mix(s: &str) -> u64 {
     s.bytes().fold(0xcbf29ce484222325u64, |h, b| (h ^ b as u64).wrapping_mul(0x100000001b3))
 }
 
-/// A reproducible sample for the independent reviewer: up to `homograph` homograph picks, `unique`
-/// unique fills (krdict + kengdic) and `derived` derived ones.
-pub fn sample_tsv(records: &[Record], homograph: usize, unique: usize, derived: usize) -> String {
+/// A reproducible sample of `total` fills for the independent reviewer: up to `homograph` homograph picks and
+/// `derived` derived ones (as many as exist), the rest unique fills (krdict + kengdic).
+pub fn sample_tsv(records: &[Record], total: usize, homograph: usize, derived: usize) -> String {
     let pick = |pred: &dyn Fn(&Record) -> bool, n: usize| -> Vec<&Record> {
         let mut v: Vec<&Record> = records.iter().filter(|r| pred(r)).collect();
         v.sort_by_key(|r| mix(&format!("{}{}", r.headword, r.hanja)));
@@ -575,8 +575,9 @@ pub fn sample_tsv(records: &[Record], homograph: usize, unique: usize, derived: 
     };
     let mut out = String::from("headword\thanja\tsource\tcore_definition\tstdict_definition_used\trule\n");
     let mut rows: Vec<&Record> = pick(&|r| r.rule == Rule::Homograph, homograph);
-    rows.extend(pick(&|r| matches!(r.rule, Rule::Unique | Rule::Kengdic), unique));
-    rows.extend(pick(&|r| r.rule == Rule::Derived, derived));
+    let derived_rows = pick(&|r| r.rule == Rule::Derived, derived);
+    rows.extend(pick(&|r| matches!(r.rule, Rule::Unique | Rule::Kengdic), total.saturating_sub(rows.len() + derived_rows.len())));
+    rows.extend(derived_rows);
     for r in rows {
         out.push_str(&format!("{}\t{}\t{}\t{}\t{}\t{}\n", r.headword, r.hanja, r.source, tsv(&crate::common::truncate(&r.own_def, 160)), tsv(&crate::common::truncate(&r.stdict_def, 160)), r.rule.as_str()));
     }

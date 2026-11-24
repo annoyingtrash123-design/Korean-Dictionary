@@ -1,0 +1,24 @@
+# Chinese wording of 성어 whose CC-CEDICT headword differs from the Korean hanja (after character variants): Korean hanja -> CEDICT traditional headword.
+# Only rows whose review column says `approved...` ship (data/seongeo_zh_alias.tsv is read by src/seongeo_zh.rs); see qa/seongeo_zh_alias_review.md.
+# Columns: hanja (as in seongeo_en_equiv.tsv) | cedict (traditional headword of the SAME idiom in CC-CEDICT) | note (why it is the same idiom, confidence) | review (draft | approved... | rejected: reason).
+# Rule: the Chinese chengyu must be the same idiom (same story / image / meaning), not merely a similar one. A row whose headword is not in CEDICT simply matches nothing.
+hanja	cedict	note	review
+塞翁之馬	塞翁失馬	Same fable (the old man who lost his horse); Korean writes 之, Chinese 失. High confidence.	draft
+破竹之勢	勢如破竹	Same image (splitting bamboo); word order differs. High confidence.	draft
+烏合之卒	烏合之眾	Same idiom (a rabble like crows gathered); Korean 卒 (soldier) vs Chinese 眾 (crowd). High confidence.	draft
+三顧草廬	三顧茅廬	Same story (Liu Bei visits Zhuge Liang three times); 草廬 vs 茅廬 are the same thatched hut. High confidence.	draft
+雨後竹筍	雨後春筍	Same image (bamboo shoots / spring shoots after rain); 竹 vs 春. High confidence.	draft
+好事多魔	好事多磨	Same saying (good things are beset by obstacles); 魔 is the Korean spelling of 磨. High confidence.	draft
+桑田碧海	滄海桑田	Same idiom (the sea becomes mulberry fields); order and 碧/滄 differ. High confidence.	draft
+同苦同樂	同甘共苦	Same idiom (share joys and hardships). High confidence.	draft
+背恩忘德	忘恩負義	Same idiom (ungrateful, forgetting a benefactor). High confidence.	draft
+優柔不斷	優柔寡斷	Same idiom (indecisive); 不 vs 寡. High confidence.	draft
+錦衣還鄕	衣錦還鄉	Same idiom (return home in glory); word order differs. High confidence.	draft
+結草報恩	結草銜環	Same pair of repayment stories (knotted grass; ring in the beak); Korean keeps only the first, so the equivalence is by tradition. Medium confidence.	draft
+刮目相對	刮目相看	Same idiom (treat with new respect after a transformation); 對 vs 看. Medium-high confidence.	draft
+孤軍奮鬪	孤軍奮戰	Same idiom (fight on alone); 鬪 vs 戰. Medium-high confidence (CEDICT may also list 孤軍奮鬥, which the variant step finds first).	draft
+千態萬象	千態萬狀	Same idiom (myriad forms); 象 vs 狀. Medium-high confidence.	draft
+眼下無人	目中無人	Same idiom (looks down on everyone); 眼下 vs 目中. Medium confidence.	draft
+錦繡江山	錦繡河山	Same phrase (a splendid land); 江 vs 河. Medium confidence.	draft
+天高馬肥	秋高馬肥	Same saying (autumn: the sky is high, horses are fat); 天 vs 秋. Medium confidence.	draft
+臨機應變	隨機應變	Same idiom (adapt to circumstances); 臨 vs 隨 (CEDICT may list 臨機應變 itself, which then matches exactly first). Medium-high confidence.	draft

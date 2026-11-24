@@ -155,4 +155,5 @@ fn committed_qa_sample_is_well_formed() {
         *n.entry(f[5]).or_insert(0) += 1;
     }
     assert!(n.get("homograph").copied().unwrap_or(0) <= 60 && n.get("derived").copied().unwrap_or(0) <= 30, "{n:?}");
+    assert!(text.lines().count() <= 151);
 }

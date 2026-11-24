@@ -163,6 +163,7 @@ main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; outline: no
 .entry-meta { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-top: 0; }
 .entry-meta .hanja { font-size: 1.2em; letter-spacing: .05em; }
 .hj-link { border-bottom: 1px dotted currentColor; }
+.hanja-src { font-size: 10.5px; line-height: 1; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 2px 4px; margin-left: -6px; cursor: help; }
 .pron { color: var(--muted); font-size: .92em; }
 .iconbtn { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); padding: 0; flex: none; }
 .iconbtn:active { background: var(--surface-2); }

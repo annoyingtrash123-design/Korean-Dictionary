@@ -912,7 +912,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             stats.total(), stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_derived, t.elapsed().as_secs_f32()
         );
         fs::write(out.join("hanja_fill_report.tsv"), crate::hanja_fill::report_tsv(&records))?;
-        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 60, 60, 30))?;
+        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 150, 60, 30))?;
         fill_stats = Some(stats);
     }
 
@@ -1621,8 +1621,15 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     }
     // "Chinese & English" block of the 성어 pages: CC-CEDICT chengyu (when the source is present) + approved English equivalents
     {
-        let stats = crate::seongeo_zh::add_table(&core.path, o.sources.cedict.as_deref())?;
-        log::info!("seongeo_zh: {} rows ({} CC-CEDICT chengyu, {} English equivalents)", stats.rows, stats.zh, stats.en);
+        let uni_variants = match (&o.sources.cedict, &o.sources.unihan) {
+            (Some(_), Some(u)) => unihan::parse_variants(u).unwrap_or_else(|e| {
+                log::warn!("unihan variants failed: {e:#}");
+                HashMap::new()
+            }),
+            _ => HashMap::new(),
+        };
+        let stats = crate::seongeo_zh::add_table(&core.path, o.sources.cedict.as_deref(), uni_variants)?;
+        log::info!("seongeo_zh: {} rows ({} CC-CEDICT chengyu: {} through character variants, {} through reviewed aliases; {} English equivalents)", stats.rows, stats.zh, stats.zh_variant, stats.zh_alias, stats.en);
         if let Some(m) = core.counts.as_object_mut() {
             m.insert("seongeo_zh".into(), (stats.rows as i64).into());
         }

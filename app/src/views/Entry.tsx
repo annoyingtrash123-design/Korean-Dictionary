@@ -145,6 +145,9 @@ function Header({ primary, entries }: { primary: Entry; entries: Entry[] }) {
               : <span key={i} class="hanja">{c}</span>)}
           </span>
         )}
+        {primary.hanja && primary.data.hanja_src === 'stdict' && (
+          <span class="hanja-src" tabIndex={0} role="note" title="Hanja from 표준국어대사전, matched to this word by headword and meaning (not given by this entry's own dictionary)" aria-label="Hanja from 표준국어대사전">표준</span>
+        )}
         {primary.hanja && <UsualReading headword={primary.headword} hanja={primary.hanja} />}
         {pron && <span class="pron">[{pron}]</span>}
         <Pos pos={primary.pos} />
