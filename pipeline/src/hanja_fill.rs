@@ -777,6 +777,51 @@ pub fn suspects_tsv(v: &[Suspect]) -> String {
     out
 }
 
+// --- kengdic fallback guard ---------------------------------------------------------------------
+
+/// Same hanja regardless of compatibility ideographs (kengdic writes 不吉 with U+F967).
+pub fn same_hanja(a: &str, b: &str) -> bool {
+    use unicode_normalization::UnicodeNormalization;
+    a.nfc().eq(b.nfc())
+}
+
+/// May a core entry (definitions `defs`, POS `pos`) take kengdic's `hanja`? The inverse of the suspect
+/// test, stricter: when stdict has the word, the stdict entry carrying that hanja must be the best match
+/// of the entry's definitions (score >= [`SUSPECT_HANJA_MAX`], no native or other-hanja entry better).
+/// Without definitions it must exist and no POS-compatible native entry may. Stdict silent: allowed.
+pub fn fallback_backed(defs: &[String], pos: &str, hanja: &str, cands: &[Std]) -> bool {
+    if cands.is_empty() {
+        return true;
+    }
+    let h = strip_marks(hanja);
+    let compat: Vec<&Std> = cands.iter().filter(|c| pos_compatible(pos, &c.pos)).collect();
+    let with: Vec<&Std> = compat.iter().copied().filter(|c| c.hanja.as_deref().is_some_and(|ch| same_hanja(ch, &h))).collect();
+    if with.is_empty() {
+        return false;
+    }
+    if defs.is_empty() {
+        return !compat.iter().any(|c| c.hanja.is_none());
+    }
+    let best = |v: &[&Std]| v.iter().map(|c| defs_score(defs, &c.defs)).fold(0.0, f64::max);
+    let ws = best(&with);
+    ws >= SUSPECT_HANJA_MAX && ws >= best(&compat)
+}
+
+/// [`fallback_backed`] against the stdict pack.
+pub struct FallbackGuard(StdLookup);
+
+impl FallbackGuard {
+    pub fn open(stdict: &Path) -> Result<FallbackGuard> {
+        Ok(FallbackGuard(StdLookup::open(stdict)?))
+    }
+
+    /// `data`: the core entry's JSON (its `ko_def`s are the definitions).
+    pub fn backed(&mut self, hw_norm: &str, pos: &str, data: &str, hanja: &str) -> Result<bool> {
+        let defs = load_defs(data);
+        Ok(fallback_backed(&defs, pos, hanja, self.0.get(hw_norm)?))
+    }
+}
+
 // --- reports ------------------------------------------------------------------------------------
 
 fn tsv(s: &str) -> String {
@@ -1006,6 +1051,31 @@ mod tests {
         // the entry with the hanja matches: not suspect
         let c = [std(None, "noun", "다른 뜻."), std(Some("打撲"), "noun", "남의 잘못이나 결점을 나무라거나 핀잔함.")];
         assert!(suspect_of(&defs, "noun", "打撲", &c).is_none());
+    }
+
+    #[test]
+    fn kengdic_fallback_needs_stdict_to_back_the_hanja_for_this_meaning() {
+        let d = |s: &str| vec![s.to_string()];
+        // 매질 "whipping" is native; kengdic's only spelling is 媒質 (physics "medium")
+        let maejil = [std(None, "noun", "매로 때리는 일."), std(Some("媒質"), "noun", "어떤 파동 또는 물리적 작용을 한곳에서 다른 곳으로 옮겨 주는 매개물.")];
+        assert!(!fallback_backed(&d("매로 때리는 일."), "noun", "媒質", &maejil));
+        // 제철 "the right season" (native 제+철) vs 製鐵 iron making / 蹄鐵 horseshoe
+        let jecheol = [std(None, "noun", "알맞은 시절."), std(Some("製鐵"), "noun", "철광석을 제련하여 철을 뽑아내는 일."), std(Some("蹄鐵"), "noun", "말굽에 대어 붙이는 쇳조각.")];
+        assert!(!fallback_backed(&d("알맞은 시기나 때."), "noun", "製鐵", &jecheol));
+        // the iron-making sense takes 製鐵, but not the horseshoe's 蹄鐵
+        assert!(fallback_backed(&d("철광석을 녹여 철을 뽑아내는 일."), "noun", "製鐵", &jecheol));
+        assert!(!fallback_backed(&d("철광석을 녹여 철을 뽑아내는 일."), "noun", "蹄鐵", &jecheol));
+        // stdict has the word but not this hanja: no; stdict silent: allowed (no evidence against)
+        assert!(!fallback_backed(&d("목의 앞쪽."), "noun", "蓂", &[std(None, "noun", "목의 앞쪽."), std(Some("冪"), "noun", "같은 수를 거듭 곱하는 일.")]));
+        assert!(fallback_backed(&d("아무 뜻."), "noun", "某", &[]));
+        // compatibility ideographs (kengdic's 不吉 is U+F967 + 吉) are the same hanja
+        assert!(same_hanja("\u{F967}吉", "不吉"));
+        let bulgil = [std(None, "noun", "세차게 타오르는 불꽃."), std(Some("不吉"), "noun", "운수 따위가 좋지 아니함.")];
+        assert!(fallback_backed(&d("운수가 좋지 아니함."), "noun", "\u{F967}吉", &bulgil));
+        assert!(!fallback_backed(&d("세차게 타오르는 불의 줄기."), "noun", "\u{F967}吉", &bulgil));
+        // no definitions (wikt): only when stdict has no native entry
+        assert!(!fallback_backed(&[], "noun", "媒質", &maejil));
+        assert!(fallback_backed(&[], "noun", "製鐵", &jecheol[1..]));
     }
 
     #[test]

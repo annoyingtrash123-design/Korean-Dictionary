@@ -733,16 +733,20 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 *cnt.entry(r?).or_default() += 1;
             }
         }
-        let cands: Vec<(i64, String, String)> = {
+        let cands: Vec<(i64, String, String, String)> = {
             let mut st = conn.prepare(
-                "SELECT id, source, hw_norm FROM entries WHERE source IN ('krdict','wikt') AND hanja IS NULL AND pos='noun' AND kind='word' AND data NOT LIKE '%\"origin_note\"%'",
+                "SELECT id, source, hw_norm, data FROM entries WHERE source IN ('krdict','wikt') AND hanja IS NULL AND pos='noun' AND kind='word' AND data NOT LIKE '%\"origin_note\"%'",
             )?;
-            let rows = st.query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)))?;
+            let rows = st.query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?)))?;
             rows.collect::<std::result::Result<_, _>>()?
         };
-        let mut filled = 0;
-        for (id, source, hwn) in cands {
-            if cnt.get(&(source, hwn.clone())) != Some(&1) {
+        // kengdic often lists only the hanja homograph of a native word (매질 媒質 "beating"): when stdict is
+        // available, its entry with that hanja must be the best match of the entry's meaning
+        let mut guard = stdict.map(crate::hanja_fill::FallbackGuard::open).transpose()?;
+        let (mut filled, mut dropped) = (0, 0);
+        let mut report = String::from("headword\tsource\thanja\tverdict\n");
+        for (id, source, hwn, data) in cands {
+            if cnt.get(&(source.clone(), hwn.clone())) != Some(&1) {
                 continue;
             }
             let Some(set) = k.hanja_by_surface.get(&hwn) else { continue };
@@ -750,13 +754,27 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 continue;
             }
             let h = set.iter().next().unwrap();
-            conn.execute("UPDATE entries SET hanja=? WHERE id=?", params![h, id])?;
+            let ok = match guard.as_mut() {
+                Some(g) => g.backed(&hwn, "noun", &data, h)?,
+                None => true,
+            };
+            report.push_str(&format!("{hwn}\t{source}\t{h}\t{}\n", if ok { "kept" } else { "dropped" }));
+            if !ok {
+                dropped += 1;
+                continue;
+            }
+            let mut v: Value = serde_json::from_str(&data)?;
+            if let Some(o) = v.as_object_mut() {
+                o.insert("hanja_src".into(), "kengdic".into());
+            }
+            conn.execute("UPDATE entries SET hanja=?, data=? WHERE id=?", params![h, serde_json::to_string(&v)?, id])?;
             for ch in cjk_chars(h) {
                 conn.execute("INSERT INTO hanja_words(ch, entry_id) VALUES(?,?)", params![ch.to_string(), id])?;
             }
             filled += 1;
         }
-        log::info!("kengdic hanja fallback filled {filled} entries");
+        fs::write(out.join("hanja_kengdic_fallback.tsv"), report)?;
+        log::info!("kengdic hanja fallback filled {filled} entries ({dropped} dropped: stdict does not back the hanja for this meaning)");
     }
 
     // sentences: Tatoeba + wikt

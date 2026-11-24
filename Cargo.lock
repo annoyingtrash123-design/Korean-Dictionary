@@ -600,6 +600,7 @@ dependencies = [
  "tar",
  "tempfile",
  "toml",
+ "unicode-normalization",
  "ureq",
  "zip",
 ]
