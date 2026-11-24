@@ -903,10 +903,15 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
          WHERE source = 'krdict' AND level = 3 AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''",
     )?;
 
+    // reviewed hanja fixes (after the kengdic fallback, which set most wrong ones; before the stdict fill, which skips them)
+    let hanja_fixes = crate::hanja_fixes::HanjaFixes::builtin();
+    let n_hanja_fixes = hanja_fixes.apply(&conn)?;
+    log::info!("hanja fixes: {n_hanja_fixes} of {} applied", hanja_fixes.len());
+
     // hanja of 표준국어대사전 for krdict / kengdic entries that have none (before the hanja tables are finished)
     if let Some(sp) = stdict {
         let t = Instant::now();
-        let suspects = crate::hanja_fill::suspect_core_hanja(&conn, sp)?;
+        let suspects = crate::hanja_fill::suspect_core_hanja(&conn, sp, &hanja_fixes)?;
         fs::write(out.join("hanja_suspect_core.tsv"), crate::hanja_fill::suspects_tsv(&suspects))?;
         let ev = crate::hanja_fill::Evidence::load(&src.opendict, src.cedict.as_deref())?;
         log::info!("hanja fill evidence: opendict {} headwords, cedict {} spellings", ev.opendict.len(), ev.cedict.len());

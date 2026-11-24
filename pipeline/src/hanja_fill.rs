@@ -561,6 +561,22 @@ fn write_fill(conn: &Connection, id: i64, f: &Fill) -> Result<()> {
     Ok(())
 }
 
+/// Set (or, with `None`, remove) an entry's hanja, mark its data with `flag: true` and rebuild its `hanja_words`
+/// rows: the reviewed-fix path ([`crate::hanja_fixes`]).
+pub fn replace_hanja(conn: &Connection, id: i64, hanja: Option<&str>, flag: &str) -> Result<()> {
+    let data: String = conn.query_row("SELECT data FROM entries WHERE id = ?1", [id], |r| r.get(0))?;
+    let mut v: Value = serde_json::from_str(&data)?;
+    if let Some(o) = v.as_object_mut() {
+        o.insert(flag.into(), true.into());
+    }
+    conn.execute("UPDATE entries SET hanja = ?1, data = ?2 WHERE id = ?3", params![hanja, serde_json::to_string(&v)?, id])?;
+    conn.execute("DELETE FROM hanja_words WHERE entry_id = ?1", [id])?;
+    for ch in cjk_chars(hanja.unwrap_or("")) {
+        conn.prepare_cached("INSERT INTO hanja_words(ch, entry_id) VALUES(?1, ?2)")?.execute(params![ch.to_string(), id])?;
+    }
+    Ok(())
+}
+
 /// Fill the hanja of the (finished, not yet indexed) core pack's krdict / kengdic entries from `stdict`.
 pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, Vec<Record>)> {
     let mut sd = StdLookup::open(stdict)?;
@@ -584,7 +600,7 @@ pub fn apply(core: &Connection, stdict: &Path, ev: &Evidence) -> Result<(Stats, 
                     taken.entry(n).or_default().insert(strip_marks(h.split('/').next().unwrap_or("")));
                 }
                 None => {
-                    if (source == "krdict" || source == "kengdic") && !headword.starts_with('-') && !headword.ends_with('-') && !data.contains("\"origin_note\"") {
+                    if (source == "krdict" || source == "kengdic") && !headword.starts_with('-') && !headword.ends_with('-') && !data.contains("\"origin_note\"") && !data.contains("\"hanja_fixed\"") {
                         let defs = if source == "krdict" { load_defs(&data) } else { Vec::new() };
                         targets.push(Target { id, source, headword, pos: pos.unwrap_or_default(), defs, en: en_glosses(&data) });
                     }
@@ -720,19 +736,20 @@ pub fn suspect_of(defs: &[String], pos: &str, hanja: &str, cands: &[Std]) -> Opt
     (hs < SUSPECT_HANJA_MAX).then(|| (native.0, best_def(defs, &native.1.defs), hs, hd))
 }
 
-/// Scan every krdict entry that has its own hanja (not a fill) with [`suspect_of`]. Call before `apply`.
-pub fn suspect_core_hanja(core: &Connection, stdict: &Path) -> Result<Vec<Suspect>> {
+/// Scan every krdict entry that has its own hanja (not a fill) with [`suspect_of`], except the reviewed keep list
+/// ([`crate::hanja_fixes`]). Call before `apply`.
+pub fn suspect_core_hanja(core: &Connection, stdict: &Path, reviewed: &crate::hanja_fixes::HanjaFixes) -> Result<Vec<Suspect>> {
     let mut sd = StdLookup::open(stdict)?;
-    let mut rows: Vec<(String, String, String, String, String)> = Vec::new();
+    let mut rows: Vec<(String, String, String, String, String, String)> = Vec::new();
     {
-        let mut st = core.prepare("SELECT headword, hw_norm, hanja, pos, data FROM entries WHERE kind = 'word' AND source = 'krdict' AND hanja IS NOT NULL")?;
-        for r in st.query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?, r.get::<_, Option<String>>(3)?.unwrap_or_default(), r.get::<_, String>(4)?)))? {
+        let mut st = core.prepare("SELECT headword, hw_norm, hanja, pos, data, COALESCE(ext_id, '') FROM entries WHERE kind = 'word' AND source = 'krdict' AND hanja IS NOT NULL")?;
+        for r in st.query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?, r.get::<_, String>(2)?, r.get::<_, Option<String>>(3)?.unwrap_or_default(), r.get::<_, String>(4)?, r.get::<_, String>(5)?)))? {
             rows.push(r?);
         }
     }
     let mut out = Vec::new();
-    for (hw, n, h, pos, data) in rows {
-        if data.contains("\"hanja_src\"") || h.contains('/') {
+    for (hw, n, h, pos, data, ext_id) in rows {
+        if data.contains("\"hanja_src\"") || h.contains('/') || reviewed.is_kept(&ext_id, &h) {
             continue;
         }
         let h = strip_marks(&h);
