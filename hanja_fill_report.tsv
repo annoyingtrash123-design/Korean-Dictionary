@@ -1,0 +1,628 @@
+headword	hanja	source	pos	rule	score	core_def	stdict_def	evidence	certainty	kept
+가사	歌辭	krdict	noun	homograph	0.53	고려 말기에서 조선 초기에 나타난, 시가와 산문의 중간 형태의 문학.	조선 초기에 나타난, 시가와 산문 중간 형태의 문학. 형식은 주로 4음보의 율문(律文)으로, 3·4조 또는 4·4조를 기조로 하며, 행수(行數)에는 제한이 없다. 마지막 행이 시조의 종장과 같은 형식인 것을 정격(正格), 그렇지 않은 것을 변격(變格)이라고 한다.	def_score>=0.5	high	true
+대망	待望	krdict	noun	homograph	0.60	많은 사람들이 몹시 기다리고 바라는 것.	기다리고 바람.	def_score>=0.5	high	true
+동선	動線	krdict	noun	homograph	0.52	어떤 일을 할 때 사람이 움직이는 거리나 방향을 나타내는 선.	건축물의 내외부에서, 사람이나 물건이 어떤 목적이나 작업을 위하여 움직이는 자취나 방향을 나타내는 선.	def_score>=0.5	high	true
+범죄율	犯罪率	krdict	noun	unique	0.48	한 나라나 지역에서 일정 기간 동안 범죄가 일어난 비율.	범죄가 일어나는 비율.	def_score<0.5	low	true
+장해물	障害物	krdict	noun	unique	0.70	하려고 하는 일을 하지 못하게 막아서 방해하는 일이나 물건.	하고자 하는 일을 막아서 방해하는 일이나 물건.	def_score>=0.5	high	true
+절정기	絕頂期	krdict	noun	unique	0.72	사물의 진행이나 발전이 최고에 이른 시기.	사물의 진행이나 발전이 최고의 경지에 달한 시기.	def_score>=0.5	high	true
+회수	回數	krdict	noun	homograph	1.00	→ 횟수	→ 횟수.	def_score>=0.5	high	true
+녹반	綠礬	kengdic	other	kengdic	1.00	green vitriol; copperas, ferric sulfate, green vitriol	철의 황산염의 하나. 철을 묽은 황산에 녹여서 만든 녹색 결정 물질로, 잉크·안료·의약·매염제 따위로 쓰인다. 화학식은 FeSO4.	cedict	low	true
+다육성	多肉性	kengdic	other	kengdic	1.00	fleshiness	식물의 잎과 줄기, 열매 따위에 살이 많은 특성.	opendict	high	true
+맥아당	麥芽糖	kengdic	other	kengdic	1.00	maltose	녹말이 베타 아밀라아제의 촉매로 가수 분해가 되어 생성되는 이당류의 하나. 무색 고체이며, 물엿의 주성분이다. 화학식은 C12H22O11.	cedict	low	true
+변위	變位	kengdic	other	kengdic	1.00	malposition; (physics) displacement	물체가 위치를 바꿈. 또는 그 물체의 나중 위치와 처음 위치의 차이를 나타내는 벡터양. 크기와 방향을 가진다.	opendict	high	true
+설태	舌苔	kengdic	other	kengdic	1.00	coated (furred) tongue	혓바닥에 끼는 흰색이나 회색, 황갈색의 이끼 모양 물질.	cedict	low	true
+소변기	小便器	kengdic	other	kengdic	1.00	urinal; a urinal	오줌을 누게 만든 기구.	cedict	low	true
+압축비	壓縮比	kengdic	other	kengdic	1.00	compression ratio	내연 기관의 실린더 속에 빨아들인 혼합 가스나 공기가 피스톤에 의하여 압축되는 비율. 압축비가 높으면 엔진의 용적, 중량을 늘리지 않고 출력을 높일 수 있으나 노킹을 일으키기 쉽다.	cedict	low	true
+여순	旅順	kengdic	other	kengdic	1.00	port Arthur	→ 뤼순.	cedict	low	true
+용골	龍骨	kengdic	other	kengdic	1.00	keel	선박 바닥의 중앙을 받치는 길고 큰 재목. 이물에서 고물에 걸쳐 선체를 받치는 기능을 한다.	opendict+cedict	high	true
+유선염	乳腺炎	kengdic	other	kengdic	1.00	mastitis	젖꼭지에 생긴 상처로 화농균이 침입하여 일어나는 젖샘의 염증. 젖샘이 부어 빨개지고 통증이 심하다.	cedict	low	true
+일현금	一絃琴	kengdic	other	kengdic	1.00	monochord	길이 석 자 여섯 치가량 되는 나무에 한 가닥의 줄을 맨 현악기.	opendict	high	true
+자기권	磁氣圈	kengdic	other	kengdic	1.00	magnetosphere	대기의 최상층부에서 지구 자기의 자기장 에너지가 대기의 열운동 에너지보다 큰 부분. 이 권역의 대기는 거의 전리되어 플라스마 상태에 있다. 지상에서 80~4만 km의 대기 영역을 이른다.	cedict	low	true
+판례법	判例法	kengdic	other	kengdic	1.00	judgemade; case law	판례의 누적(累積)에 의하여 성립한, 법 규범으로서 성문화되지 아니한 법.	cedict	low	true
+화산모	火山毛	kengdic	other	kengdic	1.00	Pele's hair	화산에서 나온 유리질 용암이 날려서 머리털 모양으로 굳은 것.	cedict	low	true
+가골	假骨	kengdic	other	kengdic	1.00	callus	부러진 뼛조각의 주위에 저절로 생기는 물질.	opendict	high	true
+가근	假根	kengdic	other	kengdic	1.00	rhizoid	선태류나 조류 따위에서 자라는 뿌리 모양의 조직. 종자식물의 뿌리와 비슷하고 수분을 흡수하여 식물을 고착시키는 역할을 하며 양분을 흡수한다. 단세포 또는 한 열(列)의 세포로 이루어지는 것이 많으며 관다발이 없다.	opendict	high	true
+가종피	假種皮	kengdic	other	kengdic	1.00	aril	겉으로는 보통의 과피와 같으나 실제로는 수정 후 태(胎) 자리나 주병(珠柄)이 비대해져서 씨를 싸게 된 과피. 사철나무의 열매, 주목의 열매 따위에 있다.	cedict	low	true
+각속도	角速度	kengdic	other	kengdic	1.00	angular velocity	회전 운동을 하는 물체가 단위 시간에 움직이는 각도. 진동수에 원주율의 두 배를 곱한 것으로, 물체의 회전 속도, 회전축의 방향이나 회전 방향을 나타내는 벡터양으로 나타낸다. 단위는 라디안/초(r/s).	cedict	low	true
+각추	角錐	kengdic	other	kengdic	1.00	pyramid	모가 진 송곳.	cedict	low	true
+간섭계	干涉計	kengdic	other	kengdic	1.00	interferometer	빛의 간섭 현상을 이용하여 빛의 파장·굴절률·길이·스펙트럼의 미세 구조 따위를 정밀하게 측정하는 계기. 보통 하나의 광원(光源)에서 나오는 빛을 둘 또는 그 이상으로 나누어 제각기 다른 경로를 거치게 한 다음 다시 모았을 때에 생기는 간섭무늬를 관측한다.	opendict	high	true
+간헐	間歇	kengdic	other	kengdic	1.00	intermitence	얼마 동안의 시간 간격을 두고 되풀이하여 일어났다 쉬었다 함.	cedict	low	true
+간흡충	肝吸蟲	kengdic	other	kengdic	1.00	liver fluke	후고흡충과의 하나. 몸의 길이는 1~2.5cm이며, 납작하고 긴 나뭇잎 모양이다. 우렁이나 민물고기 따위의 중간 숙주를 거쳐 포유류의 간에 기생한다.	cedict	low	true
+갈분	葛粉	kengdic	other	kengdic	1.00	arrowroot	칡뿌리를 짓찧어 물에 담근 뒤 가라앉은 앙금을 말린 가루.	cedict	low	true
+감람산	橄欖山	kengdic	other	kengdic	1.00	olives	이스라엘 예루살렘 동쪽에 있는 해발 814미터의 산. 예수가 자주 와서 기도를 올렸으며, 그의 승천도 이 산정에서 이루어졌다고 한다. 원래는 올리브가 무성하였다고 하여 올리브산이라고도 한다.	cedict	low	true
+감람석	橄欖石	kengdic	other	kengdic	1.00	olivine	마그네슘, 철 따위를 함유한 규산염 광물. 사방 정계에 속하며, 감람녹색·흰색·회색 따위를 띤다. 빛깔이 곱고 맑은 것은 보석으로 쓴다.	cedict	low	true
+감손	減損	kengdic	other	kengdic	1.00	impairment	물품 따위가 줆. 또는 물품 따위를 줄임.	cedict	low	true
+감쇠	減衰	kengdic	other	kengdic	1.00	attenuation	힘이나 세력 따위가 줄어서 약하여짐.	opendict	high	true
+감홍	甘汞	kengdic	other	kengdic	1.00	calomel; mercurous chloride	‘염화 수은「2」’을 일상적으로 이르는 말.	cedict	low	true
+감화원	感化院	kengdic	other	kengdic	1.00	a reformatory, a penitentiary	보호 처분을 받은 청소년을 수용하여 생각과 감정을 좋은 방향으로 변화시키는 기관.	cedict	low	true
+갱의실	更衣室	kengdic	other	kengdic	1.00	changing room	→ 경의실.	cedict	low	true
+거취조	巨嘴鳥	kengdic	other	kengdic	1.00	toucan	에리다누스강자리의 서남쪽에 있는 별자리. 소마젤란은하가 속한 별자리로, 11월 초순에 자오선을 통과한다. 고도가 낮아서 우리나라에서는 보이지 않는다.	cedict	low	true
+건락소	乾酪素	kengdic	other	kengdic	1.00	casein	인단백질의 하나. 포유류의 젖 속에 들어 있는 단백질의 80%를 차지한다. 보통 우유에 산을 가한 다음 침전시켜 얻는다. 식사 대용품·의약품·접착제·인조 섬유를 만드는 데 쓴다.	cedict	low	true
+건위제	健胃劑	kengdic	other	kengdic	1.00	stomachic	위장을 튼튼하게 하는 약제. 소화액의 분비를 왕성하게 하고 위장의 운동을 촉진시켜서 소화·흡수 작용을 돕는다.	opendict	high	true
+검룡	劍龍	kengdic	other	kengdic	1.00	stegosaurus	쥐라기 후기에 살았던 공룡. 몸의 길이는 6미터, 몸무게는 1.8톤 정도로 추정된다. 머리, 꼬리, 앞다리는 짧고 등에는 큰 삼각형 모양의 골판이 있으며 꼬리에는 가시가 있다. 초식성이다.	cedict	low	true
+격벽	隔壁	kengdic	other	kengdic	1.00	bulkhead, partition wall, septum	벽을 사이에 둠.	opendict	high	true
+견인기	牽引機	kengdic	other	kengdic	1.00	a retractor	어떤 물체를 끌어당기는 기구.	opendict	high	true
+결정학	結晶學	kengdic	other	kengdic	1.00	crystallography	결정의 형태·성질·구조를 연구하는 학문. 광물학의 한 분야이다.	cedict	low	true
+겸자	鉗子	kengdic	other	kengdic	1.00	forceps; clamp	날이 서지 않은 가위 모양으로 생긴 외과 수술 기구. 조직이나 기관을 집어서 누르거나 고정하는 데에 쓴다. 분만 집게, 지혈 집게 따위가 있다.	cedict	low	true
+경동맥	頸動脈	kengdic	other	kengdic	1.00	carotid	대동맥에서 갈려 나와 목을 지나 머리나 얼굴로 피를 보내는 동맥. 속목동맥과 바깥 목동맥이 있다.	cedict	low	true
+계전기	繼電器	kengdic	other	kengdic	1.00	relay	검출된 정보를 갖고 있는 제어 전류의 유무 또는 방향에 따라 다른 회로를 여닫는 장치. 전력 시스템에 합선이나 접지 사고가 발생할 경우, 또는 절연 파괴의 원인이나 계통의 나머지 부분에 악영향을 주는 이상 상태가 생겼을 때, 이를 검출하여 차단기를 동작시켜 사고 부분을 신속히 계통에서…	cedict	low	true
+계통성	系統性	kengdic	other	kengdic	1.00	systemicity	일정한 체계에 따라 관련되어 통일된 성질.	cedict	low	true
+고적운	高積雲	kengdic	other	kengdic	1.00	altocumulus	높은 하늘에 크고 둥글둥글하게 덩어리진 구름. 보통 2~7km 높이에 나타나며 권적운에 비하여 하나하나의 구름 덩어리가 크다. 기호는 Ac.	cedict	low	true
+고전파	古典派	kengdic	other	kengdic	1.00	classical	고전주의를 신봉하는 예술 유파.	cedict	low	true
+고층운	高層雲	kengdic	other	kengdic	1.00	altostratus	층을 이루어 하늘을 덮는 잿빛 또는 푸른색을 띤 구름. 보통 2km 이상의 높이에 나타나 두껍게 발달한다. 기호는 As.	cedict	low	true
+공분모	公分母	kengdic	other	kengdic	1.00	common denominator	둘 이상의 서로 다른 분수를 크기가 변하지 않게 통분하였을 때 갖는 분모.	cedict	low	true
+공분산	共分散	kengdic	other	kengdic	1.00	covariance	둘 이상의 변량(變量)이 서로 관계를 가지며 분포하는 모양을 전체적으로 나타내는 분산.	opendict	high	true
+공액	共軶	kengdic	other	kengdic	1.00	conjugate	두 개의 점, 선, 수가 서로 특수한 관계에 있어 바꾸어 놓아도 그 성질에 변화가 없을 경우에, 그 둘의 관계를 이르는 말.	opendict	high	true
+공집합	空集合	kengdic	other	kengdic	1.00	empty set; null set	원소를 하나도 갖지 않은 집합.	opendict	high	true
+과혈당증	過血糖症	kengdic	other	kengdic	1.00	hyperglycemia	혈액 가운데 포도당이 비정상적으로 많아지는 증상. 대부분 당뇨병과 관계가 있다.	opendict	high	true
+관리도	管理圖	kengdic	other	kengdic	1.00	control chart	관리를 잘하기 위하여 필요한 사항을 적거나 그린 도표나 그래프를 통틀어 이르는 말.	opendict	high	true
+괄선	括線	kengdic	other	kengdic	1.00	vinculum	여러 개의 글자나 숫자를 다른 자와 구별하기 위하여 한데 묶는 표시로 그 위쪽에 긋는 선.	cedict	low	true
+광상곡	狂想曲	kengdic	other	kengdic	1.00	capriccio; rhapsody	일정한 형식에 구속되지 아니하고 자유로운 요소가 강한 기악곡.	cedict	low	true
+광전자	光電子	kengdic	other	kengdic	1.00	photoelectron	빛을 받은 물체에서 방출되는 자유 전자.	cedict	low	true
+괴경	塊莖	kengdic	other	kengdic	1.00	corm, tuber	덩이 모양을 이룬 땅속줄기. 땅속에 있는 줄기의 일부에 녹말 따위의 양분이 저장되어 비대한 덩이 모양을 이룬다. 감자, 토란 따위에서 볼 수 있다.	cedict	low	true
+괴근	塊根	kengdic	other	kengdic	1.00	tubercle	덩이 모양으로 생긴 뿌리. 이상 비대 생장에 의한 것으로 녹말과 같은 양분이 저장되어 있다. 고구마, 무 따위에서 볼 수 있다.	cedict	low	true
+구강염	口腔炎	kengdic	other	kengdic	1.00	trench mouth	입안 조직에 생기는 염증.	cedict	low	true
+구동륜	驅動輪	kengdic	other	kengdic	1.00	the driving wheel	축에서 전달된 회전력으로 회전축 전체를 움직이는 바퀴.	cedict	low	true
+구립운석	球粒隕石	kengdic	other	kengdic	1.00	chondrite	석질운석의 하나. 감람석, 사방 휘석 및 그 혼합물로 이루어진, 지름 수 mm 정도의 알갱이를 다수 포함한다. 지구에 떨어지는 운석의 대부분이 이 성분으로 이루어져 있는데, 태양계의 시원(始原) 물질로 여겨진다.	cedict	low	true
+국체	國體	kengdic	other	kengdic	1.00	constitution; national debt	주권이 누구에게 있느냐에 따라 나누는 나라의 형태. 군주국, 공화국 따위로 나눈다.	cedict	low	true
+군론	群論	kengdic	other	kengdic	1.00	group theory	군의 이론과 응용에 관하여 연구하는 학문. 수학의 한 분야이다.	opendict+cedict	high	true
+권운	卷雲	kengdic	other	kengdic	1.00	cirrus	푸른 하늘에 높이 떠 있는 하얀 섬유 모양의 구름. 높이 5~13km 사이, 기온 영하 20℃ 이하인 곳에 나타난다. 빙정(氷晶)이 모여 생긴 것으로서 해나 달 주위에 끼면 무리가 나타나기도 한다. 기호는 Ci.	cedict	low	true
+권층운	卷層雲	kengdic	other	kengdic	1.00	cirrostratus; stratocirrus	온 하늘을 뒤덮은 엷고 흰 면사포 모양의 구름. 높이 5~13km 사이에 나타나며 햇무리, 달무리를 잘 일으킨다.	cedict	low	true
+궤변가	詭辯家	kengdic	other	kengdic	1.00	sophister, sophist	궤변을 잘하는 사람.	cedict	low	true
+궤변술	詭辯術	kengdic	other	kengdic	1.00	sophistry	궤변을 부리는 재주나 화술.	cedict	low	true
+규산염	硅酸鹽	kengdic	other	kengdic	1.00	silicate	규산의 수소 원자가 알루미늄, 칼슘, 마그네슘, 나트륨 따위의 금속 원자와 치환된 물질. 암석이나 광물의 주성분으로, 물에 잘 녹지 않고 녹는점이 높으며, 녹은 것을 냉각하면 결정을 이루지 않고 유리로 되기 쉽다. 유리, 시멘트, 도자기 따위의 원료로 쓴다. 화학식은 XM(Ⅰ)2O·y…	cedict	low	true
+균등화	均等化	kengdic	other	kengdic	1.00	equalization	치우침이 없도록 고르게 되거나 고르게 함.	cedict	low	true
+균사	菌絲	kengdic	other	kengdic	1.00	hypha; mycelium	균류의 몸을 이루는 섬세한 실 모양의 세포. 또는 그런 세포로 된 열(列). 흰색으로 엽록소가 없으며 종(種)에 따라 일정한 모양으로 가지 나누기를 하거나 모여서 자실체를 만든다.	cedict	low	true
+극좌표	極座標	kengdic	other	kengdic	1.00	polar coordinates	평면 위의 점의 위치를, 정점(定點)으로부터의 거리와 x축과 이루는 각으로 나타내는 좌표.	cedict	low	true
+극피동물	棘皮動物	kengdic	other	kengdic	1.00	echinoderm	극피동물문의 동물을 통틀어 이르는 말.	cedict	low	true
+근류	根瘤	kengdic	other	kengdic	1.00	root nodule	세균이나 균사가 고등 식물의 뿌리에 침입하여, 그 자극으로 뿌리의 조직이 이상 발육하여 생긴 혹 모양의 조직. 주로 콩과 식물에 나타난다.	cedict	low	true
+근음	根音	kengdic	other	kengdic	1.00	radical; root	3도로 된 음정의 세 음이 3화음을 이루고 있을 때의 가장 낮은 음.	cedict	low	true
+근전도	筋電圖	kengdic	other	kengdic	1.00	electromyogram	근육의 움직임에 따라 발생하는 전류의 변화를 기록하는 그래프.	opendict	high	true
+근지점	近地點	kengdic	other	kengdic	1.00	perigee	행성의 둘레를 도는 위성의 궤도에서 행성에 가장 가까운 점.	cedict	low	true
+근호	根號	kengdic	other	kengdic	1.00	radical	거듭제곱근을 나타내는 기호. 제곱근(<img style="vertical-align: middle;" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation/popup/formula.do?latex=%5Csqrt%7B%5C%2C+%5…	cedict	low	true
+금어초	金魚草	kengdic	other	kengdic	1.00	antirrhinum; snapdragon	현삼과의 여러해살이풀. 높이는 20~80cm이며, 잎은 어긋나거나 마주나고 갸름한 피침 모양이다. 여름에서 가을까지 흰색, 붉은색, 노란색, 보라색 따위의 금붕어 입처럼 생긴 꽃이 줄기 끝에 이삭을 이루며 핀다. 관상용이며 지중해 연안이 원산지이다.	cedict	low	true
+금홍석	金紅石	kengdic	other	kengdic	1.00	rutile	이산화 타이타늄으로 이루어진 산화 광물. 정방 정계에 속하며, 기둥 모양으로 된 결정으로, 붉은 갈색, 회색, 푸른색, 검은색 따위를 띤다. 변성암이나 화성암 따위에 들어 있다.	cedict	low	true
+기관염	氣管炎	kengdic	other	kengdic	1.00	tracheitis	목에서 폐에 이르는 기관에 생기는 염증.	cedict	low	true
+기념우표	紀念郵票	kengdic	other	kengdic	1.00	commemorative	국가적으로 뜻깊은 일을 기념하기 위하여 발행하는 우표.	cedict	low	true
+기보법	記譜法	kengdic	other	kengdic	1.00	notation	음악의 연주나 발표, 보존, 학습 따위를 목적으로 일정한 약속이나 규칙에 따라 기호를 써서 악곡을 기록하는 방법.	cedict	low	true
+기숙생	寄宿生	kengdic	other	kengdic	1.00	boarder	기숙사에서 사는 학생. 또는 기숙하는 학생.	cedict	low	true
+기흉	氣胸	kengdic	other	kengdic	1.00	pneumothorax	가슴막안에 공기가 차 있는 상태. 흉부 부상 또는 결핵이나 폐렴 따위로 허파의 표면에 구멍이 생기는 것이 원인이며, 폐가 수축하여 호흡 곤란 증상이 나타난다.	cedict	low	true
+나안	裸眼	kengdic	other	kengdic	1.00	naked eye	안경을 쓰지 아니한 상태의 눈.	cedict	low	true
+나자식물	裸子植物	kengdic	other	kengdic	1.00	gymnosperm	밑씨가 씨방 안에 있지 않고 드러나 있는 식물. 가루받이 때 꽃가루가 밑씨 위에 바로 붙는다. 꽃잎은 없으며, 줄기에는 형성층이 발달하였으나 물관이 없고 헛물관을 갖는다. 소나무, 소철, 잣나무, 전나무, 은행나무 따위가 있다.	cedict	low	true
+나체주의자	裸體主義者	kengdic	other	kengdic	1.00	a nudist	알몸으로 사는 것이 자연스럽고 아름답다고 생각하며 그것을 실천하는 사람.	cedict	low	true
+난세포	卵細胞	kengdic	other	kengdic	1.00	egg cell	암컷의 생식 세포. 유성 생식을 하는 생물에서 볼 수 있는 것으로 감수 분열에 의하여 생기며, 수정 후 발달하여 배(胚)를 형성한다.	cedict	low	true
+남극권	南極圈	kengdic	other	kengdic	1.00	antarctic circle	남위 66도 33분의 지점을 이은 선. 또는 그 선 이남의 남극을 중심으로 하는 지역. 대부분 남극 대륙이며 반년 동안은 낮이, 반년 동안은 밤이 계속되고 1년에 적어도 하루는 낮뿐이거나 밤뿐인 날이 있다.	cedict	low	true
+내과학	內科學	kengdic	other	kengdic	1.00	internal medicine	내장의 기관에 생긴 병을 외과적 수술에 의하지 않고, 물리 요법이나 약으로 치료하는 학문.	cedict	low	true
+내사시	內斜視	kengdic	other	kengdic	1.00	cross-eye	사물을 볼 때 눈동자가 안쪽으로 몰리는 눈.	cedict	low	true
+내해	內海	kengdic	other	kengdic	1.00	an inland sea	육지로 둘러싸인, 육지에 가까운 바다.	cedict	low	true
+내화성	耐火性	kengdic	other	kengdic	1.00	fire resitstance	불에 타지 아니하고 잘 견디는 성질.	opendict	high	true
+냉장차	冷藏車	kengdic	other	kengdic	1.00	chill car; refrigerator car	유제품 따위를 운반하기 위하여 냉장 시설을 갖춘 차.	cedict	low	true
+녹니석	綠泥石	kengdic	other	kengdic	1.00	chlorite	철, 알루미늄, 마그네슘 따위를 함유한 함수(含水) 규산염 광물. 단사 정계(單斜晶系)에 속하며, 비늘같이 생긴 얇은 조각으로 된 녹색 결정으로서, 결정 편암(結晶片巖)이나 운모 편암(雲母片巖) 속에 들어 있다. 화성암 속의 각섬석(角閃石)이나 흑운모의 변질에 의해 이루어진다.	cedict	low	true
+녹로	轆轤	kengdic	other	kengdic	1.00	potters wheel; roller	높은 곳이나 먼 곳으로 무엇을 달아 올리거나 끌어당길 때 쓰는 도르래.	cedict	low	true
+농가진	膿痂疹	kengdic	other	kengdic	1.00	impetigo	살갗에 고름집이 생겨서 나온 고름이 말라 굳어진 딱지.	cedict	low	true
+농민당	農民黨	kengdic	other	kengdic	1.00	country Party	농민의 이해관계를 대변하는 정당.	cedict	low	true
+농작	農作	kengdic	other	kengdic	1.00	farming	농사를 지음.	cedict	low	true
+농후	濃厚	kengdic	other	kengdic	1.00	grossness, thickness (of color/flavor/ingredients)	‘농후하다’의 어근.	cedict	low	true
+뇌룡	雷龍	kengdic	other	kengdic	1.00	brontosaurus	용반류의 공룡. 몸의 길이는 20~25미터, 몸무게는 32.5톤으로 추정되며, 중생대 쥐라기에 번성하였다. 머리가 작고 몸통은 크며, 꼬리는 끝 쪽에서 회초리처럼 가느다랗게 되어 있다. 물가에서 수생 식물을 먹고 살았을 것으로 추정하고 있으나, 육상에서 생활했을 것이라는 설도 있다.…	cedict	low	true
+뇌막	腦膜	kengdic	other	kengdic	1.00	meninges; meninx	머리뼈안에 뇌를 싸고 있는 얇은 껍질.	cedict	low	true
+뇌막염	腦膜炎	kengdic	other	kengdic	1.00	brain fever; meningitis	수막의 염증. 열이 나며, 뇌척수액의 압력이 올라가기 때문에, 심한 두통·구역질·목이 뻣뻣해지는 증상이 나타난다.	cedict	low	true
+뇌일혈	腦溢血	kengdic	other	kengdic	1.00	apoplexy; cerebral hemorrhage	‘뇌내출혈’의 전 용어.	cedict	low	true
+다식증	多食症	kengdic	other	kengdic	1.00	polyphagia	식욕이 병적으로 높아져서 음식을 아무리 먹어도 배부르지 아니하여 지나치게 많이 먹는 증상. 지적 장애인에게서 많이 볼 수 있다.	opendict	high	true
+다항식	多項式	kengdic	other	kengdic	1.00	multinomial; polynomial	두 개 이상의 항을 ‘+’, ‘－’로 결합한 식. 예를 들면 a+b, 2ax+3by－4cz 따위가 있다.	cedict	low	true
+단백석	蛋白石	kengdic	other	kengdic	1.00	opal	비결정질이나 그에 가까운 함수 규산염 광물. 표면은 콩팥 또는 종 모양이고 진주 광택을 내며, 흔히 흰색 또는 무색이나 누런색, 붉은색, 초록색, 푸른색, 갈색 따위의 색을 띤 것도 있다. 이 가운데 붉은 남색을 띤 것은 보석으로 장식에 사용한다.	cedict	low	true
+단층선	斷層線	kengdic	other	kengdic	1.00	fault line	단층면이 지표면과 만나는 선.	cedict	low	true
+단항식	單項式	kengdic	other	kengdic	1.00	monomial	한 개의 항으로 이루어진 식. 숫자와 몇 개의 문자의 곱으로만 이루어진다. ‘<img style="vertical-align: middle;" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation/popup/formula.do?la…	cedict	low	true
+대양주	大洋洲	kengdic	other	kengdic	1.00	oceania	육대주의 하나. 멜라네시아, 미크로네시아, 폴리네시아, 오스트레일리아, 뉴질랜드를 포함하는 섬과 대륙으로 이루어져 있다.	cedict	low	true
+대운하	大運河	kengdic	other	kengdic	1.00	grand Canal	배의 운항을 위하여 육지에 파 놓은 큰 물길.	cedict	low	true
+대위법	對位法	kengdic	other	kengdic	1.00	counterpoint; polyphony	건축, 문학, 영화 따위에서 두 개의 대위적 양식이나 주제 따위를 결합시켜 작품을 만드는 기법.	opendict	high	true
+대초원	大草原	kengdic	other	kengdic	1.00	a prairie, a savanna, a steppe	넓고 큰 초원.	cedict	low	true
+독점자	獨占者	kengdic	other	kengdic	1.00	monopolost; monopoly	독점하는 사람.	opendict	high	true
+동맥류	動脈瘤	kengdic	other	kengdic	1.00	aneurysm	동맥벽이 손상되거나 이상을 일으켜 동맥 내부 공간의 일부분이 늘어나 혹처럼 불룩해지는 병. 동맥 경화증, 매독, 외상 따위가 원인이 되는데 가슴의 대동맥에서 가장 흔히 볼 수 있다.	cedict	low	true
+동시성	同時性	kengdic	other	kengdic	1.00	simultaneity, synchronicity, synchronism	시간적 간격을 초월하여 종교적 실존이나 순환하는 문화 현상이 영원한 곳에서 되풀이되거나 대면하는 일. 키르케고르의 기독교 사상에 있어서 가장 중요한 개념의 하나로, 그리스도와 기독교 신자가 역사의 시간을 넘어서 동시에 결부되는 것과 같은 현상을 이른다.	opendict	high	true
+동정자	同情者	kengdic	other	kengdic	1.00	sympathizer	동정하는 사람.	cedict	low	true
+두개	頭蓋	kengdic	other	kengdic	1.00	couple; cranium	척추동물의 머리를 이루는 뼈를 통틀어 이르는 말. 사람의 경우 뇌를 싸는 마루뼈, 이마뼈, 벌집뼈, 나비뼈, 뒤통수뼈, 관자뼈와 얼굴을 이루는 코뼈, 눈물뼈, 광대뼈, 위턱뼈, 아래턱뼈, 입천장뼈, 보습뼈, 코선반뼈 등이 있다.	cedict	low	true
+두흉부	頭胸部	kengdic	other	kengdic	1.00	cephalothorax	머리와 가슴을 아울러 이르는 말.	cedict	low	true
+등시성	等時性	kengdic	other	kengdic	1.00	isochronism	주기 운동의 주기가 진폭에 관계없이 일정한 성질. 단진자는 변위하는 각이 적을 때에는 근사적으로 등시성을 갖고, 사이클로이드 진자는 완전한 등시성이다.	opendict	high	true
+등심초	燈心草	kengdic	other	kengdic	1.00	rush	골풀과의 여러해살이풀. 높이는 1미터 정도이고 땅속줄기는 옆으로 뻗으며, 잎은 줄기 아랫부분에 비늘 모양으로 붙어 있다. 5~6월에 녹빛을 띤 노란색 꽃이 취산(聚繖) 화서로 줄기 끝에 피고, 열매는 삭과(蒴果)를 맺는다. 말린 줄기는 약재(藥材)나 자리를 만드는 데 쓴다. 들의 물가…	cedict	low	true
+등압선	等壓線	kengdic	other	kengdic	1.00	isobar, line of equal pressure	일기도에서 기압이 같은 지점을 연결하여 이은 선. 고기압이나 저기압의 분포를 나타내기 위한 것으로 보통 4밀리바(mb) 간격으로 그린다.	cedict	low	true
+등차급수	等差級數	kengdic	other	kengdic	1.00	arithmetic series	서로 이웃하는 항의 차가 일정한 급수. 1+3+5+7+9+……, 2+4+6+8+…… 따위가 있다.	cedict	low	true
+등차수열	等差數列	kengdic	other	kengdic	1.00	arithmetic progression	서로 이웃하는 두 항 사이의 차(差)가 일정한 수열. 1, 3, 5, 7, 9,…… 따위가 있다.	cedict	low	true
+등편각선	等偏角線	kengdic	other	kengdic	1.00	isogonic	자기(磁氣) 자오선의 방위각이 같은 여러 개의 지점을 지도 위에 이은 선.	opendict	high	true
+마손	磨損	kengdic	other	kengdic	1.00	attrition; wear	마찰에 의하여 쓸리어 닳음.	cedict	low	true
+마전자	馬錢子	kengdic	other	kengdic	1.00	nux vomica	마전의 씨. 회색을 띤 누런빛의 원판형(圓板形)으로 생겼으며, 스트리크닌(strychnine)과 브루신의 알칼로이드 성분을 함유하고 있어 혈관 마비 따위를 치료하는 데 쓴다.	cedict	low	true
+만범	滿帆	kengdic	other	kengdic	1.00	full sail	‘만범하다’의 어근.	cedict	low	true
+만초	蔓草	kengdic	other	kengdic	1.00	trailer; trailing plant	덩굴이 뻗는 풀.	cedict	low	true
+망점	網點	kengdic	other	kengdic	1.00	dot pattern	스크린에 나타나는 그물코 모양의 점.	cedict	low	true
+맥각	麥角	kengdic	other	kengdic	1.00	ergot	호밀이나 보리 따위의 씨방에 밀생한 맥각균의 균사를 말린 것. 자흑색의 뿔 모양이며, 단단하고 독이 있다.	cedict	low	true
+맥관	脈管	kengdic	other	kengdic	1.00	vas, vessel	동물의 몸속에서 액체가 흐르는 관. 혈관과 림프관을 이른다.	cedict	low	true
+맥락막	脈絡膜	kengdic	other	kengdic	1.00	choroid	눈알의 뒷부분을 둘러싸고 있는 어두운 적갈색의 얇은 막. 혈관과 색소 세포가 많아 빛을 차단하여 눈알 속을 어둠상자같이 해 주며, 눈알의 영양 공급을 담당한다.	cedict	low	true
+맥압	脈壓	kengdic	other	kengdic	1.00	pulse pressure	‘맥박압’의 전 용어.	cedict	low	true
+맹약	盟約	kengdic	other	kengdic	1.00	a covenant, a treaty; a coven of people bound together, a league	굳게 맹세한 약속.	cedict	low	true
+멱급수	冪級數	kengdic	other	kengdic	1.00	power series	‘<img style="vertical-align: middle;" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation/popup/formula.do?latex=a_%7B0%7D%2Ba_%7B1%7Dx%2Ba_%7B2%7Dx%5E…	cedict	low	true
+명세표	明細表	kengdic	other	kengdic	1.00	schedule	물품이나 금액 따위의 분명하고 자세한 내용을 적은 표.	cedict	low	true
+모항	母港	kengdic	other	kengdic	1.00	home port	어떤 배의 근거지가 되는 항구.	cedict	low	true
+모험주의	冒險主義	kengdic	other	kengdic	1.00	adventurism	객관적인 조건을 무시하고 우연적인 성공을 바라고 행동하는 경향이나 주의.	cedict	low	true
+목불식정	目不識丁	kengdic	other	kengdic	1.00	(see/not/recognize/rake = you see a rake and do not recognize it as being a rake) being super, super stupid. 아주 무시함.	아주 간단한 글자인 ‘丁’ 자를 보고도 그것이 ‘고무래’인 줄을 알지 못한다는 뜻으로, 아주 까막눈임을 이르는 말.	cedict	low	true
+목질부	木質部	kengdic	other	kengdic	1.00	xylem	속씨식물의 관다발 가운데 물관, 헛물관, 목부 유조직, 목질 섬유 따위가 집합한 조직. 주로 수분의 통로가 되고 식물체를 지탱해 준다.	cedict	low	true
+목질소	木質素	kengdic	other	kengdic	1.00	lignify	목재, 대나무, 짚 따위의 목화(木化)한 식물체 속에 20~30% 존재하는 방향족 고분자 화합물. 세포를 서로 달라붙게 하는 구실을 하는데 이것이 축적되면 세포 분열이 멈추고 단단한 조직으로 된다. 바닐린의 제조 원료이다.	cedict	low	true
+무뇌증	無腦症	kengdic	other	kengdic	1.00	anencephaly	뇌가 없는 선천 기형.	opendict	high	true
+무한소	無限小	kengdic	other	kengdic	1.00	infinitesimal	더할 수 없이 작음.	cedict	low	true
+물권	物權	kengdic	other	kengdic	1.00	interest; real rights	특정한 물건을 직접 지배하여 이익을 얻을 수 있는 배타적 권리. 점유권, 소유권, 지상권, 지역권, 전세권, 유치권, 질권, 저당권 따위이다.	cedict	low	true
+미래파	未來派	kengdic	other	kengdic	1.00	futurism	전통을 부정하고 힘찬 약동감과 속도감을 표현하려 한 미래주의를 신봉한 유파.	cedict	low	true
+미익	尾翼	kengdic	other	kengdic	1.00	empennage; tail unit	비행기의 안정을 유지하고 방향을 바꾸는 구실을 하는 비행기의 꼬리 부분. 수평 안전판, 수직 안전판, 방향키, 승강키 따위로 이루어져 있다.	cedict	low	true
+밀도계	密度計	kengdic	other	kengdic	1.00	densimeter	물질의 밀도를 재는 계기.	cedict	low	true
+박하뇌	薄荷腦	kengdic	other	kengdic	1.00	menthol	모노테르펜에 속하는 알코올. 무색의 고체로, 박하유를 증류하여 냉각하면 고체가 석출되는데 이를 정제하여 얻는다. 향기가 독특하고 맛이 시원하며 신경통, 위통, 천식, 결핵 따위의 약재나 입안 향료로 쓴다. 화학식은 C10H20O.	cedict	low	true
+반보석	半寶石	kengdic	other	kengdic	1.00	semipostal stone	보석류 가운데 비교적 값이 싼 것. 수정, 황옥석, 월장석, 터키옥, 석류석, 지르콘 따위가 있다.	cedict	low	true
+반사광	反射光	kengdic	other	kengdic	1.00	reflection, -flexion, reflex, reverberation	한 매질에서 진행하던 광선이 다른 매질과의 경계면에서 반사하여 되돌아가는 광선.	cedict	low	true
+반사면	反射面	kengdic	other	kengdic	1.00	reflector	빛을 받아 반사하는 면.	cedict	low	true
+반사호	反射弧	kengdic	other	kengdic	1.00	reflex arc	특정한 반사에 관여하는 신경의 경로. 수용기를 출발한 흥분이 들신경을 거쳐 반사 중추에 도달한 뒤, 되돌아서 날신경을 거쳐 효과기에 이르는 모든 과정을 이른다.	cedict	low	true
+반월	半月	kengdic	other	kengdic	1.00	half a month	반원형의 달.	cedict	low	true
+반축	半軸	kengdic	other	kengdic	1.00	semiaxis	일직선 위에 놓여 있으면서 각각 다른 속도로 돌아갈 수 있게 두 부분으로 끊어져 있는 축.	cedict	low	true
+발연탄	發煙彈	kengdic	other	kengdic	1.00	smoke bomb	폭발하면 짙은 연기를 내뿜도록 되어 있는 폭탄. 사람의 시야를 일시적으로 가릴 목적으로 쓴다.	cedict	low	true
+발의권	發議權	kengdic	other	kengdic	1.00	the right of initiative	의안을 의회에 제출할 수 있는 권리. 법률안에 대한 것은 정부와 국회 의원에게 있으며, 예산안과 조약안에 대한 것은 정부에 있다.	opendict	high	true
+방선균	放線菌	kengdic	other	kengdic	1.00	actinomyces	흙 속이나 마른풀 따위에 기생하는, 세균과 곰팡이의 중간적 성질을 가진 미생물. 균사(菌絲)와 같은 것을 사방으로 내놓으면서 퍼진다.	cedict	low	true
+방해석	方解石	kengdic	other	kengdic	1.00	calcite	탄산 칼슘을 주성분으로 하는 탄산염(炭酸鹽) 광물. 삼방 정계에 속하며 순수한 것은 무색투명하지만 불순물이 들어 있으면 붉은색, 누런색, 녹색, 푸른색 따위를 띠기도 한다. 광선을 복굴절(複屈折)시키는 성질이 매우 높아서 편광기(偏光器) 따위의 광학 기구를 만드는 데에 쓴다.	cedict	low	true
+배증	倍增	kengdic	other	kengdic	1.00	doubling	갑절로 늘어남. 또는 갑절로 늘림.	cedict	low	true
+배출관	排出管	kengdic	other	kengdic	1.00	escape pipe	분비물을 밖으로 내보내는 관.	opendict	high	true
+백류석	白榴石	kengdic	other	kengdic	1.00	leucite	산화 칼륨을 특히 많이 함유한 알칼리 현무암 속에서 나는 규산염 광물. 등축 정계에 속하며 흰색 또는 회색을 띤다.	cedict	low	true
+백리향	百里香	kengdic	other	kengdic	1.00	thyme	꿀풀과의 낙엽 활엽 관목. 줄기는 덩굴지고 향기가 있으며, 잎은 마주나고 무딘 피침 모양으로 톱니가 있고 가는 털이 나 있다. 여름에 입술 모양의 붉은 자주색 꽃이 윤산(輪繖) 화서로 피고 열매는 핵과(核果)로 가을에 어두운 갈색으로 익는다. 화초로 가꾸고 줄기의 잎은 약재 또는 소스…	cedict	low	true
+백운모	白雲母	kengdic	other	kengdic	1.00	muscovite	칼륨, 알루미늄 따위를 함유한 규산염 광물. 단사 정계에 속하며, 색이 없거나 아주 연하되 진주나 비단 광택이 있다. 페그마타이트나 변성암 따위에서 나며, 전기 절연체나 내열 보온 재료로 쓴다.	cedict	low	true
+백운석	白雲石	kengdic	other	kengdic	1.00	dolomite	백색 또는 무색의 탄산염 광물.	cedict	low	true
+범죄학	犯罪學	kengdic	other	kengdic	1.00	criminology	범죄의 원인, 성질 따위를 인류학적 또는 사회학적으로 연구하는 학문.	cedict	low	true
+벽개	劈開	kengdic	other	kengdic	1.00	cleavage	쪼개져서 갈라짐.	cedict	low	true
+변곡점	變曲點	kengdic	other	kengdic	1.00	infection point	굴곡의 방향이 바뀌는 자리를 나타내는 곡선 위의 점.	opendict	high	true
+변량	變量	kengdic	other	kengdic	1.00	fluent; variate	주어진 조건에 따라 변화하는 양.	cedict	low	true
+보수당	保守黨	kengdic	other	kengdic	1.00	conservative Party	보수주의를 지지하는 정당. 또는 보수적인 정책을 내세우는 정당.	cedict	low	true
+보측	步測	kengdic	other	kengdic	1.00	pacing	거리 따위를 걸음의 수로 대충 잼.	cedict	low	true
+보표	譜表	kengdic	other	kengdic	1.00	stave	악보를 그리기 위하여 가로로 그은 다섯 줄.	cedict	low	true
+복령	茯苓	kengdic	other	kengdic	1.00	tuckahoe	구멍장이버섯과의 버섯. 공 모양 또는 타원형의 덩어리로 땅속에서 소나무 따위의 뿌리에 기생한다. 껍질은 검은 갈색으로 주름이 많고 속은 엷은 붉은색으로 무르며, 마르면 딱딱해져서 흰색을 나타낸다. 이뇨의 효과가 있어 한방에서 수종(水腫), 임질, 설사 따위에 약재로 쓰인다. 한국, 일…	cedict	low	true
+복사계	輻射計	kengdic	other	kengdic	1.00	radiometer	방사선의 세기를 재는 계기.	cedict	low	true
+복사지	複寫紙	kengdic	other	kengdic	1.00	copying paper; tracing paper	복사를 뜨는 데 쓰는 종이라는 뜻으로, ‘먹지02’를 이르는 말. 한쪽 또는 양쪽 면에 묻기 쉬운 먹칠을 한 얇은 종이로, 그 위에나 밑에 종이를 겹쳐 대고 골필 또는 철필로 눌러쓴다.	cedict	low	true
+봉헌	奉獻	kengdic	other	kengdic	1.00	consecration; sanctification	물건을 받들어 바침.	cedict	low	true
+부갑상선	副甲狀腺	kengdic	other	kengdic	1.00	parathyroid gland	‘부갑상샘’의 전 용어.	opendict+cedict	high	true
+부동항	不凍港	kengdic	other	kengdic	1.00	open port	일 년 내내 해면이 얼지 않는 항구. 겨울에 해면 동결 지역에 있으면서도 난류의 영향으로 해면이 얼지 않는다.	cedict	low	true
+북극광	北極光	kengdic	other	kengdic	1.00	merry dancers; aurora borealis	북극 지방에서 볼 수 있는 발광(發光) 현상. 빛은 약할 때에는 희게 보이지만, 강할 때에는 빨강과 초록의 아름다운 색을 보인다.	cedict	low	true
+북해	北海	kengdic	other	kengdic	1.00	north Sea	영국과 유럽 대륙의 벨기에, 네덜란드, 독일, 덴마크, 노르웨이 등에 둘러싸인 대서양 연해. 세계 3대 어장의 하나로 청어와 대구가 많이 잡힌다. 면적은 57만 5000㎢, 평균 심도는 94미터.	cedict	low	true
+분망	奔忙	kengdic	other	kengdic	1.00	rush	매우 바쁨.	cedict	low	true
+분열식	分列式	kengdic	other	kengdic	1.00	a ceremonial march, marching past	부대나 차량 따위가 대형을 갖추어 사열단 앞을 행진하면서 경례하는 의식.	cedict	low	true
+분자식	分子式	kengdic	other	kengdic	1.00	molecular formula	분자 하나에 들어 있는 각 원소의 종류와 개수를 나타내는 화학식. 물의 분자식은 ‘H2O’, 이산화 탄소의 분자식은 ‘CO2’ 따위로 나타낸다.	cedict	low	true
+분책	分冊	kengdic	other	kengdic	1.00	fascicle; partwork	하나의 책을 둘 이상의 여러 권으로 나누어 제본함. 또는 그렇게 만든 책.	cedict	low	true
+불변량	不變量	kengdic	other	kengdic	1.00	invariable	어떤 문제를 생각하는 테두리 안에서 일정한 값을 가지는 변하지 않는 양.	opendict+cedict	high	true
+불협화	不協和	kengdic	other	kengdic	1.00	discordance, disharmony, dissonance	잘 어울리지 아니함. 또는 그 사이가 좋지 아니함.	opendict	high	true
+비막	飛膜	kengdic	other	kengdic	1.00	patagium	조류를 제외한, 활공 또는 비행을 행하는 척추동물에서 주로 앞다리, 몸 쪽, 뒷다리에 걸쳐 쳐진 막. 박쥐류, 하늘다람쥐류에 있다.	cedict	low	true
+비행갑판	飛行甲板	kengdic	other	kengdic	1.00	flight deck; flying deck	활주로로 쓰는 항공 모함의 갑판.	cedict	low	true
+빈객	賓客	kengdic	other	kengdic	1.00	guest	귀한 손님.	cedict	low	true
+사문석	蛇紋石	kengdic	other	kengdic	1.00	serpentine	마그네슘을 함유한 함수 규산염(含水硅酸鹽) 광물. 단사 정계에 속하며, 감람석이나 휘석이 물과 반응하여 변질하여 생긴다. 주로 초록색을 띠나, 붉은색·노란색·검은색 따위가 섞여 있으며, 연마할 때 광택이 나면서 뱀 껍질 같은 무늬가 나타난다. 장식 석재나 석면을 만드는 데에 쓴다.	cedict	low	true
+사순절	四旬節	kengdic	other	kengdic	1.00	lent	부활 주일 전 40일 동안의 기간. 이 기간 동안 교인들은 광야에서 금식하고 시험받은 그리스도의 수난을 되살리기 위하여 단식과 속죄를 행한다.	cedict	low	true
+사오정	沙悟淨	kengdic	other	kengdic	1.00	sb who just doesn't get what you are saying	중국 명대의 장편 소설 ≪서유기≫에 나오는 괴물의 이름. 손오공, 저팔계와 함께 삼장(三藏)을 따라 천축으로 간다.	cedict	low	true
+사장석	斜長石	kengdic	other	kengdic	1.00	plagioclase	나트륨, 칼슘, 알루미늄을 주성분으로 하는 규산염 광물. 삼사 정계에 속하며, 조장석과 회장석 따위의 여러 가지 장석이 섞여 있다. 주로 화성암에서 발견되며 회색 또는 흰색을 띤다.	cedict	low	true
+사회당	社會黨	kengdic	other	kengdic	1.00	socialism	자본주의의 극복과 사회주의의 실현을 목적으로 하는 정당.	cedict	low	true
+삼첩기	三疊紀	kengdic	other	kengdic	1.00	the Triassic Period	중생대의 첫 시대. 약 2억 4500만 년 전부터 약 2억 1000만 년 전까지의 시기이다. 파충류, 암모나이트, 겉씨식물이 번성하고 포유류가 나타났다.	cedict	low	true
+삼출물	滲出物	kengdic	other	kengdic	1.00	exudate, exudation	안에서 밖으로 스며 나온 물질.	cedict	low	true
+삼항식	三項式	kengdic	other	kengdic	1.00	trinomial	세 개의 항으로 된 수식.	cedict	low	true
+상염색체	常染色體	kengdic	other	kengdic	1.00	autosome	생물의 염색체 가운데 성염색체가 아닌 보통 염색체.	cedict	low	true
+상피병	象皮病	kengdic	other	kengdic	1.00	elephantiasis	열대, 아열대 지방에 많은 풍토병의 하나. 사상충(絲狀蟲)이나 그 밖에 세균의 감염으로 인하여 피부와 피부밑 조직에 림프가 정체하며 결합 조직이 증식하여 환부가 부풀어 오르고 딱딱해져 코끼리의 피부처럼 되는 병으로, 다리·음낭(陰囊)·여자의 바깥 생식 기관에서 많이 볼 수 있다.	cedict	low	true
+색소체	色素體	kengdic	other	kengdic	1.00	a chromatophore, a plastid	식물 세포에 들어 있는 색소를 함유하는 세포 소기관. 핵산을 함유하며 색소 합성이나 자기 증식을 한다. 엽록체, 백색체, 잡색체로 나눈다.	cedict	low	true
+생물량	生物量	kengdic	other	kengdic	1.00	biomass	어느 지역 내에 생활하고 있는 생물의 현존량. 중량, 에너지양으로 나타낸다.	cedict	low	true
+생식선	生殖腺	kengdic	other	kengdic	1.00	germen, gonad	배우자를 형성하는 기관. 수컷에서는 정소, 암컷에서는 난소를 말하는데, 척추동물이 이곳에서 성호르몬을 분비하기 때문에 이 이름이 붙게 되었다.	cedict	low	true
+서판	書板	kengdic	other	kengdic	1.00	table; tablet	글씨를 쓸 때에, 종이 밑에 받치는 널조각.	cedict	low	true
+석뇌유	石腦油	kengdic	other	kengdic	1.00	naphtha	150~220℃에서 증류하여 얻는 중질의 가솔린.	cedict	low	true
+석죽	石竹	kengdic	other	kengdic	1.00	pink	석죽과의 여러해살이풀. 높이는 30cm 정도이며, 잎은 마주나고 선 모양 또는 피침 모양이다. 6~8월에 진분홍색 꽃이 가지 끝에 하나씩 피고 열매는 삭과(蒴果)를 맺는다. 관상용이고 꽃은 전초와 함께 약용한다.	cedict	low	true
+선택성	選擇性	kengdic	other	kengdic	1.00	selectivity	화학 반응에서, 어떤 물질이 여러 물질 중에서 특정의 물질만을 선택하여 반응하는 경향.	opendict+cedict	high	true
+설하선	舌下腺	kengdic	other	kengdic	1.00	sublingual	혀 아래 점막의 밑에 있는 침샘.	cedict	low	true
+섬광등	閃光燈	kengdic	other	kengdic	1.00	flashlight	섬광 신호에 쓰는 등. 등대의 신호용이나 사진 촬영 따위에 쓴다.	cedict	low	true
+성층	成層	kengdic	other	kengdic	1.00	stratification, bedding	층을 이룸. 또는 그 층.	cedict	low	true
+성홍열	猩紅熱	kengdic	other	kengdic	1.00	scarlet fever, scarlatina	용혈성(溶血性)의 연쇄상 구균에 의한 법정(法定) 급성 전염병의 하나. 흔히 가을부터 겨울 사이에 어린이에게 유행하는 병으로, 갑자기 고열이 나고 구토를 일으키며, 두통·인두통(咽頭痛)·사지통(四肢痛)·오한이 있고 얼굴이 짙은 다홍빛을 띠면서 피부에 발진이 나타나는데, 관절 류머티즘·…	cedict	low	true
+세포벽	細胞壁	kengdic	other	kengdic	1.00	the cell wall	식물 세포의 가장 바깥쪽에 있는 튼튼한 피막. 셀룰로스, 펙틴을 주성분으로 하는 후형질로서 세포를 보호하고 그 형상을 유지한다.	cedict	low	true
+소기후	小氣候	kengdic	other	kengdic	1.00	microclimate	좁은 범위 안에 나타나는 기후. 보통, 수평적으로는 10km, 수직적으로는 1km의 범위 안에 있는 기후 현상을 이른다.	cedict	low	true
+소석회	消石灰	kengdic	other	kengdic	1.00	calcium hydroxide; slaked lime	산화 칼슘에 물을 가하여 얻는 흰색의 염기성 가루. 물에 약간 녹아서 석회수가 생기며 소독제, 산성 토양의 중화제, 표백분의 원료, 회반죽, 모르타르의 재료 따위로 쓰인다. 화학식 Ca(OH)2.	cedict	low	true
+소이탄	燒夷彈	kengdic	other	kengdic	1.00	fire ball, fire bomb, incendiary	소이제를 써서 목표물을 불살라 없애는 데 쓰는 포탄이나 폭탄.	cedict	low	true
+쇠미	衰微	kengdic	other	kengdic	1.00	decadence, declination, fall, wane	쇠잔하고 미약함.	cedict	low	true
+수경법	水耕法	kengdic	other	kengdic	1.00	aquiculture, hydroponics, tray agriculture	생장에 필요한 양분을 녹인 배양액만으로 식물을 재배하는 방법.	cedict	low	true
+수난자	受難者	kengdic	other	kengdic	1.00	sufferer	견디기 힘든 어려움을 당한 사람.	cedict	low	true
+수란관	輸卵管	kengdic	other	kengdic	1.00	fallopian tube; oviduct	배란된 난자를 자궁 쪽으로 내려보내는 한 쌍의 관. 길이는 약 10cm, 지름은 0.7cm이며 안쪽으로 자궁벽을 뚫고 자궁안으로 열려져 있다.	cedict	low	true
+수량화	數量化	kengdic	other	kengdic	1.00	to quantifie and count things	지능, 생활 수준, 사회적 태도처럼 수량으로 직접 나타내기 어려운 현상에 대하여 간접적으로 수량을 부여함.	opendict	high	true
+수력학	水力學	kengdic	other	kengdic	1.00	hydraulics	액체, 특히 물의 역학적 성질을 공학에 응용하기 위하여 연구하는 학문.	cedict	low	true
+수정관	輸精管	kengdic	other	kengdic	1.00	seminiferous tubes; vas deferens	정소(精巢)에서 만든 정자를 정낭(精囊)으로 내보내는 가늘고 긴 관. 포유류·조류·파충류 따위에서는 정충만을 나르지만, 양서류·어류에서는 수뇨관을 겸한다.	cedict	low	true
+시봉	侍奉	kengdic	other	kengdic	1.00	serve one's parents faithfully	모시어 받듦.	cedict	low	true
+시산표	試算表	kengdic	other	kengdic	1.00	trial balance; work sheet	복식 부기에서, 원장에 올린 것의 정확성을 검산하는 표. 일정한 시점에 각 계정의 원장을 마감하여 대차의 합계나 잔액을 셈하고 이를 한데 모아 정리할 경우 대변과 차변의 합계가 같아야 원장의 기록에 틀림이 없음을 알 수 있다.	cedict	low	true
+시신세	始新世	kengdic	other	kengdic	1.00	eocene	지질 시대의 신생대 제3기를 다섯으로 나눈 가운데 두 번째에 해당하는 시대. 기후는 온난·습윤하였고 산림이 우거져서 석탄층이 많이 퇴적하였다.	cedict	low	true
+식객	食客	kengdic	other	kengdic	1.00	freeloader, sponger	예전에, 세력 있는 대갓집에 얹혀 있으면서 문객 노릇을 하던 사람.	cedict	low	true
+신결석	腎結石	kengdic	other	kengdic	1.00	renal calculus	콩팥에 오줌 속의 염류의 결정 또는 결석이 생기는 질환. 발작성의 복통이 때때로 일어나며 혈뇨와 돌을 배설하게 되는데, 육식을 잘하는 노인에게는 요산 염석(尿酸鹽石)이, 채식을 하는 어린아이에게는 수산 염석(蓚酸鹽石)이 흔히 발생한다.	opendict	high	true
+신경과민	神經過敏	kengdic	other	kengdic	1.00	the jitters, nervousness, to be nervy; being over-sensitive	미약한 자극에도 민감한 반응을 보이는 신경 계통의 불안정한 상태.	cedict	low	true
+신경병	神經病	kengdic	other	kengdic	1.00	neuropathy	신경 계통과 관련되는 여러 가지 질병을 통틀어 이르는 말. 신경증, 정신병을 비롯하여 뇌중풍, 신경통, 척수염 따위가 있다.	cedict	low	true
+신사상	新思想	kengdic	other	kengdic	1.00	new Thought	새로운 사상.	cedict	low	true
+신염	腎炎	kengdic	other	kengdic	1.00	nephritis	‘콩팥염’의 전 용어.	cedict	low	true
+신우염	腎盂炎	kengdic	other	kengdic	1.00	pyelitis	콩팥 깔때기의 염증.	cedict	low	true
+실달다	悉達多	kengdic	other	kengdic	1.00	siddhartha	‘싯다르타’의 음역어.	cedict	low	true
+실리주의	實利主義	kengdic	other	kengdic	1.00	utilitarianism	모든 일에 개인의 공명(功名)과 이익만을 추구하는 경향이나 태도.	cedict	low	true
+십자형	十字形	kengdic	other	kengdic	1.00	crisscross, in a cross shape	‘十’ 자와 같은 모양.	cedict	low	true
+쌍곡면	雙曲面	kengdic	other	kengdic	1.00	hyperboloid	쌍곡선의 한 주축을 축으로 하여 회전시킬 때 얻을 수 있는 곡면.	cedict	low	true
+쌍구균	雙球菌	kengdic	other	kengdic	1.00	diplococcus	두 개의 균체(菌體)가 짝을 이루어 고치 모양을 하고 있는 구균. 폐렴균, 임질균 따위가 이에 속한다.	cedict	low	true
+쌍십절	雙十節	kengdic	other	kengdic	1.00	double Ten	1911년 신해혁명과 1912년 정부 수립을 기념하는 대만의 국경일. 10월 10일이다.	cedict	low	true
+아과	亞科	kengdic	other	kengdic	1.00	subfamily	생물 분류에서 과(科)와 속(屬)의 사이.	cedict	low	true
+아마인	亞麻仁	kengdic	other	kengdic	1.00	flaxseed	아마의 씨. 아마인유의 원료이며, 당뇨병과 장 질환을 치료하는 데 쓰거나 기관지의 카타르성 질환에 냉침제로 쓴다. 달걀 모양이며 노란색이나 갈색으로 광택이 난다. 부드러운 맛이 나며, 기름같이 미끈미끈하다.	cedict	low	true
+아마포	亞麻布	kengdic	other	kengdic	1.00	cambric, linen	아마(亞麻)의 실로 짠 얇은 직물을 통틀어 이르는 말. 굵은 실로 짠 것은 양복감으로 쓰고, 가는 실로 짠 것은 셔츠, 손수건, 실내 장식품 따위를 만드는 데 쓴다.	cedict	low	true
+아선약	阿仙藥	kengdic	other	kengdic	1.00	catechu; gambier	아카시아, 미모사 따위의 잎이나 가지를 달여서 만든 약. 열을 내리고 담을 삭히며, 피 나는 것을 멈추고 음식을 소화시키며, 새살이 잘 돋아나게 하고 아픔을 멈추게 한다.	cedict	low	true
+안과학	眼科學	kengdic	other	kengdic	1.00	ophthalmology	눈알 및 그 부속 기관의 질병과 치료, 예방 따위를 연구하는 학문.	cedict	low	true
+안식향	安息香	kengdic	other	kengdic	1.00	benzoin; friar's balsam	때죽나뭇과의 상록 교목. 높이는 25미터 정도이며, 잎은 어긋나고 긴 타원형이다. 여름에 작은 꽃이 가지 끝에 총상(總狀) 화서로 피고 열매는 둥글다. 나무껍질에서는 수지를 채취하여 향수 제조에 이용한다. 말레이시아가 원산지이다.	cedict	low	true
+안점	眼點	kengdic	other	kengdic	1.00	eyespot; ocellus	모눈종이 따위의 눈금마다 나타내는 점.	cedict	low	true
+암점	暗點	kengdic	other	kengdic	1.00	scotoma	시각 신경을 이루는 신경 섬유들이 망막에서 한곳으로 모이는 곳. 붉거나 흰 원반처럼 보인다. 이 부분에는 시각 세포가 없기 때문에 빛에 대한 반응이 없다.	opendict	high	true
+액포	液胞	kengdic	other	kengdic	1.00	vacuole	성숙한 식물 세포에 들어 있는 구조물. 세포 안에 있는 큰 거품 구조로 액포막에 싸여 있고, 안에는 세포액이 차 있으며 여러 가지 당류·색소·유기산 따위가 녹아 있다.	cedict	low	true
+야금학	冶金學	kengdic	other	kengdic	1.00	metallurgy	금속 공학의 한 분야. 야금에 관한 원리, 방법, 기술 따위를 연구하는 학문이다.	cedict	low	true
+양극성	兩極性	kengdic	other	kengdic	1.00	polarity	자석의 두 극처럼 하나가 두 극으로 나누어지는 성질. 서로의 존재나 주장, 태도 따위가 맞서고 동시에 서로가 상대를 자기의 존재 조건으로 하는 관계에 있다.	opendict	high	true
+양막	羊膜	kengdic	other	kengdic	1.00	amnion	포유류의 태아를 둘러싼 반투명의 얇은 막. 속에는 양수가 들어 있다.	cedict	low	true
+어교	魚膠	kengdic	other	kengdic	1.00	fish glue	민어의 부레를 끓여서 만든 풀. 교착력이 강하여 목기(木器)를 붙이는 데 많이 쓴다.	opendict	high	true
+어분	魚粉	kengdic	other	kengdic	1.00	fish flour, fish meal	생선을 찌거나 말려서 만든 가루. 단백질 따위의 영양이 풍부하여 비료, 사료, 식료품 따위로 쓰인다.	cedict	low	true
+엄한	嚴寒	kengdic	other	kengdic	1.00	grueling, hardhanded, harsh, rigorous, severe, strict	매우 심한 추위.	cedict	low	true
+여점원	女店員	kengdic	other	kengdic	1.00	saleslady, saleswoman, shopgirl	상점에 고용되어 물건을 팔거나 그 밖의 일을 맡아 하는 여자.	cedict	low	true
+여현	餘弦	kengdic	other	kengdic	1.00	cos; cosine	‘코사인’의 전 용어.	cedict	low	true
+역참	驛站	kengdic	other	kengdic	1.00	post town, relay, stage	조선 시대에 있던 공공의 기별, 역마, 역원 등 여행 체계를 합쳐서 이르는 말. 대개 25리마다 1참을 두고 50리마다 1원을 두었다.	cedict	low	true
+연막탄	煙幕彈	kengdic	other	kengdic	1.00	smoke ball	폭발하면 짙은 연기를 내뿜도록 되어 있는 폭탄. 사람의 시야를 일시적으로 가릴 목적으로 쓴다.	cedict	low	true
+연분수	連分數	kengdic	other	kengdic	1.00	continued fraction	분모에 분수가 연속되어 내려가는 분수.	cedict	low	true
+연소실	燃燒室	kengdic	other	kengdic	1.00	combustor; combustion chamber	보일러나 가열로 따위에서 연료가 타는 방.	opendict	high	true
+열곡	裂谷	kengdic	other	kengdic	1.00	rift valley	육지에서 관찰되는, 두 개의 평행한 단층애로 둘러싸인 좁고 긴 골짜기.	cedict	low	true
+염산염	鹽酸鹽	kengdic	other	kengdic	1.00	hydrochloride	염화 수소의 수소 원자가 다른 원자로 바뀐 화합물.	cedict	low	true
+염색질	染色質	kengdic	other	kengdic	1.00	karyotin; chromatin	핵 속에 있는, 염기성 색소에 잘 염색되는 물질. 디엔에이(DNA)와 핵단백질로 이루어졌으며 세포 분열 할 때 염색체가 된다.	cedict	low	true
+영과	穎果	kengdic	other	kengdic	1.00	caryopsis	과피가 말라서 씨 껍질과 붙어 하나처럼 되고, 속의 씨는 하나인 열매. 벼, 보리, 밀 따위가 있다.	cedict	low	true
+영양학	營養學	kengdic	other	kengdic	1.00	dietetics, nutrition	생물체의 영양 작용과 영양 상태 및 영양물에 관하여 연구하는 학문. 생명의 유지 및 심신의 건강을 유지하기 위한 학문으로, 영양 생리학·영양 화학·영양 병리학 따위가 있다.	cedict	low	true
+영업세	營業稅	kengdic	other	kengdic	1.00	a franchise tax	영업에 대하여 부과하는 국세(國稅). 1976년에 ‘부가 가치세법’의 시행으로 폐지되었다.	cedict	low	true
+예광탄	曳光彈	kengdic	other	kengdic	1.00	tracer; tracer bullet	총포에서 발사되었을 때 앞부분에서 빛을 내며 날아가게 한 탄알. 신호하거나 목표물을 지시하는 데에 쓴다.	cedict	low	true
+예약어	豫約語	kengdic	other	kengdic	1.00	reserved word	원시 언어에서, 특정한 규칙에 의하여 의미와 용법이 미리 고정되어 있는 단어. 프로그래머가 임의로 의미를 바꾸어 사용할 수 없다.	opendict	high	true
+요독증	尿毒症	kengdic	other	kengdic	1.00	uremia	콩팥의 기능 장애로 몸 안의 노폐물이 오줌으로 빠져나오지 못하고 핏속에 들어가 중독을 일으키는 병증. 구토, 현기, 두통, 시력 감퇴, 전신 경련 따위의 증상이 나타나고 말기에는 혼수상태에 빠진다.	cedict	low	true
+요리점	料理店	kengdic	other	kengdic	1.00	restaurant	술과 요리를 파는 집.	cedict	low	true
+용설란	龍舌蘭	kengdic	other	kengdic	1.00	an agave, American aloe, century plant	용설란과의 얼룩용설란, 푸른용설란, 대만용설란 따위를 통틀어 이르는 말.	cedict	low	true
+용원균	溶原菌	kengdic	other	kengdic	1.00	lysogen	독이 없는 박테리오파지에 감염된 세균. 감염이 되는 것을 용원화(溶原化)라 한다.	opendict	high	true
+용해도	溶解度	kengdic	other	kengdic	1.00	fusibility, solubility	일정한 온도에서 일정한 양의 용매에 녹을 수 있는 용질의 최대의 양. 보통 용매 100mL에 녹을 수 있는 용질을 그램 수로 나타낸다.	cedict	low	true
+용혈	溶血	kengdic	other	kengdic	1.00	hemolysis	적혈구의 세포막이 파괴되어 그 안의 헤모글로빈이 혈구 밖으로 나오는 현상. 용혈소의 작용에 의한 항원 항체 반응에 의하는 것 외에 삼투압의 저하, 세균이 분비하는 독소, 약제 따위의 여러 가지 원인으로 일어난다.	opendict+cedict	high	true
+용혈수	龍血樹	kengdic	other	kengdic	1.00	dracaena	백합과의 상록 식물. 높이는 20미터 정도이고 가지는 윗부분에서 갈라지며, 잎은 뭉쳐나고 선 모양이다. 대록색(帶綠色)의 통꽃이 피고 줄기에서 분비되는 수지(樹脂)는 착색제, 방식제로 쓰며 수령은 5,000~7,000년에 달한다. 아프리카의 카나리아섬이 원산지이다.	cedict	low	true
+우슬초	牛膝草	kengdic	other	kengdic	1.00	hyssop	유대인들이 귀신이나 재앙을 쫓으려고 제물의 피를 묻혀 뿌리는 데 쓴 식물.	cedict	low	true
+운동학	運動學	kengdic	other	kengdic	1.00	kinematics	힘과 운동의 관계는 생각하지 아니하고 물체의 운동만을 수학적으로 기술하는 학문. 역학의 한 분야이다.	opendict+cedict	high	true
+웅황	雄黃	kengdic	other	kengdic	1.00	orpiment	천연으로 나는 비소 화합물. 쪼개져 갈라진 면은 진주광택이 나며, 계관석과 더불어 산출된다. 등황색 또는 누런색을 띠며 염료 또는 화약에 쓰인다.	cedict	low	true
+원유회	園遊會	kengdic	other	kengdic	1.00	fete champetre, a garden party	여러 사람이 산이나 들 또는 정원에 나가서 노는 모임.	cedict	low	true
+원자가	原子價	kengdic	other	kengdic	1.00	atomic value, valence	원자의 원자량 또는 원자단의 원자량 총량을 화학 당량으로 나눈 수. 보통 수소를 기준으로 하여 수소 원자 n개와 치환 또는 결합하는 원소의 것을 n가라고 한다.	opendict	high	true
+원자량	原子量	kengdic	other	kengdic	1.00	atomic weight	원자의 상대적인 질량. 질량수 12의 탄소 원자 12C를 기준으로 하고 이것과의 비율에 따라 각 원자의 질량을 나타낸다.	cedict	low	true
+원자론	原子論	kengdic	other	kengdic	1.00	atomic theory, atomism	세계의 모든 사상(事象)을 원자와 그 운동으로 설명하려는 학설.	cedict	low	true
+원조자	援助者	kengdic	other	kengdic	1.00	a helper, a supporter	도와주는 사람.	opendict	high	true
+원지점	遠地點	kengdic	other	kengdic	1.00	apogee	달이나 인공위성이 지구에서 가장 멀리 떨어지는 점.	cedict	low	true
+위자	慰藉	kengdic	other	kengdic	1.00	consolation	위로하고 도와줌.	cedict	low	true
+유공충	有孔蟲	kengdic	other	kengdic	1.00	foraminifera	원생동물문 과립근족충강 유공충목의 동물을 통틀어 이르는 말. 석회질이나 규산질의 껍데기가 있고 껍데기에 있는 작은 구멍에서 실 모양의 위족을 내밀어 먹이를 취한다. 맨눈으로 볼 수 있을 정도로 큰 단세포 동물이다.	cedict	low	true
+유동학	流動學	kengdic	other	kengdic	1.00	rheology	물질의 변형과 움직임을 연구하는 과학. 콜로이드성 물질, 고분자 물질, 생체 물질 따위의 복잡한 화학 조성을 가진 유동성 물질에 힘을 주었을 때에 나타나는 탄력, 변형, 유동 따위의 현상을 연구한다.	opendict	high	true
+유랑자	流浪者	kengdic	other	kengdic	1.00	exile, rover	정처 없이 이리저리 떠돌아다니는 사람.	cedict	low	true
+유백색	乳白色	kengdic	other	kengdic	1.00	being lacteous, lactescent, milk white	젖의 빛깔과 같이 불투명한 흰색.	cedict	low	true
+유성체	流星體	kengdic	other	kengdic	1.00	meteoroid	행성들 사이에 떠 있는 암석 조각. 이것들이 지구의 인력에 끌려 지구 대기권으로 들어오면 유성(流星)이 된다.	cedict	low	true
+유신론자	有神論者	kengdic	other	kengdic	1.00	a theist, a solifidian	유신론을 믿거나 주장하는 사람.	cedict	low	true
+유지질	類脂質	kengdic	other	kengdic	1.00	lipoid	지방과 성질이 비슷하나 구조가 다른 화합물을 통틀어 이르는 말. 물에는 녹지 않으나 에테르, 클로로포름, 벤젠 따위의 유기 용매에는 녹는다. 레시틴, 콜레스테롤, 에고스테롤 따위가 있다.	opendict	high	true
+육아종	肉芽腫	kengdic	other	kengdic	1.00	granuloma	육아 조직을 형성하는 염증성 종양. 결핵균, 나병균, 매독균, 바이러스 따위로 인하여 생긴 혹에서 볼 수 있다.	cedict	low	true
+윤활액	潤滑液	kengdic	other	kengdic	1.00	lubricant	관절의 윤활막에서 분비되는 끈끈한 액체. 관절안에서의 마찰을 줄여 주며 관절 연골에 영양을 공급한다.	cedict	low	true
+은행업	銀行業	kengdic	other	kengdic	1.00	banking	은행을 경영하는 사업.	cedict	low	true
+음속	音速	kengdic	other	kengdic	1.00	sonic speed	소리가 매질(媒質)을 통하여 전파되는 속도. 공기 중의 음속은 0℃, 1기압일 때 초당 331.5미터인데, 온도가 1℃ 오를 때마다 초당 약 0.6미터씩 증가하며 물속에서는 초당 약 1,500미터씩 증가한다.	cedict	low	true
+응고점	凝固點	kengdic	other	kengdic	1.00	setting point	일정한 압력에서 액체나 기체가 굳을 때의 온도. 보통 액체의 응고점은 그 물질의 녹는점과 같고, 기체의 응고점은 승화점(昇華點)과 같다.	cedict	low	true
+응집소	凝集素	kengdic	other	kengdic	1.00	agglutinin	응집 반응을 일으키는 항체. 적혈구, 세균 따위의 응집원과 반응하여 그것들을 응집시킨다.	cedict	low	true
+이뇨	利尿	kengdic	other	kengdic	1.00	diuresis	오줌을 잘 나오게 함.	cedict	low	true
+이단맥	二段脈	kengdic	other	kengdic	1.00	bigeminal	‘이단 맥박’의 전 용어.	opendict	high	true
+이윤율	利潤率	kengdic	other	kengdic	1.00	profitability, profitableness	총자본에 대한 이윤의 비율.	cedict	low	true
+이항식	二項式	kengdic	other	kengdic	1.00	binomial	두 개의 항으로 된 정식. a－b, x+1 따위가 있다.	cedict	low	true
+익수룡	翼手龍	kengdic	other	kengdic	1.00	pterodactyl	중생대에 살던, 날개가 있고 꼬리는 없는 익룡류의 화석 동물. 쥐라기 후기와 백악기 후기에 걸쳐 많이 번성하였고, 대표적인 것으로 프테로닥틸루스와 프테라노돈이 있다.	cedict	low	true
+인두세	人頭稅	kengdic	other	kengdic	1.00	capitation, head money, poll tax	납세 능력의 차이를 고려하지 아니하고 각 개인에게 일률적으로 매기는 세금. 원시적 조세 형태의 하나로 18~19세기에 없앴으나, 현재 생활필수품에 대한 소비세 따위의 간접세는 이것과 같은 방식이다.	cedict	low	true
+일광욕실	日光浴室	kengdic	other	kengdic	1.00	a solarium, a sunroom	일광욕을 하기 위하여 벽을 유리로 만든 방.	cedict	low	true
+일습	一襲	kengdic	other	kengdic	1.00	one suit of clothes	옷, 그릇, 기구 따위의 한 벌. 또는 그 전부.	cedict	low	true
+임계점	臨界點	kengdic	other	kengdic	1.00	critical point	물질의 구조와 성질이 다른 상태로 바뀔 때의 온도와 압력. 평형 상태의 두 물질이 하나의 상(相)을 이룰 때나 두 액체가 완전히 일체화할 때의 온도와 압력을 이른다.	opendict+cedict	high	true
+임파액	淋巴液	kengdic	other	kengdic	1.00	plasma; lymph	‘림프액’의 음역어.	cedict	low	true
+입방근	立方根	kengdic	other	kengdic	1.00	cube root	‘세제곱근’의 전 용어.	cedict	low	true
+자석영	紫石英	kengdic	other	kengdic	1.00	amethyst	자줏빛의 수정.	cedict	low	true
+자수품	刺繡品	kengdic	other	kengdic	1.00	embroidery	수를 놓아 만든 수예품.	cedict	low	true
+자연대수	自然對數	kengdic	other	kengdic	1.00	napierian logarithm; natural logarithm	‘자연로그’의 옛 용어.	cedict	low	true
+자연법	自然法	kengdic	other	kengdic	1.00	natural law	인간 이성을 통하여 발견한 자연적 정의 또는 자연적 질서를 사회 질서의 근본 원리로 생각하는 법. 고전적 개념은 신법(神法) 또는 영구법(永久法)의 한 부분이었으며, 근세의 개념은 인간 이성의 우위에 입각하여 합리주의, 개인주의, 급진주의의 특징을 지니고 있다.	cedict	low	true
+자엽	子葉	kengdic	other	kengdic	1.00	cotyledon; seed leaf	씨앗의 움이 트면서 처음 나오는 싹.	cedict	low	true
+자홍색	紫紅色	kengdic	other	kengdic	1.00	claret, red and purple/violet mixed	자줏빛을 띤 붉은색.	cedict	low	true
+잔류물	殘留物	kengdic	other	kengdic	1.00	residue	남은 물건.	cedict	low	true
+잡록	雜錄	kengdic	other	kengdic	1.00	miscellany	여러 가지 일을 질서 없이 기록함. 또는 그런 기록.	cedict	low	true
+잡역	雜役	kengdic	other	kengdic	1.00	general,various work and small jobs, busy work	공역 이외의 여러 가지 부역.	cedict	low	true
+장개석	蔣介石	kengdic	other	kengdic	1.00	chiang Kai-shek	‘장제스’를 우리 한자음으로 읽은 이름.	cedict	low	true
+장독소	腸毒素	kengdic	other	kengdic	1.00	enterotoxin	장에서 번식한 세균이 만드는 독소.	opendict+cedict	high	true
+장서표	藏書票	kengdic	other	kengdic	1.00	ex libris; bookplate	자기 장서임을 표시하여 책에 붙이는 표.	cedict	low	true
+장폐색증	腸閉塞症	kengdic	other	kengdic	1.00	ileus	창자의 일부가 막혀 통과 장애 증상을 나타내는 질환. 창자 안이 외부 압박, 유착, 염전, 마비, 종양 따위에 의하여 막힘 또는 협착 상태가 되어 나타나며 복통, 복부 팽만, 구토, 가스 배출 정지 따위의 증상을 일으킨다.	opendict	high	true
+재귀	再歸	kengdic	other	kengdic	1.00	recursion; reflexive	원래의 자리로 되돌아가거나 되돌아옴.	opendict	high	true
+재무관	財務官	kengdic	other	kengdic	1.00	quaestor	각 중앙 관서에서, 지출 원인 행위를 하는 공무원.	opendict	high	true
+재보험	再保險	kengdic	other	kengdic	1.00	reassurance; reinsure	보험자가 피보험 물건에 대한 보험 책임의 분산을 위하여 책임의 일부 또는 전부를 다시 다른 보험자에게 인수시키는 일.	cedict	low	true
+재삼재사	再三再四	kengdic	other	kengdic	1.00	repeatedly	여러 번 되풀이하여.	cedict	low	true
+재흡수	再吸收	kengdic	other	kengdic	1.00	reuptake; resorption	토리에서 걸러진 노폐물이 요관을 지나는 동안에 그 요관을 둘러싸고 있는 모세 혈관에 의하여 다시 흡수되어 혈액 속으로 들어가는 일.	opendict	high	true
+저혈압증	低血壓症	kengdic	other	kengdic	1.00	hypotension	혈압이 정상 수치보다 낮은 증상. 최저 혈압이 90mmHg에 미치지 아니하는 경우이다. 의학적으로는 혈압이 낮아서 동맥피가 충분히 장기(臟器)로 순환되기 어려운 상태를 이른다. 피로감, 나른함, 두통, 어깨 결림 따위가 나타난다.	opendict	high	true
+적운	積雲	kengdic	other	kengdic	1.00	cumulus	수직운의 하나. 뭉게뭉게 피어올라 윤곽이 확실하게 나타나는 구름으로, 밑은 평평하고 꼭대기는 솜을 쌓아 놓은 것처럼 뭉실뭉실한 모양이며 햇빛을 받으면 하얗게 빛난다. 무더운 여름에 상승 기류로 말미암아 보통 2km 높이에서 생기는데, 발달한 구름 꼭대기는 10km에 이르는 경우도 있으…	cedict	low	true
+전손	全損	kengdic	other	kengdic	1.00	dead loss	전체에 걸쳐 손실을 입음. 또는 그 손실.	cedict	low	true
+전의식	前意識	kengdic	other	kengdic	1.00	preconscious	현재는 의식되지 아니하나 생각하여 내려고 하면 약간의 노력으로 떠올릴 수 있는 지식이나 정서, 심상과 같은 정신의 범위. 프로이트의 용어로, 그는 이를 의식과 무의식 사이에 두었다.	opendict+cedict	high	true
+전해액	電解液	kengdic	other	kengdic	1.00	electrolyte	전기 분해를 하기 위하여 전지의 양극과 음극을 담그는 용액.	cedict	low	true
+전화당	轉化糖	kengdic	other	kengdic	1.00	invert sugar	수크로스를 가수 분해 하여 얻는, 포도당과 과당의 혼합물. 수크로스보다 소화 흡수가 좋기 때문에 과자나 식품을 만드는 데에 쓰인다.	cedict	low	true
+절분음	切分音	kengdic	other	kengdic	1.00	syncopation	한 마디 안에서 센박과 여린박의 규칙성이 뒤바뀌는 현상. 여린박에 강세를 놓거나 센박을 연장하거나 붙임줄로 다음 머리에 연결하여 만든다.	cedict	low	true
+절삭	切削	kengdic	other	kengdic	1.00	machine cutting	금속 따위를 자르거나 깎음.	cedict	low	true
+절연체	絕緣體	kengdic	other	kengdic	1.00	dielectric, an insulator, non-conductor	전도체나 소자로부터 전기적으로 분리되어 있어 열이나 전기를 잘 전달하지 아니하는 물체. 전기의 절연체는 유리·에보나이트·고무 따위이고, 열의 절연체는 솜·석면·회(灰) 따위이다.	cedict	low	true
+점근선	漸近線	kengdic	other	kengdic	1.00	asymptote	좌표 평면에서 x의 값이 양 또는 음으로 점점 커짐에 따라 어떤 곡선이 일정한 직선에 한없이 가까워질 때에, 그 직선을 곡선에 상대하여 이르는 말.	cedict	low	true
+점성가	占星家	kengdic	other	kengdic	1.00	chaldean; astrologer	별의 빛이나 위치, 운행 따위를 보고 점을 치는 점술가.	cedict	low	true
+점신세	漸新世	kengdic	other	kengdic	1.00	oligocene	신생대 제3기를 다섯으로 구분하였을 때의 세 번째 시대. 유공충류가 번성하고 포유류, 속씨식물이 발달하였다.	cedict	low	true
+점착력	粘着力	kengdic	other	kengdic	1.00	tenacity	끈끈하게 착 달라붙는 힘.	opendict	high	true
+접종물	接種物	kengdic	other	kengdic	1.00	inoculum	미생물 배양이나 조직 배양에서, 배양액에 접종할 때 이용하는, 살아 있는 미생물이나 세포가 들어 있는 물질.	opendict	high	true
+접촉기	接觸器	kengdic	other	kengdic	1.00	contact maker; contactor	전동기 따위에서 회로를 개폐하는 데 쓰는 기구.	cedict	low	true
+정다면체	正多面體	kengdic	other	kengdic	1.00	regular solid	면이 모두 합동인 정다각형으로 되어 있어 어떤 꼭짓점에 모이는 면의 수도 같고, 어떤 꼭짓점에서도 입체각이 같은 다면체. 정사면체, 정육면체, 정팔면체, 정십이면체, 정이십면체의 다섯 종류가 있다.	cedict	low	true
+정맥류	靜脈瘤	kengdic	other	kengdic	1.00	varicose, related to the veins	정맥이 혹처럼 확장된 상태. 심장의 기능이 부진하거나 정맥이 압박·폐쇄되었을 때 일어난다.	opendict	high	true
+정신병학	精神病學	kengdic	other	kengdic	1.00	psychiatry	정신병의 증상, 원인, 경과 따위를 연구하여 그 예방과 치료에 응용하는 학문.	cedict	low	true
+정오표	正誤表	kengdic	other	kengdic	1.00	corrigendum	출판물 따위에서, 잘못된 글자나 문구를 바로잡아 만든 일람표.	cedict	low	true
+정자법	正字法	kengdic	other	kengdic	1.00	orthography, the art of writing corretly	어떤 문자로써 한 언어를 표기하는 규칙. 또는 단어별로 굳어진 표기 관습.	cedict	low	true
+정장석	正長石	kengdic	other	kengdic	1.00	orthoclase (a rock which is an amalgam of various other minerals)	나트륨, 칼륨, 알루미늄 따위를 함유한 규산염 광물. 단사 정계(單斜晶系)에 속하며 화강암이나 편마암에서 난다. 대개 기둥이나 덩어리 모양으로, 질이 무르며 유리 광택이 나고 무색·흰색·엷은 붉은색·초록색 따위를 띤다. 도자기나 유리를 만드는 데 쓴다.	cedict	low	true
+정통주의	正統主義	kengdic	other	kengdic	1.00	legitimist; legitimism	프랑스 혁명과 나폴레옹 전쟁으로 생긴 유럽 여러 나라의 변화를 일소하고 혁명 이전의 옛 질서를 회복하고자 하는 정통 귀족의 사상. 1814년에서 1815년에 열린 빈 회의의 지도 이념의 하나로서, 부르봉 왕정의 복고를 꾀하였다.	opendict	high	true
+제산제	制酸劑	kengdic	other	kengdic	1.00	antacid	위산이 너무 많아 발병한 위산 과다증, 위궤양, 샘창자 궤양을 치료하는 약. 위산의 분비를 억제하거나 위산을 중화 또는 흡착하여 그 작용을 감소시키며, 위장의 점막에 생긴 궤양 면을 싸서 산(酸)의 자극을 완화한다.	cedict	low	true
+조간대	潮間帶	kengdic	other	kengdic	1.00	intertidal	만조 때의 해안선과 간조 때의 해안선 사이의 부분. 만조 때에는 바닷물에 잠기고 간조 때에는 공기에 드러나는 등 생물에 있어서는 혹독한 환경이 된다.	cedict	low	true
+조건문	條件文	kengdic	other	kengdic	1.00	condition	루틴 내에서 주어진 어떤 조건이 만족되었을 때만 수행되는 문장.	opendict	high	true
+조명탄	照明彈	kengdic	other	kengdic	1.00	a flare bomb; a ground marker; an illuminating projectile	터뜨리면 강한 빛을 내는 탄알이나 폭탄. 밤에 지상을 비추거나 항공기의 착륙을 유도하는 데에 쓴다.	cedict	low	true
+조색판	調色板	kengdic	other	kengdic	1.00	palette	수채화나 유화를 그릴 때에, 그림물감을 짜내어 섞기 위한 판.	cedict	low	true
+종단면	縱斷面	kengdic	other	kengdic	1.00	longisection	물체를 세로로 잘라 생긴 면.	cedict	low	true
+좌선성	左旋性	kengdic	other	kengdic	1.00	levorotatory	어떤 물질이 직선 편광을 받으면 그 편광면을 왼쪽으로 돌게 하는 성질. 기호는 l.	opendict	high	true
+주기계	週期系	kengdic	other	kengdic	1.00	periodic system	주기율에 의해 그 성질이 같은 원소의 집합체.	cedict	low	true
+주기표	週期表	kengdic	other	kengdic	1.00	periodic table	주기율에 따라서 원소를 배열한 표. 원소를 원자 번호의 차례대로 왼쪽에서 오른쪽으로 배열하고, 비슷한 성질의 원소가 나타날 때마다 그것을 위아래로 겹치도록 배열한 것으로, 가로를 주기, 세로를 족(族)이라 한다. 1869년에 제정 러시아의 멘델레예프가 발표하였다.	cedict	low	true
+주선율	主旋律	kengdic	other	kengdic	1.00	canto, motif, theme	다성 음악에서 주도적인 역할을 하는 선율.	cedict	low	true
+중격	中隔	kengdic	other	kengdic	1.00	septum	구조들을 분리하는 막이나 근육.	cedict	low	true
+중심립	中心粒	kengdic	other	kengdic	1.00	centriole	대부분의 세포에서 중심체의 중심을 형성하고 있는 원통 모양의 세포 소기관(細胞小器官). 유사 분열 때 볼 수 있다.	cedict	low	true
+중원소	重元素	kengdic	other	kengdic	1.00	heavy element	원자량이 큰 원소. 라듐·악티늄·톨륨·우라늄 따위가 있으며, 일정한 조건에서 그 핵이 비교적 쉽게 분열될 수 있다.	cedict	low	true
+중이	中耳	kengdic	other	kengdic	1.00	tympanum; middle ear	고막의 안쪽 관자뼈 속에 있는 공간. 고실, 귓속뼈, 귀관으로 이루어져 있다.	cedict	low	true
+중정석	重晶石	kengdic	other	kengdic	1.00	barite, baryte, heavy spar	황산 바륨으로 이루어진 황산염 광물. 사방 정계(斜方晶系)에 속하며 판자 모양, 공 모양, 실 모양, 기둥 모양 따위의 결정을 이룬다. 흔히 재색, 푸른색, 붉은색, 누런색, 갈색을 띠며 중금속 광상(鑛床)에서 맥석(脈石)으로 난다. 바륨의 원료, 흰색 안료, 식염 정제, 제지 및 방…	cedict	low	true
+중혼	重婚	kengdic	other	kengdic	1.00	bigamy	아내나 남편이 있는 사람이 다른 사람과 다시 혼인함.	cedict	low	true
+중혼죄	重婚罪	kengdic	other	kengdic	1.00	bigamy	아내나 남편이 있는 사람이 다른 사람과 다시 혼인함으로써 성립하는 죄.	cedict	low	true
+지각력	知覺力	kengdic	other	kengdic	1.00	perceptiblity	알아 깨달을 수 있는 힘.	cedict	low	true
+지방주의	地方主義	kengdic	other	kengdic	1.00	regionalism, sectionalism, territorialism	자기 지방 사람들끼리 싸고돌면서 자기 지방의 이익만을 내세우며 다른 지방 사람들은 멀리하거나 배척하려는 행동이나 사상 경향.	cedict	low	true
+지표수	地表水	kengdic	other	kengdic	1.00	surface water	지표에 있는 모든 물. 하천, 호수, 운하, 해양 따위의 물을 통틀어 이른다.	cedict	low	true
+직근	直根	kengdic	other	kengdic	1.00	taproot	땅속으로 곧게 내리는 뿌리. 우엉, 무, 교목 따위의 뿌리이다.	cedict	low	true
+직녀성	織女星	kengdic	other	kengdic	1.00	vega	거문고자리에서 가장 밝은 별. 약 26광년 떨어진 일등성으로, 칠월 칠석날 밤에 견우성과 만난다는 전설이 있다.	cedict	low	true
+직장경	直腸鏡	kengdic	other	kengdic	1.00	a proctoscope	곧창자의 환부를 검사하는 데 쓰는 기구. 금속관의 앞쪽 끝에 전구가 달려 있다.	cedict	low	true
+진앙	震央	kengdic	other	kengdic	1.00	earthquake center; epicenter	지진의 진원(震源) 바로 위에 있는 지점.	cedict	low	true
+질점	質點	kengdic	other	kengdic	1.00	particle	물체의 크기를 무시하고 질량이 모여 있다고 보는 점. 이 점으로 물체의 위치나 운동을 표시할 수 있으며, 역학 원리 및 모든 법칙의 기초가 된다.	cedict	low	true
+집행인	執行人	kengdic	other	kengdic	1.00	an executor	실제로 시행하는 사람.	cedict	low	true
+찰상	擦傷	kengdic	other	kengdic	1.00	a chafing wound, an abrasion	무엇에 스치거나 문질려서 살갗이 벗어진 상처.	cedict	low	true
+채원	菜園	kengdic	other	kengdic	1.00	kailyard; kitchen garden	전문적으로 채소를 심어 가꾸는 규모가 큰 밭.	cedict	low	true
+척력	斥力	kengdic	other	kengdic	1.00	repulsion	같은 종류의 전기나 자기를 가진 두 물체가 서로 밀어 내는 힘.	cedict	low	true
+척수염	脊髓炎	kengdic	other	kengdic	1.00	myelitis	몸 밖의 병원체에 의하여 척수에 생기는 여러 가지 염증. 초기에는 발열·팔다리 통증 외에 이완 마비가 일어나며, 점차 운동·지각 마비나 대소변 배설 장애 따위의 증상이 나타난다.	cedict	low	true
+척주	脊柱	kengdic	other	kengdic	1.00	the spinal column	척추뼈가 서로 연결되어 기둥처럼 이어진 전체를 이르는 말.	cedict	low	true
+척추골	脊椎骨	kengdic	other	kengdic	1.00	vertebra	머리뼈 아래에서 엉덩이 부위까지 33개의 뼈가 이어져 척주를 이룰 때, 그중 하나하나의 뼈를 가리키는 말. 위쪽부터 7개는 목뼈, 12개는 등뼈, 5개는 허리뼈, 5개는 엉치뼈, 4개는 꼬리뼈라 하며, 성인은 엉치뼈와 꼬리뼈가 붙어서 각각 하나의 뼈를 이룬다.	cedict	low	true
+천축모란	天竺牡丹	kengdic	other	kengdic	1.00	dahlia	국화과의 여러해살이풀. 높이는 0.4~2미터이며, 잎은 우상 복엽이고 고구마처럼 생긴 뿌리로 번식한다. 7월부터 늦가을까지 원줄기와 가지 끝에 꽃이 피고 열매는 수과(瘦果)로 10월에 익는다. 관상용이고 멕시코가 원산지이다.	cedict	low	true
+철침착증	鐵沈着症	kengdic	other	kengdic	1.00	siderosis	진폐증의 하나. 철이 함유되어 있는 미립자를 오랫동안 흡입함으로써 철분이 폐에 침착하여 일어난다.	opendict	high	true
+촉광	燭光	kengdic	other	kengdic	1.00	candlepower; candle	불의 빛. 또는 그 세기.	cedict	low	true
+총사령부	總司令部	kengdic	other	kengdic	1.00	general headquarters	총사령관이 주관하여 일을 맡아보는 기관.	cedict	low	true
+축거	軸距	kengdic	other	kengdic	1.00	wheelbase	자동차의 앞바퀴 중심과 뒷바퀴 중심 사이의 거리. 이것이 길면 차의 안전성이 좋고, 짧으면 차의 회전 반경이 작아서 짧게 돌 수 있다.	cedict	low	true
+출납원	出納員	kengdic	other	kengdic	1.00	cashier	돈이나 물건의 출납을 맡아보는 사람.	cedict	low	true
+출석자	出席者	kengdic	other	kengdic	1.00	an attendant, an attendee, the turnout	출석한 사람.	cedict	low	true
+충적층	沖積層	kengdic	other	kengdic	1.00	alluvium	비교적 최근에 하천의 활동에 의하여 자갈, 모래, 진흙 따위가 쌓여 이루어진, 아직 굳지 아니한 퇴적층.	cedict	low	true
+취관	吹管	kengdic	other	kengdic	1.00	a blowgun, a blowpipe	취관 분석에서 취관염을 만드는 데에 쓰는, 놋쇠로 만든 엘(L) 자형 기구. 한쪽 끝을 불꽃 속으로 넣고 다른 쪽 끝에서 공기를 불어 넣는다.	cedict	low	true
+측지선	測地線	kengdic	other	kengdic	1.00	geodesic	어떤 공간 안의 임의의 두 점을 맺는 가장 짧은 곡선. 평면 위에서는 직선, 구면(球面) 위에서는 대원(大圓)의 호(弧)를 이른다.	cedict	low	true
+층적운	層積雲	kengdic	other	kengdic	1.00	cumulostratus, stratocumulus	하층운의 하나. 두꺼운 덩어리로 된 구름이 층을 이룬 모양으로, 물방울로 이루어져 있다. 낮에는 구름 꼭대기가 발달하여 적운이 되었다가 저녁 무렵이 되면 약해진다. 기호는 Sc.	cedict	low	true
+치은염	齒齦炎	kengdic	other	kengdic	1.00	gingivitis	잇몸에 생기는 염증. 잇몸에서 쉽게 피가 나며 만지면 아프고 부어오르기도 한다.	cedict	low	true
+친수성	親水性	kengdic	other	kengdic	1.00	hydrophilicity	물과 친화성이 있는 성질.	opendict+cedict	high	true
+탁도	濁度	kengdic	other	kengdic	1.00	turbidity	물이 흐린 정도. 증류수 1리터 가운데에 백토 1mg이 섞여 있을 때를 1도로 한다.	cedict	low	true
+탁도계	濁度計	kengdic	other	kengdic	1.00	turbidimeter; nephelometer	비탁분석법에 쓰는 측정 장치.	opendict	high	true
+탁음	濁音	kengdic	other	kengdic	1.00	sonance	발음할 때, 목청이 떨려 울리는 소리. 국어의 모든 모음이 이에 속하며, 자음 가운데에는 ‘ㄴ’, ‘ㄹ’, ‘ㅁ’, ‘ㅇ’ 따위가 있다.	cedict	low	true
+탄저열	炭疽熱	kengdic	other	kengdic	1.00	anthrax	탄저균으로 인하여 내장이 붓고 혈관에 균이 증식하는 병. 소, 말, 양 따위 초식 가축에 주로 발생하며 사람에게 옮기도 한다.	cedict	low	true
+탕파	湯婆	kengdic	other	kengdic	1.00	footpan, foot warmer, hot water bag	뜨거운 물을 넣어서 그 열기로 몸을 따뜻하게 하는 기구. 쇠나 함석, 자기 따위로 만들며, 이불 속에 넣고 잔다.	cedict	low	true
+태양등	太陽燈	kengdic	other	kengdic	1.00	heat lamp; sunlamp	태양 광선에 가까운 빛을 내게 만든 등. 식물 재배나 병의 치료에 쓴다.	cedict	low	true
+토양학	土壤學	kengdic	other	kengdic	1.00	pedology	흙의 생성과 성질, 변화, 분류, 분포, 흙의 비옥도를 높이기 위한 대책 따위를 연구하는 학문.	cedict	low	true
+통풍공	通風孔	kengdic	other	kengdic	1.00	air shaft; ventilator	공기가 통하도록 낸 구멍.	opendict+cedict	high	true
+통행세	通行稅	kengdic	other	kengdic	1.00	a toll, tollage, transit duty	예전에, 기차·택시·버스·기선·항공기·케이블카·전차 따위의 요금이나 운임에 대하여 부과하던 세금. 운수업자를 통하여 받는 간접세로, 1977년에 ‘부가 가치세법’의 시행에 따라 폐지되었다.	cedict	low	true
+투기자	投機者	kengdic	other	kengdic	1.00	a speculator	시세 변동을 이용하여 요행으로 큰 이익을 얻으려는 사람.	cedict	low	true
+투시도	透視圖	kengdic	other	kengdic	1.00	perspective; skiagram	어떤 시점에서 본 물체의 형태를 평면상에 나타낸 그림.	cedict	low	true
+특매	特賣	kengdic	other	kengdic	1.00	sale	어떤 물건을 특별히 싼값으로 팖.	cedict	low	true
+특허장	特許狀	kengdic	other	kengdic	1.00	a charter	특허권을 인정하여 주는 증서.	cedict	low	true
+파상열	波狀熱	kengdic	other	kengdic	1.00	undulant fever	브루셀라균의 감염으로 생기는 병. 본디 소, 염소, 돼지 따위의 법정 가축 전염병으로, 사람에게 감염되면 높은 열이 나는데 백신이나 항생 물질로 예방이 가능하다.	cedict	low	true
+팔면체	八面體	kengdic	other	kengdic	1.00	octahedron	여덟 개의 평면으로 둘러싸인 입체.	opendict+cedict	high	true
+편극	偏極	kengdic	other	kengdic	1.00	polarization	전하(電荷) 또는 자하(磁荷) 분포가 변화하여 전기 쌍극자 모멘트 또는 자기 쌍극자 모멘트가 생기는 일. 또는 그 단위 부피당의 쌍극자 모멘트의 크기. 전기장 속에 놓인 유전체에 전기 쌍극자 모멘트가 생기는 현상을 이른다.	cedict	low	true
+편년사	編年史	kengdic	other	kengdic	1.00	chronicle	역사적으로 중요한 사건을 연대순으로 적은 기록.	cedict	low	true
+편미분	偏微分	kengdic	other	kengdic	1.00	partial differential	변수가 여럿인 함수에서, 하나의 변수 이외의 모든 변수를 일정하게 고정하여 놓고 그 하나의 변수로 미분하는 일. 즉 둘 이상의 변수 x, y, z……의 함수 f(x, y, z……)가 있을 때 x만 변하고 나머지는 변하지 않는다고 가정하고 x로 미분하는 일을 말하며 af/ax로 나타낸다.	cedict	low	true
+편집광	偏執狂	kengdic	other	kengdic	1.00	monomania; paranoia	어떤 사물에 집착하여 몰상식한 행동을 예사로 하는 정신 장애인.	cedict	low	true
+편집실	編輯室	kengdic	other	kengdic	1.00	cutting room; newsroom	편집을 맡아보는 방.	cedict	low	true
+평형기	平衡器	kengdic	other	kengdic	1.00	balancer	동물의 체위와 운동 방향을 감수하여 평형을 유지하게 하는 기관.	opendict	high	true
+평형추	平衡錘	kengdic	other	kengdic	1.00	counterpoise; counterbalance	기계의 운동 부분이 그 받침점이나 축에 대하여 평형을 이루게 하는 추. 기관차의 동륜 따위에 쓴다.	opendict	high	true
+폐활량계	肺活量計	kengdic	other	kengdic	1.00	spirometer; pulmometer	폐활량을 재는 기구.	opendict	high	true
+포경선	捕鯨船	kengdic	other	kengdic	1.00	whaler	고래를 잡기 위하여 특별한 설비를 갖춘 배.	cedict	low	true
+포물면	抛物面	kengdic	other	kengdic	1.00	paraboloid	이차 곡면 가운데 방정식 <img style="vertical-align: middle;" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation/popup/formula.do?latex=ax%5E%7B2%7D%2Bby%5E%7B2%…	cedict	low	true
+포식자	捕食者	kengdic	other	kengdic	1.00	predator	다른 동물을 먹이로 하는 동물.	cedict	low	true
+폭격수	爆擊手	kengdic	other	kengdic	1.00	bombardier	폭격기에서 폭탄을 떨어뜨리는 일을 맡아 하는 사람.	opendict	high	true
+피감수	被減數	kengdic	other	kengdic	1.00	minuend	어떤 수나 식에서 다른 수나 식을 뺄 때에, 그 처음의 수나 식. 즉 ‘3－2＝1’에서 ‘3’을 이른다.	cedict	low	true
+피자식물	被子植物	kengdic	other	kengdic	1.00	angiosperm	꽃식물 가운데 밑씨가 씨방 안에 싸여 있는 식물. 쌍떡잎식물과 외떡잎식물로 크게 나누는데, 감나무·버드나무·벚나무·밤나무·진달래·국화·벼·난초·백합 따위 대부분의 종자식물이 이에 해당한다.	cedict	low	true
+피층	皮層	kengdic	other	kengdic	1.00	cortex	식물 조직계의 하나. 뿌리나 줄기 따위에서 겉껍질과 중심주 사이를 채우는 세포층으로, 세포막이 얇고 부드러운 세포로 되어 있다.	cedict	low	true
+할양	割讓	kengdic	other	kengdic	1.00	cession	땅이나 물건 따위를 한 부분 떼어서 남에게 넘겨줌.	cedict	low	true
+함교	艦橋	kengdic	other	kengdic	1.00	bridge	함장이 항해 중에 함을 조종·지휘하기 위하여 갑판 맨 앞 한가운데에 높게 만든 갑판.	cedict	low	true
+함수초	含羞草	kengdic	other	kengdic	1.00	mimosa; sensitive plant	‘미모사’를 달리 이르는 말. 그 모양이 마치 수줍어서 부끄럼을 타는 것 같다 하여 이르는 말이다.	cedict	low	true
+합력	合力	kengdic	other	kengdic	1.00	resultant, resultant force	흩어진 힘을 한데 모음. 또는 그렇게 모은 힘.	cedict	low	true
+합성물	合成物	kengdic	other	kengdic	1.00	a complex, a composite, a composition, a compound	여러 가지를 합성하여 만든 물질.	opendict+cedict	high	true
+합성수	合成數	kengdic	other	kengdic	1.00	composite number	1과 자신의 수 이외에도 약수를 가진 정수. 둘 이상의 소수를 곱한 수이다.	cedict	low	true
+항공술	航空術	kengdic	other	kengdic	1.00	aeronautics	항공기를 조종하여 비행하는 기술.	cedict	low	true
+항등식	恒等式	kengdic	other	kengdic	1.00	identical equation	식에 포함된 문자에 어떤 값을 넣어도 언제나 성립하는 등식. ‘<img style="vertical-align: middle;" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation/popup/formula.do?latex=a%2B…	cedict	low	true
+해상력	解像力	kengdic	other	kengdic	1.00	resolving power; resolution	사진에서, 피사체의 미세한 상(像)을 재현할 수 있는 렌즈의 능력. 또는 현미경 따위에서, 상(像)의 미세한 부분을 식별할 수 있는 렌즈의 능력.	cedict	low	true
+핵소체	核小體	kengdic	other	kengdic	1.00	nucleolus	세포핵 안에 있는 작은 구형(球形)이나 막대 모양의 부위. 주로 단백질과 아르엔에이로 이루어진다.	cedict	low	true
+핵의학	核醫學	kengdic	other	kengdic	1.00	nuclear medicine	방사성 동위 원소를 사용하여 병을 진단하거나 치료하는 학문. 의학의 한 분야이다.	cedict	low	true
+핵형	核型	kengdic	other	kengdic	1.00	karyotype	각 생물에게 주어진 고유의 염색체 종류 및 그 숫자. 종(種), 속(屬) 따위에 따라 크기, 형(型), 수(數)가 다르다.	cedict	low	true
+향락주의	享樂主義	kengdic	other	kengdic	1.00	epicureanism, hedonism	예술에서의 도락적(道樂的) 입장.	cedict	low	true
+향성	向性	kengdic	other	kengdic	1.00	tropism	고착 생활을 하는 동물의 어떤 부분이 외부의 자극에 일정한 방향으로 움직이는 성질. 자극의 방향으로 향하는 경우를 양(陽), 반대인 경우를 음(陰)이라고 한다. 식물의 경우는 굴성(屈性)이라고 하며, 특히 양의 굴성을 이른다.	cedict	low	true
+혈괴	血塊	kengdic	other	kengdic	1.00	blood clot	아랫배에 피가 몰려 덩어리가 생긴 병.	cedict	low	true
+혈뇨	血尿	kengdic	other	kengdic	1.00	hematuria	오줌에 피가 섞여 나오는 병.	cedict	low	true
+혈전증	血栓症	kengdic	other	kengdic	1.00	thrombosis	기관 안에서 혈액이 굳는 병.	cedict	low	true
+혈종	血腫	kengdic	other	kengdic	1.00	hematoma	내출혈로 말미암아 혈액이 한곳으로 모여 혹과 같이 된 것.	cedict	low	true
+형석	螢石	kengdic	other	kengdic	1.00	fluorite	플루오린화 칼슘으로 이루어진 할로겐 광물. 등축 정계에 속하며, 육면체 또는 팔면체의 결정이나 덩어리 모양으로 난다. 유리 광택을 내고 무색투명하나 불순물에 따라 누런색·녹색·녹청색 따위를 띠며, 약하고 무르다. 플루오린의 원료, 유리 공업 재료, 야금제(冶金劑) 따위로 쓴다.	cedict	low	true
+형성층	形成層	kengdic	other	kengdic	1.00	cambium	쌍떡잎식물이나 겉씨식물, 일부 외떡잎식물과 양치식물의 줄기나 뿌리의 물관부와 체관부 사이에 있는 분열 조직. 왕성한 세포 분열이 이루어져 안쪽에 물관부, 바깥쪽에 체관부를 만든다.	cedict	low	true
+호로파	葫蘆巴	kengdic	other	kengdic	1.00	fenugreek	콩과의 한해살이풀. 높이는 0.7~1미터이다. 여름에 나비 모양의 노란색 꽃이 피고 열매는 꼬투리 모양이다. 씨는 약재, 향신료로 쓰인다. 서아시아가 원산지로 중국에 분포한다.	cedict	low	true
+호소학	湖沼學	kengdic	other	kengdic	1.00	limnology	호수나 늪의 생성 원인 및 형상, 수온, 수질, 화학 성분, 생물, 이용법 따위를 종합적으로 연구하는 학문. 육수학의 한 분야이다.	cedict	low	true
+호흡률	呼吸率	kengdic	other	kengdic	1.00	respiratory quotient (ratio)	생물이 일정한 시간에 흡수한 산소의 부피로 같은 시간에 배출한 이산화 탄소의 부피를 나눈 값.	opendict	high	true
+혼작	混作	kengdic	other	kengdic	1.00	double cropping	한곳에 두 가지 이상의 작물을 심는 일.	cedict	low	true
+홍등	紅燈	kengdic	other	kengdic	1.00	a red lamp, a red light	붉은 등불.	cedict	low	true
+홍소	哄笑	kengdic	other	kengdic	1.00	cachinnation; belly laugh	입을 크게 벌리고 웃거나 떠들썩하게 웃음. 또는 그 웃음.	cedict	low	true
+홍옥수	紅玉髓	kengdic	other	kengdic	1.00	carnelian, sard, of calcedony	갈색이나 붉은 갈색, 짙은 귤색을 띠는 반투명한 옥수.	cedict	low	true
+화농성	化膿性	kengdic	other	kengdic	1.00	to be purulent, suppurative	종기가 곪아서 고름이 생길 성질.	cedict	low	true
+화산력	火山礫	kengdic	other	kengdic	1.00	lapillus	화산이 분출할 때에 터져 나오는 용암의 조각. 이미 굳어진 암석이 폭발하여 파괴된 것으로, 지름은 4~32mm이다.	cedict	low	true
+화학전	化學戰	kengdic	other	kengdic	1.00	chemical warfare	화학 무기를 써서 적을 공격하거나, 적의 화학 무기를 무력하게 만드는 장비를 써서 방어하는 전쟁.	cedict	low	true
+환원법	還元法	kengdic	other	kengdic	1.00	reduction	정언적 삼단 논법에서, 제2·제3·제4격을 제1격으로 고치는 방법. 직접 환원법과 간접 환원법이 있다.	opendict	high	true
+환초	環礁	kengdic	other	kengdic	1.00	atoll	고리 모양으로 배열된 산호초. 안쪽은 얕은 바다를 이루고 바깥쪽은 큰 바다와 닿아 있다. 주로 태평양과 인도양에 분포한다.	cedict	low	true
+황반	黃斑	kengdic	other	kengdic	1.00	yellow spot	누런 빛깔을 띠는 얼룩무늬 또는 얼룩점.	cedict	low	true
+황선	黃癬	kengdic	other	kengdic	1.00	favus	머리카락 밑에 딱지가 생기고 고약한 냄새가 나는 곰팡이 질환의 하나.	cedict	low	true
+황열병	黃熱病	kengdic	other	kengdic	1.00	yellow jack; yellow fever	아프리카 서부와 남아메리카에서 볼 수 있는 악성 전염병. 황열 바이러스가 주로 간과 콩팥을 침범하는데, 고열이 나고 피가 섞인 검은색의 구토와 황달을 일으키며 사망률이 높다.	cedict	low	true
+황적색	黃赤色	kengdic	other	kengdic	1.00	poppy red	누런빛을 띤 붉은색.	cedict	low	true
+회귀선	回歸線	kengdic	other	kengdic	1.00	tropic	적도를 중심으로 하여 남북 각 23도 27분을 지나는 위선(緯線). 북쪽을 북회귀선 또는 하지선, 남쪽을 남회귀선 또는 동지선이라 한다. 북회귀선상에서는 하지에, 남회귀선상에서는 동지에 태양이 머리 위에 온다. 위도 23도 27분은 적도가 지구의 공전 궤도면과 이루는 각이다.	cedict	low	true
+회귀열	回歸熱	kengdic	other	kengdic	1.00	relapsing fever	스피로헤타의 침입으로 일어나는 감염병. 이, 벼룩, 진드기, 모기 따위가 매개하는 감염병으로, 오한, 고열, 두통, 피부 황색 변성 따위의 증상을 나타내다가 5~7일 뒤에 없어지고 약 일주일이 지나면 다시 같은 증상이 되풀이된다.	cedict	low	true
+회선곡	回旋曲	kengdic	other	kengdic	1.00	rondo	주제가 같은 상태로 여러 번 되풀이되는 동안에 다른 가락이 여러 가지로 삽입되는 형식의 기악곡.	cedict	low	true
+효소원	酵素原	kengdic	other	kengdic	1.00	a zymogen	비활성 전구물질로, 생체에서 만들어져 분비된 다음 다른 물질의 작용을 받고서 비로소 참된 효소가 되는 일부 효소를 이르는 말.	opendict	high	true
+후갑판	後甲板	kengdic	other	kengdic	1.00	quarterdeck; afterdeck	배의 고물 쪽에 있는 갑판.	cedict	low	true
+후치	後置	kengdic	other	kengdic	1.00	postposition	뒤에 놓음.	cedict	low	true
+후치사	後置詞	kengdic	other	kengdic	1.00	postposition	체언 따위의 실질 형태소를 포함하는 단어의 뒤에 놓여, 그 단어가 다른 단어와 맺는 관계를 표시하여 주는 말.	cedict	low	true
+휘석	輝石	kengdic	other	kengdic	1.00	pyroxene	철, 마그네슘, 칼슘 따위로 이루어진 규산염 광물. 사방 정계 또는 단사 정계에 속하며 검은색, 검은 녹색, 검은 갈색을 띠고 유리 광택이 있다. 조암 광물의 하나로 화성암 속에서 난다.	cedict	low	true
+흉골	胸骨	kengdic	other	kengdic	1.00	sternum	가슴 한복판에 세로로 길쭉하게 있는 납작한 뼈. 세 부분으로 되어 있으며 위쪽은 빗장뼈와 관절을 이루고, 옆은 위쪽 일곱 개의 갈비 연골과 연결되어 있다.	cedict	low	true
+흉벽	胸壁	kengdic	other	kengdic	1.00	battlement, breast wall, breastwork	사람의 가슴 높이만 한 담. 성곽이나 포대(砲臺) 따위의 중요한 곳에 따로 쌓는 것을 말한다.	opendict	high	true
+흉선	胸腺	kengdic	other	kengdic	1.00	sweetbread; thymus	복장뼈의 뒤쪽에 있는 내분비샘. 신체 발육의 촉진과 성적 발육을 억제하는 호르몬을 분비한다.	cedict	low	true
+흡수율	吸收率	kengdic	other	kengdic	1.00	absorptance	파동이나 방사선이 물질의 어떤 층을 지날 때 흡수에 의해서 그 양이 감소하는 정도를 나타내는 상수. 흡수하는 재질에 따라 고윳값이 다르다.	opendict	high	true
+흡입기	吸入器	kengdic	other	kengdic	1.00	an inhaler	약물을 안개나 기체 상태로 하여 기도나 폐에 들어가도록 하는 기구. 마취나 호흡 기관 질환의 치료에 쓴다.	cedict	low	true
+무진히	無盡히	krdict	adverb	derived	1.00	끝이 없을 만큼 매우.	다함이 없을 만큼 매우.	stdict_derived	high	true
+월등히	越等히	krdict	adverb	derived	1.00	수준이 다른 것이나 보통보다 훨씬 뛰어나게.	수준이 정도 이상으로 뛰어나게.	stdict_derived	high	true
+불시착시키다	不時着시키다	kengdic	other	derived	1.00	forceland; crash		english_overlap	low	true
+숙영하다	宿營하다	kengdic	other	derived	1.00	lie	군대가 훈련이나 전쟁을 수행하기 위하여 병영 밖에서 머물러 지내다. 노영하는 일, 사영하는 일, 촌락에서 노영하는 일 따위를 이른다.	stdict_derived	high	true
+야생하다	野生하다	kengdic	other	derived	1.00	grow wild	산이나 들에서 저절로 나서 자라다.	stdict_derived	high	true
+월동시키다	越冬시키다	kengdic	other	derived	1.00	winter		english_overlap	low	true
+유행시키다	流行시키다	kengdic	other	derived	1.00	bring(come)into vogue		english_overlap	low	true
+자활하다	自活하다	kengdic	other	derived	1.00	maintain	자기 힘으로 살아가다.	stdict_derived	high	true
+풍화시키다	風化시키다	kengdic	other	derived	1.00	weather		english_overlap	low	true
+감염시키다	感染시키다	kengdic	other	derived	1.00	infect		english_overlap	low	true
+강청하다	強請하다	kengdic	other	derived	1.00	bot	무리하게 억지로 청하다.	stdict_derived	high	true
+개심시키다	改心시키다	kengdic	other	derived	1.00	convert, reclaim, recover, reform, regenerate		english_overlap	low	true
+걸식하다	乞食하다	kengdic	other	derived	1.00	cadge	음식 따위를 빌어먹다. 또는 먹을 것을 빌다.	stdict_derived	high	true
+격리시키다	隔離시키다	kengdic	other	derived	1.00	insulate, isolate		english_overlap	low	true
+격앙시키다	激昻시키다	kengdic	other	derived	1.00	empoison; frenzy		english_overlap	low	true
+격추시키다	擊墜시키다	kengdic	verb	derived	1.00	to shoot down an airplane		english_overlap	low	true
+견실히	堅實히	kengdic	other	derived	1.00	consistent	믿음직스럽게 굳고 착실한 생각이나 태도로.	stdict_derived	high	true
+결빙시키다	結氷시키다	kengdic	other	derived	1.00	freeze		english_overlap	low	true
+결석시키다	缺席시키다	kengdic	other	derived	1.00	absent		english_overlap	low	true
+결심시키다	決心시키다	kengdic	verb	derived	1.00	to decide, determine, resolve		english_overlap	low	true
+결정화하다	結晶化하다	kengdic	other	derived	1.00	crystallize	용액이나 융해물 따위로부터 결정이 이루어지다. 또는 결정을 이루다.	stdict_derived	high	true
+계속시키다	繼續시키다	kengdic	verb	derived	1.00	to continue		english_overlap	low	true
+고정시키다	固定시키다	kengdic	verb	derived	1.00	to fix (down,to), immobilize, rivet, set (fix solid)		english_overlap	low	true
+골화하다	骨化하다	kengdic	other	derived	1.00	ossify	석회가 가라앉아서 뼈조직이 만들어지다.	stdict_derived	high	true
+과냉각하다	過冷却하다	kengdic	other	derived	1.00	undercool	액체를 응고점 이하로 냉각하여도 액체 상태로 있게 하다.	stdict_derived	high	true
+과로시키다	過勞시키다	kengdic	other	derived	1.00	overwork		english_overlap	low	true
+과열시키다	過熱시키다	kengdic	verb	derived	1.00	to overheat		english_overlap	low	true
+관용구적	慣用句的	kengdic	other	derived	1.00	idiomatically		english_overlap	low	true
+교란시키다	攪亂시키다	kengdic	verb	derived	1.00	to throw off,to confuse		english_overlap	low	true
+교배시키다	交配시키다	kengdic	other	derived	1.00	cross, hybridize		english_overlap	low	true
+구개음화하다	口蓋音化하다	kengdic	other	derived	1.00	palatalize	끝소리가 ‘ㄷ’, ‘ㅌ’인 형태소가 모음 ‘ㅣ’나 반모음 ‘ㅣ[j]’로 시작되는 형식 형태소와 만나서 그것이 구개음 ‘ㅈ’, ‘ㅊ’이 되거나, ‘ㄷ’ 뒤에 형식 형태소 ‘히’가 올 때 ‘ㅎ’과 결합하여 이루어진 ‘ㅌ’이 ‘ㅊ’이 되다. ‘굳이’가 ‘구지’로, ‘굳히다’가 ‘구치다’로…	stdict_derived	high	true
+굴곡하다	屈曲하다	kengdic	verb	derived	1.00	to wind, to turn, to inflect	이리저리 굽어 꺾여 있다.	stdict_derived	high	true
+귀의시키다	歸依시키다	kengdic	other	derived	1.00	convert		english_overlap	low	true
+귀화시키다	歸化시키다	kengdic	verb	derived	1.00	to naturalize		english_overlap	low	true
+급강하시키다	急降下시키다	kengdic	other	derived	1.00	crash dive		english_overlap	low	true
+급행하다	急行하다	kengdic	other	derived	1.00	rush	급히 가다.	stdict_derived	high	true
+기화되다	氣化되다	kengdic	verb	derived	1.00	to gasify	액체가 기체로 변하게 되다.	stdict_derived	high	true
+기화시키다	氣化시키다	kengdic	other	derived	1.00	vaporize, volatilize		english_overlap	low	true
+낙담시키다	落膽시키다	kengdic	verb	derived	1.00	to dampen the spirits of, discourage, dishearten		english_overlap	low	true
+낙뢰하다	落雷하다	kengdic	other	derived	1.00	thunderstrike	벼락이 떨어지다.	stdict_derived	high	true
+냉장되다	冷藏되다	kengdic	other	derived	1.00	refrigerate		english_overlap	low	true
+노출시키다	露出시키다	kengdic	other	derived	1.00	disclose		opendict_derived	high	true
+단결시키다	團結시키다	kengdic	other	derived	1.00	solidify		english_overlap	low	true
+당혹시키다	當惑시키다	kengdic	other	derived	1.00	puzzle		english_overlap	low	true
+대결시키다	對決시키다	kengdic	verb	derived	1.00	to confront		english_overlap	low	true
+대리시키다	代理시키다	kengdic	other	derived	1.00	substitute		english_overlap	low	true
+대항시키다	對抗시키다	kengdic	other	derived	1.00	oppose		english_overlap	low	true
+돌진시키다	突進시키다	kengdic	other	derived	1.00	rush		english_overlap	low	true
+동결시키다	凍結시키다	kengdic	other	derived	1.00	freeze		english_overlap	low	true
+만곡시키다	彎曲시키다	kengdic	other	derived	1.00	curve, incurvate		english_overlap	low	true
+만곡하다	彎曲하다	kengdic	other	derived	1.00	curve	활 모양으로 굽다.	stdict_derived	high	true
+매음시키다	賣淫시키다	kengdic	other	derived	1.00	prostitute		english_overlap	low	true
+면역시키다	免疫시키다	kengdic	other	derived	1.00	immunize		english_overlap	low	true
+면직시키다	免職시키다	kengdic	other	derived	1.00	dismiss, unseat from a job		english_overlap	low	true
+모조하다	模造하다	kengdic	other	derived	1.00	counterfeit	이미 있는 것을 그대로 따라 하거나 본떠서 만들다.	stdict_derived	high	true
+몰락시키다	沒落시키다	kengdic	other	derived	1.00	ruin		english_overlap	low	true
+반향시키다	反響시키다	kengdic	other	derived	1.00	rebound, reverberate, revoice		english_overlap	low	true
+발광시키다	發光시키다	kengdic	other	derived	1.00	craze, derange		english_overlap	low	true
+발열시키다	發熱시키다	kengdic	other	derived	1.00	fever		english_overlap	low	true
+발적시키다	發赤시키다	kengdic	other	derived	1.00	rubefy		english_overlap	low	true
+변성시키다	變性시키다	kengdic	other	derived	1.00	denature		english_overlap	low	true
+변형시키다	變形시키다	kengdic	other	derived	1.00	metamorphose, transform, transmogrify		english_overlap	low	true
+부영양화되다	富營養化되다	kengdic	other	derived	1.00	eutrophicate		opendict_derived	high	true
+부패시키다	腐敗시키다	kengdic	other	derived	1.00	corrupt, empoison, cause to rot		english_overlap	low	true
+분리시키다	分離시키다	kengdic	other	derived	1.00	segregate, unsolder, disconnect from		english_overlap	low	true
+분파적	分派的	kengdic	other	derived	1.00	divisive	여러 갈래로 나뉘는 성격이 있는 것.	stdict_derived	high	true
+불만하다	不滿하다	kengdic	other	derived	1.00	not a word. see 불평하다 (to complain)	마음에 흡족하지 아니하다.	stdict_derived	high	true
+비례시키다	比例시키다	kengdic	other	derived	1.00	proportion		english_overlap	low	true
+산화시키다	山火시키다	kengdic	other	derived	1.00	burn; oxidize		english_overlap	low	true
+상호작용하다	相互作用하다	kengdic	other	derived	1.00	interact; interplay		english_overlap	low	true
+서술적	敍述的	kengdic	other	derived	1.00	declarative, descriptive, predicative		opendict_derived	high	true
+선회시키다	旋回시키다	kengdic	other	derived	1.00	wheel		english_overlap	low	true
+손상시키다	損傷시키다	kengdic	other	derived	1.00	damage, injure		english_overlap	low	true
+수소화하다	水素化하다	kengdic	verb	derived	1.00	to hydrogenate		opendict_derived	high	true
+숙박시키다	宿泊시키다	kengdic	other	derived	1.00	accommodate, bestow, quarter		english_overlap	low	true
+숙지시키다	熟知시키다	kengdic	other	derived	1.00	acquaint		english_overlap	low	true
+순환시키다	循環시키다	kengdic	other	derived	1.00	circulate		english_overlap	low	true
+실격시키다	失格시키다	kengdic	verb	derived	1.00	to incapacitate, disqualify		english_overlap	low	true
+실재시키다	實在시키다	kengdic	verb	derived	1.00	to substantialize		english_overlap	low	true
+안락사시키다	安樂死시키다	kengdic	other	derived	1.00	euthanize		english_overlap	low	true
+압운하다	押韻하다	kengdic	other	derived	1.00	tag	시가에서, 시행의 일정한 자리에 같은 운을 규칙적으로 달다.	stdict_derived	high	true
+압착되다	壓搾되다	kengdic	other	derived	1.00	squeeze	눌려 짜지다.	stdict_derived	high	true
+야생적	野生的	kengdic	other	derived	1.00	wildly	산이나 들에서 자라 가꾸어지거나 길이 들지 않은 것.	stdict_derived	high	true
+양해되다	諒解되다	kengdic	verb	derived	1.00	to be understood	사정이 잘 헤아려져 너그러이 받아들여지다.	stdict_derived	high	true
+연합시키다	聯合시키다	kengdic	other	derived	1.00	associate tog., combine, consociate, federate		english_overlap	low	true
+열중시키다	熱中시키다	kengdic	other	derived	1.00	craze, immerse, intoxicate, involve		english_overlap	low	true
+예비적	豫備的	kengdic	other	derived	1.00	preparatory	필요할 때 쓰기 위하여 미리 마련하거나 갖추어 놓은 것.	stdict_derived	high	true
+오보하다	誤報하다	kengdic	other	derived	1.00	misinform	어떠한 사건이나 소식을 그릇되게 전하여 알려 주다.	stdict_derived	high	true
+오해시키다	誤解시키다	kengdic	verb	derived	1.00	to create a misunderstanding		english_overlap	low	true
+왕진하다	往診하다	kengdic	other	derived	1.00	visit	의사가 병원 밖의 환자가 있는 곳으로 가서 진료하다.	stdict_derived	high	true
+운행시키다	運行시키다	kengdic	other	derived	1.00	ran; revolve		english_overlap	low	true
+위협시키다	威脅시키다	kengdic	other	derived	1.00	intimidate		english_overlap	low	true
+유기되다	遺棄되다	kengdic	verb	derived	1.00	to become a derelict	내다 버려지다.	stdict_derived	high	true
+유심론적	唯心論的	kengdic	other	derived	1.00	spiritualistic		english_overlap	low	true
+유증하다	遺贈하다	kengdic	other	derived	1.00	bequeath, devise, will	물건을 보내다.	stdict_derived	high	true
+유착시키다	癒着시키다	kengdic	verb	derived	1.00	to agglutinate, conglutinate		english_overlap	low	true
+유통시키다	流通시키다	kengdic	verb	derived	1.00	to circulate		english_overlap	low	true
+윤작하다	輪作하다	kengdic	other	derived	1.00	rotate crops	같은 주제나 소재로 여러 작가가 돌아가며 글을 쓰다.	stdict_derived	high	true
+윤창하다	輪唱하다	kengdic	other	derived	1.00	troll		english_overlap	low	true
+은퇴시키다	隱退시키다	kengdic	other	derived	1.00	retire, retreat, seclude, seclusive, sequester		english_overlap	low	true
+응고시키다	凝固시키다	kengdic	other	derived	1.00	coagulate, solidify		english_overlap	low	true
+응당히	應當히	kengdic	other	derived	1.00	adapting well	행동이나 대상 따위가 일정한 조건이나 가치에 꼭 알맞게.	stdict_derived	high	true
+자각시키다	自覺시키다	kengdic	other	derived	1.00	awake		english_overlap	low	true
+재결합시키다	再結合시키다	kengdic	other	derived	1.00	recombine, reunite (with a former spouse)		english_overlap	low	true
+재사용하다	再使用하다	kengdic	verb	derived	1.00	to reuse, to use again one more time		opendict_derived	high	true
+재생시키다	再生시키다	kengdic	verb	derived	1.00	to regenerate		english_overlap	low	true
+재시험하다	再試驗하다	kengdic	other	derived	1.00	reexamine, retest	두 번 시험을 치다.	stdict_derived	high	true
+재출발시키다	再出發시키다	kengdic	other	derived	1.00	restart		english_overlap	low	true
+재혼시키다	再婚시키다	kengdic	other	derived	1.00	remarry		english_overlap	low	true
+전개시키다	展開시키다	kengdic	verb	derived	1.00	to deploy; to develop (events)		english_overlap	low	true
+전입되다	轉入되다	kengdic	other	derived	1.00	transfer	이전 거주지에서 새 거주지로 옮겨 오게 되다.	stdict_derived	high	true
+절찬하다	絕讚하다	kengdic	verb	derived	1.00	to be bathing in praise/applause	지극히 칭찬하다.	stdict_derived	high	true
+접근시키다	接近시키다	kengdic	other	derived	1.00	approach; approximate		english_overlap	low	true
+접촉시키다	接觸시키다	kengdic	other	derived	1.00	touch; contact		english_overlap	low	true
+정장시키다	正裝시키다	kengdic	verb	derived	1.00	to dress up		english_overlap	low	true
+좌천시키다	左遷시키다	kengdic	verb	derived	1.00	to downgrade, demote		english_overlap	low	true
+중립시키다	中立시키다	kengdic	other	derived	1.00	neutralize		english_overlap	low	true
+중절되다	中絕되다	kengdic	verb	derived	1.00	to be interrupted	중도에서 끊어지거나 그만두게 되다.	stdict_derived	high	true
+중합시키다	重合시키다	kengdic	other	derived	1.00	polymerize		english_overlap	low	true
+증식시키다	增殖시키다	kengdic	other	derived	1.00	proliferate		english_overlap	low	true
+집합되다	集合되다	kengdic	verb	derived	1.00	to be assembled	사람들이 한곳으로 모이게 되다.	stdict_derived	high	true
+차폐하다	遮蔽하다	kengdic	other	derived	1.00	mask	가려 막고 덮다.	stdict_derived	high	true
+초월시키다	超越시키다	kengdic	other	derived	1.00	transcendentalize		english_overlap	low	true
+추락시키다	墜落시키다	kengdic	other	derived	1.00	crash		english_overlap	low	true
+충혈시키다	充血시키다	kengdic	other	derived	1.00	congest, inflame		english_overlap	low	true
+침묵시키다	沈默시키다	kengdic	verb	derived	1.00	to hush, to silence		english_overlap	low	true
+침전시키다	沈澱시키다	kengdic	other	derived	1.00	precipitate		english_overlap	low	true
+타협시키다	妥協시키다	kengdic	other	derived	1.00	compromise		english_overlap	low	true
+탈구시키다	脫臼시키다	kengdic	other	derived	1.00	disjoint; dislocate		english_overlap	low	true
+퇴장시키다	退場시키다	kengdic	other	derived	1.00	bench		english_overlap	low	true
+퇴폐시키다	頹廢시키다	kengdic	other	derived	1.00	debauch, demoralize		english_overlap	low	true
+파열시키다	破裂시키다	kengdic	other	derived	1.00	rupture		english_overlap	low	true
+패소시키다	敗訴시키다	kengdic	other	derived	1.00	case		english_overlap	low	true
+팽창시키다	膨脹시키다	kengdic	other	derived	1.00	dilate; expand		english_overlap	low	true
+편취하다	騙取하다	kengdic	other	derived	1.00	defraud; diddle	남을 속이어 재물이나 이익 따위를 빼앗다.	stdict_derived	high	true
+평형되다	平衡되다	kengdic	other	derived	1.00	equilibrate		english_overlap	low	true
+평형시키다	平衡시키다	kengdic	other	derived	1.00	equilibrate; counterbalance		english_overlap	low	true
+포함시키다	包含시키다	kengdic	verb	derived	1.00	to include in, to count into the total		english_overlap	low	true
+함몰시키다	陷沒시키다	kengdic	other	derived	1.00	cave		english_overlap	low	true
+항행하다	航行하다	kengdic	other	derived	1.00	navigate	배나 비행기 따위를 타고 항로 또는 궤도를 다니다.	stdict_derived	high	true
+해소시키다	解消시키다	kengdic	verb	derived	1.00	to dissolve		english_overlap	low	true
+향연하다	饗宴하다	kengdic	verb	derived	1.00	to have a banquet, to feast		english_overlap	low	true
+형용사적	形容詞的	kengdic	other	derived	1.00	adjectival		opendict_derived	high	true
+호색하다	好色하다	kengdic	other	derived	1.00	lech	여색을 몹시 좋아하다.	stdict_derived	high	true
+확신시키다	確信시키다	kengdic	other	derived	1.00	convince; assure		english_overlap	low	true
+확장시키다	擴張시키다	kengdic	other	derived	1.00	dilate, expand		english_overlap	low	true
+환원시키다	還元시키다	kengdic	other	derived	1.00	reduce (opposite of to oxidize); revive, resuscitate, give back to		english_overlap	low	true
+활용시키다	活用시키다	kengdic	verb	derived	1.00	to inflect, conjugate		english_overlap	low	true
+회절시키다	回折시키다	kengdic	verb	derived	1.00	to diffract		english_overlap	low	true
+후진시키다	後進시키다	kengdic	other	derived	1.00	reverse		english_overlap	low	true
+휴교하다	休校하다	kengdic	other	derived	1.00	recess	학교가 학생을 가르치는 업무를 한동안 쉬다.	stdict_derived	high	true
+휴양시키다	休養시키다	kengdic	verb	derived	1.00	to rest and repose		english_overlap	low	true
