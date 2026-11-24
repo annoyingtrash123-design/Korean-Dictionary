@@ -25,13 +25,13 @@ test('filled hanja: a small 표준 marker in the entry header (phone and iPad)',
   await page.getByRole('radio', { name: 'Light' }).click();
   await page.getByRole('link', { name: 'Search', exact: true }).click().catch(() => undefined);
 
-  // 환초 (kengdic-only word): hanja 環礁 from 표준국어대사전
-  await openEntry(page, '환초');
+  // 용골 (kengdic-only word, 'keel' also in 우리말샘): hanja 龍骨 from 표준국어대사전
+  await openEntry(page, '용골');
   const marker = page.locator('.entry-head .hanja-src');
   await expect(marker).toHaveCount(1);
   await expect(marker).toHaveText('표준');
   await expect(marker).toHaveAttribute('title', /표준국어대사전/);
-  await expect(page.locator('.entry-head .hanja-chars')).toHaveText('環礁');
+  await expect(page.locator('.entry-head .hanja-chars')).toHaveText('龍骨');
   // the marker is small and does not wrap the header onto many lines
   const box = await page.locator('.entry-head').boundingBox();
   expect(box!.height).toBeLessThan(150);
@@ -39,7 +39,7 @@ test('filled hanja: a small 표준 marker in the entry header (phone and iPad)',
 
   // the filled hanja feeds the Chars tab like any other
   await page.getByRole('tab', { name: /Chars/ }).click();
-  await expect(page.locator('.etab-panel')).toContainText('環');
+  await expect(page.locator('.etab-panel')).toContainText('龍');
 
   // an entry whose dictionary gives the hanja itself (krdict 사과 etc.) has no marker; a native word has no hanja at all
   await openEntry(page, '학교');
@@ -49,7 +49,7 @@ test('filled hanja: a small 표준 marker in the entry header (phone and iPad)',
   await expect(page.locator('.entry-head .hanja-src')).toHaveCount(0);
 
   // ---- iPad ----
-  await openEntry(page, '환초');
+  await openEntry(page, '용골');
   await page.setViewportSize({ width: 1180, height: 820 });
   await page.waitForTimeout(500);
   await expect(page.locator('.entry-head .hanja-src')).toHaveText('표준');
