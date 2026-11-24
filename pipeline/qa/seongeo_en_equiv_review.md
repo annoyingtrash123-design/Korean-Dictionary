@@ -169,3 +169,16 @@ Roster: 350 성어 (seongeo300 + seongeo_learner, deduplicated). Proposed equiva
 | 견물생심 | 見物生心 | opportunity makes the thief |  |
 | 금전만능 | 金錢萬能 | money makes the world go round |  |
 | 회자정리 | 會者定離 | all good things must come to an end |  |
+
+## Independent review (2026-11-24)
+
+Rule: keep only established English idioms/proverbs whose meaning and typical use match the 성어; otherwise empty.
+
+- Result: **135 approved** (146 drafted − 12 emptied + 1 added), 215 empty (not shipped), 38.6%. Within the quality test bound (≥50 rows, ≤60%), so the test was not changed.
+- Emptied (no genuine match): 새옹지마 (a blessing in disguise: only half the meaning), 인면수심 (a wolf in sheep's clothing: hidden vs. overt cruelty), 천신만고 (blood, sweat and tears: effort, not hardship), 주경야독 (burn the midnight oil), 도원결의 (blood brothers: not an idiom for the oath), 사필귀정 (truth will out: different meaning), 아전인수 (have an axe to grind: motive, not self-serving distortion), 무궁무진 (the sky's the limit: potential, not inexhaustibility), 우유부단 (sit on the fence: neutrality, not indecisiveness), 권선징악 (poetic justice: an outcome, not the moral principle), 일심동체 (two hearts that beat as one: song lyric, not an idiom), 언감생심 (wouldn't dream of it: refusal, not "can't even hope for").
+- Changed: 동병상련 → "misery loves company" (nuance note); 암중모색 → "feel one's way"; 일구이언 kept, note added (deceit vs. going back on one's word).
+- Added from the empty rows: 유야무야 → "fizzle out".
+- Shared equivalents kept: 풍전등화/백척간두 "hanging by a thread", 막상막하/백중지세 "neck and neck" (near-synonyms in Korean too).
+- UK-only kept with their "British" notes: 야반도주 "do a moonlight flit", 대동소이 "much of a muchness".
+- 상전벽해 "a sea change" approved with its existing note.
+- Spot-check of the 204 empty rows: mostly descriptive compounds (만장일치, 자급자족…) or culture-bound allusions (토사구팽, 함흥차사, 조삼모사) with no true English idiom; left empty.
