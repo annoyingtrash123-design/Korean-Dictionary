@@ -74,12 +74,12 @@
 몰라요	first	모르다
 예뻐요	first	예쁘다
 걸어서	top3	걷다	ok	also 걸다 + -어서
-지어요	first	짓다	known	deconjugation ranks 지다 above ㅅ-irregular 짓다
+지어요	first	짓다	ok
 나았다	first	낫다
 불러요	first	부르다
 빨개요	first	빨갛다
 봤어요	first	보다
-와요	first	오다	known	rare exact headword 와요 瓦窯 outranks 오다
+와요	first	오다	ok
 갈게요	first	가다
 읽으면	first	읽다
 만들었어요	first	만들다
@@ -92,7 +92,7 @@
 잡혔다	first	잡히다
 먹고 싶어요	top3	먹다
 가르쳐	first	가르치다
-들어가세요	first	들어가다	known	들다 ranked above 들어가다
+들어가세요	first	들어가다	ok
 흘렀다	first	흐르다
 # == particles attached: the noun first
 학교에	first	학교
@@ -107,7 +107,7 @@
 나한테	first	나
 # == spacing variants
 선물가게	top3	선물 가게
-한국 사람	top3	한국 사람|한국인	known	spaced words that are not one headword find nothing (should fall back to 한국 + 사람)
+한국 사람	top3	한국 사람|한국인|한국|사람	ok	no such headword: falls back to the words one by one (한국, 사람)
 공부 하다	top3	공부하다
 아이스 크림	top3	아이스크림
 대한 민국	top3	대한민국
@@ -121,15 +121,15 @@ love	top3	사랑|사랑하다
 thank	top5	감사하다|고맙다
 beautiful	top3	아름답다
 gift	top3	선물
-present	top5	선물	known	선물 not in the top 5 (제시하다, 등장시키다 first)
+present	top5	선물	ok
 friend	first	친구
 teacher	top3	선생님|교사
 hospital	first	병원
 doctor	top3	의사
 weather	first	날씨
-book	first	책	known	책 only 6th, after 도서, 단행본, 저작
+book	first	책	ok
 time	top3	시간|때
-rain	first	비	known	치다 (to rain) above the noun 비
+rain	first	비	ok
 car	top3	차|자동차
 tea	top3	차
 bridge	top3	다리
@@ -145,7 +145,7 @@ sleep	top3	자다|잠
 run	top5	달리다|뛰다
 happy	top3	행복하다|기쁘다
 cold	top5	춥다|차갑다|감기
-to study	first	공부하다	known	"to" asks for the verb, 공부 (noun) comes first
+to study	first	공부하다	ok
 write	top3	쓰다
 learn	top3	배우다
 language	top3	언어|말
@@ -153,7 +153,7 @@ ice cream	top3	아이스크림
 credit card	top3	신용 카드|신용카드
 gift shop	top3	선물 가게
 forward contract	top5	선물 계약|선물환
-futures	top10	선물	known	선물 先物 not reached from "futures"
+futures	top10	선물	known	data gap: stdict 선물 (先物) has no English gloss; only 선물 거래 "futures transaction" mentions futures
 took	top10	가지다|잡다|타다|걸리다
 went	top10	가다
 children	top5	아이|어린이|아이들
@@ -220,18 +220,18 @@ stomach	nothanja30	배가 부르다=倍加
 막론하고	top3	막론하다	ok	막론하고 is a headword too
 부각되었다	first	부각되다
 # == phrases, idioms, proverbs
-눈이 높다	top3	눈이 높다	known	idioms are inside entries, not headwords: nothing found
-발이 넓다	top3	발이 넓다	known	idioms are inside entries, not headwords: nothing found
+눈이 높다	top3	눈(이) 높다	ok	headword is written with an optional particle / variant spelling
+발이 넓다	top3	발(이) 넓다[너르다]	ok	headword is written with an optional particle / variant spelling
 손이 크다	top3	손이 크다
-미역국을 먹다	top3	미역국을 먹다	known	idioms are inside entries, not headwords: nothing found
+미역국을 먹다	top3	미역국(을) 먹다	ok	headword is written with an optional particle / variant spelling
 그림의 떡	top3	그림의 떡
 식은 죽 먹기	top3	식은 죽 먹기
 하늘의 별 따기	top3	하늘의 별 따기
 티끌 모아 태산	top3	티끌 모아 태산
 우물 안 개구리	top3	우물 안 개구리|우물 안 개구리[고기]
 가는 날이 장날	top3	가는 날이 장날
-시치미를 떼다	top3	시치미를 떼다	known	idioms are inside entries, not headwords: nothing found
-눈코 뜰 새 없다	top3	눈코 뜰 새 없다	known	idioms are inside entries, not headwords: nothing found
+시치미를 떼다	top3	시치미(를) 떼다[따다]	ok	headword is written with an optional particle / variant spelling
+눈코 뜰 새 없다	top3	눈코 뜰 사이 없다	ok	headword is written with an optional particle / variant spelling
 고생 끝에 낙이 온다	top3	고생 끝에 낙이 온다
 수고하셨습니다	top3	수고하다
 안녕하세요	top3	안녕하다|안녕하세요

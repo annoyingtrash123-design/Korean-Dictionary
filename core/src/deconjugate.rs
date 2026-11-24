@@ -20,6 +20,8 @@ use std::collections::{BinaryHeap, HashMap};
 /// A dictionary-form candidate with a short English explanation of how it was derived.
 #[derive(Debug, Clone, PartialEq, Eq, serde::Serialize)]
 pub struct Candidate {
+    #[serde(skip)]
+    pub cost: i32,
     pub lemma: String,
     pub rule: String,
 }
@@ -841,7 +843,7 @@ fn analyze(input: &str) -> Vec<Analysis> {
 /// Plausible dictionary forms for an inflected word, most likely first, deduplicated,
 /// excluding the input itself, capped at 40.
 pub fn deconjugate(input: &str) -> Vec<Candidate> {
-    analyze(input).into_iter().map(|a| Candidate { lemma: a.lemma, rule: a.rule }).collect()
+    analyze(input).into_iter().map(|a| Candidate { cost: a.cost, lemma: a.lemma, rule: a.rule }).collect()
 }
 
 /// Grammar patterns (as listed in the grammar reference, e.g. `-아서/어서`) that appear in the

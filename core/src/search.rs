@@ -514,19 +514,63 @@ fn hangul_strict(packs: &[&PackDb], q: &str, limit: usize) -> Result<(Vec<Result
                 }
             }
         }
-        found.sort_by_key(|(i, r)| (*i, r.rank));
-        let mut matched: HashSet<usize> = HashSet::new();
-        for (i, _) in &found {
-            matched.insert(*i);
+        // The analysis knows nothing about the dictionary; now that the lemmas that exist are
+        // known, reorder them: frequent words beat rare homographs (지어요: 짓다 over 지다), and a
+        // lexicalised compound beats the split of its parts (들어가세요: 들어가다 over 들다).
+        let mut best_rank: HashMap<usize, i64> = HashMap::new();
+        for (i, r) in &found {
+            let e = best_rank.entry(*i).or_insert(r.rank);
+            *e = (*e).min(r.rank);
         }
-        let mut idxs: Vec<usize> = matched.into_iter().collect();
-        idxs.sort();
+        let stem = |i: usize| cands[i].lemma.strip_suffix('다').map(str::to_string);
+        let mut score: HashMap<usize, f64> = HashMap::new();
+        // frequency only separates verbs / adjectives (a noun's rank is not comparable), and only
+        // relative to the most frequent one
+        let log_rank = |i: usize| (best_rank[&i].max(1) as f64).log2();
+        let best_cost = best_rank.keys().map(|&i| cands[i].cost).min().unwrap_or(0);
+        let min_log = best_rank
+            .keys()
+            .filter(|&&i| stem(i).is_some() && cands[i].cost <= best_cost + 6)
+            .map(|&i| log_rank(i))
+            .fold(f64::MAX, f64::min);
+        for &i in best_rank.keys() {
+            let freq = if stem(i).is_some() { (log_rank(i) - min_log).max(0.0) } else { 0.0 };
+            let mut s = f64::from(cands[i].cost) + 1.1 * freq;
+            if let Some(si) = stem(i) {
+                let compound = best_rank.keys().any(|&j| {
+                    j != i && stem(j).is_some_and(|sj| si.chars().count() > sj.chars().count() && si.starts_with(&sj))
+                });
+                if compound {
+                    s -= 40.0;
+                }
+            }
+            score.insert(i, s);
+        }
+        let mut idxs: Vec<usize> = best_rank.keys().copied().collect();
+        idxs.sort_by(|a, b| score[a].partial_cmp(&score[b]).unwrap().then(a.cmp(b)));
+        let pos: HashMap<usize, usize> = idxs.iter().enumerate().map(|(p, &i)| (i, p)).collect();
+        found.sort_by_key(|(i, r)| (pos[i], r.rank));
         for i in idxs {
             if let Some(c) = cands.get(i) {
                 deconj_out.push(DeconjOut { lemma: c.lemma.clone(), rule: c.rule.clone() });
             }
         }
+        // A rare headword that is also a clean inflection of a much more frequent word (와요 "kiln"
+        // vs 오다 "to come"; only for the very common -아요/어요 form) must not push the inflected word down.
+        let exact_best = out.iter().filter(|r| r.via == Some("exact")).map(|r| r.rank).min();
+        let lead = found.first().filter(|(i, _)| cands[*i].rule.ends_with("polite -아요/어요")).map(|(i, r)| (cands[*i].cost, r.rank));
+        let before = out.len();
         push_new(&mut out, &mut seen, found.into_iter().map(|(_, r)| r).collect());
+        if let (Some(eb), Some((cost, rank))) = (exact_best, lead) {
+            if cost <= 5 && rank < eb {
+                let k = out.iter().take(before).filter(|r| r.via == Some("exact")).count();
+                let mut tail = out.split_off(before);
+                let exact: Vec<ResultRow> = out.drain(..k).collect();
+                tail.extend(exact);
+                tail.extend(std::mem::take(&mut out));
+                out = tail;
+            }
+        }
     }
     Ok((out, deconj_out))
 }
@@ -560,6 +604,9 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
     push_new(&mut out, &mut seen, rows_for(&prefix_packs, &cands, Some("prefix"))?);
 
     out.truncate(limit);
+    if out.is_empty() && q_raw.trim().contains(' ') {
+        out = multiword_fallback(packs, q_raw, limit)?;
+    }
     let hints = grammar_hints(&q);
     Ok(SearchResult {
         mode: "hangul",
@@ -569,6 +616,81 @@ fn search_hangul(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<SearchR
         grammar_hints: if hints.is_empty() { None } else { Some(hints) },
         ..Default::default()
     })
+}
+
+/// Headword prefix matches (best rank first) as full rows.
+fn prefix_rows(packs: &[&PackDb], prefix: &str, n: usize, via: &'static str) -> Result<Vec<ResultRow>> {
+    let upper = format!("{prefix}{}", char::MAX);
+    let sql = |p: &PackDb| {
+        format!(
+            "SELECT id, rank FROM entries {} WHERE hw_norm >= ?1 AND hw_norm < ?2 ORDER BY rank LIMIT {PREFIX_LIMIT}",
+            hw_hint(p)
+        )
+    };
+    let cands = top_ids(packs, &sql, &[prefix.into(), upper.as_str().into()], n)?;
+    rows_for(packs, &cands, Some(via))
+}
+
+/// Particles a dictionary writes as optional inside an idiom: 미역국(을) 먹다, 시치미(를) 떼다.
+const OPTIONAL_PARTICLES: &[&str] = &["을", "를", "이", "가", "은", "는", "의", "에"];
+
+/// A spaced query that matched no headword: idioms and phrases written with an optional particle
+/// (미역국을 먹다 = 미역국(을) 먹다), then headwords that start with the leading words (눈코 뜰 새
+/// 없다 → 눈코 뜰 사이 없다), then the words of the query one by one, best match of each first.
+fn multiword_fallback(packs: &[&PackDb], q_raw: &str, limit: usize) -> Result<Vec<ResultRow>> {
+    let tokens: Vec<&str> = q_raw.split_whitespace().collect();
+    let mut out: Vec<ResultRow> = Vec::new();
+    let mut seen: HashSet<(String, i64)> = HashSet::new();
+    // 1. optional-particle spellings (every combination over the first few tokens that end in one)
+    let mut variants: Vec<Vec<String>> = vec![Vec::new()];
+    for t in &tokens {
+        let mut next = Vec::new();
+        for v in &variants {
+            let mut plain = v.clone();
+            plain.push((*t).to_string());
+            next.push(plain);
+            if variants.len() < 8 {
+                if let Some(p) = OPTIONAL_PARTICLES.iter().find(|p| t.ends_with(**p) && t.chars().count() > 1) {
+                    let mut opt = v.clone();
+                    opt.push(format!("{}({p})", t.strip_suffix(*p).unwrap_or(t)));
+                    next.push(opt);
+                }
+            }
+        }
+        variants = next;
+    }
+    for v in variants.iter().skip(1) {
+        let joined = norm_headword(&v.concat());
+        push_new(&mut out, &mut seen, prefix_rows(packs, &joined, limit, "prefix")?);
+    }
+    // 2. headwords that start with the leading words
+    if out.is_empty() {
+        for k in (2..tokens.len()).rev() {
+            let rows = prefix_rows(packs, &norm_headword(&tokens[..k].concat()), limit, "prefix")?;
+            if !rows.is_empty() {
+                push_new(&mut out, &mut seen, rows);
+                break;
+            }
+        }
+    }
+    // 3. each word on its own, interleaved
+    if out.is_empty() {
+        let per: Vec<Vec<ResultRow>> = tokens
+            .iter()
+            .map(|t| hangul_strict(packs, &norm_headword(t), limit).map(|(r, _)| r))
+            .collect::<Result<_>>()?;
+        let mut i = 0;
+        while per.iter().any(|v| i < v.len()) {
+            for v in &per {
+                if let Some(r) = v.get(i) {
+                    push_new(&mut out, &mut seen, vec![r.clone()]);
+                }
+            }
+            i += 1;
+        }
+    }
+    out.truncate(limit);
+    Ok(out)
 }
 
 /// FTS5 MATCH expression: every token quoted, the last one a prefix token.
@@ -629,6 +751,64 @@ fn gloss_tier(gloss: Option<&str>, q: &str) -> u8 {
 }
 
 const FTS_CANDIDATES: i64 = 300;
+/// Gloss matches whose rows are read so that they can be re-ranked by their actual gloss text.
+const GLOSS_RERANK: usize = 160;
+/// Key points per extra gloss item: an entry whose gloss is a long list is a weaker answer for
+/// one of its items than an entry that means (nearly) only that.
+const GLOSS_LIST_PENALTY: i64 = 1000;
+/// Key points added to a query word that is the 2nd / 3rd item of the gloss (a synonym of the
+/// first): this keeps a frequent word (선물: "gift; present") above rare words that merely start
+/// their gloss with it.
+const GLOSS_SECOND_ITEM: i64 = 100_000;
+/// ... but only for words this frequent (a rank below this).
+const GLOSS_SECOND_MAX_RANK: i64 = 30_000;
+/// `to X` asks for a verb: others are pushed down by this.
+const NOT_A_VERB: i64 = 500_000;
+
+fn singular(w: &str) -> String {
+    if let Some(t) = w.strip_suffix("ies").filter(|t| !t.is_empty()) {
+        format!("{t}y")
+    } else if let Some(t) = w.strip_suffix('s').filter(|t| t.len() > 2 && !t.ends_with('s')) {
+        t.to_string()
+    } else {
+        w.to_string()
+    }
+}
+
+/// Position of the query among the gloss items (singular / plural alike), and the item count.
+fn gloss_position(gloss: &str, q: &str) -> (Option<usize>, usize) {
+    let q = singular(q);
+    let items: Vec<String> = gloss
+        .split([';', ','])
+        .map(|i| {
+            let i = i.trim().to_lowercase();
+            i.strip_prefix("to ").map(str::to_string).unwrap_or(i)
+        })
+        .collect();
+    let pos = items.iter().position(|i| *i == q || singular(i) == q);
+    // "study; studies" is one item
+    let distinct: HashSet<String> = items.iter().map(|i| singular(i)).collect();
+    (pos, distinct.len())
+}
+
+/// Adjust the pre-computed key of an exact gloss-term match using the entry's gloss text (the
+/// pre-computed tier counts "books; … ; book" as a late match and a plural as no match).
+fn rerank_gloss_key(row: &ResultRow, q: &str, old: i64, verb_wanted: bool) -> i64 {
+    let Some(g) = row.gloss.as_deref() else { return old };
+    let (pos, n) = gloss_position(g, q);
+    // the pre-computed key is (source quality + tier) * SCORE_UNIT + score: keep source and score
+    let base = old.rem_euclid(SCORE_UNIT) + quality(row) * SCORE_UNIT;
+    let mut k = match pos {
+        Some(0) => base,
+        Some(1 | 2) if row.rank < GLOSS_SECOND_MAX_RANK => base + GLOSS_SECOND_ITEM,
+        _ => return old,
+    };
+    k += GLOSS_LIST_PENALTY * (n.min(8) as i64 - 1);
+    if verb_wanted && !row.pos.as_deref().is_some_and(|p| p.contains("verb") || p.contains("adjective")) {
+        k += NOT_A_VERB;
+    }
+    k
+}
 const GLOSS_EXACT_LIMIT: i64 = 60;
 const GLOSS_PREFIX_LIMIT: usize = 40;
 /// Rows read (in term order) for a gloss-prefix query before ranking them in Rust.
@@ -657,6 +837,7 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
 
     // 1. gloss tiers from `gloss_terms` (pre-scored: ORDER BY score is the final order)
     let mut tiered: Vec<(i64, usize, i64)> = Vec::new(); // (key, pack index, id)
+    let mut exact_ids: HashSet<(usize, i64)> = HashSet::new();
     for (pi, p) in packs.iter().enumerate().filter(|(_, p)| p.caps.gloss_terms) {
         let mut seen_ids: HashSet<i64> = HashSet::new();
         let rows = p.conn.query(
@@ -667,6 +848,7 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
             let id = r.int(1).unwrap_or(0);
             if seen_ids.insert(id) {
                 tiered.push((r.int(0).unwrap_or(i64::MAX), pi, id));
+                exact_ids.insert((pi, id));
             }
         }
         if qt.chars().count() >= 3 {
@@ -695,9 +877,15 @@ fn search_english(packs: &[&PackDb], q: &str, limit: usize) -> Result<SearchResu
         }
     }
     tiered.sort();
-    tiered.truncate(limit);
+    tiered.truncate(limit.max(GLOSS_RERANK));
+    let verb_wanted = ql.starts_with("to ") && ql.len() > 3;
+    let pack_idx: HashMap<&str, usize> = packs.iter().enumerate().map(|(i, p)| (p.id.as_str(), i)).collect();
     for (c, row) in tiered.iter().zip(rows_for(packs, &tiered, Some("fts"))?) {
-        hits.insert(key(&row), Hit { group: 0, key: c.0, score: 0.0, row });
+        let mut k = c.0;
+        if exact_ids.contains(&(pack_idx[row.pack.as_str()], row.id)) {
+            k = rerank_gloss_key(&row, qt, k, verb_wanted);
+        }
+        hits.insert(key(&row), Hit { group: 0, key: k, score: 0.0, row });
     }
 
     // 2. text relevance (definitions, stemmed forms): rowid + bm25 only, then the rows
@@ -1084,9 +1272,19 @@ fn english_legacy(p: &PackDb, q: &str, ql: &str, hits: &mut HashMap<(String, i64
         for r in p.conn.query(&sql, &[expr.as_str().into(), FTS_CANDIDATES.into()])? {
             let score = r.real(13).unwrap_or(0.0);
             let row = result_row(&p.id, &r, Some("fts"));
-            let tier = gloss_tier(row.gloss.as_deref(), ql);
+            let mut tier = gloss_tier(row.gloss.as_deref(), ql);
+            let qt = ql.strip_prefix("to ").map(str::trim).filter(|t| !t.is_empty()).unwrap_or(ql);
+            if tier == 3 {
+                // a plural / singular match is an exact one (the modern packs rerank these the same way)
+                if let (Some(pos), _) = row.gloss.as_deref().map_or((None, 0), |g| gloss_position(g, qt)) {
+                    tier = u8::from(pos > 0);
+                }
+            }
             let hit = if tier < 3 {
-                let k = (tier as i64 + quality(&row)) * SCORE_UNIT + row.rank.clamp(0, SCORE_UNIT - 1);
+                let mut k = (tier as i64 + quality(&row)) * SCORE_UNIT + row.rank.clamp(0, SCORE_UNIT - 1);
+                if tier < 2 {
+                    k = rerank_gloss_key(&row, qt, k, qt.len() < ql.len());
+                }
                 Hit { group: 0, key: k, score, row }
             } else {
                 Hit { group: 1, key: 0, score, row }
@@ -1636,4 +1834,20 @@ fn warm_bounds() -> Vec<String> {
     }
     v.push("\u{10FFFF}".to_string());
     v
+}
+
+#[cfg(test)]
+mod rerank_tests {
+    use super::*;
+
+    #[test]
+    fn gloss_position_ignores_plural_and_to() {
+        assert_eq!(gloss_position("books; publications; volume; book", "book"), (Some(0), 3));
+        assert_eq!(gloss_position("to study", "study"), (Some(0), 1));
+        assert_eq!(gloss_position("gift; present", "present"), (Some(1), 2));
+        assert_eq!(gloss_position("study; studies", "study"), (Some(0), 1));
+        assert_eq!(gloss_position("rainbow", "rain").0, None);
+        assert_eq!(singular("futures"), "future");
+        assert_eq!(singular("bus"), "bus");
+    }
 }
