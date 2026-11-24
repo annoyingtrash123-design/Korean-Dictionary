@@ -2672,3 +2672,77 @@ Things to look at first: 독불장군 (literal reading), 환골탈태, 유만부
   - en (AI): Blood is thicker than water, as they say, and in the end the brothers could not turn their backs on each other.
 - ex (AI Korean): 피는 물보다 진하다고 하니 가족의 일이라면 모른 척할 수 없다.
   - en (AI): Blood is thicker than water, so I can't pretend not to see when it concerns family.
+
+## Independent content review (content-review, 2026-11-24)
+
+Reviewer: a separate agent from the drafter. Every P row, every example (Korean and English) of Part A and every line of
+Part B was read; checked against the ko_def copied from stdict/opendict, the hanja and the Korean sentence.
+
+**Part A — idiom_extra.tsv:** 263 approved, 1 rejected (264 items).
+- Rejected: 이견대인 (利見大人, opendict) — a Book of Changes phrase, not a 성어 in current Korean use; the AI examples were contrived. Kept in the file as `rejected: ...` (the loader ships only `approved`; `problems()` and the test now accept `rejected: reason`).
+- Doubtful items kept: 십상팔구 (a stdict entry, = 십중팔구, its examples are stdict's own), 불사이군 (忠臣不事二君, a real stdict 성어), 일타쌍피 (modern go-stop idiom, described as such), 무른 메주 밟듯 (opendict tags it 북한어, as the gloss says).
+- Flagged English idiom equivalents checked: 은혜를 원수로 갚는다 (gloss now leads with "bite the hand that feeds you"), 천재일우 ("chance of a lifetime" — correct), 독불장군 ("stubborn loner" — correct), 환골탈태 (gloss + both senses correct), 유만부동 (both stdict senses covered; examples correct), 천의무봉 (gloss now "seamless perfection"), 호연지기 (correct).
+- Sensitive items: 노류장화 / 창가소부 already labelled derogatory; 운우지정 relabelled "(literary euphemism)"; 일부종사 and 출가외인 labelled "(traditional)"; 삼종지도 already marked traditional with a critical example.
+- Invented gender removed where the Korean names nobody (he/his/her for 사람, 배우, 가수, 코치, 공무원 ...).
+
+Changes (old → new):
+
+- `He is such a versatile actor that he handles any role he is given.` → `The actor is so versatile that any role given is handled well.`
+- `Ten years after her debut, the singer underwent a complete transformation and presented music entirely unlike her earlier work.` → `Ten years after debuting, the singer underwent a complete transformation and presented music entirely unlike anything before.`
+- `It is unbelievable that he committed such a vile act and shows no remorse.` → `It is unbelievable that someone could commit such a vile act and show no remorse.`
+- `To torment a little child, he is truly a vicious person.` → `Anyone who would torment a little child is truly vicious.`
+- `그녀는 합격 소식을 듣고 기쁨에 겨워 대성통곡을 했다. ⇥ ai ⇥ On hearing she had passed, she wept loudly, overcome with joy.` → `그녀는 친구의 사고 소식을 듣고 대성통곡을 했다. ⇥ ai ⇥ On hearing about her friend's accident, she burst into loud wailing.`
+- `There is no point arguing over who was at fault this time; it is six of one, half a dozen of the other.` → `There is no point arguing over who was at fault this time; both sides are just as bad.`
+- `The company met a new investor at the very last moment.` → `At a moment of desperate crisis, the company found a new investor.`
+- `Not noticing that others dislike it, he chatters away as if no one else were around.` → `Not noticing that others dislike it, they chatter away as if no one else were around.`
+- `With an arrogant disregard for others, he shouted in front of his elders.` → `With an arrogant disregard for others, they shouted in front of their elders.`
+- `No matter how much I try to stop him he doesn't listen, so I won't say any more.` → `No matter how much I try to talk them out of it, it falls on deaf ears, so I won't say any more.`
+- `Despite the string of defeats, the coach had faith in his players.` → `Despite the string of defeats, the coach kept faith in the players.`
+- `He makes the mistake himself and then gets angry; the guilty blaming the innocent has its limits.` → `Making the mistake yourself and then getting angry: there are limits to turning the tables like that.`
+- `The pupil's skill has gone beyond his teacher's, so it deserves to be called the pupil surpassing the master.` → `The pupil's skill has gone beyond the teacher's, so it truly is a case of the pupil surpassing the master.`
+- `Just as the saying goes, the junior has broken the senior's record and outdone the master.` → `Just as the saying about the pupil surpassing the master goes, the junior has broken the senior's record.`
+- `The official built up his wealth by using his public post for private gain and was punished.` → `The official grew rich by using a public post for private gain and was punished.`
+- `Thanks to the decisiveness of his clean cuts, the company got past the crisis.` → `Thanks to clean, decisive judgment, the company got past the crisis.`
+- `With that level of skill, it wouldn't be surprising if he won.` → `With that level of skill, it wouldn't be surprising if they won.`
+- `That professor is someone the students keep a respectful distance from, so it is hard to approach.` → `That professor is someone the students keep at a respectful distance, so it is hard to get close.`
+- `A loyal subject, the saying goes, does not serve two lords, and he kept faith even when the country fell.` → `Saying that a loyal subject does not serve two lords, they kept faith even when the country fell.`
+- `The word "flawless" suited that pianist's performance.` → `That pianist's performance deserved to be called a seamless heavenly robe.`
+- `flawless and natural ⇥ Perfect` → `seamless perfection; flawless and natural ⇥ Perfect`
+- `He lies and then does not even apologize; it is outrageous.` → `Lying and then not even apologizing: it is outrageous.`
+- `We should guard against the year-end party turning into a drunken orgy.` → `We should guard against the year-end party turning into an extravagant drinking binge.`
+- `베풀어 주신 은혜는 영세불망 잊지 않겠습니다. ⇥ ai ⇥ I will never forget the kindness you have shown me.` → `베풀어 주신 은혜는 영세불망하겠습니다. ⇥ ai ⇥ I will never, ever forget the kindness you have shown me.`
+- `He begged and pleaded until his hands were worn out, but the owner never forgave him.` → `He begged and pleaded, rubbing his hands together, but the owner never forgave him.`
+- `As the saying "surely not" kills, they neglected to prepare and suffered great damage.` → `As the saying "surely not" kills goes, preparations were neglected and great damage followed.`
+- `One bad apple spoils the bunch, as they say: one person's mistake brought blame on the whole team.` → `The weakest member shames the whole group, as they say: one person's mistake brought blame on the whole team.`
+- ` ⇥ to repay kindness with harm ⇥ ` → ` ⇥ to bite the hand that feeds you; repay kindness with harm ⇥ `
+- ` ⇥ remaining faithful to one husband ⇥ ` → ` ⇥ (traditional) remaining faithful to one husband ⇥ `
+- ` ⇥ a married daughter belongs to her husband's family ⇥ ` → ` ⇥ (traditional) a married daughter is an outsider to her own family ⇥ `
+- ` ⇥ sexual love; lovemaking ⇥ ` → ` ⇥ (literary euphemism) sexual union ⇥ `
+
+**Part B — example_en_idioms.tsv:** all 1,051 rows read; 1,051 approved after 22 corrections (none rejected).
+Corrections: invented or wrong subject/gender, mistranslated proverbs (개 머루 먹듯 dropped, 못 먹는 감 찔러나 본다 muddled), an added gloss in brackets, word-order slips.
+
+Changes (old → new):
+
+- `I heard Minjun left his wife for another woman?` → `I heard Minjun was seeing another woman behind his wife's back?`
+- `but it was a gas leak that made you dizzy just to think about.` → `but it was a gas leak that is chilling just to think about.`
+- `I want to grow old with you together, forever.` → `I want to spend my whole life with you, growing old together.`
+- `prayed for the eternal immortality of our souls.` → `prayed for the immortality of our souls.`
+- `is really tasteful and nice.` → `is really charming and lovely.`
+- `and punished them without a word, not even asking why they were late.` → `and punished them indiscriminately, without even asking why they were late.`
+- `please don't just get angry without a word; tell me` → `please don't just get angry before hearing what happened; tell me`
+- `The rich man lived in luxury` → `The rich person lived in luxury`
+- `The more the better, so the more the merrier.` → `The more the better, as they say, so the more you put in, the happier I'll be.`
+- `Seung-gyu said he would quit drinking, but far from lasting three days, he didn't last a single day before drinking soju.` → `Seung-gyu vowed to quit drinking, but far from lasting three days, didn't last even a single day before having soju.`
+- `like a dog that chased a chicken up onto the roof.` → `like a dog staring up at the roof after the chicken it chased has flown up there.`
+- `Seeing a wealthy rich man, people thought he was born under a lucky star.` → `Seeing a man of great wealth, people thought he was born under a lucky star.`
+- `odd rumors spread, the sort of sour grapes that poke at a persimmon one can't eat.` → `odd rumors spread, in the spirit of "if I can't eat the persimmon, I'll poke it."`
+- `Yes, a rags-to-riches transformation, as if a loach had become a dragon.` → `Yes, a total transformation, as if a loach had become a dragon.`
+- `he looked so frail from all his hardship that he seemed he would blow away if blown on and crumple if gripped.` → `he looked so frail from all his hardship that it seemed he would blow away if blown on and crumple if gripped.`
+- `You actually know nothing, so stop pretending to know again.` → `You actually know nothing, so stop pretending to know again, like a dog gulping wild grapes without tasting them.`
+- `let's scold Jisu sternly so that it never lies again.` → `let's scold Jisu sternly so that Jisu never lies again.`
+- `Yumin's spouse had an affair, they divorced` → `Yumin's husband had an affair, they divorced`
+- `I brought this bonus all to my mother-in-law.` → `I gave my whole bonus this time to my mother-in-law.`
+- `Do you think one billion is a child's name in some neighborhood? (as if a billion were a trifle)` → `Do you think a billion is just some kid's name in the neighborhood?`
+- `The swindler coaxed people with plausible words and then struck them, extorting money from them.` → `The swindler coaxed people with plausible words and then turned on them, extorting their money.`
+- `Park Assistant Manager snatched the contract I had nearly closed.` → `Assistant Manager Park snatched away the contract I had nearly closed.`
