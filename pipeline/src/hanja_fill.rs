@@ -19,9 +19,8 @@
 //!   those of every candidate (native ones included, so a native word whose homograph has hanja can
 //!   never be taken over). `score` = best over definition pairs of `(Dice + overlap) / 2` on hangul
 //!   character bigrams (text in parentheses and quotes removed). A candidate with a conflicting part of
-//!   speech scores 0. The best candidate must have usable hanja, and
-//!     - `unique` (the headword has one stdict entry): score >= 0.30;
-//!     - `homograph` (several stdict entries): score >= 0.40 and >= 0.15 above the runner-up.
+//!   speech scores 0. The best candidate must have usable hanja, and score >= 0.30 when the headword has one
+//!   stdict entry (`unique`), or >= 0.40 and >= 0.15 above the runner-up when it has several (`homograph`).
 //!   A hanja that another core entry of the same headword already has is never given again.
 //! * **kengdic, `kengdic`**: kengdic has only English glosses, which cannot be compared with Korean
 //!   definitions, so the rule is structural: exactly one stdict entry with usable hanja, no stdict

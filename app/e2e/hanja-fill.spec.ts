@@ -7,6 +7,7 @@ mkdirSync(SHOTS, { recursive: true });
 const shot = async (page: Page, name: string) => { console.log('SHOT', name); await page.screenshot({ path: join(SHOTS, `${name}.png`) }); };
 
 async function openEntry(page: Page, word: string) {
+  await page.getByRole('link', { name: 'Search', exact: true }).click().catch(() => undefined);
   await page.getByRole('searchbox', { name: 'Search' }).fill(word);
   await page.locator('.row', { has: page.locator('.hangul', { hasText: new RegExp(`^${word}$`) }) }).first().click();
   await expect(page.locator('h1').first()).toContainText(word);
@@ -39,18 +40,15 @@ test('filled hanja: a small 표준 marker in the entry header (phone and iPad)',
   // the filled hanja feeds the Chars tab like any other
   await page.getByRole('tab', { name: /Chars/ }).click();
   await expect(page.locator('.etab-panel')).toContainText('環');
-  await page.goBack().catch(() => undefined);
 
   // an entry whose dictionary gives the hanja itself (krdict 사과 etc.) has no marker; a native word has no hanja at all
   await openEntry(page, '학교');
   await expect(page.locator('.entry-head .hanja-src')).toHaveCount(0);
-  await page.goBack();
   await openEntry(page, '하늘');
   await expect(page.locator('.entry-head .hanja-chars')).toHaveCount(0);
   await expect(page.locator('.entry-head .hanja-src')).toHaveCount(0);
 
   // ---- iPad ----
-  await page.goBack();
   await openEntry(page, '환초');
   await page.setViewportSize({ width: 1180, height: 820 });
   await page.waitForTimeout(500);

@@ -1632,6 +1632,7 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
         log::info!("seongeo_zh: {} rows ({} CC-CEDICT chengyu: {} through character variants, {} through reviewed aliases; {} English equivalents)", stats.rows, stats.zh, stats.zh_variant, stats.zh_alias, stats.en);
         if let Some(m) = core.counts.as_object_mut() {
             m.insert("seongeo_zh".into(), (stats.rows as i64).into());
+            m.insert("seongeo_zh_chinese".into(), (stats.zh as i64).into());
         }
     }
     packs.push(pack::compress_pack("core", true, &core.path, &site, &core.counts, o.chunk_bytes)?);

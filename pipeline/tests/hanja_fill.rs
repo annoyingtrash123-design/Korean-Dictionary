@@ -8,6 +8,7 @@ use rusqlite::{params, Connection};
 use serde_json::json;
 use std::path::Path;
 
+#[allow(clippy::too_many_arguments)]
 fn insert(c: &Connection, source: &str, hw: &str, hanja: Option<&str>, pos: &str, ko_def: &str, gloss: &str, extra: serde_json::Value) {
     let mut sense = json!({ "ko_def": ko_def });
     if !gloss.is_empty() {

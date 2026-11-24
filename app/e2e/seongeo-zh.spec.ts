@@ -34,7 +34,7 @@ test('성어 page: "Chinese & English" block (phone and iPad)', async ({ page })
   await page.getByRole('radio', { name: 'Light' }).click();
   await page.getByRole('link', { name: 'Search', exact: true }).click().catch(() => undefined);
 
-  if (!SAMPLE && !(COUNTS.seongeo_zh > 0)) {
+  if (!SAMPLE && !(COUNTS.seongeo_zh_chinese > 0)) {
     // no rows in this pack (no CC-CEDICT, nothing approved): a 성어 page shows no such block
     await openEntry(page, '과유불급');
     await expect(block(page)).toHaveCount(0);

@@ -8,8 +8,9 @@
 //!       classes when the Unihan source is present, plus a small built-in table ([`Variants`]);
 //!    3. a reviewed alias (`data/seongeo_zh_alias.tsv`) for idioms whose Chinese wording differs (塞翁之馬 -> 塞翁失馬);
 //!       only rows whose review column says `approved...` ship.
-//!    Only filled when the CEDICT source is present at build time (CI fetches it); without it there are no Chinese
-//!    columns and no error.
+//!
+//!    The Chinese half is only filled when the CEDICT source is present at build time (CI fetches it); without it
+//!    there are no Chinese columns and no error.
 //!  * an established English idiom with the same meaning (`data/seongeo_en_equiv.tsv`, AI-proposed). Only rows
 //!    whose `review` column says `approved...` ship; the app labels the text as AI-written (`en_ai = 1`).
 //!

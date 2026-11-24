@@ -9,7 +9,7 @@ Sample rows (hanja as the dictionaries spell them):
   他山之石 (타산지석)  Chinese only, simplified = traditional, two CEDICT definitions
   塞翁之馬 (새옹지마)  English equivalent only (CEDICT has 塞翁失馬, not an exact match), with a nuance note
 
-A pack whose `seongeo_zh` already has rows (a CI build with CC-CEDICT) is left alone. Rewrites core.sqlite.gz.* and
+A pack with Chinese `seongeo_zh` rows (a CI build with CC-CEDICT: counts.seongeo_zh_chinese) is left alone. Rewrites core.sqlite.gz.* and
 manifest.json in place and records `counts.seongeo_zh_sample = 1` so the e2e spec knows the rows are these.
 
   python3 scripts/e2e-seongeo-zh.py [app/public/data]
@@ -46,8 +46,9 @@ def main() -> None:
     man = json.load(open(man_path))
     core = next(p for p in man['packs'] if p['id'] == 'core')
     counts = core.setdefault('counts', {})
-    if counts.get('seongeo_zh_sample') or (counts.get('seongeo_zh') or 0) > 0:
-        print('core pack already has seongeo_zh rows: nothing to do')
+    # real Chinese rows (a CI build with CC-CEDICT) are left alone; English-only rows do not count (the spec needs the Chinese half)
+    if counts.get('seongeo_zh_sample') or (counts.get('seongeo_zh_chinese') or 0) > 0:
+        print('core pack already has Chinese seongeo_zh rows: nothing to do')
         return
     core, work, db_path = cur.unpack_core(DATA, man)
     c = sqlite3.connect(db_path)
