@@ -85,7 +85,8 @@ No entry needs a *different* hanja: in every removal the sense is native in both
 - stdict native 비지: "두부를 만들고 남은 찌꺼기." / "콩을 불려 갈아서 끓인 음식."; 우리말샘 고유어.
 - stdict 비지(鼻紙): "코를 풀거나 닦는 데에 사용하는 종이."
 
-### 불길 (60545) 不吉 — remove
+### 불길 (60545) 不吉 — remove
+- The core hanja is spelled with the compatibility ideograph U+F967 (不), as in kengdic; the fix row matches that exact spelling.
 - krdict: "세차게 타오르는 불의 줄기." / "(비유적으로) 세차게 일어나는 감정이나 정열." / "(비유적으로) 세찬 기세로 퍼져 나가는 사회적 현상." (flame; blaze)
 - stdict native 불길: "세차게 타오르는 불꽃." / "세차게 일어나는 감정이나 정열을 비유적으로 이르는 말." (불 + 길); 우리말샘 고유어.
 - stdict 불길(不吉): "‘불길하다’의 어근." — ominous, a different word.
