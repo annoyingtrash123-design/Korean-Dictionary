@@ -107,7 +107,8 @@
 나한테	first	나
 # == spacing variants
 선물가게	top3	선물 가게
-한국 사람	top3	한국 사람|한국인|한국|사람	ok	no such headword: falls back to the words one by one (한국, 사람)
+한국 사람	top3	한국 사람|한국인|한국	ok	no such headword: falls back to the words one by one — 한국 must be in the top 3
+한국 사람	top3	한국 사람|한국인|사람	ok	… and so must 사람 (two rows: the benchmark has no all-of check)
 공부 하다	top3	공부하다
 아이스 크림	top3	아이스크림
 대한 민국	top3	대한민국
