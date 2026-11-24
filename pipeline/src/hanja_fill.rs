@@ -799,12 +799,15 @@ pub fn fallback_backed(defs: &[String], pos: &str, hanja: &str, cands: &[Std]) -
     if with.is_empty() {
         return false;
     }
+    let native = compat.iter().any(|c| c.hanja.is_none());
     if defs.is_empty() {
-        return !compat.iter().any(|c| c.hanja.is_none());
+        return !native;
     }
     let best = |v: &[&Std]| v.iter().map(|c| defs_score(defs, &c.defs)).fold(0.0, f64::max);
     let ws = best(&with);
-    ws >= SUSPECT_HANJA_MAX && ws >= best(&compat)
+    // with a native homograph the hanja entry must match clearly; without one (대칭 對稱 vs 大秤, 대란 大亂
+    // alone) kengdic and stdict agree on a Sino-Korean word, and the hanja entry need only be the best of them
+    ws >= best(&compat) && (!native || ws >= SUSPECT_HANJA_MAX)
 }
 
 /// [`fallback_backed`] against the stdict pack.
@@ -1073,6 +1076,12 @@ mod tests {
         let bulgil = [std(None, "noun", "세차게 타오르는 불꽃."), std(Some("不吉"), "noun", "운수 따위가 좋지 아니함.")];
         assert!(fallback_backed(&d("운수가 좋지 아니함."), "noun", "\u{F967}吉", &bulgil));
         assert!(!fallback_backed(&d("세차게 타오르는 불의 줄기."), "noun", "\u{F967}吉", &bulgil));
+        // no native homograph: kengdic's hanja stands when stdict's entry with it is the best (or only) one, even
+        // when the wording differs (대란 大亂, 대칭 對稱 vs 大秤)
+        assert!(fallback_backed(&d("사회가 매우 혼란스럽고 어려운 상황."), "noun", "大亂", &[std(Some("大亂"), "noun", "크게 일어난 난리.")]));
+        let daeching = [std(Some("大秤"), "noun", "큰 저울."), std(Some("對稱"), "noun", "점·선·면이 한 점·직선·평면을 사이에 두고 같은 거리에 마주 놓여 있는 일.")];
+        assert!(fallback_backed(&d("두 사물이 서로 크기나 모양이 같아 한 쌍을 이룸."), "noun", "對稱", &daeching));
+        assert!(!fallback_backed(&d("물건의 무게를 다는 큰 저울."), "noun", "對稱", &daeching));
         // no definitions (wikt): only when stdict has no native entry
         assert!(!fallback_backed(&[], "noun", "媒質", &maejil));
         assert!(fallback_backed(&[], "noun", "製鐵", &jecheol[1..]));

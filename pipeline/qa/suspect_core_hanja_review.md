@@ -116,8 +116,13 @@ No entry needs a *different* hanja: in every removal the sense is native in both
   characters. The hanja is genuinely the word's origin and useful to a learner, so it stays, and the entry is on
   `pipeline/data/hanja_keep.tsv` so the scan does not re-flag it.
 
-## Follow-up (not done here)
+## Follow-up: the kengdic fallback is guarded (2026-11-24)
 
-The kengdic fallback itself is the source of these errors; it only takes a hanja when kengdic has exactly one
-spelling, which is exactly when kengdic omits the native homograph. A guard there (skip when stdict has a native
-homograph whose definition matches the krdict entry) would stop new cases; this review only fixes the 14 flagged.
+`hanja_fill::fallback_backed` now gates the fallback: when stdict has the word, its entry with kengdic's hanja must
+be the best match of the krdict definitions (and score >= 0.3 when a native homograph exists); the keep list
+overrides it. Kept fills are marked `"hanja_src": "kengdic"`; every verdict is written to
+`out/hanja_kengdic_fallback.tsv`. Local build: 15 of 42 fills kept (대결산, 대란, 대업, 대칭, 동생 [keep list], 동전,
+무책임, 범죄성, 수상작, 자료실, 첨삭, 팔각형, 풍취, 필독, 홍수), 27 dropped: the 13 above plus 감투 敢鬪, 고명 高名,
+광대 廣大, 농어 農魚, 대목 大木, 막대 莫大, 신명 神明, 자라 紫羅, 활 佸, 황소 黃소 (native words), 외상값 外上값, 주춧돌 柱춧돌
+(stdict gives the compound no 원어), 대망 大望 and 절정기 絶頂期 (the stdict fill then gives 待望 / 絕頂期).
+The rows in `hanja_fixes.tsv` therefore now apply to 0 entries; they stay as a guard should the fallback change.

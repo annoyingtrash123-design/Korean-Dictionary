@@ -733,19 +733,21 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 *cnt.entry(r?).or_default() += 1;
             }
         }
-        let cands: Vec<(i64, String, String, String)> = {
+        let cands: Vec<(i64, String, String, String, String)> = {
             let mut st = conn.prepare(
-                "SELECT id, source, hw_norm, data FROM entries WHERE source IN ('krdict','wikt') AND hanja IS NULL AND pos='noun' AND kind='word' AND data NOT LIKE '%\"origin_note\"%'",
+                "SELECT id, source, hw_norm, data, COALESCE(ext_id, '') FROM entries WHERE source IN ('krdict','wikt') AND hanja IS NULL AND pos='noun' AND kind='word' AND data NOT LIKE '%\"origin_note\"%'",
             )?;
-            let rows = st.query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?)))?;
+            let rows = st.query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?)))?;
             rows.collect::<std::result::Result<_, _>>()?
         };
         // kengdic often lists only the hanja homograph of a native word (매질 媒質 "beating"): when stdict is
         // available, its entry with that hanja must be the best match of the entry's meaning
+        // (the reviewed keep list, e.g. 동생 同生, overrides it)
         let mut guard = stdict.map(crate::hanja_fill::FallbackGuard::open).transpose()?;
+        let reviewed = crate::hanja_fixes::HanjaFixes::builtin();
         let (mut filled, mut dropped) = (0, 0);
         let mut report = String::from("headword\tsource\thanja\tverdict\n");
-        for (id, source, hwn, data) in cands {
+        for (id, source, hwn, data, ext_id) in cands {
             if cnt.get(&(source.clone(), hwn.clone())) != Some(&1) {
                 continue;
             }
@@ -755,6 +757,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             }
             let h = set.iter().next().unwrap();
             let ok = match guard.as_mut() {
+                Some(_) if source == "krdict" && reviewed.is_kept(&ext_id, h) => true,
                 Some(g) => g.backed(&hwn, "noun", &data, h)?,
                 None => true,
             };
