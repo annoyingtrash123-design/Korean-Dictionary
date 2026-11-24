@@ -34,3 +34,19 @@ meaning), not merely a similar one? Reject anything where you would not write "s
 
 19 rows. Not proposed on purpose (similar, not the same idiom): 針小棒大 / 小題大做, 自家撞着 / 自相矛盾, 苦肉之策 / 苦肉計,
 風前燈火 / 風中之燭, 刻骨難忘 / 刻骨銘心, 竹馬故友 / 青梅竹馬.
+
+## Independent review (2026-11-24)
+
+Standard applied: same idiom = same story or image and same meaning, differing only in a character, a variant
+form or word order. Equivalents that say the same thing in other words are held.
+
+**Approved (16):** 塞翁之馬, 破竹之勢, 烏合之卒, 三顧草廬, 雨後竹筍, 好事多魔, 桑田碧海, 優柔不斷, 錦衣還鄕, 刮目相對,
+孤軍奮鬪, 千態萬象, 眼下無人, 錦繡江山, 天高馬肥, 臨機應變.
+- 眼下無人 / 目中無人: the same image (nobody under/in one's eyes), same meaning; approved as a wording variant.
+- 天高馬肥 / 秋高馬肥: the same source line (杜審言 "秋高塞馬肥"); Chinese keeps an old "season for campaigns" nuance
+  that CEDICT mentions, but the image and the core meaning match.
+
+**Held as draft (3), with the reason in the note column:**
+- 同苦同樂 / 同甘共苦: equivalent, not the same idiom (different wording and image; Korean has its own 동감공고).
+- 背恩忘德 / 忘恩負義: equivalent, not the same idiom (Korean has its own 망은부의).
+- 結草報恩 / 結草銜環: the Chinese idiom joins two stories (結草 + 楊寶's 銜環); the Korean one has only the first.
