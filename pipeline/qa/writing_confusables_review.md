@@ -41,7 +41,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W001** `-에 대해 살펴보고자 한다` · this essay sets out to look at … (stock opening of an introduction)
 
-- register: Written, formal “(한다체)”. Typical first sentence of a 54 essay. Spoken counterpart “-에 대해 얘기해 볼게요” does not belong in an essay.
+- register: Written, formal (“한다체”). Typical first sentence of a 54 essay. Spoken counterpart “-에 대해 얘기해 볼게요” does not belong in an essay.
 - 1: 이 글에서는 청소년의 스마트폰 사용 실태에 대해 살펴보고자 한다. / This essay sets out to look at how teenagers actually use smartphones.
 - 2: 본론에서는 조기 영어 교육이 아동의 발달에 미치는 영향에 대해 살펴보고자 한다. / The main part looks at how early English education affects children's development.
 - link: g:-고자 · review: draft
@@ -135,7 +135,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W014** `-다고 생각한다` · I think that …
 
-- register: Written “(한다체)”. The basic way to state an opinion; spoken “-(ㄴ/는)다고 생각해요 / -것 같아요” are not used in an essay.
+- register: Written (“한다체”). The basic way to state an opinion; spoken “-(ㄴ/는)다고 생각해요 / -것 같아요” are not used in an essay.
 - 1: 나는 학교 교육에서 예절 교육이 강화되어야 한다고 생각한다. / I think moral education should be strengthened in school education.
 - 2: 나는 이 제도가 장기적으로 사회에 도움이 될 것이라고 생각한다. / I think that in the long run this system will benefit society.
 - link: w:생각하다 · review: draft
@@ -483,7 +483,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W062** `반면에 / -는 반면` · whereas, on the other hand
 
-- register: Written, formal. Contrasts two things in one sentence (“-는 반면”) or across two “(반면에)”. Spoken “근데 / 그런데” do not mark contrast in an essay.
+- register: Written, formal. Contrasts two things in one sentence (“-는 반면”) or across two (“반면에”). Spoken “근데 / 그런데” do not mark contrast in an essay.
 - 1: 도시는 일자리가 많은 반면 주거 비용이 높다. / Cities have plenty of jobs, whereas housing costs are high.
 - 2: 온라인 쇼핑은 편리하다. 반면에 상품을 직접 확인할 수 없다는 단점이 있다. / Online shopping is convenient. On the other hand, it has the drawback that you cannot check the goods in person.
 - link: g:-는 반면에 · review: draft
@@ -577,7 +577,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W075** `-음에도 불구하고` · despite …, in spite of …
 
-- register: Written, formal. Attaches to a clause “(-ㅁ/음에도)” or a noun (“-에도 불구하고”). Spoken “그런데도 / -는데도” are too casual.
+- register: Written, formal. Attaches to a clause (“-ㅁ/음에도”) or a noun (“-에도 불구하고”). Spoken “그런데도 / -는데도” are too casual.
 - 1: 정부가 여러 대책을 내놓았음에도 불구하고 집값은 계속 오르고 있다. / Despite the various measures the government introduced, house prices keep rising.
 - 2: 높은 비용에도 불구하고 해외 유학을 선택하는 학생이 늘고 있다. / Despite the high cost, more students are choosing to study abroad.
 - link: g:에도 불구하고 · review: draft
@@ -598,7 +598,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W078** `-기는 하지만` · it is … but …
 
-- register: Written, neutral. Admit a point (“-기는 하다”), then give the opposite “(-지만)”: the standard "yes, but". Spoken “-기는 한데” is too casual.
+- register: Written, neutral. Admit a point (“-기는 하다”), then give the opposite (“-지만”): the standard "yes, but". Spoken “-기는 한데” is too casual.
 - 1: 인터넷이 편리하기는 하지만 지나친 의존은 문제가 될 수 있다. / The internet is certainly convenient, but excessive reliance on it can become a problem.
 - 2: 이 방법이 효과가 있기는 하지만 모든 경우에 적용할 수는 없다. / This method is effective, but it cannot be applied in every case.
 - link: g:-기는 · review: draft
@@ -758,7 +758,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W100** `-을/를 조사한 결과이다` · this is the result of a survey on …
 
-- register: Written, formal “(한다체)”. Opening sentence of a 53 answer; name the topic, the group surveyed and the period. Spoken “조사해 봤어요” is too casual.
+- register: Written, formal (“한다체”). Opening sentence of a 53 answer; name the topic, the group surveyed and the period. Spoken “조사해 봤어요” is too casual.
 - 1: 이 그래프는 20대 직장인의 여가 활동을 조사한 결과이다. / This graph shows the results of a survey on leisure activities of office workers in their twenties.
 - 2: 위 표는 최근 5년간 연령대별 인터넷 쇼핑 이용 현황을 조사한 결과이다. / The table above shows the results of a survey on online shopping use by age group over the last five years.
 - link: w:조사 · review: draft
@@ -1158,7 +1158,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W155** `-기를 바란다` · I hope that …
 
-- register: Written, formal “(한다체)”. A closing wish. Spoken “-기를 바라요 / -면 좋겠어요” is too casual.
+- register: Written, formal (“한다체”). A closing wish. Spoken “-기를 바라요 / -면 좋겠어요” is too casual.
 - 1: 이 글을 통해 많은 사람이 환경 문제에 관심을 가지게 되기를 바란다. / I hope that through this piece many people will come to take an interest in environmental problems.
 - 2: 앞으로 더 많은 사람이 독서의 즐거움을 알게 되기를 바란다. / I hope that more people will come to know the joy of reading.
 - link: w:바라다 · review: draft
@@ -1168,49 +1168,49 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **W156** `-고자 합니다` · I would like to …, I am writing in order to …
 
-- register: Formal polite “(합쇼체)”. For the practical texts of 51: notices, e-mails, announcements. Not “-(으)려고 해요”.
+- register: Formal polite (“합쇼체”). For the practical texts of 51: notices, e-mails, announcements. Not “-(으)려고 해요”.
 - 1: 이번 학기 학생회에서는 신입생 환영 행사를 열고자 합니다. / This semester the student council would like to hold a welcome event for new students.
 - 2: 저희 동아리에서는 새로운 회원을 모집하고자 합니다. / Our club would like to recruit new members.
 - link: g:-고자 · review: draft
 
 **W157** `-시기 바랍니다` · please …
 
-- register: Formal polite “(합쇼체)”. Polite request in a notice; “부탁드립니다” is also acceptable. Spoken “-세요 / -해 주세요” is too plain for a formal notice.
+- register: Formal polite (“합쇼체”). Polite request in a notice; “부탁드립니다” is also acceptable. Spoken “-세요 / -해 주세요” is too plain for a formal notice.
 - 1: 참석하실 분은 이번 주 금요일까지 신청해 주시기 바랍니다. / Those who will attend are asked to apply by this Friday.
 - 2: 문의 사항이 있으시면 아래 번호로 연락해 주시기 바랍니다. / If you have any questions, please contact the number below.
 - link: w:바라다 · review: draft
 
 **W158** `-(으)ㄹ 예정입니다` · is scheduled to …
 
-- register: Formal polite “(합쇼체)”. Announces a plan or schedule: “일시와 장소는 -입니다”. Spoken “-(으)ㄹ 거예요 / -(으)ㄹ게요” is too casual in a notice.
+- register: Formal polite (“합쇼체”). Announces a plan or schedule: “일시와 장소는 -입니다”. Spoken “-(으)ㄹ 거예요 / -(으)ㄹ게요” is too casual in a notice.
 - 1: 도서관은 다음 달 1일부터 새롭게 문을 열 예정입니다. / The library is scheduled to reopen from the 1st of next month.
 - 2: 행사는 이번 주 토요일 오후 두 시에 시작될 예정입니다. / The event is scheduled to start at two o'clock this Saturday afternoon.
 - link: w:예정 · review: draft
 
 **W159** `-(으)ㄹ 수 있도록 해 주시면 감사하겠습니다` · I would be grateful if you could …
 
-- register: Formal polite “(합쇼체)”. Polite request in an e-mail to a professor or a company. Spoken “해 주시면 좋겠어요 / -어 주세요” is too casual.
+- register: Formal polite (“합쇼체”). Polite request in an e-mail to a professor or a company. Spoken “해 주시면 좋겠어요 / -어 주세요” is too casual.
 - 1: 신청서를 이번 주까지 제출할 수 있도록 해 주시면 감사하겠습니다. / I would be grateful if you could let me hand in the application by this week.
 - 2: 자료를 미리 받아 볼 수 있도록 해 주시면 감사하겠습니다. / I would be grateful if I could receive the materials in advance.
 - link: w:감사하다 · review: draft
 
 **W160** `-게 되어 죄송합니다` · I am sorry that … had to …
 
-- register: Formal polite “(합쇼체)”. Apology in an e-mail or notice; add “양해해 주시기 바랍니다” to ask for understanding. Spoken “미안해요 / 죄송해요” is too casual in an e-mail.
+- register: Formal polite (“합쇼체”). Apology in an e-mail or notice; add “양해해 주시기 바랍니다” to ask for understanding. Spoken “미안해요 / 죄송해요” is too casual in an e-mail.
 - 1: 개인 사정으로 약속 시간을 변경하게 되어 죄송합니다. / I apologise for having to change the appointment time because of personal circumstances.
 - 2: 갑작스러운 사정으로 행사가 연기된 점 양해해 주시기 바랍니다. / Please understand that the event has been postponed for unforeseen reasons.
 - link: w:양해 · review: draft
 
 **W161** `-(으)ㄴ/는 것이다` · the fact is that …, it is that … (emphasising an explanation)
 
-- register: Written, formal “(한다체)”. Typical for the closing line of a 52 passage that explains something; it turns the sentence into an explanation. Not spoken “-거든요”.
+- register: Written, formal (“한다체”). Typical for the closing line of a 52 passage that explains something; it turns the sentence into an explanation. Not spoken “-거든요”.
 - 1: 따라서 잘 쉬는 것도 성공적인 일의 중요한 부분인 것이다. / So resting well is also an important part of work that succeeds.
 - 2: 결국 습관이 사람을 만드는 것이다. / In the end, it is habit that makes the person.
 - link: (none) · review: draft
 
 **W162** `-(으)ㄴ/는 경향이 있다` · there is a tendency to …
 
-- register: Written, formal “(한다체)”. General tendency, common in 52 text completion. Spoken “-는 경향이에요 / -는 편이에요” is too casual.
+- register: Written, formal (“한다체”). General tendency, common in 52 text completion. Spoken “-는 경향이에요 / -는 편이에요” is too casual.
 - 1: 사람들은 자신이 이미 가진 생각과 일치하는 정보를 더 쉽게 받아들이는 경향이 있다. / People tend to accept information that matches their existing ideas more readily.
 - 2: 시간이 부족할수록 중요한 일을 미루는 경향이 있다. / The less time we have, the more we tend to put off important things.
 - link: w:경향 · review: draft
@@ -1383,7 +1383,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **C021** [spelling] `깨끗이 | 꼼꼼히 | 틈틈이`
 
-- explanation: Adverb endings follow a rule. After a stem with a “ㅅ” final consonant “(깨끗하다)” or a reduplicated noun (“틈틈”, “곳곳”, “집집”) the ending is “-이”. After other stems that end in “-하다” (“꼼꼼하다”, “조용하다”) it is “-히”.
+- explanation: Adverb endings follow a rule. After a stem with a “ㅅ” final consonant (“깨끗하다”) or a reduplicated noun (“틈틈”, “곳곳”, “집집”) the ending is “-이”. After other stems that end in “-하다” (“꼼꼼하다”, “조용하다”) it is “-히”.
 - 깨끗이: 손을 깨끗이 씻었다. / I washed my hands clean.
 - 꼼꼼히: 계약서를 꼼꼼히 읽어 보았다. / I read the contract carefully.
 - 틈틈이: 틈틈이 책을 읽는 습관이 필요하다. / You need the habit of reading in your spare moments.
@@ -1692,7 +1692,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **C059** [meaning] `조리다 | 졸이다`
 
-- explanation: “조리다” is to simmer meat, fish or vegetables in seasoning until the liquid is almost gone: “생선을 조리다”. “졸이다” is to boil down a liquid, or “(마음을)” to feel anxious: “국물을 졸이다”, “마음을 졸이다”.
+- explanation: “조리다” is to simmer meat, fish or vegetables in seasoning until the liquid is almost gone: “생선을 조리다”. “졸이다” is to boil down a liquid, or (“마음을”) to feel anxious: “국물을 졸이다”, “마음을 졸이다”.
 - 조리다: 생선을 간장에 조려서 반찬으로 먹었다. / I simmered the fish in soy sauce and ate it as a side dish.
 - 졸이다: 합격자 발표를 기다리며 마음을 졸였다. / I waited anxiously for the results to be announced.
 - common mistake: Writing “마음을 조리다”. Anxiety is always “마음을 졸이다”.
@@ -1946,7 +1946,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 
 **C090** [meaning] `주의 | 조심`
 
-- explanation: “주의” is attention and caution; it often stands in notices “(주의하십시오)”. “조심” is being careful in one's behaviour, with a more everyday tone.
+- explanation: “주의” is attention and caution; it often stands in notices (“주의하십시오”). “조심” is being careful in one's behaviour, with a more everyday tone.
 - 주의: 바닥이 미끄러우니 주의하십시오. / The floor is slippery, so be careful.
 - 조심: 길이 미끄러우니 조심해서 걸어라. / The road is slippery, so walk carefully.
 - common mistake: Using “조심하십시오” in a formal notice; “주의하십시오” is the standard sign-board wording.
@@ -2005,7 +2005,7 @@ AI-written (Claude), all `draft`. Nothing ships until a row's `review` column sa
 - explanation: Both turn a verb into a noun. “-(으)ㅁ” names a result or a state and is common in formal writing, notices and titles. “-기” names an action or an activity (“읽기”, “쓰기”) and goes with “위해”, “때문에” and expectations.
 - -(으)ㅁ: 그는 이 방법이 효과적임을 보여 주었다. / He showed that this method is effective.
 - -기: 매일 달리기는 건강에 도움이 된다. / Running every day is good for health.
-- common mistake: Using “-음” for an activity as a subject (“달림은 건강에 좋다”); a named activity is “-기” “(달리기)”.
+- common mistake: Using “-음” for an activity as a subject (“달림은 건강에 좋다”); a named activity is “-기” (“달리기”).
 - review: draft
 
 **C098** [grammar] `-(으)ㄴ데 | -(으)ㄴ 데`

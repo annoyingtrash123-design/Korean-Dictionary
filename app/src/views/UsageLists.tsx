@@ -85,7 +85,7 @@ function WritingList({ list, back }: { list: ListSummary; back: ComponentChildre
   return (
     <div class="page list-detail uw" data-testid="writing-list">
       <Head list={list} back={back}>
-        <AiNote what="Formal written expressions for the TOPIK writing section. Spoken forms to avoid in an essay are named in each note." />
+        <AiNote what="Each note says which spoken forms to avoid in an essay." />
         <Filter q={q} setQ={setQ} label="Filter expressions" />
         <div class="list-sub"><span class="muted small" data-testid="usage-count">{r.loading && !all.length ? 'Loading…' : searching ? `${groups.reduce((n, g) => n + g.rows.length, 0)} of ${all.length} expressions` : `${all.length} expressions · ${groups.length} groups`}</span></div>
       </Head>
