@@ -133,6 +133,8 @@ export interface Engine {
   grammarList(): Promise<GrammarRow[]>;
   grammarLessons(source: string, id: number): Promise<GrammarLessonRow[]>;
   seongeoZh(hanja: string): Promise<SeongeoZh | null>;
+  writingExpressions(): Promise<WritingExpr[]>;
+  confusables(): Promise<Confusable[]>;
   gameWords(level: number, limit: number): Promise<GameWord[]>;
   gameWordsFor(headwords: string[]): Promise<GameWord[]>;
   chainCandidates(starts: string[], used: string[], limit: number): Promise<GameWord[]>;
@@ -178,7 +180,7 @@ export interface HomeIdiom { source: Source; id: number; headword: string; homon
 export interface HomeData { words: HomeWord[]; grammar: HomeGrammar[]; idioms: HomeIdiom[] }
 
 /** Built-in study lists (Lists tab): see core/src/search/study.rs. Empty arrays when the pack lacks `curriculum` / `topic`. */
-export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[]; idioms?: StudyIdiomList[] }
+export interface StudyOverview { vocab: { level: number; count: number }[]; grammar: { level: number; count: number }[]; topics: { category: string; count: number }[]; idioms?: StudyIdiomList[]; usage?: UsageCounts }
 /** Idioms & proverbs lists (`study_item`): absent on packs that predate them. */
 export interface StudyIdiomList { list: string; count: number }
 export interface StudyIdiom { rank: number; kind: 'sokdam' | 'seongeo'; title: string; headword: string; gloss: string; pack: string; entry: { source: Source; id: number; homonym: number | null; pos: string | null } | null }
@@ -195,6 +197,21 @@ export interface SeongeoZh {
   zh_trad: string | null; zh_simp: string | null; zh_pinyin: string | null; zh_en: string[];
   en_equiv: string | null; en_note: string | null; en_ai: boolean;
 }
+
+/** Rows of the "Writing & usage" study lists (core pack `writing_expr` / `confusable`; 0: not in the pack). */
+export interface UsageCounts { writing: number; confusables: number }
+/** A dictionary or grammar entry a row links to (null/absent: the app searches for the word instead). */
+export interface UsageEntryRef { source: string; id: number; homonym: number | null; pos: string | null }
+/** A 쓰기 expression for TOPIK writing 51-54 (AI-written, reviewed: `ai`). `register`: why it is written style and which spoken forms to avoid. */
+export interface WritingExpr {
+  id: string; group: string; expr: string; meaning: string; register: string;
+  examples: { ko: string; en: string }[];
+  entry: UsageEntryRef | null; ai: boolean;
+}
+/** One word of a confusable group; `wrong`: a spelling people write that is not valid (no sentence, no entry). */
+export interface ConfusableWord { word: string; wrong: boolean; ko: string; en: string; entry: UsageEntryRef | null }
+/** A group of near-synonyms or look-alikes (`kind`: spelling, meaning or grammar), AI-written and reviewed. */
+export interface Confusable { id: string; kind: 'spelling' | 'meaning' | 'grammar'; words: ConfusableWord[]; explanation: string; mistake: string; ai: boolean }
 
 /** A quiz word (Games tab). `examples`: Korean example sentences for Fill the gap. */
 export interface GameWord { source: string; id: number; headword: string; hanja?: string | null; pos?: string | null; level?: number | null; gloss: string; examples: string[] }

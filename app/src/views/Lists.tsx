@@ -6,6 +6,8 @@ import { NameForm } from '../components/SaveButton';
 import { createList, deleteList, removeFromList, renameList, restoreItem, lists, type ListItem } from '../lib/lists';
 import { LIST_SOURCES, sourceOf, type ListSource, type ListSummary } from '../lib/list-sources';
 import { PagedDetail } from './StudyList';
+import { UsageDetail } from './UsageLists';
+import { parseUsageId } from '../lib/study-usage';
 import { href, navigate, useRoute, withoutTab } from '../lib/router';
 import { savedPath } from '../lib/entry-key';
 import { showToast } from '../lib/toast';
@@ -158,6 +160,7 @@ function ListDetail({ id }: { id: string }) {
   const [sort, setSort] = useState<Sort>(loadSort);
   const [edit, setEdit] = useState(false);
   const [renaming, setRenaming] = useState(false);
+  if (l && parseUsageId(id)) return <UsageDetail key={id} id={id} list={l} path={listPath(id)} back={<BackLink />} />;
   if (src?.paged && l) return <PagedDetail key={id} src={src} list={l} back={<BackLink />} />;
   if (!src || !l) {
     return <div class="page"><BackLink /><Empty title="List not found">It may have been deleted. <a href={href(listPath())}>All lists</a></Empty></div>;

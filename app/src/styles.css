@@ -869,6 +869,53 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 .zh-src { margin-top: 3px; font-size: 11.5px; }
 .zh-note { margin-top: 2px; }
 .pane-right .zh-body { padding-left: 0; padding-right: 0; }
+/* "Writing & usage" study lists (views/UsageLists.tsx): 쓰기 expressions and confusable words, AI-written and reviewed */
+.uw { padding-bottom: 28px; }
+.uw-ai { display: flex; align-items: flex-start; gap: 8px; margin: 8px 16px 2px; color: var(--muted); line-height: 1.4; }
+.uw-ai .chip-ai { flex: none; margin-top: 1px; }
+.uw-ai-inline { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
+.uw-filter { display: flex; align-items: center; gap: 8px; margin: 8px 16px 0; padding: 0 12px; height: 42px; border-radius: 21px; background: var(--surface-2); color: var(--muted); }
+.uw-filter input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; color: var(--text); font: inherit; font-size: 16px; outline: none; }
+.uw-filter:focus-within { box-shadow: 0 0 0 2px var(--accent); }
+.uw-seg { padding-top: 8px; flex-wrap: wrap; }
+.uw-group { margin-top: 2px; }
+.uw-rows { padding: 0 16px 6px; }
+.uw-rows[hidden] { display: none; }
+.uw-item { margin: 0 0 8px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.uw-item > summary { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; min-height: 52px; padding: 8px 12px; cursor: pointer; list-style: none; }
+.uw-item > summary::-webkit-details-marker { display: none; }
+.uw-item > summary svg { color: var(--muted); transition: transform .15s; }
+.uw-item[open] > summary svg { transform: rotate(180deg); }
+.uw-main { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.uw-expr { font-size: 17px; font-weight: 650; line-height: 1.35; overflow-wrap: anywhere; }
+.uw-mean { font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+.uw-body { padding: 4px 12px 12px; border-top: 1px dashed var(--border); }
+.uw-lbl { display: block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.uw-register { margin: 8px 0 10px; font-size: 14px; line-height: 1.5; }
+.uw-register .uw-lbl { display: inline; margin-right: 4px; }
+.uw-q { font-size: .98em; }
+.uw-body .exs { margin-top: 4px; }
+.uw-foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 12px; margin-top: 8px; }
+.uw-open { display: inline-flex; align-items: center; gap: 2px; min-height: 32px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.uw-groups .row-gloss { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.uw-groups .row > svg:last-child { flex: none; color: var(--muted); }
+.uw-compare .list-title-row { align-items: flex-start; }
+.uw-compare .list-title-row .chip-ai { margin-top: 8px; }
+.uw-expl { margin: 8px 16px 4px; font-size: 15px; line-height: 1.55; }
+.uw-cmp { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; padding: 8px 16px 4px; }
+.uw-card { padding: 10px 12px 8px; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px; background: var(--surface); }
+.uw-card.wrong { border-left-color: var(--danger); border-style: dashed; background: none; }
+.uw-word { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.uw-w { font-size: 22px; font-weight: 700; }
+.uw-card.wrong s { font-size: 20px; font-weight: 600; text-decoration-color: var(--danger); text-decoration-thickness: 2px; color: var(--muted); }
+.uw-x { font-size: 12.5px; color: var(--danger); }
+.uw-ex { display: flex; align-items: flex-start; gap: 6px; margin-top: 6px; }
+.uw-ex-main { flex: 1; min-width: 0; }
+.uw-mistake { margin: 10px 16px 6px; padding: 8px 10px; border-radius: 10px; background: var(--accent-soft); font-size: 14.5px; line-height: 1.5; }
+.uw-mistake p { margin: 2px 0 0; }
+.uw-compare > .uw-ai-inline { margin: 6px 16px 0; }
+.uw-pager { display: flex; justify-content: space-between; gap: 8px; padding: 12px 16px 0; }
+.uw-pager .btn { display: inline-flex; align-items: center; gap: 4px; max-width: 48%; min-width: 0; }
 .lessons { padding: 8px 16px 4px; }
 .pane-right .lessons { padding-left: 0; padding-right: 0; }
 .lesson { margin: 10px 0 8px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }

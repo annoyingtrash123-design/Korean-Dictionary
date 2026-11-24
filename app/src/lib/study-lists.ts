@@ -5,6 +5,7 @@ import type { ListRow, ListSummary } from './list-sources';
 import { entryPath, wordPath } from './router';
 import { curriculumHint, curriculumLabel } from './home-day';
 import { idiomId, idiomSummaries, parseIdiomId } from './study-idioms';
+import { parseUsageId, USAGE_LISTS, usageSummaries, type UsageKind } from './study-usage';
 
 export const STUDY_PREFIX = 'study:';
 export const LEVELS = [1, 2, 3, 4, 5, 6];
@@ -13,12 +14,14 @@ export const GROUP_VOCAB = 'Vocabulary by level';
 export const GROUP_GRAMMAR = 'Grammar by level';
 export const GROUP_TOPICS = 'Topics';
 
-export type StudyRef = { kind: 'vocab'; level: number } | { kind: 'grammar'; level: number } | { kind: 'topic'; category: string } | { kind: 'idiom'; list: string };
+export type StudyRef = { kind: 'vocab'; level: number } | { kind: 'grammar'; level: number } | { kind: 'topic'; category: string } | { kind: 'idiom'; list: string } | { kind: 'usage'; list: UsageKind };
 
-export const studyId = (r: StudyRef): string => (r.kind === 'topic' ? `${STUDY_PREFIX}topic:${r.category}` : r.kind === 'idiom' ? idiomId(r.list) : `${STUDY_PREFIX}${r.kind}:${r.level}`);
+export const studyId = (r: StudyRef): string => (r.kind === 'topic' ? `${STUDY_PREFIX}topic:${r.category}` : r.kind === 'idiom' ? idiomId(r.list) : r.kind === 'usage' ? USAGE_LISTS[r.list].id : `${STUDY_PREFIX}${r.kind}:${r.level}`);
 export function parseStudyId(id: string): StudyRef | undefined {
   const list = parseIdiomId(id);
   if (list) return { kind: 'idiom', list };
+  const usage = parseUsageId(id);
+  if (usage) return { kind: 'usage', list: usage };
   const m = /^study:(vocab|grammar|topic):(.+)$/.exec(id);
   if (!m) return undefined;
   if (m[1] === 'topic') return { kind: 'topic', category: m[2] };
@@ -55,6 +58,7 @@ export function summariesOf(o: StudyOverview | null | undefined): ListSummary[] 
     for (const s of e.subs) out.push({ id: studyId({ kind: 'topic', category: s.category }), name: subOf(s.category), count: s.count, unit: 'word', group: GROUP_TOPICS, eyebrow: `Topic · ${top}`, parent: id, fullName: s.category });
   }
   out.push(...idiomSummaries(o.idioms));
+  out.push(...usageSummaries(o.usage));
   return out;
 }
 
