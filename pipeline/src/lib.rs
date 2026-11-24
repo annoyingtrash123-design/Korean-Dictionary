@@ -32,6 +32,7 @@ pub mod texts_news;
 pub mod texts_pack;
 pub mod texts_wikitext;
 pub mod unihan;
+pub mod usage_lists;
 pub mod wordnet;
 pub mod xml;
 pub mod zhwikt;
