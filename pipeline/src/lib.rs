@@ -8,6 +8,7 @@ pub mod idiom_extra;
 pub mod enwikt;
 pub mod example_en;
 pub mod gloss_fixes;
+pub mod hanja_fill;
 pub mod grammar_extra;
 pub mod grammar_lessons;
 pub mod fetch;

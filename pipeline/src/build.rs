@@ -581,7 +581,8 @@ pub fn is_sentence(ko: &str) -> bool {
     !t.is_empty() && !t.contains('\n') && t.split_whitespace().count() >= 2
 }
 
-pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, built_at: &str) -> Result<PackResult> {
+/// `stdict`: the built stdict pack, the source of the hanja fill ([`crate::hanja_fill`]); `None` skips it.
+pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, built_at: &str, stdict: Option<&Path>) -> Result<PackResult> {
     let path = out.join("core.sqlite");
     let conn = open_db(&path)?;
     conn.execute_batch(schema::COMMON)?;
@@ -590,6 +591,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     conn.execute_batch("BEGIN")?;
     let mut c = Counters::default();
     let mut grammar: Vec<GrammarRow> = Vec::new();
+    let mut fill_stats: Option<crate::hanja_fill::Stats> = None;
 
     // kengdic first: needed for the hanja fallback
     let kd = match &src.kengdic {
@@ -901,6 +903,19 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
          WHERE source = 'krdict' AND level = 3 AND kind = 'word' AND gloss IS NOT NULL AND gloss != ''",
     )?;
 
+    // hanja of 표준국어대사전 for krdict / kengdic entries that have none (before the hanja tables are finished)
+    if let Some(sp) = stdict {
+        let t = Instant::now();
+        let (stats, records) = crate::hanja_fill::apply(&conn, sp)?;
+        log::info!(
+            "hanja fill from stdict: {} entries (krdict {} unique + {} homograph + {} derived; kengdic {} + {} derived) in {:.1}s",
+            stats.total(), stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_derived, t.elapsed().as_secs_f32()
+        );
+        fs::write(out.join("hanja_fill_report.tsv"), crate::hanja_fill::report_tsv(&records))?;
+        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 60, 60, 30))?;
+        fill_stats = Some(stats);
+    }
+
     conn.execute_batch(schema::FILL_HANJA_RANK)?;
     conn.execute_batch(schema::COMMON_INDEXES)?;
     fill_cho(&conn)?;
@@ -972,6 +987,9 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
     counts.insert("hanja_chars".into(), q("SELECT COUNT(*) FROM hanja_chars")?.into());
     counts.insert("hanja_hun".into(), n_hun.into());
+    if let Some(f) = &fill_stats {
+        counts.insert("hanja_filled".into(), f.total().into());
+    }
     counts.insert("sentences".into(), q("SELECT COUNT(*) FROM sentences")?.into());
     counts.insert("sentences_tatoeba".into(), n_tat.into());
     counts.insert("sentences_wikt".into(), n_wikt_s.into());
@@ -1566,9 +1584,7 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
     if o.sources.krdict.is_empty() && o.sources.kaikki.is_none() && o.sources.kengdic.is_none() {
         anyhow::bail!("no English dictionary source available (krdict / kaikki / kengdic): nothing to build for core");
     }
-    let mut core = build_core(&o.sources, &ranker, &o.out, &version, &built_at)?;
-    log::info!("core.sqlite built: {}", core.counts);
-
+    // stdict first: its 원어 hanja fill the core pack's entries that have none
     let mut dedupe: HashSet<String> = HashSet::new();
     let mut stdict_counts: Option<Value> = None;
     let mut korean_packs: Vec<PackResult> = Vec::new();
@@ -1582,6 +1598,9 @@ pub fn run(o: &BuildOpts) -> Result<Value> {
         dedupe = st.keys.clone();
         korean_packs.push(st);
     }
+    let stdict_path = korean_packs.first().map(|p| p.path.clone());
+    let mut core = build_core(&o.sources, &ranker, &o.out, &version, &built_at, stdict_path.as_deref())?;
+    log::info!("core.sqlite built: {}", core.counts);
     if o.sources.opendict.is_empty() {
         remove_stale(&site, "opendict.sqlite.gz.")?;
     } else {
