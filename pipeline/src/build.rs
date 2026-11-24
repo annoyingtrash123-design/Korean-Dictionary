@@ -916,7 +916,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             stats.total(), stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_opendict, stats.kengdic_cedict, stats.kengdic_both, stats.kengdic_derived, suspects.len(), t.elapsed().as_secs_f32()
         );
         fs::write(out.join("hanja_fill_report.tsv"), crate::hanja_fill::report_tsv(&records))?;
-        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 150, 60, 30, "2"))?;
+        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 150, 60, 60, "2"))?;
         fill_stats = Some(stats);
     }
 

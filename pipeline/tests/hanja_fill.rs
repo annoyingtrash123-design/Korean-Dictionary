@@ -170,16 +170,31 @@ fn committed_qa_sample_is_well_formed() {
     let p = Path::new(env!("CARGO_MANIFEST_DIR")).join("qa/hanja_fill_sample.tsv");
     let Ok(text) = std::fs::read_to_string(&p) else { return }; // written by a full build, committed with the review
     let mut lines = text.lines();
-    assert_eq!(lines.next().unwrap(), "headword\thanja\tsource\tcore_definition\tstdict_definition_used\trule");
+    assert_eq!(lines.next().unwrap(), "headword\thanja\tsource\tcore_definition\tstdict_definition_used\trule\tevidence");
     let mut n = std::collections::HashMap::new();
     for l in lines {
         let f: Vec<&str> = l.split('\t').collect();
-        assert_eq!(f.len(), 6, "{l}");
+        assert_eq!(f.len(), 7, "{l}");
         assert!(is_valid_fill(f[1]), "{l}");
         assert!(["krdict", "kengdic"].contains(&f[2]), "{l}");
         assert!(["unique", "homograph", "kengdic", "derived"].contains(&f[5]), "{l}");
+        // the kengdic rule only fills with English corroboration from an independent source
+        assert_eq!(f[5] == "kengdic", ["opendict", "cedict", "opendict+cedict"].contains(&f[6]), "{l}");
         *n.entry(f[5]).or_insert(0) += 1;
     }
-    assert!(n.get("homograph").copied().unwrap_or(0) <= 60 && n.get("derived").copied().unwrap_or(0) <= 30, "{n:?}");
+    assert!(n.get("homograph").copied().unwrap_or(0) <= 60 && n.get("derived").copied().unwrap_or(0) <= 60, "{n:?}");
     assert!(text.lines().count() <= 151);
+}
+
+#[test]
+fn committed_suspect_list_is_well_formed() {
+    let p = Path::new(env!("CARGO_MANIFEST_DIR")).join("qa/suspect_core_hanja.tsv");
+    let Ok(text) = std::fs::read_to_string(&p) else { return };
+    let mut lines = text.lines();
+    assert_eq!(lines.next().unwrap(), "headword\thanja\tpos\tcore_def\tnative_stdict_def\tnative_score\tstdict_def_with_this_hanja\thanja_score");
+    for l in lines {
+        let f: Vec<&str> = l.split('\t').collect();
+        assert_eq!(f.len(), 8, "{l}");
+        assert!(f[5].parse::<f64>().unwrap() >= 0.6 && f[7].parse::<f64>().unwrap() < 0.3, "{l}");
+    }
 }
