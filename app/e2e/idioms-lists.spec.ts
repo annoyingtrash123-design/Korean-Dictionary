@@ -88,18 +88,34 @@ for (const vp of [{ n: 'phone', w: 390, h: 844 }, { n: 'ipad', w: 1180, h: 820 }
       await shot(page, `idioms-list${i + 1}-${vp.n}`);
     }
 
-    // ---- 설상가상 is only in 표준국어대사전: with stdict installed the row opens that entry ----
+    // ---- 설상가상 has a krdict entry: the row shows krdict's English and opens the krdict entry ----
     await overview(page);
     await link(page, 'Essential 성어 — top 100').click();
     const row = rows(page).filter({ has: page.locator('.hw', { hasText: /^설상가상$/ }) });
     await expect(row).toBeVisible();
-    await expect(row.locator('.row-gloss')).toContainText('눈 위에 서리가');
+    await expect(row.locator('.row-gloss')).toContainText('misfortune on top of misfortunes');
     await row.locator('a.row').click();
-    await expect(page).toHaveURL(/#\/entry\/stdict\/\d+/);
+    await expect(page).toHaveURL(/#\/entry\/krdict\/\d+/);
     await expect(page.locator('h1').filter({ hasText: '설상가상' }).first()).toBeVisible();
-    await expect(page.locator('main').last()).toContainText('눈 위에 서리가 덮인다는 뜻으로');
+    await expect(page.locator('details.dict > summary').first()).toContainText('krdict');
+    await expect(page.locator('details.dict > summary').filter({ hasText: 'idiom notes' })).toHaveCount(0);
     await page.waitForTimeout(300);
-    await shot(page, `idioms-entry-stdict-${vp.n}`);
+    await shot(page, `idioms-entry-krdict-${vp.n}`);
+
+    // ---- 다재다능 is in no krdict: the reviewed English overlay (한뿌리 idiom notes, AI-assisted) ----
+    await overview(page);
+    await link(page, 'Essential 성어 — top 100').click();
+    const ov = rows(page).filter({ has: page.locator('.hw', { hasText: /^다재다능$/ }) });
+    await expect(ov).toBeVisible();
+    await expect(ov.locator('.row-gloss')).toContainText('multi-talented');
+    await ov.locator('a.row').click();
+    await expect(page).toHaveURL(/#\/entry\/hanppuri\/\d+/);
+    await expect(page.locator('h1').filter({ hasText: '다재다능' }).first()).toBeVisible();
+    const head = page.locator('details.dict > summary').first();
+    await expect(head).toContainText('한뿌리 idiom notes (AI-assisted)');
+    await expect(head).not.toContainText('grammar');
+    await page.waitForTimeout(300);
+    await shot(page, `idioms-entry-overlay-${vp.n}`);
 
     // ---- a krdict proverb opens its core entry; the star saves a row ----
     await overview(page);

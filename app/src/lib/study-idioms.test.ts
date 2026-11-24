@@ -31,7 +31,7 @@ describe('idioms & proverbs study lists', () => {
     expect(s.map((x) => [x.name, x.count, x.group])).toEqual([
       ['Common proverbs — top 100', 100, GROUP_IDIOMS], ['All learner proverbs', 655, GROUP_IDIOMS],
       ['Essential 성어 — top 100', 100, GROUP_IDIOMS], ['Common 성어 — top 300', 300, GROUP_IDIOMS],
-      ['All learner 성어', 202, GROUP_IDIOMS],
+      ['All learner 성어', 254, GROUP_IDIOMS],
     ]);
     expect(idiomSummaries(undefined)).toEqual([]);
     expect(idiomSummaries([{ list: 'sokdam100', count: 0 }])).toEqual([]);

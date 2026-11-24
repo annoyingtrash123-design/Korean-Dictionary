@@ -13,7 +13,7 @@ import { TAP } from '../components/TapLookup';
 import { ExampleList } from '../components/Examples';
 import { GrammarLessons } from '../components/GrammarLesson';
 import { TabBar, WordsTab, CharsTab, SentsTab, useEntryTab } from './EntryTabs';
-import { SOURCE_ORDER, SOURCE_TITLE, type Entry, type Sense } from '../lib/types';
+import { SOURCE_ORDER, entrySourceTitle, type Entry, type Sense } from '../lib/types';
 import { Empty, LevelBadge, Pos } from '../components/common';
 import { SaveButton } from '../components/SaveButton';
 import type { ItemInput } from '../lib/lists';
@@ -94,12 +94,16 @@ export function EntryView(props: EntryProps) {
 /** The Dict tab: every dictionary's senses of the word, its grammar lessons, similar words. */
 function DictPanel({ primary, entries }: { primary: Entry; entries: Entry[] }) {
   const s = useStore(settings);
-  const bySource = SOURCE_ORDER.map((src) => ({ src, list: entries.filter((e) => e.source === src) })).filter((x) => x.list.length);
+  // one group per source and heading (the hanppuri source has two: grammar notes, idiom notes)
+  const groups = SOURCE_ORDER.flatMap((src) => {
+    const titles = [...new Set(entries.filter((e) => e.source === src).map(entrySourceTitle))];
+    return titles.map((title) => ({ src, title, list: entries.filter((e) => e.source === src && entrySourceTitle(e) === title) }));
+  });
   return (
     <>
-      {bySource.map(({ src, list }) => (
-        <details key={src} class="dict" open>
-          <summary><span>{SOURCE_TITLE[src]}</span><Icon name="down" size={18} /></summary>
+      {groups.map(({ src, title, list }) => (
+        <details key={src + title} class="dict" open>
+          <summary><span>{title}</span><Icon name="down" size={18} /></summary>
           {list.map((e) => <EntryBody key={e.id} e={e} many={list.length > 1} showKo={s.showKoDef || e.lang === 'ko'} />)}
         </details>
       ))}

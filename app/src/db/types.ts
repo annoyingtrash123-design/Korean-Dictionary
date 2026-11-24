@@ -10,6 +10,10 @@ export const SOURCE_TITLE: Record<Source, string> = {
   cedict: 'CC-CEDICT',
   zhwikt: 'Wiktionary (Chinese)',
 };
+/** Heading of an entry's source group. The hanppuri source holds two AI-assisted overlays: grammar notes
+ *  (kind 'grammar') and the English of 속담/성어 that krdict lacks (kind 'proverb' / 'word'): say which one. */
+export const entrySourceTitle = (e: { source: string; kind?: string }): string =>
+  e.source === 'hanppuri' && e.kind !== 'grammar' ? '한뿌리 idiom notes (AI-assisted)' : (SOURCE_TITLE as Record<string, string>)[e.source] ?? e.source;
 export const SOURCE_SHORT: Record<Source, string> = { krdict: 'krdict', hanppuri: '한뿌리', wikt: 'wikt', kengdic: 'kengdic', stdict: 'stdict', opendict: '우리말샘', cedict: 'CC-CEDICT', zhwikt: 'zh-wikt' };
 /** Korean-only sources (lang 'ko'): never preferred over an English source. */
 export const isKoSource = (s: string) => s === 'stdict' || s === 'opendict';
