@@ -22,7 +22,7 @@ pub const LISTS: [(&str, &str, usize); 5] = [
     ("sokdam_all", "sokdam", 655),
     ("seongeo100", "seongeo", 100),
     ("seongeo300", "seongeo", 300),
-    ("seongeo_learner", "seongeo", 202),
+    ("seongeo_learner", "seongeo", 254),
 ];
 
 /// Shortest healthy `study_item`: the lists minus a few unresolved rows.

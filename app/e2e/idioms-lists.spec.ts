@@ -24,7 +24,7 @@ const LISTS = [
   { name: 'All learner proverbs', count: 655, tag: '속담', first: '누워서 떡 먹기' },
   { name: 'Essential 성어 — top 100', count: 100, tag: '성어', first: '만장일치' },
   { name: 'Common 성어 — top 300', count: 300, tag: '성어', first: '만장일치' },
-  { name: 'All learner 성어', count: 202, tag: '성어', first: '만장일치' },
+  { name: 'All learner 성어', count: 254, tag: '성어', first: '만장일치' },
 ];
 
 const fold = (page: Page) => study(page).getByRole('button', { name: /^Idioms & proverbs/ });

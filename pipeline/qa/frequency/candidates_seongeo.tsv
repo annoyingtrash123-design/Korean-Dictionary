@@ -81,22 +81,22 @@ sg00079	풍전등화	風前燈火	50968	404622		krdict,stdict	1	1	비유	0
 sg00080	호시탐탐	虎視眈眈	53195	422329		krdict,stdict	1	1	출전·유래	0
 sg00081	혼비백산	魂飛魄散	53354	423388		krdict,stdict	1	1	krdict:idiom/figurative	0
 sg00082	황금연휴	黃金連休	53880	428646		krdict,stdict	1	1	비유	0
-sg00083	공통분모	共通分母	4627			krdict	1	1	비유	0
-sg00084	돌연변이	突然變異	13665			krdict	1	1	비유	0
-sg00085	부전자전	父傳子傳	22888			krdict	1	1	krdict:idiom/figurative	0
-sg00086	불협화음	不協和音	23689			krdict	1	1	비유	0
-sg00087	사각지대	死角地帶	24556			krdict	1	1	비유	0
-sg00088	사자성어	四字成語	24933			krdict	1	1	krdict:idiom/figurative	0
-sg00089	사주팔자	四柱八字	24975			krdict	1	1	krdict:idiom/figurative	0
-sg00090	아비규환	阿鼻叫喚	31049			krdict	1	1	비유	0
-sg00091	일장춘몽	一場春夢	38694			krdict	1	1	비유	0
-sg00092	자승자박	自繩自縛	39396			krdict	1	1	비유	0
-sg00093	장유유서	長幼有序	40114			krdict	1	1	krdict:idiom/figurative	0
-sg00094	죽마고우	竹馬故友	43405			krdict	1	1	krdict:idiom/figurative	0
-sg00095	침소봉대	針小棒大	47834			krdict	1	1	뜻으로	0
-sg00096	함흥차사	咸興差使	51961			krdict	1	1	krdict:idiom/figurative	0
-sg00097	호의호식	好衣好食	53217			krdict	1	1	krdict:idiom/figurative	0
-sg00098	회자정리	會者定離	54020			krdict	1	1	뜻으로	0
+sg00083	공통분모	共通分母	4627	34725		krdict,stdict	1	1	비유	0
+sg00084	돌연변이	突然變異	13665	98631		krdict,stdict	1	1	비유	0
+sg00085	부전자전	父傳子傳	22888	163884		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00086	불협화음	不協和音	23689	169324		krdict,stdict	1	1	비유	0
+sg00087	사각지대	死角地帶	24556	176921		krdict,stdict	1	1	비유	0
+sg00088	사자성어	四字成語	24933	181146		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00089	사주팔자	四柱八字	24975	181556		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00090	아비규환	阿鼻叫喚	31049	234665		krdict,stdict	1	1	비유	0
+sg00091	일장춘몽	一場春夢	38694	301310		krdict,stdict	1	1	비유	0
+sg00092	자승자박	自繩自縛	39396	306627		krdict,stdict	1	1	비유	0
+sg00093	장유유서	長幼有序	40114	313053		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00094	죽마고우	竹馬故友	43405	342005		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00095	침소봉대	針小棒大	47834	378160		krdict,stdict	1	1	뜻으로	0
+sg00096	함흥차사	咸興差使	51961	411899		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00097	호의호식	好衣好食	53217	422540		krdict,stdict	1	1	krdict:idiom/figurative	0
+sg00098	회자정리	會者定離	54020	430460		krdict,stdict	1	1	뜻으로	0
 sg00099	가계야치	家鷄野雉			358	opendict	0	1	뜻으로	0
 sg00100	가급인족	家給人足		634		stdict	0	1	출전·유래	0
 sg00101	가도벽립	家徒壁立			1208	opendict	0	1	뜻으로	0
@@ -201,7 +201,7 @@ sg00199	경거숙로	輕車熟路		21225		stdict	0	1	뜻으로	0
 sg00200	경광도협	傾筐倒篋			31349	opendict	0	1	뜻으로	0
 sg00201	경구비마	輕裘肥馬		21447		stdict	0	1	뜻으로	0
 sg00202	경구완대	輕裘緩帶		21449		stdict	0	1	뜻으로	0
-sg00203	경국지색	傾國之色		21472		stdict	0	1	뜻으로	0
+sg00203	경국지색	傾國之色	2907	21472		krdict,stdict	1	1	뜻으로	0
 sg00204	경궁요대	瓊宮瑤臺		21484		stdict	0	1	뜻으로	0
 sg00205	경궁지조	驚弓之鳥		21485		stdict	0	1	뜻으로	0
 sg00206	경당문노	耕當問奴		21645		stdict	0	1	뜻으로	0
@@ -247,7 +247,7 @@ sg00245	고관광대	高冠廣帶		25931		stdict	0	1	뜻으로	0
 sg00246	고굉지력	股肱之力		25949		stdict	0	1	뜻으로	0
 sg00247	고굉지신	股肱之臣		25950		stdict	0	1	뜻으로	0
 sg00248	고국산천	故國山川		25990		stdict	0	1	뜻으로	0
-sg00249	고군분투	孤軍奮鬪		25998		stdict	0	1	비유	0
+sg00249	고군분투	孤軍奮鬪	3388	25998		krdict,stdict	1	1	비유	0
 sg00250	고군약졸	孤軍弱卒		26001		stdict	0	1	비유	0
 sg00251	고근약식	孤根弱植		26037		stdict	0	1	뜻으로	0
 sg00252	고금격석	敲金擊石		26046		stdict	0	1	뜻으로	0
@@ -272,8 +272,8 @@ sg00270	고어사전	古語辭典		28524		stdict	0	1	출전·유래	0
 sg00271	고어지사	枯魚之肆			40792	opendict	0	1	뜻으로	0
 sg00272	고옥건령	高屋建瓴			40898	opendict	0	1	뜻으로	1
 sg00273	고운야학	孤雲野鶴		28709		stdict	0	1	뜻으로	0
-sg00274	고육지계	苦肉之計		28830		stdict	0	1	뜻으로	0
-sg00275	고육지책	苦肉之策		28831		stdict	0	1	뜻으로	0
+sg00274	고육지계	苦肉之計	3830	28830		krdict,stdict	1	1	뜻으로	0
+sg00275	고육지책	苦肉之策	3831	28831		krdict,stdict	1	1	뜻으로	0
 sg00276	고의충간	古誼忠肝		28899		stdict	0	1	출전·유래	0
 sg00277	고자과곡	孤雌寡鵠		28967		stdict	0	1	뜻으로	0
 sg00278	고자과학	孤雌寡鶴		28968		stdict	0	1	뜻으로	0
@@ -333,7 +333,7 @@ sg00331	관리전도	冠履顚倒		36652		stdict	0	1	뜻으로	0
 sg00332	관맹상제	寬猛相濟			54123	opendict	0	1	뜻으로	0
 sg00333	관중규표	管中窺豹		37431		stdict	0	1	뜻으로	0
 sg00334	관즉득중	寬則得衆			54919	opendict	0	1	뜻으로	0
-sg00335	관포지교	管鮑之交		37560		stdict	0	1	뜻으로	0
+sg00335	관포지교	管鮑之交	5028	37560		krdict,stdict	1	1	뜻으로	0
 sg00336	괄구마광	刮垢摩光		37689		stdict	0	1	뜻으로	0
 sg00337	광복만리	光復萬里			55869	opendict	0	1	뜻으로	1
 sg00338	광언기어	狂言綺語		38395		stdict	0	1	뜻으로	0
@@ -371,7 +371,7 @@ sg00369	구미속초	狗尾續貂		42548		stdict	0	1	뜻으로	0
 sg00370	구밀복검	口蜜腹劍		42564		stdict	0	1	뜻으로	0
 sg00371	구반문촉	毆槃文燭			61842	opendict	0	1	뜻으로	0
 sg00372	구분증닉	救焚拯溺		42711		stdict	0	1	뜻으로	0
-sg00373	구사일생	九死一生		42793		stdict	0	1	뜻으로	0
+sg00373	구사일생	九死一生	5637	42793		krdict,stdict	1	1	뜻으로	0
 sg00374	구상유취	口尙乳臭		42855		stdict	0	1	뜻으로	0
 sg00375	구세동거	九世同居		42999		stdict	0	1	뜻으로	0
 sg00376	구시화문	口是禍門			62635	opendict	0	1	뜻으로	0
@@ -383,7 +383,7 @@ sg00381	구전문사	求田問舍		43782		stdict	0	1	뜻으로	0
 sg00382	구전심수	口傳心授		43791		stdict	0	1	뜻으로	0
 sg00383	구절양장	九折羊腸		43810		stdict	0	1	뜻으로	0
 sg00384	구정대려	九鼎大呂		43840		stdict	0	1	비유	0
-sg00385	구중궁궐	九重宮闕		44040		stdict	0	1	뜻으로	0
+sg00385	구중궁궐	九重宮闕	5787	44040		krdict,stdict	1	1	뜻으로	0
 sg00386	구중신금	九重宸襟			63514	opendict	0	1	뜻으로	1
 sg00387	구중심처	九重深處		44043		stdict	0	1	뜻으로	0
 sg00388	구천용귀	屨賤踊貴		44169		stdict	0	1	뜻으로	0
@@ -392,11 +392,11 @@ sg00390	구첨지지	具瞻之地			63642	opendict	0	1	뜻으로	1
 sg00391	구침지희	九鍼之戲			63725	opendict	0	1	뜻으로	0
 sg00392	구혈미건	口血未乾		44487		stdict	0	1	뜻으로	0
 sg00393	구화투신	救火投薪		44556		stdict	0	1	뜻으로	0
-sg00394	국가대표	國家代表		44652		stdict	0	1	출전·유래	0
+sg00394	국가대표	國家代表	5859	44652		krdict,stdict	1	1	출전·유래	0
 sg00395	국궁진췌	鞠躬盡瘁		44821		stdict	0	1	출전·유래	0
 sg00396	국천척지	跼天蹐地		46010		stdict	0	1	뜻으로	0
 sg00397	군경절축	群輕折軸		46205		stdict	0	1	뜻으로	0
-sg00398	군계일학	群鷄一鶴		46210		stdict	0	1	뜻으로	0
+sg00398	군계일학	群鷄一鶴	6059	46210		krdict,stdict	1	1	뜻으로	0
 sg00399	군군신신	君君臣臣			67156	opendict	0	1	뜻으로	0
 sg00400	군로신일	君勞臣逸			67310	opendict	0	1	뜻으로	1
 sg00401	군맹무상	群盲撫象		46431		stdict	0	1	뜻으로	0
@@ -441,7 +441,7 @@ sg00439	금곤복거	禽困覆車		53712		stdict	0	1	뜻으로	0
 sg00440	금구무결	金甌無缺		53767		stdict	0	1	뜻으로	0
 sg00441	금독지행	禽犢之行		53917		stdict	0	1	뜻으로	0
 sg00442	금산철벽	金山鐵壁		54247		stdict	0	1	비유	0
-sg00443	금상첨화	錦上添花		54258		stdict	0	1	뜻으로	0
+sg00443	금상첨화	錦上添花	7106	54258		krdict,stdict	1	1	뜻으로	0
 sg00444	금성옥진	金聲玉振		54334		stdict	0	1	비유	0
 sg00445	금성천리	金城千里		54335		stdict	0	1	뜻으로	0
 sg00446	금성철벽	金城鐵壁		54336		stdict	0	1	뜻으로	0
@@ -495,11 +495,11 @@ sg00493	난백난중	難伯難仲		67749		stdict	0	1	뜻으로	0
 sg00494	난상봉저	鸞翔鳳翥			99223	opendict	0	1	뜻으로	0
 sg00495	난자혜질	蘭姿蕙質		68010		stdict	0	1	비유	0
 sg00496	난최옥절	蘭摧玉折		68166		stdict	0	1	뜻으로	0
-sg00497	난형난제	難兄難弟		68271		stdict	0	1	뜻으로	0
+sg00497	난형난제	難兄難弟	9274	68271		krdict,stdict	1	1	뜻으로	0
 sg00498	날이불치	涅而不緇		68660		stdict	0	1	뜻으로	0
 sg00499	남귤북지	南橘北枳		68866		stdict	0	1	뜻으로	0
 sg00500	남기북두	南箕北斗		68907		stdict	0	1	뜻으로	0
-sg00501	남녀노소	男女老少		68928		stdict	0	1	뜻으로	0
+sg00501	남녀노소	男女老少	9377	68928		krdict,stdict	1	1	뜻으로	0
 sg00502	남만격설	南蠻鴃舌		69033		stdict	0	1	뜻으로	0
 sg00503	남방지강	南方之強		69100		stdict	0	1	뜻으로	0
 sg00504	남부여대	男負女戴		69143		stdict	0	1	뜻으로	0
@@ -597,12 +597,12 @@ sg00595	당랑포선	螳螂捕蟬			130850	opendict	0	1	뜻으로	0
 sg00596	당시승상	當時丞相		87392		stdict	0	1	비유	0
 sg00597	대경차악	大驚且愕		88101		stdict	0	1	뜻으로	0
 sg00598	대궁장모	大弓長矛		88329		stdict	0	1	뜻으로	0
-sg00599	대기만성	大器晩成		88445		stdict	0	1	뜻으로	0
+sg00599	대기만성	大器晩成	12297	88445		krdict,stdict	1	1	뜻으로	0
 sg00600	대변약눌	大辯若訥			133844	opendict	0	1	뜻으로	0
 sg00601	대분망천	戴盆望天		89617		stdict	0	1	뜻으로	0
 sg00602	대서특기	大書特記		89859		stdict	0	1	뜻으로	0
 sg00603	대서특서	大書特書		89862		stdict	0	1	뜻으로	0
-sg00604	대서특필	大書特筆		89865		stdict	0	1	뜻으로	0
+sg00604	대서특필	大書特筆	12474	89865		krdict,stdict	1	1	뜻으로	0
 sg00605	대소경중	大小輕重		89956		stdict	0	1	뜻으로	0
 sg00606	대소인원	大小人員		89975		stdict	0	1	출전·유래	0
 sg00607	대수장군	大樹將軍		90061		stdict	0	1	출전·유래	0
@@ -642,7 +642,7 @@ sg00640	도탕부화	蹈湯赴火		96539		stdict	0	1	뜻으로	0
 sg00641	도화인각	圖畫麟閣		96805		stdict	0	1	뜻으로	0
 sg00642	독립등대	獨立燈臺			146990	opendict	0	1	뜻으로	1
 sg00643	독립룡마	獨立龍馬			146991	opendict	0	1	비유	1
-sg00644	독불장군	獨不將軍		97196		stdict	0	1	뜻으로	0
+sg00644	독불장군	獨不將軍	13471	97196		krdict,stdict	1	1	뜻으로	0
 sg00645	독서망양	讀書亡羊		97248		stdict	0	1	뜻으로	0
 sg00646	독서행군	讀書行軍			147334	opendict	0	1	비유	1
 sg00647	독수독과	毒樹毒果			147432	opendict	0	1	뜻으로	0
@@ -668,12 +668,12 @@ sg00666	동문동궤	同文同軌		99759		stdict	0	1	뜻으로	0
 sg00667	동방보루	東邦堡壘			150752	opendict	0	1	뜻으로	1
 sg00668	동방초소	東方哨所			150767	opendict	0	1	뜻으로	1
 sg00669	동방화촉	洞房華燭		99948		stdict	0	1	뜻으로	0
-sg00670	동분서주	東奔西走		100058		stdict	0	1	뜻으로	0
+sg00670	동분서주	東奔西走	13844	100058		krdict,stdict	1	1	뜻으로	0
 sg00671	동빙가절	凍氷可折		100070		stdict	0	1	뜻으로	0
 sg00672	동빙한설	凍氷寒雪		100073		stdict	0	1	뜻으로	0
 sg00673	동산금혈	銅山金穴		100112		stdict	0	1	뜻으로	0
 sg00674	동상각몽	同牀各夢		100148		stdict	0	1	뜻으로	0
-sg00675	동서남북	東西南北		100186		stdict	0	1	뜻으로	0
+sg00675	동서남북	東西南北	13862	100186		krdict,stdict	1	1	뜻으로	0
 sg00676	동서대취	東西貸取		100190		stdict	0	1	뜻으로	0
 sg00677	동서분주	東西奔走		100201		stdict	0	1	뜻으로	0
 sg00678	동서불변	東西不辨		100203		stdict	0	1	뜻으로	0
@@ -738,7 +738,7 @@ sg00736	마권찰장	摩拳擦掌		112644		stdict	0	1	뜻으로	0
 sg00737	마두출령	馬頭出令		112893		stdict	0	1	뜻으로	0
 sg00738	마부위침	磨斧爲針			186099	opendict	0	1	뜻으로	0
 sg00739	마부작침	磨斧作針			186100	opendict	0	1	뜻으로	0
-sg00740	마이동풍	馬耳東風		113787		stdict	0	1	뜻으로	0
+sg00740	마이동풍	馬耳東風	15996	113787		krdict,stdict	1	1	뜻으로	0
 sg00741	마정방종	摩頂放踵		113942		stdict	0	1	뜻으로	0
 sg00742	마중지봉	麻中之蓬		114017		stdict	0	1	뜻으로	0
 sg00743	마혁과시	馬革裹屍		114325		stdict	0	1	뜻으로	0
@@ -751,7 +751,7 @@ sg00749	막역지우	莫逆之友		114626		stdict	0	1	뜻으로	0
 sg00750	막우막희	莫憂莫喜			188625	opendict	0	1	뜻으로	1
 sg00751	막천석지	幕天席地		114721		stdict	0	1	뜻으로	0
 sg00752	만경유리	萬頃琉璃		114796		stdict	0	1	뜻으로	0
-sg00753	만경창파	萬頃蒼波		114798		stdict	0	1	뜻으로	0
+sg00753	만경창파	萬頃蒼波	16135	114798		krdict,stdict	1	1	뜻으로	0
 sg00754	만경창해	萬頃滄海		114800		stdict	0	1	뜻으로	0
 sg00755	만구성비	萬口成碑		114864		stdict	0	1	뜻으로	0
 sg00756	만륙유경	萬戮猶輕		115140		stdict	0	1	뜻으로	0
@@ -863,7 +863,7 @@ sg00861	문안시선	問安視膳		132081		stdict	0	1	뜻으로	0
 sg00862	문예부산	蚊蚋負山		132144		stdict	0	1	뜻으로	0
 sg00863	문일지십	聞一知十		132212		stdict	0	1	뜻으로	0
 sg00864	문장삼이	文章三易		132286		stdict	0	1	뜻으로	0
-sg00865	문전성시	門前成市		132321		stdict	0	1	출전·유래	0
+sg00865	문전성시	門前成市	18634	132321		krdict,stdict	1	1	출전·유래	0
 sg00866	문전작라	門前雀羅			213350	opendict	0	1	뜻으로	0
 sg00867	문정경중	問鼎輕重			213357	opendict	0	1	뜻으로	0
 sg00868	문정약시	門庭若市		132337		stdict	0	1	뜻으로	0
@@ -906,7 +906,7 @@ sg00904	반자지명	半子之名		141690		stdict	0	1	뜻으로	0
 sg00905	반조반미	半租半米		141839		stdict	0	1	뜻으로	0
 sg00906	반청반황	半靑半黃		142003		stdict	0	1	뜻으로	0
 sg00907	반포보은	反哺報恩			229997	opendict	0	1	뜻으로	0
-sg00908	반포지효	反哺之孝		142145		stdict	0	1	뜻으로	0
+sg00908	반포지효	反哺之孝	20017	142145		krdict,stdict	1	1	뜻으로	0
 sg00909	발단심장	髮短心長		142678		stdict	0	1	뜻으로	0
 sg00910	발분도강	發憤圖強			231172	opendict	0	1	뜻으로	0
 sg00911	발산개세	拔山蓋世		143125		stdict	0	1	출전·유래	0
@@ -955,13 +955,13 @@ sg00953	백약지장	百藥之長		149016		stdict	0	1	출전·유래	0
 sg00954	백어입주	白魚入舟		149029		stdict	0	1	비유	0
 sg00955	백옥무하	白玉無瑕		149088		stdict	0	1	뜻으로	0
 sg00956	백의동포	白衣同胞		149165		stdict	0	1	뜻으로	0
-sg00957	백의민족	白衣民族		149166		stdict	0	1	뜻으로	0
+sg00957	백의민족	白衣民族	21050	149166		krdict,stdict	1	1	뜻으로	0
 sg00958	백인가도	白刃可蹈			239316	opendict	0	1	뜻으로	0
 sg00959	백일옹폐	白日壅蔽		149207		stdict	0	1	뜻으로	0
 sg00960	백전불태	百戰不殆			239441	opendict	0	1	출전·유래	0
 sg00961	백중숙계	伯仲叔季		149389		stdict	0	1	뜻으로	0
 sg00962	백중지간	伯仲之間		149392		stdict	0	1	출전·유래	0
-sg00963	백중지세	伯仲之勢		149393		stdict	0	1	출전·유래	0
+sg00963	백중지세	伯仲之勢	21073	149393		krdict,stdict	1	1	출전·유래	0
 sg00964	백척간두	百尺竿頭		149457		stdict	0	1	뜻으로	0
 sg00965	백홍관일	白虹貫日		149631		stdict	0	1	뜻으로	0
 sg00966	백화점가	百貨店街			239827	opendict	0	1	뜻으로	0
@@ -988,7 +988,7 @@ sg00986	보천욕일	補天浴日			252610	opendict	0	1	뜻으로	0
 sg00987	보천지하	普天之下		157775		stdict	0	1	뜻으로	0
 sg00988	복거지계	覆車之戒		158368		stdict	0	1	뜻으로	0
 sg00989	복고여산	腹高如山		158393		stdict	0	1	뜻으로	0
-sg00990	복고주의	復古主義		158397		stdict	0	1	출전·유래	0
+sg00990	복고주의	復古主義	22209	158397		krdict,stdict	1	1	출전·유래	0
 sg00991	복룡봉추	伏龍鳳雛			253994	opendict	0	1	뜻으로	0
 sg00992	복모구구	伏慕區區		158678		stdict	0	1	뜻으로	0
 sg00993	복모무임	伏慕無任		158680		stdict	0	1	뜻으로	0
@@ -1135,7 +1135,7 @@ sg01133	사대육신	四大六身		177813		stdict	0	1	뜻으로	0
 sg01134	사도팔도	四都八道		177876		stdict	0	1	뜻으로	0
 sg01135	사래선거	絲來線去		178174		stdict	0	1	비유	0
 sg01136	사량침주	捨量沈舟			284899	opendict	0	1	뜻으로	0
-sg01137	사면초가	四面楚歌		178667		stdict	0	1	출전·유래	0
+sg01137	사면초가	四面楚歌	24728	178667		krdict,stdict	1	1	출전·유래	0
 sg01138	사면춘풍	四面春風		178668		stdict	0	1	비유	0
 sg01139	사문도례	死文徒禮			285615	opendict	0	1	뜻으로	1
 sg01140	사바전광	娑婆電光		178954		stdict	0	1	비유	0
@@ -1143,7 +1143,7 @@ sg01141	사발농사	沙鉢農事		178987		stdict	0	1	뜻으로	0
 sg01142	사본축말	捨本逐末			285881	opendict	0	1	뜻으로	0
 sg01143	사불급설	駟不及舌		179370		stdict	0	1	뜻으로	0
 sg01144	사비사지	使臂使指		179410		stdict	0	1	뜻으로	0
-sg01145	사상누각	沙上樓閣		179618		stdict	0	1	뜻으로	0
+sg01145	사상누각	沙上樓閣	24800	179618		krdict,stdict	1	1	뜻으로	0
 sg01146	사생동거	死生同居		179693		stdict	0	1	뜻으로	0
 sg01147	사생동고	死生同苦		179694		stdict	0	1	뜻으로	0
 sg01148	사생유명	死生有命		179700		stdict	0	1	뜻으로	0
@@ -1188,7 +1188,7 @@ sg01186	산중재상	山中宰相		184770		stdict	0	1	비유	0
 sg01187	산중호걸	山中豪傑		184772		stdict	0	1	뜻으로	0
 sg01188	산진수궁	山盡水窮		184811		stdict	0	1	뜻으로	0
 sg01189	산진해갈	山盡海渴		184815		stdict	0	1	뜻으로	0
-sg01190	산천초목	山川草木		184858		stdict	0	1	뜻으로	0
+sg01190	산천초목	山川草木	25222	184858		krdict,stdict	1	1	뜻으로	0
 sg01191	산촌수곽	山村水廓		184877		stdict	0	1	뜻으로	0
 sg01192	산하금대	山河襟帶		185027		stdict	0	1	뜻으로	0
 sg01193	살계백반	殺鷄白飯		185333		stdict	0	1	뜻으로	0
@@ -1223,7 +1223,7 @@ sg01221	삼종지례	三從之禮		187553		stdict	0	1	출전·유래	0
 sg01222	삼종지법	三從之法		187554		stdict	0	1	출전·유래	0
 sg01223	삼종지의	三從之義		187555		stdict	0	1	출전·유래	0
 sg01224	삼종지탁	三從之托		187556		stdict	0	1	출전·유래	0
-sg01225	삼척동자	三尺童子		187690		stdict	0	1	비유	0
+sg01225	삼척동자	三尺童子	25437	187690		krdict,stdict	1	1	비유	0
 sg01226	삼청냉돌	三廳冷突		187745		stdict	0	1	뜻으로	0
 sg01227	삼호잡지	三號雜誌		187980		stdict	0	1	뜻으로	0
 sg01228	상간복상	桑間濮上		188244		stdict	0	1	출전·유래	0
@@ -1251,7 +1251,7 @@ sg01249	상해지변	桑海之變		191263		stdict	0	1	뜻으로	0
 sg01250	상호봉시	桑弧蓬矢		191364		stdict	0	1	출전·유래	0
 sg01251	상화하택	上火下澤			299775	opendict	0	1	뜻으로	0
 sg01252	새신만명	賽神萬明		191931		stdict	0	1	비유	0
-sg01253	새옹지마	塞翁之馬		192001		stdict	0	1	출전·유래	0
+sg01253	새옹지마	塞翁之馬	25861	192001		krdict,stdict	1	1	출전·유래	0
 sg01254	생구불망	生口不網		192898		stdict	0	1	뜻으로	0
 sg01255	생리시계	生理時計		193133		stdict	0	1	비유	0
 sg01256	생면강산	生面江山		193188		stdict	0	1	비유	0
@@ -1288,7 +1288,7 @@ sg01286	설권낭축	舌卷囊縮		199470		stdict	0	1	뜻으로	0
 sg01287	설니홍조	雪泥鴻爪		199500		stdict	0	1	뜻으로	0
 sg01288	설망어검	舌芒於劍			312019	opendict	0	1	뜻으로	0
 sg01289	설부화용	雪膚花容		199718		stdict	0	1	뜻으로	0
-sg01290	설상가상	雪上加霜		199778		stdict	0	1	뜻으로	0
+sg01290	설상가상	雪上加霜	26775	199778		krdict,stdict	1	1	뜻으로	0
 sg01291	설상가설	雪上加雪		199779		stdict	0	1	뜻으로	0
 sg01292	설저유부	舌底有斧		199937		stdict	0	1	뜻으로	0
 sg01293	설중송백	雪中松柏		199979		stdict	0	1	뜻으로	0
@@ -1296,7 +1296,7 @@ sg01294	설중송탄	雪中送炭			312297	opendict	0	1	뜻으로	0
 sg01295	설참신도	舌斬身刀			312306	opendict	0	1	뜻으로	0
 sg01296	성공무덕	聖供無德		200769		stdict	0	1	뜻으로	0
 sg01297	성기전극	星旗電戟		200919		stdict	0	1	뜻으로	0
-sg01298	성대모사	聲帶模寫		201012		stdict	0	1	비유	0
+sg01298	성대모사	聲帶模寫	26901	201012		krdict,stdict	1	1	비유	0
 sg01299	성동격서	聲東擊西		201059		stdict	0	1	뜻으로	0
 sg01300	성라기포	星羅棋布		201075		stdict	0	1	뜻으로	0
 sg01301	성명부지	姓名不知		201166		stdict	0	1	뜻으로	0
@@ -1436,7 +1436,7 @@ sg01434	신외무물	身外無物		226734		stdict	0	1	뜻으로	0
 sg01435	신인공노	神人共怒		226908		stdict	0	1	뜻으로	0
 sg01436	신인공분	神人共憤		226910		stdict	0	1	뜻으로	0
 sg01437	신진화멸	薪盡火滅		227262		stdict	0	1	뜻으로	0
-sg01438	신체발부	身體髮膚		227339		stdict	0	1	뜻으로	0
+sg01438	신체발부	身體髮膚	30143	227339		krdict,stdict	1	1	뜻으로	0
 sg01439	신축자재	伸縮自在		227379		stdict	0	1	뜻으로	0
 sg01440	신풍속도	新風俗圖			355780	opendict	0	1	비유	0
 sg01441	신호지세	晨虎之勢		227657		stdict	0	1	뜻으로	0
@@ -1516,7 +1516,7 @@ sg01514	야행피수	夜行被繡		243904		stdict	0	1	뜻으로	0
 sg01515	약롱중물	藥籠中物		244063		stdict	0	1	뜻으로	0
 sg01516	약롱지물	藥籠之物		244064		stdict	0	1	뜻으로	0
 sg01517	약마복중	弱馬卜重		244071		stdict	0	1	뜻으로	0
-sg01518	약육강식	弱肉強食		244378		stdict	0	1	뜻으로	0
+sg01518	약육강식	弱肉強食	31961	244378		krdict,stdict	1	1	뜻으로	0
 sg01519	약팽소선	若烹小鮮			380892	opendict	0	1	뜻으로	0
 sg01520	양과분비	兩寡分悲		244955		stdict	0	1	뜻으로	0
 sg01521	양궁거시	揚弓擧矢		245006		stdict	0	1	뜻으로	0
@@ -1652,7 +1652,7 @@ sg01650	오거지서	五車之書		263079		stdict	0	1	뜻으로	0
 sg01651	오검난명	五劍難名		263083		stdict	0	1	비유	0
 sg01652	오곡불승	五穀不升		263137		stdict	0	1	뜻으로	0
 sg01653	오리동록	五釐銅綠		264034		stdict	0	1	뜻으로	0
-sg01654	오리무중	五里霧中		264038		stdict	0	1	뜻으로	0
+sg01654	오리무중	五里霧中	34173	264038		krdict,stdict	1	1	뜻으로	0
 sg01655	오발선빈	烏髮蟬鬢			410315	opendict	0	1	뜻으로	0
 sg01656	오방저미	五方豬尾		264319		stdict	0	1	뜻으로	0
 sg01657	오비삼척	吾鼻三尺		264496		stdict	0	1	뜻으로	0
@@ -1671,7 +1671,7 @@ sg01669	오장칠부	五臟七腑		265307		stdict	0	1	뜻으로	0
 sg01670	오지자웅	烏之雌雄		265525		stdict	0	1	뜻으로	0
 sg01671	오집지교	烏集之交		265557		stdict	0	1	뜻으로	0
 sg01672	오풍십우	五風十雨		265839		stdict	0	1	뜻으로	0
-sg01673	오합지졸	烏合之卒		265932		stdict	0	1	뜻으로	0
+sg01673	오합지졸	烏合之卒	34315	265932		krdict,stdict	1	1	뜻으로	0
 sg01674	오합지중	烏合之衆		265933		stdict	0	1	뜻으로	0
 sg01675	오행병하	五行竝下		265947		stdict	0	1	뜻으로	0
 sg01676	오호애재	嗚呼哀哉		265988		stdict	0	1	뜻으로	0
@@ -1723,7 +1723,7 @@ sg01721	욕기지락	浴沂之樂		273120		stdict	0	1	뜻으로	0
 sg01722	욕사무지	欲死無地		273153		stdict	0	1	뜻으로	0
 sg01723	욕식기육	欲食其肉		273170		stdict	0	1	뜻으로	0
 sg01724	욕언미토	欲言未吐		273190		stdict	0	1	뜻으로	0
-sg01725	용두사미	龍頭蛇尾		273475		stdict	0	1	뜻으로	0
+sg01725	용두사미	龍頭蛇尾	35124	273475		krdict,stdict	1	1	뜻으로	0
 sg01726	용루봉궐	龍樓鳳闕		273522		stdict	0	1	비유	0
 sg01727	용미봉탕	龍味鳳湯		273616		stdict	0	1	뜻으로	0
 sg01728	용반호거	龍蟠虎踞		273619		stdict	0	1	비유	0
@@ -1869,7 +1869,7 @@ sg01867	이견대인	利見大人			447192	opendict	0	1	뜻으로	0
 sg01868	이공보공	以功報功|以空補空		292190		stdict	0	1	뜻으로	0
 sg01869	이곽지사	伊霍之事		292212		stdict	0	1	비유	0
 sg01870	이관규천	以管窺天			447244	opendict	0	1	뜻으로	0
-sg01871	이구동성	異口同聲		292275		stdict	0	1	뜻으로	0
+sg01871	이구동성	異口同聲	37535	292275		krdict,stdict	1	1	뜻으로	0
 sg01872	이구동음	異口同音		292276		stdict	0	1	뜻으로	0
 sg01873	이국풍상	異國風霜			447297	opendict	0	1	뜻으로	1
 sg01874	이극구당	履屐俱當		292343		stdict	0	1	뜻으로	0
@@ -1959,7 +1959,7 @@ sg01957	일고삼척	日高三尺		299433		stdict	0	1	뜻으로	0
 sg01958	일고작기	一鼓作氣		299440		stdict	0	1	뜻으로	0
 sg01959	일구양설	一口兩舌		299551		stdict	0	1	뜻으로	0
 sg01960	일구월심	日久月深		299553		stdict	0	1	뜻으로	0
-sg01961	일구이언	一口二言		299555		stdict	0	1	뜻으로	0
+sg01961	일구이언	一口二言	38501	299555		krdict,stdict	1	1	뜻으로	0
 sg01962	일구일갈	一裘一葛		299557		stdict	0	1	뜻으로	0
 sg01963	일구일학	一邱一壑		299558		stdict	0	1	뜻으로	0
 sg01964	일구지학	一丘之貉		299559		stdict	0	1	뜻으로	0
@@ -2027,7 +2027,7 @@ sg02025	일심동체	一心同體		300874		stdict	0	1	뜻으로	0
 sg02026	일야천리	一夜千里			461217	opendict	0	1	뜻으로	1
 sg02027	일양내복	一陽來復		300932		stdict	0	1	뜻으로	0
 sg02028	일어탁수	一魚濁水		300940		stdict	0	1	뜻으로	0
-sg02029	일언반구	一言半句		300946		stdict	0	1	뜻으로	0
+sg02029	일언반구	一言半句	38658	300946		krdict,stdict	1	1	뜻으로	0
 sg02030	일언반사	一言半辭		300947		stdict	0	1	뜻으로	0
 sg02031	일언지신	一言之信		300958		stdict	0	1	뜻으로	0
 sg02032	일엽장목	一葉障目			461256	opendict	0	1	뜻으로	0
@@ -2052,7 +2052,7 @@ sg02050	일장일이	一張一弛		301308		stdict	0	1	뜻으로	0
 sg02051	일장풍파	一場風波		301314		stdict	0	1	비유	0
 sg02052	일전쌍조	一箭雙鵰		301328		stdict	0	1	뜻으로	0
 sg02053	일점일획	一點一劃		301340		stdict	0	1	뜻으로	0
-sg02054	일조일석	一朝一夕		301387		stdict	0	1	뜻으로	0
+sg02054	일조일석	一朝一夕	38713	301387		krdict,stdict	1	1	뜻으로	0
 sg02055	일중도영	日中逃影		301440		stdict	0	1	뜻으로	0
 sg02056	일즙일채	一汁一菜		301448		stdict	0	1	뜻으로	0
 sg02057	일지반전	一紙半錢		301461		stdict	0	1	뜻으로	0
@@ -2069,7 +2069,7 @@ sg02067	일취지몽	一炊之夢		301715		stdict	0	1	비유	0
 sg02068	일취천일	一醉千日		301716		stdict	0	1	뜻으로	0
 sg02069	일타쌍피	一打雙皮			462257	opendict	0	1	뜻으로	0
 sg02070	일패도지	一敗塗地		301765		stdict	0	1	뜻으로	0
-sg02071	일편단심	一片丹心		301773		stdict	0	1	뜻으로	0
+sg02071	일편단심	一片丹心	38764	301773		krdict,stdict	1	1	뜻으로	0
 sg02072	일편지력	一鞭之力		301779		stdict	0	1	뜻으로	0
 sg02073	일편천언	一遍千言		301783		stdict	0	1	출전·유래	0
 sg02074	일폭십한	一曝十寒		301790		stdict	0	1	뜻으로	0
@@ -2153,7 +2153,7 @@ sg02151	저력산목	樗櫟散木		316163		stdict	0	1	뜻으로	0
 sg02152	저력지재	樗櫟之材		316164		stdict	0	1	뜻으로	0
 sg02153	저양촉번	羝羊觸藩		316504		stdict	0	1	뜻으로	0
 sg02154	저인망식	底引網式			483739	opendict	0	1	비유	0
-sg02155	적반하장	賊反荷杖		317521		stdict	0	1	뜻으로	0
+sg02155	적반하장	賊反荷杖	40737	317521		krdict,stdict	1	1	뜻으로	0
 sg02156	적선여경	積善餘慶		317740		stdict	0	1	출전·유래	0
 sg02157	적수공권	赤手空拳		317815		stdict	0	1	뜻으로	0
 sg02158	적수단신	赤手單身		317818		stdict	0	1	뜻으로	0
@@ -2216,7 +2216,7 @@ sg02214	제주생면	祭酒生面		331940		stdict	0	1	뜻으로	0
 sg02215	제포연연	綈袍戀戀		332204		stdict	0	1	비유	0
 sg02216	제호관정	醍醐灌頂		332346		stdict	0	1	뜻으로	0
 sg02217	조가야현	朝歌夜弦		332481		stdict	0	1	뜻으로	0
-sg02218	조강지처	糟糠之妻		332592		stdict	0	1	뜻으로	0
+sg02218	조강지처	糟糠之妻	42302	332592		krdict,stdict	1	1	뜻으로	0
 sg02219	조개모락	朝開暮落		332613		stdict	0	1	뜻으로	0
 sg02220	조개모변	朝改暮變		332615		stdict	0	1	뜻으로	0
 sg02221	조개모위	朝開暮萎		332617		stdict	0	1	뜻으로	0
@@ -2227,7 +2227,7 @@ sg02225	조기모소	朝起暮消			504835	opendict	0	1	뜻으로	1
 sg02226	조당비갱	蜩螗沸羹		333064		stdict	0	1	뜻으로	0
 sg02227	조동모서	朝東暮西		333124		stdict	0	1	뜻으로	0
 sg02228	조득모실	朝得暮失		333143		stdict	0	1	뜻으로	0
-sg02229	조령모개	朝令暮改		333257		stdict	0	1	뜻으로	0
+sg02229	조령모개	朝令暮改	42378	333257		krdict,stdict	1	1	뜻으로	0
 sg02230	조령석개	朝令夕改		333259		stdict	0	1	뜻으로	0
 sg02231	조로인생	朝露人生		333281		stdict	0	1	뜻으로	0
 sg02232	조명시리	朝名市利		333572		stdict	0	1	뜻으로	0
@@ -2235,7 +2235,7 @@ sg02233	조문석사	朝聞夕死		333631		stdict	0	1	출전·유래	0
 sg02234	조반석죽	朝飯夕粥		333703		stdict	0	1	뜻으로	0
 sg02235	조반유리	造反有理			505613	opendict	0	1	뜻으로	0
 sg02236	조변모개	朝變暮改		333771		stdict	0	1	뜻으로	0
-sg02237	조변석개	朝變夕改		333772		stdict	0	1	뜻으로	0
+sg02237	조변석개	朝變夕改	42455	333772		krdict,stdict	1	1	뜻으로	0
 sg02238	조불려석	朝不慮夕		333847		stdict	0	1	뜻으로	0
 sg02239	조불모석	朝不謀夕		333849		stdict	0	1	뜻으로	0
 sg02240	조산수찬	鳥散獸竄		333970		stdict	0	1	뜻으로	0
@@ -2317,7 +2317,7 @@ sg02315	죽두목설	竹頭木屑		341976		stdict	0	1	뜻으로	0
 sg02316	준민고택	浚民膏澤		342447		stdict	0	1	뜻으로	0
 sg02317	준조절충	樽俎折衝		342683		stdict	0	1	뜻으로	0
 sg02318	줄탁동기	啐啄同機			515099	opendict	0	1	뜻으로	0
-sg02319	중구난방	衆口難防		343530		stdict	0	1	뜻으로	0
+sg02319	중구난방	衆口難防	43553	343530		krdict,stdict	1	1	뜻으로	0
 sg02320	중구삭금	衆口鑠金		343533		stdict	0	1	뜻으로	0
 sg02321	중류지주	中流砥柱		344007		stdict	0	1	비유	0
 sg02322	중심성성	衆心成城		344646		stdict	0	1	뜻으로	0
@@ -2479,7 +2479,7 @@ sg02477	천자문생	天子門生		363537		stdict	0	1	뜻으로	0
 sg02478	천작지합	天作之合		363560		stdict	0	1	뜻으로	0
 sg02479	천장지비	天藏地祕		363589		stdict	0	1	뜻으로	0
 sg02480	천재일시	千載一時		363609		stdict	0	1	뜻으로	0
-sg02481	천재일우	千載一遇		363610		stdict	0	1	뜻으로	0
+sg02481	천재일우	千載一遇	46083	363610		krdict,stdict	1	1	뜻으로	0
 sg02482	천정배필	天定配匹		363635		stdict	0	1	뜻으로	0
 sg02483	천존지비	天尊地卑		363674		stdict	0	1	뜻으로	0
 sg02484	천종만류	千種萬類		363678		stdict	0	1	뜻으로	0
@@ -2498,7 +2498,7 @@ sg02496	천추만대	千秋萬代		363913		stdict	0	1	뜻으로	0
 sg02497	천탈기백	天奪其魄		363961		stdict	0	1	뜻으로	0
 sg02498	천태만교	千態萬嬌		363967		stdict	0	1	뜻으로	0
 sg02499	천태만변	千態萬變		363968		stdict	0	1	뜻으로	0
-sg02500	천태만상	千態萬象		363970		stdict	0	1	뜻으로	0
+sg02500	천태만상	千態萬象	46108	363970		krdict,stdict	1	1	뜻으로	0
 sg02501	천태만화	千態萬化		363972		stdict	0	1	뜻으로	0
 sg02502	천파만파	千波萬波		363992		stdict	0	1	비유	0
 sg02503	천학단재	淺學短才		364071		stdict	0	1	뜻으로	0
@@ -2566,7 +2566,7 @@ sg02564	총명예지	聰明叡智		370353		stdict	0	1	뜻으로	0
 sg02565	총욕불경	寵辱不驚		370537		stdict	0	1	뜻으로	0
 sg02566	총욕약경	寵辱若驚		370539		stdict	0	1	뜻으로	0
 sg02567	총중고골	冢中枯骨		370607		stdict	0	1	뜻으로	0
-sg02568	총천연색	總天然色		370658		stdict	0	1	뜻으로	0
+sg02568	총천연색	總天然色	46880	370658		krdict,stdict	1	1	뜻으로	0
 sg02569	최고납후	摧枯拉朽		370851		stdict	0	1	뜻으로	0
 sg02570	추경정용	椎輕釘聳		371429		stdict	0	1	뜻으로	0
 sg02571	추고마비	秋高馬肥		371447		stdict	0	1	뜻으로	0
@@ -2599,7 +2599,7 @@ sg02597	춘풍추우	春風秋雨		373337		stdict	0	1	뜻으로	0
 sg02598	춘한노건	春寒老健		373348		stdict	0	1	뜻으로	0
 sg02599	춘화노골	春花老骨		373363		stdict	0	1	뜻으로	0
 sg02600	춘화추월	春花秋月		373366		stdict	0	1	뜻으로	0
-sg02601	출가외인	出嫁外人		373387		stdict	0	1	뜻으로	0
+sg02601	출가외인	出嫁外人	47228	373387		krdict,stdict	1	1	뜻으로	0
 sg02602	출구입이	出口入耳		373458		stdict	0	1	뜻으로	0
 sg02603	출람지예	出藍之譽			552414	opendict	0	1	뜻으로	0
 sg02604	출몰귀관	出沒鬼關		373609		stdict	0	1	뜻으로	0
@@ -2658,7 +2658,7 @@ sg02656	토각귀모	兔角龜毛		388886		stdict	0	1	뜻으로	0
 sg02657	토강여유	吐剛茹柔			576493	opendict	0	1	뜻으로	0
 sg02658	토목형해	土木形骸		389225		stdict	0	1	뜻으로	0
 sg02659	토붕와해	土崩瓦解		389284		stdict	0	1	뜻으로	0
-sg02660	토사구팽	兔死狗烹		389304		stdict	0	1	뜻으로	0
+sg02660	토사구팽	兔死狗烹	49039	389304		krdict,stdict	1	1	뜻으로	0
 sg02661	토사호비	兔死狐悲		389319		stdict	0	1	뜻으로	0
 sg02662	토영삼굴	兔營三窟		389494		stdict	0	1	뜻으로	0
 sg02663	토진간담	吐盡肝膽		389687		stdict	0	1	뜻으로	0
@@ -2676,10 +2676,10 @@ sg02674	파리변물	笆籬邊物		394631		stdict	0	1	뜻으로	0
 sg02675	파부침선	破釜沈船		394759		stdict	0	1	뜻으로	0
 sg02676	파빙지려	破氷之旅			585865	opendict	0	1	뜻으로	0
 sg02677	파주미륵	坡州彌勒		395303		stdict	0	1	비유	0
-sg02678	파죽지세	破竹之勢		395307		stdict	0	1	뜻으로	0
+sg02678	파죽지세	破竹之勢	49828	395307		krdict,stdict	1	1	뜻으로	0
 sg02679	판관사령	判官使令		395619		stdict	0	1	뜻으로	0
 sg02680	판상주환	阪上走丸		395870		stdict	0	1	뜻으로	0
-sg02681	팔도강산	八道江山		396215		stdict	0	1	뜻으로	0
+sg02681	팔도강산	八道江山	49959	396215		krdict,stdict	1	1	뜻으로	0
 sg02682	팔만장안	八萬長安		396352		stdict	0	1	뜻으로	0
 sg02683	팔면육비	八面六臂		396376		stdict	0	1	뜻으로	0
 sg02684	팔방미남	八方美男			588297	opendict	0	1	비유	0
@@ -2837,7 +2837,7 @@ sg02835	호사토비	狐死兔悲		422156		stdict	0	1	뜻으로	0
 sg02836	호사토읍	狐死兔泣		422157		stdict	0	1	뜻으로	0
 sg02837	호시우보	虎視牛步			629772	opendict	0	1	뜻으로	0
 sg02838	호시우행	虎視牛行			629773	opendict	0	1	뜻으로	0
-sg02839	호연지기	浩然之氣		422414		stdict	0	1	출전·유래	0
+sg02839	호연지기	浩然之氣	53203	422414		krdict,stdict	1	1	출전·유래	0
 sg02840	호월일가	胡越一家		422482		stdict	0	1	뜻으로	0
 sg02841	호의현상	縞衣玄裳		422539		stdict	0	1	비유	0
 sg02842	호접지몽	胡蝶之夢		422642		stdict	0	1	뜻으로	0
@@ -2845,7 +2845,7 @@ sg02843	호중천지	壺中天地		422735		stdict	0	1	뜻으로	0
 sg02844	호질기의	護疾忌醫			630038	opendict	0	1	뜻으로	0
 sg02845	호추부두	戶樞不蠹		422798		stdict	0	1	뜻으로	0
 sg02846	호치단순	皓齒丹脣		422817		stdict	0	1	뜻으로	0
-sg02847	호형호제	呼兄呼弟		422953		stdict	0	1	뜻으로	0
+sg02847	호형호제	呼兄呼弟	53263	422953		krdict,stdict	1	1	뜻으로	0
 sg02848	호흡지간	呼吸之間		423083		stdict	0	1	뜻으로	0
 sg02849	혼돈세계	混沌世界		423285		stdict	0	1	비유	0
 sg02850	혼돈천지	混沌天地		423289		stdict	0	1	비유	0
@@ -3033,38 +3033,38 @@ sg03031	횡설수설	橫說竪說	54090	431100		krdict,stdict	1	2	clause-def	0
 sg03032	후안무치	厚顔無恥	54219	432092		krdict,stdict	1	2	clause-def	0
 sg03033	후회막급	後悔莫及	54261	432422		krdict,stdict	1	2	clause-def	0
 sg03034	희희낙락	喜喜樂樂	54781	435953		krdict,stdict	1	2	clause-def	0
-sg03035	거두절미	去頭截尾	1892			krdict	1	2	clause-def	0
-sg03036	거수경례	擧手敬禮	2008			krdict	1	2	clause-def	0
-sg03037	경거망동	輕擧妄動	2888			krdict	1	2	clause-def	0
-sg03038	공동생활	共同生活	4322			krdict	1	2	clause-def	0
-sg03039	근친상간	近親相姦	7000			krdict	1	2	clause-def	0
-sg03040	금전만능	金錢萬能	7159			krdict	1	2	clause-def	0
-sg03041	기고만장	氣高萬丈	7354			krdict	1	2	clause-def	0
-sg03042	기상천외	奇想天外	7572			krdict	1	2	clause-def	0
-sg03043	기하급수	幾何級數	7833			krdict	1	2	clause-def	0
-sg03044	기회균등	機會均等	7865			krdict	1	2	clause-def	0
-sg03045	대경실색	大驚失色	12265			krdict	1	2	clause-def	0
-sg03046	매관매직	賣官賣職	16700			krdict	1	2	clause-def	0
-sg03047	무료입장	無料入場	18163			krdict	1	2	clause-def	0
-sg03048	무사안일	無事安逸	18216			krdict	1	2	clause-def	0
-sg03049	부국강병	富國強兵	22589			krdict	1	2	clause-def	0
-sg03050	분리수거	分離收去	23146			krdict	1	2	clause-def	0
-sg03051	사실무근	事實無根	24834			krdict	1	2	clause-def	0
-sg03052	설왕설래	說往說來	26779			krdict	1	2	clause-def	0
-sg03053	수신제가	修身齊家	28578			krdict	1	2	clause-def	0
-sg03054	승승장구	乘勝長驅	29427			krdict	1	2	clause-def	0
-sg03055	시대착오	時代錯誤	29566			krdict	1	2	clause-def	0
-sg03056	시종일관	始終一貫	29740			krdict	1	2	clause-def	0
-sg03057	신신당부	申申當付	30071			krdict	1	2	clause-def	0
-sg03058	암중모색	暗中摸索	31583			krdict	1	2	clause-def	0
-sg03059	양자택일	兩者擇一	32133			krdict	1	2	clause-def	0
-sg03060	일맥상통	一脈相通	38568			krdict	1	2	clause-def	0
-sg03061	일언지하	一言之下	38659			krdict	1	2	clause-def	0
-sg03062	자기모순	自己矛盾	39187			krdict	1	2	clause-def	0
-sg03063	자유방임	自由放任	39464			krdict	1	2	clause-def	0
-sg03064	진두지휘	陣頭指揮	44546			krdict	1	2	clause-def	0
-sg03065	태연자약	泰然自若	48833			krdict	1	2	clause-def	0
-sg03066	호사다마	好事多魔	53171			krdict	1	2	clause-def	0
+sg03035	거두절미	去頭截尾	1892	14367		krdict,stdict	1	2	clause-def	0
+sg03036	거수경례	擧手敬禮	2008	15078		krdict,stdict	1	2	clause-def	0
+sg03037	경거망동	輕擧妄動	2888	21223		krdict,stdict	1	2	clause-def	0
+sg03038	공동생활	共同生活	4322	32662		krdict,stdict	1	2	clause-def	0
+sg03039	근친상간	近親相姦	7000	53146		krdict,stdict	1	2	clause-def	0
+sg03040	금전만능	金錢萬能	7159	54863		krdict,stdict	1	2	clause-def	0
+sg03041	기고만장	氣高萬丈	7354	56226		krdict,stdict	1	2	clause-def	0
+sg03042	기상천외	奇想天外	7572	57800		krdict,stdict	1	2	clause-def	0
+sg03043	기하급수	幾何級數	7833	59638		krdict,stdict	1	2	clause-def	0
+sg03044	기회균등	機會均等	7865	59844		krdict,stdict	1	2	clause-def	0
+sg03045	대경실색	大驚失色	12265	88093		krdict,stdict	1	2	clause-def	0
+sg03046	매관매직	賣官賣職	16700	118249		krdict,stdict	1	2	clause-def	0
+sg03047	무료입장	無料入場	18163	128704		krdict,stdict	1	2	clause-def	0
+sg03048	무사안일	無事安逸	18216	129203		krdict,stdict	1	2	clause-def	0
+sg03049	부국강병	富國強兵	22589	161817		krdict,stdict	1	2	clause-def	0
+sg03050	분리수거	分離收去	23146	165852		krdict,stdict	1	2	clause-def	0
+sg03051	사실무근	事實無根	24834	180157		krdict,stdict	1	2	clause-def	0
+sg03052	설왕설래	說往說來	26779	199867		krdict,stdict	1	2	clause-def	0
+sg03053	수신제가	修身齊家	28578	214274		krdict,stdict	1	2	clause-def	0
+sg03054	승승장구	乘勝長驅	29427	221129		krdict,stdict	1	2	clause-def	0
+sg03055	시대착오	時代錯誤	29566	222070		krdict,stdict	1	2	clause-def	0
+sg03056	시종일관	始終一貫	29740	223723		krdict,stdict	1	2	clause-def	0
+sg03057	신신당부	申申當付	30071	226573		krdict,stdict	1	2	clause-def	0
+sg03058	암중모색	暗中摸索	31583	240340		krdict,stdict	1	2	clause-def	0
+sg03059	양자택일	兩者擇一	32133	246238		krdict,stdict	1	2	clause-def	0
+sg03060	일맥상통	一脈相通	38568	300030		krdict,stdict	1	2	clause-def	0
+sg03061	일언지하	一言之下	38659	300960		krdict,stdict	1	2	clause-def	0
+sg03062	자기모순	自己矛盾	39187	304749		krdict,stdict	1	2	clause-def	0
+sg03063	자유방임	自由放任	39464	307323		krdict,stdict	1	2	clause-def	0
+sg03064	진두지휘	陣頭指揮	44546	352044		krdict,stdict	1	2	clause-def	0
+sg03065	태연자약	泰然自若	48833	387265		krdict,stdict	1	2	clause-def	0
+sg03066	호사다마	好事多魔	53171	422144		krdict,stdict	1	2	clause-def	0
 sg03067	가감부득	加減不得		287		stdict	0	2	clause-def	0
 sg03068	가공영사	假公營私		498		stdict	0	2	clause-def	0
 sg03069	가납기언	嘉納其言		731		stdict	0	2	clause-def	0
@@ -3251,7 +3251,7 @@ sg03249	과감무쌍	果敢無雙		35010		stdict	0	2	clause-def	0
 sg03250	과망대열	過望大悅			51943	opendict	0	2	clause-def	1
 sg03251	과문불입	過門不入		35356		stdict	0	2	clause-def	0
 sg03252	과부적중	寡不敵衆		35440		stdict	0	2	clause-def	0
-sg03253	과소평가	過小評價		35557		stdict	0	2	clause-def	0
+sg03253	과소평가	過小評價	4755	35557		krdict,stdict	1	2	clause-def	0
 sg03254	과약기언	果若其言		35678		stdict	0	2	clause-def	0
 sg03255	관구자부	官久自富		36335		stdict	0	2	clause-def	0
 sg03256	관기숙정	官紀肅正		36371		stdict	0	2	clause-def	0
@@ -3322,7 +3322,7 @@ sg03320	궁천극지	窮天極地		48223		stdict	0	2	clause-def	0
 sg03321	궁흉극악	窮凶極惡		48293		stdict	0	2	clause-def	0
 sg03322	권권복응	拳拳服膺		48385		stdict	0	2	clause-def	0
 sg03323	권권불망	眷眷不忘		48387		stdict	0	2	clause-def	0
-sg03324	권선징악	勸善懲惡		48648		stdict	0	2	clause-def	0
+sg03324	권선징악	勸善懲惡	6315	48648		krdict,stdict	1	2	clause-def	0
 sg03325	권언유착	權言癒着			69505	opendict	0	2	clause-def	0
 sg03326	권학강문	勸學講文		48923		stdict	0	2	clause-def	0
 sg03327	궐각계수	厥角稽首		48969		stdict	0	2	clause-def	0
@@ -3469,7 +3469,7 @@ sg03467	대상청령	臺上聽令		89813		stdict	0	2	clause-def	0
 sg03468	대성일갈	大聲一喝		89922		stdict	0	2	clause-def	0
 sg03469	대성질갈	大聲叱喝		89928		stdict	0	2	clause-def	0
 sg03470	대성질호	大聲叱呼		89929		stdict	0	2	clause-def	0
-sg03471	대성통곡	大聲痛哭		89933		stdict	0	2	clause-def	0
+sg03471	대성통곡	大聲痛哭	12485	89933		krdict,stdict	1	2	clause-def	0
 sg03472	대실소망	大失所望		90176		stdict	0	2	clause-def	0
 sg03473	대악무도	大惡無道		90202		stdict	0	2	clause-def	0
 sg03474	대양휴명	對揚休命		90264		stdict	0	2	clause-def	0
@@ -3513,7 +3513,7 @@ sg03511	동생공사	同生共死		100170		stdict	0	2	clause-def	0
 sg03512	동생동락	同生同樂		100173		stdict	0	2	clause-def	0
 sg03513	동성동명	同姓同名		100241		stdict	0	2	clause-def	0
 sg03514	동시다발	同時多發		100327		stdict	0	2	clause-def	0
-sg03515	동시통역	同時通譯		100358		stdict	0	2	clause-def	0
+sg03515	동시통역	同時通譯	13882	100358		krdict,stdict	1	2	clause-def	0
 sg03516	동실거생	同室居生		100378		stdict	0	2	clause-def	0
 sg03517	동작서수	東作西收		100799		stdict	0	2	clause-def	0
 sg03518	동조동근	同祖同根		100941		stdict	0	2	clause-def	0
@@ -3613,7 +3613,7 @@ sg03611	망지소조	罔知所措		117701		stdict	0	2	clause-def	0
 sg03612	매방초시	每榜初試		118563		stdict	0	2	clause-def	0
 sg03613	매사가감	每事可堪		118605		stdict	0	2	clause-def	0
 sg03614	매인열지	每人悅之		118843		stdict	0	2	clause-def	0
-sg03615	매점매석	買占賣惜		118943		stdict	0	2	clause-def	0
+sg03615	매점매석	買占賣惜	16817	118943		krdict,stdict	1	2	clause-def	0
 sg03616	매진일로	邁進一路		119017		stdict	0	2	clause-def	0
 sg03617	매합용지	媒合容止		119182		stdict	0	2	clause-def	0
 sg03618	맥락관통	脈絡貫通		119334		stdict	0	2	clause-def	0
@@ -3789,7 +3789,7 @@ sg03787	배달직입	排闥直入		146765		stdict	0	2	clause-def	0
 sg03788	배도겸행	倍道兼行		146813		stdict	0	2	clause-def	0
 sg03789	배부개가	背夫改嫁		147070		stdict	0	2	clause-def	0
 sg03790	배부도주	背夫逃走		147072		stdict	0	2	clause-def	0
-sg03791	배산임수	背山臨水		147162		stdict	0	2	clause-def	0
+sg03791	배산임수	背山臨水	20854	147162		krdict,stdict	1	2	clause-def	0
 sg03792	배회고면	徘徊顧眄		148091		stdict	0	2	clause-def	0
 sg03793	백결무구	白潔無垢		148160		stdict	0	2	clause-def	0
 sg03794	백계무책	百計無策		148170		stdict	0	2	clause-def	0
@@ -3908,7 +3908,7 @@ sg03906	분향재배	焚香再拜		166987		stdict	0	2	clause-def	0
 sg03907	불가극복	不可克服			266370	opendict	0	2	clause-def	1
 sg03908	불가부생	不可復生		167116		stdict	0	2	clause-def	0
 sg03909	불가분리	不可分離		167120		stdict	0	2	clause-def	0
-sg03910	불가사의	不可思議		167136		stdict	0	2	clause-def	0
+sg03910	불가사의	不可思議	23335	167136		krdict,stdict	1	2	clause-def	0
 sg03911	불가승수	不可勝數		167145		stdict	0	2	clause-def	0
 sg03912	불가제항	不可制抗		167157		stdict	0	2	clause-def	0
 sg03913	불가타협	不可妥協			266424	opendict	0	2	clause-def	1
@@ -4244,7 +4244,7 @@ sg04242	십상팔구	十常八九		230370		stdict	0	2	clause-def	0
 sg04243	십수기일	十輸其一		230384		stdict	0	2	clause-def	0
 sg04244	십습장지	什襲藏之		230387		stdict	0	2	clause-def	0
 sg04245	십육강행	十六強行			359711	opendict	0	2	clause-def	0
-sg04246	십중팔구	十中八九		230646		stdict	0	2	clause-def	0
+sg04246	십중팔구	十中八九	30564	230646		krdict,stdict	1	2	clause-def	0
 sg04247	쌍거쌍래	雙去雙來		231261		stdict	0	2	clause-def	0
 sg04248	아궁불열	我躬不閱		233148		stdict	0	2	clause-def	0
 sg04249	아유경탈	阿諛傾奪		235403		stdict	0	2	clause-def	0
@@ -4305,7 +4305,7 @@ sg04303	어무윤척	語無倫脊		247727		stdict	0	2	clause-def	0
 sg04304	어문일치	語文一致		247734		stdict	0	2	clause-def	0
 sg04305	어분족의	於分足矣		247857		stdict	0	2	clause-def	0
 sg04306	어불근리	語不近理		247858		stdict	0	2	clause-def	0
-sg04307	어불성설	語不成說		247860		stdict	0	2	clause-def	0
+sg04307	어불성설	語不成說	32359	247860		krdict,stdict	1	2	clause-def	0
 sg04308	어불택발	語不擇發		247861		stdict	0	2	clause-def	0
 sg04309	어사족의	於斯足矣		247904		stdict	0	2	clause-def	0
 sg04310	억강부약	抑強扶弱		248874		stdict	0	2	clause-def	0
@@ -4524,7 +4524,7 @@ sg04522	유부겁탈	有夫劫奪		283866		stdict	0	2	clause-def	0
 sg04523	유산태평	遊山太平		284017		stdict	0	2	clause-def	0
 sg04524	유실무실	有實無實		284418		stdict	0	2	clause-def	0
 sg04525	유아이사	由我而死		284482		stdict	0	2	clause-def	0
-sg04526	유야무야	有耶無耶		284548		stdict	0	2	clause-def	0
+sg04526	유야무야	有耶無耶	36340	284548		krdict,stdict	1	2	clause-def	0
 sg04527	유양불박	悠揚不迫		284569		stdict	0	2	clause-def	0
 sg04528	유예미결	猶豫未決		284781		stdict	0	2	clause-def	0
 sg04529	유왕유독	愈往愈篤		284800		stdict	0	2	clause-def	0
@@ -4569,7 +4569,7 @@ sg04567	응형무궁	應形無窮			445803	opendict	0	2	clause-def	0
 sg04568	의기상투	意氣相投		290838		stdict	0	2	clause-def	0
 sg04569	의기상합	意氣相合		290840		stdict	0	2	clause-def	0
 sg04570	의기충천	意氣衝天		290853		stdict	0	2	clause-def	0
-sg04571	의기투합	意氣投合		290855		stdict	0	2	clause-def	0
+sg04571	의기투합	意氣投合	37319	290855		krdict,stdict	1	2	clause-def	0
 sg04572	의리당연	義理當然		290998		stdict	0	2	clause-def	0
 sg04573	의리부동	義理不同		291000		stdict	0	2	clause-def	0
 sg04574	의사상통	意思相通		291256		stdict	0	2	clause-def	0
@@ -4628,7 +4628,7 @@ sg04626	인적부도	人跡不到		298700		stdict	0	2	clause-def	0
 sg04627	인패재패	人敗財敗		299109		stdict	0	2	clause-def	0
 sg04628	인홀불견	因忽不見		299206		stdict	0	2	clause-def	0
 sg04629	인희지광	人稀地廣		299266		stdict	0	2	clause-def	0
-sg04630	일거일동	一擧一動		299372		stdict	0	2	clause-def	0
+sg04630	일거일동	一擧一動	38474	299372		krdict,stdict	1	2	clause-def	0
 sg04631	일견여구	一見如舊		299393		stdict	0	2	clause-def	0
 sg04632	일경일희	一驚一喜		299413		stdict	0	2	clause-def	0
 sg04633	일고가파	一鼓可破		299427		stdict	0	2	clause-def	0
@@ -4724,8 +4724,8 @@ sg04722	자가비판	自家批判		304102		stdict	0	2	clause-def	0
 sg04723	자고자대	自高自大		304314		stdict	0	2	clause-def	0
 sg04724	자과부지	自過不知		304332		stdict	0	2	clause-def	0
 sg04725	자금위시	自今爲始		304604		stdict	0	2	clause-def	0
-sg04726	자급자족	自給自足		304627		stdict	0	2	clause-def	0
-sg04727	자기만족	自己滿足		304745		stdict	0	2	clause-def	0
+sg04726	자급자족	自給自足	39171	304627		krdict,stdict	1	2	clause-def	0
+sg04727	자기만족	自己滿足	39186	304745		krdict,stdict	1	2	clause-def	0
 sg04728	자기모멸	自己侮蔑		304748		stdict	0	2	clause-def	0
 sg04729	자기변호	自己辯護		304773		stdict	0	2	clause-def	0
 sg04730	자기비판	自己批判		304792		stdict	0	2	clause-def	0
@@ -4816,7 +4816,7 @@ sg04814	전가후옹	前呵後擁		318616		stdict	0	2	clause-def	0
 sg04815	전감소연	前鑑昭然		318663		stdict	0	2	clause-def	0
 sg04816	전고미문	前古未聞		318802		stdict	0	2	clause-def	0
 sg04817	전담후고	前擔後顧			486953	opendict	0	2	clause-def	1
-sg04818	전대미문	前代未聞		319582		stdict	0	2	clause-def	0
+sg04818	전대미문	前代未聞	40923	319582		krdict,stdict	1	2	clause-def	0
 sg04819	전도유망	前途有望		319645		stdict	0	2	clause-def	0
 sg04820	전도유위	前途有爲		319647		stdict	0	2	clause-def	0
 sg04821	전돈낭패	顚頓狼狽		319678		stdict	0	2	clause-def	0
@@ -5038,7 +5038,7 @@ sg05036	천지상합	天地相合		363752		stdict	0	2	clause-def	0
 sg05037	천진난만	天眞爛漫		363797		stdict	0	2	clause-def	0
 sg05038	천진무구	天眞無垢		363799		stdict	0	2	clause-def	0
 sg05039	천진협사	天眞挾詐		363809		stdict	0	2	clause-def	0
-sg05040	천차만별	千差萬別		363819		stdict	0	2	clause-def	0
+sg05040	천차만별	千差萬別	46101	363819		krdict,stdict	1	2	clause-def	0
 sg05041	천참만륙	千斬萬戮		363828		stdict	0	2	clause-def	0
 sg05042	천하무쌍	天下無雙		364032		stdict	0	2	clause-def	0
 sg05043	천하삼분	天下三分		364037		stdict	0	2	clause-def	0
@@ -5275,7 +5275,7 @@ sg05273	흔연대접	欣然待接		434527		stdict	0	2	clause-def	0
 sg05274	흔흔낙락	欣欣樂樂		434561		stdict	0	2	clause-def	0
 sg05275	흔희작약	欣喜雀躍		434566		stdict	0	2	clause-def	0
 sg05276	흥국강병	興國強兵		435262		stdict	0	2	clause-def	0
-sg05277	흥망성쇠	興亡盛衰		435312		stdict	0	2	clause-def	0
+sg05277	흥망성쇠	興亡盛衰	54671	435312		krdict,stdict	1	2	clause-def	0
 sg05278	흥와조산	興訛造訕		435393		stdict	0	2	clause-def	0
 sg05279	흥와주산	興訛做訕		435395		stdict	0	2	clause-def	0
 sg05280	희대미문	稀代未聞		435597		stdict	0	2	clause-def	0

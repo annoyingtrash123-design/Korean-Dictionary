@@ -165,6 +165,39 @@ class Candidates(unittest.TestCase):
     def test_productive_suffix_tier2_rejected(self):
         self.assertIsNone(self.cls("신격으로 되지 아니함.", hw="비신격화"))
 
+    def test_krdict_is_recorded_even_when_only_stdict_looks_like_a_seongeo(self):
+        """Regression: 설상가상 had a krdict entry, but only stdict's definition passed classify_seongeo, so the
+        candidate said stdict-only and the study list / idiom overlay used the Korean-only entry."""
+        import sqlite3
+        cols = "id integer primary key, headword text, hanja text, kind text, source text, quality int, rank int, data text"
+        sense = lambda d: json.dumps({"senses": [{"ko_def": d}]}, ensure_ascii=False)
+        with tempfile.TemporaryDirectory() as d:
+            for name, rows in (
+                ("core", [(1, "설상가상", "雪上加霜", "word", "krdict", 0, 0, sense("곤란하거나 불행한 일이 잇따라 일어남.")),
+                          (2, "설상가상", "雪上加霜x", "word", "krdict", 0, 0, sense("x")),
+                          (3, "가나다라", "加那多羅", "word", "krdict", 0, 0, sense("다른 한자의 같은 말."))]),
+                ("stdict", [(10, "설상가상", "雪上加霜", "word", "stdict", 0, 0, sense("어려운 일이 겹친다는 뜻으로, 이르는 말.")),
+                            (11, "가나다라", "歌那多羅", "word", "stdict", 0, 0, sense("어떤 일이 겹친다는 뜻으로, 이르는 말."))]),
+                ("opendict", []),
+            ):
+                con = sqlite3.connect(os.path.join(d, name + ".sqlite"))
+                con.execute(f"create table entries ({cols})")
+                con.executemany("insert into entries values (?,?,?,?,?,?,?,?)", rows)
+                con.commit(); con.close()
+            by = {r["text"]: r for r in bc.seongeo_rows(d)}
+        self.assertEqual((by["설상가상"]["krdict_id"], by["설상가상"]["stdict_id"], by["설상가상"]["krdict"]), (1, 10, 1))
+        self.assertEqual(by["설상가상"]["sources"], "krdict,stdict")
+        self.assertEqual(by["가나다라"]["krdict_id"], "", "different hanja = a different word")
+
+    def test_ids_stay_put_when_the_sort_order_changes(self):
+        rows = [{"text": "나", "id": "sg00001"}, {"text": "가", "id": "sg00002"}, {"text": "다", "id": "sg00003"}]
+        with tempfile.TemporaryDirectory() as d:
+            prev = os.path.join(d, "c.tsv")
+            with open(prev, "w", encoding="utf-8") as f:
+                f.write("id\ttext\nsg00007\t가\nsg00008\t나\n")
+            out = bc.keep_ids(rows, prev, "sg")
+        self.assertEqual([(r["text"], r["id"]) for r in out], [("가", "sg00007"), ("나", "sg00008"), ("다", "sg00009")])
+
     def test_proverb_grouping_merges_sources(self):
         recs = [
             {"src": "krdict", "id": 1, "hw": "a", "keys": ["가난구제는나라님도못한다"]},

@@ -45,12 +45,17 @@ fn rows_pass_the_quality_gate_and_are_unique() {
     }
 }
 
+/// A row rejected because krdict has the word (kept in the file for the record).
+fn krdict_rejected(p: &IdiomItem) -> bool {
+    p.review.starts_with("rejected: krdict has this entry (")
+}
+
 #[test]
 fn every_item_is_one_the_lists_ask_for() {
     let seongeo: HashMap<String, String> = wanted_seongeo().into_iter().collect();
     let sokdam: HashSet<String> = wanted_sokdam().into_iter().collect();
     let study = study_idioms::builtin();
-    for p in builtin() {
+    for p in builtin().into_iter().filter(|p| !krdict_rejected(p)) {
         if p.kind == "seongeo" {
             assert_eq!(seongeo.get(&p.headword), Some(&p.hanja), "{} is not a kept krdict-less 성어 (or its hanja differ)", p.headword);
         } else {
@@ -70,10 +75,43 @@ fn the_file_covers_every_item() {
     if include_str!("../data/idiom_extra.tsv").lines().any(|l| l == "# PARTIAL") {
         return;
     }
-    let have: HashSet<(String, String)> = builtin().into_iter().map(|p| (p.kind, p.headword)).collect();
+    let have: HashSet<(String, String)> = builtin().into_iter().filter(|p| !krdict_rejected(p)).map(|p| (p.kind, p.headword)).collect();
     let missing: Vec<String> = wanted_seongeo().into_iter().map(|(t, _)| ("seongeo".to_string(), t)).chain(wanted_sokdam().into_iter().map(|t| ("sokdam".to_string(), t))).filter(|k| !have.contains(k)).map(|k| k.1).collect();
     assert!(missing.is_empty(), "{} items without a row: {missing:?}", missing.len());
-    assert_eq!(builtin().len(), wanted_seongeo().len() + wanted_sokdam().len());
+    assert_eq!(builtin().iter().filter(|p| !krdict_rejected(p)).count(), wanted_seongeo().len() + wanted_sokdam().len());
+}
+
+/// Every recurring mistake becomes a check: the overlay is for words krdict LACKS. An approved item (or a draft that
+/// could be approved) whose headword and hanja are a krdict entry is a duplicate -- it must say so in its review column.
+/// Offline against the candidate list (krdict_id), and against the core pack's krdict entries when it is built locally.
+#[test]
+fn no_live_item_duplicates_a_krdict_entry() {
+    let cand = table(CAND_SEONGEO);
+    for p in builtin().iter().filter(|p| !krdict_rejected(p) && p.kind == "seongeo") {
+        let c = cand.iter().find(|c| c["text"] == p.headword && c["hanja"].split('|').any(|h| h == p.hanja)).unwrap_or_else(|| panic!("{} is not a candidate", p.headword));
+        assert!(c["krdict_id"].is_empty(), "{}: krdict has this entry (id {}): mark the row `rejected: krdict has this entry (<ext_id>)`", p.headword, c["krdict_id"]);
+    }
+    let Some(core) = pack_dir().map(|d| d.join("core.sqlite")).filter(|p| p.exists()) else { return };
+    let conn = rusqlite::Connection::open_with_flags(core, rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    let mut checked = 0;
+    for p in builtin() {
+        let dup = krdict_duplicate(&conn, &p).unwrap();
+        if krdict_rejected(&p) {
+            let ext = dup.unwrap_or_else(|| panic!("{}: rejected as a krdict duplicate but the core pack has no such krdict entry", p.headword));
+            assert!(p.review == format!("rejected: krdict has this entry ({ext})"), "{}: {}", p.headword, p.review);
+        } else {
+            assert!(dup.is_none(), "{} duplicates krdict entry {:?} (review: {})", p.headword, dup, p.review);
+        }
+        checked += 1;
+    }
+    eprintln!("idiom_extra: {checked} items checked against krdict in the core pack");
+}
+
+fn pack_dir() -> Option<std::path::PathBuf> {
+    std::env::var_os("KDICT_PACK_DIR").map(std::path::PathBuf::from).or_else(|| {
+        let here = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+        here.ancestors().map(|a| a.join("pipeline/out")).find(|p| p.join("stdict.sqlite").exists())
+    })
 }
 
 #[test]
@@ -111,11 +149,7 @@ fn entry_json_flags_every_ai_field() {
 /// the build runs the same check (`study_idioms::add_items`).
 #[test]
 fn korean_text_is_verbatim_from_the_packs() {
-    let dir = std::env::var_os("KDICT_PACK_DIR").map(std::path::PathBuf::from).or_else(|| {
-        let here = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
-        here.ancestors().map(|a| a.join("pipeline/out")).find(|p| p.join("stdict.sqlite").exists())
-    });
-    let Some(dir) = dir else { return };
+    let Some(dir) = pack_dir() else { return };
     let open = |n: &str| rusqlite::Connection::open_with_flags(dir.join(format!("{n}.sqlite")), rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY).ok();
     let (st, od) = (open("stdict"), open("opendict"));
     let mut checked = 0;

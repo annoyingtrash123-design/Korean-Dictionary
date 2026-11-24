@@ -27,7 +27,7 @@ describe('idioms & proverbs study lists', () => {
   });
 
   it('the group shows the lists with counts, and is absent for a pack without the table', () => {
-    const s = idiomSummaries([{ list: 'sokdam100', count: 100 }, { list: 'sokdam_all', count: 655 }, { list: 'seongeo100', count: 100 }, { list: 'seongeo300', count: 300 }, { list: 'seongeo_learner', count: 202 }]);
+    const s = idiomSummaries([{ list: 'sokdam100', count: 100 }, { list: 'sokdam_all', count: 655 }, { list: 'seongeo100', count: 100 }, { list: 'seongeo300', count: 300 }, { list: 'seongeo_learner', count: 254 }]);
     expect(s.map((x) => [x.name, x.count, x.group])).toEqual([
       ['Common proverbs — top 100', 100, GROUP_IDIOMS], ['All learner proverbs', 655, GROUP_IDIOMS],
       ['Essential 성어 — top 100', 100, GROUP_IDIOMS], ['Common 성어 — top 300', 300, GROUP_IDIOMS],

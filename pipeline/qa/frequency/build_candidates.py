@@ -160,7 +160,12 @@ def classify_seongeo(data, source, hw=""):
 
 
 def seongeo_rows(pack_dir):
+    """Candidates = headwords whose entry in ANY pack looks like a 성어 (classify_seongeo).  The classifier only
+    decides candidacy; which packs have the word is decided by headword + hanja afterwards.  (krdict's own
+    definitions rarely carry a 성어 marker -- 설상가상: "곤란하거나 불행한 일이 잇따라 일어남." -- so the
+    classifier misses them, and a word only stdict's definition flagged used to be recorded as stdict-only.)"""
     by_word = {}
+    every = {}  # (src, headword, hanja) -> first (best-ordered) entry id, classified or not
     for src, pack in SOURCES:
         con = connect(pack_dir, pack)
         q = ("select id, headword, hanja, data from entries where kind='word' and hanja is not null "
@@ -170,6 +175,7 @@ def seongeo_rows(pack_dir):
         for eid, hw, hanja, data in con.execute(q):
             if not re.fullmatch(r"[가-힣]{4}", hw) or not re.fullmatch(r"[一-鿿]{4}", hanja):
                 continue
+            every.setdefault((src, hw, hanja), eid)
             c = classify_seongeo(data, src, hw)
             if c is None:
                 continue
@@ -180,6 +186,13 @@ def seongeo_rows(pack_dir):
             if c[0] < d["tier"]:
                 d["tier"], d["marker"] = c[0], c[1]
             d["nk"] = min(d["nk"], c[2])
+    for hw, d in by_word.items():
+        for src, _ in SOURCES:
+            if src not in d["src"]:
+                for hanja in d["hanja"]:
+                    if (src, hw, hanja) in every:
+                        d["src"][src] = every[(src, hw, hanja)]
+                        break
     out = []
     for hw, d in by_word.items():
         out.append({
@@ -194,6 +207,27 @@ def seongeo_rows(pack_dir):
     for n, r in enumerate(out, 1):
         r["id"] = f"sg{n:05d}"
     return out
+
+
+def keep_ids(rows, prev_path, prefix):
+    """Ids are what seongeo_review.tsv / the corpus counts refer to, so they must not move when a fix changes the sort
+    order: rows whose text is in the previous file keep their id (and position); new texts get fresh ids at the end."""
+    if not os.path.exists(prev_path):
+        return rows
+    with open(prev_path, encoding="utf-8") as f:
+        prev = {}
+        for ln in list(f)[1:]:
+            c = ln.rstrip("\n").split("\t")
+            prev[c[1]] = c[0]
+    nxt = max((int(i[len(prefix):]) for i in prev.values()), default=0)
+    for r in rows:
+        if r["text"] in prev:
+            r["id"] = prev[r["text"]]
+        else:
+            nxt += 1
+            r["id"] = f"{prefix}{nxt:05d}"
+    rows.sort(key=lambda r: r["id"])
+    return rows
 
 
 def write_tsv(path, rows, cols):
@@ -213,7 +247,7 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     s = sokdam_rows(pack_dir)
     write_tsv(os.path.join(out_dir, "candidates_sokdam.tsv"), s, SOKDAM_COLS)
-    g = seongeo_rows(pack_dir)
+    g = keep_ids(seongeo_rows(pack_dir), os.path.join(out_dir, "candidates_seongeo.tsv"), "sg")
     write_tsv(os.path.join(out_dir, "candidates_seongeo.tsv"), g, SEONGEO_COLS)
     print(f"sokdam: {len(s)} unique ({sum(r['krdict'] for r in s)} in krdict, "
           f"{sum(r['short'] for r in s)} too short to rank)")

@@ -841,6 +841,9 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 drafts += 1;
                 continue;
             }
+            if let Some(ext) = crate::idiom_extra::krdict_duplicate(&conn, &it)? {
+                anyhow::bail!("idiom_extra.tsv: approved item {} duplicates krdict entry {ext}; mark it `rejected: krdict has this entry ({ext})`", it.headword);
+            }
             let e = crate::idiom_extra::to_entry(&it);
             let rank = ranker.rank(&Entry { source: "krdict", ..e.clone() });
             insert_entry(&conn, &e, rank, true, &mut c)?;

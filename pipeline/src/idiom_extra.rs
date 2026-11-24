@@ -175,6 +175,23 @@ pub fn problems(it: &IdiomItem) -> Vec<String> {
     v
 }
 
+/// The krdict core entry (its `ext_id`) an item duplicates, if any: same headword (spaces ignored) and, for a 성어,
+/// the same hanja. The overlay is only for words krdict LACKS, so an approved item for which this returns `Some` is
+/// a bug (build and `tests/idiom_extra.rs` both fail on it); such a row is marked `rejected: krdict has this entry`.
+pub fn krdict_duplicate(core: &Connection, it: &IdiomItem) -> Result<Option<String>> {
+    let kind = if it.kind == "seongeo" { "word" } else { "proverb" };
+    let mut q = core.prepare_cached("SELECT ext_id, hanja FROM entries WHERE source = 'krdict' AND kind = ?1 AND replace(headword, ' ', '') = ?2")?;
+    let want = crate::common::hw_norm(&it.headword);
+    let rows = q.query_map([kind, want.as_str()], |r| Ok((r.get::<_, Option<String>>(0)?, r.get::<_, Option<String>>(1)?)))?;
+    for r in rows {
+        let (ext, hanja) = r?;
+        if it.kind != "seongeo" || hanja.as_deref() == Some(it.hanja.as_str()) {
+            return Ok(Some(ext.unwrap_or_default()));
+        }
+    }
+    Ok(None)
+}
+
 /// The core pack entry of an approved item (source `hanppuri`; kind as krdict has it: `proverb`, or `word` for a 성어).
 pub fn to_entry(it: &IdiomItem) -> Entry {
     let src = format!("{}:{}", it.src_pack, it.src_id);
