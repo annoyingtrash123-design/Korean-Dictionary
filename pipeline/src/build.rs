@@ -906,13 +906,17 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     // hanja of 표준국어대사전 for krdict / kengdic entries that have none (before the hanja tables are finished)
     if let Some(sp) = stdict {
         let t = Instant::now();
-        let (stats, records) = crate::hanja_fill::apply(&conn, sp)?;
+        let suspects = crate::hanja_fill::suspect_core_hanja(&conn, sp)?;
+        fs::write(out.join("hanja_suspect_core.tsv"), crate::hanja_fill::suspects_tsv(&suspects))?;
+        let ev = crate::hanja_fill::Evidence::load(&src.opendict, src.cedict.as_deref())?;
+        log::info!("hanja fill evidence: opendict {} headwords, cedict {} spellings", ev.opendict.len(), ev.cedict.len());
+        let (stats, records) = crate::hanja_fill::apply(&conn, sp, &ev)?;
         log::info!(
-            "hanja fill from stdict: {} entries (krdict {} unique + {} homograph + {} derived; kengdic {} + {} derived) in {:.1}s",
-            stats.total(), stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_derived, t.elapsed().as_secs_f32()
+            "hanja fill from stdict: {} entries (krdict {} unique + {} homograph + {} derived; kengdic {} [opendict {}, cedict {}, both {}] + {} derived; {} suspect core hanja) in {:.1}s",
+            stats.total(), stats.krdict_unique, stats.krdict_homograph, stats.krdict_derived, stats.kengdic, stats.kengdic_opendict, stats.kengdic_cedict, stats.kengdic_both, stats.kengdic_derived, suspects.len(), t.elapsed().as_secs_f32()
         );
         fs::write(out.join("hanja_fill_report.tsv"), crate::hanja_fill::report_tsv(&records))?;
-        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 150, 60, 30))?;
+        fs::write(out.join("hanja_fill_sample.tsv"), crate::hanja_fill::sample_tsv(&records, 150, 60, 30, "2"))?;
         fill_stats = Some(stats);
     }
 

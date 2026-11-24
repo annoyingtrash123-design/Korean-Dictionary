@@ -2,7 +2,7 @@
 //! (homograph pick, native words stay empty, nothing overwritten, derived words, kengdic) and the
 //! committed QA sample.
 
-use kdict_pipeline::hanja_fill::{apply, is_valid_fill, Rule};
+use kdict_pipeline::hanja_fill::{apply, is_valid_fill, Evidence, Rule};
 use kdict_pipeline::schema;
 use rusqlite::{params, Connection};
 use serde_json::json;
@@ -45,6 +45,9 @@ fn packs(dir: &Path) -> (Connection, std::path::PathBuf) {
         ("고유전학", Some("古遺傳學"), "화석화한 동식물의 유전에 관하여 연구하는 학문."),
         ("동선", Some("動線"), "건축물에서 사람이 움직이는 자취나 방향을 나타내는 선."),
         ("동선", Some("銅線"), "구리로 만든 줄."),
+        ("구경", None, "흥미나 관심을 가지고 봄."),
+        ("구경", Some("究竟"), "일의 마지막."),
+        ("재분", Some("才分"), "재주의 정도."),
         ("시원하다", None, "덥지도 춥지도 않고 적당하게 서늘하다."),
     ] {
         insert(&s, "stdict", hw, h, "noun", d, "", n.clone());
@@ -70,12 +73,30 @@ fn packs(dir: &Path) -> (Connection, std::path::PathBuf) {
     insert(&core, "krdict", "신중하다", None, "adjective", "매우 조심스럽다.", "prudent", json!({}));
     // native, marked by the origin note
     insert(&core, "krdict", "아기", None, "noun", "어린아이.", "baby", json!({ "origin_note": "고유어: 아기" }));
+    // 구경 carries a wrong krdict hanja (究竟); 구경시키다 must not inherit it
+    insert(&core, "krdict", "구경", Some("究竟"), "noun", "흥미나 관심을 가지고 봄.", "sightseeing", json!({}));
+    insert(&core, "krdict", "구경시키다", None, "verb", "흥미나 관심을 가지고 볼 만한 것을 보여 주다.", "to show around", json!({}));
+    // a kengdic-filled stem is never a stem: 재분 (even with evidence) -> 재분하다 stays empty
+    insert(&core, "kengdic", "재분", None, "other", "", "subdivision", json!({}));
+    insert(&core, "kengdic", "재분하다", None, "verb", "", "subdivide", json!({}));
     // kengdic-only
     insert(&core, "kengdic", "환초", None, "other", "", "atoll", json!({}));
     insert(&core, "kengdic", "고유전학", None, "other", "", "paleogenetics", json!({}));
     insert(&core, "kengdic", "시원하다", None, "adjective", "", "to be cool", json!({}));
+    // kengdic's word is another word of the sound of stdict's only entry (stdict 會意字; kengdic 'unbeliever'): no evidence, no fill
+    insert(&s, "stdict", "회의자", Some("會意字"), "noun", "한자 육서의 하나.", "", json!({}));
+    insert(&core, "kengdic", "회의자", None, "other", "", "unbeliever", json!({}));
     core.execute_batch("CREATE TABLE IF NOT EXISTS x(a)").unwrap();
     (core, sp)
+}
+
+/// English evidence as the build would load it: 우리말샘 glosses (環礁 atoll, 古遺傳學 palaeogenetics).
+fn evidence() -> Evidence {
+    let mut ev = Evidence::default();
+    ev.opendict.insert("재분".into(), vec![("才分".into(), vec!["subdivision of talent".into()])]);
+    ev.opendict.insert("환초".into(), vec![("環礁".into(), vec!["atoll".into()])]);
+    ev.cedict.insert("古遺傳學".into(), vec!["paleogenetics".into()]);
+    ev
 }
 
 fn hanja_of(c: &Connection, hw: &str, gloss: &str) -> Option<String> {
@@ -86,7 +107,7 @@ fn hanja_of(c: &Connection, hw: &str, gloss: &str) -> Option<String> {
 fn fills_follow_the_rules_and_never_invent() {
     let dir = tempfile::tempdir().unwrap();
     let (core, sp) = packs(dir.path());
-    let (stats, records) = apply(&core, &sp).unwrap();
+    let (stats, records) = apply(&core, &sp, &evidence()).unwrap();
 
     // 사기 (porcelain) picks 沙器 among four homographs; the other two krdict entries are untouched
     assert_eq!(hanja_of(&core, "사기", "porcelain").as_deref(), Some("沙器"));
@@ -109,6 +130,10 @@ fn fills_follow_the_rules_and_never_invent() {
     assert_eq!(k("환초").as_deref(), Some("環礁"));
     assert_eq!(k("고유전학").as_deref(), Some("古遺傳學"));
     assert_eq!(k("시원하다"), None);
+    assert_eq!(k("회의자"), None);
+    assert_eq!(hanja_of(&core, "구경시키다", "to show around"), None);
+    assert_eq!(k("재분").as_deref(), Some("才分"));
+    assert_eq!(k("재분하다"), None);
 
     // every fill is CJK + allowed suffix, marked in the data, and indexed by character
     assert_eq!(records.len(), stats.total());
@@ -133,10 +158,10 @@ fn fills_follow_the_rules_and_never_invent() {
 fn a_second_run_changes_nothing() {
     let dir = tempfile::tempdir().unwrap();
     let (core, sp) = packs(dir.path());
-    let first = apply(&core, &sp).unwrap().1.len();
+    let first = apply(&core, &sp, &evidence()).unwrap().1.len();
     assert!(first > 0);
     // what is filled now has hanja: nothing new
-    let again = apply(&core, &sp).unwrap();
+    let again = apply(&core, &sp, &evidence()).unwrap();
     assert_eq!(again.1.len(), 0, "{:?}", again.1);
 }
 
