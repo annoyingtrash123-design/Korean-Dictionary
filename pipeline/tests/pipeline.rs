@@ -610,7 +610,9 @@ fn end_to_end_mini_build() {
     let n_extra = kdict_pipeline::grammar_extra::builtin().len() as i64;
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='hanppuri' AND kind='grammar'"), n_extra);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM grammar g JOIN entries e ON e.id=g.entry_id WHERE e.source='hanppuri'"), n_extra);
-    assert_eq!(counts["hanppuri"], n_extra);
+    // plus the reviewed 속담/성어 overlay (data/idiom_extra.tsv), approved rows only
+    let n_idiom = kdict_pipeline::idiom_extra::approved().len() as i64;
+    assert_eq!(counts["hanppuri"], n_extra + n_idiom);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM entries WHERE source='hanppuri' AND hw_norm='기에따라' AND json_extract(data,'$.senses[0].def_ai')=1 AND json_extract(data,'$.senses[0].ko_def_ai')=1"), 1);
     assert_eq!(q::<i64>(&c, "SELECT COUNT(*) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.form='기에앞서서' AND e.source='hanppuri'"), 1);
     // entry data is valid JSON with senses

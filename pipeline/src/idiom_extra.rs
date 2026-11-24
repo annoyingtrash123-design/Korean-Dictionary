@@ -150,8 +150,8 @@ pub fn problems(it: &IdiomItem) -> Vec<String> {
     if !has_hangul(&it.ko_def) || it.ko_def != it.ko_def.trim() {
         v.push("ko_def must be Korean, trimmed".into());
     }
-    if !(it.review == "draft" || it.review.starts_with("approved")) {
-        v.push(format!("review {:?} (draft | approved...)", it.review));
+    if !(it.review == "draft" || it.review.starts_with("approved") || it.review.starts_with("rejected: ")) {
+        v.push(format!("review {:?} (draft | approved... | rejected: reason)", it.review));
     }
     if !(2..=3).contains(&it.examples.len()) {
         v.push(format!("{} examples (expected 2-3)", it.examples.len()));

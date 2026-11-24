@@ -81,7 +81,7 @@ fn nothing_ships_before_review() {
     let all = builtin();
     let n_ok = all.iter().filter(|p| is_approved(p)).count();
     assert_eq!(approved().len(), n_ok);
-    assert!(all.iter().all(|p| p.review == "draft" || p.review.starts_with("approved")));
+    assert!(all.iter().all(|p| p.review == "draft" || p.review.starts_with("approved") || p.review.starts_with("rejected: ")));
 }
 
 #[test]
