@@ -213,6 +213,23 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
   await barGap();                                        // the results list keeps it
   await page.waitForTimeout(300);
   await shot(page, 'search-phone-results');
+  // ---- a status bar over the WebView (Android edge to edge): no screen puts content under it ----
+  // (the owner's phone: the first result sat under the clock once the search bar moved to the bottom)
+  await page.evaluate(() => document.documentElement.style.setProperty('--safe-area-inset-top', '30px'));
+  const firstTop = async (sel: string) => (await page.locator(sel).first().boundingBox())!.y;
+  expect(await firstTop('.row')).toBeGreaterThanOrEqual(30);
+  await page.locator('main').evaluate((m) => m.scrollTo(0, 400));
+  await expect(page.locator('.status-pad')).toHaveCSS('height', '30px');   // a solid strip: rows scroll under it, not under the clock
+  await page.locator('main').evaluate((m) => m.scrollTo(0, 0));
+  for (const [tab, sel] of [['Lists', 'main > *'], ['Settings', 'main > *'], ['Reader', '.rd-lib-head > *'], ['Games', '.gm-head > *'], ['Home', '.home-head > *']] as const) {
+    await nav.getByRole('link', { name: tab }).click();
+    await expect(nav.getByRole('link', { name: tab })).toHaveAttribute('aria-current', 'page');
+    expect(await firstTop(sel), tab).toBeGreaterThanOrEqual(30);
+  }
+  await nav.getByRole('link', { name: 'Search' }).click();
+  await expect(page.locator('.row').first()).toBeVisible();
+  expect(await firstTop('.row')).toBeGreaterThanOrEqual(30);
+  await page.evaluate(() => document.documentElement.style.removeProperty('--safe-area-inset-top'));
   // a keyboard shrinks the viewport: the bar stays whole, right above it, and the tab bar gets out of the way
   await bar.focus();
   await page.setViewportSize({ width: 390, height: 500 });

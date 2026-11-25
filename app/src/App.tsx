@@ -118,6 +118,9 @@ export function App() {
   return (
     <div class={kb ? 'app kb' : 'app'}>
       {route.name === 'home' && <HomeHeader />}
+      {/* Home, Reader and Games draw their own header under the status bar; every other screen gets a solid strip
+          so its content never sits or scrolls under the clock and icons. */}
+      {!['home', 'reader', 'games'].includes(route.name) && <div class="status-pad" aria-hidden="true" />}
       <main key="main" ref={main} id="main" tabIndex={-1} class={readerRoute && route.parts[0] ? 'reader-host' : undefined}>{view(route)}</main>
       {dock && <footer class="dock"><SearchBar /></footer>}
       <TabBar />
