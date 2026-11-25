@@ -220,11 +220,24 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
   expect(await firstTop('.row')).toBeGreaterThanOrEqual(30);
   await page.locator('main').evaluate((m) => m.scrollTo(0, 400));
   await expect(page.locator('.status-pad')).toHaveCSS('height', '30px');   // a solid strip: rows scroll under it, not under the clock
+  await shot(page, 'search-phone-statusbar');
   await page.locator('main').evaluate((m) => m.scrollTo(0, 0));
-  for (const [tab, sel] of [['Lists', 'main > *'], ['Settings', 'main > *'], ['Reader', '.rd-lib-head > *'], ['Games', '.gm-head > *'], ['Home', '.home-head > *']] as const) {
+  // the highest piece of visible text on the screen (whatever the tab shows) starts below the status bar
+  const textTop = () => page.evaluate(() => {
+    let top = Infinity;
+    const w = document.createTreeWalker(document.querySelector('.app')!, NodeFilter.SHOW_TEXT);
+    for (let n = w.nextNode(); n; n = w.nextNode()) {
+      if (!n.textContent?.trim()) continue;
+      const r = document.createRange(); r.selectNodeContents(n);
+      for (const b of r.getClientRects()) if (b.height > 0 && b.bottom > 0) top = Math.min(top, b.top);
+    }
+    return top;
+  });
+  for (const tab of ['Lists', 'Settings', 'Reader', 'Games', 'Home']) {
     await nav.getByRole('link', { name: tab }).click();
     await expect(nav.getByRole('link', { name: tab })).toHaveAttribute('aria-current', 'page');
-    expect(await firstTop(sel), tab).toBeGreaterThanOrEqual(30);
+    await page.waitForTimeout(300);
+    expect(await textTop(), tab).toBeGreaterThanOrEqual(30);
   }
   await nav.getByRole('link', { name: 'Search' }).click();
   await expect(page.locator('.row').first()).toBeVisible();
