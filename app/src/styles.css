@@ -780,13 +780,13 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 .car-track:focus-visible { outline-offset: -3px; }
 /* each page: one framed card, sized to its content (centred in the page), never taller than the page: the middle
    scrolls inside the card while the header strip and "Open entry" stay put. Spacing steps 4/8/12/16/24. */
-.car-slide { flex: 0 0 100%; min-width: 0; display: flex; flex-direction: column; padding: 16px 16px 12px; scroll-snap-align: start; scroll-snap-stop: always; }
+.car-slide { flex: 0 0 100%; min-width: 0; display: flex; flex-direction: column; padding: 16px 16px 14px; scroll-snap-align: start; scroll-snap-stop: always; }
 /* one calm surface: the card is a sheet of paper a shade lighter than the parchment page (in dark, a shade lighter
    than the page too), with a single green-tinted hairline border and a soft shadow. No coloured header block: the
    header is part of the card, set apart only by a hairline rule; the forest green is the
    accent (kind label, level badge, star, section labels, rules). The only thing that varies per kind is the small
    marker before the kind label. */
-.today-card { --card-x: 20px; --card-bg: color-mix(in srgb, #fff 42%, var(--bg));
+.today-card { container: card / inline-size; --card-x: 20px; --card-bg: color-mix(in srgb, #fff 42%, var(--bg));
   --card-rule: color-mix(in srgb, var(--accent) 16%, var(--card-bg)); --kind-mark: var(--moss);
   width: 100%; max-width: 600px; max-height: 100%; min-height: 0; margin: auto; display: flex; flex-direction: column;
   border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--card-bg)); border-radius: 20px; background: var(--card-bg); overflow: hidden;
@@ -813,7 +813,7 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
    with real touch events. No touch-action here: pan-y would forbid the horizontal pan for the whole card. */
 .card-body { flex: 0 1 auto; min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior-x: auto; overscroll-behavior-y: contain; padding: 0 var(--card-x); }
 .card-top { padding: 24px 0 20px; }
-.card-hw { margin: 0; font-size: 34px; font-weight: 650; line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }
+.card-hw { margin: 0; font-size: 24px; font-weight: 650; line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }
 .card-link { color: inherit; }
 .card-sub { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 4px; }
 .card-sub .hanja { font-size: 19px; letter-spacing: .04em; }
@@ -836,13 +836,15 @@ main:has(> .page.home) { display: flex; flex-direction: column; overflow: hidden
 .today-card .entry-inline .similar { margin: 0; padding: 16px 0 8px; border-top: 1px solid var(--card-rule); }
 .today-card .entry-inline .similar-h { color: var(--accent); font-size: 11.5px; letter-spacing: .09em; }
 .today-card .entry-inline .skeleton { margin: 16px 0; }
-.car-nav { flex: none; display: flex; align-items: center; justify-content: center; gap: 4px; padding: 0 8px 8px; }
-.car-arrow { width: 44px; height: 44px; }
-.car-arrow:disabled { opacity: .3; }
-.car-dots { display: flex; gap: 0; }
-.car-dot { position: relative; width: 24px; height: 32px; border: 0; background: none; padding: 0; }
-.car-dot::after { content: ''; position: absolute; left: 8px; top: 12px; width: 8px; height: 8px; border-radius: 4px; background: var(--border); transition: background .15s, width .15s, left .15s; }
-.car-dot[aria-current='true']::after { left: 4px; width: 16px; background: var(--accent); }
+/* a narrow card (phone, iPad side pane): the header keeps kind, level, counter and star on one line: 속담 · 성어 · 단어 · 문법,
+   "5급" (the English kind and the curriculum name stay for wider cards; the level's tooltip names it) */
+@container card (max-width: 400px) {
+  .card-kind-en { display: none; }
+  .card-kind-ko { margin-left: 0; font: 600 13px/1 var(--font-ko); color: var(--accent); }
+  .cur-lvl-long { display: none; }
+}
+/* where this card is in today's set ("3 / 7"): the only pager control, so nothing sits under the cards */
+.card-n { flex: none; height: 24px; padding: 0 9px; display: inline-flex; align-items: center; border-radius: 12px; font: 600 12.5px/1 var(--font-ui); font-variant-numeric: tabular-nums; color: var(--muted); background: color-mix(in srgb, var(--accent) 9%, var(--card-bg)); }
 @media (min-width: 600px) { .today-card { --card-x: 24px; } }
 
 /* ---- Home tab header ---- */

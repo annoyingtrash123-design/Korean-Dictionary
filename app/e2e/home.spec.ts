@@ -18,6 +18,16 @@ const pager = (page: Page) => page.getByRole('region', { name: /^Today/ });
 const slides = (page: Page) => pager(page).getByRole('group', { name: /^\d of \d$/ }).filter({ has: page.locator('.today-card') });
 const titles = (page: Page) => texts(page.locator('.today-card .card-hw .hangul'));
 const kinds = (page: Page) => page.locator('.today-card').evaluateAll((els) => els.map((e) => e.getAttribute('data-kind')));
+/** The page the track rests on, and moving to one (as a swipe would). */
+const curPage = (page: Page) => page.locator('.car-track').first().evaluate((t) => Math.round(t.scrollLeft / t.clientWidth));
+const goPage = (page: Page, i: number) => page.locator('.car-track').first().evaluate((t, i) => t.scrollTo({ left: i * t.clientWidth }), i);
+const onPage = async (page: Page, i: number) => (await curPage(page)) === i;
+/** Every card header fits on one line: nothing overflows it and the save star stays inside the card. */
+const headsFit = (page: Page, scope = '') => page.locator(`${scope} .today-card`).evaluateAll((cards) => cards.map((c) => {
+  const head = c.querySelector('.card-head') as HTMLElement, star = head.querySelector('.save-btn') as HTMLElement;
+  const ok = head.scrollWidth <= head.clientWidth + 1 && star.getBoundingClientRect().right <= c.getBoundingClientRect().right - 2;
+  return ok ? '' : `${c.getAttribute('data-kind')}: ${head.innerText.replace(/\s+/g, ' ')}`;
+}).filter(Boolean));
 const dateRe = /^Today\s*·\s*\d{1,2} [A-Z][a-z]{2}$/;
 
 test('home: one framed card per page, six tabs, search bar only on the Search tab', async ({ page }) => {
@@ -49,6 +59,7 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
   const idiom = page.locator('.today-card[data-kind=proverb]');
   await expect(idiom.locator('.card-kind')).toHaveText('Proverb 속담');
   await expect(page.locator('.today-card[data-kind=seongeo] .card-kind')).toHaveText('Four-character idiom 성어');
+  await expect(idiom.locator('.card-kind')).toHaveJSProperty('innerText', '속담');   // a phone card shows the short Korean label
   await expect(idiom.locator('.cur-lvl')).toHaveCount(0);           // idioms have no curriculum level
   await expect(idiom.locator('.card-gloss')).not.toBeEmpty();
   for (const t of await titles(page)) expect(t).not.toMatch(/[∼~…]/);   // fixed expressions, never a frame with a slot
@@ -81,15 +92,14 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     expect(await pager(page).innerText()).not.toMatch(/TOPIK/);
 
     const first = await titles(page);
-    const prev = pager(page).getByRole('button', { name: 'Previous page' });
-    const next = pager(page).getByRole('button', { name: 'Next page' });
-    const dots = pager(page).getByRole('button', { name: /^\d of 7$/ });
-    await expect(dots).toHaveCount(7);
-    await expect(prev).toBeDisabled();
-    await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true');
-    await next.click();
-    await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
-    await expect(prev).toBeEnabled();
+    // no pager buttons under the cards: each card's header says where it is ("1 / 7"); keys and swipes move
+    await expect(pager(page).getByRole('button', { name: /^(Previous|Next) page$|^\d of 7$/ })).toHaveCount(0);
+    expect(await headsFit(page)).toEqual([]);
+    expect(await texts(page.locator('.today-card .card-n'))).toEqual(['1 / 7', '2 / 7', '3 / 7', '4 / 7', '5 / 7', '6 / 7', '7 / 7']);
+    await expect(onPage(page, 0)).resolves.toBe(true);
+    await pager(page).locator('.car-track').focus();
+    await page.keyboard.press('ArrowRight');
+    await expect.poll(() => curPage(page)).toBe(1);
     // the 성어 page: from "All learner 성어", four syllables, the whole entry inside
     const sg = page.locator('.today-card[data-kind=seongeo]');
     await expect(sg).toBeInViewport({ ratio: 0.9 });
@@ -98,11 +108,11 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await page.waitForTimeout(400);
     await shot(page, 'home-phone-seongeo');
     // a word page: badge, headword, gloss, then the whole entry (every dictionary, all senses)
-    await dots.nth(2).click();
-    await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
+    await goPage(page, 2);
+    await expect.poll(() => curPage(page)).toBe(2);
     const w = page.locator('.today-card[data-kind=word]').first();
     await expect(w.locator('.card-gloss')).not.toBeEmpty();
-    await expect(w.locator('.card-kind')).toHaveText('Word');
+    await expect(w.locator('.card-kind')).toHaveText('Word 단어');
     await expect(w.locator('.entry-inline details.dict').first()).toBeVisible();
     await expect(w.locator('.entry-inline .sense').first()).toBeVisible();
     // every card's header strip is one line: kind, level, star
@@ -118,12 +128,12 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await page.mouse.wheel(0, 600);
     await expect.poll(() => body.evaluate((b) => b.scrollTop)).toBeGreaterThan(100);
     expect((await w.locator('.card-head').boundingBox())!.y).toBe(head0);
-    await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
+    await expect.poll(() => curPage(page)).toBe(2);
     await page.waitForTimeout(300);
     await shot(page, 'home-phone-scrolled');
     await body.evaluate((b) => b.scrollTo(0, 0));
-    await dots.nth(5).click();
-    await expect(dots.nth(5)).toHaveAttribute('aria-current', 'true');
+    await goPage(page, 5);
+    await expect.poll(() => curPage(page)).toBe(5);
     await expect(page.locator('.today-card[data-kind=grammar]').first()).toBeInViewport({ ratio: 0.9 });
     const g = page.locator('.today-card[data-kind=grammar]').first();
     await expect(g.locator('.card-gloss')).not.toBeEmpty();
@@ -138,23 +148,26 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await expect(g.locator('.card-head')).toBeInViewport();
     await page.waitForTimeout(600);
     await shot(page, 'home-phone-grammar');
-    await dots.nth(6).click();
-    await expect(next).toBeDisabled();   // the last page simply ends
+    await goPage(page, 6);
+    await expect.poll(() => curPage(page)).toBe(6);
+    await page.keyboard.press('ArrowRight');   // the last page simply ends
+    await page.waitForTimeout(300);
+    expect(await curPage(page)).toBe(6);
     await track.focus();
     await page.keyboard.press('ArrowLeft');
-    await expect(dots.nth(5)).toHaveAttribute('aria-current', 'true');
+    await expect.poll(() => curPage(page)).toBe(5);
     await page.keyboard.press('ArrowRight');
-    await expect(dots.nth(6)).toHaveAttribute('aria-current', 'true');
+    await expect.poll(() => curPage(page)).toBe(6);
     // mouse drag (touch swipes natively; a desktop pointer drags the track)
-    await dots.nth(0).click();
-    await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true');
+    await goPage(page, 0);
+    await expect.poll(() => curPage(page)).toBe(0);
     const box = (await track.boundingBox())!;
     await page.mouse.move(box.x + box.width - 30, box.y + 200);
     await page.mouse.down();
     await page.mouse.move(box.x + box.width - 120, box.y + 200, { steps: 6 });
     await page.mouse.move(box.x + 20, box.y + 200, { steps: 6 });
     await page.mouse.up();
-    await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
+    await expect.poll(() => curPage(page)).toBe(1);
     expect(page.url()).not.toMatch(/#\/(entry|word)\//);   // a drag is not a tap
 
     // ---- the save star ----
@@ -164,8 +177,8 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await w.getByRole('button', { name: /^Remove from / }).click();
 
     // ---- the headword opens the entry page; Back returns to Home, again on page 1 ----
-    await dots.nth(2).click();
-    await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
+    await goPage(page, 2);
+    await expect.poll(() => curPage(page)).toBe(2);
     await w.locator('.card-link').click();
     await expect(page).toHaveURL(/#\/entry\//);
     await expect(page.locator('h1')).toContainText(first[2]);
@@ -173,7 +186,7 @@ test('home: one framed card per page, six tabs, search bar only on the Search ta
     await page.goBack();
     await expect(pager(page)).toBeVisible();
     await expect(page).toHaveURL(/#\/$/);
-    await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true');
+    await expect.poll(() => curPage(page)).toBe(0);
 
     // ---- the same pages for the same date, others on other dates ----
     await page.clock.setFixedTime(new Date(2026, 2, 5, 12, 0, 0));
@@ -285,9 +298,10 @@ test('home: iPad two-pane and dark mode screenshots', async ({ page }) => {
   await page.getByRole('link', { name: 'Home' }).click();
   await expect(page.locator('.pane-left').getByRole('heading', { level: 1 })).toHaveText(dateRe);
   await expect(page.locator('.pane-left .today-card[data-kind=proverb]')).toBeVisible();
-  await expect(page.locator('.pane-left').getByRole('button', { name: 'Next page' })).toHaveCount(HAS_CURRICULUM ? 1 : 0);
+  if (HAS_CURRICULUM) await expect(page.locator('.pane-left .today-card .card-n').first()).toHaveText('1 / 7');
+  expect(await headsFit(page, '.pane-left')).toEqual([]);   // the narrow side pane: short labels, star inside
   await page.waitForTimeout(500);
-  if (HAS_CURRICULUM) await page.locator('.pane-left').getByRole('button', { name: 'Next page' }).click();
+  if (HAS_CURRICULUM) await goPage(page, 1);
   await page.waitForTimeout(500);
   await shot(page, 'home-ipad');
   // a card opens its entry in the right pane; the left pane stays on Home
@@ -311,8 +325,8 @@ test('home: iPad two-pane and dark mode screenshots', async ({ page }) => {
   await page.goto('/#/');
   await expect(page.locator('.today-card[data-kind=proverb]')).toBeVisible();
   if (HAS_CURRICULUM) {
-    await page.getByRole('button', { name: 'Next page' }).click();
-    await expect(page.getByRole('button', { name: '2 of 7' })).toHaveAttribute('aria-current', 'true');
+    await goPage(page, 1);
+    await expect.poll(() => curPage(page)).toBe(1);
   }
   await page.waitForTimeout(500);
   await shot(page, 'home-dark');

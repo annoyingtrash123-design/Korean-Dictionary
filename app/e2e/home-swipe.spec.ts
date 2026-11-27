@@ -37,10 +37,9 @@ test('home: a finger swipe on a card changes page; a vertical one scrolls the ca
   await downloadAll(page);
   await page.goto('/#/');
   const pager = page.getByRole('region', { name: /^Today/ });
-  const dots = pager.getByRole('button', { name: /^\d of 7$/ });
   const track = pager.locator('.car-track');
-  await expect(dots).toHaveCount(7);
-  await expect(dots.nth(0)).toHaveAttribute('aria-current', 'true');
+  const cur = () => track.evaluate((t) => Math.round(t.scrollLeft / t.clientWidth));
+  await expect.poll(cur).toBe(0);
   const card = (i: number) => page.locator('.today-card').nth(i);
   await expect(card(0).locator('.entry-inline .sense').first()).toBeVisible();
   await page.waitForTimeout(300);
@@ -88,14 +87,14 @@ test('home: a finger swipe on a card changes page; a vertical one scrolls the ca
   let p = await onText(0);
   await swipe(page, p.x + 120, p.y, p.x - 140, p.y + 6);
   await settled();
-  await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
+  await expect.poll(cur).toBe(1);
   expect(page.url()).toMatch(/#\/$/);                     // a swipe is not a tap
 
   // ---- and another, to page 3 (a word card, whose body is long) ----
   p = await onText(1);
   await swipe(page, p.x + 120, p.y, p.x - 140, p.y - 8);
   await settled();
-  await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
+  await expect.poll(cur).toBe(2);
 
   // ---- a vertical swipe scrolls the card body and stays on the page ----
   const body = card(2).locator('.card-body');
@@ -106,30 +105,23 @@ test('home: a finger swipe on a card changes page; a vertical one scrolls the ca
   await swipe(page, p.x, p.y + 150, p.x + 10, p.y - 150);
   await expect.poll(() => body.evaluate((b) => b.scrollTop)).toBeGreaterThan(100);
   await settled();
-  await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
+  await expect.poll(cur).toBe(2);
   expect(await track.evaluate((t) => t.scrollLeft)).toBe(left0);
 
   // ---- a right swipe goes back, even from a scrolled body ----
   p = await onText(2);
   await swipe(page, p.x - 120, p.y, p.x + 140, p.y + 6);
   await settled();
-  await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
+  await expect.poll(cur).toBe(1);
 
-  // ---- taps still work: the star saves, the arrows page, the headword opens the entry ----
+  // ---- taps still work: the star saves, the headword opens the entry ----
   const star = card(1).getByRole('button', { name: /^Save to / });
   await star.tap();
   await expect(card(1).getByRole('button', { name: /^Remove from / })).toBeVisible();
   await card(1).getByRole('button', { name: /^Remove from / }).tap();
   await expect(card(1).getByRole('button', { name: /^Save to / })).toBeVisible();
-  // the "Removed · Undo" toast sits over the pager on a phone: dismiss it as a user would (it also times out)
-  const dismiss = page.locator('.toast-host').getByRole('button', { name: 'Dismiss' });
-  if (await dismiss.count()) await dismiss.first().tap();
-  await expect(page.locator('.toast-host .app-toast')).toHaveCount(0);
-  await pager.getByRole('button', { name: 'Next page' }).tap();
-  await expect(dots.nth(2)).toHaveAttribute('aria-current', 'true');
-  await pager.getByRole('button', { name: 'Previous page' }).tap();
-  await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
-  await settled();
+  await expect(pager.getByRole('button', { name: /^(Previous|Next) page$/ })).toHaveCount(0);   // no arrows: swipe only
+  await expect(card(1).locator('.card-n')).toHaveText('2 / 7');
   await card(1).locator('.card-link').tap();
   await expect(page).toHaveURL(/#\/entry\//);
 });

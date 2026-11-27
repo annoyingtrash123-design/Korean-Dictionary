@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
-import { Icon } from './Icons';
 import { Hanja, Pos } from './common';
 import { SaveButton } from './SaveButton';
 import { entryPath, href, wordPath } from '../lib/router';
@@ -10,7 +9,9 @@ import { EntryInline } from '../views/Entry';
 import type { ItemInput } from '../lib/lists';
 
 export function CurriculumLevel({ level }: { level: number }) {
-  return <span class="cur-lvl" title={curriculumHint(level)} aria-label={curriculumHint(level)}>{curriculumLabel(level)}</span>;
+  const [short, ...rest] = curriculumLabel(level).split(' · ');
+  // a narrow card (phone, iPad side pane) keeps just "5급"; the curriculum name is in the tooltip and the label
+  return <span class="cur-lvl" title={curriculumHint(level)} aria-label={curriculumHint(level)}>{short}{rest.length > 0 && <span class="cur-lvl-long"> · {rest.join(' · ')}</span>}</span>;
 }
 
 interface PageSpec {
@@ -35,14 +36,14 @@ function pageSpecs(h: HomeData): PageSpec[] {
     const [en, ko] = IDIOM_LABEL[i.kind] ?? IDIOM_LABEL.idiom;
     out.push({
       key: `i${i.id}`, kind: i.kind,
-      label: <>{en} <span class="card-kind-ko" lang="ko">{ko}</span></>,
+      label: <><span class="card-kind-en">{en}</span> <span class="card-kind-ko" lang="ko">{ko}</span></>,
       save: { kind: 'entry', source: i.source, headword: i.headword, homonym: i.homonym, pos: i.pos ?? i.kind, gloss: i.gloss },
       title: i.headword, gloss: i.gloss, entry: { source: i.source, id: i.id, hw: i.headword }, path: entryPath(i.source, i.id, i.headword),
     });
   }
   for (const w of h.words) {
     out.push({
-      key: `w${w.id}`, kind: 'word', label: 'Word', level: w.level,
+      key: `w${w.id}`, kind: 'word', label: <><span class="card-kind-en">Word</span> <span class="card-kind-ko" lang="ko">단어</span></>, level: w.level,
       save: { kind: 'entry', source: w.source, headword: w.headword, homonym: w.homonym, pos: w.pos, hanja: w.hanja, gloss: w.gloss },
       title: w.headword, hanja: w.hanja, pos: w.pos, gloss: w.gloss, entry: { source: w.source, id: w.id, hw: w.headword }, path: entryPath(w.source, w.id, w.headword),
     });
@@ -50,7 +51,7 @@ function pageSpecs(h: HomeData): PageSpec[] {
   for (const g of h.grammar) {
     out.push({
       key: `g${g.id}`, kind: 'grammar',
-      label: 'Grammar', level: g.level,
+      label: <><span class="card-kind-en">Grammar</span> <span class="card-kind-ko" lang="ko">문법</span></>, level: g.level,
       save: { kind: 'grammar', pattern: g.pattern, summary: g.summary_en, level: g.level, ref: g.entry ? { source: g.entry.source, homonym: g.entry.homonym, pos: g.entry.pos } : null },
       title: g.pattern, gloss: g.summary_en,
       entry: g.entry ? { source: g.entry.source, id: g.entry.id, hw: g.pattern } : { word: g.pattern },
@@ -71,6 +72,7 @@ function Page({ p, n, total, near }: { p: PageSpec; n: number; total: number; ne
         <header class="card-head">
           <span class="card-kind">{p.label}</span>
           {p.level != null && <CurriculumLevel level={p.level} />}
+          {total > 1 && <span class="card-n" aria-hidden="true">{n} / {total}</span>}
           <span class="card-spacer" />
           <SaveButton item={p.save} title={p.title} size={22} />
         </header>
@@ -92,7 +94,7 @@ function Page({ p, n, total, near }: { p: PageSpec; n: number; total: number; ne
 const STEP_KEYS: Record<string, number> = { ArrowRight: 1, ArrowLeft: -1 };
 
 /** Home: full-page items to swipe through (idiom of the day, 3 words, 2 grammar patterns): scroll-snap track, mouse drag,
- *  arrow buttons and keys, page dots. Always opens on the first page. */
+ *  arrow keys; each card's header shows where it is ("1 / 7"), so there are no buttons under the cards. Always opens on the first page. */
 export function HomePager({ data }: { data: HomeData }) {
   const pages = pageSpecs(data);
   const n = pages.length;
@@ -150,17 +152,6 @@ export function HomePager({ data }: { data: HomeData }) {
         onClickCapture={(e) => { if (drag.current?.moved) { e.preventDefault(); e.stopPropagation(); } }}>
         {pages.map((p, i) => <Page key={p.key} p={p} n={i + 1} total={n} near={Math.abs(i - cur) <= 1 || seen.has(i)} />)}
       </div>
-      {n > 1 && (
-        <div class="car-nav">
-          <button type="button" class="iconbtn car-arrow" aria-label="Previous page" disabled={cur <= 0} onClick={() => goTo(cur - 1)}><Icon name="back" size={22} /></button>
-          <div class="car-dots" role="group" aria-label="Choose a page">
-            {pages.map((p, i) => (
-              <button key={p.key} type="button" class="car-dot" aria-label={`${i + 1} of ${n}`} aria-current={i === cur ? 'true' : undefined} onClick={() => goTo(i)} />
-            ))}
-          </div>
-          <button type="button" class="iconbtn car-arrow" aria-label="Next page" disabled={cur >= n - 1} onClick={() => goTo(cur + 1)}><Icon name="chev" size={22} /></button>
-        </div>
-      )}
     </section>
   );
 }
