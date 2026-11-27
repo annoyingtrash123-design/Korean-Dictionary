@@ -913,14 +913,18 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             Some(p) => p.query_row("SELECT COUNT(*) FROM entries", [], |r| r.get::<_, i64>(0))? > 100_000,
             None => false,
         };
-        let (mut added, mut drafts, mut absent) = (0, 0, 0);
+        let (mut added, mut drafts, mut absent, mut n_covered) = (0, 0, 0, 0);
+        let mut covered = String::from("headword\thanja\tgloss\tcovered_by\n");
         for w in crate::word_en::builtin() {
             if !crate::word_en::is_approved(&w) {
                 drafts += 1;
                 continue;
             }
+            // already has English in another source (wikt is only in the CI build): nothing to add, reported
             if let Some(dup) = crate::word_en::english_duplicate(&conn, &w)? {
-                anyhow::bail!("word_en.tsv: approved row {} {} duplicates {dup}, which has English; mark it `rejected: covered by {dup}`", w.headword, w.hanja);
+                covered.push_str(&format!("{}\t{}\t{}\t{dup}\n", w.headword, w.hanja, w.en_gloss));
+                n_covered += 1;
+                continue;
             }
             if let Some(sp) = &sp {
                 if !crate::word_en::check_against_stdict(sp, &w)? {
@@ -936,7 +940,8 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             insert_entry(&conn, &e, rank, true, &mut c)?;
             added += 1;
         }
-        log::info!("word English overlay (hanppuri, AI-written, reviewed): {added} entries added, {drafts} drafts left out, {absent} not in this stdict pack");
+        log::info!("word English overlay (hanppuri, AI-written, reviewed): {added} entries added, {drafts} drafts left out, {absent} not in this stdict pack, {n_covered} already have English elsewhere (word_en_covered.tsv)");
+        fs::write(out.join("word_en_covered.tsv"), covered)?;
     }
 
     // grammar table

@@ -84,7 +84,7 @@ pub fn problems(w: &WordEn) -> Vec<String> {
 
 /// The krdict / kengdic entry with English the row duplicates, if any: same headword and the same hanja (any of the
 /// entry's `/` variants, or one that the stdict hanja string starts with: stdict runs variants together, 妊娠姙娠).
-/// The overlay is only for meanings that have no English, so an approved row for which this is `Some` fails the build.
+/// The overlay is only for meanings that have no English: the build skips such a row and lists it in `word_en_covered.tsv`.
 pub fn english_duplicate(core: &Connection, w: &WordEn) -> Result<Option<String>> {
     use unicode_normalization::UnicodeNormalization;
     let nfc = |s: &str| -> String { s.nfc().collect() };
