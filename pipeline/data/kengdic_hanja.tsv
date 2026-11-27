@@ -1,3 +1,496 @@
 # Reviewed corrections to kengdic's own hanja (see src/kengdic_hanja.rs). fix: fixed_hanja replaces hanja; drop: no hanja;
 # keep rows are kept for the record and change nothing. gloss is the entry's English exactly.
 headword	hanja	gloss	verdict	fixed_hanja	reason
+가신	家臣	rear vassal, retainer, vassal	keep		retainer
+가용성	可鎔性	fusibility, integratability	keep		fusibility matches 可鎔性
+각반	脚絆	gaiter; legging	keep		gaiter matches 脚絆
+간결	簡潔	brevity, briefness, concision, laconicism	keep		concision
+간단	間斷	a pause, intermission	keep		pause matches 間斷
+간략	簡略	simplicity,conciseness	keep		간략하다 어근
+간만	干滿	fluctuations in the tide, high and low tide	keep		tide ebb and flow matches
+간명	簡明	concision, the quality of being brief	keep		concision matches 簡明
+간소	簡素	simplicity; chasteness, chastity	keep		simplicity matches 簡素
+감사관	監査官	comptroller, controller, corrector	keep		감사관
+감시관	監視官	inspector, surveyor, warden	drop		監視官 not listed; only exam-supervisor 監試官
+강습하다	講習하다	assault; storm	fix	強襲하다	assault is 強襲, 講習 is training
+거간	居間	banian, brokerage, commission	keep		brokerage matches 居間
+건보	健保	건강 보험, health insurance	drop		健保 not listed in stdict entries
+검수	檢數	counting, adding up	keep		개수 검사
+격막	隔膜	the diaphragm, the septum	fix	膈膜	anatomical diaphragm/septum is 膈膜
+격앙	激昻	excitement, frenzy, irritation	fix	激昂	variant 昻; stdict 激昂
+격화소양	隔靴搔瘍	you cannot scratch your foot if you are wearing shoes, it has no effect; an unscratchable itch	fix	隔靴搔癢	瘍 wrong, 癢 itch
+견고	堅固	adamancy, firmness, hardness, impregnability, solidity, substantiality, tightness	keep		solidity
+결정자	決定者	decider; determinant	drop		only 結晶子 listed; decider unconfirmed
+경건	敬虔	godliness, pietism, piety	keep		piety matches 敬虔
+경결	硬結	induration, congealment, solidification	keep		단단하게 굳음
+경의하다	敬意하다	regard, esteem	drop		敬意하다 not a listed entry
+경조부박	輕조浮薄	not taking things seriously, playing around. The 조 means 방정 (correctness, state of being correct).	fix	輕佻浮薄	complete hanja listed
+계류	繫留	mooring, moorage, tying up	keep		mooring matches 繫留
+계사	繫辭	a copula, copulative	drop		listed 繫辭 meaning is commentary, not copula
+계사	鷄舍	a henhouse, a henroost	keep		kept: 鷄舍 is the stdict hanja for this meaning (entry was cut from the reviewer list)
+계원	係員	the manager, the boss	drop		manager/boss matches no entry; 係員 is clerk
+계창	鷄窓	a study, a room for studying	keep		study room
+고결	高潔	nobility of character, integrity, nobleness, virtue	keep		nobility matches 高潔
+고량	高粱	durra; kaoliang	keep		kaoliang sorghum
+고매	高邁	nobleness, receiving nobly	keep		nobleness matches 高邁
+고상	高尙	nobleness, refinement, sublimity	keep		고상하다 어근
+고속도	高速道	a freeway, a highway	drop		高速道 not listed; only 高速度 speed
+고창	鼓脹	tympanites, flatulence	keep		bloat, tympanites
+골막	骨膜	periosteum, the cerebral membrane	drop		periosteum 骨膜 and brain membrane 골膜 mixed
+공법	公法	public law, law between nations	keep		public law incl. international law
+공법	工法	construction method, method of construction	keep		construction method matches
+공전절후	空前絶後	전무후무(前無後無). without peer. 비교할 만한 것이 전에도 없었고, 앞으로도.	keep		絶 standard variant of 絕
+공차	公差	a remedy, tolerance	keep		tolerance (mint remedy) matches 公差
+과감	果敢	resolution, determination	keep		determination matches 果敢
+관대	寬大	catafalque, bier; forgiveness, generosity, lenience, lenity	drop		bier 棺臺 and leniency 寬大 mixed
+관모	冠帽	aigrette, crest, pappus, topknot	fix	冠毛	pappus/crest is 冠毛, 冠帽 is official hat
+광량	鑛量	reserves (ammunition, supplies)	drop		ammunition reserves not 鑛量 ore quantity
+광유	鑛油	mineral oil, petrolatum	keep		mineral oil
+광파	光波	light wave; undulation	drop		undulation is not light wave
+교의	敎義	a doctrine, a dogma, tenets	keep		敎義 doctrine
+구차	苟且	stupid, awkward, a feeble attempt	keep		shabby/feeble (구차하다) matches 苟且; loose
+구체	球體	globe, orb, sphere	keep		sphere matches 球體
+군도	群島	archipelago; saber	drop		archipelago 群島 and saber 軍刀 mixed
+궁경	窮境	an impasse, a predicament, a quandary; necessity, poverty	keep		predicament
+권화	權化	avatar, impersonation, incarnation	keep		incarnation
+궤주	潰走	a rout, people running helter skelter for their lives, a stampede	keep		져서 달아남
+귀의	歸依	auditory; conversion to Christianity	drop		mixes 귀+의 auditory and 歸依 conversion
+규소	硅素	silica, silicon	keep		silicon
+극지	局地	land`s end, the north/south pole	fix	極地	poles are 極地
+극진	極盡	hospitality, friendliness	keep		utmost devotion, loose
+근사	近似	closeness, nearness, propinquity	keep		closeness, approximation
+기관사	機關士	greaser, engine man; driver, locomotive engineer	keep		engine operator
+기명하다	器皿하다	inscribe, register	fix	記名하다	register name is 記名
+기발	奇拔	newness, extraordinarily creative	keep		extraordinarily creative matches 奇拔
+기숙	寄宿	boarding, livingin	keep		숙사에서 기거
+기이	奇異	fantasticality, singularity	keep		strangeness
+기정	旣定	a fixed (period), an established (period)	keep		이미 결정됨
+기항	寄港	call, calling	keep		port call matches 寄港
+긴박	緊迫	exigency, instancy	keep		urgency matches 緊迫
+낙성	落成	completion, being completed	keep		completion of building
+난해	難解	abstruse, hard to make out	keep		abstruse matches 難解
+남작	男爵	baron; nobility	keep		baron
+내구	耐久	persistence, durability	keep		durability
+내무	內務	home affairs, interior affairs	keep		home affairs matches
+내보	內報	a tipoff, inside information	keep		inside report
+녹봉	祿俸	stipend, salary	keep		벼슬아치 녹봉
+논파	論破	elenchus; refutation	keep		refutation matches 論破
+농목	農牧	농업과 목축; farming and pasturing	keep		farming and pasturing matches
+누심	壘審	a base umpire, a field umpire	keep		base umpire matches 壘審
+다변	多變	loquacity, gabbing, verbosity; many-sided	drop		mixed: loquacity 多辯, many-sided 多變
+단성	丹誠	sincerity, devotion	keep		sincerity matches 丹誠
+단안	斷案	conclusion, consequent, verdict	keep		conclusion, judgment
+단언	斷言	with affirmation, assertion, dictum, predication	keep		딱 잘라 말함
+단품	斷品	an individual unit, an individual separate product	fix	單品	single item is 單品
+담석	膽石	bilestone, gallstone	keep		gallstone matches 膽石
+당산	堂山	a famous, respected hill/mountain	keep		sacred village hill, loose but right
+당제	唐制	confection; conserva	drop		confection matches no listed entry
+대국	大局	the general, whole situation	keep		general situation matches 大局
+대동	大同	resembling and almost the same; going with other people	drop		mixes 'nearly same' and 帶同 accompanying
+대주	貸株	alcoholism; lender	drop		alcoholism 大酒 and lender 貸主 mixed
+대차	大差	loan; rigger	drop		mixed: loan 貸借, rigger unclear
+대하	大河	crayfish; lobster	fix	大蝦	shrimp/prawn is 大蝦, not 大河 river
+도당	徒黨	a cabal, a gang (of conspiritors)	keep		gang matches 徒黨
+도련	刀鍊	cutting the edge, trimming	keep		trimming edges matches 刀鍊
+도상	道上	icon; on the surface of a road	drop		mixed: icon 圖像, on road 道上
+도선	渡船	conductor; ferriage; lead	drop		mixed: conductor 導線, ferriage 渡船, lead
+도해하다	圖解하다	diagrammatize; illustrate	keep		illustrate with diagram
+동란	動亂	agitation, convulsion, fermentation, turbulence (involving people, not like just a chemical reaction)	keep		사회 소란
+동식	同食	movement and rest; eating together	drop		mixed: 動息 and 同食
+동판	銅版	a chalcograph, copper, copperplate	keep		copperplate matches 銅版
+둔사	遁辭	quibble; quip; quirk	keep		회피하려 꾸민 말
+등신	等神	a feeb, a jackstraw, a fool and a jackass	keep		fool
+등화	燈火	a lamp or candle (등불, 등잔불, 촛불)	keep		lamplight matches 燈火
+만곡	彎曲	curvature, incurvation, an incurve, sinuosity	keep		활 모양으로 굽음
+망망	茫茫	wide, spacious	keep		vast
+맥수지탄	麥秀之嘆	after the defeat of a country, only the barley grows well and nothing else	keep		lament for fallen country
+면허하다	免許하다	approbate, charter, license	keep		면허 허가
+명명	命名	appellation, baptism, christening, denomination, naming	keep		naming matches
+명석	明晳	clearness, lucidity	keep		lucidity matches 明晳
+명정	酩酊	inebriation, inebriety	keep		drunkenness matches 酩酊
+모선	母線	bussbar, generatrix	keep		busbar/generatrix matches 母線
+목상	木像	a wooden image of Buddha, a saint, somebody special	keep		나무 불상
+묘상	苗床	a plant nursery, nursery garden, a seedbed	keep		모종 키우는 자리
+무모	無謀	daredevilry, temerity, wildness	keep		temerity matches 無謀
+무미	無味	flatness; tasteless	keep		tastelessness
+무산	無産	unproductive, fruitless	drop		fruitless matches neither 無産 nor listed entry
+무수	無數	incalculability, a zillion trillion	keep		countless
+무참	無慘	cruel, merciless	keep		cruel matches 無慘
+무해	無害	innocence; innocency	keep		해로움이 없음
+미미	微微	daintiness; relish, a good flavor; slight, petty, insignificant	drop		mixed: 美味 and 微微
+미분	微分	differential, differentiation	keep		미분 계수
+미약	微弱	aphrodisiac, love potion	fix	媚藥	aphrodisiac is 媚藥
+박식	博識	erudition, learning, omniscience; or a person with those qualities	keep		erudition matches
+반소	反訴	countercharge, counterclaim, cross action, recrimination	keep		counterclaim
+반음	半音	a half step, a halftone, a semi tone	keep		semitone
+방부	防腐	antisepsis; preservation	keep		antisepsis
+방수하다	防守하다	to intercept, to block and protect	keep		defend
+방안지	方眼紙	graph paper, plotting paper	keep		graph paper matches 方眼紙
+방자	放恣	license, indulgence, rudeness	keep		license, rudeness matches 放恣
+방주	方舟	an apostil, marginalia, marginal notes, sidenotes; an ark	drop		mixed: marginalia 旁註, ark 方舟
+방축	防縮	banishment, ejection, ejectment	fix	放逐	banishment is 放逐
+방탄	防彈	bulletproof, shellproof, shotproof	keep		탄알을 막음
+방탄하다	放誕하다	to be very noisy, loud with your voice	drop		放誕 is absurd talk, not loudness
+범포	帆布	canvas, cloth, sailcloth	keep		sailcloth
+법가	法家	sb familiar with the law. Perhaps, an ancient Chinese lawyer in the BC era	keep		legalist, legal expert
+변성	變性	crack; transmutation	drop		voice crack 變聲 vs transmutation mixed
+변성하다	變性하다	change, crack, denature a protein	drop		mixed: 變成, 變聲 (crack), 變性
+병소	病巢	focus; lesion; nidus	keep		lesion matches 病巢
+보습	補濕	a moldboard; a plow, a plowshare	drop		plowshare is native 보습, no hanja
+보시	布施	alms; charity	keep		alms matches 布施
+복마	卜馬	draft horse, Galloway, packhorse, shire horse	keep		packhorse
+복속	服屬	subjugation, bowing down to	keep		subjugation
+부석	浮石	axinite; floatstone	drop		axinite 斧石 and floatstone 浮石 mixed
+부식하다	副食하다	bite, eat another type of food	drop		副食 not listed; senses unclear
+부식하다	腐蝕하다	cauterize, corrode, erode, rust	keep		썩어서 문드러지다
+부신	副腎	paranephros, renal gland, the adrenal	keep		내분비샘
+부전	仆顚	a slip/tag/label; falling over	drop		slip/tag (附箋) and falling over (仆顚) mixed
+분기하다	分期하다	awake, rouse; ramify, divide	drop		mixed: rouse 奮起, ramify 分岐
+분대	分隊	division, section, squad	keep		보병 단위
+불미	不美	uncouth, not pretty	keep		unseemly
+비대	肥大	corpulence, grossness, obesity	keep		obesity matches 肥大
+비등	沸騰	boil, boiling, ebullience, ebullition	keep		끓어오름
+비문	碑文	epigraph; inscription	keep		inscription matches 碑文
+비밀히	秘密히	privately, secretly	keep		秘 standard variant of 祕
+비속	卑俗	vulgar, common, lowlife	keep		격이 낮고 속됨
+비수	匕首	a short knife, a dagger	keep		dagger matches 匕首
+비옥	肥沃	fatness, feracity, fertility, richness	keep		fertility
+비조	鼻祖	the founder, the originator	keep		맨 처음 조상
+비준하다	批准하다	to ratify, validate	keep		ratify matches 批准
+비탄하다	悲嘆하다	bemoan, bewail, wail, weep	keep		lament
+빈궁	嬪宮	beggarliness, destitution, penury	fix	貧窮	poverty is 貧窮, not crown princess 嬪宮
+빈발	頻發	frequency; rash	keep		frequent occurrence (rash of) matches 頻發
+사감	私感	a bad feeling of resentment, malice [towards sb]	fix	私憾	resentment is 私憾
+사당패	寺黨牌	travelling around, selling dances and singing entertainment, those kinds of people in days gone past	drop		사당 has no hanja; only 사당牌 listed
+사모	思慕	yearning for sth, loving	keep		그리워함
+사악	邪惡	evilness, ill, improbity, perversity, vice	keep		wickedness
+사출	寫出	ejection pod, jet, projection, shooting	fix	射出	ejection/shooting is 射出
+사출하다	寫出하다	radiate; shoot	fix	射出	shoot/radiate is 射出
+삭도	索道	aerial tramway, cableway	keep		cableway matches 索道
+산도	酸度	degree of acidity, acidity	keep		산도 acidity
+산만	散漫	diffuseness, diffusion	keep		diffuseness
+산포	散布	diffusion, dissemination, distribution	keep		dissemination matches 散布
+산화	酸化	combustion, oxidation	keep		oxidation
+살수	撒水	sprinkling water, watering	keep		sprinkling water
+삼출	渗出	exudation, percolation, seepage	fix	滲出	stdict form 滲出 (渗 is simplified)
+삼투	渗透	osmosis; percolation	fix	滲透	non-standard 渗; stdict 滲透
+상간	相姦	fucking, fornication	keep		illicit intercourse matches 相姦
+상감하다	上監하다	enchase; inlay	fix	象嵌하다	inlay is 象嵌, 上監 is the king
+상과	商科	superfamily; a commercial course/department	drop		superfamily (上科) not listed; mixed senses
+상반	相反	contradiction, incompatibilty... in disagreement, not working together	keep		서로 반대됨
+상생	相生	doing it together, eth in harmony	keep		mutual coexistence, loose
+상세	詳細	minutiae, details	keep		details matches 詳細
+상이	相異	disparity, dissemblance	keep		상이하다 어근
+상조	尙早	interdependence, mutual aid	fix	相助	mutual aid is 相助
+상좌	上座	dais; halfpace	keep		윗사람이 앉는 자리 = dais
+생소	生疏	alienation, to be a stranger/new to	keep		unfamiliar matches 生疏
+서경	書經	an ancient, long ancient Chinese book of history	keep		Book of Documents
+서력	西曆	AD; domminical year	keep		Christian era
+서안	西岸	bookholder; bookrest	fix	書案	bookrest is 書案, not 西岸
+서언	序言	prolegomena, prolegomenon, a book preface	keep		preface matches 序言
+서정	抒情	artistic writing which describes feelings, lyricism	keep		lyricism
+석고	石膏	gypsum, plaster of Paris	keep		gypsum matches 石膏
+석판	石板	slab; slate	keep		석판 slate
+선경	仙境	fairyland, a metaphor for a place with beautiful scenery	keep		fairyland matches 仙境
+선단	扇端	apex, extremity, nose, tip	fix	先端	tip/extremity is 先端; 扇端 is alluvial-fan edge
+선명	鮮明	freshness, liveliness, sharpness	keep		sharpness matches 鮮明
+선미	船尾	steerage; stern	keep		배의 뒷부분
+선민	選民	the first people (generation-wise), the chosen people	drop		first people 先民 and chosen people 選民 mixed
+선봉	先鋒	avant courier (advance guard), forward, spearhead	keep		spearhead matches 先鋒
+선천설	先天性	apriorism, nativism	fix	先天說	theory is 先天說, kengdic gave 先天性
+성급	性急	haste, hotness	keep		haste matches 性急
+성배	聖杯	a holy grail, a chalice	keep		신성한 술잔
+성위	星位	a configuration of stars, a constellation	keep		star position
+성채	城砦	castle, fort	keep		fortress
+성체	成體	the adult form; the sacrament, the mystery	drop		adult form 成體 and sacrament 聖體 mixed
+세류	細流	a downwash, a rill	drop		mixed: downwash 洗流, rill 細流
+세평	世評	comment, report, reputation, repute	keep		reputation, public comment
+소곡	小曲	a bagatelle (a short piece for the piano), a ditty, an opuscule	keep		작은 곡
+소구	訴求	globule; roundlet; spherule	fix	小球	globule is 小球, not 訴求
+소극	笑劇	depolarization; farce	drop		depolarization 消極 and farce 笑劇 mixed
+소산하다	所産하다	exhale; selfdestruct	drop		exhale/self-destruct match no entry cleanly
+소심	小心	pusillanimity; tinidity	keep		timidity
+소연	騷然	noisy, loud	keep		noisy matches 騷然
+소엽	小葉	lobe; lobule	keep		lobule/leaflet is 小葉
+소해	掃海	minesweeping, clearing of mines	keep		기뢰 제거
+속사	俗事	secularity, the mundane	keep		mundane affairs
+수구초심	首邱初心	in the face of death, you will remember your home town.	fix	首丘初心	stdict spells 首丘初心
+수라간	水刺間	the kitchen of the king, the royal kitchen	fix	水剌間	kengdic 刺 typo; stdict 水剌間
+수부	水夫	mariner, matelot, sailor	keep		sailor
+수연	雖然	even if that is the case, 비록 ....	drop		雖然 not listed
+수직선	垂直線	a number line (mathematics, negative numbers on the left, positive on the right)	fix	數直線	number line is 數直線
+수차	數次	aberration; waterwheel	drop		mixed: aberration 收差, waterwheel 水車
+수평의	水平의	even, horizontal, level	drop		水平 not listed; only 水平儀 instrument
+숙련자	熟練者	an adept, an expert, a practician	fix	熟鍊者	stdict lists 熟鍊者
+숙지	熟知	acquaintance; conversance, -sancy; know	keep		thorough knowledge
+숭고	崇高	nobility; (the sublime )	keep		숭고하다 어근
+시의	市議	civic, municipal	drop		'civic' is 시+의 particle, not 市議 council
+시의	詩意	parnassian, poetic, Eleusinian	keep		poetic sense, loose
+시편	詩篇	a psalm, a psalmbook	keep		Psalms
+시효	時效	prescription, statute of limitations	keep		statute of limitations matches 時效
+식상	食傷	glut; surfeit	keep		surfeit
+식언	食言	you renege on your words, you take back your words	keep		breaking one's word matches 食言
+식육	食肉	flesh, the packing industry, eating meat	keep		고기를 먹음
+신빙	信憑	trust, faith	keep		믿어 근거로 삼음
+신탁	信託	a trust (for like a dead person); putting sth in sb else's trust	keep		trust matches 信託
+신통	神通	wonderful, absolutely fantastic	keep		神通 marvellous
+심대	甚大	handspeak; roller	drop		handspeak/roller unrelated to 甚大
+심산	心算	intention;purpose;calculation;a design	keep		마음속 계획
+심상하다	尋常하다	to be normal, usual	keep		ordinary matches 尋常
+아교질	絹織物	colloidal, gelationid, glutinous, sticky	fix	阿膠質	hanja wrong (絹織物 = silk fabric)
+아성	牙城	donjon; keep	keep		stronghold, keep
+아호	雅號	nom de plume; pseudonym	keep		pen name matches 雅號
+악장	樂章	bandmaster, drum major, Kapellmeister	fix	樂長	bandmaster is 樂長, not 樂章
+안동	安東	간고등어 fish common in this city, ANDONG	keep		city Andong matches
+암거	暗渠	a channel, conduit, culvert	keep		땅속 도랑
+암상	岩床	bedrock, hardpan, rock	drop		巖床 is a sill, not bedrock
+암자	庵子	cell; a small Buddhist temple	keep		hermitage
+암장	暗葬	magma; a secret burial	drop		magma 巖漿 and secret burial 暗葬 mixed
+압착	壓搾	crush; squeeze	keep		눌러 짜냄
+압착하다	壓搾하다	crush; squeeze	keep		squeeze matches 壓搾
+애고	愛顧	custom, patronage	keep		patronage, favor
+애상	哀傷	a sad feeling; sad, with a broken heart	keep		grief, heartbreak
+액화	液化	condensation, liquefaction	keep		liquefaction
+약제	藥劑	drug, medicament	keep		조제한 약
+양화	洋靴	good money; positive; quantification	drop		mixes good money, positive, quantification
+어구	語句	locution, phraseology	keep		phrase
+엄호	掩護	cover, covering	keep		掩護 cover
+여각	旅閣	complementary angle; complement	fix	餘角	complementary angle is 餘角
+여로	旅路	a journey, 나그네 길. 여행의 노정(路程)	keep		여행하는 길
+여수	與受	the complement, the remainder	drop		remainder is 餘數, not listed
+역법	曆法	style; calendar	keep		calendar matches 曆法
+역수	逆數	inverse, reciprocal number	keep		reciprocal matches 逆數
+역수	曆數	backwater, billabong	fix	逆水	backwater is 逆水, not 曆數
+역장	驛長	station agent; stationmaster	keep		stationmaster
+역학적	力學的	mechanical, dynamic	keep		mechanical
+연로	年老	to be old, to be up there in years	keep		elderly
+연면	連綿	(1) in a connected line (2) connected for a long time, not severable	keep		continuous matches 連綿
+연석	緣石	the curb, a curbstone	keep		curbstone
+연성	延性	ductility, tractility	keep		연성 ductility
+연약	軟弱	weak, flaccidity, infirmity	keep		weakness matches 軟弱
+연접	連接	connction, nexion, junction, syzygy	keep		junction matches 連接
+연화	蓮花	softening; soft currency	drop		softening 軟化 and soft currency 軟貨 mixed
+열렬	熱烈	fervency, fervor, hotness, impetusosity	keep		fervor
+열선	熱線	ray; heat rays	keep		열선 heat rays
+열화	熱火	heat, fire; being angry	drop		fire vs anger ambiguous between 烈火/熱火
+염기	厭忌	hating, loathing	keep		loathing matches 厭忌
+염산	鹽酸	hydrochloric acid, muriatic acid	keep		hydrochloric acid matches
+영변	寧邊	fluent like a lawyer; a place in North Korea	drop		mixed: 佞辯 and place 寧邊
+영성	靈性	ethereality, the spiritual realm, spirituality	keep		신령한 품성
+영수	領受	receipt, quittance	keep		領受 listed variant of 領收
+영화하다	映畵하다	etherealize; spiritualize	fix	靈化하다	spiritualize is 靈化, not 映畵 film
+예기	豫期	elan, dash; anticipation, expectation	drop		mixed: elan 銳氣, anticipation 豫期
+예민	銳敏	acuity; subtlety	keep		acuity
+예상외	隸屬民	unanticipated, unplanned for	fix	豫想外	hanja 隸屬民 is wrong word
+오묘	奧妙	deepness, profundity	keep		오묘하다 어근
+오식	誤植	corrigendum, erratum, misprint, printer's error	keep		잘못 인쇄
+온순	溫順	docility, gentleness, mansuetude, tameness	keep		온순하다 어근
+온화	溫和	amiability, benignity, clemency, geniality	keep		mildness
+완강	頑强	strbbornness; tenacity	keep		強/强 variant; stubbornness
+완고	頑固	adamancy, obduracy, obstinacy, pertinacity	keep		obstinacy matches 頑固
+완곡	婉曲	circumambulation, in a roundabout/indirect way, euphemism	keep		roundabout/euphemistic matches 婉曲
+완만	緩慢	inertia; laxation	keep		sluggishness loosely matches 緩慢
+완충기	緩衝器	a buffer, a bumper, a shock absorber	keep		shock absorber
+요격하다	邀擊하다	receive; intercept	keep		intercept matches 邀擊
+요요하다	遙遙하다	distant, far away	keep		매우 멀고 아득하다
+용해하다	溶解하다	to turn into a liquid, to smelt	fix	鎔解하다	smelting/melting by heat is 鎔解
+우매	愚昧	stupidity, foolishness	keep		foolishness matches 愚昧
+우미	優美	daintiness, delicacy, elegance, grace	keep		우미하다 어근
+우사	雨師	cowhouse; cowshed	fix	牛舍	cowshed is 牛舍, 雨師 is rain god
+운모	雲母	isinglass; mica	keep		운모 mica
+울적	鬱寂	sadness, dreariness; melancholy	keep		melancholy
+울창	鬱蒼	luxurious growth, dense vegetative growth	keep		울창하다 어근
+웅장	雄壯	grandness, nobleness, fabulousness	keep		웅장하다 어근
+원구	圓球	blastopore, a sphere	drop		blastopore 原口 and sphere 圓球 mixed
+원대	遠大	great, grand, fantastic	keep		grand (far-reaching) matches 遠大; loose
+원류	源流	headstream; headwaters	keep		headwaters matches 源流
+원만	圓滿	roundness, well-rounded (personality)	keep		원만하다 어근
+원형질	元型質	plasma; protoplasm	fix	原形質	protoplasm is 原形質
+위구	危懼	fear, being afraid	keep		염려하고 두려워함
+위대	偉大	grandeur, grandness, greatness	keep		위대하다 어근
+위무	威武	propitiation; appeasement	fix	慰撫	appeasement is 慰撫
+위서	僞書	a forgery, a pseudograph	keep		forgery
+유능	有能	talent, ability	keep		ability matches 有能
+유순	柔順	docility, pliability, tameness	keep		docility matches 柔順
+유약	柔弱	enamel, glazing, milkiness and glazing over; effeminacy, emasculation, weakness	drop		mixed: glaze 釉藥, weakness 柔弱
+유연	柔軟	pliability, softness	keep		유연하다 어근
+유음	流音	assonance, a liquid sound (linguistics)	keep		유음 liquid
+유장	悠長	plasma; whey	drop		whey is 乳漿 but plasma doubtful
+유증	遺贈	bequest, devisal, testation	keep		bequest
+유창	流暢	mellifluence, smoothness, volubility	keep		fluency
+유폐	幽閉	confinement, imprisonment, incarceration	keep		깊숙이 가둠
+유풍	遺風	a cultural relic, cultural remains passed down	keep		전하여 내려오는 풍속
+육종	育種	sarcoma; breeding of plants and animals	drop		mixes 肉腫 sarcoma and 育種 breeding
+은전	恩典	benefit, privilege	keep		privilege, favor
+음역	音譯	the singing compass, singing range, the musical register	fix	音域	vocal range is 音域, not 音譯 transliteration
+음위	陰覆	agenesis, medical impotence	fix	陰痿	impotence is 陰痿
+의보	醫保	의료 보험, medical insurance	drop		醫保 not listed; only 依報
+의약	醫藥	medicament; curative	keep		병 고치는 약
+의제	議題	agenda; fiction	drop		agenda 議題 and legal fiction 擬制 mixed
+이교	異敎	heathenism, heathenry, heresy	keep		이단의 가르침
+인광	燐光	phosphate rock, phosphoresce, phosphorite	drop		phosphorite 燐鑛 and phosphoresce 燐光 mixed
+인민	人民	people; citizen; collectivity	keep		people matches
+인민공사	人民共사	a commune belonging to the people, a peoples commune	fix	人民公社	hanja malformed; 人民公社 listed
+인육	人肉	human flesh; a woman's flesh	keep		사람 고기
+일문	一門	clan; house	keep		한 가문
+일생일대	一生一代	a lot, very much	drop		senses fit neither 一生一大 nor 一生一代 cleanly
+일이	一二	one,two	keep		matches 一二 one or two
+임산	林産	products from forests, forestry products	keep		forest products
+입목	立木	living/standing timber, stumpage	keep		서 있는 산 나무
+입신하다	立身하다	to succeed, to be successful	keep		입신 출세
+자매어	姉妹어	sister, sisterly	drop		senses (sister) don't match sister-language entry
+자색	姿色	good looks; a woman's good looks or beauty	keep		woman's beauty
+자중	自重	dead load, empty weight	keep		own weight
+작인	作人	causality; agent	drop		causality/agent is 作因, not listed
+잠함	潛함	a caisson, a cofferdam, a pontoon	fix	潛函	caisson is 潛函
+잡역부	雜役夫	general laborer, sb doing various sundry duties depending on day and time, manofallwork	keep		잡일하는 남자
+장갑하다	掌匣하다	cuirass; iron	fix	裝甲하다	armor is 裝甲, 掌匣 is gloves
+장력	張力	tension; tensility	keep		tension matches 張力
+장루	檣樓	a roundtop, the top	keep		masthead platform matches 檣樓
+장비하다	裝備하다	to equip, rig	keep		갖추어 차리다
+장성	將星	general officer, generals	keep		장성 general officers
+장의	葬儀	enteric; intestinal; leaved	drop		intestinal is 腸의, not listed; 葬儀 is funeral
+장중	掌中	inside the parameters of, within the bounds of	drop		within bounds may be 場中; unsure vs 掌中
+장황	張皇	long and tedious, prolixity, verbosity	keep		prolixity
+재송	再送	forwarding again, re-sending	keep		re-sending matches
+재정하다	裁定하다	adjudicate, award, rule	keep		adjudicate matches 裁定
+재택	在宅	at home, in the house	drop		在宅 not listed in stdict
+적당	適當	applicability, pertinency, relevance, -vancy, suitability; moderation, appropriate for the circumstances	keep		suitability
+적실	嫡室	the legitimate wife, as opposed to the one you have but are not married to	keep		legitimate wife
+전거	典據	a basis in, foundation of	keep		문헌상 출처
+전뇌	電腦	prosencephalon; forebrain	fix	前腦	forebrain is 前腦
+전대하다	纏帶하다	sublease, underlease	fix	轉貸하다	sublease is 轉貸
+전재	轉載	reproduction, reprinting, printing again	keep		옮겨 실음
+전정	剪定	pruning; vestibule	drop		mixed: pruning 剪定, vestibule 前庭
+전지	全知	all-knowing, knowing everything	keep		모든 것을 다 앎
+전지	電池	a battery, a voltaic cell	keep		kept: 電池 is the stdict hanja for this meaning (entry was cut from the reviewer list)
+전초	前哨	outpost; outguard	keep		outpost matches 前哨
+절박	切迫	imminence, pressure, (sth is very rushed and there's no time for anything else), urgency	keep		urgency matches 切迫
+정교	情交	sexual intercourse; intimacy, friendship	keep		情交 intimacy; sexual sense same word
+정교	精巧	elaborateness, exquisiteness, delicacy	keep		exquisiteness matches 精巧
+정령	精靈	elemental, an elemental spirit	keep		정령 spirit
+정중	鄭重	civility, courtesy	keep		정중하다 어근
+정충	精蟲	sperm, spermatozoon	keep		spermatozoon
+제사장	祭司長	high priest; pontiff	keep		high priest matches 祭司長
+제식	制式	rules (to be followed in military formation, of a ritual)	drop		mixes drill rules 制式 and ritual 祭式
+조미	助味	flavoring; seasoning	fix	調味	seasoning/flavoring is 調味
+조악	粗惡	baseness, inferiority, meanness	keep		crudeness, inferiority
+조영	造營	a building, a constructed building	keep		집 따위를 지음
+조잡	粗雜	coarseness, crassitude, crudity, grossness	keep		조잡하다 어근
+조재	造材	logging, handling timber	keep		timber making
+종계	種鷄	a breeding hen, a hen for breeding	keep		씨닭
+종루	鐘樓	belfry; bell tower	keep		종을 다는 누각
+종사	從事	prosecution, pursuit of a certain job, career	keep		engage in occupation
+종심	終審	the court of last resort, unappealable after that	keep		최종 심사
+좌골	坐骨	the hipbone, the ischium	keep		골반 뼈
+주각	周角	perigon, plinth, round angle	drop		plinth is 柱脚, perigon is different word
+주루	走壘	base running; running; baserunning	keep		야구 주루
+주물	鑄物	casting; juju	drop		casting 鑄物 and juju 呪物 mixed
+주석하다	主席하다	annotate, comment, gloss	fix	註釋하다	annotate is 註釋
+주요부	主要部	the chief/main part, the trunk	drop		only 主要簿 (ledger) listed; 主要部 unconfirmed
+주장자	主張者	advocate, claimant, urger	drop		主張者 not listed; only 拄杖子 staff
+주조	主潮	casting, founding	fix	鑄造	casting is 鑄造
+주조하다	鑄造하다	casting, coining, minting coins	keep		casting/minting matches 鑄造
+주형	鑄型	print, template	keep		casting mold, loose
+중공	中共	communist China, the Chinese Communist party	keep		중국 공산당
+중매인	仲買人	commission agent, commission broker, middleman	keep		broker 仲買人
+중상하다	重傷하다	calumniate, defame, libel, slander	fix	中傷하다	slander is 中傷, not 重傷
+중역하다	中譯하다	to chain translate from language A to B, then B to C...	fix	重譯하다	chain translation is 重譯, not 中譯 (into Chinese)
+중유	重油	fuel oil; heavy oil	keep		heavy oil
+중절하다	中絶하다	to intermit, to pretermit	keep		中絶/中絕 variant; discontinue
+중파	中波	medium wave; medium frequency	keep		medium wave matches
+증정본	贈呈本	a desk copy, giftbook, presentation copy	keep		presentation copy
+지골	指骨	the phalange, the phalanx	keep		phalanx matches 指骨
+지난	至難	the last (streetlight, time)	drop		senses are native 지난 (past); no entry
+지둔	智鈍	torpor, slow, being slow	fix	遲鈍	slowness is 遲鈍
+지력	知力	the intellect, intellectual capacity	keep		intellect
+지맥	地脈	branch, offshoot, ramificaton	fix	支脈	branch/offshoot is 支脈, 地脈 is geomantic vein
+지복	至福	bliss, felicity	keep		더없는 행복
+지학	地學	earth science, geoscience	keep		earth science matches
+지학	志學	scholarly learning; the age of 15	keep		志學 learning ambition; age fifteen
+직사	直死	immediate, sudden death	keep		instant death
+진사	進士	cinnabar; vermilion	fix	辰沙	cinnabar is 辰沙, 進士 is degree holder
+진서	眞書	bibliopole; curiosa	drop		bookseller/curiosa match no listed entry
+집요	執拗	stubborness, tenacity	keep		집요하다 어근
+차환하다	借換하다	to convert, to reinvest or buy the original stock again, get a refund and invest it	keep		refinance loans
+참수	斬首	beheading, taking off the head	keep		목을 벰
+천박	淺薄	frivolity; sleaze; superficiality, shallowness	keep		shallowness
+천수	天壽	rainwater; natural life	drop		rainwater 天水 and lifespan 天壽 mixed
+천운	天運	destiny, fortune	keep		하늘이 정한 운명
+천이	遷移	migration, movement to a different place; displacement	keep		옮기어 바뀜
+천칭	天秤	a balance, a scale	keep		balance scale
+철금	綴錦	metallophone; glockenspiel	fix	鐵琴	glockenspiel is 鐵琴
+철통	鐵桶	a steel barrel, container	keep		steel barrel matches 鐵桶
+청조	淸朝	ching, Ch'ing	keep		Qing dynasty matches 淸朝
+체적	體積	volume, cubage, cubic measure of volume	keep		volume
+체현하다	體現하다	personify; impersonate	keep		embody/personify matches 體現
+총안	銃眼	a crenel, an embrasure, a gunport	keep		총 쏘는 구멍
+총통	總統	franco; generalissimo; supremo	keep		總統
+추인하다	追認하다	confirm, ratify	keep		소급하여 인정
+추잡	醜雜	coarseness, filth, sleaze	keep		filth matches 醜雜
+축성	祝聖	consecration, sanctification	keep		Catholic consecration 祝聖; same hanja
+축성	築城	castellation (the act of building a castle), fortification	keep		성을 쌓음
+축성하다	祝聖하다	to consecrate, to sanctify	keep		consecrate
+축연	祝宴	a feast, a potlatch	keep		축하 잔치
+축첩	蓄妾	hetaerism; concubinage	keep		concubinage matches 蓄妾
+충분	充分	amplitude, plenitude, sufficiency	keep		sufficiency
+측연	測鉛	plumb, plumb bob, sounding lead	keep		측연 sounding lead
+치관	齒冠	the crown of a tooth, crownwork	keep		tooth crown matches 齒冠
+치세	治世	reign; rule	keep		reign/rule matches 治世
+쾌활	快活	buoyancy, cheer, gaiety, vivacity	keep		cheerfulness
+타구	唾具	a cuspidor, a gaboon, a spittoon	keep		spittoon
+탈모하다	脫帽하다	depilate; cap	drop		mixed: depilate 脫毛, cap 脫帽
+토벌하다	討伐하다	to put down, to suppress	keep		무력으로 쳐 없애다
+통명	通名	a name which is widely known, an alias one is known by	keep		널리 통하는 이름
+통신사	通信使	wire service; news service; news agency	fix	通信社	news agency is 通信社
+통어	統御	mastership; rein	keep		control matches 統御
+통음	痛飮	drinking bout; quaff	keep		heavy drinking
+통행권	通行券	right of passage, right-of-way	fix	通行權	right of passage is 通行權, not ticket
+투석기	投石器	catapult, slingshot	keep		투석기 catapult
+특이성	特異性	idiosyncrasy, particularity, specificity, being different and what makes it so	keep		두드러지게 다른 성질
+파두	巴豆	croton; fade	drop		mixed: croton 巴豆, fado no hanja
+파종기	播種期	planter, seeder, seeding machine, sower	fix	播種機	seeding machine is 播種機, not 播種期 season
+판지	判旨	cardboard, carton, paper board	fix	板紙	cardboard is 板紙
+편제	編制	forming an association or association, a regiment, regimentation	keep		편성 체제
+포만	飽滿	surfeit; satiety	keep		satiety
+포유하다	哺乳하다	to suckle, to give the breast to	keep		젖 먹이다
+표제	標題	headline; a caption, a heading, a title	keep		heading/title matches 標題
+표토	表土	regolith; fuller's earth; topsoil	drop		fuller's earth/regolith not 表土; mixed
+풍부	豊富	abundance, cornucopia, plenitude, profusion, richness	fix	豐富	stdict form 豐富
+풍설	風說	rumor, rumour	keep		rumor matches 風說
+풍족	豊足	fullness, abundancy	fix	豐足	stdict form 豐足
+하상	下裳	river-bed; streambed; channel	fix	河床	riverbed is 河床, not 下裳
+하제	下劑	a laxative, an evacuant; a cathartic, a purgative	keep		설사약
+한수	―手	a move, a fake, a skilled maneauver	drop		hanja ―手 not a listed entry
+합자	合資	double letter; ligature	fix	合字	ligature is 合字
+항진	亢進	sail, proceed, steam ahead	fix	航進	ships proceeding is 航進
+행상하다	行商하다	to cadge, peddle, vend	keep		peddle
+허어	虛言	a lie, sth not true	fix	虛語	headword 허어 is 虛語, not 虛言
+현수	懸垂	pendency, hanging down	keep		아래로 드리워짐
+현저	顯著	an obvious fact; a salient, marked and conspicuous feature	keep		현저하다 어근
+현현	顯現	apparition, directly appearing	keep		manifestation
+협작	挾雜	cheating, swindling, conning	fix	挾作	swindling is 挾作
+혼성	混成	a composition, a mixture (a mixed mixture of a racing team)	keep		섞여서 이루어짐
+화경	花梗	a flower stalk, a peduncle	keep		flower stalk
+화려	華麗	grandeur, luxuriance	keep		splendor
+화복	禍福	fortune and poverty, the good and the bad	keep		fortune and misfortune
+화사	華奢	luxurious, fit for a queen	keep		luxurious matches 華奢
+화서	花序	inflorescence; anthotaxy	keep		inflorescence matches 花序
+화주	貨主	the shipper, the owner of the goods	keep		화물의 임자
+확연	確然	clear, abrupt	keep		clear, certain
+환매	換買	repurchase, buying back, re-buying	fix	還買	buying back is 還買
+환시	幻視	photism; hallucination	keep		visual hallucination
+환절	環節	a ring-like body segment, segmentation	drop		環節 not listed; 換節 is season change
+황급	遑急	precipitance, precipitation, precipitancy	keep		precipitance matches 遑急
+황천	荒天	weather; hades	drop		weather is 荒天, hades is 黃泉: mixed
+황화	黃化	sulfuration; etiolation (plants turning yellow because of lack of sun)	keep		黃化 covers etiolation and sulfur compound
+회오	悔悟	contrition, resipiscence (recognition of a past mistake and the desire to improve in the future), rue, repentance	keep		뉘우치고 깨달음
+회음	會飮	an assemblage, drinking party	keep		모여서 술 마심
+회춘	回春	greening, rejuvenation	keep		rejuvenation
+후작	侯爵	marquess, marquis, nobility	keep		작위
+훈훈	薰薰	to be comfortably warm; to have a warm heart	keep		warmth
+휴지하다	休紙하다	to take a break, to pause	fix	休止하다	pause is 休止
+흉성	凶星	a malefic star, a star which is a bad omen	keep		불길한 별
+흑연	黑鉛	black lead, graphite	keep		graphite matches 黑鉛
+희망봉	希望峯	cape; good Hope; C.G.H.	fix	喜望峯	Cape of Good Hope is 喜望峯
+희미	稀微	faint, not clear	keep		faint
