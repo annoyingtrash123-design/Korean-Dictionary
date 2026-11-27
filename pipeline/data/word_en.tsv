@@ -1,0 +1,3 @@
+# English for 표준국어대사전 meanings that have no English in the app (see src/word_en.rs). AI-written; a row ships only
+# once an independent review set review to "approved..."; ko_def is stdict's text, verbatim (senses joined by " ‖ ").
+headword	hanja	pos	src	en_gloss	ko_def	review
