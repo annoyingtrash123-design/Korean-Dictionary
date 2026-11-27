@@ -60,10 +60,10 @@ pub const MIN_MARGIN: f64 = 0.15;
 /// A krdict fill with a definition score at or above this is `high` certainty, below it `low`.
 pub const HIGH_SCORE: f64 = 0.5;
 
-/// Owner rule "if in doubt, no hanja": when `false`, every `low` certainty fill (this module and the
-/// kengdic fallback in `build.rs`) is dropped instead of written. Default `true` keeps the shipped data
-/// unchanged until the owner has reviewed the samples (`hanja-report` workflow).
-pub const HANJA_KEEP_LOW: bool = true;
+/// Owner rule "if in doubt, no hanja": `false` writes a `low` certainty fill (this module and the kengdic fallback
+/// in `build.rs`) only when the independent review ([`crate::hanja_review`], `data/hanja_reviewed.tsv`) kept or
+/// fixed it; an unreviewed or dropped one is reported but not written. `true` would write every low fill.
+pub const HANJA_KEEP_LOW: bool = false;
 
 /// How sure we are that a pipeline-added hanja is what a KOREAN dictionary (stdict, opendict, krdict) says.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
@@ -705,8 +705,23 @@ pub fn apply_with(core: &Connection, stdict: &Path, ev: &Evidence, keep_low: boo
     }
 
     let mut done: HashSet<i64> = HashSet::new();
-    let push = |conn: &Connection, t: &Target, f: Fill, stats: &mut Stats, records: &mut Vec<Record>, done: &mut HashSet<i64>| -> Result<()> {
-        let kept = keep_low || f.certainty == Certainty::High;
+    let review = crate::hanja_review::HanjaReview::builtin();
+    let push = |conn: &Connection, t: &Target, mut f: Fill, stats: &mut Stats, records: &mut Vec<Record>, done: &mut HashSet<i64>| -> Result<()> {
+        use crate::hanja_review::Verdict;
+        let kept = keep_low
+            || f.certainty == Certainty::High
+            || match review.get(&t.headword, &f.hanja) {
+                Some(Verdict::Keep) => {
+                    f.evidence = "reviewed";
+                    true
+                }
+                Some(Verdict::Fix(h)) => {
+                    f.hanja = h.clone();
+                    f.evidence = "reviewed_fix";
+                    true
+                }
+                _ => false,
+            };
         match f.certainty {
             Certainty::High => stats.high += 1,
             Certainty::Low => stats.low += 1,

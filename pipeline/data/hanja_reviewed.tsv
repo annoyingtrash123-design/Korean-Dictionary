@@ -1,0 +1,697 @@
+# Independent review of pipeline-added hanja (owner rule "if in doubt, no hanja"; see src/hanja_review.rs).
+# keep: 표준국어대사전 gives this hanja on the matching meaning; fix: it gives fixed_hanja instead; drop: no hanja.
+headword	hanja	verdict	fixed_hanja	reason
+가두	街頭	keep		matches stdict sense
+가인	歌人	drop		Cain (biblical name) is not 歌人 singer
+가종피	假種皮	keep		matches stdict sense
+각배	角杯	drop		half-siblings sense not clearly matched; 角杯 is horn cup
+각속도	角速度	keep		matches stdict sense
+각추	角錐	drop		stdict sense is 'awl', not geometric pyramid
+간헐	間歇	keep		matches stdict sense
+간흡충	肝吸蟲	keep		matches stdict sense
+갈분	葛粉	keep		matches stdict sense
+감람산	橄欖山	keep		matches stdict sense
+감람석	橄欖石	keep		matches stdict sense
+감손	減損	keep		matches stdict sense
+감염시키다	感染시키다	keep		base noun sense matches; hanja as listed
+감홍	甘汞	keep		matches stdict sense
+감화원	感化院	keep		matches stdict sense
+강물	江물	keep		matches stdict sense
+개심시키다	改心시키다	keep		base noun sense matches; hanja as listed
+갱의실	更衣室	keep		matches stdict sense
+거취조	巨嘴鳥	drop		stdict sense is the constellation Tucana, not the bird
+건너편	건너便	keep		matches stdict sense
+건락소	乾酪素	keep		matches stdict sense
+검객	劍客	keep		matches stdict sense
+검룡	劍龍	keep		matches stdict sense
+검은색	검은色	keep		matches stdict sense
+격리시키다	隔離시키다	keep		base noun sense matches; hanja as listed
+격앙시키다	激昻시키다	fix	激昂시키다	stdict base writes 激昂 (昂, not variant 昻)
+격추시키다	擊墜시키다	keep		base noun sense matches; hanja as listed
+견제	牽制	keep		matches stdict sense
+결빙시키다	結氷시키다	keep		base noun sense matches; hanja as listed
+결석시키다	缺席시키다	keep		base noun sense matches; hanja as listed
+결심시키다	決心시키다	keep		base noun sense matches; hanja as listed
+결정학	結晶學	keep		matches stdict sense
+겸자	鉗子	keep		matches stdict sense
+경동맥	頸動脈	keep		matches stdict sense
+계속시키다	繼續시키다	keep		base noun sense matches; hanja as listed
+계전기	繼電器	keep		matches stdict sense
+계통성	系統性	keep		matches stdict sense
+고음	高音	keep		matches stdict sense
+고자질	告者질	keep		matches stdict sense
+고적운	高積雲	keep		matches stdict sense
+고전파	古典派	keep		matches stdict sense
+고정시키다	固定시키다	keep		base noun sense matches; hanja as listed
+고추장	고추醬	keep		matches stdict sense
+고층운	高層雲	keep		matches stdict sense
+공분모	公分母	keep		matches stdict sense
+공중제비	空中제비	keep		matches stdict sense
+공짜	空짜	keep		matches stdict sense
+과로시키다	過勞시키다	keep		base noun sense matches; hanja as listed
+과열시키다	過熱시키다	keep		base noun sense matches; hanja as listed
+관용구적	慣用句的	drop		no stdict entry for this spelling
+괄선	括線	keep		matches stdict sense
+광상곡	狂想曲	keep		matches stdict sense
+광전자	光電子	keep		matches stdict sense
+괴경	塊莖	keep		matches stdict sense
+괴근	塊根	keep		matches stdict sense
+교내	校內	keep		matches stdict sense
+교란시키다	攪亂시키다	keep		base noun sense matches; hanja as listed
+교배시키다	交配시키다	keep		base noun sense matches; hanja as listed
+구강염	口腔炎	keep		matches stdict sense
+구동륜	驅動輪	keep		matches stdict sense
+구립운석	球粒隕石	keep		matches stdict sense
+국체	國體	keep		matches stdict sense
+군종	軍宗	fix	軍種	service branch is 軍種; 軍宗 is military religious affairs
+권운	卷雲	keep		matches stdict sense
+권층운	卷層雲	keep		matches stdict sense
+궤변가	詭辯家	keep		matches stdict sense
+궤변술	詭辯術	keep		matches stdict sense
+귀의시키다	歸依시키다	keep		base noun sense matches; hanja as listed
+귀화시키다	歸化시키다	keep		base noun sense matches; hanja as listed
+규산염	硅酸鹽	keep		matches stdict sense
+균등화	均等化	keep		matches stdict sense
+균사	菌絲	keep		matches stdict sense
+그중	그中	keep		matches stdict sense
+극좌표	極座標	keep		matches stdict sense
+극피동물	棘皮動物	keep		matches stdict sense
+근류	根瘤	keep		matches stdict sense
+근음	根音	keep		matches stdict sense
+근지점	近地點	keep		matches stdict sense
+근호	根號	keep		matches stdict sense
+금어초	金魚草	keep		matches stdict sense
+금홍석	金紅石	keep		matches stdict sense
+급강하시키다	急降下시키다	keep		base noun sense matches; hanja as listed
+급소	急所	keep		matches stdict sense
+기관염	氣管炎	keep		matches stdict sense
+기념우표	紀念郵票	keep		matches stdict sense
+기도원	祈禱院	keep		matches stdict sense
+기보법	記譜法	keep		matches stdict sense
+기숙생	寄宿生	keep		matches stdict sense
+기화시키다	氣化시키다	keep		base noun sense matches; hanja as listed
+기흉	氣胸	keep		matches stdict sense
+까만색	까만色	keep		matches stdict sense
+깡패	깡牌	keep		matches stdict sense
+나안	裸眼	keep		matches stdict sense
+나자식물	裸子植物	keep		matches stdict sense
+나체주의자	裸體主義者	keep		matches stdict sense
+낙담시키다	落膽시키다	keep		base noun sense matches; hanja as listed
+난세포	卵細胞	keep		matches stdict sense
+남극권	南極圈	keep		matches stdict sense
+남쪽	南쪽	keep		matches stdict sense
+내공	內攻	fix	內功	martial internal power is 內功; 內攻 is internal spreading
+내과학	內科學	keep		matches stdict sense
+내사시	內斜視	keep		matches stdict sense
+내해	內海	keep		matches stdict sense
+냉방	冷房	keep		matches stdict sense
+냉장되다	冷藏되다	drop		no stdict entry for this spelling
+냉장차	冷藏車	keep		matches stdict sense
+노란색	노란色	keep		matches stdict sense
+노래방	노래房	keep		matches stdict sense
+노인정	老人亭	keep		matches stdict sense
+노포	老鋪	keep		matches stdict sense
+녹니석	綠泥石	keep		matches stdict sense
+녹로	轆轤	keep		matches stdict sense
+녹반	綠礬	keep		matches stdict sense
+농가진	膿痂疹	keep		matches stdict sense
+농민당	農民黨	keep		matches stdict sense
+농사일	農事일	keep		matches stdict sense
+농작	農作	keep		matches stdict sense
+농후	濃厚	keep		matches stdict sense
+뇌룡	雷龍	keep		matches stdict sense
+뇌막	腦膜	keep		matches stdict sense
+뇌막염	腦膜炎	keep		matches stdict sense
+뇌일혈	腦溢血	keep		matches stdict sense
+다항식	多項式	keep		matches stdict sense
+단결시키다	團結시키다	keep		base noun sense matches; hanja as listed
+단백석	蛋白石	keep		matches stdict sense
+단층선	斷層線	keep		matches stdict sense
+단항식	單項式	keep		matches stdict sense
+달력	달曆	keep		matches stdict sense
+당혹시키다	當惑시키다	keep		base noun sense matches; hanja as listed
+대결산	大決算	drop		no stdict entry
+대결시키다	對決시키다	keep		base noun sense matches; hanja as listed
+대란	大亂	keep		matches stdict sense
+대리시키다	代理시키다	keep		base noun sense matches; hanja as listed
+대양주	大洋洲	keep		matches stdict sense
+대업	大業	keep		matches stdict sense
+대운하	大運河	keep		matches stdict sense
+대장간	대장間	keep		matches stdict sense
+대초원	大草原	keep		matches stdict sense
+대칭	對稱	keep		matches stdict sense
+대항시키다	對抗시키다	keep		base noun sense matches; hanja as listed
+독보적	獨步的	keep		matches stdict sense
+돌진시키다	突進시키다	keep		base noun sense matches; hanja as listed
+동결시키다	凍結시키다	keep		base noun sense matches; hanja as listed
+동맥류	動脈瘤	keep		matches stdict sense
+동생	同生	drop		sibling sense is native in stdict; 同生 means living together
+동심	童心	keep		matches stdict sense
+동전	銅錢	keep		matches stdict sense
+동정자	同情者	keep		matches stdict sense
+두개	頭蓋	drop		gloss mixes 'couple' (두 개, native) with cranium
+두흉부	頭胸部	keep		matches stdict sense
+뒷산	뒷山	keep		matches stdict sense
+등심초	燈心草	keep		matches stdict sense
+등압선	等壓線	keep		matches stdict sense
+등차급수	等差級數	keep		matches stdict sense
+등차수열	等差數列	keep		matches stdict sense
+마손	磨損	keep		matches stdict sense
+마전자	馬錢子	keep		matches stdict sense
+마포	麻布	drop		mop is English loanword, not 麻布 hemp cloth
+만곡시키다	彎曲시키다	keep		base noun sense matches; hanja as listed
+만범	滿帆	keep		matches stdict sense
+만초	蔓草	keep		matches stdict sense
+망점	網點	keep		matches stdict sense
+맞은편	맞은便	keep		matches stdict sense
+매달	每달	keep		matches stdict sense
+매음시키다	賣淫시키다	keep		base noun sense matches; hanja as listed
+맥각	麥角	keep		matches stdict sense
+맥관	脈管	keep		matches stdict sense
+맥락막	脈絡膜	keep		matches stdict sense
+맥아당	麥芽糖	keep		matches stdict sense
+맥압	脈壓	keep		matches stdict sense
+맹약	盟約	keep		matches stdict sense
+멱급수	冪級數	keep		matches stdict sense
+면류관	冕旒冠	keep		matches stdict sense
+면역시키다	免疫시키다	keep		base noun sense matches; hanja as listed
+면직시키다	免職시키다	keep		base noun sense matches; hanja as listed
+명세표	明細表	keep		matches stdict sense
+모함	謀陷	keep		matches stdict sense
+모항	母港	keep		matches stdict sense
+모험주의	冒險主義	keep		matches stdict sense
+목불식정	目不識丁	keep		matches stdict sense
+목질부	木質部	keep		matches stdict sense
+목질소	木質素	keep		matches stdict sense
+목회	牧會	keep		matches stdict sense
+몰락시키다	沒落시키다	keep		base noun sense matches; hanja as listed
+무적	無敵	keep		matches stdict sense
+무책임	無責任	keep		matches stdict sense
+무한소	無限小	keep		matches stdict sense
+물권	物權	keep		matches stdict sense
+물기	물氣	keep		matches stdict sense
+미래파	未來派	keep		matches stdict sense
+미익	尾翼	keep		matches stdict sense
+밀도계	密度計	keep		matches stdict sense
+박하뇌	薄荷腦	keep		matches stdict sense
+반말	半말	keep		matches stdict sense
+반보석	半寶石	keep		matches stdict sense
+반사광	反射光	keep		matches stdict sense
+반사면	反射面	keep		matches stdict sense
+반사호	反射弧	keep		matches stdict sense
+반월	半月	drop		stdict sense is half-moon, not half a month
+반축	半軸	drop		stdict 半軸 is split axle, not mathematical semiaxis
+반향시키다	反響시키다	keep		base noun sense matches; hanja as listed
+발광시키다	發光시키다	fix	發狂시키다	craze/derange is 發狂 (madness), not 發光 (emit light)
+발연탄	發煙彈	keep		matches stdict sense
+발열시키다	發熱시키다	keep		base noun sense matches; hanja as listed
+발적시키다	發赤시키다	keep		base noun sense matches; hanja as listed
+밤색	밤色	keep		matches stdict sense
+방선균	放線菌	keep		matches stdict sense
+방해석	方解石	keep		matches stdict sense
+배증	倍增	keep		matches stdict sense
+백류석	白榴石	keep		matches stdict sense
+백리향	百里香	keep		matches stdict sense
+백운모	白雲母	keep		matches stdict sense
+백운석	白雲石	keep		matches stdict sense
+번째	番째	keep		matches stdict sense
+범죄성	犯罪性	keep		matches stdict sense
+범죄율	犯罪率	keep		matches stdict sense
+범죄학	犯罪學	keep		matches stdict sense
+벽개	劈開	keep		matches stdict sense
+변량	變量	keep		matches stdict sense
+변성시키다	變性시키다	keep		base noun sense matches; hanja as listed
+변형시키다	變形시키다	keep		base noun sense matches; hanja as listed
+별표	別表	fix	별標	asterisk is 별標; 別表 is an appended table
+보라색	보라色	keep		matches stdict sense
+보수당	保守黨	keep		matches stdict sense
+보측	步測	keep		matches stdict sense
+보표	譜表	keep		matches stdict sense
+보혈	補血	fix	寶血	blood of Christ is 寶血; 補血 is blood tonic
+보호소	保護所	keep		matches stdict sense
+복령	茯苓	keep		matches stdict sense
+복사계	輻射計	keep		matches stdict sense
+복사본	複寫本	keep		matches stdict sense
+복사지	複寫紙	keep		matches stdict sense
+복수초	福壽草	keep		matches stdict sense
+본위	本位	keep		本位 covers monetary standard
+본의	本意	keep		matches stdict sense
+봉인	封印	keep		matches stdict sense
+봉헌	奉獻	keep		matches stdict sense
+부동항	不凍港	keep		matches stdict sense
+부모님	父母님	keep		matches stdict sense
+부잣집	富者집	keep		matches stdict sense
+부패시키다	腐敗시키다	keep		base noun sense matches; hanja as listed
+북극광	北極光	keep		matches stdict sense
+북쪽	北쪽	keep		matches stdict sense
+북해	北海	keep		matches stdict sense
+분리시키다	分離시키다	keep		base noun sense matches; hanja as listed
+분망	奔忙	keep		matches stdict sense
+분열식	分列式	keep		matches stdict sense
+분자식	分子式	keep		matches stdict sense
+분책	分冊	keep		matches stdict sense
+불시착시키다	不時着시키다	keep		base noun sense matches; hanja as listed
+불청객	不請客	keep		matches stdict sense
+비례시키다	比例시키다	keep		base noun sense matches; hanja as listed
+비막	飛膜	keep		matches stdict sense
+비행갑판	飛行甲板	keep		matches stdict sense
+빈객	賓客	keep		matches stdict sense
+빨간색	빨간色	keep		matches stdict sense
+사또	使道	keep		stdict 使道▽ (marker only)
+사랑방	舍廊房	keep		matches stdict sense
+사모님	師母님	keep		matches stdict sense
+사목	司牧	drop		司牧 listed only as Silla office, not pastoral ministry
+사무	事務	keep		matches stdict sense
+사무직	事務職	keep		matches stdict sense
+사문석	蛇紋石	keep		matches stdict sense
+사수자리	射手자리	keep		matches stdict sense
+사순절	四旬節	keep		matches stdict sense
+사역	使役	keep		matches stdict sense
+사오정	沙悟淨	drop		slang sense not in stdict; only the novel character
+사장석	斜長石	keep		matches stdict sense
+사회당	社會黨	keep		matches stdict sense
+산길	山길	keep		matches stdict sense
+산속	山속	keep		matches stdict sense
+산화시키다	山火시키다	fix	酸化시키다	oxidize is 酸化, not 山火 (forest fire)
+삼첩기	三疊紀	keep		matches stdict sense
+삼출물	滲出物	keep		matches stdict sense
+삼항식	三項式	keep		matches stdict sense
+상염색체	常染色體	keep		matches stdict sense
+상피병	象皮病	keep		matches stdict sense
+상호작용하다	相互作用하다	drop		no stdict entry for this spelling
+색소체	色素體	keep		matches stdict sense
+생명체	生命體	keep		matches stdict sense
+생물량	生物量	keep		matches stdict sense
+생식선	生殖腺	keep		matches stdict sense
+서쪽	西쪽	keep		matches stdict sense
+서판	書板	keep		matches stdict sense
+석뇌유	石腦油	keep		matches stdict sense
+석죽	石竹	keep		matches stdict sense
+선견지명	先見之明	keep		matches stdict sense
+선회시키다	旋回시키다	keep		base noun sense matches; hanja as listed
+설태	舌苔	keep		matches stdict sense
+설하선	舌下腺	keep		matches stdict sense
+섬광등	閃光燈	keep		matches stdict sense
+성결	聖潔	fix	性결	temperament is 性결; 聖潔 means holy purity
+성층	成層	keep		matches stdict sense
+성홍열	猩紅熱	keep		matches stdict sense
+세포벽	細胞壁	keep		matches stdict sense
+셋방	貰房	keep		matches stdict sense
+소기후	小氣候	keep		matches stdict sense
+소변기	小便器	keep		matches stdict sense
+소석회	消石灰	keep		matches stdict sense
+소이탄	燒夷彈	keep		matches stdict sense
+손상시키다	損傷시키다	keep		base noun sense matches; hanja as listed
+손수건	손手巾	keep		matches stdict sense
+쇠미	衰微	keep		matches stdict sense
+수경법	水耕法	keep		matches stdict sense
+수난자	受難者	keep		matches stdict sense
+수도꼭지	水道꼭지	keep		matches stdict sense
+수돗물	水道물	keep		matches stdict sense
+수란관	輸卵管	keep		matches stdict sense
+수력학	水力學	keep		matches stdict sense
+수상작	受賞作	keep		matches stdict sense
+수정관	輸精管	keep		matches stdict sense
+숙박시키다	宿泊시키다	keep		base noun sense matches; hanja as listed
+숙성	熟成	keep		matches stdict sense
+숙지시키다	熟知시키다	keep		base noun sense matches; hanja as listed
+순환시키다	循環시키다	keep		base noun sense matches; hanja as listed
+술병	술甁	fix	술病	hangover is 술病, not 술甁 bottle
+시봉	侍奉	keep		matches stdict sense
+시산표	試算表	keep		matches stdict sense
+시식	試食	keep		matches stdict sense
+시신세	始新世	keep		matches stdict sense
+시아버지	媤아버지	keep		matches stdict sense
+시어머니	媤어머니	keep		matches stdict sense
+시작점	始作點	keep		matches stdict sense
+식객	食客	keep		matches stdict sense
+신경과민	神經過敏	keep		matches stdict sense
+신경병	神經病	keep		matches stdict sense
+신년	新年	keep		matches stdict sense
+신사상	新思想	keep		matches stdict sense
+신염	腎炎	keep		matches stdict sense
+신우염	腎盂炎	keep		matches stdict sense
+실격시키다	失格시키다	keep		base noun sense matches; hanja as listed
+실달다	悉達多	keep		matches stdict sense
+실리주의	實利主義	keep		matches stdict sense
+실재시키다	實在시키다	keep		base noun sense matches; hanja as listed
+십자형	十字形	keep		matches stdict sense
+쌍곡면	雙曲面	keep		matches stdict sense
+쌍구균	雙球菌	keep		matches stdict sense
+쌍둥이	雙둥이	keep		matches stdict sense
+쌍발	雙發	drop		gloss "going to work" does not match 雙發
+쌍십절	雙十節	keep		matches stdict sense
+쓰레기통	쓰레기桶	keep		matches stdict sense
+아과	亞科	keep		matches stdict sense
+아래층	아래層	keep		matches stdict sense
+아마인	亞麻仁	keep		matches stdict sense
+아마포	亞麻布	keep		matches stdict sense
+아선약	阿仙藥	keep		matches stdict sense
+아열대	亞熱帶	keep		matches stdict sense
+악착	齷齪	keep		matches stdict sense
+안과학	眼科學	keep		matches stdict sense
+안락사시키다	安樂死시키다	keep		base noun sense matches; hanja as listed
+안방	안房	keep		matches stdict sense
+안식	安息	keep		matches stdict sense
+안식향	安息香	keep		matches stdict sense
+안점	眼點	drop		stdict sense is graph-paper grid dot, not eyespot
+압축비	壓縮比	keep		matches stdict sense
+앞문	앞門	keep		matches stdict sense
+애초	애初	keep		matches stdict sense
+액포	液胞	keep		matches stdict sense
+야금학	冶金學	keep		matches stdict sense
+야유	揶揄	keep		matches stdict sense
+야인	野人	keep		matches stdict sense
+양막	羊膜	keep		matches stdict sense
+양배추	洋배추	keep		matches stdict sense
+양옥집	洋屋집	keep		matches stdict sense
+양장	洋裝	keep		matches stdict sense
+양쪽	兩쪽	keep		matches stdict sense
+어분	魚粉	keep		matches stdict sense
+엄한	嚴寒	drop		entry is 엄하다 'strict'; 嚴寒 means severe cold
+여순	旅順	keep		matches stdict sense
+여점원	女店員	keep		matches stdict sense
+여편네	女便네	keep		matches stdict sense
+여현	餘弦	keep		matches stdict sense
+역참	驛站	keep		matches stdict sense
+연꽃	蓮꽃	keep		matches stdict sense
+연막탄	煙幕彈	keep		matches stdict sense
+연분수	連分數	keep		matches stdict sense
+연합시키다	聯合시키다	keep		base noun sense matches; hanja as listed
+열곡	裂谷	keep		matches stdict sense
+열중시키다	熱中시키다	keep		base noun sense matches; hanja as listed
+염산염	鹽酸鹽	keep		matches stdict sense
+염색질	染色質	keep		matches stdict sense
+영과	穎果	keep		matches stdict sense
+영양학	營養學	keep		matches stdict sense
+영업세	營業稅	keep		matches stdict sense
+옆방	옆房	keep		matches stdict sense
+예광탄	曳光彈	keep		matches stdict sense
+오덕	五德	drop		otaku slang, unrelated to 五德
+오래전	오래前	keep		matches stdict sense
+오해시키다	誤解시키다	keep		base noun sense matches; hanja as listed
+온종일	온終日	keep		matches stdict sense
+옹고집	壅固執	keep		matches stdict sense
+왜간장	倭간醬	keep		matches stdict sense
+외출	外出	keep		matches stdict sense
+외할머니	外할머니	keep		matches stdict sense
+외할아버지	外할아버지	keep		matches stdict sense
+요독증	尿毒症	keep		matches stdict sense
+요리점	料理店	keep		matches stdict sense
+용돈	用돈	keep		matches stdict sense
+용설란	龍舌蘭	keep		matches stdict sense
+용해도	溶解度	keep		matches stdict sense
+용혈수	龍血樹	keep		matches stdict sense
+우비	雨備	keep		matches stdict sense
+우슬초	牛膝草	keep		matches stdict sense
+우애	友愛	keep		matches stdict sense
+운영자	運營者	drop		no stdict entry
+운행시키다	運行시키다	keep		base noun sense matches; hanja as listed
+웅장	雄壯	keep		matches stdict sense
+웅황	雄黃	keep		matches stdict sense
+원유회	園遊會	keep		matches stdict sense
+원자량	原子量	keep		matches stdict sense
+원자론	原子論	keep		matches stdict sense
+원주민	原住民	keep		matches stdict sense
+원지점	遠地點	keep		matches stdict sense
+원추	圓錐	keep		matches stdict sense
+월동시키다	越冬시키다	keep		base noun sense matches; hanja as listed
+위염	胃炎	keep		matches stdict sense
+위자	慰藉	keep		matches stdict sense
+위층	위層	keep		matches stdict sense
+위협시키다	威脅시키다	keep		base noun sense matches; hanja as listed
+유공충	有孔蟲	keep		matches stdict sense
+유랑자	流浪者	keep		matches stdict sense
+유명세	有名稅	keep		matches stdict sense
+유백색	乳白色	keep		matches stdict sense
+유선염	乳腺炎	keep		matches stdict sense
+유성체	流星體	keep		matches stdict sense
+유신론자	有神論者	keep		matches stdict sense
+유심론적	唯心論的	drop		no stdict entry for this spelling
+유착시키다	癒着시키다	keep		base noun sense matches; hanja as listed
+유통시키다	流通시키다	keep		base noun sense matches; hanja as listed
+유행시키다	流行시키다	keep		base noun sense matches; hanja as listed
+육개장	肉개醬	keep		matches stdict sense
+육계	肉鷄	fix	肉桂	cinnamon is 肉桂; 肉鷄 is broiler chicken
+육아종	肉芽腫	keep		matches stdict sense
+윤창하다	輪唱하다	keep		base noun sense matches; hanja as listed
+윤활액	潤滑液	drop		stdict sense is synovial fluid, not general lubricant
+융통성	融通性	keep		融通性 same hanja for flexibility sense
+은퇴시키다	隱退시키다	keep		base noun sense matches; hanja as listed
+은폐	隱蔽	keep		matches stdict sense
+은행업	銀行業	keep		matches stdict sense
+음속	音速	keep		matches stdict sense
+응고시키다	凝固시키다	keep		base noun sense matches; hanja as listed
+응고점	凝固點	keep		matches stdict sense
+응집소	凝集素	keep		matches stdict sense
+이뇨	利尿	keep		matches stdict sense
+이번	이番	keep		matches stdict sense
+이윤율	利潤率	keep		matches stdict sense
+이항식	二項式	keep		stdict sense matches meaning; same hanja
+익수룡	翼手龍	keep		stdict sense matches meaning; same hanja
+인두세	人頭稅	keep		stdict sense matches meaning; same hanja
+인문	人文	keep		matches stdict sense
+일광욕실	日光浴室	keep		stdict sense matches meaning; same hanja
+일습	一襲	keep		stdict sense matches meaning; same hanja
+임파액	淋巴液	keep		stdict sense matches meaning; same hanja
+입방근	立方根	keep		stdict sense matches meaning; same hanja
+자각시키다	自覺시키다	keep		base noun sense matches; hanja as listed
+자기권	磁氣圈	keep		matches stdict sense
+자료실	資料室	keep		matches stdict sense
+자석영	紫石英	keep		stdict sense matches meaning; same hanja
+자수품	刺繡品	keep		stdict sense matches meaning; same hanja
+자연대수	自然對數	keep		stdict sense matches meaning; same hanja
+자연법	自然法	keep		stdict sense matches meaning; same hanja
+자엽	子葉	keep		stdict sense matches meaning; same hanja
+자영업자	自營業者	keep		matches stdict sense
+자유화	自由化	keep		matches stdict sense
+자장가	자장歌	keep		matches stdict sense
+자주색	紫朱色	keep		matches stdict sense
+자홍색	紫紅色	keep		stdict sense matches meaning; same hanja
+작	作	keep		matches stdict sense
+잔류물	殘留物	keep		stdict sense matches meaning; same hanja
+잡록	雜錄	keep		stdict sense matches meaning; same hanja
+잡역	雜役	keep		stdict sense matches meaning; same hanja
+장개석	蔣介石	keep		stdict sense matches meaning; same hanja
+장모님	丈母님	keep		matches stdict sense
+장서표	藏書票	keep		stdict sense matches meaning; same hanja
+재결합시키다	再結合시키다	keep		base noun sense matches; hanja as listed
+재보험	再保險	keep		stdict sense matches meaning; same hanja
+재삼재사	再三再四	keep		stdict sense matches meaning; same hanja
+재생시키다	再生시키다	keep		base noun sense matches; hanja as listed
+재출발시키다	再出發시키다	keep		base noun sense matches; hanja as listed
+재혼시키다	再婚시키다	keep		base noun sense matches; hanja as listed
+저음	低音	keep		matches stdict sense
+적운	積雲	keep		stdict sense matches meaning; same hanja
+전개시키다	展開시키다	keep		base noun sense matches; hanja as listed
+전날	前날	keep		matches stdict sense
+전손	全損	keep		stdict sense matches meaning; same hanja
+전해액	電解液	keep		stdict sense matches meaning; same hanja
+전화당	轉化糖	keep		stdict sense matches meaning; same hanja
+절분음	切分音	keep		stdict sense matches meaning; same hanja
+절삭	切削	keep		stdict sense matches meaning; same hanja
+절실	切實	keep		matches stdict sense
+절연체	絕緣體	keep		stdict sense matches meaning; same hanja
+점근선	漸近線	keep		stdict sense matches meaning; same hanja
+점성가	占星家	keep		stdict sense matches meaning; same hanja
+점술	占術	keep		matches stdict sense
+점신세	漸新世	keep		stdict sense matches meaning; same hanja
+접근시키다	接近시키다	keep		base noun sense matches; hanja as listed
+접촉기	接觸器	keep		stdict sense matches meaning; same hanja
+접촉시키다	接觸시키다	keep		base noun sense matches; hanja as listed
+정낭	精囊	drop		dialect outhouse word, not 精囊 seminal vesicle
+정다면체	正多面體	keep		stdict sense matches meaning; same hanja
+정신병학	精神病學	keep		stdict sense matches meaning; same hanja
+정오표	正誤表	keep		stdict sense matches meaning; same hanja
+정자법	正字法	keep		stdict sense matches meaning; same hanja
+정장석	正長石	keep		stdict sense matches meaning; same hanja
+정장시키다	正裝시키다	keep		base noun sense matches; hanja as listed
+정착	定着	keep		matches stdict sense
+제산제	制酸劑	keep		stdict sense matches meaning; same hanja
+조간대	潮間帶	keep		stdict sense matches meaning; same hanja
+조명탄	照明彈	keep		stdict sense matches meaning; same hanja
+조색판	調色板	keep		stdict sense matches meaning; same hanja
+존댓말	尊待말	keep		matches stdict sense
+종단면	縱斷面	keep		stdict sense matches meaning; same hanja
+종소리	鐘소리	keep		matches stdict sense
+좌천시키다	左遷시키다	keep		matches stdict sense
+주기계	週期系	keep		stdict sense matches meaning; same hanja
+주기표	週期表	keep		stdict sense matches meaning; same hanja
+주선율	主旋律	keep		stdict sense matches meaning; same hanja
+주해	註解	keep		matches stdict sense
+준비물	準備物	keep		matches stdict sense
+중격	中隔	keep		stdict sense matches meaning; same hanja
+중국집	中國집	keep		matches stdict sense
+중립시키다	中立시키다	keep		matches stdict sense
+중심립	中心粒	keep		stdict sense matches meaning; same hanja
+중원소	重元素	keep		stdict sense matches meaning; same hanja
+중이	中耳	keep		stdict sense matches meaning; same hanja
+중정석	重晶石	keep		stdict sense matches meaning; same hanja
+중합시키다	重合시키다	keep		matches stdict sense
+중혼	重婚	keep		stdict sense matches meaning; same hanja
+중혼죄	重婚罪	keep		stdict sense matches meaning; same hanja
+증식	增殖	keep		matches stdict sense
+증식시키다	增殖시키다	keep		matches stdict sense
+지각력	知覺力	keep		stdict sense matches meaning; same hanja
+지난번	지난番	keep		matches stdict sense
+지난주	지난週	keep		matches stdict sense
+지방주의	地方主義	keep		stdict sense matches meaning; same hanja
+지표수	地表水	keep		stdict sense matches meaning; same hanja
+직근	直根	keep		stdict sense matches meaning; same hanja
+직녀성	織女星	keep		stdict sense matches meaning; same hanja
+직장경	直腸鏡	keep		stdict sense matches meaning; same hanja
+진앙	震央	keep		stdict sense matches meaning; same hanja
+질점	質點	keep		stdict sense matches meaning; same hanja
+짐마차	짐馬車	keep		matches stdict sense
+집행인	執行人	keep		stdict sense matches meaning; same hanja
+찰상	擦傷	keep		stdict sense matches meaning; same hanja
+창밖	窓밖	keep		matches stdict sense
+창턱	窓턱	keep		matches stdict sense
+채원	菜園	keep		stdict sense matches meaning; same hanja
+책가방	冊가방	keep		matches stdict sense
+처자식	妻子息	keep		matches stdict sense
+척력	斥力	keep		stdict sense matches meaning; same hanja
+척수염	脊髓炎	keep		stdict sense matches meaning; same hanja
+척주	脊柱	keep		stdict sense matches meaning; same hanja
+척추골	脊椎骨	keep		stdict sense matches meaning; same hanja
+천신	天神	keep		天神 heavenly god; stdict sense shown is cross-reference
+천제	天帝	drop		天帝 is the supreme god, not heaven/paradise
+천축모란	天竺牡丹	keep		stdict sense matches meaning; same hanja
+첨삭	添削	keep		matches stdict sense
+청설모	靑鼠毛	keep		stdict 靑鼠▽毛 (marker only)
+초밥	醋밥	keep		matches stdict sense
+초벌	初벌	keep		matches stdict sense
+초여름	初여름	keep		matches stdict sense
+초월시키다	超越시키다	keep		matches stdict sense
+촉광	燭光	keep		stdict sense matches meaning; same hanja
+총사령부	總司令部	keep		stdict sense matches meaning; same hanja
+추락시키다	墜落시키다	keep		matches stdict sense
+축거	軸距	keep		stdict sense matches meaning; same hanja
+축구공	蹴球공	keep		matches stdict sense
+출납원	出納員	keep		stdict sense matches meaning; same hanja
+출발점	出發點	keep		matches stdict sense
+출석자	出席者	keep		stdict sense matches meaning; same hanja
+충적층	沖積層	keep		stdict sense matches meaning; same hanja
+충혈시키다	充血시키다	keep		matches stdict sense
+취관	吹管	keep		stdict sense matches meaning; same hanja
+측지선	測地線	keep		stdict sense matches meaning; same hanja
+층적운	層積雲	keep		stdict sense matches meaning; same hanja
+치은염	齒齦炎	keep		stdict sense matches meaning; same hanja
+침묵시키다	沈默시키다	keep		matches stdict sense
+침전시키다	沈澱시키다	keep		matches stdict sense
+칫솔	齒솔	keep		matches stdict sense
+타협시키다	妥協시키다	keep		matches stdict sense
+탁도	濁度	keep		stdict sense matches meaning; same hanja
+탁음	濁音	keep		stdict sense matches meaning; same hanja
+탄저열	炭疽熱	keep		stdict sense matches meaning; same hanja
+탈구시키다	脫臼시키다	keep		matches stdict sense
+탕파	湯婆	keep		stdict sense matches meaning; same hanja
+태양등	太陽燈	keep		stdict sense matches meaning; same hanja
+토양학	土壤學	keep		stdict sense matches meaning; same hanja
+통제력	統制力	keep		matches stdict sense
+통행세	通行稅	keep		stdict sense matches meaning; same hanja
+퇴장시키다	退場시키다	keep		matches stdict sense
+퇴폐시키다	頹廢시키다	keep		matches stdict sense
+투기자	投機者	keep		stdict sense matches meaning; same hanja
+투시도	透視圖	keep		stdict sense matches meaning; same hanja
+투하	投下	keep		matches stdict sense
+특매	特賣	keep		stdict sense matches meaning; same hanja
+특허장	特許狀	keep		stdict sense matches meaning; same hanja
+파란색	파란色	keep		matches stdict sense
+파상열	波狀熱	keep		stdict sense matches meaning; same hanja
+파열시키다	破裂시키다	keep		matches stdict sense
+파종	播種	keep		matches stdict sense
+판례법	判例法	keep		matches stdict sense
+팔각형	八角形	keep		matches stdict sense
+패가망신	敗家亡身	keep		matches stdict sense
+패소시키다	敗訴시키다	keep		matches stdict sense
+팽창시키다	膨脹시키다	keep		matches stdict sense
+편극	偏極	keep		stdict sense matches meaning; same hanja
+편년사	編年史	keep		stdict sense matches meaning; same hanja
+편미분	偏微分	keep		stdict sense matches meaning; same hanja
+편집광	偏執狂	keep		stdict sense matches meaning; same hanja
+편집실	編輯室	keep		stdict sense matches meaning; same hanja
+평형되다	平衡되다	drop		no stdict entry for 평형되다
+평형시키다	平衡시키다	keep		matches stdict sense
+포경선	捕鯨船	keep		stdict sense matches meaning; same hanja
+포물면	抛物面	keep		stdict sense matches meaning; same hanja
+포식자	捕食者	keep		stdict sense matches meaning; same hanja
+포함시키다	包含시키다	keep		matches stdict sense
+푸대접	푸待接	keep		matches stdict sense
+풍취	風趣	keep		matches stdict sense
+풍화시키다	風化시키다	keep		base noun sense matches; hanja as listed
+피감수	被減數	keep		stdict sense matches meaning; same hanja
+피란	避亂	keep		matches stdict sense
+피자식물	被子植物	keep		stdict sense matches meaning; same hanja
+피층	皮層	keep		stdict sense matches meaning; same hanja
+필독	必讀	keep		matches stdict sense
+하숙집	下宿집	keep		matches stdict sense
+하악	下顎	drop		hiss is onomatopoeia, not 下顎 lower jaw
+하얀색	하얀色	keep		matches stdict sense
+학계	學界	keep		matches stdict sense
+한쌍	—雙	drop		no stdict entry
+할양	割讓	keep		stdict sense matches meaning; same hanja
+함교	艦橋	keep		stdict sense matches meaning; same hanja
+함몰시키다	陷沒시키다	keep		matches stdict sense
+함수초	含羞草	keep		stdict sense matches meaning; same hanja
+함자	銜字	drop		dialect form of 혼자, unrelated to 銜字
+합력	合力	keep		stdict sense matches meaning; same hanja
+합성수	合成數	keep		stdict sense matches meaning; same hanja
+항공술	航空術	keep		stdict sense matches meaning; same hanja
+항등식	恒等式	keep		stdict sense matches meaning; same hanja
+해당화	海棠花	keep		matches stdict sense
+해상력	解像力	keep		stdict sense matches meaning; same hanja
+해소시키다	解消시키다	keep		matches stdict sense
+해체	解體	fix	해體	speech level is 해體, not 解體
+핵소체	核小體	keep		stdict sense matches meaning; same hanja
+핵의학	核醫學	keep		stdict sense matches meaning; same hanja
+핵형	核型	keep		stdict sense matches meaning; same hanja
+향락주의	享樂主義	keep		stdict sense matches meaning; same hanja
+향성	向性	keep		stdict sense matches meaning; same hanja
+향연하다	饗宴하다	keep		matches stdict sense
+혁대	革帶	keep		matches stdict sense
+혈괴	血塊	keep		stdict sense matches meaning; same hanja
+혈뇨	血尿	keep		stdict sense matches meaning; same hanja
+혈전증	血栓症	keep		stdict sense matches meaning; same hanja
+혈종	血腫	keep		stdict sense matches meaning; same hanja
+형석	螢石	keep		stdict sense matches meaning; same hanja
+형성층	形成層	keep		stdict sense matches meaning; same hanja
+호로파	葫蘆巴	keep		stdict sense matches meaning; same hanja
+호소학	湖沼學	keep		stdict sense matches meaning; same hanja
+호주머니	胡주머니	keep		matches stdict sense
+혼작	混作	keep		stdict sense matches meaning; same hanja
+홍등	紅燈	keep		stdict sense matches meaning; same hanja
+홍색	紅色	keep		matches stdict sense
+홍소	哄笑	keep		stdict sense matches meaning; same hanja
+홍수	洪水	keep		matches stdict sense
+홍옥수	紅玉髓	keep		stdict sense matches meaning; same hanja
+화농성	化膿性	keep		stdict sense matches meaning; same hanja
+화산력	火山礫	keep		stdict sense matches meaning; same hanja
+화산모	火山毛	keep		matches stdict sense
+화학전	化學戰	keep		stdict sense matches meaning; same hanja
+확신시키다	確信시키다	keep		matches stdict sense
+확장시키다	擴張시키다	keep		matches stdict sense
+환생	幻生	fix	還生	reincarnation is 還生
+환원시키다	還元시키다	keep		matches stdict sense
+환초	環礁	keep		stdict sense matches meaning; same hanja
+활용시키다	活用시키다	keep		matches stdict sense
+황반	黃斑	keep		stdict sense matches meaning; same hanja
+황선	黃癬	keep		stdict sense matches meaning; same hanja
+황열병	黃熱病	keep		stdict sense matches meaning; same hanja
+황적색	黃赤色	keep		stdict sense matches meaning; same hanja
+회귀선	回歸線	keep		stdict sense matches meaning; same hanja
+회귀열	回歸熱	keep		stdict sense matches meaning; same hanja
+회선곡	回旋曲	keep		stdict sense matches meaning; same hanja
+회양목	회楊木	keep		matches stdict sense
+회절시키다	回折시키다	keep		matches stdict sense
+후갑판	後甲板	keep		stdict sense matches meaning; same hanja
+후진시키다	後進시키다	keep		後進 is the vehicle-reversing word
+후치	後置	keep		stdict sense matches meaning; same hanja
+후치사	後置詞	keep		stdict sense matches meaning; same hanja
+휘석	輝石	keep		stdict sense matches meaning; same hanja
+휴양시키다	休養시키다	keep		matches stdict sense
+흉골	胸骨	keep		stdict sense matches meaning; same hanja
+흉선	胸腺	keep		stdict sense matches meaning; same hanja
+흡입기	吸入器	keep		stdict sense matches meaning; same hanja
+희대	稀代	keep		matches stdict sense
+흰색	흰色	keep		matches stdict sense

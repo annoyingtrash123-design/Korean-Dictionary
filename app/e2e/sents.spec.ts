@@ -158,18 +158,18 @@ test('우리말샘 English equivalents are shown', async ({ page }) => {
   await page.waitForTimeout(400);
   await page.screenshot({ path: '../docs/screenshots/opendict-en-ipad.png' });
 
-  // English search: rows from English dictionaries take the hanja that 표준/우리말샘 give the word
+  // English search never guesses hanja for rows whose dictionary gives none (owner rule "if in doubt, no hanja"):
+  // kengdic's 선물환 and 선물 가게 stay plain (the run-time guess used to add 先物換 and 膳物)
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole('link', { name: 'Search' }).click();
   await page.getByRole('searchbox', { name: 'Search' }).fill('forward contract');
   const sw = page.locator('.row', { has: page.locator('.hw', { hasText: /^선물환$/ }) }).first();
-  await expect(sw.locator('.hanja')).toHaveText('先物換');
-  // 선물 is 先物 (futures) or 膳物 (gift): each English row gets the one its meaning needs
-  const fc = page.locator('.row', { has: page.locator('.hw', { hasText: /^선물 계약$/ }) }).first();
-  await expect(fc.locator('.hanja')).toHaveText(/^先物/);
+  await expect(sw).toBeVisible();
+  await expect(sw.locator('.hanja')).toHaveCount(0);
   await page.getByRole('searchbox', { name: 'Search' }).fill('gift shop');
   const gs = page.locator('.row', { has: page.locator('.hw', { hasText: /^선물 가게$/ }) }).first();
-  await expect(gs.locator('.hanja')).toHaveText(/^膳物 ?가게$/);
+  await expect(gs).toBeVisible();
+  await expect(gs.locator('.hanja')).toHaveCount(0);
   await page.waitForTimeout(300);
   await page.screenshot({ path: '../docs/screenshots/english-hanja-phone.png' });
   await page.setViewportSize({ width: 1180, height: 820 });

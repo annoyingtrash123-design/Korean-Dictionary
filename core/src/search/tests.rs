@@ -997,6 +997,7 @@ fn filled(packs: &[&PackDb], ids: &[i64]) -> Vec<Option<String>> {
     rows.into_iter().map(|r| r.hanja).collect()
 }
 
+/// The guess itself (kept for reference; switched off in search, see [`SEARCH_FILL_HANJA`]).
 #[test]
 fn english_rows_take_hanja_by_meaning() {
     let (core, st) = hanja_fixture();

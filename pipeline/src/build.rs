@@ -745,6 +745,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
         // (the reviewed keep list, e.g. 동생 同生, overrides it)
         let mut guard = stdict.map(crate::hanja_fill::FallbackGuard::open).transpose()?;
         let reviewed = crate::hanja_fixes::HanjaFixes::builtin();
+        let review = crate::hanja_review::HanjaReview::builtin();
         let (mut filled, mut dropped) = (0, 0);
         let mut report = String::from("headword\tsource\thanja\tverdict\tcertainty\tevidence\tgloss\n");
         let (mut n_high, mut n_low) = (0, 0);
@@ -769,9 +770,20 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 let g = v.get("senses").and_then(|s| s.as_array()).and_then(|a| a.iter().find_map(|s| s.get("gloss").or_else(|| s.get("ko_def")).and_then(|g| g.as_str()))).unwrap_or("");
                 truncate(g, 120).replace(['\t', '\n', '\r'], " ")
             };
+            // the independent review (data/hanja_reviewed.tsv) has the last word on a fallback hanja: drop, fix or keep;
+            // a low one it has not kept is dropped (owner rule "if in doubt, no hanja")
+            use crate::hanja_review::Verdict;
+            let rv = verdict.and_then(|_| review.get(&hwn, h));
+            let (h, verdict) = match rv {
+                Some(Verdict::Drop) => (h.clone(), None),
+                Some(Verdict::Fix(f)) => (f.clone(), Some((Certainty::High, "reviewed_fix"))),
+                Some(Verdict::Keep) => (h.clone(), verdict.map(|(c, e)| (c, if c == Certainty::Low { "reviewed" } else { e }))),
+                None => (h.clone(), verdict),
+            };
+            let h = &h;
             let (cert, evid) = verdict.map_or(("", ""), |(c, e)| (c.as_str(), e));
-            let keep = verdict.is_some_and(|(c, _)| c == Certainty::High || crate::hanja_fill::HANJA_KEEP_LOW);
-            let label = if verdict.is_none() { "dropped" } else if keep { "kept" } else { "dropped_low" };
+            let keep = verdict.is_some_and(|(c, _)| c == Certainty::High || matches!(rv, Some(Verdict::Keep)) || crate::hanja_fill::HANJA_KEEP_LOW);
+            let label = if rv == Some(&Verdict::Drop) { "dropped_review" } else if verdict.is_none() { "dropped" } else if keep { "kept" } else { "dropped_low" };
             report.push_str(&format!("{hwn}\t{source}\t{h}\t{label}\t{cert}\t{evid}\t{gloss}\n"));
             let Some((certainty, evidence)) = verdict.filter(|_| keep) else {
                 dropped += 1;
@@ -791,7 +803,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             filled += 1;
         }
         fs::write(out.join("hanja_kengdic_fallback.tsv"), report)?;
-        log::info!("kengdic hanja fallback filled {filled} entries [{n_high} high, {n_low} low] ({dropped} dropped: stdict does not back the hanja for this meaning, or low certainty with HANJA_KEEP_LOW off)");
+        log::info!("kengdic hanja fallback filled {filled} entries [{n_high} high, {n_low} low] ({dropped} dropped: stdict does not back the hanja for this meaning, low certainty not kept by the review, or dropped by the review)");
     }
 
     // sentences: Tatoeba + wikt

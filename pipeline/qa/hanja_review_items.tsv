@@ -1,0 +1,695 @@
+n	set	headword	hanja	source	pos	entry_meaning	stdict_senses (hanja | pos | Korean definition)
+1	fill	범죄율	犯罪率	krdict	noun	한 나라나 지역에서 일정 기간 동안 범죄가 일어난 비율.	犯罪率 | noun | 범죄가 일어나는 비율.
+2	fill	녹반	綠礬	kengdic	other	green vitriol; copperas, ferric sulfate, green vitriol	綠礬 | noun | 철의 황산염의 하나. 철을 묽은 황산에 녹여서 만든 녹색 결정 물질로, 잉크·안료·의약·매염제 따위로 쓰인다. 화학식은 FeSO4.
+3	fill	맥아당	麥芽糖	kengdic	other	maltose	麥芽糖 | noun | 녹말이 베타 아밀라아제의 촉매로 가수 분해가 되어 생성되는 이당류의 하나. 무색 고체이며, 물엿의 주성분이다. 화학식은 C12H22O11.
+4	fill	설태	舌苔	kengdic	other	coated (furred) tongue	舌苔 | noun | 혓바닥에 끼는 흰색이나 회색, 황갈색의 이끼 모양 물질.
+5	fill	소변기	小便器	kengdic	other	urinal; a urinal	小便器 | noun | 오줌을 누게 만든 기구.
+6	fill	압축비	壓縮比	kengdic	other	compression ratio	壓縮比 | noun | 내연 기관의 실린더 속에 빨아들인 혼합 가스나 공기가 피스톤에 의하여 압축되는 비율. 압축비가 높으면 엔진의 용적, 중량을 늘리지 않고 출력을 높일 수 있으나 노킹을 일으키기 쉽다.
+7	fill	여순	旅順	kengdic	other	port Arthur	旅順 | noun | → 뤼순.
+8	fill	유선염	乳腺炎	kengdic	other	mastitis	乳腺炎 | noun | 젖꼭지에 생긴 상처로 화농균이 침입하여 일어나는 젖샘의 염증. 젖샘이 부어 빨개지고 통증이 심하다.
+9	fill	자기권	磁氣圈	kengdic	other	magnetosphere	磁氣圈 | noun | 대기의 최상층부에서 지구 자기의 자기장 에너지가 대기의 열운동 에너지보다 큰 부분. 이 권역의 대기는 거의 전리되어 플라스마 상태에 있다. 지상에서 80~4만 km의 대기 영역을 이른다.
+10	fill	판례법	判例法	kengdic	other	judgemade; case law	判例法 | noun | 판례의 누적(累積)에 의하여 성립한, 법 규범으로서 성문화되지 아니한 법.
+11	fill	화산모	火山毛	kengdic	other	Pele's hair	火山毛 | noun | 화산에서 나온 유리질 용암이 날려서 머리털 모양으로 굳은 것.
+12	fill	가종피	假種皮	kengdic	other	aril	假種皮 | noun | 겉으로는 보통의 과피와 같으나 실제로는 수정 후 태(胎) 자리나 주병(珠柄)이 비대해져서 씨를 싸게 된 과피. 사철나무의 열매, 주목의 열매 따위에 있다.
+13	fill	각속도	角速度	kengdic	other	angular velocity	角速度 | noun | 회전 운동을 하는 물체가 단위 시간에 움직이는 각도. 진동수에 원주율의 두 배를 곱한 것으로, 물체의 회전 속도, 회전축의 방향이나 회전 방향을 나타내는 벡터양으로 나타낸다. 단위는 라디안/초(r/
+14	fill	각추	角錐	kengdic	other	pyramid	角錐 | noun | 모가 진 송곳.
+15	fill	간헐	間歇	kengdic	other	intermitence	間歇 | noun | 얼마 동안의 시간 간격을 두고 되풀이하여 일어났다 쉬었다 함.
+16	fill	간흡충	肝吸蟲	kengdic	other	liver fluke	肝吸蟲 | noun | 후고흡충과의 하나. 몸의 길이는 1~2.5cm이며, 납작하고 긴 나뭇잎 모양이다. 우렁이나 민물고기 따위의 중간 숙주를 거쳐 포유류의 간에 기생한다.
+17	fill	갈분	葛粉	kengdic	other	arrowroot	葛粉 | noun | 칡뿌리를 짓찧어 물에 담근 뒤 가라앉은 앙금을 말린 가루.
+18	fill	감람산	橄欖山	kengdic	other	olives	橄欖山 | noun | 이스라엘 예루살렘 동쪽에 있는 해발 814미터의 산. 예수가 자주 와서 기도를 올렸으며, 그의 승천도 이 산정에서 이루어졌다고 한다. 원래는 올리브가 무성하였다고 하여 올리브산이라고도 한다.
+19	fill	감람석	橄欖石	kengdic	other	olivine	橄欖石 | noun | 마그네슘, 철 따위를 함유한 규산염 광물. 사방 정계에 속하며, 감람녹색·흰색·회색 따위를 띤다. 빛깔이 곱고 맑은 것은 보석으로 쓴다.
+20	fill	감손	減損	kengdic	other	impairment	減損 | noun | 물품 따위가 줆. 또는 물품 따위를 줄임.
+21	fill	감홍	甘汞	kengdic	other	calomel; mercurous chloride	甘汞 | noun | ‘염화 수은「2」’을 일상적으로 이르는 말.
+22	fill	감화원	感化院	kengdic	other	a reformatory, a penitentiary	感化院 | noun | 보호 처분을 받은 청소년을 수용하여 생각과 감정을 좋은 방향으로 변화시키는 기관.
+23	fill	갱의실	更衣室	kengdic	other	changing room	更衣室 | noun | → 경의실.
+24	fill	거취조	巨嘴鳥	kengdic	other	toucan	巨嘴鳥 | noun | 에리다누스강자리의 서남쪽에 있는 별자리. 소마젤란은하가 속한 별자리로, 11월 초순에 자오선을 통과한다. 고도가 낮아서 우리나라에서는 보이지 않는다.
+25	fill	건락소	乾酪素	kengdic	other	casein	乾酪素 | noun | 인단백질의 하나. 포유류의 젖 속에 들어 있는 단백질의 80%를 차지한다. 보통 우유에 산을 가한 다음 침전시켜 얻는다. 식사 대용품·의약품·접착제·인조 섬유를 만드는 데 쓴다.
+26	fill	검룡	劍龍	kengdic	other	stegosaurus	劍龍 | noun | 쥐라기 후기에 살았던 공룡. 몸의 길이는 6미터, 몸무게는 1.8톤 정도로 추정된다. 머리, 꼬리, 앞다리는 짧고 등에는 큰 삼각형 모양의 골판이 있으며 꼬리에는 가시가 있다. 초식성이다.
+27	fill	결정학	結晶學	kengdic	other	crystallography	結晶學 | noun | 결정의 형태·성질·구조를 연구하는 학문. 광물학의 한 분야이다.
+28	fill	겸자	鉗子	kengdic	other	forceps; clamp	鉗子 | noun | 날이 서지 않은 가위 모양으로 생긴 외과 수술 기구. 조직이나 기관을 집어서 누르거나 고정하는 데에 쓴다. 분만 집게, 지혈 집게 따위가 있다.
+29	fill	경동맥	頸動脈	kengdic	other	carotid	頸動脈 | noun | 대동맥에서 갈려 나와 목을 지나 머리나 얼굴로 피를 보내는 동맥. 속목동맥과 바깥 목동맥이 있다.
+30	fill	계전기	繼電器	kengdic	other	relay	繼電器 | noun | 검출된 정보를 갖고 있는 제어 전류의 유무 또는 방향에 따라 다른 회로를 여닫는 장치. 전력 시스템에 합선이나 접지 사고가 발생할 경우, 또는 절연 파괴의 원인이나 계통의 나머지 부분에 악영향을 주
+31	fill	계통성	系統性	kengdic	other	systemicity	系統性 | noun | 일정한 체계에 따라 관련되어 통일된 성질.
+32	fill	고적운	高積雲	kengdic	other	altocumulus	高積雲 | noun | 높은 하늘에 크고 둥글둥글하게 덩어리진 구름. 보통 2~7km 높이에 나타나며 권적운에 비하여 하나하나의 구름 덩어리가 크다. 기호는 Ac.
+33	fill	고전파	古典派	kengdic	other	classical	古典派 | noun | 고전주의를 신봉하는 예술 유파.
+34	fill	고층운	高層雲	kengdic	other	altostratus	高層雲 | noun | 층을 이루어 하늘을 덮는 잿빛 또는 푸른색을 띤 구름. 보통 2km 이상의 높이에 나타나 두껍게 발달한다. 기호는 As.
+35	fill	공분모	公分母	kengdic	other	common denominator	公分母 | noun | 둘 이상의 서로 다른 분수를 크기가 변하지 않게 통분하였을 때 갖는 분모.
+36	fill	괄선	括線	kengdic	other	vinculum	括線 | noun | 여러 개의 글자나 숫자를 다른 자와 구별하기 위하여 한데 묶는 표시로 그 위쪽에 긋는 선.
+37	fill	광상곡	狂想曲	kengdic	other	capriccio; rhapsody	狂想曲 | noun | 일정한 형식에 구속되지 아니하고 자유로운 요소가 강한 기악곡.
+38	fill	광전자	光電子	kengdic	other	photoelectron	光電子 | noun | 빛을 받은 물체에서 방출되는 자유 전자.
+39	fill	괴경	塊莖	kengdic	other	corm, tuber	塊莖 | noun | 덩이 모양을 이룬 땅속줄기. 땅속에 있는 줄기의 일부에 녹말 따위의 양분이 저장되어 비대한 덩이 모양을 이룬다. 감자, 토란 따위에서 볼 수 있다.
+40	fill	괴근	塊根	kengdic	other	tubercle	塊根 | noun | 덩이 모양으로 생긴 뿌리. 이상 비대 생장에 의한 것으로 녹말과 같은 양분이 저장되어 있다. 고구마, 무 따위에서 볼 수 있다.
+41	fill	구강염	口腔炎	kengdic	other	trench mouth	口腔炎 | noun | 입안 조직에 생기는 염증.
+42	fill	구동륜	驅動輪	kengdic	other	the driving wheel	驅動輪 | noun | 축에서 전달된 회전력으로 회전축 전체를 움직이는 바퀴.
+43	fill	구립운석	球粒隕石	kengdic	other	chondrite	球粒隕石 | noun | 석질운석의 하나. 감람석, 사방 휘석 및 그 혼합물로 이루어진, 지름 수 mm 정도의 알갱이를 다수 포함한다. 지구에 떨어지는 운석의 대부분이 이 성분으로 이루어져 있는데, 태양계의 시원(始原) 물
+44	fill	국체	國體	kengdic	other	constitution; national debt	國體 | noun | 주권이 누구에게 있느냐에 따라 나누는 나라의 형태. 군주국, 공화국 따위로 나눈다.
+45	fill	권운	卷雲	kengdic	other	cirrus	卷雲 | noun | 푸른 하늘에 높이 떠 있는 하얀 섬유 모양의 구름. 높이 5~13km 사이, 기온 영하 20℃ 이하인 곳에 나타난다. 빙정(氷晶)이 모여 생긴 것으로서 해나 달 주위에 끼면 무리가 나타나기도 한다.
+46	fill	권층운	卷層雲	kengdic	other	cirrostratus; stratocirrus	卷層雲 | noun | 온 하늘을 뒤덮은 엷고 흰 면사포 모양의 구름. 높이 5~13km 사이에 나타나며 햇무리, 달무리를 잘 일으킨다.
+47	fill	궤변가	詭辯家	kengdic	other	sophister, sophist	詭辯家 | noun | 궤변을 잘하는 사람.
+48	fill	궤변술	詭辯術	kengdic	other	sophistry	詭辯術 | noun | 궤변을 부리는 재주나 화술.
+49	fill	규산염	硅酸鹽	kengdic	other	silicate	硅酸鹽 | noun | 규산의 수소 원자가 알루미늄, 칼슘, 마그네슘, 나트륨 따위의 금속 원자와 치환된 물질. 암석이나 광물의 주성분으로, 물에 잘 녹지 않고 녹는점이 높으며, 녹은 것을 냉각하면 결정을 이루지 않고 유
+50	fill	균등화	均等化	kengdic	other	equalization	均等化 | noun | 치우침이 없도록 고르게 되거나 고르게 함.
+51	fill	균사	菌絲	kengdic	other	hypha; mycelium	菌絲 | noun | 균류의 몸을 이루는 섬세한 실 모양의 세포. 또는 그런 세포로 된 열(列). 흰색으로 엽록소가 없으며 종(種)에 따라 일정한 모양으로 가지 나누기를 하거나 모여서 자실체를 만든다.
+52	fill	극좌표	極座標	kengdic	other	polar coordinates	極座標 | noun | 평면 위의 점의 위치를, 정점(定點)으로부터의 거리와 x축과 이루는 각으로 나타내는 좌표.
+53	fill	극피동물	棘皮動物	kengdic	other	echinoderm	棘皮動物 | noun | 극피동물문의 동물을 통틀어 이르는 말.
+54	fill	근류	根瘤	kengdic	other	root nodule	根瘤 | noun | 세균이나 균사가 고등 식물의 뿌리에 침입하여, 그 자극으로 뿌리의 조직이 이상 발육하여 생긴 혹 모양의 조직. 주로 콩과 식물에 나타난다.
+55	fill	근음	根音	kengdic	other	radical; root	根音 | noun | 3도로 된 음정의 세 음이 3화음을 이루고 있을 때의 가장 낮은 음.
+56	fill	근지점	近地點	kengdic	other	perigee	近地點 | noun | 행성의 둘레를 도는 위성의 궤도에서 행성에 가장 가까운 점.
+57	fill	근호	根號	kengdic	other	radical	"根號 | noun | 거듭제곱근을 나타내는 기호. 제곱근(<img style=""vertical-align: middle;"" src='http://stdmgt.korean.go.kr:8899/dictionary/compi"
+58	fill	금어초	金魚草	kengdic	other	antirrhinum; snapdragon	金魚草 | noun | 현삼과의 여러해살이풀. 높이는 20~80cm이며, 잎은 어긋나거나 마주나고 갸름한 피침 모양이다. 여름에서 가을까지 흰색, 붉은색, 노란색, 보라색 따위의 금붕어 입처럼 생긴 꽃이 줄기 끝에 이삭을
+59	fill	금홍석	金紅石	kengdic	other	rutile	金紅石 | noun | 이산화 타이타늄으로 이루어진 산화 광물. 정방 정계에 속하며, 기둥 모양으로 된 결정으로, 붉은 갈색, 회색, 푸른색, 검은색 따위를 띤다. 변성암이나 화성암 따위에 들어 있다.
+60	fill	기관염	氣管炎	kengdic	other	tracheitis	氣管炎 | noun | 목에서 폐에 이르는 기관에 생기는 염증.
+61	fill	기념우표	紀念郵票	kengdic	other	commemorative	紀念郵票 | noun | 국가적으로 뜻깊은 일을 기념하기 위하여 발행하는 우표.
+62	fill	기보법	記譜法	kengdic	other	notation	記譜法 | noun | 음악의 연주나 발표, 보존, 학습 따위를 목적으로 일정한 약속이나 규칙에 따라 기호를 써서 악곡을 기록하는 방법.
+63	fill	기숙생	寄宿生	kengdic	other	boarder	寄宿生 | noun | 기숙사에서 사는 학생. 또는 기숙하는 학생.
+64	fill	기흉	氣胸	kengdic	other	pneumothorax	氣胸 | noun | 가슴막안에 공기가 차 있는 상태. 흉부 부상 또는 결핵이나 폐렴 따위로 허파의 표면에 구멍이 생기는 것이 원인이며, 폐가 수축하여 호흡 곤란 증상이 나타난다.
+65	fill	나안	裸眼	kengdic	other	naked eye	裸眼 | noun | 안경을 쓰지 아니한 상태의 눈.
+66	fill	나자식물	裸子植物	kengdic	other	gymnosperm	裸子植物 | noun | 밑씨가 씨방 안에 있지 않고 드러나 있는 식물. 가루받이 때 꽃가루가 밑씨 위에 바로 붙는다. 꽃잎은 없으며, 줄기에는 형성층이 발달하였으나 물관이 없고 헛물관을 갖는다. 소나무, 소철, 잣나무, 
+67	fill	나체주의자	裸體主義者	kengdic	other	a nudist	裸體主義者 | noun | 알몸으로 사는 것이 자연스럽고 아름답다고 생각하며 그것을 실천하는 사람.
+68	fill	난세포	卵細胞	kengdic	other	egg cell	卵細胞 | noun | 암컷의 생식 세포. 유성 생식을 하는 생물에서 볼 수 있는 것으로 감수 분열에 의하여 생기며, 수정 후 발달하여 배(胚)를 형성한다.
+69	fill	남극권	南極圈	kengdic	other	antarctic circle	南極圈 | noun | 남위 66도 33분의 지점을 이은 선. 또는 그 선 이남의 남극을 중심으로 하는 지역. 대부분 남극 대륙이며 반년 동안은 낮이, 반년 동안은 밤이 계속되고 1년에 적어도 하루는 낮뿐이거나 밤뿐인 날
+70	fill	내과학	內科學	kengdic	other	internal medicine	內科學 | noun | 내장의 기관에 생긴 병을 외과적 수술에 의하지 않고, 물리 요법이나 약으로 치료하는 학문.
+71	fill	내사시	內斜視	kengdic	other	cross-eye	內斜視 | noun | 사물을 볼 때 눈동자가 안쪽으로 몰리는 눈.
+72	fill	내해	內海	kengdic	other	an inland sea	內海 | noun | 육지로 둘러싸인, 육지에 가까운 바다.
+73	fill	냉장차	冷藏車	kengdic	other	chill car; refrigerator car	冷藏車 | noun | 유제품 따위를 운반하기 위하여 냉장 시설을 갖춘 차.
+74	fill	녹니석	綠泥石	kengdic	other	chlorite	綠泥石 | noun | 철, 알루미늄, 마그네슘 따위를 함유한 함수(含水) 규산염 광물. 단사 정계(單斜晶系)에 속하며, 비늘같이 생긴 얇은 조각으로 된 녹색 결정으로서, 결정 편암(結晶片巖)이나 운모 편암(雲母片巖) 속
+75	fill	녹로	轆轤	kengdic	other	potters wheel; roller	轆轤 | noun | 높은 곳이나 먼 곳으로 무엇을 달아 올리거나 끌어당길 때 쓰는 도르래.
+76	fill	농가진	膿痂疹	kengdic	other	impetigo	膿痂疹 | noun | 살갗에 고름집이 생겨서 나온 고름이 말라 굳어진 딱지.
+77	fill	농민당	農民黨	kengdic	other	country Party	農民黨 | noun | 농민의 이해관계를 대변하는 정당.
+78	fill	농작	農作	kengdic	other	farming	農作 | noun | 농사를 지음.
+79	fill	농후	濃厚	kengdic	other	grossness, thickness (of color/flavor/ingredients)	濃厚 | other | ‘농후하다’의 어근.
+80	fill	뇌룡	雷龍	kengdic	other	brontosaurus	雷龍 | noun | 용반류의 공룡. 몸의 길이는 20~25미터, 몸무게는 32.5톤으로 추정되며, 중생대 쥐라기에 번성하였다. 머리가 작고 몸통은 크며, 꼬리는 끝 쪽에서 회초리처럼 가느다랗게 되어 있다. 물가에서 수
+81	fill	뇌막	腦膜	kengdic	other	meninges; meninx	腦膜 | noun | 머리뼈안에 뇌를 싸고 있는 얇은 껍질.
+82	fill	뇌막염	腦膜炎	kengdic	other	brain fever; meningitis	腦膜炎 | noun | 수막의 염증. 열이 나며, 뇌척수액의 압력이 올라가기 때문에, 심한 두통·구역질·목이 뻣뻣해지는 증상이 나타난다.
+83	fill	뇌일혈	腦溢血	kengdic	other	apoplexy; cerebral hemorrhage	腦溢血 | noun | ‘뇌내출혈’의 전 용어.
+84	fill	다항식	多項式	kengdic	other	multinomial; polynomial	多項式 | noun | 두 개 이상의 항을 ‘+’, ‘－’로 결합한 식. 예를 들면 a+b, 2ax+3by－4cz 따위가 있다.
+85	fill	단백석	蛋白石	kengdic	other	opal	蛋白石 | noun | 비결정질이나 그에 가까운 함수 규산염 광물. 표면은 콩팥 또는 종 모양이고 진주 광택을 내며, 흔히 흰색 또는 무색이나 누런색, 붉은색, 초록색, 푸른색, 갈색 따위의 색을 띤 것도 있다. 이 가운
+86	fill	단층선	斷層線	kengdic	other	fault line	斷層線 | noun | 단층면이 지표면과 만나는 선.
+87	fill	단항식	單項式	kengdic	other	monomial	"單項式 | noun | 한 개의 항으로 이루어진 식. 숫자와 몇 개의 문자의 곱으로만 이루어진다. ‘<img style=""vertical-align: middle;"" src='http://stdmgt.korean.go.k"
+88	fill	대양주	大洋洲	kengdic	other	oceania	大洋洲 | noun | 육대주의 하나. 멜라네시아, 미크로네시아, 폴리네시아, 오스트레일리아, 뉴질랜드를 포함하는 섬과 대륙으로 이루어져 있다.
+89	fill	대운하	大運河	kengdic	other	grand Canal	大運河 | noun | 배의 운항을 위하여 육지에 파 놓은 큰 물길.
+90	fill	대초원	大草原	kengdic	other	a prairie, a savanna, a steppe	大草原 | noun | 넓고 큰 초원.
+91	fill	동맥류	動脈瘤	kengdic	other	aneurysm	動脈瘤 | noun | 동맥벽이 손상되거나 이상을 일으켜 동맥 내부 공간의 일부분이 늘어나 혹처럼 불룩해지는 병. 동맥 경화증, 매독, 외상 따위가 원인이 되는데 가슴의 대동맥에서 가장 흔히 볼 수 있다.
+92	fill	동정자	同情者	kengdic	other	sympathizer	同情者 | noun | 동정하는 사람.
+93	fill	두개	頭蓋	kengdic	other	couple; cranium	頭蓋 | noun | 척추동물의 머리를 이루는 뼈를 통틀어 이르는 말. 사람의 경우 뇌를 싸는 마루뼈, 이마뼈, 벌집뼈, 나비뼈, 뒤통수뼈, 관자뼈와 얼굴을 이루는 코뼈, 눈물뼈, 광대뼈, 위턱뼈, 아래턱뼈, 입천장뼈,
+94	fill	두흉부	頭胸部	kengdic	other	cephalothorax	頭胸部 | noun | 머리와 가슴을 아울러 이르는 말.
+95	fill	등심초	燈心草	kengdic	other	rush	燈心草 | noun | 골풀과의 여러해살이풀. 높이는 1미터 정도이고 땅속줄기는 옆으로 뻗으며, 잎은 줄기 아랫부분에 비늘 모양으로 붙어 있다. 5~6월에 녹빛을 띤 노란색 꽃이 취산(聚繖) 화서로 줄기 끝에 피고, 열매
+96	fill	등압선	等壓線	kengdic	other	isobar, line of equal pressure	等壓線 | noun | 일기도에서 기압이 같은 지점을 연결하여 이은 선. 고기압이나 저기압의 분포를 나타내기 위한 것으로 보통 4밀리바(mb) 간격으로 그린다.
+97	fill	등차급수	等差級數	kengdic	other	arithmetic series	等差級數 | noun | 서로 이웃하는 항의 차가 일정한 급수. 1+3+5+7+9+……, 2+4+6+8+…… 따위가 있다.
+98	fill	등차수열	等差數列	kengdic	other	arithmetic progression	等差數列 | noun | 서로 이웃하는 두 항 사이의 차(差)가 일정한 수열. 1, 3, 5, 7, 9,…… 따위가 있다.
+99	fill	마손	磨損	kengdic	other	attrition; wear	磨損 | noun | 마찰에 의하여 쓸리어 닳음.
+100	fill	마전자	馬錢子	kengdic	other	nux vomica	馬錢子 | noun | 마전의 씨. 회색을 띤 누런빛의 원판형(圓板形)으로 생겼으며, 스트리크닌(strychnine)과 브루신의 알칼로이드 성분을 함유하고 있어 혈관 마비 따위를 치료하는 데 쓴다.
+101	fill	만범	滿帆	kengdic	other	full sail	滿帆 | other | ‘만범하다’의 어근.
+102	fill	만초	蔓草	kengdic	other	trailer; trailing plant	蔓草 | noun | 덩굴이 뻗는 풀.
+103	fill	망점	網點	kengdic	other	dot pattern	網點 | noun | 스크린에 나타나는 그물코 모양의 점.
+104	fill	맥각	麥角	kengdic	other	ergot	麥角 | noun | 호밀이나 보리 따위의 씨방에 밀생한 맥각균의 균사를 말린 것. 자흑색의 뿔 모양이며, 단단하고 독이 있다.
+105	fill	맥관	脈管	kengdic	other	vas, vessel	脈管 | noun | 동물의 몸속에서 액체가 흐르는 관. 혈관과 림프관을 이른다.
+106	fill	맥락막	脈絡膜	kengdic	other	choroid	脈絡膜 | noun | 눈알의 뒷부분을 둘러싸고 있는 어두운 적갈색의 얇은 막. 혈관과 색소 세포가 많아 빛을 차단하여 눈알 속을 어둠상자같이 해 주며, 눈알의 영양 공급을 담당한다.
+107	fill	맥압	脈壓	kengdic	other	pulse pressure	脈壓 | noun | ‘맥박압’의 전 용어.
+108	fill	맹약	盟約	kengdic	other	a covenant, a treaty; a coven of people bound together, a league	盟約 | noun | 굳게 맹세한 약속.
+109	fill	멱급수	冪級數	kengdic	other	power series	"冪級數 | noun | ‘<img style=""vertical-align: middle;"" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation/popup/formul"
+110	fill	명세표	明細表	kengdic	other	schedule	明細表 | noun | 물품이나 금액 따위의 분명하고 자세한 내용을 적은 표.
+111	fill	모항	母港	kengdic	other	home port	母港 | noun | 어떤 배의 근거지가 되는 항구.
+112	fill	모험주의	冒險主義	kengdic	other	adventurism	冒險主義 | noun | 객관적인 조건을 무시하고 우연적인 성공을 바라고 행동하는 경향이나 주의.
+113	fill	목불식정	目不識丁	kengdic	other	(see/not/recognize/rake = you see a rake and do not recognize it as being a rake) being super, super stupid. 아주 무시함.	目不識丁 | noun | 아주 간단한 글자인 ‘丁’ 자를 보고도 그것이 ‘고무래’인 줄을 알지 못한다는 뜻으로, 아주 까막눈임을 이르는 말.
+114	fill	목질부	木質部	kengdic	other	xylem	木質部 | noun | 속씨식물의 관다발 가운데 물관, 헛물관, 목부 유조직, 목질 섬유 따위가 집합한 조직. 주로 수분의 통로가 되고 식물체를 지탱해 준다.
+115	fill	목질소	木質素	kengdic	other	lignify	木質素 | noun | 목재, 대나무, 짚 따위의 목화(木化)한 식물체 속에 20~30% 존재하는 방향족 고분자 화합물. 세포를 서로 달라붙게 하는 구실을 하는데 이것이 축적되면 세포 분열이 멈추고 단단한 조직으로 된다.
+116	fill	무한소	無限小	kengdic	other	infinitesimal	無限小 | noun | 더할 수 없이 작음.
+117	fill	물권	物權	kengdic	other	interest; real rights	物權 | noun | 특정한 물건을 직접 지배하여 이익을 얻을 수 있는 배타적 권리. 점유권, 소유권, 지상권, 지역권, 전세권, 유치권, 질권, 저당권 따위이다.
+118	fill	미래파	未來派	kengdic	other	futurism	未來派 | noun | 전통을 부정하고 힘찬 약동감과 속도감을 표현하려 한 미래주의를 신봉한 유파.
+119	fill	미익	尾翼	kengdic	other	empennage; tail unit	尾翼 | noun | 비행기의 안정을 유지하고 방향을 바꾸는 구실을 하는 비행기의 꼬리 부분. 수평 안전판, 수직 안전판, 방향키, 승강키 따위로 이루어져 있다.
+120	fill	밀도계	密度計	kengdic	other	densimeter	密度計 | noun | 물질의 밀도를 재는 계기.
+121	fill	박하뇌	薄荷腦	kengdic	other	menthol	薄荷腦 | noun | 모노테르펜에 속하는 알코올. 무색의 고체로, 박하유를 증류하여 냉각하면 고체가 석출되는데 이를 정제하여 얻는다. 향기가 독특하고 맛이 시원하며 신경통, 위통, 천식, 결핵 따위의 약재나 입안 향료로
+122	fill	반보석	半寶石	kengdic	other	semipostal stone	半寶石 | noun | 보석류 가운데 비교적 값이 싼 것. 수정, 황옥석, 월장석, 터키옥, 석류석, 지르콘 따위가 있다.
+123	fill	반사광	反射光	kengdic	other	reflection, -flexion, reflex, reverberation	反射光 | noun | 한 매질에서 진행하던 광선이 다른 매질과의 경계면에서 반사하여 되돌아가는 광선.
+124	fill	반사면	反射面	kengdic	other	reflector	反射面 | noun | 빛을 받아 반사하는 면.
+125	fill	반사호	反射弧	kengdic	other	reflex arc	反射弧 | noun | 특정한 반사에 관여하는 신경의 경로. 수용기를 출발한 흥분이 들신경을 거쳐 반사 중추에 도달한 뒤, 되돌아서 날신경을 거쳐 효과기에 이르는 모든 과정을 이른다.
+126	fill	반월	半月	kengdic	other	half a month	半月 | noun | 반원형의 달.
+127	fill	반축	半軸	kengdic	other	semiaxis	半軸 | noun | 일직선 위에 놓여 있으면서 각각 다른 속도로 돌아갈 수 있게 두 부분으로 끊어져 있는 축.
+128	fill	발연탄	發煙彈	kengdic	other	smoke bomb	發煙彈 | noun | 폭발하면 짙은 연기를 내뿜도록 되어 있는 폭탄. 사람의 시야를 일시적으로 가릴 목적으로 쓴다.
+129	fill	방선균	放線菌	kengdic	other	actinomyces	放線菌 | noun | 흙 속이나 마른풀 따위에 기생하는, 세균과 곰팡이의 중간적 성질을 가진 미생물. 균사(菌絲)와 같은 것을 사방으로 내놓으면서 퍼진다.
+130	fill	방해석	方解石	kengdic	other	calcite	方解石 | noun | 탄산 칼슘을 주성분으로 하는 탄산염(炭酸鹽) 광물. 삼방 정계에 속하며 순수한 것은 무색투명하지만 불순물이 들어 있으면 붉은색, 누런색, 녹색, 푸른색 따위를 띠기도 한다. 광선을 복굴절(複屈折)시
+131	fill	배증	倍增	kengdic	other	doubling	倍增 | noun | 갑절로 늘어남. 또는 갑절로 늘림.
+132	fill	백류석	白榴石	kengdic	other	leucite	白榴石 | noun | 산화 칼륨을 특히 많이 함유한 알칼리 현무암 속에서 나는 규산염 광물. 등축 정계에 속하며 흰색 또는 회색을 띤다.
+133	fill	백리향	百里香	kengdic	other	thyme	百里香 | noun | 꿀풀과의 낙엽 활엽 관목. 줄기는 덩굴지고 향기가 있으며, 잎은 마주나고 무딘 피침 모양으로 톱니가 있고 가는 털이 나 있다. 여름에 입술 모양의 붉은 자주색 꽃이 윤산(輪繖) 화서로 피고 열매는 
+134	fill	백운모	白雲母	kengdic	other	muscovite	白雲母 | noun | 칼륨, 알루미늄 따위를 함유한 규산염 광물. 단사 정계에 속하며, 색이 없거나 아주 연하되 진주나 비단 광택이 있다. 페그마타이트나 변성암 따위에서 나며, 전기 절연체나 내열 보온 재료로 쓴다.
+135	fill	백운석	白雲石	kengdic	other	dolomite	白雲石 | noun | 백색 또는 무색의 탄산염 광물.
+136	fill	범죄학	犯罪學	kengdic	other	criminology	犯罪學 | noun | 범죄의 원인, 성질 따위를 인류학적 또는 사회학적으로 연구하는 학문.
+137	fill	벽개	劈開	kengdic	other	cleavage	劈開 | noun | 쪼개져서 갈라짐.
+138	fill	변량	變量	kengdic	other	fluent; variate	變量 | noun | 주어진 조건에 따라 변화하는 양.
+139	fill	보수당	保守黨	kengdic	other	conservative Party	保守黨 | noun | 보수주의를 지지하는 정당. 또는 보수적인 정책을 내세우는 정당.
+140	fill	보측	步測	kengdic	other	pacing	步測 | noun | 거리 따위를 걸음의 수로 대충 잼.
+141	fill	보표	譜表	kengdic	other	stave	譜表 | noun | 악보를 그리기 위하여 가로로 그은 다섯 줄.
+142	fill	복령	茯苓	kengdic	other	tuckahoe	茯苓 | noun | 구멍장이버섯과의 버섯. 공 모양 또는 타원형의 덩어리로 땅속에서 소나무 따위의 뿌리에 기생한다. 껍질은 검은 갈색으로 주름이 많고 속은 엷은 붉은색으로 무르며, 마르면 딱딱해져서 흰색을 나타낸다. 
+143	fill	복사계	輻射計	kengdic	other	radiometer	輻射計 | noun | 방사선의 세기를 재는 계기.
+144	fill	복사지	複寫紙	kengdic	other	copying paper; tracing paper	複寫紙 | noun | 복사를 뜨는 데 쓰는 종이라는 뜻으로, ‘먹지02’를 이르는 말. 한쪽 또는 양쪽 면에 묻기 쉬운 먹칠을 한 얇은 종이로, 그 위에나 밑에 종이를 겹쳐 대고 골필 또는 철필로 눌러쓴다.
+145	fill	봉헌	奉獻	kengdic	other	consecration; sanctification	奉獻 | noun | 물건을 받들어 바침.
+146	fill	부동항	不凍港	kengdic	other	open port	不凍港 | noun | 일 년 내내 해면이 얼지 않는 항구. 겨울에 해면 동결 지역에 있으면서도 난류의 영향으로 해면이 얼지 않는다.
+147	fill	북극광	北極光	kengdic	other	merry dancers; aurora borealis	北極光 | noun | 북극 지방에서 볼 수 있는 발광(發光) 현상. 빛은 약할 때에는 희게 보이지만, 강할 때에는 빨강과 초록의 아름다운 색을 보인다.
+148	fill	북해	北海	kengdic	other	north Sea	北海 | noun | 영국과 유럽 대륙의 벨기에, 네덜란드, 독일, 덴마크, 노르웨이 등에 둘러싸인 대서양 연해. 세계 3대 어장의 하나로 청어와 대구가 많이 잡힌다. 면적은 57만 5000㎢, 평균 심도는 94미터.
+149	fill	분망	奔忙	kengdic	other	rush	奔忙 | noun | 매우 바쁨.
+150	fill	분열식	分列式	kengdic	other	a ceremonial march, marching past	分列式 | noun | 부대나 차량 따위가 대형을 갖추어 사열단 앞을 행진하면서 경례하는 의식.
+151	fill	분자식	分子式	kengdic	other	molecular formula	分子式 | noun | 분자 하나에 들어 있는 각 원소의 종류와 개수를 나타내는 화학식. 물의 분자식은 ‘H2O’, 이산화 탄소의 분자식은 ‘CO2’ 따위로 나타낸다.
+152	fill	분책	分冊	kengdic	other	fascicle; partwork	分冊 | noun | 하나의 책을 둘 이상의 여러 권으로 나누어 제본함. 또는 그렇게 만든 책.
+153	fill	비막	飛膜	kengdic	other	patagium	飛膜 | noun | 조류를 제외한, 활공 또는 비행을 행하는 척추동물에서 주로 앞다리, 몸 쪽, 뒷다리에 걸쳐 쳐진 막. 박쥐류, 하늘다람쥐류에 있다.
+154	fill	비행갑판	飛行甲板	kengdic	other	flight deck; flying deck	飛行甲板 | noun | 활주로로 쓰는 항공 모함의 갑판.
+155	fill	빈객	賓客	kengdic	other	guest	賓客 | noun | 귀한 손님.
+156	fill	사문석	蛇紋石	kengdic	other	serpentine	蛇紋石 | noun | 마그네슘을 함유한 함수 규산염(含水硅酸鹽) 광물. 단사 정계에 속하며, 감람석이나 휘석이 물과 반응하여 변질하여 생긴다. 주로 초록색을 띠나, 붉은색·노란색·검은색 따위가 섞여 있으며, 연마할 때 
+157	fill	사순절	四旬節	kengdic	other	lent	四旬節 | noun | 부활 주일 전 40일 동안의 기간. 이 기간 동안 교인들은 광야에서 금식하고 시험받은 그리스도의 수난을 되살리기 위하여 단식과 속죄를 행한다.
+158	fill	사오정	沙悟淨	kengdic	other	sb who just doesn't get what you are saying	沙悟淨 | noun | 중국 명대의 장편 소설 ≪서유기≫에 나오는 괴물의 이름. 손오공, 저팔계와 함께 삼장(三藏)을 따라 천축으로 간다.
+159	fill	사장석	斜長石	kengdic	other	plagioclase	斜長石 | noun | 나트륨, 칼슘, 알루미늄을 주성분으로 하는 규산염 광물. 삼사 정계에 속하며, 조장석과 회장석 따위의 여러 가지 장석이 섞여 있다. 주로 화성암에서 발견되며 회색 또는 흰색을 띤다.
+160	fill	사회당	社會黨	kengdic	other	socialism	社會黨 | noun | 자본주의의 극복과 사회주의의 실현을 목적으로 하는 정당.
+161	fill	삼첩기	三疊紀	kengdic	other	the Triassic Period	三疊紀 | noun | 중생대의 첫 시대. 약 2억 4500만 년 전부터 약 2억 1000만 년 전까지의 시기이다. 파충류, 암모나이트, 겉씨식물이 번성하고 포유류가 나타났다.
+162	fill	삼출물	滲出物	kengdic	other	exudate, exudation	滲出物 | noun | 안에서 밖으로 스며 나온 물질.
+163	fill	삼항식	三項式	kengdic	other	trinomial	三項式 | noun | 세 개의 항으로 된 수식.
+164	fill	상염색체	常染色體	kengdic	other	autosome	常染色體 | noun | 생물의 염색체 가운데 성염색체가 아닌 보통 염색체.
+165	fill	상피병	象皮病	kengdic	other	elephantiasis	象皮病 | noun | 열대, 아열대 지방에 많은 풍토병의 하나. 사상충(絲狀蟲)이나 그 밖에 세균의 감염으로 인하여 피부와 피부밑 조직에 림프가 정체하며 결합 조직이 증식하여 환부가 부풀어 오르고 딱딱해져 코끼리의 피부
+166	fill	색소체	色素體	kengdic	other	a chromatophore, a plastid	色素體 | noun | 식물 세포에 들어 있는 색소를 함유하는 세포 소기관. 핵산을 함유하며 색소 합성이나 자기 증식을 한다. 엽록체, 백색체, 잡색체로 나눈다.
+167	fill	생물량	生物量	kengdic	other	biomass	生物量 | noun | 어느 지역 내에 생활하고 있는 생물의 현존량. 중량, 에너지양으로 나타낸다.
+168	fill	생식선	生殖腺	kengdic	other	germen, gonad	生殖腺 | noun | 배우자를 형성하는 기관. 수컷에서는 정소, 암컷에서는 난소를 말하는데, 척추동물이 이곳에서 성호르몬을 분비하기 때문에 이 이름이 붙게 되었다.
+169	fill	서판	書板	kengdic	other	table; tablet	書板 | noun | 글씨를 쓸 때에, 종이 밑에 받치는 널조각.
+170	fill	석뇌유	石腦油	kengdic	other	naphtha	石腦油 | noun | 150~220℃에서 증류하여 얻는 중질의 가솔린.
+171	fill	석죽	石竹	kengdic	other	pink	石竹 | noun | 석죽과의 여러해살이풀. 높이는 30cm 정도이며, 잎은 마주나고 선 모양 또는 피침 모양이다. 6~8월에 진분홍색 꽃이 가지 끝에 하나씩 피고 열매는 삭과(蒴果)를 맺는다. 관상용이고 꽃은 전초와 
+172	fill	설하선	舌下腺	kengdic	other	sublingual	舌下腺 | noun | 혀 아래 점막의 밑에 있는 침샘.
+173	fill	섬광등	閃光燈	kengdic	other	flashlight	閃光燈 | noun | 섬광 신호에 쓰는 등. 등대의 신호용이나 사진 촬영 따위에 쓴다.
+174	fill	성층	成層	kengdic	other	stratification, bedding	成層 | noun | 층을 이룸. 또는 그 층.
+175	fill	성홍열	猩紅熱	kengdic	other	scarlet fever, scarlatina	猩紅熱 | noun | 용혈성(溶血性)의 연쇄상 구균에 의한 법정(法定) 급성 전염병의 하나. 흔히 가을부터 겨울 사이에 어린이에게 유행하는 병으로, 갑자기 고열이 나고 구토를 일으키며, 두통·인두통(咽頭痛)·사지통(四肢
+176	fill	세포벽	細胞壁	kengdic	other	the cell wall	細胞壁 | noun | 식물 세포의 가장 바깥쪽에 있는 튼튼한 피막. 셀룰로스, 펙틴을 주성분으로 하는 후형질로서 세포를 보호하고 그 형상을 유지한다.
+177	fill	소기후	小氣候	kengdic	other	microclimate	小氣候 | noun | 좁은 범위 안에 나타나는 기후. 보통, 수평적으로는 10km, 수직적으로는 1km의 범위 안에 있는 기후 현상을 이른다.
+178	fill	소석회	消石灰	kengdic	other	calcium hydroxide; slaked lime	消石灰 | noun | 산화 칼슘에 물을 가하여 얻는 흰색의 염기성 가루. 물에 약간 녹아서 석회수가 생기며 소독제, 산성 토양의 중화제, 표백분의 원료, 회반죽, 모르타르의 재료 따위로 쓰인다. 화학식 Ca(OH)2.
+179	fill	소이탄	燒夷彈	kengdic	other	fire ball, fire bomb, incendiary	燒夷彈 | noun | 소이제를 써서 목표물을 불살라 없애는 데 쓰는 포탄이나 폭탄.
+180	fill	쇠미	衰微	kengdic	other	decadence, declination, fall, wane	衰微 | noun | 쇠잔하고 미약함.
+181	fill	수경법	水耕法	kengdic	other	aquiculture, hydroponics, tray agriculture	水耕法 | noun | 생장에 필요한 양분을 녹인 배양액만으로 식물을 재배하는 방법.
+182	fill	수난자	受難者	kengdic	other	sufferer	受難者 | noun | 견디기 힘든 어려움을 당한 사람.
+183	fill	수란관	輸卵管	kengdic	other	fallopian tube; oviduct	輸卵管 | noun | 배란된 난자를 자궁 쪽으로 내려보내는 한 쌍의 관. 길이는 약 10cm, 지름은 0.7cm이며 안쪽으로 자궁벽을 뚫고 자궁안으로 열려져 있다.
+184	fill	수력학	水力學	kengdic	other	hydraulics	水力學 | noun | 액체, 특히 물의 역학적 성질을 공학에 응용하기 위하여 연구하는 학문.
+185	fill	수정관	輸精管	kengdic	other	seminiferous tubes; vas deferens	輸精管 | noun | 정소(精巢)에서 만든 정자를 정낭(精囊)으로 내보내는 가늘고 긴 관. 포유류·조류·파충류 따위에서는 정충만을 나르지만, 양서류·어류에서는 수뇨관을 겸한다.
+186	fill	시봉	侍奉	kengdic	other	serve one's parents faithfully	侍奉 | noun | 모시어 받듦.
+187	fill	시산표	試算表	kengdic	other	trial balance; work sheet	試算表 | noun | 복식 부기에서, 원장에 올린 것의 정확성을 검산하는 표. 일정한 시점에 각 계정의 원장을 마감하여 대차의 합계나 잔액을 셈하고 이를 한데 모아 정리할 경우 대변과 차변의 합계가 같아야 원장의 기록에
+188	fill	시신세	始新世	kengdic	other	eocene	始新世 | noun | 지질 시대의 신생대 제3기를 다섯으로 나눈 가운데 두 번째에 해당하는 시대. 기후는 온난·습윤하였고 산림이 우거져서 석탄층이 많이 퇴적하였다.
+189	fill	식객	食客	kengdic	other	freeloader, sponger	食客 | noun | 예전에, 세력 있는 대갓집에 얹혀 있으면서 문객 노릇을 하던 사람.
+190	fill	신경과민	神經過敏	kengdic	other	the jitters, nervousness, to be nervy; being over-sensitive	神經過敏 | noun | 미약한 자극에도 민감한 반응을 보이는 신경 계통의 불안정한 상태.
+191	fill	신경병	神經病	kengdic	other	neuropathy	神經病 | noun | 신경 계통과 관련되는 여러 가지 질병을 통틀어 이르는 말. 신경증, 정신병을 비롯하여 뇌중풍, 신경통, 척수염 따위가 있다.
+192	fill	신사상	新思想	kengdic	other	new Thought	新思想 | noun | 새로운 사상.
+193	fill	신염	腎炎	kengdic	other	nephritis	腎炎 | noun | ‘콩팥염’의 전 용어.
+194	fill	신우염	腎盂炎	kengdic	other	pyelitis	腎盂炎 | noun | 콩팥 깔때기의 염증.
+195	fill	실달다	悉達多	kengdic	other	siddhartha	悉達多 | noun | ‘싯다르타’의 음역어.
+196	fill	실리주의	實利主義	kengdic	other	utilitarianism	實利主義 | noun | 모든 일에 개인의 공명(功名)과 이익만을 추구하는 경향이나 태도.
+197	fill	십자형	十字形	kengdic	other	crisscross, in a cross shape	十字形 | noun | ‘十’ 자와 같은 모양.
+198	fill	쌍곡면	雙曲面	kengdic	other	hyperboloid	雙曲面 | noun | 쌍곡선의 한 주축을 축으로 하여 회전시킬 때 얻을 수 있는 곡면.
+199	fill	쌍구균	雙球菌	kengdic	other	diplococcus	雙球菌 | noun | 두 개의 균체(菌體)가 짝을 이루어 고치 모양을 하고 있는 구균. 폐렴균, 임질균 따위가 이에 속한다.
+200	fill	쌍십절	雙十節	kengdic	other	double Ten	雙十節 | noun | 1911년 신해혁명과 1912년 정부 수립을 기념하는 대만의 국경일. 10월 10일이다.
+201	fill	아과	亞科	kengdic	other	subfamily	亞科 | noun | 생물 분류에서 과(科)와 속(屬)의 사이.
+202	fill	아마인	亞麻仁	kengdic	other	flaxseed	亞麻仁 | noun | 아마의 씨. 아마인유의 원료이며, 당뇨병과 장 질환을 치료하는 데 쓰거나 기관지의 카타르성 질환에 냉침제로 쓴다. 달걀 모양이며 노란색이나 갈색으로 광택이 난다. 부드러운 맛이 나며, 기름같이 미끈
+203	fill	아마포	亞麻布	kengdic	other	cambric, linen	亞麻布 | noun | 아마(亞麻)의 실로 짠 얇은 직물을 통틀어 이르는 말. 굵은 실로 짠 것은 양복감으로 쓰고, 가는 실로 짠 것은 셔츠, 손수건, 실내 장식품 따위를 만드는 데 쓴다.
+204	fill	아선약	阿仙藥	kengdic	other	catechu; gambier	阿仙藥 | noun | 아카시아, 미모사 따위의 잎이나 가지를 달여서 만든 약. 열을 내리고 담을 삭히며, 피 나는 것을 멈추고 음식을 소화시키며, 새살이 잘 돋아나게 하고 아픔을 멈추게 한다.
+205	fill	안과학	眼科學	kengdic	other	ophthalmology	眼科學 | noun | 눈알 및 그 부속 기관의 질병과 치료, 예방 따위를 연구하는 학문.
+206	fill	안식향	安息香	kengdic	other	benzoin; friar's balsam	安息香 | noun | 때죽나뭇과의 상록 교목. 높이는 25미터 정도이며, 잎은 어긋나고 긴 타원형이다. 여름에 작은 꽃이 가지 끝에 총상(總狀) 화서로 피고 열매는 둥글다. 나무껍질에서는 수지를 채취하여 향수 제조에 이
+207	fill	안점	眼點	kengdic	other	eyespot; ocellus	眼點 | noun | 모눈종이 따위의 눈금마다 나타내는 점.
+208	fill	액포	液胞	kengdic	other	vacuole	液胞 | noun | 성숙한 식물 세포에 들어 있는 구조물. 세포 안에 있는 큰 거품 구조로 액포막에 싸여 있고, 안에는 세포액이 차 있으며 여러 가지 당류·색소·유기산 따위가 녹아 있다.
+209	fill	야금학	冶金學	kengdic	other	metallurgy	冶金學 | noun | 금속 공학의 한 분야. 야금에 관한 원리, 방법, 기술 따위를 연구하는 학문이다.
+210	fill	양막	羊膜	kengdic	other	amnion	羊膜 | noun | 포유류의 태아를 둘러싼 반투명의 얇은 막. 속에는 양수가 들어 있다.
+211	fill	어분	魚粉	kengdic	other	fish flour, fish meal	魚粉 | noun | 생선을 찌거나 말려서 만든 가루. 단백질 따위의 영양이 풍부하여 비료, 사료, 식료품 따위로 쓰인다.
+212	fill	엄한	嚴寒	kengdic	other	grueling, hardhanded, harsh, rigorous, severe, strict	嚴寒 | noun | 매우 심한 추위.
+213	fill	여점원	女店員	kengdic	other	saleslady, saleswoman, shopgirl	女店員 | noun | 상점에 고용되어 물건을 팔거나 그 밖의 일을 맡아 하는 여자.
+214	fill	여현	餘弦	kengdic	other	cos; cosine	餘弦 | noun | ‘코사인’의 전 용어.
+215	fill	역참	驛站	kengdic	other	post town, relay, stage	驛站 | noun | 조선 시대에 있던 공공의 기별, 역마, 역원 등 여행 체계를 합쳐서 이르는 말. 대개 25리마다 1참을 두고 50리마다 1원을 두었다.
+216	fill	연막탄	煙幕彈	kengdic	other	smoke ball	煙幕彈 | noun | 폭발하면 짙은 연기를 내뿜도록 되어 있는 폭탄. 사람의 시야를 일시적으로 가릴 목적으로 쓴다.
+217	fill	연분수	連分數	kengdic	other	continued fraction	連分數 | noun | 분모에 분수가 연속되어 내려가는 분수.
+218	fill	열곡	裂谷	kengdic	other	rift valley	裂谷 | noun | 육지에서 관찰되는, 두 개의 평행한 단층애로 둘러싸인 좁고 긴 골짜기.
+219	fill	염산염	鹽酸鹽	kengdic	other	hydrochloride	鹽酸鹽 | noun | 염화 수소의 수소 원자가 다른 원자로 바뀐 화합물.
+220	fill	염색질	染色質	kengdic	other	karyotin; chromatin	染色質 | noun | 핵 속에 있는, 염기성 색소에 잘 염색되는 물질. 디엔에이(DNA)와 핵단백질로 이루어졌으며 세포 분열 할 때 염색체가 된다.
+221	fill	영과	穎果	kengdic	other	caryopsis	穎果 | noun | 과피가 말라서 씨 껍질과 붙어 하나처럼 되고, 속의 씨는 하나인 열매. 벼, 보리, 밀 따위가 있다.
+222	fill	영양학	營養學	kengdic	other	dietetics, nutrition	營養學 | noun | 생물체의 영양 작용과 영양 상태 및 영양물에 관하여 연구하는 학문. 생명의 유지 및 심신의 건강을 유지하기 위한 학문으로, 영양 생리학·영양 화학·영양 병리학 따위가 있다.
+223	fill	영업세	營業稅	kengdic	other	a franchise tax	營業稅 | noun | 영업에 대하여 부과하는 국세(國稅). 1976년에 ‘부가 가치세법’의 시행으로 폐지되었다.
+224	fill	예광탄	曳光彈	kengdic	other	tracer; tracer bullet	曳光彈 | noun | 총포에서 발사되었을 때 앞부분에서 빛을 내며 날아가게 한 탄알. 신호하거나 목표물을 지시하는 데에 쓴다.
+225	fill	요독증	尿毒症	kengdic	other	uremia	尿毒症 | noun | 콩팥의 기능 장애로 몸 안의 노폐물이 오줌으로 빠져나오지 못하고 핏속에 들어가 중독을 일으키는 병증. 구토, 현기, 두통, 시력 감퇴, 전신 경련 따위의 증상이 나타나고 말기에는 혼수상태에 빠진다.
+226	fill	요리점	料理店	kengdic	other	restaurant	料理店 | noun | 술과 요리를 파는 집.
+227	fill	용설란	龍舌蘭	kengdic	other	an agave, American aloe, century plant	龍舌蘭 | noun | 용설란과의 얼룩용설란, 푸른용설란, 대만용설란 따위를 통틀어 이르는 말.
+228	fill	용해도	溶解度	kengdic	other	fusibility, solubility	溶解度 | noun | 일정한 온도에서 일정한 양의 용매에 녹을 수 있는 용질의 최대의 양. 보통 용매 100mL에 녹을 수 있는 용질을 그램 수로 나타낸다.
+229	fill	용혈수	龍血樹	kengdic	other	dracaena	龍血樹 | noun | 백합과의 상록 식물. 높이는 20미터 정도이고 가지는 윗부분에서 갈라지며, 잎은 뭉쳐나고 선 모양이다. 대록색(帶綠色)의 통꽃이 피고 줄기에서 분비되는 수지(樹脂)는 착색제, 방식제로 쓰며 수령은 
+230	fill	우슬초	牛膝草	kengdic	other	hyssop	牛膝草 | noun | 유대인들이 귀신이나 재앙을 쫓으려고 제물의 피를 묻혀 뿌리는 데 쓴 식물.
+231	fill	웅황	雄黃	kengdic	other	orpiment	雄黃 | noun | 천연으로 나는 비소 화합물. 쪼개져 갈라진 면은 진주광택이 나며, 계관석과 더불어 산출된다. 등황색 또는 누런색을 띠며 염료 또는 화약에 쓰인다.
+232	fill	원유회	園遊會	kengdic	other	fete champetre, a garden party	園遊會 | noun | 여러 사람이 산이나 들 또는 정원에 나가서 노는 모임.
+233	fill	원자량	原子量	kengdic	other	atomic weight	原子量 | noun | 원자의 상대적인 질량. 질량수 12의 탄소 원자 12C를 기준으로 하고 이것과의 비율에 따라 각 원자의 질량을 나타낸다.
+234	fill	원자론	原子論	kengdic	other	atomic theory, atomism	原子論 | noun | 세계의 모든 사상(事象)을 원자와 그 운동으로 설명하려는 학설.
+235	fill	원지점	遠地點	kengdic	other	apogee	遠地點 | noun | 달이나 인공위성이 지구에서 가장 멀리 떨어지는 점.
+236	fill	위자	慰藉	kengdic	other	consolation	慰藉 | noun | 위로하고 도와줌.
+237	fill	유공충	有孔蟲	kengdic	other	foraminifera	有孔蟲 | noun | 원생동물문 과립근족충강 유공충목의 동물을 통틀어 이르는 말. 석회질이나 규산질의 껍데기가 있고 껍데기에 있는 작은 구멍에서 실 모양의 위족을 내밀어 먹이를 취한다. 맨눈으로 볼 수 있을 정도로 큰 
+238	fill	유랑자	流浪者	kengdic	other	exile, rover	流浪者 | noun | 정처 없이 이리저리 떠돌아다니는 사람.
+239	fill	유백색	乳白色	kengdic	other	being lacteous, lactescent, milk white	乳白色 | noun | 젖의 빛깔과 같이 불투명한 흰색.
+240	fill	유성체	流星體	kengdic	other	meteoroid	流星體 | noun | 행성들 사이에 떠 있는 암석 조각. 이것들이 지구의 인력에 끌려 지구 대기권으로 들어오면 유성(流星)이 된다.
+241	fill	유신론자	有神論者	kengdic	other	a theist, a solifidian	有神論者 | noun | 유신론을 믿거나 주장하는 사람.
+242	fill	육아종	肉芽腫	kengdic	other	granuloma	肉芽腫 | noun | 육아 조직을 형성하는 염증성 종양. 결핵균, 나병균, 매독균, 바이러스 따위로 인하여 생긴 혹에서 볼 수 있다.
+243	fill	윤활액	潤滑液	kengdic	other	lubricant	潤滑液 | noun | 관절의 윤활막에서 분비되는 끈끈한 액체. 관절안에서의 마찰을 줄여 주며 관절 연골에 영양을 공급한다.
+244	fill	은행업	銀行業	kengdic	other	banking	銀行業 | noun | 은행을 경영하는 사업.
+245	fill	음속	音速	kengdic	other	sonic speed	音速 | noun | 소리가 매질(媒質)을 통하여 전파되는 속도. 공기 중의 음속은 0℃, 1기압일 때 초당 331.5미터인데, 온도가 1℃ 오를 때마다 초당 약 0.6미터씩 증가하며 물속에서는 초당 약 1,500미터씩
+246	fill	응고점	凝固點	kengdic	other	setting point	凝固點 | noun | 일정한 압력에서 액체나 기체가 굳을 때의 온도. 보통 액체의 응고점은 그 물질의 녹는점과 같고, 기체의 응고점은 승화점(昇華點)과 같다.
+247	fill	응집소	凝集素	kengdic	other	agglutinin	凝集素 | noun | 응집 반응을 일으키는 항체. 적혈구, 세균 따위의 응집원과 반응하여 그것들을 응집시킨다.
+248	fill	이뇨	利尿	kengdic	other	diuresis	利尿 | noun | 오줌을 잘 나오게 함.
+249	fill	이윤율	利潤率	kengdic	other	profitability, profitableness	利潤率 | noun | 총자본에 대한 이윤의 비율.
+250	fill	이항식	二項式	kengdic	other	binomial	二項式 | noun | 두 개의 항으로 된 정식. a－b, x+1 따위가 있다.
+251	fill	익수룡	翼手龍	kengdic	other	pterodactyl	翼手龍 | noun | 중생대에 살던, 날개가 있고 꼬리는 없는 익룡류의 화석 동물. 쥐라기 후기와 백악기 후기에 걸쳐 많이 번성하였고, 대표적인 것으로 프테로닥틸루스와 프테라노돈이 있다.
+252	fill	인두세	人頭稅	kengdic	other	capitation, head money, poll tax	人頭稅 | noun | 납세 능력의 차이를 고려하지 아니하고 각 개인에게 일률적으로 매기는 세금. 원시적 조세 형태의 하나로 18~19세기에 없앴으나, 현재 생활필수품에 대한 소비세 따위의 간접세는 이것과 같은 방식이다.
+253	fill	일광욕실	日光浴室	kengdic	other	a solarium, a sunroom	日光浴室 | noun | 일광욕을 하기 위하여 벽을 유리로 만든 방.
+254	fill	일습	一襲	kengdic	other	one suit of clothes	一襲 | noun | 옷, 그릇, 기구 따위의 한 벌. 또는 그 전부.
+255	fill	임파액	淋巴液	kengdic	other	plasma; lymph	淋巴液 | noun | ‘림프액’의 음역어.
+256	fill	입방근	立方根	kengdic	other	cube root	立方根 | noun | ‘세제곱근’의 전 용어.
+257	fill	자석영	紫石英	kengdic	other	amethyst	紫石英 | noun | 자줏빛의 수정.
+258	fill	자수품	刺繡品	kengdic	other	embroidery	刺繡品 | noun | 수를 놓아 만든 수예품.
+259	fill	자연대수	自然對數	kengdic	other	napierian logarithm; natural logarithm	自然對數 | noun | ‘자연로그’의 옛 용어.
+260	fill	자연법	自然法	kengdic	other	natural law	自然法 | noun | 인간 이성을 통하여 발견한 자연적 정의 또는 자연적 질서를 사회 질서의 근본 원리로 생각하는 법. 고전적 개념은 신법(神法) 또는 영구법(永久法)의 한 부분이었으며, 근세의 개념은 인간 이성의 우위
+261	fill	자엽	子葉	kengdic	other	cotyledon; seed leaf	子葉 | noun | 씨앗의 움이 트면서 처음 나오는 싹.
+262	fill	자홍색	紫紅色	kengdic	other	claret, red and purple/violet mixed	紫紅色 | noun | 자줏빛을 띤 붉은색.
+263	fill	잔류물	殘留物	kengdic	other	residue	殘留物 | noun | 남은 물건.
+264	fill	잡록	雜錄	kengdic	other	miscellany	雜錄 | noun | 여러 가지 일을 질서 없이 기록함. 또는 그런 기록.
+265	fill	잡역	雜役	kengdic	other	general,various work and small jobs, busy work	雜役 | noun | 공역 이외의 여러 가지 부역.
+266	fill	장개석	蔣介石	kengdic	other	chiang Kai-shek	蔣介石 | noun | ‘장제스’를 우리 한자음으로 읽은 이름.
+267	fill	장서표	藏書票	kengdic	other	ex libris; bookplate	藏書票 | noun | 자기 장서임을 표시하여 책에 붙이는 표.
+268	fill	재보험	再保險	kengdic	other	reassurance; reinsure	再保險 | noun | 보험자가 피보험 물건에 대한 보험 책임의 분산을 위하여 책임의 일부 또는 전부를 다시 다른 보험자에게 인수시키는 일.
+269	fill	재삼재사	再三再四	kengdic	other	repeatedly	再三再四 | adverb | 여러 번 되풀이하여.
+270	fill	적운	積雲	kengdic	other	cumulus	積雲 | noun | 수직운의 하나. 뭉게뭉게 피어올라 윤곽이 확실하게 나타나는 구름으로, 밑은 평평하고 꼭대기는 솜을 쌓아 놓은 것처럼 뭉실뭉실한 모양이며 햇빛을 받으면 하얗게 빛난다. 무더운 여름에 상승 기류로 말미
+271	fill	전손	全損	kengdic	other	dead loss	全損 | noun | 전체에 걸쳐 손실을 입음. 또는 그 손실.
+272	fill	전해액	電解液	kengdic	other	electrolyte	電解液 | noun | 전기 분해를 하기 위하여 전지의 양극과 음극을 담그는 용액.
+273	fill	전화당	轉化糖	kengdic	other	invert sugar	轉化糖 | noun | 수크로스를 가수 분해 하여 얻는, 포도당과 과당의 혼합물. 수크로스보다 소화 흡수가 좋기 때문에 과자나 식품을 만드는 데에 쓰인다.
+274	fill	절분음	切分音	kengdic	other	syncopation	切分音 | noun | 한 마디 안에서 센박과 여린박의 규칙성이 뒤바뀌는 현상. 여린박에 강세를 놓거나 센박을 연장하거나 붙임줄로 다음 머리에 연결하여 만든다.
+275	fill	절삭	切削	kengdic	other	machine cutting	切削 | noun | 금속 따위를 자르거나 깎음.
+276	fill	절연체	絕緣體	kengdic	other	dielectric, an insulator, non-conductor	絕緣體 | noun | 전도체나 소자로부터 전기적으로 분리되어 있어 열이나 전기를 잘 전달하지 아니하는 물체. 전기의 절연체는 유리·에보나이트·고무 따위이고, 열의 절연체는 솜·석면·회(灰) 따위이다.
+277	fill	점근선	漸近線	kengdic	other	asymptote	漸近線 | noun | 좌표 평면에서 x의 값이 양 또는 음으로 점점 커짐에 따라 어떤 곡선이 일정한 직선에 한없이 가까워질 때에, 그 직선을 곡선에 상대하여 이르는 말.
+278	fill	점성가	占星家	kengdic	other	chaldean; astrologer	占星家 | noun | 별의 빛이나 위치, 운행 따위를 보고 점을 치는 점술가.
+279	fill	점신세	漸新世	kengdic	other	oligocene	漸新世 | noun | 신생대 제3기를 다섯으로 구분하였을 때의 세 번째 시대. 유공충류가 번성하고 포유류, 속씨식물이 발달하였다.
+280	fill	접촉기	接觸器	kengdic	other	contact maker; contactor	接觸器 | noun | 전동기 따위에서 회로를 개폐하는 데 쓰는 기구.
+281	fill	정다면체	正多面體	kengdic	other	regular solid	正多面體 | noun | 면이 모두 합동인 정다각형으로 되어 있어 어떤 꼭짓점에 모이는 면의 수도 같고, 어떤 꼭짓점에서도 입체각이 같은 다면체. 정사면체, 정육면체, 정팔면체, 정십이면체, 정이십면체의 다섯 종류가 있다.
+282	fill	정신병학	精神病學	kengdic	other	psychiatry	精神病學 | noun | 정신병의 증상, 원인, 경과 따위를 연구하여 그 예방과 치료에 응용하는 학문.
+283	fill	정오표	正誤表	kengdic	other	corrigendum	正誤表 | noun | 출판물 따위에서, 잘못된 글자나 문구를 바로잡아 만든 일람표.
+284	fill	정자법	正字法	kengdic	other	orthography, the art of writing corretly	正字法 | noun | 어떤 문자로써 한 언어를 표기하는 규칙. 또는 단어별로 굳어진 표기 관습.
+285	fill	정장석	正長石	kengdic	other	orthoclase (a rock which is an amalgam of various other minerals)	正長石 | noun | 나트륨, 칼륨, 알루미늄 따위를 함유한 규산염 광물. 단사 정계(單斜晶系)에 속하며 화강암이나 편마암에서 난다. 대개 기둥이나 덩어리 모양으로, 질이 무르며 유리 광택이 나고 무색·흰색·엷은 붉은색
+286	fill	제산제	制酸劑	kengdic	other	antacid	制酸劑 | noun | 위산이 너무 많아 발병한 위산 과다증, 위궤양, 샘창자 궤양을 치료하는 약. 위산의 분비를 억제하거나 위산을 중화 또는 흡착하여 그 작용을 감소시키며, 위장의 점막에 생긴 궤양 면을 싸서 산(酸)의
+287	fill	조간대	潮間帶	kengdic	other	intertidal	潮間帶 | noun | 만조 때의 해안선과 간조 때의 해안선 사이의 부분. 만조 때에는 바닷물에 잠기고 간조 때에는 공기에 드러나는 등 생물에 있어서는 혹독한 환경이 된다.
+288	fill	조명탄	照明彈	kengdic	other	a flare bomb; a ground marker; an illuminating projectile	照明彈 | noun | 터뜨리면 강한 빛을 내는 탄알이나 폭탄. 밤에 지상을 비추거나 항공기의 착륙을 유도하는 데에 쓴다.
+289	fill	조색판	調色板	kengdic	other	palette	調色板 | noun | 수채화나 유화를 그릴 때에, 그림물감을 짜내어 섞기 위한 판.
+290	fill	종단면	縱斷面	kengdic	other	longisection	縱斷面 | noun | 물체를 세로로 잘라 생긴 면.
+291	fill	주기계	週期系	kengdic	other	periodic system	週期系 | noun | 주기율에 의해 그 성질이 같은 원소의 집합체.
+292	fill	주기표	週期表	kengdic	other	periodic table	週期表 | noun | 주기율에 따라서 원소를 배열한 표. 원소를 원자 번호의 차례대로 왼쪽에서 오른쪽으로 배열하고, 비슷한 성질의 원소가 나타날 때마다 그것을 위아래로 겹치도록 배열한 것으로, 가로를 주기, 세로를 족(
+293	fill	주선율	主旋律	kengdic	other	canto, motif, theme	主旋律 | noun | 다성 음악에서 주도적인 역할을 하는 선율.
+294	fill	중격	中隔	kengdic	other	septum	中隔 | noun | 구조들을 분리하는 막이나 근육.
+295	fill	중심립	中心粒	kengdic	other	centriole	中心粒 | noun | 대부분의 세포에서 중심체의 중심을 형성하고 있는 원통 모양의 세포 소기관(細胞小器官). 유사 분열 때 볼 수 있다.
+296	fill	중원소	重元素	kengdic	other	heavy element	重元素 | noun | 원자량이 큰 원소. 라듐·악티늄·톨륨·우라늄 따위가 있으며, 일정한 조건에서 그 핵이 비교적 쉽게 분열될 수 있다.
+297	fill	중이	中耳	kengdic	other	tympanum; middle ear	中耳 | noun | 고막의 안쪽 관자뼈 속에 있는 공간. 고실, 귓속뼈, 귀관으로 이루어져 있다.
+298	fill	중정석	重晶石	kengdic	other	barite, baryte, heavy spar	重晶石 | noun | 황산 바륨으로 이루어진 황산염 광물. 사방 정계(斜方晶系)에 속하며 판자 모양, 공 모양, 실 모양, 기둥 모양 따위의 결정을 이룬다. 흔히 재색, 푸른색, 붉은색, 누런색, 갈색을 띠며 중금속 광
+299	fill	중혼	重婚	kengdic	other	bigamy	重婚 | noun | 아내나 남편이 있는 사람이 다른 사람과 다시 혼인함.
+300	fill	중혼죄	重婚罪	kengdic	other	bigamy	重婚罪 | noun | 아내나 남편이 있는 사람이 다른 사람과 다시 혼인함으로써 성립하는 죄.
+301	fill	지각력	知覺力	kengdic	other	perceptiblity	知覺力 | noun | 알아 깨달을 수 있는 힘.
+302	fill	지방주의	地方主義	kengdic	other	regionalism, sectionalism, territorialism	地方主義 | noun | 자기 지방 사람들끼리 싸고돌면서 자기 지방의 이익만을 내세우며 다른 지방 사람들은 멀리하거나 배척하려는 행동이나 사상 경향.
+303	fill	지표수	地表水	kengdic	other	surface water	地表水 | noun | 지표에 있는 모든 물. 하천, 호수, 운하, 해양 따위의 물을 통틀어 이른다.
+304	fill	직근	直根	kengdic	other	taproot	直根 | noun | 땅속으로 곧게 내리는 뿌리. 우엉, 무, 교목 따위의 뿌리이다.
+305	fill	직녀성	織女星	kengdic	other	vega	織女星 | noun | 거문고자리에서 가장 밝은 별. 약 26광년 떨어진 일등성으로, 칠월 칠석날 밤에 견우성과 만난다는 전설이 있다.
+306	fill	직장경	直腸鏡	kengdic	other	a proctoscope	直腸鏡 | noun | 곧창자의 환부를 검사하는 데 쓰는 기구. 금속관의 앞쪽 끝에 전구가 달려 있다.
+307	fill	진앙	震央	kengdic	other	earthquake center; epicenter	震央 | noun | 지진의 진원(震源) 바로 위에 있는 지점.
+308	fill	질점	質點	kengdic	other	particle	質點 | noun | 물체의 크기를 무시하고 질량이 모여 있다고 보는 점. 이 점으로 물체의 위치나 운동을 표시할 수 있으며, 역학 원리 및 모든 법칙의 기초가 된다.
+309	fill	집행인	執行人	kengdic	other	an executor	執行人 | noun | 실제로 시행하는 사람.
+310	fill	찰상	擦傷	kengdic	other	a chafing wound, an abrasion	擦傷 | noun | 무엇에 스치거나 문질려서 살갗이 벗어진 상처.
+311	fill	채원	菜園	kengdic	other	kailyard; kitchen garden	菜園 | noun | 전문적으로 채소를 심어 가꾸는 규모가 큰 밭.
+312	fill	척력	斥力	kengdic	other	repulsion	斥力 | noun | 같은 종류의 전기나 자기를 가진 두 물체가 서로 밀어 내는 힘.
+313	fill	척수염	脊髓炎	kengdic	other	myelitis	脊髓炎 | noun | 몸 밖의 병원체에 의하여 척수에 생기는 여러 가지 염증. 초기에는 발열·팔다리 통증 외에 이완 마비가 일어나며, 점차 운동·지각 마비나 대소변 배설 장애 따위의 증상이 나타난다.
+314	fill	척주	脊柱	kengdic	other	the spinal column	脊柱 | noun | 척추뼈가 서로 연결되어 기둥처럼 이어진 전체를 이르는 말.
+315	fill	척추골	脊椎骨	kengdic	other	vertebra	脊椎骨 | noun | 머리뼈 아래에서 엉덩이 부위까지 33개의 뼈가 이어져 척주를 이룰 때, 그중 하나하나의 뼈를 가리키는 말. 위쪽부터 7개는 목뼈, 12개는 등뼈, 5개는 허리뼈, 5개는 엉치뼈, 4개는 꼬리뼈라 하
+316	fill	천축모란	天竺牡丹	kengdic	other	dahlia	天竺牡丹▽ | noun | 국화과의 여러해살이풀. 높이는 0.4~2미터이며, 잎은 우상 복엽이고 고구마처럼 생긴 뿌리로 번식한다. 7월부터 늦가을까지 원줄기와 가지 끝에 꽃이 피고 열매는 수과(瘦果)로 10월에 익는다. 관상
+317	fill	촉광	燭光	kengdic	other	candlepower; candle	燭光 | noun | 불의 빛. 또는 그 세기.
+318	fill	총사령부	總司令部	kengdic	other	general headquarters	總司令部 | noun | 총사령관이 주관하여 일을 맡아보는 기관.
+319	fill	축거	軸距	kengdic	other	wheelbase	軸距 | noun | 자동차의 앞바퀴 중심과 뒷바퀴 중심 사이의 거리. 이것이 길면 차의 안전성이 좋고, 짧으면 차의 회전 반경이 작아서 짧게 돌 수 있다.
+320	fill	출납원	出納員	kengdic	other	cashier	出納員 | noun | 돈이나 물건의 출납을 맡아보는 사람.
+321	fill	출석자	出席者	kengdic	other	an attendant, an attendee, the turnout	出席者 | noun | 출석한 사람.
+322	fill	충적층	沖積層	kengdic	other	alluvium	沖積層 | noun | 비교적 최근에 하천의 활동에 의하여 자갈, 모래, 진흙 따위가 쌓여 이루어진, 아직 굳지 아니한 퇴적층.
+323	fill	취관	吹管	kengdic	other	a blowgun, a blowpipe	吹管 | noun | 취관 분석에서 취관염을 만드는 데에 쓰는, 놋쇠로 만든 엘(L) 자형 기구. 한쪽 끝을 불꽃 속으로 넣고 다른 쪽 끝에서 공기를 불어 넣는다.
+324	fill	측지선	測地線	kengdic	other	geodesic	測地線 | noun | 어떤 공간 안의 임의의 두 점을 맺는 가장 짧은 곡선. 평면 위에서는 직선, 구면(球面) 위에서는 대원(大圓)의 호(弧)를 이른다.
+325	fill	층적운	層積雲	kengdic	other	cumulostratus, stratocumulus	層積雲 | noun | 하층운의 하나. 두꺼운 덩어리로 된 구름이 층을 이룬 모양으로, 물방울로 이루어져 있다. 낮에는 구름 꼭대기가 발달하여 적운이 되었다가 저녁 무렵이 되면 약해진다. 기호는 Sc.
+326	fill	치은염	齒齦炎	kengdic	other	gingivitis	齒齦炎 | noun | 잇몸에 생기는 염증. 잇몸에서 쉽게 피가 나며 만지면 아프고 부어오르기도 한다.
+327	fill	탁도	濁度	kengdic	other	turbidity	濁度 | noun | 물이 흐린 정도. 증류수 1리터 가운데에 백토 1mg이 섞여 있을 때를 1도로 한다.
+328	fill	탁음	濁音	kengdic	other	sonance	濁音 | noun | 발음할 때, 목청이 떨려 울리는 소리. 국어의 모든 모음이 이에 속하며, 자음 가운데에는 ‘ㄴ’, ‘ㄹ’, ‘ㅁ’, ‘ㅇ’ 따위가 있다.
+329	fill	탄저열	炭疽熱	kengdic	other	anthrax	炭疽熱 | noun | 탄저균으로 인하여 내장이 붓고 혈관에 균이 증식하는 병. 소, 말, 양 따위 초식 가축에 주로 발생하며 사람에게 옮기도 한다.
+330	fill	탕파	湯婆	kengdic	other	footpan, foot warmer, hot water bag	湯婆 | noun | 뜨거운 물을 넣어서 그 열기로 몸을 따뜻하게 하는 기구. 쇠나 함석, 자기 따위로 만들며, 이불 속에 넣고 잔다.
+331	fill	태양등	太陽燈	kengdic	other	heat lamp; sunlamp	太陽燈 | noun | 태양 광선에 가까운 빛을 내게 만든 등. 식물 재배나 병의 치료에 쓴다.
+332	fill	토양학	土壤學	kengdic	other	pedology	土壤學 | noun | soil science
+333	fill	통행세	通行稅	kengdic	other	a toll, tollage, transit duty	通行稅 | noun | 예전에, 기차·택시·버스·기선·항공기·케이블카·전차 따위의 요금이나 운임에 대하여 부과하던 세금. 운수업자를 통하여 받는 간접세로, 1977년에 ‘부가 가치세법’의 시행에 따라 폐지되었다.
+334	fill	투기자	投機者	kengdic	other	a speculator	投機者 | noun | 시세 변동을 이용하여 요행으로 큰 이익을 얻으려는 사람.
+335	fill	투시도	透視圖	kengdic	other	perspective; skiagram	透視圖 | noun | 어떤 시점에서 본 물체의 형태를 평면상에 나타낸 그림.
+336	fill	특매	特賣	kengdic	other	sale	特賣 | noun | 어떤 물건을 특별히 싼값으로 팖.
+337	fill	특허장	特許狀	kengdic	other	a charter	特許狀 | noun | 특허권을 인정하여 주는 증서.
+338	fill	파상열	波狀熱	kengdic	other	undulant fever	波狀熱 | noun | 브루셀라균의 감염으로 생기는 병. 본디 소, 염소, 돼지 따위의 법정 가축 전염병으로, 사람에게 감염되면 높은 열이 나는데 백신이나 항생 물질로 예방이 가능하다.
+339	fill	편극	偏極	kengdic	other	polarization	偏極 | noun | 전하(電荷) 또는 자하(磁荷) 분포가 변화하여 전기 쌍극자 모멘트 또는 자기 쌍극자 모멘트가 생기는 일. 또는 그 단위 부피당의 쌍극자 모멘트의 크기. 전기장 속에 놓인 유전체에 전기 쌍극자 모멘트
+340	fill	편년사	編年史	kengdic	other	chronicle	編年史 | noun | 역사적으로 중요한 사건을 연대순으로 적은 기록.
+341	fill	편미분	偏微分	kengdic	other	partial differential	偏微分 | noun | 변수가 여럿인 함수에서, 하나의 변수 이외의 모든 변수를 일정하게 고정하여 놓고 그 하나의 변수로 미분하는 일. 즉 둘 이상의 변수 x, y, z……의 함수 f(x, y, z……)가 있을 때 x만 
+342	fill	편집광	偏執狂	kengdic	other	monomania; paranoia	偏執狂 | noun | 어떤 사물에 집착하여 몰상식한 행동을 예사로 하는 정신 장애인.
+343	fill	편집실	編輯室	kengdic	other	cutting room; newsroom	編輯室 | noun | 편집을 맡아보는 방.
+344	fill	포경선	捕鯨船	kengdic	other	whaler	捕鯨船 | noun | 고래를 잡기 위하여 특별한 설비를 갖춘 배.
+345	fill	포물면	抛物面	kengdic	other	paraboloid	"抛物面 | noun | 이차 곡면 가운데 방정식 <img style=""vertical-align: middle;"" src='http://stdmgt.korean.go.kr:8899/dictionary/compilation"
+346	fill	포식자	捕食者	kengdic	other	predator	捕食者 | noun | 다른 동물을 먹이로 하는 동물.
+347	fill	피감수	被減數	kengdic	other	minuend	被減數 | noun | 어떤 수나 식에서 다른 수나 식을 뺄 때에, 그 처음의 수나 식. 즉 ‘3－2＝1’에서 ‘3’을 이른다.
+348	fill	피자식물	被子植物	kengdic	other	angiosperm	被子植物 | noun | 꽃식물 가운데 밑씨가 씨방 안에 싸여 있는 식물. 쌍떡잎식물과 외떡잎식물로 크게 나누는데, 감나무·버드나무·벚나무·밤나무·진달래·국화·벼·난초·백합 따위 대부분의 종자식물이 이에 해당한다.
+349	fill	피층	皮層	kengdic	other	cortex	皮層 | noun | 식물 조직계의 하나. 뿌리나 줄기 따위에서 겉껍질과 중심주 사이를 채우는 세포층으로, 세포막이 얇고 부드러운 세포로 되어 있다.
+350	fill	할양	割讓	kengdic	other	cession	割讓 | noun | 땅이나 물건 따위를 한 부분 떼어서 남에게 넘겨줌.
+351	fill	함교	艦橋	kengdic	other	bridge	艦橋 | noun | 함장이 항해 중에 함을 조종·지휘하기 위하여 갑판 맨 앞 한가운데에 높게 만든 갑판.
+352	fill	함수초	含羞草	kengdic	other	mimosa; sensitive plant	含羞草 | noun | ‘미모사’를 달리 이르는 말. 그 모양이 마치 수줍어서 부끄럼을 타는 것 같다 하여 이르는 말이다.
+353	fill	합력	合力	kengdic	other	resultant, resultant force	合力 | noun | 흩어진 힘을 한데 모음. 또는 그렇게 모은 힘.
+354	fill	합성수	合成數	kengdic	other	composite number	合成數 | noun | 1과 자신의 수 이외에도 약수를 가진 정수. 둘 이상의 소수를 곱한 수이다.
+355	fill	항공술	航空術	kengdic	other	aeronautics	航空術 | noun | 항공기를 조종하여 비행하는 기술.
+356	fill	항등식	恒等式	kengdic	other	identical equation	"恒等式 | noun | 식에 포함된 문자에 어떤 값을 넣어도 언제나 성립하는 등식. ‘<img style=""vertical-align: middle;"" src='http://stdmgt.korean.go.kr:8899/d"
+357	fill	해상력	解像力	kengdic	other	resolving power; resolution	解像力 | noun | 사진에서, 피사체의 미세한 상(像)을 재현할 수 있는 렌즈의 능력. 또는 현미경 따위에서, 상(像)의 미세한 부분을 식별할 수 있는 렌즈의 능력.
+358	fill	핵소체	核小體	kengdic	other	nucleolus	核小體 | noun | 세포핵 안에 있는 작은 구형(球形)이나 막대 모양의 부위. 주로 단백질과 아르엔에이로 이루어진다.
+359	fill	핵의학	核醫學	kengdic	other	nuclear medicine	核醫學 | noun | 방사성 동위 원소를 사용하여 병을 진단하거나 치료하는 학문. 의학의 한 분야이다.
+360	fill	핵형	核型	kengdic	other	karyotype	核型 | noun | 각 생물에게 주어진 고유의 염색체 종류 및 그 숫자. 종(種), 속(屬) 따위에 따라 크기, 형(型), 수(數)가 다르다.
+361	fill	향락주의	享樂主義	kengdic	other	epicureanism, hedonism	享樂主義 | noun | 예술에서의 도락적(道樂的) 입장.
+362	fill	향성	向性	kengdic	other	tropism	向性 | noun | 고착 생활을 하는 동물의 어떤 부분이 외부의 자극에 일정한 방향으로 움직이는 성질. 자극의 방향으로 향하는 경우를 양(陽), 반대인 경우를 음(陰)이라고 한다. 식물의 경우는 굴성(屈性)이라고 하며
+363	fill	혈괴	血塊	kengdic	other	blood clot	血塊 | noun | 아랫배에 피가 몰려 덩어리가 생긴 병.
+364	fill	혈뇨	血尿	kengdic	other	hematuria	血尿 | noun | 오줌에 피가 섞여 나오는 병.
+365	fill	혈전증	血栓症	kengdic	other	thrombosis	血栓症 | noun | 기관 안에서 혈액이 굳는 병.
+366	fill	혈종	血腫	kengdic	other	hematoma	血腫 | noun | 내출혈로 말미암아 혈액이 한곳으로 모여 혹과 같이 된 것.
+367	fill	형석	螢石	kengdic	other	fluorite	螢石 | noun | 플루오린화 칼슘으로 이루어진 할로겐 광물. 등축 정계에 속하며, 육면체 또는 팔면체의 결정이나 덩어리 모양으로 난다. 유리 광택을 내고 무색투명하나 불순물에 따라 누런색·녹색·녹청색 따위를 띠며, 
+368	fill	형성층	形成層	kengdic	other	cambium	形成層 | noun | 쌍떡잎식물이나 겉씨식물, 일부 외떡잎식물과 양치식물의 줄기나 뿌리의 물관부와 체관부 사이에 있는 분열 조직. 왕성한 세포 분열이 이루어져 안쪽에 물관부, 바깥쪽에 체관부를 만든다.
+369	fill	호로파	葫蘆巴	kengdic	other	fenugreek	葫蘆巴 | noun | 콩과의 한해살이풀. 높이는 0.7~1미터이다. 여름에 나비 모양의 노란색 꽃이 피고 열매는 꼬투리 모양이다. 씨는 약재, 향신료로 쓰인다. 서아시아가 원산지로 중국에 분포한다.
+370	fill	호소학	湖沼學	kengdic	other	limnology	湖沼學 | noun | 호수나 늪의 생성 원인 및 형상, 수온, 수질, 화학 성분, 생물, 이용법 따위를 종합적으로 연구하는 학문. 육수학의 한 분야이다.
+371	fill	혼작	混作	kengdic	other	double cropping	混作 | noun | 한곳에 두 가지 이상의 작물을 심는 일.
+372	fill	홍등	紅燈	kengdic	other	a red lamp, a red light	紅燈 | noun | 붉은 등불.
+373	fill	홍소	哄笑	kengdic	other	cachinnation; belly laugh	哄笑 | noun | 입을 크게 벌리고 웃거나 떠들썩하게 웃음. 또는 그 웃음.
+374	fill	홍옥수	紅玉髓	kengdic	other	carnelian, sard, of calcedony	紅玉髓 | noun | 갈색이나 붉은 갈색, 짙은 귤색을 띠는 반투명한 옥수.
+375	fill	화농성	化膿性	kengdic	other	to be purulent, suppurative	化膿性 | noun | 종기가 곪아서 고름이 생길 성질.
+376	fill	화산력	火山礫	kengdic	other	lapillus	火山礫 | noun | 화산이 분출할 때에 터져 나오는 용암의 조각. 이미 굳어진 암석이 폭발하여 파괴된 것으로, 지름은 4~32mm이다.
+377	fill	화학전	化學戰	kengdic	other	chemical warfare	化學戰 | noun | 화학 무기를 써서 적을 공격하거나, 적의 화학 무기를 무력하게 만드는 장비를 써서 방어하는 전쟁.
+378	fill	환초	環礁	kengdic	other	atoll	環礁 | noun | 고리 모양으로 배열된 산호초. 안쪽은 얕은 바다를 이루고 바깥쪽은 큰 바다와 닿아 있다. 주로 태평양과 인도양에 분포한다.
+379	fill	황반	黃斑	kengdic	other	yellow spot	黃斑 | noun | 누런 빛깔을 띠는 얼룩무늬 또는 얼룩점.
+380	fill	황선	黃癬	kengdic	other	favus	黃癬 | noun | 머리카락 밑에 딱지가 생기고 고약한 냄새가 나는 곰팡이 질환의 하나.
+381	fill	황열병	黃熱病	kengdic	other	yellow jack; yellow fever	黃熱病 | noun | 아프리카 서부와 남아메리카에서 볼 수 있는 악성 전염병. 황열 바이러스가 주로 간과 콩팥을 침범하는데, 고열이 나고 피가 섞인 검은색의 구토와 황달을 일으키며 사망률이 높다.
+382	fill	황적색	黃赤色	kengdic	other	poppy red	黃赤色 | noun | 누런빛을 띤 붉은색.
+383	fill	회귀선	回歸線	kengdic	other	tropic	回歸線 | noun | 적도를 중심으로 하여 남북 각 23도 27분을 지나는 위선(緯線). 북쪽을 북회귀선 또는 하지선, 남쪽을 남회귀선 또는 동지선이라 한다. 북회귀선상에서는 하지에, 남회귀선상에서는 동지에 태양이 머리
+384	fill	회귀열	回歸熱	kengdic	other	relapsing fever	回歸熱 | noun | 스피로헤타의 침입으로 일어나는 감염병. 이, 벼룩, 진드기, 모기 따위가 매개하는 감염병으로, 오한, 고열, 두통, 피부 황색 변성 따위의 증상을 나타내다가 5~7일 뒤에 없어지고 약 일주일이 지나
+385	fill	회선곡	回旋曲	kengdic	other	rondo	回旋曲 | noun | 주제가 같은 상태로 여러 번 되풀이되는 동안에 다른 가락이 여러 가지로 삽입되는 형식의 기악곡.
+386	fill	후갑판	後甲板	kengdic	other	quarterdeck; afterdeck	後甲板 | noun | 배의 고물 쪽에 있는 갑판.
+387	fill	후치	後置	kengdic	other	postposition	後置 | noun | 뒤에 놓음.
+388	fill	후치사	後置詞	kengdic	other	postposition	後置詞 | noun | 체언 따위의 실질 형태소를 포함하는 단어의 뒤에 놓여, 그 단어가 다른 단어와 맺는 관계를 표시하여 주는 말.
+389	fill	휘석	輝石	kengdic	other	pyroxene	輝石 | noun | 철, 마그네슘, 칼슘 따위로 이루어진 규산염 광물. 사방 정계 또는 단사 정계에 속하며 검은색, 검은 녹색, 검은 갈색을 띠고 유리 광택이 있다. 조암 광물의 하나로 화성암 속에서 난다.
+390	fill	흉골	胸骨	kengdic	other	sternum	胸骨 | noun | 가슴 한복판에 세로로 길쭉하게 있는 납작한 뼈. 세 부분으로 되어 있으며 위쪽은 빗장뼈와 관절을 이루고, 옆은 위쪽 일곱 개의 갈비 연골과 연결되어 있다.
+391	fill	흉선	胸腺	kengdic	other	sweetbread; thymus	胸腺 | noun | 복장뼈의 뒤쪽에 있는 내분비샘. 신체 발육의 촉진과 성적 발육을 억제하는 호르몬을 분비한다.
+392	fill	흡입기	吸入器	kengdic	other	an inhaler	吸入器 | noun | 약물을 안개나 기체 상태로 하여 기도나 폐에 들어가도록 하는 기구. 마취나 호흡 기관 질환의 치료에 쓴다.
+393	fill	불시착시키다	不時着시키다	kengdic	other	forceland; crash	[base 불시착] 不時着 | noun | 비행기가 비행 도중 기관 고장이나 기상 악화, 연료 부족 따위로 목적지에 이르기 전에 예정되지 않은 장소에 착륙함.
+394	fill	월동시키다	越冬시키다	kengdic	other	winter	[base 월동] 越冬 | noun | 겨울을 지내어 넘김. 또는 그런 일.
+395	fill	유행시키다	流行시키다	kengdic	other	bring(come)into vogue	[base 유행] 有行 | noun | 실지로 드러나는 행동. || [base 유행] 流行 | noun | 전염병이 널리 퍼져 돌아다님. || [base 유행] 遊行 | noun | 유람하기 위하여 각처로 돌아다님. || [base 유행] 遊幸 | noun | 임금이 대궐 밖으로 거둥함. || [base 유행] 儒行 | noun | 유학에 기반을 둔 행위.
+396	fill	풍화시키다	風化시키다	kengdic	other	weather	[base 풍화] 風化 | noun | 교육이나 정치의 힘으로 풍습을 잘 교화하는 일. || [base 풍화] 風化 | noun | 지표를 구성하는 암석이 햇빛, 공기, 물, 생물 따위의 작용으로 점차로 파괴되거나 분해되는 일. || [base 풍화] 風火 | noun | 병의 원인이 되는 풍기(風氣)와 화기(火氣). || [base 풍화] 風和 | noun | 바람이 멎고 파도가 잔잔함.
+397	fill	감염시키다	感染시키다	kengdic	other	infect	[base 감염] 減鹽 | noun | 소금을 줄임. || [base 감염] 感染 | noun | 나쁜 버릇이나 풍습, 사상 따위가 영향을 주어 물이 들게 함.
+398	fill	개심시키다	改心시키다	kengdic	other	convert, reclaim, recover, reform, regenerate	[base 개심] 改心 | noun | 잘못된 마음을 바르게 고침. || [base 개심] 開心 | noun | 지혜를 일깨워 열어 줌.
+399	fill	격리시키다	隔離시키다	kengdic	other	insulate, isolate	[base 격리] 隔離 | noun | 다른 것과 통하지 못하게 사이를 막거나 떼어 놓음.
+400	fill	격앙시키다	激昻시키다	kengdic	other	empoison; frenzy	[base 격앙] 激昂 | noun | 기운이나 감정 따위가 격렬히 일어나 높아짐.
+401	fill	격추시키다	擊墜시키다	kengdic	verb	to shoot down an airplane	[base 격추] 擊追 | noun | 쫓아가서 침. || [base 격추] 擊墜 | noun | 비행기나 비행선 따위를 쏘아 떨어뜨림.
+402	fill	결빙시키다	結氷시키다	kengdic	other	freeze	[base 결빙] 結氷 | noun | 물이 얾.
+403	fill	결석시키다	缺席시키다	kengdic	other	absent	[base 결석] 缺席 | noun | 나가야 할 자리에 나가지 않음. || [base 결석] 結石 | noun | 몸 안의 장기 속에 생기는 단단한 물질. 쓸갯돌, 콩팥돌, 이자돌 따위가 있다.
+404	fill	결심시키다	決心시키다	kengdic	verb	to decide, determine, resolve	[base 결심] 決心 | noun | 할 일에 대하여 어떻게 하기로 마음을 굳게 정함. 또는 그런 마음. || [base 결심] 結審 | noun | 소송에서 변론을 끝내는 일. 또는 그런 상태.
+405	fill	계속시키다	繼續시키다	kengdic	verb	to continue	[base 계속] 戒屬 | noun | 타이르는 일. || [base 계속] 繫束 | noun | 얽어매어 묶음. || [base 계속] 繫屬係屬 | noun | 소속하여 매임. || [base 계속] 繼續 | noun | 끊이지 않고 이어 나감.
+406	fill	고정시키다	固定시키다	kengdic	verb	to fix (down,to), immobilize, rivet, set (fix solid)	[base 고정]  | other | ‘고정하다01’의 어근. || [base 고정] 考正 | noun | 심사하여 바로잡음. || [base 고정] 考定 | noun | 고찰하여 정함. || [base 고정] 考訂 | noun | 옛 서적의 진위와 이동(異同)을 조사하여 밝힘. || [base 고정] 固定 | noun | 한번 정한 대로 변경하지 아니함. || [base 고정] 固精 | noun | 병자나 허약한 사람의 정력(精力)을 강하게 함. || [base 고정] 孤亭 | noun | 외따로 떨어져 있는 정자. || [base 고정] 孤貞 | other | ‘고정하다07’의 어근. || [base 고정] 故情 | noun | 오랫동안 사귀어 온 두터운 정분. || [base 고정] 苦情 | noun | 괴로운 심정이나 사정.
+407	fill	과로시키다	過勞시키다	kengdic	other	overwork	[base 과로] 過勞 | noun | 몸이 고달플 정도로 지나치게 일함. 또는 그로 말미암은 지나친 피로. || [base 과로] 過路 | noun | 지나가는 길.
+408	fill	과열시키다	過熱시키다	kengdic	verb	to overheat	[base 과열] 過熱 | noun | superheating || [base 과열] 寡劣 | noun | 재주 따위가 모자라고 변변하지 못함.
+409	fill	관용구적	慣用句的	kengdic	other	idiomatically	(no 표준국어대사전 entry for this spelling)
+410	fill	교란시키다	攪亂시키다	kengdic	verb	to throw off,to confuse	[base 교란] 交欄 | noun | ‘亞’ 자 모양으로 꾸민 난간. || [base 교란] 攪亂 | noun | 마음이나 상황 따위를 뒤흔들어서 어지럽고 혼란하게 함.
+411	fill	교배시키다	交配시키다	kengdic	other	cross, hybridize	[base 교배] 交拜 | noun | 전통 결혼식에서, 신랑과 신부가 서로 절을 주고받는 예(禮). || [base 교배] 交配 | noun | 생물의 암수를 인위적으로 수정 또는 수분시켜 다음 세대를 얻는 일.
+412	fill	귀의시키다	歸依시키다	kengdic	other	convert	[base 귀의] 貴意 | noun | 주로 편지글에서, 상대편의 의견을 높여 이르는 말. || [base 귀의] 歸依 | noun | 돌아가거나 돌아와 몸을 의지함. || [base 귀의] 歸意 | noun | 떠나온 곳으로 돌아가고 싶은 마음.
+413	fill	귀화시키다	歸化시키다	kengdic	verb	to naturalize	[base 귀화] 鬼化 | noun | 귀신이 됨. || [base 귀화] 鬼火 | noun | 밤에 무덤이나 축축한 땅 또는 고목이나 낡고 오래된 집에서 인 따위의 작용으로 저절로 번쩍이는 푸른빛의 불꽃. || [base 귀화] 鬼話 | noun | 도깨비에 관한 이야기. || [base 귀화] 歸化 | noun | 왕의 어진 정치에 감화되어 그 백성이 됨.
+414	fill	급강하시키다	急降下시키다	kengdic	other	crash dive	[base 급강하] 急降下 | noun | 기온이나 가격, 비율 따위가 갑자기 내려감.
+415	fill	기화시키다	氣化시키다	kengdic	other	vaporize, volatilize	[base 기화] 己和 | noun | 조선 시대의 승려(1376~1433). 속성은 유(劉). 처음 법명은 수이(守夷). 호는 득통(得通)·함허(涵虛)·무준(無準). 무학(無學)에게 법을 배우고, 세종의 청으로 대자 어찰(大慈御刹)에  || [base 기화] 奇花 | noun | 보기 드문 신비하고 이상한 꽃. || [base 기화] 奇貨 | noun | 진기한 재물이나 보배. || [base 기화] 奇話 | noun | 이상야릇하고 재미있는 이야기. || [base 기화] 奇禍 | noun | 뜻밖에 당하는 재난. || [base 기화] 氣化 | noun | 액체가 기체로 변함. 또는 그런 현상. || [base 기화] 起畫 | noun | 단청에서, 먼저 무늬를 채색한 다음 빛깔과 빛깔의 구별이 뚜렷하게 보이도록 먹으로 줄을 그리는 일. || [base 기화] 寄貨 | noun | 궁중에서, ‘뒤주’를 이르던 말. || [base 기화] 琪花 | noun | 선경(仙境)에 있다는 아름답고 고운 꽃. || [base 기화] 機化 | noun | 사람이나 동물이 하는 노동을 기계가 대신함. 또는 그렇게 함.
+416	fill	낙담시키다	落膽시키다	kengdic	verb	to dampen the spirits of, discourage, dishearten	[base 낙담] 落膽 | noun | 바라던 일이 뜻대로 되지 않아 마음이 몹시 상함.
+417	fill	냉장되다	冷藏되다	kengdic	other	refrigerate	(no 표준국어대사전 entry for this spelling)
+418	fill	단결시키다	團結시키다	kengdic	other	solidify	[base 단결] 團結 | noun | 많은 사람이 마음과 힘을 한데 뭉침. || [base 단결] 斷決 | noun | 결정적인 판단을 하거나 단정을 내림. 또는 그런 판단이나 단정. || [base 단결] 斷結 | noun | 번뇌를 끊어 없앰.
+419	fill	당혹시키다	當惑시키다	kengdic	other	puzzle	[base 당혹] 當惑 | noun | 무슨 일을 당하여 정신이 헷갈리거나 생각이 막혀 어찌할 바를 몰라 함. 또는 그런 감정.
+420	fill	대결시키다	對決시키다	kengdic	verb	to confront	[base 대결] 代決 | noun | 남을 대신하여 결재함. 또는 그런 결재. || [base 대결] 對決 | noun | 양자(兩者)가 맞서서 우열이나 승패를 가림.
+421	fill	대리시키다	代理시키다	kengdic	other	substitute	[base 대리] 大吏 | noun | 지위가 높은 벼슬이나 관리. || [base 대리] 大利 | noun | 큰 이익. || [base 대리] 大理 | noun | 고려 시대에, 형옥(刑獄)을 맡아보던 관아. 성종 14년(995)에 전옥서를 고친 것으로, 문종 때에 다시 전옥서로 고쳤다. || [base 대리] 代理 | noun | 남을 대신하여 일을 처리함. 또는 그런 사람. || [base 대리] 對理 | noun | 소송의 양쪽 당사자를 출석하게 하여 심리함. 또는 그런 심리(審理). 민사 소송에서는 구두 변론, 형사 소송에서는 공판 기일의 절차를 뜻한다.
+422	fill	대항시키다	對抗시키다	kengdic	other	oppose	[base 대항] 對抗 | noun | 굽히거나 지지 않으려고 맞서서 버티거나 항거함.
+423	fill	돌진시키다	突進시키다	kengdic	other	rush	[base 돌진] 突進 | noun | 세찬 기세로 거침없이 곧장 나아감.
+424	fill	동결시키다	凍結시키다	kengdic	other	freeze	[base 동결] 凍結 | noun | 추위나 냉각으로 얼어붙음. 또는 그렇게 함.
+425	fill	만곡시키다	彎曲시키다	kengdic	other	curve, incurvate	[base 만곡] 萬斛 | noun | 아주 많은 분량. || [base 만곡] 彎曲 | noun | 활 모양으로 굽음.
+426	fill	매음시키다	賣淫시키다	kengdic	other	prostitute	[base 매음] 賣淫 | noun | 돈을 받고 몸을 팖.
+427	fill	면역시키다	免疫시키다	kengdic	other	immunize	[base 면역] 免役 | noun | 병역이나 부역(賦役) 따위를 면함. || [base 면역] 免疫 | noun | 반복되는 자극 따위에 반응하지 않고 무감각해지는 상태를 비유적으로 이르는 말.
+428	fill	면직시키다	免職시키다	kengdic	other	dismiss, unseat from a job	[base 면직] 免職 | noun | 일정한 직위나 직무에서 물러나게 함. || [base 면직] 綿織 | noun | 목화솜으로 짠 피륙.
+429	fill	몰락시키다	沒落시키다	kengdic	other	ruin	[base 몰락] 沒落 | noun | 재물이나 세력 따위가 쇠하여 보잘것없이 됨.
+430	fill	반향시키다	反響시키다	kengdic	other	rebound, reverberate, revoice	[base 반향] 反響 | noun | 어떤 사건이나 발표 따위가 세상에 영향을 미치어 일어나는 반응. || [base 반향] 半晌 | noun | 한나절의 반. || [base 반향] 班鄕 | noun | 양반이 많이 모여 사는 시골.
+431	fill	발광시키다	發光시키다	kengdic	other	craze, derange	[base 발광] 發光 | noun | 빛을 냄. || [base 발광] 發狂 | noun | 미친병의 증세가 밖으로 드러나 비정상적이고 격하게 행동함. 또는 그런 행동.
+432	fill	발열시키다	發熱시키다	kengdic	other	fever	[base 발열] 發熱 | noun | 열이 남. 또는 열을 냄.
+433	fill	발적시키다	發赤시키다	kengdic	other	rubefy	[base 발적] 發赤 | noun | 피부나 점막에 염증이 생겼을 때에 그 부분이 빨갛게 부어오르는 현상. 모세 혈관의 확장이 그 원인이다.
+434	fill	변성시키다	變性시키다	kengdic	other	denature	[base 변성] 邊城 | noun | 변경에 있는 성(城). || [base 변성] 變成 | noun | 변하여 다르게 됨. || [base 변성] 變姓 | noun | 성을 갊. 또는 그렇게 간 성. || [base 변성] 變性 | noun | transformation || [base 변성] 變聲 | noun | 목소리가 변함.
+435	fill	변형시키다	變形시키다	kengdic	other	metamorphose, transform, transmogrify	[base 변형] 變形 | noun | 모양이나 형태가 달라지거나 달라지게 함. 또는 그 달라진 형태.
+436	fill	부패시키다	腐敗시키다	kengdic	other	corrupt, empoison, cause to rot	[base 부패] 부牌 | noun | 광업을 함께 경영하는 사람. || [base 부패] 副牌 | noun | 트럼프 놀이에서, 주패 이외에 다음으로 잡게 되는 패. || [base 부패] 符牌 | noun | 병부(兵符), 순패(巡牌), 마패(馬牌) 따위를 통틀어 이르는 말. || [base 부패] 腐敗 | noun | 정치, 사상, 의식 따위가 타락함.
+437	fill	분리시키다	分離시키다	kengdic	other	segregate, unsolder, disconnect from	[base 분리] 分利 | noun | 이익을 나눔. || [base 분리] 分厘 | noun | 돈, 저울, 자 따위의 단위인 푼(分)과 리(厘)를 아울러 이르는 말. || [base 분리] 分理 | noun | 사리를 풀어 밝힘. || [base 분리] 分離 | noun | 서로 나뉘어 떨어짐. 또는 그렇게 되게 함.
+438	fill	비례시키다	比例시키다	kengdic	other	proportion	[base 비례] 比例 | noun | 한쪽의 양이나 수가 증가하는 만큼 그와 관련 있는 다른 쪽의 양이나 수도 증가함. || [base 비례] 非禮 | noun | 예의에 어긋남. || [base 비례] 備禮 | noun | 예의를 갖춤. || [base 비례] 菲禮 | noun | 변변하지 못한 예물.
+439	fill	산화시키다	山火시키다	kengdic	other	burn; oxidize	[base 산화] 山火 | noun | 산에 난 불. || [base 산화] 山花 | noun | 산에 피는 꽃. || [base 산화] 山靴 | noun | 등산할 때 신는 신. 보통 창이 두껍고 바닥이 울퉁불퉁하며, 벗겨지지 않도록 만들어졌다. || [base 산화] 山禍 | noun | 묏자리가 좋지 못한 탓으로 자손이 받는다는 재앙. || [base 산화] 散花散華 | noun | 어떤 대상이나 목적을 위하여 목숨을 바침. || [base 산화] 酸化 | noun | 어떤 원자, 분자, 이온 따위가 전자를 잃는 일.
+440	fill	상호작용하다	相互作用하다	kengdic	other	interact; interplay	(no 표준국어대사전 entry for this spelling)
+441	fill	선회시키다	旋回시키다	kengdic	other	wheel	[base 선회] 旋回 | noun | 둘레를 빙글빙글 돎. || [base 선회] 善誨 | noun | 훌륭하게 가르쳐 잘못을 뉘우치게 함. 또는 그렇게 하도록 충분히 가르침. || [base 선회] 善繪 | noun | 조선 시대에, 도화서에 속한 종칠품 잡직 벼슬. || [base 선회] 禪會 | noun | 참선하는 모임.
+442	fill	손상시키다	損傷시키다	kengdic	other	damage, injure	[base 손상] 損傷 | noun | 물체가 깨지거나 상함.
+443	fill	숙박시키다	宿泊시키다	kengdic	other	accommodate, bestow, quarter	[base 숙박] 宿泊 | noun | 여관이나 호텔 따위에서 잠을 자고 머무름.
+444	fill	숙지시키다	熟知시키다	kengdic	other	acquaint	[base 숙지] 宿志夙志 | noun | 오랫동안 마음에 품어온 뜻. || [base 숙지] 肅志 | noun | 뜻을 삼감. || [base 숙지] 熟地 | noun | 여러 번 다녀서 익히 잘 아는 땅. || [base 숙지] 熟知 | noun | 익숙하게 또는 충분히 앎.
+445	fill	순환시키다	循環시키다	kengdic	other	circulate	[base 순환] 循環 | noun | 주기적으로 자꾸 되풀이하여 돎. 또는 그런 과정. || [base 순환] 順換 | noun | 채무자가 채권자에게 빚을 갚으려고 발행하는 송금환.
+446	fill	실격시키다	失格시키다	kengdic	verb	to incapacitate, disqualify	[base 실격] 失格 | noun | 격식에 맞지 아니함.
+447	fill	실재시키다	實在시키다	kengdic	verb	to substantialize	[base 실재] 實才 | noun | 글재주가 있는 사람. || [base 실재] 實在 | noun | 실제로 존재함.
+448	fill	안락사시키다	安樂死시키다	kengdic	other	euthanize	[base 안락사] 安樂死 | noun | 극심한 고통을 받고 있는 불치의 환자에 대하여, 본인 또는 가족의 요구에 따라 고통이 적은 방법으로 생명을 단축하는 행위. 위법성에 관한 법적 문제가 야기되는 경우가 있다.
+449	fill	연합시키다	聯合시키다	kengdic	other	associate tog., combine, consociate, federate	[base 연합] 煉合 | noun | 고아서 합침. || [base 연합] 煙盒 | noun | 담배를 담아 놓는 그릇. 나무, 돌, 쇠 따위로 만든다. || [base 연합] 聯合 | noun | 두 가지 이상의 사물이 서로 합동하여 하나의 조직체를 만듦. 또는 그렇게 만든 조직체.
+450	fill	열중시키다	熱中시키다	kengdic	other	craze, immerse, intoxicate, involve	[base 열중] 熱中 | noun | 한 가지 일에 정신을 쏟음.
+451	fill	오해시키다	誤解시키다	kengdic	verb	to create a misunderstanding	[base 오해] 五害 | noun | 흉년이 들 다섯 가지 피해. 장마나 홍수 피해, 가뭄 피해, 바람·이슬 피해, 우박·서리 피해, 병해를 이른다. || [base 오해] 誤解 | noun | 그릇되게 해석하거나 뜻을 잘못 앎. 또는 그런 해석이나 이해.
+452	fill	운행시키다	運行시키다	kengdic	other	ran; revolve	[base 운행] 雲行 | noun | 구름이 떠다님. || [base 운행] 運行 | noun | 정하여진 길을 따라 차량 따위를 운전하여 다님.
+453	fill	위협시키다	威脅시키다	kengdic	other	intimidate	[base 위협] 威脅 | noun | 상대가 겁을 먹도록 무서운 말이나 행동으로 협박함.
+454	fill	유심론적	唯心論的	kengdic	other	spiritualistic	(no 표준국어대사전 entry for this spelling)
+455	fill	유착시키다	癒着시키다	kengdic	verb	to agglutinate, conglutinate	[base 유착]  | other | ‘유착하다01’의 어근. || [base 유착] 癒着 | noun | 사물들이 서로 깊은 관계를 가지고 결합하여 있음. || [base 유착] 謬錯 | noun | 잘못이나 틀림.
+456	fill	유통시키다	流通시키다	kengdic	verb	to circulate	[base 유통] 乳桶 | noun | 소, 양 따위의 젖을 짜서 담아 두는 통. || [base 유통] 乳痛 | noun | 해산을 한 후에 양쪽 젖이 아랫배까지 늘어지고 몹시 아픈 병. || [base 유통] 乳筒乳筩 | noun | 소, 돼지 따위의 젖퉁이의 고기. 소의 경우에는 찰유통, 메유통의 구별이 있다. || [base 유통] 流通 | noun | 공기 따위가 막힘이 없이 흘러 통함. || [base 유통] 儒通 | noun | 유생들 사이에 통지하던 글. 유림 간에 자기 파의 주장을 펴고 반대파의 주장을 비난하는 데 사용한 것으로, 한때는 왕의 명령서와 같은 위력을 발휘하기도 하였다.
+457	fill	윤창하다	輪唱하다	kengdic	other	troll	[base 윤창] 輪唱 | noun | 같은 노래를 일정한 마디의 사이를 두고, 일부가 먼저 부르고 나머지가 뒤따라 부르는 합창.
+458	fill	은퇴시키다	隱退시키다	kengdic	other	retire, retreat, seclude, seclusive, sequester	[base 은퇴] 隱退 | noun | 직임에서 물러나거나 사회 활동에서 손을 떼고 한가히 지냄.
+459	fill	응고시키다	凝固시키다	kengdic	other	coagulate, solidify	[base 응고] 凝固 | noun | 액체 따위가 엉겨서 뭉쳐 딱딱하게 굳어짐. || [base 응고] 應鼓 | noun | 아악기에 속하는 북의 하나. 엎드린 호랑이 모양의 두 받침대 위에 틀을 세우고 긴 북을 건 것으로, 틀 위에는 붉은 칠을 하여 달 모양을 그렸다. 조회(朝會)나 연향(宴享)에 사용하였다.
+460	fill	자각시키다	自覺시키다	kengdic	other	awake	[base 자각] 子閣 | noun | 덧붙여 지은 전각(殿閣). || [base 자각] 自刻 | noun | 자기 스스로 모든 고생을 이겨 내며 부지런히 노력함. || [base 자각] 自覺 | noun | 현실을 판단하여 자기의 입장이나 능력 따위를 스스로 깨달음. || [base 자각] 刺刻 | noun | 남을 해치거나 남에게 해를 입힘. || [base 자각] 磁殼 | noun | 엔(N) 극과 에스(S) 극의 자기가 작은 간격을 두고 평면적으로 분포하는 일.
+461	fill	재결합시키다	再結合시키다	kengdic	other	recombine, reunite (with a former spouse)	[base 재결합] 再結合 | noun | 한 번 헤어지거나 떨어졌다가 다시 결합함.
+462	fill	재생시키다	再生시키다	kengdic	verb	to regenerate	[base 재생] 再生 | noun | 죽게 되었다가 다시 살아남. || [base 재생] 齋生 | noun | ‘거재 유생’을 줄여 이르는 말.
+463	fill	재출발시키다	再出發시키다	kengdic	other	restart	[base 재출발] 再出發 | noun | 어떤 일을 처음부터 다시 시작함.
+464	fill	재혼시키다	再婚시키다	kengdic	other	remarry	[base 재혼] 再婚 | noun | 다시 결혼함. 또는 그런 결혼.
+465	fill	전개시키다	展開시키다	kengdic	verb	to deploy; to develop (events)	[base 전개] 全開 | noun | 꽃이 활짝 다 핌. || [base 전개] 展開 | noun | 열리어 나타남. || [base 전개] 悛改 | noun | 행실이나 태도의 잘못을 뉘우치고 마음을 바르게 고쳐먹음.
+466	fill	접근시키다	接近시키다	kengdic	other	approach; approximate	[base 접근] 接近 | noun | 가까이 다가감.
+467	fill	접촉시키다	接觸시키다	kengdic	other	touch; contact	[base 접촉] 接觸 | noun | 서로 맞닿음.
+468	fill	정장시키다	正裝시키다	kengdic	verb	to dress up	[base 정장] 丁匠 | noun | 예전에, 물건을 만드는 것을 업으로 하던 사람. || [base 정장] 丁壯 | noun | 나이가 젊고 기운이 좋은 남자. || [base 정장] 正章 | noun | 약식이 아닌 정식으로 된 훈장이나 문장 따위를 통틀어 이르는 말. || [base 정장] 正裝 | noun | 정식의 복장을 함. 또는 그 복장. || [base 정장] 呈狀 | noun | 소장(訴狀)을 관청에 냄. || [base 정장] 亭障 | noun | 변방의 요새에 설치하여 사람들이 드나드는 것을 검열하던 관문. || [base 정장] 庭牆庭墻 | noun | 마당을 둘러친 담장. || [base 정장] 艇長 | noun | 보트, 요트 및 정(艇) 따위의 배를 책임지고 지휘하는 사람. 또는 그런 직위. || [base 정장] 整腸 | noun | 장(腸)을 깨끗하게 함.
+469	fill	좌천시키다	左遷시키다	kengdic	verb	to downgrade, demote	[base 좌천] 左遷 | noun | 낮은 관직이나 지위로 떨어지거나 외직으로 전근됨을 이르는 말. 예전에 중국에서 오른쪽을 숭상하고 왼쪽을 멸시하였던 데서 유래한다.
+470	fill	중립시키다	中立시키다	kengdic	other	neutralize	[base 중립] 中立 | noun | 어느 편에도 치우치지 않고 중간적인 입장에 섬. 또는 그런 입장. || [base 중립] 中粒 | noun | 중간 정도 크기의 알맹이.
+471	fill	중합시키다	重合시키다	kengdic	other	polymerize	[base 중합] 重合 | noun | 포개어 합침. || [base 중합] 衆合 | noun | 팔열 지옥(八熱地獄)의 하나. 살생, 투도(偸盜), 사음(邪淫)의 죄를 지은 사람이 가는데, 온갖 고통을 합치어 준다는 지옥이다.
+472	fill	증식시키다	增殖시키다	kengdic	other	proliferate	[base 증식] 增殖 | noun | 늘어서 많아짐. 또는 늘려서 많게 함.
+473	fill	초월시키다	超越시키다	kengdic	other	transcendentalize	[base 초월] 初月 | noun | 음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다. || [base 초월] 超越 | noun | 어떠한 한계나 표준을 뛰어넘음. || [base 초월] 楚越 | noun | 중국 전국 시대의 초나라와 월나라의 사이라는 뜻으로, 서로 원수처럼 여기는 사이를 비유적으로 이르는 말.
+474	fill	추락시키다	墜落시키다	kengdic	other	crash	[base 추락] 秋落 | noun | 가을에 와서 예상보다 수확이 줄어듦. || [base 추락] 墜落 | noun | 높은 곳에서 떨어짐.
+475	fill	충혈시키다	充血시키다	kengdic	other	congest, inflame	[base 충혈] 充血 | noun | 몸의 일정한 부분에 동맥피가 비정상적으로 많이 모임. 또는 그런 증상. 염증이나 외부 자극으로 일어난다. || [base 충혈] 忠血 | noun | 충성을 다하여 흘리는 피.
+476	fill	침묵시키다	沈默시키다	kengdic	verb	to hush, to silence	[base 침묵] 沈默 | noun | 아무 말도 없이 잠잠히 있음. 또는 그런 상태.
+477	fill	침전시키다	沈澱시키다	kengdic	other	precipitate	[base 침전] 沈澱 | noun | 액체 속에 있는 물질이 밑바닥에 가라앉음. 또는 그 물질. || [base 침전] 寢殿 | noun | 임금의 침방(寢房)이 있는 전각.
+478	fill	타협시키다	妥協시키다	kengdic	other	compromise	[base 타협] 妥協 | noun | 어떤 일을 서로 양보하여 협의함.
+479	fill	탈구시키다	脫臼시키다	kengdic	other	disjoint; dislocate	[base 탈구] 脫句 | noun | 글 중에서 빠진 글귀. || [base 탈구] 脫臼 | noun | 관절을 구성하는 뼈마디, 연골, 인대 따위의 조직이 정상적인 운동 범위를 벗어나 위치가 바뀌는 것.
+480	fill	퇴장시키다	退場시키다	kengdic	other	bench	[base 퇴장] 退狀 | noun | 사헌부에서 소장(訴狀)을 기각하여 도장을 찍어서 되돌려주던 일. || [base 퇴장] 退場 | noun | 어떤 장소에서 물러남. || [base 퇴장] 退藏 | noun | 물러나서 자취를 감춤.
+481	fill	퇴폐시키다	頹廢시키다	kengdic	other	debauch, demoralize	[base 퇴폐] 退廢 | noun | 일정한 지위에서 폐하여 물러남. 또는 물러나게 함. || [base 퇴폐] 頹廢 | noun | 쇠퇴하여 결딴이 남.
+482	fill	파열시키다	破裂시키다	kengdic	other	rupture	[base 파열] 破裂 | noun | 깨어지거나 갈라져 터짐.
+483	fill	패소시키다	敗訴시키다	kengdic	other	case	[base 패소] 敗訴 | noun | 소송에서 짐.
+484	fill	팽창시키다	膨脹시키다	kengdic	other	dilate; expand	[base 팽창] 膨脹 | noun | 부풀어서 부피가 커짐.
+485	fill	평형되다	平衡되다	kengdic	other	equilibrate	(no 표준국어대사전 entry for this spelling)
+486	fill	평형시키다	平衡시키다	kengdic	other	equilibrate; counterbalance	[base 평형] 平桁 | noun | 모가 나게 만든 도리. || [base 평형] 平衡 | noun | 사물이 한쪽으로 기울지 않고 안정해 있음.
+487	fill	포함시키다	包含시키다	kengdic	verb	to include in, to count into the total	[base 포함]  | noun | 무당이 신(神)의 말을 받아서 호령함. || [base 포함] 包含 | noun | 어떤 사물이나 현상 가운데 함께 들어 있거나 함께 넣음. || [base 포함] 包涵 | noun | 널리 휩쓸어 쌈. || [base 포함] 砲艦 | noun | 포(砲)를 갖추고 강기슭이나 해안의 수색과 정찰 및 경비를 맡아보는 날쌔고 작은 군함.
+488	fill	함몰시키다	陷沒시키다	kengdic	other	cave	[base 함몰] 咸沒 | noun | 모조리 다 죽음. || [base 함몰] 陷沒 | noun | 사물이나 신체의 일부가 아래나 안쪽으로 빠지거나 꺼져 내려앉음.
+489	fill	해소시키다	解消시키다	kengdic	verb	to dissolve	[base 해소] 咳嗽▽ | noun | ‘해수01’의 변한말. || [base 해소] 海嘯 | noun | 삼각형 모양의 하구에서 만조 때나 폭풍, 해저 화산 따위로 인하여 바닷물이 역류하여 일어나는 거센 파도. 좁은 하구의 저항 때문에 생기며, 중국의 첸탕강(錢塘江), 남아메리카의 아마존강 하구가 유명 || [base 해소] 解消 | noun | 어려운 일이나 문제가 되는 상태를 해결하여 없애 버림. || [base 해소] 解訴 | noun | 원고가 소송을 취하함.
+490	fill	향연하다	饗宴하다	kengdic	verb	to have a banquet, to feast	[base 향연] 香煙 | noun | 향이 타며 나는 연기. || [base 향연] 饗宴 | noun | 특별히 융숭하게 손님을 대접하는 잔치. || [base 향연] 饗筵 | noun | 향연을 베푼 자리.
+491	fill	확신시키다	確信시키다	kengdic	other	convince; assure	[base 확신] 確信 | noun | 굳게 믿음. 또는 그런 마음.
+492	fill	확장시키다	擴張시키다	kengdic	other	dilate, expand	[base 확장] 擴張 | noun | 범위, 규모, 세력 따위를 늘려서 넓힘.
+493	fill	환원시키다	還元시키다	kengdic	other	reduce (opposite of to oxidize); revive, resuscitate, give back to	[base 환원] 還元 | noun | 본디의 상태로 다시 돌아감. 또는 그렇게 되게 함.
+494	fill	활용시키다	活用시키다	kengdic	verb	to inflect, conjugate	[base 활용] 活用 | noun | 도구나 물건 따위를 충분히 잘 이용함.
+495	fill	회절시키다	回折시키다	kengdic	verb	to diffract	[base 회절] 回折 | noun | 파동의 전파가 장애물 때문에 일부가 차단되었을 때 장애물의 그림자 부분에까지도 파동이 전파하는 현상. 장애물의 크기와 파장이 같은 정도일 때 뚜렷이 나타난다. 음파, 전자기파, 빛, 엑스선 외에 전
+496	fill	후진시키다	後進시키다	kengdic	other	reverse	[base 후진] 後晉 | noun | 중국 오대(五代) 가운데 936년에 석경당(石敬瑭)이 후당(後唐)을 멸하고 중원(中原)에 세운 나라. 수도는 변경(汴京)이며 946년에 요나라에 망하였다. || [base 후진] 後秦 | noun | 중국의 오호 십육국 가운데, 384년에 강족(羌族)의 추장 요장(姚萇)이 장안(長安)에 도읍하여 세운 나라. 417년에 동진(東晉)의 장군 유유(劉裕)에게 멸망하였다. || [base 후진] 後陣 | noun | 여러 진 가운데서 맨 뒤의 진. || [base 후진] 後進 | noun | 어떤 발전 수준에 뒤지거나 뒤떨어짐. 또는 그런 사람. || [base 후진] 後塵 | noun | 사람이나 마차 따위가 지나간 뒤에 일어나는 먼지.
+497	fill	휴양시키다	休養시키다	kengdic	verb	to rest and repose	[base 휴양] 休養 | noun | 편안히 쉬면서 몸과 마음을 보양함.
+498	fallback	대결산	大決算	krdict		settlement of accounts; balancing accounts	(no 표준국어대사전 entry for this spelling)
+499	fallback	대란	大亂	krdict		serious disturbance; great commotion; upheaval	大亂 | noun | 크게 일어난 난리.
+500	fallback	대업	大業	krdict		important undertaking; great work	大業 | noun | 큰 사업.
+501	fallback	대칭	對稱	krdict		symmetry	大秤 | noun | 큰 저울. || 對稱 | noun | 한 결정 입자를 다른 결정 입자에 반사시키거나 어떤 축을 중심으로 회전시켰을 때 다른 결정 입자와 포개지는 성질. || 臺秤 | noun | 바닥에 놓은 채 받침판 위에 물건을 올려놓고 위쪽에 있는 저울대에서 저울추로 무게를 다는 저울.
+502	fallback	동생	同生	krdict		brother; sister	 | noun | 같은 부모에게서 태어난 사이거나 일가친척 가운데 항렬이 같은 사이에서 손윗사람이 손아랫사람을 이르거나 부르는 말. || 同生 | noun | 함께 삶.
+503	fallback	동전	銅錢	krdict		coin	同前 | noun | 앞의 것과 같음. || 東銓 | noun | 조선 시대에, ‘이조02「2」’를 달리 이르던 말. 동반(東班)인 문관(文官)의 제반 인사 행정을 맡은 데서 유래한다. || 動轉 | noun | 변하여 달라짐. || 棟箭 | noun | 창문이나 문짝 따위에 가로지른 살. || 銅錢 | noun | 구리로 만든 돈. 실제로는 구리와 주석의 합금으로 되어 있다.
+504	fallback	무책임	無責任	krdict		irresponsibility	無責任 | noun | 책임이 없음.
+505	fallback	범죄성	犯罪性	krdict		criminality	犯罪性 | noun | 범죄가 될 만한 성질.
+506	fallback	수상작	受賞作	krdict		award-winning work	受賞作 | noun | 상을 받은 작품.
+507	fallback	자료실	資料室	krdict		reference room	資料室 | noun | 자료를 보관하는 방.
+508	fallback	첨삭	添削	krdict		correction; editing	添削 | noun | 시문(詩文)이나 답안 따위의 내용 일부를 보태거나 삭제하여 고침.
+509	fallback	팔각형	八角形	krdict		octagon	八角形 | noun | 여덟 개의 선분으로 둘러싸인 평면 도형.
+510	fallback	풍취	風趣	krdict		beautiful scenery	風趣 | noun | 아담한 정취가 있는 풍경.
+511	fallback	필독	必讀	krdict		required reading; something that must be read	必讀 | noun | 반드시 읽어야 함. 또는 반드시 읽음. || 畢讀 | noun | 책 읽기를 끝냄.
+512	fallback	홍수	洪水	krdict		flood; torrent	洪水 | noun | 비가 많이 와서 강이나 개천에 갑자기 크게 불은 물. || 紅袖 | noun | 옛 군복의 붉은 소매. || 紅樹 | noun | 홍수과의 상록 교목. 높이는 4미터 정도이며 잎은 마주나고 긴 타원형인데 두껍고 광택이 난다. 흰 오판화(五瓣花)가 취산(聚繖) 화서로 피고 열매는 산치자와 비슷하며 붉게 익는다. 나무껍질에서 홍색
+513	fallback	공짜	空짜	wikt		something which is free, which does not have to be paid for	空짜 | noun | 힘이나 돈을 들이지 않고 거저 얻은 물건.
+514	fallback	청설모	靑鼠毛	wikt		a red squirrel, Sciurus vulgaris	靑鼠▽毛 | noun | 다람쥣과의 하나. 몸빛은 잿빛 갈색이며 네 다리와 귀의 긴 털은 검은색이다. 종자, 과실, 나뭇잎 따위를 먹고 가을에는 땅속에 먹이를 저장한다. 임신 기간은 35일이며 한 배에 5마리의 새끼를 낳는
+515	fallback	해체	解體	wikt		The informal, non-polite speech level in Korean.	해體 | noun | 상대 높임법의 하나. 상대편을 높이지 않는 뜻을 나타내는 종결형으로, 격식체인 ‘해라체’와 ‘하게체’를 쓸 자리에 두루 쓰는 비격식체이다. ‘철수야, 이리 와서 먹어.’ 따위이다. || 楷體 | noun | 수묵화에서, 대상에 충실한 형체·색채·선을 표현하는 화법. || 解體 | noun | deconstruction
+516	fallback	반말	半말	wikt		crude language	半말 | noun | 대화하는 사람의 관계가 분명치 아니하거나 매우 친밀할 때 쓰는, 높이지도 낮추지도 아니하는 말. ‘이 책 재미있어?’, ‘아주 재미있는걸’에서와 같이 종결 어미 ‘-아(어)’, ‘-지’, ‘-군’,
+517	fallback	이번	이番	wikt		this time; this occasion	이番 | noun | 곧 돌아오거나 이제 막 지나간 차례. || 理煩 | noun | 소송 심리를 어지럽힘.
+518	fallback	달력	달曆	wikt		calendar	달曆 | noun | 1년 가운데 달, 날, 요일, 이십사절기, 행사일 따위의 사항을 날짜에 따라 적어 놓은 것.
+519	fallback	번째	番째	wikt		a dependent noun used to express the order or relative position of an object; a construction equivalent to ordinal numb…	番째 | bound noun | 차례나 횟수를 나타내는 말.
+520	fallback	그중	그中	wikt		among those; of those	그中 | noun | 범위가 정해진 여럿 가운데.
+521	fallback	흰색	흰色	wikt		The color white.	흰色 | noun | 눈이나 우유의 빛깔과 같이 밝고 선명한 색.
+522	fallback	외할아버지	外할아버지	wikt		maternal grandfather	外할아버지 | noun | 어머니의 친정아버지를 이르거나 부르는 말.
+523	fallback	남쪽	南쪽	wikt		The South.	南쪽 | noun | 네 방위의 하나. 나침반의 에스(S) 극이 가리키는 방위이다.
+524	fallback	부모님	父母님	wikt		honorific of 부모 (bumo, “parents”)	父母님 | noun | ‘부모01’를 높여 이르는 말.
+525	fallback	자장가	자장歌	wikt		lullaby (a soothing song to lull children to sleep)	자장歌 | noun | 어린아이를 재우기 위하여 부르는 노래.
+526	fallback	초밥	醋밥	wikt		sushi	醋밥 | noun | 일본 음식의 하나. 초와 소금을 친 흰밥을 갸름하게 뭉친 뒤에 고추냉이와 생선 쪽 따위를 얹어 만든다.
+527	fallback	칫솔	齒솔	wikt		toothbrush	齒솔 | noun | 이를 닦는 데 쓰는 솔.
+528	fallback	작	作	wikt		作: a work by (someone)	 | adverb | 줄이나 획을 한 번 긋는 소리. 또는 그 모양. ||  | adverb | 적은 액체가 가는 줄기로 세게 뻗치는 소리. 또는 그 모양. || 勺 | bound noun | 부피의 단위. 액체나 씨앗 따위의 양을 잴 때 쓴다. 한 작은 한 홉의 10분의 1로 18mL에 해당한다. || 作 | noun | 물건을 팔아서 돈을 마련함. || 作 | noun | ‘작품’, ‘저작’, ‘제작’의 뜻을 나타내는 말. || 作 | other | ‘작하다’의 어근. || 昨 | determiner | 그 날짜가 이미 지나갔거나 어제였음을 나타내는 말. || 爵 | noun | 벼슬의 위계. || 爵 | noun | 중국이나 우리나라에서 제사 때 쓰던 술잔. 모양은 참새와 비슷하고 손잡이와 세 개의 긴 발이 달렸다.
+529	fallback	노래방	노래房	wikt		karaoke; noraebang	노래房 | noun | 방음이 된 방에서 가사가 화면에 나타나는 음악 반주기에 맞추어 노래를 부르도록 장치를 해 놓은 곳.
+530	fallback	고추장	고추醬	wikt		gochujang: a savory and pungent fermented Korean condiment made from red chili powder, glutinous rice powder mixed with…	고추醬 | noun | 쌀·보리 따위로 질게 지은 밥이나 떡가루 또는 되게 쑨 죽에, 메줏가루·고춧가루·소금을 넣어 섞어서 만든 붉은 빛깔의 매운 장.
+531	fallback	북쪽	北쪽	wikt		north, northward	北쪽 | noun | 네 방위의 하나. 나침반의 엔(N) 극이 가리키는 방위이다.
+532	fallback	왜간장	倭간醬	wikt		a Japanese soy sauce	倭간醬 | noun | 일본식으로 만든 간장. 집에서 만든 재래식 간장에 대하여 양조장 등에서 만든 개량된 간장을 이르는 말로 흔히 쓴다.
+533	fallback	육개장	肉개醬	wikt		yukgaejang, a spicy Korean dish made of beef, powdered red pepper, and fern (or mung bean sprout).	肉개醬 | noun | 쇠고기를 삶아서 알맞게 뜯어 넣고, 얼큰하게 갖은양념을 하여 끓인 국.
+534	fallback	수도꼭지	水道꼭지	wikt		tap, faucet, spigot	水道꼭지 | noun | 수돗물을 나오게 하거나 막는 장치.
+535	fallback	쌍발	雙發	wikt		going to work	雙發 | noun | 발동기가 두 대 달린 것.
+536	fallback	노란색	노란色	wikt		yellow (color)	노란色 | noun | 병아리나 개나리꽃의 빛깔과 같이 매우 밝고 선명한 색.
+537	fallback	건너편	건너便	wikt		the opposite side, the other side	건너便 | noun | 마주 대하고 있는 저편.
+538	fallback	외할머니	外할머니	wikt		maternal grandmother	外할머니 | noun | 어머니의 친정어머니를 이르거나 부르는 말.
+539	fallback	시아버지	媤아버지	wikt		father-in-law (husband's father)	媤아버지 | noun | 남편의 아버지를 이르는 말.
+540	fallback	시어머니	媤어머니	wikt		mother-in-law for a woman, i.e. husband's mother	媤어머니 | noun | 남편의 어머니를 이르는 말.
+541	fallback	손수건	손手巾	wikt		handkerchief, hankie	손手巾 | noun | 몸에 지니고 다니며 쓰는 얇고 자그마한 수건.
+542	fallback	양배추	洋배추	wikt		cabbage	洋배추 | noun | 십자화과의 두해살이풀. 잎은 두껍고 털이 없으며 푸르고 희다. 5~6월에 엷은 노란색 꽃이 총상(總狀) 화서로 피고 열매는 견과(堅果)이다. 고갱이가 뭉쳐 큰 공 모양을 이루며 식용한다.
+543	fallback	쓰레기통	쓰레기桶	wikt		garbage can, trash can, rubbish bin	쓰레기桶 | noun | 쓰레기를 담거나 모아 두는 통.
+544	fallback	쌍둥이	雙둥이	wikt		twins	雙둥이 | noun | 한 어머니에게서 한꺼번에 태어난 두 아이.
+545	fallback	호주머니	胡주머니	wikt		pocket	胡주머니 | noun | 옷의 일정한 곳에 헝겊을 달거나 옷의 한 부분에 헝겊을 덧대어 돈, 소지품 따위를 넣도록 만든 부분.
+546	fallback	하숙집	下宿집	wikt		boarding house	下宿집 | noun | 일정한 방세와 식비를 내고 머물면서 숙식하는 집.
+547	fallback	존댓말	尊待말	wikt		honorific, term of respect	尊待말 | noun | 사람이나 사물을 높여서 이르는 말. ‘아버님’, ‘선생님’ 따위의 직접 높임말, ‘진지’, ‘따님’, ‘아드님’ 따위의 간접 높임말, ‘뵙다’, ‘여쭙다’, ‘드리다’ 따위의 객체 높임말이 있다.
+548	fallback	밤색	밤色	wikt		chestnut (color)	밤色 | noun | 여문 밤의 겉껍데기 빛깔과 같이 검은색을 띤 갈색.
+549	fallback	보라색	보라色	wikt		violet, purple (color)	보라色 | noun | 파랑과 빨강의 중간색. 또는 그런 색의 물감.
+550	fallback	안방	안房	wikt		inner room	안房 | noun | 집 안채의 부엌에 딸린 방.
+551	fallback	오래전	오래前	wikt		long ago, long before	오래前 | noun | 상당한 시간이 지나간 과거.
+552	fallback	용돈	用돈	wikt		pocket money	用돈 | noun | 개인이 자질구레하게 쓰는 돈. 또는 특별한 목적을 갖지 않고 자유롭게 쓸 수 있는 돈.
+553	fallback	매달	每달	wikt		monthly	每달 | noun | 한 달 한 달.
+554	fallback	물기	물氣	wikt		wetness	물氣 | noun | 축축한 물의 기운.
+555	fallback	창밖	窓밖	wikt		outside a window	窓밖 | noun | 창문의 밖.
+556	fallback	양쪽	兩쪽	wikt		both sides, both parties	兩쪽 | noun | 두 쪽.
+557	fallback	지난번	지난番	wikt		last time	지난番 | noun | 말하는 때 이전의 지나간 차례나 때.
+558	fallback	강물	江물	wikt		river water, river	江물 | noun | 강에 흐르는 물.
+559	fallback	검은색	검은色	wikt		black (color)	검은色 | noun | 숯이나 먹의 빛깔과 같이 어둡고 짙은 색.
+560	fallback	한쌍	—雙	wikt		a pair, a couple	(no 표준국어대사전 entry for this spelling)
+561	fallback	서쪽	西쪽	wikt		west	西쪽 | noun | 네 방위의 하나. 해가 지는 쪽이다.
+562	fallback	깡패	깡牌	wikt		bully	깡牌 | noun | 폭력을 쓰면서 행패를 부리고 못된 짓을 일삼는 무리를 속되게 이르는 말.
+563	fallback	전날	前날	wikt		the day before, the previous day	前날 | noun | 일정한 날을 기준으로 한 바로 앞 날.
+564	fallback	애초	애初	wikt		beginning, start	애初 | noun | 맨 처음. || 艾草 | noun | 국화과의 여러해살이풀. 높이는 60~120cm이며, 잎은 어긋나고 달걀 모양이다. 7~10월에 분홍빛이 도는 흰색 꽃이 피고 열매는 수과(瘦果)이다. 어린잎은 식용하고 줄기와 잎자루는 약용한다. || 崖椒 | noun | 산초나무의 열매. 기름을 만드는 원료로 쓰고 식용 또는 약용한다.
+565	fallback	별표	別表	wikt		asterisk	별標 | noun | 별 모양의 표. || 別表 | noun | 따로 붙인 표시나 도표.
+566	fallback	창턱	窓턱	wikt		windowsill	窓턱 | noun | 창문의 문지방에 있는 턱.
+567	fallback	온종일	온終日	wikt		the whole day	온終日 | noun | 아침부터 저녁까지의 동안.
+568	fallback	부잣집	富者집	wikt		rich family	富者집 | noun | 재산이 많아 살림이 넉넉한 사람의 집.
+569	fallback	피란	避亂	wikt		refuge from war/chaos	避亂 | noun | 난리를 피하여 옮겨 감.
+570	fallback	책가방	冊가방	wikt		schoolbag; (school) backpack	冊가방 | noun | 주로 학생들이 책이나 학용품 따위를 넣어서 들거나 메고 다니는 가방.
+571	fallback	빨간색	빨간色	wikt		red (color)	빨간色 | noun | 피나 익은 고추와 같이 밝고 짙은 붉은색.
+572	fallback	중국집	中國집	wikt		Chinese restaurant	中國집 | noun | 중국요리를 파는 식당.
+573	fallback	하얀색	하얀色	wikt		white (colour)	하얀色 | noun | 깨끗한 눈이나 밀가루와 같이 밝고 선명한 흰색.
+574	fallback	술병	술甁	wikt		hangover (illness caused by heavy drinking)	술病 | noun | 술을 많이 마셔서 생긴 병. || 술甁 | noun | 술을 담는 병을 통틀어 이르는 말. || 戌兵 | noun | 수비하는 군사.
+575	fallback	맞은편	맞은便	wikt		other side	맞은便 | noun | 서로 마주 바라보이는 편.
+576	fallback	파란색	파란色	wikt		blue (color)	파란色 | noun | 맑은 가을 하늘과 같이 밝고 선명한 푸른색.
+577	fallback	지난주	지난週	wikt		last week	지난週 | noun | 이 주의 바로 앞의 주.
+578	fallback	천제	天帝	wikt		heaven, paradise	天제 | interjection | ‘천지에’의 준말. || 天帝 | noun | 우주를 창조하고 주재한다고 믿어지는 초자연적인 절대자. 종교적 신앙의 대상으로서 각각의 종교에 따라 여러 가지 고유한 이름으로 불리는데, 불가사의한 능력으로써 선악을 판단하고 길흉화복을 인간에게 내 || 天祭 | noun | 하느님에게 지내는 제사. || 天際 | noun | 하늘의 끝. || 闡提 | noun | 본디 해탈의 소인을 갖지 못하여 부처가 될 수 없는 이.
+579	fallback	위염	胃炎	wikt		gastritis	胃炎 | noun | 위 점막에 생기는 염증성 질환을 통틀어 이르는 말. 급성은 폭음, 폭식, 자극물 섭취, 병원균의 독소, 스트레스 따위로 생기고 만성은 불규칙적 식사, 약물 치료의 부작용, 유전적 요소 따위로 생긴다
+580	fallback	장모님	丈母님	wikt		honorific of 장모 (jangmo, “mother-in-law, wife's mother”)	丈母님 | noun | ‘장모01’를 높여 이르거나 부르는 말.
+581	fallback	연꽃	蓮꽃	wikt		lotus	蓮꽃 | noun | 연꽃과의 여러해살이 수초. 연못에서 자라거나 연못이나 논과 같이 물 빠짐이 좋지 않은 곳에서 재배되며 뿌리줄기가 굵고 옆으로 뻗어 간다. 잎은 뿌리줄기에서 나와 잎자루 끝에 달리며, 꽃은 7~8월에
+582	fallback	앞문	앞門	wikt		front door	앞門 | noun | 집이나 방의 앞쪽에 있는 문.
+583	fallback	아래층	아래層	wikt		downstairs	아래層 | noun | 여러 층으로 된 것의 아래에 있는 층.
+584	fallback	위층	위層	wikt		upstairs	위層 | noun | 이 층 또는 여러 층 가운데 위쪽의 층.
+585	fallback	마포	麻布	wikt		mop (implement for washing floors)	麻布 | noun | 삼실로 짠 천.
+586	fallback	정낭	精囊	wikt		bathroom, outhouse	精囊 | noun | 남자 생식 기관의 한 부분. 길쭉한 막성(膜性)의 주머니로, 정관의 끝에 위치하며 정액을 생산한다.
+587	fallback	공중제비	空中제비	wikt		somersault	空中제비 | noun | 두 손을 땅에 짚고 두 다리를 공중으로 쳐들어서 반대 방향으로 넘는 재주.
+588	fallback	숙성	熟成	wikt		ripeness, maturity	夙成 | other | ‘숙성하다01’의 어근. || 宿醒 | noun | 이튿날까지 깨지 아니하는 취기. || 淑性 | noun | 얌전하고 착한 성질. || 熟成 | noun | 충분히 이루어짐. || 熟省 | noun | 지나간 일을 돌이켜 보면서 깊이 반성함.
+589	fallback	함자	銜字	wikt		Pyongan, Hwanghae, and Gyeongsang form of 혼자 (honja, “alone, all by oneself”)	銜字 | noun | 남의 이름자를 높여 이르는 말.
+590	fallback	성결	聖潔	wikt		temperament, disposition	性결 | noun | 성품의 바탕이나 상태. || 聖潔 | noun | 거룩하고 깨끗함.
+591	fallback	각배	角杯	wikt		half-siblings having different mothers	各배 | noun | 한 어미에게서 다른 시기에 태어난 새끼. || 各拜 | noun | 모든 사람에게 따로따로 절을 함. || 角杯 | noun | 짐승의 뿔로 만든 술잔.
+592	fallback	양옥집	洋屋집	wikt		a Western-style house	洋屋집 | noun | 서양식으로 지은 집.
+593	fallback	급소	急所	wikt		vital point, tender spot, keypoint, sore point	急所 | noun | 조금만 다쳐도 생명에 지장을 주는 몸의 중요한 부분. || 急燒 | noun | 빨리 탐.
+594	fallback	산속	山속	wikt		the heart of a mountain	山속 | noun | 산의 속.
+595	fallback	절실	切實	wikt		Root of 절실히 (jeolsilhi, “desperately, urgently, direly”) / 절실하다 (jeolsilhada, “acute, keen, fervent, poignant”). Rarely…	切實 | other | ‘절실하다’의 어근.
+596	fallback	외출	外出	wikt		going out	外出 | noun | 집이나 근무지 따위에서 벗어나 잠시 밖으로 나감.
+597	fallback	종소리	鐘소리	wikt		sound/peal of a bell	鐘소리 | noun | 종을 칠 때 울리는 소리.
+598	fallback	대장간	대장間	wikt		forge, smithy	대장間 | noun | 쇠를 달구어 온갖 연장을 만드는 곳.
+599	fallback	환생	幻生	wikt		reincarnation	幻生 | noun | 실제는 없으나 환상처럼 나타남. || 還生 | noun | 다시 살아남.
+600	fallback	사무	事務	wikt		office work, clerical work	寺務 | noun | 절에서 보는 일. || 私務 | noun | 개인의 사사로운 일. || 私貿 | noun | 궁궐에서 쓰는 물품을 공계(貢契)를 통하지 아니하고 임시로 상인에게서 사들이던 일. || 事務 | noun | 자신이 맡은 직책에 관련된 여러 가지 일을 처리하는 일. 주로 책상에서 문서 따위를 다루는 일을 이른다. || 社務 | noun | 회사의 일. || 師巫 | noun | 귀신을 섬겨 길흉을 점치고 굿을 하는 것을 직업으로 하는 사람.
+601	fallback	사무직	事務職	wikt		office job, white-collar job	事務職 | noun | 주로 책상에서 문서 따위를 다루는 일을 하는 직무. 또는 그런 분야에 종사하는 직원.
+602	fallback	신년	新年	wikt		new year	申年 | noun | 지지(地支)가 신(申)으로 된 해. || 辛年 | noun | 천간(天干)이 신(辛)으로 된 해. || 新年 | noun | 새로 시작되는 해.
+603	fallback	오덕	五德	wikt		fan, otaku	五德 | noun | 유학에서 이르는 다섯 가지 덕(德). 온화·양순·공손·검소·겸양을 이르거나, 총명예지(聰明叡智)·관유온유(寬裕溫柔)·발강강의(發強剛毅)·제장중정(齊莊中正)·문리밀찰(文理密察)을 이른다.
+604	fallback	까만색	까만色	wikt		black (color)	까만色 | noun | 불빛이 전혀 없는 밤하늘과 같이 밝고 짙은 검은색.
+605	fallback	사모님	師母님	wikt		(one's) teacher's wife	師母님 | noun | 스승의 부인을 높여 부르거나 이르는 말.
+606	fallback	융통성	融通性	wikt		flexibility	融通性 | noun | 금전, 물품 따위를 돌려쓸 수 있는 성질.
+607	fallback	웅장	雄壯	wikt		magnificence, splendor, grandeur	雄壯 | other | ‘웅장하다’의 어근. || 雄將 | noun | 뛰어나고 굳센 장수. || 熊掌 | noun | 곰의 발바닥.
+608	fallback	회양목	회楊木	wikt		Korean box tree (Buxus microphylla var. koreana)	회楊木 | noun | 회양목과의 상록 활엽 관목. 높이는 7미터 정도이며, 잎은 마주나고 타원형인데 두껍다. 4~5월에 노란색 꽃이 잎겨드랑이에 피고 열매는 삭과(蒴果)로 6~7월에 갈색으로 익는다. 정원수로 가꾸기도 
+609	fallback	복수초	福壽草	wikt		Amur adonis (Adonis amurensis)	福壽草 | noun | 미나리아재빗과의 여러해살이풀. 높이는 25~30cm 정도이며, 잎은 어긋나고 세 번 또는 네 번 우상 복엽이다. 4~5월에 누런색 꽃이 원줄기와 가지 끝에 한 개씩 피고 열매는 수과(瘦果)이다. 산
+610	fallback	증식	增殖	wikt		proliferation	增殖 | noun | 늘어서 많아짐. 또는 늘려서 많게 함.
+611	fallback	짐마차	짐馬車	wikt		cart, wagon	짐馬車 | noun | 짐을 싣는 마차.
+612	fallback	본위	本位	wikt		monetary standard	本位 | noun | 판단이나 행동에서 중심이 되는 기준.
+613	fallback	본의	本意	wikt		original or true feelings	本衣 | noun | 밤이나 도토리 따위의 속껍질. || 本意 | noun | 본디부터 변함없이 그대로 가지고 있는 마음. || 本義 | noun | 근본이 되는 취지.
+614	fallback	사수자리	射手자리	wikt		Sagittarius	射手자리 | noun | 염소자리와 전갈자리 사이에 있는 별자리. 황도 십이궁의 아홉째 별자리로, 9월 상순 저녁에 자오선을 지난다. 별자리의 모양이 궁수가 활을 쏘는 모양과 비슷하다고 하여 이름이 붙여졌다. 중앙의 국자 
+615	fallback	독보적	獨步的	wikt		something unreachable, unparalleled	獨步的 | noun | 남이 감히 따를 수 없을 정도로 뛰어난 것.
+616	fallback	고음	高音	wikt		high note, high pitch	古音 | noun | 옛날에 쓰던 한자음. || 孤吟 | noun | 홀로 읊음. || 孤陰 | noun | 음(陰)만 있고 짝이 되는 양(陽)이 없는 것. || 股陰 | noun | 넓적다리 안쪽 부위. || 苦陰 | noun | 사람의 몸이 오온(五蘊)으로 이루어져 온갖 괴로움에서 벗어나지 못함을 이르는 말. || 高吟 | noun | 높은 소리로 읊음. || 高音 | noun | 높은 소리. || 膏飮 | noun | → 곰01 ‘곰01.
+617	fallback	저음	低音	wikt		low note, low pitch	低吟 | noun | 낮은 소리로 읊음. || 低音 | noun | 낮은 소리.
+618	fallback	야유	揶揄	wikt		heckling, jeer, catcall	冶遊 | noun | 주색에 빠져 방탕하게 놂. || 夜柔 | noun | 삼명(三明)의 하나. 인도 바라문교 경전의 하나이다. 베다의 4부 가운데 하나로, 제사(祭祀)의 법식을 집성(集成)한 책이다. || 夜遊 | noun | 밤에 벌이는 놀이. || 野遊 | noun | 들에 나가 노는 놀이. || 揶揄 | noun | 남을 빈정거려 놀림. 또는 그런 말이나 몸짓.
+619	fallback	악착	齷齪	wikt		tenacity, perseverance	齷齪 | noun | 일을 해 나가는 태도가 매우 모질고 끈덕짐. 또는 그런 사람.
+620	fallback	정착	定着	wikt		settlement, settling down, becoming established	定着 | noun | 일정한 곳에 자리를 잡아 붙박이로 있거나 머물러 삶.
+621	fallback	아열대	亞熱帶	wikt		the subtropics	亞熱帶 | noun | 열대와 온대의 중간 지대. 대체로 남북 위도 각각 20~30도 사이의 지대로 건조 지역이 많다.
+622	fallback	군종	軍宗	wikt		service branch	軍宗 | noun | 군대 내에서 하는 종교에 관한 일. || 軍種 | noun | 육군, 해군, 공군 따위와 같이 지리적 위치에 따라 나누는 군의 종류.
+623	fallback	육계	肉鷄	wikt		cinnamon, cassia (Cinnamomum cassia)	六界 | noun | 만물을 생성하는 여섯 가지 요소. 지대(地大), 수대(水大), 화대(火大), 풍대(風大), 공대(空大), 식대(識大)를 이른다. || 肉界 | noun | 육신(肉身)의 세계. 육체 또는 육체가 작용하는 범위를 이른다. || 肉桂 | noun | 5~6년 이상 자란 계수나무의 두꺼운 껍질을 한방에서 이르는 말. 건위제와 강장제로 쓴다. || 肉髻 | noun | 부처의 정수리에 있는 뼈가 솟아 저절로 상투 모양이 된 것. 인간이나 천상에서 볼 수 없는 일이므로 이렇게 이른다. 부처의 팔십수형호의 하나이다. || 肉鷄 | noun | 주로 고기를 얻으려고 살지게 기르는 닭.
+624	fallback	초여름	初여름	wikt		early summer	初여름 | noun | 이른 여름. 주로 음력 4월을 이른다.
+625	fallback	옆방	옆房	wikt		next room, adjacent room	옆房 | noun | 방이 연이어 있을 때 이웃하는 방.
+626	fallback	선견지명	先見之明	wikt		foresight, far-sightedness	先見之明 | noun | 어떤 일이 일어나기 전에 미리 앞을 내다보고 아는 지혜.
+627	fallback	하악	下顎	wikt		a hiss, while hissing	下顎 | noun | 아래쪽의 턱.
+628	fallback	수돗물	水道물	wikt		tap water	水道물 | noun | 상수도에서 나오는 물.
+629	fallback	주해	註解	wikt		annotation	酒海 | noun | 술의 바다라는 뜻으로, 큰 술잔을 비유적으로 이르는 말. || 註解 | noun | 본문에 주를 달아 알기 쉽게 풀이함. 또는 그런 글.
+630	fallback	학계	學界	wikt		academia, scholarly community	學契 | noun | 교육이나 학비 조달을 목적으로 하는 계. || 學界 | noun | 학문 연구 및 저술에 종사하는 학자들의 활동 분야. || 學階 | noun | 승려의 학식에 따라 주는 강사(講師), 법사(法師) 따위의 위계.
+631	fallback	희대	稀代	wikt		rarety, uniqueness	稀代 | noun | 세상에 드묾. || 戲臺 | noun | 배우가 연극하는 곳.
+632	fallback	푸대접	푸待接	wikt		poor treatment	푸待接 | noun | 정성을 들이지 않고 아무렇게나 하는 대접.
+633	fallback	원추	圓錐	wikt		cone	袁樞 | noun | 중국 남송(南宋)의 역사가(1131~1205). 자는 기중(機仲). 기사 본말체를 창안하여 ≪통감기사본말≫을 저술하였다. || 圓錐 | noun | ‘원뿔’의 전 용어.
+634	fallback	양장	洋裝	wikt		Western-style suit	羊腸 | noun | 양의 창자. || 良匠 | noun | 재주와 기술이 뛰어난 공인(工人). || 良將 | noun | 재주와 꾀가 많은 훌륭한 장수. || 兩場 | noun | 조선 시대에, 과거의 초시와 복시를 통틀어 이르던 말. || 洋裝 | noun | 옷차림이나 머리 모양을 서양식으로 꾸밈. 또는 그런 옷이나 몸단장. || 糧仗 | noun | 군량과 병기를 아울러 이르는 말.
+635	fallback	홍색	紅色	wikt		red (color)	紅色 | noun | 사람의 입술이나 피의 빛깔과 같이 짙고 선명한 색.
+636	fallback	시식	試食	wikt		sampling food	侍食 | noun | 어른이 식사할 때 곁에 모시고 서 있는 일. || 施食 | noun | 죽은 영혼을 천도(薦度)하기 위하여 법식(法食)을 주면서 법문(法門)을 말해 주고 경전을 독송하며 염불하는 따위의 의식을 행함. 또는 그 법식. || 時食 | noun | 그 계절에 특별히 있는 음식. 또는 그 시절에 알맞은 음식. || 視息 | noun | 눈 뜨고 살아 있는 목숨. || 試食 | noun | 음식의 맛이나 요리 솜씨를 보려고 시험 삼아 먹어 봄. || 試植 | noun | 새로운 품종의 식물 따위를 시험적으로 심음.
+637	fallback	가인	歌人	wikt		Cain	佳人 | noun | 아름다운 사람. 주로 얼굴이나 몸매 따위가 아름다운 여자를 이른다. || 家人 | noun | 한 가족이나 가까운 일가를 이르는 말. || 家印 | noun | 자기 집 소유물임을 나타내기 위하여 물건에 표시해 두는 기호. 또는 거기에 쓰는 도장. || 街人 | noun | ‘김병로’의 호. || 歌人 | noun | 노래를 잘 부르거나 잘 짓는 사람.
+638	fallback	노인정	老人亭	wikt		hall for the elderly; senior community center	老人亭 | noun | 노인들이 모여 쉴 수 있도록 마련해 놓은 정자나 집, 방 따위.
+639	fallback	통제력	統制力	wikt		controlling ability; control	統制力 | noun | 통제하는 힘.
+640	fallback	투하	投下	wikt		dropping (from a height)	投下 | noun | 던져 아래로 떨어뜨림. || 投荷 | noun | 배가 조난하였을 때에 선체를 가볍게 하기 위하여 짐을 바다에 던짐. 또는 그 짐.
+641	fallback	노포	老鋪	wikt		a shop with a long history	老圃 | noun | 농사일에 경험이 많은 농부. || 老鋪 | noun | 대대로 물려 내려오는 점포(店鋪). || 弩砲 | noun | 쇠로 된 발사 장치가 달린 활. 여러 개의 화살을 연달아 쏘게 되어 있는 것으로, 주로 낙랑 무덤에서 나오고 있다. || 露布 | noun | 일반에게 널리 퍼뜨림. || 露布 | noun | 중국 문체(文體)의 하나. 봉함을 하지 않고 노출된 채로 선포하는 포고문인데, 주로 전승(戰勝)을 급히 알리는 데에 사용되었다.
+642	fallback	복사본	複寫本	wikt		copy (as opposed to the original)	複寫本 | noun | 원본을 복사하여 만든 책이나 서류 따위.
+643	fallback	불청객	不請客	wikt		an uninvited guest	不請客 | noun | 오라고 청하지 않았는데도 스스로 찾아온 손님.
+644	fallback	검객	劍客	wikt		swordsman	劍客 | noun | 칼 쓰기 기술에 능한 사람.
+645	fallback	혁대	革帶	wikt		leather belt	革代 | noun | 나라의 왕조가 바뀜. || 革帶 | noun | 가죽으로 만든 띠.
+646	fallback	여편네	女便네	wikt		wife, married woman	女便네 | noun | 결혼한 여자를 낮잡아 이르는 말.
+647	fallback	축구공	蹴球공	wikt		football, soccer ball (ball used in this sport)	蹴球공 | noun | 축구 경기에 쓰는 공. 둘레는 68~71cm이고, 무게는 390~453g, 공의 내부 공기 압력은 0.6~1.1기압으로, 주로 재질은 가죽이다.
+648	fallback	봉인	封印	wikt		a seal; the act of sealing or being sealed, often referring to a document, package, or magical/ritual context	奉引 | noun | 손윗사람을 받들어 인도함. || 封人 | noun | 변경(邊境)을 지키던 벼슬아치. || 封印 | noun | 밀봉(密封)한 자리에 도장을 찍음. 또는 그렇게 찍힌 도장. || 鋒刃 | noun | 창, 칼 따위의 날.
+649	fallback	자유화	自由化	wikt		liberalization	自由化 | noun | 제약이나 제한 없이 자유롭게 됨. 또는 그렇게 함. || 自由畫 | noun | 아동이 표현하고 싶은 그대로 자유롭게 그린 그림. 또는 실감(實感)을 솔직하게 표현한 어린이의 그림.
+650	fallback	농사일	農事일	wikt		farming, agriculture, farming work	農事일 | noun | 농사짓는 일. 또는 농사와 관계되는 일.
+651	fallback	자주색	紫朱色	wikt		violet, purple (color)	紫朱色 | noun | 짙은 남빛을 띤 붉은색. 또는 그런 색의 물감.
+652	fallback	자영업자	自營業者	wikt		business owner	自營業者 | noun | 자신이 직접 사업을 경영하는 사람.
+653	fallback	기도원	祈禱院	wikt		prayer house	祈禱院 | noun | 숙식을 하면서 기도할 수 있는 시설을 갖추어 놓은 곳.
+654	fallback	보호소	保護所	wikt		shelter, protection center	保護所 | noun | 위험이나 곤란 따위가 미치지 않도록 잘 보살펴 주는 곳.
+655	fallback	운영자	運營者	wikt		operator, administrator, manager	(no 표준국어대사전 entry for this spelling)
+656	fallback	준비물	準備物	wikt		items to be prepared; supplies; preparation	準備物 | noun | 미리 마련하여 갖추어 놓는 물건.
+657	fallback	패가망신	敗家亡身	wikt		ruining oneself and one's own family	敗家亡身 | noun | 집안의 재산을 다 써 없애고 몸을 망침.
+658	fallback	견제	牽制	wikt		restraint; a check	牽制 | noun | 일정한 작용을 가함으로써 상대편이 지나치게 세력을 펴거나 자유롭게 행동하지 못하게 억누름.
+659	fallback	유명세	有名稅	wikt		the price of becoming famous	有名稅 | noun | 세상에 이름이 널리 알려져 있는 탓으로 당하는 불편이나 곤욕을 속되게 이르는 말.
+660	fallback	사또	使道	wikt		the head of a province or government office	使道▽ | noun | 일반 백성이나 하급 벼슬아치들이 자기 고을의 원(員)을 존대하여 부르던 말.
+661	fallback	뒷산	뒷山	wikt		mountain or hill at the back	뒷山 | noun | 마을이나 집 뒤쪽에 있는 산.
+662	fallback	내공	內攻	wikt		internal exercises	乃公 | pronoun | 윗사람이 아랫사람을 상대하여 자기를 이르는 일인칭 대명사. 주로 임금이 신하를, 또는 아버지가 아들을 상대하여 자기를 이를 때 쓴다. || 內功 | noun | 오랜 기간 무예 따위를 숙련해서 다져진 힘과 기운. || 內攻 | noun | 정신적 결함이나 타격이 겉으로 나타나지 않고 속으로만 퍼짐. 또는 그런 일. || 內供 | noun | 옷의 안감으로 쓰는 무명. 흔히 품질이 낮은 무명을 이른다. || 內空 | noun | 속이 비어 있음. || 來攻 | noun | 침공하여 옴. || 來貢 | noun | 외국 또는 속국(屬國)의 사신이 찾아와서 공물을 바침. || 耐空 | noun | 공중에서 견딘다는 뜻으로, 항공기나 새 따위가 땅에 내리지 않고 뜬 채로 오랫동안 낢을 이르는 말.
+663	fallback	점술	占術	wikt		fortune-telling, divination	占術 | noun | 특수한 자연 현상이나 인간 현상을 관찰하여 미래의 일이나 운명을 판단하고 예언하며, 감추어진 초자연적인 세력의 의사를 알려는 방술(方術). 소극적이고 수동적인 점이 주술과 다르다.
+664	fallback	시작점	始作點	wikt		starting point; initial point	始作點 | noun | 어떠한 것이 처음으로 일어나거나 시작되는 곳.
+665	fallback	출발점	出發點	wikt		starting point	出發點 | noun | 길을 가는 데 처음 떠나는 지점.
+666	fallback	무적	無敵	wikt		invincibility; matchlessness	無敵 | noun | 매우 강하여 겨룰 만한 맞수가 없음. 또는 그런 사람. || 無籍 | noun | 국적, 학적 따위가 해당 문서에 기록되어 있지 아니함. || 舞翟 | noun | 궁중 제무에서, 문무(文舞)를 추는 사람이 왼손에 잡고 춤을 추던 기구. 나무로 만든 용머리에 자루를 맞추고, 용머리의 입에는 다섯 층의 꿩의 꽁지를 달았다. || 霧笛 | noun | 안개가 끼었을 때에 선박이 충돌하는 따위를 막기 위하여 등대나 배에서 울리는 고동. || 霧滴 | noun | 안개의 방울.
+667	fallback	원주민	原住民	wikt		native; aborigine; indigenous people	原住民 | noun | 그 지역에 본디부터 살고 있는 사람들.
+668	fallback	생명체	生命體	wikt		life, lifeform	生命體 | noun | 생명이 있는 물체.
+669	fallback	야인	野人	wikt		unrefined person; uncivilized person	野人 | noun | 교양이 없고 예절을 모르는 사람.
+670	fallback	초벌	初벌	wikt		the initial rough work done for a task that requires multiple steps	初벌 | noun | 같은 일을 여러 차례 거듭하여야 할 때에 맨 처음 대강 하여 낸 차례.
+671	fallback	해당화	海棠花	wikt		beach rose (Rosa rugosa)	海棠花 | noun | 장미과의 낙엽 활엽 관목. 높이는 1~1.5미터이며, 잎은 어긋나고 우상 복엽인데 잔잎은 긴 타원형이고 잎 뒤에 선점과 잔털이 있다. 5~8월에 붉은 자주색 꽃이 가지 끝에 피고 열매는 가장과로 8
+672	fallback	파종	播種	wikt		sowing	破腫 | noun | 종기를 터뜨림. || 播種 | noun | 곡식이나 채소 따위를 키우기 위하여 논밭에 씨를 뿌림.
+673	fallback	셋방	貰房	wikt		rented room	貰房 | noun | 세를 내고 빌려 쓰는 방.
+674	fallback	고자질	告者질	wikt		tattling, snitching	告者질 | noun | 남의 잘못이나 비밀을 일러바치는 짓.
+675	fallback	안식	安息	wikt		rest	安息 | noun | 편히 쉼. || 安息 | noun | 고대 서아시아에 있던 이란족의 파르티아 왕국을 중국에서 이르던 이름. || 案息 | noun | 벽에 세워 놓고 앉을 때 몸을 기대는 방석. || 眼識 | noun | 사물의 좋고 나쁨이나 가치의 높고 낮음을 구별할 수 있는 안목과 식견.
+676	fallback	면류관	冕旒冠	wikt		royal crown	冕旒冠 | noun | 제왕(帝王)의 정복(正服)에 갖추어 쓰던 관. 거죽은 검고 속은 붉으며, 위에는 긴 사각형의 판이 있고 판의 앞에는 오채(五彩)의 구슬꿰미를 늘어뜨린 것으로, 국가의 대제(大祭) 때나 왕의 즉위 때
+677	fallback	산길	山길	wikt		mountain path; mountain road	散길 | noun | → 낙질. || 山길 | noun | 산에 나 있는 길.
+678	fallback	교내	校內	wikt		the inside of a school	校內 | noun | 학교의 안. || 敎內 | noun | 부처의 가르침을 말이나 글로 전함.
+679	fallback	보혈	補血	wikt		the precious blood; the blood of Jesus Christ	補血 | noun | 약을 먹어 조혈 작용을 돕는 일. || 寶血 | noun | 인류의 죄를 구속(救贖)하기 위하여 예수가 십자가에 못 박혀 흘린 피.
+680	fallback	옹고집	壅固執	wikt		stubbornness, obstinateness	壅固執 | noun | 억지가 매우 심하여 자기 의견만 내세워 우기는 성미. 또는 그런 사람.
+681	fallback	모함	謀陷	wikt		slander; entrapping	母艦 | noun | 항공기나 잠수함 따위의 이동 기지 역할을 하는 군함. 연료, 식량 따위를 공급하며, 항공기의 이착륙 설비를 갖추기도 하였다. || 謀陷 | noun | 나쁜 꾀로 남을 어려운 처지에 빠지게 함.
+682	fallback	처자식	妻子息	wikt		one's wife and children; one's family	妻子息 | noun | 아내와 자식을 아울러 이르는 말.
+683	fallback	사랑방	舍廊房	wikt		men's quarters, mostly found in a hanok	舍廊房 | noun | 사랑으로 쓰는 방.
+684	fallback	냉방	冷房	wikt		air conditioning	冷房 | noun | 실내의 온도를 낮춰 차게 하는 일.
+685	fallback	천신	天神	wikt		sky god; heavenly god; sky spirit	天神 | noun | ‘천사04「4」’의 전 용어. || 賤臣 | pronoun | 천한 신하라는 뜻으로, 신하가 임금을 상대하여 자기를 낮추어 이르는 일인칭 대명사. || 賤身 | noun | 천한 몸이라는 뜻으로, 자기를 낮추어 이르는 말. || 薦紳 | noun | 관위가 있는 사람. 또는 지체가 높은 사람. || 薦新 | noun | 철 따라 새로 난 과실이나 농산물을 먼저 신위(神位)에 올리는 일.
+686	fallback	사목	司牧	wikt		pastoral ministry	四目 | noun | ‘방상시’를 달리 이르는 말. 황금색의 눈이 네 개 있어 이렇게 이른다. || 司牧 | noun | 신라 때에, 사어부에 속한 벼슬. 경덕왕 때에 사지(舍知)를 고친 것으로, 혜공왕 때에 다시 사지로 고쳤다. || 事目 | noun | 공사(公事)에 관하여 정한 규칙. || 蛇目 | noun | 뱀의 눈. || 肆目 | noun | 마음껏 보고 싶은 대로 멀리 바라봄.
+687	fallback	목회	牧會	wikt		pastoral ministry	木灰 | noun | 나무가 다 타서 생긴 재. || 牧會 | noun | 목사가 교회를 맡아 설교하거나 신자의 신앙생활을 지도하는 등 공식적으로 행하는 활동. 형태는 교회에 따라 다양하며 초대 교회에서 발전한 형태는 로마 가톨릭교회, 동방 정교회, 성공회 따위의 몇몇 교
+688	fallback	사역	使役	wikt		putting to work; setting to work	四逆 | noun | 손발에서 팔꿈치와 무릎까지 싸늘해지는 증상. || 四域 | noun | 사방의 지역. || 寺役 | noun | 절에 부과하는 부역. || 寺域 | noun | 절이 차지하고 있는 구역 안. || 死域 | noun | 무기의 사정거리 또는 레이다 및 관측자의 관측 범위 안에 있으면서도 지형 따위의 장애로 인하여 영향력이 미치지 못하는 구역. || 使役 | noun | 사람을 부리어 일을 시킴. 또는 시킴을 받아 어떤 작업을 함. || 思繹 | noun | 생각하고 찾아서 구함.
+689	fallback	동심	童心	wikt		a child's mind, childlike innocence	冬心 | noun | 겨울과도 같이 차갑고 쓸쓸한 마음. || 同心 | noun | 마음을 같이함. 또는 같은 마음. || 動心 | noun | 자극을 받아 마음이 움직임. || 童心 | noun | 어린아이의 마음.
+690	fallback	가두	街頭	wikt		street	假頭 | noun | 얼굴과 머리 뒤까지 가리는 탈. || 街頭 | noun | 도시의 길거리.
+691	fallback	은폐	隱蔽	wikt		concealment; cover-up	隱閉 | noun | 숨어서 나오지 아니함. || 隱蔽 | noun | 덮어 감추거나 가리어 숨김.
+692	fallback	우애	友愛	wikt		brotherliness; friendliness; fraternity	友愛 | noun | 형제간 또는 친구 간의 사랑이나 정분. || 愚騃 | other | ‘우애하다02’의 어근.
+693	fallback	우비	雨備	wikt		raincoat	于飛 | noun | 부부가 화합함을 비유적으로 이르는 말. 봉황 한 쌍이 사이좋게 날았다는 옛 시에서 유래한다. || 牛屝 | noun | 소에게 일을 시킬 때에 신기는 짚신. || 雨備 | noun | 비를 가리기 위하여 사용하는 물건을 통틀어 이르는 말. 우산, 비옷, 삿갓, 도롱이 따위를 이른다. || 愚鄙 | noun | 어리석고 우둔함. || 憂悲 | noun | 근심과 슬픔을 아울러 이르는 말. || 優比 | noun | 앞의 항의 값이 뒤의 항의 값보다 큰 비. 8:4 따위가 있다. || 優批 | noun | 신하가 올린 글에 대하여 임금이 좋은 말로 비답을 내리던 일. 또는 그 비답.
+694	fallback	인문	人文	wikt		the humanities	人文 | noun | 인류의 문화. || 仁聞 | noun | 어질다고 들리는 평판 높은 소문. || 引文 | noun | 남의 말이나 글에서 직접 또는 간접으로 따온 문장. || 印文 | noun | 도장을 찍은 형적. || 鱗紋 | noun | 무늬의 하나. 이등변 삼각형을 두 개 나란히 하고 그 위에 다시 한 개를 포갠 것을 기본으로 상하좌우로 늘어놓은 모양이다.

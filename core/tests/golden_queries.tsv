@@ -183,10 +183,9 @@ investment	top3	투자
 contract	top3	계약
 tax	top3	세금
 responsibility	top3	책임
-# == English-result hanja: the reading the meaning needs, never a wrong one
-gift shop	hanja5	선물 가게=膳物
+# == English-result hanja: never a wrong one (search no longer guesses hanja for rows without it, owner rule
+# "if in doubt, no hanja", so the former 'gift shop' / 'forward contract' hanja5/hanja10 checks are gone)
 gift	nothanja20	선물=先物
-forward contract	hanja10	선물 계약=先物|선물환=先物換
 water	nothanja20	물=物
 love	nothanja20	사랑=舍廊
 stomach	nothanja30	배가 부르다=倍加

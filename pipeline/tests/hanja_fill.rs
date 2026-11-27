@@ -117,28 +117,31 @@ fn fills_follow_the_rules_and_never_invent() {
     assert_eq!(hanja_of(&core, "하늘", "sky"), None);
     assert_eq!(hanja_of(&core, "나이", "age"), None);
     assert_eq!(hanja_of(&core, "아기", "baby"), None);
-    // a unique, matching entry; a partial hanja (中央 for 중앙아시아) is not copied
+    // a unique, matching entry (low certainty, kept because the review in data/hanja_reviewed.tsv confirmed it);
+    // a partial hanja (中央 for 중앙아시아) is not copied
     assert_eq!(hanja_of(&core, "범죄율", "crime rate").as_deref(), Some("犯罪率"));
     assert_eq!(hanja_of(&core, "중앙아시아", "Central Asia"), None);
     // existing hanja is never overwritten
     assert_eq!(hanja_of(&core, "동선", "sharing a ship").as_deref(), Some("同船"));
     assert_eq!(hanja_of(&core, "동선", "flow line").as_deref(), Some("動線"));
-    // derived: stem hanja + native suffix
-    assert_eq!(hanja_of(&core, "신중하다", "prudent").as_deref(), Some("愼重하다"));
+    // derived: stem hanja + native suffix, but only on English overlap (low certainty) and not reviewed: owner rule
+    // "if in doubt, no hanja" leaves it empty
+    assert_eq!(hanja_of(&core, "신중하다", "prudent"), None);
     // kengdic: one stdict candidate; 시원하다 has a native stdict entry (no hanja) and stays empty
     let k = |hw: &str| -> Option<String> { core.query_row("SELECT hanja FROM entries WHERE source='kengdic' AND hw_norm=?1", [hw], |r| r.get(0)).unwrap() };
     assert_eq!(k("환초").as_deref(), Some("環礁"));
-    assert_eq!(k("고유전학").as_deref(), Some("古遺傳學"));
+    assert_eq!(k("고유전학"), None); // only CC-CEDICT backs it (low) and it is not reviewed
     assert_eq!(k("시원하다"), None);
     assert_eq!(k("회의자"), None);
     assert_eq!(hanja_of(&core, "구경시키다", "to show around"), None);
     assert_eq!(k("재분").as_deref(), Some("才分"));
     assert_eq!(k("재분하다"), None);
 
-    // every fill is CJK + allowed suffix, marked in the data, and indexed by character
-    assert_eq!(records.len(), stats.total());
+    // every written fill is CJK + allowed suffix, marked in the data, and indexed by character
+    assert_eq!(records.iter().filter(|r| r.kept).count(), stats.total());
     assert_eq!(stats.krdict_homograph + stats.krdict_unique, 3, "{stats:?}"); // 사기, 동선, 범죄율
-    for r in &records {
+    assert!(records.iter().any(|r| !r.kept && r.headword == "고유전학"), "unreviewed low fills are reported, not written");
+    for r in records.iter().filter(|r| r.kept) {
         assert!(is_valid_fill(&r.hanja), "{r:?}");
         let (h, data): (String, String) = core.query_row("SELECT hanja, data FROM entries WHERE id = ?1", [r.id], |r| Ok((r.get(0)?, r.get(1)?))).unwrap();
         assert_eq!(h, r.hanja);
@@ -151,18 +154,19 @@ fn fills_follow_the_rules_and_never_invent() {
     assert!(records.iter().any(|r| r.rule == Rule::Homograph && r.headword == "사기"));
     // entries that were not filled have no marker
     let marked: i64 = core.query_row("SELECT COUNT(*) FROM entries WHERE data LIKE '%hanja_src%'", [], |r| r.get(0)).unwrap();
-    assert_eq!(marked as usize, records.len());
+    assert_eq!(marked as usize, records.iter().filter(|r| r.kept).count());
 }
 
 #[test]
 fn a_second_run_changes_nothing() {
     let dir = tempfile::tempdir().unwrap();
     let (core, sp) = packs(dir.path());
-    let first = apply(&core, &sp, &evidence()).unwrap().1.len();
+    let first = apply(&core, &sp, &evidence()).unwrap().1.iter().filter(|r| r.kept).count();
     assert!(first > 0);
-    // what is filled now has hanja: nothing new
+    // what is filled now has hanja: nothing new is written (unreviewed low fills are only reported again)
     let again = apply(&core, &sp, &evidence()).unwrap();
-    assert_eq!(again.1.len(), 0, "{:?}", again.1);
+    let written: Vec<_> = again.1.iter().filter(|r| r.kept).collect();
+    assert_eq!(written.len(), 0, "{written:?}");
 }
 
 #[test]

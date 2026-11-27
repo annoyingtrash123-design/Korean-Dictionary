@@ -31,6 +31,8 @@ the app's WebView, Preact UI (`app/`). Specs:
 - **Hanja: if in doubt, none (owner's rule).** Show hanja only when a Korean dictionary (krdict, 표준국어대사전,
   우리말샘) confirms it for that word and meaning. Never guess hanja from Chinese-only evidence, definition
   similarity or a homograph; a native word or an uncertain case gets no hanja.
+  Pipeline-added hanja that no dictionary ties to the meaning ship only with an independent review verdict
+  (`pipeline/data/hanja_reviewed.tsv`, owner-approved 2026-11); unreviewed ones are dropped, and search never guesses.
 - Public domain in Korea: authors who died before 1963. Laws/court rulings are unprotected.
 - wasm-opt: `export PATH=/tmp/claude-0/binaryen/bin:$PATH` in this sandbox before `npm run build:core`.
 - Local data for e2e: `cp -r pipeline/out/site-data app/public/data` after a pipeline build.
