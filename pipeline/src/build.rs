@@ -1070,6 +1070,7 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     counts.insert("hanja_words".into(), q("SELECT COUNT(*) FROM hanja_words")?.into());
     counts.insert("hanja_chars".into(), q("SELECT COUNT(*) FROM hanja_chars")?.into());
     counts.insert("hanja_hun".into(), n_hun.into());
+    counts.insert("word_en".into(), q("SELECT COUNT(*) FROM entries WHERE ext_id LIKE 'word-stdict-%'")?.into());
     if let Some(f) = &fill_stats {
         counts.insert("hanja_filled".into(), f.total().into());
     }
