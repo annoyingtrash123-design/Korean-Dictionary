@@ -208,6 +208,13 @@ function AiChip({ what }: { what: string }) {
   return <span class="chip-ai ex-ai" lang="en" title={`${what} written by AI`} aria-label={`${what} written by AI`}>AI</span>;
 }
 
+/** AI label of an English gloss: written by AI for an entry of our own (its Korean definition names a source:
+ *  the idiom and word overlays), corrected by AI for a dictionary's own sense (gloss_fixes). */
+function GlossAiChip({ written }: { written: boolean }) {
+  const label = written ? 'English written by AI (reviewed)' : 'English corrected by AI (reviewed)';
+  return <span class="chip-ai ex-ai" title={label} aria-label={label}>AI</span>;
+}
+
 function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolean; isKo: boolean }) {
   const [all, setAll] = useState(false);
   // examples with English (a source translation or a reviewed AI one) first, so they are among the shown few
@@ -217,7 +224,7 @@ function SenseView({ s, n, showKo, isKo }: { s: Sense; n: number; showKo: boolea
     <li class="sense">
       <div class="sense-body">
         {s.pos && <Pos pos={s.pos} />}
-        {s.gloss ? <><span class="gloss">{s.gloss}</span>{s.gloss_ai && <span class="chip-ai ex-ai" title="English corrected by AI (reviewed)" aria-label="English corrected by AI (reviewed)">AI</span>}</> : s.roman ? <span class="roman">{s.roman}</span> : null}
+        {s.gloss ? <><span class="gloss">{s.gloss}</span>{s.gloss_ai && <GlossAiChip written={!!s.ko_def_source} />}</> : s.roman ? <span class="roman">{s.roman}</span> : null}
         {s.tags?.length ? <span class="tags">{s.tags.map((t) => <span key={t} class="tag">{t}</span>)}</span> : null}
         {s.def && <div class="def">{s.def_ai && <AiChip what="English definition" />}{s.def}</div>}
         {s.ko_def && (showKo || isKo) && (

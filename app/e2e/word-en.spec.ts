@@ -28,7 +28,9 @@ test('English search finds 선물 先物 "futures" with an AI-labelled gloss (ph
   await expect(page.locator('h1')).toContainText('선물');
   const gloss = page.locator('.gloss', { hasText: 'futures (finance)' }).first();
   await expect(gloss).toBeVisible();
-  await expect(gloss.locator('xpath=following-sibling::span[contains(@class,"chip-ai")]').first()).toHaveText('AI');
+  const chip = gloss.locator('xpath=following-sibling::span[contains(@class,"chip-ai")]').first();
+  await expect(chip).toHaveText('AI');
+  await expect(chip).toHaveAttribute('aria-label', 'English written by AI (reviewed)');
   // stdict's own Korean definition stays with it
   await expect(page.getByText('장래의 일정한 시기에 현품을 넘겨준다는 조건으로').first()).toBeVisible();
   await page.screenshot({ path: '../docs/screenshots/word-en-entry-phone.png' });

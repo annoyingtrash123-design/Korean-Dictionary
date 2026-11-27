@@ -18,6 +18,7 @@ pub mod fetch;
 pub mod freq;
 pub mod kaikki;
 pub mod kengdic;
+pub mod kengdic_hanja;
 pub mod krdict;
 pub mod opendict;
 pub mod pack;

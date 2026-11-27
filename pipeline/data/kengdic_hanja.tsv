@@ -1,0 +1,3 @@
+# Reviewed corrections to kengdic's own hanja (see src/kengdic_hanja.rs). fix: fixed_hanja replaces hanja; drop: no hanja;
+# keep rows are kept for the record and change nothing. gloss is the entry's English exactly.
+headword	hanja	gloss	verdict	fixed_hanja	reason

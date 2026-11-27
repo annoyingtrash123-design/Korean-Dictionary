@@ -27,7 +27,8 @@ export interface Rel { type: string; word: string }
 export interface Sense {
   pos?: string; gloss?: string; roman?: string; def?: string; ko_def?: string; note?: string; pattern?: string;
   tags?: string[]; examples?: Example[]; rel?: Rel[];
-  /** gloss is an AI-reviewed correction of the source English (pipeline gloss_fixes) */
+  /** gloss is AI-written and reviewed: a correction of a dictionary's English (gloss_fixes), or the English of our own
+   *  entry (idiom / word overlays, which carry `ko_def_source`) */
   gloss_ai?: boolean;
   /** the English `def` was written by AI (grammar overlay, source hanppuri) */
   def_ai?: boolean;

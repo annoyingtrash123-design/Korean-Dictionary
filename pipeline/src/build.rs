@@ -992,6 +992,9 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
     let hanja_fixes = crate::hanja_fixes::HanjaFixes::builtin();
     let n_hanja_fixes = hanja_fixes.apply(&conn)?;
     log::info!("hanja fixes: {n_hanja_fixes} of {} applied", hanja_fixes.len());
+    let kh = crate::kengdic_hanja::builtin();
+    let n_kh = crate::kengdic_hanja::apply(&conn, &kh)?;
+    log::info!("kengdic hanja corrections (reviewed): {n_kh} entries changed by {} rows", kh.len());
 
     // hanja of 표준국어대사전 for krdict / kengdic entries that have none (before the hanja tables are finished)
     if let Some(sp) = stdict {
