@@ -908,7 +908,12 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
             Some(p) => Some(Connection::open_with_flags(p, rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY)?),
             None => None,
         };
-        let (mut added, mut drafts) = (0, 0);
+        // the full stdict pack has every source entry; a small fixture pack (tests) only some, and the others are left out
+        let full = match &sp {
+            Some(p) => p.query_row("SELECT COUNT(*) FROM entries", [], |r| r.get::<_, i64>(0))? > 100_000,
+            None => false,
+        };
+        let (mut added, mut drafts, mut absent) = (0, 0, 0);
         for w in crate::word_en::builtin() {
             if !crate::word_en::is_approved(&w) {
                 drafts += 1;
@@ -918,14 +923,20 @@ pub fn build_core(src: &Sources, ranker: &Ranker, out: &Path, version: &str, bui
                 anyhow::bail!("word_en.tsv: approved row {} {} duplicates {dup}, which has English; mark it `rejected: covered by {dup}`", w.headword, w.hanja);
             }
             if let Some(sp) = &sp {
-                crate::word_en::check_against_stdict(sp, &w)?;
+                if !crate::word_en::check_against_stdict(sp, &w)? {
+                    if full {
+                        anyhow::bail!("word_en.tsv: {} {}: stdict has no entry {} (renumbered upstream? re-match the row)", w.headword, w.hanja, w.src_id);
+                    }
+                    absent += 1;
+                    continue;
+                }
             }
             let e = crate::word_en::to_entry(&w);
             let rank = ranker.rank(&Entry { source: "krdict", ..e.clone() });
             insert_entry(&conn, &e, rank, true, &mut c)?;
             added += 1;
         }
-        log::info!("word English overlay (hanppuri, AI-written, reviewed): {added} entries added, {drafts} drafts left out");
+        log::info!("word English overlay (hanppuri, AI-written, reviewed): {added} entries added, {drafts} drafts left out, {absent} not in this stdict pack");
     }
 
     // grammar table

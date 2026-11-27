@@ -104,16 +104,17 @@ pub fn english_duplicate(core: &Connection, w: &WordEn) -> Result<Option<String>
 }
 
 /// The row's Korean definitions must be the stdict entry's, verbatim and in order (the pack is the built stdict pack).
-pub fn check_against_stdict(stdict: &Connection, w: &WordEn) -> Result<()> {
+/// `Ok(false)`: the pack has no such entry (a fixture build; the caller decides whether that is allowed).
+pub fn check_against_stdict(stdict: &Connection, w: &WordEn) -> Result<bool> {
     let data: Option<String> = stdict.query_row("SELECT data FROM entries WHERE ext_id = ?1 LIMIT 1", [w.src_id.as_str()], |r| r.get(0)).ok();
-    let Some(data) = data else { bail!("word_en.tsv: {} {}: stdict has no entry {}", w.headword, w.hanja, w.src_id) };
+    let Some(data) = data else { return Ok(false) };
     let v: serde_json::Value = serde_json::from_str(&data)?;
     let pack: Vec<&str> = v["senses"].as_array().into_iter().flatten().filter_map(|s| s["ko_def"].as_str()).collect();
     let mine: Vec<&str> = w.ko_def.split(" ‖ ").collect();
     if pack.len() < mine.len() || pack[..mine.len()] != mine[..] {
         bail!("word_en.tsv: {} {} (stdict:{}): ko_def is not the stdict entry's definitions\n  file: {}\n  pack: {}", w.headword, w.hanja, w.src_id, w.ko_def, pack.join(" ‖ "));
     }
-    Ok(())
+    Ok(true)
 }
 
 pub fn ext_id(w: &WordEn) -> String {
