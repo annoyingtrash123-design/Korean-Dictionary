@@ -179,13 +179,8 @@ test('study lists: levels, deep scroll, entry, save, grammar, topics (phone and 
   // the saved word is in "Saved words" (keyed like any entry), and the study list is unchanged
   await overview(page);
   await expect(page.locator('.list-row', { has: page.locator('.list-name', { hasText: /^Saved words$/ }) })).toContainText('1 item');
-  await expect(study(page).locator('.resume')).toContainText('Continue: 6급 · 표준 교육과정');
-  await expect(study(page).locator('.resume')).toContainText('Vocabulary');
-
-  // the Continue row sits above the groups, outside any collapsed one
-  await fold(page, 'Vocabulary by level').click();
-  await expect(study(page).locator('.resume .list-row')).toBeVisible();
-  await expand(page, 'Vocabulary by level');
+  // no "Continue: …" shortcut row above the groups (the owner removed it)
+  await expect(page.getByText(/^Continue:/)).toHaveCount(0);
 
   // ---- grammar by level: the official forms, summaries; a tap opens the pattern's entry ----
   await expand(page, 'Grammar by level');

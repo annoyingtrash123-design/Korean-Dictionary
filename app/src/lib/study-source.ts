@@ -78,5 +78,4 @@ export const studySource: ListSource = {
     setSort: saveTopicSort,
     fetch: fetchRows,
   },
-  lastOpened: () => studyMemory.last(),
 };

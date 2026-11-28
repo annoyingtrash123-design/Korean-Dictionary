@@ -68,8 +68,6 @@ export interface ListSource {
   useList(listId: string): (ListSummary & { items: ListItem[] }) | undefined;
   /** Built-in lists read in pages (`useList().items` is empty). */
   paged?: PagedLists;
-  /** The list opened last (the overview offers to continue there). */
-  lastOpened?(): string | undefined;
 }
 
 export const userLists: ListSource = {

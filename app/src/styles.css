@@ -347,7 +347,6 @@ input[type=checkbox][role=switch]:checked::after { transform: translateX(18px); 
 .group-sum { flex: none; font-weight: 400; }
 .list-group > ul[hidden] { display: none; }
 .list-group + .list-group { margin-top: 2px; }
-.resume { margin-top: 2px; }
 .list-badge { font: 700 15px/1 var(--font-ko); }
 .list-row-wrap { display: flex; align-items: center; }
 .list-row-wrap .list-row { flex: 1; min-width: 0; }

@@ -56,8 +56,6 @@ function SourceSection({ src }: { src: ListSource }) {
       <ListRow l={l} current={current(l.id)} subs={all.filter((s) => s.parent === l.id)} currentOf={current} />
     </li>
   ));
-  const resume = src.lastOpened?.();
-  const last = resume ? all.find((l) => l.id === resume) : undefined;
   return (
     <section aria-labelledby={`lists-${src.id}`} data-source={src.id}>
       <div class="section-head">
@@ -66,11 +64,6 @@ function SourceSection({ src }: { src: ListSource }) {
       </div>
       {adding && <div class="pad"><NameForm label="New list name" submit="Create" onDone={onNew} /></div>}
       {!all.length && !adding && <Empty title="No lists yet">Tap the star on any entry to save it, or make a list with “New list”.</Empty>}
-      {last && (
-        <ul class="plain list resume">
-          <li><ListRow l={last} current={current(last.id)} lead="Continue" /></li>
-        </ul>
-      )}
       {groups.map((g) => (g.name
         ? <FoldGroup key={g.name} id={`${src.id}:${g.name}`} name={g.name} lists={g.lists}>{listItems(g.lists)}</FoldGroup>
         : <div key="" class="list-group"><ul class="plain list">{listItems(g.lists)}</ul></div>))}
@@ -106,7 +99,7 @@ function FoldGroup({ id, name, lists: ls, children }: { id: string; name: string
 }
 
 /** One list on the overview. A list with sub-lists (a top-level topic) gets a button that unfolds them. */
-function ListRow({ l, current, lead, subs = [], currentOf }: { l: ListSummary; current?: 'true'; lead?: string; subs?: ListSummary[]; currentOf?: (id: string) => 'true' | undefined }) {
+function ListRow({ l, current, subs = [], currentOf }: { l: ListSummary; current?: 'true'; subs?: ListSummary[]; currentOf?: (id: string) => 'true' | undefined }) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -114,8 +107,8 @@ function ListRow({ l, current, lead, subs = [], currentOf }: { l: ListSummary; c
         <a class="row compact list-row" href={href(listPath(l.id))} aria-current={current} title={l.hint} aria-label={l.hint ? `${l.name}. ${l.hint}. ${plural(l.count, l.unit ?? 'item')}` : undefined}>
           <span class="list-ico" aria-hidden="true">{l.badge ? <span class="list-badge">{l.badge}</span> : <Icon name="lists" size={20} />}</span>
           <div class="row-main">
-            <div class="row-head"><span class="list-name">{lead ? `${lead}: ${l.name}` : l.name}</span></div>
-            <div class="row-gloss muted small">{lead && l.eyebrow ? `${l.eyebrow} · ` : ''}{plural(l.count, l.unit ?? 'item')}{l.updated ? ` · updated ${fmtWhen(l.updated)}` : ''}</div>
+            <div class="row-head"><span class="list-name">{l.name}</span></div>
+            <div class="row-gloss muted small">{plural(l.count, l.unit ?? 'item')}{l.updated ? ` · updated ${fmtWhen(l.updated)}` : ''}</div>
           </div>
           {!subs.length && <Icon name="chev" size={18} />}
         </a>
